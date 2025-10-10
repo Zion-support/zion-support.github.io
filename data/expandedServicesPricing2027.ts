@@ -59,17 +59,10 @@ export type ExpandedServicePricing =
     supportIncluded: string,
     customizationOptions: string[]}
   contactInfo: unknown;
-<<<<<<< HEAD
     phone: string
     email: string
     website: string,
     address: string}}
-=======
-    phone: string;
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 1. CYBERSECURITY SERVICES PRICING;
 export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-threat-hunter'
@@ -367,13 +360,8 @@ export const,
           'Highly regulated industries',
           'Custom security requirements'
         ],
-<<<<<<< HEAD
         setupFee: 50000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 50000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -620,13 +608,8 @@ export const,
           'Military organizations',
           'Custom compliance requirements'
         ],
-<<<<<<< HEAD
         setupFee: 20000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 20000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
@@ -876,13 +859,8 @@ export const,
           'Government agencies',
           'Custom AI requirements'
         ],
-<<<<<<< HEAD
         setupFee: 30000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 30000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -1132,13 +1110,8 @@ export const,
           'Military organizations',
           'Custom cloud requirements'
         ],
-<<<<<<< HEAD
         setupFee: 40000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 40000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -1388,13 +1361,8 @@ export const,
           'Military installations',
           'Custom IoT requirements'
         ],
-<<<<<<< HEAD
         setupFee: 50000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 50000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -1644,13 +1612,8 @@ export const,
           'Military organizations',
           'Custom quantum requirements'
         ],
-<<<<<<< HEAD
         setupFee: 150000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 150000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -1900,13 +1863,8 @@ export const,
           'Military medical facilities',
           'Custom medical requirements'
         ],
-<<<<<<< HEAD
         setupFee: 70000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 70000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],

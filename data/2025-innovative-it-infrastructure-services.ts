@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 
 export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknown
         price: 299,
-=======
-export const innovativeITInfrastructureServices2025 = [
-{pricing: starter: unknown;
-];
-        price: 299;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         period: 'month',
         features: [,
           'Basic security',
@@ -166,16 +159,9 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic DevOps automation'
           'Standard CI/CD'
           'Email support',
-<<<<<<< HEAD
           'Limited environments']}
       professional: price: 449,
         period: 'month'
-=======
-          'Limited environments']};
-      professional: price: 449;
-        period: 'month',
-        features:
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         features: [
       professiona,
   l: pric,
@@ -187,15 +173,9 @@ export const innovativeITInfrastructureServices2025 = [
           'AI-powered automation'
           'Advanced monitoring'
           'Priority support',
-<<<<<<< HEAD
           'Extended environments']}
       enterprise: unknown
         price: 1199,
-=======
-          'Extended environments']};
-      enterprise: unknown;
-        price: 1199;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         period: 'month',
         features: [,
       enterpris,
@@ -297,16 +277,9 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic quantum cloud'
           'Standard security'
           'Email support',
-<<<<<<< HEAD
           'Limited resources']}
       professional: price: 899,
         period: 'month'
-=======
-          'Limited resources']};
-      professional: price: 899;
-        period: 'month',
-        features:
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         features: [
       professiona,
   l: pric,
@@ -318,15 +291,9 @@ export const innovativeITInfrastructureServices2025 = [
           'Advanced quantum processing'
           'Enhanced security'
           'Priority support',
-<<<<<<< HEAD
           'Extended resources']}
       enterprise: unknown
         price: 2299,
-=======
-          'Extended resources']};
-      enterprise: unknown;
-        price: 2299;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         period: 'month',
         features: [,
       enterpris,
@@ -435,16 +402,9 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic automation'
           'Standard monitoring'
           'Email support',
-<<<<<<< HEAD
           'Limited data centers']}
       professional: price: 1199,
         period: 'month'
-=======
-          'Limited data centers']};
-      professional: price: 1199;
-        period: 'month',
-        features:
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         features: [
       professiona,
   l: pric,
@@ -456,15 +416,9 @@ export const innovativeITInfrastructureServices2025 = [
           'Advanced AI automation'
           'Full monitoring'
           'Priority support',
-<<<<<<< HEAD
           'Extended data centers']}
       enterprise: unknown
         price: 2999,
-=======
-          'Extended data centers']};
-      enterprise: unknown;
-        price: 2999;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         period: 'month',
         features: [,
       enterpris,
@@ -554,13 +508,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: unknown
         price: 1499,
         period: 'month',
-<<<<<<< HEAD
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
     }
-=======
-        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     category: 'IT Infrastructure', tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration']
     website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator'
     contact: unknown,
@@ -590,13 +539,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-<<<<<<< HEAD
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
     }
-=======
-  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     categor,
   y: 'IT Infrastructure', tag,
   s: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'],
@@ -645,13 +589,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: unknown
         price: 1999,
         period: 'month',
-<<<<<<< HEAD
         features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
     }
-=======
-        features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     category: 'Cybersecurity', tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security']
     website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform'
     contact: unknown,
@@ -681,13 +620,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-<<<<<<< HEAD
   s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
     }
-=======
-  s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     categor,
   y: 'Cybersecurity', tag,
   s: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'],
@@ -736,13 +670,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: unknown
         price: 1199,
         period: 'month',
-<<<<<<< HEAD
         features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
     }
-=======
-        features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     category: 'DevOps & Automation', tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response']
     website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform'
     contact: unknown,
@@ -772,13 +701,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-<<<<<<< HEAD
   s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
     }
-=======
-  s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     categor,
   y: 'DevOps & Automation', tag,
   s: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'],
@@ -823,13 +747,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: unknown
         price: 2299,
         period: 'month',
-<<<<<<< HEAD
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
     }
-=======
-        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     category: 'Cloud Computing', tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
     contact: unknown,
@@ -869,13 +788,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-<<<<<<< HEAD
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
     }
-=======
-  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     categor,
   y: 'Cloud Computing', tag,
   s: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'],
@@ -924,13 +838,8 @@ export const innovativeITInfrastructureServices2025 = [
       enterprise: unknown
         price: 2999,
         period: 'month',
-<<<<<<< HEAD
         features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
     }
-=======
-        features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     category: 'Data Center Management', tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management']
     website: 'https://ziontechgroup.com/ai-powered-data-center-automation'
     contact: unknown,
@@ -960,13 +869,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-<<<<<<< HEAD
   s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
     }
-=======
-  s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     categor,
   y: 'Data Center Management', tag,
   s: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'],

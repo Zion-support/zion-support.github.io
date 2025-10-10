@@ -2,19 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
 // Function to remove unused imports from a file;
 function removeUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-=======
-// Function to remove unused imports from a file;
-function removeUnusedImports(filePath) {
-  try {;
-const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Skip if file doesn't exist or is empty;
     if (!content.trim()) return;
     // Run ESLint with --fix to remove unused imports;
@@ -41,7 +34,6 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */};
             const isUsed = importName.some(name => {)
               const cleanName = name.replace(/\s+as\s+\w+/, '').trim();
               return content.includes(cleanName) && !line.includes(cleanName);
-<<<<<<< HEAD
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
           if (importName) {/* TODO: Fix JSX expression */}
@@ -70,31 +62,6 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-=======
-      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */});
-const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
-          if (importName) {/* TODO: Fix JSX expression */};
-            });
-            return isUsed};
-        };
-        return true});
-      if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
-        // console.log removed for production
-};
-    };
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.log removed for production
-};
-};
-// Function to recursively find all TypeScript/JavaScript files;
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;
-const files = [];
-  ;
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir);
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
@@ -107,13 +74,9 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
     };
   };
   traverse(dir);
-<<<<<<< HEAD
   return files;
 }
 
-=======
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 console.log('🧹 Starting cleanup of unused imports...\n');
 
@@ -124,13 +87,8 @@ console.log(`Found ${files.length} files to process\n`);
 
 let processed = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   s: ${processed}/${files.length} files processed`);
   }
 }
-=======
-  s: ${processed}/${files.length} files processed`)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`

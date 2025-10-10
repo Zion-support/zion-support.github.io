@@ -5,13 +5,8 @@ const specificFixes = {
 };
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
     keywords:
-<<<<<<< HEAD
       'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',
 const specificFixes = {/* TODO: Fix JSX expression */}
-=======
-      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;
-const specificFixes = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */};
   },
@@ -28,32 +23,19 @@ function processFile(filePath) {
   try {
     // Apply specific fixes;
     if (specificFixes[relativePath]) {
-<<<<<<< HEAD
       if (fix.keywords) {
         const keywordArray = fix.keywords;
           .split(', ')
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-=======
-      if (fix.keywords) {;
-const keywordArray = fix.keywords;
-          .split(', ');
-function processFile(filePath) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           .map(k => `'${k}'`)
           .join(', ');
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
   s: [${keywordArray}],`);
-<<<<<<< HEAD
           modified = true;
         }
       }
     }
 
-=======
-          modified = true};
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // General fixes;
     const replacements = [
 ];
@@ -82,7 +64,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -91,14 +72,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
@@ -112,13 +85,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;"`

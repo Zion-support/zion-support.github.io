@@ -12,13 +12,8 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'QUANTU, M, A, I',
-<<<<<<< HEAD
       sta, t, s: '1, 0,000x, Speed, Boost',
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: '1, 0,000x, Speed, Boost',;
-const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
     {/* TODO: Fix JSX expression */};
      },

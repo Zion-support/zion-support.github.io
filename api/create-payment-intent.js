@@ -1,58 +1,47 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
+
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-<<<<<<< HEAD
     return;
   }
 
   const { amount, currency = 'usd' } = req.body || {};
 
-=======
-    return};
-;
-const { amount, currency = 'usd' } = req.body || {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (!amount) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
-<<<<<<< HEAD
     return;
   }
 
   try {
     const paymentIntent = {
-=======
-    return};
-  try {;
-const paymentIntent = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      id: `pi_${Date.now()}`,
       amount: Math.round(amount * 100), // Convert to cents
-      currency,
+      currency: currency.toLowerCase(),
       status: 'requires_payment_method',
+      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
       created: Math.floor(Date.now() / 1000)
     };
+
     res.statusCode = 200;
-    res.json({ paymentIntent });
-  } catch (err) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error("Error:", err);
-    }
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      paymentIntent
+    }));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to create payment intent',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
 
-=======
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default withErrorLogging(handler);

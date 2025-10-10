@@ -1,31 +1,17 @@
 export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-<<<<<<< HEAD
     </string>if</string> (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties)
   }
 }
 
-=======
-return (
-</string>if</string>
-);
-} (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-<<<<<<< HEAD
       page_title: pageTitle});
   }
 }
 
-=======
-      page_title: pageTitle})};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const initAnalytics = (measurementId: string) => {
   if (typeof window !== 'undefined') {
     // Load Google Analytics script
@@ -36,7 +22,6 @@ export const initAnalytics = (measurementId: string) => {
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: any[]) {
-<<<<<<< HEAD
     window.dataLayer.push(args)
   }
     window.gtag = gtag;
@@ -52,18 +37,3 @@ declare global {
     dataLayer: any[]
   }
 }
-=======
-      window.dataLayer.push(args)};
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', measurementId)};
-};
-// Declare global types
-declare global {
-  interface Window {
-}
-}
-    gtag: (...args: any[]) => void;
-    dataLayer: any[]};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

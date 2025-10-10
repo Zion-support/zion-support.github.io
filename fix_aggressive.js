@@ -70,16 +70,11 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */};
   //Fix corrupted function calls;
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
   //Fix corrupted arrow functions;
-<<<<<<< HEAD
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
     /g, match => {
     return match.replace(/\s+/g, ' ').trim()
   });
 
-=======
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
-    return match.replace(/\s+/g, ' ').trim()});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Fix corrupted string literals;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */};
   });
@@ -175,14 +170,10 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */};
   fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g,
     'performanceMetrics, setPerformanceMetrics')
   );
-<<<<<<< HEAD
 
   return fixed;
 }
 
-=======
-  return fixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -191,7 +182,6 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
-<<<<<<< HEAD
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
     return false;
@@ -199,13 +189,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
   try {
@@ -223,7 +206,6 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
-<<<<<<< HEAD
       ) {/* TODO: Fix JSX expression */}
         }
       }
@@ -234,15 +216,6 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
   return processedCount;
 }
 
-=======
-      ) {/* TODO: Fix JSX expression */};
-        };
-      };
-    };
-  } catch (error) {/* TODO: Fix JSX expression */};
-    //     };
-  return processedCount};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main execution;
 // let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');

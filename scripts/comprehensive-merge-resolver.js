@@ -2,13 +2,9 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n');
 
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
@@ -17,7 +13,6 @@ function execGitCommand(command, description) {
       encoding: 'utf8'),
       cwd: process.cwd(),
       stdio: 'pipe'});
-<<<<<<< HEAD
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
@@ -31,17 +26,6 @@ function resolveMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-=======
-    // console.log removed for production
-return result} catch (error) {
-    // console.log removed for production
-return null};
-};
-// Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {
-  try {;
-const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`);
@@ -65,7 +49,6 @@ const content = fs.readFileSync(filePath, 'utf8');
         .replace(/        .replace(//g, '')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
-<<<<<<< HEAD
       console.log(`✅ Resolved merge conflicts in ${filePath}`);
       return true;
     }
@@ -76,14 +59,6 @@ const content = fs.readFileSync(filePath, 'utf8');
   }
 }
 
-=======
-      // console.log removed for production
-return true};
-    return false} catch (error) {
-    // console.log removed for production
-return false};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to find and resolve all merge conflicts;
 function resolveAllMergeConflicts() {
   console.log('🔍 Searching for files with merge conflicts...');
@@ -93,7 +68,6 @@ function resolveAllMergeConflicts() {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0);
     if (conflictedFiles.length === 0) {
-<<<<<<< HEAD
     console.log('✅ No merge conflicts found');
       return true
   }
@@ -117,24 +91,6 @@ function resolveAllMergeConflicts() {
   }
 }
 
-=======
-      // console.log removed for production
-return true};
-    // console.log removed for production
-conflictedFiles.forEach(file => // console.log removed for production
-);
-    // Resolve conflicts in each file;
-    let resolvedCount = 0;
-    for (const file of conflictedFiles) {
-      if (resolveMergeConflicts(file)) {
-        resolvedCount++};
-    };
-    // console.log removed for production
-return resolvedCount === conflictedFiles.length} catch (error) {
-    // console.log removed for production
-return false};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to get all remote branches;
 function getAllRemoteBranches() {
   try {
@@ -145,7 +101,6 @@ function getAllRemoteBranches() {
       .filter(line => line && !line.includes('HEAD'))
       .map(line => line.replace('origin/', ''))
       .filter(branch => !branch.includes('main'));
-<<<<<<< HEAD
     
     return branches;
   } catch (error) {
@@ -154,12 +109,6 @@ function getAllRemoteBranches() {
   }
 }
 
-=======
-    return branches} catch (error) {
-    // console.log removed for production
-return []};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to merge a branch safely;
 function mergeBranch(branchName) {
   console.log(`\n🔄 Attempting to merge ${branchName}...`);
@@ -167,15 +116,10 @@ function mergeBranch(branchName) {
   try {
     // Check if branch exists;
     const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists`);
-<<<<<<< HEAD
     
     if (branchExists !== null) {
       const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName}`);
       
-=======
-    if (branchExists !== null) {;
-const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       if (mergeResult) {
         console.log(`✅ Successfully merged ${branchName}`);
         return true;
@@ -185,7 +129,6 @@ const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `
         if (resolveAllMergeConflicts()) {
           execGitCommand('git add .', `Adding resolved files from ${branchName}`);
           execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName}`);
-<<<<<<< HEAD
           console.log(`✅ Resolved conflicts and merged ${branchName}`);
           return true;
         } else {
@@ -218,31 +161,6 @@ async function main() {
   console.log('\n🔄 Attempting to merge with origin/main...'),
   const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main');
   
-=======
-          // console.log removed for production
-return true} else {
-          // console.log removed for production
-return false};
-      };
-    } else {
-      // console.log removed for production
-return false};
-  } catch (error) {
-    // console.log removed for production
-return false};
-};
-// Main execution;
-async function main() {
-  // console.log removed for production
-// Step 1: Check current status;
-  // console.log removed for production
-execGitCommand('git status --porcelain', 'Checking git status');
-  // Step 2: Fetch latest changes;
-  execGitCommand('git fetch origin', 'Fetching latest changes from origin');
-  // Step 3: Try to merge with main first;
-  // console.log removed for production
-const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (mergeResult) {
     console.log('✅ Successfully merged with origin/main')
   } else {
@@ -254,7 +172,6 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging w
       ,
       // Step 5: Add resolved files,
       execGitCommand('git add .', 'Adding resolved files');
-<<<<<<< HEAD
       
       // Step 6: Commit the merge,
       execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution');
@@ -269,30 +186,13 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging w
   // Step 7: Get all remote branches and merge them
   console.log('\n🔍 Getting all remote branches...')
   const allBranches = getAllRemoteBranches(),
-=======
-      // Step 6: Commit the merge;
-      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution');
-      // console.log removed for production
-} else {
-      // console.log removed for production
-return};
-  };
-  // Step 7: Get all remote branches and merge them;
-  // console.log removed for production
-const allBranches = getAllRemoteBranches();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ,
   console.log(`📋 Found ${allBranches.length} remote branches to process: `),
   allBranches.slice(0, 10).forEach(branch => console.log(`  - ${branch}`));
   if (allBranches.length > 10) {
-<<<<<<< HEAD
     console.log(`  ... and ${allBranches.length - 10} more branches`);
   }
   
-=======
-    // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Priority branches to merge first;
   const priorityBranches = [
 ];
@@ -309,7 +209,6 @@ const allBranches = getAllRemoteBranches();
   console.log('\n🎯 Merging priority branches...');
   for (const branch of priorityBranches) {
     if (allBranches.includes(branch)) {
-<<<<<<< HEAD
       mergeBranch(branch)
   }
   }
@@ -340,27 +239,5 @@ const allBranches = getAllRemoteBranches();
   console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!');
 }
 
-=======
-      mergeBranch(branch)};
-  };
-  // Merge other branches in batches;
-  const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch));
-  const batchSize = 5;
-  // console.log removed for production
-for (let i = 0; i < otherBranches.length; i += batchSize) {;
-const batch = otherBranches.slice(i, i + batchSize);
-    // console.log removed for production
-+ 1}/${Math.ceil(otherBranches.length / batchSize)}`);
-    for (const branch of batch) {
-      mergeBranch(branch)};
-    // Small delay between batches;
-    await new Promise(resolve => setTimeout(resolve, 1000))};
-  // Step 8: Final status check;
-  // console.log removed for production
-execGitCommand('git status', 'Final git status');
-  execGitCommand('git log --oneline -10', 'Recent commits');
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run the main function;
 main().catch(console.error);

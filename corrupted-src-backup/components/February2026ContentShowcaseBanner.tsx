@@ -9,15 +9,8 @@ const, February2026ContentShowcaseBanne, r = () => {
       reade, r, s: '18, 0, K+','
       bad, g, e: 'BREAKTHROU, G, H','
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-<<<<<<< HEAD
       ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
-=======
-      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>
-);
-}, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
@@ -39,7 +32,6 @@ const, February2026ContentShowcaseBanne, r = () => {
       bad, g, e: 'REVOLUTIONA, R, Y','
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
-<<<<<<< HEAD
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
 const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
@@ -47,15 +39,6 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
     {/* TODO: Fix JSX expression */}
       descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
-=======
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
-const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
-    {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times};
-    {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6',';
       catego, r, y: 'AI, Architectur, e',';
       readTi, m, e: '12, mi, n',';

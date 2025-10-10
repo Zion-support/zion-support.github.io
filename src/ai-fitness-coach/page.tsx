@@ -3,16 +3,8 @@ import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 const AIFitnessCoachPage: React.FC = () => {
   const features = [
-=======
-;
-const AIFitnessCoachPage: React.FC = () => {
-};
-const features = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -24,13 +16,7 @@ const features = [
     'Meal Planning',
     'Wearable Integration'
   ];
-<<<<<<< HEAD
   const benefits = [
-=======
-;
-const benefits = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Better results',
     '24/7 guidance',
     'Personalized approach',
@@ -38,15 +24,8 @@ const benefits = [
     'Motivation support',
     'Cost-effective'
   ];
-<<<<<<< HEAD
   const pricingPlans = [
     {
-=======
-;
-const pricingPlans = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Basic',
       price: '$99',
       period: '/month',
@@ -78,16 +57,11 @@ const pricingPlans = [
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
           {/* Hero Section */}
-=======
-          {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
-<<<<<<< HEAD
                   <Heart className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
@@ -114,21 +88,6 @@ const pricingPlans = [
           </section>
           {/* Features Section */}
           <section className="mb-16">
-=======
-                  AI Fitness Coach
-                <
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Personalized fitness and nutrition plans powered by AI analysis
-              <
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a href="
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial
-                <
-                <a href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fitness Features;
   </
@@ -136,7 +95,6 @@ const pricingPlans = [
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
-<<<<<<< HEAD
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -145,16 +103,6 @@ const pricingPlans = [
             </div>
           </section>
           {/* Benefits Section */}
-=======
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" 
-                    <h3 className="text-lg font-semibold text-white">{feature}<
-                  <
-                <)
-              ))};
-            <
-          <
-          {/* Benefits Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fitness Coach?
@@ -163,7 +111,6 @@ const pricingPlans = [
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-<<<<<<< HEAD
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
@@ -172,16 +119,6 @@ const pricingPlans = [
             </div>
           </section>
           {/* Pricing Section */}
-=======
-                    <Zap className="w-8 h-8 text-white" 
-                  <
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
-                <)
-              ))};
-            <
-          <
-          {/* Pricing Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing;
@@ -192,17 +129,10 @@ const pricingPlans = [
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-<<<<<<< HEAD
                         Most Popular;
   </
                     </div>
                   )}
-=======
-                        Most Popular
-                      <
-                    <
-                  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -211,7 +141,6 @@ const pricingPlans = [
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-<<<<<<< HEAD
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -234,16 +163,6 @@ const pricingPlans = [
             </div>
           </section>
           {/* CTA Section */}
-=======
-                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">
-                    Get Started
-                  <
-                <
-              ))};
-            <
-          <
-          {/* CTA Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -253,7 +172,6 @@ const pricingPlans = [
                 Join thousands of users achieving their fitness goals with AI;
   </
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -285,23 +203,3 @@ export default AIFitnessCoachPage;
   </h1>
   </div>
   </SEOOptimizer>
-=======
-                <a href="
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial
-                <
-                <a href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300">
-                  <span>Call +1 302 464 0950<
-                <
-              <
-            <
-          <
-        <
-        <Footer />
-      </div>
-    </React.Fragment>
-  )};
-export default AIFitnessCoachPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

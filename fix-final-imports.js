@@ -21,13 +21,8 @@ function processFile(filePath) {
       // Fix MetadataRoute namespace issue;
       {
         pattern: /MetadataRoute\./g;
-<<<<<<< HEAD
         replacement: 'MetadataRoute',
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-=======
-        replacement: 'MetadataRoute',;
-function processFile(filePath) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
   t: "import { useRouter } from '../utils/navigation';"},
@@ -44,7 +39,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -53,14 +47,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
@@ -74,13 +60,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;"

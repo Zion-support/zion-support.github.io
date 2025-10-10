@@ -13,7 +13,6 @@ export interface RevOpsContent {
   valueProposition?: string
   highlights: string[],
   metrics: {,
-<<<<<<< HEAD
     [key: string]: string,
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
@@ -24,16 +23,6 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    [key: string]: string;
-export interface RevOpsContent {/* TODO: Fix JSX expression */};
-  };
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
-  cta?: {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025'
@@ -103,7 +92,6 @@ export const,
     }},
   {/* TODO: Fix JSX expression */};
     }}];
-<<<<<<< HEAD
 
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
@@ -113,11 +101,3 @@ export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
 
 export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
-=======
-export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
-export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
-export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

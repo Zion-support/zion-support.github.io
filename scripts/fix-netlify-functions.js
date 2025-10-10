@@ -29,13 +29,9 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */};
     .replace(/\s+$/gm, '');
   // Ensure proper function structure;
   if (!fixed.includes('exports.handler = async function')) {
-<<<<<<< HEAD
     return content; // Skip if no proper function found
   }
 
-=======
-    return content; // Skip if no proper function found};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Add proper error handling if missing;
   if (!fixed.includes('try {') && !fixed.includes('catch')) {
     const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
@@ -55,22 +51,15 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */};
   if (!fixed.includes('exports.handler = async function')) {/* TODO: Fix JSX expression */};
   };
   // Add proper error handling if missing;
-<<<<<<< HEAD
   if (!fixed.includes('try {/* TODO: Fix JSX expression */})
     const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {/* TODO: Fix JSX expression */}
-=======
-  if (!fixed.includes('try {/* TODO: Fix JSX expression */});
-const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
-    if (handlerMatch) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         /exports\.handler = async function[^{]*{[^}]*}/,
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
     ${body};
   } catch (error) {/* TODO: Fix JSX expression */};
       }),
       header,
-<<<<<<< HEAD
   s: {'Content-Type': 'application/json'}
     }
   }`
@@ -82,14 +71,6 @@ const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*
   return fixed;
 }
 
-=======
-  s: {'Content-Type': 'application/json'};
-    }}`
-}`
-      )};
-  };
-  return fixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main function to process all Netlify functions;
 async function main() {
 async function main() {/* TODO: Fix JSX expression */};
@@ -111,7 +92,6 @@ async function main() {/* TODO: Fix JSX expression */};
         // console.log(`✅ Fixed: ${path.basename(filePath)}`);
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`);
-<<<<<<< HEAD
         fixedCount++;
       } else {/* TODO: Fix JSX expression */}`
   d: ${path.basename(filePath)} (no changes needed)`);
@@ -129,18 +109,3 @@ if (import.meta.url === `fil)`
 }
 
 export { fixNetlifyFunction }`
-=======
-        fixedCount++} else {/* TODO: Fix JSX expression */}`
-  d: ${path.basename(filePath)} (no changes needed)`)};
-    } catch (error) {/* TODO: Fix JSX expression */};
-    };
-  });
-  if (errorCount > 0) {/* TODO: Fix JSX expression */};
-  };
-};
-`
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */};
-};
-export { fixNetlifyFunction };`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,22 +1,10 @@
 const, October2025NewTechBannerMeg, a = () => {
-<<<<<<< HEAD
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
       {/* Animated, Background, Effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
       {/* Animated, Background, Effects */}</div>
-=======
-return (
-  return(<div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
-);
-};
-      {/* Animated, Background, Effects */};
-      <div , className="absolute, inse, t-0, overflo, w-hidd, e, n">
-  return (
-    <div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
-      {/* Animated, Background, Effects */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>
         <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
@@ -24,13 +12,8 @@ return (
       {/* Animated, Background, Effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>";
-<<<<<<< HEAD
 const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Effects */}
-=======
-const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, Background, Effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"

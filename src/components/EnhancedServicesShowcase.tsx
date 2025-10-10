@@ -3,23 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 import { services, serviceCategories, contactInfo } from '../data/services';
 interface ServiceCardProps {
-<<<<<<< HEAD
     service: typeof services[0],
   index: number
   }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     const [isHovered, setIsHovered] = useState(false);
   const formatPrice = (pricing: typeof service.pricing) => {
-=======
-  service: typeof services[0]
-}
-  index: number};
-;
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
-const [isHovered, setIsHovered] = useState(false);
-;
-const formatPrice = (pricing: typeof service.pricing) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (pricing.custom) {
       return 'Custom Pricing'
   }
@@ -28,7 +17,6 @@ const formatPrice = (pricing: typeof service.pricing) => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
-<<<<<<< HEAD
       case 'micro-saas': return Zap
       case 'it': return Cloud
       case 'emerging-tech': return Rocket,
@@ -36,15 +24,6 @@ const formatPrice = (pricing: typeof service.pricing) => {
   }
   }
   const CategoryIcon = getCategoryIcon(service.category);
-=======
-      case 'micro-saas': return Zap;
-      case 'it': return Cloud;
-      case 'emerging-tech': return Rocket;
-      default: return Target}
-  };
-;
-const CategoryIcon = getCategoryIcon(service.category);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
@@ -109,15 +88,9 @@ const CategoryIcon = getCategoryIcon(service.category);
           ))};
           {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
-<<<<<<< HEAD
               +{service.features.length - 3} more features;
   </
           )}
-=======
-              +{service.features.length - 3} more features
-            </li>
-          )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </ul>
       </div>
       {/* Benefits */}
@@ -155,19 +128,13 @@ const CategoryIcon = getCategoryIcon(service.category);
       </div>
       {/* Contact Actions */}
       <div className="space-y-2">
-<<<<<<< HEAD
         <a
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
-=======
-        <a href={`tel:${contactInfo.phone}`};
-          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
   </
         <div className="grid grid-cols-2 gap-2">
-<<<<<<< HEAD
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
@@ -179,17 +146,6 @@ const CategoryIcon = getCategoryIcon(service.category);
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
-=======
-          <a href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`};
-            className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
-            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email
-          </a>
-          <a href={service.contact.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo,
   </
@@ -210,16 +166,7 @@ const CategoryIcon = getCategoryIcon(service.category);
   );
 }
 const EnhancedServicesShowcase: React.FC = () => {
-<<<<<<< HEAD
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
-=======
-}
-return (
-;
-const [selectedCategory, setSelectedCategory] = useState<string>
-);
-}('all');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [filteredServices, setFilteredServices] = useState(services);
   useEffect(() => {
     if (selectedCategory === 'all') {
@@ -239,13 +186,8 @@ const [selectedCategory, setSelectedCategory] = useState<string>
             Our Services,
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
   </
-=======
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -282,15 +224,9 @@ const [selectedCategory, setSelectedCategory] = useState<string>
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
-<<<<<<< HEAD
           >
             All Services;
   </
-=======
-                >
-            All Services
-          </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           {serviceCategories.map((category) => (
             <button
               key={category.id}
@@ -328,12 +264,8 @@ const [selectedCategory, setSelectedCategory] = useState<string>
                     <div className="text-lg font-bold text-cyan-400 mb-2">
                       ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
                     </div>
-<<<<<<< HEAD
                     <a
                       href={`tel:${contactInfo.phone}`}
-=======
-                    <a href={`tel:${contactInfo.phone}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Call Now →
                     </a>
@@ -342,11 +274,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>
               ))};
             </div>
           </div>
-<<<<<<< HEAD
         )}
-=======
-        )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
           <h3 className="text-2xl font-bold text-white mb-4 neon-text">
@@ -356,12 +284,8 @@ const [selectedCategory, setSelectedCategory] = useState<string>
             Get a free consultation and discover how our AI and IT solutions can drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <a
               href={`tel:${contactInfo.phone}`}
-=======
-            <a href={`tel:${contactInfo.phone}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="cyber-button inline-flex items-center justify-center px-8 py-3">
               <Phone className="w-5 h-5 mr-2" />
               Call {contactInfo.phone}
@@ -376,7 +300,6 @@ const [selectedCategory, setSelectedCategory] = useState<string>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default EnhancedServicesShowcase;
@@ -395,7 +318,3 @@ export default EnhancedServicesShowcase;
   </span>
   </span>
   </ServiceCardProps>
-=======
-  )};
-export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

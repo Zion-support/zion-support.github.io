@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -31,16 +27,10 @@ import React from 'react';
   variant: ServiceVariant;
   contact_info: unknown;
     mobile: string;
-<<<<<<< HEAD
     email: string
     address: string
     website: string,
   }
-=======
-    email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -50,12 +40,8 @@ import React from 'react';
   benefits: string[]
   marketAdvantage: string,
   capabilities: string[],
-<<<<<<< HEAD
   market_advantage: string,
 }
-=======
-  market_advantage: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -132,7 +118,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security',
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',
-<<<<<<< HEAD
     targetAudience: 'Enterprise security teams, Government agencies, Financial institutions'
     trialDays: 30}
     setupTime: '2-3 weeks',
@@ -141,18 +126,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']}
     market_advantage: 'Advanced AI models with enterprise - grade features and integrations'}
 // Cybersecurity Services;
-=======
-    targetAudience: 'Enterprise security teams, Government agencies, Financial institutions',
-    trialDays:
-        trialDays: 30};
-    setupTime: '2-3 weeks',
-    category: 'Cybersecurity',
-    capabilities: [,
-      'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']};
-    market_advantage: 'Advanced AI models with enterprise - grade features and integrations'};
-;
-  // Cybersecurity Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security architecture'
@@ -196,16 +169,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring'],
-<<<<<<< HEAD
     market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'}
 // DevOps & Infrastructure Services;
     id: 'ai - powered - devops - automation'
-=======
-    market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'};
-;
-  // DevOps & Infrastructure Services;
-    id: 'ai - powered - devops - automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'AI - Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation and optimization',
     price: '$899',
@@ -257,16 +223,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation'],
-<<<<<<< HEAD
     market_advantage: 'First AI - powered DevOps platform with predictive optimization'}
 // Edge Computing Services;
     id: 'iot - edge - intelligence - platform'
-=======
-    market_advantage: 'First AI - powered DevOps platform with predictive optimization'};
-;
-  // Edge Computing Services;
-    id: 'iot - edge - intelligence - platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'IoT Edge Intelligence Platform',
     tagline: 'Intelligent IoT edge computing and analytics',
     price: '$599',
@@ -318,14 +277,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Edge data processing_real - time analyticsML at the edge_device management_security features'],
-<<<<<<< HEAD
     market_advantage: 'Advanced edge computing with AI - powered intelligence'}
 // Healthcare AI Services;
-=======
-    market_advantage: 'Advanced edge computing with AI - powered intelligence'};
-;
-  // Healthcare AI Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - medical - imaging - analysis',
     name: 'AI Medical Imaging Analysis',
     tagline: 'Advanced AI - powered medical image diagnosis',
@@ -378,14 +331,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'}
 // Financial Technology Services;
-=======
-    market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'};
-;
-  // Financial Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - financial - risk - management',
     name: 'AI Financial Risk Management',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-risk',
@@ -435,14 +382,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI risk management with real - time capabilities'}
 // Education Technology Services;
-=======
-    market_advantage: 'Advanced AI risk management with real - time capabilities'};
-;
-  // Education Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - personalized - learning - platform',
     name: 'AI Personalized Learning Platform',
     tagline: 'Adaptive learning powered by artificial intelligence',
@@ -492,14 +433,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI learning platform with proven educational outcomes'}
 // Supply Chain & Logistics Services;
-=======
-    market_advantage: 'Advanced AI learning platform with proven educational outcomes'};
-;
-  // Supply Chain & Logistics Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - supply - chain - optimization',
     name: 'AI Supply Chain Optimization',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-supply-chain',
@@ -549,14 +484,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'}
 // Energy & Sustainability Services;
-=======
-    market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'};
-;
-  // Energy & Sustainability Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - energy - optimization - platform',
     name: 'AI Energy Optimization Platform',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-energy-optimization',
@@ -608,11 +537,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ]
 export interface ComprehensiveInnovativeService {
-<<<<<<< HEAD
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -640,26 +564,17 @@ export interface ComprehensiveInnovativeService {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
     website: string}
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
   benefits: string[]
   capabilities: string[]
   marketAdvantage: string,
@@ -668,18 +583,6 @@ export interface ComprehensiveInnovativeService {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string};
-;
-// const contact = {
-;
-};
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   website: 'https://ziontechgroup.com',
   i,
   d: string,
@@ -790,17 +693,10 @@ export const,
     marketPositio,
   n: 'Leading AI content generation platform with enterprise features',
 export const,
-<<<<<<< HEAD
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services,
   {/* TODO: Fix JSX expression */}
   s: 30}
-=======
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
-  {/* TODO: Fix JSX expression */};
-  s: 30};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     setupTim,
   e: '2-3 weeks'
     categor,
@@ -811,14 +707,8 @@ export const,
     ]};
     market_advantag,
   e: 'Advanced AI models with enterprise - grade features and integrations'
-<<<<<<< HEAD
   }
 // Cybersecurity Services;
-=======
-  };
-;
-  // Cybersecurity Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'zero - trust - security - platform'
     nam,
@@ -903,14 +793,8 @@ export const,
     ],
     market_advantag,
   e: 'Comprehensive zero - trust platform with advanced threat detection'
-<<<<<<< HEAD
   }
 // DevOps & Infrastructure Services;
-=======
-  };
-;
-  // DevOps & Infrastructure Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - powered - devops - automation'
     nam,
@@ -1014,14 +898,8 @@ export const,
     ],
     market_advantag,
   e: 'First AI - powered DevOps platform with predictive optimization'
-<<<<<<< HEAD
   }
 // Edge Computing Services;
-=======
-  };
-;
-  // Edge Computing Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'iot - edge - intelligence - platform'
     nam,
@@ -1125,14 +1003,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced edge computing with AI - powered intelligence'
-<<<<<<< HEAD
   }
 // Healthcare AI Services;
-=======
-  };
-;
-  // Healthcare AI Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - medical - imaging - analysis'
     nam,
@@ -1236,14 +1108,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI medical imaging with proven clinical outcomes'
-<<<<<<< HEAD
   }
 // Financial Technology Services;
-=======
-  };
-;
-  // Financial Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - financial - risk - management'
     nam,
@@ -1341,14 +1207,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI risk management with real - time capabilities'
-<<<<<<< HEAD
   }
 // Education Technology Services;
-=======
-  };
-;
-  // Education Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - personalized - learning - platform'
     nam,
@@ -1446,14 +1306,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI learning platform with proven educational outcomes'
-<<<<<<< HEAD
   }
 // Supply Chain & Logistics Services;
-=======
-  };
-;
-  // Supply Chain & Logistics Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - supply - chain - optimization'
     nam,
@@ -1551,14 +1405,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI supply chain platform with comprehensive optimization'
-<<<<<<< HEAD
   }
 // Energy & Sustainability Services;
-=======
-  };
-;
-  // Energy & Sustainability Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - energy - optimization - platform'
     nam,
@@ -1659,13 +1507,8 @@ export const,
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1683,16 +1526,9 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  e: string};
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1753,20 +1589,11 @@ export const,
   };
 ];
 export default comprehensiveInnovativeServices;
-<<<<<<< HEAD
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
-=======
-;
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
-  s: string};
-    websit,
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1793,12 +1620,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
-=======
-  e: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default comprehensiveInnovativeServices;
 i,
   d: string, nam,
@@ -2228,7 +2050,6 @@ i,
   n: true,' implementation_detail,
   s: 'Industrial energy management platform with AI optimization and IoT integration'' launch_dat,
   e: '2023 - 12 - 01' customer,
-<<<<<<< HEAD
   s: 78, ratin,
   g: 4 && 4.6, review,
   s: 56, benefit,
@@ -2244,38 +2065,15 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string} const contact = {/* TODO: Fix JSX expression */}
-=======
-  s: 78; ratin,
-  g: 4 && 4.6; review,
-  s: 56; benefit,
-  s: [;' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,
   e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -2286,15 +2084,3 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string} export default comprehensiveInnovativeServices; '
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; export default comprehensiveInnovativeServices; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -49,7 +49,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4"></div>
-<<<<<<< HEAD
             <TrendingUp, className="h-5 w-5, tex, t-bl, u, e-4, 0, 0  />
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0">
 const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -58,16 +57,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-            <TrendingUp , className="h-5 w-5, tex, t-bl, u, e-4, 0, 0  />
-            <span, className="te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0">;
-const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return (<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"
       {/* Animated, background, effects */}"
@@ -91,12 +80,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";
-<<<<<<< HEAD
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
     }
-=======
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 2,
       tit, l, e: "Kubernetes, Security, Best Practic, e, s",";
@@ -104,12 +89,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s",";
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0",";
-<<<<<<< HEAD
       metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"
   }
-=======
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 3,
       tit, l, e: "Re, a, l-Time, Data, Streaming",";
@@ -117,18 +98,11 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s",";
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0",";
-<<<<<<< HEAD
       metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"
   }
   ];
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",),
       {/* Animated, background, effects */}
-=======
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"};
-  ];
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";),
-      {/* Animated, background, effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";
   return (</h2>
@@ -143,20 +117,12 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;"
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";"
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";"
-<<<<<<< HEAD
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"};
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return ("
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",
@@ -190,15 +156,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">"</div>
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
-<<<<<<< HEAD
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
-=======
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li , n, k;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             return (</div>
               <Li , n, k
   k, e, y={artic, l, e.id};
@@ -274,12 +233,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </d, i, v>
         {/* CTA, Sectio, n */};
         <div , className="te, x, t-cent, e, r">

@@ -4,13 +4,8 @@ const Sideba, r: React.FC = () => { ,
   const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
-<<<<<<< HEAD
       lin, k, s: [,
 const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      lin, k, s: [,;
-const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
         { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
         { lab, e, l: 'Servi, c, e, s', pa, t, h: '/servi, c, e, s' },
@@ -75,11 +70,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
               ))};
             </n, a, v>
           </div>
-<<<<<<< HEAD
         ))}
-=======
-        ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'></div>
           <Link , t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'>
@@ -89,11 +80,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
         </div>
       </div>
     </a, s, i, d, e>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default Sidebar;
 `

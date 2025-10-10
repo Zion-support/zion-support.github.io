@@ -14,7 +14,6 @@ export interface InnovativeMicroSaas2029 {
   features: string[];
   link: string;
   category: string;
-<<<<<<< HEAD
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
@@ -36,28 +35,6 @@ export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     address: string,
   }
-=======
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
-    email: string};
-    address: string};
-export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
-export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
-};
-    address: string};
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     id: '2029 - innovative - micro - saas',
     name: '2029 Innovative Micro SAAS Platform',
@@ -69,12 +46,7 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
 export const,
   innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     addres,
-<<<<<<< HEAD
   s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     i,
@@ -128,7 +100,6 @@ export const,
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
@@ -136,14 +107,6 @@ export const,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     id: "2029-innovative-micro-saas", name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029", price: "$229/month"
@@ -354,15 +317,9 @@ id: "2029-innovative-micro-saas"
   };
 ];
 export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas2029,
-<<<<<<< HEAD
   id: string, export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
-=======
-  id: string; export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */};
-  l: string} addres,
-  s: string} }; export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,
   s: string} export const,

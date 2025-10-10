@@ -159,7 +159,6 @@ function fixFile(filePath) {
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
   t: 'return (\n    <div>{/* content */}'}];
-<<<<<<< HEAD
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
@@ -175,19 +174,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-);
-function fixFile(filePath) {/* TODO: Fix JSX expression */};
-      };
-    });
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */};
   };
@@ -196,14 +182,9 @@ async function main() {/* TODO: Fix JSX expression */};
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++;
     }
   files.forEach(file => {/* TODO: Fix JSX expression */}
-=======
-      fixedCount++};
-  files.forEach(file => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     })
   });
   //   };

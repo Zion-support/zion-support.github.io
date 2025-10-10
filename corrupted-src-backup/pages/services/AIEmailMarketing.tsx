@@ -8,13 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-<<<<<<< HEAD
 const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   const, feature, s = [
-=======
-const, AIEmailMarketin, g: Rea, c, t.FC = () => {;
-const, feature, s = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       i, c, o;
   n: Bra, i, n;
@@ -81,12 +76,8 @@ const, feature, s = [
         "5, campaign, s/mon, t, h"
         "Basic, segmentatio, n"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Profession, a, l"
       pri, c, e: "$1, 9, 9"
@@ -104,12 +95,8 @@ const, feature, s = [
         "A/B, testin, g"
         "API, acces, s"
       ]
-<<<<<<< HEAD
       popul, a, r: tr, u, e
   }
-=======
-      popul, a, r: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Enterpri, s, e"
       pri, c, e: "$5, 9, 9"
@@ -145,12 +132,8 @@ const, feature, s = [
         "5, campaign, s/mon, t, h",";
         "Basic, segmentatio, n"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Profession, a, l",";
       pri, c, e: "$1, 9, 9",";
@@ -168,12 +151,8 @@ const, feature, s = [
         "A/B, testin, g",";
         "API, acces, s"
       ]
-<<<<<<< HEAD
       popul, a, r: tr, u, e
   }
-=======
-      popul, a, r: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Enterpri, s, e",";
       pri, c, e: "$5, 9, 9",";
@@ -193,12 +172,8 @@ const, feature, s = [
         "SLA, guarante, e",";
         "Traini, n, g & consultati, o, n"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const, testimonial, s = [
     {
@@ -259,38 +234,25 @@ const, feature, s = [
       tit, l, e: "E-Commer, c, e",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.",";
-<<<<<<< HEAD
       benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
   }
-=======
-      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     tit, l, e: "Sa, a, S & B, 2, B",";
       ic, o, n: Trending, U, p;
       descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.",";
-<<<<<<< HEAD
       benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"
   }
-=======
-      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     tit, l, e: "Healthca, r, e",";
       ic, o, n: Use, r, s;
       descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.",";
-<<<<<<< HEAD
       benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"
   }
-=======
-      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       tit, l, e: "Educati, o, n",";
       ic, o, n: Bra, i, n;
       descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.",";
       benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]";
-<<<<<<< HEAD
 const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -365,82 +327,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
   ];
   return(<React.Fragment>
-=======
-const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, capabilitie, s = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  return(<React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
         <me, t, a;
@@ -453,7 +339,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   na, m, e="descripti, o, n""
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>""
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t."
-<<<<<<< HEAD
          />"
         <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";"
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" />";
@@ -465,19 +350,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-=======
-        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" 
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" 
-      <
-      <Head, e, r   /><
-      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
-        {/* Hero, Sectio, n *
-        <section , className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-cent, e, r">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
@@ -551,7 +423,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;"
-<<<<<<< HEAD
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />";
                 </a>
@@ -565,14 +436,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                  <Link, className="w-5 h-5, m, l-2  /><
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="text-center mb-12">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g: px-8">",
@@ -665,7 +528,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  /></Shield>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";"
-<<<<<<< HEAD
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";"
@@ -678,21 +540,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
-=======
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" 
-                <
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y<
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Advanced, inbox, placement optimizati, o, n<
-              <
-            <
-          <
-        <
-        {/* Use, Case, s *
-        <section , className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
@@ -724,7 +571,6 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
@@ -745,56 +591,16 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-=======
-return (
-;
-const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}"
-                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-4, ga, p-8">";)
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-return (
-;
-const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6"><
-                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8"><
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-return (
-;
-const, Ico, n = useCa, s, e.ic, o, n;
-                return (</div>
-                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
-<<<<<<< HEAD
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
-=======
-                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (<li , ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  
-                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
             </d, i, v>"
@@ -819,7 +625,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
-<<<<<<< HEAD
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>)
@@ -837,25 +642,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" 
-                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
-                        <)
-                      ))};
-                    </ul>
-                  </d, i, v>
-                )})};
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* Capabiliti, e, s */};
-        <section , className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -899,7 +685,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
-<<<<<<< HEAD
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";"
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}</p>";
                 </d, i, v>
@@ -913,22 +698,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}<
-                  <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}<
-                <)
-              ))};
-            <
-          <
-        <
-        {/* Featur, e, s *
-        <section , className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g: px-8">",
@@ -961,7 +730,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">
@@ -979,52 +747,15 @@ const, Ico, n = useCa, s, e.ic, o, n;
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
-=======
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}"
-                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4"><
-                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div , className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-8">";)
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-=======
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
-                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />";
                     </d, i, v>
@@ -1057,7 +788,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-<<<<<<< HEAD
                 );
               })}
             </d, i, v>
@@ -1069,19 +799,6 @@ const, Ico, n = featu, r, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                )})};
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* Prici, n, g */};
-        <section , i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -1119,7 +836,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-emera, l, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
-<<<<<<< HEAD
                       </sp, a, n>
                     </d, i, v>
                   )}
@@ -1128,16 +844,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
             </d, i, v>"
-=======
-                      <
-                    <
-                  )};
-                  <div, className="te, x, t-center, m, b-8">";<
-                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}<
-                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";<
-                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}<
-            <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -1159,19 +865,11 @@ const, Ico, n = featu, r, e.ic, o, n;
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
-<<<<<<< HEAD
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
-=======
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" 
-                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}<
-                      <
-                    ))};
-                  <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <a;
   hr, e, f="/conta, c, t"
                     classNa, m, e={
@@ -1179,7 +877,6 @@ const, Ico, n = featu, r, e.ic, o, n;
 pl, a, n.popul, a, r;
 ? 'bg-emera, l, d-600, tex, t-white, hove, r: bg-emera, l, d-7, 0, 0'
 ? 'bg-emera, l, d-600, tex, t-white, hov, e;
-<<<<<<< HEAD
   r: bg-emera, l, d-7, 0, 0','
   }
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
@@ -1195,22 +892,6 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?</p>";
-=======
-  r: bg-emera, l, d-7, 0, 0','};
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'};
-                  <a><
-  hr, e, f="
-                    classNa, m, e={/* TODO: Fix JSX expression *
-}`}`;`
-                  >
-                    Get, Starte, d;
-                  <
-                <
-              ))};
-            <
-            <div, className="te, x, t-center, m, t-12">";<
-              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <a;
   hr, e, f="/conta, c, t"
             </d, i, v>"
@@ -1221,7 +902,6 @@ pl, a, n.popul, a, r;
                 classNa, m, e="inli, n, e-flex, item, s-center, tex, t-emera, l, d-600, hove, r: te, x, t-emera, l, d-700, fon, t-semibo, l, d"
               >
                 Contact, our, Marketing Te, a, m;"
-<<<<<<< HEAD
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />";
               </a>
@@ -1234,14 +914,6 @@ pl, a, n.popul, a, r;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                <Link, className="w-4 h-4, m, l-1  /><
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -1285,7 +957,6 @@ pl, a, n.popul, a, r;
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="flex, item, s-center, m, b-4">";
-<<<<<<< HEAD
                     {/* TODO: Fix JSX expression */}"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
@@ -1309,32 +980,6 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
-                    {/* TODO: Fix JSX expression *
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /><
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t")
-                    ))};
-                  <
-                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
-                    "{testimoni, a, l.conte, n, t}"
-                  <
-                  <d, i, v><
-                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}<
-                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}<
-                    <div, className="te, x, t-emera, l, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}<
-                  <
-                <
-              ))};
-            <
-          <
-        <
-        {/* CTA, Sectio, n *
-        <section , className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8, tex, t-cent, e, r">"
-            <h2 , className="te, x, t-4xl, fon, t-bold, m, b-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
@@ -1394,12 +1039,7 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-<<<<<<< HEAD
   );
 }
 export default AIEmailMarketing;
 }}}}"`
-=======
-  )};
-export default AIEmailMarketing}}}}"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

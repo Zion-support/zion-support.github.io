@@ -1,7 +1,6 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   servic,
@@ -37,51 +36,10 @@ const MicroSAASCard: React.FC,
   }
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-=======
-  O: Add content};
-};
-  servic,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-  titl,
-  e: string;
-    descriptio,
-  n: string;
-    ico,
-  n: string;
-    pric,
-  e: string;,
-    feature,
-  s: string[];,
-    benefit,
-  s: string[];
-    marketPrice?: string;,
-    categor,
-  y: string;,
-    technologie,
-  s: string[];,
-    contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean}};
-;
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
-};
-;
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
           <div>Coming Soon</div>
   )
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
@@ -153,13 +111,8 @@ return (
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>
-=======
-  )};
-export default MicroSAASCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

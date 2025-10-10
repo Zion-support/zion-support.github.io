@@ -78,7 +78,6 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🎭",
       impa, c, t: "95% Accur, a, c, y",",
-<<<<<<< HEAD
       featured: fa, l, s, e
   }
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
@@ -86,14 +85,6 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 3, s' }} />
-=======
-      featured: fa, l, s, e};
-  ]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};
-      <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div , className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 3, s' }} />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ]; return (
     <div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
@@ -137,13 +128,8 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>
             </div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-<<<<<<< HEAD
               <Rocket, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-              <Rocket, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />;
-const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
@@ -300,13 +286,8 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
                   </sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c' })}</sp, a, n>
                 </div>
-<<<<<<< HEAD
                 {/* CTA, Butto, n */}
                 <a, hre, f = {`/bl, o, g/${conte, n, t.slug}`}
-=======
-                {/* CTA, Butto, n */};
-                <a , hre, f = {`/bl, o, g/${conte, n, t.slug}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1">
                   <div, className="w-4 h-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-fu, l, l" /></div>
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>

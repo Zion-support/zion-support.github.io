@@ -1,17 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
 const NewContentAdvertisingBanne, r: React.FC = () => { ,
   const featuredConten, t: FeaturedConte, n, t[] = [
-=======
-interface FeaturedConten, t {/* TODO: Fix JSX expression */};
-};
-const NewContentAdvertisingBanne, r: React.FC = () => {
-return (
- ,;
-const featuredConten, t: FeaturedConte, n, t[] = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: , 0,
       title: 'Governed, Agent, Rollback, s',
@@ -21,17 +12,9 @@ const featuredConten, t: FeaturedConte, n, t[] = [
       reade, r, s: '25, K+',
       bad, g, e: 'NE, W',
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
-<<<<<<< HEAD
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      ic, o, n: <Sparkles , classNam, e = "w-6 , h-, 6" />
-);
-} ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s';
-const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
     {/* TODO: Fix JSX expression */};
      },

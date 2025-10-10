@@ -7,21 +7,11 @@
   link: string;
   category: string;
   realImplementation: boolean;
-<<<<<<< HEAD
   contactInfo: unknown
     mobile: string
     email: string,
 export interface PracticalBusinessSolution2028 {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface PracticalBusinessSolution2028 {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface PracticalBusinessSolution2028 {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,7 +70,6 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
@@ -95,14 +77,6 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */};
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [,
     id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028", price: "$249/month"
@@ -114,15 +88,9 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
       "Easy integration",
       "Affordable pricing"],
     link: "/services/2028-practical-business-solution", category: "Practical Business Solutions 2028",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

@@ -19,14 +19,9 @@
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
       // FID;
-<<<<<<< HEAD
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 //           });
       }).observe({/* TODO: Fix JSX expression */})
-=======
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};
-//           })}).observe({/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: ['first-input'] });
       // CLS;
       let _clsValue = 0;
@@ -34,15 +29,10 @@
           };
         });
 //         }).observe({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
   s: ['layout-shift'] });
     }
   }
   
-=======
-  s: ['layout-shift'] })};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals)

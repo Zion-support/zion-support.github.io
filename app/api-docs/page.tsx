@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
@@ -13,19 +12,6 @@ export default function APIDocsPage() {
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)
   }
-=======
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-export default function APIDocsPage() {;
-const [copiedCode, setCopiedCode] = useState<string | null>(null);
-const [searchQuery, setSearchQuery] = useState('');
-;
-const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const apiEndpoints = [
 [
         {
@@ -33,27 +19,15 @@ const apiEndpoints = [
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
       endpoints: [
-<<<<<<< HEAD
         {
           name: 'Text Analysis',
-=======
-            {
-          nam,
-    e: 'Text Analysis',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           method: 'POST',
           path: '/api/ai/text-analysis',
           description: 'Analyze text sentiment, entities, and key phrases',
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-<<<<<<< HEAD
   -H "Content-Type: application/json" \\
   -d '{
-=======
-  -H "Content-Typ,
-    e: application
-  -d '    {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "text": "Your text to analyze",
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
@@ -118,14 +92,8 @@ const apiEndpoints = [
   }'`
         };
       ]
-<<<<<<< HEAD
     }
   ]
-=======
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -133,7 +101,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-<<<<<<< HEAD
   })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -147,14 +114,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
 <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-=======
-  })).filter(category => category.endpoints.length > 0);
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */};
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             API Documentation
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -173,21 +132,12 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Quick Start */}
       <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-=======
-      {/* Quick Start */};
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start<
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
               </div>
@@ -195,15 +145,9 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Get API Key →
-<<<<<<< HEAD
               </button>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-=======
-              <
-            <
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
@@ -211,15 +155,9 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 View Examples →
-<<<<<<< HEAD
               </button>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-=======
-              <
-            <
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
@@ -227,21 +165,12 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </section>
       {/* API Endpoints */}
-=======
-              <
-            <
-          <
-        <
-      <
-      {/* API Endpoints *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
@@ -250,7 +179,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-<<<<<<< HEAD
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -261,17 +189,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                 <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-=======
-                    <category .icon className="w-6 h-6 text-white" 
-                  <
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}<
-                    <p className="text-gray-300">{category.description}<
-                  <
-                <
-                <div className="space-y-6">)
-                  {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -279,11 +196,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-blue-500/20 text-blue-400'
                           }`}>
-<<<<<<< HEAD
                             {endpoint.method}
-=======
-                            {endpoint.method};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
@@ -303,11 +216,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                           )}
                         </button>
                       </div>
-<<<<<<< HEAD
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
-=======
-                      <p className="text-gray-300 mb-4">{endpoint.description}<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
@@ -321,11 +230,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
-=======
-      {/* CTA Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -340,7 +245,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               View SDKs
-<<<<<<< HEAD
   </
           </div>
         </div>
@@ -356,11 +260,3 @@ const filteredEndpoints = apiEndpoints.map(category => ({
   </h1>
   </SEOOptimizer>
   </string>
-=======
-            <
-          <
-        <
-      <
-      <Footer />
-    </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

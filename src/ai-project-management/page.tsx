@@ -1,20 +1,11 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
-=======
-export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
-};
-  return (<div><Helmet><
-        <title>AI Project Management Solutions - Zion Tech Group<
-        <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /><
-        <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /><
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <link rel="canonical" href="http,"
   s://ziontechgroup.com/ai-project-management" /></link>
       </Helmet>
@@ -33,19 +24,11 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
-<<<<<<< HEAD
             </p>
           </section>
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
-=======
-            <
-          <
-          {/* Features Grid *
-          <section className="mb-16"><
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
@@ -94,7 +77,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3>"
                 <p className="text-gray-300 text-center"></p>
                   Advanced metrics and KPIs to track team productivity and project success rates.
-<<<<<<< HEAD
                 </p>
               </div>
             </div>
@@ -102,15 +84,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
-=======
-                <
-              <
-            <
-          <
-          {/* Pricing Section *
-          <section className="mb-16"><
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-8 text-center"></div>"
@@ -140,7 +113,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
               "
-<<<<<<< HEAD
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
@@ -159,26 +131,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>"
-=======
-              <div className="cyber-card p-8 text-center"><
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise<
-                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom<
-                <ul className="text-gray-300 space-y-3 mb-8"><
-                  <li>Unlimited team members<
-                  <li>Unlimited projects<
-                  <li>Full AI suite<
-                  <li>White-label solution<
-                  <li>24/7 dedicated support<
-                  <li>Custom AI training<
-                <
-                <a href="/contact" className="cyber-button w-full">Contact Sales<
-              <
-            <
-          <
-          {/* Benefits Section *
-          <section className="mb-16"><
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
@@ -200,7 +152,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <p className="text-gray-300">95% of projects delivered on time</p>
               </div>
               "
-<<<<<<< HEAD
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>"
@@ -212,19 +163,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>"
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-=======
-              <div className="cyber-card p-6 text-center"><
-                <div className="text-4xl font-bold text-yellow-400 mb-4">85%<
-                <h3 className="text-xl font-bold text-white mb-2">Team Productivity<
-                <p className="text-gray-300">85% increase in team productivity<
-              <
-            <
-          <
-          {/* CTA Section *
-          <section className="text-center"><
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today<
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"><
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.
             </p>"
             <div className="flex flex-col,"
@@ -232,7 +170,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <a href="te,"
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-<<<<<<< HEAD
   l: (302) 464-0950,
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
@@ -248,20 +185,3 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
     </div>
   ),
 }"
-=======
-  l: (302) 464-0950;
-              <
-              <a href="
-  hove,
-    r:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"><
-                Get Free Trial;
-              <
-            <
-          <
-        <
-        <Footer /></Footer>
-      </div>
-    </div>
-  )}"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

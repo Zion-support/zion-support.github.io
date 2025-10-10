@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
@@ -12,36 +11,10 @@ const PartnersPage: React.FC = () => {
       logo: '/images/partners/microsoft.png',
       description: 'Strategic partner for Azure cloud solutions and AI services',
       category: 'Cloud & AI'
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-interface Partner {
-}
-}
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified'});;)
-};
-const PartnersPage: React.FC = () => {
-};
-  const partners: Partner[] = [
-    {
-      name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI',
-      website: 'https://microsoft.com',
-      tier: 'strategic'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
-<<<<<<< HEAD
       description: 'Premier partner for AWS cloud infrastructure and machine learning',
       category: 'Cloud & AI'
     },
@@ -188,13 +161,3 @@ const PartnersPage: React.FC = () => {
 }
 
 export default PartnersPage
-=======
-      description: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing',
-      website: 'https://aws.amazon.com',
-      tier: 'strategic'
-    },
-  );
-};
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

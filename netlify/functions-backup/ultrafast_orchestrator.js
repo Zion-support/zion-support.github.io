@@ -6,17 +6,11 @@ exports.handler = async function (event, context) {
       statusCode: 200,
       body: JSON.stringify({)
         message: 'ultrafast_orchestrator function executed successfully'),
-<<<<<<< HEAD
         timestamp: timestamp),
         function: 'ultrafast_orchestrator'})
     }
   } catch (error) {
 
-=======
-        timestamp: timestamp),;
-function: 'ultrafast_orchestrator'})
-    }} catch (error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return {
       statusCode: 500,
       body: JSON.stringify({)
@@ -25,16 +19,9 @@ function: 'ultrafast_orchestrator'})
         timestamp: new Date().toISOString(),
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
       })
-<<<<<<< HEAD
     }
   } catch (error) {/* TODO: Fix JSX expression */}
       })
     }
   }
 }
-=======
-    }} catch (error) {/* TODO: Fix JSX expression */};
-      })
-    }};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

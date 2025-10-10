@@ -6,7 +6,6 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({)
         message:),
           'content_freshness_score_runner function executed successfully'),
-<<<<<<< HEAD
         timestamp: timestamp),
         function: 'content_freshness_score_runner'}
       });
@@ -14,19 +13,11 @@ exports.handler = async function (event, context) {try {
 //   } catch (error) {
     // console.error('❌ content_freshness_score_runner function failed: ') error
   }
-=======
-        timestamp: timestamp),;
-function: 'content_freshness_score_runner'};
-      })};
-//   } catch (error) {// // console.error removed for production
-error};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return {
       statusCode: 500,
       body: JSON.stringify({),
         error: 'content_freshness_score_runner function failed'),
         message: error.message),
-<<<<<<< HEAD
         timestamp: new Date().toISOString()}
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
     const timestamp = new Date().toISOString()}
@@ -42,19 +33,5 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
   }
 }
-=======
-        timestamp: new Date().toISOString()};
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
-    const timestamp = new Date().toISOString()};
-    return {/* TODO: Fix JSX expression */};
-  n: 'content_freshness_score_runner'};
-      })};
-//   } catch (error) {/* TODO: Fix JSX expression */};
-      };
-    return {/* TODO: Fix JSX expression */};
-  p: new Date().toISOString()};
-      })}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         timestam,
   p: new Date().toISOString() }) } } }'

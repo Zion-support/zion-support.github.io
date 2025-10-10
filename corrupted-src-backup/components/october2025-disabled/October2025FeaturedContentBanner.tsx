@@ -8,13 +8,8 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
       bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
-<<<<<<< HEAD
       sta, t, s: [,
 const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: [,;
-const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
         { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' }]},
@@ -90,15 +85,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
-<<<<<<< HEAD
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
             const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
             const Ico, n = conte, n, t.ic, o, n; return (</div>
-=======
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {;
-const Ico, n = conte, n, t.ic, o, n; return(<Link , ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l';
-const Ico, n = conte, n, t.ic, o, n; return (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
   ]; return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></10>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'></div>
@@ -191,12 +180,8 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`};
                  /></div>
               </Li, n, k>
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
         {/* Bottom, CT, A */};
         <div, classNam, e = 'te, x, t-cent, e, r'></div>

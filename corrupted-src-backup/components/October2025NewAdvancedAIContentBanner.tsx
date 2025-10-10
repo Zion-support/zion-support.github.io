@@ -476,11 +476,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
         </moti, o, n.d, i, v>
       </d, i, v>
     </d, i, v>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -2,21 +2,12 @@ impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t';
-<<<<<<< HEAD
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
    }
   return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-30'>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-=======
-const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
-   };
-  return(<div , classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
-      {/* Animated, background, effects */};
-      <div , className='absolute, inse, t-0, opacit, y-30'>
-        <div , className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div , classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
@@ -65,7 +56,6 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             Master, contex, t-aware, agen, t, s, intelligent, cost, governance, and, multimodal, intelligence with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 26x, performance, improvements.
           </p>
         </div>
-<<<<<<< HEAD
         {/* Content, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
@@ -74,15 +64,6 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
                 <div, className='flex, item, s-start, ga, p-4, m, b-6' ></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}
-=======
-        {/* Content, Card, s */};
-        <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {;
-const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
-              <Link , ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`};
-                className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'>
-                <div, className='flex, item, s-start, ga, p-4, m, b-6' ></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   ></div>
                     <Icon , classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                   </div>
@@ -151,12 +132,8 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
                   <Link, className='w-5 h-5' /></Link>
                 </div>
               </Li, n, k>
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
         {/* CTA, Sectio, n */};
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l'></div>

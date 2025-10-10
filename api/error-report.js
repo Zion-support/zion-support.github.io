@@ -1,60 +1,50 @@
-// Error reporting API endpoint
-export default function handler(req, res) {
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { error, stack, url, userAgent, timestamp } = req.body || {};
+
+  if (!error) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Error details are required' }));
     return;
   }
 
   try {
-    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
-
-=======
-    return};
-  try {;
-const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Log error details (in production you would send this to your monitoring service)
-    // In a real application, you would:
-    // 1. Send to Sentry, LogRocket, Bugsnag, etc.
-    // 2. Store in your database
-    // 3. Send alerts to your team
-<<<<<<< HEAD
-
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Client Error Report:', {
-        error: error?.message || error,
-        stack,
-        componentStack,
-        timestamp,
-        userAgent,
-        url,
-        serverTime: new Date().toISOString()
-      });
-    }
-
-=======
-    // console.error removed for production
-    console.log('Error report received:', {
-      error: req.body.error,
-      timestamp: new Date().toISOString()
+    // Log the error for monitoring
+    console.error('Client Error Report:', {
+      error,
+      stack,
+      url,
+      userAgent,
+      timestamp: timestamp || new Date().toISOString()
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // For now, just acknowledge receipt
+
+    // In a real application, you would save this to a database
+    // or send it to an error tracking service like Sentry
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Error report received' 
+    res.end(JSON.stringify({
+      success: true,
+      message: 'Error report received'
     }));
-
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reporting error:', error);
-    }
+  } catch (err) {
+    console.error('Error reporting handler error:', err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process error report' }));
-  };
-};
+    res.end(JSON.stringify({ 
+      error: 'Failed to process error report',
+      details: process.env.NODE_ENV === 'development' ? err.message : undefined
+    }));
+  }
+}
+
+export default withErrorLogging(handler);

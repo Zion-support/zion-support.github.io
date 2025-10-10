@@ -1,21 +1,12 @@
 #!/bin/bash
 
-# Script to fix all merge conflicts by removing conflict markers and keeping the HEAD version
+# Script to fix merge conflicts by removing conflict markers and keeping the HEAD version
 
 echo "Fixing merge conflicts..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "^[<>=]\{7\}" 2>/dev/null)
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | cut -d: -f1 | sort -u)
 
-if [ -z "$files_with_conflicts" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found merge conflicts in the following files:"
-echo "$files_with_conflicts"
-
-# Fix each file
 for file in $files_with_conflicts; do
     echo "Fixing $file..."
     
@@ -23,11 +14,15 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup"
     
     # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print }
+    !in_head && !in_other { print }
+    ' "$file.backup" > "$file"
     
     echo "Fixed $file"
 done
 
-echo "All merge conflicts have been resolved."
-echo "Please review the changes and test the build."
+echo "Merge conflicts fixed!"

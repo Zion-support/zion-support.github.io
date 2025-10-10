@@ -98,7 +98,6 @@ const, September30NewContentMegaBanne, r = () => {
         {/* Articles Grid */})
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
           {newArticles.map((article, index) => (
-<<<<<<< HEAD
             <Link;
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs,
@@ -109,17 +108,6 @@ const, September30NewContentMegaBanne, r = () => {
             <Link
               key={index}
               to={article.link}
-=======
-            <Link ;
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
-            🚀 5 Revolutionary AI Breakthroughs
-        </div>
-        {/* Articles Grid */};
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (</div>
-            <Link key={index};
-              to={article.link};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="flex items-start gap-4">,
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
@@ -182,7 +170,6 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
           <Link,
             <div></div>
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
     }
@@ -202,27 +189,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>;
-const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"
   md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
@@ -299,16 +265,10 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <Link
             to="/blog"
-=======
-        {/* CTA Buttons */};
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-          <Link to="/blog"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />
             Get Started Today,

@@ -15,13 +15,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       rati, n, g: 4.9,
       trendi, n, g: tr, u, e;
       featur, e, d: tr, u, e;
-<<<<<<< HEAD
       ic, o, n: <Brain, className="w-6 h-6/>,"
-=======
-      ic, o, n: <Brain , className="w-6 h-6/>
-);
-},"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'FEATUR, E, D','
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
@@ -135,12 +129,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Brain, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'FEATUR, E, D',';
-<<<<<<< HEAD
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
   }
-=======
-      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 2,
       tit, l, e: 'Quantum, Computing, Breakthrough;
@@ -158,12 +148,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Zap, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'TRENDI, N, G',';
-<<<<<<< HEAD
       ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'
   }
-=======
-      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 3,
       tit, l, e: 'Enterprise, AI, Implementatio;
@@ -181,12 +167,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Award, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'POPUL, A, R',';
-<<<<<<< HEAD
       ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'
   }
-=======
-      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 4,
       tit, l, e: 'Se, l, f-Evolving, AI, System;
@@ -204,12 +186,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'INNOVATI, O, N',';
-<<<<<<< HEAD
       ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'
   }
-=======
-      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 5,
       tit, l, e: 'Predictive, Analytics, Revolutio;
@@ -227,12 +205,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'ANALYTI, C, S',';
-<<<<<<< HEAD
       ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'
   }
-=======
-      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: 6,
       tit, l, e: 'AI, Ethics, and Governa, n, c;

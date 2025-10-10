@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -838,7 +835,6 @@ export const,
       reviews: 4,
     }
   ];    features: [,
-<<<<<<< HEAD
 export interface CuttingEdgeITInfrastructureService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -862,32 +858,6 @@ export interface CuttingEdgeITInfrastructureService {id: string, name: string,
   rating: number
   reviews: number,
 }
-=======
-export interface CuttingEdgeITInfrastructureService {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [,
   // Quantum-Secure Cloud Infrastructure;
     id: 'quantum-secure-cloud-infrastructure', name: 'Quantum-Secure Cloud Infrastructure Platform',
@@ -908,7 +878,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -918,17 +887,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4.9
       reviews: 4,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.'
-      launchDate: '2025-02-01',
-      customers:
-        customers: 6;
-      rating: 4.9;
-      reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01'
       customers: 6
@@ -1004,11 +962,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4;
 ]
 export interface CuttingEdgeITInfrastructureService {
-<<<<<<< HEAD
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1036,19 +989,11 @@ export interface CuttingEdgeITInfrastructureService {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
     website: string}
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1305,13 +1250,8 @@ export const,
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1323,12 +1263,7 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
@@ -1359,7 +1294,6 @@ export const,
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-<<<<<<< HEAD
     marketSize: '$397.4 B cloud computing market'
     growthRate: '23% annual growth',
     variant: 'quantum-cloud-enterprise'}
@@ -1369,17 +1303,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$397.4 B cloud computing market';
-    growthRate: '23% annual growth';
-    variant: 'quantum-cloud-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.';
     launchDate: '2025-01-10';
     customers: 8
@@ -1414,7 +1337,6 @@ export const,
     useCases: ['Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'];
     roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
     competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'];
-<<<<<<< HEAD
     marketSize: '$67.8 B edge computing market'
     growthRate: '37% annual growth',
     variant: 'edge-computing-enterprise'}
@@ -1424,17 +1346,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$67.8 B edge computing market';
-    growthRate: '37% annual growth';
-    variant: 'edge-computing-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.';
     launchDate: '2025-01-15';
     customers: 25
@@ -1469,7 +1380,6 @@ export const,
     useCases: ['Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'];
     roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'];
-<<<<<<< HEAD
     marketSize: '$8.2 B DevOps market'
     growthRate: '24% annual growth',
     variant: 'autonomous-devops-enterprise'}
@@ -1479,17 +1389,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$8.2 B DevOps market';
-    growthRate: '24% annual growth';
-    variant: 'autonomous-devops-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.';
     launchDate: '2025-01-20';
     customers: 38
@@ -1524,7 +1423,6 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts'];
     roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.',
     competitors: ['IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'];
-<<<<<<< HEAD
     marketSize: '$19.9 B blockchain market'
     growthRate: '87% annual growth',
     variant: 'blockchain-enterprise'}
@@ -1534,17 +1432,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$19.9 B blockchain market';
-    growthRate: '87% annual growth';
-    variant: 'blockchain-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.';
     launchDate: '2025-01-25';
     customers: 15
@@ -1579,7 +1466,6 @@ export const,
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network window.window.window.performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-<<<<<<< HEAD
     marketSize: '$25.3 B quantum computing market'
     growthRate: '32% annual growth',
     variant: 'quantum-networking-enterprise'}
@@ -1587,15 +1473,6 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-    marketSize: '$25.3 B quantum computing market';
-    growthRate: '32% annual growth';
-    variant: 'quantum-networking-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       website: 'https://ziontechgroup.com',
   {/* TODO: Fix JSX expression */};
   t: 'quantum-cloud-enterprise'};
@@ -1730,31 +1607,18 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 4,
 ]}
 ];
 }
-=======
-  s: 4;
-]};
-];
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 };
 ];
 export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1772,12 +1636,7 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
@@ -1808,7 +1667,6 @@ export const,
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-<<<<<<< HEAD
     marketSize: '$397.4 B cloud computing market'
     growthRate: '23% annual growth',
     variant: 'quantum-cloud-enterprise'}
@@ -1818,17 +1676,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$397.4 B cloud computing market';
-    growthRate: '23% annual growth';
-    variant: 'quantum-cloud-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.';
     launchDate: '2025-01-10';
     customers: 8
@@ -1863,7 +1710,6 @@ export const,
     useCases: ['Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'];
     roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
     competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'];
-<<<<<<< HEAD
     marketSize: '$67.8 B edge computing market'
     growthRate: '37% annual growth',
     variant: 'edge-computing-enterprise'}
@@ -1873,17 +1719,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$67.8 B edge computing market';
-    growthRate: '37% annual growth';
-    variant: 'edge-computing-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.';
     launchDate: '2025-01-15';
     customers: 25
@@ -1918,7 +1753,6 @@ export const,
     useCases: ['Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'];
     roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'];
-<<<<<<< HEAD
     marketSize: '$8.2 B DevOps market'
     growthRate: '24% annual growth',
     variant: 'autonomous-devops-enterprise'}
@@ -1928,17 +1762,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$8.2 B DevOps market';
-    growthRate: '24% annual growth';
-    variant: 'autonomous-devops-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.';
     launchDate: '2025-01-20';
     customers: 38
@@ -1973,7 +1796,6 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts'];
     roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.',
     competitors: ['IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'];
-<<<<<<< HEAD
     marketSize: '$19.9 B blockchain market'
     growthRate: '87% annual growth',
     variant: 'blockchain-enterprise'}
@@ -1983,17 +1805,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    marketSize: '$19.9 B blockchain market';
-    growthRate: '87% annual growth';
-    variant: 'blockchain-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.';
     launchDate: '2025-01-25';
     customers: 15
@@ -2028,7 +1839,6 @@ export const,
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network window.window.window.performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-<<<<<<< HEAD
     marketSize: '$25.3 B quantum computing market'
     growthRate: '32% annual growth',
     variant: 'quantum-networking-enterprise'}
@@ -2045,24 +1855,6 @@ export const,
     reviews: 4,
   {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud-enterprise'}
-=======
-    marketSize: '$25.3 B quantum computing market';
-    growthRate: '32% annual growth';
-    variant: 'quantum-networking-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.';
-    launchDate: '2025-02-01';
-    customers: 6;
-    rating: 4.9;
-    reviews: 4;
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-cloud-enterprise'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -2608,7 +2400,6 @@ i,
   e: '2025 - 02 - 01', customer,
   s: 6, ratin,
   g: 4.9, review,
-<<<<<<< HEAD
   s: 4, ], ' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
@@ -2619,93 +2410,52 @@ i,
   g: number, review,
   s: number} export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure, {/* TODO: Fix JSX expression */}
-=======
-  s: 4; ], ' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-10', customer,
   s: 8, ratin,
   g: 4.9, review,
   s: 5} // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-10'; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-15', customer,
   s: 25, ratin,
   g: 4.8, review,
   s: 18} // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-15'; customer,
-  s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-20', customer,
   s: 38, ratin,
   g: 4.7, review,
   s: 25} // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-20'; customer,
-  s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-25', customer,
   s: 15, ratin,
   g: 4.8, review,
   s: 12} // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-25'; customer,
-  s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-01', customer,
   s: 6, ratin,
   g: 4.9, review,
@@ -2719,103 +2469,53 @@ i,
   g: number, review,
   s: number} export const,
   cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure, {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-01'; customer,
-  s: 6; ratin,
-  g: 4.9; review,
-  s: 4; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-10', customer,
   s: 8, ratin,
   g: 4.9, review,
   s: 5} // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-10'; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-15', customer,
   s: 25, ratin,
   g: 4.8, review,
   s: 18} // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-15'; customer,
-  s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-20', customer,
   s: 38, ratin,
   g: 4.7, review,
   s: 25} // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-20'; customer,
-  s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-25', customer,
   s: 15, ratin,
   g: 4.8, review,
   s: 12} // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-25'; customer,
-  s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-01', customer,
   s: 6, ratin,
   g: 4.9, review,
   s: 4} ]; '
-=======
-  e: '2025-02-01'; customer,
-  s: 6; ratin,
-  g: 4.9; review,
-  s: 4} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

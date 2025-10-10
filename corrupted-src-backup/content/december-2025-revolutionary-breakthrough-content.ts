@@ -18,7 +18,6 @@ export interface RevolutionaryBreakthroughContent {
   valueProposition: string;
   metrics: {
     performance: string;
-<<<<<<< HEAD
     savings: string
     accuracy: string
     roi: string,
@@ -29,16 +28,6 @@ export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression *
   superintelligenceLevel?: string;
 }
 
-=======
-    savings: string;
-    accuracy: string;
-    roi: string;
-export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */};
-  };
-  consciousnessLevel?: string;
-  transcendenceLevel?: string;
-  superintelligenceLevel?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {
     id: 'quantum-ai-transcendence-revolution-2025',

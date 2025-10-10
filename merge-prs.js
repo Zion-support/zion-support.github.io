@@ -1,18 +1,13 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-<<<<<<< HEAD
 
 console.log('🚀 Starting PR merge process...');
 
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 try {
   // Check current status;
   console.log('📋 Checking current git status...');
   const status = execSync('git status --porcelain', { encoding: 'utf8' });
   if (status.trim()) {
-<<<<<<< HEAD
     console.log('⚠️  Working directory not clean, committing changes...');
     execSync('git add .', { stdio: 'inherit' });
     execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' });
@@ -26,17 +21,6 @@ try {
   console.log('📥 Pulling latest changes from main...');
   execSync('git pull origin main', { stdio: 'inherit' });
 
-=======
-    // console.log removed for production
-execSync('git add .', { stdio: 'inherit' });
-    execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' })};
-  // Switch to main branch;
-  // console.log removed for production
-execSync('git checkout main', { stdio: 'inherit' });
-  // Pull latest changes;
-  // console.log removed for production
-execSync('git pull origin main', { stdio: 'inherit' });
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Process each PR;
 for (const pr of prs) {
 //   try {
@@ -118,7 +102,6 @@ for (const pr of prs) {/* TODO: Fix JSX expression */};
           console.log(`🔧 Resolving conflicts in ${file}...`);
           try {
             execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });
-<<<<<<< HEAD
             execSync(`git add "${file}"`, { stdio: 'inherit' });
           } catch (e) {
             console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`);
@@ -153,33 +136,6 @@ for (const pr of prs) {/* TODO: Fix JSX expression */};
 //     }
 }
 
-=======
-            execSync(`git add "${file}"`, { stdio: 'inherit' })} catch (e) {
-            // console.log removed for production
-};
-        };
-      };
-      // Complete the merge;
-      execSync('git commit -m "Resolve merge conflicts - accept website audit changes"', { stdio: 'inherit' });
-      // console.log removed for production
-};
-  };
-  // Push to main;
-  // console.log removed for production
-execSync('git push origin main', { stdio: 'inherit' });
-  // console.log removed for production
-// Clean up feature branch;
-  // console.log removed for production
-execSync('git branch -d cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
-  execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
-  // console.log removed for production
-} catch (error) {
-  // console.error removed for production
-process.exit(1)};
-  } catch (error) {/* TODO: Fix JSX expression */};
-//     };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Push changes;
 try {/* TODO: Fix JSX expression */};
   o: 'inherit' });

@@ -2,13 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-<<<<<<< HEAD
     id: string;
-=======
-}
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   description: string;
   category: string;
@@ -18,19 +12,12 @@ interface BlogPost {
   image: string
   featured: boolean
   stats?: {
-<<<<<<< HEAD
     views: number,
     engagement: number
   }
 }
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
-=======
-    views: number;
-    engagement: number}};
-export default function BlogPage() {;
-const [posts, setPosts] = useState<BlogPost[]>([]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
@@ -163,12 +150,8 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     );
   }
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -233,21 +216,15 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>
-<<<<<<< HEAD
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-=======
-            <Link to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Subscribe to Newsletter
   </
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ),
 }
   </Link>
@@ -257,6 +234,3 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
   </h2>
   </p>
   </string>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -17,20 +17,10 @@ export const real2036AIServices = [
     popular: true,
     category: 'Emotional AI',
     icon: '',
-<<<<<<< HEAD
     marketPrice: '$5,000-8,000/month'
     benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
-=======
-    marketPrice: '$5,000-8,000/month',
-    benefits:
-        benefits: [};
-export const real2036AIServices = [
-{/* TODO: Fix JSX expression */};
-];
-  s: [};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
@@ -572,20 +562,10 @@ export const real2036AIServices = [
     popular: true,
     category: 'Emotional AI',
     icon: '',
-<<<<<<< HEAD
     marketPrice: '$5,000-8,000/month'
     benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
-=======
-    marketPrice: '$5,000-8,000/month',
-    benefits:
-        benefits: [};
-export const real2036AIServices = [
-{/* TODO: Fix JSX expression */};
-];
-  s: [};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
@@ -1070,13 +1050,7 @@ export const real2036AIServices = [
       'Predictive maintenance'
     ]
     useCases: [
-<<<<<<< HEAD
 export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
-=======
-export const real2036AIServices = [
-{id: 'ai - emotion - intelligence - platform',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description: unknown,
@@ -1574,18 +1548,10 @@ export const real2036 AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 export const real2036AIServices = [
-<<<<<<< HEAD
   {
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding',
-=======
-];
-  {;
-    id: 'ai-emotion-intelligence-platform';
-    name: 'AI Emotion Intelligence Platform';
-    tagline: 'Advanced emotional AI understanding';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.';
     price: '$3,999';
     period: 'month';
@@ -1600,21 +1566,12 @@ export const real2036AIServices = [
       'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];,
     useCases: [};
       'Customer serviceMental health supportEducation technologyHuman resources'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-creativity-orchestrator'
     name: 'AI Creativity Orchestrator'
     tagline: 'Intelligent creative collaboration',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-creativity-orchestrator';
-    name: 'AI Creativity Orchestrator';
-    tagline: 'Intelligent creative collaboration';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.';
     price: '$2,999';
     period: 'month';
@@ -1629,21 +1586,12 @@ export const real2036AIServices = [
       'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];,
     useCases: [};
       'Marketing campaignsProduct designContent creationResearch and development'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-dream-interpreter-platform'
     name: 'AI Dream Interpreter Platform'
     tagline: 'Intelligent dream analysis',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-dream-interpreter-platform';
-    name: 'AI Dream Interpreter Platform';
-    tagline: 'Intelligent dream analysis';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.';
     price: '$1,999';
     period: 'month';
@@ -1658,21 +1606,12 @@ export const real2036AIServices = [
       'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];,
     useCases: [};
       'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-content-factory-pro'
     name: 'AI Content Factory Pro'
     tagline: 'Professional content generation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-content-factory-pro';
-    name: 'AI Content Factory Pro';
-    tagline: 'Professional content generation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.';
     price: '$4,999';
     period: 'month';
@@ -1687,21 +1626,12 @@ export const real2036AIServices = [
       '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];,
     useCases: [};
       'Marketing contentBlog writingSocial media contentProduct descriptions'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-customer-intelligence-platform'
     name: 'AI Customer Intelligence Platform'
     tagline: 'Deep customer understanding',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-customer-intelligence-platform';
-    name: 'AI Customer Intelligence Platform';
-    tagline: 'Deep customer understanding';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.';
     price: '$5,999';
     period: 'month';
@@ -1716,21 +1646,12 @@ export const real2036AIServices = [
       'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];,
     useCases: [};
       'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-marketing-platform'
     name: 'AI Autonomous Marketing Platform'
     tagline: 'Self-optimizing marketing',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-marketing-platform';
-    name: 'AI Autonomous Marketing Platform';
-    tagline: 'Self-optimizing marketing';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.';
     price: '$6,999';
     period: 'month';
@@ -1745,21 +1666,12 @@ export const real2036AIServices = [
       'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];,
     useCases: [};
       'Digital advertisingEmail marketingSocial media marketingContent marketing'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-research-assistant'
     name: 'AI Autonomous Research Assistant'
     tagline: 'Intelligent research automation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-research-assistant';
-    name: 'AI Autonomous Research Assistant';
-    tagline: 'Intelligent research automation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.';
     price: '$3,499';
     period: 'month';
@@ -1774,21 +1686,12 @@ export const real2036AIServices = [
       'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];,
     useCases: [};
       'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-decision-engine'
     name: 'AI Autonomous Decision Engine'
     tagline: 'Intelligent decision automation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-decision-engine';
-    name: 'AI Autonomous Decision Engine';
-    tagline: 'Intelligent decision automation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.';
     price: '$7,999';
     period: 'month';
@@ -1803,21 +1706,12 @@ export const real2036AIServices = [
       'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];,
     useCases: [};
       'Financial decisionsOperational decisionsStrategic planningRisk management'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-ecosystem-manager'
     name: 'AI Autonomous Ecosystem Manager'
     tagline: 'Intelligent ecosystem orchestration',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-ecosystem-manager';
-    name: 'AI Autonomous Ecosystem Manager';
-    tagline: 'Intelligent ecosystem orchestration';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.';
     price: '$8,999';
     period: 'month';
@@ -1832,21 +1726,12 @@ export const real2036AIServices = [
       'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];,
     useCases: [};
       'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-vehicle-ai'
     name: 'AI Autonomous Vehicle AI'
     tagline: 'Next-generation vehicle intelligence',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-vehicle-ai';
-    name: 'AI Autonomous Vehicle AI';
-    tagline: 'Next-generation vehicle intelligence';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.';
     price: '$9,999';
     period: 'month';
@@ -1863,7 +1748,6 @@ export const real2036AIServices = [
   {/* TODO: Fix JSX expression */};
   s: [};
       'Customer serviceMental health supportEducation technologyHuman resources'
-<<<<<<< HEAD
     ]}
   }
   {/* TODO: Fix JSX expression */}
@@ -1908,52 +1792,6 @@ export const real2036AIServices = [
   }
   {/* TODO: Fix JSX expression */}
   s: [}
-=======
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Marketing campaignsProduct designContent creationResearch and development'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Marketing contentBlog writingSocial media contentProduct descriptions'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Digital advertisingEmail marketingSocial media marketingContent marketing'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Financial decisionsOperational decisionsStrategic planningRisk management'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]};
   };
@@ -1962,18 +1800,10 @@ export const real2036AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 export const real2036AIServices = [
-<<<<<<< HEAD
   {
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding',
-=======
-];
-  {;
-    id: 'ai-emotion-intelligence-platform';
-    name: 'AI Emotion Intelligence Platform';
-    tagline: 'Advanced emotional AI understanding';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.';
     price: '$3,999';
     period: 'month';
@@ -1988,21 +1818,12 @@ export const real2036AIServices = [
       'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'];,
     useCases: [};
       'Customer serviceMental health supportEducation technologyHuman resources'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-creativity-orchestrator'
     name: 'AI Creativity Orchestrator'
     tagline: 'Intelligent creative collaboration',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-creativity-orchestrator';
-    name: 'AI Creativity Orchestrator';
-    tagline: 'Intelligent creative collaboration';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.';
     price: '$2,999';
     period: 'month';
@@ -2017,21 +1838,12 @@ export const real2036AIServices = [
       'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'];,
     useCases: [};
       'Marketing campaignsProduct designContent creationResearch and development'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-dream-interpreter-platform'
     name: 'AI Dream Interpreter Platform'
     tagline: 'Intelligent dream analysis',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-dream-interpreter-platform';
-    name: 'AI Dream Interpreter Platform';
-    tagline: 'Intelligent dream analysis';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.';
     price: '$1,999';
     period: 'month';
@@ -2046,21 +1858,12 @@ export const real2036AIServices = [
       'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'];,
     useCases: [};
       'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-content-factory-pro'
     name: 'AI Content Factory Pro'
     tagline: 'Professional content generation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-content-factory-pro';
-    name: 'AI Content Factory Pro';
-    tagline: 'Professional content generation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.';
     price: '$4,999';
     period: 'month';
@@ -2075,21 +1878,12 @@ export const real2036AIServices = [
       '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'];,
     useCases: [};
       'Marketing contentBlog writingSocial media contentProduct descriptions'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-customer-intelligence-platform'
     name: 'AI Customer Intelligence Platform'
     tagline: 'Deep customer understanding',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-customer-intelligence-platform';
-    name: 'AI Customer Intelligence Platform';
-    tagline: 'Deep customer understanding';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.';
     price: '$5,999';
     period: 'month';
@@ -2104,21 +1898,12 @@ export const real2036AIServices = [
       'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'];,
     useCases: [};
       'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-marketing-platform'
     name: 'AI Autonomous Marketing Platform'
     tagline: 'Self-optimizing marketing',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-marketing-platform';
-    name: 'AI Autonomous Marketing Platform';
-    tagline: 'Self-optimizing marketing';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.';
     price: '$6,999';
     period: 'month';
@@ -2133,21 +1918,12 @@ export const real2036AIServices = [
       'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'];,
     useCases: [};
       'Digital advertisingEmail marketingSocial media marketingContent marketing'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-research-assistant'
     name: 'AI Autonomous Research Assistant'
     tagline: 'Intelligent research automation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-research-assistant';
-    name: 'AI Autonomous Research Assistant';
-    tagline: 'Intelligent research automation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.';
     price: '$3,499';
     period: 'month';
@@ -2162,21 +1938,12 @@ export const real2036AIServices = [
       'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'];,
     useCases: [};
       'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-decision-engine'
     name: 'AI Autonomous Decision Engine'
     tagline: 'Intelligent decision automation',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-decision-engine';
-    name: 'AI Autonomous Decision Engine';
-    tagline: 'Intelligent decision automation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.';
     price: '$7,999';
     period: 'month';
@@ -2191,21 +1958,12 @@ export const real2036AIServices = [
       'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'];,
     useCases: [};
       'Financial decisionsOperational decisionsStrategic planningRisk management'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-ecosystem-manager'
     name: 'AI Autonomous Ecosystem Manager'
     tagline: 'Intelligent ecosystem orchestration',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-ecosystem-manager';
-    name: 'AI Autonomous Ecosystem Manager';
-    tagline: 'Intelligent ecosystem orchestration';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.';
     price: '$8,999';
     period: 'month';
@@ -2220,21 +1978,12 @@ export const real2036AIServices = [
       'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'];,
     useCases: [};
       'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
-<<<<<<< HEAD
     ]}
   }
   {
     id: 'ai-autonomous-vehicle-ai'
     name: 'AI Autonomous Vehicle AI'
     tagline: 'Next-generation vehicle intelligence',
-=======
-    ]};
-  };
-  {;
-    id: 'ai-autonomous-vehicle-ai';
-    name: 'AI Autonomous Vehicle AI';
-    tagline: 'Next-generation vehicle intelligence';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.';
     price: '$9,999';
     period: 'month';
@@ -2251,7 +2000,6 @@ export const real2036AIServices = [
   {/* TODO: Fix JSX expression */};
   s: [};
       'Customer serviceMental health supportEducation technologyHuman resources'
-<<<<<<< HEAD
     ]}
   }
   {/* TODO: Fix JSX expression */}
@@ -2296,52 +2044,6 @@ export const real2036AIServices = [
   }
   {/* TODO: Fix JSX expression */}
   s: [}
-=======
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Marketing campaignsProduct designContent creationResearch and development'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Marketing contentBlog writingSocial media contentProduct descriptions'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Digital advertisingEmail marketingSocial media marketingContent marketing'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Financial decisionsOperational decisionsStrategic planningRisk management'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
-      'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
-    ]};
-  };
-  {/* TODO: Fix JSX expression */};
-  s: [};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]};
   };
@@ -2745,7 +2447,6 @@ export const real2036AIServices = [
   n: '🚗🤖',' market_pric,
   e: '$15, 000 - 25, 000 / month', benefit,
   s: [,' 'Enhanced vehicle safety',' 'Autonomous operation',' 'Traffic optimization',' 'Predictive maintenance'], use_case,
-<<<<<<< HEAD
   s: [,' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']}' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] }' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ ' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']}' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ {/* TODO: Fix JSX expression */}
   s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} } {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} } {/* TODO: Fix JSX expression */}
@@ -2766,30 +2467,4 @@ export const real2036AIServices = [
   s: [}' 'Market researchAcademic researchBusiness intelligenceCompetitive analysis' ]} } {/* TODO: Fix JSX expression */}
   s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} } {/* TODO: Fix JSX expression */}
   s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} } {/* TODO: Fix JSX expression */}
-=======
-  s: [,' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ ' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [
-; {/* TODO: Fix JSX expression */};
-];
-  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Marketing contentBlog writingSocial media contentProduct descriptions' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'E-commerce optimizationCustomer serviceMarketing campaignsProduct development' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Digital advertisingEmail marketingSocial media marketingContent marketing' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Market researchAcademic researchBusiness intelligenceCompetitive analysis' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [
-; {/* TODO: Fix JSX expression */};
-];
-  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Marketing contentBlog writingSocial media contentProduct descriptions' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'E-commerce optimizationCustomer serviceMarketing campaignsProduct development' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Digital advertisingEmail marketingSocial media marketingContent marketing' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Market researchAcademic researchBusiness intelligenceCompetitive analysis' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} }; {/* TODO: Fix JSX expression */};
-  s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]; '

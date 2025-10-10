@@ -1,19 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ARVRPlatformPage: React.FC = () => {
   const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ARVRPlatformPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered AR/VR',
@@ -31,7 +21,6 @@ const features = [
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
@@ -39,28 +28,13 @@ const features = [
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
-=======
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
-const benefits = [
-];
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Enterprise-grade security and compliance',
     'Cross-platform deployment capabilities',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
-=======
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -68,15 +42,9 @@ const benefits = [
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
       </Helmet>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -101,11 +69,7 @@ const benefits = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section */}
-=======
-      {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -116,17 +80,10 @@ const benefits = [
 Our AR/VR solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature .icon className="w-12 h-12 text-purple-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -134,15 +91,9 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-=======
-      {/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits,
@@ -161,15 +112,9 @@ Experience the power of our AR/VR platform solutions for your business.
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
-      {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?

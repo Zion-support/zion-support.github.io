@@ -287,7 +287,6 @@ function fixFile(filePath) {
 function fixFile(filePath) {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -296,29 +295,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main function;
 async function main() {
     //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++
   }
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-      fixedCount++};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */};

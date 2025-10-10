@@ -32,27 +32,15 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             </p>
           </div>
           <div, classNam, e = "flex, fle, x-col, ga, p-4"></div>
-<<<<<<< HEAD
             <Link, t, o="/bl, o, g" 
               className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg">
               <BookOpen, className="w-5 h-5" />
-=======
-            <Link , t, o="/bl, o, g" 
-              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg">
-              <BookOpen , className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Explore, All, Articles;
               <Link , className="w-5 h-5" />
             </Li, n, k>
-<<<<<<< HEAD
             <Link, t, o="/ca, s, e-studi, e, s" 
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               <Zap, className="w-5 h-5" />
-=======
-            <Link , t, o="/ca, s, e-studi, e, s" 
-              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
-              <Zap , className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               View, Case, Studies;
             </Li, n, k>
           </div>

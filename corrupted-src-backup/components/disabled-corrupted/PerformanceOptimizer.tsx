@@ -1,15 +1,9 @@
 import React from 'react';
 import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t';
 interface PerformanceOptimizerProp, s {
-<<<<<<< HEAD
     isVisib, l, e: boolean,
   onClo, s, e: () = > v, o, i, d
   }
-=======
-  isVisib, l, e: boolean;
-  onClo, s, e: () = > v, o, i, d};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({</PerformanceOptimizerPro>isVisi</PerformanceOptimizerPro>, b, l, e,
   onClo, s, e}) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useState({)
@@ -18,20 +12,13 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({</Perf
     cachi, n, g: t, r, u, e)
     compressi, o, n: t, r, u, e)
     c, d, n: fa, l, s, e)
-<<<<<<< HEAD
 interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */}
  }
-=======
-interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */};
- };
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */};
   });
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([])
   );
-<<<<<<< HEAD
   const runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
      }
@@ -43,38 +30,16 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
   }, [optimizatio, n, s]);
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-=======
-;
-const runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */};
-      }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */};
-     };
-    if() {/* TODO: Fix JSX expression */};
-      }, if (optimizatio, n, s.cachi, n, g) {/* TODO: Fix JSX expression */};
-     };
-    if() {/* TODO: Fix JSX expression */};
-      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t)}, [optimizatio, n, s]);
-  useEffect(() => {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }, [isVisib, l, e, runOptimizatio, n, s]);
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => { 
     setOptimizatio, n, s(pr, e, v = > ({)
       ...pr, e, v)
-<<<<<<< HEAD
       [k, e, y]: !pr, e, v[k, e, y])
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */}
      }));
   }
   const optimizationOption, s = [
     {/* TODO: Fix JSX expression */}
-=======
-      [k, e, y]: !pr, e, v[k, e, y]);
-const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */};
-     }))};
-;
-const optimizationOption, s = [
-    {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
@@ -100,11 +65,7 @@ const optimizationOption, s = [
           <X, className='h-6 w-6' /></X>
         </button>
       </div>
-<<<<<<< HEAD
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
-=======
-      <div , className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { optimizationOptio, n, s.m, a, p(opti, o, n = > (</div>
           <div , ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { `p-4, border, rounded-lg, transitio, n-colo, r, s ${
               opti, o, n.enabl, e, d;
@@ -172,26 +133,16 @@ const optimizationOption, s = [
             ))};
           </div>
         </div>
-<<<<<<< HEAD
       )}
-=======
-      )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, classNam, e = 'flex, justif, y-end, spac, e-x-3'></div>
         <button , onClic, k = { onCl, o, s, e }, classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, b, g-white, border, border-gr, a, y-300, rounde, d-md, hove, r: bg-gr, a, y-50, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'>
           Clo, s, e;
         </button>
-<<<<<<< HEAD
         <button, onCli, c, k={
     () = > {
             setCurrentOptimizatio, n, s([])
   }
             // Trigger r e-optimizat i o n;}
-=======
-        <button, onCli, c, k={ () = > {
-            setCurrentOptimizatio, n, s([])};
-            // Trigger r e-optimizat i o n};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         ></button>
           Clo, s, e;
         </button>
@@ -202,11 +153,7 @@ const optimizationOption, s = [
         </button>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default PerformanceOptimizer;
 "`

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Additional 2025 real micro-SaaS, AI and IT services;
 export const new2025Services: EnhancedRealMicroSaasService[] = [,
 export const,
@@ -86,7 +82,6 @@ export const,
     setup_time: '30 minutes'
     category: 'AI & Data'
     real_service: true;
-<<<<<<< HEAD
     technology: ['TypeScriptOpenAIAnthropicOpenTelemetry']
     integrations: ['SlackPagerDutyDatadogGitHub Actions']
     use_cases: ['Prevent unsafe outputs_compliance readiness_model regression detection'],
@@ -95,16 +90,6 @@ export const,
     rating: 4 && 4.8
     reviews: 11,
   }
-=======
-    technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'];
-    integrations: ['SlackPagerDutyDatadogGitHub Actions'];
-    use_cases: ['Prevent unsafe outputs_compliance readiness_model regression detection'];
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors:
-        competitors: ['LakeraGuardrails AIAzure AI Content Safety'],
-    rating: 4 && 4.8;
-    reviews: 11};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'serverless-cron-orchestrator',
     name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead-lettering across clouds'
@@ -129,7 +114,6 @@ export const,
     market_size: '$3.5 B+ AI safety & governance'
     growth_rate: '200% annual growth'
     variant: 'holographic - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Inline middleware, policy DSL, exporters and dashboards.'
@@ -138,15 +122,6 @@ export const,
     rating: 4.8
     reviews: 11,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Inline middleware, policy DSL, exporters and dashboards.',
-    launch_date: '2025 - 03 - 10',
-    customers: 25;
-    rating: 4.8;
-    reviews: 11};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'serverless - cron - orchestrator',
     name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead - lettering across clouds'
@@ -177,7 +152,6 @@ export const,
     market_size: '$8 B workflow automation'
     growth_rate: '22% CAGR'
     variant: 'quantum - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Config registry, scheduler runners, and audit dashboard.'
@@ -187,17 +161,6 @@ export const,
     reviews: 19,
   }
     id: 'gdpr - dsar - automation - pro'
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Config registry, scheduler runners, and audit dashboard.',
-    launch_date: '2025 - 02 - 20',
-    customers: 40;
-    rating: 4.7;
-reviews: 19;
-  };
-    id: 'gdpr - dsar - automation - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
     price: '$199',
@@ -235,7 +198,6 @@ reviews: 19;
     market_size: '$4 B privacy tech'
     growth_rate: '28% CAGR'
     variant: 'quantum - cyberpunk',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Workflow engine, connectors, secure storage and audit logs.'
@@ -244,15 +206,6 @@ reviews: 19;
     rating: 4.7
     reviews: 13,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Workflow engine, connectors, secure storage and audit logs.',
-    launch_date: '2025 - 01 - 28',
-    customers: 18;
-    rating: 4.7;
-    reviews: 13};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners',
@@ -273,7 +226,6 @@ reviews: 19;
     setup_time: '1 hour'
     category: 'Developer Tools'
     real_service: true;
-<<<<<<< HEAD
     technology: ['Node.jsOpenAPIGraphQL']
     integrations: ['GitHubGitLabCircleCI']
     use_cases: ['Prevent breaking changes_improve API reliability'],
@@ -295,29 +247,6 @@ reviews: 19;
     rating: 4.6
     reviews: 10,
   }
-=======
-    technology: ['Node.jsOpenAPIGraphQL'];
-    integrations: ['GitHubGitLabCircleCI'];
-    use_cases: ['Prevent breaking changes_improve API reliability'];
-    roi: 'Cut API incidents by 50% within 60 days',
-    competitors:
-        competitors: ['StoplightOpticRedocly'],
-    rating: 4 && 4.6;
-reviews: 10;
-  };
-    id: 'cloud-cost-finops-copilot',
-    name: 'Cloud Cost FinOps Copilot',
-    market_size: '$7B API economy tools',
-    growth_rate: '20% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Contract diffing, runners, and PR integrations.',
-    launch_date: '2025 - 03 - 12',
-    customers: 22;
-    rating: 4.6;
-    reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts'
@@ -343,7 +272,6 @@ variant: 'ai - futuristic',
     setup_time: '1 day'
     category: 'Cloud & FinOps'
     real_service: true;
-<<<<<<< HEAD
     technology: ['AWSGCPAzureBigQuery']
     integrations: ['SlackEmailPagerDuty']
     use_cases: ['Cost reduction_budget control_capacity planning'],
@@ -365,29 +293,6 @@ variant: 'ai - futuristic',
     rating: 4.7
     reviews: 14,
   }
-=======
-    technology: ['AWSGCPAzureBigQuery'];
-    integrations: ['SlackEmailPagerDuty'];
-    use_cases: ['Cost reduction_budget control_capacity planning'];
-    roi: 'Save 1035% cloud spend in first 90 days',
-    competitors:
-        competitors: ['CloudHealthVantageCloudZero'],
-    rating: 4 && 4.7;
-reviews: 14;
-  };
-    id: 'email-deliverability-warmup-monitor',
-    name: 'Email Deliverability Warmup & Monitor',
-    market_size: '$6B cloud cost mgmt',
-    growth_rate: '25% CAGR',;
-variant: 'quantum - holographic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Ingestion, heuristics engine and alerting with reports.',
-    launch_date: '2025 - 02 - 05',
-    customers: 33;
-    rating: 4.7;
-    reviews: 14};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts'
@@ -426,7 +331,6 @@ variant: 'quantum - holographic',
     market_size: '$2 B email tooling'
     growth_rate: '18% CAGR'
     variant: 'ai - futuristic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Mailbox network, test harness and alerting.'
@@ -435,15 +339,6 @@ variant: 'quantum - holographic',
     rating: 4.6
     reviews: 12,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Mailbox network, test harness and alerting.',
-    launch_date: '2025 - 03 - 02',
-    customers: 28;
-    rating: 4.6;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
     tagline: 'Blueprints for Pinecone / Weaviate / PGVector with evals & dashboards',
@@ -484,20 +379,12 @@ variant: 'quantum - holographic',
     variant: 'quantum - holographic'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Scaffold generators and eval harness.'
     launch_date: '2025 - 02 - 12'
     customers: 31
     rating: 4 && 4.7
     reviews: 16,
   }
-=======
-    implementation_details: 'Scaffold generators and eval harness.',
-    launch_date: '2025 - 02 - 12',
-    customers: 31;
-    rating: 4 && 4.7;
-    reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'api-security-attack-surface-scanner',
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes'
@@ -519,14 +406,9 @@ variant: 'quantum - holographic',
     category: 'Security'
     realService: true,
     technology: ['Node && Node.jsOpenAPIeBPF (optional)'],
-<<<<<<< HEAD
     rating: 4.7
     reviews: 16,
   }
-=======
-    rating: 4.7;
-    reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes'
@@ -547,7 +429,6 @@ variant: 'quantum - holographic',
     setup_time: '1 day'
     category: 'Security'
     real_service: true;
-<<<<<<< HEAD
     technology: ['Node.jsOpenAPIeBPF (optional)']
     integrations: ['CloudflareFastlyGitHub']
     use_cases: ['Reduce API risk_enforce auth_detect drift'],
@@ -556,21 +437,10 @@ variant: 'quantum - holographic',
     rating: 4 && 4.7
     reviews: 8,
   }
-=======
-    technology: ['Node.jsOpenAPIeBPF (optional)'];
-    integrations: ['CloudflareFastlyGitHub'];
-    use_cases: ['Reduce API risk_enforce auth_detect drift'];
-    roi: 'Cut API incidents by 40%+ in 90 days',
-    competitors:
-        competitors: ['Salt SecurityNoname Security'],
-    rating: 4 && 4.7;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'reliability-slo-guard',
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy-based alerts as-a-service'
     market_size: '$6B API security',
-<<<<<<< HEAD
     growth_rate: '23% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact
@@ -581,17 +451,6 @@ variant: 'quantum - holographic',
     rating: 4.7
     reviews: 8,
   }
-=======
-    growth_rate: '23% CAGR',;
-variant: 'quantum - cyberpunk',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Passive discovery, analyzers, and PR bots.',
-    launch_date: '2025 - 03 - 06',
-    customers: 14;
-    rating: 4.7;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy - based alerts as - a-service'
@@ -622,7 +481,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$15 B observability'
     growth_rate: '19% CAGR'
     variant: 'quantum - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'SLO engine, alerting and reports.'
@@ -631,15 +489,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.6
     reviews: 9,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'SLO engine, alerting and reports.',
-    launch_date: '2025 - 02 - 18',
-    customers: 20;
-    rating: 4.6;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - website - personalization - pro',
     name: 'AI Website Personalization Pro',
     tagline: 'On - site experiences tailored by intent and persona',
@@ -660,7 +509,6 @@ variant: 'quantum - cyberpunk',
     setup_time: '1 day'
     category: 'AI & Data'
     real_service: true;
-<<<<<<< HEAD
     technology: ['Next.js_edge functions']
     integrations: ['SegmentRudderStackGoogle Analytics']
     use_cases: ['Increase conversion_tailor content_experiment fast'],
@@ -669,16 +517,6 @@ variant: 'quantum - cyberpunk',
     rating: 4 && 4.7
     reviews: 13,
   }
-=======
-    technology: ['Next.js_edge functions'];
-    integrations: ['SegmentRudderStackGoogle Analytics'];
-    use_cases: ['Increase conversion_tailor content_experiment fast'];
-    roi: 'Boost conversion by 1025% in 60 days',
-    competitors:
-        competitors: ['MutinyOptimizely'],
-    rating: 4 && 4.7;
-    reviews: 13};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'sso-scim-starter-kit',
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months'
@@ -703,7 +541,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$9 B personalization'
     growth_rate: '21% CAGR'
     variant: 'ai - futuristic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Audience engine, variant manager and edge runtime.'
@@ -712,15 +549,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.7
     reviews: 13,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Audience engine, variant manager and edge runtime.',
-    launch_date: '2025 - 02 - 25',
-    customers: 27;
-    rating: 4.7;
-    reviews: 13};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'sso - scim - starter - kit',
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months'
@@ -755,16 +583,10 @@ variant: 'quantum - cyberpunk',
     launch_date: '2025 - 01 - 30'
     customers: 19;
     rating: 4 && 4.8;
-<<<<<<< HEAD
     reviews: 9
     rating: 4.8
     reviews: 9,
   }
-=======
-    reviews: 9;
-    rating: 4.8;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Production - grade Postgres with automated backups and failover',
@@ -795,20 +617,12 @@ variant: 'quantum - cyberpunk',
     variant: 'quantum - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'IaC blueprints and managed ops playbooks.'
     launch_date: '2025 - 03 - 04'
     customers: 8
     rating: 4 && 4.6
     reviews: 5,
   }
-=======
-    implementation_details: 'IaC blueprints and managed ops playbooks.',
-    launch_date: '2025 - 03 - 04',
-    customers: 8;
-    rating: 4 && 4.6;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on-brand sales emails at scale'
@@ -830,14 +644,9 @@ variant: 'quantum - cyberpunk',
     category: 'Micro SaaS'
     realService: true,
     technology: ['Next && Next.jsLLM APIs'],
-<<<<<<< HEAD
     rating: 4.6
     reviews: 5,
   }
-=======
-    rating: 4.6;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on - brand sales emails at scale'
@@ -868,7 +677,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$5 B sales tech'
     growth_rate: '26% CAGR'
     variant: 'ai - futuristic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Sequence engine, inbox rotation and safety checks.'
@@ -877,15 +685,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.7
     reviews: 21,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Sequence engine, inbox rotation and safety checks.',
-    launch_date: '2025 - 02 - 16',
-    customers: 42;
-    rating: 4.7;
-    reviews: 21};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
@@ -916,7 +715,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$7 B ITAM'
     growth_rate: '17% CAGR'
     variant: 'quantum - holographic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Lightweight agents, collectors and API.'
@@ -925,15 +723,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.5
     reviews: 6,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Lightweight agents, collectors and API.',
-    launch_date: '2025 - 01 - 22',
-    customers: 12;
-    rating: 4.5;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'edge - feature - flags - pro',
     name: 'Edge Feature Flags Pro',
     tagline: 'Zero - latency feature rollout and A / B at the edge',
@@ -954,7 +743,6 @@ variant: 'quantum - cyberpunk',
     setup_time: '1 day'
     category: 'Developer Tools'
     real_service: true;
-<<<<<<< HEAD
     technology: ['Edge FunctionsTypeScript']
     integrations: ['VercelNetlifyCloudflare']
     use_cases: ['Gradual rollouts_kill switches_experiments'],
@@ -963,16 +751,6 @@ variant: 'quantum - cyberpunk',
     rating: 4 && 4.6
     reviews: 7,
   }
-=======
-    technology: ['Edge FunctionsTypeScript'];
-    integrations: ['VercelNetlifyCloudflare'];
-    use_cases: ['Gradual rollouts_kill switches_experiments'];
-    roi: 'Reduce incident blast radius and speed up experiments',
-    competitors:
-        competitors: ['LaunchDarklyGrowthBookStatsig'],
-    rating: 4 && 4.6;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'llm-finetune-ops-manager',
     name: 'LLM Fine-tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine-tuned models'
@@ -994,7 +772,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$3 B feature mgmt'
     growth_rate: '24% CAGR'
     variant: 'quantum - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Rule engine, SDKs, metrics pipeline and UI.'
@@ -1003,15 +780,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.6
     reviews: 7,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Rule engine, SDKs, metrics pipeline and UI.',
-    launch_date: '2025 - 03 - 14',
-    customers: 17;
-    rating: 4.6;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'llm - finetune - ops - manager',
     name: 'LLM Fine - tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine - tuned models'
@@ -1032,7 +800,6 @@ variant: 'quantum - cyberpunk',
     setup_time: '2 days'
     category: 'AI & Data'
     real_service: true;
-<<<<<<< HEAD
     technology: ['OpenAIHugging FaceWeights & Biases']
     integrations: ['GitHubLangfusePromptfoo']
     use_cases: ['Improve response quality_reduce cost / latency_governance'],
@@ -1041,16 +808,6 @@ variant: 'quantum - cyberpunk',
     rating: 4 && 4.7
     reviews: 6,
   }
-=======
-    technology: ['OpenAIHugging FaceWeights & Biases'];
-    integrations: ['GitHubLangfusePromptfoo'];
-    use_cases: ['Improve response quality_reduce cost / latency_governance'];
-    roi: 'Increase task success rate 1025% with controlled spend',
-    competitors:
-        competitors: ['OpenAI finetune UIHF AutoTrain'],
-    rating: 4 && 4.7;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes'
@@ -1072,7 +829,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$4 B model ops'
     growth_rate: '35% CAGR'
     variant: 'holographic - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Run tracker, registry and eval pipelines.'
@@ -1081,15 +837,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.7
     reviews: 6,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Run tracker, registry and eval pipelines.',
-    launch_date: '2025 - 03 - 13',
-    customers: 9;
-    rating: 4.7;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP / INP tracking, synthetic journeys and Core Web Vitals fixes'
@@ -1110,7 +857,6 @@ variant: 'quantum - cyberpunk',
     setup_time: '1 day'
     category: 'Quality & Monitoring'
     real_service: true;
-<<<<<<< HEAD
     technology: ['Lighthouse CIWeb VitalsPlaywright']
     integrations: ['GitHubSlackNetlify']
     use_cases: ['Prevent perf regressions_improve CWV scores'],
@@ -1132,29 +878,6 @@ variant: 'quantum - cyberpunk',
     rating: 4.5
     reviews: 5,
   }
-=======
-    technology: ['Lighthouse CIWeb VitalsPlaywright'];
-    integrations: ['GitHubSlackNetlify'];
-    use_cases: ['Prevent perf regressions_improve CWV scores'];
-    roi: 'Boost conversion 310% by improving CWV',
-    competitors:
-        competitors: ['SpeedCurveCalibre'],
-    rating: 4 && 4.5;
-reviews: 5;
-  };
-    id: 'ai-governance-registry',
-    name: 'AI Governance Registry',
-    market_size: '$2B web perf',
-    growth_rate: '16% CAGR',;
-variant: 'quantum - holographic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'RUM collector, synthetic runner and PR bots.',
-    launch_date: '2025 - 03 - 11',
-    customers: 13;
-    rating: 4.5;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - governance - registry',
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features'
@@ -1180,7 +903,6 @@ variant: 'quantum - holographic',
     setup_time: '2 days'
     category: 'AI & Data'
     real_service: true;
-<<<<<<< HEAD
     technology: ['TypeScriptPostgreSQL']
     integrations: ['GitHubJiraSlack']
     use_cases: ['Audit readiness_asset ownership_policy enforcement'],
@@ -1189,23 +911,12 @@ variant: 'quantum - holographic',
     rating: 4 && 4.6
     reviews: 6,
   }
-=======
-    technology: ['TypeScriptPostgreSQL'];
-    integrations: ['GitHubJiraSlack'];
-    use_cases: ['Audit readiness_asset ownership_policy enforcement'];
-    roi: 'Reduce compliance cycle time by 50%',
-    competitors:
-        competitors: ['Model governance suites'],
-    rating: 4 && 4.6;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
     realImplementation: true,
     implementationDetails:
     market_size: '$3 B AI governance'
     growth_rate: '30% CAGR'
     variant: 'ai - futuristic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Registry, policies and approval workflows.'
@@ -1214,15 +925,6 @@ variant: 'quantum - holographic',
     rating: 4.6
     reviews: 6,
   }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Registry, policies and approval workflows.',
-    launch_date: '2025 - 03 - 07',
-    customers: 10;
-    rating: 4.6;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
     real_implementation: true
     implementation_details: unknown,
@@ -6198,15 +5900,9 @@ variant: 'quantum - holographic',
     marketSiz,
   e: '$3.5B+ AI safety & governance',
     growthRat,
-<<<<<<< HEAD
   e: '200% annual growth',
     varian,
   t: 'holographic-matrix'}
-=======
-  e: '200% annual growth',;
-varian,
-  t: 'holographic-matrix'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 'Model and dataset registry'
       'Risk and policy mappings'
@@ -10838,10 +10534,5 @@ review,
   e: '2025-03-07', customer,
   s: 10, ratin,
   g: 4.6, review,
-<<<<<<< HEAD
   s: 6} ]; review,
   s: 6 } ]; ]; '
-=======
-  s: 6}; ]; review,
-  s: 6 } ]; ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

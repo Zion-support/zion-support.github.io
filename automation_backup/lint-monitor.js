@@ -1,12 +1,6 @@
 // #!/usr/bin/en,
-<<<<<<< HEAD
   v: node; import fs from';fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  v: node; import fs from';fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -85,7 +79,6 @@ clas,
   h: (command) {/* TODO: Fix JSX expression */};
   t: '} Usag,
   e: nod,
-<<<<<<< HEAD
   e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // console.log('Usag,
   e: nod)
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
@@ -99,22 +92,6 @@ clas,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // // console.log removed for production
-e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
-  e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // // console.log removed for production
-e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
-  e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
-  e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -193,7 +170,6 @@ clas,
   h: (command) {/* TODO: Fix JSX expression */};
   t: '} Usag,
   e: nod,
-<<<<<<< HEAD
   e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // console.log('Usag,
   e: nod)
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
@@ -207,22 +183,6 @@ clas,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // // console.log removed for production
-e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
-  e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // // console.log removed for production
-e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
-  e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
-  e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -301,7 +261,6 @@ clas,
   h: (command) {/* TODO: Fix JSX expression */};
   t: '} Usag,
   e: nod,
-<<<<<<< HEAD
   e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // console.log('Usag,
   e: nod)
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
@@ -315,22 +274,6 @@ clas,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // // console.log removed for production
-e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
-  e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // // console.log removed for production
-e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
-  e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
-  e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -409,7 +352,6 @@ clas,
   h: (command) {/* TODO: Fix JSX expression */};
   t: '} Usag,
   e: nod,
-<<<<<<< HEAD
   e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // console.log('Usag,
   e: nod)
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
@@ -423,22 +365,6 @@ clas,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // // console.log removed for production
-e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
-  e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // // console.log removed for production
-e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
-  e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
-  e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs''; import path from'path''} import { execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path'') // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -517,7 +443,6 @@ clas,
   h: (command) {/* TODO: Fix JSX expression */};
   t: '} Usag,
   e: nod,
-<<<<<<< HEAD
   e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // console.log('Usag,
   e: nod)
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
@@ -531,23 +456,6 @@ clas,
   c: checkLintStatus() {try { this.log(#!/usr/bin/"env": node;' import fs from'fs'';' import path from'path''}' import { execSync} spawn } from'child_process'';' import chokidar from'chokidar'';' import { fileURLToPath } from'url'';' import { dirname } from'path''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'';' import chokidar from'chokidar'') const __dirname = dirname(__filename); "class": LintMonitor {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs; import path from';path} import { execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  e: lint-monitor.js [start|stop|status|stats]')' process.exit(1), // // console.log removed for production
-e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
-  e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // // console.log removed for production
-e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
-  e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
-  e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {try { this.log(#!/usr/bin/"env": node;' import fs from'fs'';' import path from'path''}' import { execSync} spawn } from'child_process'';' import chokidar from'chokidar'';' import { fileURLToPath } from'url'';' import { dirname } from'path''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'';' import chokidar from'chokidar'') // __dirname removed
-"class": LintMonitor {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs; import path from';path} import { execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: = 0} this.lastChec,
   k: = null, this.logFil,
   e: = path.join(__dirname 'logs'lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
@@ -606,13 +514,8 @@ clas,
   l: = null}} ; i,
   f: (this.watcher) {this.watcher.close()} this.watche,
   r: = null}} ; this.log('🛑 Lin)
-<<<<<<< HEAD
   t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */}
   g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0; } status() {/* TODO: Fix JSX expression */}`
-=======
-  t: Monitor stopped')}' status() {/* TODO: Fix JSX expression */};
-  g: ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0} status() {/* TODO: Fix JSX expression */}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0}} ; this.log(`📊 Statu,
   s: ${/* TODO: Fix JSX expression */})`
   g: ? Running': 'Stopped}}`); this.log(`📊 Erro,
@@ -634,43 +537,23 @@ clas,
   e: lint-monitor.js [start|stop|status|stats])' process.exit(1})} process.on('SIGINT')() => {' monitor.stop()} process.exit(0)}) process.on('SIGTERM')() => {/* TODO: Fix JSX expression */}`
   e: node lint-monitor.js [start|stop|status|stats]`); process.exit(1)} // console.log(`Usag)`
   e: node lint-monitor.js [start|stop|status|stats])} process.exit(1)} process.on(','SIGINT')() => {monitor.stop()} process.exit(0)}) process.on(' 'SIGTERM')() => {monitor.stop()} process.exit(0)})`;' #!/usr/bin/en,
-<<<<<<< HEAD
   v: node; import fs from'fs; import path from';path; import {execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  v: node; import fs from'fs; import path from';path; import {execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: = 0} this.lastChec,
   k: = null, this.logFil,
   e: = path.join(__dirname 'logs'lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}`
   e: true}})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-<<<<<<< HEAD
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs; import path from';path} import { execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
-=======
-  c: checkLintStatus() {/* TODO: Fix JSX expression */};
-  v: node; import fs from'fs; import path from';path} import { execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; // __dirname removed
-clas,
-  s: LintMonitor {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: = 0} this.lastChec,
   k: = null, this.logFil,
   e: = path.join(__dirname 'logs'lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}`
   e: true}})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,"`
-<<<<<<< HEAD
   c: checkLintStatus() {try { this.log(')`; ursor/add-new-services-and-deploy-updates-0462; ursor/fix-syntax-push-and-merge-to-main-40de;)`; origin/cursor/integrate-build-improve-and-re-verify-c7b5}' import { execSync} spawn } from 'child_process;' import { fileURLToPath } from'url;' import { dirname } from 'path;' import chokidar from'chokidar;') const __dirname = dirname(__filename); "class": LintMonitor {/* TODO: Fix JSX expression */}
   O: Implement} } pr-12325 constructor() {this.isRunning = false; // // // // // // // // // console.log(message)} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
-=======
-  c: checkLintStatus() {try { this.log(')`; ursor/add-new-services-and-deploy-updates-0462; ursor/fix-syntax-push-and-merge-to-main-40de;)`; origin/cursor/integrate-build-improve-and-re-verify-c7b5}' import { execSync} spawn } from 'child_process;' import { fileURLToPath } from'url;' import { dirname } from 'path;' import chokidar from'chokidar;') // __dirname removed
-"class": LintMonitor {/* TODO: Fix JSX expression */};
-  O: Implement} } pr-12325 constructor() {this.isRunning = false; // // // // // // // // // // console.log removed for production
-} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}`
   e: true })} } const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile) logMessage)} asyn,

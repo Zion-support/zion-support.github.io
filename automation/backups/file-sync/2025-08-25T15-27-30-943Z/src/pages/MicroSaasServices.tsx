@@ -2,22 +2,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react';
   // Micro SAAS Services data;
   const microSaasServices = [
-<<<<<<< HEAD
     {id: 1
       name: "TaskFlow Pro"
       category: "Productivity"
       pricing: "Freemium"
       description: "Simple yet powerful task management and project collaboration tool for small teams"
       price: 15,
-=======
-];
-    {id: 1;
-      name: 'TaskFlow Pro',
-      category: 'Productivity',
-      pricing: 'Freemium',
-      description: 'Simple yet powerful task management and project collaboration tool for small teams',
-      price: 15;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
@@ -439,354 +429,178 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     {/* TODO: Fix JSX expression */};
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
     }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
@@ -1067,12 +881,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left">
                 <a;
               <div className="text-left"></div>
-<<<<<<< HEAD
                 <a
                   href="mailto: kleber@ziontechgroup.<com" className="text-left">
-=======
-                <a href="mailto: kleber@ziontechgroup.<com" className="text-left">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <Mail className="text-left" />
                   Get Started Today
                 </a>

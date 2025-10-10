@@ -1,8 +1,4 @@
 import { MetadataRoute } from 'next';
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default function sitemap(): MetadataRoute.Sitemap {
     return [;
     {
@@ -69,12 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: 'https://ziontechgroup.com/support',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-<<<<<<< HEAD
       priority: 0.5,
   },
   ]
 }
-=======
-      priority: 0.5}]
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

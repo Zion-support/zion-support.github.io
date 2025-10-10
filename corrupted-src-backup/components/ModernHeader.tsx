@@ -60,13 +60,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
     };
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' };
   ];
-<<<<<<< HEAD
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-=======
-  return(<header , className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   g:px-8">",
   return (
     <header , className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
@@ -298,12 +293,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<<<<<<< HEAD
 <div, ke, y={it, e, m.na, m, e
   }
-=======
-<div , ke, y={it, e, m.na, m, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }>
                   <Li, n, k;
 <div, className="m

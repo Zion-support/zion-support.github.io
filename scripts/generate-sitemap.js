@@ -1,18 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 
 // Generate sitemap for the website
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
-=======
-// Generate sitemap for the website;
-const generateSitemap = () => {
-};
-return (
-;
-const baseUrl = 'https://ziontechgroup.com';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const pages = [
 ];
     '',

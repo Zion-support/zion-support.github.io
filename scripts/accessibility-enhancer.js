@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Accessibility Enhancement Script;
@@ -334,12 +333,6 @@ function generateAccessibilityChecklist() {
   console.log('✅ Generating accessibility checklist...');
   
   const checklist = {
-=======
-  // console.log removed for production
-;
-const checklist = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     title: "Zion Tech Group Accessibility Checklist"
     version: "1.0.0"
     lastUpdated: new Date().toISOString()

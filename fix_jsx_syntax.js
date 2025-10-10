@@ -34,7 +34,6 @@ async function main() {/* TODO: Fix JSX expression */};
       if (classNameFix !== content) {/* TODO: Fix JSX expression */};
       };
       //4. Fix style prop,
-<<<<<<< HEAD
   placement: <div>\nstyle={...} -> <div\nstyle={...}
       if (styleFix !== content) {/* TODO: Fix JSX expression */}
       }
@@ -48,17 +47,6 @@ async function main() {/* TODO: Fix JSX expression */};
   }
 
       //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
-=======
-  placement: <div>\nstyle={...} -> <div\nstyle={...};
-      if (styleFix !== content) {/* TODO: Fix JSX expression */};
-      };
-      //5. Fix template literal syntax: ${> -> ${,
-      //       const templateFix = content.replace(/\$\{>/g, '${');
-      if (templateFix !== content) {
-        content = templateFix;
-        modified = true};
-      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const inputFix = content.replace(
         /<input([^>]*?)\n\s*\n\s*<button/g
         '<input$1\n/>\n\n<button'
@@ -66,13 +54,9 @@ async function main() {/* TODO: Fix JSX expression */};
       if (inputFix !== content) {
     ,
         content = inputFix;
-<<<<<<< HEAD
         modified = true
   }
 
-=======
-        modified = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       //7. Fix unclosed br tags: <br> -> <br />,
       //5. Fix template literal,
   syntax: ${/* TODO: Fix JSX expression */};

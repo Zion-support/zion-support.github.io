@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
-=======
-export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const { slug } = useParams();
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
@@ -46,10 +42,6 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
         </div>
       </div>
     </div>)
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

@@ -42,17 +42,11 @@ export type ZionEmergingTechService2029 =
   pricing: unknown;
     starter: number;
     professional: number;
-<<<<<<< HEAD
     enterprise: number
     currency: string
     period: string,
   }
 }
-=======
-    enterprise: number;
-    currency: string;
-    period: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform,
     id: 'space-technology-satellite-management',
@@ -151,12 +145,8 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string,
     perio,
-<<<<<<< HEAD
   d: string}
 }
-=======
-  d: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -2272,10 +2262,5 @@ export type ZionEmergingTechService2029 = i,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
   y: string) => return zionEmergingTechServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-<<<<<<< HEAD
   e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
   y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
-=======
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

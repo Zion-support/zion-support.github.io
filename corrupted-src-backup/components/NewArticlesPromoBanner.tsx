@@ -1,16 +1,9 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";"
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
-<<<<<<< HEAD
 interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
-=======
-interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */};
-};
-const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({;
-varia, n, t = 'def, a, u, l, t',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   showCou, n, t =  , 3,
   autoRota, t, e = fa, l, s, e,
   rotationInterv, a, l = 5, 0, 0, 0,

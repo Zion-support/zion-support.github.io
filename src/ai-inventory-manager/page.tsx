@@ -4,19 +4,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings } from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {
-<<<<<<< HEAD
     const features = [],
   return (
     {// TODO: Add content
   }
 }
-=======
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Package,
       titl,
@@ -49,13 +41,8 @@ const features = [];
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Inventory Manager
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Inventory Manager;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Smart Inventory Management,
@@ -63,7 +50,6 @@ const features = [];
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 // Optimize your inventory with AI-powered management solutions.
             Track stock, predict demand, and automate reordering for maximum efficiency.
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -73,16 +59,6 @@ const features = [];
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Package className="w-5 h-5" />
               +1 302 464 0950,
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//>
-//               Get Started;
-          </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Package className="w-5 h-5" />
-              +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
         </section>"
         <section className="mb-16"></section>"
@@ -114,10 +90,6 @@ const features = [];
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default PagePage;

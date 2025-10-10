@@ -21,12 +21,7 @@ export const metaTags = {
 export const metaTags = {/* TODO: Fix JSX expression */};
   },
   twitte,
-<<<<<<< HEAD
   r: {/* TODO: Fix JSX expression */}
   }}
 
-=======
-  r: {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default metaTags;

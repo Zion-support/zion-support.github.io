@@ -22,13 +22,9 @@ function optimizeCSS() {/* TODO: Fix JSX expression */};
   if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */};
         content = content.replace(/;\s*}/g, '}');
         content = content.replace(/,\s+/g, ',');
-<<<<<<< HEAD
         
         fs.writeFileSync(filePath, content);
       }
-=======
-        fs.writeFileSync(filePath, content)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
 //     };
 };
@@ -49,17 +45,11 @@ function optimizeJS() {
 function optimizeJS() {/* TODO: Fix JSX expression */};
 };
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
-<<<<<<< HEAD
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
         }
         
         fs.writeFileSync(filePath, content);
       }
-=======
-  if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */};
-        };
-        fs.writeFileSync(filePath, content)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
 //     };
 };

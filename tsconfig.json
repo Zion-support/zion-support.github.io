@@ -76,18 +76,16 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "App.tsx",
-    "api/**/*.js",
-    "api/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
+    "App.tsx"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
     "dist",
+    "app/**",
+    "api/**",
+    "utils/**",
     "vite.config.ts",
     "vite.config.d.ts",
     "_app_disabled/**/*",

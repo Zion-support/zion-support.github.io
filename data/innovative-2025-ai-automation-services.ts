@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -29,19 +25,11 @@ import React from 'react';
   growthRate: string;
   variant: string;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
   }
 realImplementation: boolean;
-=======
-    mobile: string;
-    email: string;
-    address: string};
-;
-  realImplementation: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   implementationDetails: string;
   launchDate: string;
   customers: number;
@@ -115,16 +103,9 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     emai,
   l: string,
     addres,
-<<<<<<< HEAD
   s: string}
 realImplementatio,
   n: boolean,
-=======
-  s: string};
-;
-  realImplementatio,
-  n: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   implementationDetail,
   s: string,
   launchDat,
@@ -223,7 +204,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -233,17 +213,6 @@ export const,
       rating: 4.9
       reviews: 45,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.'
-      launchDate: '2025-01-15',
-      customers:
-        customers: 75;
-      rating: 4.9;
-      reviews: 45};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -370,7 +339,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -380,17 +348,6 @@ export const,
       rating: 4.8
       reviews: 78,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.'
-      launchDate: '2025-02-01',
-      customers:
-        customers: 120;
-      rating: 4.8;
-      reviews: 78};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -522,7 +479,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -532,17 +488,6 @@ export const,
       rating: 4.9
       reviews: 62,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.'
-      launchDate: '2025-01-20',
-      customers:
-        customers: 95;
-      rating: 4.9;
-      reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -667,7 +612,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -677,17 +621,6 @@ export const,
       rating: 4.9
       reviews: 38,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.'
-      launchDate: '2025-02-15',
-      customers:
-        customers: 45;
-      rating: 4.9;
-      reviews: 38};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -819,15 +752,9 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true
       implementationDetails:],    features: [,
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:];    features: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'
       'Comprehensive medical reportsHIPAA-compliant security'
     ];
@@ -847,15 +774,9 @@ export const,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     launchDate: '2025-03-01', customers: 35;
     rating: 4.9;
     reviews: 28;
@@ -876,18 +797,11 @@ export const,
   growth_rate: string;
   variant: string;
   contact_info: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
   }
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1130,7 +1044,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -1140,17 +1053,6 @@ export const,
       rating: 4.9
       reviews: 45,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.'
-      launchDate: '2025-01-15',
-      customers:
-        customers: 75;
-      rating: 4.9;
-      reviews: 45};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -1277,7 +1179,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -1287,17 +1188,6 @@ export const,
       rating: 4.8
       reviews: 78,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.'
-      launchDate: '2025-02-01',
-      customers:
-        customers: 120;
-      rating: 4.8;
-      reviews: 78};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -1429,7 +1319,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -1439,17 +1328,6 @@ export const,
       rating: 4.9
       reviews: 62,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.'
-      launchDate: '2025-01-20',
-      customers:
-        customers: 95;
-      rating: 4.9;
-      reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -1574,7 +1452,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -1584,17 +1461,6 @@ export const,
       rating: 4.9
       reviews: 38,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.'
-      launchDate: '2025-02-15',
-      customers:
-        customers: 45;
-      rating: 4.9;
-      reviews: 38};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -1726,7 +1592,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
@@ -1736,17 +1601,6 @@ export const,
       rating: 4.9
       reviews: 28,
     }
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
-      implementationDetails:,
-        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-      launchDate: '2025-03-01',
-      customers:
-        customers: 35;
-      rating: 4.9;
-      reviews: 28};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01'
       customers: 35
@@ -1818,21 +1672,12 @@ export const,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35
     rating: 4.9
     reviews: 28,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
-    launchDate: '2025-03-01', customers: 35;
-    rating: 4.9;
-    reviews: 28;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     popula,
   r: true, ico,
   n: '',
@@ -1887,12 +1732,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 28}
   }
-=======
-  s: 28}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */};
   l: string} addres,
@@ -2386,8 +2227,4 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */};
   e: '2025-03-01', customer,
   s: 35,
   rating: 4.9,
-<<<<<<< HEAD
   reviews: 28 } } ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
-=======
-  reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

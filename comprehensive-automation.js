@@ -4,12 +4,7 @@
   s: this.issues.length} fixesApplie,"
   d: this.fixes.length } }' fs.writeFileSync('security-report.json', JSON.stringify(report, null) 2));' // console.log('Security report generated')} if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor"' this.writeFile('scripts/security-auditor.js') script);' this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = "#!/usr/bin/env node;' const fs = require('fs')}' const path = require('path')class TestRunner { constructor() { this.results = { "unit": { passe,d:,0} "failed": 0}, "integration": {passe,d:,0} "failed": 0}, "e2e": {passe,d:,0} "failed": 0} }}' checkTestFiles() {const testDirs = ['__tests__', 'src/__tests__'} 'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => ' file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) {' // console.log('⚠️ No test files found')} else { // console.log(\\"✅ Found \\${testFilesFound} test files\\")} return testFilesFound} checkPackageJsonScripts() {try {' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')); if (!packageJson.scripts.test) {' // console.log('⚠️ No test script found in package.json')} return false }' ' return true} catch() {// console.log('❌ Error reading package."json": }') error.message); return false } } generateReport() {const report = { "timestamp": new Date().toISOStrin,g(); "results": this.results} summar,
   y: {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
   d: this.checkTestFile,s(), "testScriptExists": this.checkPackageJsonScript}s()} }' fs.writeFileSync('test-report.json', JSON.stringify(report, null) 2));' // console.log('Test report generated')} if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner"' this.writeFile('scripts/test-runner.js') script);' this.results.improvements.push('Created test runner script')}' createOptimizedNextConfig() { const config = "/** @type {import('next').NextConfig } */; const nextConfig = {/* TODO: Fix JSX expression */}
-=======
-  d: this.checkTestFile,s(), "testScriptExists": this.checkPackageJsonScript}s()} };' fs.writeFileSync('test-report.json', JSON.stringify(report, null) 2));' // // console.log removed for production
-} if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner"' this.writeFile('scripts/test-runner.js') script);' this.results.improvements.push('Created test runner script')}' createOptimizedNextConfig() { const config = "/** @type {import('next').NextConfig } */; const nextConfig = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */}"
@@ -23,24 +18,11 @@
   y: "default-src 'self' script-src 'none' sandbo}x;"}, //Security headers; async headers() {/* TODO: Fix JSX expression */}"
   y: 'X-Content-Type-Options', "value": 'nosnif}f'},{"key": 'X-Frame-Options', "value": 'DEN}Y'},{"key": 'X-XSS-Protection', "value": '1mode=bloc}k'},{"key": 'Referrer-Policy', "value": 'origin-when-cross-origi}n'},{"key": 'Permissions-Policy', "value": 'camer,a=(), microphone=()} geolocation=()' } ]} ]} //Bundle analyzer; "webpack": (config { isServer }) => {if (!isServer) { config.resolve.fallback = { ...config.resolve.fallback, "fs": false} ne,
   t: false} tl,"
-<<<<<<< HEAD
   s: false }} return config} } module.exports = nextConfig"' this.writeFile('next.config.optimized.js') config);' this.results.optimizations.push('Created optimized Next.js configuration')} createGitWorkflowScript() {const script = "#!/usr/bin/env node;' const fs = require('fs')} class GitWorkflow { constructor() {' this.branch = 'main' this.changes = [] } checkGitStatus() {try {' //Check if we're in a git repository;' if (!fs.existsSync('.git')) {' // console.log('❌ Not in a git repository')} return false }' ' return true} catch() {// console.log('❌ Error checking git "status": }') error.message); return false } } generateCommitMessage() { const timestamp = new Date().toISOString()return \\"Automated improvements and optimizations - \\${timestamp }\\"} createGitHooks() {const preCommitHook = \\"#!/bin/sh; # Pre-commit hook" echo "Running pre-commit checks..." # Run linting; npm run "lint": check; # Run type checking; npm run type-check; # Run tests; npm test; " echo "Pre-commit checks completed" \\"}' this.writeFile('.git/hooks/pre-commit'} preCommitHook);' // console.log('✅ Created pre-commit hook') } generateReport() {const report={ "timestamp": new Date().toISOStrin,g(), "gitRepository": this.checkGitStatu,s(), "commitMessage": this.generateCommitMessag,e(), "recommendations": [}' 'Run git add . to stage changes',"' 'Run git commit -m "Automated improvements"'}' 'Run git push origin main to push changes']}' fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null) 2));' // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow"' this.writeFile('scripts/git-workflow.js') script);' this.results.improvements.push('Created git workflow script')} generateFinalReport() {const duration = Date.now() - this.startTimeconst report = { "timestamp": new Date().toISOStrin,g(), "duration": `${Math.round(duratio}n /1000)}s`, "results": this.results; summar,
   y: {/* TODO: Fix JSX expression */}
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,"`
   d: 4} }' fs.writeFileSync('comprehensive-automation-report.json', JSON.stringify(report, null) 2));' this.log('📊 Comprehensive Automation Report Generated') 'SUCCESS')this.log(`🚀 Improvements "Created": ${report.summary.improvementsCreated }`) 'SUCCESS')this.log(`⚡ Optimizations "Applied": ${report.summary.optimizationsApplied }`) 'SUCCESS')this.log(`📝 Scripts "Generated": ${report.summary.scriptsGenerated }`) 'SUCCESS')}' async run() {this.log('🚀 Starting Comprehensive Automation System...') 'PROGRESS'); //Analysis phase; this.analyzePackageJson(); this.analyzeNextConfig(); this.analyzeAppStructure(); //Improvement phase; this.createPerformanceMonitor(); this.createSecurityAuditor(); this.createTestRunner(); this.createOptimizedNextConfig(); this.createGitWorkflowScript(); //Report generation; this.generateFinalReport()}' this.log('✅ Comprehensive Automation System Completed'} 'SUCCESS') } } //Run the automation; if() {const automation = new ComprehensiveAutomation()} automation.run().catch(error => {' // console.error('Automation "failed": )'} error); process.exit(1) })} module.exports = ComprehensiveAutomation;" ' #!/usr/bin/env node; const fs = require('fs'); const path = require('path'); class ComprehensiveAutomation {/* TODO: Fix JSX expression */}
-=======
-  s: false }} return config} }; module.exports = nextConfig"' this.writeFile('next.config.optimized.js') config);' this.results.optimizations.push('Created optimized Next.js configuration')} createGitWorkflowScript() {const script = "#!/usr/bin/env node;' const fs = require('fs')} class GitWorkflow { constructor() {' this.branch = 'main' this.changes = [] } checkGitStatus() {try {' //Check if we're in a git repository;' if (!fs.existsSync('.git')) {' // // console.log removed for production
-} return false }' ' return true} catch() {// // console.log removed for production
-error.message); return false } } generateCommitMessage() { const timestamp = new Date().toISOString()return \\"Automated improvements and optimizations - \\${timestamp }\\"} createGitHooks() {const preCommitHook = \\"#!/bin/sh; # Pre-commit hook" echo "Running pre-commit checks..." # Run linting; npm run "lint": check; # Run type checking; npm run type-check; # Run tests; npm test; " echo "Pre-commit checks completed" \\"}' this.writeFile('.git/hooks/pre-commit'} preCommitHook);' // // console.log removed for production
-} generateReport() {const report={ "timestamp": new Date().toISOStrin,g(), "gitRepository": this.checkGitStatu,s(), "commitMessage": this.generateCommitMessag,e(), "recommendations": [}' 'Run git add . to stage changes',"' 'Run git commit -m "Automated improvements"'}' 'Run git push origin main to push changes']};' fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null) 2));' // // console.log removed for production
-} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow"' this.writeFile('scripts/git-workflow.js') script);' this.results.improvements.push('Created git workflow script')} generateFinalReport() {const duration = Date.now() - this.startTimeconst report = { "timestamp": new Date().toISOStrin,g(), "duration": `${Math.round(duratio}n /1000)}s`, "results": this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
-  d: this.results.improvements.length} optimizationsApplie,
-  d: this.results.optimizations.length} scriptsGenerate,"`
-  d: 4} };' fs.writeFileSync('comprehensive-automation-report.json', JSON.stringify(report, null) 2));' this.log('📊 Comprehensive Automation Report Generated') 'SUCCESS')this.log(`🚀 Improvements "Created": ${report.summary.improvementsCreated }`) 'SUCCESS')this.log(`⚡ Optimizations "Applied": ${report.summary.optimizationsApplied }`) 'SUCCESS')this.log(`📝 Scripts "Generated": ${report.summary.scriptsGenerated }`) 'SUCCESS')}' async run() {this.log('🚀 Starting Comprehensive Automation System...') 'PROGRESS'); //Analysis phase; this.analyzePackageJson(); this.analyzeNextConfig(); this.analyzeAppStructure(); //Improvement phase; this.createPerformanceMonitor(); this.createSecurityAuditor(); this.createTestRunner(); this.createOptimizedNextConfig(); this.createGitWorkflowScript(); //Report generation; this.generateFinalReport()}' this.log('✅ Comprehensive Automation System Completed'} 'SUCCESS') } } //Run the automation; if() {const automation = new ComprehensiveAutomation()} automation.run().catch(error => {' // // console.error removed for production
-'} error); process.exit(1) })} module.exports = ComprehensiveAutomation;" ' #!/usr/bin/env node; const fs = require('fs'); const path = require('path'); class ComprehensiveAutomation {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: { passe,d:,0}faile,
   d: 0},build,
   s: {/* TODO: Fix JSX expression */};
@@ -70,32 +52,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -122,13 +88,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n / 1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`
@@ -165,32 +126,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -217,13 +162,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n /1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`
@@ -260,32 +200,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -312,13 +236,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n / 1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`
@@ -355,32 +274,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -407,13 +310,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n /1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`
@@ -450,32 +348,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -502,13 +384,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n / 1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`
@@ -545,32 +422,16 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   s: this.fixes} summar,
   y: {/* TODO: Fix JSX expression */};
   s: this.issues.length} fixesApplie,`
-<<<<<<< HEAD
   d: this.fixes.length } } fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // console.log('Security report generated')} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */}
-=======
-  d: this.fixes.length } }; fs.writeFileSync('security-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig()} auditor.generateReport() } module.exports = SecurityAuditor`; this.writeFile('scripts/security-auditor.js')script); this.results.improvements.push('Created security auditor script')} createTestRunner() {const script = `#!/usr/bin/env node; const fs = require('fs')} const path = require('path')class TestRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: { passe,d:,0}faile,
   d: 0},integratio,
   n: {passe,d:,0}faile,
   d: 0},e2,
   e: {passe,d:,0}faile,`
-<<<<<<< HEAD
   d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // console.log('⚠️ No test files found')} else { // console.log(\`✅ Found \${testFilesFound} test files\`)} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // console.log('⚠️ No test script found in package.json')} return false } return true} catch() {/* TODO: Fix JSX expression */}
   n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */}
   d: this.checkTestFile,s()}testScriptExist,`
   s: this.checkPackageJsonScript,s()} } fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // console.log('Test report generated')} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
-=======
-  d: 0} }} checkTestFiles() {const testDirs = ['__tests__','src/__tests__'}'tests']; let testFilesFound = 0; testDirs.forEach(dir => {if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.'); )} testFilesFound += testFiles.length } }); if (testFilesFound === 0) { // // console.log removed for production
-} else { // // console.log removed for production
-} return testFilesFound} checkPackageJsonScripts() {try { const packageJson = JSON.parse(fs.readFileSync('package.json')'utf8')); if (!packageJson.scripts.test) { // // console.log removed for production
-} return false } return true} catch() {/* TODO: Fix JSX expression */};
-  n:  }')error.message); return false } } generateReport() {/* TODO: Fix JSX expression */};
-  d: this.checkTestFile,s()}testScriptExist,`
-  s: this.checkPackageJsonScript;s()} }; fs.writeFileSync('test-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
-} } if() {const runner = new TestRunner()} runner.generateReport() } module.exports = TestRunner`; this.writeFile('scripts/test-runner.js')script); this.results.improvements.push('Created test runner script')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: true} poweredByHeade,
   r: false} eslin,
   t: {/* TODO: Fix JSX expression */};
@@ -597,13 +458,8 @@ error.message); return false } } generateCommitMessage() { const timestamp = new
   lint: check; # Run type checking; npm run type-check; # Run tests; npm test, "} echo "Pre-commit checks completed" \`, this.writeFile('.git/hooks/pre-commit'}preCommitHook); // console.log('✅ Created pre-commit hook') } generateReport() {/* TODO: Fix JSX expression */}"`
   s: [, 'Run git add . to stage changes',"} 'Run git commit -m "Automated improvements"'}'Run git push origin main to push changes']} fs.writeFileSync('git-workflow-report.json',JSON.stringify(report,null)2)); // console.log('Git workflow report generated')} } if() {const workflow = new GitWorkflow(); workflow.createGitHooks()} workflow.generateReport() } module.exports = GitWorkflow`; this.writeFile('scripts/git-workflow.js')script); this.results.improvements.push('Created git workflow script')} generateFinalReport() {/* TODO: Fix JSX expression */}`
   n: `${Math.round(duratio}n / 1000)}s`,result,
-<<<<<<< HEAD
   s: this.results, summar,
   y: {/* TODO: Fix JSX expression */}
-=======
-  s: this.results; summar,
-  y: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: this.results.improvements.length} optimizationsApplie,
   d: this.results.optimizations.length} scriptsGenerate,`
   d: 4} } fs.writeFileSync('comprehensive-automation-report.json',JSON.stringify(report,null)2)); this.log('📊 Comprehensive Automation Report Generated')'SUCCESS')this.log(`🚀 Improvements)`

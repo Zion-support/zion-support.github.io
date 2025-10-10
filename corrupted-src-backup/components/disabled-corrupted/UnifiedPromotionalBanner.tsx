@@ -1,7 +1,6 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 export interface FeaturedItem {
-<<<<<<< HEAD
     title: string
   category: string,
   li, n, k: string,
@@ -13,21 +12,6 @@ export interface UnifiedPromotionalBannerProps {
   description: string,
   ctaTe, x, t: string,
   ctaLi, n, k: string,
-=======
-}
-  title: string;
-  category: string;
-  li, n, k: string;
-  metri, c, s ?  : str, i, n, g};
-export interface UnifiedPromotionalBannerProps {
-;
-}
-varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  title: string;
-  description: string;
-  ctaTe, x, t: string;
-  ctaLi, n, k: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
   featuredIte, m, s?: FeaturedIt, e, m[];
   showCou, n, t?: number;
@@ -41,32 +25,19 @@ export interface FeaturedItem {/* TODO: Fix JSX expression */};
 export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */};
  };
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
 }) => {/* TODO: Fix JSX expression */}
   } const buttonTheme, s = {/* TODO: Fix JSX expression */}
   }
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
-=======
-}) => {/* TODO: Fix JSX expression */};
-  }; const buttonTheme, s = {/* TODO: Fix JSX expression */};
-  };
-  // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }[ic, o, n];
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
-<<<<<<< HEAD
     me, g, a: 'py-20, p, x-1, 2'} const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
   } const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
-=======
-    me, g, a: 'py-20, p, x-1, 2'}; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div , classNam, e = { `
-  // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */};
-  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]};
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : '' };

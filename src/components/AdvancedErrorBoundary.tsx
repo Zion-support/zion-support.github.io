@@ -1,7 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface ErrorBoundaryState {
-<<<<<<< HEAD
     hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null,
@@ -13,26 +12,11 @@ interface ErrorBoundaryProps {
   }
 interface ErrorReport {
     errorId: string | null;
-=======
-  hasError: boolean
-}
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null};
-interface ErrorBoundaryProps {
-  children: ReactNode
-}
-  fallback?: ReactNode};
-interface ErrorReport {
-  errorId: string | null
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   error: Error;
   errorInfo: ErrorInfo;
   errorMessage: string;
   errorStack: string | undefined;
   errorComponentStack: string | null | undefined;
-<<<<<<< HEAD
   errorBoundary: string
   errorTimestamp: string
   errorUserAgent: string | null,
@@ -41,37 +25,20 @@ interface ErrorReport {
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props),
-=======
-  errorBoundary: string;
-  errorTimestamp: string;
-  errorUserAgent: string | null;
-  errorUrl: string | null};
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
-constructor(props: ErrorBoundaryProps) {
-    super(props);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null
-<<<<<<< HEAD
     }
   }
-=======
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
   }
-=======
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -80,7 +47,6 @@ constructor(props: ErrorBoundaryProps) {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo)
   }
     // Send error report in production
@@ -88,14 +54,6 @@ constructor(props: ErrorBoundaryProps) {
     this.reportError(error, errorInfo)
   }
   }
-=======
-      // console.error removed for production
-}
-    // Send error report in production
-    if (process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo)}
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
     try {
       const errorReport: ErrorReport = {
@@ -114,7 +72,6 @@ constructor(props: ErrorBoundaryProps) {
       await fetch('/api/error-report', {
         method: 'POST',
         headers: {
-<<<<<<< HEAD
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorReport),
@@ -123,20 +80,12 @@ constructor(props: ErrorBoundaryProps) {
     console.error('Failed to report error:', reportError)
   }
   }
-=======
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(errorReport)})} catch (reportError) {
-      // console.error removed for production
-}
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null
-<<<<<<< HEAD
     });
   }
   private handleReload = () => {
@@ -149,17 +98,6 @@ constructor(props: ErrorBoundaryProps) {
       if (this.props.fallback) {
         return this.props.fallback
   }
-=======
-    })};
-  private handleReload = () => {
-    if (typeof window !== 'undefined') {
-      window.location.reload()}
-  };
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -186,7 +124,6 @@ constructor(props: ErrorBoundaryProps) {
                   {this.state.error.stack && `\n\n${this.state.error.stack}`};
                 </pre>
               </div>
-<<<<<<< HEAD
             )}
             <div className="flex space-x-3">
               <button
@@ -199,18 +136,6 @@ constructor(props: ErrorBoundaryProps) {
                 className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                 Reload Page,
   </
-=======
-            )};
-            <div className="flex space-x-3">
-              <button onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                Try Again
-              </button>
-              <button onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                Reload Page
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
@@ -219,7 +144,6 @@ constructor(props: ErrorBoundaryProps) {
             )};
           </div>
         </div>
-<<<<<<< HEAD
       );
     }
     return this.props.children;
@@ -230,9 +154,3 @@ export default AdvancedErrorBoundary;
   </button>
   </h3>
   </ErrorBoundaryState>
-=======
-      )};
-    return this.props.children};
-};
-export default AdvancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

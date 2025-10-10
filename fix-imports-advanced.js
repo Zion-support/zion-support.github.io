@@ -1,18 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
 
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 
-=======
-;
-function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processFile(filePath) {
   try {
     // Calculate relative paths based on file location;
@@ -75,7 +68,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -84,14 +76,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
@@ -105,13 +89,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;`

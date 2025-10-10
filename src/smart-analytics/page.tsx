@@ -2,18 +2,9 @@ import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React from 'react';
-<<<<<<< HEAD
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
-=======
-;
-const SmartAnalyticsPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
@@ -41,13 +32,7 @@ iconicon: Shield,
       benefit:     ,
 $4};
   ];
-<<<<<<< HEAD
   const pricingPlans = [
-=======
-;
-const pricingPlans = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -94,7 +79,6 @@ const pricingPlans = [
             Transform your data into actionable insights with AI-powered analytics that drive real business results
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
@@ -102,23 +86,12 @@ const pricingPlans = [
   </
             <Link
               to="/contact"
-=======
-            <a href="tel:+13024640950"
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-              📞 Call: (302) 464-0950
-            </a>
-            <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               Get Free Consultation,
   </
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
-=======
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features,
@@ -131,13 +104,8 @@ const pricingPlans = [
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <div className="text-cyan-400 font-medium">{feature.benefit}</div>
-<<<<<<< HEAD
             ))}
         {/* Pricing Section */}
-=======
-            ))};
-        {/* Pricing Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -148,15 +116,9 @@ const pricingPlans = [
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-<<<<<<< HEAD
                       Most Popular;
   </
                 )}
-=======
-                      Most Popular
-                    </span>
-                )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
                 <div className="mb-6">
@@ -175,7 +137,6 @@ const pricingPlans = [
                       : 'bg-gray-600 text-white hover:bg-gray-700'
                   }`};
                   Get Started
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
 import { Link } from 'react-router-dom';
@@ -185,17 +146,6 @@ const SmartAnalyticsPage: React.FC = () => {
     {// TODO: Add content
   }
 }
-=======
-        {/* CTA Section */};
-        <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: BarChart,
       titl,
@@ -212,11 +162,6 @@ const features = [];
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
-=======
-};
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -235,20 +180,11 @@ return (
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
-<<<<<<< HEAD
     }
-=======
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const pricingPlans = [
 ];
@@ -278,12 +214,8 @@ return (
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //                     plan.popular;
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
@@ -291,11 +223,7 @@ return (
   hover:bg-gray-700'`
                   }`};
                   Get Started;
-<<<<<<< HEAD
         {/* CTA Section */}
-=======
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
@@ -304,13 +232,8 @@ return (
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
-<<<<<<< HEAD
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo,
         {/* Contact Info */}
-=======
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
-        {/* Contact Info */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -329,7 +252,6 @@ return (
                   kleber@ziontechgroup.com,
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-<<<<<<< HEAD
   );
 }
 export default SmartAnalyticsPage;
@@ -361,7 +283,3 @@ export default SmartAnalyticsPage;
   </h1>
   </div>
   </div>
-=======
-  )};
-export default SmartAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

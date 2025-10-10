@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
-=======
-export const metaverseDigitalRealityServices2026 = [
-{name: 'Metaverse Development Platform 2026',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
     icon: 'Globe',
@@ -86,15 +80,8 @@ export const metaverseDigitalStats2026 = {}
   averageRatin,
   g: 4.7,
   activeUser,
-<<<<<<< HEAD
   s: 1200}
 export const metaverseDigitalRealityServices2026 = [ nam,
-=======
-  s: 1200};
-export const metaverseDigitalRealityServices2026 = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,
   n: 'Complete metaverse development and deployment solution',' ico,

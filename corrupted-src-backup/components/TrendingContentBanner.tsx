@@ -163,7 +163,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       catego, r, y: "AI, Governanc, e",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5",";
-<<<<<<< HEAD
       bad, g, e: "H, O, T"
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -195,39 +194,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-      bad, g, e: "H, O, T";
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   useEffe, c, t(() => {/* TODO: Fix JSX expression */};
     }, 40, 0, 0);
@@ -302,16 +268,10 @@ defa, u, l;
                   {currentIt, e, m.catego, r, y};
                 </sp, a, n>
               </d, i, v>
-<<<<<<< HEAD
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 }
   }
-=======
-              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>;
-const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */};
-}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const, Ico, n = currentIt, e, m.ic, o, n;
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
@@ -430,7 +390,6 @@ const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression
               <butt, o, n;
             {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>
               <butt, o, n
-<<<<<<< HEAD
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
                 classNa, m, e={
@@ -441,16 +400,6 @@ const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression
             {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-=======
-  k, e, y={ind, e, x};
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)};
-                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
-                  ind, e, x === currentInd, e, x};
-                    ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' };
-            {/* TODO: Fix JSX expression */};
-  k, e, y={ind, e, x};
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 classNa, m, e={/* TODO: Fix JSX expression */}`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'`

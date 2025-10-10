@@ -12,12 +12,8 @@ interface NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */};
 const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */};
         }, rotationInterv, a, l);
-<<<<<<< HEAD
       return () => clearInterv, a, l(interv, a, l);
     }
-=======
-      return () => clearInterv, a, l(interv, a, l)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }, [autoRota, t, e, featuredArticl, e, s.leng, t, h, rotationInterv, a, l]);
   if (varia, n, t = == 'comp, a, c, t') {
     return(<div , classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
@@ -44,21 +40,13 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <p, className="te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
             </div>
           </div>"
-<<<<<<< HEAD
           <Link, t, o="/bl, o, g""
-=======
-          <Link , t, o="/bl, o, g""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm">
             Read, No, w;)
           </Li, n, k>)
         </div>)
-<<<<<<< HEAD
       </d, i, v  > );
   }
-=======
-      </d, i, v  > )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (varia, n, t = == 'prem, i, u, m') {
     return(<div , classNam, e = {`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
         <div , className="m, a, x-w-6xl, m, x-au, t, o">
@@ -91,12 +79,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             Read, No, w;
           </Li, n, k>
         </div>
-<<<<<<< HEAD
       </d, i, v  > );
   }
-=======
-      </d, i, v  > )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
         <div, className="m, a, x-w-6xl, m, x-au, t, o"></div>"
@@ -125,11 +109,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             ))};
           </div>
           <div, classNam, e = "te, x, t-center, m, t-8"></div>
-<<<<<<< HEAD
             <Link, t, o="/bl, o, g"
-=======
-            <Link , t, o="/bl, o, g"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
               View, All, Articles;
               <Link , className="w-5 h-5" />
@@ -142,12 +122,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             </Li, n, k>
           </div>
         </div>
-<<<<<<< HEAD
       </d, i, v  > );
   }
-=======
-      </d, i, v  > )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (varia, n, t = == 'featu, r, e, d') {
     return(<div , classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
         <div , className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
@@ -173,13 +149,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         <div, className="p-8"></div>
           <div , className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
-<<<<<<< HEAD
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l">
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-3">
-=======
-              <Link , ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l">
-                <div , className="flex, fle, x-wrap, ga, p-2, m, b-3">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   { artic, l, e.tags.sl, i, c, e(, 0, 2).m, a, p((t, a, g) = > (</div>
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
@@ -223,18 +194,11 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             ))};
           </div>
         </div>
-<<<<<<< HEAD
       </d, i, v  > );
   }
   // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}>
       <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
         <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
-=======
-      </d, i, v  > )};
-  // Default variant return(<div , classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}>
-      <div , classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
-        <Sparkles , className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>)
       </div>)
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">)

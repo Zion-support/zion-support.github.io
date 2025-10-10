@@ -2,13 +2,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   o: 'pipe'} encodin,
   g: 'utf8' });' return {/* TODO: Fix JSX expression */};
   s: res.status || 0} stdou,
-<<<<<<< HEAD
   t: res.stdout || '', stder,
   r: res.stderr || '' } } ' return {/* TODO: Fix JSX expression */}
-=======
-  t: res.stdout || ''; stder,
-  r: res.stderr || '' }} ' return {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 200} header,
   s: { 'content-type': 'text/plain' } bod,
   y: logs.join('\n') } } '

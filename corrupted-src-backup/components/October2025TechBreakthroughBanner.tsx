@@ -1,22 +1,10 @@
 const, October2025TechBreakthroughBanne, r = () => {
-<<<<<<< HEAD
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">)
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
       {/* Animated, Backgroun, d */}</div>
-=======
-return (
-  return(<div , className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
-);
-})
-      {/* Animated, Backgroun, d */};)
-      <div, className="absolute, inse, t-0, opacit, y-20">)
-  return (
-    <div , className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
-      {/* Animated, Backgroun, d */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>
@@ -47,15 +35,9 @@ return (
   g:px-8, p, y-12">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8">";</div>
-<<<<<<< HEAD
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50">";</div>
 const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Backgroun, d */}
-=======
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50">";</div>;
-const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, Backgroun, d */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>"

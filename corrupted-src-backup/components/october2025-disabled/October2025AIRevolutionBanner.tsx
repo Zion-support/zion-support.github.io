@@ -1,12 +1,8 @@
 impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t';
 interface October2025AIRevolutionBannerProp, s {
-<<<<<<< HEAD
     classNa, m, e ?  : string
   }
-=======
-  classNa, m, e ?  : string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default function October2025AIRevolutionBann, e, r({)
   classNa, m, e = '')
 }: October2025AIRevolutionBannerPro, p, s) {
@@ -208,10 +204,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `

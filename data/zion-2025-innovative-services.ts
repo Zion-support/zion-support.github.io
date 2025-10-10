@@ -1,13 +1,8 @@
 export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   technology: string[];
   integrations: string[];
@@ -17,16 +12,10 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */};
   marketSize: string;
   growthRate: string;
   launchDate: string;
-<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 }
-=======
-  customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
   // AI-Powered Quantum Edge Computing,
     id: 'quantum-edge-ai-platform',

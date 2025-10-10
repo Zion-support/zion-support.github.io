@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-<<<<<<< HEAD
 
 console.log('🚀 Starting comprehensive PR merge process...');
 
@@ -26,42 +25,14 @@ function mergePRBranch(branchName, prNumber) {
   try {
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
     
-=======
-// console.log removed for production
-// Function to get all open PRs;
-async function getOpenPRs() {
-  try {;
-const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
-    const prs = await response.json();
-    return prs} catch (error) {
-    // console.error removed for production
-return [];
-async function getOpenPRs() {/* TODO: Fix JSX expression */};
-};
-  try {/* TODO: Fix JSX expression */};
-  } catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-// Function to merge a PR branch;
-function mergePRBranch(branchName, prNumber) {
-  try {
-    // console.log removed for production
-...`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fetch the branch;
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
     // Try to merge;
     try {
       execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
-<<<<<<< HEAD
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
     
-=======
-function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */};
-    // console.log removed for production
-...`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fetch the branch;`
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });
@@ -93,26 +64,17 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */};
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
-<<<<<<< HEAD
               console.log(`  ✅ Resolved ${file}`);
             } catch (error) {/* TODO: Fix JSX expression */}`
               console.log(`  ❌ Failed to resolve ${file}: ${error.message}`);
             }
           }
-=======
-              // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */}`
-              // console.log removed for production
-};
-          };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         });
         // Commit the merge;
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });
         // Commit the merge;"`
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */};
   o: 'pipe' });`
-<<<<<<< HEAD
         console.log(`✅ PR #${prNumber} merged with conflicts resolved`);
         return true;
       } else {/* TODO: Fix JSX expression */}`
@@ -133,25 +95,6 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
   console.log('🧹 Cleaning up console.log statements...');
   
   const commonFiles = [
-=======
-        // console.log removed for production
-return true} else {/* TODO: Fix JSX expression */}`
-        // console.log removed for production
-return false};
-    };
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.log removed for production
-return false};
-};
-// Function to clean up console.log statements;
-function cleanConsoleLogs() {;
-function cleanConsoleLogs() {/* TODO: Fix JSX expression */};
-};
-  // console.log removed for production
-;
-const commonFiles = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'app/App.tsx',
     'app/components/Footer.tsx',
     'app/components/Navigation.tsx',
@@ -172,7 +115,6 @@ const commonFiles = [
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content);
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
-<<<<<<< HEAD
           console.log(`  ✅ Cleaned ${file}`);
         }
       } catch (error) {/* TODO: Fix JSX expression */}`
@@ -194,25 +136,6 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
     try {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-=======
-          // console.log removed for production
-};
-      } catch (error) {/* TODO: Fix JSX expression */}`
-        // console.log removed for production
-};
-    };
-  })};
-// Function to optimize build configuration;
-function optimizeBuild() {;
-function optimizeBuild() {/* TODO: Fix JSX expression */};
-};
-  // console.log removed for production
-// Update package.json with optimized scripts;
-  const packageJsonPath = 'package.json';
-  if (fs.existsSync(packageJsonPath)) {
-    try {;
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       packageJson.scripts = {
         ...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
@@ -223,7 +146,6 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         'clean': 'rm -rf .next out dist node_modules/.cache',
         'prebuild': 'npm run clean',
         'postbuild': 'echo "Build completed successfully"'
-<<<<<<< HEAD
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       }
       
@@ -248,28 +170,6 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
     }
-=======
-  if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */};
-      };
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${error.message}`)};
-  };
-};
-// Main execution;
-async function main() {
-  try {
-    // console.log removed for production
-const prs = await getOpenPRs();
-    if (prs.length === 0) {
-      // console.log removed for production
-return;
-async function main() {/* TODO: Fix JSX expression */};
-};
-  try {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     `
     console.log(`📊 Found ${prs.length} open PRs`);
     
@@ -285,7 +185,6 @@ async function main() {/* TODO: Fix JSX expression */};
       console.log(`   Branc)`
   h: ${branchName}`);
       try {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
           console.log(`✅ Successfully merged PR #${prNumber}`);
         } else {/* TODO: Fix JSX expression */}`
           console.log(`❌ Failed to merge PR #${prNumber}`);
@@ -295,16 +194,6 @@ async function main() {/* TODO: Fix JSX expression */};
       }
     }
     
-=======
-          // console.log removed for production
-} else {/* TODO: Fix JSX expression */}`
-          // console.log removed for production
-};
-      } catch (error) {/* TODO: Fix JSX expression */}`
-        // console.log removed for production
-};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Clean up and optimize;
     console.log('\n🧹 Post-merge cleanup...');
     
@@ -319,7 +208,6 @@ async function main() {/* TODO: Fix JSX expression */};
     console.log('\n🚀 Pushing to main branch...');
     execSync('git push origin main', {/* TODO: Fix JSX expression */})
   o: 'pipe' });
-<<<<<<< HEAD
     
     console.log('\n🎉 PR merge process completed!');
     console.log('📊 Summary: '),
@@ -330,22 +218,9 @@ async function main() {/* TODO: Fix JSX expression */};
     console.log('📊 Summar)
   y: '),`
     console.log(`  ✅ Successfully)`
-=======
-    // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-y:');`
-    // console.log removed for production
-`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   merged: ${mergedCount} PRs`);`
     console.log(`  ❌ Failed to)`
   merge: ${failedCount} PRs`);`
-<<<<<<< HEAD
     console.log(`  🧹 Console.log statements cleaned`);`
     console.log(`  ⚡ Build configuration optimized`);`
     console.log(`  🚀 All changes pushed to main`);
@@ -353,14 +228,4 @@ y:');`
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-=======
-    // console.log removed for production
-`
-    // console.log removed for production
-`
-    // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "`

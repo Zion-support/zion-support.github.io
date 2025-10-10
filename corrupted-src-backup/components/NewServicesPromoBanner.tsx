@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
-=======
-interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */};
-};
-const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({;
-varia, n, t = 'def, a, u, l, t',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
             <h2 , classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">

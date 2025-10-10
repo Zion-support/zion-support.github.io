@@ -22,13 +22,8 @@ export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.El
         <p , className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s;
         </p>
-<<<<<<< HEAD
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
 }
-=======
-        <div , classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }</div>
 export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
 };

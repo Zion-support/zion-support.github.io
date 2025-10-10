@@ -28,10 +28,6 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>)
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

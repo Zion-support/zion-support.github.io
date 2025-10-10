@@ -12,15 +12,9 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {,
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📊",
       impa, c, t: "$10, 0, M+ Savi, n, g, s",
-<<<<<<< HEAD
       featured: t, r, u, e,",
 const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" }
-=======
-      featured: t, r, u, e,",;
-const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */};
-      sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
       sta, t, s: { securi, t, y: "99.9, 9%", complian, c, e: "10, 0%", threa, t, s: ", 0" };

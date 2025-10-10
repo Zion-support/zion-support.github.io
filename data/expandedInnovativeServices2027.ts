@@ -46,17 +46,10 @@ export type ExpandedService2027 =
     scalability: string,
   }
   support: string;
-<<<<<<< HEAD
   rating: number
   reviews: number
   launchDate: string,
   status: 'active' | 'beta' | 'coming-soon'}
-=======
-  rating: number;
-  reviews: number;
-  launchDate: string;
-  status: 'active' | 'beta' | 'coming-soon'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
     id: 'quantum-threat-hunter'
@@ -2208,15 +2201,10 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 export const getExpandedServicesByCategory = (categor)
   y: string): ExpandedService2027[] =>
   if (category === 'All')
-<<<<<<< HEAD
     return ALL_EXPANDED_SERVICES_2027,
   }
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 }
-=======
-    return ALL_EXPANDED_SERVICES_2027};
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}

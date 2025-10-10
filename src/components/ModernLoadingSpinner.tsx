@@ -1,19 +1,11 @@
 import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
-<<<<<<< HEAD
     size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
   fullScreen?: boolean
   }
-=======
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-}
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -59,7 +51,6 @@ $4}
       </div>
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -67,24 +58,11 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   text?: string;
   fullScreen?: boolean;
 }
-=======
-  O: Add content};
-};
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   ModernLoadingSpinner: React.FC,
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -99,13 +77,8 @@ const,
   l: 'w-16 h-16'
   }
   const colorClasses = {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   primar,
   y: 'text-cyan-400',
     secondar,
@@ -143,8 +116,5 @@ const,
 }
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
-<<<<<<< HEAD
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

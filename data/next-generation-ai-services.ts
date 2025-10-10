@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 export interface NextGenerationAIService;
 export interface NextGenerationAIService {
-=======
-import React from 'react';
-export interface NextGenerationAIService;
-export interface NextGenerationAIService {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -40,7 +32,6 @@ export interface NextGenerationAIService {
     address: string;
   realImplementation: boolean;
   implementationDetails: string;
-<<<<<<< HEAD
   launchDate: string
   customers: number
   rating: number,
@@ -49,33 +40,15 @@ export interface NextGenerationAIService {}
     email: string
     address: string,
     website: string}
-=======
-  launchDate: string;
-  customers: number;
-  rating: number;
-export interface NextGenerationAIService {};
-  reviews: number,    mobile: string;
-    email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
 export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
 export interface NextGenerationAIService {}
-=======
-  customers: number;
-  rating: number;
-  reviews: number;
-export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
-export interface NextGenerationAIService {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   review,
   s: number,    mobil,
   e: string,
@@ -154,7 +127,6 @@ export interface NextGenerationAIService {};
   o: {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -176,26 +148,6 @@ export interface NextGenerationAIService {};
   rating: number
   reviews: number,
 }
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-  reviews: number;    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems,
     id: 'ai-autonomous-business-agent',
@@ -1507,13 +1459,8 @@ export const,
     review,
   s: 125};
 ];
-<<<<<<< HEAD
 export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
   g: number, export interface NextGenerationAIService {} review,
-=======
-export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
-  g: number; export interface NextGenerationAIService {} review,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: number, mobil,
   e: string, emai,
   l: string, addres,
@@ -1525,7 +1472,6 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   s: number, ratin,
   g: number, review,
   s: number } i,
-<<<<<<< HEAD
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -1553,35 +1499,6 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: string, varian,
   t: string, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string; perio,
-  d: string; descriptio,
-  n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
-  t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -1994,8 +1911,4 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: '2024-03-15', customer,
   s: 220, ratin,
   g: 4.7, review,
-<<<<<<< HEAD
   s: 125 } ];'
-=======
-  s: 125 } ];'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
