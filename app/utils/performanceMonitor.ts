@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Advanced Performance Monitoring Utility;
@@ -524,3 +525,8 @@ Metrics: ${JSON.stringify(metrics, null, 2);
     `});
 }
   }
+=======
+interface PerformanceMetrics {/* TODO: Fix JSX expression */});;);
+class PerformanceMonitor {/* TODO: Fix JSX expression */}
+  s: {});;);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

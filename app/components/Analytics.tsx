@@ -38,12 +38,12 @@ function gtag(...args: any[]) {
       (window as any).dataLayer.push(args);
     (window as any).gtag = gtag;
 
-    gtag('js', new Date());
+    gtag('js', new Date())
     gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-    });
+    })
 ;
 const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
@@ -57,16 +57,16 @@ const observer = new PerformanceObserver((list) => {
               trackEvent('web_vitals', 'CLS', (entry as any).value);
           }
         }
-      });
+      })
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
 
       // Monitor page load time
       window.addEventListener('load', () => {;
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
-          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
-      });
+          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))
+      })
   };
 ;
 const initializeErrorTracking = () => {
@@ -78,14 +78,14 @@ const initializeErrorTracking = () => {
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.stack
-      })});
+      })})
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
         promise: event.promise
-      })});
+      })})
 
     // Track resource loading errors
     window.addEventListener('error', (event) => {
@@ -94,7 +94,7 @@ const initializeErrorTracking = () => {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
-        });
+        })
     }, true);
 ;
 const initializeUserBehaviorTracking = () => {
@@ -103,7 +103,7 @@ const initializeUserBehaviorTracking = () => {
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
-    });
+    })
 
     // Track scroll depth;
 let maxScroll = 0;
@@ -114,13 +114,13 @@ const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight -
         if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
           trackEvent('engagement', 'scroll_depth', maxScroll);
       }
-    });
+    })
 
     // Track time on page;
 const startTime = Date.now();
     window.addEventListener('beforeunload', () => {;
 const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage)});
+      trackEvent('engagement', 'time_on_page', timeOnPage)})
 
     // Track clicks on important elements
     document.addEventListener('click', (event) => {;
@@ -135,8 +135,8 @@ const tagName = target.tagName.toLowerCase();
         trackEvent('engagement', 'button_click', {
           button_text: target.textContent?.trim(),
           button_class: target.className
-        });
-    });
+        })
+    })
 
     // Track form submissions
     document.addEventListener('submit', (event) => {;
@@ -145,7 +145,7 @@ const form = event.target as HTMLFormElement;
         form_id: form.id,
         form_class: form.className,
         form_action: form.action
-      })});
+      })})
 ;
 const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -153,7 +153,7 @@ const trackEvent = (category: string, action: string, value?: any) => {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
-      });
+      })
   };
 
   return null};

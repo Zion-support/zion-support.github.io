@@ -1,24 +1,22 @@
-'use client'
 /**
- * Testing Utilities;
- * Provides helper functions and utilities for testing;
+ * Test utilities for React components and functions
+ * Provides mocking and testing helpers
  */
+
 /**
- * Wait for a specified amount of time;
+ * Wait for a specified amount of time
  */
-export const wait = (ms: number): Promise<void></void> => {,
-export const wait = (ms: number): Promise<void></void> => {}
-  return new Promise(resolve => setTimeout(resolve, ms));});
-}
+export const wait = (ms: number): Promise<void> => 
+  new Promise(resolve => setTimeout(resolve, ms));
+
 /**
- * Wait for a condition to be true;
+ * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean;
+  condition: () => boolean,
   timeout = 5000,
-  interval = 100;
-): Promise<void></void> => {
   interval = 100
+<<<<<<< HEAD
 ): Promise<void></void> => {}
   const startTime = Date.now()
   while (!condition()) {}
@@ -28,12 +26,25 @@ throw new Error(`Timeout waiting for condition after ${timeout}ms`)]
     await wait(interval)]
     }
 }
+=======
+): Promise<void> => {
+  const startTime = Date.now();
+  while (!condition()) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+    }
+    await wait(interval);
+  }
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 /**
- * Mock fetch for testing;
+ * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown,
+  response: any,
   status = 200,
+<<<<<<< HEAD
   headers: Record<string, string></string> = {}
 ): void => {}
   if (typeof global !== 'undefined') {}
@@ -118,10 +129,23 @@ writable: true,]
     });
 export const wait = (m)
   s: number): Promise<void></void> => {/* TODO: Fix JSX expression */});
+=======
+  headers: Record<string, string> = {}
+) => {
+  return jest.fn().mockResolvedValue({
+    ok: status >= 200 && status < 300,
+    status,
+    headers: new Headers(headers),
+    json: async () => response,
+    text: async () => JSON.stringify(response)
+  } as Response);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 };
+
 /**
- * Wait for a condition to be true;
+ * Mock local storage
  */
+<<<<<<< HEAD
 export const waitFor = async (conditio)
   n: () => boolean,
   timeout = 5000,
@@ -383,44 +407,77 @@ this.mock()]
 }
       this.warnings.push(args.map(String).join(' '));});
 }
+=======
+export class MockStorage implements Storage {
+  private store: Map<string, string> = new Map();
+
+  get length(): number {
+    return this.store.size;
   }
-  getLogs(): string[] {}
-    return [...this.logs];});
+
+  clear(): void {
+    this.store.clear();
+  }
+
+  getItem(key: string): string | null {
+    return this.store.get(key) || null;
+  }
+
+  key(index: number): string | null {
+    const keys = Array.from(this.store.keys());
+    return keys[index] || null;
+  }
+
+  removeItem(key: string): void {
+    this.store.delete(key);
+  }
+
+  setItem(key: string, value: string): void {
+    this.store.set(key, value);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+  }
 }
-  getErrors(): string[] {}
-    return [...this.errors];});
-}
-  getWarnings(): string[] {}
-    return [...this.warnings];});
-}
-  restore(): void {
-  restore(): void {});
-}
-  clear(): void {}
-    this.logs = []
-    this.errors = []
-    this.warnings = [];}
-export const deepClone = <T></T>(ob)
-  j: T): T => {/* TODO: Fix JSX expression */});
-};
+
 /**
- * Compare objects for equality;
+ * Create a mock storage instance
  */
-export const deepEqual = (obj,
-  1: unknown, obj)
-  2: unknown): boolean => {/* TODO: Fix JSX expression */});
-};
+export const createMockStorage = (): MockStorage => new MockStorage();
+
 /**
- * Spy on console methods;
+ * Mock window.location
  */
+<<<<<<< HEAD
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
     this.originalConsole = { ...console };
 this.mock()]
     }
   private mock(): void {/* TODO: Fix JSX expression */});
+=======
+export const mockLocation = (url: string) => {
+  delete (window as any).location;
+  window.location = new URL(url) as any;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 };
-  s: unknown[]) => {/* TODO: Fix JSX expression */});
+
+/**
+ * Mock window.matchMedia
+ */
+export const mockMatchMedia = (matches: boolean) => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
 };
+<<<<<<< HEAD
   s: unknown[]) => {/* TODO: Fix JSX expression */});
 }]
     }
@@ -435,9 +492,13 @@ this.mock()]
   clear(): void {/* TODO: Fix JSX expression */});
 }
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 /**
- * Create a deferred promise;
+ * Mock IntersectionObserver
  */
+<<<<<<< HEAD
 export interface Deferred<T></T> {
   promise: Promise<T></T>,
   resolve: (value: T) => void;
@@ -535,6 +596,122 @@ export const measureExecutionTime = async <T></T>(f)
 return { result, duration }]
     };
 export default {/* TODO: Fix JSX expression */});
+=======
+export const mockIntersectionObserver = () => {
+  const mockIntersectionObserver = jest.fn();
+  mockIntersectionObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null
+  });
+  window.IntersectionObserver = mockIntersectionObserver;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 };
-`
-}
+
+/**
+ * Mock ResizeObserver
+ */
+export const mockResizeObserver = () => {
+  const mockResizeObserver = jest.fn();
+  mockResizeObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null
+  });
+  window.ResizeObserver = mockResizeObserver;
+};
+
+/**
+ * Mock scrollTo
+ */
+export const mockScrollTo = () => {
+  window.scrollTo = jest.fn();
+};
+
+/**
+ * Mock console methods
+ */
+export const mockConsole = () => {
+  jest.spyOn(console, 'log').mockImplementation(() => {});
+  jest.spyOn(console, 'warn').mockImplementation(() => {});
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+};
+
+/**
+ * Restore console methods
+ */
+export const restoreConsole = () => {
+  jest.restoreAllMocks();
+};
+
+/**
+ * Create a mock event
+ */
+export const createMockEvent = (type: string, options: any = {}) => {
+  return new Event(type, options);
+};
+
+/**
+ * Create a mock keyboard event
+ */
+export const createMockKeyboardEvent = (type: string, options: any = {}) => {
+  return new KeyboardEvent(type, options);
+};
+
+/**
+ * Create a mock mouse event
+ */
+export const createMockMouseEvent = (type: string, options: any = {}) => {
+  return new MouseEvent(type, options);
+};
+
+/**
+ * Create a mock form event
+ */
+export const createMockFormEvent = (type: string, options: any = {}) => {
+  return new Event(type, options);
+};
+
+/**
+ * Mock fetch with error
+ */
+export const mockFetchError = (error: Error) => {
+  return jest.fn().mockRejectedValue(error);
+};
+
+/**
+ * Mock fetch with network error
+ */
+export const mockFetchNetworkError = () => {
+  return jest.fn().mockRejectedValue(new Error('Network error'));
+};
+
+/**
+ * Mock fetch with timeout
+ */
+export const mockFetchTimeout = () => {
+  return jest.fn().mockImplementation(() => 
+    new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Request timeout')), 100)
+    )
+  );
+};
+
+/**
+ * Setup test environment
+ */
+export const setupTestEnvironment = () => {
+  mockMatchMedia(true);
+  mockIntersectionObserver();
+  mockResizeObserver();
+  mockScrollTo();
+  mockConsole();
+};
+
+/**
+ * Cleanup test environment
+ */
+export const cleanupTestEnvironment = () => {
+  restoreConsole();
+  jest.clearAllMocks();
+};

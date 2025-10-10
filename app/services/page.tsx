@@ -833,8 +833,8 @@ const servicesPerPage = 12;
 const filteredServices = services.filter(service => {;
 const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch})
 ;
 const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
 const startIndex = (currentPage - 1) * servicesPerPage;
@@ -940,7 +940,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                           {category}
 <<<<<<< HEAD
                         </option>
-                      ));
+                      ))
                     </select>
                   </div>
                 </div>
@@ -973,7 +973,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     {category}
 <<<<<<< HEAD
                   </button>
-                ));
+                ))
               </div>
             </div>
           </div>
@@ -1013,6 +1013,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
 <<<<<<< HEAD
                       Popular
+<<<<<<< HEAD
                     </div>);
 =======
 
@@ -1020,6 +1021,9 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                   )}
                   
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+                    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500
                       <service.icon className="w-8 h-8 text-cyan-400" 
@@ -1044,7 +1048,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                           {feature}
 <<<<<<< HEAD
                         </li>
-                      ));
+                      ))
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
@@ -1078,14 +1082,14 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     </button>
                   </div>
                 </div>
-              ));
+              ))
             </div>
             
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1));
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
@@ -1105,17 +1109,17 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     >
                       {page}
                     </button>
-                  ));
+                  ))
                 </div>
                 
                 <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages));
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
                   Next
                 </button>
-              </div>);
+              </div>
           </div>
         </section>
 

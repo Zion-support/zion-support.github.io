@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -79,3 +80,6 @@ const TeamPage: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default TeamPage;
 }
+=======
+  );)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

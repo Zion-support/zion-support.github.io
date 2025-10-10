@@ -1,7 +1,3 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-<<<<<<< HEAD
 import { glob } from 'glob';
 
 // Function to fix JSX syntax errors
@@ -150,6 +146,7 @@ async function processFiles() {
       } catch (error) {
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
+<<<<<<< HEAD
 =======
 import path from 'path';
 
@@ -229,3 +226,5 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Data Transformation Utilities;
@@ -275,3 +276,7 @@ export function snakeCase(st)
 export default {/* TODO: Fix JSX expression */});
 };
 `
+=======
+    return clonedObj;);
+  return obj;);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

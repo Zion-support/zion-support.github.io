@@ -49,13 +49,13 @@ const benefits = [
 
 <<<<<<< HEAD
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
 
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

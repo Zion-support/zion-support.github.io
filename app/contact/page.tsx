@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -30,17 +31,20 @@ const ContactPage: React.FC = () => {
   const handleChange = useCallback ((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
     message: '';)
-});
+})
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value;)
-}););)
+})))
 }, []);
 const handleSubmit = useCallback(async (e: React.FormEvent) => {
+<<<<<<< HEAD
 =======
     message: '']
     });;
@@ -502,3 +506,5 @@ message: '']
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default ContactPage;
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

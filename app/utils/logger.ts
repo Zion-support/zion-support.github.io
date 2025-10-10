@@ -1,47 +1,7 @@
-'use client'
-/**
- * Advanced Logging System;
- * Provides structured logging with multiple levels and context;
- */
-
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  FATAL = 4});
-}
-
-export interface LogContext {
-  userId?: string;
-  sessionId?: string;
-  component?: string;
-  action?: string;
-  [key: string]: unknown});
-}
-
-class Logger {
-  private logLevel: LogLevel = LogLevel.INFO;
-  private logs: Array<{,
-  level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string></string>
-    timestamp: number,});
-}> = []
-
-  setLogLevel(level: LogLevel): void {,
-    this.logLevel = level});
-}
-
-  getLogLevel(): LogLevel {
-    return this.logLevel});
-}
-
-<<<<<<< HEAD
   debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata););
   info(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.INFO, message, context, metadata););
   warn(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.WARN, message, context, metadata););
+<<<<<<< HEAD
 =======
   debug(message: string, context?: LogContext, metadata?: Record<strin></strin>): void {</<<<strin></strin>this</string>.log(LogLevel.DEBUG, message, context, metadata)]
     }
@@ -328,3 +288,5 @@ l: LogLevel): string {/* TODO: Fix JSX expression */});]
     }
 export const logger = new Logger();`
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

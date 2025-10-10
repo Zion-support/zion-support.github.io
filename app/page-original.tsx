@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 'use client';
@@ -2910,3 +2911,7 @@ HomePage.displayName = 'HomePage'
 HomePage.displayName = 'HomePage';
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default HomePage;
+=======
+      import('./components/ContentCarousel');)
+}, 100););
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

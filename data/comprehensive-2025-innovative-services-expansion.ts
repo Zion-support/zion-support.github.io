@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
   id: string;
@@ -2140,3 +2141,9 @@ i,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
   e: string} ; export default comprehensiveInnovativeServices; '
+=======
+    marketSize: '$8 B+ content marketing market'
+    growthRate: '180% YoY';
+variant: 'ai-futuristic'
+    contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

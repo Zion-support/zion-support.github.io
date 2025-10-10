@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ZionCuttingEdgeService2029 =
   id: string;
   name: string;
@@ -2265,3 +2266,10 @@ export type ZionCuttingEdgeService2029 = i,
   e: number) maxPric,
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
+=======
+    marketSize: '$1.3B quantum computing market'
+    growthRate: '32.1% annual growth';
+variant: 'quantum-ai-futuristic'
+    contactInfo: unknown;
+      mobile: '+1 302 464 0950'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

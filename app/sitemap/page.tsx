@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 ;
 const SitemapPage: React.FC = () => {const pages = [
@@ -89,3 +90,6 @@ const SitemapPage: React.FC = () => {const pages = [
 )]
     };
 export default SitemapPage;
+=======
+  );)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

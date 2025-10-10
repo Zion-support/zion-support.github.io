@@ -89,25 +89,25 @@ const process = [
     p: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart,});
+      icon: BarChart,})
 },
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code,});
+      icon: Code,})
 },
     {
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe,});
+      icon: Globe,})
 },
     {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield,});
+      icon: Shield,})
 }
   ];
 
@@ -318,7 +318,7 @@ const process = [
                         <li></li>
                           <CheckCircl></CheckCircl>{feature}</CheckCircle>
                         </CheckCircle>
-                      ));
+                      ))
                     </ul>
                   </div>
 
@@ -328,7 +328,7 @@ const process = [
                           <li></li>
                             <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
                           </ArrowRight>
-                        ));
+                        ))
                       </ul>
                     </div>
                   );
@@ -359,7 +359,7 @@ const process = [
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
 =======
                   </a>,
-                </div>));
+                </div>))
             </div>
           </section>
 
@@ -416,7 +416,7 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 
@@ -489,7 +489,7 @@ const process = [
                   <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 
@@ -540,6 +540,7 @@ const process = [
     <
 =======
         <Footer />
+<<<<<<< HEAD
       </div>,
 <<<<<<< HEAD
     </>);)
@@ -551,6 +552,11 @@ const process = [
 >>>>>>> main
 };
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+      </div>
+    </>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

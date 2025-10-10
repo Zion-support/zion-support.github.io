@@ -1,43 +1,5 @@
-'use client';
-/**
- * Performance Enhancement Utilities;
- * Advanced performance optimization tools for the application;
- */
-import React from 'react';
-// Debounce function for performance optimization
-export const debounce = <T></T> unknown>(,
-  func: T,
-  wait: number,
-): ((...args: Parameters<T></T>) => void) => {;
-let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T></T>) => {,
-  func: T,
-  wait: number
-): ((...args: Parameters<T></T>) => void) => {}
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T></T>) => {}
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait)]
-    }});
-};
-// Throttle function for performance optimization
-export const throttle = <T></T> unknown>(,
-  func: T,
-  limit: number,
-): ((...args: Parameters<T></T>) => void) => {;
-let inThrottle: boolean,
-  return (...args: Parameters<T></T>) => {
-    if (!inThrottle) {,
-  func: T,
-  limit: number
-): ((...args: Parameters<T></T>) => void) => {}
-  let inThrottle: boolean,
-  return (...args: Parameters<T></T>) => {}
-    if (!inThrottle) {}
-      func(...args);
-      inThrottle = true;
-<<<<<<< HEAD
       setTimeout(() => (inThrottle = false), limit););
+<<<<<<< HEAD
 =======
       setTimeout(() => (inThrottle = false), limit)]
     }
@@ -591,3 +553,5 @@ export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX express
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };`
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

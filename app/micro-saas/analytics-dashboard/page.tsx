@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
@@ -353,3 +354,6 @@ const metrics = [
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AIAnalyticsDashboardPage;
+=======
+      description: 'Monitor KPIs and business objectives with automated alerts.';);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

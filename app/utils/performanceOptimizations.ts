@@ -1,23 +1,7 @@
-'use client'
-// Performance optimization utilities;
-// Debounce utility for performance
-export const debounce = <T></T> any>(,
-  func: T,
-  wait: number,
-): ((...args: Parameters<T></T>) => void) => {;
-let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T></T>) => {,
-    clearTimeout(timeout),
-  func: T,
-  wait: number
-): ((...args: Parameters<T></T>) => void) => {}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T></T>) => {}
-    clearTimeout(timeout)
-<<<<<<< HEAD
     timeout = setTimeout(() => func(...args), wait);});;);
 }
 // Throttle utility for performance
+<<<<<<< HEAD
 =======
     timeout = setTimeout(() => func(...args), wait);});]
     }
@@ -605,3 +589,5 @@ export default {/* TODO: Fix JSX expression */});]
     };
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

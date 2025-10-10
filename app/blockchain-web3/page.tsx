@@ -75,10 +75,10 @@ const BlockchainWeb3Page: React.FC = () => {const features = [
                       {benefit}
 <<<<<<< HEAD
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
+            ))
           </div>
         </div>
       </div>

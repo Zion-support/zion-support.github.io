@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -336,3 +337,5 @@ const benefits = [
 export default CloudServicesPage;
     </div>)
 export default PagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

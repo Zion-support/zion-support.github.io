@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +9,8 @@ import Footer from '../components
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
 const PagePage: React.FC = () => {const features = [
@@ -15,6 +18,7 @@ const PagePage: React.FC = () => {const features = [
       title: 'Feature 1',
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+<<<<<<< HEAD
 =======
 >>>>>>> main
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -537,3 +541,5 @@ export default PagePage;
 =======
 >>>>>>> main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

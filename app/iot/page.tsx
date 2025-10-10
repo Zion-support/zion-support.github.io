@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
@@ -622,3 +623,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default IoTPage;
+=======
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

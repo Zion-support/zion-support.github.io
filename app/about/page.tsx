@@ -429,6 +429,9 @@ const AboutPage: React.FC = () => {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   );
 =======
 );)

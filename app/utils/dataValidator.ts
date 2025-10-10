@@ -1,9 +1,3 @@
-'use client';
-/**
- * Data Validation Utility;
- * Provides comprehensive data validation with type safety;
- */
-<<<<<<< HEAD
 export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});;)
 export interface FieldRule {/* TODO: Fix JSX expression */});;)
 export type ValidationRules = Record<string></string>
@@ -15,6 +9,7 @@ constructor(message: string)
     super(message);
     this.name = 'ValidationError'
 export class ValidationError extends Error {/* TODO: Fix JSX expression */});;);
+<<<<<<< HEAD
 =======
 export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});]
     }
@@ -693,3 +688,5 @@ export async function validateAsync(validato,
 }
 }
 "`
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

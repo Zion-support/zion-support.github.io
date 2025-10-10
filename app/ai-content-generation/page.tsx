@@ -1,9 +1,3 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
 const PagePage: React.FC = () => {const features = [
@@ -11,6 +5,7 @@ const PagePage: React.FC = () => {const features = [
       title: 'Feature 1',
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -529,3 +524,5 @@ export default AiContentGenerationPage;
 export default PagePage;
 >>>>>>> main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility
@@ -252,3 +253,6 @@ const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
 }
   }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

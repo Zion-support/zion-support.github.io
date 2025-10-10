@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -271,3 +272,7 @@ const features = [
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;
+=======
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

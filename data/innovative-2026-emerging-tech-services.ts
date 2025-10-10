@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2771,3 +2772,10 @@ i,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price})} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) }; '"
+=======
+      market_size: '$12.8B market'
+      growth_rate: '380% annual growth';
+variant: 'quantum - futuristic'
+      contact_info: unknown;
+        mobile: '+1 302 464 0950'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

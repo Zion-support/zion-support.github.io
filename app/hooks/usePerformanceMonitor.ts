@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -94,3 +95,6 @@ export const usePerformanceMonitor = () => {
     measureMemoryUsage
   };
 };
+=======
+import { useEffect } from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

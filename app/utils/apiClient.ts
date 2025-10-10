@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
@@ -435,3 +436,6 @@ export { apiClient };
 export default ApiClient;
 `
 }
+=======
+  cacheTTL?: number;);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

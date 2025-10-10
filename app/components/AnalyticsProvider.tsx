@@ -35,7 +35,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
-      });
+      })
     }
   }, []);
 
@@ -50,7 +50,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         event_label: parameters.label,
         value: parameters.value,
         ...parameters,
-      });
+      })
     }
 
     // Console logging for development
@@ -68,7 +68,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.origin + pagePath,
-      });
+      })
     }
 
     // Console logging for development

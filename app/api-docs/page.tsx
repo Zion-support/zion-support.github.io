@@ -260,10 +260,10 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                         </pre>
                       </div>
                     </div>
-                  ));
+                  ))
                 </div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -304,6 +304,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
 
 <<<<<<< HEAD
       <Footer />
+<<<<<<< HEAD
     </div>);
 =======
       <Footer 
@@ -311,3 +312,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
   );
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

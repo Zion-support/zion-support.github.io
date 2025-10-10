@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
@@ -123,3 +124,6 @@ content: 'These terms shall be governed by and construed in accordance with the 
     </div>
 )]
     }
+=======
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -134,3 +135,9 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 };
 
 export default EnhancedSEOHead;
+=======
+const EnhancedSEOHead: React.FC = () => {
+  return (;
+const EnhancedSEOHead: React.FC = () => {
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

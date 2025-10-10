@@ -26,18 +26,28 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState<Fo
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
     message: '')
   });
 <<<<<<< HEAD
+=======
+    message: ''
+  })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 ;
 const [status, setStatus] = useState<FormStatus>({
 =======
   const [status, setStatus] = useState<FormStatus>({
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     type: 'idle',
+<<<<<<< HEAD
     message: '')
   });
 <<<<<<< HEAD
+=======
+    message: ''
+  })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 ;
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
@@ -48,21 +58,29 @@ const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))
 ;
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     setStatus({ typ,
     e: 'loading', message: 'Sending message...' });
     try {
       /
       await new Promise(resolve => setTimeout(resolve, 2000));
+=======
+    setStatus({ type: 'loading', message: 'Sending message...' })
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
       
       setStatus({
         type: 'success',
 <<<<<<< HEAD
         message: 'Thank you! Your message has been sent successfully.'
-      });
+      })
       
       // Reset form
 =======
@@ -86,8 +104,13 @@ const handleSubmit = async (e: React.FormEvent) => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       setStatus({
         type: 'error',
+<<<<<<< HEAD
         message: 'Sorry, there was an error sending your message. Please try again.')
       });
+=======
+        message: 'Sorry, there was an error sending your message. Please try again.'
+      })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   }
 const services = [
     'AI & Machine Learning',
@@ -240,7 +263,7 @@ const services = [
                 <option key={service} value={service}>
                   {service}
                 </option>
-              ));
+              ))
             </select>
           </div>
 =======
@@ -286,7 +309,7 @@ const services = [
                 <AlertCircle className="w-5 h-5 mr-2" />
               ) : null}
               <span>{status.message}</span>
-            </div>);
+            </div>
           <button
             type="submit"
 <<<<<<< HEAD

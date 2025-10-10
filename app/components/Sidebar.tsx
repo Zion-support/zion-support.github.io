@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
@@ -24,13 +25,16 @@ import {
 
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   Clock;)
 >>>>>>> main
 } from 'lucide-react';
 ;
 const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 const location = useLocation();
+<<<<<<< HEAD
 =======
   Clock]
     } from 'lucide-react';
@@ -567,3 +571,5 @@ Sidebar.displayName = 'Sidebar';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Sidebar;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

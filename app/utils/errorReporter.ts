@@ -1,19 +1,5 @@
-import React from 'react';
-'use client'
-/**
- * Enhanced Error Reporting Utility;
- * Provides comprehensive error tracking, logging, and reporting capabilities;
- */
-export interface ErrorReport {
-  message: string,
-  stack?: string;
-  componentStack?: string;
-  timestamp: string,
-  userAgent: string,
-  url: string,
-  severity: 'low' | 'medium' | 'high' | 'critical',
-<<<<<<< HEAD
   context?: Record<string></string>;});;)
+<<<<<<< HEAD
 =======
   context?: Record<string></string>;});]
     }
@@ -400,3 +386,5 @@ export const captureComponentError = (erro,
 export default ErrorReporter;
 `
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

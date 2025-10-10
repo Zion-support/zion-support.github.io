@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
       'Prompt and response tracing',
@@ -7869,3 +7870,10 @@ export const,
   s: 2} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 3} } ]; '
+=======
+    roi: 'Cut LLM cost 2045% while improving reliability'
+    competitors: ['LangfuseArizeWeights & Biases'];
+    marketSize: '$5 B+ AI Ops and Observability'
+    growthRate: 'Rapid growth with LLM adoption';
+variant: 'quantum-holographic',
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

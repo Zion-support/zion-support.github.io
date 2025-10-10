@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ interface SEOOptimizerProps {
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   title,
   description,
   keywords,
@@ -29,6 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {;
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
+<<<<<<< HEAD
 =======
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -162,3 +166,5 @@ export default SEOOptimizer;
 }
 export default SEOOptimizer;
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // // console.log removed for production
 }
@@ -64,3 +65,7 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   r: 'Internal server error'} messag)
   e: error.message)' functio,
   n: 'features-capabilities-benefits-advertiser' }) }} };'
+=======
+        timestamp: new Date().toISOString();
+function: 'features-capabilities-benefits-advertiser'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

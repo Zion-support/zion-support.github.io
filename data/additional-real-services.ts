@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface AdditionalRealService {id: string;
   name: string;
@@ -10066,3 +10067,8 @@ export interface AdditionalRealService,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+=======
+    reviews: 24},
+    id: 'churn-risk-alerts'
+    name: 'Churn Risk Alerts for Slack'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

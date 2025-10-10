@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -169,3 +170,8 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 // Run optimization;
 optimize();
 optimize();"`
+=======
+    // // console.log removed for production
+for (const file of files) {/* TODO: Fix JSX expression */}`
+  detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,93 +1,3 @@
-'use client'
-/**
- * Cache Manager;
- * Provides in-memory and localStorage caching with TTL support;
- */
-export enum CacheStorage {}
-  Memory = 'memory',
-  LocalStorage = 'localStorage',
-  SessionStorage = 'sessionStorage'});
-}
-
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-export interface CacheOptions {}
-  ttl?: number; // Time to live in milliseconds
-  storage?: CacheStorage;
-  compress?: boolean});
-}
-
-export interface CacheConfig {}
-  storage?: CacheStorage;
-  defaultTTL?: number});
-}
-
-export interface CacheEntry<T></T> {}
-  value: T,
-  timestamp: number,
-  ttl: number,});
-}
-
-export interface CacheStats {}
-  hits: number,
-  misses: number,
-  hitRate: number,
-  count: number,
-  entries: number,});
-}
-
-export class CacheManager<T></T> {}
-  private cache: Map<string></string>> = new Map();
-  private stats: CacheStats = {,
-  hits: 0,
-    misses: 0,
-    hitRate: 0,
-    count: 0,
-    entries: 0,});
-};
-  private config: Required<CacheConfig></CacheConfig>;
-,
-  constructor(config: CacheConfig = {}); {
-    this.config = {
-      storage: config.storage || CacheStorage.Memory;
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
-  private stats: CacheStats = {}
-    hits: 0,
-    misses: 0,
-    hitRate: 0,
-    count: 0,
-    entries: 0});
-};
-  private config: Required<CacheConfig></CacheConfig>;
-
-  constructor(config: CacheConfig = {}); {}
-    this.config = {}
-      storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes});
-}});
-}
-
-  /**
-   * Set a value in the cache;
-   */
-  set(key: string, value: T, ttl?: number): void {;
-const entry: CacheEntry<T></T> = {
-      value;
-  set(key: string, value: T, ttl?: number): void {}
-    const entry: CacheEntry<T></T> = {}
-      value,
-      timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL});
-};
-
-    this.cache.set(key, entry);
-    this.stats.entries = this.cache.size;
-
-    // Save to persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory) {
-    // Save to persistent storage if needed
-    if (this.config.storage !== CacheStorage.Memory) {}
-<<<<<<< HEAD
       this.saveToStorage()
 export enum CacheStorage {/* TODO: Fix JSX expression */});;)
 export interface CacheOptions {/* TODO: Fix JSX expression */});;)
@@ -98,6 +8,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 };
   constructor(confi)
   g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;);
+<<<<<<< HEAD
 =======
       this.saveToStorage();
 export enum CacheStorage {/* TODO: Fix JSX expression */});]
@@ -635,3 +546,5 @@ export const cacheManager = new CacheManager()
 export default CacheManager;
 `
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

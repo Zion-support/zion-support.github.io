@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
@@ -103,3 +104,6 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default MicroSaaSPage;
 }
+=======
+  );)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

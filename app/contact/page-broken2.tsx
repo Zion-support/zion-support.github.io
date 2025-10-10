@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 'use client';
@@ -16,11 +17,14 @@ import {
 
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   CheckCircle;)
 >>>>>>> main
 } from 'lucide-react';
 ;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+<<<<<<< HEAD
 =======
   CheckCircle]
     } from 'lucide-react';
@@ -579,3 +583,5 @@ description: 'Eastern Time']
 )]
     };
 export default ContactPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

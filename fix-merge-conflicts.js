@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -71,6 +69,7 @@ import { glob } from 'glob';
 function resolveMergeConflicts(content) {
   // Remove merge conflict markers and choose HEAD version
   let resolved = content
+<<<<<<< HEAD
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
@@ -353,3 +352,5 @@ console.log(`Fixed ${fixedCount} out of ${conflictFiles.length} files`);
 processFiles().catch(console.error);
 >>>>>>> main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

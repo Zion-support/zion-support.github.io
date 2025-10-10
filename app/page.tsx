@@ -1,4 +1,20 @@
 'use client';
+<<<<<<< HEAD
+=======
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+// Dynamically import heavy components for better performance;
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
 import React, { useState, useEffect, Suspense, memo } from 'react';
 import { Navigation } from './components/Navigation';
@@ -12,7 +28,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded mb-2"></div>
     <div className="h-3 bg-gray-300 rounded"> </div>
   </div>
-));
+))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
@@ -30,8 +46,13 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'phone_click', {
         event_category: 'engagement',
+<<<<<<< HEAD
         event_label: 'header_phone'
       });
+=======
+        event_label: 'main_phone_number'
+      })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
     }
   };
 

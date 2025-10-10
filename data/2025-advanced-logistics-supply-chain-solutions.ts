@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2295,3 +2296,10 @@ i,
   s: 178; ratin,
   g: 4.8; review,
   s: 112} ]; '
+=======
+      market_size: '$45B supply chain management market'
+      growth_rate: '28% annual growth';
+variant: 'logistics'
+      contact_info: unknown;
+        mobile: '+1 302 464 0950'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

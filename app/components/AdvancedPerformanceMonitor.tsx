@@ -1,13 +1,3 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-<<<<<<< HEAD
   memory: number | null;);
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
@@ -15,7 +5,7 @@ interface PerformanceMonitorProps {
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,;)
-}); => {;
+}) => {;
 const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
   memory: number | null}
 
@@ -30,6 +20,7 @@ return (;
 const [metrics, setMetrics] = useState<PerformanceMetrics>
 );
 }({
+<<<<<<< HEAD
 =======
   memory: number | null]
     }
@@ -618,3 +609,5 @@ export default AdvancedPerformanceMonitor;
   );
 }
 export default AdvancedPerformanceMonitor;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

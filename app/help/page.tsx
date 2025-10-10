@@ -19,7 +19,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 <<<<<<< HEAD
             </p>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 <<<<<<< HEAD
             </p>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

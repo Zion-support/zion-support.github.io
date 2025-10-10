@@ -10,7 +10,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
 return (;
 const [loadingStates, setLoadingStates] = useState<Record<string, boolean>
 );
-}>({});
+}>({})
 
   useEffect(() => {
     // UX enhancement logic;
@@ -22,9 +22,9 @@ const enhanceUX = () => {
 const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {
         element.addEventListener('click', () => {
-          setLoadingStates(prev => ({ ...prev, [index]: true }));
+          setLoadingStates(prev => ({ ...prev, [index]: true }))
           setTimeout(() => {
-            setLoadingStates(prev => ({ ...prev, [index]: false }))}, 1000)})});
+            setLoadingStates(prev => ({ ...prev, [index]: false }))}, 1000)})})
 
       // Add focus indicators;
 const style = document.createElement('style');

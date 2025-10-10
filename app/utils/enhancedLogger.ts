@@ -1,25 +1,6 @@
-'use client'
-/**
- * Enhanced Logging Utility;
- *
- * Provides comprehensive logging capabilities with multiple levels,
- * structured logging, and remote logging support.
- *
- * @module enhancedLogger;
- * @author Zion Tech Group;
- * @version 1.0.0;
- */
-/**
- * Log levels enum;
- */
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-<<<<<<< HEAD
   FATAL = 4
 export enum LogLevel {/* TODO: Fix JSX expression */});;);
+<<<<<<< HEAD
 =======
   FATAL = 4;
 export enum LogLevel {/* TODO: Fix JSX expression */});]
@@ -752,3 +733,5 @@ export const logger = EnhancedLogger.getInstance();
 export default EnhancedLogger;
 "`
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

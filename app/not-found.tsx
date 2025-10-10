@@ -35,4 +35,4 @@ export default function NotFound() {
           If you believe this is an error, please contact our support team.
         </div>
       </div>
-    </div>);
+    </div>

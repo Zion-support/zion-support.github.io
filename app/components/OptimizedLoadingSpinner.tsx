@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
@@ -145,3 +146,6 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner;
 }
+=======
+  fullScreen?: boolean;);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

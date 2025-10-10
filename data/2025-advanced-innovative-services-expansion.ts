@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -4184,3 +4185,9 @@ i,
   s: [,' 'AI climate modeling',' 'Environmental monitoring',' 'Weather forecasting',' 'Sustainability analytics',' 'Custom model development'], market_advantag,
   e:  ,' 'Most advanced AI climate prediction platform with research - grade accuracy'},' ]; 'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development' ];' market_advantag,
   e: 'Most advanced AI climate prediction platform with research - grade accuracy' } ]; '
+=======
+    marketSize: '$8 B+ DevOps tools market'
+    growthRate: '25% YoY';
+variant: 'ai-autonomous-enterprise'
+    contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

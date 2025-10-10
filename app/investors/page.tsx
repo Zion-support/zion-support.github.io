@@ -1,10 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
 const PagePage: React.FC = () => {const features = [
+<<<<<<< HEAD
 =======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -279,3 +276,5 @@ const PagePage: React.FC = () => {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

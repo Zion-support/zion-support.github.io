@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   i,
   d: string;
@@ -3368,3 +3369,9 @@ i,
   s: 410; trial_day,
   s: 14;' setup_tim,
   e: '2 hours' contact_info}]; ; contactInfo } ]}} '"
+=======
+    category: 'AI & Assistants'
+    link: 'https://ziontechgroup.com / ai - assistant';
+variant: 'ai - futuristic'
+    rating: 4.8;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

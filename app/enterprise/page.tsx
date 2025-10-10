@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -225,3 +226,6 @@ const stats = [
 )]
     };
 export default EnterprisePage;
+=======
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,18 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
-
-interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
-  features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
     text: string;)
 }>;
   onSubscribe?: (email: string) => void;);
+<<<<<<< HEAD
 =======
     text: string]
     }>;
@@ -321,3 +310,5 @@ const handleSubmit = async (e: React.FormEvent) => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default ContentNewsletterSignup;
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,128 +1,16 @@
-'use client';
-/**
- * Advanced Error Handler;
- * Comprehensive error handling utilities for React applications;
- */
-import React, { ErrorInfo, useCallback } from 'react';
 // Error types
-export enum ErrorType {
-// Error types
-export enum ErrorType {}
-  RUNTIME = 'RUNTIME',
-  NETWORK = 'NETWORK',
-  VALIDATION = 'VALIDATION',
-  AUTHENTICATION = 'AUTHENTICATION',
-  AUTHORIZATION = 'AUTHORIZATION',
-  NOT_FOUND = 'NOT_FOUND',
-  SERVER = 'SERVER',
-  CLIENT = 'CLIENT',
-  UNKNOWN = 'UNKNOWN'});
-}
+export enum ErrorType {/* TODO: Fix JSX expression */}))
 // Error severity levels
-export enum ErrorSeverity {
-// Error severity levels
-export enum ErrorSeverity {}
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL'});
-}
+export enum ErrorSeverity {/* TODO: Fix JSX expression */}))
 // Error interface
-export interface AppError {
-  id: string;,
-    type: ErrorType,
-  severity: ErrorSeverity;,
-    message: string,
-// Error interface
-export interface AppError {}
-  id: string,
-  type: ErrorType,
-  severity: ErrorSeverity,
-  message: string,
-  stack?: string;
-  timestamp: Date,
-  userId?: string;
-  sessionId?: string;
-  url?: string;
-  userAgent?: string;
-  componentStack?: string;
-  context?: Record<stri></stri>;</<<<stri></stri>resolved</strin>?: boolean;
-  retryCount?: number});
-}
+export interface AppError {/* TODO: Fix JSX expression */}))
 // Error handler configuration
-export interface ErrorHandlerConfig {
-  enableLogging: boolean;,
-    enableReporting: boolean,
-  enableRetry: boolean;,
-    maxRetries: number,
-  retryDelay: number;,
-    enableUserNotification: boolean,
-  enableConsoleLogging: boolean;,
-    enableNetworkLogging: boolean,
-// Error handler configuration
-export interface ErrorHandlerConfig {}
-  enableLogging: boolean,
-  enableReporting: boolean,
-  enableRetry: boolean,
-  maxRetries: number,
-  retryDelay: number,
-  enableUserNotification: boolean,
-  enableConsoleLogging: boolean,
-  enableNetworkLogging: boolean,
-  reportEndpoint?: string;
-  logLevel: 'debug' | 'info' | 'warn' | 'error'});
-}
-// Default configuration
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
-    enableLogging: true,
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
-  enableLogging: true,
-  enableReporting: true,
-  enableRetry: true,
-  maxRetries: 3,
-  retryDelay: 1000,
-  enableUserNotification: true,
-  enableConsoleLogging: true,
-  enableNetworkLogging: true,
-  logLevel: 'error'
-// Default configuration
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
-  enableLogging: true,
-  enableReporting: true,
-  enableRetry: true,
-  maxRetries: 3,
-  retryDelay: 1000,
-  enableUserNotification: true,
-  enableConsoleLogging: true,
-  enableNetworkLogging: true,
-  logLevel: 'error'};
-// Error Handler class
-export class ErrorHandler {
-// Error Handler class
-export class ErrorHandler {}
-  private static instance: ErrorHandler,
-  private config: ErrorHandlerConfig;</string>
-  private errors: AppError[] = [];</string>
-  private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
-  constructor(config: Partial<ErrorHandlerConfig></ErrorHandlerConfig>= {}); {
-    this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>});
-}</ErrorHandlerConfig>
-  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler(config);
-<<<<<<< HEAD
-// Error types
-export enum ErrorType {/* TODO: Fix JSX expression */});;);
-// Error severity levels
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;);
-// Error interface
-export interface AppError {/* TODO: Fix JSX expression */});;);
-// Error handler configuration
-export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});;);
+export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}))
 // Default configuration
 export const,
-  defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */});;);
+  defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */}))
 // Error Handler class
+<<<<<<< HEAD
 =======
 // Error types;
 export enum ErrorType {/* TODO: Fix JSX expression */});]
@@ -1138,3 +1026,5 @@ return {/* TODO: Fix JSX expression */});]
 export default ErrorHandler;
 "`
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeAIService {id: string;
   name: string;
   tagline: string;
@@ -3647,3 +3648,10 @@ export interface InnovativeAIService,
   s: 67, ratin,
   g: 4.7, review,
   s: 34 } ]; ]} ]; '"
+=======
+    marketSize: '$1 && 1.5B BCI market'
+    growthRate: '300% annual growth';
+variant: 'quantum-neural-advanced'
+    contactInfo: unknown;
+    color: 'from - purple - 600 to - indigo - 700'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

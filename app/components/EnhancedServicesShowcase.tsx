@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 ;
@@ -93,3 +94,6 @@ stats: '95% Efficiency']
     };
 export default EnhancedServicesShowcase;
 }
+=======
+      stats: '95% Efficiency';);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

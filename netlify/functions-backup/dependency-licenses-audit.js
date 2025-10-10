@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const _fs = require('fs');
 const _fsp = require('fs/promises');
 const _path = require('path');
@@ -281,3 +282,7 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   l: '/reports/licenses/'} }}; return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify(body) }};'"`
+=======
+  y: `Failed to read package.jso,`
+  n: ${e}` }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

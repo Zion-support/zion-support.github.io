@@ -177,6 +177,7 @@ const BlogPage: React.FC = () => {
   const categories = ['all', 'AI & Machine Learning', 'Cybersecurity', 'Cloud Computing', 'Software Development'];
 >>>>>>> origin/main
 
+<<<<<<< HEAD
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -184,6 +185,17 @@ const BlogPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+=======
+  const filteredPosts = useMemo(() => {
+    return blogPosts.filter(post => {
+      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    })
+  }, [searchTerm, selectedCategory]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
   const featuredPosts = blogPosts.filter(post => post.featured);
 <<<<<<< HEAD

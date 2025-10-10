@@ -11,7 +11,7 @@ const ContentStatistics: React.FC = () => {
     years: 0,
     countries: 0,
     uptime: 0
-  });
+  })
 
   const targetCounters = {
     clients: 10000,
@@ -150,12 +150,12 @@ const ContentStatistics: React.FC = () => {
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
+        }))
       }, stepDuration);
-    });
+    })
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
+      timers.forEach(timer => clearInterval(timer))
     };
   }, []);
 

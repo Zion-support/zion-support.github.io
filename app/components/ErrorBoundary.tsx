@@ -37,7 +37,7 @@ constructor(props: Props) {
     this.setState({
       error,
       errorInfo
-    });
+    })
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -72,7 +72,7 @@ const errorData = {
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
 
     // console.error removed for production
@@ -83,7 +83,7 @@ const errorData = {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    })
   };
   
   handleGoHome = () => {
@@ -129,7 +129,10 @@ const errorData = {
                         {this.state.error.stack}
                       </pre>
                     </div>
+<<<<<<< HEAD
                   )}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
@@ -137,7 +140,10 @@ const errorData = {
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
+<<<<<<< HEAD
                   )}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                 </div>
                 </details>
               )}
@@ -172,10 +178,14 @@ const errorData = {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       );
     }
     return this.props.children;
   }
+=======
+    return this.props.children}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 }
 
 export default ErrorBoundary;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
@@ -114,6 +115,9 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       category: 'Web3',
 technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
+=======
+      technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 },
     {
       title: 'Blockchain Analytics Platform',
@@ -148,6 +152,7 @@ technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       marketPrice: '$500-1,500
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
+<<<<<<< HEAD
   ];
 ;
 const categories = [...new Set(blockchainServices.map(service => service.category))];
@@ -613,3 +618,5 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 export default BlockchainPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

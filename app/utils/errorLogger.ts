@@ -1,14 +1,5 @@
-'use client'
-/**
- * Comprehensive Error Logging System;
- * Provides structured error logging with different severity levels;
- */
-export enum ErrorSeverity {}
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-<<<<<<< HEAD
   CRITICAL = 'critical'});;)
+<<<<<<< HEAD
 =======
   CRITICAL = 'critical'});]
     }
@@ -284,3 +275,5 @@ export const logInfo = (messag)
 export default errorLogger;
 `
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export interface ComprehensiveITService {id: string;
@@ -7559,3 +7560,7 @@ export interface ComprehensiveITService,
   s: 180, ratin,
   g: 4.9, review,
   s: 156} ; '
+=======
+    growth_rate: '8% annual growth';
+variant: 'enterprise - futuristic'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -68,7 +68,7 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@ const benefits = [
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -142,6 +142,7 @@ const benefits = [
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 =======
               <
@@ -154,3 +155,6 @@ const benefits = [
 };
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

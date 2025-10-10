@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
   id: string;
@@ -1146,3 +1147,10 @@ i,
   n: true, implementation_detail,
   s:  ,' 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',' launch_dat,
   e: '2024 - 07 - 15', '
+=======
+      marketSize: '$1 && 1.2B market'
+      growthRate: '22 && 22.5% annual growth';
+variant: 'ai-autonomous'
+      contactInfo: unknown;
+      color: 'from - blue - 600 to - cyan - 500'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

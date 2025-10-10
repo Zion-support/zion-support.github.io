@@ -16,10 +16,13 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     {
       icon: BarChart,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -39,12 +42,15 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: Globe,
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -57,6 +63,7 @@ const AiAnalyticsPage: React.FC = () => {const features = [
 >>>>>>> main
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 const benefits = [
@@ -87,6 +94,8 @@ const useCases = [
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
 const useCases = [
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
   const benefits = [
     'Transform raw data into actionable insights',
@@ -98,7 +107,6 @@ const useCases = [
   ];
 
   const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -223,6 +231,7 @@ const useCases = [
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -235,6 +244,8 @@ const useCases = [
                       ));
                     </ul>);
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
@@ -274,9 +285,8 @@ const useCases = [
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>
@@ -324,6 +334,7 @@ const useCases = [
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ));
 =======
               </div>
@@ -351,6 +362,10 @@ const useCases = [
                 </div>)
               ))}
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
             </div>
           </div>
         </section>
@@ -407,6 +422,7 @@ const useCases = [
         <Footer />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>
 =======
       
@@ -415,4 +431,10 @@ const useCases = [
 }
 export default AiAnalyticsPage;
     </React.Fragment>)
+=======
+    </>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 export default AiAnalyticsPage;

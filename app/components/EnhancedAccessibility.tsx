@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -262,3 +263,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 };
 
 export default EnhancedAccessibility;
+=======
+;
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
+const [settings, setSettings] = useState<AccessibilitySettings>({
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -87,3 +88,5 @@ const Breadcrumb: React.FC = () => {
 };
 
 export default Breadcrumb;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

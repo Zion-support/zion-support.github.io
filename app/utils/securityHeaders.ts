@@ -1,59 +1,5 @@
-/**
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
- */
-export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
-  permissionsPolicy?: string;});
-}
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
-  // Content Security Policy;
-  contentSecurityPolicy: [,
-export interface SecurityHeadersConfig {}
-  contentSecurityPolicy?: string
-  strictTransportSecurity?: string
-  xFrameOptions?: string
-  xContentTypeOptions?: string
-  referrerPolicy?: string
-  permissionsPolicy?: string;});
-}
-export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy
-  contentSecurityPolicy: [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https: blob:",
-    "font-src 'self' data: ",
-    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests'].join('; '),
-  // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
-  // Prevent clickjacking;
-  xFrameOptions: 'DENY'
-  // Prevent MIME type sniffing;
-  xContentTypeOptions: 'nosniff'
-  // Referrer Policy;
-  referrerPolicy: 'strict-origin-when-cross-origin'
-  // Permissions Policy (formerly Feature Policy),
-  permissionsPolicy: [,
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'interest-cohort=()',
-    'accelerometer=()',
-    'gyroscope=()',
-<<<<<<< HEAD
     'magnetometer=()'].join(', '););
+<<<<<<< HEAD
 =======
     'magnetometer=()'].join(', ')]
     }
@@ -134,3 +80,5 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 });)]
     }
 export default defaultSecurityHeaders;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

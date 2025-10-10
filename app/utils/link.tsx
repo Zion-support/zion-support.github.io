@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface LinkProps {
   href: string,
@@ -83,3 +84,6 @@ export default Link;
     };
 export default Link;
 }
+=======
+  return (<a;);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

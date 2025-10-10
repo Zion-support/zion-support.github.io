@@ -65,7 +65,7 @@ const benefits = [
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

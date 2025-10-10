@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
   id: string;
@@ -3438,3 +3439,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; '
+=======
+    reviews: 1600},
+    id: 'smart - contract - automation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,9 +1,3 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
 const AIContentWriterPage: React.FC = () => {const features = [
@@ -11,6 +5,7 @@ const AIContentWriterPage: React.FC = () => {const features = [
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -551,3 +546,5 @@ export default AiContentWriterPage;
 export default AIContentWriterPage;
 >>>>>>> main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

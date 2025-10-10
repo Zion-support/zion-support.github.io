@@ -279,14 +279,14 @@ const DemoPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ));
+                    ))
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
                   </button>
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>

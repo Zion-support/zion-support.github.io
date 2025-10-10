@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -322,3 +323,8 @@ const PagePage: React.FC = () => {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+;
+const PagePage: React.FC = () => {const features = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

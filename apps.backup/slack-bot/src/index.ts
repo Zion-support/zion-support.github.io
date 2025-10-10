@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)
   t: helpText() }); return}' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
@@ -63,3 +64,8 @@ t: '*${data.project.name}* – statu,
   r:
         r: ${err.message || 'unknown'}` }); } }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
 >>>>>>> cursor/fix-errors-and-merge-to-main-1c81
+=======
+  t: `*${data.project.name}* – statu,
+  s: ${data.project.status}\\nMilestone)`
+  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

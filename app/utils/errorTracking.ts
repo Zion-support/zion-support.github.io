@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 /**
  * Advanced Error Tracking and Reporting System;
@@ -453,3 +454,6 @@ export const removeErrorListener = (listene,
   errorTracking.removeListener(listener);
 `
 }
+=======
+export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
