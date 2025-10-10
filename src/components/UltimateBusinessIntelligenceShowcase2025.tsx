@@ -3,7 +3,7 @@ import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all')}
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -146,7 +146,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -257,5 +257,5 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
+export default UltimateBusinessIntelligenceShowcase2025
   </path>

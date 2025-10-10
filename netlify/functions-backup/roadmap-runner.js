@@ -10,11 +10,11 @@ exports.handler = async () => {try {
     execSync('node automation/advanced-git-sync.cjs || true', {stdio: 'inherit'),
       shell: true}
     });
-    return {statusCode: 200;
+    return {statusCode: 200
       body: JSON.stringify({ ok: true} task: 'roadmap-runner' });
     };
   } catch (e) {return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({ ok: false} error: String(e) });
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   l: true}

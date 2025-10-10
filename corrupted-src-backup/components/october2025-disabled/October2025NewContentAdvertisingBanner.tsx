@@ -37,7 +37,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           {/* Main, Headlin, e */}"
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
-              3, Revolutionary, AI Breakthroug, h, s;
+              3, Revolutionary, AI Breakthroug, h, s
             </sp, a, n>
           </h2>"
           <p, className="te, x, t-3xl, m, d:te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8"></p>

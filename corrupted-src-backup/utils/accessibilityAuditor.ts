@@ -1,21 +1,21 @@
 /**
- * Accessibility auditor for comprehensive accessibility testing;
+ * Accessibility auditor for comprehensive accessibility testing
  */
 
 /**
- * Interface for accessibility issues;
+ * Interface for accessibility issues
  */
 interface AccessibilityIssue {/* TODO: Fix JSX expression */}
 }
 
 /**
- * Accessibility auditor class;
+ * Accessibility auditor class
  */
 export class AccessibilityAuditor {
   private issues: AccessibilityIssue[] = [];
 
   /**
-   * Run comprehensive accessibility audit;
+   * Run comprehensive accessibility audit
    */
   public audit(): AccessibilityIssue[] {
     this.issues = [];
@@ -25,15 +25,15 @@ export class AccessibilityAuditor {
     this.checkLinks();
     this.checkForms();
     this.checkButtons();
-    this.checkColorContrast();
-    this.checkKeyboardNavigation();
-    this.checkARIALabels();
+    this.checkColorContrast()}
+    this.checkKeyboardNavigation()}
+    this.checkARIALabels()}
 ,
-    return this.issues;
+    return this.issues
   }
 
   private checkImages(): void {
-    const _images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img')}
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {
         this.addIssue('critical')
@@ -52,12 +52,10 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkHeadings(): void {
-    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let _previousLevel = 0;
-
+    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')}
+    let _previousLevel = 0
     headings.forEach((heading, index) => {
-      //       const level = parseInt(heading.tagName.charAt(1));
-
+      //       const level = parseInt(heading.tagName.charAt(1))}
       if (level > previousLevel + 1) {
         this.addIssue('serious')
           `heading[${index}]`)
@@ -69,12 +67,12 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
         );
       }
 
-      previousLevel = level;
+      previousLevel = level
     });
   }
 
   private checkLinks(): void {
-    const _links = document.querySelectorAll('a');
+    const _links = document.querySelectorAll('a')}
     links.forEach((link, index) => {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
         this.addIssue('serious')
@@ -90,7 +88,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkForms(): void {
-    const _inputs = document.querySelectorAll('input, textarea, select');
+    const _inputs = document.querySelectorAll('input, textarea, select')}
     inputs.forEach((input, index) => {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
         this.addIssue('serious')
@@ -106,7 +104,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkButtons(): void {
-    const _buttons = document.querySelectorAll('button');
+    const _buttons = document.querySelectorAll('button')}
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
         this.addIssue('serious')
@@ -122,17 +120,17 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkColorContrast(): void {
-    // This is a simplified check - in practice, you'd use a library like axe-core;
+    // This is a simplified check - in practice, you'd use a library like axe-core
     this.addIssue('moderate')
       'document')
       'Color contrast check needed')
       'Use automated tools to verify color contrast ratios'
-    );
+    )}
   }
 
   private checkKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-    );
+    )}
     focusableElements.forEach((element, index) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         this.addIssue('moderate')
@@ -151,11 +149,10 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkARIALabels(): void {
-    const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
+    const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]')}
     elementsWithAria.forEach((element, index) => {
-      //       const ariaLabel = element.getAttribute('aria-label');
-      //       const ariaLabelledBy = element.getAttribute('aria-labelledby');
-
+      //       const ariaLabel = element.getAttribute('aria-label')}
+      //       const ariaLabelledBy = element.getAttribute('aria-labelledby')}
       if (ariaLabel && ariaLabelledBy) {
         this.addIssue('moderate')
           `element[${index}]`)
@@ -172,7 +169,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
     issue: string)
-    recommendation: string;
+    recommendation: string
   ): void {,
     this.issues.push({)
       severity;)
@@ -192,30 +189,30 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Get issues by severity;
+   * Get issues by severity
    */
   public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {,
-    return this.issues.filter(issue => issue.severity === severity);
+    return this.issues.filter(issue => issue.severity === severity)}
   public getIssuesBySeverity(severit)
   y: AccessibilityIssue['severity']): AccessibilityIssue[] {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Get summary of audit results;
+   * Get summary of audit results
    */
   public getSummary(): {
-    total: number;
-    critical: number;
-    serious: number;
-    moderate: number;
-    minor: number;
+    total: number
+    critical: number
+    serious: number
+    moderate: number
+    minor: number
   } {
     return {
-      total: this.issues.length;
-      critical: this.getIssuesBySeverity('critical').length;
-      serious: this.getIssuesBySeverity('serious').length;
-      moderate: this.getIssuesBySeverity('moderate').length;
-      minor: this.getIssuesBySeverity('minor').length;
+      total: this.issues.length
+      critical: this.getIssuesBySeverity('critical').length
+      serious: this.getIssuesBySeverity('serious').length
+      moderate: this.getIssuesBySeverity('moderate').length
+      minor: this.getIssuesBySeverity('minor').length
   public getSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
     };
@@ -223,7 +220,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 }
 
 /**
- * Utility function to run accessibility audit;
+ * Utility function to run accessibility audit
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
 };

@@ -6,8 +6,7 @@ import { execSync } from 'child_process';
 
 // Function to fix common syntax patterns
 function fixCommonSyntaxErrors(content) {
-  let modified = false;
-  
+  let modified = false
   // Fix malformed imports
   const importFixes = [
     // Fix malformed import statements with missing commas
@@ -28,10 +27,10 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of importFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent = content.replace(fix.pattern, fix.replacement)}
     if (newContent !== content) {
-      content = newContent;
-      modified = true;
+      content = newContent
+      modified = true
     }
   }
   
@@ -55,10 +54,10 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of functionFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent = content.replace(fix.pattern, fix.replacement)}
     if (newContent !== content) {
-      content = newContent;
-      modified = true;
+      content = newContent
+      modified = true
     }
   }
   
@@ -82,10 +81,10 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of objectFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent = content.replace(fix.pattern, fix.replacement)}
     if (newContent !== content) {
-      content = newContent;
-      modified = true;
+      content = newContent
+      modified = true
     }
   }
   
@@ -109,10 +108,10 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of jsxFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent = content.replace(fix.pattern, fix.replacement)}
     if (newContent !== content) {
-      content = newContent;
-      modified = true;
+      content = newContent
+      modified = true
     }
   }
   
@@ -131,10 +130,10 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of commentFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent = content.replace(fix.pattern, fix.replacement)}
     if (newContent !== content) {
-      content = newContent;
-      modified = true;
+      content = newContent
+      modified = true
     }
   }
   
@@ -144,24 +143,22 @@ function fixCommonSyntaxErrors(content) {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
+    let content = fs.readFileSync(filePath, 'utf8')}
+    let modified = false
     // Apply common fixes
-    const result = fixCommonSyntaxErrors(content);
-    content = result.content;
-    modified = result.modified;
-    
+    const result = fixCommonSyntaxErrors(content)}
+    content = result.content
+    modified = result.modified
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
+      return true
     }
     
-    return false;
+    return false
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    return false
   }
 }
 
@@ -171,8 +168,8 @@ function findFilesWithSyntaxErrors() {
     const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
-    return [];
+    console.error('Error finding files with syntax errors:', error.message)}
+    return []}
   }
 }
 
@@ -182,10 +179,10 @@ console.log('Starting comprehensive syntax error resolution...');
 const filesWithErrors = findFilesWithSyntaxErrors();
 console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 
-let fixedCount = 0;
+let fixedCount = 0
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
+    fixedCount++}
   }
 }
 
@@ -196,10 +193,10 @@ try {
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
+    console.log('✅ All syntax errors resolved!')}
   } else {
     console.log(`⚠️  ${count} syntax errors still remain`);
   }
 } catch (error) {
-  console.log('✅ No syntax errors found');
+  console.log('✅ No syntax errors found')}
 }

@@ -17,13 +17,13 @@ export default function quantumblockchainsecurityservices() {
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="text-center mb-8"></div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Quantum Blockchain Security Services;
+              Quantum Blockchain Security Services
             </h1>
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>
           <div className="prose max-w-none"></div>
             <p className="text-lg text-gray-700 mb-6">
-              Our Quantum Blockchain Security Services services are designed to help your business;
+              Our Quantum Blockchain Security Services services are designed to help your business
               achieve its goals through innovative technology solutions.
             </p>)
           </div>)
@@ -39,13 +39,13 @@ export default function quantumblockchainsecurityservices() {/* TODO: Fix JSX ex
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
           <div className="text-center mb-8"></div>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
-              Quantum Blockchain Security Services;
+              Quantum Blockchain Security Services
             </h1>"
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>"
           <div className="prose max-w-none"></div>"
             <p className="text-lg text-gray-700 mb-6"></p>
-              Our Quantum Blockchain Security Services services are designed to help your business;
+              Our Quantum Blockchain Security Services services are designed to help your business
               achieve its goals through innovative technology solutions.
             </p>
           </div>

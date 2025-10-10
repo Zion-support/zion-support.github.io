@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('homepage_advertiser function triggered')}
-    // Homepage advertising simulation;
+    // Homepage advertising simulation
     const result = {
-      statusCode: 200;
+      statusCode: 200
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         advertising: {,
           status: 'active',
-          ads: 0;
+          ads: 0
           lastAd: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
@@ -22,11 +22,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   d: new Date().toISOString()}
         }})};
-    return result;
-//   } catch (error) {// console.error('Error in homepage_advertiser: ') error;
+    return result
+//   } catch (error) {// console.error('Error in homepage_advertiser: ') error
       }
     return {
-      statusCode: 500;
+      statusCode: 500
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -46,8 +46,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'homepage_advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', ads: 0;
-        lastAd: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in homepage_advertiser: ') error;
+        timestamp: new Date().toISOString(),' function: 'homepage_advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', ads: 0
+        lastAd: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in homepage_advertiser: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'homepage_advertiser' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

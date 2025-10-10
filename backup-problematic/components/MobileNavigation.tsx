@@ -19,5 +19,5 @@ const MobileNavigation = React.memo(function MobileNavigation({/* TODO: Fix JSX 
     </div>
   );
 });
-export default MobileNavigation;
+export default MobileNavigation
 "`

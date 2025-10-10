@@ -19,5 +19,5 @@ const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({/
     </div>
   );
 });
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase
 "`

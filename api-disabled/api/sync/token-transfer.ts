@@ -26,16 +26,16 @@ export default async function handler(re,
   //   const version = nextVersionFor(state, txId);
   const event = {
     eventId: uuidv4()
-    type: 'token_transfer' as const;
+    type: 'token_transfer' as const
     payload: {,
-      id: txId;
+      id: txId
       txId,
       token,
       amount,
       fromSubnet,
       toSubnet,
       timestamp: timestamp || Date.now()},
-    originInstanceId: state.config.instanceId;
+    originInstanceId: state.config.instanceId
   const event = {/* TODO: Fix JSX expression */}
     },
     originInstanceI,
@@ -52,16 +52,15 @@ export default async function handler(re,
   const,
   headers: Record<string, string> = {};
   //   const sig = signPayload(body);
-  if (sig) headers['x-zion-signature'] = sig;
-
+  if (sig) headers['x-zion-signature'] = sig
   await Promise.all(state.config.peers;)
       .filter(p => !p.paused)
       .map(async peer => {)
-        //         const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+        //         const url = new URL('/api/sync/publish', peer.baseUrl).toString()}
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
         } catch {
-          // ignore;
+          // ignore
       .map(async peer => {/* TODO: Fix JSX expression */})
   t: 5000 });
         } catch {/* TODO: Fix JSX expression */}

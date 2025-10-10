@@ -65,14 +65,14 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
           <d, i, v></d>"
             <div, className="flex, item, s-center, ga, p-2, m, b-1">";"
               <span, className="px-3, p, y-1, b, g-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, animate-pul, s, e">";
-                🚀 Just, Publishe, d;
+                🚀 Just, Publishe, d
               </sp, a, n>"
               <span, className="te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibo, l, d">Octobe, r, 1, 20, 2, 5</sp, a, n>";
             </d, i, v>
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">"</h2>
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">";
-              Latest, AI, Revolutio;
-  n: 3, Breakthrough, Guides;
+              Latest, AI, Revolutio
+  n: 3, Breakthrough, Guides
             </h2>
           </d, i, v>
         </d, i, v>
@@ -87,7 +87,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">""
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">";
               Latest, AI, Revolutio,
-  n: 3, Breakthrough, Guides;
+  n: 3, Breakthrough, Guides
             </h2>
           </d, i, v>
         </d, i, v>"
@@ -100,11 +100,11 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Articl, e, 1 */}
-          <Li, n, k;
+          <Li, n, k
           {/* Articl, e, 1 */}</div>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-agen, t, s-automati, o, n-revoluti, o, n"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, hov, e
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
@@ -126,7 +126,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d">N, E, W</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
@@ -134,10 +134,10 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
-              Enterprise, AI, Agents Revoluti, o, n;
+              Enterprise, AI, Agents Revoluti, o, n
             </h3>"
             <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">";
-              Autonomous, agents, achieving 85% efficiency, gains, and $4.7B, in, proven value, creatio, n;
+              Autonomous, agents, achieving 85% efficiency, gains, and $4.7B, in, proven value, creatio, n
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
@@ -151,18 +151,18 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";"
               <span, className="flex, item, s-center, ga, p-1">";"
                 <TrendingUp, className="w-3 h-3" />";
-                $4.7B, Valu, e;
+                $4.7B, Valu, e
               </sp, a, n>
               <sp, a, n>•</sp, a, n>
               <sp, a, n>85% Efficien, c, y</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e
   r: te, x, t-purp, l, e-3, 0, 0">"
               Read, Full, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-3, 0, 0">";
-              Read, Full, Guide;
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
+              Read, Full, Guide
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
               Read, Full, Guide;</div>
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
@@ -177,9 +177,9 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 */}
-          <Li, n, k;
+          <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-securi, t, y-prom, p, t-injecti, o, n-defen, s, e"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-r, e, d-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-r, e, d-4, 0, 0/50, transitio, n-all, hov, e
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
@@ -201,7 +201,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, tex, t-xs, fon, t-semibold, rounde, d">CRITIC, A, L</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">"</h3>
@@ -209,10 +209,10 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-r, e, d-300, transitio, n-colo, r, s">";
-              LLM, Securit, y & Defen, s, e;
+              LLM, Securit, y & Defen, s, e
             </h3>"
             <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">";
-              Advanced, prompt, injection defense, protectin, g $3.2B, in, enterprise AI, asset, s;
+              Advanced, prompt, injection defense, protectin, g $3.2B, in, enterprise AI, asset, s
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
@@ -226,18 +226,18 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";"
               <span, className="flex, item, s-center, ga, p-1">";"
                 <Shield, className="w-3 h-3" />";
-                99.8% Preventi, o, n;
+                99.8% Preventi, o, n
               </sp, a, n>
               <sp, a, n>•</sp, a, n>
               <sp, a, n>$3.2B, Protecte, d</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e
   r: te, x, t-r, e, d-3, 0, 0">"
               Read, Security, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-r, e, d-3, 0, 0">";
-              Read, Security, Guide;
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
+              Read, Security, Guide
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
               Read, Security, Guide;</div>
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
@@ -252,9 +252,9 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 */}
-          <Li, n, k;
+          <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-vect, o, r-databas, e, s-r, a, g-syste, m, s-enterpri, s, e"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, hov, e
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
@@ -276,7 +276,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-300, tex, t-xs, fon, t-semibold, rounde, d">ESSENTI, A, L</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"</h3>
@@ -284,10 +284,10 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
-              Vector, Database, s & R, A, G;
+              Vector, Database, s & R, A, G
             </h3>"
             <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">";
-              Enterprise, implementation, powering $5.8B, in, AI deployments, with, 92% accuracy, gain, s;
+              Enterprise, implementation, powering $5.8B, in, AI deployments, with, 92% accuracy, gain, s
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
@@ -301,18 +301,18 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";"
               <span, className="flex, item, s-center, ga, p-1">";"
                 <Database, className="w-3 h-3" />";
-                $5.8B, Scal, e;
+                $5.8B, Scal, e
               </sp, a, n>
               <sp, a, n>•</sp, a, n>
               <sp, a, n>92% Accura, c, y</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e
   r: te, x, t-cy, a, n-3, 0, 0">"
               Read, Implementation, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-cy, a, n-3, 0, 0">";
-              Read, Implementation, Guide;
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
+              Read, Implementation, Guide
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
               Read, Implementation, Guide;</div>
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
@@ -354,12 +354,12 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
   e: <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-4, 0, 0">$13.7, Billio, n</sp, a, n>";
               </h3>"
               <p, className="te, x, t-gr, a, y-3, 0, 0">";
-                Proven, strategies, from Fortune, 500, leaders • 99%+ Accura, c, y • Producti, o, n-Ready, Framework, s;
+                Proven, strategies, from Fortune, 500, leaders • 99%+ Accura, c, y • Producti, o, n-Ready, Framework, s
               </p>
             </d, i, v>
-            <Li, n, k;
+            <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove;
+              classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove,"
@@ -375,5 +375,5 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
     </d, i, v>
   );
 };
-export default October2025NewAIContentMegaBanner;
+export default October2025NewAIContentMegaBanner
 ;"

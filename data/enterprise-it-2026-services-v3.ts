@@ -1,63 +1,63 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  link: string
+  category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string
+    email: string
 export interface EnterpriseIt2026ServiceV3 {;,
     address: string}
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
 export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
   e: string,,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -68,14 +68,14 @@ export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
@@ -89,7 +89,7 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
       "Improved security",
       "Better performance"],
     link: "/services/2026-enterprise-it-v3", category: "Enterprise IT 2026 V3",
-    realImplementation: true;
+    realImplementation: true
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -185,8 +185,8 @@ export const,
     ],
     link: "/services/2026-enterprise-it-v3"
     category: "Enterprise IT 2026 V3"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',

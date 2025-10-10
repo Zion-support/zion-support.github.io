@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Environment Variables Validator;
- * Ensures all required environment variables are present and valid;
+ * Environment Variables Validator
+ * Ensures all required environment variables are present and valid
  */
 
 export interface EnvConfig {// TODO: Add content;}
@@ -10,9 +10,9 @@ export interface EnvConfig {// TODO: Add content;}
 };
   NODE_EN,
   V: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
+  NEXT_PUBLIC_API_URL?: string
+  NEXT_PUBLIC_GA_ID?: string
+  NEXT_PUBLIC_SITE_URL?: string
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -21,16 +21,16 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   private errors: string[] = []
   private warnings: string[] = []
   /**
-   * Validate all environment variables;
+   * Validate all environment variables
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {// TODO: Add content;}
 
 }
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV;
+    // Validate NODE_ENV
 //     this.validateNodeEnv()
-    // Validate optional but recommended variables;
+    // Validate optional but recommended variables
 //     this.validateOptionalVars()
 
     return {// TODO: Add content;}
@@ -41,15 +41,15 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       error,
   s: this.errors,
       warning,
-  s: this.warnings;
+  s: this.warnings
     };
   }
   /**
-   * Get validated environment configuration;
+   * Get validated environment configuration
    */
   getConfig(): EnvConfig {if (!validation.isValid) {}
   // TOD,
-  O: Add content;
+  O: Add content
 }
       throw new Error()
         `Environment validation,`
@@ -64,7 +64,7 @@ ${validation.errors.join('
   O: Add content;}
 }
 //       this.errors.push('NODE_ENV is not set')
-//       return;
+//       return
     }
 
     if (!validEnvs.includes(nodeEnv)) {// TODO: Add content;}
@@ -78,7 +78,7 @@ ${validation.errors.join('
 
 }
     const nodeEnv = this.getNodeEnv()
-    // In production, these should be set;
+    // In production, these should be set
     if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -107,9 +107,9 @@ ${validation.errors.join('
     return env as 'development' | 'production' | 'test'
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const envValidator = new EnvValidator()
-// Export convenience function;
+// Export convenience function
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

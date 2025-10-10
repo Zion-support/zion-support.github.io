@@ -16,5 +16,5 @@ const Search = React.memo(function Search({ className = '' }: SearchProps) {/* T
     </div>
   );
 });
-export default Search;
+export default Search
 "`

@@ -19,5 +19,5 @@ const SearchComponent = React.memo(function SearchComponent({/* TODO: Fix JSX ex
     </div>
   );
 });
-export default SearchComponent;
+export default SearchComponent
 "`

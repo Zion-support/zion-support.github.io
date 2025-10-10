@@ -1,10 +1,10 @@
 import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl'}
+  color?: 'primary' | 'secondary' | 'accent'}
+  text?: string
+  fullScreen?: boolean
 }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
@@ -51,11 +51,11 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean;
+  text?: string
+  fullScreen?: boolean
 }
 const,
-  ModernLoadingSpinner: React.FC;
+  ModernLoadingSpinner: React.FC
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -85,13 +85,13 @@ const,
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-//     animate-spin;
-//     border-2;
-//     border-current;
-//     border-t-transparent;
+//     animate-spin
+//     border-2
+//     border-current
+//     border-t-transparent
 //     rounded-full;`
   `;
-  const containerClasses = fullScreen;
+  const containerClasses = fullScreen
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (<div>Coming Soon</div>)
@@ -110,7 +110,7 @@ const,
     </div>
   );
 };
-export default ModernLoadingSpinner;
+export default ModernLoadingSpinner
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>

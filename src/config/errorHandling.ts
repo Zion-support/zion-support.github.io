@@ -7,8 +7,8 @@ export enum ErrorSeverity {
 
 'use client'
 /**
- * Error Handling Configuration;
- * Centralized error tracking and reporting settings;
+ * Error Handling Configuration
+ * Centralized error tracking and reporting settings
  */
 
 export enum ErrorSeverity {// TODO: Add content;}
@@ -35,19 +35,19 @@ export enum ErrorCategory {// TODO: Add content;}
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  enabled: boolean
+  logToConsole: boolean
+  sendToServer: boolean
+  sampleRate: number
+  maxStackTraceLength: number
+  ignoreErrors: RegExp[]}
+  severityThreshold: ErrorSeverity
 }
 export const _errorHandlingConfig: ErrorConfig = {
 
 export interface ErrorConfig {// TODO: Add content;}
 };
-  enabled: boolean;
+  enabled: boolean
     logToConsole: boolean;,
     sendToServer: boolean;,
     sampleRate: number;,
@@ -102,8 +102,7 @@ export class AppError extends Error {
 //     /Loading chunk \d+ failed/i,
 //   ],
 
-  severityThreshold: ErrorSeverity.LOW;
-
+  severityThreshold: ErrorSeverity.LOW
 };
   offlin,
   e: 'You are currently offline. Please check your internet connection.',
@@ -185,8 +184,7 @@ export class AppError extends Error {
   category: ErrorCategory = ErrorCategory.UNKNOWN,
     public,
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record;
-
+    public metadata?: Record
           <string, unknown>
   ) {// TODO: Add content;}
 
@@ -196,7 +194,4 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-export default errorHandlingConfig;
-
-
-
+export default errorHandlingConfig

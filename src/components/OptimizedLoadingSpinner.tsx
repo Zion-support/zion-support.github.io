@@ -1,19 +1,19 @@
 import React from 'react';
 'use client';
 interface OptimizedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  className?: string;
-'use client';
+  size?: 'sm' | 'md' | 'lg'}
+  color?: 'primary' | 'secondary' | 'white'}
+  className?: string
+'use client'}
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
-  className?: string;
+  className?: string
 }
 const,
-  OptimizedLoadingSpinner: React.FC;
+  OptimizedLoadingSpinner: React.FC
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
@@ -65,7 +65,7 @@ className="opacity-75""
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
@@ -108,7 +108,7 @@ $4};
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner
   </path>
   </circle>
   </OptimizedLoadingSpinnerProps>

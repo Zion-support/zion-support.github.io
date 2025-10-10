@@ -181,7 +181,7 @@ const PricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
-              const colors = getColorClasses(plan.color);
+              const colors = getColorClasses(plan.color)}
               return (
                 <div
                   key={index}
@@ -191,8 +191,7 @@ const PricingPage: React.FC = () => {
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular;
-  </
+                      Most Popular</Popular>
                   )}
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <div className="text-center mb-8">
@@ -252,11 +251,9 @@ const PricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Add-on Services;
-  </
+              Add-on Services</Services>
             <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features;
-  </
+              Enhance your plan with additional services and features</features>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
@@ -277,11 +274,9 @@ const PricingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions;
-  </
+              Frequently Asked Questions</Questions>
             <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans;
-  </
+              Everything you need to know about our pricing and plans</plans>
           </div>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
@@ -306,13 +301,11 @@ const PricingPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial;
-  </
+              Start Free Trial</Trial>
             <Link
               to="/demo"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Schedule Demo;
-  </
+              Schedule Demo</Demo>
           </div>
         </div>
       </section>
@@ -320,7 +313,7 @@ const PricingPage: React.FC = () => {
     </div>
   );
 };
-export default PricingPage;
+export default PricingPage
   </Link>
   </Link>
   </p>

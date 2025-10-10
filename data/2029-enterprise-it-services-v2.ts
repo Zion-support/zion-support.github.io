@@ -1,41 +1,41 @@
 
 export interface EnterpriseITService2029V2 {;
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string
+  description: string
   category: string[];
-  price: string;
+  price: string
   features: string[];
   benefits: string[];
   useCases: string[];
-  marketSize: string;
+  marketSize: string
   competitors: string[];
   technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
+  integration: string[]}
+  support: string[]}
+  compliance: string[]}
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  whiteLabel: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
+  contact: unknown
+    mobile: string
+    email: string
     website: string}
     address: string}
   }
@@ -667,7 +667,7 @@ export const,
     partnership: 'Strategic cloud partnerships',
     funding: 'Series C funding, $400 M valuation',
     exit: 'IPO or cloud acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -771,7 +771,7 @@ export const,
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $250 M valuation',
     exit: 'IPO or security acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -939,7 +939,7 @@ export const,
     customization: 'Custom workflows, integration templates'
     funding: 'Series B funding, $180 M valuation'
     exit: 'IPO or enterprise acquisition'
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
@@ -955,7 +955,7 @@ export const,
     partnership: 'Strategic enterprise partnerships',
     funding: 'Series B funding, $180 M valuation',
     exit: 'IPO or enterprise acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

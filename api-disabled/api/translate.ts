@@ -28,8 +28,7 @@ export default async function handler(re,
           ? 'Spanish'
           : lng.startsWith('ar')
             ? 'Arabic'
-            : 'English';
-
+            : 'English'}
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [,
@@ -48,7 +47,7 @@ export default async function handler(re,
   e: 0.2});
 
       const _translated = completion.choices?.[0]?.message?.content?.trim() || '';
-      results[lng] = translated;
+      results[lng] = translated
     }
 
     return res.status(200).json(results);

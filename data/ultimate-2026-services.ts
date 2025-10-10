@@ -1,75 +1,75 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  link: string;
-  category: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  link: string
+  category: string
+  contactInfo: unknown
+    mobile: string
+    email: string
 export interface Ultimate2026Service {;,
     address: string}
 };
-  id: string;
-  name: string;
-  tagline: string;
+  id: string
+  name: string
+  tagline: string
   price: string,,
-  description: string;
+  description: string
   features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {,
-    mobile: string;
+    mobile: string
     email: string}
     address: string}
       address: "364 E Main St STE 1008 Middletown DE 19709",
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   contactInf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
 export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
   e: string,,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -82,7 +82,7 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
 ];
   }
 }
-    address: string;
+    address: string
     addres,
   s: string}
 export const,
@@ -97,7 +97,7 @@ export const,
     ]
     link: '/services/2026-ultimate-service'
     category: 'Ultimate 2026 Services'
-    realImplementation: true;
+    realImplementation: true
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -107,14 +107,14 @@ export const,
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const ultimate2026 Services: Ultimate2026 Service[] = [,
@@ -128,8 +128,8 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
       "Premium features",
       "24/7 support"],
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
@@ -242,7 +242,7 @@ export const,
       "24/7 support"
     ];
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
-    realImplementation: true;
+    realImplementation: true
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

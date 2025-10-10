@@ -23,7 +23,7 @@ export const _usePerformanceMonitoring = () => {// TODO: Add content;}
   e: true }).catch(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        // Analytics reporting failed;
+        // Analytics reporting failed
       });
     }
   }, []);
@@ -33,7 +33,7 @@ export const _usePerformanceMonitoring = () => {// TODO: Add content;}
     if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      // Monitor Core Web Vitals;
+      // Monitor Core Web Vitals
 const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

@@ -5,12 +5,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
-exports.config = {// Frequent safety checks without overloading;
+exports.config = {// Frequent safety checks without overloading
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -30,7 +30,7 @@ exports.handler = async () => {const logs = []}
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
-    return status;
+    return status
   }
   step('securit)
   y: audit') 'automation/security-audit.cjs');

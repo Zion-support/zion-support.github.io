@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -6,10 +6,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Website audit script to check all links and identify missing pages;
+// Website audit script to check all links and identify missing pages
 console.log('🔍 Starting comprehensive website audit...\n');
 
-// Get all page files from the app directory;
+// Get all page files from the app directory
 const appDir = path.join(__dirname, '..', 'app');
 const allPages = [];
 
@@ -17,27 +17,26 @@ function scanDirectory(dir, basePath = '') {
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)}
+    const stat = fs.statSync(fullPath)}
     if (stat.isDirectory()) {
-      // Check if directory has a page.tsx file;
-      const pageFile = path.join(fullPath, 'page.tsx');
+      // Check if directory has a page.tsx file
+      const pageFile = path.join(fullPath, 'page.tsx')}
       if (fs.existsSync(pageFile)) {
-        const route = basePath + '/' + item;
+        const route = basePath + '/' + item
         allPages.push({)
           path: route),
           file: pageFile),
-          exists: true;
+          exists: true
         });
       }
-      // Recursively scan subdirectories;
+      // Recursively scan subdirectories
       scanDirectory(fullPath, basePath + '/' + item);
     }
   }
 }
 
-// Scan the app directory for pages;
+// Scan the app directory for pages
 scanDirectory(appDir);
 
 console.log(`📄 Found ${allPages.length} pages: `);
@@ -45,14 +44,14 @@ allPages.forEach(page => {),
   console.log(`  ✅ ${page.path}`);
 });
 
-// Check for missing pages referenced in Footer;
+// Check for missing pages referenced in Footer
 const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
 const footerContent = fs.readFileSync(footerFile, 'utf8');
 
-// Extract all href links from Footer;
-const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;
+// Extract all href links from Footer
+const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g
 const footerLinks = [];
-let match;
+let match
 ,
 while ((match = hrefRegex.exec(footerContent)) !== null) {,
   footerLinks.push(match[1]);}
@@ -62,13 +61,13 @@ footerLinks.forEach(link => {),
   console.log(`  📎 ${link}`);
 });
 
-// Check which footer links are missing pages;
+// Check which footer links are missing pages
 const missingPages = [];
 const existingRoutes = allPages.map(p => p.path);
 
 footerLinks.forEach(link => {)
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
-    missingPages.push(link);
+    missingPages.push(link)}
   }
 });
 
@@ -77,7 +76,7 @@ missingPages.forEach(page => {)
   console.log(`  🚫 ${page}`);
 });
 
-// Check for other common missing pages;
+// Check for other common missing pages
 const commonPages = [
   '/about',
   '/contact',
@@ -110,25 +109,23 @@ if (additionalMissing.length > 0) {
   });
 }
 
-// Check for broken internal links in existing pages;
+// Check for broken internal links in existing pages
 console.log(`\n🔍 Checking for broken internal links in existing pages...`);
 
 const brokenLinks = [];
 
 allPages.forEach(page => {)
   try {)
-    const content = fs.readFileSync(page.file, 'utf8');
-    
-    // Find all internal links in the page;
-    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;
-    let linkMatch;
-    
+    const content = fs.readFileSync(page.file, 'utf8')}
+    // Find all internal links in the page
+    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g
+    let linkMatch
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {
-      const link = linkMatch[1];
+      const link = linkMatch[1]}
       if (!existingRoutes.includes(link) && !link.startsWith('http')) {
         brokenLinks.push({),
           page: page.path),
-          brokenLink: link;
+          brokenLink: link
         });
       }
     }
@@ -143,17 +140,17 @@ if (brokenLinks.length > 0) {
     console.log(`  ❌ ${page} → ${brokenLink}`);
   });
 } else {
-  console.log(`  ✅ No broken internal links found`);
+  console.log(`  ✅ No broken internal links found`)}
 }
 
-// Generate report;
+// Generate report
 const report = {
   timestamp: new Date().toISOString()
-  totalPages: allPages.length;
-  totalFooterLinks: footerLinks.length;
-  missingPages: missingPages;
-  additionalMissing: additionalMissing;
-  brokenLinks: brokenLinks;
+  totalPages: allPages.length
+  totalFooterLinks: footerLinks.length
+  missingPages: missingPages
+  additionalMissing: additionalMissing
+  brokenLinks: brokenLinks
   existingPages: allPages.map(p => p.path)};
 
 fs.writeFileSync(

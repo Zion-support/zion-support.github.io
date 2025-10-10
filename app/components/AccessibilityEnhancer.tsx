@@ -2,11 +2,11 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+  children: React.ReactNode
+  enableKeyboardNavigation?: boolean
+  enableScreenReaderSupport?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -22,18 +22,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
           if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
+            skipLink.focus()}
+            event.preventDefault()}
           }
         }
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]')}
           openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false')}
           });
         }
       };
@@ -47,22 +47,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       const trapFocus = (container: HTMLElement) => {
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
+        const focusableContent = container.querySelectorAll(focusableElements)}
+        const firstFocusableElement = focusableContent[0] as HTMLElement
+        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement
         const handleTabKey = (e: KeyboardEvent) => {
-          if (e.key !== 'Tab') return;
-
+          if (e.key !== 'Tab') return
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
-              lastFocusableElement.focus();
-              e.preventDefault();
+              lastFocusableElement.focus()}
+              e.preventDefault()}
             }
           } else {
             if (document.activeElement === lastFocusableElement) {
-              firstFocusableElement.focus();
-              e.preventDefault();
+              firstFocusableElement.focus()}
+              e.preventDefault()}
             }
           }
         };
@@ -85,47 +83,44 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
       liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
-
+      liveRegion.id = 'live-region'}
+      document.body.appendChild(liveRegion)}
       // Announce page changes
       const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
+        const liveRegion = document.getElementById('live-region')}
         if (liveRegion) {
-          liveRegion.textContent = message;
+          liveRegion.textContent = message
         }
       };
 
       // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
-
+      const originalPushState = history.pushState
+      const originalReplaceState = history.replaceState
       history.pushState = function(...args) {
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
+        originalPushState.apply(history, args)}
+        announcePageChange('Page changed')}
       };
 
       history.replaceState = function(...args) {
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
+        originalReplaceState.apply(history, args)}
+        announcePageChange('Page updated')}
       };
 
       return () => {
-        document.body.removeChild(liveRegion);
-        history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
+        document.body.removeChild(liveRegion)}
+        history.pushState = originalPushState
+        history.replaceState = originalReplaceState
       };
     }
 
     // High contrast mode support
     if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)')}
       const updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
+          document.documentElement.classList.add('high-contrast')}
         } else {
-          document.documentElement.classList.remove('high-contrast');
+          document.documentElement.classList.remove('high-contrast')}
         }
       };
 
@@ -139,4 +134,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return <React.Fragment>{children}</React.Fragment>;
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

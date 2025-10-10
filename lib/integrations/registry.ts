@@ -117,8 +117,7 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
     description: 'HRIS & ATS'}];
 
 export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
-  return PROVIDERS.find(p => p.id === id);
-
+  return PROVIDERS.find(p => p.id === id)}
 export function getProviderById(i)
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
   }];

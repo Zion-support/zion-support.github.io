@@ -5,15 +5,15 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   messag,
-  e: string;
-  type?: ToastType;
-  duration?: number;
+  e: string
+  type?: ToastType
+  duration?: number
   onClose?: () => void;,
     sho,
-  w: boolean;
+  w: boolean
 }
 const,
-  Toast: React.FC;
+  Toast: React.FC
           <ToastProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -36,9 +36,9 @@ const,
       }, duration);
       return () => clearTimeout(timer);
     }
-    return undefined;
+    return undefined
   }, [show, duration, onClose]);
-  if (!isVisible) return null;
+  if (!isVisible) return null
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -90,7 +90,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       <button></button>
         onClick={() => {}
   // TOD,
-  O: Add content;
+  O: Add content
 }
           setIsVisible(false);
           if (onClose) onClose();

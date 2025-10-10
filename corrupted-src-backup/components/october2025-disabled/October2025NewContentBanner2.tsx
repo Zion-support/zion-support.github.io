@@ -22,10 +22,10 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Breakthroughs & Innovatio, n, s;
+            Latest, AI, Breakthroughs & Innovatio, n, s
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
           </p>
         </div>)
         {/* Articles, G, r, i, d */})
@@ -60,10 +60,10 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Latest, AI, Breakthroughs & Innovatio, n, s;
+            Latest, AI, Breakthroughs & Innovatio, n, s
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
           </p>
         </div>
         {/* Articles, G, r, i, d */}"
@@ -119,5 +119,5 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     </sec, t, i, o, n>
   );
 };
-export default October2025NewContentBanner2;
+export default October2025NewContentBanner2
 "`

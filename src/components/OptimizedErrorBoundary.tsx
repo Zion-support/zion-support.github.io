@@ -1,24 +1,24 @@
 'use client';
 interface OptimizedErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  resetOnPropsChange?: boolean
+  resetKeys?: Array<string | number>}
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
 }
 class OptimizedErrorBoundary extends Component
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null;
+  private resetTimeoutId: number | null = null
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props);
+    super(props)}
     this.state = {
       hasError: false,
       error: null,
@@ -42,22 +42,22 @@ $4};
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)}
     }
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)}
     }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
+    const { resetKeys, resetOnPropsChange } = this.props
+    const { hasError } = this.state
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        )}
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary();
+          this.resetErrorBoundary()}
         }
       }
     }
@@ -66,12 +66,12 @@ $4};
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-      this.resetErrorBoundary();
+      this.resetErrorBoundary()}
     }
   }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)}
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -83,9 +83,9 @@ $4};
             command: string,
             action: string,
             parameters: Record<string, unknown>
-          ) => void;
+          ) => void
         }
-      ).gtag;
+      ).gtag
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
@@ -98,7 +98,7 @@ $4};
   };
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)}
     }
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
@@ -110,12 +110,12 @@ $4});
     }, 100);
   };
   private handleRetry = () => {
-    this.resetErrorBoundary();
+    this.resetErrorBoundary()}
   };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       return (
         <ErrorFallback
@@ -126,14 +126,14 @@ $4});
         />
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 interface ErrorFallbackProps {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  onRetry: () => void;
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
+  onRetry: () => void
 }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (

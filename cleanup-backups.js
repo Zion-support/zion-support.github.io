@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
-function findBackupFiles(_dir) {let backupFiles = [];
+#!/usr/bin/env node
+function findBackupFiles(_dir) {let backupFiles = []}
   function traverse(currentDir) {
 function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
     const items = fs.readdirSync(currentDir)}
@@ -11,10 +11,10 @@ function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
     }
   }
   traverse(dir);
-  return backupFiles;
+  return backupFiles
 }
 function deleteBackupFiles() {const backupFiles = findBackupFiles('./src')}
-//   let deletedCount = 0;
+//   let deletedCount = 0
   for (const file of backupFiles) {/* TODO: Fix JSX expression */}
       fs.unlinkSync(file)}
 //       deletedCount++;

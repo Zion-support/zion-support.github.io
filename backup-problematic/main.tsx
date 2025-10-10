@@ -5,6 +5,6 @@ if (_root) {
   ReactDOM.createRoot(_root).render(<React.StrictMode>)
       <App />)
     </React.StrictMode>)
-  );
+  )}
 if (_root) {/* TODO: Fix JSX expression */}
 }

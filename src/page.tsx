@@ -123,8 +123,8 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
+      import('./components/ContentPromotionBanner')}
+      import('./components/ContentCarousel')}
     }, 100);
   }
 };
@@ -143,10 +143,10 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
-    preloadComponents();
+    preloadComponents()}
     // Initialize performance optimizations
-    initializePerformanceOptimizations();
-    return () => clearTimeout(timer);
+    initializePerformanceOptimizations()}
+    return () => clearTimeout(timer)}
   }, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
@@ -671,23 +671,19 @@ const HomePage: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP;
-  </
+              ZION TECH GROUP</GROUP>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation;
-  </
+              AI-Powered Enterprise Solutions & Digital Transformation</Transformation>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950;
-  </
+                  +1 302 464 0950</0950>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com;
-  </
+                  kleber@ziontechgroup.com</com>
               </div>
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
@@ -719,8 +715,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
-  </
+              Micro SAAS Services</Services>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Powerful, affordable AI-powered tools designed for modern businesses. 
               Start with our micro SAAS solutions and scale as you grow.
@@ -732,8 +727,7 @@ const HomePage: React.FC = () => {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR;
-  </
+                      🔥 POPULAR</POPULAR>
                   </div>
                 )}
                 <div className="text-center mb-4">
@@ -798,8 +792,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
-  </
+              AI Services & Solutions</Solutions>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
               Transform your business with our advanced AI capabilities.
@@ -870,8 +863,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
-  </
+              IT Services & Solutions</Solutions>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT services to support your digital transformation journey. 
               From infrastructure to cybersecurity, we've got you covered.
@@ -942,8 +934,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
-  </
+              Specialized Solutions</Solutions>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
               Cutting-edge technology meets practical business needs.
@@ -1026,16 +1017,14 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-  </
+                +1 302 464 0950</0950>
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-  </
+                kleber@ziontechgroup.com</com>
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
@@ -1043,8 +1032,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
-  </
+                Middletown DE 19709</19709>
             </div>
           </div>
         </div>
@@ -1054,7 +1042,7 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
-export default HomePage;
+export default HomePage
   </p>
   </a>
   </a>

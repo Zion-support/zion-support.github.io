@@ -15,7 +15,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Quantum-enhanced data processing'
       'Automated infrastructure management'
     ]
-    pricing: starter: unknown;
+    pricing: starter: unknown
         price: 399}
         period: 'month',
         features: [}
@@ -30,12 +30,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Email support'
         ]
       }
-      professional: price: 999;
+      professional: price: 999
         period: 'month'
         features: [
       professiona,
   l: pric,
-  e: 999;
+  e: 999
         perio,
   d: 'month'
         feature,
@@ -44,12 +44,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Enhanced security protocols'
           'Priority support',
           'Performance optimization']}
-      enterprise: price: 2499;
+      enterprise: price: 2499
         period: 'month'
         features: [
       enterpris,
   e: pric,
-  e: 2499;
+  e: 2499
         perio,
   d: 'month'
         feature,
@@ -141,15 +141,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Edge-to-cloud synchronization'
       'Performance optimization algorithms'
     ]
-    pricing: starter: unknown;
-        price: 299;
+    pricing: starter: unknown
+        price: 299
         period: 'month'
         features: [
     pricin,
   g: starte,
-  r: unknown;
+  r: unknown
         pric,
-  e: 299;
+  e: 299
         perio,
   d: 'month'
         feature,
@@ -157,12 +157,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Basic edge orchestration'
           'Standard monitoring',
           'Email support']}
-      professional: price: 799;
+      professional: price: 799
         period: 'month'
         features: [
       professiona,
   l: pric,
-  e: 799;
+  e: 799
         perio,
   d: 'month'
         feature,
@@ -171,12 +171,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'AI model deployment'
           'Priority support',
           'Performance optimization']}
-      enterprise: price: 1999;
+      enterprise: price: 1999
         period: 'month'
         features: [
       enterpris,
   e: pric,
-  e: 1999;
+  e: 1999
         perio,
   d: 'month'
         feature,
@@ -265,15 +265,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Automated security responses'
       'Comprehensive audit logging'
     ]
-    pricing: starter: unknown;
-        price: 499;
+    pricing: starter: unknown
+        price: 499
         period: 'month'
         features: [
     pricin,
   g: starte,
-  r: unknown;
+  r: unknown
         pric,
-  e: 499;
+  e: 499
         perio,
   d: 'month'
         feature,
@@ -281,12 +281,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Basic zero-trust features'
           'Standard authentication',
           'Email support']}
-      professional: price: 1299;
+      professional: price: 1299
         period: 'month'
         features: [
       professiona,
   l: pric,
-  e: 1299;
+  e: 1299
         perio,
   d: 'month'
         feature,
@@ -295,12 +295,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Behavioral analytics'
           'Priority support',
           'Custom policies']}
-      enterprise: price: 2999;
+      enterprise: price: 2999
         period: 'month'
         features: [
       enterpris,
   e: pric,
-  e: 2999;
+  e: 2999
         perio,
   d: 'month'
         feature,
@@ -392,15 +392,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Multi-party workflow automation'
       'Comprehensive reporting and analytics'
     ]
-    pricing: starter: unknown;
-        price: 599;
+    pricing: starter: unknown
+        price: 599
         period: 'month'
         features: [
     pricin,
   g: starte,
-  r: unknown;
+  r: unknown
         pric,
-  e: 599;
+  e: 599
         perio,
   d: 'month'
         feature,
@@ -408,12 +408,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Basic blockchain features'
           'Standard smart contracts',
           'Email support']}
-      professional: price: 1499;
+      professional: price: 1499
         period: 'month'
         features: [
       professiona,
   l: pric,
-  e: 1499;
+  e: 1499
         perio,
   d: 'month'
         feature,
@@ -422,12 +422,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Custom smart contracts'
           'Priority support',
           'Performance optimization']}
-      enterprise: price: 3499;
+      enterprise: price: 3499
         period: 'month'
         features: [
       enterpris,
   e: pric,
-  e: 3499;
+  e: 3499
         perio,
   d: 'month'
         feature,
@@ -516,15 +516,15 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Automated security scanning'
       'Comprehensive analytics and reporting'
     ]
-    pricing: starter: unknown;
-        price: 399;
+    pricing: starter: unknown
+        price: 399
         period: 'month'
         features: [
     pricin,
   g: starte,
-  r: unknown;
+  r: unknown
         pric,
-  e: 399;
+  e: 399
         perio,
   d: 'month'
         feature,
@@ -532,12 +532,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Basic AI DevOps features'
           'Standard automation',
           'Email support']}
-      professional: price: 999;
+      professional: price: 999
         period: 'month'
         features: [
       professiona,
   l: pric,
-  e: 999;
+  e: 999
         perio,
   d: 'month'
         feature,
@@ -546,12 +546,12 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Custom automation'
           'Priority support',
           'Performance optimization']}
-      enterprise: price: 2499;
+      enterprise: price: 2499
         period: 'month'
         features: [
       enterpris,
   e: pric,
-  e: 2499;
+  e: 2499
         perio,
   d: 'month'
         feature,
@@ -620,9 +620,9 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',
       'Quantum-enhanced data processingAutomated infrastructure management',
     market_size: '$25.6B',
-    target_audience: unknown;
+    target_audience: unknown
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     i,
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',
@@ -680,12 +680,12 @@ export const cuttingEdgeITServices2025 = [,
     name: 'Quantum Cloud Infrastructure Platform',,
   description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
     features: [
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring'}
       'Quantum-enhanced data processingAutomated infrastructure management'
-    ];
-    pricing: {;
+    ]}
+    pricing: {}
       starter: {,
-        price: 399;
+        price: 399
         period: 'month'}
         features: ['Basic quantum infrastructureStandard security protocolsEmail support']}
     integration,
@@ -762,12 +762,12 @@ export const cuttingEdgeITServices2025 = [
     name: 'Edge Computing Orchestration Platform',,
   description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.';
     features: [
-      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment';
+      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment'}
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
-    ];
-    pricing: {;
+    ]}
+    pricing: {}
       starter: {,
-        price: 299;
+        price: 299
         period: 'month'}
         features: ['Basic edge orchestrationStandard monitoringEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -830,12 +830,12 @@ export const cuttingEdgeITServices2025 = [
     name: 'Zero Trust Security Platform',,
   description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.';
     features: [
-      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment';
+      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment'}
       'Automated security responsesComprehensive audit logging'
-    ];
-    pricing: {;
+    ]}
+    pricing: {}
       starter: {,
-        price: 499;
+        price: 499
         period: 'month'}
         features: ['Basic zero-trust featuresStandard authenticationEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -898,12 +898,12 @@ export const cuttingEdgeITServices2025 = [
     name: 'Blockchain Enterprise Platform',,
   description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.';
     features: [
-      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing';
+      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing'}
       'Multi-party workflow automationComprehensive reporting and analytics'
-    ];
-    pricing: {;
+    ]}
+    pricing: {}
       starter: {,
-        price: 599;
+        price: 599
         period: 'month'}
         features: ['Basic blockchain featuresStandard smart contractsEmail support']}
   {/* TODO: Fix JSX expression */}
@@ -966,12 +966,12 @@ export const cuttingEdgeITServices2025 = [
     name: 'AI-Powered DevOps Platform',,
   description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.';
     features: [
-      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization';
+      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization'}
       'Automated security scanningComprehensive analytics and reporting'
-    ];
-    pricing: {;
+    ]}
+    pricing: {}
       starter: {,
-        price: 399;
+        price: 399
         period: 'month'}
         features: ['Basic AI DevOps featuresStandard automationEmail support']}
   {/* TODO: Fix JSX expression */}

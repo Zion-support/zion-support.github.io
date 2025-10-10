@@ -19,12 +19,12 @@ const,
       <div className="container mx-auto px-4"></div>
         <div className="flex justify-between items-center py-4"></div>
           <Link href="/" className="text-xl font-bold text-blue-600">
-            Zion Tech Group;
+            Zion Tech Group
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden md: flex space-x-8">,
             {navigationItems.map(item => (,
-              <Link;
+              <Link
                 key={item.name})
                 href={item.href})
                 className="text-gray-700 hover: text-blue-600 transition-colors")
@@ -36,7 +36,7 @@ const,
       <div className="container mx-auto px-4"></div>"
         <div className="flex justify-between items-center py-4"></div>"
           <Link href="/" className="text-xl font-bold text-blue-600"></Link>
-            Zion Tech Group;
+            Zion Tech Group
           </Link>
           {/* Desktop Navigation */}"
           <div className="hidden,"
@@ -89,7 +89,7 @@ const,
     </nav>
   );
 };
-export default ModernNavigation;
+export default ModernNavigation
 "`
   </button>
   </nav>

@@ -33,7 +33,7 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";</div>
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5
             </sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
@@ -46,16 +46,16 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";"
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5
             </sp, a, n>
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
-            Latest, AI, Infrastructure Breakthroug, h, s;
+            Latest, AI, Infrastructure Breakthroug, h, s
           </h2>"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">";
-            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y;
-  AI, agents, with our, latest, enterprise guid, e, s;
+            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y
+  AI, agents, with our, latest, enterprise guid, e, s
           </p>
         </d, i, v>
         {/* Content, Card, s */})
@@ -63,18 +63,18 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
           {)
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;</div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"}
           {
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
-const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
-return(<Li, n, k;
+const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;"}
+return(<Li, n, k
   k, e, y={conte, n, t.id;}
 return (</div>
 <Li, n, k
-  k, e, y={conte, n, t.id;
+  k, e, y={conte, n, t.id
 }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
-                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
+                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>
@@ -180,7 +180,7 @@ return (</div>
             Get, a, free consultation, and, custom roadmap, for, your organizati, o, n.
           </p>
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
-            <Li, n, k;
+            <Li, n, k
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";</div>
             <Li, n, k
   to="/conta, c, t"
@@ -194,13 +194,13 @@ return (</div>
               <Link, className="w-5 h-5  /></Link>"
               <Link, className="w-5 h-5" />";
             </Li, n, k>
-            <Li, n, k;
+            <Li, n, k
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
             ></Li>
-              Explore, All, Articles;
+              Explore, All, Articles
             </Li, n, k>
           </d, i, v>
         </d, i, v>
@@ -251,6 +251,6 @@ return (</div>
     </d, i, v>
   );
 };
-export default October2025 LatestBreakthroughBanner;
+export default October2025 LatestBreakthroughBanner
 ;
 }}"`

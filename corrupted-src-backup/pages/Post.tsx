@@ -15,7 +15,7 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
           <p className="text-xl text-gray-600 mb-8">Post slug: {slug}</p>
           <div className="bg-white rounded-lg shadow-lg p-8"></div>
             <p className="text-gray-600">
-              This is a placeholder for the blog post content. The actual content would be loaded;
+              This is a placeholder for the blog post content. The actual content would be loaded
               based on the slug parameter.
             </p>)
           </div>)
@@ -35,7 +35,7 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
 "
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
             <p className="text-gray-600"></p>
-              This is a placeholder for the blog post content. The actual content would be loaded;
+              This is a placeholder for the blog post content. The actual content would be loaded
               based on the slug parameter.
             </p>
           </div>

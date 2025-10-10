@@ -14,7 +14,7 @@ function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expr
       }
     }
   }
-  return result;
+  return result
 }
 function isTextFile(filePath) {/* TODO: Fix JSX expression */}
   )}
@@ -26,7 +26,7 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
   } catch {return ''}
   }
 }
-function relativePublicPath(absPath) repoRoot) {const rel = path;
+function relativePublicPath(absPath) repoRoot) {const rel = path
 function relativePublicPath(absPath) repoRoot) {/* TODO: Fix JSX expression */}
     .relative(path.join(repoRoot) 'public')} absPath)
     .split(path.sep)
@@ -42,20 +42,20 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
 exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');
   const _logs = [];
-  // Gather all text content to search references;
-//   const codeDirs = ['pages', 'components', 'styles', 'public'];
-  const textFiles = codeDirs;
+  // Gather all text content to search references
+//   const codeDirs = ['pages', 'components', 'styles', 'public']}
+  const textFiles = codeDirs
     .map(d => path.join(repoRoot) d))
-    .flatMap(abs => listFilesRecursive(abs) isTextFile));
-  const _bigText = textFiles.map(readFileSafe).join('\n');
-  // List assets under public, exclude reports dir to avoid self-references;
+    .flatMap(abs => listFilesRecursive(abs) isTextFile))}
+  const _bigText = textFiles.map(readFileSafe).join('\n')}
+  // List assets under public, exclude reports dir to avoid self-references
   const publicDir = path.join(repoRoot) 'public')}
   const assets = listFilesRecursive(publicDir})
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
@@ -87,16 +87,16 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     }
   }
   const report = {generatedAt: new Date().toISOString(),
-    totalAssets: assets.length;
-    unusedCount: unused.length;
+    totalAssets: assets.length
+    unusedCount: unused.length
   const report = {/* TODO: Fix JSX expression */}
     unused}
   };
 //   const outDir = path.join(publicDir, 'reports') 'assets');
   writeFileEnsured(path.join(outDir) 'unused-assets.json'),
     JSON.stringify(report, null) 2));
-  // Simple HTML report;
-  const rows = unused;
+  // Simple HTML report
+  const rows = unused
     .sort((a) b) => b.size - a.size)
     .map(u =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
@@ -130,9 +130,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   g:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(outDir) 'index.html'), html);
   logs.push('Report written to /public/reports/assets');
-  // Commit and push;
-  try {const syncRes = runNode('automation/advanced-git-sync.cjs');
-    logs.push(syncRes.stdout || 'git sync done');
+  // Commit and push
+  try {const syncRes = runNode('automation/advanced-git-sync.cjs')}
+    logs.push(syncRes.stdout || 'git sync done')}
   try {/* TODO: Fix JSX expression */}
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}

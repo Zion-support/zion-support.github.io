@@ -8,17 +8,16 @@ import { execSync } from 'child_process';
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
+    let originalContent = content
     // Remove merge conflict markers and keep the HEAD version
     content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '')}
     content = content.replace(/    
     // Clean up any remaining merge conflict artifacts
-    content = content.replace(/    content = content.replace(/\n?/g, '');
+    content = content.replace(/    content = content.replace(/\n?/g, '')}
     content = content.replace(/    
     // Fix common syntax issues that might result from merge conflicts
-    content = content.replace(/,\s*\)/g, ')');
+    content = content.replace(/,\s*\)/g, ')')}
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/,\s*]/g, ']');
     content = content.replace(/,\s*;/g, ';');
@@ -38,40 +37,37 @@ function cleanMergeConflicts(filePath) {
     
     // Only write if content changed
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Cleaned: ${filePath}`);
-      return true;
+      return true
     }
-    return false;
+    return false
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
+    return false
   }
 }
 
 // Function to recursively find and clean files
 function cleanDirectory(dirPath) {
-  let cleanedCount = 0;
-  
+  let cleanedCount = 0
   try {
-    const items = fs.readdirSync(dirPath);
-    
+    const items = fs.readdirSync(dirPath)}
     for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dirPath, item)}
+      const stat = fs.statSync(fullPath)}
       if (stat.isDirectory()) {
         // Skip node_modules and other directories we don't want to process
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
-          continue;
+          continue
         }
         cleanedCount += cleanDirectory(fullPath);
       } else if (stat.isFile()) {
         // Only process certain file types
-        const ext = path.extname(item);
+        const ext = path.extname(item)}
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++;
+            cleanedCount++}
           }
         }
       }
@@ -80,7 +76,7 @@ function cleanDirectory(dirPath) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  return cleanedCount;
+  return cleanedCount
 }
 
 // Main execution

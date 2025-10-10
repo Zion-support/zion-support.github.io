@@ -16,10 +16,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-    // Log error to monitoring service;
+    // Log error to monitoring service
     // console.error('ErrorBoundary caught an)
   error:', error, errorInfo);
-    // You can also log to external services here;
+    // You can also log to external services here
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
     }
@@ -58,7 +58,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
+                Try Again
               </button>
               <button></button>
                 onClick={this.handleReload}"
@@ -66,7 +66,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Reload Page;
+                Reload Page
               </button>
               <a></a>"
                 href="/""
@@ -74,7 +74,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
+                Go Home
               </a>
               <a></a>"
                 href="mailt,"
@@ -84,7 +84,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
-                Report Issue;
+                Report Issue
               </a>
             </div>
 "
@@ -95,14 +95,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <a href="mailt,"
   o:support@ziontechgroup.com" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  support@ziontechgroup.com;
+                  support@ziontechgroup.com
                 </a>
               </p>"
               <p className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  (302) 464-0950;
+                  (302) 464-0950
                 </a>
               </p>
             </div>
@@ -110,7 +110,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
         </div>
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 export default ErrorBoundary;"

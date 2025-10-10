@@ -11,52 +11,52 @@ import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, ConversationalA, I: Rea, c, t.FC = () => {
   const, feature, s = [
     {
-      i, c, o;
-  n: Bra, i, n;
+      i, c, o
+  n: Bra, i, n
       tit, l, e: "Advanced, NL, P & N, L, U","
       descripti, o, n: "Sta, t, e-of-t, h, e-art, natural, language processing, that, understands conte, x, t, inte, n, t, and, sentiment, with 96% accura, c, y.","
-      tit, l, e: "Advanced, NL, P & N, L, U",";
-      descripti, o, n: "Sta, t, e-of-t, h, e-art, natural, language processing, that, understands conte, x, t, inte, n, t, and, sentiment, with 96% accura, c, y.",";
+      tit, l, e: "Advanced, NL, P & N, L, U","}
+      descripti, o, n: "Sta, t, e-of-t, h, e-art, natural, language processing, that, understands conte, x, t, inte, n, t, and, sentiment, with 96% accura, c, y.","}
       benef, i, t: "96% conversation, understandin, g"
     }
     {
-      ic, o, n: MessageCirc, l, e;
+      ic, o, n: MessageCirc, l, e
       tit, l, e: "Mul, t, i-Modal, Conversation, s","
       descripti, o, n: "Support, for, text, voi, c, e, and, video, conversations with, seamless, transitions between, modalitie, s.","
-      tit, l, e: "Mul, t, i-Modal, Conversation, s",";
-      descripti, o, n: "Support, for, text, voi, c, e, and, video, conversations with, seamless, transitions between, modalitie, s.",";
+      tit, l, e: "Mul, t, i-Modal, Conversation, s","}
+      descripti, o, n: "Support, for, text, voi, c, e, and, video, conversations with, seamless, transitions between, modalitie, s.","}
       benef, i, t: "Unified, conversation, experience"
     }
     {
-      ic, o, n: Languag, e, s;
+      ic, o, n: Languag, e, s
       tit, l, e: "1, 5, 0+ Language, Suppor, t","
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, with cultural, context, awareness.","
-      tit, l, e: "1, 5, 0+ Language, Suppor, t",";
-      descripti, o, n: "Re, a, l-time, translation, and multilingual, support, with cultural, context, awareness.",";
+      tit, l, e: "1, 5, 0+ Language, Suppor, t","}
+      descripti, o, n: "Re, a, l-time, translation, and multilingual, support, with cultural, context, awareness.","}
       benef, i, t: "Global, reach, capability"
     }
     {
-      ic, o, n: Z, a, p;
+      ic, o, n: Z, a, p
       tit, l, e: "Re, a, l-Time, Processin, g","
       descripti, o, n: "S, u, b-second, response, times with, intelligent, context retention, across, conversation threa, d, s.","
-      tit, l, e: "Re, a, l-Time, Processin, g",";
-      descripti, o, n: "S, u, b-second, response, times with, intelligent, context retention, across, conversation threa, d, s.",";
+      tit, l, e: "Re, a, l-Time, Processin, g","}
+      descripti, o, n: "S, u, b-second, response, times with, intelligent, context retention, across, conversation threa, d, s.","}
       benef, i, t: "Instant, response, delivery"
     }
     {
-      ic, o, n: Shie, l, d;
+      ic, o, n: Shie, l, d
       tit, l, e: "Enterprise, Securit, y","
       descripti, o, n: "E, n, d-to-end, encryptio, n, GDPR, complianc, e, and, advanced, privacy protection, for, sensitive conversatio, n, s.","
-      tit, l, e: "Enterprise, Securit, y",";
-      descripti, o, n: "E, n, d-to-end, encryptio, n, GDPR, complianc, e, and, advanced, privacy protection, for, sensitive conversatio, n, s.",";
+      tit, l, e: "Enterprise, Securit, y","}
+      descripti, o, n: "E, n, d-to-end, encryptio, n, GDPR, complianc, e, and, advanced, privacy protection, for, sensitive conversatio, n, s.","}
       benef, i, t: "1, 0, 0% privacy, complianc, e"
     }
     {
-      ic, o, n: Use, r, s;
+      ic, o, n: Use, r, s
       tit, l, e: "Hum, a, n-AI, Collaboratio, n","
       descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.","
-      tit, l, e: "Hum, a, n-AI, Collaboratio, n",";
-      descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.",";
+      tit, l, e: "Hum, a, n-AI, Collaboratio, n","}
+      descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.","}
       benef, i, t: "Perfect, escalation, flow"
     }
   ];
@@ -76,7 +76,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "5, language, support"
         "Basic, customizatio, n"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e
     }
     {
       na, m, e: "Profession, a, l"
@@ -96,7 +96,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "A/B, testin, g"
         "Sentiment, analysi, s"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e
     }
     {
       na, m, e: "Enterpri, s, e"
@@ -118,8 +118,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "On-premise, deploymen, t"
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e;
-      n, a, m;
+      popul, a, r: fal, s, e
+      n, a, m
   e: "Start, e, r",";
       pri, c, e: "$3, 9, 9",";
       peri, o, d: "/mon, t, h",";
@@ -129,12 +129,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Basic, NLP, capabilities",";
         "Te, x, t & voice, suppor, t",";
         "Email, suppor, t",";
-        "Basic, analytic, s",";
-        "Standard, integration, s",";
-        "5, language, support",";
+        "Basic, analytic, s","}
+        "Standard, integration, s","}
+        "5, language, support","}
         "Basic, customizatio, n"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e
     }
     {
       na, m, e: "Profession, a, l",";
@@ -149,12 +149,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Advanced, analytic, s & insigh, t, s",";
         "Advanced, integration, s",";
         "25, language, support",";
-        "Custom, model, training",";
-        "API, acces, s",";
-        "A/B, testin, g",";
+        "Custom, model, training","}
+        "API, acces, s","}
+        "A/B, testin, g","}
         "Sentiment, analysi, s"
       ]
-      popul, a, r: tr, u, e;
+      popul, a, r: tr, u, e
     }
     {
       na, m, e: "Enterpri, s, e",";
@@ -171,12 +171,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "1, 5, 0+ language, suppor, t",";
         "Custom, AI, development",";
         "Whi, t, e-label, solution, s",";
-        "Advanced, security, features",";
-        "SLA, guarante, e",";
-        "On-premise, deploymen, t",";
+        "Advanced, security, features","}
+        "SLA, guarante, e","}
+        "On-premise, deploymen, t","}
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e;
+      popul, a, r: fal, s, e
     }
   ];
   const, testimonial, s = [
@@ -184,123 +184,123 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       na, m, e: "Amanda, Foste, r","
       ro, l, e: "VP, Customer, Experience, E-Commerce, Gian, t","
       conte, n, t: "Conversational, AI, reduced our, customer, service response, time, from 4, hours, to 30, second, s. Customer, satisfaction, increased by, 4, 5% while, reducing, support costs, by, 60%.","
-      na, m, e: "Amanda, Foste, r",";
-      ro, l, e: "VP, Customer, Experience, E-Commerce, Gian, t",";
-      conte, n, t: "Conversational, AI, reduced our, customer, service response, time, from 4, hours, to 30, second, s. Customer, satisfaction, increased by, 4, 5% while, reducing, support costs, by, 60%.",";
-      rati, n, g: 5;
+      na, m, e: "Amanda, Foste, r","}
+      ro, l, e: "VP, Customer, Experience, E-Commerce, Gian, t","}
+      conte, n, t: "Conversational, AI, reduced our, customer, service response, time, from 4, hours, to 30, second, s. Customer, satisfaction, increased by, 4, 5% while, reducing, support costs, by, 60%.","}
+      rati, n, g: 5
       compa, n, y: "E-Commerce, Gian, t"
     }
     {
       na, m, e: "Dr. Robert, Che, n","
       ro, l, e: "Head, of, Digital Heal, t, h, Medical, System, s","
       conte, n, t: "The, mult, i-modal, conversation, capabilities enabled, us, to provide, personalized, patient support, 2, 4/7. Patient, engagement, improved by, 7, 0% with, better, health outcom, e, s.","
-      na, m, e: "Dr. Robert, Che, n",";
-      ro, l, e: "Head, of, Digital Heal, t, h, Medical, System, s",";
-      conte, n, t: "The, mult, i-modal, conversation, capabilities enabled, us, to provide, personalized, patient support, 2, 4/7. Patient, engagement, improved by, 7, 0% with, better, health outcom, e, s.",";
-      rati, n, g: 5;
+      na, m, e: "Dr. Robert, Che, n","}
+      ro, l, e: "Head, of, Digital Heal, t, h, Medical, System, s","}
+      conte, n, t: "The, mult, i-modal, conversation, capabilities enabled, us, to provide, personalized, patient support, 2, 4/7. Patient, engagement, improved by, 7, 0% with, better, health outcom, e, s.","}
+      rati, n, g: 5
       compa, n, y: "Medical, System, s"
     }
     {
       na, m, e: "Maria, Rodrigue, z","
       ro, l, e: "C, T, O, Global, Financial, Services","
       conte, n, t: "Enterpri, s, e-grade, security, and 1, 5, 0+ language, support, made it, perfect, for our, international, operations. Compliance, requirements, were fully, met, while improving, customer, experience.","
-      na, m, e: "Maria, Rodrigue, z",";
-      ro, l, e: "C, T, O, Global, Financial, Services",";
-      conte, n, t: "Enterpri, s, e-grade, security, and 1, 5, 0+ language, support, made it, perfect, for our, international, operations. Compliance, requirements, were fully, met, while improving, customer, experience.",";
-      rati, n, g: 5;
+      na, m, e: "Maria, Rodrigue, z","}
+      ro, l, e: "C, T, O, Global, Financial, Services","}
+      conte, n, t: "Enterpri, s, e-grade, security, and 1, 5, 0+ language, support, made it, perfect, for our, international, operations. Compliance, requirements, were fully, met, while improving, customer, experience.","}
+      rati, n, g: 5
       compa, n, y: "Global, Financial, Services"
     }
   ];
   const, useCase, s = [
     {
       tit, l, e: "Customer, Suppor, t","
-      ic, o, n: Use, r, s;
+      ic, o, n: Use, r, s
       descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.","
       benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]"
     }
     {
       tit, l, e: "Sal, e, s & Lead, Generatio, n","
-      ic, o, n: Z, a, p;
+      ic, o, n: Z, a, p
       descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.","
       benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]"
     }
     {
       tit, l, e: "Healthcare, Suppor, t","
-      ic, o, n: MessageCirc, l, e;
+      ic, o, n: MessageCirc, l, e
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.","
       benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]"
     }
     {
       tit, l, e: "Educati, o, n & Traini, n, g","
-      ic, o, n: Bra, i, n;
+      ic, o, n: Bra, i, n
       descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.","
       benefi, t, s: ["50% learning, retentio, n", "40% course, completio, n", "60% student, satisfactio, n"]"
-      tit, l, e: "Customer, Suppor, t",";
-      ic, o, n: Use, r, s;
-      descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.",";
-      benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]";
+      tit, l, e: "Customer, Suppor, t","}
+      ic, o, n: Use, r, s
+      descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.","}
+      benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]"}
     }
     {
-      tit, l, e: "Sal, e, s & Lead, Generatio, n",";
-      ic, o, n: Z, a, p;
-      descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.",";
-      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]";
+      tit, l, e: "Sal, e, s & Lead, Generatio, n","}
+      ic, o, n: Z, a, p
+      descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.","}
+      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]"}
     }
     {
-      tit, l, e: "Healthcare, Suppor, t",";
-      ic, o, n: MessageCirc, l, e;
-      descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.",";
-      benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]";
+      tit, l, e: "Healthcare, Suppor, t","}
+      ic, o, n: MessageCirc, l, e
+      descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.","}
+      benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]"}
     }
     {
-      tit, l, e: "Educati, o, n & Traini, n, g",";
-      ic, o, n: Bra, i, n;
-      descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.",";
-      benefi, t, s: ["50% learning, retentio, n", "40% course, completio, n", "60% student, satisfactio, n"]";
+      tit, l, e: "Educati, o, n & Traini, n, g","}
+      ic, o, n: Bra, i, n
+      descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.","}
+      benefi, t, s: ["50% learning, retentio, n", "40% course, completio, n", "60% student, satisfactio, n"]"}
     }
   ];
   const, integration, s = [
     {
       na, m, e: "CRM, System, s","
-      na, m, e: "CRM, System, s",";
-      ic, o, n: Databa, s, e;
+      na, m, e: "CRM, System, s","}
+      ic, o, n: Databa, s, e
       descripti, o, n: "Seamless, integration, with Salesfor, c, e, HubSp, o, t, and, custom, CRM platfor, m, s."
     }
     {
       na, m, e: "Communication, Platform, s","
-      na, m, e: "Communication, Platform, s",";
-      ic, o, n: Glo, b, e;
+      na, m, e: "Communication, Platform, s","}
+      ic, o, n: Glo, b, e
       descripti, o, n: "Native, support, for Sla, c, k, Tea, m, s, WhatsA, p, p, and, enterprise, messaging syste, m, s."
     }
     {
       na, m, e: "Voi, c, e & Vid, e, o","
-      na, m, e: "Voi, c, e & Vid, e, o",";
-      ic, o, n: M, i, c;
+      na, m, e: "Voi, c, e & Vid, e, o","}
+      ic, o, n: M, i, c
       descripti, o, n: "Integration, with, Twilio, Zo, o, m, WebR, T, C, and, custom, voice/video, solution, s."
     }
     {
       na, m, e: "Analytics, Platform, s","
-      na, m, e: "Analytics, Platform, s",";
-      ic, o, n: Z, a, p;
+      na, m, e: "Analytics, Platform, s","}
+      ic, o, n: Z, a, p
       descripti, o, n: "Connect, with, Google Analyti, c, s, Mixpan, e, l, and, custom, business intelligence, tool, s."
     }
     {
       na, m, e: "AI/ML, Service, s","
-      na, m, e: "AI/ML, Service, s",";
-      ic, o, n: Bra, i, n;
+      na, m, e: "AI/ML, Service, s","}
+      ic, o, n: Bra, i, n
       descripti, o, n: "Integration, with, OpenAI, Azure, A, I, AWS, AI, services, and, custom, ML mode, l, s."
     }
     {
       na, m, e: "Enterprise, System, s","
-      na, m, e: "Enterprise, System, s",";
-      ic, o, n: Shie, l, d;
+      na, m, e: "Enterprise, System, s","}
+      ic, o, n: Shie, l, d
       descripti, o, n: "Connect, with, ERP, HR, system, s, and, enterprise, resource planning, platform, s."
     }
   ];
   return(<React.Fragment>
       <Helmet>
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
-        <me, t, a;
+        <me, t, a
   na, m, e="descripti, o, n"
           content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>"
 const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
@@ -381,7 +381,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -391,7 +391,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">
-                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
+                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t
   and, mult, i-modal, conversations, for customer, suppor, t, sal, e, s, and, engagemen, t.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
@@ -403,17 +403,17 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
                 Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
               </h1>
-              <p, className="te, x, t-x, l, m;
+              <p, className="te, x, t-x, l, m
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
-                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
+                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t
                 and, mult, i-modal, conversations, for customer, suppor, t, sal, e, s, and, engagemen, t.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a;
+                <a
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="/conta, c, t"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -423,7 +423,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Conversation, a, l <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
-                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
+                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t
   and, mult, i-modal, conversations, for customer, suppor, t, sal, e, s, and, engagemen, t.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -435,7 +435,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
-                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
+                Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t
                 and, mult, i-modal, conversations, for customer, suppor, t, sal, e, s, and, engagemen, t.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
@@ -446,11 +446,11 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 >"
                   <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                   <Phone, className="w-5 h-5, m, r-2" />";
-                  Schedule, Dem, o;
+                  Schedule, Dem, o
                 </a>
-                <a;
+                <a
   hr, e, f="#prici, n, g"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
                 <a></a>"
   hr, e, f="#prici, n, g""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
@@ -466,12 +466,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g: px-8">";
             <div, className="text-center mb-12">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -572,7 +572,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Use, Case, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
@@ -596,23 +596,23 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Industry, Application, s;
+                Industry, Application, s
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Transform, customer, engagement across, multiple, industries with, intelligent, conversations.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
+                const, Ico, n = useCa, s, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
+                const, Ico, n = useCa, s, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
@@ -622,7 +622,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
+                const, Ico, n = useCa, s, e.ic, o, n
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
@@ -672,7 +672,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Integratio, n, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
@@ -696,23 +696,23 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Seamless, Integration, s;
+                Seamless, Integration, s
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Connect, with, your existing, tools, and systems, for, a unified, experienc, e.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
+                const, Ico, n = integrati, o, n.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
+                const, Ico, n = integrati, o, n.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
@@ -722,7 +722,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
+                const, Ico, n = integrati, o, n.ic, o, n
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
@@ -755,12 +755,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Featur, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -782,16 +782,16 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Advanced, AI, Capabilities;
+                Advanced, AI, Capabilities
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Powerful, features, that make, conversations, natural, intellige, n, t, and, effectiv, e.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -806,7 +806,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
@@ -814,7 +814,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+                const, Ico, n = featu, r, e.ic, o, n
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";</div>
@@ -856,7 +856,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
@@ -880,13 +880,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Transparent, Pricing, for Every, Business, Size;
+                Transparent, Pricing, for Every, Business, Size
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose, the, plan that, fits, your conversational, AI, needs and, conversation, volume.
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
@@ -895,8 +895,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-viol, e, t-500, relativ, e' : ''}`}>`;`
                   {pl, a, n.popul, a, r && (</div>
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
-                      <span, className="bg-viol, e, t-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
-                        Most, Popula, r;
+                      <span, className="bg-viol, e, t-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">"}
+                        Most, Popula, r
                       </sp, a, n>
                     </d, i, v>
                   )}
@@ -931,13 +931,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       </li>
                     ))}
                   </ul>
-                  <a;
+                  <a
   hr, e, f="/conta, c, t"
                     classNa, m, e={
 `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
-pl, a, n.popul, a, r;
+pl, a, n.popul, a, r
 ? 'bg-viol, e, t-600, tex, t-white, hove, r: bg-viol, e, t-7, 0, 0'
-? 'bg-viol, e, t-600, tex, t-white, hov, e;
+? 'bg-viol, e, t-600, tex, t-white, hov, e
   r: bg-viol, e, t-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
@@ -945,14 +945,14 @@ pl, a, n.popul, a, r;
                     classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
                   >
-                    Get, Starte, d;
+                    Get, Starte, d
                   </a>
                 </d, i, v>
               ))}
             </d, i, v>
             <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom conversational, AI, solution?</p>";
-              <a;
+              <a
   hr, e, f="/conta, c, t"
             </d, i, v>"
             <div, className="te, x, t-center, m, t-12">";"
@@ -970,7 +970,7 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Testimonia, l, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
@@ -994,13 +994,13 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                What, Our, Clients S, a, y;
+                What, Our, Clients S, a, y
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Join, hundreds, of companies, already, using our, conversational, AI to, transform, customer engageme, n, t.
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
@@ -1037,11 +1037,11 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"</section>
@@ -1065,12 +1065,12 @@ pl, a, n.popul, a, r;
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-              <a;
+              <a
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
   hr, e, f="/conta, c, t"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e
             </p>"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
@@ -1081,11 +1081,11 @@ pl, a, n.popul, a, r;
               >"
                 <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                 <Phone, className="w-5 h-5, m, r-2" />";
-                Schedule, Dem, o;
+                Schedule, Dem, o
               </a>
-              <a;
+              <a
   hr, e, f="/ca, s, e-studi, e, s"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
               <a></a>"
   hr, e, f="/ca, s, e-studi, e, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
@@ -1103,5 +1103,5 @@ pl, a, n.popul, a, r;
     </React.Fragment>
   );
 };
-export default ConversationalAI;
+export default ConversationalAI
 }}}}}}"`

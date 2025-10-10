@@ -5,12 +5,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
-exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
+exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -21,7 +21,7 @@ exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '17 */2 * * *'} // every 2 hours offset;
+  e: '17 */2 * * *'} // every 2 hours offset
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
@@ -30,11 +30,11 @@ exports.handler = async () => {const logs = []}
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
-    return status;
+    return status
   }
-  // Regenerate sitemap;
+  // Regenerate sitemap
   logStep('sitemap: generate') () => runNode('scripts/generate-sitemap.js'));
-  // Ping search engines;
+  // Ping search engines
   const baseUrl = (
     process.env.SITE_URL ||
     process.env.URL ||
@@ -42,14 +42,14 @@ exports.handler = async () => {const logs = []}
     'https: //ziontechgroup.com').replace(/\/$/) '');
   try {,
   logStep('sitema)
-  p: generate') () => runNode('scripts/generate-sitemap.js'));
-  // Ping search engines;
+  p: generate') () => runNode('scripts/generate-sitemap.js'))}
+  // Ping search engines
   const baseUrl = (process.env.SITE_URL ||
     process.env.URL ||
     process.env.DEPLOY_PRIME_URL ||
     'http,
   s: //ziontechgroup.com')
-  ).replace(/\/$/) '');
+  ).replace(/\/$/) '')}
   try {/* TODO: Fix JSX expression */}`
 //     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [`
@@ -64,7 +64,7 @@ exports.handler = async () => {const logs = []}
   } catch (e) {/* TODO: Fix JSX expression */}`
   error: ${String(e)}`);
   }
-  // Attempt to push any changes;
+  // Attempt to push any changes
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {statusCode: 200} body: logs.join('\n') };
   logStep('gi)

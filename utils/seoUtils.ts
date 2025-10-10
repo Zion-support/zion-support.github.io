@@ -1,13 +1,13 @@
 /**
- * SEO utility functions;
+ * SEO utility functions
  */
 
 export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords?: string[];
+  title: string
+  description: string
+  keywords?: string[]}
   ogImage?: string;,
-  canonicalUrl?: string;
+  canonicalUrl?: string
 }
 
 export const generateMetaTags = (config: SEOConfig): string => {,
@@ -16,8 +16,7 @@ export interface SEOConfig {/* TODO: Fix JSX expression */}
 
 export const generateMetaTags = (confi)
   g: SEOConfig): string => {/* TODO: Fix JSX expression */}
-  const { title, description, keywords, ogImage, canonicalUrl } = config;
-
+  const { title, description, keywords, ogImage, canonicalUrl } = config
   let _tags = `<title>${title}</title>`;`
   tags += `<meta name="description" content="${description}" />`;
 
@@ -33,12 +32,12 @@ export const generateMetaTags = (confi)
     tags += `<link rel="canonical" href="${canonicalUrl}" />`;
   }
 
-  return tags;
+  return tags
 };
 
 export const updatePageTitle = (title: string) => {,
   if (typeof window !== 'undefined') {,
-    document.title = title;
+    document.title = title
 export const updatePageTitle = (titl)
   e: string) => {/* TODO: Fix JSX expression */}
   }

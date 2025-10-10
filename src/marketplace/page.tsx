@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('products')}
+  const [searchTerm, setSearchTerm] = useState('')}
   const categories = [
     {
       id: 'products',
@@ -117,13 +117,13 @@ $4}
   const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
-        return products;
+        return products
       case 'talent':
-        return talent;
+        return talent
       case 'equipment':
-        return equipment;
+        return equipment
       default:
-        return [];
+        return []}
   };
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -164,8 +164,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace;
-  </
+              Zion Tech Marketplace</Marketplace>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
@@ -194,8 +193,7 @@ icon$5: Award,
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters;
-  </
+                Filters</Filters>
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
@@ -292,8 +290,7 @@ icon$5: Award,
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping;
-  </
+                Start Shopping</Shopping>
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -409,16 +406,16 @@ const categories = [
       vendo,
   r: 'QuantumCloud',
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
-// Start Shopping;
+// Start Shopping
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer /></Footer>
-export default MarketplacePage;
+export default MarketplacePage
   </div>
   </p>
   </h2>

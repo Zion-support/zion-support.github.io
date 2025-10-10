@@ -68,10 +68,10 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">";</h2>
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">";
-              3, Revolutionary, AI Breakthroug, h, s;
+              3, Revolutionary, AI Breakthroug, h, s
             </sp, a, n>
           </h2>
-          <p, className="te, x, t-3x, l, m;
+          <p, className="te, x, t-3x, l, m
   d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">"
           <p, className="te, x, t-3x, l, m
   d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">"</p>
@@ -114,7 +114,7 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>"
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">";"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">";
-              3, Revolutionary, AI Breakthroug, h, s;
+              3, Revolutionary, AI Breakthroug, h, s
             </sp, a, n>
           </h2>"
           <p, className="te, x, t-3x, l, m,"
@@ -199,11 +199,11 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
               ⚡ Limited, Tim, e: Free, Enterprise, Assessment ⚡
             </p>
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">";
-              <Li, n, k;
+              <Li, n, k
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">";</div>
               <Li, n, k
   to="/conta, c, t"
-                classNa, m, e="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hov, e;
+                classNa, m, e="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hov, e
           {/* Urgent, CT, A */}"
           <div, className="flex, fle, x-col, item, s-center, ga, p-6"></div>"
             <p, className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e"></p>"
@@ -221,9 +221,9 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
                 <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
                 <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
               </Li, n, k>
-              <Li, n, k;
+              <Li, n, k
   to="/bl, o, g"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
               <Li, n, k;"
   to="/bl, o, g""
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hov, e,"

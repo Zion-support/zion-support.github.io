@@ -1,29 +1,29 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  link: string;
-  category: string;
-    address: string;
+  link: string
+  category: string
+    address: string
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
     addres,
   s: string}
 export const,
@@ -48,7 +48,7 @@ export const,
     ]
     link: '/services/next-gen-ai-suite'
     category: 'Next-Gen Innovations 2025'
-    realImplementation: true;
+    realImplementation: true
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -72,8 +72,8 @@ export const,
     ],
     link: "/services/next-gen-ai-suite"
     category: "Next-Gen Innovations 2025"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,

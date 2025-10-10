@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, ComponentType } from 'react';
 interface LazyComponentProps {
-  fallback?: React.ReactNode;
-  children: React.ReactNode;
+  fallback?: React.ReactNode
+  children: React.ReactNode
 }
 export default function LazyComponent({
   className = '',
@@ -12,7 +12,7 @@ const DefaultFallback = () => (
     <div className="cyber-loader"></div>
     <span className="ml-3 text-cyan-400">Loading...</span>
   </div>
-);
+)}
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
   return (
@@ -30,35 +30,35 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
     </LazyComponent>
   );
   LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
-  return LazyWrappedComponent;
+  return LazyWrappedComponent
 };
 // Utility function to create lazy components
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
-  const LazyComponent = lazy(importFunc);
+  const LazyComponent = lazy(importFunc)}
   return (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
     </LazyComponent>
   );
 };
-export default LazyComponent;
+export default LazyComponent
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   childre,
-  n: ReactNode;
-  fallback?: ReactNode;
-  delay?: number;
-  threshold?: number;
-  rootMargin?: string;
+  n: ReactNode
+  fallback?: ReactNode
+  delay?: number
+  threshold?: number
+  rootMargin?: string
 }
-// Higher-order component for lazy loading;
+// Higher-order component for lazy loading
 export const _withLazyLoading = {};
           <P extends object>()
   Componen,
-  t: ComponentType;
+  t: ComponentType
           <P>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -70,9 +70,9 @@ export const _withLazyLoading = {};
     </Suspense>
   );
 };
-// Lazy component wrapper with intersection observer;
+// Lazy component wrapper with intersection observer
 const,
-  LazyComponent: React.FC;
+  LazyComponent: React.FC
           <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -87,7 +87,7 @@ const,
 }
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef;
+  const elementRef = React.useRef
           <HTMLDivElement>(null);
   React.useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -133,9 +133,9 @@ const,
           </div>
   );
 };
-// Preload function for critical components;
+// Preload function for critical components
 export const preloadComponent = (importFunctio)
-  n: () => Promise;
+  n: () => Promise
           <any>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -143,14 +143,14 @@ export const preloadComponent = (importFunctio)
   O: Add content;}
 }
     const component = lazy(importFunction);
-    return component;
+    return component
   };
 };
-// Lazy load with preloading;
+// Lazy load with preloading
 export const createLazyComponent = {};
           <P extends object>()
   importFunctio,
-  n: () => Promise;
+  n: () => Promise
           <{/* TODO: Fix JSX expression */}
   t: ComponentType<P> }>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
@@ -164,15 +164,15 @@ export const createLazyComponent = {};
     </Suspense>
   );
 };
-// Critical resource preloader;
+// Critical resource preloader
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
+  if (typeof window === 'undefined') return
+  // Preload critical fonts
 const fontPreloads = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     'http,
   s://fonts.googleapis.com/css2?family=Orbitro,
@@ -186,13 +186,13 @@ const fontPreloads = [
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style';
-    link.href = href;
+    link.href = href
     document.head.appendChild(link);
   });
-  // Preload critical images;
+  // Preload critical images
 const imagePreloads = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     '/og-image.jpg',
 //     '/favicon.ico'];
@@ -202,11 +202,11 @@ const imagePreloads = [
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = src;
+    link.href = src
     document.head.appendChild(link);
   });
 };
-export default LazyComponent;
+export default LazyComponent
   </P>
   </P>
   </any>

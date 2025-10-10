@@ -4,9 +4,8 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, G
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 export default function DocsPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')}
   const docCategories = [
     {
       title: 'Getting Started',
@@ -15,27 +14,13 @@ export default function DocsPage() {
       docs: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-=======
-;
-export default function DocsPage() {;
-  const [searchQuery, setSearchQuery] = useState('');
-;
-  const docCategories = [;
-    {;
-      title: 'Getting Started',;
-      icon: 'rocket',;
-      description: 'Quick start guides and basic setup instructions',;
-      docs: [;}
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },;
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ];
     },;
     {;
-      title: 'API Reference',;
-      icon: 'code',;
-      description: 'Complete API documentation and endpoints',;
+      title: 'API Reference',}
+      icon: 'code',}
+      description: 'Complete API documentation and endpoints',}
       docs: [;}
         { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },;
         { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },;
@@ -43,9 +28,9 @@ export default function DocsPage() {;
       ];
     },;
     {;
-      title: 'AI Solutions',;
-      icon: 'brain',;
-      description: 'AI and machine learning documentation',;
+      title: 'AI Solutions',}
+      icon: 'brain',}
+      description: 'AI and machine learning documentation',}
       docs: [;}
         { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },;
         { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },;
@@ -53,9 +38,9 @@ export default function DocsPage() {;
       ];
     },;
     {;
-      title: 'Cloud Services',;
-      icon: 'cloud',;
-      description: 'Cloud infrastructure and services',;
+      title: 'Cloud Services',}
+      icon: 'cloud',}
+      description: 'Cloud infrastructure and services',}
       docs: [;}
         { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },;
         { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },;
@@ -63,7 +48,6 @@ export default function DocsPage() {;
       ];
     }
   ];
-<<<<<<< HEAD
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
@@ -89,36 +73,6 @@ export default function DocsPage() {;
           </div>
         </div>
       </section>
-=======
-;
-  const popularDocs = [;
-    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },;
-    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },;
-    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },;
-    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
-  ];
-;
-  const filteredDocs = docCategories.map(category => ({;
-    ...category,;
-    docs: category.docs.filter(doc =>;
-      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-    );}
-  })).filter(category => category.docs.length > 0);
-;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
-      <SEOOptimizer;
-        title="Documentation - Zion Tech Group";
-        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices.";
-        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation";
-      />;
-      <Navigation />;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Popular Docs */}
       <section className="py-16 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -136,9 +90,8 @@ export default function DocsPage() {;
                   {doc.title}
                 </h3>;
                 <p className="text-gray-300 text-sm mb-4">{doc.description}</p>;
-                <a;
+                <a
                   href={doc.link}
-<<<<<<< HEAD
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
@@ -173,44 +126,6 @@ export default function DocsPage() {;
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
-=======
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm";
-                >;
-                  Read More;
-                  <ArrowRight className="w-4 h-4" />;
-                </a>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Documentation Categories */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>;
-            {filteredDocs.map((category, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>;
-                <div className="flex items-center gap-4 mb-6"></div>;
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"></div>;
-                    <BookOpen className="w-6 h-6 text-white" />;
-                  </div>;
-                  <div></div>;
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>;
-                    <p className="text-gray-300">{category.description}</p>;
-                  </div>;
-                </div>;
-                <div className="space-y-4"></div>;
-                  {category.docs.map((doc, docIndex) => (;
-                    <a;}
-                      key={docIndex}
-                      href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group";
-                    >;
-                      <div className="flex items-center justify-between"></div>;
-                        <div></div>;
-                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                             {doc.title}
                           </h4>;
                           <p className="text-gray-300 text-sm">{doc.description}</p>;
@@ -222,7 +137,6 @@ export default function DocsPage() {;
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -237,11 +151,9 @@ export default function DocsPage() {;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Contact Support;
-  </
+              Contact Support</Support>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Join Community;
-  </
+              Join Community</Community>
           </div>
         </div>
       </section>
@@ -252,32 +164,3 @@ export default function DocsPage() {;
   </button>
   </button>
   </SEOOptimizer>
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>;
-        <div className="max-w-4xl mx-auto text-center"></div>;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            Need Help?;
-          </h2>;
-          <p className="text-xl text-purple-100 mb-8">;
-            Can't find what you're looking for? Our support team is here to help.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">;
-              Contact Support;
-            </button>;
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">;
-              Join Community;
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-      <Footer />;
-    </div>;
-  );
-}
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

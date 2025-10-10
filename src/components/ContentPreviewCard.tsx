@@ -2,9 +2,9 @@ import React from 'react';
 interface ContentPreviewCardProps {// TODO: Add content;}
 };
   i,
-  d: string;
+  d: string
     titl,
-  e: string;
+  e: string
     descriptio,
   n: string;,
     categor,
@@ -16,20 +16,20 @@ interface ContentPreviewCardProps {// TODO: Add content;}
     pat,
   h: string;,
     imag,
-  e: string;
-  featured?: boolean;
+  e: string
+  featured?: boolean
   stats?: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   view,
   s: number;,
     engagemen,
-  t: number;
+  t: number
   };
-  excerpt?: string;
+  excerpt?: string
 }
 const,
-  ContentPreviewCard: React.FC;
+  ContentPreviewCard: React.FC
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -46,7 +46,7 @@ const,
 //   excerpt;)
 }) => {if (num >= 1000) {}
   // TOD,
-  O: Add content;
+  O: Add content
 }
       return (num / 1000).toFixed(1) + 'k';
     }
@@ -70,14 +70,14 @@ const,
       'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600'
     };
-    return colors[category] || colors.default;
+    return colors[category] || colors.default
   };
   return (<div>Coming Soon</div>)
   )
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>
@@ -92,7 +92,7 @@ const,
         {featured && ()}"
           <div className="absolute top-4 left-4"></div>"
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold"></span>
-// Featured;
+// Featured
           </span>
           </div>
         )}

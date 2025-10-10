@@ -1,17 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)}
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {
@@ -21,11 +21,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)}
     }
     // Call onError callback if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)}
     }
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
@@ -37,7 +37,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       // Default error UI
       return (
@@ -77,7 +77,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 export { GlobalErrorBoundary }</a>

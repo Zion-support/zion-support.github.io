@@ -8,11 +8,11 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({ ok: true} tool: 'media-orchestrator' });
     };
   } catch (e) {return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({ ok: false} error: String(e) });
     return {/* TODO: Fix JSX expression */}
   k: true} too,

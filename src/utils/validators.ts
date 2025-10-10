@@ -1,18 +1,18 @@
 // Validation utility functions
 
 export interface ValidationResult {
-  isValid: boolean;
-  error?: string;
+  isValid: boolean
+  error?: string
 }
 
 // URL Validation
 export const isValidUrl = (url: string): boolean => {
-  if (!url || typeof url !== 'string') return false;
+  if (!url || typeof url !== 'string') return false
   try {
-    const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    const urlObj = new URL(url)}
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:'}
   } catch {
-    return false;
+    return false
   }
 };
 
@@ -52,14 +52,13 @@ export const validateLength = (
 
 // Password Validation
 export const isValidPassword = (password: string): boolean => {
-  if (!password || password.length < 8) return false;
-  
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
+  if (!password || password.length < 8) return false
+  const hasUpperCase = /[A-Z]/.test(password)}
+  const hasLowerCase = /[a-z]/.test(password)}
+  const hasNumbers = /\d/.test(password)}
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
   
-  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
+  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 };
 
 export const validatePassword = (password: string): ValidationResult => {
@@ -87,15 +86,14 @@ export const validatePassword = (password: string): ValidationResult => {
 
 // HTML Sanitization
 export const sanitizeHTML = (input: string | null | undefined): string => {
-  if (!input || typeof input !== 'string') return '';
-  
+  if (!input || typeof input !== 'string') return ''}
   return input
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;');
+    .replace(/\//g, '&#x2F;')}
 };
 
 // Date Validation
@@ -139,21 +137,19 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
   }
   
   // Luhn algorithm
-  let sum = 0;
-  let isEven = false;
-  
+  let sum = 0
+  let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
-    
+    let digit = parseInt(cleaned[i])}
     if (isEven) {
-      digit *= 2;
+      digit *= 2
       if (digit > 9) {
-        digit -= 9;
+        digit -= 9
       }
     }
     
-    sum += digit;
-    isEven = !isEven;
+    sum += digit
+    isEven = !isEven
   }
   
   if (sum % 10 !== 0) {
@@ -170,7 +166,7 @@ export const validateJSON = (jsonString: string): ValidationResult => {
   }
   
   try {
-    JSON.parse(jsonString);
+    JSON.parse(jsonString)}
     return { isValid: true };
   } catch (error) {
     return { isValid: false, error: 'Invalid JSON format' };
@@ -192,9 +188,9 @@ export const validateComposite = (
   validators: Array<(val: string) => ValidationResult>
 ): ValidationResult => {
   for (const validator of validators) {
-    const result = validator(value);
+    const result = validator(value)}
     if (!result.isValid) {
-      return result;
+      return result
     }
   }
   
@@ -204,6 +200,6 @@ export const validateComposite = (
 // Async Validation Helper
 export const asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
-  await new Promise(resolve => setTimeout(resolve, 100));
-  return 'success';
+  await new Promise(resolve => setTimeout(resolve, 100))}
+  return 'success'}
 };

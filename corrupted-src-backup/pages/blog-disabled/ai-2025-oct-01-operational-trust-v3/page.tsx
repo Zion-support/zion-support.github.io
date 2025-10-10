@@ -15,7 +15,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          AI, 202, 5: Operational, Trust, Scorecards v3;
+          AI, 202, 5: Operational, Trust, Scorecards v3
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           SL, I, s → KPIs, with, budge, t, s, canari, e, s, and, instant, rollback — updated, v3, playbook for, operational, trust.
@@ -27,10 +27,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
-            ← Back, to, Blog;
+            ← Back, to, Blog
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )}
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

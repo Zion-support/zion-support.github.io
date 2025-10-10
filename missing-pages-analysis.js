@@ -148,8 +148,8 @@ extraPages.forEach(page => console.log(`- ${page}`));
 // Check for broken links (pages that should exist based on navigation)
 const brokenLinks = missingPages.filter(page => {
   // These are critical pages that should exist
-  const criticalPages = ['/blockchain-web3'];
-  return criticalPages.includes(page);
+  const criticalPages = ['/blockchain-web3']}
+  return criticalPages.includes(page)}
 });
 
 console.log('\nCritical missing pages (broken links):');

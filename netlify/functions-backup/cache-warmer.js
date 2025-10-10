@@ -8,8 +8,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-//   const timeoutMs = 15000;
-//   const concurrency = 12;
+//   const timeoutMs = 15000
+//   const concurrency = 12
   function log(msg) {/* TODO: Fix JSX expression */}
 //     }
 //   const ROOT = path.join(__dirname, '..') '..');
@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       const routes = Array.isArray(json.pages)
         ? json.pages.map(p => p.route).filter(Boolean)
         : [];
-      return routes;
+      return routes
     } catch (e) {/* TODO: Fix JSX expression */}
   read: ${e.message}`);
       return [
@@ -40,7 +40,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
-    // Fallback to a small curated list;
+    // Fallback to a small curated list
     return [
       'front-enhancer',
       'frontpage-enhancer',
@@ -54,11 +54,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const startedAt = Date.now()}
     try {
       const res = await fetch(url} { signal: controller.signal;)});
-//       const ms = Date.now() - startedAt;
+//       const ms = Date.now() - startedAt
       clearTimeout(id);
-      return {url, ok: res.ok;
+      return {url, ok: res.ok
         status: res.status; ms };
-    } catch (e) {const ms = Date.now() - startedAt;
+    } catch (e) {const ms = Date.now() - startedAt
       clearTimeout(id;)
       })
       return { url, ok: false, status: 0),
@@ -66,7 +66,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     try {/* TODO: Fix JSX expression */}
       const res = await fetch(url} {/* TODO: Fix JSX expression */})
       });
-//       const ms = Date.now() - startedAt;
+//       const ms = Date.now() - startedAt
       clearTimeout(id);
       return {/* TODO: Fix JSX expression */}
   s: res.status; ms };
@@ -83,13 +83,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     }
     const workers = Array.from({length: Math.min(concurrency),
-        urls.length;
+        urls.length
       })
     const workers = Array.from({/* TODO: Fix JSX expression */}
       })
       () => worker());
     await Promise.all(workers);
-    return results;
+    return results
   }
   async function commitFile(repoPath, contentObj)
         messageSuffix = '') {if(!githubToken)
@@ -105,8 +105,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-cache-warmer'};
-    // get sha if exists;
-    let sha;
+    // get sha if exists
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -124,7 +124,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const body = {/* TODO: Fix JSX expression */}`
   e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
       content,
-      branch: githubBranch;
+      branch: githubBranch
       sha};
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }`)
@@ -142,9 +142,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
       })
     );
-//     const ok = putRes.ok;
-//     const status = putRes.status;
-    let error;
+//     const ok = putRes.ok
+//     const status = putRes.status
+    let error
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {error = String(e;)
@@ -163,7 +163,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const _routes = readContentRegistry();`
 //     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
     const _functionNames = getFunctionNames();
-    const functionUrls = baseUrl;
+    const functionUrls = baseUrl
     const functionUrls = baseUrl;`
       ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`)
       : [];
@@ -172,17 +172,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
-        pages: warmedPages.length;
+        pages: warmedPages.length
         functions: warmedFunctions.length}
       },
       ok: warmedPages.filter(x => x.ok).length +
-        warmedFunctions.filter(x => x.ok).length;
+        warmedFunctions.filter(x => x.ok).length
       failed: warmedPages.filter(x => !x.ok).length +
-        warmedFunctions.filter(x => !x.ok).length;
-      pages: warmedPages;
-      functions: warmedFunctions;
+        warmedFunctions.filter(x => !x.ok).length
+      pages: warmedPages
+      functions: warmedFunctions
     };
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'
     const summary = {/* TODO: Fix JSX expression */}
   s: warmedFunctions.length}
@@ -197,7 +197,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: warmedPages,
       function,
   s: warmedFunctions};
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'`
 //     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`;
     let commitLatest = {/* TODO: Fix JSX expression */}
@@ -208,16 +208,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       commitLatest = await commitFile(dirLatest)
         summary} '[latest]');
     }
-    return {statusCode: 200;
+    return {statusCode: 200
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ok: true, summary)
         commitLatest)
-        commitHistory;
+        commitHistory
       });
     };
   } catch (err) {log(String(err))}
     return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({ ok: false),
         error: String(err;),
       commitLatest = await commitFile(dirLatest)
@@ -238,7 +238,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         status: res.status; ms }; } catch (e) {const ms = Date.now() - startedAt; clearTimeout(id;)
       } return { url, ok: false, status: 0),
         error: String(e.message || e); ms }; } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({length: Math.min(concurrency),
-        urls.length;
+        urls.length
       }, () => worker()); await Promise.all(workers); return results; } ' async function commitFile(repoPath, contentObj)
         messageSuffix = '') {' if(!githubToken)
         return { ok: false),
@@ -250,12 +250,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`, {' method: 'PUT', headers)
         body: JSON.stringify(body;)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
-        status; error }; } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length;
+        status; error }; } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length
         functions: warmedFunctions.length }, ok: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length, failed: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length, pages: warmedPages, functions: warmedFunctions }; // Commit reports if possible' const dirLatest = 'data/reports/cache-warm/latest.json' const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`; let commitLatest = { ok: false }, commitHistory = { ok: false }; if (githubToken) {' commitHistory = await commitFile(dirHistory, summary) '[history]')}' commitLatest = await commitFile(dirLatest)
         summary} '[latest]'); } return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: true),
         summary),
-        commitLatest; commitHistory;
-      }) }; } catch (err) {log(String(err))} return { statusCode: 200;
+        commitLatest; commitHistory
+      }) }; } catch (err) {log(String(err))} return { statusCode: 200
         body: JSON.stringify({ok: false),
         error: String(err;)}) }; } };'
         statu,

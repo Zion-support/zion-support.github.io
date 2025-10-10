@@ -165,8 +165,7 @@ export default function AboutPage() {
         <div className='prose prose-lg max-w-none'>
           <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
             <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-              Our Mission;
-  </
+              Our Mission</Mission>
             <p className='text-gray-600 mb-4'>
               At Zion Tech Group, we are dedicated to transforming
               businesses through cutting-edge AI and IT solutions. Our
@@ -224,8 +223,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission;
-  </
+                  Our Mission</Mission>
                 <p className="text-lg text-gray-600 mb-6">
                   To democratize access to advanced AI technology and empower businesses of all sizes 
                   to achieve their full potential through innovative digital solutions.
@@ -237,8 +235,7 @@ export default function AboutPage() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get in Touch;
-  </
+                  Get in Touch</Touch>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -256,11 +253,9 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values;
-  </
+                Our Values</Values>
               <p className="text-xl text-gray-600">
-                The principles that guide everything we do;
-  </
+                The principles that guide everything we do</do>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
@@ -284,11 +279,9 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Meet Our Team;
-  </
+                Meet Our Team</Team>
               <p className="text-xl text-gray-600">
-                The experts behind our innovative solutions;
-  </
+                The experts behind our innovative solutions</solutions>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
@@ -327,13 +320,11 @@ export default function AboutPage() {
               <Link
                 to="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                Start a Project;
-  </
+                Start a Project</Project>
               <Link
                 to="/careers"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
-                Join Our Team;
-  </
+                Join Our Team</Team>
             </div>
           </div>
         </section>
@@ -355,8 +346,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group;
-  </
+              About Zion Tech Group</Group>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
               innovative thinking, and unwavering commitment to client success.
@@ -384,8 +374,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Mission;
-  </
+                Our Mission</Mission>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
@@ -407,8 +396,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Vision;
-  </
+                Our Vision</Vision>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To be the world's leading provider of AI and quantum computing solutions, 
                 creating a future where technology seamlessly integrates with human potential 
@@ -440,11 +428,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Values;
-  </
+              Our Values</Values>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our culture;
-  </
+              The principles that guide everything we do and shape our culture</culture>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -464,11 +450,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Meet Our Team;
-  </
+              Meet Our Team</Team>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              World-class experts in AI, quantum computing, and enterprise technology;
-  </
+              World-class experts in AI, quantum computing, and enterprise technology</technology>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
@@ -498,11 +482,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Achievements;
-  </
+              Our Achievements</Achievements>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our impact and success;
-  </
+              Numbers that speak to our impact and success</success>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
@@ -526,11 +508,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Journey;
-  </
+              Our Journey</Journey>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our company's growth and innovation;
-  </
+              Key milestones in our company's growth and innovation</innovation>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
@@ -566,14 +546,12 @@ export default function AboutPage() {
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
               <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today;
-  </
+              Get Started Today</Today>
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center">
               <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation;
-  </
+              Free Consultation</Consultation>
           </div>
         </div>
       </section>

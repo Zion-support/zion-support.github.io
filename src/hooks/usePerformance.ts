@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  networkLatency: number
 }
 
 export const usePerformance = () => {
@@ -18,7 +18,7 @@ export const usePerformance = () => {
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
-        console.log('Running performance optimizations...');
+        console.log('Running performance optimizations...')}
       });
     }
   }, []);
@@ -27,9 +27,8 @@ export const usePerformance = () => {
     // Measure performance metrics
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const memory = (performance as any).memory;
-        
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const memory = (performance as any).memory
         setMetrics({
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
           renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
@@ -62,24 +61,24 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 export const _usePerformance = () => {// TODO: Add content;}
 
 }
-  const [metrics, setMetrics] = useState;
+  const [metrics, setMetrics] = useState
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === 'undefined' || !('performance' in window)) return
     const measurePerformance = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const navigation = performance.getEntriesByType()
 //         'navigation'
-      )[0] as PerformanceNavigationTiming;
+      )[0] as PerformanceNavigationTiming
       const paintEntries = performance.getEntriesByType('paint')
       const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
       const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0
       // Measure CLS (Cumulative Layout Shift)
 
       if ('PerformanceObserver' in window) {// TODO: Add content;}
@@ -98,8 +97,7 @@ export const _usePerformance = () => {// TODO: Add content;}
   O: Add content;}
 }
 
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
-
+              cumulativeLayoutShift += (entry as unknown as { value: number }).value
             }
           }
         }
@@ -128,7 +126,7 @@ export const _usePerformance = () => {// TODO: Add content;}
 
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
-  t: number }).processingStart - entry.startTime;
+  t: number }).processingStart - entry.startTime
             }
           }
         }
@@ -145,11 +143,11 @@ export const _usePerformance = () => {// TODO: Add content;}
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
-//         firstInputDelay;
+//         firstInputDelay
       };
       setMetrics(performanceData);
       setIsMonitoring(false);
-      // Report to analytics using trackTiming;
+      // Report to analytics using trackTiming
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
 //       analytics.trackTiming()
@@ -166,9 +164,9 @@ export const _usePerformance = () => {// TODO: Add content;}
 //         performanceData.cumulativeLayoutShift);
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
-    // Start monitoring;
+    // Start monitoring
     setIsMonitoring(true);
-    // Measure performance after page load;
+    // Measure performance after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}

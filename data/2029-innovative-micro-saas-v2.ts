@@ -1,24 +1,24 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  roi: string;
+  link: string
+  marketPosition: string
+  targetAudience: string
+  roi: string
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
+  marketSize: string
+  growthRate: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string
+    email: string
+    address: string
   }
-  category: string;
+  category: string
   technology: string[];
   benefits: string[];
   useCases: string[];
@@ -31,43 +31,43 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       description: 'Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.'
       features: [
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   marketPositio,
-  n: string;
+  n: string
   targetAudienc,
-  e: string;
+  e: string
   ro,
-  i: string;
+  i: string
   competitor,
   s: string[];
   marketSiz,
-  e: string;
+  e: string
   growthRat,
-  e: string;
+  e: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
     addres,
   s: string}
   categor,
-  y: string;
+  y: string
   technolog,
   y: string[];
   benefit,
@@ -105,7 +105,7 @@ export const,
       competitors: ['Gainsight', 'Totango', 'ClientSuccess']
       marketSize: '$3.2B'
       growthRate: '35% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -128,7 +128,7 @@ export const,
       growthRat,
   e: '35% annually'
       realImplementatio,
-  n: true;
+  n: true
       contactInf,
   o: mobil,
   e: '+1 302 464 0950'
@@ -194,7 +194,7 @@ export const,
       competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism']
       marketSize: '$4.8B'
       growthRate: '40% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -280,7 +280,7 @@ export const,
       competitors: ['Gong', 'Chorus', 'SalesLoft']
       marketSize: '$2.1B'
       growthRate: '30% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -303,7 +303,7 @@ export const,
       growthRat,
   e: '30% annually'
       realImplementatio,
-  n: true;
+  n: true
       contactInf,
   o: mobil,
   e: '+1 302 464 0950'
@@ -370,7 +370,7 @@ export const,
       competitors: ['Collibra', 'Informatica', 'Alation']
       marketSize: '$1.8B'
       growthRate: '25% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -456,7 +456,7 @@ export const,
       competitors: ['Llamasoft', 'E2open', 'Kinaxis']
       marketSize: '$5.2B'
       growthRate: '45% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -542,7 +542,7 @@ export const,
       competitors: ['Visier', 'Workday', 'BambooHR']
       marketSize: '$2.4B'
       growthRate: '28% annually'
-      realImplementation: true;
+      realImplementation: true
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -565,7 +565,7 @@ export const,
       growthRat,
   e: '28% annually'
       realImplementatio,
-  n: true;
+  n: true
       contactInf,
   o: mobil,
   e: '+1 302 464 0950'
@@ -641,8 +641,8 @@ export const,
       competitors: ['Gainsight', 'Totango', 'ClientSuccess'],
       marketSize: '$3.2B'
       growthRate: '35% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -718,8 +718,8 @@ export const,
       competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism'],
       marketSize: '$4.8B'
       growthRate: '40% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -791,8 +791,8 @@ export const,
       competitors: ['Gong', 'Chorus', 'SalesLoft'],
       marketSize: '$2.1B'
       growthRate: '30% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -868,8 +868,8 @@ export const,
       competitors: ['Collibra', 'Informatica', 'Alation'],
       marketSize: '$1.8B'
       growthRate: '25% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -941,8 +941,8 @@ export const,
       competitors: ['Llamasoft', 'E2open', 'Kinaxis'],
       marketSize: '$5.2B'
       growthRate: '45% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1014,8 +1014,8 @@ export const,
       competitors: ['Visier', 'Workday', 'BambooHR'],
       marketSize: '$2.4B'
       growthRate: '28% annually'
-      realImplementation: true;
-      contactInfo: unknown;
+      realImplementation: true
+      contactInfo: unknown
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1069,33 +1069,33 @@ export const,
   descriptio,"
   n: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies."
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
-  e: string;
+  e: string
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   marketPositio,
-  n: string;
+  n: string
   targetAudienc,
-  e: string;
+  e: string
   ro,
-  i: string;
+  i: string
   competitor,
   s: string[];
   marketSiz,
-  e: string;
+  e: string
   growthRat,
-  e: string;
+  e: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -1103,14 +1103,14 @@ export const,
   s: string}
   };
   categor,
-  y: string;
+  y: string
   technolog,
   y: string[];
   benefit,
   s: string[];
   useCase,
   s: string[]}
-export interface InnovativeMicroSaasService2029V2 {;
+export interface InnovativeMicroSaasService2029V2 {}
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [,
     id: "ai-powered-customer-success-platform",
     name: "AI-Powered Customer Success Platform",
@@ -1131,8 +1131,8 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     roi: "400% average return on investment",
     competitors: ["Gainsight", "Totango"; "ClientSuccess"]}
     marketSize: "$3 && 3.2B", growthRate: "35% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709",
 export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression */}"
@@ -1185,8 +1185,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Gainsight", "Totango", "ClientSuccess"],
     marketSize: "$3.2B"
     growthRate: "35% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1263,8 +1263,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     roi: "350% average return on investment",
     competitors: ["UiPath", "Automation Anywhere"; "Blue Prism"];
     marketSize: "$4 && 4.8B", growthRate: "40% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -1325,8 +1325,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
     marketSize: "$4.8B"
     growthRate: "40% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1403,8 +1403,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     roi: "450% average return on investment",
     competitors: ["Gong", "Chorus"; "SalesLoft"];
     marketSize: "$2 && 2.1B", growthRate: "30% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -1465,8 +1465,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Gong", "Chorus", "SalesLoft"],
     marketSize: "$2.1B"
     growthRate: "30% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1543,8 +1543,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     roi: "300% average return on investment",
     competitors: ["Collibra", "Informatica"; "Alation"];
     marketSize: "$1 && 1.8B", growthRate: "25% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -1605,8 +1605,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Collibra", "Informatica", "Alation"],
     marketSize: "$1.8B"
     growthRate: "25% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1683,8 +1683,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     roi: "500% average return on investment",
     competitors: ["Llamasoft", "E2open"; "Kinaxis"];
     marketSize: "$5 && 5.2B", growthRate: "45% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -1745,8 +1745,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Llamasoft", "E2open", "Kinaxis"],
     marketSize: "$5.2B"
     growthRate: "45% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1823,8 +1823,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     roi: "320% average return on investment",
     competitors: ["Visier", "Workday"; "BambooHR"];
     marketSize: "$2 && 2.4B", growthRate: "28% annually",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -1881,8 +1881,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Visier", "Workday", "BambooHR"],
     marketSize: "$2.4B"
     growthRate: "28% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1938,8 +1938,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
     competitors: ["Visier", "Workday", "BambooHR"],
     marketSize: "$2.4B"
     growthRate: "28% annually"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

@@ -88,11 +88,9 @@ const NewsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates;
-  </
+              News & Updates</Updates>
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories;
-  </
+              Stay informed with our latest innovations and success stories</stories>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
@@ -113,8 +111,7 @@ const NewsPage: React.FC = () => {
           {/* Featured Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Featured News;
-  </
+              Featured News</News>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -156,8 +153,7 @@ const NewsPage: React.FC = () => {
           {/* All Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Latest Updates;
-  </
+              Latest Updates</Updates>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -200,11 +196,9 @@ const NewsPage: React.FC = () => {
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated;
-  </
+                Stay Updated</Updated>
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates;
-  </
+                Subscribe to our newsletter for the latest AI insights and company updates</updates>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
@@ -212,8 +206,7 @@ const NewsPage: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe;
-  </
+                  Subscribe</Subscribe>
               </div>
               <p className="text-gray-400 text-sm mt-4">
                 No spam, unsubscribe at any time.
@@ -226,7 +219,7 @@ const NewsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default NewsPage;
+export default NewsPage
   </button>
   </p>
   </h2>

@@ -154,13 +154,11 @@ const CareersPage: React.FC = () => {
             <Link
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions;
-  </
+              View Open Positions</Positions>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us;
-  </
+              Contact Us</Us>
           </div>
         </div>
       </section>
@@ -172,8 +170,7 @@ const CareersPage: React.FC = () => {
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community;
-  </
+              We offer more than just a job - we offer a career and a community</community>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -194,8 +191,7 @@ const CareersPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture;
-  </
+                Our Culture</Culture>
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
@@ -239,11 +235,9 @@ const CareersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Open Positions;
-  </
+              Open Positions</Positions>
             <p className="text-xl text-gray-600">
-              Find your next career opportunity with us;
-  </
+              Find your next career opportunity with us</us>
           </div>
           <div className="space-y-8">
             {openPositions.map((position) => (
@@ -321,13 +315,11 @@ const CareersPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume;
-  </
+              Send Us Your Resume</Resume>
             <Link
               to="/team"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Meet Our Team;
-  </
+              Meet Our Team</Team>
           </div>
         </div>
       </section>
@@ -335,7 +327,7 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-export default CareersPage;
+export default CareersPage
   </Link>
   </Link>
   </p>

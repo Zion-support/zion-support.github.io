@@ -15,7 +15,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Instrument Selection',
     'Tempo Control',
     'Export Options'
-  ];
+  ]}
   const benefits = [
     'Unlimited music',
     'No copyright issues',
@@ -23,7 +23,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Professional quality',
     'Fast generation',
     'Cost-effective'
-  ];
+  ]}
   const pricingPlans = [
     {
       name: 'Starter',

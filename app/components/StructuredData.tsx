@@ -2,8 +2,8 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'}
+  data?: Record<string, unknown>}
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
@@ -179,4 +179,4 @@ const StructuredData: React.FC<StructuredDataProps> = ({
   );
 };
 
-export default StructuredData;
+export default StructuredData

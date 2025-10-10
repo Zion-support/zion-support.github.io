@@ -6,12 +6,12 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   sr,
   c: string;,
     al,
-  t: string;
-  className?: string;
-  children?: React.ReactNode;
+  t: string
+  className?: string
+  children?: React.ReactNode
 }
 const,
-  LazyImage: React.FC;
+  LazyImage: React.FC
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -34,7 +34,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (priority) return;
+    if (priority) return
     const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content;}

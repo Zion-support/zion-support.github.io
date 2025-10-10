@@ -2,7 +2,7 @@
 export const useRouter = (;) => {
   return (
     $3
-  );
+  )}
 };
   const push = useCallback((url: string) => {,;}
     window.location.href = url;}

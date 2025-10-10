@@ -1,35 +1,35 @@
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
-  showRetryButton?: boolean;
+  o: ErrorInfo) => void
+  enableErrorReporting?: boolean
+  maxRetries?: number
+  showRetryButton?: boolean
 }
 interface State {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   hasErro,
-  r: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  r: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
   errorId?: string;,
     retryCoun,
   t: number;,
     isRetryin,
-  g: boolean;
+  g: boolean
 }
-class ComprehensiveErrorBoundary extends Component;
+class ComprehensiveErrorBoundary extends Component
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  private maxRetries: number;
+  private maxRetries: number
   constructor(props: Props) {// TODO: Add content;}
 }
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
+    super(props)}
     this.state = {// TODO: Add content;}
 };
   hasErro,
@@ -41,10 +41,10 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorI,
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-    this.maxRetries = props.maxRetries || 3;
+    this.maxRetries = props.maxRetries || 3
   }
   static getDerivedStateFromError(erro)
-  r: Error): Partial;
+  r: Error): Partial
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -59,7 +59,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCoun,
   t: 0,
       isRetryin,
-  g: false;
+  g: false
     };
   }
   componentDidCatch(erro,
@@ -102,9 +102,9 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       ur,
   l: window.location.href,
       retryCoun,
-  t: this.state.retryCount;
+  t: this.state.retryCount
     };
-    // Send to error reporting service;
+    // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -122,11 +122,11 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   error_i,
   d: this.state.errorId,
           retry_coun,
-  t: this.state.retryCount;
+  t: this.state.retryCount
         })
       });
     }
-    // Log to console in development;
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -141,7 +141,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
       this.setState({/* TODO: Fix JSX expression */})
   g: true });
-      // Simulate retry delay;
+      // Simulate retry delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -173,7 +173,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        return this.props.fallback;
+        return this.props.fallback
       }
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -194,7 +194,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"
             <div className="text-6xl mb-6"></div>"
             <h1 className="text-3xl font-bold text-white mb-4"></h1>
-// Oops! Something went wrong;
+// Oops! Something went wrong
           </h1>"
             <p className="text-gray-300 mb-6"></p>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
@@ -231,15 +231,14 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 className="cyber-button""
                 aria-label="Reload the entire page"
 // >
-//                  Reload Page;
+//                  Reload Page
           </button>
               <a></a>"
                 href="/contact""
                 className="cyber-button""
                 aria-label="Contact support for help with this error"
 //               >
-//                  Contact Support;
-  </
+//                  Contact Support</Support>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
@@ -256,7 +255,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         </div>
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 export default ComprehensiveErrorBoundary;"`

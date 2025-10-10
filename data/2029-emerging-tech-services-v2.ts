@@ -1,9 +1,9 @@
 
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string
+  description: string
   category: string[];
-  price: string;
+  price: string
   features: string[];
   benefits: string[];
   competitors: string[];
@@ -11,45 +11,45 @@
   integration: string[];
   support: string[];
   compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string;
-    address: string;
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
+  contact: unknown
+    mobile: string
+    email: string
+    website: string
+    address: string
   }
 ;
 export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     id: 'quantum - internet - security - gateway',
     name: 'Quantum Internet Security Gateway',
-    description: unknown;
+    description: unknown
   i,
   d: string,
   nam,
   e: string,
   descriptio,
-  n: string;
+  n: string
   categor,
   y: string[];
   pric,
-  e: string;
+  e: string
   feature,
   s: string[];
   benefit,
@@ -65,49 +65,49 @@ export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
   complianc,
   e: string[];
   scalabilit,
-  y: string;
+  y: string
   ro,
-  i: string;
+  i: string
   deploymen,
-  t: string;
+  t: string
   maintenanc,
-  e: string;
+  e: string
   trainin,
-  g: string;
+  g: string
   documentatio,
-  n: string;
+  n: string
   ap,
-  i: string;
+  i: string
   mobil,
-  e: string;
+  e: string
   securit,
-  y: string;
+  y: string
   backu,
-  p: string;
+  p: string
   monitorin,
-  g: string;
+  g: string
   analytic,
-  s: string;
+  s: string
   customizatio,
-  n: string;
+  n: string
   affiliat,
-  e: string;
+  e: string
   referra,
-  l: string;
+  l: string
   partnershi,
-  p: string;
+  p: string
   fundin,
-  g: string;
+  g: string
   exi,
-  t: string;
+  t: string
   contac,
-  t: unknown;
+  t: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
     websit,
-  e: string;
+  e: string
     addres,
   s: string}
 ;
@@ -187,7 +187,7 @@ export const,
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $300 M valuation',
     exit: 'IPO or security acquisition',
-    contact: description: unknown;
+    contact: description: unknown
       'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.'
     category: [
       'Biotechnology'
@@ -715,7 +715,7 @@ export const,
     partnership: 'Research institution partnerships',
     funding: 'Series B funding, $150 M valuation',
     exit: 'IPO or biotech acquisition',
-    contact: description: unknown;
+    contact: description: unknown
       'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
     category: [
       'Fintech'
@@ -831,7 +831,7 @@ export const,
     affiliate: '15% commission for referrals',    referral: '$100,000 bonus for partnerships',    partnership: 'Financial institution partnerships',
     funding: 'Series C funding, $500M valuation'
     exit: 'IPO or financial acquisition',
-    contact: description: unknown;
+    contact: description: unknown
     technolog,
   y: [,
       'Quantum Computing'
@@ -935,7 +935,7 @@ export const,
     affiliate: '30% commission for referrals',    referral: '$10,000 bonus for partnerships',    partnership: 'Creative agency partnerships',
     funding: 'Series A funding, $80M valuation'
     exit: 'Acquisition by major creative platform'
-    contact: unknown;
+    contact: unknown
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
     marketSize: '$18 && 18.9 B by 2029'
@@ -963,32 +963,32 @@ export const,
     partnership: 'Creative agency partnerships',
     funding: 'Series A funding, $80M valuation'
     exit: 'Acquisition by major creative platform'
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];
-  id: string, name: string;
+  id: string, name: string
   description: string, category: string[],
   price: string, features: string[],
   benefits: string[], useCases: string[],
   marketSize: string, competitors: string[],
   technology: string[], integration: string[],
   support: string[], compliance: string[],
-  scalability: string, roi: string;
-  deployment: string, maintenance: string;
-  training: string, documentation: string;
-  api: string, mobile: string;
-  security: string, backup: string;
-  monitoring: string, analytics: string;
-  customization: string, whiteLabel: string;
-  affiliate: string, referral: string;
-  partnership: string, funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string, email: string;
-    website: string;
-    address: string;
+  scalability: string, roi: string
+  deployment: string, maintenance: string
+  training: string, documentation: string
+  api: string, mobile: string
+  security: string, backup: string
+  monitoring: string, analytics: string
+  customization: string, whiteLabel: string
+  affiliate: string, referral: string
+  partnership: string, funding: string
+  exit: string
+  contact: unknown
+    mobile: string, email: string
+    website: string
+    address: string
     useCase,
   s: [;
     technolog,
@@ -1039,7 +1039,7 @@ export const,
     exi,
   t: 'Acquisition by major creative platform'
     contac,
-  t: unknown;
+  t: unknown
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
     marketSiz,
@@ -1202,7 +1202,7 @@ export const,
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $300 M valuation',
     exit: 'IPO or security acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1408,9 +1408,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     customization: 'Custom security policies, integration';
     whiteLabel: 'Available for security providers';
     affiliate: '20% commission for referrals';
-    referral: '$50,000 bonus for partnerships';
-    partnership: 'Strategic security partnerships';
-    funding: 'Series C funding, $300 M valuation';
+    referral: '$50,000 bonus for partnerships'}
+    partnership: 'Strategic security partnerships'}
+    funding: 'Series C funding, $300 M valuation'}
     exit: 'IPO or security acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1454,9 +1454,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     customization: 'Custom research protocols, integration';
     whiteLabel: 'Available for research institutions';
     affiliate: '25% commission for referrals';
-    referral: '$75,000 bonus for partnerships';
-    partnership: 'Research institution partnerships';
-    funding: 'Series B funding, $150 M valuation';
+    referral: '$75,000 bonus for partnerships'}
+    partnership: 'Research institution partnerships'}
+    funding: 'Series B funding, $150 M valuation'}
     exit: 'IPO or biotech acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1500,9 +1500,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     customization: 'Custom trading strategies, integration';
     whiteLabel: 'Available for financial institutions';
     affiliate: '15% commission for referrals';
-    referral: '$100,000 bonus for partnerships';
-    partnership: 'Financial institution partnerships';
-    funding: 'Series C funding, $500 M valuation';
+    referral: '$100,000 bonus for partnerships'}
+    partnership: 'Financial institution partnerships'}
+    funding: 'Series C funding, $500 M valuation'}
     exit: 'IPO or financial acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1546,9 +1546,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     customization: 'Custom creative tools, templates';
     whiteLabel: 'Available for creative agencies';
     affiliate: '30% commission for referrals';
-    referral: '$10,000 bonus for partnerships';
-    partnership: 'Creative agency partnerships';
-    funding: 'Series A funding, $80 M valuation';
+    referral: '$10,000 bonus for partnerships'}
+    partnership: 'Creative agency partnerships'}
+    funding: 'Series A funding, $80 M valuation'}
     exit: 'Acquisition by major creative platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1559,14 +1559,14 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 ];
     funding: 'Series C funding, $500 M valuation',
     exit: 'IPO or financial acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
     deployment: 'Cloud-based, web and desktop apps',
       address: '364 E Main St STE 1008 Middletown DE 19709'}},
     id: 'quantum - creativity - studio',
     name: 'Quantum Creativity Studio',
-    description: unknown;
+    description: unknown
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {/* TODO: Fix JSX expression */}

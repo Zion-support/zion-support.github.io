@@ -5,11 +5,11 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
+  )}
 };
   const _services = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -62,7 +62,7 @@ const CloudServicesPage: React.FC = () => {
   ];
   const benefits = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
@@ -78,21 +78,20 @@ const CloudServicesPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// Cloud Services;
+// Cloud Services
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+            Coming Soon</Soon>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Get Started Today;
+//               Get Started Today
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Learn More;
+//               Learn More
           </a>
           </div>
         </section>
@@ -147,12 +146,12 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Call (302) 464-0950;
+//               Call (302) 464-0950
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Get Free Consultation;
+//               Get Free Consultation
           </a>
           </div>
         </section>
@@ -161,4 +160,4 @@ const CloudServicesPage: React.FC = () => {
     </div>
   );
 };
-export default CloudServicesPage;
+export default CloudServicesPage

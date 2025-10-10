@@ -3,19 +3,18 @@
 
 
 interface SEOConfig {title: string;}
-  description: string;
+  description: string
   keywords: string[];
-  canonicalUrl: string;
-
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: unknown;
-  robots?: string;
-  language?: string;
-  author?: string;
-  publisher?: string;
-  lastModified?: string;
+  canonicalUrl: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: unknown
+  robots?: string
+  language?: string
+  author?: string
+  publisher?: string
+  lastModified?: string
 }
 
 class SEOEnhancer {/* TODO: Fix JSX expression */}
@@ -30,10 +29,9 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 
   private updateMetaTags(): void {if (typeof document !== 'undefined') {}
-      // Update title;
-      document.title = this.config.title;
-      
-      // Update meta description;
+      // Update title
+      document.title = this.config.title
+      // Update meta description
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {metaDescription = document.createElement('meta');}
         metaDescription.setAttribute('name', 'description');

@@ -22,29 +22,28 @@ function fixCriticalFiles() {
       content: `/// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_URL: string;
-  readonly VITE_APP_API_URL: string;
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
+  readonly VITE_APP_TITLE: string
+  readonly VITE_APP_DESCRIPTION: string
+  readonly VITE_APP_URL: string
+  readonly VITE_APP_API_URL: string
+  readonly DEV: boolean
+  readonly PROD: boolean
+  readonly MODE: string
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv
 }`
     },
     {
       path: '/workspace/src/layout.tsx',
       content: `import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
-
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
+import Analytics from './components/Analytics'}
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -64,7 +63,7 @@ export default function RootLayout({
 
   for (const file of criticalFiles) {
     try {
-      fs.writeFileSync(file.path, file.content, 'utf8');
+      fs.writeFileSync(file.path, file.content, 'utf8')}
       console.log(`✓ Fixed: ${file.path}`);
     } catch (error) {
       console.error(`Error fixing ${file.path}:`, error.message);
@@ -85,13 +84,12 @@ function cleanProblematicFiles() {
     '/workspace/src/services/BaseService.ts',
     '/workspace/src/middleware/rateLimiter.ts',
     '/workspace/src/middleware/requestMiddleware.ts'
-  ];
-
+  ]}
   for (const filePath of problematicFiles) {
     try {
       if (fs.existsSync(filePath)) {
         // Create minimal valid content for each file type
-        let content = '';
+        let content = ''}
         if (filePath.endsWith('.tsx')) {
           content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`;
         } else if (filePath.endsWith('.ts')) {

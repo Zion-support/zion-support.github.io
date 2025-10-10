@@ -6,7 +6,7 @@ interface State {/* TODO: Fix JSX expression */}
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
-    super(props);
+    super(props)}
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {,
@@ -15,27 +15,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo;
+      errorInfo
     });
-    // Log error to console in development;
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo)}
     }
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)}
     }
-    // Enhanced error reporting;
+    // Enhanced error reporting
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)}
     }
-    // Log to console in development;
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console;
-      console.group('🚨 Error Boundary Caught Error');
-    // In production, you might want to send this to an error reporting service;
+      // eslint-disable-next-line no-console
+      console.group('🚨 Error Boundary Caught Error')}
+    // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
-      // Example: send to error reporting service;
+      // Example: send to error reporting service
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
@@ -46,7 +46,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong;
+              Oops! Something went wrong
             </h1>
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -58,9 +58,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-                Refresh Page;
+                Refresh Page
               </button>,
-              <button;
+              <button
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
@@ -74,16 +74,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-    // Log error to console in development;
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
-    // Enhanced error reporting;
+    // Enhanced error reporting
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
-    // Log to console in development;
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   a: errorInfo });
     }
@@ -92,7 +92,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="text-6xl mb-4">⚠️</div>"
             <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
-              Oops! Something went wrong;
+              Oops! Something went wrong
             </h1>"
             <p className="text-gray-600 mb-6"></p>
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -103,14 +103,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors"
               >
-                Refresh Page;
+                Refresh Page
               </button>
               <button></button>
                 onClick={() => window.history.back()}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-300 transition-colors"
               >
-                Go Back;
+                Go Back
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -129,7 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
         </div>
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 export default EnhancedErrorBoundary;"

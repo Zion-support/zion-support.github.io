@@ -9,9 +9,8 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+            Page</Page>
+<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
           </p>
           <div></div>
@@ -30,8 +29,8 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         <div></div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three,
-  primitives: hard;
-            budgets, lightweight approvals and KPI-linked canaries that trigger;
+  primitives: hard
+            budgets, lightweight approvals and KPI-linked canaries that trigger
             automatic rollback when thresholds are breached.
           </p>
           <h3>Runbook Outline</h3>
@@ -81,5 +80,5 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       </section>)
     </main>)
 }
-export default AgentReleaseRunbooksV22026Page;
+export default AgentReleaseRunbooksV22026Page
   </h1>

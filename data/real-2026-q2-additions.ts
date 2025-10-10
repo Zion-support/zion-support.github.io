@@ -10,7 +10,7 @@ export const real2026 Q2 Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -129,7 +129,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData']
     price: '$1,200'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -155,7 +155,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly']
     price: '$399'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -274,7 +274,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse']
     price: '$490'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -331,7 +331,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost']
     price: '$690'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -394,7 +394,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API']
     price: '$149'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams',
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -456,7 +456,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime']
     price: '$79'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -482,7 +482,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC']
     price: '$890'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -591,7 +591,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara']
     price: '$249'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs',
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -670,7 +670,7 @@ export const real2026Q2Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -678,9 +678,9 @@ export const real2026Q2Additions = [
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
-    tagline: unknown;
+    tagline: unknown
       'Generate high - quality, private, and balanced datasets for ML training.',
-    description: unknown;
+    description: unknown
     competitor,
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     pric,
@@ -742,7 +742,7 @@ export const real2026Q2Additions = [
     competitors: ['Mostly AI', 'Gretel', 'YData'],
     price: '$1, 200',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -751,7 +751,7 @@ export const real2026Q2Additions = [
     name: 'Ecommerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitor,
@@ -800,7 +800,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop Returns', 'Returnly'],
     price: '$399'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -808,9 +808,9 @@ export const real2026Q2Additions = [
 export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
-    tagline: unknown;
+    tagline: unknown
       'Generate high - quality, private, and balanced datasets for ML training.',
-    description: unknown;
+    description: unknown
       'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.',
     features: [,
       'Differential privacy and k - anonymity options',
@@ -818,7 +818,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access';
+      'SDKs for Python / JS and API access'}
     integration,
   s: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
     competitor,
@@ -849,7 +849,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData'],
     price: '$1, 200',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -859,7 +859,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'Ecommerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitor,
@@ -909,7 +909,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly'],
     price: '$399'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -917,9 +917,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
-    tagline: unknown;
+    tagline: unknown
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
     competitor,
@@ -975,7 +975,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse'],
     price: '$490'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -1003,9 +1003,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
-    tagline: unknown;
+    tagline: unknown
       'Edge - detected anomalies, instant Slack alerts, and auto - remediation.',
-    description: unknown;
+    description: unknown
     i,
   d: 'cloud - cost - anomaly - guard',
     nam,
@@ -1034,7 +1034,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost'],
     price: '$690'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -1065,7 +1065,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
     tagline: 'REST and SDKs for compliant e - signatures with audit trails.',
-    description: unknown;
+    description: unknown
     i,
   d: 'secure - pdf - signing - api',
     nam,
@@ -1093,7 +1093,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'SMB to mid - market developer teams',
     roi: 'Accelerate time - to - sign by 50% and cut manual errors by 70%',
@@ -1101,9 +1101,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
-    tagline: unknown;
+    tagline: unknown
       'One - click status pages with SLOs, error budgets, and subscribers.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['Zapier', 'Make && Make.com', 'Salesforce', 'HubSpot'],
     competitor,
@@ -1151,7 +1151,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime'],
     price: '$79'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -1183,9 +1183,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
-    tagline: unknown;
+    tagline: unknown
       'Automate questionnaires, evidence collection, and continuous monitoring.',
-    description: unknown;
+    description: unknown
     i,
   d: 'vendor - risk - automation - pro',
     nam,
@@ -1214,7 +1214,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC'],
     price: '$890'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -1245,7 +1245,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
     tagline: 'Embeddings + RAG search over docs with answer extraction.',
-    description: unknown;
+    description: unknown
     i,
   d: 'ai - docs - search - answers',
     nam,
@@ -1274,7 +1274,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'High adoption for self - serve docs',
     roi: 'Reduce tickets by 30% and improve time - to - answer',
@@ -1282,9 +1282,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
-    tagline: unknown;
+    tagline: unknown
       'Manage and secure fleets of endpoints with remote scripts and patches.',
-    description: unknown;
+    description: unknown
       'MSP - grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance - ready logs.',
     features: [,
     integration,
@@ -1363,7 +1363,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData']
     price: '$1,200'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -1389,7 +1389,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly']
     price: '$399'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -1508,7 +1508,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse']
     price: '$490'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -1565,7 +1565,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost']
     price: '$690'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -1628,7 +1628,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API']
     price: '$149'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams',
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -1690,7 +1690,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime']
     price: '$79'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -1716,7 +1716,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC']
     price: '$890'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -1825,7 +1825,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara']
     price: '$249'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs',
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -1851,7 +1851,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Atera', 'NinjaOne']
     price: '$4'
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -1957,13 +1957,13 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams',
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'}];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals'
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
@@ -1979,7 +1979,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'}
 ];
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
@@ -1990,17 +1990,17 @@ export const real2026Q2Additions = [
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.';
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'}
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]}
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']}
     competitors: ['MonitaurCalypsoAICredo AI']}
     price: '$2}500';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
@@ -2013,13 +2013,13 @@ export const real2026Q2Additions = [
     description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]}
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']}
+    integrations: ['S3 BigQuerySnowflakeDatabricks']}
     competitors: ['Mostly AIGretelYData']}
     price: '$1}200';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Growing demand driven by privacy regulations';
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
@@ -2089,7 +2089,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2107,7 +2107,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2130,7 +2130,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop ReturnsReturnly'];
     price: '$399';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Ideal for mid-market brands and marketplaces';
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
@@ -2146,7 +2146,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2168,7 +2168,7 @@ export const real2026Q2Additions = [
     competitors: ['HumanloopArizeLangfuse'];
     price: '$490';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Hot category with fast adoption in AI apps';
     roi: 'Cut token spend by 25% and improve response quality by 12%';
@@ -2184,7 +2184,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2206,7 +2206,7 @@ export const real2026Q2Additions = [
     competitors: ['CloudZeroKubecost'];
     price: '$690';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Proven ROI for cloud-native teams';
     roi: 'Reduce cloud waste by 30% within 60 days';
@@ -2222,7 +2222,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2244,7 +2244,7 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign APIHelloSign API'];
     price: '$149';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'SMB to mid-market developer teams';
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
@@ -2260,7 +2260,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2282,7 +2282,7 @@ export const real2026Q2Additions = [
     competitors: ['StatuspageBetter Uptime'];
     price: '$79';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Great value with SLO-first approach';
     roi: 'Improve uptime communications and reduce churn risk';
@@ -2298,7 +2298,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2320,7 +2320,7 @@ export const real2026Q2Additions = [
     competitors: ['WhisticVantaZenGRC'];
     price: '$890';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Sales-assisted and security-led adoption';
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
@@ -2336,7 +2336,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2359,7 +2359,7 @@ export const real2026Q2Additions = [
     competitors: ['Algolia AnswersVectara'];
     price: '$249';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'High adoption for self-serve docs';
     roi: 'Reduce tickets by 30% and improve time-to-answer';
@@ -2375,7 +2375,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2397,7 +2397,7 @@ export const real2026Q2Additions = [
     competitors: ['AteraNinjaOne'];
     price: '$4';
     period: '/device/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -2405,7 +2405,7 @@ export const real2026Q2Additions = [
 ];
 ;
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -2417,17 +2417,17 @@ export const real2026 Q2 Additions = [
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'}
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]}
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']}
     competitors: ['MonitaurCalypsoAICredo AI']}
     price: '$2}500';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
@@ -2440,13 +2440,13 @@ export const real2026 Q2 Additions = [
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]}
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']}
+    integrations: ['S3 BigQuerySnowflakeDatabricks']}
     competitors: ['Mostly AIGretelYData']}
     price: '$1}200';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Growing demand driven by privacy regulations';
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
@@ -2462,7 +2462,7 @@ export const real2026 Q2 Additions = [
     perio,
   d: '/device/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2498,7 +2498,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2516,7 +2516,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2539,7 +2539,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop ReturnsReturnly'];
     price: '$399';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Ideal for mid-market brands and marketplaces';
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
@@ -2555,7 +2555,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2577,7 +2577,7 @@ export const real2026Q2Additions = [
     competitors: ['HumanloopArizeLangfuse'];
     price: '$490';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Hot category with fast adoption in AI apps';
     roi: 'Cut token spend by 25% and improve response quality by 12%';
@@ -2593,7 +2593,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2615,7 +2615,7 @@ export const real2026Q2Additions = [
     competitors: ['CloudZeroKubecost'];
     price: '$690';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Proven ROI for cloud-native teams';
     roi: 'Reduce cloud waste by 30% within 60 days';
@@ -2631,7 +2631,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2653,7 +2653,7 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign APIHelloSign API'];
     price: '$149';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'SMB to mid-market developer teams';
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
@@ -2669,7 +2669,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2691,7 +2691,7 @@ export const real2026Q2Additions = [
     competitors: ['StatuspageBetter Uptime'];
     price: '$79';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Great value with SLO-first approach';
     roi: 'Improve uptime communications and reduce churn risk';
@@ -2707,7 +2707,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2729,7 +2729,7 @@ export const real2026Q2Additions = [
     competitors: ['WhisticVantaZenGRC'];
     price: '$890';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Sales-assisted and security-led adoption';
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
@@ -2745,7 +2745,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2768,7 +2768,7 @@ export const real2026Q2Additions = [
     competitors: ['Algolia AnswersVectara'];
     price: '$249';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'High adoption for self-serve docs';
     roi: 'Reduce tickets by 30% and improve time-to-answer';
@@ -2784,7 +2784,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2806,7 +2806,7 @@ export const real2026Q2Additions = [
     competitors: ['AteraNinjaOne'];
     price: '$4';
     period: '/device/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -2818,17 +2818,17 @@ export const real2026Q2Additions = [
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'}
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]}
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']}
     competitors: ['MonitaurCalypsoAICredo AI']}
     price: '$2}500';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
@@ -2841,13 +2841,13 @@ export const real2026Q2Additions = [
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]}
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']}
+    integrations: ['S3 BigQuerySnowflakeDatabricks']}
     competitors: ['Mostly AIGretelYData']}
     price: '$1}200';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Growing demand driven by privacy regulations';
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
@@ -2863,7 +2863,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/device/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2883,7 +2883,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2901,7 +2901,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2924,7 +2924,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop ReturnsReturnly'];
     price: '$399';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Ideal for mid-market brands and marketplaces';
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
@@ -2940,7 +2940,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -2962,7 +2962,7 @@ export const real2026Q2Additions = [
     competitors: ['HumanloopArizeLangfuse'];
     price: '$490';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Hot category with fast adoption in AI apps';
     roi: 'Cut token spend by 25% and improve response quality by 12%';
@@ -2978,7 +2978,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3000,7 +3000,7 @@ export const real2026Q2Additions = [
     competitors: ['CloudZeroKubecost'];
     price: '$690';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Proven ROI for cloud-native teams';
     roi: 'Reduce cloud waste by 30% within 60 days';
@@ -3016,7 +3016,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3038,7 +3038,7 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign APIHelloSign API'];
     price: '$149';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'SMB to mid-market developer teams';
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
@@ -3054,7 +3054,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3076,7 +3076,7 @@ export const real2026Q2Additions = [
     competitors: ['StatuspageBetter Uptime'];
     price: '$79';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Great value with SLO-first approach';
     roi: 'Improve uptime communications and reduce churn risk';
@@ -3092,7 +3092,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3114,7 +3114,7 @@ export const real2026Q2Additions = [
     competitors: ['WhisticVantaZenGRC'];
     price: '$890';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Sales-assisted and security-led adoption';
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
@@ -3130,7 +3130,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3153,7 +3153,7 @@ export const real2026Q2Additions = [
     competitors: ['Algolia AnswersVectara'];
     price: '$249';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'High adoption for self-serve docs';
     roi: 'Reduce tickets by 30% and improve time-to-answer';
@@ -3169,7 +3169,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3191,7 +3191,7 @@ export const real2026Q2Additions = [
     competitors: ['AteraNinjaOne'];
     price: '$4';
     period: '/device/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -3207,7 +3207,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/device/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3222,13 +3222,13 @@ export const real2026Q2Additions = [
   }
 ];
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
@@ -3239,17 +3239,17 @@ export const real2026Q2Additions = [
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'}
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]}
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']}
     competitors: ['MonitaurCalypsoAICredo AI']}
     price: '$2}500';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Strong enterprise traction with compliance-led buyers';
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
@@ -3262,13 +3262,13 @@ export const real2026Q2Additions = [
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]}
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']}
+    integrations: ['S3 BigQuerySnowflakeDatabricks']}
     competitors: ['Mostly AIGretelYData']}
     price: '$1}200';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Growing demand driven by privacy regulations';
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
@@ -3276,7 +3276,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast'
     marketPositio,
@@ -3307,7 +3307,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3325,7 +3325,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3348,7 +3348,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop ReturnsReturnly'];
     price: '$399';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Ideal for mid-market brands and marketplaces';
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
@@ -3364,7 +3364,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3386,7 +3386,7 @@ export const real2026Q2Additions = [
     competitors: ['HumanloopArizeLangfuse'];
     price: '$490';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Hot category with fast adoption in AI apps';
     roi: 'Cut token spend by 25% and improve response quality by 12%';
@@ -3402,7 +3402,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3424,7 +3424,7 @@ export const real2026Q2Additions = [
     competitors: ['CloudZeroKubecost'];
     price: '$690';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Proven ROI for cloud-native teams';
     roi: 'Reduce cloud waste by 30% within 60 days';
@@ -3440,7 +3440,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3462,7 +3462,7 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign APIHelloSign API'];
     price: '$149';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'SMB to mid-market developer teams';
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
@@ -3478,7 +3478,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3500,7 +3500,7 @@ export const real2026Q2Additions = [
     competitors: ['StatuspageBetter Uptime'];
     price: '$79';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Great value with SLO-first approach';
     roi: 'Improve uptime communications and reduce churn risk';
@@ -3516,7 +3516,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3538,7 +3538,7 @@ export const real2026Q2Additions = [
     competitors: ['WhisticVantaZenGRC'];
     price: '$890';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Sales-assisted and security-led adoption';
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
@@ -3554,7 +3554,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3577,7 +3577,7 @@ export const real2026Q2Additions = [
     competitors: ['Algolia AnswersVectara'];
     price: '$249';
     period: '/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'High adoption for self-serve docs';
     roi: 'Reduce tickets by 30% and improve time-to-answer';
@@ -3593,7 +3593,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,
@@ -3615,7 +3615,7 @@ export const real2026Q2Additions = [
     competitors: ['AteraNinjaOne'];
     price: '$4';
     period: '/device/month';
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -3631,7 +3631,7 @@ export const real2026Q2Additions = [
     perio,
   d: '/device/month';
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast';
     marketPositio,

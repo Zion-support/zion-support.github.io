@@ -22,6 +22,6 @@ const,
     </div>)
   );
 };
-export default LoadingSpinner;
+export default LoadingSpinner
 `
   </LoadingSpinnerProps>

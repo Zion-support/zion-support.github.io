@@ -8,7 +8,7 @@ export const _useRouter = () => {// TODO: Add content;}
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    window.location.href = url;
+    window.location.href = url
   const replace = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -30,8 +30,8 @@ export const _useRouter = () => {// TODO: Add content;}
     replace,
     back,
     forward,
-    refresh;
+    refresh
   }
 export }
-export const rateLimitingMiddleware = params;
+export const rateLimitingMiddleware = params
 export default { useRouter, usePathname, useSearchParams }

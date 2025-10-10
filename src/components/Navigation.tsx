@@ -6,35 +6,35 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)}
+  const [isScrolled, setIsScrolled] = useState(false)}
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)}
       }
     };
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 50)}
     };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize)}
+      window.removeEventListener('scroll', handleScroll)}
     };
   }, []);
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
+    setItServicesOpen(false)}
+    setMicroSaasOpen(false)}
+    setIsOpen(false)}
   };
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)}
     if (isOpen) {
-      closeAllMenus();
+      closeAllMenus()}
     }
   };
   const serviceCategories = [
@@ -186,11 +186,9 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home;
-  </
+              Home</Home>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About;
-  </
+              About</About>
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -247,8 +245,7 @@ const Navigation: React.FC = () => {
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
-                      View All Services;
-  </
+                      View All Services</Services>
                   </div>
                 </div>
               )}
@@ -261,22 +258,19 @@ const Navigation: React.FC = () => {
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Case Studies;
-  </
+              Case Studies</Studies>
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Blog;
-  </
+              Blog</Blog>
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact;
-  </
+              Contact</Contact>
             {/* CTA Button */}
             <Link
               href="/contact"
@@ -284,8 +278,7 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950;
-  </
+              (302) 464-0950</0950>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
@@ -307,15 +300,13 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Home;
-  </
+                Home</Home>
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                About;
-  </
+                About</About>
               {/* Mobile Services */}
               <div>
                 <button
@@ -369,8 +360,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started;
-  </
+              Get Started</Started>
           </div>
           {/* Mobile Menu Button */}
           <button
@@ -405,8 +395,7 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950;
-  </
+                (302) 464-0950</0950>
             </div>
           </div>
         )}
@@ -414,7 +403,7 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-export default Navigation;
+export default Navigation
   </a>
   </a>
   </Link>

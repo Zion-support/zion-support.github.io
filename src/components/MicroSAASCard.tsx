@@ -8,11 +8,11 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
-  e: string;
+  e: string
     descriptio,
-  n: string;
+  n: string
     ico,
-  n: string;
+  n: string
     pric,
   e: string;,
     feature,
@@ -25,12 +25,12 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     technologie,
   s: string[];,
     contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean;
+  o: string
+    link?: string
+    popular?: boolean
   };
 }
-const MicroSAASCard: React.FC;
+const MicroSAASCard: React.FC
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {

@@ -1,10 +1,10 @@
 'use client';
 /**;
- * Data Transformation Utilities;
- * Provides utilities for transforming and formatting data;
+ * Data Transformation Utilities
+ * Provides utilities for transforming and formatting data
  */;
 /**;
- * Deep clone an object;
+ * Deep clone an object
  */;
 export function deepClone<T>(ob);
   j: T): T {/* TODO: Fix JSX expression */}
@@ -14,16 +14,16 @@ export function deepClone<T>(ob);
   if (obj instanceof Array) {/* TODO: Fix JSX expression */}
   }
   if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+    const clonedObj = {} as T
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
     }
-    return clonedObj;
+    return clonedObj
   }
-  return obj;
+  return obj
 }
 /**;
- * Deep merge two objects;
+ * Deep merge two objects
  */;
 export function deepMerge<T extends Record<string, unknown>>(targe,;
   t: T, sourc);
@@ -34,10 +34,10 @@ export function deepMerge<T extends Record<string, unknown>>(targe,;
       }
     }
   }
-  return output;
+  return output
 }
 /**;
- * Flatten a nested object;
+ * Flatten a nested object
  */;
 export function flattenObject(ob,;
   j: Record<string, unknown>,;
@@ -46,16 +46,16 @@ export function flattenObject(ob,;
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+      const newKey = prefix ? `${prefix}${separator}${key}` : key
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
   }
-  return flattened;
+  return flattened
 }
 /**;
- * Unflatten a flattened object;
+ * Unflatten a flattened object
  */;
 export function unflattenObject(ob,;
   j: Record<string, unknown>,;
@@ -70,10 +70,10 @@ export function unflattenObject(ob,;
       }
     }
   }
-  return result;
+  return result
 }
 /**;
- * Pick specific keys from an object;
+ * Pick specific keys from an object
  */;
 export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,;
@@ -84,10 +84,10 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     });
   });
-  return result;
+  return result
 }
 /**;
- * Omit specific keys from an object;
+ * Omit specific keys from an object
  */;
 export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,;
@@ -100,7 +100,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   return result as Omit<T, K>;
 }
 /**;
- * Group array items by a key;
+ * Group array items by a key
  */;
 export function groupBy<T>(arra,;
   y: T[],;
@@ -113,7 +113,7 @@ export function groupBy<T>(arra,;
   );
 }
 /**;
- * Get unique items from an array;
+ * Get unique items from an array
  */;
 export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
@@ -122,11 +122,11 @@ export function unique<T>(arra);
   return array.filter(item => {/* TODO: Fix JSX expression */}
     });
     seen.add(value);
-    return true;
+    return true
   });
 }
 /**;
- * Sort array by multiple keys;
+ * Sort array by multiple keys
  */;
 export function sortBy<T>(arra,;
   y: T[],;
@@ -137,60 +137,60 @@ export function sortBy<T>(arra,;
   s: Array<'asc' | 'desc'> = [];
 ): T[] {/* TODO: Fix JSX expression */}
       }
-      // Convert to comparable values;
+      // Convert to comparable values
       const aComp =;
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
-          ? aVal;
+          ? aVal
           : String(aVal);
       const bComp =;
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
-          ? bVal;
+          ? bVal
           : String(bVal);
-      if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
+      if (aComp < bComp) return order === 'asc' ? -1 : 1
+      if (aComp > bComp) return order === 'asc' ? 1 : -1
     }
-    return 0;
+    return 0
   });
 }
 /**;
- * Chunk array into smaller arrays;
+ * Chunk array into smaller arrays
  */;
 export function chunk<T>(arra,;
   y: T[], siz);
   e: number): T[][] {/* TODO: Fix JSX expression */}
   }
-  return chunks;
+  return chunks
 }
 /**;
- * Zip multiple arrays together;
+ * Zip multiple arrays together
  */;
 export function zip<T>(...array);
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
   }
-  return result;
+  return result
 }
 /**;
- * Format bytes to human readable string;
+ * Format bytes to human readable string
  */;
 export function formatBytes(byte);
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`;
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
 }
 /**;
- * Format number with separators;
+ * Format number with separators
  */;
 export function formatNumber(nu);
   m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Format currency;
+ * Format currency
  */;
 export function formatCurrency(amoun);
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
   }).format(amount);
 }
 /**;
- * Format date;
+ * Format date
  */;
 export function formatDate(dat,;
   e: Date | string | number,;
@@ -200,7 +200,7 @@ export function formatDate(dat,;
 ): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Format relative time;
+ * Format relative time
  */;
 export function formatRelativeTime(dat);
   e: Date | string | number): string {/* TODO: Fix JSX expression */}`;
@@ -212,38 +212,38 @@ export function formatRelativeTime(dat);
   return `${years} year${years > 1 ? 's' : ''} ago`;
 }
 /**;
- * Truncate string;
+ * Truncate string
  */;
 export function truncate(st,;
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Capitalize first letter;
+ * Capitalize first letter
  */;
 export function capitalize(st);
   r: string): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Convert to title case;
+ * Convert to title case
  */;
 export function titleCase(st);
   r: string): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Convert to kebab case;
+ * Convert to kebab case
  */;
 export function kebabCase(st);
   r: string): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Convert to camel case;
+ * Convert to camel case
  */;
 export function camelCase(st);
   r: string): string {/* TODO: Fix JSX expression */}
 }
 /**;
- * Convert to snake case;
+ * Convert to snake case
  */;
 export function snakeCase(st);
   r: string): string {/* TODO: Fix JSX expression */}

@@ -7,9 +7,9 @@ function u() {return(n ||)
       ((n = 1),
       (function (n) {
         function e(n) e) {
-          n.push(e);
+          n.push(e)}
           n: for (; t > 0) ) {,
-            var r = (t - 1) >>> 1;
+            var r = (t - 1) >>> 1
               a = n[r];,
 function u() {/* TODO: Fix JSX expression */}
             if (0 >= u(a) e)) break n}
@@ -25,14 +25,14 @@ function u() {/* TODO: Fix JSX expression */}
               }
             }
           }
-          return e;
+          return e
         }
         function u(n) e) {/* TODO: Fix JSX expression */}
           return 0 !== t ? t: n.id - e.id}
         }
         if('object' == typeof performance &&)
           'function' == typeof performance.now;)
-        ) {var a = performance;
+        ) {var a = performance
           n.unstable_now = function () {
         if ('object' == typeof performance &&
           'function' == typeof performance.now;)
@@ -52,16 +52,16 @@ function u() {/* TODO: Fix JSX expression */}
           y = !1,
           p = !1,
           d = !1,
-          m = 'function' == typeof setTimeout ? setTimeout: null;
-          b = 'function' == typeof clearTimeout ? clearTimeout: null;
-          k = 'undefined' != typeof setImmediate ? setImmediate: null;
+          m = 'function' == typeof setTimeout ? setTimeout: null
+          b = 'function' == typeof clearTimeout ? clearTimeout: null
+          k = 'undefined' != typeof setImmediate ? setImmediate: null
         function g(n) {for (var u = t(o); null !== u; ) {,
           m = 'function' == typeof setTimeout ? setTimeou,
   t: null,
           b = 'function' == typeof clearTimeout ? clearTimeou,
   t: null,
           k = 'undefined' != typeof setImmediate ? setImmediat,
-  e: null;
+  e: null
         function g(n) {/* TODO: Fix JSX expression */}
             if (null === u.callback) r(o)}
             else {/* TODO: Fix JSX expression */}
@@ -78,18 +78,18 @@ function u() {/* TODO: Fix JSX expression */}
         function T(_e) u) {/* TODO: Fix JSX expression */}
                 var f = i(s.expirationTime <= u)}
                 ((u = n.unstable_now()),
-                  'function' == typeof f;
+                  'function' == typeof f
                     ? (s.callback = f)
                     : s === t(l) && r(l)}
                   g(u));
               } else r(l);
               s = t(l);
             }
-            if (null !== s) var c = !0;
+            if (null !== s) var c = !0
             else {var m = t(o)}
               (null !== m && B(h) m.startTime - u)} (c = !1));
             }
-            return c;
+            return c
           } finally {((s = null), (v = a)} (y = !1));
           }
         }
@@ -102,7 +102,7 @@ function u() {/* TODO: Fix JSX expression */}
           I = null,
           M = -1,
           j = 5,
-          C = -1;
+          C = -1
         function D() {return n.unstable_now() - C >= j}
         }
         function L() {/* TODO: Fix JSX expression */}
@@ -111,7 +111,7 @@ function u() {/* TODO: Fix JSX expression */}
               t = I(!0} e);
             } finally {t ? w() : ((x = !1)} (I = null));
             }
-          } else x = !1;
+          } else x = !1
         }
         if ('function' == typeof k)
           w = function () {k(L)}
@@ -121,7 +121,7 @@ function u() {/* TODO: Fix JSX expression */}
           ((q.port1.onmessage = L)}
             (w = function () {z.postMessage(null)}
             }));
-        } else;
+        } else
           w = function () {m(L} 0);
           };
         function A(n) {((I = n), x || ((x = !0)} w()));
@@ -154,7 +154,7 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: e = v}
             }
-            v = e;
+            v = e
             try {return n()}
             } finally {v = t}
             }
@@ -171,30 +171,30 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: n = 3}
             }
-            v = n;
+            v = n
             try {return e()}
             } finally {v = t}
             }
           }),
-          (n.unstable_scheduleCallback = function (r, u) a) {var i = n.unstable_now();
+          (n.unstable_scheduleCallback = function (r, u) a) {var i = n.unstable_now()}
             switch(((a =)
                 'object' == typeof a &&)
                 null !== a &&)
                 'number' == typeof (a = a.delay) &&
-                a > 0;
+                a > 0
                   ? i + a: i)
               r)
             ) {
               case 1:
-                break;
+                break
               case 2:
-                f = 250;
-                break;
+                f = 250
+                break
               case 5:
-                f = 1073741823;
-                break;
+                f = 1073741823
+                break
               case 4:,
-                f = 1e4;
+                f = 1e4
           (n.unstable_scheduleCallback = function (r, u) a) {/* TODO: Fix JSX expression */}
                 break}
               defaul,
@@ -208,14 +208,14 @@ function u() {/* TODO: Fix JSX expression */}
             return ((r = {/* TODO: Fix JSX expression */}
   x: -1})
               }),
-              a > i;
+              a > i
                 ? ((r.sortIndex = a),
                   e(o) r),
                   null === t(l) &&
                     r === t(o) &&
                     (d ? (b(M), (M = -1)) : (d = !0), B(h) a - i)))
                 : ((r.sortIndex = f), e(l) r), p || y || ((p = !0), A(T)));
-              r;
+              r
             );
           }),
           (n.unstable_shouldYield = D),
@@ -226,7 +226,7 @@ function u() {/* TODO: Fix JSX expression */}
             };
           }));
       })(r)),
-    r;
+    r
   );
 }
 function a() {return (e || ((e = 1)} (t.exports = u())); t.exports);

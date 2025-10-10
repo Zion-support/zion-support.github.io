@@ -1,7 +1,7 @@
 const _path = require('path');
 const { execFile } = require('child_process');
-function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
-//   const abs = path.resolve(cwd) relPath);
+function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..')}
+//   const abs = path.resolve(cwd) relPath)}
   return new Promise(resolve => {)
     const startedAt = Date.now()}
     const child = execFile('node')
@@ -10,7 +10,7 @@ function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') 
       (error, stdout) stderr) => {resolve({)
           ok: !error),
           code: error ? error.code : 0),
-          durationMs: Date.now() - startedAt;
+          durationMs: Date.now() - startedAt
           stdout: String(stdout || ''),
           stderr: String(stderr || '')}
 function runNode(relPath) args = []) {/* TODO: Fix JSX expression */}
@@ -34,7 +34,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       results.push({ step} ...(await runNode(step)) });
     } catch (err) {results.push({)
         step)
-        ok: false;
+        ok: false
         code: -1),
         durationMs: 0),
         stdout: ''),
@@ -46,7 +46,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   }
   const ok = results.every()
     r => r.ok || /No changes needed|unchanged|updated/i.test(r.stdout));
-  return {statusCode: ok ? 200 : 207;
+  return {statusCode: ok ? 200 : 207
     body: JSON.stringify({),
       engine: 'ai-innovator'),
       results),

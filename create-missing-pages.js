@@ -5,11 +5,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Read the missing pages from the analysis;
+// Read the missing pages from the analysis
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
-const missingPages = analysisData.missingPagesList;
-
-// Template for creating pages;
+const missingPages = analysisData.missingPagesList
+// Template for creating pages
 const createPageTemplate = (route, title, description, category) => `'use client';
 import React from 'react';
 import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Target, Globe, Settings, FileText, Phone, Mail, MapPin, Clock, Award, TrendingUp, Activity, Database, Cpu, Lock, MessageSquare, Eye, Sparkles, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react';
@@ -21,7 +20,7 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer;
+      <SEOOptimizer
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
@@ -47,11 +46,11 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Get Started Today;
+              Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Learn More;
+              Learn More
             </button>
           </div>
         </div>,
@@ -105,10 +104,10 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation;
+              Get Free Consultation
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              View Pricing;
+              View Pricing
             </button>
           </div>
         </div>
@@ -118,26 +117,25 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
     </div>);
 };
 
-export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
+export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page
 `;
 
-// Function to create a page;
+// Function to create a page
 const createPage = (route, title, description, category) => {
-  const pageContent = createPageTemplate(route, title, description, category);
-  const pagePath = path.join('/workspace/src', route, 'page.tsx');
-  
-  // Create directory if it doesn't exist;
-  const dir = path.dirname(pagePath);
+  const pageContent = createPageTemplate(route, title, description, category)}
+  const pagePath = path.join('/workspace/src', route, 'page.tsx')}
+  // Create directory if it doesn't exist
+  const dir = path.dirname(pagePath)}
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
   
-  // Write the page file;
+  // Write the page file
   fs.writeFileSync(pagePath, pageContent);
   console.log(`Created page: ${route}`);
 };
 
-// Page configurations;
+// Page configurations
 const pageConfigs = {
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
@@ -285,24 +283,22 @@ const pageConfigs = {
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 };
 
-// Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
-
+// Create pages in batches
+let createdCount = 0
+const batchSize = 10
 console.log(`Creating ${missingPages.length} missing pages...`);
 
 for (const route of missingPages) {
   if (pageConfigs[route]) {
-    const config = pageConfigs[route];
-    createPage(route, config.title, config.description, config.category);
-    createdCount++;
-    
+    const config = pageConfigs[route]}
+    createPage(route, config.title, config.description, config.category)}
+    createdCount++}
     if (createdCount % batchSize === 0) {
       console.log(`Created ${createdCount} pages...`);
     }
   } else {
-    // Create a generic page for routes without specific configs;
-    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    // Create a generic page for routes without specific configs
+    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
     const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
     const category = 'Technology';
     

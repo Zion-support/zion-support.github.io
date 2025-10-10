@@ -19,5 +19,5 @@ const EnhancedSidebar = React.memo(function EnhancedSidebar({/* TODO: Fix JSX ex
     </div>
   );
 });
-export default EnhancedSidebar;
+export default EnhancedSidebar
 "`

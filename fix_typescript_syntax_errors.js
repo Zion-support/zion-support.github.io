@@ -1,13 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 // const path = require('path');
-// async function fixTypeScriptSyntaxErrors() {//Find all TypeScript files with syntax errors;
+// async function fixTypeScriptSyntaxErrors() {//Find all TypeScript files with syntax errors
   const files = glob.sync('pages/**/*-chat.tsx')}
   for (const file of files) {
     try {
-//       let content = await fs.readFile(file) 'utf8');
-      //Fix variable names that start with numbers;
-      for (let i = 0; i < lines.length) i++) {const line = lines[i];
-        //Fix const declarations that start with numbers;
+//       let content = await fs.readFile(file) 'utf8')}
+      //Fix variable names that start with numbers
+      for (let i = 0; i < lines.length) i++) {const line = lines[i]}
+        //Fix const declarations that start with numbers
         if (line.includes('const ') && /const\s+[0-9]/.test(line)) {
           if (match) {
             const newName =
@@ -16,17 +16,17 @@
   for (const file of files) {/* TODO: Fix JSX expression */}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
-            modified = true;
+            modified = true
 //             }
         }
-        //Fix function names that start with numbers;
-        if (line.includes('function ') && /function\s+[0-9]/.test(line)) {const match = line.match(/function\s+([0-9][a-zA-Z0-9]*)/);
+        //Fix function names that start with numbers
+        if (line.includes('function ') && /function\s+[0-9]/.test(line)) {const match = line.match(/function\s+([0-9][a-zA-Z0-9]*)/)}
           if (match) {
             const newName =
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {/* TODO: Fix JSX expression */}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
-            modified = true;
+            modified = true
 //             }
         }
       }

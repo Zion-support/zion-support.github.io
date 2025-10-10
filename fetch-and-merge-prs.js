@@ -1,17 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const { execSync } = require('child_process');
-//Configuration;
-// const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+//Configuration
+// const GITHUB_TOKEN = process.env.GITHUB_TOKEN
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }
-//Function to make GitHub API requests;
+//Function to make GitHub API requests
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
-      port: 443;
-  path: path;
+      port: 443
+  path: path
       method: 'GET'}
       headers: {,
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
@@ -38,7 +38,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
     req.end();
   });
 }
-//Function to merge a PR;
+//Function to merge a PR
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
@@ -90,31 +90,31 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
     req.end();
   });
 }
-//Main function;
+//Main function
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
-    //Fetch open PRs;
+    //Fetch open PRs
 //     //     if (prs.length === 0) {return}
     }
-    //Display PRs;
+    //Display PRs
 //     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
 //     // console.log('\n📝 Open Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 //       //       //       //       });
-    //Save PR list to file;
+    //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
-//     //Filter mergeable PRs;
-//     //Merge mergeable PRs;
+//     //Filter mergeable PRs
+//     //Merge mergeable PRs
     for (const pr of mergeablePRs) {
       try {
-//         const result = await mergePR(pr.number) pr.title);
+//         const result = await mergePR(pr.number) pr.title)}
 //         //         } catch (error) {
 //         }
     }
-    // Handle non-mergeable PRs;
+    // Handle non-mergeable PRs
     if (nonMergeablePRs.length > 0) {
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {),
@@ -122,7 +122,7 @@ async function main() {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
     }
-    // Handle non-mergeable PRs;
+    // Handle non-mergeable PRs
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
   conflicts: `),

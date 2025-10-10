@@ -1,68 +1,68 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
   technology: string[];
   integrations: string[];
   useCases: string[];
-  roi: string;
+  roi: string
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  marketSize: string
+  growthRate: string
+  variant: string
+  contactInfo: unknown
+    mobile: string
+    email: string
 export interface EnterpriseItService2029 {;,
     address: string}
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   popula,
-  r: boolean;
+  r: boolean
   ico,
-  n: string;
+  n: string
   colo,
-  r: string;
+  r: string
   textColo,
-  r: string;
+  r: string
   lin,
-  k: string;
+  k: string
   marketPositio,
-  n: string;
+  n: string
   targetAudienc,
-  e: string;
+  e: string
   trialDay,
-  s: number;
+  s: number
   setupTim,
-  e: string;
+  e: string
   categor,
-  y: string;
+  y: string
   realServic,
-  e: boolean;
+  e: boolean
   technolog,
   y: string[];
   integration,
@@ -70,42 +70,42 @@ export interface EnterpriseItService2029 {;,
   useCase,
   s: string[];
   ro,
-  i: string;
+  i: string
   competitor,
   s: string[];
   marketSiz,
-  e: string;
+  e: string
   growthRat,
-  e: string;
+  e: string
   varian,
-  t: string;
+  t: string
   contactInf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
 export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
   e: string,,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -116,14 +116,14 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
@@ -137,7 +137,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
       "24/7 support",
       "Custom integration"],
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
-    realImplementation: true;
+    realImplementation: true
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -233,8 +233,8 @@ export const,
     ],
     link: "/services/2029-enterprise-it"
     category: "Enterprise IT Services 2029"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',

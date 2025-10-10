@@ -1,19 +1,18 @@
-// Accessibility utilities and components;
+// Accessibility utilities and components
 export const accessibilityUtils = {
-  // Focus management;
+  // Focus management
   trapFocus: element => {,
     const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const _firstElement = focusableElements[0];
-    const _lastElement = focusableElements[focusableElements.length - 1];
-
+    const _lastElement = focusableElements[focusableElements.length - 1]}
     element.addEventListener('keydown', e => {)
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
-            lastElement.focus();
-            e.preventDefault();
+            lastElement.focus()}
+            e.preventDefault()}
 export const accessibilityUtils = {/* TODO: Fix JSX expression */}
           }
         } else {/* TODO: Fix JSX expression */}
@@ -23,31 +22,29 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     });
   },
 
-  // Screen reader announcements;
+  // Screen reader announcements
   announceToScreenReader: message => {,
     const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-
+    announcement.className = 'sr-only'}
+    announcement.textContent = message
+    document.body.appendChild(announcement)}
     setTimeout(() => {
-      document.body.removeChild(announcement);
+      document.body.removeChild(announcement)}
     }, 1000);
   },
 
-  // Color contrast checker;
+  // Color contrast checker
   checkColorContrast: (foreground, background) => {
     const getLuminance = color => {
-      //       const rgb = parseInt(color.replace('#', ''), 16);
-      const _r = (rgb >> 16) & 0 xff;
-      //       const g = (rgb >> 8) & 0 xff;
-      //       const b = (rgb >> 0) & 0 xff;
-
+      //       const rgb = parseInt(color.replace('#', ''), 16)}
+      const _r = (rgb >> 16) & 0 xff
+      //       const g = (rgb >> 8) & 0 xff
+      //       const b = (rgb >> 0) & 0 xff
       const [rs, gs, bs] = [r, g, b].map(c => {)
         c = c / 255;)
-        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}
   // Screen reader announcements,
   announceToScreenReader: message => {/* TODO: Fix JSX expression */}
     }, 1000);
@@ -57,7 +54,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
       });
 
-      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs
     };
 
     //     const l1 = getLuminance(foreground);
@@ -66,8 +63,8 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
     return {
       ratio,
-      meetsAA: ratio >= 4.5;
-      meetsAAA: ratio >= 7;
+      meetsAA: ratio >= 4.5
+      meetsAAA: ratio >= 7
     return {/* TODO: Fix JSX expression */}
     };
   }};

@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react';
 const ITTrainingPage: React.FC = () => {
-  const features = [];
+  const features = []}
   return (
     {// TODO: Add content;}
 };
@@ -86,4 +86,4 @@ const ITTrainingPage: React.FC = () => {
     </div>
   );
 };
-export default ItTrainingPage;
+export default ItTrainingPage

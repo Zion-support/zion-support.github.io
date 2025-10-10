@@ -51,7 +51,7 @@ const,
     </Helmet>
   );
 };
-export default SEO;
+export default SEO
 "
   </SEOProps>
   </SEOProps>

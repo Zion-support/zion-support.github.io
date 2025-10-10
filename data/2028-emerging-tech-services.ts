@@ -1,18 +1,18 @@
 
-export interface EmergingTechService2028;
-export interface EmergingTechService2028 {id: string;
-export interface EmergingTechService2028 {  id: string;
+export interface EmergingTechService2028
+export interface EmergingTechService2028 {id: string
+export interface EmergingTechService2028 {  id: string
 export interface EmergingTechService2028 {
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]}
+  link: string
+  category: string
+  real_implementation: boolean
+  contact_info: unknown
+    mobile: string
     email: string}
     address: string}
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
@@ -26,10 +26,10 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string;
+    address: string
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [;
-    address: string;
+    address: string
   }
 ;
 export const emergingTech2028Services: EmergingTechService2028[] = [
@@ -37,7 +37,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     name: '2028 Emerging Tech Service Platform',
     tagline: 'Emerging tech services for 2028',
     price: '$299 / month',
-    description: unknown;
+    description: unknown
     addres,
   s: string}
 export const,
@@ -67,8 +67,8 @@ export const,
       'Expert insights'],
     link: '/services / 2028 - emerging - tech - service'
     category: 'Emerging Tech Services 2028'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
@@ -86,8 +86,8 @@ export const,
     ],
     link: "/services/2028-emerging-tech-service"
     category: "Emerging Tech Services 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
@@ -95,14 +95,14 @@ export const,
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const emergingTech2028 Services: EmergingTechService2028[] = [,
@@ -116,8 +116,8 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
       "Advanced features",
       "Expert insights"],
     link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
@@ -254,8 +254,8 @@ export const,
     ],
     link: "/services/2028-emerging-tech-service"
     category: "Emerging Tech Services 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',

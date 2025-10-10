@@ -1,18 +1,18 @@
 
 /**
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
+ * Security Headers Configuration
+ * Comprehensive security headers for production applications
  */
 
 export interface SecurityHeadersConfig {// TODO: Add content;}
 
 }
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
-  permissionsPolicy?: string;
+  contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
+  referrerPolicy?: string
+  permissionsPolicy?: string
 }
 export const,
   _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
@@ -70,15 +70,13 @@ export const,
 //   ].join(', ')
 }
 /**
- * Get security headers as key-value pairs;
+ * Get security headers as key-value pairs
  */
 export function getSecurityHeaders()
-  customConfig?: Partial;
-
+  customConfig?: Partial
           <SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
-  // TODO: Add content;
-
+  // TODO: Add content
 }
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
@@ -86,43 +84,42 @@ export function getSecurityHeaders()
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy
   }
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity
   }
   if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['X-Frame-Options'] = config.xFrameOptions;
+    headers['X-Frame-Options'] = config.xFrameOptions
   }
   if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions
   }
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['Referrer-Policy'] = config.referrerPolicy;
+    headers['Referrer-Policy'] = config.referrerPolicy
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    headers['Permissions-Policy'] = config.permissionsPolicy;
+    headers['Permissions-Policy'] = config.permissionsPolicy
   }
-    headers['Permissions-Policy'] = config.permissionsPolicy;
+    headers['Permissions-Policy'] = config.permissionsPolicy
   }
-  return headers;
+  return headers
 }
 /**
- * Get security headers in Next.js format;
+ * Get security headers in Next.js format
  */
 export function getNextSecurityHeaders()
-  customConfig?: Partial;
-
+  customConfig?: Partial
           <SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {// TODO: Add content;}
 

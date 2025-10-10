@@ -1,77 +1,77 @@
 /**;
- * Enhanced Performance Hook;
- * Combines performance monitoring, error tracking, and analytics;
+ * Enhanced Performance Hook
+ * Combines performance monitoring, error tracking, and analytics
  */;
 import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 ;
-export interface UseEnhancedPerformanceOptions {;
-  component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
+export interface UseEnhancedPerformanceOptions {}
+  component?: string
+  trackErrors?: boolean
+  trackPerformance?: boolean
   trackAnalytics?: boolean;}
 }
 ;
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {;
   const {;
-    component = 'Unknown',;
-    trackErrors = true,;
-    trackPerformance = true,;
+    component = 'Unknown',}
+    trackErrors = true,}
+    trackPerformance = true,}
     trackAnalytics = true,;}
   } = _options;const _renderCountRef = useRef<number>(0);
 ;
   useEffect(() => {;
-    mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
-;
-    // Track component mount;
-    if (trackAnalytics) {;
+    mountTimeRef.current = performance.now()}
+    renderCountRef.current = 0
+}
+    // Track component mount
+    if (trackAnalytics) {}
       analytics.trackCustomEvent('Component', 'Mounted', component);}
     }
 ;
     return () => {;
-      // Track component unmount duration;
+      // Track component unmount duration
       if (trackPerformance) {;
-        const _duration = performance.now() - mountTimeRef.current;
+        const _duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {;
-          // Long-lived component;
+          // Long-lived component
           analytics.trackCustomEvent(;
             'Performance',;
-            'Long Component Lifetime',;
-            component,;
-            Math.round(duration);
+            'Long Component Lifetime',}
+            component,}
+            Math.round(duration)}
           );}
         }
       }
 ;
-      // Track component unmount;
-      if (trackAnalytics) {;
+      // Track component unmount
+      if (trackAnalytics) {}
         analytics.trackCustomEvent('Component', 'Unmounted', component);}
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
 ;
-  // Track render performance;
+  // Track render performance
   useEffect(() => {;
     renderCountRef.current++;
 ;
     if (trackPerformance && renderCountRef.current > 10) {;
-      // Many re-renders detected;
+      // Many re-renders detected
       analytics.trackCustomEvent(;
-        'Performance',;
-        'High Render Count',;
-        component,;
-        renderCountRef.current;
+        'Performance',}
+        'High Render Count',}
+        component,}
+        renderCountRef.current
       );}
     }
   });
 ;
   const trackError = useCallback(;
     (error: Error, context?: Record<string, unknown>) => {;
-      if (trackErrors) {;
-        errorTracker.trackError(error, {;
-          component,;
+      if (trackErrors) {}
+        errorTracker.trackError(error, {}
+          component,}
           ...context,;}
         });
       }
@@ -80,8 +80,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   );
 ;
   const trackUserAction = useCallback(;
-    (action: string, metadata?: Record<string, unknown>) => {;
-      if (trackAnalytics) {;
+    (action: string, metadata?: Record<string, unknown>) => {}
+      if (trackAnalytics) {}
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
       }
     },;
@@ -94,10 +94,10 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       const _startTime = performance.now();
 ;
       return {;
-        end: () => {;
-          const _duration = performance.now() - startTime;
-;
-          if (trackPerformance) {;
+        end: () => {}
+          const _duration = performance.now() - startTime
+}
+          if (trackPerformance) {}
             analytics.trackPerformance(;}
               `${component}-${operationName}`,;
               duration,;
@@ -105,18 +105,18 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             );
           }
 ;
-          return duration;
+          return duration
         },;
       };
     },;
     [component, trackPerformance];
   );
 ;
-  return {;
-    trackError,;
-    trackUserAction,;
+  return {}
+    trackError,}
+    trackUserAction,}
     measureOperation,;}
   };
 }
 ;
-export default useEnhancedPerformance;
+export default useEnhancedPerformance

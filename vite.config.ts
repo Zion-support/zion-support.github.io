@@ -32,38 +32,38 @@ export default defineConfig({
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+              return 'vendor-react'}
             }
             if (id.includes('react-router')) {
-              return 'vendor-router';
+              return 'vendor-router'}
             }
             if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+              return 'vendor-ui'}
             }
             if (id.includes('recharts')) {
-              return 'vendor-charts';
+              return 'vendor-charts'}
             }
             if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
+              return 'vendor-analytics'}
             }
             return 'vendor-misc';
           }
           // App chunks
           if (id.includes('/app/ai-')) {
-            return 'ai-services';
+            return 'ai-services'}
           }
           if (id.includes('/app/it-')) {
-            return 'it-services';
+            return 'it-services'}
           }
           if (id.includes('/app/components/')) {
-            return 'components';
+            return 'components'}
           }
           return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
+          const ext = assetInfo.name?.split('.').pop()}
           if (/\.(css)$/i.test(assetInfo.name || '')) {
             return `assets/css/[name]-[hash].${ext}`;
           }

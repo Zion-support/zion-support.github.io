@@ -1,17 +1,17 @@
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
+  id: string
+  name: string
+  description: string
+  category: string
+  price: string
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  marketSize: string;
-  competitiveAdvantage: string;
-  implementationTime: string;
-  roi: string;
-  link: string;
+  marketSize: string
+  competitiveAdvantage: string
+  implementationTime: string
+  roi: string
+  link: string
     id: 'neuromorphic-computing'
     name: 'Neuromorphic Computing Platform',
     description: "Advanced computing platform that mimics the human brain's neural structure for ultra-efficient AI processing and learning.",
@@ -23,11 +23,11 @@
   nam,
   e: string,
   descriptio,
-  n: string;
+  n: string
   categor,
-  y: string;
+  y: string
   pric,
-  e: string;
+  e: string
   feature,
   s: string[];
   benefit,
@@ -37,13 +37,13 @@
   targetAudienc,
   e: string[];
   marketSiz,
-  e: string;
+  e: string
   competitiveAdvantag,
-  e: string;
+  e: string
   implementationTim,
-  e: string;
+  e: string
   ro,
-  i: string;
+  i: string
   lin,
   k: string,
     i,
@@ -181,26 +181,26 @@
       'Genetic Engineering'
   use_cases: string[];
   target_audience: string[];
-  market_size: string;
-  competitive_advantage: string;
-  implementation_time: string;
-  roi: string;
-  link: string;
+  market_size: string
+  competitive_advantage: string
+  implementation_time: string
+  roi: string
+  link: string
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
-    description: unknown;
+    description: unknown
   use_case,
   s: string[];
   target_audienc,
   e: string[];
   market_siz,
-  e: string;
+  e: string
   competitive_advantag,
-  e: string;
+  e: string
   implementation_tim,
-  e: string;
+  e: string
   ro,
-  i: string;
+  i: string
   lin,
   k: string,
     i,
@@ -244,7 +244,7 @@
       'Research institutions',
       'Environmental companies'],
     market_size: '$22.8B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$22.8B by 2027',
     competitive_advantag,
@@ -266,7 +266,7 @@
       'Research']},
     id: 'quantum - sensors - network',
     name: 'Quantum Sensors Network',
-    description: unknown;
+    description: unknown
     i,
   d: 'quantum - sensors - network',
     nam,
@@ -370,7 +370,7 @@
       'Research institutions',
       'Industrial companies'],
     market_size: '$16.5B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$16.5B by 2027',
     competitive_advantag,
@@ -392,7 +392,7 @@
       'Navigation']},
     id: 'brain - computer - interface',
     name: 'Brain - Computer Interface Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'brain - computer - interface',
     nam,
@@ -515,7 +515,7 @@
       'Research']},
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'quantum - internet - security',
     nam,
@@ -557,7 +557,7 @@
       'Military organizations',
       'Critical infrastructure'],
     market_size: '$25.4B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$25.4B by 2027',
     competitive_advantag,
@@ -579,7 +579,7 @@
       'Financial']},
     id: 'autonomous - robotics - platform',
     name: 'Autonomous Robotics Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'autonomous - robotics - platform',
     nam,
@@ -632,7 +632,7 @@
       'Service providers',
       'Research institutions'],
     market_size: '$19.8B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$19.8B by 2027',
     competitive_advantag,
@@ -649,7 +649,7 @@
   s: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics']},
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'quantum - materials - discovery',
     nam,
@@ -691,7 +691,7 @@
       'Medical device companies',
       'Energy companies'],
     market_size: '$21.3B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$21.3B by 2027',
     competitive_advantag,
@@ -713,7 +713,7 @@
       'Innovation']},
     id: 'quantum - financial - modeling',
     name: 'Quantum Financial Modeling Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'quantum - financial - modeling',
     nam,
@@ -755,7 +755,7 @@
       'Insurance companies',
       'Regulatory bodies'],
     market_size: '$18.9B by 2027',
-    competitive_advantage: unknown;
+    competitive_advantage: unknown
     market_siz,
   e: '$18.9B by 2027',
     competitive_advantag,
@@ -777,7 +777,7 @@
       'Modeling']},
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
-    description: unknown;
+    description: unknown
     i,
   d: 'quantum - climate - modeling',
     nam,
@@ -818,13 +818,13 @@
       'Environmental organizations',
       'Insurance companies',
       'Energy companies'],
-  id: string, name: string;
-  description: string, category: string;
+  id: string, name: string
+  description: string, category: string
   price: string, features: string[],
   benefits: string[], useCases: string[],
-  targetAudience: string[], marketSize: string;
-  competitiveAdvantage: string, implementationTime: string;
-  roi: string, link: string;
+  targetAudience: string[], marketSize: string
+  competitiveAdvantage: string, implementationTime: string
+  roi: string, link: string
   tags: string[]}
     id: 'quantum-climate-modeling',
     name: 'Quantum Climate Modeling Platform',
@@ -1012,9 +1012,9 @@ export const emergingTech2027Services: Service[] = [;
       'Research institutionsPharmaceutical companiesFinancial institutionsGovernment agenciesTech companies'
     ];
     marketSize: '$18.7 B by 2027';
-    competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms';
-    implementationTime: '6-8 weeks';
-    roi: '1200% within 18 months';
+    competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms'}
+    implementationTime: '6-8 weeks'}
+    roi: '1200% within 18 months'}
     link: 'https://ziontechgroup.com/services/quantum-machine-learning'}
     tags: ['Quantum ComputingMachine LearningAIResearchOptimization']}
   };
@@ -1037,9 +1037,9 @@ export const emergingTech2027Services: Service[] = [;
       'IoT companiesRobotics manufacturersEdge computing providersSensor manufacturersAutonomous vehicle companies'
     ];
     marketSize: '$14.2 B by 2027';
-    competitiveAdvantage: 'Most advanced neuromorphic computing platform';
-    implementationTime: '4-6 weeks';
-    roi: '800% within 12 months';
+    competitiveAdvantage: 'Most advanced neuromorphic computing platform'}
+    implementationTime: '4-6 weeks'}
+    roi: '800% within 12 months'}
     link: 'https://ziontechgroup.com/services/neuromorphic-computing'}
     tags: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']}
   };
@@ -1062,9 +1062,9 @@ export const emergingTech2027Services: Service[] = [;
       'Pharmaceutical companiesAgricultural companiesIndustrial biotech firmsResearch institutionsEnvironmental companies'
     ];
     marketSize: '$22.8 B by 2027';
-    competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration';
-    implementationTime: '8-12 weeks';
-    roi: '1500% within 24 months';
+    competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration'}
+    implementationTime: '8-12 weeks'}
+    roi: '1500% within 24 months'}
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform'}
     tags: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']}
   };
@@ -1087,9 +1087,9 @@ export const emergingTech2027Services: Service[] = [;
       'Medical device companiesEnvironmental monitoring firmsNavigation companiesResearch institutionsIndustrial companies'
     ];
     marketSize: '$16.5 B by 2027';
-    competitiveAdvantage: 'Only quantum sensors network with multi-application support';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 15 months';
+    competitiveAdvantage: 'Only quantum sensors network with multi-application support'}
+    implementationTime: '6-8 weeks'}
+    roi: '900% within 15 months'}
     link: 'https://ziontechgroup.com/services/quantum-sensors-network'}
     tags: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']}
   };
@@ -1112,9 +1112,9 @@ export const emergingTech2027Services: Service[] = [;
       'Medical device companiesResearch institutionsAssistive technology firmsGaming companiesHealthcare providers'
     ];
     marketSize: '$28.9 B by 2027';
-    competitiveAdvantage: 'Most advanced brain-computer interface platform';
-    implementationTime: '10-12 weeks';
-    roi: '2000% within 30 months';
+    competitiveAdvantage: 'Most advanced brain-computer interface platform'}
+    implementationTime: '10-12 weeks'}
+    roi: '2000% within 30 months'}
     link: 'https://ziontechgroup.com/services/brain-computer-interface'}
     tags: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']}
   };
@@ -1137,9 +1137,9 @@ export const emergingTech2027Services: Service[] = [;
       'Government agenciesFinancial institutionsHealthcare organizationsMilitary organizationsCritical infrastructure'
     ];
     marketSize: '$25.4 B by 2027';
-    competitiveAdvantage: 'Only quantum internet security platform with global coverage';
-    implementationTime: '4-6 weeks';
-    roi: '1000% within 18 months';
+    competitiveAdvantage: 'Only quantum internet security platform with global coverage'}
+    implementationTime: '4-6 weeks'}
+    roi: '1000% within 18 months'}
     link: 'https://ziontechgroup.com/services/quantum-internet-security'}
     tags: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']}
   };
@@ -1162,9 +1162,9 @@ export const emergingTech2027Services: Service[] = [;
       'Manufacturing companiesLogistics companiesAgricultural companiesService providersResearch institutions'
     ];
     marketSize: '$19.8 B by 2027';
-    competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning';
-    implementationTime: '5-7 weeks';
-    roi: '700% within 12 months';
+    competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning'}
+    implementationTime: '5-7 weeks'}
+    roi: '700% within 12 months'}
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platform'}
     tags: ['RoboticsAIAutomationManufacturingLogistics']}
   };
@@ -1187,9 +1187,9 @@ export const emergingTech2027Services: Service[] = [;
       'Semiconductor companiesBattery manufacturersAerospace companiesMedical device companiesEnergy companies'
     ];
     marketSize: '$21.3 B by 2027';
-    competitiveAdvantage: 'Only quantum materials discovery platform with AI integration';
-    implementationTime: '8-10 weeks';
-    roi: '1100% within 20 months';
+    competitiveAdvantage: 'Only quantum materials discovery platform with AI integration'}
+    implementationTime: '8-10 weeks'}
+    roi: '1100% within 20 months'}
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery'}
     tags: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']}
   };
@@ -1212,9 +1212,9 @@ export const emergingTech2027Services: Service[] = [;
       'Investment banksHedge fundsAsset managersInsurance companiesRegulatory bodies'
     ];
     marketSize: '$18.9 B by 2027';
-    competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 16 months';
+    competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis'}
+    implementationTime: '6-8 weeks'}
+    roi: '900% within 16 months'}
     link: 'https://ziontechgroup.com/services/quantum-financial-modeling'}
     tags: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']}
   };
@@ -1237,9 +1237,9 @@ export const emergingTech2027Services: Service[] = [;
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
     marketSize: '$17.6 B by 2027';
-    competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
-    implementationTime: '7-9 weeks';
-    roi: '800% within 18 months';
+    competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions'}
+    implementationTime: '7-9 weeks'}
+    roi: '800% within 18 months'}
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'}
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']}
 export const,

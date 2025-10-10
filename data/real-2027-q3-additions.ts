@@ -5,7 +5,7 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
     period: '/month',
-    description: unknown;
+    description: unknown
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
       'Agentless subnet scanning and SaaS discovery',
       'OS, version, and CVE enrichment',
@@ -13,7 +13,7 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
       'Change detection and drift alerts'],
     category: 'Enterprise IT',
     link: '/it - asset - discovery - agent',
-    real_service: true;
+    real_service: true
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
   },
     id: 'managed - postgres - ha',
@@ -21,7 +21,7 @@ export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
     tagline: 'High availability PostgreSQL with SRE runbooks',
     price: '$1, 200',
     period: '/month',
-    description: unknown;
+    description: unknown
 export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'}
   },
@@ -46,14 +46,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Security hardening and auditing'],
     category: 'Cloud & Infrastructure',
     link: '/managed - postgres - ha',
-    real_service: true;
+    real_service: true
     roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.'},
     id: 'vector - search - starter'
     name: 'Vector Search Starter',
     tagline: 'Production RAG foundation with evals and ops',
     price: '$89',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Cloud & Infrastructure',
     lin,
@@ -83,14 +83,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Tracing, metrics, and dashboards'],
     category: 'AI & Data',
     link: '/vector - search - starter',
-    real_service: true;
+    real_service: true
     roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.'},
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable jobs with retries, idempotency, and alerting',
     price: '$39',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'AI & Data',
     lin,
@@ -120,14 +120,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Metrics, logs, and alerting'],
     category: 'Developer Tools',
     link: '/serverless - cron - manager',
-    real_service: true;
+    real_service: true
     roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.'},
     id: 'domain - dns - monitor'
     name: 'Domain & DNS Monitor',
     tagline: 'Proactive domain health and expiry guardrails',
     price: '$19',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Developer Tools',
     lin,
@@ -157,14 +157,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Slack, Email, and Webhook alerts'],
     category: 'Quality & Monitoring',
     link: '/domain - dns - monitor',
-    real_service: true;
+    real_service: true
     roi: 'Avoid costly outages from expired domains and misconfigured DNS.'},
     id: 'uptime - slo - monitor'
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks with SLOs and error budgets',
     price: '$29',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Quality & Monitoring',
     lin,
@@ -194,14 +194,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Change annotations and incident links'],
     category: 'Observability',
     link: '/uptime - slo - monitor',
-    real_service: true;
+    real_service: true
     roi: 'Cut false alerts by 60% and align reliability to user impact.'},
     id: 'sso - user - lifecycle - automation',
     name: 'SSO User Lifecycle Automation',
     tagline: 'Provisioning, deprovisioning, and access reviews',
     price: '$199',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Observability',
     lin,
@@ -231,14 +231,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Audit logs and exports'],
     category: 'Security & Identity',
     link: '/sso - user - lifecycle - automation',
-    real_service: true;
+    real_service: true
     roi: 'Reduce onboarding time by 80% and access risk by 50%.'},
     id: 'api - observability - starter',
     name: 'API Observability Starter',
     tagline: 'Traces, metrics, logs for APIs in minutes',
     price: '$49',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Security & Identity',
     lin,
@@ -268,14 +268,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Alert templates and runbooks'],
     category: 'Observability',
     link: '/api - observability - starter',
-    real_service: true;
+    real_service: true
     roi: 'Decrease MTTR by 40% and increase release confidence.'},
     id: 'kubernetes - rbac - auditor'
     name: 'Kubernetes RBAC Auditor',
     tagline: 'Least - privilege insights and drift detection',
     price: '$79',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Observability',
     lin,
@@ -305,14 +305,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Multi - cluster support'],
     category: 'Security & Identity',
     link: '/kubernetes - rbac - auditor',
-    real_service: true;
+    real_service: true
     roi: 'Reduce lateral movement risk and pass audits faster.'},
     id: 'infrastructure - drift - detector'
     name: 'Infrastructure Drift Detector',
     tagline: 'Detect and reconcile infra drift automatically',
     price: '$69',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Security & Identity',
     lin,
@@ -342,14 +342,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Multi - cloud support'],
     category: 'Cloud & Infrastructure',
     link: '/infrastructure - drift - detector',
-    real_service: true;
+    real_service: true
     roi: 'Prevent config drift incidents and reduce compliance toil.'},
     id: 'incident - copilot'
     name: 'Incident Copilot',
     tagline: 'AI - assisted incident response and postmortems',
     price: '$99',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Cloud & Infrastructure',
     lin,
@@ -379,14 +379,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Postmortem drafts and actions'],
     category: 'Operations',
     link: '/incident - copilot',
-    real_service: true;
+    real_service: true
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'},
     id: 'ai - market - research'
     name: 'AI Market Research',
     tagline: 'Automated landscape scans and insight briefs',
     price: '$79',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Operations',
     lin,
@@ -416,14 +416,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Export to Slides / Docs'],
     category: 'AI & Data',
     link: '/ai - market - research',
-    real_service: true;
+    real_service: true
     roi: 'Save 10–20 analyst hours per week while increasing coverage.'},
     id: 'ai - sales - automation',
     name: 'AI Sales Automation',
     tagline: 'Sequencing, enrichment, and AI reply drafting',
     price: '$59',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'AI & Data',
     lin,
@@ -453,14 +453,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Pipeline analytics'],
     category: 'Sales & Marketing',
     link: '/ai - sales - automation',
-    real_service: true;
+    real_service: true
     roi: 'Increase meetings booked by 20–40% with consistent outreach.'},
     id: 'ai - legal - contract - analyzer',
     name: 'AI Legal Contract Analyzer',
     tagline: 'Clause extraction, risk flags, and playbooks',
     price: '$99',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Sales & Marketing',
     lin,
@@ -490,14 +490,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Export to Word / PDF'],
     category: 'Legal & Compliance',
     link: '/ai - legal - contract - analyzer',
-    real_service: true;
+    real_service: true
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.'},
     id: 'ai - content - generator'
     name: 'AI Content Generator',
     tagline: 'SEO - optimized content with brand voice',
     price: '$49',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Legal & Compliance',
     lin,
@@ -527,14 +527,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'WordPress / Shopify integrations'],
     category: 'Content & Marketing',
     link: '/ai - content - generator',
-    real_service: true;
+    real_service: true
     roi: 'Publish 3–5x more content while improving rankings.'},
     id: 'email - dmarc - analyzer',
     name: 'Email DMARC Analyzer',
     tagline: 'DMARC, DKIM, SPF reporting and policy help',
     price: '$29',
     period: '/month',
-    description: unknown;
+    description: unknown
     categor,
   y: 'Content & Marketing',
     lin,
@@ -564,26 +564,26 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Alerts and exports'],
     category: 'Security & Identity',
     link: '/email - dmarc - analyzer',
-    real_service: true;
+    real_service: true
     roi: 'Improve deliverability and block spoofing / phishing attempts.'},
     id: 'api - security - scanner'
     name: 'API Security Scanner',
     tagline: 'API discovery and vuln scanning with CI gates',
     price: '$199',
     period: '/month',
-    description: unknown;
+    description: unknown
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
     ]
     category: 'Security & Identity'
     link: '/api - security - scanner'
-    real_service: true;
+    real_service: true
     roi: 'Prevent high - severity API incidents and cut MTTR.'
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
     ];
     category: 'Security & Identity';
     link: '/email-dmarc-analyzer';
-    realService: true;
+    realService: true
     roi: 'Improve deliverability and block spoofing/phishing attempts.',
     categor,
   y: 'Security & Identity',
@@ -624,7 +624,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     lin,
   k: '/email-dmarc-analyzer';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
   };
@@ -636,14 +636,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
-    realService: true;
+    realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.',
     categor,
   y: 'Security & Identity';
     lin,
   k: '/api-security-scanner';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
@@ -658,14 +658,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Enterprise IT';
     link: '/it-asset-discovery-agent';
-    realService: true;
+    realService: true
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.',
     categor,
   y: 'Enterprise IT';
     lin,
   k: '/it-asset-discovery-agent';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   };
@@ -677,14 +677,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Cloud & Infrastructure';
     link: '/managed-postgres-ha';
-    realService: true;
+    realService: true
     roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.',
     categor,
   y: 'Cloud & Infrastructure';
     lin,
   k: '/managed-postgres-ha';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
   };
@@ -696,14 +696,14 @@ export const real2027Q3Additions = [
     ];
     category: 'AI & Data';
     link: '/vector-search-starter';
-    realService: true;
+    realService: true
     roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.',
     categor,
   y: 'AI & Data';
     lin,
   k: '/vector-search-starter';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Cut RAG prototyping time from weeks to days while improving answer quality.'
   };
@@ -715,14 +715,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Developer Tools';
     link: '/serverless-cron-manager';
-    realService: true;
+    realService: true
     roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.',
     categor,
   y: 'Developer Tools';
     lin,
   k: '/serverless-cron-manager';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Reduce failed job incidents by 70% and engineering toil by 50%.'
   };
@@ -734,14 +734,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Quality & Monitoring';
     link: '/domain-dns-monitor';
-    realService: true;
+    realService: true
     roi: 'Avoid costly outages from expired domains and misconfigured DNS.',
     categor,
   y: 'Quality & Monitoring';
     lin,
   k: '/domain-dns-monitor';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Avoid costly outages from expired domains and misconfigured DNS.'
   };
@@ -753,14 +753,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Observability';
     link: '/uptime-slo-monitor';
-    realService: true;
+    realService: true
     roi: 'Cut false alerts by 60% and align reliability to user impact.',
     categor,
   y: 'Observability';
     lin,
   k: '/uptime-slo-monitor';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Cut false alerts by 60% and align reliability to user impact.'
   };
@@ -772,14 +772,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Security & Identity';
     link: '/sso-user-lifecycle-automation';
-    realService: true;
+    realService: true
     roi: 'Reduce onboarding time by 80% and access risk by 50%.',
     categor,
   y: 'Security & Identity';
     lin,
   k: '/sso-user-lifecycle-automation';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Reduce onboarding time by 80% and access risk by 50%.'
   };
@@ -791,14 +791,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Observability';
     link: '/api-observability-starter';
-    realService: true;
+    realService: true
     roi: 'Decrease MTTR by 40% and increase release confidence.',
     categor,
   y: 'Observability';
     lin,
   k: '/api-observability-starter';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Decrease MTTR by 40% and increase release confidence.'
   };
@@ -810,14 +810,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Security & Identity';
     link: '/kubernetes-rbac-auditor';
-    realService: true;
+    realService: true
     roi: 'Reduce lateral movement risk and pass audits faster.',
     categor,
   y: 'Security & Identity';
     lin,
   k: '/kubernetes-rbac-auditor';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Reduce lateral movement risk and pass audits faster.'
   };
@@ -829,14 +829,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Cloud & Infrastructure';
     link: '/infrastructure-drift-detector';
-    realService: true;
+    realService: true
     roi: 'Prevent config drift incidents and reduce compliance toil.',
     categor,
   y: 'Cloud & Infrastructure';
     lin,
   k: '/infrastructure-drift-detector';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Prevent config drift incidents and reduce compliance toil.'
   };
@@ -848,14 +848,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Operations';
     link: '/incident-copilot';
-    realService: true;
+    realService: true
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
     categor,
   y: 'Operations';
     lin,
   k: '/incident-copilot';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Reduce incident resolution time by 30–50% and improve learning capture.'
   };
@@ -867,14 +867,14 @@ export const real2027Q3Additions = [
     ];
     category: 'AI & Data';
     link: '/ai-market-research';
-    realService: true;
+    realService: true
     roi: 'Save 10–20 analyst hours per week while increasing coverage.',
     categor,
   y: 'AI & Data';
     lin,
   k: '/ai-market-research';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Save 10–20 analyst hours per week while increasing coverage.'
   };
@@ -886,14 +886,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Sales & Marketing';
     link: '/ai-sales-automation';
-    realService: true;
+    realService: true
     roi: 'Increase meetings booked by 20–40% with consistent outreach.',
     categor,
   y: 'Sales & Marketing';
     lin,
   k: '/ai-sales-automation';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Increase meetings booked by 20–40% with consistent outreach.'
   };
@@ -905,14 +905,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Legal & Compliance';
     link: '/ai-legal-contract-analyzer';
-    realService: true;
+    realService: true
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.',
     categor,
   y: 'Legal & Compliance';
     lin,
   k: '/ai-legal-contract-analyzer';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
   };
@@ -924,14 +924,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Content & Marketing';
     link: '/ai-content-generator';
-    realService: true;
+    realService: true
     roi: 'Publish 3–5x more content while improving rankings.',
     categor,
   y: 'Content & Marketing';
     lin,
   k: '/ai-content-generator';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Publish 3–5x more content while improving rankings.'
   };
@@ -943,14 +943,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Security & Identity';
     link: '/email-dmarc-analyzer';
-    realService: true;
+    realService: true
     roi: 'Improve deliverability and block spoofing/phishing attempts.',
     categor,
   y: 'Security & Identity';
     lin,
   k: '/email-dmarc-analyzer';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.'
   };
@@ -962,14 +962,14 @@ export const real2027Q3Additions = [
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
-    realService: true;
+    realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.',
     categor,
   y: 'Security & Identity';
     lin,
   k: '/api-security-scanner';
     realServic,
-  e: true;
+  e: true
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }

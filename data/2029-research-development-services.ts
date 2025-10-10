@@ -1,9 +1,9 @@
 
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string
+  description: string
   category: string[];
-  price: string;
+  price: string
   features: string[];
   benefits: string[];
   competitors: string[];
@@ -11,39 +11,39 @@
   integration: string[];
   support: string[];
   compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string;
-      contact: unknown;
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
+  contact: unknown
+    mobile: string
+    email: string
+    website: string
+      contact: unknown
   i,
   d: string,
   nam,
   e: string,
   descriptio,
-  n: string;
+  n: string
   categor,
   y: string[];
   pric,
-  e: string;
+  e: string
   feature,
   s: string[];
   benefit,
@@ -59,49 +59,49 @@
   complianc,
   e: string[];
   scalabilit,
-  y: string;
+  y: string
   ro,
-  i: string;
+  i: string
   deploymen,
-  t: string;
+  t: string
   maintenanc,
-  e: string;
+  e: string
   trainin,
-  g: string;
+  g: string
   documentatio,
-  n: string;
+  n: string
   ap,
-  i: string;
+  i: string
   mobil,
-  e: string;
+  e: string
   securit,
-  y: string;
+  y: string
   backu,
-  p: string;
+  p: string
   monitorin,
-  g: string;
+  g: string
   analytic,
-  s: string;
+  s: string
   customizatio,
-  n: string;
+  n: string
   affiliat,
-  e: string;
+  e: string
   referra,
-  l: string;
+  l: string
   partnershi,
-  p: string;
+  p: string
   fundin,
-  g: string;
+  g: string
   exi,
-  t: string;
+  t: string
   contac,
-  t: unknown;
+  t: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
     websit,
-  e: string;
+  e: string
       contac,
   t: unknown,
         'Quantum physics research',
@@ -251,7 +251,7 @@
       partnership: 'Quantum research partnerships',
       funding: 'Series B funding, $150 M valuation',
       exit: 'IPO or quantum acquisition',
-      contact: unknown;
+      contact: unknown
       scalabilit,
   y: 'Quantum - grade, global research network',
       ro,
@@ -417,7 +417,7 @@
       partnership: 'AI research partnerships',
       funding: 'Series A funding, $80 M valuation',
       exit: 'Acquisition by major research platform',
-      contact: unknown;
+      contact: unknown
       suppor,
   t: ['24 / 7 AI support', 'Research experts', 'Implementation help'],
       complianc,
@@ -492,7 +492,7 @@
       partnership: 'Biotech research partnerships',
       funding: 'Series B funding, $120M valuation',
       exit: 'IPO or biotech acquisition'
-      contact: unknown;
+      contact: unknown
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         website: 'https://ziontechgroup && ziontechgroup.com',
@@ -592,7 +592,7 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60 M valuation',
     exit: 'Acquisition by major research platform',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -708,7 +708,7 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150 M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -824,7 +824,7 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80 M valuation',
     exit: 'Acquisition by major research platform',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -936,7 +936,7 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60 M valuation',
     exit: 'Acquisition by major research platform',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     use_case,
@@ -1022,7 +1022,7 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150 M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -1108,7 +1108,7 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80 M valuation',
     exit: 'Acquisition by major research platform',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -1198,7 +1198,7 @@
     partnership: 'Biotech research partnerships',
     funding: 'Series B funding, $120 M valuation',
     exit: 'IPO or biotech acquisition',
-    contact: unknown;
+    contact: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
     useCase,
@@ -1323,9 +1323,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     customization: 'Custom research workflows, integration';
     whiteLabel: 'Available for research institutions';
     affiliate: '25% commission for referrals';
-    referral: '$15,000 bonus for partnerships';
-    partnership: 'Research institution partnerships';
-    funding: 'Series A funding, $60 M valuation';
+    referral: '$15,000 bonus for partnerships'}
+    partnership: 'Research institution partnerships'}
+    funding: 'Series A funding, $60 M valuation'}
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1369,9 +1369,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     customization: 'Custom quantum research, integration';
     whiteLabel: 'Available for research institutions';
     affiliate: '20% commission for referrals';
-    referral: '$25,000 bonus for partnerships';
-    partnership: 'Quantum research partnerships';
-    funding: 'Series B funding, $150 M valuation';
+    referral: '$25,000 bonus for partnerships'}
+    partnership: 'Quantum research partnerships'}
+    funding: 'Series B funding, $150 M valuation'}
     exit: 'IPO or quantum acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1415,9 +1415,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     customization: 'Custom AI research, integration';
     whiteLabel: 'Available for research institutions';
     affiliate: '30% commission for referrals';
-    referral: '$10,000 bonus for partnerships';
-    partnership: 'AI research partnerships';
-    funding: 'Series A funding, $80 M valuation';
+    referral: '$10,000 bonus for partnerships'}
+    partnership: 'AI research partnerships'}
+    funding: 'Series A funding, $80 M valuation'}
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1461,9 +1461,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     customization: 'Custom biotech research, integration';
     whiteLabel: 'Available for biotech institutions';
     affiliate: '25% commission for referrals';
-    referral: '$20,000 bonus for partnerships';
-    partnership: 'Biotech research partnerships';
-    funding: 'Series B funding, $120 M valuation';
+    referral: '$20,000 bonus for partnerships'}
+    partnership: 'Biotech research partnerships'}
+    funding: 'Series B funding, $120 M valuation'}
     exit: 'IPO or biotech acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';

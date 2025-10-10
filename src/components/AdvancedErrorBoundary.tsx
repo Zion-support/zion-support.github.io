@@ -1,30 +1,30 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string | null
 }
 interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 interface ErrorReport {
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  errorMessage: string;
-  errorStack: string | undefined;
-  errorComponentStack: string | null | undefined;
-  errorBoundary: string;
-  errorTimestamp: string;
-  errorUserAgent: string | null;
-  errorUrl: string | null;
+  errorId: string | null
+  error: Error
+  errorInfo: ErrorInfo
+  errorMessage: string
+  errorStack: string | undefined
+  errorComponentStack: string | null | undefined
+  errorBoundary: string
+  errorTimestamp: string
+  errorUserAgent: string | null
+  errorUrl: string | null
 }
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
+    super(props)}
     this.state = {
       hasError: false,
       error: null,
@@ -47,11 +47,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)}
     }
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)}
     }
   }
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
@@ -77,7 +77,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+      console.error('Failed to report error:', reportError)}
     }
   };
   private handleRetry = () => {
@@ -90,13 +90,13 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   };
   private handleReload = () => {
     if (typeof window !== 'undefined') {
-      window.location.reload();
+      window.location.reload()}
     }
   };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -109,8 +109,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               </div>
               <div className="ml-3">
                 <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong;
-  </
+                  Something went wrong</wrong>
                 <p className="text-sm text-gray-500">
                   We're sorry, but something unexpected happened.
                 </p>
@@ -129,13 +128,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                Try Again;
-  </
+                Try Again</Again>
               <button
                 onClick={this.handleReload}
                 className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                Reload Page;
-  </
+                Reload Page</Page>
             </div>
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
@@ -146,10 +143,10 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         </div>
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary
   </button>
   </button>
   </h3>

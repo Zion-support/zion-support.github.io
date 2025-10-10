@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Accessibility Enhancement Script;
- * Enhances accessibility for better user experience;
+ * Accessibility Enhancement Script
+ * Enhances accessibility for better user experience
  */
 
 import fs from 'fs';
@@ -30,24 +30,24 @@ if (fs.existsSync(indexPath)) {
           const skipLink = document.createElement('a');
           skipLink.href = '#main-content';
           skipLink.textContent = 'Skip to main content';
-          skipLink.className = 'skip-link';
+          skipLink.className = 'skip-link'}
           skipLink.style.cssText = \`
-            position: absolute;
-            top: -40 px;
-            left: 6 px;
-            background: #000;
-            color: #fff;
-            padding: 8 px;
-            text-decoration: none;
-            z-index: 1000;
-            border-radius: 4 px;
-            transition: top 0.3 s;
-          \`;
+            position: absolute
+            top: -40 px
+            left: 6 px
+            background: #000
+            color: #fff
+            padding: 8 px
+            text-decoration: none
+            z-index: 1000
+            border-radius: 4 px
+            transition: top 0.3 s
+          \`}
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px';
+            this.style.top = '6 px'}
           });
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px';
+            this.style.top = '-40 px'}
           });
           document.body.insertBefore(skipLink, document.body.firstChild);
         }
@@ -58,21 +58,21 @@ if (fs.existsSync(indexPath)) {
           toggle.textContent = 'High Contrast';
           toggle.className = 'accessibility-toggle';
           toggle.style.cssText = \`
-            position: fixed;
-            top: 10 px;
-            right: 10 px;
-            z-index: 1000;
-            background: #000;
-            color: #fff;
-            border: 2 px solid #fff;
-            padding: 8 px 16 px;
-            border-radius: 4 px;
-            cursor: pointer;
-            font-size: 14 px;
-          \`;
+            position: fixed
+            top: 10 px
+            right: 10 px
+            z-index: 1000
+            background: #000
+            color: #fff
+            border: 2 px solid #fff
+            padding: 8 px 16 px
+            border-radius: 4 px
+            cursor: pointer
+            font-size: 14 px
+          \`}
           toggle.addEventListener('click', function() {
-            document.body.classList.toggle('high-contrast');
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast';
+            document.body.classList.toggle('high-contrast')}
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'}
           });
           document.body.appendChild(toggle);
         }
@@ -82,37 +82,37 @@ if (fs.existsSync(indexPath)) {
           const controls = document.createElement('div');
           controls.className = 'font-size-controls';
           controls.style.cssText = \`
-            position: fixed;
-            top: 50 px;
-            right: 10 px;
-            z-index: 1000;
-            background: #000;
-            color: #fff;
-            padding: 10 px;
-            border-radius: 4 px;
-            display: flex;
-            flex-direction: column;
-            gap: 5 px;
+            position: fixed
+            top: 50 px
+            right: 10 px
+            z-index: 1000
+            background: #000
+            color: #fff
+            padding: 10 px
+            border-radius: 4 px
+            display: flex
+            flex-direction: column
+            gap: 5 px
           \`;
           
           const increaseBtn = document.createElement('button');
-          increaseBtn.textContent = 'A+';
+          increaseBtn.textContent = 'A+'}
           increaseBtn.addEventListener('click', () => {
-            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px';
+            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)}
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px'}
           });
           
           const decreaseBtn = document.createElement('button');
           decreaseBtn.textContent = 'A-';
           decreaseBtn.addEventListener('click', () => {
-            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px';
+            const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)}
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'}
           });
           
           const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px';
+            document.documentElement.style.fontSize = '16 px'}
           });
           
           controls.appendChild(increaseBtn);
@@ -132,17 +132,16 @@ if (fs.existsSync(indexPath)) {
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
                 );
                 const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
-                
+                const lastElement = focusableElements[focusableElements.length - 1]}
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
-                    lastElement.focus();
-                    e.preventDefault();
+                    lastElement.focus()}
+                    e.preventDefault()}
                   }
                 } else {
                   if (document.activeElement === lastElement) {
-                    firstElement.focus();
-                    e.preventDefault();
+                    firstElement.focus()}
+                    e.preventDefault()}
                   }
                 }
               }
@@ -150,10 +149,10 @@ if (fs.existsSync(indexPath)) {
             
             // Close modals with Escape key
             if (e.key === 'Escape') {
-              const modal = document.querySelector('.modal:not([style*="display: none"])');
+              const modal = document.querySelector('.modal:not([style*="display: none"])')}
               if (modal) {
-                const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn');
-                if (closeBtn) closeBtn.click();
+                const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn')}
+                if (closeBtn) closeBtn.click()}
               }
             }
           });
@@ -162,11 +161,11 @@ if (fs.existsSync(indexPath)) {
         // Add ARIA labels to interactive elements
         function addAriaLabels() {
           // Add aria-labels to buttons without text
-          const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+          const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')}
           iconButtons.forEach(button => {
-            const icon = button.querySelector('svg, i');
+            const icon = button.querySelector('svg, i')}
             if (icon) {
-              const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
+              const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase()}
               button.setAttribute('aria-label', \`\${iconName} button\`);
             }
           });
@@ -175,8 +174,8 @@ if (fs.existsSync(indexPath)) {
           const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
-              div.setAttribute('role', 'button');
-              div.setAttribute('tabindex', '0');
+              div.setAttribute('role', 'button')}
+              div.setAttribute('tabindex', '0')}
             }
           });
           
@@ -184,7 +183,7 @@ if (fs.existsSync(indexPath)) {
           const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded')) {
-              element.setAttribute('aria-expanded', 'false');
+              element.setAttribute('aria-expanded', 'false')}
             }
           });
         }
@@ -196,23 +195,22 @@ if (fs.existsSync(indexPath)) {
           liveRegion.setAttribute('aria-atomic', 'true');
           liveRegion.className = 'sr-only';
           liveRegion.style.cssText = \`
-            position: absolute;
-            width: 1 px;
-            height: 1 px;
-            padding: 0;
-            margin: -1 px;
-            overflow: hidden;
+            position: absolute
+            width: 1 px
+            height: 1 px
+            padding: 0
+            margin: -1 px
+            overflow: hidden
             clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+            white-space: nowrap
+            border: 0
           \`;
-          document.body.appendChild(liveRegion);
-          
+          document.body.appendChild(liveRegion)}
           // Announce navigation changes
-          const originalPushState = history.pushState;
+          const originalPushState = history.pushState
           history.pushState = function() {
-            originalPushState.apply(history, arguments);
-            liveRegion.textContent = 'Page navigation complete';
+            originalPushState.apply(history, arguments)}
+            liveRegion.textContent = 'Page navigation complete'}
           };
         }
         
@@ -221,27 +219,27 @@ if (fs.existsSync(indexPath)) {
           addSkipLink();
           addHighContrastToggle();
           addFontSizeControls();
-          enhanceFocusManagement();
-          addAriaLabels();
-          addLiveRegion();
+          enhanceFocusManagement()}
+          addAriaLabels()}
+          addLiveRegion()}
         });
         
         // Add high contrast styles
         const highContrastStyles = \`
           .high-contrast {
-            filter: contrast(150%) brightness(120%);
+            filter: contrast(150%) brightness(120%)}
           }
           .high-contrast * {
-            border-color: currentColor !important;
+            border-color: currentColor !important
           }
           .high-contrast button,
           .high-contrast a {
-            border: 2 px solid currentColor !important;
+            border: 2 px solid currentColor !important
           }
         \`;
         
         const styleSheet = document.createElement('style');
-        styleSheet.textContent = highContrastStyles;
+        styleSheet.textContent = highContrastStyles
         document.head.appendChild(styleSheet);
       })();
     </script>
@@ -256,18 +254,17 @@ if (fs.existsSync(indexPath)) {
 
 // Create accessibility statement
 const accessibilityStatement = `# Accessibility Statement
-// 1. Generate accessibility report;
+// 1. Generate accessibility report
 function generateAccessibilityReport() {
-  console.log('📊 Generating accessibility report...');
-  
+  console.log('📊 Generating accessibility report...')}
   const accessibilityReport = {
     timestamp: new Date().toISOString()
     version: "1.0.0"
     summary: {
-      totalIssues: 0;
-      criticalIssues: 0;
-      warnings: 0;
-      passed: 0;
+      totalIssues: 0
+      criticalIssues: 0
+      warnings: 0
+      passed: 0
     },
     checks: [
       {,
@@ -328,10 +325,9 @@ function generateAccessibilityReport() {
   console.log('✅ Accessibility report generated');
 }
 
-// 2. Generate accessibility checklist;
+// 2. Generate accessibility checklist
 function generateAccessibilityChecklist() {
-  console.log('✅ Generating accessibility checklist...');
-  
+  console.log('✅ Generating accessibility checklist...')}
   const checklist = {
     title: "Zion Tech Group Accessibility Checklist"
     version: "1.0.0"
@@ -392,10 +388,9 @@ function generateAccessibilityChecklist() {
   console.log('✅ Accessibility checklist generated');
 }
 
-// 3. Generate accessibility improvements;
+// 3. Generate accessibility improvements
 function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
-  
+  console.log('🔧 Generating accessibility improvements...')}
   const improvements = [
     {
       id: "skip-links",
@@ -436,10 +431,9 @@ function generateAccessibilityImprovements() {
   console.log('✅ Accessibility improvements generated');
 }
 
-// 4. Generate accessibility testing guide;
+// 4. Generate accessibility testing guide
 function generateAccessibilityTestingGuide() {
-  console.log('🧪 Generating accessibility testing guide...');
-  
+  console.log('🧪 Generating accessibility testing guide...')}
   const testingGuide = {
     title: "Accessibility Testing Guide"
     version: "1.0.0"
@@ -485,18 +479,17 @@ Zion Tech Group is committed to ensuring digital accessibility for people with d
 
 ## Conformance Status
 This website is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
-// Run all accessibility enhancements;
+// Run all accessibility enhancements
 async function runAccessibilityEnhancements() {
   try {
     generateAccessibilityReport();
     generateAccessibilityChecklist();
-    generateAccessibilityImprovements();
-    generateAccessibilityTestingGuide();
-    
-    console.log('🎉 Accessibility enhancement completed successfully!');
+    generateAccessibilityImprovements()}
+    generateAccessibilityTestingGuide()}
+    console.log('🎉 Accessibility enhancement completed successfully!')}
   } catch (error) {
-    console.error('❌ Error during accessibility enhancement:', error);
-    process.exit(1);
+    console.error('❌ Error during accessibility enhancement:', error)}
+    process.exit(1)}
   }
 }
 

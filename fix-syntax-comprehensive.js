@@ -30,9 +30,8 @@ const filesToFix = [
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
+    let content = fs.readFileSync(filePath, 'utf8')}
+    let modified = false
     // Fix malformed imports
     const importFixes = [
       // Fix malformed import statements
@@ -53,10 +52,10 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of importFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)}
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
     }
     
@@ -80,10 +79,10 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of functionFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)}
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
     }
     
@@ -102,10 +101,10 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of objectFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)}
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
     }
     
@@ -124,33 +123,33 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of jsxFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)}
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
       }
     }
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
+      return true
     }
     
-    return false;
+    return false
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    return false
   }
 }
 
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');
 
-let fixedCount = 0;
+let fixedCount = 0
 for (const file of filesToFix) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
+    fixedCount++}
   }
 }
 

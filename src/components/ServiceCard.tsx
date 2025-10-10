@@ -49,7 +49,7 @@ const,
             </li>
           ))}
           {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
+              +{features.length - 3} more features
             </li>
           )}
         </ul>

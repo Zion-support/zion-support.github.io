@@ -9,7 +9,7 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }};
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData
   return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
@@ -81,6 +81,6 @@ const,
     </React.Fragment>
   );
 };
-export default SEOEnhancer;
+export default SEOEnhancer
 "
   </SEOEnhancerProps>

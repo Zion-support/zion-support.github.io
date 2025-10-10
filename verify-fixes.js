@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,12 +7,10 @@ import { fileURLToPath } from 'url';
 // const __dirname = path.dirname(__filename);
 
 // try {
-  //   const appTsxPath = path.join(__dirname, 'App.tsx');
-
-  // Check for duplicate class definitions;
-  //   //   //   // Check for syntax issues;
-  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
-
+  //   const appTsxPath = path.join(__dirname, 'App.tsx')}
+  // Check for duplicate class definitions
+  //   //   //   // Check for syntax issues
+  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)')}
   if(classMatches &&
     classMatches.length === 1 &&
     interfaceStateMatches &&)
@@ -21,9 +19,9 @@ import { fileURLToPath } from 'url';
     interfacePropsMatches.length === 1 &&)
     !hasDoubleClosing;)
   ) {
-    //     process.exit(0);
+    //     process.exit(0)}
   } else {
-    //     process.exit(1);
+    //     process.exit(1)}
 // try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }

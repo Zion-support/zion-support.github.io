@@ -1,13 +1,13 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return;
+    return
   }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      return;
+      return
     }
 
     // Process quote submission logic here
@@ -30,10 +30,10 @@ export default async function handler(req, res) {
 
     // Log quote request for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Quote request received:', quoteData);
+      console.log('Quote request received:', quoteData)}
     }
 
-    res.statusCode = 200;
+    res.statusCode = 200
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
@@ -45,9 +45,9 @@ export default async function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Quote submission error:', error);
+      console.error('Quote submission error:', error)}
     }
-    res.statusCode = 500;
+    res.statusCode = 500
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }

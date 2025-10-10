@@ -1,5 +1,5 @@
 
-// Mock functions for sitemap generation;
+// Mock functions for sitemap generation
 export const getAllPages = () => [
   // TODO: Add items]
   { path: '/', priority: 1.0 },
@@ -45,10 +45,10 @@ export const generateSitemap = (pages: Array;)
 `;
   });
   sitemap += '</urlset>';
-  return sitemap;
+  return sitemap
 };
-// This would typically be handled by a server-side route;
-// For now, we'll create a static sitemap.xml file;
+// This would typically be handled by a server-side route
+// For now, we'll create a static sitemap.xml file
 export const generateStaticSitemap = () => {// TODO: Add content;}
 }
   return generateSitemap(getAllPages());

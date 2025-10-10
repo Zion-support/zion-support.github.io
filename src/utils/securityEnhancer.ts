@@ -3,10 +3,10 @@
 
 
 interface SecurityConfig {enableCSP: boolean;}
-  enableHTTPS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableHTTPS: boolean
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  enableContentSecurityPolicy: boolean
 }
 
 class SecurityEnhancer {private config: SecurityConfig;}

@@ -4,19 +4,19 @@ const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return
   }
 
   const { productId, userId } = req.body || {};
 
   if (!productId) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 400
+    res.setHeader('Content-Type', 'application/json')}
     res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
+    return
   }
 
   try {
@@ -33,7 +33,7 @@ async function handler(req, res) {
     // 2. Store session data in your database
     // 3. Return the session ID and checkout URL
 
-    res.statusCode = 200;
+    res.statusCode = 200
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
@@ -44,9 +44,9 @@ async function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Checkout session creation error:', error);
+      console.error('Checkout session creation error:', error)}
     }
-    res.statusCode = 500;
+    res.statusCode = 500
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',

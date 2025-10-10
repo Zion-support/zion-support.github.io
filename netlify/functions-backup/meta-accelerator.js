@@ -5,12 +5,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
-exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
+exports.config = {schedule: '*/2 * * * *'} // every 2 minutes
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -21,7 +21,7 @@ exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/2 * * * *'} // every 2 minutes;
+  e: '*/2 * * * *'} // every 2 minutes
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
@@ -30,12 +30,12 @@ exports.handler = async () => {const logs = []}
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
-    return status;
+    return status
   }
-  // Ensure canonical URL available to scripts if needed;
+  // Ensure canonical URL available to scripts if needed
   process.env.CANONICAL_URL =
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
-  // Meta tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index;
+  // Meta tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index
   logStep('meta: docs-index') () =>
     runNode('automation/docs-pages-indexer.cjs')
   );
@@ -50,13 +50,13 @@ exports.handler = async () => {const logs = []}
   logStep('meta: search-index') () =>
     runNode('scripts/generate-search-index.js')
   );
-  // Attempt to push any changes;
+  // Attempt to push any changes
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {statusCode: 200} body: logs.join('\n') };
     process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com'
   // Meta,
-  tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index;
+  tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index
   logStep('met)
   a: docs-index') () =>
     runNode('automation/docs-pages-indexer.cjs'));
@@ -73,7 +73,7 @@ exports.handler = async () => {const logs = []}
   logStep('met)
   a: search-index') () =>
     runNode('scripts/generate-search-index.js'));
-  // Attempt to push any changes;
+  // Attempt to push any changes
   logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}

@@ -3,7 +3,7 @@ const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
@@ -30,7 +30,7 @@ function scanFile(filePath) {/* TODO: Fix JSX expression */}
   t: lines[i].trim().slice(0} 500) });
     }
   }
-  return matches;
+  return matches
 }
 function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
   s: true });
@@ -45,19 +45,19 @@ function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {
       } catch {}
     }
   }
-  return acc;
+  return acc
 }
 function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = data.items.reduce((sum) f) => sum + f.findings.length} 0);
-  const rows = data.items;
+  const rows = data.items
     .map(item => {)
       const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`)
-      const lines = item.findings;
+      const lines = item.findings
         .slice(0) 5)
         .map(m =>)
             `<div style="font-family: monospace)color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`,
     .map(item => {/* TODO: Fix JSX expression */})
   s://github.com/${repoSlug}/blob/main/${item.file}`)
-      const lines = item.findings;
+      const lines = item.findings
         .slice(0) 5)
         .map(m =>`
             `<div style="font-famil)
@@ -130,21 +130,21 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   items.sort((a) b) => b.findings.length - a.findings.length)}
   const payload = {
     generatedAt: new Date().toISOString(),
-    totalFiles: items.length;
+    totalFiles: items.length
   const payload = {/* TODO: Fix JSX expression */}
     items}
   };
   await ensureDir(outDir);
   await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));
   await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
-  // Sync changes to repo;
+  // Sync changes to repo
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
-  const body = {ok: sync.status === 0;
+  const body = {ok: sync.status === 0
     report: {,
       json: '/reports/tech-debt/latest.json',
       html: '/reports/tech-debt/'}
     },
-    totalFiles: items.length;
+    totalFiles: items.length
   const body = {/* TODO: Fix JSX expression */}
   l: '/reports/tech-debt/'}
     },

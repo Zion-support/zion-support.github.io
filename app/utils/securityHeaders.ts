@@ -1,28 +1,28 @@
 /**;
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
+ * Security Headers Configuration
+ * Comprehensive security headers for production applications
  */;
-export interface SecurityHeadersConfig {;
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
+export interface SecurityHeadersConfig {}
+  contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
   referrerPolicy?: string;}
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {;
-  // Content Security Policy;
+export const defaultSecurityHeaders: SecurityHeadersConfig = {}
+  // Content Security Policy
   contentSecurityPolicy: [,;}
 export interface SecurityHeadersConfig {}
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
+  contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
+  referrerPolicy?: string
   permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy;
+  // Content Security Policy
   contentSecurityPolicy: [;
     "default-src 'self'",;
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",;
@@ -36,11 +36,11 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'upgrade-insecure-requests'].join('; '),;
   // HTTP Strict Transport Security (HSTS);
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';
-  // Prevent clickjacking;
+  // Prevent clickjacking
   xFrameOptions: 'DENY';
-  // Prevent MIME type sniffing;
+  // Prevent MIME type sniffing
   xContentTypeOptions: 'nosniff';
-  // Referrer Policy;
+  // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin';
   // Permissions Policy (formerly Feature Policy),;
   permissionsPolicy: [,;
@@ -55,7 +55,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'magnetometer=()'].join(', ')}
 }
 /**;
- * Get security headers as key-value pairs;
+ * Get security headers as key-value pairs
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 export function getSecurityHeaders();
@@ -89,7 +89,7 @@ export const,;
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 };
 /**;
- * Get security headers as key-value pairs;
+ * Get security headers as key-value pairs
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
@@ -109,14 +109,14 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
-  return headers;
+  return headers
 }
 /**;
- * Get security headers in Next.js format;
+ * Get security headers in Next.js format
  */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-): Array<{ key: string; value: string }> {;
-export function getNextSecurityHeaders();
+): Array<{ key: string; value: string }> {}
+export function getNextSecurityHeaders()}
   customConfig?: Partial<SecurityHeadersConfig>;}
 ): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig);
@@ -129,4 +129,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   e: string }> {/* TODO: Fix JSX expression */}
   }));
 }
-export default defaultSecurityHeaders;
+export default defaultSecurityHeaders

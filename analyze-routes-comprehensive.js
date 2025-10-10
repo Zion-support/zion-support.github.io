@@ -3,12 +3,12 @@ import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
-// Configuration;
+// Configuration
 const BASE_URL = 'https: //ziontechgroup.com';
-const TIMEOUT = 10000;
+const TIMEOUT = 10000
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)';
 
-// All routes defined in the app;
+// All routes defined in the app
 const definedRoutes = [,
   '/',
   '/about',
@@ -37,7 +37,7 @@ const definedRoutes = [,
   '/edge-computing',
   '/5 g-implementation',
   '/iot-platform',
-  // AI Services;
+  // AI Services
   '/ai-quantum-financial-oracle',
   '/ai-neural-memory-assistant',
   '/ai-holographic-workspace',
@@ -199,7 +199,7 @@ const definedRoutes = [,
   '/ai-weather',
   '/ai-workforce',
   '/ai-zoo',
-  // Additional routes from footer;
+  // Additional routes from footer
   '/cloud-migration',
   '/cybersecurity',
   '/it-infrastructure',
@@ -231,42 +231,40 @@ const definedRoutes = [,
   '/sitemap'
 ];
 
-// Track results;
+// Track results
 const results = {
   working: [],
   broken: [],
   errors: [],
-  total: 0;
+  total: 0
 };
 
-// Helper function to make HTTP requests;
+// Helper function to make HTTP requests
 function makeRequest(url) {
   return new Promise((resolve, reject) => {
-    const urlObj = new URL(url);
-    const isHttps = urlObj.protocol === 'https: ';
-    const client = isHttps ? https : http;
-    
+    const urlObj = new URL(url)}
+    const isHttps = urlObj.protocol === 'https: '}
+    const client = isHttps ? https : http
     const requestOptions = {
-      hostname: urlObj.hostname;
+      hostname: urlObj.hostname
       port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
+      path: urlObj.pathname + urlObj.search
       method: 'GET',
       headers: {,
-        'User-Agent': USER_AGENT;
+        'User-Agent': USER_AGENT
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
       },
-      timeout: TIMEOUT;
+      timeout: TIMEOUT
     };
 
     const req = client.request(requestOptions, (res) => {
-      let data = '';
-      
+      let data = ''}
       res.on('data', (chunk) => {
-        data += chunk;
+        data += chunk
       });
       
       res.on('end', () => {
@@ -274,18 +272,18 @@ function makeRequest(url) {
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url;
+          url: url
         });
       });
     });
 
     req.on('error', (error) => {
-      reject(error);
+      reject(error)}
     });
 
     req.on('timeout', () => {
-      req.destroy();
-      reject(new Error('Request timeout'));
+      req.destroy()}
+      reject(new Error('Request timeout'))}
     });
 
     req.setTimeout(TIMEOUT);
@@ -293,11 +291,10 @@ function makeRequest(url) {
   });
 }
 
-// Analyze a single route;
+// Analyze a single route
 async function analyzeRoute(route) {
-  const url = BASE_URL + route;
-  results.total++;
-  
+  const url = BASE_URL + route
+  results.total++}
   try {
     console.log(`Checking: ${url}`);
     const response = await makeRequest(url);
@@ -306,7 +303,7 @@ async function analyzeRoute(route) {
       results.working.push({)
         route: route),
         url: url),
-        statusCode: response.statusCode;
+        statusCode: response.statusCode
       });
       console.log(`✅ ${route} - ${response.statusCode}`);
     } else {
@@ -322,56 +319,55 @@ async function analyzeRoute(route) {
     results.errors.push({)
       route: route),
       url: url),
-      error: error.message;
+      error: error.message
     });
     console.log(`⚠️  ${route} - Error: ${error.message}`);
   }
 }
 
-// Main analysis function;
+// Main analysis function
 async function analyzeAllRoutes() {
-  console.log('Starting comprehensive route analysis...');
+  console.log('Starting comprehensive route analysis...')}
   console.log(`Base URL: ${BASE_URL}`);
   console.log(`Total routes to check: ${definedRoutes.length}`);
   console.log('---');
 
-  // Process routes in batches to avoid overwhelming the server;
-  const batchSize = 10;
+  // Process routes in batches to avoid overwhelming the server
+  const batchSize = 10
   for (let i = 0; i < definedRoutes.length; i += batchSize) {
-    const batch = definedRoutes.slice(i, i + batchSize);
-    const promises = batch.map(route => analyzeRoute(route));
-    
+    const batch = definedRoutes.slice(i, i + batchSize)}
+    const promises = batch.map(route => analyzeRoute(route))}
     try {
-      await Promise.all(promises);
+      await Promise.all(promises)}
     } catch (error) {
       console.log(`Batch error: ${error.message}`);
     }
     
-    // Small delay between batches;
+    // Small delay between batches
     if (i + batchSize < definedRoutes.length) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))}
     }
   }
 
-  // Generate report;
+  // Generate report
   const report = {
     timestamp: new Date().toISOString()
-    baseUrl: BASE_URL;
+    baseUrl: BASE_URL
     summary: {
-      total: results.total;
-      working: results.working.length;
-      broken: results.broken.length;
-      errors: results.errors.length;
+      total: results.total
+      working: results.working.length
+      broken: results.broken.length
+      errors: results.errors.length
     },
-    working: results.working;
-    broken: results.broken;
-    errors: results.errors;
+    working: results.working
+    broken: results.broken
+    errors: results.errors
   };
 
-  // Save detailed report;
+  // Save detailed report
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
   
-  // Generate summary;
+  // Generate summary
   console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
   console.log(`Total Routes Checked: ${results.total}`);
   console.log(`Working Routes: ${results.working.length}`);
@@ -379,14 +375,14 @@ async function analyzeAllRoutes() {
   console.log(`Error Routes: ${results.errors.length}`);
   
   if (results.broken.length > 0) {
-    console.log('\n=== BROKEN ROUTES ===');
+    console.log('\n=== BROKEN ROUTES ===')}
     results.broken.forEach(route => {)
       console.log(`❌ ${route.route} - ${route.reason}`);
     });
   }
 
   if (results.errors.length > 0) {
-    console.log('\n=== ERROR ROUTES ===');
+    console.log('\n=== ERROR ROUTES ===')}
     results.errors.forEach(route => {)
       console.log(`⚠️  ${route.route} - ${route.error}`);
     });
@@ -395,5 +391,5 @@ async function analyzeAllRoutes() {
   console.log('\nDetailed report saved to: route-analysis-report.json');
 }
 
-// Run the analysis;
+// Run the analysis
 analyzeAllRoutes();

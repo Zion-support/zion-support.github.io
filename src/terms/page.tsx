@@ -2,7 +2,7 @@
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+  const lastUpdated = 'January 1, 2024'}
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -79,8 +79,7 @@ export default function TermsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Terms of Service;
-  </
+              Terms of Service</Service>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
             </p>
@@ -297,8 +296,7 @@ export default function TermsPage() {
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              Contact Us;
-  </
+              Contact Us</Us>
           </div>
         </div>
       </section>

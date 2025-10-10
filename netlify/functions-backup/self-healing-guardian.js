@@ -1,7 +1,7 @@
 const _path = require('path');
 const { execFile } = require('child_process');
-function runNodeScript(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
-//   const abs = path.resolve(cwd) relPath);
+function runNodeScript(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..')}
+//   const abs = path.resolve(cwd) relPath)}
   return new Promise(resolve => {)
     const startedAt = Date.now()}
     const child = execFile('node')
@@ -11,7 +11,7 @@ function runNodeScript(relPath) args = []) {const cwd = path.resolve(__dirname, 
           script: relPath),
           ok: !error),
           code: error ? error.code : 0),
-          durationMs: Date.now() - startedAt;
+          durationMs: Date.now() - startedAt
           stdout: stdout ? stdout.toString() : '',
           stderr: stderr ? stderr.toString() : ''}
 function runNodeScript(relPath) args = []) {/* TODO: Fix JSX expression */}

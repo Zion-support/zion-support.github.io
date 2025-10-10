@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -14,14 +14,11 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
     // Only show in development or when performance monitoring is enabled
     const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
-
-    if (!shouldMonitor) return;
-
+                         localStorage.getItem('performance-monitoring') === 'true'}
+    if (!shouldMonitor) return
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
@@ -58,7 +55,7 @@ const PerformanceMonitor: React.FC = () => {
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+        console.warn('Performance Observer not supported:', e)}
       }
 
       return () => observer.disconnect();
@@ -70,19 +67,19 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
+    return null
   }
 
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
+    if (value <= thresholds.good) return 'text-green-400'}
+    if (value <= thresholds.poor) return 'text-yellow-400'}
+    return 'text-red-400'}
   };
 
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
+    if (value <= thresholds.good) return 'Good'}
+    if (value <= thresholds.poor) return 'Needs Improvement'}
+    return 'Poor'}
   };
 
   return (
@@ -147,4 +144,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

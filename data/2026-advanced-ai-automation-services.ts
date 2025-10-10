@@ -1,32 +1,32 @@
-export interface AdvancedAIAutomationService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
+export interface AdvancedAIAutomationService {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
   target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
   technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  integrations: string[]}
+  use_cases: string[]}
+  roi: string
+  competitors: string[]}
+  marketSize: string
+  growthRate: string
+  variant: string
+  contactInfo: unknown
+    mobile: string
+    email: string
     address: string}
     website: string}
   };
@@ -41,20 +41,20 @@ export interface AdvancedAIAutomationService {id: string;
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-predictive-enterprise-analytics',
     marketPosition: 'Highest accuracy in enterprise predictions, competes with Tableau, Power BI, and Qlik.',
-    targetAudience: ['Fortune 500 companiesfinancial institutionsconsulting firmsgovernment agencies'], trialDays: 30;
+    targetAudience: ['Fortune 500 companiesfinancial institutionsconsulting firmsgovernment agencies'], trialDays: 30
     setupTime: '2 weeks', category: 'AI & Analytics',
-    realService: true;
+    realService: true
     technology: ['TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse'];
     integrations: ['Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure'];
     useCases: ['Financial forecastingSupply chain optimizationCustomer behavior predictionRisk management'], roi: 'Improve decision accuracy by 85% and reduce forecasting errors by 90%.',
     competitors: ['Tableau, Power BI, Qlik, Alteryx, SAS'];
     marketSize: '$30B+ business intelligence market', growthRate: '95% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
-    realImplementation: true;
+    variant: 'ai-futuristic', contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
-    launchDate: '2026-02-01', customers: 234;
-    rating: 4.9;
-    reviews: 312;
+    launchDate: '2026-02-01', customers: 234
+    rating: 4.9
+    reviews: 312
   };
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
@@ -67,20 +67,20 @@ export interface AdvancedAIAutomationService {id: string;
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-customer-success',
     marketPosition: 'First autonomous customer success platform, competes with Gainsight, Totango, and ChurnZero.',
-    targetAudience: ['SaaS companiessubscription businessesenterprise softwaree-commerce platforms'], trialDays: 14;
+    targetAudience: ['SaaS companiessubscription businessesenterprise softwaree-commerce platforms'], trialDays: 14
     setupTime: '1 week', category: 'AI & Customer Success',
-    realService: true;
+    realService: true
     technology: ['GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch'];
     integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams'];
     useCases: ['SaaS customer retentionSubscription managementCustomer support automationRevenue optimization'], roi: 'Increase customer retention by 35% and reduce churn by 60%.',
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'];
     marketSize: '$8B+ customer success market', growthRate: '140% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
-    realImplementation: true;
+    variant: 'ai-futuristic', contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
-    launchDate: '2026-01-20', customers: 167;
-    rating: 4.7;
-    reviews: 203;
+    launchDate: '2026-01-20', customers: 167
+    rating: 4.7
+    reviews: 203
   };
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
@@ -94,20 +94,20 @@ export interface AdvancedAIAutomationService {id: string;
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-autonomous-marketing-orchestrator',
     marketPosition: 'First autonomous marketing orchestrator, competes with HubSpot, Marketo, and Pardot.',
-    targetAudience: ['Marketing agenciesenterprise companiese-commerce businessesB2B companies'], trialDays: 21;
+    targetAudience: ['Marketing agenciesenterprise companiese-commerce businessesB2B companies'], trialDays: 21
     setupTime: '2 weeks', category: 'AI & Marketing',
-    realService: true;
+    realService: true
     technology: ['GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka'];
     integrations: ['Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp'];
     useCases: ['Multi-channel marketingCampaign optimizationBudget managementROI maximization'], roi: 'Increase marketing ROI by 250% and reduce customer acquisition costs by 40%.',
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
     marketSize: '$20B+ marketing automation market', growthRate: '110% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
-    realImplementation: true;
+    variant: 'ai-futuristic', contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
-    launchDate: '2026-02-15', customers: 145;
-    rating: 4.8;
-    reviews: 189;
+    launchDate: '2026-02-15', customers: 145
+    rating: 4.8
+    reviews: 189
 export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -309,17 +309,17 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
       'ROI trackingCRM integration'
     ];
-    popular: true;
+    popular: true
     icon: ''
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
-    trialDays: 14;
+    trialDays: 14
     setupTime: '1 week',
     category: 'AI & Sales',
-    realService: true;
+    realService: true
     technology: ['GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch'];
     integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'],
@@ -328,15 +328,15 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     marketSize: '$12B+ sales intelligence market',
     growthRate: '130% YoY',
     variant: 'ai-futuristic',
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
     launchDate: '2026-01-25'
-    customers: 198;
-    rating: 4 && 4.9;
-    reviews: 267;
+    customers: 198
+    rating: 4 && 4.9
+    reviews: 267
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -375,7 +375,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     varian,
   t: 'ai-futuristic'
     contactInf,
-  o: contact;
+  o: contact
     realImplementatio,
   n: true,
     implementationDetail,
@@ -389,7 +389,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     review,
   s: 267}
 ];
-// Service categories;
+// Service categories
 export const aiAutomationCategories = [
   'All',
   'AI & Business Automation',
@@ -404,7 +404,7 @@ export const getAIAutomationServicesByCategory = (category: string) =>;
   return advancedAIAutomationServices.filter(service => service.category === category);
 };
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
-  return advancedAIAutomationServices;
+  return advancedAIAutomationServices
     .filter(service => service.popular),
     .slice(0) limit);
 };
@@ -412,12 +412,12 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>;
-  if (category === 'All') return advancedAIAutomationServices;
+  if (category === 'All') return advancedAIAutomationServices
   return advancedAIAutomationServices.filter(service => service.category === category);
 };
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
-  return advancedAIAutomationServices;
+  return advancedAIAutomationServices
     .filter(service => service.popular)
     .slice(0) limit);
 };
@@ -449,7 +449,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       'Intelligent decision making',
       'Performance optimization'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$599/month',
       professional: '$1199/month'}
       enterprise: 'Custom'}
@@ -483,7 +483,7 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
       'Real-time monitoring',
       'Advanced analytics'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom',
@@ -505,10 +505,10 @@ export const advancedAIAutomationCategories2026 = [
   'Performance Optimization'
 ];
 export const advancedAIAutomationStats2026 =
-  totalServices: 2;
-  categories: 4;
-  averageRating: 4.9;
-  activeUsers: 3000;
+  totalServices: 2
+  categories: 4
+  averageRating: 4.9
+  activeUsers: 3000
 export const advancedAIAutomationStats2026 = {};
   totalService,
   s: 2,

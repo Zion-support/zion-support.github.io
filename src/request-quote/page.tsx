@@ -54,7 +54,7 @@ $4});
     'To be discussed'
   ];
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -64,9 +64,9 @@ $4});
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsSubmitting(false)}
+    setIsSubmitted(true)}
   };
   const benefits = [
     {
@@ -151,21 +151,19 @@ $4}
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                   <Phone className="w-5 h-5 mr-2" />
-                  Contact Us;
-  </
+                  Contact Us</Us>
                 <a
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home;
-  </
+                  Back to Home</Home>
               </div>
             </div>
           </div>
         </div>
         <Footer />
       </React.Fragment>
-    );
+    )}
   }
   return (
     <React.Fragment>
@@ -175,8 +173,7 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote;
-  </
+              Request a Quote</Quote>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
@@ -222,8 +219,7 @@ $4}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name;
-  </
+                        Company Name</Name>
                       <input
                         type="text"
                         name="company"
@@ -235,8 +231,7 @@ $4}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number;
-  </
+                        Phone Number</Number>
                       <input
                         type="tel"
                         name="phone"
@@ -267,8 +262,7 @@ $4}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size;
-  </
+                        Project Size</Size>
                       <select
                         name="projectSize"
                         value={formData.projectSize}
@@ -282,8 +276,7 @@ $4}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline;
-  </
+                        Timeline</Timeline>
                       <select
                         name="timeline"
                         value={formData.timeline}
@@ -298,8 +291,7 @@ $4}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range;
-  </
+                      Budget Range</Range>
                     <select
                       name="budget"
                       value={formData.budget}
@@ -327,8 +319,7 @@ $4}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements;
-  </
+                      Specific Requirements</Requirements>
                     <textarea
                       name="requirements"
                       value={formData.requirements}
@@ -447,7 +438,7 @@ $4}
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     'AI Services',
 //     'IT Infrastructure',
@@ -461,7 +452,7 @@ $4}
   ];
   const projectSizes = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
@@ -470,7 +461,7 @@ $4}
   ];
   const timelines = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     'ASAP',
 //     '1-3 months',
@@ -481,7 +472,7 @@ $4}
   ];
   const budgetRanges = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
 //     'Under $10,000',
 //     '$10,000 - $50,000',
@@ -494,7 +485,7 @@ $4}
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -507,14 +498,14 @@ $4}
 }
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission;
+    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
   const benefits = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -559,7 +550,7 @@ $4}
   ];
   const whyChooseUs = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -619,7 +610,7 @@ $4}
 // Quote Request Submitted!
           </h1>"
               <p className="text-xl text-gray-300 mb-8"></p>
-                Thank you for your interest in our services. We've received your quote request;
+                Thank you for your interest in our services. We've received your quote request
 // and will get back to you within 24 hours with a detailed proposal.
           </p>"
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
@@ -645,14 +636,14 @@ $4}
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Contact Us;
+// Contact Us
           </a>
                 <a
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home;
+// Back to Home
           </a>
               </div>
             </div>
@@ -675,11 +666,10 @@ $4}
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Request a Quote;
+// Request a Quote
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+            Coming Soon</Soon>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -718,7 +708,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name;
+// Company Name
           </label>
                       <input
 type="text" name="company"
@@ -729,7 +719,7 @@ type="text" name="company"
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number;
+// Phone Number
           </label>
                       <input
 type="tel" name="phone"
@@ -761,7 +751,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size;
+// Project Size
           </label>
                       <select
                         name="projectSize" value={formData.projectSize}
@@ -777,8 +767,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline;
-  </
+// Timeline</Timeline>
                       <select
                         name="timeline" value={formData.timeline}
                         onChange={handleInputChange}
@@ -794,7 +783,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Budget Range;
+// Budget Range
           </label>
                     <select
                       name="budget" value={formData.budget}
@@ -822,7 +811,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements;
+// Specific Requirements
           </label>
                     <textarea
                       name="requirements" value={formData.requirements}
@@ -895,7 +884,7 @@ type="submit" disabled={isSubmitting}
     </div>
   );
 };
-export default RequestQuotePage;
+export default RequestQuotePage
   </textarea>
   </textarea>
   </HTMLInputElement>

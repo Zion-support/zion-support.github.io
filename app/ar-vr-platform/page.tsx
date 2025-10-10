@@ -48,8 +48,7 @@ const ARVRPlatformPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AR/VR Platform;
-  </
+                AR/VR Platform</Platform>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -63,8 +62,7 @@ const ARVRPlatformPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
+                Learn More</More>
             </div>
           </div>
         </div>
@@ -96,8 +94,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits</Benefits>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our AR/VR platform solutions for your business.
             </p>
@@ -125,12 +122,10 @@ Experience the power of our AR/VR platform solutions for your business.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
-  </
+                Call Now</Now>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
-  </
+                Email Us</Us>
             </div>
           </div>
         </div>
@@ -138,7 +133,7 @@ Experience the power of our AR/VR platform solutions for your business.
     </div>
   );
 };
-export default ARVRPlatformPage;
+export default ARVRPlatformPage
   </button>
   </button>
   </h2>

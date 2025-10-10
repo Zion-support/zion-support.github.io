@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// List of all page files that need to be restored;
+// List of all page files that need to be restored
 const pageFiles = [
   'ai-services/page.tsx',
   'ai-marketing/page.tsx',
@@ -55,20 +55,17 @@ const pageFiles = [
   'ai-ml-platform/page.tsx'
 ];
 
-// Function to create a basic page component;
+// Function to create a basic page component
 function createPageComponent(pageName) {
   const componentName = pageName.split('/')[0]
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('') + 'Page';
-  
+    .join('') + 'Page'}
   const displayName = pageName.split('/')[0]
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-
-  return `import React from 'react';
-
+    .join(' ')}
+  return `import React from 'react'}
 const ${componentName}: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
       <div className="text-center">)
@@ -81,7 +78,7 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
+          Contact Us
         </a>
       </div>,
     </div>);
@@ -90,12 +87,11 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
 export default ${componentName};`;
 }
 
-// Function to restore a page file;
+// Function to restore a page file
 function restorePageFile(pagePath) {
-  const fullPath = path.join(__dirname, 'src', pagePath);
-  const dir = path.dirname(fullPath);
-  
-  // Create directory if it doesn't exist;
+  const fullPath = path.join(__dirname, 'src', pagePath)}
+  const dir = path.dirname(fullPath)}
+  // Create directory if it doesn't exist
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
@@ -110,10 +106,10 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   d: ${pagePath}`);
 }
 
-// Main execution;
+// Main execution
 console.log('Starting page restoration...');
 
-let restoredCount = 0;
+let restoredCount = 0
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error restoring ${pageFile}:`, error.message);

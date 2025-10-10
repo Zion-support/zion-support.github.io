@@ -9,7 +9,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Virtual commerce integration',
       'Multi-platform deployment'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$399/month',
       professional: '$799/month'}
       enterprise: 'Custom'}
@@ -43,7 +43,7 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
       'Mixed reality integration',
       'Spatial computing solutions'
     ],
-    pricing: unknown;
+    pricing: unknown
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom',
@@ -65,10 +65,10 @@ export const metaverseDigitalCategories2026 = [
   'Digital Twins'
 ];
 export const metaverseDigitalStats2026 =
-  totalServices: 2;
-  categories: 4;
-  averageRating: 4.7;
-  activeUsers: 1200;
+  totalServices: 2
+  categories: 4
+  averageRating: 4.7
+  activeUsers: 1200
 export const metaverseDigitalStats2026 = {};
   totalService,
   s: 2,

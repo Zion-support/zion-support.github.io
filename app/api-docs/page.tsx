@@ -8,9 +8,9 @@ export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
+    navigator.clipboard.writeText(code)}
+    setCopiedCode(id)}
+    setTimeout(() => setCopiedCode(null), 2000)}
   };
   const apiEndpoints = [
     {
@@ -113,8 +113,7 @@ export default function APIDocsPage() {
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
-  </
+            API Documentation</Documentation>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
@@ -122,12 +121,10 @@ export default function APIDocsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </
+              Get Started</Started>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Download className="mr-2 h-5 w-5" />
-              Download SDK;
-  </
+              Download SDK</SDK>
           </div>
         </div>
       </section>
@@ -240,11 +237,9 @@ export default function APIDocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </
+              Get API Key</Key>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </
+              View SDKs</SDKs>
           </div>
         </div>
       </section>

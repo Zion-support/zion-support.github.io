@@ -24,7 +24,7 @@ $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -33,19 +33,19 @@ $4});
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    // console.log('Form submitted:', formData)}
+    setIsSubmitted(true)}
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false)}
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsSubmitted(true)}
+    setIsSubmitting(false)}
   };
   const contactInfo = {
     phone: '+1 (302) 464-0950',
@@ -79,7 +79,7 @@ $4});
           Contact Us</span>
       </div>
   );
-export default ContactPage;
+export default ContactPage
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -187,7 +187,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
+    )}
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

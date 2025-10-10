@@ -3,12 +3,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     } catch {return null}
     }
   }
-  function listAutomationScripts() {const dir = path.join(process.cwd(), 'automation');
-    const _items = [];
+  function listAutomationScripts() {const dir = path.join(process.cwd(), 'automation')}
+    const _items = []}
     try {
       for (const name of fs.readdirSync(dir)) {
 //         const full = path.join(dir)
-        name);
+        name)}
         const stat = fs.statSync(full;)
       })
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {
@@ -22,13 +22,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         }
       }
     } catch {}
-    return items;
+    return items
   }
   function listNetlifyFunctions() {const manifest = readJson(path.join()
         process.cwd(),
         'netlify',
         'functions',
-        'functions-manifest.json'));
+        'functions-manifest.json'))}
     if (!manifest || !Array.isArray(manifest.functions)) return []}
     return manifest.functions.map(fn => ({)
       type: function),
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const catalog = {/* TODO: Fix JSX expression */}
   s: listAutomationScripts()}
   };
-  return {statusCode: 200;
+  return {statusCode: 200
         headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(catalog);
   };
@@ -52,7 +52,7 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
         name); const stat = fs.statSync(full;)
       } if (stat.isFile() && /\\.(cjs|js|mjs|ts)$/.test(name)) {' items.push({ type: script),
         name),
-        path: `automation/${name}` }); } } } catch {} return items; } function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({ type: 'function'} name: fn;
+        path: `automation/${name}` }); } } } catch {} return items; } function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({ type: 'function'} name: fn
         href: `/.netlify/functions/${fn}` })); } const catalog = {generatedAt: new Date().toISOString(), functions: listNetlifyFunctions()} scripts: listAutomationScripts() }; return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }; body: JSON.stringify(catalog;)}; };'
   return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
@@ -71,5 +71,5 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   s: listAutomationScripts() }; return {/* TODO: Fix JSX expression */}
   e: 200}' header,
   s: { 'Content-Type': 'application/json' }; bod,
-  y: JSON.stringify(catalog;
+  y: JSON.stringify(catalog
       }; };')`

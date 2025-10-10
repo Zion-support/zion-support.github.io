@@ -58,12 +58,12 @@ const nextConfig = {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
+              )}
             },
             name(module) {
-              const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
+              const _hash = crypto.createHash('sha1')}
+              _hash.update(module.identifier())}
+              return _hash.digest('hex').substring(0, 8)}
             },
             priority: 30,
             minChunks: 1,
@@ -83,7 +83,7 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
+              )}
             },
             priority: 10,
             minChunks: 2,
@@ -97,9 +97,8 @@ const nextConfig = {
     };
 
     // Tree shaking
-    config.optimization.usedExports = true;
-
-    return config;
+    config.optimization.usedExports = true
+    return config
   },
 
   async headers() {

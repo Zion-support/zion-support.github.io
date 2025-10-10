@@ -45,8 +45,7 @@ icon: Shield,
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Backup & Recovery;
-  </
+            Backup & Recovery</Recovery>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -80,8 +79,7 @@ icon: Shield,
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits</Benefits>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our backup and recovery solutions for your business.
             </p>
@@ -108,12 +106,10 @@ icon: Shield,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
+              Call Now</Now>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
-  </
+              Email Us</Us>
           </div>
         </div>
         <div className="text-center">
@@ -126,19 +122,17 @@ icon: Shield,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
+              Call Now</Now>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
-  </
+              Email Us</Us>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default BackupRecoveryPage;
+export default BackupRecoveryPage
   </button>
   </button>
   </button>

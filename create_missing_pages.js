@@ -1,9 +1,9 @@
 import fs from 'fs';
 
-// Read missing pages;
+// Read missing pages
 const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page => page.trim());
 
-// Page configurations;
+// Page configurations
 const pageConfigs = {
   'ai-fintech': {
     title: 'AI Fintech Solutions',
@@ -502,12 +502,12 @@ const pageConfigs = {
   }
 };
 
-// Create missing pages;
+// Create missing pages
 missingPages.forEach(pageName => {)
   const config = pageConfigs[pageName];)
   if (!config) {
     console.log(`No configuration found for ${pageName}`);
-    return;
+    return
   }
 
   const pageContent = `'use client';
@@ -540,18 +540,18 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               ${config.description}
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a;
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
-                Get Started Today;
+                Get Started Today
               </a>
-              <a;
+              <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950;
+                +1 302 464 0950
               </a>
             </div>
           </div>,
@@ -561,10 +561,10 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Features;
+              Key Features
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business;
+              Powerful capabilities designed to transform your business
             </p>
           </div>
           
@@ -585,7 +585,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               Why Choose Our ${config.title}?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business;
+              Proven results and measurable impact for your business
             </p>
           </div>
           
@@ -603,10 +603,10 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Pricing;
+              Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees;
+              Transparent pricing with no hidden fees
             </p>
           </div>
           ,
@@ -615,11 +615,11 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <h3 className="text-2xl font-bold text-white mb-4">${config.title}</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">${config.price}</div>
               <p className="text-gray-300 mb-6">per month</p>
-              <a;
+              <a
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
               >
-                Get Started;
+                Get Started
               </a>
             </div>
           </div>,
@@ -632,7 +632,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Contact our experts to discuss your specific needs;
+              Contact our experts to discuss your specific needs
             </p>
           </div>
           
@@ -642,7 +642,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
+                +1 302 464 0950
               </a>
             </div>
             
@@ -651,7 +651,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
+                kleber@ziontechgroup.com
               </a>
             </div>
             
@@ -661,7 +661,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
+                Middletown DE 19709
               </p>
             </div>
           </div>
@@ -674,13 +674,13 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
 
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 
-  // Create directory if it doesn't exist;
+  // Create directory if it doesn't exist
   const dirPath = `app/${pageName}`;
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
 
-  // Write the page file;
+  // Write the page file
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
   console.log(`Created page: ${pageName}`);
 });

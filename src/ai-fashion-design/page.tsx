@@ -15,7 +15,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Pattern Creation',
     '3D Visualization',
     'Cost Estimation'
-  ];
+  ]}
   const benefits = [
     'Faster design cycles',
     'Trend accuracy',
@@ -23,7 +23,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Market insights',
     'Creative inspiration',
     'Competitive advantage'
-  ];
+  ]}
   const pricingPlans = [
     {
       name: 'Starter',

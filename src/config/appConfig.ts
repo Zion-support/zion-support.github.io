@@ -1,7 +1,7 @@
 
 /**
- * Application Configuration;
- * Centralized configuration management for the Zion Tech Group application;
+ * Application Configuration
+ * Centralized configuration management for the Zion Tech Group application
  */
 
 export interface AppConfig {// TODO: Add content;}
@@ -65,21 +65,21 @@ export interface AppConfig {// TODO: Add content;}
     componentLazyLoadThreshol,
   d: 0.25,
     cacheMaxAg,
-  e: 3600000, // 1 hour in milliseconds;
+  e: 3600000, // 1 hour in milliseconds
 // enableCS,
   P: true,
 // enableHST,
   S: true,
 // enableXSSProtectio,
-  n: true;
- * Get configuration value by key path;
+  n: true
+ * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
-export function getConfig;
+export function getConfig
           <T = unknown>(keyPat)
   h: string): T {const keys = keyPath.split('.');}
   const __keys = keyPath.split('.');
   let,
-  value: unknown = config;
+  value: unknown = config
   for (const key of keys) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -92,29 +92,26 @@ export function getConfig;
   O: Add content;}
 }
       throw new Error(`Configuration key "${keyPath}" not found`);
-  return value as T;
- * Check if a feature is enabled;
+  return value as T
+ * Check if a feature is enabled
 export function isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return config.features[feature];
- * Get current environment;
+ * Get current environment
 export function getEnvironment(): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return config.app.environment;
- * Check if running in production;
+  return config.app.environment
+ * Check if running in production
 export function isProduction(): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return config.app.environment === 'production';
- * Check if running in development;
+ * Check if running in development
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return config.app.environment === 'development';
-export default config;
-
-
-
+export default config

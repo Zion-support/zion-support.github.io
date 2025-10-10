@@ -1,7 +1,7 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {
-  error: Error;
-  resetError: () => void;
+  error: Error
+  resetError: () => void
 }
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
@@ -48,15 +48,15 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   );
 }
 interface AppErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode
 }
 interface AppErrorBoundaryState {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: boolean
+  error: Error | undefined
 }
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
-    super(props);
+    super(props)}
     this.state = { hasError: false, error: undefined };
   }
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
@@ -64,7 +64,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)}
     }
     // Here you could send error to monitoring service
   }
@@ -75,7 +75,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }
-    return this.props.children;
+    return this.props.children
   }
 }
   </button>

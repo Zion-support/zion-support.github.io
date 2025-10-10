@@ -19,5 +19,5 @@ const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({/* TODO: 
     </div>
   );
 });
-export default BreadcrumbNavigation;
+export default BreadcrumbNavigation
 "`

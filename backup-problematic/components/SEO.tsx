@@ -19,7 +19,7 @@ const,
       {children}
   );
 };
-export default SEO;
+export default SEO
 "
   </SEOProps>
   </SEOProps>

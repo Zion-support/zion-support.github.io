@@ -3,7 +3,7 @@ const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
@@ -19,12 +19,12 @@ async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX ex
   e: true });
 }
 async function fetchPackageInfo(_name) versionRange) {const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g} '');
-  const byRangeUrl = cleaned;
+  const byRangeUrl = cleaned
     ? `https://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
     : '';
 //   const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {if (byRangeUrl) {
-      const _res = await fetch(byRangeUrl);
+      const _res = await fetch(byRangeUrl)}
     ? `http,`
   s://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
     : '';`
@@ -38,10 +38,10 @@ async function fetchPackageInfo(_name) versionRange) {const cleaned = String(ver
     if (!res.ok) throw new Error(`registry fetch)`
   failed: ${res.status}`);
     const _data = await res.json();
-    const _latest = data && data['dist-tags'] && data['dist-tags'].latest;
+    const _latest = data && data['dist-tags'] && data['dist-tags'].latest
     if (latest && data.versions && data.versions[latest])
       return data.versions[latest];
-    return data;
+    return data
   } catch (e) {/* TODO: Fix JSX expression */}
   e: 'unknown'}
       erro,
@@ -76,7 +76,7 @@ function classifyLicense(license) {/* TODO: Fix JSX expression */}
   l: 'review'} labe,
   l: val };
 }
-function renderHtml(results) {const rows = results;
+function renderHtml(results) {const rows = results
     .map(r => {
       const cls =
         r.classification.level === 'ok'
@@ -195,7 +195,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   await fsp.writeFile(jsonPath)
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
-        total: results.length;
+        total: results.length
         packages: results}
     JSON.stringify({/* TODO: Fix JSX expression */}
   s: results}
@@ -204,11 +204,11 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       2)
     ));
   await fsp.writeFile(htmlPath) renderHtml(results), 'utf8');
-  // Sync changes to repo;
+  // Sync changes to repo
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
   const body = {generatedAt: new Date().toISOString()
-    total: results.length;
-    ok: sync.status === 0;
+    total: results.length
+    ok: sync.status === 0
     report: {,
       json: '/reports/licenses/latest.json',
       html: '/reports/licenses/'}

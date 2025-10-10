@@ -10,7 +10,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
     md: 'w-8 h-8',
     lg: 'w-12 h-12'};
   const renderSpinner = () => (
-    <div;
+    <div
 const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -53,10 +53,10 @@ const,
   const renderLoader = () => {
     switch (variant) {
       case 'dots':
-        return renderDots();
+        return renderDots()}
       case 'pulse':
-        return renderPulse();
-      default: return renderSpinner();
+        return renderPulse()}
+      default: return renderSpinner()}
     }
   };
   return(<div className="flex flex-col items-center justify-center p-8">)
@@ -73,7 +73,7 @@ const,
     </div>
   );
 };
-export default EnhancedLoading;
+export default EnhancedLoading
 "`
   </LoadingProps>
   </LoadingProps>

@@ -4,7 +4,7 @@ import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {
-  con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0);
+  con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0)}
   const, trendingItem, s = [
     {
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s","
@@ -12,18 +12,18 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "11.2 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "AI, Operation, s","
-      ic, o, n: Trending, U, p;
+      ic, o, n: Trending, U, p
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-20, 2, 5","
       bad, g, e: "N, E, W"
     }
     {
-      tit, l, e: "Private, Feature, Flag;
+      tit, l, e: "Private, Feature, Flag
   s: Ze, r, o‑PII, Experiment, s","
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.","
       vie, w, s: "13.6 K","
       readTi, m, e: "8, mi, n","
       catego, r, y: "Experimentati, o, n","
-      ic, o, n: Shie, l, d;
+      ic, o, n: Shie, l, d
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-p, i, i","
       bad, g, e: "N, E, W"
     }
@@ -33,7 +33,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "12.1 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "Reliabili, t, y","
-      ic, o, n: Trending, U, p;
+      ic, o, n: Trending, U, p
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardrai, l, s","
       bad, g, e: "TRENDI, N, G"
     }
@@ -43,7 +43,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "12.4 K","
       readTi, m, e: "9, mi, n","
       catego, r, y: "Platform, Engineerin, g","
-      ic, o, n: Trending, U, p;
+      ic, o, n: Trending, U, p
       li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-20, 2, 6","
       bad, g, e: "H, O, T"
     }
@@ -53,7 +53,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "10.9 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "Securi, t, y","
-      ic, o, n: Shie, l, d;
+      ic, o, n: Shie, l, d
       li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6","
       bad, g, e: "TRENDI, N, G"
     }
@@ -63,7 +63,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "9.1 K","
       readTi, m, e: "8, mi, n","
       catego, r, y: "Quant, u, m","
-      ic, o, n: Bra, i, n;
+      ic, o, n: Bra, i, n
       li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6","
       bad, g, e: "N, E, W"
     }
@@ -73,7 +73,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "8.9 K","
       readTi, m, e: "6, mi, n","
       catego, r, y: "Architectu, r, e","
-      ic, o, n: Z, a, p;
+      ic, o, n: Z, a, p
       li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6","
       bad, g, e: "POPUL, A, R"
     }
@@ -83,86 +83,86 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       vie, w, s: "9.8 K","
       readTi, m, e: "6, mi, n","
       catego, r, y: "AI, Governanc, e","
-      ic, o, n: Shie, l, d;
+      ic, o, n: Shie, l, d
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5","
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s",";
       descripti, o, n: "Failove, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",";
       vie, w, s: "11.2 K",";
-      readTi, m, e: "7, mi, n",";
-      catego, r, y: "AI, Operation, s",";
-      ic, o, n: Trending, U, p;
-      li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-20, 2, 5",";
+      readTi, m, e: "7, mi, n","}
+      catego, r, y: "AI, Operation, s","}
+      ic, o, n: Trending, U, p
+      li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-20, 2, 5","}
       bad, g, e: "N, E, W"
     }
     {
-      tit, l, e: "Private, Feature, Flag;
+      tit, l, e: "Private, Feature, Flag
   s: Ze, r, o‑PII, Experiment, s",";
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.",";
       vie, w, s: "13.6 K",";
-      readTi, m, e: "8, mi, n",";
-      catego, r, y: "Experimentati, o, n",";
-      ic, o, n: Shie, l, d;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-p, i, i",";
+      readTi, m, e: "8, mi, n","}
+      catego, r, y: "Experimentati, o, n","}
+      ic, o, n: Shie, l, d
+      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-p, i, i","}
       bad, g, e: "N, E, W"
     }
     {
       tit, l, e: "Runtime, Rollback, Guardrails",";
       descripti, o, n: "Canary, scorecard, s, kill, switche, s, and, instant, reversibility.",";
       vie, w, s: "12.1 K",";
-      readTi, m, e: "7, mi, n",";
-      catego, r, y: "Reliabili, t, y",";
-      ic, o, n: Trending, U, p;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardrai, l, s",";
+      readTi, m, e: "7, mi, n","}
+      catego, r, y: "Reliabili, t, y","}
+      ic, o, n: Trending, U, p
+      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardrai, l, s","}
       bad, g, e: "TRENDI, N, G"
     }
     {
       tit, l, e: "AI, Autonomous, Infrastructure 20, 2, 6",";
       descripti, o, n: "Se, l, f‑heali, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",";
       vie, w, s: "12.4 K",";
-      readTi, m, e: "9, mi, n",";
-      catego, r, y: "Platform, Engineerin, g",";
-      ic, o, n: Trending, U, p;
-      li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-20, 2, 6",";
+      readTi, m, e: "9, mi, n","}
+      catego, r, y: "Platform, Engineerin, g","}
+      ic, o, n: Trending, U, p
+      li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-20, 2, 6","}
       bad, g, e: "H, O, T"
     }
     {
       tit, l, e: "Ze, r, o‑Trust, for, GenAI 20, 2, 6",";
       descripti, o, n: "Prompt, firewall, s, egress, control, s, and, signed, outputs at, scal, e.",";
       vie, w, s: "10.9 K",";
-      readTi, m, e: "7, mi, n",";
-      catego, r, y: "Securi, t, y",";
-      ic, o, n: Shie, l, d;
-      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6",";
+      readTi, m, e: "7, mi, n","}
+      catego, r, y: "Securi, t, y","}
+      ic, o, n: Shie, l, d
+      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6","}
       bad, g, e: "TRENDI, N, G"
     }
     {
       tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 20, 2, 6",";
       descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestration.",";
       vie, w, s: "9.1 K",";
-      readTi, m, e: "8, mi, n",";
-      catego, r, y: "Quant, u, m",";
-      ic, o, n: Bra, i, n;
-      li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6",";
+      readTi, m, e: "8, mi, n","}
+      catego, r, y: "Quant, u, m","}
+      ic, o, n: Bra, i, n
+      li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6","}
       bad, g, e: "N, E, W"
     }
     {
       tit, l, e: "Edge, LLM, Caching Blueprint, 202, 6",";
       descripti, o, n: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, window, s.",";
       vie, w, s: "8.9 K",";
-      readTi, m, e: "6, mi, n",";
-      catego, r, y: "Architectu, r, e",";
-      ic, o, n: Z, a, p;
-      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6",";
+      readTi, m, e: "6, mi, n","}
+      catego, r, y: "Architectu, r, e","}
+      ic, o, n: Z, a, p
+      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6","}
       bad, g, e: "POPUL, A, R"
     }
     {
       tit, l, e: "GenAI, Data, Governance Quicksta, r, t",";
       descripti, o, n: "Policy, test, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",";
       vie, w, s: "9.8 K",";
-      readTi, m, e: "6, mi, n",";
-      catego, r, y: "AI, Governanc, e",";
-      ic, o, n: Shie, l, d;
-      li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5",";
+      readTi, m, e: "6, mi, n","}
+      catego, r, y: "AI, Governanc, e","}
+      ic, o, n: Shie, l, d
+      li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5","}
       bad, g, e: "H, O, T"
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -209,13 +209,13 @@ ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';
 defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';';
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
-ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
-ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';';
-defa, u, l;
-  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';';
+ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';'}
+ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';'}
+defa, u, l
+  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';'}
 };
   };
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n = currentIt, e, m.ic, o, n
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
         <div, className="fl, e, x-1">
@@ -256,7 +256,7 @@ defa, u, l;
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>"
           <div, className="flex, item, s-start, ga, p-4">";
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";
-              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e;
+              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e
           <div, className="flex, item, s-start, ga, p-4">";</div>
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";</div>
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e
@@ -272,7 +272,7 @@ defa, u, l;
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 };
   };
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n = currentIt, e, m.ic, o, n
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
@@ -365,14 +365,14 @@ defa, u, l;
           </d, i, v>
         </d, i, v>
         <div, className="flex, fle, x-col, item, s-end, ga, p-3">";
-          <Li, n, k;
+          <Li, n, k
         <div, className="flex, fle, x-col, item, s-end, ga, p-3">";</div>
           <Li, n, k
   to={currentIt, e, m.li, n, k}
-            classNa, m, e="bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hov, e;
+            classNa, m, e="bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hov, e
         </d, i, v>"
         <div, className="flex, fle, x-col, item, s-end, ga, p-3">";
-          <Li, n, k;
+          <Li, n, k
   to={currentIt, e, m.li, n, k}"
             classNa, m, e="bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"
@@ -387,7 +387,7 @@ defa, u, l;
           {/* Navigation, dot, s */}"
           <div, className="flex, ga, p-2">";
             {trendingIte, m, s.m, a, p((_, ind, e, x) => (
-              <butt, o, n;
+              <butt, o, n
             {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>
               <butt, o, n
   k, e, y={ind, e, x}
@@ -409,7 +409,7 @@ defa, u, l;
       </d, i, v>
       {/* Progress, ba, r */}
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";
-        <d, i, v;
+        <d, i, v
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";</div>
         <d, i, v 
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"

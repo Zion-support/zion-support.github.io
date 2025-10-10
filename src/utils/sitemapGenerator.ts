@@ -1,14 +1,14 @@
 
 
-// Sitemap generator utility;
+// Sitemap generator utility
 export interface SitemapUrl {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   lo,
-  c: string;
-  lastmod?: string;
+  c: string
+  lastmod?: string
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  priority?: number
 }
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
@@ -56,21 +56,20 @@ ${urls;}
 ')}
 
 </urlset>`;
-  return sitemap;
+  return sitemap
 };
-// Define all the pages for the sitemap;
-
+// Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
 
 }
-// Define all the pages for the sitemap;
+// Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
   // TOD,
   O: Add items]
-    // Main pages;
+    // Main pages
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -89,7 +88,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // AI Services;
+    // AI Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -134,7 +133,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // IT Services;
+    // IT Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -149,7 +148,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Micro SAAS;
+    // Micro SAAS
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -168,7 +167,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Specialized Solutions;
+    // Specialized Solutions
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
@@ -181,7 +180,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
-    // Legal pages;
+    // Legal pages
     {/* TODO: Fix JSX expression */}
   q: 'yearly' },
     {/* TODO: Fix JSX expression */}

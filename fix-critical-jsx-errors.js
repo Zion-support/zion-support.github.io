@@ -325,11 +325,10 @@ criticalFiles.forEach(filePath => {
   try {
     const pathParts = filePath.split('/');
     const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
-    const config = pageConfigs[fileName];
-    
+    const config = pageConfigs[fileName]}
     if (config) {
-      const content = createBasicPageTemplate(config.name, config.title, config.description);
-      fs.writeFileSync(filePath, content, 'utf8');
+      const content = createBasicPageTemplate(config.name, config.title, config.description)}
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`✅ Fixed ${filePath}`);
     } else {
       console.log(`⚠️  No config found for ${fileName}`);

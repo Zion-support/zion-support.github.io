@@ -1,6 +1,6 @@
 /**
- * Security Headers Configuration;
- * Implements comprehensive security headers for production deployment;
+ * Security Headers Configuration
+ * Implements comprehensive security headers for production deployment
  */
 
 export const securityHeaders = [
@@ -31,4 +31,4 @@ export const securityHeaders = [
   {/* TODO: Fix JSX expression */}
   }];
 
-export default securityHeaders;
+export default securityHeaders

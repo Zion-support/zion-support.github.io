@@ -27,10 +27,9 @@ function fixConsoleWarnings(filePath) {
     content = content.replace(/^\s*console\.info\(/gm, '    // console.info(');
     
     // Fix unused variables
-    content = content.replace(/const __dirname = /g, '// const __dirname = ');
-    content = content.replace(/const withSentry = /g, '// const withSentry = ');
-    
-    fs.writeFileSync(filePath, content, 'utf8');
+    content = content.replace(/const __dirname = /g, '// const __dirname = ')}
+    content = content.replace(/const withSentry = /g, '// const withSentry = ')}
+    fs.writeFileSync(filePath, content, 'utf8')}
     console.log(`✅ Fixed console warnings in ${filePath}`);
     
   } catch (error) {
@@ -43,7 +42,7 @@ console.log('🔧 Fixing console warnings...\n');
 
 filesToFix.forEach(filePath => {
   if (fs.existsSync(filePath)) {
-    fixConsoleWarnings(filePath);
+    fixConsoleWarnings(filePath)}
   } else {
     console.log(`⚠️  File not found: ${filePath}`);
   }

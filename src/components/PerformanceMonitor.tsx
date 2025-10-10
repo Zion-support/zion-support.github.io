@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  fcp: number | null
+  ttfb: number | null
 }
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -14,19 +14,19 @@ const PerformanceMonitor: React.FC = () => {
     fcp: null,
     ttfb: null});
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === 'undefined' || !('performance' in window)) return
     // Web Vitals measurement
     const measureWebVitals = () => {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const entries = list.getEntries()}
+        const lastEntry = entries[entries.length - 1]}
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries()}
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ 
             ...prev, 
@@ -36,12 +36,12 @@ const PerformanceMonitor: React.FC = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
-      let clsValue = 0;
+      let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries()}
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+            clsValue += entry.value
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         });
@@ -49,7 +49,7 @@ const PerformanceMonitor: React.FC = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries()}
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
@@ -58,7 +58,7 @@ const PerformanceMonitor: React.FC = () => {
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
         setMetrics(prev => ({ 
           ...prev, 
@@ -68,16 +68,16 @@ const PerformanceMonitor: React.FC = () => {
       // Cleanup observers
       return () => {
         lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
+        fidObserver.disconnect()}
+        clsObserver.disconnect()}
+        fcpObserver.disconnect()}
       };
     };
     const cleanup = measureWebVitals();
     // Send metrics to analytics (if available)
     const sendToAnalytics = (metrics: PerformanceMetrics) => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as any).gtag;
+        const gtag = (window as any).gtag
         if (metrics.lcp !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
@@ -100,16 +100,16 @@ const PerformanceMonitor: React.FC = () => {
     };
     // Send metrics after a delay to allow all measurements to complete
     const timeoutId = setTimeout(() => {
-      sendToAnalytics(metrics);
+      sendToAnalytics(metrics)}
     }, 5000);
     return () => {
-      cleanup?.();
-      clearTimeout(timeoutId);
+      cleanup?.()}
+      clearTimeout(timeoutId)}
     };
   }, [metrics]);
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null;
+    return null
   }
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
@@ -122,5 +122,5 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-export default PerformanceMonitor;
+export default PerformanceMonitor
   </PerformanceMetrics>

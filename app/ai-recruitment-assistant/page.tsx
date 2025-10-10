@@ -47,8 +47,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant;
-  </
+                AI Recruitment Assistant</Assistant>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
               </p>
@@ -72,5 +71,5 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIRecruitmentAssistantPage;
+export default AIRecruitmentAssistantPage
   </h1>

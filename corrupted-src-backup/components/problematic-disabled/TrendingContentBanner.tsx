@@ -89,7 +89,7 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           <Link, t, o = { currentIt, e, m.l, i, n, k }, classNa, m, e = "bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"
           ></Link>
             <BookOpen, className="w-4 h-4" />
-            Read, No, w;
+            Read, No, w
             <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
           ></Link>"
             <BookOpen, className="w-4 h-4" /></BookOpen>
@@ -100,7 +100,7 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           <div, classNam, e = "flex, ga, p-2"></div>
             { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
               <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
-                  ind, e, x === currentInd, e, x;
+                  ind, e, x === currentInd, e, x
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
             {/* TODO: Fix JSX expression */}

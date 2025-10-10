@@ -2,7 +2,7 @@ import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide
 import React from 'react';
 import { Link } from 'react-router-dom';
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()}
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
@@ -160,4 +160,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-export default EnhancedFooter;
+export default EnhancedFooter

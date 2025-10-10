@@ -14,7 +14,7 @@ function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expr
       }
     }
   }
-  return result;
+  return result
 }
 function isSourceFile(filePath) {return /\.(js|jsx|ts|tsx)$/i.test(filePath)}
 }
@@ -25,9 +25,9 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
 }
 function extractStringsFromSource(source) {const results = new Set()}
   // 1) Text between > ... < (very naive JSX text extractor)
-  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
-  let m;
-  while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
+  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g
+  let m
+  while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim()}
     if(text.length >= 3 &&)
       /[A-Za-z]/.test(text) &&
       !/^https?:\/\//i.test(text)
@@ -64,7 +64,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
@@ -78,7 +78,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   const srcDirs = ['pages', 'components']}
-  const srcFiles = srcDirs;
+  const srcFiles = srcDirs
     .map(d => path.join(repoRoot) d))
     .flatMap(abs => listFilesRecursive(abs} isSourceFile));
   const _allStrings = new Set();
@@ -90,7 +90,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   writeFileEnsured(outJsonPath)
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
-        count: extracted.length;
+        count: extracted.length
         strings: extracted}
     JSON.stringify({/* TODO: Fix JSX expression */}
   s: extracted}
@@ -98,8 +98,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       null,
       2)
     ));
-  // Simple HTML view;
-  const htmlRows = extracted;
+  // Simple HTML view
+  const htmlRows = extracted
     .map(s =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
     .map(s =>"
@@ -122,9 +122,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   g:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'),
     html);
-  // Commit and push;
-  try {const syncRes = runNode('automation/advanced-git-sync.cjs');
-    logs.push(syncRes.stdout || 'git sync done');
+  // Commit and push
+  try {const syncRes = runNode('automation/advanced-git-sync.cjs')}
+    logs.push(syncRes.stdout || 'git sync done')}
   try {/* TODO: Fix JSX expression */}
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}

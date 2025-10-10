@@ -1,14 +1,14 @@
 import React from 'react';
 interface SkeletonProps {// TODO: Add content;}
 }
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: boolean;
-  animated?: boolean;
+  className?: string
+  width?: string | number
+  height?: string | number
+  rounded?: boolean
+  animated?: boolean
 }
 const,
-  Skeleton: React.FC;
+  Skeleton: React.FC
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }

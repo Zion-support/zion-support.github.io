@@ -25,14 +25,13 @@ function fixMainPage() {
     content = content.replace(/map\(([^)]*)\)\s*=>\s*\(\s*<\/div>/g, 'map($1) => (');
     
     // Fix closing tags that don't match opening tags
-    content = content.replace(/<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>');
-    
-    fs.writeFileSync('/workspace/app/page.tsx', content);
-    console.log('✅ Fixed main page.tsx file');
-    return true;
+    content = content.replace(/<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>')}
+    fs.writeFileSync('/workspace/app/page.tsx', content)}
+    console.log('✅ Fixed main page.tsx file')}
+    return true
   } catch (error) {
-    console.error('Error fixing main page:', error.message);
-    return false;
+    console.error('Error fixing main page:', error.message)}
+    return false
   }
 }
 

@@ -16,5 +16,5 @@ const ModernFooter = React.memo(function ModernFooter({ className = '' }: Modern
     </div>
   );
 });
-export default ModernFooter;
+export default ModernFooter
 "`

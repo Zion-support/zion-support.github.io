@@ -1,15 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Files to process;
+// Files to process
 const filePatterns = [
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}'
 ];
 
-// Files to exclude;
+// Files to exclude
 const excludePatterns = [
   '**/node_modules/**',
   '**/dist/**',
@@ -26,76 +26,74 @@ const excludePatterns = [
   '**/temp*/**'
 ];
 
-let totalFiles = 0;
-let processedFiles = 0;
-let fixedFiles = 0;
-
+let totalFiles = 0
+let processedFiles = 0
+let fixedFiles = 0
 function fixSyntaxErrors(content) {
-  let newContent = content;
-  let fixed = false;
-
-  // Fix missing closing braces and parentheses;
-  // Pattern: Missing closing brace for setState;
-  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;
+  let newContent = content
+  let fixed = false
+  // Fix missing closing braces and parentheses
+  // Pattern: Missing closing brace for setState
+  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm
   if (setStatePattern.test(newContent)) {
     newContent = newContent.replace(setStatePattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
       }
-      return match;
+      return match
     });
-    fixed = true;
+    fixed = true
   }
 
-  // Fix missing closing braces for function calls;
-  const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm;
+  // Fix missing closing braces for function calls
+  const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm
   if (functionCallPattern.test(newContent)) {
     newContent = newContent.replace(functionCallPattern, (match) => {
       if (!match.includes('});') && !match.includes('});')) {
         return match + '\n      });';
       }
-      return match;
+      return match
     });
-    fixed = true;
+    fixed = true
   }
 
-  // Fix missing closing braces for if statements;
-  const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;
+  // Fix missing closing braces for if statements
+  const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm
   if (ifStatementPattern.test(newContent)) {
     newContent = newContent.replace(ifStatementPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n    }';
       }
-      return match;
+      return match
     });
-    fixed = true;
+    fixed = true
   }
 
-  // Fix missing closing braces for forEach;
-  const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;
+  // Fix missing closing braces for forEach
+  const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm
   if (forEachPattern.test(newContent)) {
     newContent = newContent.replace(forEachPattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
       }
-      return match;
+      return match
     });
-    fixed = true;
+    fixed = true
   }
 
-  // Fix missing closing braces for object methods;
-  const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm;
+  // Fix missing closing braces for object methods
+  const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm
   if (objectMethodPattern.test(newContent)) {
     newContent = newContent.replace(objectMethodPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n  }';
       }
-      return match;
+      return match
     });
-    fixed = true;
+    fixed = true
   }
 
-  // Clean up multiple empty lines;
+  // Clean up multiple empty lines
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   return { content: newContent, fixed };
@@ -103,11 +101,10 @@ function fixSyntaxErrors(content) {
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const result = fixSyntaxErrors(content);
-    
+    const content = fs.readFileSync(filePath, 'utf8')}
+    const result = fixSyntaxErrors(content)}
     if (result.fixed) {
-      fs.writeFileSync(filePath, result.content, 'utf8');
+      fs.writeFileSync(filePath, result.content, 'utf8')}
       console.log(`✅ ${filePath}: Fixed syntax errors`);
       fixedFiles++;
     }
@@ -119,10 +116,9 @@ function processFile(filePath) {
 }
 
 async function main() {
-  console.log('🚀 Starting syntax error fixes...\n');
-
-  // Get all files to process;
-  const allFiles = [];
+  console.log('🚀 Starting syntax error fixes...\n')}
+  // Get all files to process
+  const allFiles = []}
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
@@ -130,13 +126,12 @@ async function main() {
     allFiles.push(...files);
   }
 
-  // Remove duplicates;
+  // Remove duplicates
   const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
+  totalFiles = uniqueFiles.length
   console.log(`📁 Found ${totalFiles} files to process\n`);
 
-  // Process each file;
+  // Process each file
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Syntax error fixes completed!`);
@@ -146,7 +141,7 @@ async function main() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+  main()}
 }
 
 export { processFile, fixSyntaxErrors };

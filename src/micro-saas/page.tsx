@@ -296,8 +296,7 @@ export default function MicroSaasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions;
-  </
+              Micro SAAS Solutions</Solutions>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
@@ -306,13 +305,11 @@ export default function MicroSaasPage() {
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950;
-  </
+                Call (302) 464-0950</0950>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Trial;
-  </
+                Get Free Trial</Trial>
             </div>
           </div>
         </div>
@@ -357,8 +354,7 @@ export default function MicroSaasPage() {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
+                      Most Popular</Popular>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -378,8 +374,7 @@ export default function MicroSaasPage() {
                   ))}
                   {service.features.length > 3 && (
                     <li className="text-xs text-gray-400">
-                      +{service.features.length - 3} more features;
-  </
+                      +{service.features.length - 3} more features</features>
                   )}
                 </ul>
                 <div className="text-center">
@@ -390,8 +385,7 @@ export default function MicroSaasPage() {
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
-                    Learn More;
-  </
+                    Learn More</More>
                 </div>
               </div>
             ))}
@@ -406,8 +400,7 @@ export default function MicroSaasPage() {
               Why Choose Our Micro SAAS Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver powerful, affordable tools that help businesses grow and succeed;
-  </
+              We deliver powerful, affordable tools that help businesses grow and succeed</succeed>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -427,8 +420,7 @@ export default function MicroSaasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing;
-  </
+              Simple, Transparent Pricing</Pricing>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
@@ -440,62 +432,50 @@ export default function MicroSaasPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  5 Micro SAAS Apps;
-  </
+                  5 Micro SAAS Apps</Apps>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Basic Support;
-  </
+                  Basic Support</Support>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Standard Features;
-  </
+                  Standard Features</Features>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Email Support;
-  </
+                  Email Support</Support>
               </ul>
               <Link
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started;
-  </
+                Get Started</Started>
             </div>
             <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
               <div className="flex items-center justify-center mb-4">
                 <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Most Popular;
-  </
+                  Most Popular</Popular>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  15 Micro SAAS Apps;
-  </
+                  15 Micro SAAS Apps</Apps>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Priority Support;
-  </
+                  Priority Support</Support>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Advanced Features;
-  </
+                  Advanced Features</Features>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Phone & Email Support;
-  </
+                  Phone & Email Support</Support>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  API Access;
-  </
+                  API Access</Access>
               </ul>
               <Link
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started;
-  </
+                Get Started</Started>
             </div>
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
@@ -503,30 +483,24 @@ export default function MicroSaasPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  All 50+ Apps;
-  </
+                  All 50+ Apps</Apps>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  24/7 Premium Support;
-  </
+                  24/7 Premium Support</Support>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Custom Features;
-  </
+                  Custom Features</Features>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Dedicated Manager;
-  </
+                  Dedicated Manager</Manager>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  White-label Options;
-  </
+                  White-label Options</Options>
               </ul>
               <Link
                 to="/contact"
                 className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Contact Sales;
-  </
+                Contact Sales</Sales>
             </div>
           </div>
         </div>
@@ -546,13 +520,11 @@ export default function MicroSaasPage() {
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950;
-  </
+                Call (302) 464-0950</0950>
               <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Start Free Trial;
-  </
+                Start Free Trial</Trial>
             </div>
           </div>
         </div>

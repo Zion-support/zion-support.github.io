@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
-  const features = [];
+  const features = []}
   return (
     {// TODO: Add content;}
 };
@@ -86,4 +86,4 @@ const AIEdgeComputingPage: React.FC = () => {
     </div>
   );
 };
-export default PagePage;
+export default PagePage

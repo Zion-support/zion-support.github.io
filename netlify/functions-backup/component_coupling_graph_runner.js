@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {try {
-//     // Basic implementation - replace with actual logic;
+//     // Basic implementation - replace with actual logic
     const timestamp = new Date().toISOString()}
     return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({)
         message:),
           'component_coupling_graph_runner function executed successfully'),
@@ -10,10 +10,10 @@ exports.handler = async function (event, context) {try {
         function: 'component_coupling_graph_runner'}
       });
     };
-//   } catch (error) {// console.error('❌ component_coupling_graph_runner function failed: ') error;
+//   } catch (error) {// console.error('❌ component_coupling_graph_runner function failed: ') error
       }
     return {
-      statusCode: 500;
+      statusCode: 500
       body: JSON.stringify({),
         error: 'component_coupling_graph_runner function failed'),
         message: error.message),

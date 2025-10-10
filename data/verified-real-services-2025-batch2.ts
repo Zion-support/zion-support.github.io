@@ -1,22 +1,22 @@
 
-export interface VerifiedRealService2025Batch2 {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+export interface VerifiedRealService2025Batch2 {id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]}
+  link: string
+  category: string
+  real_implementation: boolean
+  contact_info: unknown
+    mobile: string
     email: string}
     address: string}
   };
-    address: string;
+    address: string
   }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string;
+    address: string
   }
 ;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
@@ -24,7 +24,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     name: 'AI Quality Assurance Platform',
     tagline: 'Automated testing and quality control',
     price: '$79 / month',
-    description: unknown;
+    description: unknown
 export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
@@ -59,8 +59,8 @@ export const,
       'Continuous integration'],
     link: '/services / ai - quality - assurance'
     category: 'Verified Services 2025'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
@@ -78,8 +78,8 @@ export const,
     ],
     link: "/services/ai-quality-assurance"
     category: "Verified Services 2025"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
@@ -87,14 +87,14 @@ export const,
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
@@ -108,8 +108,8 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
       "Quality metrics",
       "Continuous integration"],
     link: "/services/ai-quality-assurance", category: "Verified Services 2025",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
@@ -246,8 +246,8 @@ export const,
     ],
     link: "/services/ai-quality-assurance"
     category: "Verified Services 2025"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',

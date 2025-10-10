@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap } from 'lucide-react';
 const GlobalITSupportPage: React.FC = () => {
-  const features = [];
+  const features = []}
   return (
     {// TODO: Add content;}
 };
@@ -46,7 +46,7 @@ const GlobalITSupportPage: React.FC = () => {
 // Worldwide IT Support Services
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
-            Get comprehensive IT support wherever you are in the world. Our global team of experts provides;
+            Get comprehensive IT support wherever you are in the world. Our global team of experts provides
             24/7 support across all time zones with local expertise and multi-language capabilities.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -88,4 +88,4 @@ const GlobalITSupportPage: React.FC = () => {
     </div>
   );
 };
-export default GlobalItSupportPage;
+export default GlobalItSupportPage

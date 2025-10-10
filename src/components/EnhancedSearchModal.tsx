@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  type: 'page' | 'service' | 'blog' | 'documentation';
-  popularity?: number;
-  lastModified?: string;
+  id: string
+  title: string
+  description: string
+  url: string
+  category: string
+  type: 'page' | 'service' | 'blog' | 'documentation'}
+  popularity?: number
+  lastModified?: string
 }
 interface SearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 const mockSearchResults: SearchResult[] = [
   {
@@ -79,29 +79,29 @@ const popularSearches = [
 ];
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1)}
+  const [showSuggestions, setShowSuggestions] = useState(false)}
   const inputRef = useRef<HTMLInputElement>(null)</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus()}
     }
   }, [isOpen]);
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return;
+      if (!isOpen) return
       if (e.key === 'Escape') {
-        onClose();
+        onClose()}
       } else if (e.key === 'ArrowDown') {
-        e.preventDefault();
+        e.preventDefault()}
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
-        );
+        )}
       } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+        e.preventDefault()}
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)}
       } else if (e.key === 'Enter' && selectedIndex >= 0) {
-        e.preventDefault();
-        handleResultClick(results[selectedIndex]);
+        e.preventDefault()}
+        handleResultClick(results[selectedIndex])}
       }
     };
     document.addEventListener('keydown', handleKeyDown);
@@ -109,9 +109,9 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   }, [isOpen, results, selectedIndex, onClose]);
   const searchResults = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
-      setResults([]);
-      setShowSuggestions(true);
-      return;
+      setResults([])}
+      setShowSuggestions(true)}
+      return
     }
     setIsSearching(true);
     setShowSuggestions(false);
@@ -124,25 +124,25 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     );
     // Sort by popularity and relevance
     const sortedResults = filteredResults.sort((a, b) => {
-      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
+      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
+      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance
     });
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false);
   };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
-    setQuery(value);
-    searchResults(value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value
+    setQuery(value)}
+    searchResults(value)}
   };
   const handleResultClick = (result: SearchResult) => {
-    window.location.href = result.url;
-    onClose();
+    window.location.href = result.url
+    onClose()}
   };
   const handleSuggestionClick = (suggestion: string) => {
-    setQuery(suggestion);
-    searchResults(suggestion);
+    setQuery(suggestion)}
+    searchResults(suggestion)}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -153,11 +153,11 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'IT Services':
         return '☁️';
       case 'Company':
-        return '🏢';
+        return '🏢'}
       case 'Documentation':
-        return '📚';
+        return '📚'}
       default:
-        return '🔍';
+        return '🔍'}
     }
   };
   const getTypeColor = (type: string) => {
@@ -167,14 +167,14 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'page':
         return 'text-purple-400';
       case 'blog':
-        return 'text-pink-400';
+        return 'text-pink-400'}
       case 'documentation':
-        return 'text-green-400';
+        return 'text-green-400'}
       default:
-        return 'text-gray-400';
+        return 'text-gray-400'}
     }
   };
-  if (!isOpen) return null;
+  if (!isOpen) return null
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}

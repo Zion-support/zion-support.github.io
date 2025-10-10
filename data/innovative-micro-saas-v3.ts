@@ -1,63 +1,63 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
   features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  link: string
+  category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string
+    email: string
 export interface InnovativeMicroSaasV3 {;,
     address: string}
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
-  l: string;
+  l: string
 export interface InnovativeMicroSaasV3 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
   e: string,,
   descriptio,
-  n: string;
+  n: string
   feature,
   s: string[];
   lin,
-  k: string;
+  k: string
   categor,
-  y: string;
+  y: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -68,14 +68,14 @@ export interface InnovativeMicroSaasV3 {/* TODO: Fix JSX expression */}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
@@ -89,7 +89,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
       "Analytics dashboard",
       "CRM integration"],
     link: "/services/ai-customer-support", category: "Customer Support",
-    realImplementation: true;
+    realImplementation: true
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -185,8 +185,8 @@ export const,
     ],
     link: "/services/ai-customer-support"
     category: "Customer Support"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',

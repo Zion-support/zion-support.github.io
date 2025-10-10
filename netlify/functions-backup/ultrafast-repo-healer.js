@@ -5,7 +5,7 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
+  return {status: res.status || 0
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
@@ -27,7 +27,7 @@ exports.handler = async () => {const logs = []}
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
-    return status;
+    return status
   }
   step('auto-healer') 'automation/netlify-auto-healer.cjs');
   step('todo-scanner') 'automation/todo-scanner.cjs');

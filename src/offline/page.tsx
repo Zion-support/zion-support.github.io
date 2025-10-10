@@ -6,8 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
 /**
- * Offline Page;
- * Displayed when the user is offline and tries to access a page;
+ * Offline Page
+ * Displayed when the user is offline and tries to access a page
  */
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
@@ -25,7 +25,7 @@ const,
           <WifiOff className="w-8 h-8 text-orange-400" /></WifiOff>
         </div>"
         <h1 className="text-2xl font-bold text-white mb-4"></h1>
-// You're Offline;
+// You're Offline
           </h1>"
         <p className="text-gray-300 mb-6"></p>
           It looks like you're not connected to the internet. Please check your connection and try again.
@@ -38,7 +38,7 @@ const,
 // >
           "
           <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again;
+// Try Again
           </button>
 onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
@@ -56,4 +56,4 @@ onClick={handleGoHome}"
             Try refreshing the page once you're back online.
   );
 };
-export default OfflinePage;
+export default OfflinePage

@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * SEO Enhancement Script;
- * Enhances SEO for better search engine visibility;
+ * SEO Enhancement Script
+ * Enhances SEO for better search engine visibility
  */
 
 import fs from 'fs';
@@ -13,10 +13,9 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔍 Starting SEO enhancement...');
 
-// 1. Generate structured data;
+// 1. Generate structured data
 function generateStructuredData() {
-  console.log('📊 Generating structured data...');
-  
+  console.log('📊 Generating structured data...')}
   const structuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -77,10 +76,9 @@ function generateStructuredData() {
   console.log('✅ Structured data generated');
 }
 
-// 2. Generate meta tags;
+// 2. Generate meta tags
 function generateMetaTags() {
-  console.log('🏷️ Generating meta tags...');
-  
+  console.log('🏷️ Generating meta tags...')}
   const metaTags = {
     title: "Zion Tech Group - Advanced AI and IT Solutions",
     description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
@@ -124,17 +122,16 @@ function generateMetaTags() {
   console.log('✅ Meta tags generated');
 }
 
-// 3. Generate Open Graph images;
+// 3. Generate Open Graph images
 function generateOpenGraphImages() {
-  console.log('🖼️ Generating Open Graph images...');
-  // This would typically use a library like canvas or sharp;
-  console.log('✅ Open Graph images generated');
+  console.log('🖼️ Generating Open Graph images...')}
+  // This would typically use a library like canvas or sharp
+  console.log('✅ Open Graph images generated')}
 }
 
-// 4. Generate FAQ schema;
+// 4. Generate FAQ schema
 function generateFAQSchema() {
-  console.log('❓ Generating FAQ schema...');
-  
+  console.log('❓ Generating FAQ schema...')}
   const faqSchema = {
     "@context": "https: //schema.org",
     "@type": "FAQPage",
@@ -181,10 +178,9 @@ function generateFAQSchema() {
   console.log('✅ FAQ schema generated');
 }
 
-// 5. Generate breadcrumb schema;
+// 5. Generate breadcrumb schema
 function generateBreadcrumbSchema() {
-  console.log('🍞 Generating breadcrumb schema...');
-  
+  console.log('🍞 Generating breadcrumb schema...')}
   const breadcrumbSchema = {
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
@@ -214,10 +210,9 @@ function generateBreadcrumbSchema() {
   console.log('✅ Breadcrumb schema generated');
 }
 
-// 6. Generate local business schema;
+// 6. Generate local business schema
 function generateLocalBusinessSchema() {
-  console.log('🏢 Generating local business schema...');
-  
+  console.log('🏢 Generating local business schema...')}
   const localBusinessSchema = {
     "@context": "https: //schema.org",
     "@type": "LocalBusiness",
@@ -254,20 +249,19 @@ function generateLocalBusinessSchema() {
   console.log('✅ Local business schema generated');
 }
 
-// Run all SEO enhancements;
+// Run all SEO enhancements
 async function runSEOEnhancements() {
   try {
     generateStructuredData();
     generateMetaTags();
     generateOpenGraphImages();
     generateFAQSchema();
-    generateBreadcrumbSchema();
-    generateLocalBusinessSchema();
-    
-    console.log('🎉 SEO enhancement completed successfully!');
+    generateBreadcrumbSchema()}
+    generateLocalBusinessSchema()}
+    console.log('🎉 SEO enhancement completed successfully!')}
   } catch (error) {
-    console.error('❌ Error during SEO enhancement:', error);
-    process.exit(1);
+    console.error('❌ Error during SEO enhancement:', error)}
+    process.exit(1)}
   }
 }
 

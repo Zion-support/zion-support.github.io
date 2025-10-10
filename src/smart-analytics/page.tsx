@@ -73,29 +73,24 @@ $4}
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Smart Analytics;
-  </
+            Smart Analytics</Analytics>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics that drive real business results;
-  </
+            Transform your data into actionable insights with AI-powered analytics that drive real business results</results>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-              📞 Call: (302) 464-0950;
-  </
+              📞 Call: (302) 464-0950</0950>
             <Link
               to="/contact"
               className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-              Get Free Consultation;
-  </
+              Get Free Consultation</Consultation>
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features;
-  </
+            Powerful Analytics Features</Features>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
@@ -117,8 +112,7 @@ $4}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular;
-  </
+                      Most Popular</Popular>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -142,7 +136,7 @@ $4}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [];
+  const features = []}
   return (
     {// TODO: Add content;}
 };
@@ -168,11 +162,9 @@ const PagePage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
+            Page</Page>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+            Coming Soon</Soon>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
@@ -196,7 +188,7 @@ const PagePage: React.FC = () => {
                 {plan.popular && ()}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
+// Most Popular
           </span>
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -213,15 +205,15 @@ const PagePage: React.FC = () => {
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
-//                     plan.popular;
+//                     plan.popular
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
                       : 'bg-gray-600 text-white,
   hover:bg-gray-700'`
                   }`}
-                  Get Started;
+                  Get Started
         {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -231,7 +223,7 @@ const PagePage: React.FC = () => {
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -245,15 +237,15 @@ const PagePage: React.FC = () => {
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
-+1 (302) 464-0950;
++1 (302) 464-0950
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   );
 };
-export default SmartAnalyticsPage;
+export default SmartAnalyticsPage
   </a>
   </a>
   </a>

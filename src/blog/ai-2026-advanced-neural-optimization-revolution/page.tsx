@@ -13,13 +13,12 @@ const Ai2026AdvancedNeuralOptimizationRevolutionPage: React.FC = () => {
           <Link 
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-            Contact Us;
-  </
+            Contact Us</Us>
         </div>
       </div>
       <Footer />
     </div>
-  );
+  )}
 };
-export default Ai2026AdvancedNeuralOptimizationRevolutionPage;
+export default Ai2026AdvancedNeuralOptimizationRevolutionPage
   </Link>

@@ -27,9 +27,9 @@ function getGitInfo() {/* TODO: Fix JSX expression */}
 function walkDir(dir)
   ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true;)});
   const _files = [];
-  for (const entry of entries) {if (ignoreDirs.has(entry.name)) continue;
+  for (const entry of entries) {if (ignoreDirs.has(entry.name)) continue
     const full = path.join(dir)
-        entry.name;
+        entry.name
       }
     if (entry.isDirectory()) files.push(...walkDir(full)
 function walkDir(dir)
@@ -42,7 +42,7 @@ function walkDir(dir)
         ignoreDirs));
     else files.push(full);
   }
-  return files;
+  return files
 }
 function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}
         const _byExt = {};
@@ -50,7 +50,7 @@ function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}
       byExt[ext] = (byExt[ext] || 0) + 1}
     } catch {}
   }
-//   const totalFiles = files.length;
+//   const totalFiles = files.length
 //   const totalMb = +(totalBytes / (1024 * 1024)).toFixed(2);
   return {/* TODO: Fix JSX expression */}
         totalMb; byExt };
@@ -67,9 +67,9 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   lines.push(`## Stats`);
   lines.push(`- Files: ${insights.stats.totalFiles}`);
   lines.push(`- Size: ${insights.stats.totalMb)
-        MB`);
-  lines.push('');
-  lines.push('## Files by extension');
+        MB`)}
+  lines.push('')}
+  lines.push('## Files by extension')}
   Object.entries(insights.stats.byExt)
     .sort((a)
         b) => b[1] - a[1])
@@ -100,8 +100,8 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
 }
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
-//     const root = path.resolve(__dirname, '..') '..');
-    const _git = getGitInfo();
+//     const root = path.resolve(__dirname, '..') '..')}
+    const _git = getGitInfo()}
     const stats = getRepoStats(root;)
       })
     const insights = { generatedAt: new Date().toISOString(), git,
@@ -122,14 +122,14 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'),
       toMarkdown(insights));
     try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
-        { stdio: 'inherit'} shell: true;
+        { stdio: 'inherit'} shell: true
       })
       );
       execSync('git add public/reports/repo-insights.*', {stdio: inherit),
         shell: true}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true
       })
       );
       execSync('git add public/reports/repo-insights.*', {/* TODO: Fix JSX expression */}
@@ -144,12 +144,12 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         shell: true}
       });
     } catch {}
-    return {statusCode: 200;
+    return {statusCode: 200
       body: JSON.stringify({ ok: true),
         report: '/reports/repo-insights.json' });
     };
   } catch (e) {return {
-      statusCode: 200;
+      statusCode: 200
       body: JSON.stringify({ ok: false),
         error: String(e;),
       execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
@@ -168,7 +168,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         content) {fs.mkdirSync(path.dirname(targetPath;)
       } { recursive: true;)});' fs.writeFileSync(targetPath, content) 'utf8'); } function getGitInfo() {function safe(cmd) {' try { return execSync(cmd} { encoding: 'utf8' }).trim(); } catch {return ''} } }' const lastCommitHash = safe('git rev-parse HEAD');' const lastCommitMsg = safe('git log -1 --pretty=%B');' const lastCommitAuthor = safe('git log -1 --pretty=%an');' const lastCommitDate = safe('git log -1 --pretty=%aI');' const branch = safe('git rev-parse --abbrev-ref HEAD'); return {lastCommitHash, lastCommitMsg, lastCommitAuthor,
         lastCommitDate; branch }; } ' function walkDir(dir, ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true;)}); const files = []; for (const entry of entries) {if (ignoreDirs.has(entry.name)) continue; const full = path.join(dir)
-        entry.name;
+        entry.name
       } if (entry.isDirectory()) files.push(...walkDir(full)
         ignoreDirs)); else files.push(full); } return files; } function getRepoStats(rootDir) {const files = walkDir(rootDir); let totalBytes = 0,
         const byExt = {}; for (const f of files) {try { const stat = fs.statSync(f); totalBytes += stat.size;' const ext = path.extname(f) || 'noext' byExt[ext] = (byExt[ext] || 0) + 1} } catch {} } const totalFiles = files.length; const totalMb = +(totalBytes / (1024 * 1024)).toFixed(2); return {totalFiles,
@@ -179,13 +179,13 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         count])=>{ lines.push(`- ${ext}: ${count}`); });' return lines.join('\n'); } ' exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const git = getGitInfo(); const stats = getRepoStats(root;)
       } const insights = { generatedAt: new Date().toISOString(), git,
         stats }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
-        2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true;
-      });' execSync('git add public/reports/repo-insights.*') {stdio: 'inherit'} shell: true;
-      });' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {stdio: 'inherit'} shell: true;
-      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true;
-      }); } catch {} ' return {statusCode: 200;
+        2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true
+      });' execSync('git add public/reports/repo-insights.*') {stdio: 'inherit'} shell: true
+      });' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {stdio: 'inherit'} shell: true
+      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true
+      }); } catch {} ' return {statusCode: 200
         body: JSON.stringify({ok: true),
-        report: '/reports/repo-insights.json' }) }; } catch (e) {return { statusCode: 200;
+        report: '/reports/repo-insights.json' }) }; } catch (e) {return { statusCode: 200
         body: JSON.stringify({ok: false),
         error: String(e;)}) }; } };'
 const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); function writeFileEnsuringDir(targetPath)
@@ -212,16 +212,16 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         stats }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true
       });' execSync('git add public/reports/repo-insights.*') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;"
       });' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true
       });' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/repo-insights.json' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`

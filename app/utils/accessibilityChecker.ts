@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -6,24 +5,24 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 ;
 const AccessibilityCheckerPage: React.FC = () => {;
   const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
+    {}
+      icon: Brain,}
+      title: 'AI-Powered Solutions',}
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
     },;
-    {;
-      icon: Zap,;
-      title: 'High Performance',;
+    {}
+      icon: Zap,}
+      title: 'High Performance',}
       description: 'Lightning-fast processing and real-time analytics for optimal results';}
     },;
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
+    {}
+      icon: Shield,}
+      title: 'Enterprise Security',}
       description: 'Bank-level security with encryption and compliance standards';}
     },;
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
+    {}
+      icon: Globe,}
+      title: 'Global Reach',}
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
@@ -52,7 +51,7 @@ const AccessibilityCheckerPage: React.FC = () => {;
           <div className="text-center"></div>;
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
-                AccessibilityChecker;
+                AccessibilityChecker
               </span>;
               <br />;
               <span className="text-white">Solutions</span>;
@@ -63,11 +62,11 @@ const AccessibilityCheckerPage: React.FC = () => {;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">;
-                Get Started;
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />;
               </button>;
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">;
-                Learn More;
+                Learn More
               </button>;
             </div>;
           </div>;
@@ -102,7 +101,7 @@ const AccessibilityCheckerPage: React.FC = () => {;
         <div className="max-w-7xl mx-auto"></div>;
           <div className="text-center mb-16"></div>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Key Benefits;
+              Key Benefits
             </h2>;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Experience the power of our accessibilitychecker solutions for your business.;
@@ -131,11 +130,11 @@ const AccessibilityCheckerPage: React.FC = () => {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">;
                 <Phone className="mr-2 h-5 w-5" />;
-                Call Now;
+                Call Now
               </button>;
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">;
                 <Mail className="mr-2 h-5 w-5" />;
-                Email Us;
+                Email Us
               </button>;
             </div>;
           </div>;
@@ -145,7 +144,4 @@ const AccessibilityCheckerPage: React.FC = () => {;
   );
 };
 ;
-export default AccessibilityCheckerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+export default AccessibilityCheckerPage

@@ -15,21 +15,21 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Ai, Self, Healing Infrastructure, 202, 5;
+          Ai, Self, Healing Infrastructure, 202, 5
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Learn, about, ai self, healing, infrastructure 2025, and, how it, can, benefit;
+          Learn, about, ai self, healing, infrastructure 2025, and, how it, can, benefit
           your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'></div>
           <p>
-            This, comprehensive, guide covers, ai, self healing, infrastructure, 2025;
+            This, comprehensive, guide covers, ai, self healing, infrastructure, 2025
             and, provides, practical insights, for, enterprise implementati, o, n.
           </p>
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog;
+            ← Back, to, Blog
           </Li, n, k>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

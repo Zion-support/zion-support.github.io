@@ -61,7 +61,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ];
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">",
   return (
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
@@ -70,8 +70,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },';
     { 
-      na, m, e: 'Solutio, n, s', ';
-      hr, e, f: '/solutio, n, s',';
+      na, m, e: 'Solutio, n, s', '}
+      hr, e, f: '/solutio, n, s','}
       dropdo, w, n: [,
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50"></header>"
@@ -89,8 +89,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       ]
     }
     { 
-      na, m, e: 'Servic, e, s', ';
-      hr, e, f: '/servic, e, s',';
+      na, m, e: 'Servic, e, s', '}
+      hr, e, f: '/servic, e, s','}
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'AI, Solution, s', hr, e, f: '/servic, e, s/ai-solutio, n, s' },';
@@ -102,8 +102,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       ]
     }
     { 
-      na, m, e: 'Resourc, e, s', ';
-      hr, e, f: '/resourc, e, s',';
+      na, m, e: 'Resourc, e, s', '}
+      hr, e, f: '/resourc, e, s','}
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'Case, Studie, s', hr, e, f: '/ca, s, e-studi, e, s' },';
@@ -116,8 +116,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     { na, m, e: 'Bl, o, g', hr, e, f: '/bl, o, g' },';
     { 
-      na, m, e: 'Compa, n, y', ';
-      hr, e, f: '/abo, u, t',';
+      na, m, e: 'Compa, n, y', '}
+      hr, e, f: '/abo, u, t','}
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'About, U, s', hr, e, f: '/abo, u, t' },';
@@ -158,7 +158,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <nav, className="hidden, m, d: flex, spac, e-x-8">""
           <nav, className="hidden, m, d: flex, spac, e-x-8">";
             {navigationIte, m, s.m, a, p((it, e, m) => (
-              <d, i, v;
+              <d, i, v
   k, e, y={it, e, m.na, m, e}
                 classNa, m, e="relati, v, e"
             {/* TODO: Fix JSX expression */}
@@ -167,7 +167,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 onMouseEnt, e, r={() => it, e, m.dropdo, w, n && setActiveDropdo, w, n(it, e, m.na, m, e)}
                 onMouseLea, v, e={() => setActiveDropdo, w, n(nu, l, l)}
               >
-                <Li, n, k;
+                <Li, n, k
   to={it, e, m.hr, e, f}
   to={it, e, m.hr, e, f}"
                   classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, flex, items-cent, e, r"
@@ -186,14 +186,14 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 </Li, n, k>
                 {/* Dropdown, Men, u */}
                 {it, e, m.dropdo, w, n && activeDropdo, w, n === it, e, m.na, m, e && (
-                  <div, className="absolute, to, p-full, lef, t-0, m, t-1 w-56, b, g-white, rounde, d-lg, shado, w-lg, border, border-gr, a, y-200, p, y-2 z-50">";
+                  <div, className="absolute, to, p-full, lef, t-0, m, t-1 w-56, b, g-white, rounde, d-lg, shado, w-lg, border, border-gr, a, y-200, p, y-2 z-50">"}
                     {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (
-                      <Li, n, k;
+                      <Li, n, k
                     {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
                       <Li, n, k
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}
-                        classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e;
+                        classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e
                 {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}"
@@ -212,7 +212,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"</div>
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";</div>
             <a, titl, e="Internal, lin, k"
-              hr, e, f="te;
+              hr, e, f="te
   l: +130246409, 5, 0"
           {/* CTA, Butto, n */}"
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">""
@@ -222,38 +222,38 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   l: +130246409, 5, 0""
               classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medi, u, m"
             ></a>
-              +1, 302, 464 09, 5, 0;
+              +1, 302, 464 09, 5, 0
             </a>
-            <Li, n, k;
+            <Li, n, k
   to="/conta, c, t"
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m"
             ></Li>
-              Gette, d;
+              Gette, d
             </Li, n, k>
           </d, i, v>
           {/* Mobile, menu, button */}
-          <butt, o, n;
+          <butt, o, n
   onCli, c, k={() => setIsMenuOp, e, n(!isMenuOp, e, n)}
-            classNa, m, e="md: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e;
+            classNa, m, e="md: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e
   r:bg-gr, a, y-100, transitio, n-colo, r, s"
             ar, i, a-lab, e, l="Toggle, men, u"
           >
-            <s, v, g;
+            <s, v, g
   classNa, m, e="w-6 h-6"
               fi, l, l="no, n, e"
               stro, k, e="currentCol, o, r"
               viewB, o, x="0, 0, 24 24"
             ></s>
               {isMenuOp, e, n ? (
-                <pa, t, h;
+                <pa, t, h
   strokeLinec, a, p="rou, n, d"
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
                   d="M6, 18L18, 6M6 6l12, 1, 2  />
               ) : (
-                <pa, t, h;
+                <pa, t, h
               ) : (</p>
                 <pa, t, h 
   strokeLinec, a, p="rou, n, d"
@@ -289,25 +289,25 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 isMenuOp, e, n && (
 <div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0"></div>
 <nav, className="flex, fle, x-col, spac, e-y-1">
-<div, className="m;
-  d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
-<nav, className="flex, fle, x-col, spac, e-y-1">";
+<div, className="m
+  d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,"}
+<nav, className="flex, fle, x-col, spac, e-y-1">"}
 {navigationIte, m, s.m, a, p((it, e, m) => (
 <div, ke, y={it, e, m.na, m, e;}
 }>
-                  <Li, n, k;
+                  <Li, n, k
 <div, className="m
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e;
+<div, ke, y={it, e, m.na, m, e
 }></div>
                   <Li, n, k
   to={it, e, m.hr, e, f}
-                    classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
+                    classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e
         {/* TODO: Fix JSX expression */}
 }></div>
-                  <Li, n, k;
+                  <Li, n, k
   to={it, e, m.hr, e, f}"
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e,"
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colors, fon, t-medi, u, m"
@@ -316,14 +316,14 @@ isMenuOp, e, n && (
                     {it, e, m.na, m, e}
                   </Li, n, k>
                   {it, e, m.dropdo, w, n && (
-                    <div, className="ml-4, spac, e-y-1">";
+                    <div, className="ml-4, spac, e-y-1">"}
                       {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (
-                        <Li, n, k;
+                        <Li, n, k
                       {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
                         <Li, n, k
   k, e, y={ind, e, x}
                           to={dropdownIt, e, m.hr, e, f}
-                          classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e;
+                          classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e
                   {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                           to={dropdownIt, e, m.hr, e, f}"
@@ -347,16 +347,16 @@ isMenuOp, e, n && (
                   hr, e, f="t, e, l: +130246409, 5, 0""
                   classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"
                 ></a>
-                  +1, 302, 464 09, 5, 0;
+                  +1, 302, 464 09, 5, 0
                 </a>
-                <Li, n, k;
+                <Li, n, k
   to="/conta, c, t"
                 <Li, n, k;"
   to="/conta, c, t""
                   classNa, m, e="block, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medium, tex, t-cent, e, r"
                   onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>
                 >
-                  Gette, d;
+                  Gette, d
                 </Li, n, k>
               </d, i, v>
             </n, a, v>

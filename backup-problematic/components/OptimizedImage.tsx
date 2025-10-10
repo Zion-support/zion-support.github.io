@@ -16,5 +16,5 @@ const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: Op
     </div>
   );
 });
-export default OptimizedImage;
+export default OptimizedImage
 "`

@@ -1,5 +1,5 @@
-// Real Micro SAAS Services for Zion Tech Group;
-// Comprehensive list of innovative, real-world micro SAAS solutions;
+// Real Micro SAAS Services for Zion Tech Group
+// Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {;
   id: string,;
   title: string,;
@@ -7,7 +7,7 @@ export interface MicroSaasService {;
   shortDescription: string,;
   icon: string,;
   price: string,;
-  originalPrice?: string;
+  originalPrice?: string
   features: string[];
   benefits: string[];
   link: string,;
@@ -26,25 +26,20 @@ export interface MicroSaasService {;
   support: string,;
   setupTime: string,;
   technicalSpecs: {;
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
+    languages: string[]}
+    frameworks: string[]}
+    databases: string[]}
     cloudProviders: string[];}
   };
   pricing: {;
-    monthly: number,;
-    yearly: number,;
-    enterprise: number,;
+    monthly: number,}
+    yearly: number,}
+    enterprise: number,}
     features: string[];}
   };
 }
-<<<<<<< HEAD
 export const microSaasServices: MicroSaasService[] = [
-=======
-;
-export const microSaasServices: MicroSaasService[] = [;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI-Powered Productivity Tools;
+  // AI-Powered Productivity Tools
   {,;
     id: 'ai-project-manager-pro',;
     title: 'AI Project Manager Pro',;
@@ -74,7 +69,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-project-manager';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.9;
+    rating: 4.9
     users: '15,000+',;
     freeTrial: '14 days',;
     marketPrice: '$149-299/month',;
@@ -105,18 +100,17 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Priority Support',;
     setupTime: '15 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],;
-      frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],}
+      frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean'];}
     },;
     pricing: {;
-      monthly: 99,;
-      yearly: 990,;
-      enterprise: 299,;
+      monthly: 99,}
+      yearly: 990,}
+      enterprise: 299,}
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-task-manager-pro',
@@ -147,39 +141,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-task-manager'
     popular: true,
     category: 'Productivity',
-=======
-  },;
-  {;
-    id: 'ai-task-manager-pro',;
-    title: 'AI Task Manager Pro',;
-    description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',;
-    shortDescription: 'Smart task management with AI prioritization and productivity optimization.';
-    icon: '✅',;
-    price: '$49/month',;
-    originalPrice: '$79/month',;
-    features: [,;
-      'AI-powered task prioritization and scheduling',;
-      'Smart deadline prediction and alerts',;
-      'Habit tracking and goal setting',;
-      'Team collaboration with AI insights',;
-      'Productivity analytics and reporting',;
-      'Time tracking and optimization',;
-      'Cross-platform synchronization',;
-      'Voice-to-task conversion';
-    ],;
-    benefits: [,;
-      '60% increase in task completion rate',;
-      '45% reduction in missed deadlines',;
-      '35% improvement in focus time',;
-      '50% better work-life balance',;
-      '40% increase in goal achievement',;
-      '25% reduction in stress levels';
-    ],;
-    link: '/ai-task-manager';
-    popular: true,;
-    category: 'Productivity',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',;
     freeTrial: '14 days',;
     marketPrice: '$79-149/month',;
@@ -209,23 +171,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: 'Email & Chat Support',;
     setupTime: '5 minutes',;
     technicalSpecs: {,;
-      languages: ['JavaScript', 'TypeScript', 'Python'],;
-      frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],;
-      databases: ['SQLite', 'PostgreSQL', 'Redis'],;
+      languages: ['JavaScript', 'TypeScript', 'Python'],}
+      frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],}
+      databases: ['SQLite', 'PostgreSQL', 'Redis'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Firebase'];}
     },;
     pricing: {;
-      monthly: 49,;
-      yearly: 490,;
-      enterprise: 149,;
+      monthly: 49,}
+      yearly: 490,}
+      enterprise: 149,}
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Content & Marketing Tools;
+  // AI Content & Marketing Tools
   {;
     id: 'ai-content-writer-pro',;
     title: 'AI Content Writer Pro',;
@@ -255,7 +213,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-content-writer';
     popular: true,;
     category: 'Content & Marketing',;
-    rating: 4.7;
+    rating: 4.7
     users: '40,000+',;
     freeTrial: '7 days',;
     marketPrice: '$129-299/month',;
@@ -285,18 +243,17 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Support',;
     setupTime: '10 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript'],;
-      frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis'],;
+      languages: ['Python', 'JavaScript', 'TypeScript'],}
+      frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure'];}
     },;
     pricing: {;
-      monthly: 79,;
-      yearly: 790,;
-      enterprise: 199,;
+      monthly: 79,}
+      yearly: 790,}
+      enterprise: 199,}
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-social-media-manager',
@@ -327,39 +284,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-social-media-manager'
     popular: true,
     category: 'Content & Marketing',
-=======
-  },;
-  {;
-    id: 'ai-social-media-manager',;
-    title: 'AI Social Media Manager',;
-    description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',;
-    shortDescription: 'AI-powered social media management with automated content creation and optimization.';
-    icon: '📱',;
-    price: '$89/month',;
-    originalPrice: '$149/month',;
-    features: [,;
-      'AI content creation for all social platforms',;
-      'Smart posting schedule optimization',;
-      'Advanced audience analytics and insights',;
-      'Automated engagement and responses',;
-      'Hashtag research and optimization',;
-      'Competitor analysis and monitoring',;
-      'Social listening and sentiment analysis',;
-      'ROI tracking and reporting';
-    ],;
-    benefits: [,;
-      '70% increase in social media engagement',;
-      '50% reduction in social media management time',;
-      '85% improvement in content performance',;
-      '60% increase in follower growth',;
-      '40% boost in website traffic from social',;
-      '90% automation of routine tasks';
-    ],;
-    link: '/ai-social-media-manager';
-    popular: true,;
-    category: 'Content & Marketing',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    rating: 4.6;
+    rating: 4.6
     users: '30,000+',;
     freeTrial: '14 days',;
     marketPrice: '$149-399/month',;
@@ -390,23 +315,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Support',;
     setupTime: '20 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript'],;
-      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript'],}
+      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure'];}
     },;
     pricing: {;
-      monthly: 89,;
-      yearly: 890,;
-      enterprise: 249,;
+      monthly: 89,}
+      yearly: 890,}
+      enterprise: 249,}
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Business & Finance Tools;
+  // AI Business & Finance Tools
   {;
     id: 'ai-crm-intelligence',;
     title: 'AI CRM Intelligence',;
@@ -436,7 +357,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-crm';
     popular: true,;
     category: 'Business & Finance',;
-    rating: 4.8;
+    rating: 4.8
     users: '20,000+',;
     freeTrial: '21 days',;
     marketPrice: '$199-499/month',;
@@ -467,18 +388,17 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Priority Support',;
     setupTime: '30 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],;
-      frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],}
+      frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce'];}
     },;
     pricing: {;
-      monthly: 129,;
-      yearly: 1290,;
-      enterprise: 399,;
+      monthly: 129,}
+      yearly: 1290,}
+      enterprise: 399,}
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-financial-analyzer',
@@ -509,39 +429,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-financial-analyzer'
     popular: true,
     category: 'Business & Finance',
-=======
-  },;
-  {;
-    id: 'ai-financial-analyzer',;
-    title: 'AI Financial Analyzer',;
-    description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',;
-    shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.';
-    icon: '💰',;
-    price: '$199/month',;
-    originalPrice: '$299/month',;
-    features: [,;
-      'Real-time financial data analysis',;
-      'AI-powered risk assessment and scoring',;
-      'Predictive financial modeling',;
-      'Automated financial reporting',;
-      'Investment recommendation engine',;
-      'Market trend analysis and forecasting',;
-      'Portfolio optimization algorithms',;
-      'Regulatory compliance monitoring';
-    ],;
-    benefits: [,;
-      '70% improvement in financial decision accuracy',;
-      '50% reduction in analysis time',;
-      '85% better risk prediction accuracy',;
-      '40% increase in investment returns',;
-      '60% reduction in compliance costs',;
-      '90% automation of financial reporting';
-    ],;
-    link: '/ai-financial-analyzer';
-    popular: true,;
-    category: 'Business & Finance',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    rating: 4.9;
+    rating: 4.9
     users: '12,000+',;
     freeTrial: '14 days',;
     marketPrice: '$299-999/month',;
@@ -572,23 +460,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Expert Support',;
     setupTime: '45 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'R', 'Julia', 'JavaScript'],;
-      frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],;
-      databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],;
+      languages: ['Python', 'R', 'Julia', 'JavaScript'],}
+      frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],}
+      databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud'];}
     },;
     pricing: {;
-      monthly: 199,;
-      yearly: 1990,;
-      enterprise: 599,;
+      monthly: 199,}
+      yearly: 1990,}
+      enterprise: 599,}
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Customer Service Tools;
+  // AI Customer Service Tools
   {;
     id: 'ai-customer-support-bot',;
     title: 'AI Customer Support Bot',;
@@ -618,7 +502,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-customer-support-bot';
     popular: true,;
     category: 'Customer Service',;
-    rating: 4.7;
+    rating: 4.7
     users: '35,000+',;
     freeTrial: '14 days',;
     marketPrice: '$99-299/month',;
@@ -649,23 +533,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Support',;
     setupTime: '15 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript'],;
-      frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript'],}
+      frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow'];}
     },;
     pricing: {;
-      monthly: 59,;
-      yearly: 590,;
-      enterprise: 199,;
+      monthly: 59,}
+      yearly: 590,}
+      enterprise: 199,}
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Development Tools;
+  // AI Development Tools
   {;
     id: 'ai-code-review-assistant',;
     title: 'AI Code Review Assistant',;
@@ -695,7 +575,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-code-generation';
     popular: true,;
     category: 'Development',;
-    rating: 4.8;
+    rating: 4.8
     users: '18,000+',;
     freeTrial: '14 days',;
     marketPrice: '$129-399/month',;
@@ -726,23 +606,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: 'Developer Support',;
     setupTime: '10 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],;
-      frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],}
+      frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions'];}
     },;
     pricing: {;
-      monthly: 79,;
-      yearly: 790,;
-      enterprise: 249,;
+      monthly: 79,}
+      yearly: 790,}
+      enterprise: 249,}
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Healthcare Tools;
+  // AI Healthcare Tools
   {;
     id: 'ai-healthcare-assistant',;
     title: 'AI Healthcare Assistant',;
@@ -772,7 +648,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-healthcare';
     popular: true,;
     category: 'Healthcare',;
-    rating: 4.9;
+    rating: 4.9
     users: '8,000+',;
     freeTrial: '30 days',;
     marketPrice: '$249-999/month',;
@@ -803,23 +679,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Medical Support',;
     setupTime: '60 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],;
-      frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],}
+      frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting'];}
     },;
     pricing: {;
-      monthly: 149,;
-      yearly: 1490,;
-      enterprise: 499,;
+      monthly: 149,}
+      yearly: 1490,}
+      enterprise: 499,}
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI E-commerce Tools;
+  // AI E-commerce Tools
   {;
     id: 'ai-ecommerce-optimizer',;
     title: 'AI E-commerce Optimizer',;
@@ -849,7 +721,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-ecommerce-solutions';
     popular: true,;
     category: 'E-commerce',;
-    rating: 4.7;
+    rating: 4.7
     users: '22,000+',;
     freeTrial: '14 days',;
     marketPrice: '$199-599/month',;
@@ -880,23 +752,19 @@ export const microSaasServices: MicroSaasService[] = [;
     support: '24/7 Support',;
     setupTime: '30 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],;
-      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],}
+      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus'];}
     },;
     pricing: {;
-      monthly: 119,;
-      yearly: 1190,;
-      enterprise: 399,;
+      monthly: 119,}
+      yearly: 1190,}
+      enterprise: 399,}
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  // AI Education Tools;
+  // AI Education Tools
   {;
     id: 'ai-education-platform',;
     title: 'AI Education Platform',;
@@ -926,7 +794,7 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-education';
     popular: true,;
     category: 'Education',;
-    rating: 4.8;
+    rating: 4.8
     users: '28,000+',;
     freeTrial: '21 days',;
     marketPrice: '$149-399/month',;
@@ -957,24 +825,20 @@ export const microSaasServices: MicroSaasService[] = [;
     support: 'Educational Support',;
     setupTime: '45 minutes',;
     technicalSpecs: {,;
-      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],;
-      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],;
-      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],;
+      languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],}
+      frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],}
+      databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],}
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting'];}
     },;
     pricing: {;
-      monthly: 89,;
-      yearly: 890,;
-      enterprise: 299,;
+      monthly: 89,}
+      yearly: 890,}
+      enterprise: 299,}
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard'];}
     }
   }
 ];
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Service categories for filtering and organization;
+// Service categories for filtering and organization
 export const serviceCategories = [;
   'All',;
   'Productivity',;
@@ -989,37 +853,29 @@ export const serviceCategories = [;
   'Analytics',;
   'Automation';
 ];
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Pricing tiers for comparison;
+// Pricing tiers for comparison
 export const pricingTiers = {;
-  starter: {,;
-    name: 'Starter',;
-    price: '$29-99/month',;
+  starter: {,}
+    name: 'Starter',}
+    price: '$29-99/month',}
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics'];}
   },;
-  professional: {,;
-    name: 'Professional',;
-    price: '$99-299/month',;
+  professional: {,}
+    name: 'Professional',}
+    price: '$99-299/month',}
     features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access'];}
   },;
-  enterprise: {,;
-    name: 'Enterprise',;
-    price: '$299-999/month',;
+  enterprise: {,}
+    name: 'Enterprise',}
+    price: '$299-999/month',}
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'];}
   }
 };
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Contact information;
+// Contact information
 export const contactInfo = {;
   phone: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008, Middletown, DE 19709',;
-  website: 'https://ziontechgroup.com',;
+  email: 'kleber@ziontechgroup.com',}
+  address: '364 E Main St STE 1008, Middletown, DE 19709',}
+  website: 'https://ziontechgroup.com',}
   hours: '24/7 Support Available',;}
   timezone: 'EST (Eastern Standard Time)'};

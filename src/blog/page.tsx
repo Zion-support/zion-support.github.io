@@ -2,24 +2,24 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  description: string
+  category: string
+  readTime: string
+  date: string
+  path: string
+  image: string
+  featured: boolean
   stats?: {
-    views: number;
-    engagement: number;
+    views: number
+    engagement: number
   };
 }
 export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [posts, setPosts] = useState<BlogPost[]>([])}
+  const [loading, setLoading] = useState(true)}
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')}
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
@@ -120,8 +120,8 @@ export default function BlogPage() {
   ], []);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
+      setPosts(blogPosts)}
+      setLoading(false)}
     }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
@@ -159,8 +159,7 @@ export default function BlogPage() {
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team;
-  </
+            Latest insights on AI, enterprise automation, and digital transformation from our expert team</team>
         </header>
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -182,8 +181,7 @@ export default function BlogPage() {
         {selectedCategory === 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles;
-  </
+              🌟 Featured Articles</Articles>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
@@ -212,8 +210,7 @@ export default function BlogPage() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update;
-  </
+              Never Miss an Update</Update>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
@@ -221,8 +218,7 @@ export default function BlogPage() {
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-              Subscribe to Newsletter;
-  </
+              Subscribe to Newsletter</Newsletter>
           </div>
         </div>
       </div>

@@ -3,27 +3,27 @@ const { isValidEmail } = require('../emailUtils.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return
   }
 
   try {
     const { email } = req.body || {};
 
     if (!email) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')}
       res.end(JSON.stringify({ error: 'Email is required' }));
-      return;
+      return
     }
 
     if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')}
       res.end(JSON.stringify({ error: 'Invalid email format' }));
-      return;
+      return
     }
 
     // Save subscription logic here
@@ -37,7 +37,7 @@ async function handler(req, res) {
       console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
     }
 
-    res.statusCode = 200;
+    res.statusCode = 200
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
@@ -48,9 +48,9 @@ async function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Newsletter subscription error:', error);
+      console.error('Newsletter subscription error:', error)}
     }
-    res.statusCode = 500;
+    res.statusCode = 500
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',

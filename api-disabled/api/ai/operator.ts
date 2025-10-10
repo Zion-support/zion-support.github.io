@@ -3,29 +3,28 @@ const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY });
 
 // In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes;
-// const RATE_LIMIT_MAX_REQUESTS = 15;
+const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+// const RATE_LIMIT_MAX_REQUESTS = 15
 const,
   ipToRequests: Record<string, {/* TODO: Fix JSX expression */}
   s: number[] }> = {};
 
 function isRateLimited(ip: string): boolean {,
-  const _now = Date.now();
+  const _now = Date.now()}
   const _bucket = ipToRequests[ip] || { timestamps: [] };
 function isRateLimited(i)
   p: string): boolean {/* TODO: Fix JSX expression */}
   s: [] };
 
-  // Drop old timestamps;
+  // Drop old timestamps
   bucket.timestamps = bucket.timestamps.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS);
 
-  //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
-
+  //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
   if (!limited) {/* TODO: Fix JSX expression */}
   }
 
-  ipToRequests[ip] = bucket;
-  return limited;
+  ipToRequests[ip] = bucket
+  return limited
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
@@ -37,15 +36,14 @@ export default async function handler(re,
   r: 'Method Not Allowed' });
   }
 
-  // Auth via Bearer token;
+  // Auth via Bearer token
   const _authHeader = req.headers.authorization || '';
-  const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
-
+  const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
   r: 'Unauthorized' });
   }
 
-  // Rate limit;
+  // Rate limit
   const ip =
     (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
     req.socket.remoteAddress ||
@@ -57,8 +55,7 @@ export default async function handler(re,
 
   try {/* TODO: Fix JSX expression */}
     const { prompt, system, temperature } =
-      typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-
+      typeof req.body === 'string' ? JSON.parse(req.body) : req.body
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
   r: 'Missing prompt' });
     }

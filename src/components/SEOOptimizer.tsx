@@ -6,11 +6,11 @@ const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    // Add breadcrumb structured data;
+    // Add breadcrumb structured data
     addBreadcrumbStructuredData();
-    // Add FAQ structured data;
+    // Add FAQ structured data
     addFAQStructuredData();
-    // Add organization structured data;
+    // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (nam,
@@ -40,7 +40,7 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
+    // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -61,7 +61,7 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
     script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
+    // Remove existing FAQ data
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -82,7 +82,7 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data;
+    // Remove existing organization data
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }

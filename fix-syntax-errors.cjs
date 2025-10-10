@@ -1,106 +1,119 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing closing tags
-  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-  content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-  content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
-  content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
-  content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
-  content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
-  
-  // Fix JSX fragments
-  content = content.replace(/<>\s*$/gm, '<></>');
-  content = content.replace(/<>([^<]*)$/gm, '<>{$1}</>');
-  
-  // Fix missing semicolons in JSX
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
-  
-  // Fix common JSX syntax issues
-  content = content.replace(/className\s*=\s*"([^"]*)"\s*$/gm, 'className="$1"');
-  content = content.replace(/onClick\s*=\s*{([^}]*)}\s*$/gm, 'onClick={$1}');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{\s*$/gm, '{}');
-  
-  // Fix malformed JSX expressions
-  content = content.replace(/\{\s*([^}]*)\s*$/gm, '{$1}');
-  
-  // Fix missing return statements
-  content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]*)\s*$/gm, 'const $1 = ($2) => {\n  return (\n    $3\n  );\n};');
-  
-  return content;
-}
-
-// Function to fix specific file patterns
-function fixSpecificFile(filePath, content) {
-  // Fix common patterns in AI pages
-  if (filePath.includes('/ai-')) {
-    // Ensure proper component structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[\s\S]*?)(\s*\});?$/m, '$1\n};\n\nexport default $1;');
-    }
-    
-    // Fix missing React import
-    if (!content.includes("import React")) {
-      content = "'use client';\nimport React from 'react';\n" + content;
-    }
-  }
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    let fixedContent = fixSyntaxErrors(content);
-    fixedContent = fixSpecificFile(filePath, fixedContent);
+    // Fix common patterns
+    const fixes = [
+      // Fix malformed JSX closing tags with semicolons
+      {
+        pattern: /(\w+);\s*<\/\s*$/gm,
+        replacement: '$1</$1>'
+      },
+      // Fix incomplete closing tags
+      {
+        pattern: /(\w+);\s*$/gm,
+        replacement: '$1'
+      },
+      // Fix malformed button tags
+      {
+        pattern: /<button([^>]*)>([^<]*);\s*<\/\s*$/gm,
+        replacement: '<button$1>$2</button>'
+      },
+      // Fix malformed h1, h2, h3 tags
+      {
+        pattern: /<(h[1-6])([^>]*)>([^<]*);\s*<\/\s*$/gm,
+        replacement: '<$1$2>$3</$1>'
+      },
+      // Fix malformed p tags
+      {
+        pattern: /<p([^>]*)>([^<]*);\s*<\/\s*$/gm,
+        replacement: '<p$1>$2</p>'
+      },
+      // Fix malformed span tags
+      {
+        pattern: /<span([^>]*)>([^<]*);\s*<\/\s*$/gm,
+        replacement: '<span$1>$2</span>'
+      },
+      // Fix malformed div tags
+      {
+        pattern: /<div([^>]*)>([^<]*);\s*<\/\s*$/gm,
+        replacement: '<div$1>$2</div>'
+      },
+      // Fix incomplete JSX expressions
+      {
+        pattern: /(\{[^}]*);\s*$/gm,
+        replacement: '$1}'
+      },
+      // Fix malformed closing tags with extra characters
+      {
+        pattern: /<\/\s*(\w+);\s*$/gm,
+        replacement: '</$1>'
+      }
+    ];
     
-    // Only write if content changed
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✓ Fixed syntax errors in: ${filePath}`);
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to find all TypeScript/TSX files with syntax errors
-function findFilesWithErrors(dir) {
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         files.push(fullPath);
       }
     }
   }
   
-  traverse(dir);
+  walkDir(dir);
   return files;
 }
 
 // Main execution
-console.log('🔍 Searching for files with syntax errors...');
-const filesToProcess = findFilesWithErrors('./app');
+console.log('Starting syntax error fixes...');
 
-console.log(`Found ${filesToProcess.length} files to process`);
+const sourceFiles = findSourceFiles('/workspace');
+console.log(`Found ${sourceFiles.length} source files`);
 
-filesToProcess.forEach(file => {
-  processFile(file);
-});
+let fixedCount = 0;
+for (const file of sourceFiles) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
 
-console.log('✅ Syntax error fixing complete!');
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log('Syntax error fixes complete!');

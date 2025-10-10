@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -169,7 +169,7 @@ $4]
       </body>
     </html>
   );
-export default RootLayout;
+export default RootLayout
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
@@ -180,6 +180,6 @@ export default RootLayout;
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-export default SrcPage;
+export default SrcPage
 }
   </script>

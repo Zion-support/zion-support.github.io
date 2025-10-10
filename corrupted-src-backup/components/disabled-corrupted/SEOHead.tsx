@@ -13,7 +13,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   structuredData}) => {
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
-    ? canonicalUrl;
+    ? canonicalUrl
     : `https://zion.app${canonicalUrl}`;
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
@@ -21,7 +21,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
+    description: description
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
   return(<Helmet>
       <title>{fullTitle}</title>
@@ -108,7 +108,7 @@ const,
     </Helmet>
   );
 };
-export default SEOHead;
+export default SEOHead
 "`
   </SEOHeadProps>
   </SEOHeadProps>

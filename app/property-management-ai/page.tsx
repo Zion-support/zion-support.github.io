@@ -42,4 +42,4 @@ const PropertyManagementAIPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PropertyManagementAIPage;
+export default PropertyManagementAIPage

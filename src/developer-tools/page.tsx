@@ -68,11 +68,9 @@ $4}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools;
-  </
+              Developer Tools</Tools>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity;
-  </
+              AI-powered development tools that accelerate your coding workflow and improve productivity</productivity>
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -110,7 +108,7 @@ $4}
 };
   const _devTools = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -225,10 +223,10 @@ $4}
             <h1 className="text-4xl,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
-// Developer Tools;
+// Developer Tools
           </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-// AI-powered development tools that accelerate your coding workflow and improve productivity;
+// AI-powered development tools that accelerate your coding workflow and improve productivity
           </p>
             {/* Stats */}"
             <div className="grid grid-cols-2,"
@@ -276,8 +274,7 @@ $4}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools;
-  </
+              Our Developer Tools</Tools>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {devTools.map((tool, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -301,7 +298,7 @@ $4}
         <section className="py-16 px-4"></section>"
           <div className="max-w-7xl mx-auto"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
-// Our Developer Tools;
+// Our Developer Tools
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -355,8 +352,7 @@ $4}
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block">
-                      Get Started Now;
-  </
+                      Get Started Now</Now>
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
@@ -366,7 +362,7 @@ $4}
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"
 // >
-//                       Get Started Now;
+//                       Get Started Now
           </a>
                   </div>
                 </div>
@@ -387,13 +383,11 @@ $4}
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Call (302) 464-0950;
-  </
+                Call (302) 464-0950</0950>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-                Email Us;
-  </
+                Email Us</Us>
             </div>
           </div>
         </section>
@@ -413,12 +407,12 @@ $4}
               <a
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//                 Call (302) 464-0950;
+//                 Call (302) 464-0950
           </a>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//                 Email Us;
+//                 Email Us
           </a>
             </div>
           </div>
@@ -428,6 +422,6 @@ $4}
     </div>
   );
 };
-export default DeveloperToolsPage;
+export default DeveloperToolsPage
   </a>
   </a>

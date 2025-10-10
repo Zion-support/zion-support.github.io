@@ -2,20 +2,20 @@
 import React, { useState, useCallback } from 'react';
 const Image: React.FC = () => {
 interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+  _placeholder?: 'blur' | 'empty'}
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
+  onError?: () => void
 }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -35,14 +35,14 @@ export const Image: React.FC<ImageProps> = ({
   ...props
 }) => {
   const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [hasError, setHasError] = useState(false)}
   const _handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
+    setIsLoaded(true)}
+    if (onLoad) onLoad()}
   }, [onLoad]);
   const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
+    setHasError(true)}
+    if (onError) onError()}
   }, [onError]);
   const imageStyle: React.CSSProperties = {
     ...style,
@@ -82,13 +82,13 @@ $4})
     />
   );
 };
-export default Image;
+export default Image
 'use client';
 import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content;
+  O: Add content
 };
   src: string;,
     alt: string
@@ -98,14 +98,14 @@ const,
   priority?: boolean
   _quality?: number
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
+  onError?: () => void
 }
-export const Image: React.FC;
+export const Image: React.FC
           <ImageProps> = ({// TODO: Add content;}
 }
 //   src,
@@ -122,7 +122,7 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props;
+//   ...props
 }) => {// TODO: Add content;}
 }
   const [, setIsLoaded] = useState(false);

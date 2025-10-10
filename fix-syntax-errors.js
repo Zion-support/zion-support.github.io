@@ -24,8 +24,7 @@ const filesToFix = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8')}
     // Fix common syntax issues
     content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>');
     
@@ -57,7 +56,7 @@ console.log('🔧 Fixing syntax errors...\n');
 
 filesToFix.forEach(filePath => {
   if (fs.existsSync(filePath)) {
-    fixFile(filePath);
+    fixFile(filePath)}
   } else {
     console.log(`⚠️  File not found: ${filePath}`);
   }

@@ -14,9 +14,9 @@ const,
     }
     if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
     }
-    // Add security headers;
+    // Add security headers
     addSecurityHeaders();
-    // Add security event listeners;
+    // Add security event listeners
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
   const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@ const,
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
     });
-    // Prevent drag and drop;
+    // Prevent drag and drop
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
     });
     document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
@@ -55,28 +55,28 @@ const,
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+Shift+I;
+        // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+U;
+        // Ctrl+U
         if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+S;
+        // Ctrl+S
         if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+A;
+        // Ctrl+A
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
         }
       }
     });
-    // Monitor for suspicious activity;
-    let suspiciousActivity = 0;
+    // Monitor for suspicious activity
+    let suspiciousActivity = 0
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
     };
-    // Reset suspicious activity counter every 5 minutes;
+    // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
     // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
+    let clickCount = 0
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
       });
@@ -86,16 +86,16 @@ const,
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
       form.addEventListener('submit', (e) => {
-        const formData = new FormData(form as HTMLFormElement);
-        const token = formData.get('csrf_token');
+        const formData = new FormData(form as HTMLFormElement)}
+        const token = formData.get('csrf_token')}
         if (!token) {
           setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
           logger.warn('Potential CSRF attempt detected', { form: form.id });
         }
       });
     });
-    // Track rapid keyboard input;
-    let keyCount = 0;
+    // Track rapid keyboard input
+    let keyCount = 0
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
           }
         });
@@ -103,9 +103,9 @@ const,
     };
     checkSuspiciousCode();
     // Monitor for unusual network requests
-    const originalFetch = window.fetch;
+    const originalFetch = window.fetch
     window.fetch = async (...args) => {
-      const url = args[0] as string;
+      const url = args[0] as string
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
         logger.warn('Suspicious network request blocked', { url });
@@ -116,24 +116,24 @@ const,
   }, [validateURL]);
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const warnings: string[] = [];
+    if (typeof window === 'undefined') return
+    const warnings: string[] = []}
     // Check for HTTPS
     if (location.protocol !== 'https:') {
-      warnings.push('Site is not served over HTTPS');
-      setIsSecure(false);
+      warnings.push('Site is not served over HTTPS')}
+      setIsSecure(false)}
     }
     // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
+    const headers = (window as any).securityHeaders
     if (headers) {
       if (!headers['x-frame-options']) {
-        warnings.push('X-Frame-Options header missing');
+        warnings.push('X-Frame-Options header missing')}
       }
       if (!headers['x-content-type-options']) {
-        warnings.push('X-Content-Type-Options header missing');
+        warnings.push('X-Content-Type-Options header missing')}
       }
       if (!headers['x-xss-protection']) {
-        warnings.push('X-XSS-Protection header missing');
+        warnings.push('X-XSS-Protection header missing')}
       }
     }
     setSecurityWarnings(warnings);
@@ -143,26 +143,26 @@ const,
   }, []);
   // Rate limiting
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
-    const windowStart = now - windowMs;
+    const now = Date.now()}
+    const windowStart = now - windowMs
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
+      return false
     }
     requests.push(now);
     localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
+    return true
   }, []);
   // Initialize security monitoring
   useEffect(() => {
     monitorCSP();
-    monitorSuspiciousActivity();
-    validateSecurityHeaders();
+    monitorSuspiciousActivity()}
+    validateSecurityHeaders()}
     // Set up periodic security checks
     const interval = setInterval(() => {
-      validateSecurityHeaders();
+      validateSecurityHeaders()}
     }, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
@@ -171,7 +171,7 @@ const,
     logger.info('Security event', { event, data });
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
-      return;
+      return
     }
     // Send to security monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {

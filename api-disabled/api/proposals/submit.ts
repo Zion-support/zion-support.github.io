@@ -4,14 +4,14 @@ async function submitByEmail(to: string;)
   text: string)
   attachments: unknown[] = []
 ) {
-  //   const host = process.env.EMAIL_HOST;
-  //   const port = Number(process.env.EMAIL_PORT || 587);
-  //   const user = process.env.EMAIL_USER;
-  //   const pass = process.env.EMAIL_PASS;
-  //   const from = process.env.EMAIL_FROM || user;
+  //   const host = process.env.EMAIL_HOST
+  //   const port = Number(process.env.EMAIL_PORT || 587)}
+  //   const user = process.env.EMAIL_USER
+  //   const pass = process.env.EMAIL_PASS
+  //   const from = process.env.EMAIL_FROM || user
 ,
   if (!host || !user || !pass) {,
-    throw new Error('Email not configured');
+    throw new Error('Email not configured')}
   }
 
   const transporter = nodemailer.createTransporter({)
@@ -70,9 +70,9 @@ export default async function handler(re,
   r: 'Proposal not found' });
     }
 
-    // Email submission;
+    // Email submission
     if (channels.includes('email')) {
-      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org'}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
@@ -102,13 +102,13 @@ Delegate,`
     }
 
     // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
+    let ensRecordHash: string | undefined
     try {,
-      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
+      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')}
       ensRecordHash = `0 x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {
-      // ignore;
+      // ignore
     }
 
     const updated = updateProposalMeta(id, m => ({)
@@ -121,7 +121,7 @@ Delegate,`
     // ENS record hash (defaul)
   t: compute and store hash only)
     let,
-  ensRecordHash: string | undefined;
+  ensRecordHash: string | undefined
     try {/* TODO: Fix JSX expression */}`
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });

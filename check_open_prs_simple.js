@@ -1,11 +1,11 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import https from 'https';
 
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com'
-      path: path;
+      path: path
       method: 'GET'
       headers: {,
         'User-Agent': 'Zion-App-Automation',

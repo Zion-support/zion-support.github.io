@@ -5,7 +5,7 @@ interface State {/* TODO: Fix JSX expression */}
 }
 export class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
-    super(props);
+    super(props)}
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {,
@@ -23,12 +23,12 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     this.setState({ error, errorInfo });
-    // Log error to monitoring service;
-    //     // Send to error tracking service;
+    // Log error to monitoring service
+    //     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {)
         description: error.toString(),
-        fatal: false;
+        fatal: false
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
     }
@@ -54,7 +54,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
         )
       );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary

@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState('')}
+  const [openItems, setOpenItems] = useState<number[]>([])}
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
+    )}
   };
   const faqData = [
     {
@@ -113,8 +113,8 @@ $4];
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
+                    const globalIndex = categoryIndex * 100 + itemIndex
+                    const isOpen = openItems.includes(globalIndex)}
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
@@ -153,14 +153,14 @@ $4];
                 Contact Form
       <Footer />
     </React.Fragment>
-export default FAQPage;
+export default FAQPage
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
+  )}
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -173,7 +173,7 @@ const toggleItem = (inde)
   };
   const faqData = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -340,9 +340,9 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content;
+  O: Add content
 }
-                    const globalIndex = categoryIndex * 100 + itemIndex;
+                    const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex);
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
@@ -378,13 +378,13 @@ type="text" placeholder="Search FAQs..."
 // Call (302) 464-0950</a>
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
                 href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Contact Form;
+                Contact Form
       <Footer /></Footer>
     </React.Fragment>
-export default FAQPage;
+export default FAQPage
 export default FaqPage</div>
   </p>
   </h2>
