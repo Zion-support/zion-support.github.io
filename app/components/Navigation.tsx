@@ -189,6 +189,11 @@ const Navigation: React.FC = () => {
   ];
 
   const emergingTech = [
+    { name: 'AI Smart Contract Auditor', href: '/ai-smart-contract-auditor', icon: Shield, description: 'Blockchain security analysis' },
+    { name: 'AI Quantum Computing Simulator', href: '/ai-quantum-computing-simulator', icon: Cpu, description: 'Quantum simulation platform' },
+    { name: 'AI Neural Interface', href: '/ai-neural-interface', icon: Brain, description: 'Brain-computer interface' },
+    { name: 'AI Space Mission Optimizer', href: '/ai-space-mission-optimizer', icon: Rocket, description: 'Space mission planning' },
+    { name: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine', icon: Globe, description: 'Climate forecasting AI' },
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },

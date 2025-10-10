@@ -398,6 +398,72 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       benefits: ['Grid efficiency', 'Renewable integration', 'Cost optimization', 'Sustainability'],
       category: 'Energy Tech',
       popular: false
+    },
+    {
+      icon: Shield,
+      title: 'AI Smart Contract Auditor',
+      description: 'Advanced AI-powered smart contract auditing with automated security analysis',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: ['99.9% vulnerability detection', 'Automated security analysis', 'Code quality assessment', 'Risk scoring system', 'Machine learning models'],
+      benefits: ['Reduced audit time by 80%', 'Zero false positives', 'Gas optimization', 'Comprehensive security'],
+      category: 'Blockchain',
+      popular: true
+    },
+    {
+      icon: Cpu,
+      title: 'AI Quantum Computing Simulator',
+      description: 'Advanced quantum computing simulation with up to 50 qubit processing',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: ['Up to 50 qubit simulation', 'AI-powered optimization', '3D quantum visualization', 'Error correction modeling'],
+      benefits: ['50% faster algorithm development', 'Advanced quantum ML', 'Accurate molecular modeling', 'Enhanced security analysis'],
+      category: 'Quantum',
+      popular: false
+    },
+    {
+      icon: Brain,
+      title: 'AI Neural Interface',
+      description: 'Revolutionary brain-computer interface for medical and research applications',
+      price: '$7,999/month',
+      marketPrice: '$15000-50000/month',
+      features: ['Real-time neural processing', 'Visual cortex interface', 'Motor control interface', 'Behavioral analytics'],
+      benefits: ['85% improvement in motor function', 'Restored communication ability', '40% cognitive improvement', 'Natural prosthetic control'],
+      category: 'Medical',
+      popular: false
+    },
+    {
+      icon: Rocket,
+      title: 'AI Space Mission Optimizer',
+      description: 'Advanced space mission optimization for trajectory planning and payload optimization',
+      price: '$12,999/month',
+      marketPrice: '$25000-100000/month',
+      features: ['30% fuel savings', 'Mission trajectory optimization', 'Risk assessment & mitigation', 'Multi-planetary planning'],
+      benefits: ['40% reduction in operational costs', 'Optimized Mars mission trajectories', '25% improvement in efficiency', 'Enhanced mission success rates'],
+      category: 'Aerospace',
+      popular: false
+    },
+    {
+      icon: Globe,
+      title: 'AI Climate Prediction Engine',
+      description: 'Revolutionary climate prediction with 95% accuracy for weather forecasting',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: ['95% accuracy predictions', 'Global climate modeling', 'Extreme weather prediction', 'Climate risk assessment'],
+      benefits: ['25% increase in crop yields', '60% reduction in disaster impact', '30% improvement in energy efficiency', 'Enhanced urban resilience'],
+      category: 'Climate',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'AI Cyber Defense Matrix',
+      description: 'Advanced cybersecurity platform with 99.9% threat detection and zero-trust architecture',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: ['99.9% threat detection', 'Zero-trust architecture', 'Behavioral analytics', 'Automated incident response'],
+      benefits: ['99.9% security uptime', 'Zero data breaches', 'Enhanced national security', '100% infrastructure protection'],
+      category: 'Cybersecurity',
+      popular: true
     }
   ];
 

@@ -46,6 +46,13 @@ const CommunityPage = React.lazy(() => import('./app/community/page'));
 const ApiPage = React.lazy(() => import('./app/api/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+// New AI Services
+const AISmartContractAuditor = React.lazy(() => import('./app/ai-smart-contract-auditor/page'));
+const AIQuantumComputingSimulator = React.lazy(() => import('./app/ai-quantum-computing-simulator/page'));
+const AINeuralInterface = React.lazy(() => import('./app/ai-neural-interface/page'));
+const AISpaceMissionOptimizer = React.lazy(() => import('./app/ai-space-mission-optimizer/page'));
+const AIClimatePredictionEngine = React.lazy(() => import('./app/ai-climate-prediction-engine/page'));
+const AICyberDefenseMatrix = React.lazy(() => import('./app/ai-cyber-defense-matrix/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -98,6 +105,13 @@ const App: React.FC = () => {
                             <Route path="/api" element={<ApiPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            {/* New AI Services Routes */}
+                            <Route path="/ai-smart-contract-auditor" element={<AISmartContractAuditor />} />
+                            <Route path="/ai-quantum-computing-simulator" element={<AIQuantumComputingSimulator />} />
+                            <Route path="/ai-neural-interface" element={<AINeuralInterface />} />
+                            <Route path="/ai-space-mission-optimizer" element={<AISpaceMissionOptimizer />} />
+                            <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEngine />} />
+                            <Route path="/ai-cyber-defense-matrix" element={<AICyberDefenseMatrix />} />
                           </Routes>
                         </Suspense>
                       </main>
