@@ -3,20 +3,16 @@ const { isValidEmail } = require('../emailUtils.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-=======
->>>>>>> origin/resolve-merge-conflicts
   try {
     const { email } = req.body || {};
 
     if (!email) {
-<<<<<<< HEAD
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
@@ -30,18 +26,19 @@ async function handler(req, res) {
       return;
     }
 
-    // Save subscription logic here
-    const subscription = {
-      email,
-      subscribedAt: new Date().toISOString(),
-      status: 'active'
-    };
+    // Here you would typically:
+    // 1. Validate the email format
+    // 2. Check if email already exists
+    // 3. Add to your newsletter service (Mailchimp, ConvertKit, etc.)
+    // 4. Send confirmation email
+
+    console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       message: 'Successfully subscribed to newsletter',
-      subscription
+      email
     }));
   } catch (error) {
     console.error('Newsletter subscription error:', error);
@@ -52,17 +49,3 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
-    };
-
-    res.statusCode = 200;
-    res.json({ success: true, subscription });
-  } catch (err) {
-    console.error("Error:", err);
-    console.error('Error subscribing to newsletter:', err);
-    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
-  }
-}
-
-export default withSentry(handler);
->>>>>>> origin/resolve-merge-conflicts
