@@ -75,6 +75,59 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
   ];
 
+  const microSaasServices = [
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
+    { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data integration platform' },
+    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation platform' },
+    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management AI' },
+    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing AI' },
+    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice generation' },
+    { name: 'Zion Workflow Automation', url: '/zion-workflow-automation', description: 'Process automation' },
+    { name: 'Zion Performance Monitor', url: '/zion-performance-monitor', description: 'Performance monitoring' },
+    { name: 'Zion Compliance Manager', url: '/zion-compliance-manager', description: 'Compliance management' },
+    { name: 'Zion Social Scheduler', url: '/zion-social-scheduler', description: 'Social media management' },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Intelligent code review' },
+    { name: 'Zion Customer Insights Pro', url: '/zion-customer-insights', description: 'Customer analytics' },
+    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'Smart email management' },
+    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', description: 'Meeting automation' },
+    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'SEO optimization' },
+    { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning & validation' },
+    { name: 'Zion AI Contract Analyzer', url: '/zion-ai-contract-analyzer', description: 'Contract analysis' },
+    { name: 'Zion AI Survey Builder', url: '/zion-ai-survey-builder', description: 'Intelligent surveys' },
+    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', description: 'AI accounting' },
+    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'AI recruitment' },
+    { name: 'Zion AI Content Moderation', url: '/zion-ai-content-moderation', description: 'Content moderation' },
+    { name: 'Zion AI Predictive Maintenance', url: '/zion-ai-predictive-maintenance', description: 'Equipment maintenance' },
+    { name: 'Zion AI Energy Manager', url: '/zion-ai-energy-manager', description: 'Energy optimization' },
+    { name: 'Zion AI Supply Chain Optimizer', url: '/zion-ai-supply-chain-optimizer', description: 'Supply chain AI' },
+    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
+    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
+    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
+    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' },
+    { name: 'Zion AI Quantum Analytics', url: '/zion-ai-quantum-analytics', description: 'Quantum-powered analytics' },
+    { name: 'Zion AI Holographic Workspace', url: '/zion-ai-holographic-workspace', description: '3D workspace platform' },
+    { name: 'Zion AI Edge Intelligence', url: '/zion-ai-edge-intelligence', description: 'Edge computing AI' },
+    { name: 'Zion AI Quantum Security', url: '/zion-ai-quantum-security', description: 'Quantum-resistant security' },
+    { name: 'Zion AI Neural Database Pro', url: '/zion-ai-neural-database-pro', description: 'Self-optimizing database' },
+    { name: 'Zion AI Energy Optimizer', url: '/zion-ai-energy-optimizer', description: 'Energy management AI' },
+    { name: 'Zion AI Supply Chain Intelligence', url: '/zion-ai-supply-chain-intelligence', description: 'Supply chain AI' },
+    { name: 'Zion AI Talent Intelligence', url: '/zion-ai-talent-intelligence', description: 'Talent acquisition AI' },
+    { name: 'Zion AI Global Translator', url: '/zion-ai-global-translator', description: 'Advanced translation AI' },
+    { name: 'Zion AI Legal Assistant', url: '/zion-ai-legal-assistant', description: 'Legal document AI' },
+    { name: 'Zion AI Health Monitor', url: '/zion-ai-health-monitor', description: 'Health monitoring AI' },
+    { name: 'Zion AI Market Intelligence', url: '/zion-ai-market-intelligence', description: 'Market analysis AI' },
+    { name: 'Zion AI Process Optimizer', url: '/zion-ai-process-optimizer', description: 'Process optimization AI' },
+    { name: 'Zion AI Infrastructure Monitor', url: '/zion-ai-infrastructure-monitor', description: 'Infrastructure monitoring AI' }
+  ];
+
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -185,31 +238,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
-              Micro SAAS Tools
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
-                  >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div>
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
-                        {service.description}
-                      </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* IT Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
