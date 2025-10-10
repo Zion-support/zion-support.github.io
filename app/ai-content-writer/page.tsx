@@ -35,6 +35,7 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
@@ -229,6 +230,7 @@ const AIContentWriterPage: React.FC = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 

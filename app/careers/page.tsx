@@ -3,7 +3,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
+
+interface JobPosition {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  description: string;
+  requirements: string[];
+  benefits: string[];
+  posted: string;
+  featured: boolean;
+}
 
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
@@ -238,6 +252,17 @@ const CareersPage: React.FC = () => {
                     </div>
                   </div>
 
+                  <div className="flex gap-3">
+                    <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+                      Apply Now
+                    </button>
+                    <button className="px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg transition-all duration-300">
+                      Save
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -263,30 +288,6 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
-=======
-                  {position.requirements && (
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, reqIndex) => (
-                          <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              ))}
             </div>
           </div>
         </section>
