@@ -1,99 +1,132 @@
-'use client'
-import React, { useState, useEffect, useCallback, memo, lazy, Suspense } from 'react'
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'
-import SEOOptimizer from './components/SEOOptimizer'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates'
-import StructuredData from './components/StructuredData'
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+'use client';
+import React, { useState, useEffect, useCallback, memo, lazy, Suspense } from 'react';
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
+import StructuredData from './components/StructuredData';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+
 // Performance optimization: Debounce scroll events
 const debounce = (func: Function, wait: number) => {
-  let timeout: NodeJS.Timeout
+  let timeout: NodeJS.Timeout;
   return function executedFunction(...args: any[]) {
     const later = () => {
-      clearTimeout(timeout)
-      func(...args)
-    }
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-  }
-}
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
 // Memoized components for better performance
 const ServiceCard = memo(({ icon: Icon, title, description, features, href, delay = 0 }: {
   icon: React.ComponentType<any>;
-  title: string
-  description: string
-  features: string[]
-  href: string
-  delay?: number
+  title: string;
+  description: string;
+  features: string[];
+  href: string;
+  delay?: number;
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay)
-    return () => clearTimeout(timer)
-  }, [delay])
+    const timer = setTimeout(() => setIsVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   return (
-    </any><div> </div><div> </div><div> </div><Icon> </Icon></div>
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+      <div className="flex flex-col h-full">
+        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <Icon className="w-8 h-8 text-white" />
+        </div>
         
-        <h3>{title}
-        </h3></h3>
+        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+          {title}
+        </h3>
         
-        <p>{description}
-        </p></p>
+        <p className="text-gray-300 mb-6 flex-grow group-hover:text-gray-200 transition-colors">
+          {description}
+        </p>
         
-        <ul>{features.map((feature, index) => (
-            </ul><li> </li><CheckCircle>{feature}
-            </CheckCircle></li>
+        <ul className="space-y-2 mb-6">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+              <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+              {feature}
+            </li>
           ))}
         </ul>
         
-        <a>Learn More
-          </a><ArrowRight> </ArrowRight></a>
+        <a
+          href={href}
+          className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+        >
+          Learn More
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </a>
       </div>
     </div>
-  )
-})
-ServiceCard.displayName = 'ServiceCard'
+  );
+});
+
+ServiceCard.displayName = 'ServiceCard';
+
 const StatsCard = memo(({ icon: Icon, value, label, delay = 0 }: {
-  icon: React.ComponentType<any>value: string
-  label: string
-  delay?: number
+  icon: React.ComponentType<any>;
+  value: string;
+  label: string;
+  delay?: number;
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay)
-    return () => clearTimeout(timer)
-  }, [delay])
+    const timer = setTimeout(() => setIsVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   return (
-    </any><div> </div><div> </div><Icon> </Icon></div>
+    <div className={`text-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-500`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <Icon className="w-8 h-8 text-white" />
+      </div>
       <div className="text-3xl font-bold text-white mb-2">{value}</div>
       <div className="text-gray-400">{label}</div>
     </div>
-  )
-})
-StatsCard.displayName = 'StatsCard'
+  );
+});
+
+StatsCard.displayName = 'StatsCard';
+
 const HomePage: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [scrollY, setScrollY] = useState(0)
+  const [isLoading, setIsLoading] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+
   // Performance optimization: Debounced scroll handler
   const handleScroll = useCallback(
     debounce(() => {
-      setScrollY(window.scrollY)
+      setScrollY(window.scrollY);
     }, 10),
     []
-  )
+  );
+
   useEffect(() => {
     // Simulate loading time for better UX
-    const timer = setTimeout(() => setIsLoading(false), 1000)
-    window.addEventListener('scroll', handleScroll)
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      clearTimeout(timer)
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+
   const services = [
     {
       icon: Brain,
@@ -137,68 +170,124 @@ const HomePage: React.FC = () => {
       features: ['Strategy Planning', 'Digital Transformation', 'Process Optimization', 'Training'],
       href: '/consultation'
     }
-  ]
+  ];
+
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: CheckCircle, value: '1000+', label: 'Projects Completed' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Clock, value: '24/7', label: 'Support Available' }
-  ]
+  ];
+
   if (isLoading) {
     return (
-      <div> </div><div> </div><div> </div><Brain> </Brain></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+            <Brain className="w-8 h-8 text-white" />
+          </div>
           <div className="text-white text-xl font-semibold">Loading...</div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    <div> </div><PerformanceOptimizer> </PerformanceOptimizer><SEOOptimizer> </SEOOptimizer><AccessibilityEnhancer> </AccessibilityEnhancer><StructuredData>{/* Hero Section */}
-      </StructuredData><section> </section><div> </div><div> </div><div> </div><h1>AI & IT Solutions
-            </h1><span>for the Future
-            </span></span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <PerformanceOptimizer />
+      <SEOOptimizer />
+      <AccessibilityEnhancer />
+      <StructuredData />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI & IT Solutions
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              for the Future
+            </span>
           </h1>
-          <p>Transform your business with cutting-edge artificial intelligence and information technology solutions. 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your business with cutting-edge artificial intelligence and information technology solutions. 
             We deliver innovative, scalable, and secure solutions that drive growth and efficiency.
-          </p></p>
-          <div> </div><button>Get Started
-            </button></button>
-            <button>Learn More
-            </button></button>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section> </section><div> </div><div>{stats.map((stat, index) => (
-              </div><StatsCard>))}
-          </StatsCard></div>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <StatsCard
+                key={index}
+                icon={stat.icon}
+                value={stat.value}
+                label={stat.label}
+                delay={index * 100}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section> </section><div> </div><div> </div><h2>Our Services
-            </h2></h2>
-            <p>Comprehensive solutions designed to accelerate your digital transformation and drive business success.
-            </p></p>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions designed to accelerate your digital transformation and drive business success.
+            </p>
           </div>
           
-          <div>{services.map((service, index) => (
-              </div><ServiceCard>))}
-          </ServiceCard></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                features={service.features}
+                href={service.href}
+                delay={index * 100}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section> </section><div> </div><div> </div><h2>Ready to Transform Your Business?
-            </h2></h2>
-            <p>Let's discuss how our AI and IT solutions can help you achieve your goals.
-            </p></p>
-            <div> </div><button>Contact Us
-              </button></button>
-              <button>Schedule Demo
-              </button></button>
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our AI and IT solutions can help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Us
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </div>
@@ -206,12 +295,15 @@ const HomePage: React.FC = () => {
 
       {/* Content Carousel */}
       <Suspense fallback={<div className="h-64 bg-gray-800 rounded-lg animate-pulse" />}>
-        <ContentCarousel> </ContentCarousel></Suspense>
+        <ContentCarousel />
+      </Suspense>
 
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-32 bg-gray-800 rounded-lg animate-pulse" />}>
-        <ContentPromotionBanner> </ContentPromotionBanner></Suspense>
+        <ContentPromotionBanner />
+      </Suspense>
     </div>
-  )
-}
-export default HomePage
+  );
+};
+
+export default HomePage;

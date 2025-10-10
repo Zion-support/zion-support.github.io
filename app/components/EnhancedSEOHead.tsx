@@ -1,23 +1,24 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
 interface SEOHeadProps {
-  title: string
-  description: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
-  alternate?: { hreflang: string; href: string }[]
-  structuredData?: any
+  title: string;
+  description: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
+  alternate?: { hreflang: string; href: string }[];
+  structuredData?: any;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -38,36 +39,63 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   alternate = [],
   structuredData
 }) => {
-  const location = useLocation()
-  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
+  const location = useLocation();
+  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+
   return (
-    <Helmet>{/* Basic Meta Tags */}
-      </Helmet><title>{title}</title>
-      <meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta>{/* Open Graph Meta Tags */}
-      </meta><meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta>{/* Twitter Card Meta Tags */}
-      </meta><meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta> </meta><meta>{/* Additional Meta Tags */}
-      {publishedTime && </meta><meta property="article:published_time" content={publishedTime} />}
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
-        <meta>))}
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Canonical URL */}
-      {canonical && </meta><link rel="canonical" href={canonical} />}
+      {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Alternate Language Versions */}
       {alternate.map((alt, index) => (
-        <link>))}
+        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
+      ))}
       
       {/* Structured Data */}
       {structuredData && (
-        </link><script>{JSON.stringify(structuredData)}
-        </script></script>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       )}
       
       {/* Default Structured Data */}
-      <script>{JSON.stringify({
+      <script type="application/ld+json">
+        {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
@@ -92,8 +120,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
             "https://github.com/ziontechgroup"
           ]
         })}
-      </script></script>
+      </script>
     </Helmet>
-  )
-}
-export default EnhancedSEOHead
+  );
+};
+
+export default EnhancedSEOHead;
