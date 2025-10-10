@@ -309,10 +309,150 @@ const AIServicesPage: React.FC = () => {
         'Real-time tracking',
         'Predictive analytics'
       ]
+    },
+    {
+      id: 11,
+      name: 'AI Quantum Computing Platform',
+      description: 'Revolutionary quantum computing solutions with AI optimization for complex problem solving',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Optimization',
+        'Quantum Machine Learning',
+        'Quantum Simulation',
+        'Quantum Error Correction',
+        'Quantum Cryptography',
+        'Quantum Optimization',
+        'Quantum Neural Networks',
+        'Quantum Data Processing'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $15,000/mo',
+      capabilities: [
+        '1000x faster computation',
+        'Quantum advantage in optimization',
+        'Breakthrough problem solving',
+        'Next-gen cryptography'
+      ]
+    },
+    {
+      id: 12,
+      name: 'AI Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with AI-powered navigation and safety systems',
+      icon: Car,
+      features: [
+        'Autonomous Navigation',
+        'Object Detection & Recognition',
+        'Path Planning',
+        'Collision Avoidance',
+        'Traffic Analysis',
+        'Predictive Maintenance',
+        'Fleet Management',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $8,500/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time decision making',
+        'Fleet optimization',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 13,
+      name: 'AI Space Exploration Platform',
+      description: 'AI-powered space exploration and satellite management with advanced mission planning',
+      icon: Rocket,
+      features: [
+        'Mission Planning',
+        'Satellite Operations',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Astronomical Data Analysis',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Resource Management'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $12,000/mo',
+      capabilities: [
+        'Mission success optimization',
+        'Real-time space monitoring',
+        'Advanced trajectory planning',
+        'Space resource optimization'
+      ]
+    },
+    {
+      id: 14,
+      name: 'AI Climate Intelligence',
+      description: 'Advanced climate monitoring and prediction with AI-powered environmental analysis',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Carbon Footprint Analysis',
+        'Environmental Monitoring',
+        'Disaster Prediction',
+        'Sustainability Planning',
+        'Emission Tracking',
+        'Green Energy Optimization'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $5,500/mo',
+      capabilities: [
+        '95% weather accuracy',
+        'Climate change mitigation',
+        'Environmental protection',
+        'Sustainable development'
+      ]
+    },
+    {
+      id: 15,
+      name: 'AI Drug Discovery Platform',
+      description: 'Revolutionary pharmaceutical research with AI-powered molecular analysis and drug development',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Interaction Analysis',
+        'Clinical Trial Optimization',
+        'Protein Folding Prediction',
+        'Toxicity Assessment',
+        'Patent Analysis',
+        'Biomarker Discovery',
+        'Personalized Medicine'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $18,000/mo',
+      capabilities: [
+        '50% faster drug development',
+        '98% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment plans'
+      ]
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
 
   if (!isLoaded) {
     return (
