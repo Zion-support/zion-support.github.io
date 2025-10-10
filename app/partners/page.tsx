@@ -1,18 +1,17 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react'
 interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
+  name: string
+  logo: string
+  description: string
+  category: string
+  website?: string
+  tier: 'strategic' | 'preferred' | 'certified'
 }
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
@@ -71,7 +70,7 @@ logo: '/api/placeholder/200/100',
       description: 'Enterprise AI and data analytics',
       category: 'Enterprise Partner'
     }
-  ];
+  ]
   const benefits = [
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
@@ -125,7 +124,7 @@ logo: '/api/placeholder/200/100',
       website: 'https://splunk.com',
       tier: 'certified'
     }
-  ];
+  ]
   const benefits = [
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
@@ -134,7 +133,7 @@ logo: '/api/placeholder/200/100',
     'Co-marketing and co-selling programs',
     'Dedicated partner success manager',
     'Priority support and resources'
-  ];
+  ]
   const partnershipTiers = [
     {
       name: 'Strategic Partners',
@@ -154,10 +153,10 @@ logo: '/api/placeholder/200/100',
       icon: <CheckCircle className="w-8 h-8 text-green-500" />,
       color: 'from-green-400 to-teal-500'
     }
-  ];
+  ]
   const getTierInfo = (tier: string) => {
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
-  };
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
+  }
   return (
     <React.Fragment>
       <Helmet>
@@ -171,7 +170,7 @@ logo: '/api/placeholder/200/100',
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Partners;
+              Our Partners
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We work with industry leaders to deliver cutting-edge AI and IT solutions.
@@ -245,8 +244,7 @@ logo: '/api/placeholder/200/100',
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '1000+', label: 'Joint Customers' },
     { icon: <Zap className="w-8 h-8 text-purple-500" />, value: '95%', label: 'Success Rate' },
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -311,7 +309,7 @@ logo: '/api/placeholder/200/100',
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
-                const tierInfo = getTierInfo(partner.tier);
+                const tierInfo = getTierInfo(partner.tier)
                 return (
                   <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
                     <div className="text-center">
@@ -337,7 +335,7 @@ logo: '/api/placeholder/200/100',
                       )}
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -421,13 +419,13 @@ logo: '/api/placeholder/200/100',
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Become Our Partner;
+              Become Our Partner
   </
             <p className="text-xl text-gray-300 mb-8">
               Join our ecosystem and help shape the future of AI and IT solutions.
             </p>
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Partner With Us;
+              Partner With Us
   </
           </div>
         </section>
@@ -480,9 +478,9 @@ logo: '/api/placeholder/200/100',
         </div>
       </section>
     </div>
-  );
-};
-export default PartnersPage;
+  )
+}
+export default PartnersPage
   </button>
   </h2>
   </div>

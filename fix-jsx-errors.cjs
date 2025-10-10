@@ -2,133 +2,265 @@
 
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common JSX syntax errors
-function fixJsxErrors(filePath) {
+// Common JSX error patterns to fix
+const fixes = [
+  // Fix malformed closing tags (missing >)
+  {
+    pattern: /<\/([a-zA-Z][a-zA-Z0-9]*)\s*$/gm,
+    replacement: (match, tagName) => `</${tagName}>`
+  },
+  // Fix semicolons after JSX closing tags
+  {
+    pattern: /<\/([a-zA-Z][a-zA-Z0-9]*)>;/gm,
+    replacement: (match, tagName) => `</${tagName}>`
+  },
+  // Fix semicolons after JSX self-closing tags
+  {
+    pattern: /<([a-zA-Z][a-zA-Z0-9]*)\s*\/>;/gm,
+    replacement: (match, tagName) => `<${tagName} />`
+  },
+  // Fix malformed JSX fragments
+  {
+    pattern: /<React\.Fragment>;/gm,
+    replacement: '<React.Fragment>'
+  },
+  {
+    pattern: /<\/React\.Fragment>;/gm,
+    replacement: '</React.Fragment>'
+  },
+  // Fix malformed Routes closing
+  {
+    pattern: /<\/Routes>;/gm,
+    replacement: '</Routes>'
+  },
+  // Fix malformed Suspense closing
+  {
+    pattern: /<\/Suspense>;/gm,
+    replacement: '</Suspense>'
+  },
+  // Fix malformed div closing
+  {
+    pattern: /<\/div>;/gm,
+    replacement: '</div>'
+  },
+  // Fix malformed BrowserRouter closing
+  {
+    pattern: /<\/BrowserRouter>;/gm,
+    replacement: '</BrowserRouter>'
+  },
+  // Fix malformed HelmetProvider closing
+  {
+    pattern: /<\/HelmetProvider>;/gm,
+    replacement: '</HelmetProvider>'
+  },
+  // Fix malformed ErrorBoundary closing
+  {
+    pattern: /<\/ErrorBoundary>;/gm,
+    replacement: '</ErrorBoundary>'
+  },
+  // Fix extra semicolons at end of JSX expressions
+  {
+    pattern: /;\s*$/gm,
+    replacement: ''
+  },
+  // Fix malformed h1 closing tags
+  {
+    pattern: /<\/h1\s*$/gm,
+    replacement: '</h1>'
+  },
+  // Fix malformed h2 closing tags
+  {
+    pattern: /<\/h2\s*$/gm,
+    replacement: '</h2>'
+  },
+  // Fix malformed p closing tags
+  {
+    pattern: /<\/p\s*$/gm,
+    replacement: '</p>'
+  },
+  // Fix malformed span closing tags
+  {
+    pattern: /<\/span\s*$/gm,
+    replacement: '</span>'
+  },
+  // Fix malformed button closing tags
+  {
+    pattern: /<\/button\s*$/gm,
+    replacement: '</button>'
+  },
+  // Fix malformed section closing tags
+  {
+    pattern: /<\/section\s*$/gm,
+    replacement: '</section>'
+  },
+  // Fix malformed div closing tags
+  {
+    pattern: /<\/div\s*$/gm,
+    replacement: '</div>'
+  },
+  // Fix malformed header closing tags
+  {
+    pattern: /<\/header\s*$/gm,
+    replacement: '</header>'
+  },
+  // Fix malformed footer closing tags
+  {
+    pattern: /<\/footer\s*$/gm,
+    replacement: '</footer>'
+  },
+  // Fix malformed main closing tags
+  {
+    pattern: /<\/main\s*$/gm,
+    replacement: '</main>'
+  },
+  // Fix malformed article closing tags
+  {
+    pattern: /<\/article\s*$/gm,
+    replacement: '</article>'
+  },
+  // Fix malformed aside closing tags
+  {
+    pattern: /<\/aside\s*$/gm,
+    replacement: '</aside>'
+  },
+  // Fix malformed nav closing tags
+  {
+    pattern: /<\/nav\s*$/gm,
+    replacement: '</nav>'
+  },
+  // Fix malformed ul closing tags
+  {
+    pattern: /<\/ul\s*$/gm,
+    replacement: '</ul>'
+  },
+  // Fix malformed ol closing tags
+  {
+    pattern: /<\/ol\s*$/gm,
+    replacement: '</ol>'
+  },
+  // Fix malformed li closing tags
+  {
+    pattern: /<\/li\s*$/gm,
+    replacement: '</li>'
+  },
+  // Fix malformed a closing tags
+  {
+    pattern: /<\/a\s*$/gm,
+    replacement: '</a>'
+  },
+  // Fix malformed img self-closing tags
+  {
+    pattern: /<img([^>]*)\s*$/gm,
+    replacement: (match, attributes) => {
+      if (!match.includes('/>')) {
+        return `<img${attributes} />`
+      }
+      return match
+    }
+  },
+  // Fix malformed input self-closing tags
+  {
+    pattern: /<input([^>]*)\s*$/gm,
+    replacement: (match, attributes) => {
+      if (!match.includes('/>')) {
+        return `<input${attributes} />`
+      }
+      return match
+    }
+  },
+  // Fix malformed br self-closing tags
+  {
+    pattern: /<br\s*$/gm,
+    replacement: '<br />'
+  },
+  // Fix malformed hr self-closing tags
+  {
+    pattern: /<hr\s*$/gm,
+    replacement: '<hr />'
+  },
+  // Fix malformed meta self-closing tags
+  {
+    pattern: /<meta([^>]*)\s*$/gm,
+    replacement: (match, attributes) => {
+      if (!match.includes('/>')) {
+        return `<meta${attributes} />`
+      }
+      return match
+    }
+  },
+  // Fix malformed link self-closing tags
+  {
+    pattern: /<link([^>]*)\s*$/gm,
+    replacement: (match, attributes) => {
+      if (!match.includes('/>')) {
+        return `<link${attributes} />`
+      }
+      return match
+    }
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Fix 1: Add missing closing tags for common patterns
-    // Look for unclosed div, section, main tags
-    const unclosedTagPatterns = [
-      { open: '<div', close: '</div>' },
-      { open: '<section', close: '</section>' },
-      { open: '<main', close: '</main>' },
-      { open: '<article', close: '</article>' },
-      { open: '<header', close: '</header>' },
-      { open: '<footer', close: '</footer>' },
-      { open: '<nav', close: '</nav>' }
-    ];
-    
-    // Fix 2: Fix JSX fragments - ensure proper opening and closing
-    content = content.replace(/<>/g, '<React.Fragment>');
-    content = content.replace(/<\/>/g, '</React.Fragment>');
-    
-    // Fix 3: Fix common syntax errors
-    // Fix missing commas in object literals
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix missing semicolons in JSX expressions
-    content = content.replace(/(\w+)\s*\n\s*<\/\w+>/g, '$1;\n  </');
-    
-    // Fix 4: Ensure proper JSX structure
-    // Add missing React import if needed
-    if (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect')) {
-      if (!content.includes("import React")) {
-        content = "import React from 'react';\n" + content;
+    // Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
       }
-    }
+    });
     
-    // Fix 5: Fix malformed JSX attributes
-    content = content.replace(/className=\s*{([^}]+)}\s*>/g, 'className={$1}>');
-    content = content.replace(/className=\s*"([^"]+)"\s*>/g, 'className="$1">');
-    
-    // Fix 6: Fix unclosed JSX elements by adding proper closing tags
-    // This is a more complex fix that requires parsing the structure
-    const lines = content.split('\n');
-    const fixedLines = [];
-    const tagStack = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      fixedLines.push(line);
-      
-      // Check for opening tags
-      const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
-      if (openTagMatch && !line.includes('/>')) {
-        const tagName = openTagMatch[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          tagStack.push(tagName);
-        }
-      }
-      
-      // Check for closing tags
-      const closeTagMatch = line.match(/<\/(\w+)>/);
-      if (closeTagMatch) {
-        const tagName = closeTagMatch[1];
-        const lastIndex = tagStack.lastIndexOf(tagName);
-        if (lastIndex !== -1) {
-          tagStack.splice(lastIndex, 1);
-        }
-      }
-    }
-    
-    // Add missing closing tags at the end
-    while (tagStack.length > 0) {
-      const tag = tagStack.pop();
-      fixedLines.push(`  </${tag}>`);
-    }
-    
-    content = fixedLines.join('\n');
-    
-    // Fix 7: Clean up extra whitespace and empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    
+    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Fixed JSX errors in ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with JSX errors
-function findFilesWithJsxErrors() {
-  try {
-    const { execSync } = require('child_process');
-    const result = execSync('find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules', { 
-      encoding: 'utf8',
-      cwd: process.cwd()
+function main() {
+  console.log('Starting JSX error fixes...');
+  
+  // Find all TypeScript/JSX files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    totalFiles += files.length;
+    
+    files.forEach(file => {
+      if (fixFile(file)) {
+        fixedFiles++;
+      }
     });
-    return result.trim().split('\n').filter(line => line.trim());
-  } catch (error) {
-    return [];
-  }
+  });
+  
+  console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files`);
+  console.log('JSX error fixes completed!');
 }
 
-// Main execution
-console.log('🔧 Starting JSX error fixes...\n');
+if (require.main === module) {
+  main();
+}
 
-const filesToFix = findFilesWithJsxErrors();
-console.log(`Found ${filesToFix.length} JSX files to check:\n`);
-
-let fixedCount = 0;
-let totalFiles = filesToFix.length;
-
-filesToFix.forEach((filePath, index) => {
-  console.log(`[${index + 1}/${totalFiles}] Processing ${filePath}`);
-  
-  if (fixJsxErrors(filePath)) {
-    fixedCount++;
-  }
-});
-
-console.log(`\n✅ JSX fixes complete!`);
-console.log(`📊 Fixed errors in ${fixedCount} out of ${totalFiles} files`);
+module.exports = { fixFile, fixes };

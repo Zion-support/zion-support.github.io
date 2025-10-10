@@ -1,21 +1,20 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react'
 interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
+  id: string
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  requirements: string[]
+  benefits: string[]
+  posted: string
+  featured: boolean
 }
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
@@ -53,7 +52,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     }
-  ];
+  ]
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -65,7 +64,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     '401k matching program',
     'Unlimited PTO',
     'Mental health support'
-  ];
+  ]
   const values = [
     {
       icon: Lightbulb,
@@ -91,7 +90,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       description: 'We build trust through transparency and honesty',
       color: 'text-red-400'
     }
-  ];
+  ]
   const culture = [
     {
       stat: '98%',
@@ -113,7 +112,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -126,7 +125,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team;
+            Join Our Team
   </
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Work on cutting-edge AI and IT solutions that transform businesses worldwide.
@@ -269,7 +268,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                     </div>
                   </div>
                   <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                    Apply Now;
+                    Apply Now
   </
                 </div>
 <p className="text-gray-300 mb-4">{position.description}</p>
@@ -305,12 +304,12 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Zap className="w-5 h-5" />
-                  Send Resume;
+                  Send Resume
   </
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  Contact Us;
+                  Contact Us
   </
               </div>
             </div>
@@ -374,9 +373,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         </div>
       </section>
     </div>
-  );
-};
-export default CareersPage;
+  )
+}
+export default CareersPage
   </Link>
   </button>
   </button>

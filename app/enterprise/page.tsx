@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
     }
-  ];
+  ]
   const solutions = [
     {
       title: 'Enterprise Resource Planning',
@@ -68,7 +68,7 @@ const EnterprisePage: React.FC = () => {
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
     }
-  ];
+  ]
   const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -78,13 +78,13 @@ const EnterprisePage: React.FC = () => {
     'Scale with business growth',
     'Integrate with existing systems',
     'Provide 24/7 support and monitoring'
-  ];
+  ]
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -101,7 +101,7 @@ const EnterprisePage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions;
+              Solutions
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -114,23 +114,23 @@ const EnterprisePage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies;
+              View Case Studies
   </
           </div>
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-20 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>;
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (;}
-              <div key={index} className="text-center"></div>;
-                <div className="flex justify-center mb-4"></div>;
-                  <stat.icon className="w-12 h-12 text-purple-400" />;
-                </div>;
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;
-                <div className="text-gray-300 text-sm">{stat.label}</div>;
-              </div>;
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
+                  <stat.icon className="w-12 h-12 text-purple-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -140,7 +140,7 @@ const EnterprisePage: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features;
+              Enterprise-Grade Features
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for scale, security, and performance to meet the demands of large organizations.
@@ -156,16 +156,16 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions;
+              Comprehensive Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end enterprise solutions that address every aspect of your business operations.
@@ -173,8 +173,8 @@ const EnterprisePage: React.FC = () => {
           </div>
                     </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
           </div>
         </div>
@@ -202,16 +202,16 @@ const EnterprisePage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More;
+              Learn More
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default EnterprisePage;
+  )
+}
+export default EnterprisePage
   </button>
   </h2>
   </h2>

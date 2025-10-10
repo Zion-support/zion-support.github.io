@@ -1,18 +1,18 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 interface Slide {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  features: string[]
   stats?: {
-    value: string;
-    label: string;
-  }[];
+    value: string
+    label: string
+  }[]
 }
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
     {
       icon: Brain,
@@ -58,24 +58,24 @@ const ContentCarousel: React.FC = () => {
         { value: '24/7', label: 'Global Support' }
       ]
     }
-  ];
+  ]
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-  const currentSlideData = slides[currentSlide];
+    const timer = setInterval(nextSlide, 5000)
+    return () => clearInterval(timer)
+  }, [])
+  const currentSlideData = slides[currentSlide]
   return (
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Discover Our Solutions;
+            Discover Our Solutions
   </
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
@@ -155,11 +155,11 @@ const ContentCarousel: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
-                    Get Started;
+                    Get Started
   </
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
-                    Learn More;
+                    Learn More
   </
                 </div>
               </div>
@@ -273,9 +273,9 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel
   </button>
   </button>
   </button>

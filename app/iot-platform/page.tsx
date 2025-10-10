@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
     },
     {
       icon: Clock,
@@ -13,7 +13,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     },
     {
     }
-  ];
+  ]
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
@@ -21,8 +21,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
             </p>
           </div>
                   ))}
-                </ul>;
-</div>;
+                </ul>
+</div>
             ))}
           </div>
         </div>
@@ -32,7 +32,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              IoT Use Cases;
+              IoT Use Cases
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform supports a wide range of industries and applications, 
@@ -81,15 +81,15 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </p>
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
+              Schedule Demo
   </
           </div>
         </div>
       </section>
       <Footer />
 </div>
-  );
-};
-export default PagePage;
+  )
+}
+export default PagePage
   </button>
   </h2>

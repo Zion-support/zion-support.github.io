@@ -1,27 +1,27 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {;
-  Mail,;
-  Target,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database,;
-  Send,;
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import {
+  Mail,
+  Target,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
+  Database,
+  Send,
   PieChart;}
-} from 'lucide-react';
+} from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +44,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
       title: 'Smart Triggers',
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
     }
-  ];
+  ]
   const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -54,7 +54,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
     'Improve customer retention',
     'Generate more qualified leads',
     'Save time and resources'
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -68,7 +68,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Email Marketing Automation;
+                Email Marketing Automation
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your email marketing with our AI-powered automation platform. 
@@ -77,11 +77,11 @@ const EmailMarketingAutomationPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
-                  Start Free Trial;
+                  Start Free Trial
   </
                 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (302) 464-0950;
+                  Call (302) 464-0950
   </
               </div>
             </div>
@@ -92,7 +92,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Platform Features;
+                Platform Features
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our email marketing automation platform provides everything you need to succeed.
@@ -116,7 +116,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits;
+                Key Benefits
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive better results with our comprehensive email marketing automation platform.
@@ -145,11 +145,11 @@ const EmailMarketingAutomationPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (302) 464-0950;
+                  Call (302) 464-0950
   </
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
-                  Email Us;
+                  Email Us
   </
               </div>
             </div>
@@ -157,9 +157,9 @@ const EmailMarketingAutomationPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default EmailMarketingAutomationPage;
+  )
+}
+export default EmailMarketingAutomationPage
   </button>
   </button>
   </h2>

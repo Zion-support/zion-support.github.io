@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
 const features = [
     {
@@ -24,7 +24,7 @@ const features = [
       title: 'Global Deployment',
       description: 'Worldwide cloud services deployment and support'
     }
-  ];
+  ]
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
@@ -34,7 +34,7 @@ const features = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -45,7 +45,7 @@ const features = [
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Services;
+            Cloud Services
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud services. 
@@ -140,10 +140,10 @@ const features = [
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  Start Your Cloud Journey;
+                  Start Your Cloud Journey
   </
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Schedule Consultation;
+                  Schedule Consultation
   </
               </div>
             </div>
@@ -151,9 +151,9 @@ const features = [
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default CloudServicesPage;
+  )
+}
+export default CloudServicesPage
   </button>
   </button>
   </h1>

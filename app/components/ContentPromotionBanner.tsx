@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+'use client'
+import React from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
@@ -23,7 +23,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -33,7 +33,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   const stats = [
     {
       icon: Users,
@@ -53,7 +53,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
+  ]
   return (
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -68,11 +68,11 @@ const ContentPromotionBanner: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
-              Get Started Today;
+              Get Started Today
   </
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More;
+              Learn More
   </
           </div>
         </div>
@@ -116,7 +116,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
           <div className="text-center mt-8">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Get Started Today;
+              Get Started Today
   </
           </div>
         </div>
@@ -183,7 +183,7 @@ const ContentPromotionBanner: React.FC = () => {
                 <span>Start Free Trial</span>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo;
+                Schedule Demo
   </
             </div>
           </div>
@@ -195,9 +195,9 @@ const ContentPromotionBanner: React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
-export default ContentPromotionBanner;
+  )
+}
+export default ContentPromotionBanner
   </button>
   </button>
   </button>

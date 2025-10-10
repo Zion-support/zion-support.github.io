@@ -1,7 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const EnhancedSEOHead: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -52,8 +51,7 @@ const EnhancedSEOHead: React.FC = () => {
         "description": "Strategic IT consulting to optimize business operations"
       }
     ]
-  };
-
+  }
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -103,7 +101,6 @@ const EnhancedSEOHead: React.FC = () => {
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default EnhancedSEOHead;
+  )
+}
+export default EnhancedSEOHead

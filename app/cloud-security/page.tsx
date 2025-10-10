@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react'
 const CloudSecurityPage: React.FC = () => {
   const features = [
     {
@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Compliance',
       description: 'Worldwide compliance with security standards and regulations'
     }
-  ];
+  ]
   const benefits = [
 'Advanced cloud security technology',
     'Real-time threat monitoring and detection',
@@ -34,7 +34,7 @@ icon: Shield,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,7 +45,7 @@ icon: Shield,
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security;
+            Cloud Security
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
@@ -79,7 +79,7 @@ icon: Shield,
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud security solutions for your business.
@@ -107,11 +107,11 @@ icon: Shield,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
+              Call Now
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
+              Email Us
   </
           </div>
         </div>
@@ -125,19 +125,19 @@ icon: Shield,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
+              Call Now
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
+              Email Us
   </
           </div>
         </div>
       </div>
     </div>
-  );
-};
-export default CloudSecurityPage;
+  )
+}
+export default CloudSecurityPage
   </button>
   </button>
   </button>

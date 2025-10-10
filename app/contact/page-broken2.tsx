@@ -1,16 +1,16 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Send,;
+'use client'
+import React from 'react'
+'use client'
+import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle;}
-} from 'lucide-react';
+} from 'lucide-react'
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,40 +21,40 @@ phone: '',
     budget: '',
     timeline: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({;
-      ...prev,;
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
       [name]: value;}
-    }));
-  }, []);
+    }))
+  }, [])
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({;
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        budget: '',;
-        timeline: '',;
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
         message: '';}
-      });
-    } catch (error) {;
+      })
+    } catch (error) {
       setSubmitStatus('error');}
-    } finally {;
+    } finally {
       setIsSubmitting(false);}
     }
-  };
+  }
   const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -65,7 +65,7 @@ phone: '',
     'DevOps',
     'Consulting',
     'Other'
-  ];
+  ]
   const contactInfo = [
     {
       icon: Phone,
@@ -91,7 +91,7 @@ phone: '',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -106,7 +106,7 @@ phone: '',
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Get in
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Touch;
+                {' '}Touch
   </
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ phone: '',
                         onChange={handleInputChange}
                         required
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your full name"
+                        placeholder="Your full name" />
                       />
                     </div>
                   </div>
@@ -162,7 +162,7 @@ phone: '',
                         onChange={handleInputChange}
                         required
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="your@email.com"
+                        placeholder="your@email.com" />
                       />
                     </div>
                   </div>
@@ -170,7 +170,7 @@ phone: '',
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Company;
+                      Company
   </
                     <div className="relative">
                       <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -180,13 +180,13 @@ phone: '',
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your company"
+                        placeholder="Your company" />
                       />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number
   </
                     <div className="relative">
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -196,14 +196,14 @@ phone: '',
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+1 (555) 123-4567" />
                       />
                     </div>
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest;
+                    Service Interest
   </
                   <div className="relative">
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -216,7 +216,7 @@ phone: '',
                       {services.map((service) => (
                         <option key={service} value={service}>
                           {service}
-                        </option>;
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -231,7 +231,7 @@ phone: '',
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      required;
+                      required
                       rows={6}
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
@@ -281,11 +281,11 @@ phone: '',
                     <div>
 <h3 className="text-lg font-semibold text-white mb-1">
                         {info.title}
-                      </h3>;
-                      <p className="text-cyan-400 font-medium mb-1">;
+                      </h3>
+                      <p className="text-cyan-400 font-medium mb-1">
                         {info.details}
-                      </p>;
-                      <p className="text-gray-300 text-sm">;
+                      </p>
+                      <p className="text-gray-300 text-sm">
                         {info.description}
                       </p>
                     </div>
@@ -324,9 +324,9 @@ phone: '',
         </section>
       </div>
 </div>
-  );
-};
-export default ContactPage;
+  )
+}
+export default ContactPage
   </textarea>
   </label>
   </label>

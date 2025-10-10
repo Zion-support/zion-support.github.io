@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -9,7 +9,7 @@ const ContentStatistics: React.FC = () => {
     years: 0,
     countries: 0,
     uptime: 0
-  });
+  })
   const targetCounters = {
     clients: 10000,
     projects: 5000,
@@ -17,7 +17,7 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  };
+  }
   const statistics = [
     {
       icon: Users,
@@ -67,7 +67,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-red-400',
       description: 'Service reliability'
     }
-  ];
+  ]
   const achievements = [
     {
       icon: Brain,
@@ -85,7 +85,7 @@ const ContentStatistics: React.FC = () => {
 description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -95,7 +95,7 @@ description: 'Worldwide deployment and support for international businesses',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   const achievements = [
     {
       icon: Star,
@@ -115,38 +115,38 @@ description: 'Worldwide deployment and support for international businesses',
       description: 'Year-over-year business growth',
       value: '300%'
     }
-  ];
+  ]
   useEffect(() => {
     const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const steps = 60
+    const stepDuration = duration / steps
     const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
+      const target = targetCounters[key as keyof typeof targetCounters]
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       return setInterval(() => {
 setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
+          const current = prev[key as keyof typeof prev]
           if (current < target) {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
-            };
+            }
           }
-          return prev;
-        });
-      }, 16);
-    });
+          return prev
+        })
+      }, 16)
+    })
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))
+    }
+  }, [])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Impact in Numbers;
+            Our Impact in Numbers
   </
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've transformed businesses and delivered exceptional results.
@@ -281,16 +281,16 @@ setCounters(prev => {
                 Get Started Today
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies;
+                View Case Studies
   </
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-export default ContentStatistics;
+  )
+}
+export default ContentStatistics
   </button>
   </h2>
   </div>

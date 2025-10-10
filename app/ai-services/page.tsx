@@ -1,7 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   MessageSquare, 
@@ -38,10 +38,10 @@ import {
   Headphones,
   Mail,
   MapPin
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AIServicesPagePage: React.FC = () => {
   const features = [
     {
@@ -214,14 +214,14 @@ const AIServicesPagePage: React.FC = () => {
       marketPrice: '$300-1200/month',
       benefits: ['Faster design process', 'Consistent branding', 'Creative inspiration', 'Cost-effective solutions']
     }
-  ];
+  ]
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -232,8 +232,7 @@ const AIServicesPagePage: React.FC = () => {
       <Navigation />
       
       <main className="pt-20">
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -249,7 +248,7 @@ const AIServicesPagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Services;
+              AI Services
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence solutions. 
@@ -257,10 +256,10 @@ const AIServicesPagePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
+                Get Started
   </
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
+                View Demo
   </
             </div>
           </div>
@@ -270,10 +269,10 @@ const AIServicesPagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
+                Key Features
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
+                Advanced AI technology that drives results
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -296,7 +295,7 @@ const AIServicesPagePage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search AI services..."
-                  value={searchTerm}
+                  value={searchTerm} />
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
@@ -384,7 +383,7 @@ const AIServicesPagePage: React.FC = () => {
                 Why Choose Our AI Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
+                Proven results that drive business growth and efficiency
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -424,10 +423,10 @@ const AIServicesPagePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
+                  Contact Us
   </
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
+                  Learn More
   </
                 Ready to Get Started?
               </h2>
@@ -449,9 +448,9 @@ const AIServicesPagePage: React.FC = () => {
       
       <Footer />
     </React.Fragment>
-  );
-};
-export default AIServicesPagePage;
+  )
+}
+export default AIServicesPagePage
   </button>
   </button>
   </p>
@@ -499,8 +498,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Advanced AI security solutions for threat detection, fraud prevention, and risk management.',
       benefits: ['Real-time threat detection', 'Fraud pattern recognition', 'Behavioral analysis', 'Risk assessment', 'Security monitoring', 'Compliance automation', 'Incident response', 'Threat intelligence']
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -558,8 +556,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $12,000/project',
       features: ['Object detection', 'Image classification', 'OCR solutions', 'Quality inspection', 'Real-time processing']
     }
-  ];
-
+  ]
   const benefits = [
     'Increased operational efficiency',
     'Better decision making with data insights',
@@ -569,15 +566,13 @@ const AIServicesPage: React.FC = () => {
     'Scalable AI solutions',
     '24/7 AI-powered support',
     'Continuous learning and improvement'
-  ];
-
+  ]
   const stats = [
     { icon: Brain, value: '95%', label: 'Accuracy Rate' },
     { icon: Zap, value: '10x', label: 'Faster Processing' },
     { icon: Shield, value: '99.9%', label: 'Uptime' },
     { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -742,14 +737,12 @@ const AIServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIServicesPage;
+  )
+}
+export default AIServicesPage
       </div>
       <Footer />
     </>
-  );
-};
-
-export default AIServicesPage;
+  )
+}
+export default AIServicesPage

@@ -1,22 +1,21 @@
-'use client';
-import React, { useState } from 'react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react'
 interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
+  question: string
+  answer: string
+  category: string
 }
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -58,7 +57,7 @@ answer: 'Yes, we provide comprehensive training programs to ensure your team can
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
     }
-  ];
+  ]
   const supportChannels = [
     {
       name: 'Phone Support',
@@ -93,7 +92,7 @@ title: 'Phone Support',
       icon: MessageCircle,
 availability: 'Mon-Fri: 9AM-6PM EST'
     }
-  ];
+  ]
   const faqs = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -111,12 +110,12 @@ availability: 'Mon-Fri: 9AM-6PM EST'
       question: 'Do you offer training for your solutions?',
       answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions.'
     }
-  ];
+  ]
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  )
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST',
       color: 'text-purple-400'
@@ -129,8 +128,8 @@ availability: 'Mon-Fri: 9AM-6PM EST'
       availability: '24/7 Critical Support',
       color: 'text-red-400'
     }
-  ];
-  const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
+  ]
+  const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development']
       question: 'Can I integrate with my existing systems?',
       answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom connectors. Our team will help you set up integrations during implementation.',
       category: 'Integration'
@@ -145,19 +144,17 @@ availability: 'Mon-Fri: 9AM-6PM EST'
       answer: 'We implement automated daily backups with 30-day retention, plus real-time replication across multiple data centers. All backups are encrypted and tested regularly to ensure data integrity.',
       category: 'Data Management'
     }
-  ];
-
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
-
+  ]
+  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management']
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
+    setExpandedFAQ(expandedFAQ === index ? null : index)
+  }
   return (
     <React.Fragment>
       <Helmet>
@@ -171,7 +168,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Support Center;
+              Support Center
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get help and support for our AI and IT solutions. We're here to help you succeed.
@@ -182,7 +179,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               <input
                 type="text"
                 placeholder="Search for help..."
-                value={searchTerm}
+                value={searchTerm} />
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
@@ -212,7 +209,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               <input
                 type="text"
                 placeholder="Search for help..."
-                value={searchTerm}
+                value={searchTerm} />
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
@@ -224,7 +221,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Contact Support;
+                Contact Support
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose your preferred way to get in touch with our support team.
@@ -319,7 +316,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  View Docs;
+                  View Docs
   </
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
@@ -327,7 +324,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Join Community;
+                  Join Community
   </
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
@@ -335,7 +332,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Check Status;
+                  Check Status
   </
               </div>
             </div>
@@ -361,11 +358,11 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Phone className="w-5 h-5" />
-                  Call Support;
+                  Call Support
   </
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
-                  Email Support;
+                  Email Support
   </
               </div>
             </div>
@@ -373,9 +370,9 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default SupportPage;
+  )
+}
+export default SupportPage
   </button>
   </button>
   </div>
@@ -427,7 +424,6 @@ export default SupportPage;
 
       <Footer />
     </>
-  );
-};
-
-export default SupportPage;
+  )
+}
+export default SupportPage

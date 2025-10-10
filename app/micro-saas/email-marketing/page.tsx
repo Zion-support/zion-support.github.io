@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
   return (
     <React.Fragment>
@@ -30,7 +30,7 @@ const EmailMarketingSuitePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo;
+                View Demo
   </
             </div>
           </div>
@@ -47,7 +47,7 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default EmailMarketingSuitePage;
+  )
+}
+export default EmailMarketingSuitePage
   </button>

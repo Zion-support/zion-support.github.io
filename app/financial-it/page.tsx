@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
 const FinancialITPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +42,7 @@ const FinancialITPage: React.FC = () => {
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
     }
-  ];
+  ]
   const services = [
     {
       icon: '🏦',
@@ -64,7 +64,7 @@ const FinancialITPage: React.FC = () => {
       title: 'Security Services',
       description: 'Cybersecurity and data protection solutions'
     }
-  ];
+  ]
   const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -72,7 +72,7 @@ const FinancialITPage: React.FC = () => {
     'Regulatory Compliance',
     'Fraud Prevention',
     'Advanced Analytics'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
@@ -89,7 +89,7 @@ const FinancialITPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Financial Services
             <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Solutions;
+              IT Solutions
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -102,7 +102,7 @@ const FinancialITPage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
+              Schedule Demo
   </
           </div>
         </div>
@@ -113,7 +113,7 @@ const FinancialITPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed specifically for financial services industry;
+              Comprehensive IT solutions designed specifically for financial services industry
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -129,10 +129,10 @@ const FinancialITPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
           </div>
         </div>
@@ -142,7 +142,7 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services;
+              Financial Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
@@ -187,23 +187,23 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading financial institutions using our specialized IT solutions for compliance and security;
+            Join leading financial institutions using our specialized IT solutions for compliance and security
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+              Start Free Trial
   </
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
+              Contact Sales
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default FinancialITPage;
+  )
+}
+export default FinancialITPage
   </button>
   </button>
   </p>

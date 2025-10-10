@@ -1,54 +1,54 @@
-'use client';
-import React from 'react';
-import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {;
-  const webServices = [,;
-    {,;
-      title: 'Frontend Development',;
-      description: 'Modern, responsive web applications with cutting-edge technologies',;
-      icon: Code,;
-      price: '$1,200/month',;
-      features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],;
+'use client'
+import React from 'react'
+import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import PerformanceOptimizer from '../components/PerformanceOptimizer'
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
+import SecurityEnhancer from '../components/SecurityEnhancer'
+const $1: React.FC = () => {
+  const webServices = [,
+    {,
+      title: 'Frontend Development',
+      description: 'Modern, responsive web applications with cutting-edge technologies',
+      icon: Code,
+      price: '$1,200/month',
+      features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],;}
-      color: 'text-blue-400'},;
-    {;
-      title: 'Backend Development',;
-      description: 'Scalable server-side solutions and API development',;
-      icon: Database,;
-      price: '$1,500/month',;
-      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],;
+      color: 'text-blue-400'},
+    {
+      title: 'Backend Development',
+      description: 'Scalable server-side solutions and API development',
+      icon: Database,
+      price: '$1,500/month',
+      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
       benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],;}
-      color: 'text-green-400'},;
-    {;
-      title: 'Full-Stack Development',;
-      description: 'Complete web solutions from frontend to backend',;
-      icon: Globe,;
-      price: '$2,200/month',;
-      features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],;
+      color: 'text-green-400'},
+    {
+      title: 'Full-Stack Development',
+      description: 'Complete web solutions from frontend to backend',
+      icon: Globe,
+      price: '$2,200/month',
+      features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
       benefits: ['Unified solution', 'Faster development', 'Better performance'],;}
-      color: 'text-purple-400'},;
-    {;
-      title: 'E-commerce Development',;
-      description: 'Custom e-commerce platforms and online stores',;
-      icon: Smartphone,;
-      price: '$1,800/month',;
-      features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],;
+      color: 'text-purple-400'},
+    {
+      title: 'E-commerce Development',
+      description: 'Custom e-commerce platforms and online stores',
+      icon: Smartphone,
+      price: '$1,800/month',
+      features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],;}
-      color: 'text-orange-400'},;
-    {;
-      title: 'Maintenance & Support',;
-      description: 'Ongoing maintenance and support for your web applications',;
-      icon: Users,;
-      price: '$500/month',;
+      color: 'text-orange-400'},
+    {
+      title: 'Maintenance & Support',
+      description: 'Ongoing maintenance and support for your web applications',
+      icon: Users,
+      price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],;}
       color: 'text-gray-400'}
-  ];
+  ]
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -56,7 +56,7 @@ const $1: React.FC = () => {;
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+  ]
   const process = [
     {
       step: '01',
@@ -82,12 +82,11 @@ const $1: React.FC = () => {;
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,
     }
-  ];
+  ]
   return(<React.Fragment>
-      <SEOOptimizer;
-        title="Web Development Services - Zion Tech Group";
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
-
+      <SEOOptimizer
+        title="Web Development Services - Zion Tech Group"
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -134,8 +133,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ];
-
+  ]
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -143,8 +141,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
-
+  ]
   const process = [
     {
       step: '01',
@@ -170,8 +167,7 @@ const WebDevelopmentPage: React.FC = () => {
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -209,16 +205,16 @@ const WebDevelopmentPage: React.FC = () => {
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16"></section>;
-            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">;
-              Web Development Services;</h1>;
-            </h1>,;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,;
-              Build modern, scalable, and high-performance web applications with our expert development team.;
-              From frontend to backend, we deliver solutions that drive business growth.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>;
-              <a;
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+              Web Development Services;</h1>
+            </h1>,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+              Build modern, scalable, and high-performance web applications with our expert development team.
+              From frontend to backend, we deliver solutions that drive business growth.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <a
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
@@ -226,16 +222,16 @@ const WebDevelopmentPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
               >
-                Start Your Project;
-              </a>;
-              <a;
+                Start Your Project
+              </a>
+              <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                Call +1 302 464 0950;
-              </a>;
-            </div>,;
-          </section>,;
-,;
+                Call +1 302 464 0950
+              </a>
+            </div>,
+          </section>,
+,
           {/* Services Grid */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
@@ -311,14 +307,14 @@ const WebDevelopmentPage: React.FC = () => {
                       </ul>
                     </div>
                   )}
-                  <a;
+                  <a
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button">Get Started</a>
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
-                    Get Started;
-                  </a>,;
+                    Get Started
+                  </a>,
                 </div>))}
             </div>
           </section>
@@ -370,17 +366,17 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="text-center"></section>;
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">;
-                Ready to Build Your Next Web Application?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Let's discuss your project requirements and create a custom solution that drives your business forward.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
-                <a;
+          <section className="text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Build Your Next Web Application?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss your project requirements and create a custom solution that drives your business forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
@@ -391,12 +387,12 @@ const WebDevelopmentPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
                 >
-                  Start Your Project;
-                </a>;
-                <a;
+                  Start Your Project
+                </a>
+                <a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950
                 </a>
               </div>
             </div>
@@ -404,9 +400,9 @@ const WebDevelopmentPage: React.FC = () => {
         </main>
         <Footer />
       </div>,
-    </React.Fragment>);
-};
-export default WebDevelopmentPage;
+    </React.Fragment>)
+}
+export default WebDevelopmentPage
   </h2>
   </span>
   </h2>
@@ -420,7 +416,6 @@ export default WebDevelopmentPage;
   </h2>
       </div>
     </>
-  );
-};
-
-export default WebDevelopmentPage;
+  )
+}
+export default WebDevelopmentPage

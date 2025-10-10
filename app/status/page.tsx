@@ -1,19 +1,19 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(new Date())
+  const [isRefreshing, setIsRefreshing] = useState(false)
   const refreshStatus = async () => {
-    setIsRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
+    setIsRefreshing(true)
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setLastUpdated(new Date())
     setIsRefreshing(false);}
-  };
+  }
   const services = [
     {
       name: 'API Services',
@@ -63,7 +63,7 @@ export default function StatusPage() {
       lastIncident: 'Never',
       description: 'System monitoring and alerts'
     }
-  ];
+  ]
   const incidents = [
     {
       id: 1,
@@ -85,48 +85,48 @@ export default function StatusPage() {
       description: 'Intermittent database connection issues affecting some user operations.',
       affectedServices: ['Database', 'API Services']
     }
-  ];
+  ]
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'degraded':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case 'outage':;
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return <CheckCircle className="w-5 h-5 text-green-400" />
+      case 'degraded':
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
+      case 'outage':
+        return <XCircle className="w-5 h-5 text-red-400" />
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return <Clock className="w-5 h-5 text-gray-400" />
     }
-  };
+  }
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
-        return 'text-green-400';
+        return 'text-green-400'
       case 'degraded':
-        return 'text-yellow-400';
+        return 'text-yellow-400'
       case 'outage':
-        return 'text-red-400';
+        return 'text-red-400'
       default:
-        return 'text-gray-400';
+        return 'text-gray-400'
     }
-  };
+  }
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
+        return 'bg-red-500/20 text-red-400 border-red-500/50'
       case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
       default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'
     }
-  };
+  }
   const overallStatus = services.every(service => service.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
-      : 'degraded';
+      : 'degraded'
   return (
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -136,17 +136,17 @@ export default function StatusPage() {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
               {getStatusIcon(overallStatus)}
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>;
+              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' :;}
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-              </span>;
-            </div>;
-            <button;
+              </span>
+            </div>
+            <button
               onClick={refreshStatus}
               disabled={isRefreshing}
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh;
+              Refresh
   </
           </div>
           <p className="text-gray-400 text-sm">
@@ -155,18 +155,18 @@ export default function StatusPage() {
         </div>
       </section>
       {/* Services Status */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>;
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {services.map((service, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>;
-                <div className="flex items-center justify-between mb-4"></div>;
-                  <div className="flex items-center gap-3"></div>;
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  <div className="flex items-center gap-3"></div>
                     {getStatusIcon(service.status)}
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>;
-                  </div>;
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>;
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
                 </div>
@@ -191,29 +191,29 @@ export default function StatusPage() {
         </div>
       </section>
       {/* Recent Incidents */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>;
-          <div className="space-y-6"></div>;
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
+          <div className="space-y-6"></div>
             {incidents.map((incident) => (;}
-              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>;
-                <div className="flex items-start justify-between mb-4"></div>;
-                  <div></div>;
-                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>;
-                    <div className="flex items-center gap-4 text-sm text-gray-400"></div>;
-                      <span>Started: {new Date(incident.startTime).toLocaleString()}</span>;
-                      <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-2"></div>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>;
+              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
+                <div className="flex items-start justify-between mb-4"></div>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-400"></div>
+                      <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
+                      <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2"></div>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
                       {incident.severity}
-                    </span>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      incident.status === 'resolved';
-                        ? 'bg-green-500/20 text-green-400';
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      incident.status === 'resolved'
+                        ? 'bg-green-500/20 text-green-400'
                         : 'bg-yellow-500/20 text-yellow-400';}
-                    }`}>;
+                    }`}>
                       {incident.status}
                     </span>
                   </div>
@@ -275,17 +275,17 @@ export default function StatusPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates;
+              Subscribe to Updates
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support;
+              Contact Support
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
+  )
 }
   </button>
   </button>

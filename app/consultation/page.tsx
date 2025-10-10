@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react'
 const ConsultationPage: React.FC = () => {
   const services = [
     {
@@ -24,7 +24,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Guide your organization through digital transformation.',
       benefits: ['Process optimization', 'Technology integration', 'Change management', 'Training programs']
     }
-  ];
+  ]
   const process = [
     {
       step: '1',
@@ -45,21 +45,21 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Ongoing Support',
       description: 'Provide continuous guidance and support throughout implementation.'
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react'
 interface ConsultationType {
-  id: string;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular: boolean;
+  id: string
+  name: string
+  description: string
+  duration: string
+  price: string
+  features: string[]
+  popular: boolean
 }
 const ConsultationPage: React.FC = () => {
-  const [selectedType, setSelectedType] = useState<string>('');
+  const [selectedType, setSelectedType] = useState<string>('')
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -121,7 +121,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const experts = [
     {
       icon: Zap,
@@ -143,12 +143,12 @@ const ConsultationPage: React.FC = () => {
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
-  ];
+  ]
   const handleBooking = (typeId: string) => {
-    setSelectedType(typeId);
+    setSelectedType(typeId)
     // In a real app, this would open a booking modal or redirect to a booking page
-    console.log(`Booking consultation: ${typeId}`);
-  };
+    console.log(`Booking consultation: ${typeId}`)
+  }
   return (
     <React.Fragment>
       <Helmet>
@@ -161,7 +161,7 @@ const ConsultationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert IT Consultation;
+                Expert IT Consultation
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get personalized guidance from our experts to transform your business with cutting-edge AI and IT solutions.
@@ -194,7 +194,7 @@ const ConsultationPage: React.FC = () => {
                     ))}
                   </ul>
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                    Schedule Consultation;
+                    Schedule Consultation
   </
                 </div>
               ))}
@@ -293,7 +293,7 @@ const ConsultationPage: React.FC = () => {
                   {type.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular
   </
                     </div>
                   )}
@@ -322,7 +322,7 @@ const ConsultationPage: React.FC = () => {
                         : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                     }`}
                   >
-                    Book Consultation;
+                    Book Consultation
   </
                 </div>
               ))}
@@ -402,7 +402,7 @@ const ConsultationPage: React.FC = () => {
                 <Link
                   to="/services"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  View All Services;
+                  View All Services
   </
               </div>
             </div>
@@ -472,20 +472,20 @@ const ConsultationPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Calendar className="mr-2 h-5 w-5" />
-              Schedule Consultation;
+              Schedule Consultation
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Contact Us;
+              Contact Us
   </
           </div>
         </div>
       </section>
       </div>
     </React.Fragment>
-  );
-};
-export default ConsultationPage;
+  )
+}
+export default ConsultationPage
   </button>
   </button>
   </Link>
@@ -499,7 +499,6 @@ export default ConsultationPage;
   </section>
   </div>
   </string>
-  );
-};
-
-export default ConsultationPage;
+  )
+}
+export default ConsultationPage

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const SitemapPage: React.FC = () => {
   const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
@@ -26,7 +26,7 @@ const SitemapPage: React.FC = () => {
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
       <div className="max-w-7xl mx-auto"></div>
@@ -35,7 +35,7 @@ const SitemapPage: React.FC = () => {
             Sitemap</h1>
           </h1>
           <p className="text-xl text-gray-600">
-            Navigate through all pages on our website;
+            Navigate through all pages on our website
   </
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -47,15 +47,15 @@ const SitemapPage: React.FC = () => {
                     href={page.path} 
                     className="text-blue-600 hover:text-blue-700 transition-colors">
                     {page.title}
-                  </a>;
-                </h3>;
-                <p className="text-sm text-gray-600 mb-2">;
+                  </a>
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
                   {page.description}
-                </p>;
-                <p className="text-xs text-gray-500">;
+                </p>
+                <p className="text-xs text-gray-500">
                   {page.path}
-                </p>;
-              </div>;
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -70,20 +70,20 @@ const SitemapPage: React.FC = () => {
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
-              Contact Us;
+              Contact Us
   </
             <a 
               href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
-              Call Us: (302) 464-0950;
+              Call Us: (302) 464-0950
   </
           </div>
         </div>
       </div>
     </div>
-  );
-};
-export default SitemapPage;
+  )
+}
+export default SitemapPage
   </a>
   </a>
   </p>

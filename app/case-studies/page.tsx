@@ -1,19 +1,19 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react'
 interface CaseStudy {
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  duration: string;
-  team: string;
+  id: string
+  title: string
+  client: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  image: string
+  duration: string
+  team: string
 }
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
@@ -68,17 +68,16 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       duration: '4 months',
       team: '6 specialists'
     }
-  ];
+  ]
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
-    : caseStudies.filter(study => study.industry === selectedIndustry);
-
+    : caseStudies.filter(study => study.industry === selectedIndustry)
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -91,7 +90,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies;
+            Case Studies
   </
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
@@ -162,7 +161,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     </Link>
                     <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                       <ExternalLink className="w-4 h-4" />
-                      Share;
+                      Share
   </
                   </div>
           </div>
@@ -212,9 +211,9 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         </div>
       </section>
     </div>
-  );
-};
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage
   </button>
   </div>
   </div>

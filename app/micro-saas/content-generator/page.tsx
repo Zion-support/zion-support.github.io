@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Settings, ArrowRight } from 'lucide-react'
 const MicroSaaSPage: React.FC = () => {
-  const serviceName = 'content-generator';
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const serviceName = 'content-generator'
+  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   return (
     <React.Fragment>
       <Helmet>
@@ -31,7 +31,7 @@ const MicroSaaSPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo;
+                View Demo
   </
             </div>
           </div>
@@ -48,7 +48,7 @@ const MicroSaaSPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default MicroSaaSPage;
+  )
+}
+export default MicroSaaSPage
   </button>

@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
-  ];
+  ]
   const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -62,7 +62,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -79,7 +79,7 @@ const AccessibilityPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Accessibility
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Solutions;
+                Solutions
   </
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -88,10 +88,10 @@ const AccessibilityPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Get Accessibility Audit;
+                Get Accessibility Audit
   </
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More;
+                Learn More
   </
             </div>
           </div>
@@ -101,7 +101,7 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive Accessibility Features;
+                Comprehensive Accessibility Features
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
@@ -117,17 +117,17 @@ const AccessibilityPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {feature.title}
-                  </h3>;
-                  <p className="text-gray-300 mb-6">{feature.description}</p>;
-                  <ul className="space-y-2">;
+                  </h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (;}
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">;
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />;
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
@@ -137,7 +137,7 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Standards Compliance;
+                Standards Compliance
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure full compliance with international accessibility standards and regulations.
@@ -155,8 +155,8 @@ const AccessibilityPage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
                   <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">
                     {standard.status}
-                  </span>;
-                </div>;
+                  </span>
+                </div>
               ))}
             </div>
           </div>
@@ -173,10 +173,10 @@ const AccessibilityPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Accessibility Audit;
+                  Get Accessibility Audit
   </
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us;
+                  Contact Us
   </
               </div>
             </div>
@@ -184,9 +184,9 @@ const AccessibilityPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default AccessibilityPage;
+  )
+}
+export default AccessibilityPage
   </button>
   </button>
   </h2>

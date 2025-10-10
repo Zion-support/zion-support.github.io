@@ -1,26 +1,25 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react'
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  date: string
+  readTime: string
+  category: string
+  tags: string[]
+  image: string
+  featured: boolean
 }
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
   // Sample blog posts data
   const blogPosts: BlogPost[] = [
     {
@@ -101,29 +100,29 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-web.jpg',
       featured: false
     }
-  ];
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
+  ]
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development']
   useEffect(() => {
-    let filtered = blogPosts;
+    let filtered = blogPosts
     if (searchTerm) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => post.category === selectedCategory)
     }
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredPosts(filtered)
+  }, [searchTerm, selectedCategory])
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
@@ -162,8 +161,8 @@ const BlogPage: React.FC = () => {
       category: 'Micro SaaS',
       readTime: '7 min read'
     }
-  ];
-  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
+  ]
+  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights']
   return (
     <React.Fragment>
       <Helmet>
@@ -176,7 +175,7 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Updates;
+                Tech Insights & Updates
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
@@ -187,7 +186,7 @@ const BlogPage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  value={searchQuery}
+                  value={searchQuery} />
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
@@ -250,7 +249,7 @@ const BlogPage: React.FC = () => {
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News;
+              Tech Insights & News
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
@@ -276,7 +275,7 @@ const BlogPage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  value={searchTerm}
+                  value={searchTerm} />
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -310,7 +309,7 @@ const BlogPage: React.FC = () => {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                     />
                   </div>
                   <div className="p-6">
@@ -320,7 +319,7 @@ const BlogPage: React.FC = () => {
                       </span>
                       {post.featured && (
                         <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">
-                          Featured;
+                          Featured
   </
                       )}
                     </div>
@@ -451,7 +450,7 @@ const BlogPage: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               />
               <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors duration-200">
                 Subscribe
@@ -461,9 +460,9 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default BlogPage;
+  )
+}
+export default BlogPage
   </span>
   </section>
   </h1>
@@ -489,7 +488,6 @@ export default BlogPage;
         </section>
       </div>
     </>
-  );
-};
-
-export default BlogPage;
+  )
+}
+export default BlogPage

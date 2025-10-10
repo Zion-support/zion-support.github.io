@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react'
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +40,7 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -66,10 +66,10 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
+                Get Started
   </
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Demo;
+                Schedule Demo
   </
             </div>
           </div>
@@ -79,10 +79,10 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features;
+                Advanced 5G Features
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge 5G technology for the next generation of connectivity;
+                Cutting-edge 5G technology for the next generation of connectivity
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,11 +99,11 @@ const FiveGImplementationPage: React.FC = () => {
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
-                        </li>;
+                        </li>
                       ))}
-                    </ul>;
+                    </ul>
                   )}
-                </div>;
+                </div>
               ))}
             </div>
           </div>
@@ -120,10 +120,10 @@ const FiveGImplementationPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
+                  Contact Us
   </
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
+                  Learn More
   </
               </div>
             </div>
@@ -131,9 +131,9 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default FiveGImplementationPage;
+  )
+}
+export default FiveGImplementationPage
   </button>
   </button>
   </p>

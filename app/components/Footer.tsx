@@ -1,11 +1,9 @@
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Phone, Mail, MapPin } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Phone, Mail, MapPin } from 'lucide-react'
 const Footer: React.FC = React.memo(() => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear()
   // Service data
   const aiServices = [
     { name: 'AI Analytics', url: '/ai-analytics' },
@@ -16,8 +14,7 @@ const Footer: React.FC = React.memo(() => {
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics' },
     { name: 'AI Marketing', url: '/ai-marketing' }
-  ];
-
+  ]
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services' },
     { name: 'Cybersecurity', url: '/cybersecurity' },
@@ -27,8 +24,7 @@ const Footer: React.FC = React.memo(() => {
     { name: 'Network Security', url: '/network-security' },
     { name: 'Mobile Development', url: '/mobile-development' },
     { name: 'Web Development', url: '/web-development' }
-  ];
-
+  ]
   const microSaasServices = [
     { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard' },
     { name: 'Content Generator', url: '/micro-saas/content-generator' },
@@ -38,8 +34,7 @@ const Footer: React.FC = React.memo(() => {
     { name: 'Lead Scoring', url: '/micro-saas/lead-scoring' },
     { name: 'SEO Optimizer', url: '/micro-saas/seo-optimizer' },
     { name: 'Social Manager', url: '/micro-saas/social-manager' }
-  ];
-
+  ]
   const quickLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Services', url: '/services' },
@@ -47,14 +42,12 @@ const Footer: React.FC = React.memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'Contact', url: '/contact' }
-  ];
-
+  ]
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' }
-  ];
-
+  ]
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -214,8 +207,7 @@ const Footer: React.FC = React.memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-export default Footer;
+  )
+})
+Footer.displayName = 'Footer'
+export default Footer

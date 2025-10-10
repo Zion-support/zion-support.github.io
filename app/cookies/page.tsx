@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CookiesPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -41,6 +41,6 @@ const CookiesPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default CookiesPage;
+  )
+}
+export default CookiesPage

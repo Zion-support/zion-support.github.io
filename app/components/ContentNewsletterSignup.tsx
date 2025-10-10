@@ -1,16 +1,16 @@
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
+    icon: React.ComponentType<{ className?: string }>
+    text: string
+  }>
+  onSubscribe?: (email: string) => void
 }
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
@@ -25,29 +25,28 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   ],
   onSubscribe
 }) => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setIsLoading(true);
+    e.preventDefault()
+    if (!email) return
+    setIsLoading(true)
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
-        onSubscribe(email);
+        onSubscribe(email)
       }
-      setIsSubscribed(true);
-      setEmail('');
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error('Subscription error:', error)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
   if (isSubscribed) {
     return (
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -78,11 +77,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <button
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
-            Subscribe another email;
+            Subscribe another email
   </
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -111,11 +110,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address;
+                  Email Address
   </
                 <input
                   type="email"
-                  value={email}
+                  value={email} />
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={placeholder}
                   required
@@ -146,9 +145,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup
   </label>
   </button>
   </ContentNewsletterSignupProps>

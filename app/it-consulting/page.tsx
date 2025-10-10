@@ -1,82 +1,82 @@
-'use client';
-import React from 'react';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import {;
-  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,;
-  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,;
-  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,;
-  Mail, Phone, DollarSign, Clock, Award, CheckCircle,;
-  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart,;
-  CreditCard, Building, Factory, Car, Plane, Ship, Train,;
-  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench,;
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator,;
-  Compass, PieChart, TrendingDown, Activity, Zap as Lightning,;
-  Target as Crosshair, Shield as Security, Users as People,;
-  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow,;
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,;
-  Eye, Search, MessageSquare, PieChart as Chart,;
-  Download, Upload, RefreshCw, Play, Pause, Stop,;
-  Volume2, VolumeX, Mic, MicOff, Headphones,;
-  Wifi, WifiOff, Battery, BatteryCharging,;
-  Sun, Moon, Sunrise, Sunset, CloudRain,;
-  Snowflake, Wind, Thermometer, Droplets,;
-  Lightbulb, LightbulbOff, Power, PowerOff,;
-  Wrench as Tool, Hammer as HammerIcon,;
-  Paintbrush as Brush, Scissors as ScissorIcon,;
-  BookOpen as Book, Calculator as Calc,;
-  Compass as CompassIcon, PieChart as PieChartIcon,;
-  TrendingDown as TrendingDownIcon, Activity as ActivityIcon,;
-  Grid3X3, Package, Utensils, Microscope,;
-  Atom, Cpu as CpuIcon, Database as DatabaseIcon,;
-  Network, Layers, Workflow, GitBranch,;
-  Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon,;
-  Search as SearchIcon, MessageSquare as MessageSquareIcon,;
-  PieChart as PieChartIcon2, BarChart as BarChartIcon,;
-  TrendingUp as TrendingUpIcon, Activity as ActivityIcon2,;
-  Target as TargetIcon, Globe as GlobeIcon,;
-  Shield as ShieldIcon, Lock as LockIcon,;
-  Users as UsersIcon, Settings as SettingsIcon,;
-  Calendar as CalendarIcon, CheckSquare as CheckSquareIcon,;
-  FileText as FileTextIcon, Mail as MailIcon2,;
-  Phone as PhoneIcon2, DollarSign as DollarSignIcon,;
-  Clock as ClockIcon, Award as AwardIcon,;
-  CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon,;
-  Bot as BotIcon, Palette as PaletteIcon,;
-  Camera as CameraIcon, Music as MusicIcon,;
-  Video as VideoIcon, Gamepad2 as Gamepad2Icon,;
-  ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon,;
-  Building as BuildingIcon, Factory as FactoryIcon,;
-  Car as CarIcon, Plane as PlaneIcon,;
-  Ship as ShipIcon, Train as TrainIcon,;
-  Home as HomeIcon, Heart as HeartIcon,;
-  Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon,;
-  Briefcase as BriefcaseIcon, Wrench as WrenchIcon,;
-  Hammer as HammerIcon2, Paintbrush as PaintbrushIcon,;
-  Scissors as ScissorsIcon, BookOpen as BookOpenIcon,;
-  Calculator as CalculatorIcon, Compass as CompassIcon2,;
-  PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2,;
-  Activity as ActivityIcon3, Zap as ZapIcon2,;
-  Target as TargetIcon2, Shield as ShieldIcon2,;
-  Users as UsersIcon2, Star as StarIcon2,;
-  CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2,;
-  Phone as PhoneIcon3, Mail as MailIcon3,;
-  MapPin as LocationIcon, Server, HardDrive,;
-  Monitor, Printer, Router, Wifi as WifiIcon,;
-  Smartphone as SmartphoneIcon, Laptop,;
-  Tablet, Headphones as HeadphonesIcon,;
-  Keyboard, Mouse, Webcam, Speaker,;
-  HardDrive as HardDriveIcon, Server as ServerIcon,;
-  Monitor as MonitorIcon, Printer as PrinterIcon,;
-  Router as RouterIcon, Wifi as WifiIcon2,;
-  Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,;
-  Tablet as TabletIcon, Headphones as HeadphonesIcon2,;
-  Keyboard as KeyboardIcon, Mouse as MouseIcon,;
+'use client'
+import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
+  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
+  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
+  Mail, Phone, DollarSign, Clock, Award, CheckCircle,
+  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart,
+  CreditCard, Building, Factory, Car, Plane, Ship, Train,
+  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench,
+  Hammer, Paintbrush, Scissors, BookOpen, Calculator,
+  Compass, PieChart, TrendingDown, Activity, Zap as Lightning,
+  Target as Crosshair, Shield as Security, Users as People,
+  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow,
+  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
+  Eye, Search, MessageSquare, PieChart as Chart,
+  Download, Upload, RefreshCw, Play, Pause, Stop,
+  Volume2, VolumeX, Mic, MicOff, Headphones,
+  Wifi, WifiOff, Battery, BatteryCharging,
+  Sun, Moon, Sunrise, Sunset, CloudRain,
+  Snowflake, Wind, Thermometer, Droplets,
+  Lightbulb, LightbulbOff, Power, PowerOff,
+  Wrench as Tool, Hammer as HammerIcon,
+  Paintbrush as Brush, Scissors as ScissorIcon,
+  BookOpen as Book, Calculator as Calc,
+  Compass as CompassIcon, PieChart as PieChartIcon,
+  TrendingDown as TrendingDownIcon, Activity as ActivityIcon,
+  Grid3X3, Package, Utensils, Microscope,
+  Atom, Cpu as CpuIcon, Database as DatabaseIcon,
+  Network, Layers, Workflow, GitBranch,
+  Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon,
+  Search as SearchIcon, MessageSquare as MessageSquareIcon,
+  PieChart as PieChartIcon2, BarChart as BarChartIcon,
+  TrendingUp as TrendingUpIcon, Activity as ActivityIcon2,
+  Target as TargetIcon, Globe as GlobeIcon,
+  Shield as ShieldIcon, Lock as LockIcon,
+  Users as UsersIcon, Settings as SettingsIcon,
+  Calendar as CalendarIcon, CheckSquare as CheckSquareIcon,
+  FileText as FileTextIcon, Mail as MailIcon2,
+  Phone as PhoneIcon2, DollarSign as DollarSignIcon,
+  Clock as ClockIcon, Award as AwardIcon,
+  CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon,
+  Bot as BotIcon, Palette as PaletteIcon,
+  Camera as CameraIcon, Music as MusicIcon,
+  Video as VideoIcon, Gamepad2 as Gamepad2Icon,
+  ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon,
+  Building as BuildingIcon, Factory as FactoryIcon,
+  Car as CarIcon, Plane as PlaneIcon,
+  Ship as ShipIcon, Train as TrainIcon,
+  Home as HomeIcon, Heart as HeartIcon,
+  Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon,
+  Briefcase as BriefcaseIcon, Wrench as WrenchIcon,
+  Hammer as HammerIcon2, Paintbrush as PaintbrushIcon,
+  Scissors as ScissorsIcon, BookOpen as BookOpenIcon,
+  Calculator as CalculatorIcon, Compass as CompassIcon2,
+  PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2,
+  Activity as ActivityIcon3, Zap as ZapIcon2,
+  Target as TargetIcon2, Shield as ShieldIcon2,
+  Users as UsersIcon2, Star as StarIcon2,
+  CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2,
+  Phone as PhoneIcon3, Mail as MailIcon3,
+  MapPin as LocationIcon, Server, HardDrive,
+  Monitor, Printer, Router, Wifi as WifiIcon,
+  Smartphone as SmartphoneIcon, Laptop,
+  Tablet, Headphones as HeadphonesIcon,
+  Keyboard, Mouse, Webcam, Speaker,
+  HardDrive as HardDriveIcon, Server as ServerIcon,
+  Monitor as MonitorIcon, Printer as PrinterIcon,
+  Router as RouterIcon, Wifi as WifiIcon2,
+  Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
+  Tablet as TabletIcon, Headphones as HeadphonesIcon2,
+  Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
-} from 'lucide-react';
+} from 'lucide-react'
 const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
   const itServices = [
     // IT Infrastructure Services
     {
@@ -399,7 +399,7 @@ const ITConsultingPage: React.FC = () => {
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -412,13 +412,13 @@ const ITConsultingPage: React.FC = () => {
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];
+  ]
   const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch;}
-  });
+  })
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
@@ -437,62 +437,62 @@ const ITConsultingPage: React.FC = () => {
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950;
+              Call (302) 464-0950
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation;
+              Get IT Consultation
   </
           </div>
         </div>
       </section>
       {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>;
-            {/* Search */}</div>;
-            <div className="flex-1"></div>;
-              <div className="relative"></div>;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-                <input;
-                  type="text";
-                  placeholder="Search IT services...";
-                  value={searchTerm}
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+            {/* Search */}</div>
+            <div className="flex-1"></div>
+              <div className="relative"></div>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search IT services..."
+                  value={searchTerm} />
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
             {/* Category Filter */}
-            <div className="lg:w-64"></div>;
-              <select;
+            <div className="lg:w-64"></div>
+              <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
-                  </option>;
+                  </option>
                 ))}
               </select>
             </div>
           </div>
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>;
-            {categories.map((category) => (</div>;
+          <div className="flex flex-wrap gap-2 mb-8"></div>
+            {categories.map((category) => (</div>
               <button;}
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category.id;
-                    ? 'bg-cyan-500 text-white';
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';}
                 }`}
-              >;
+              >
                 {category.name}
-              </button>;
+              </button>
             ))}
           </div>
         </div>
@@ -563,13 +563,13 @@ const ITConsultingPage: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Free Consultation;
+                    Get Free Consultation
   </
                   <a
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote;
+                    Call for Quote
   </
                 </div>
               </div>
@@ -592,21 +592,21 @@ const ITConsultingPage: React.FC = () => {
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5" />
-              Call (302) 464-0950;
+              Call (302) 464-0950
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5" />
-              Get Custom IT Strategy;
+              Get Custom IT Strategy
   </
           </div>
         </div>
       </section>
     </div>
-  );
-};
-export default ITConsultingPage;
+  )
+}
+export default ITConsultingPage
   </a>
   </a>
   </a>

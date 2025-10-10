@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -33,7 +33,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
     }
-  ];
+  ]
   const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -41,13 +41,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     'Automated report generation',
     'Multi-platform data integration',
     'Mobile-responsive design'
-  ];
+  ]
   const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -79,7 +79,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  View Demo;
+                  View Demo
   </
               </div>
             </div>
@@ -91,7 +91,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make data-driven decisions with confidence;
+                Everything you need to make data-driven decisions with confidence
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,7 +113,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built for scale and reliability;
+                Built for scale and reliability
   </
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -135,7 +135,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the difference with our AI-powered analytics platform;
+                Experience the difference with our AI-powered analytics platform
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -184,7 +184,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  Schedule Demo;
+                  Schedule Demo
   </
               </div>
             </div>
@@ -192,9 +192,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default AIAnalyticsDashboardPage;
+  )
+}
+export default AIAnalyticsDashboardPage
   </button>
   </p>
   </p>

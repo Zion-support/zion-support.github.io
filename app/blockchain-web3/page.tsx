@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const BlockchainWeb3Page: React.FC = () => {
   const features = [
     {
@@ -28,7 +28,7 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -62,15 +62,15 @@ const BlockchainWeb3Page: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                       {benefit}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </div>
     </React.Fragment>
-  );
-};
-export default BlockchainWeb3Page;
+  )
+}
+export default BlockchainWeb3Page
