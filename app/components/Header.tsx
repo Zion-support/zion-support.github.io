@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const Header: React.FC = () => {
   return (
     <>
@@ -15,7 +14,6 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-=======
 const HeaderPage: React.FC = () => {
   const features = [
     {
@@ -164,4 +162,3 @@ const HeaderPage: React.FC = () => {
 };
 
 export default HeaderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3

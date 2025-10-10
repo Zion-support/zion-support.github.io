@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Star, Clock, Users, Shield, Brain, Settings, MessageSquare, Eye, Sparkles, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, TrendingDown, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
 import {
   BarChart3,
   TrendingUp,
@@ -68,7 +66,6 @@ import {
   Navigation,
   TrendingDown
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -173,7 +170,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -370,7 +366,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <Footer />
       </div>
     </>
-=======
   const testimonials = [
     {
       name: "David Kim",
@@ -638,7 +633,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
   );
 };
 
