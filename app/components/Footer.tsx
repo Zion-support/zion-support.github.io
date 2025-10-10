@@ -103,11 +103,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Pricing', href: '/pricing' },
-{ name: 'Micro SAAS', href: '/micro-saas' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Consultation', href: '/consultation' }
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -117,8 +115,9 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
     { name: 'System Health', href: '/health' },
-    { name: 'Demo Request', href: '/demo' },
-    { name: 'Free Consultation', href: '/consultation' }
+    { name: 'Help Center', href: '/help' },
+    { name: 'Community', href: '/community' },
+    { name: 'Training', href: '/training' }
   ];
 
   const legalLinks = [
@@ -127,11 +126,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Protection', href: '/data-protection' },
+    { name: 'Accessibility', href: '/accessibility' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   return (
-<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />

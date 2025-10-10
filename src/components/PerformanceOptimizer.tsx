@@ -1,124 +1,192 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+  // Intersection Observer for lazy loading
+  const setupIntersectionObserver = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+      });
+
+      // Observe all lazy images
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  }, []);
+
+  // Resource hints optimization
+  const optimizeResourceHints = useCallback(() => {
+    const criticalResources = [
+      { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+      { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: 'anonymous' },
+      { href: 'https://www.google-analytics.com', rel: 'preconnect' },
+      { href: 'https://www.googletagmanager.com', rel: 'preconnect' }
+    ];
+
+    criticalResources.forEach(resource => {
+      if (!document.querySelector(`link[href="${resource.href}"]`)) {
+        const link = document.createElement('link');
+        Object.entries(resource).forEach(([key, value]) => {
+          link.setAttribute(key, value as string);
+        });
+        document.head.appendChild(link);
+      }
+    });
+  }, []);
+
+  // Critical CSS inlining
+  const inlineCriticalCSS = useCallback(() => {
+    const criticalCSS = `
+      .hero-section { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+      @keyframes fadeIn { to { opacity: 1; } }
+      .loading { display: none; }
+      .loaded .loading { display: none; }
+      .loaded .content { display: block; }
+    `;
+
+    if (!document.querySelector('#critical-css')) {
+      const style = document.createElement('style');
+      style.id = 'critical-css';
+      style.textContent = criticalCSS;
+      document.head.insertBefore(style, document.head.firstChild);
+    }
+  }, []);
+
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/logo.png',
-        '/og-image.png'
+        '/images/hero-bg.webp',
+        '/images/logo.webp',
+        '/images/og-image.webp'
       ];
 
-      const criticalFonts = [
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      ];
-
-      // Preload critical images
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-
-      // Preload critical fonts
-      criticalFonts.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = href;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-
-      // Add DNS prefetch for external domains
-      const externalDomains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      externalDomains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'dns-prefetch';
-        link.href = domain;
         document.head.appendChild(link);
       });
     };
 
-    // Optimize images with better lazy loading
+    // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
         }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-        // Add error handling
-        img.onerror = () => {
-          img.style.display = 'none';
-        };
-      });
-    };
-
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        script.setAttribute('defer', '');
-      });
-    };
-
-    // Add resource hints for better performance
-    const addResourceHints = () => {
-      // Preconnect to external domains
-      const preconnectDomains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com'
-      ];
-
-      preconnectDomains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Add loading="lazy" to iframes
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(iframe => {
-        if (!iframe.loading) {
-          iframe.loading = 'lazy';
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
         }
       });
     };
 
+    // Enable service worker for caching
+    const enableServiceWorker = () => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registered:', registration);
+            }
+          })
+          .catch(error => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registration failed:', error);
+            }
+          });
+      }
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScroll = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScroll);
+      };
+    };
+
+    // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalScripts();
-    addResourceHints();
-    optimizeThirdPartyScripts();
+    enableServiceWorker();
+    setupIntersectionObserver();
+    optimizeResourceHints();
+    inlineCriticalCSS();
+    const cleanupScroll = optimizeScroll();
 
-    // Cleanup
+    // Cleanup on unmount
     return () => {
-      // Cleanup if needed
+      cleanupScroll();
     };
+  }, [setupIntersectionObserver, optimizeResourceHints, inlineCriticalCSS]);
+
+  // Add performance monitoring
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          const logMetric = (metric: any) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log(metric);
+            }
+            // Send to analytics in production
+            if (process.env.NODE_ENV === 'production') {
+              // Send to analytics service
+            }
+          };
+          
+          getCLS(logMetric);
+          getFID(logMetric);
+          getFCP(logMetric);
+          getLCP(logMetric);
+          getTTFB(logMetric);
+        });
+      }
+    };
+
+    monitorWebVitals();
   }, []);
 
   return <>{children}</>;
-};
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
