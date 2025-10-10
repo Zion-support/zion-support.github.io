@@ -24,49 +24,190 @@ const ITServicesPage: React.FC = () => {
       name: "Cloud Migration & Setup",
       description: "Seamless cloud migration with zero downtime and comprehensive security",
       price: "$2,500/mo",
-      features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
+      features: ["Zero Downtime Migration", "Security Audit", "Performance Optimization", "24/7 Support", "Cost Optimization", "Disaster Recovery"],
       icon: Cloud,
-      popular: true
+      popular: true,
+      category: "Cloud Services"
     },
     {
       name: "Cybersecurity Suite",
       description: "Comprehensive security solutions to protect your digital assets and data",
       price: "$1,800/mo",
-      features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
+      features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance", "Security Training", "Penetration Testing"],
       icon: Shield,
-      popular: true
+      popular: true,
+      category: "Security"
     },
     {
       name: "IT Infrastructure Design",
       description: "Scalable infrastructure architecture designed for your business needs",
       price: "$3,000/mo",
-      features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
+      features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring", "Load Balancing", "High Availability"],
       icon: Server,
-      popular: false
+      popular: false,
+      category: "Infrastructure"
     },
     {
       name: "24/7 IT Support",
       description: "Round-the-clock technical support and monitoring for your systems",
       price: "$1,200/mo",
-      features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
+      features: ["24/7 Monitoring", "Remote Support", "System Maintenance", "Emergency Response", "Proactive Maintenance", "SLA Guarantee"],
       icon: Users,
-      popular: true
+      popular: true,
+      category: "Support"
     },
     {
       name: "Custom Development",
-      description: "Tailored software solutions built specifically for your business requirements",
-      price: "$2,200/mo",
-      features: ["Custom Software", "API Development", "Integration", "Maintenance"],
+      description: "Tailored software solutions built to meet your specific business requirements",
+      price: "$4,000/mo",
+      features: ["Custom Software", "API Development", "Integration", "Maintenance", "Testing", "Documentation"],
       icon: Code,
-      popular: false
+      popular: false,
+      category: "Development"
     },
     {
       name: "Database Management",
-      description: "Complete database administration, optimization, and security services",
+      description: "Expert database administration and optimization for peak performance",
       price: "$1,500/mo",
-      features: ["Database Design", "Performance Tuning", "Backup & Recovery", "Security"],
+      features: ["Database Optimization", "Backup & Recovery", "Performance Tuning", "Security", "Replication", "Monitoring"],
       icon: Database,
-      popular: true
+      popular: false,
+      category: "Database"
+    },
+    {
+      name: "Network Security",
+      description: "Advanced network protection with firewall management and intrusion detection",
+      price: "$1,600/mo",
+      features: ["Firewall Management", "Intrusion Detection", "VPN Setup", "Network Monitoring", "Traffic Analysis", "Access Control"],
+      icon: Network,
+      popular: true,
+      category: "Security"
+    },
+    {
+      name: "DevOps Implementation",
+      description: "Complete DevOps pipeline setup with CI/CD and automated deployment",
+      price: "$2,200/mo",
+      features: ["CI/CD Pipeline", "Automated Deployment", "Container Orchestration", "Monitoring", "Log Management", "Infrastructure as Code"],
+      icon: Settings,
+      popular: true,
+      category: "DevOps"
+    },
+    {
+      name: "Data Backup & Recovery",
+      description: "Comprehensive backup solutions with disaster recovery planning",
+      price: "$800/mo",
+      features: ["Automated Backups", "Disaster Recovery", "Data Encryption", "Offsite Storage", "Recovery Testing", "Compliance"],
+      icon: Database,
+      popular: false,
+      category: "Data Management"
+    },
+    {
+      name: "IT Consulting",
+      description: "Strategic IT consulting to optimize your technology investments",
+      price: "$1,000/mo",
+      features: ["Technology Assessment", "Strategic Planning", "Vendor Management", "Cost Analysis", "ROI Optimization", "Best Practices"],
+      icon: Users,
+      popular: false,
+      category: "Consulting"
+    },
+    {
+      name: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android",
+      price: "$3,500/mo",
+      features: ["Native Development", "Cross-platform", "UI/UX Design", "API Integration", "Testing", "App Store Deployment"],
+      icon: Code,
+      popular: false,
+      category: "Development"
+    },
+    {
+      name: "Web Development",
+      description: "Modern web applications with responsive design and optimal performance",
+      price: "$2,800/mo",
+      features: ["Responsive Design", "Performance Optimization", "SEO Optimization", "Security", "CMS Integration", "E-commerce"],
+      icon: Code,
+      popular: true,
+      category: "Development"
+    },
+    {
+      name: "API Development & Integration",
+      description: "RESTful APIs and third-party integrations for seamless data flow",
+      price: "$1,400/mo",
+      features: ["RESTful APIs", "GraphQL", "Third-party Integration", "API Documentation", "Rate Limiting", "Authentication"],
+      icon: Code,
+      popular: false,
+      category: "Development"
+    },
+    {
+      name: "IT Asset Management",
+      description: "Complete IT asset lifecycle management and optimization",
+      price: "$600/mo",
+      features: ["Asset Tracking", "License Management", "Lifecycle Planning", "Cost Optimization", "Compliance", "Reporting"],
+      icon: Server,
+      popular: false,
+      category: "Management"
+    },
+    {
+      name: "Cloud Cost Optimization",
+      description: "Optimize your cloud spending with intelligent resource management",
+      price: "$900/mo",
+      features: ["Cost Analysis", "Resource Optimization", "Auto-scaling", "Reserved Instances", "Monitoring", "Reporting"],
+      icon: Cloud,
+      popular: false,
+      category: "Cloud Services"
+    },
+    {
+      name: "IT Training & Certification",
+      description: "Comprehensive IT training programs for your team",
+      price: "$1,100/mo",
+      features: ["Technical Training", "Certification Prep", "Hands-on Labs", "Custom Curriculum", "Progress Tracking", "Certification"],
+      icon: Users,
+      popular: false,
+      category: "Training"
+    },
+    {
+      name: "Compliance & Governance",
+      description: "Ensure regulatory compliance with comprehensive governance frameworks",
+      price: "$2,000/mo",
+      features: ["Compliance Auditing", "Policy Development", "Risk Assessment", "Documentation", "Training", "Monitoring"],
+      icon: Shield,
+      popular: false,
+      category: "Compliance"
+    },
+    {
+      name: "IT Project Management",
+      description: "Expert project management for complex IT implementations",
+      price: "$1,700/mo",
+      features: ["Project Planning", "Resource Management", "Timeline Management", "Risk Management", "Quality Assurance", "Reporting"],
+      icon: Settings,
+      popular: false,
+      category: "Project Management"
+    },
+    {
+      name: "Hybrid Cloud Solutions",
+      description: "Seamless integration between on-premises and cloud environments",
+      price: "$2,800/mo",
+      features: ["Hybrid Architecture", "Data Synchronization", "Security Integration", "Performance Optimization", "Monitoring", "Migration"],
+      icon: Cloud,
+      popular: true,
+      category: "Cloud Services"
+    },
+    {
+      name: "IT Disaster Recovery",
+      description: "Comprehensive disaster recovery planning and implementation",
+      price: "$1,900/mo",
+      features: ["Disaster Planning", "Recovery Testing", "Backup Strategies", "Failover Systems", "Documentation", "Training"],
+      icon: Shield,
+      popular: false,
+      category: "Disaster Recovery"
+    },
+    {
+      name: "IT Performance Monitoring",
+      description: "Advanced monitoring and alerting for optimal system performance",
+      price: "$1,300/mo",
+      features: ["Real-time Monitoring", "Performance Analytics", "Alerting", "Capacity Planning", "Trend Analysis", "Reporting"],
+      icon: Network,
+      popular: false,
+      category: "Monitoring"
     }
   ];
 
@@ -128,6 +269,18 @@ const ITServicesPage: React.FC = () => {
             </p>
           </div>
           
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              All Services
+            </button>
+            {Array.from(new Set(itServices.map(service => service.category))).map((category, index) => (
+              <button key={index} className="px-6 py-3 bg-slate-800 text-gray-300 font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300">
+                {category}
+              </button>
+            ))}
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <div
@@ -147,22 +300,33 @@ const ITServicesPage: React.FC = () => {
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="mb-2">
+                    <span className="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded">
+                      {service.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                   
-                  <div className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                  <div className="space-y-2 mb-6">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
+                    {service.features.length > 4 && (
+                      <div className="text-cyan-400 text-sm text-center">
+                        +{service.features.length - 4} more features
+                      </div>
+                    )}
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <div className="text-gray-400 text-sm mb-4">per month</div>
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                      Learn More
+                      Get Started
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </button>
                   </div>
