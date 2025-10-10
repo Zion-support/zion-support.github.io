@@ -4,10 +4,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const IoTPlatformPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Wifi;
+const IoTPlatformPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
       title: 'Device Management',
       description: 'Comprehensive IoT device management with remote monitoring, updates, and configuration.',
       benefits: ['Remote monitoring', 'OTA updates', 'Device configuration']

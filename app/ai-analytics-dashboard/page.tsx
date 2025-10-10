@@ -72,7 +72,7 @@ import {
   ArrowRight as Arrow,
   Phone as PhoneIcon,
   Mail as MailIcon,
-  MapPin as Location;
+  MapPin as Location
 } from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {

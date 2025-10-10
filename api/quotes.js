@@ -1,11 +1,15 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
   }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
     }
 
     // Process quote submission logic here

@@ -15,9 +15,9 @@ interface FormStatus {
   message: string;
 }
 
-const ContactForm: React.FC = () => {,
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: ''
+    name: '',
     email: '',
     company: '',
     phone: '',

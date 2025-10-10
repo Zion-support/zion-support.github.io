@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 
-interface AdvancedAccessibilityEnhancerProps {}
+interface AdvancedAccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;

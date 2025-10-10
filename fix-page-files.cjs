@@ -1,25 +1,43 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+const problematicFiles = [
+  '/workspace/app/ai-smart-calendar/page.tsx',
+  '/workspace/app/ai-content-delivery-network/page.tsx',
+  '/workspace/app/ai-financial-crime-detection-pro/page.tsx',
+  '/workspace/app/ai-infrastructure-monitoring/page.tsx',
+  '/workspace/app/ai-load-testing/page.tsx',
+  '/workspace/app/ai-supply-chain-optimization-pro/page.tsx',
+  '/workspace/app/ai-legal-research-pro/page.tsx',
+  '/workspace/app/ai-api-manager/page.tsx',
+  '/workspace/app/ai-ml-platform/page.tsx',
+  '/workspace/app/ai-crm-assistant/page.tsx',
+  '/workspace/app/ai-energy-grid-management-pro/page.tsx'
+];
+
+function createPageTemplate(title, description, keywords) {
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
-const AiSmartCalendarPage: React.FC = () => {
+const ${title.replace(/\s+/g, '')}Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Smart Calendar - Zion Tech Group</title>
-        <meta name="description" content="Professional ai smart calendar services powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="ai smart calendar, AI solutions, IT services, Zion Tech Group" />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Smart Calendar
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional ai smart calendar services powered by advanced AI and cutting-edge technology.
+              ${description}
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
@@ -63,4 +81,32 @@ const AiSmartCalendarPage: React.FC = () => {
   );
 };
 
-export default AiSmartCalendarPage;
+export default ${title.replace(/\s+/g, '')}Page;`;
+}
+
+function getTitleFromPath(filePath) {
+  const fileName = path.basename(path.dirname(filePath));
+  return fileName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+function fixPageFile(filePath) {
+  try {
+    const title = getTitleFromPath(filePath);
+    const description = `Professional ${title.toLowerCase()} services powered by advanced AI and cutting-edge technology.`;
+    const keywords = `${title.toLowerCase()}, AI solutions, IT services, Zion Tech Group`;
+    
+    const content = createPageTemplate(title, description, keywords);
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all problematic files
+problematicFiles.forEach(fixPageFile);
+
+console.log('Page files fixed successfully!');

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const AIAutonomousSystemsPage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Autonomous Decision Making',
       description: 'AI systems that make independent decisions based on real-time data analysis and learned patterns.',
       benefits: ['Real-time decisions', 'Pattern recognition', 'Adaptive learning', 'Risk assessment']
