@@ -122,35 +122,6 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,300/mo' },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe, price: '$1,800/mo' },
-    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection', icon: Shield, price: '$2,200/mo' },
-    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, price: '$1,600/mo' },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,500/mo' },
-    { name: 'AI Financial Services', href: '/ai-financial-services', icon: CreditCard, price: '$1,900/mo' },
-    { name: 'AI Natural Language Processing', href: '/ai-nlp', icon: MessageSquare, price: '$1,100/mo' },
-    { name: 'AI Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,400/mo' },
-    { name: 'AI Customer Service Automation', href: '/ai-customer-service', icon: MessageSquare, price: '$1,200/mo' },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield, price: '$1,400/mo' },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users, price: '$1,200/mo' },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText, price: '$1,500/mo' },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home, price: '$1,300/mo' },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory, price: '$1,800/mo' },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck, price: '$1,600/mo' },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap, price: '$1,200/mo' },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap, price: '$1,500/mo' },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield, price: '$1,400/mo' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,300/mo' },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu, price: '$3,000/mo' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, price: '$1,800/mo' },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$1,600/mo' },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, price: '$1,400/mo' },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,200/mo' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' }
-=======
     { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
     { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
@@ -177,7 +148,6 @@ const Navigation: React.FC = () => {
     { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
->>>>>>> cursor/website-audit-and-update-with-deployment-868d
   ];
 
   const itServices = [
@@ -235,23 +205,9 @@ const Navigation: React.FC = () => {
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
           </a>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-6 xl:space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
->>>>>>> origin/main
               <button
                 onClick={toggleServices}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
@@ -259,16 +215,6 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[900px] xl:w-[1000px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-=======
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-[1000px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
@@ -297,7 +243,6 @@ const Navigation: React.FC = () => {
                                 </a>
                               ))}
                             </div>
->>>>>>> origin/main
                           </div>
                         ))}
                       </div>
@@ -444,33 +389,10 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 max-h-[80vh] overflow-y-auto">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                About
-              </Link>
-
-              {/* Mobile Services */}
-=======
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
->>>>>>> origin/main
               <div>
                 <button
                   onClick={toggleServices}

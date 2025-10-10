@@ -26,12 +26,7 @@ def resolve_conflicts(content):
     """Remove git conflict markers, keeping the incoming version (after =======)"""
     
     # Pattern to match conflict blocks
-    # <<<<<<< HEAD
-    # ... current content ...
-    # =======
-    # ... incoming content ...
-    # >>>>>>> branch-name
-    
+    #     
     # Try multiple passes to handle nested conflicts
     max_iterations = 10
     for _ in range(max_iterations):
