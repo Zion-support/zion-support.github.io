@@ -21,7 +21,8 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Quantum Security Suite', href: '/ai-quantum-security-suite' }
       ]
     },
     {
@@ -39,7 +40,8 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }
       ]
     },
     {
@@ -57,7 +59,9 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Neural Interface Pro', href: '/ai-neural-interface-pro' },
+        { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager' }
       ]
     },
     {
@@ -125,7 +129,9 @@ const Footer: React.FC = memo(() => {
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services.
+              autonomous systems, and digital transformation services. We help businesses 
+              achieve unprecedented levels of efficiency, innovation, and growth through 
+              cutting-edge technology and intelligent automation.
             </p>
 
             {/* Contact Info */}
