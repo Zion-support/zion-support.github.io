@@ -22,19 +22,23 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes with cutting-edge machine learning and deep learning technologies.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Custom AI Models', 'API Integration', 'Real-time Processing'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      benefits: ['95% process automation', '300% ROI improvement', '24/7 AI monitoring', 'Scalable solutions'],
+      useCases: ['Process automation', 'Data analysis', 'Customer insights', 'Predictive maintenance']
     },
     {
       icon: Brain,
       title: 'AI Marketing Automation',
-      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
-      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
+      description: 'Revolutionary AI-powered marketing automation with personalized campaigns, intelligent optimization, and advanced customer journey mapping.',
+      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel', 'Customer Journey Mapping', 'Predictive Analytics', 'Real-time Optimization'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      benefits: ['40% increase in conversion rates', '60% reduction in marketing costs', 'Real-time optimization', 'Multi-platform integration'],
+      useCases: ['Email marketing', 'Social media campaigns', 'Lead nurturing', 'Customer retention']
     },
     {
       icon: Brain,
@@ -282,6 +286,132 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
       category: 'IT Services'
+    },
+
+    // New AI Services
+    {
+      icon: Brain,
+      title: 'AI Voice Assistant',
+      description: 'Intelligent voice assistants for customer service, internal operations, and smart home integration.',
+      features: ['Natural Language Processing', 'Voice Recognition', 'Multi-language Support', 'Integration APIs', 'Custom Commands', 'Analytics'],
+      price: 'Starting at $199/month',
+      category: 'AI Services',
+      benefits: ['24/7 availability', 'Multi-language support', 'Reduced response time', 'Cost-effective solution'],
+      useCases: ['Customer service', 'Internal operations', 'Smart home control', 'Accessibility support']
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Predict equipment failures and optimize maintenance schedules with AI-powered predictive analytics.',
+      features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Monitoring', 'Alert System', 'Analytics Dashboard'],
+      price: 'Starting at $399/month',
+      category: 'AI Services',
+      benefits: ['30% reduction in downtime', '25% cost savings', 'Proactive maintenance', 'Extended equipment life'],
+      useCases: ['Manufacturing', 'Fleet management', 'Building maintenance', 'Industrial equipment']
+    },
+    {
+      icon: Brain,
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation using AI to detect and filter inappropriate content across platforms.',
+      features: ['Image Recognition', 'Text Analysis', 'Video Processing', 'Real-time Filtering', 'Custom Rules', 'API Integration'],
+      price: 'Starting at $149/month',
+      category: 'AI Services',
+      benefits: ['99.9% accuracy', 'Real-time processing', 'Scalable solution', 'Reduced manual work'],
+      useCases: ['Social media platforms', 'E-commerce sites', 'Forums', 'User-generated content']
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Optimize supply chain operations with AI-powered demand forecasting and inventory management.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment', 'Cost Analysis'],
+      price: 'Starting at $599/month',
+      category: 'AI Services',
+      benefits: ['20% inventory reduction', '15% cost savings', 'Improved efficiency', 'Better demand planning'],
+      useCases: ['Retail', 'Manufacturing', 'Logistics', 'Distribution']
+    },
+
+    // New IT Services
+    {
+      icon: Cloud,
+      title: 'Cloud Security Audit',
+      description: 'Comprehensive cloud security assessment and compliance verification for your cloud infrastructure.',
+      features: ['Security Assessment', 'Compliance Check', 'Vulnerability Scanning', 'Penetration Testing', 'Report Generation', 'Remediation Guidance'],
+      price: 'Starting at $1,999/audit',
+      category: 'IT Services',
+      benefits: ['Enhanced security posture', 'Compliance assurance', 'Risk mitigation', 'Expert recommendations'],
+      useCases: ['Cloud migration', 'Compliance audits', 'Security assessments', 'Risk management']
+    },
+    {
+      icon: Database,
+      title: 'Database Performance Tuning',
+      description: 'Optimize database performance with advanced tuning techniques and AI-powered recommendations.',
+      features: ['Performance Analysis', 'Query Optimization', 'Index Tuning', 'Capacity Planning', 'Monitoring', 'Automated Tuning'],
+      price: 'Starting at $799/month',
+      category: 'IT Services',
+      benefits: ['50% performance improvement', 'Reduced query time', 'Better resource utilization', 'Automated optimization'],
+      useCases: ['High-traffic applications', 'Data warehouses', 'E-commerce platforms', 'Analytics systems']
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security Implementation',
+      description: 'Implement zero trust security architecture to protect your organization from advanced threats.',
+      features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring', 'Policy Enforcement', 'Threat Detection'],
+      price: 'Starting at $2,499/month',
+      category: 'IT Services',
+      benefits: ['Enhanced security', 'Reduced attack surface', 'Better compliance', 'Continuous protection'],
+      useCases: ['Enterprise security', 'Remote work', 'Compliance requirements', 'Advanced threat protection']
+    },
+    {
+      icon: Globe,
+      title: 'API Gateway Management',
+      description: 'Centralized API management with security, monitoring, and rate limiting capabilities.',
+      features: ['API Security', 'Rate Limiting', 'Monitoring', 'Analytics', 'Versioning', 'Documentation'],
+      price: 'Starting at $299/month',
+      category: 'IT Services',
+      benefits: ['Centralized management', 'Enhanced security', 'Better monitoring', 'Improved performance'],
+      useCases: ['Microservices', 'Third-party integrations', 'Mobile applications', 'Partner APIs']
+    },
+
+    // New Micro SAAS Services
+    {
+      icon: BarChart3,
+      title: 'AI Business Intelligence',
+      description: 'Transform your data into actionable insights with AI-powered business intelligence and reporting.',
+      features: ['Data Visualization', 'Predictive Analytics', 'Custom Dashboards', 'Automated Reports', 'Real-time Insights', 'Mobile Access'],
+      price: 'Starting at $199/month',
+      category: 'Micro SAAS',
+      benefits: ['Data-driven decisions', 'Real-time insights', 'Automated reporting', 'Easy visualization'],
+      useCases: ['Business analytics', 'Performance tracking', 'KPI monitoring', 'Strategic planning']
+    },
+    {
+      icon: Mail,
+      title: 'AI Email Assistant',
+      description: 'Intelligent email management with smart categorization, auto-responses, and priority sorting.',
+      features: ['Smart Categorization', 'Auto-responses', 'Priority Sorting', 'Spam Filtering', 'Scheduling', 'Analytics'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS',
+      benefits: ['Improved productivity', 'Better organization', 'Time savings', 'Reduced email overload'],
+      useCases: ['Email management', 'Customer support', 'Sales follow-up', 'Team communication']
+    },
+    {
+      icon: Calendar,
+      title: 'Smart Meeting Scheduler',
+      description: 'AI-powered meeting scheduling with conflict resolution and optimal time suggestions.',
+      features: ['Conflict Resolution', 'Optimal Scheduling', 'Calendar Integration', 'Meeting Analytics', 'Reminder System', 'Time Zone Support'],
+      price: 'Starting at $29/month',
+      category: 'Micro SAAS',
+      benefits: ['Reduced scheduling conflicts', 'Optimal time utilization', 'Automated reminders', 'Better coordination'],
+      useCases: ['Team meetings', 'Client appointments', 'Interview scheduling', 'Event planning']
+    },
+    {
+      icon: FileText,
+      title: 'AI Document Analyzer',
+      description: 'Automatically analyze and extract insights from documents using advanced AI technology.',
+      features: ['Document Analysis', 'Data Extraction', 'Content Summarization', 'Sentiment Analysis', 'Classification', 'Search'],
+      price: 'Starting at $79/month',
+      category: 'Micro SAAS',
+      benefits: ['Faster document processing', 'Accurate data extraction', 'Better organization', 'Time savings'],
+      useCases: ['Contract analysis', 'Research papers', 'Legal documents', 'Business reports']
     }
   ];
 
@@ -295,7 +425,8 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Micro SAAS'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -438,6 +569,42 @@ const ServicesPage: React.FC = () => {
                       )}
                     </ul>
                   </div>
+
+                  {service.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">
+                            {benefit}
+                          </span>
+                        ))}
+                        {service.benefits.length > 3 && (
+                          <span className="text-gray-400 text-xs">
+                            +{service.benefits.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {service.useCases && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-3">Use Cases:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.useCases.slice(0, 3).map((useCase, useCaseIndex) => (
+                          <span key={useCaseIndex} className="bg-blue-500/20 text-blue-400 text-xs px-2 py-1 rounded-full">
+                            {useCase}
+                          </span>
+                        ))}
+                        {service.useCases.length > 3 && (
+                          <span className="text-gray-400 text-xs">
+                            +{service.useCases.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -34,17 +32,6 @@ const ContentCarousel: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -59,6 +46,46 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Solutions</h2>
+          <p className="text-xl text-gray-300">Discover how our technology can transform your business</p>
+        </div>
+
+        <div className="relative">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 min-h-[400px]">
+            <div className="text-center mb-8">
+              <div className="bg-cyan-500/20 p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                {React.createElement(slides[currentSlide].icon, { className: "w-10 h-10 text-cyan-400" })}
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">{slides[currentSlide].title}</h3>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">{slides[currentSlide].description}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
+                <ul className="space-y-3">
+                  {slides[currentSlide].features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h4>
+                <p className="text-gray-300 mb-6">
+                  Learn more about how this solution can benefit your business.
+                </p>
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
+                  Learn More
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
             </div>
           </div>
 
