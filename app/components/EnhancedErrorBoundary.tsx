@@ -171,13 +171,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
-          <p>Error ID: {// this.state.errorId}</p>
+          <p>Error ID: {this.state.errorId}</p>
           {this.state.retryCount < this.maxRetries && (
             <button onClick={this.handleRetry}>
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
             </button>
-          )}        </div>
           )}
+        </div>
  cursor/analyze-improve-and-deploy-application-cde4
       // Custom fallback UI
       if (this.props.fallback) {
