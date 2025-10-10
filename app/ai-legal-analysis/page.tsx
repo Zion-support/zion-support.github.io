@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Code, Brain, Cloud, Settings, Database, Globe, Smartphone, Target, TrendingUp, FileText, Lock, Users as UsersIcon, Calendar, Clock, Award } from 'lucide-react';
 
-const pricingPage: React.FC = () => {
+const AILegalAnalysisPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -59,19 +59,19 @@ const pricingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Pricing | Zion Tech Group</title>
-        <meta name="description" content="Professional pricing services and solutions from Zion Tech Group." />
-        <meta name="keywords" content="pricing, AI solutions, technology services, Zion Tech Group" />
+        <title>AI Legal Analysis | Zion Tech Group - AI Services</title>
+        <meta name="description" content="AI-powered legal document analysis and contract review solutions." />
+        <meta name="keywords" content="ai legal analysis, ai services, AI solutions, technology services, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Pricing
+            AI Legal Analysis
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Professional pricing services and solutions from Zion Tech Group.
+            AI-powered legal document analysis and contract review solutions.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -116,9 +116,9 @@ const pricingPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Pricing?</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our AI Legal Analysis?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our cutting-edge solutions.
+              Experience the benefits of our cutting-edge ai services solutions.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ const pricingPage: React.FC = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn more about our Pricing solutions and how they can benefit your business.
+              Contact us today to learn more about our AI Legal Analysis solutions and how they can benefit your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -167,4 +167,4 @@ const pricingPage: React.FC = () => {
   );
 };
 
-export default pricingPage;
+export default AILegalAnalysisPage;

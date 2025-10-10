@@ -1,90 +1,55 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Files with merge conflicts
-const filesWithConflicts = [
-  './src/components/PerformanceDashboard.tsx',
-  './app/utils/accessibilityChecker.ts',
-  './app/utils/accessibilityEnhancer.ts',
-  './app/types/next.d.ts',
-  './app/ai-crm-assistant/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const filesToFix = [
+  'app/careers/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/consultation/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/partners/page.tsx',
+  'app/pricing/page.tsx',
+  'app/support/page.tsx',
+  'app/components/ContentCarousel.tsx',
+  'app/components/ContentPromotionBanner.tsx',
+  'app/components/ContentStatistics.tsx',
+  'app/components/DynamicContentShowcase.tsx'
 ];
 
-function resolveMergeConflicts(filePath) {
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Split by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let inHead = false;
-    let inSeparator = false;
+    // Remove merge conflict markers and keep the latest version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.trim() === '<<<<<<< HEAD') {
-        inConflict = true;
-        inHead = true;
-        inSeparator = false;
-        continue;
-      } else if (line.trim() === '=======') {
-        inHead = false;
-        inSeparator = true;
-        continue;
-      } else if (line.trim() === '>>>>>>>') {
-        inConflict = false;
-        inHead = false;
-        inSeparator = false;
-        continue;
-      }
-      
-      if (inConflict) {
-        if (inHead) {
-          resolvedLines.push(line);
-        }
-        // Skip lines in the other branch (after =======)
-      } else {
-        resolvedLines.push(line);
-      }
-    }
+    // Clean up any remaining conflict markers
+    content = content.replace(/^<<<<<<< HEAD$/gm, '');
+    content = content.replace(/^=======$/gm, '');
+    content = content.replace(/^>>>>>>> [^\n]+$/gm, '');
     
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    console.log(`✅ Resolved merge conflicts in ${filePath}`);
+    // Remove empty lines that might have been left
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in ${filePath}`);
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Process all files
-console.log('🔧 Resolving merge conflicts...\n');
-
-filesWithConflicts.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    resolveMergeConflicts(filePath);
+// Fix all files
+filesToFix.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (fs.existsSync(fullPath)) {
+    fixMergeConflicts(fullPath);
   } else {
-    console.log(`⚠️  File not found: ${filePath}`);
+    console.log(`File not found: ${fullPath}`);
   }
 });
 
-console.log('\n✨ Merge conflict resolution complete!');
+console.log('Merge conflict fixing completed!');
