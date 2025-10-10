@@ -4,7 +4,7 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 # Disallow admin and private areas
@@ -12,33 +12,29 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /temp/
-Disallow: /backup/
 
 # Allow important pages
-Allow: /services
-Allow: /ai-services
-Allow: /it-services
+Allow: /
 Allow: /about
+Allow: /services
 Allow: /contact
-Allow: /blog
 Allow: /pricing
 Allow: /case-studies
+Allow: /blog
+Allow: /enterprise
+Allow: /ai-services
+Allow: /it-services
+Allow: /quantum-computing
+Allow: /autonomous-systems
+Allow: /blockchain
+Allow: /iot-edge
 
-# Block common bot traps
-Disallow: /*?*
-Disallow: /*#*
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-
-# Allow specific file types
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
+# Allow all micro SAAS service pages
+Allow: /ai-*
+Allow: /machine-learning
+Allow: /computer-vision
+Allow: /cloud-*
+Allow: /cybersecurity
+Allow: /devops
+Allow: /database-*
+Allow: /mobile-app-*

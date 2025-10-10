@@ -1,122 +1,120 @@
 'use client';
 import React from 'react';
-import { MessageSquare, Globe, Bot, FileText, Search, Brain, Zap, Shield } from 'lucide-react';
+import { MessageSquare, Globe, Brain, Zap, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
 const AINLPPage: React.FC = () => {
-  const nlpServices = [
+  const features = [
+    'Text Analysis & Processing',
+    'Sentiment Analysis',
+    'Language Translation',
+    'Chatbot Development',
+    'Named Entity Recognition',
+    'Text Summarization',
+    'Intent Classification',
+    'Multi-language Support'
+  ];
+
+  const benefits = [
+    '70% improvement in text processing speed',
+    '85% accuracy in sentiment analysis',
+    '60% reduction in manual text review',
+    '90% customer satisfaction increase'
+  ];
+
+  const useCases = [
     {
-      title: 'Text Analysis',
-      description: 'Extract insights and meaning from unstructured text data',
-      icon: FileText,
-      features: ['Sentiment Analysis', 'Topic Modeling', 'Entity Recognition', 'Text Classification']
+      title: 'Customer Support Chatbots',
+      description: 'Intelligent chatbots that understand and respond to customer queries naturally',
+      icon: MessageSquare
     },
     {
-      title: 'Language Translation',
-      description: 'Real-time translation across multiple languages with high accuracy',
-      icon: Globe,
-      features: ['Multi-language Support', 'Context-Aware Translation', 'Custom Dictionaries', 'API Integration']
+      title: 'Document Analysis',
+      description: 'Automatically extract insights and categorize documents at scale',
+      icon: Brain
     },
     {
-      title: 'Chatbot Development',
-      description: 'Intelligent conversational AI for customer service and support',
-      icon: Bot,
-      features: ['Natural Conversations', 'Intent Recognition', 'Context Management', 'Human Handoff']
-    },
-    {
-      title: 'Document Processing',
-      description: 'Automated extraction and analysis of information from documents',
-      icon: Search,
-      features: ['OCR Integration', 'Data Extraction', 'Document Classification', 'Content Summarization']
+      title: 'Social Media Monitoring',
+      description: 'Analyze social media sentiment and brand mentions in real-time',
+      icon: Globe
     }
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="Natural Language Processing - Zion Tech Group"
-        description="Advanced NLP solutions for text analysis, language translation, chatbot development, and document processing. Transform text data into actionable insights."
-        keywords={['natural language processing', 'NLP', 'text analysis', 'chatbot', 'language translation', 'document processing']}
-        canonicalUrl="https://ziontechgroup.com/ai-nlp"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-              Natural Language Processing
-            </h1>
-            <p className="text-xl text-blue-400 mb-8 font-medium">
-              Understand and Process Human Language
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Harness the power of NLP to analyze text, understand context, and build intelligent 
-              systems that can communicate naturally with humans.
-            </p>
-          </section>
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">
+            Natural Language Processing
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Advanced NLP solutions for text analysis, language understanding, and intelligent communication.
+          </p>
+          <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,200/month</div>
+        </section>
 
-          {/* NLP Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {nlpServices.map((service, index) => (
-                <article key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
+        {/* Features */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Key Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{feature}</span>
+                </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our NLP Solutions?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold text-white mb-3">Advanced AI Models</h3>
-                <p className="text-gray-300">State-of-the-art language models that understand context and nuance in human communication.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-xl font-bold text-white mb-3">Multi-Language Support</h3>
-                <p className="text-gray-300">Process and understand text in multiple languages with high accuracy and cultural context.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-3">Real-Time Processing</h3>
-                <p className="text-gray-300">Fast, efficient processing of text data for real-time applications and decision making.</p>
-              </div>
+        {/* Benefits */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Proven Benefits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div>
+                  <p className="text-gray-300 text-sm">{benefit}</p>
+                </div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* CTA Section */}
-          <section className="cyber-card p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Unlock the Power of Language?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our NLP experts help you build intelligent systems that understand and process human language. 
-              Get a free consultation and discover how NLP can transform your business operations.
+        {/* Use Cases */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Common Use Cases
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="cyber-card p-6 text-center">
+                <useCase.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="text-center">
+          <div className="cyber-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+              Ready to Implement NLP Solutions?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Contact us today to discuss your NLP requirements and get a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -127,17 +125,18 @@ const AINLPPage: React.FC = () => {
               </a>
               <a
                 href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
+                <Phone className="w-5 h-5" />
                 Call +1 302 464 0950
               </a>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
+      </main>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

@@ -8,12 +8,12 @@ const useAnalytics = () => ({
 });
 // PerformanceMetrics interface removed as it's not used in this hook
 export const usePerformanceMonitoring = () => {
-  const { trackPerformance } = useAnalytics();
+  const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackPerformance(name, value, 'performance');
+      trackEvent(name, { value });
     },
-    [trackPerformance]
+    [trackEvent]
   );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -9,71 +8,44 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 import Analytics from '../components/Analytics';
-=======
-import { Code, Globe, Zap, Shield, BarChart, Settings, Smartphone, Palette } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
       title: 'Frontend Development',
-<<<<<<< HEAD
       description: 'Modern, responsive web applications with cutting-edge technologies',
       icon: Code,
       price: '$1,200/month',
       features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
+      benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
       color: 'text-blue-400'
     },
     {
       title: 'Backend Development',
       description: 'Scalable server-side solutions and API development',
       icon: Database,
-      price: '$1,400/month',
-      features: ['Node.js/Python', 'RESTful APIs', 'GraphQL', 'Microservices'],
+      price: '$1,500/month',
+      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
+      benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
       color: 'text-green-400'
     },
     {
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend',
       icon: Globe,
-      price: '$2,000/month',
-      features: ['End-to-End Development', 'Database Design', 'Cloud Integration', 'DevOps'],
+      price: '$2,200/month',
+      features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
+      benefits: ['Unified solution', 'Faster development', 'Better performance'],
       color: 'text-purple-400'
     },
     {
-      title: 'E-commerce Solutions',
+      title: 'E-commerce Development',
       description: 'Custom e-commerce platforms and online stores',
       icon: Smartphone,
       price: '$1,800/month',
-      features: ['Custom Stores', 'Payment Integration', 'Inventory Management', 'Analytics'],
+      features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
+      benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
       color: 'text-orange-400'
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Speed up your website with advanced optimization techniques',
-      icon: Zap,
-      price: '$800/month',
-      features: ['Page Speed Optimization', 'SEO Enhancement', 'CDN Setup', 'Caching'],
-      color: 'text-yellow-400'
-    },
-    {
-      title: 'Security Implementation',
-      description: 'Secure your web applications with enterprise-grade security',
-      icon: Shield,
-      price: '$1,000/month',
-      features: ['SSL Certificates', 'Security Audits', 'Penetration Testing', 'Compliance'],
-      color: 'text-red-400'
-    },
-    {
-      title: 'Analytics Integration',
-      description: 'Advanced analytics and tracking for your web applications',
-      icon: BarChart,
-      price: '$600/month',
-      features: ['Google Analytics', 'Custom Dashboards', 'User Tracking', 'Conversion Optimization'],
-      color: 'text-cyan-400'
     },
     {
       title: 'Maintenance & Support',
@@ -82,29 +54,42 @@ const WebDevelopmentPage: React.FC = () => {
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
-=======
-      description: 'Modern, responsive web applications using React, Vue, and Angular',
-      icon: Code,
-      features: ['React/Vue/Angular', 'Responsive Design', 'Progressive Web Apps', 'Performance Optimization']
+    }
+  ];
+
+  const technologies = [
+    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
+    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
+    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
+    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
+    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
+    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
+  ];
+
+  const process = [
+    {
+      step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project plan',
+      icon: BarChart
     },
     {
-      title: 'Backend Development',
-      description: 'Scalable server-side applications and APIs using Node.js, Python, and more',
-      icon: Settings,
-      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Integration']
+      step: '02',
+      title: 'Design & Prototyping',
+      description: 'Create wireframes and prototypes to visualize your solution',
+      icon: Code
     },
     {
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend and database',
-      icon: Globe,
-      features: ['End-to-End Development', 'Database Design', 'API Development', 'Deployment']
+      step: '03',
+      title: 'Development',
+      description: 'Build your web application using modern technologies and best practices',
+      icon: Globe
     },
     {
-      title: 'E-commerce Solutions',
-      description: 'Custom e-commerce platforms and online store development',
-      icon: BarChart,
-      features: ['Custom Stores', 'Payment Integration', 'Inventory Management', 'Analytics']
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
+      step: '04',
+      title: 'Testing & Launch',
+      description: 'Thorough testing and deployment with ongoing support',
+      icon: Shield
     }
   ];
 
@@ -112,16 +97,15 @@ const WebDevelopmentPage: React.FC = () => {
     <>
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
-<<<<<<< HEAD
-        description="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
-        enablePrefetching={true}
+        enablePreloading={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
@@ -138,181 +122,136 @@ const WebDevelopmentPage: React.FC = () => {
       <Analytics />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Build modern, scalable web applications."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
-        canonicalUrl="https://ziontechgroup.com/web-development"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-              Web Development
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+              Web Development Services
             </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">
-<<<<<<< HEAD
-              Modern, Scalable Web Applications
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build modern, scalable, and high-performance web applications with our expert development team. 
+              From frontend to backend, we deliver solutions that drive business growth.
             </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Build powerful, responsive web applications with our expert development team. 
-              From simple websites to complex enterprise applications, we deliver solutions that drive results.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              >
+                Start Your Project
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
           </section>
 
           {/* Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Our Web Development Services
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
+                      <div className={`font-semibold ${service.color}`}>{service.price}</div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
-=======
-              Build Modern Web Applications
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Professional web development services for modern, scalable applications. 
-              From frontend to backend, we create web solutions that drive business success.
-            </p>
-          </section>
 
-          {/* Web Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {webServices.map((service, index) => (
-                <article key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/contact" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Get Started
-                    </a>
-                  </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-                </article>
+
+                  {service.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-gray-300">
+                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <a
+                    href="/contact"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
+                  >
+                    Get Started
+                  </a>
+                </div>
               ))}
             </div>
           </section>
 
-<<<<<<< HEAD
-          {/* Technology Stack */}
-          <section className="mb-16">
-            <div className="cyber-card p-8">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-                Our Technology Stack
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">Frontend</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>React/Next.js</li>
-                    <li>Vue.js/Angular</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind CSS</li>
-                  </ul>
+          {/* Technologies */}
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Technologies We Use
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {technologies.map((tech, index) => (
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                  <p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-purple-400 mb-3">Backend</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>Node.js/Python</li>
-                    <li>Express.js/Django</li>
-                    <li>PostgreSQL/MongoDB</li>
-                    <li>Redis</li>
-                  </ul>
+              ))}
+            </div>
+          </section>
+
+          {/* Process */}
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Our Development Process
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">{step.step}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-green-400 mb-3">Cloud</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>AWS/Azure/GCP</li>
-                    <li>Docker/Kubernetes</li>
-                    <li>CDN Services</li>
-                    <li>CI/CD Pipelines</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Tools</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>Git/GitHub</li>
-                    <li>Jest/Cypress</li>
-                    <li>Webpack/Vite</li>
-                    <li>Figma/Sketch</li>
-                  </ul>
-                </div>
-=======
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Web Development?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-3">High Performance</h3>
-                <p className="text-gray-300">Optimized web applications that load fast and perform smoothly across all devices.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">📱</div>
-                <h3 className="text-xl font-bold text-white mb-3">Responsive Design</h3>
-                <p className="text-gray-300">Mobile-first design that looks great on all screen sizes and devices.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">🔒</div>
-                <h3 className="text-xl font-bold text-white mb-3">Secure & Scalable</h3>
-                <p className="text-gray-300">Enterprise-grade security and architecture that scales with your business.</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-              </div>
+              ))}
             </div>
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+            <div className="cyber-card p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Build Your Next Web Application?
               </h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Let our expert development team bring your vision to life with modern, 
-                scalable web applications that deliver exceptional user experiences.
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -323,33 +262,11 @@ const WebDevelopmentPage: React.FC = () => {
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
+                  Call +1 302 464 0950
                 </a>
               </div>
-=======
-          <section className="cyber-card p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Build Your Web Application?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our web development experts help you create a powerful, modern web application. 
-              Get a free consultation and discover how we can bring your web vision to life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >
-                Get Free Consultation
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call +1 302 464 0950
-              </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
             </div>
           </section>
         </main>

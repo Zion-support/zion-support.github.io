@@ -1,397 +1,86 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone } from 'lucide-react';
+import { Shield, AlertTriangle, Eye, Zap, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
-=======
-import { Shield, Eye, AlertTriangle, BarChart, Zap, Lock, Target, Brain } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
 const AIFraudDetectionPage: React.FC = () => {
-  const fraudServices = [
-    {
-<<<<<<< HEAD
-      title: 'Real-time Fraud Detection',
-      description: 'Instant detection of fraudulent activities using advanced AI algorithms',
-      icon: Zap,
-      price: '$1,900/month',
-      features: ['Real-time Monitoring', 'Instant Alerts', 'Pattern Recognition', 'Risk Scoring'],
-      color: 'text-red-400'
-    },
-    {
-      title: 'Transaction Analysis',
-      description: 'Comprehensive analysis of transactions to identify suspicious patterns',
-      icon: BarChart,
-      price: '$1,200/month',
-      features: ['Transaction Monitoring', 'Anomaly Detection', 'Behavioral Analysis', 'Risk Assessment'],
-      color: 'text-blue-400'
-    },
-    {
-      title: 'Identity Verification',
-      description: 'Advanced identity verification and authentication systems',
-      icon: Users,
-      price: '$1,500/month',
-      features: ['Biometric Verification', 'Document Analysis', 'Liveness Detection', 'Multi-factor Auth'],
-      color: 'text-green-400'
-    },
-    {
-      title: 'Credit Card Fraud Prevention',
-      description: 'Specialized protection against credit card fraud and chargebacks',
-      icon: Lock,
-      price: '$1,800/month',
-      features: ['Card Verification', 'Chargeback Prevention', 'Merchant Protection', 'PCI Compliance'],
-      color: 'text-purple-400'
-    },
-    {
-      title: 'Account Takeover Protection',
-      description: 'Prevent unauthorized access to user accounts and data',
-      icon: Shield,
-      price: '$1,600/month',
-      features: ['Login Monitoring', 'Device Fingerprinting', 'Behavioral Biometrics', 'Suspicious Activity Detection'],
-      color: 'text-cyan-400'
-    },
-    {
-      title: 'Insurance Fraud Detection',
-      description: 'Detect and prevent insurance fraud with AI-powered analysis',
-      icon: AlertTriangle,
-      price: '$2,000/month',
-      features: ['Claim Analysis', 'Document Verification', 'Pattern Recognition', 'Risk Profiling'],
-      color: 'text-orange-400'
-    },
-    {
-      title: 'AML Compliance',
-      description: 'Anti-Money Laundering compliance and monitoring solutions',
-      icon: Eye,
-      price: '$1,700/month',
-      features: ['Transaction Monitoring', 'Sanctions Screening', 'KYC Verification', 'Regulatory Reporting'],
-      color: 'text-yellow-400'
-    },
-    {
-      title: 'Fraud Analytics Dashboard',
-      description: 'Comprehensive dashboard for fraud monitoring and analytics',
-      icon: TrendingDown,
-      price: '$800/month',
-      features: ['Real-time Dashboards', 'Custom Reports', 'Trend Analysis', 'Performance Metrics'],
-      color: 'text-gray-400'
-    }
+  const features = [
+    'Real-time Detection',
+    'Pattern Recognition',
+    'Risk Scoring',
+    'Alert System',
+    'Machine Learning Models',
+    'Behavioral Analysis',
+    'Transaction Monitoring',
+    'Compliance Reporting'
   ];
 
   const benefits = [
-    {
-      title: '99.9% Accuracy',
-      description: 'Our AI models achieve 99.9% accuracy in fraud detection',
-      icon: '🎯'
-    },
-    {
-      title: 'Real-time Protection',
-      description: 'Instant fraud detection and prevention in real-time',
-      icon: '⚡'
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Reduce fraud losses by up to 90% with our solutions',
-      icon: '💰'
-    },
-    {
-      title: 'Compliance Ready',
-      description: 'Built-in compliance with industry regulations',
-      icon: '✅'
-=======
-      title: 'Real-time Detection',
-      description: 'AI-powered fraud detection that identifies threats in real-time',
-      icon: Eye,
-      features: ['Instant Analysis', 'Pattern Recognition', 'Behavioral Analysis', 'Risk Scoring']
-    },
-    {
-      title: 'Pattern Recognition',
-      description: 'Advanced algorithms that identify fraudulent patterns and anomalies',
-      icon: Brain,
-      features: ['Machine Learning Models', 'Anomaly Detection', 'Historical Analysis', 'Predictive Modeling']
-    },
-    {
-      title: 'Risk Scoring',
-      description: 'Comprehensive risk assessment and scoring for all transactions',
-      icon: BarChart,
-      features: ['Dynamic Scoring', 'Multi-factor Analysis', 'Threshold Management', 'Custom Rules']
-    },
-    {
-      title: 'Alert System',
-      description: 'Intelligent alerting system that notifies you of potential fraud',
-      icon: AlertTriangle,
-      features: ['Smart Notifications', 'Escalation Rules', 'Dashboard Alerts', 'Mobile Notifications']
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-    }
+    '99.9% detection accuracy',
+    'Real-time monitoring',
+    '90% false positive reduction',
+    '24/7 protection'
   ];
 
   return (
-    <>
-      <SEOOptimizer
-<<<<<<< HEAD
-        title="AI Fraud Detection Services - Zion Tech Group"
-        description="Advanced AI-powered fraud detection and prevention services. Protect your business from fraud with real-time monitoring, transaction analysis, and identity verification."
-        keywords={['AI fraud detection', 'fraud prevention', 'transaction monitoring', 'identity verification', 'AML compliance', 'fraud analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
-      />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePrefetching={true}
-      />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <SecurityEnhancer
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <Analytics />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-        title="AI Fraud Detection - Zion Tech Group"
-        description="Advanced AI fraud detection solutions with real-time monitoring, pattern recognition, and risk scoring. Protect your business from fraudulent activities."
-        keywords={['AI fraud detection', 'fraud prevention', 'risk scoring', 'pattern recognition', 'real-time monitoring', 'security']}
-        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-              AI Fraud Detection
-            </h1>
-            <p className="text-xl text-red-400 mb-8 font-medium">
-<<<<<<< HEAD
-              Advanced Fraud Prevention & Detection
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Protect your business from fraud with our cutting-edge AI-powered detection systems. 
-              Real-time monitoring, advanced analytics, and instant alerts to keep your business secure.
-            </p>
-          </section>
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Fraud Detection">
+            AI Fraud Detection
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Advanced fraud prevention and security monitoring with real-time detection and risk assessment.
+          </p>
+          <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,900/month</div>
+        </section>
 
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Why Choose Our AI Fraud Detection?
-            </h2>
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div>
+                  <p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Services Grid */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Our Fraud Detection Services
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {fraudServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
-=======
-              Protect Your Business from Fraud
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Advanced AI-powered fraud detection that identifies and prevents fraudulent activities in real-time. 
-              Protect your business with cutting-edge machine learning and behavioral analysis.
-            </p>
-          </section>
-
-          {/* Fraud Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {fraudServices.map((service, index) => (
-                <article key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-red-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-<<<<<<< HEAD
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/contact" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Get Started
-                    </a>
-                  </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-                </article>
-              ))}
-            </div>
-          </section>
-
-<<<<<<< HEAD
-          {/* Industry Applications */}
-          <section className="mb-16">
-            <div className="cyber-card p-8">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-                Industry Applications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Financial Services</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Credit Card Fraud Prevention</li>
-                    <li>• Account Takeover Protection</li>
-                    <li>• Money Laundering Detection</li>
-                    <li>• Identity Verification</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-purple-400 mb-4">E-commerce</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Payment Fraud Prevention</li>
-                    <li>• Chargeback Protection</li>
-                    <li>• Fake Account Detection</li>
-                    <li>• Transaction Monitoring</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">Insurance</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Claims Fraud Detection</li>
-                    <li>• Document Verification</li>
-                    <li>• Risk Assessment</li>
-                    <li>• Policy Validation</li>
-                  </ul>
-                </div>
-=======
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Fraud Detection?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">🛡️</div>
-                <h3 className="text-xl font-bold text-white mb-3">Advanced AI</h3>
-                <p className="text-gray-300">State-of-the-art machine learning models that adapt and learn from new fraud patterns.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-3">Real-Time Protection</h3>
-                <p className="text-gray-300">Instant fraud detection that stops threats before they can cause damage.</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3">Comprehensive Analytics</h3>
-                <p className="text-gray-300">Detailed insights and reporting to help you understand and prevent fraud.</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}
-<<<<<<< HEAD
-          <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                Protect Your Business from Fraud
-              </h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Don't let fraud damage your business. Our AI-powered fraud detection systems 
-                provide real-time protection and help you stay ahead of emerging threats.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Free Security Audit
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-              </div>
-=======
-          <section className="cyber-card p-8 text-center">
+        <section className="text-center">
+          <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Protect Your Business?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our fraud detection experts help you build a robust defense against fraudulent activities. 
-              Get a free security assessment and discover how we can protect your business.
-            </p>
+            <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your fraud detection needs.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >
-                Get Free Assessment
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">Get Free Assessment</a>
+              <a href="tel:+13024640950" className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                <Phone className="w-5 h-5" />Call +1 302 464 0950
               </a>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call +1 302 464 0950
-              </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-11ea
             </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

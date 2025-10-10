@@ -1,90 +1,73 @@
-#!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-//PR information from the JSON files
-const prs = [
-  {
-    number: 11935,
-    title: 'Fix web application console errors',
-    branch: 'cursor/fix-web-application-console-errors-0bf5',
-    sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661',
-  },
-  {
-    number: 25063,
-    title: 'Build and deploy with vite and netlify',
-    branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37',
-    sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580',
-  },
-  {
-    number: 25062,
-    title: 'Fix errors and merge to main',
-    branch: 'cursor/fix-errors-and-merge-to-main-fcbd',
-    sha: 'a5f35d4a9ddcf46941c797da316bb3a2b7b05b56',
-  },
-  {
-    number: 25061,
-    title: 'Fix errors and merge to main',
-    branch: 'cursor/fix-errors-and-merge-to-main-e6e1',
-    sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
-  },
-];
+console.log('🚀 Starting PR merge process...');
 
-// //Ensure we're on main branch
 try {
+  // Check current status
+  console.log('📋 Checking current git status...');
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  if (status.trim()) {
+    console.log('⚠️  Working directory not clean, committing changes...');
+    execSync('git add .', { stdio: 'inherit' });
+    execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' });
+  }
+
+  // Switch to main branch
+  console.log('🔄 Switching to main branch...');
   execSync('git checkout main', { stdio: 'inherit' });
-//   } catch (error) {
-//   process.exit(1);
-}
 
-//Pull latest changes
-try {
+  // Pull latest changes
+  console.log('📥 Pulling latest changes from main...');
   execSync('git pull origin main', { stdio: 'inherit' });
-//   } catch (error) {
-//   process.exit(1);
-}
 
-//Process each PR
-for (const pr of prs) {
-//   try {
-    //Check if branch exists
-    try {
-      execSync(
-        `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
-        { stdio: 'pipe' }
-      );
-//       } catch (error) {
-//       continue;
-    }
-
-    //Try to merge the branch
-    try {
-      execSync(
-        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
-        { stdio: 'inherit' }
-      );
-//       } catch (error) {
-//       //Try to resolve conflicts automatically
-      try {
-        execSync('git status --porcelain', { stdio: 'pipe' });
-//         //If there are conflicts, try to resolve them
-        const _status = execSync('git status --porcelain', { encoding: 'utf8' });
-        if (status.includes('UU') || status.includes('AA')) {
-//           //Reset the merge
-          execSync('git merge --abort', { stdio: 'inherit' });
-//           }
-      } catch (resolveError) {
-//         }
-    }
+  // Merge our feature branch
+  console.log('🔀 Merging feature branch...');
+  try {
+    execSync('git merge cursor/website-audit-and-update-with-deployment-1500 --no-ff -m "Merge website audit and update improvements"', { stdio: 'inherit' });
+    console.log('✅ Successfully merged feature branch!');
   } catch (error) {
-//     }
-}
+    console.log('⚠️  Merge conflicts detected, resolving...');
+    
+    // Check for conflicts
+    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    if (conflictFiles.trim()) {
+      console.log('🔧 Conflict files found:', conflictFiles);
+      
+      // Auto-resolve conflicts by accepting our changes
+      const files = conflictFiles.trim().split('\n');
+      for (const file of files) {
+        if (file.trim()) {
+          console.log(`🔧 Resolving conflicts in ${file}...`);
+          try {
+            execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });
+            execSync(`git add "${file}"`, { stdio: 'inherit' });
+          } catch (e) {
+            console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`);
+          }
+        }
+      }
+      
+      // Complete the merge
+      execSync('git commit -m "Resolve merge conflicts - accept website audit changes"', { stdio: 'inherit' });
+      console.log('✅ Merge conflicts resolved!');
+    }
+  }
 
-// Push changes
-try {
+  // Push to main
+  console.log('📤 Pushing changes to main...');
   execSync('git push origin main', { stdio: 'inherit' });
-//   } catch (error) {
-//   }
 
-// 
+  console.log('🎉 Successfully merged and pushed to main!');
+
+  // Clean up feature branch
+  console.log('🧹 Cleaning up feature branch...');
+  execSync('git branch -d cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
+  execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
+
+  console.log('✨ All done! Feature branch merged and cleaned up.');
+
+} catch (error) {
+  console.error('❌ Error during merge process:', error.message);
+  process.exit(1);
+}

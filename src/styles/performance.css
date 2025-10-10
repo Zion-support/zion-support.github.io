@@ -1,0 +1,323 @@
+/* Performance-optimized CSS for Zion Tech Group */
+
+/* Critical CSS - Above the fold styles */
+.hero-section {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+.navigation {
+  contain: layout style;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-scale {
+    animation: scale 0.3s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-scale {
+    animation: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scale {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
+  decoding: async;
+}
+
+/* Critical font loading */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
+
+/* Optimize text rendering */
+body {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Optimize focus indicators */
+.focus-visible {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Optimize button interactions */
+button, a {
+  touch-action: manipulation;
+}
+
+/* Optimize form elements */
+input, textarea, select {
+  touch-action: manipulation;
+}
+
+/* Optimize layout shifts */
+.aspect-ratio {
+  aspect-ratio: 16/9;
+}
+
+/* Optimize container queries */
+@container (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Optimize print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* Optimize dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0a0a0a;
+    --text-primary: #ffffff;
+  }
+}
+
+/* Optimize high contrast mode */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    filter: contrast(150%) brightness(120%);
+  }
+}
+
+/* Optimize reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize container queries for modern browsers */
+@supports (container-type: inline-size) {
+  .container-query {
+    container-type: inline-size;
+  }
+}
+
+/* Optimize CSS Grid with subgrid */
+@supports (grid-template-rows: subgrid) {
+  .subgrid {
+    display: grid;
+    grid-template-rows: subgrid;
+  }
+}
+
+/* Optimize backdrop filters */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Optimize transforms */
+.transform-optimized {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Optimize opacity transitions */
+.opacity-transition {
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+
+/* Optimize visibility */
+.visibility-hidden {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Optimize screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Optimize focus management */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap:focus-within {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+/* Optimize loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Optimize critical path */
+.critical-path {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Optimize non-critical styles */
+.non-critical {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize intersection observer */
+.intersection-observer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.intersection-observer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optimize service worker styles */
+.service-worker-ready {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #10b981;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+/* Optimize error states */
+.error-state {
+  border: 2px solid #ef4444;
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Optimize success states */
+.success-state {
+  border: 2px solid #10b981;
+  background: #f0fdf4;
+  color: #059669;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Optimize warning states */
+.warning-state {
+  border: 2px solid #f59e0b;
+  background: #fffbeb;
+  color: #d97706;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Optimize info states */
+.info-state {
+  border: 2px solid #3b82f6;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}

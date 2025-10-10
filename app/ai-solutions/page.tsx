@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, Search, FileText, TrendingUp, Target } from 'lucide-react';
+import { Brain, MessageSquare, Eye, Zap, BarChart, Cube, Mic, FileText, TrendingUp, Target, Shield, Search, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
@@ -13,7 +12,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Brain,
       price: '$1,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
-      color: 'text-purple-400'
+      color: 'text-purple-400',
+      category: 'AI Development',
+      link: '/ai-ml'
     },
     {
       title: 'Natural Language Processing',
@@ -21,7 +22,9 @@ const AISolutionsPage: React.FC = () => {
       icon: MessageSquare,
       price: '$1,200/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
-      color: 'text-blue-400'
+      color: 'text-blue-400',
+      category: 'AI Development',
+      link: '/ai-nlp'
     },
     {
       title: 'Computer Vision',
@@ -29,7 +32,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Eye,
       price: '$1,800/month',
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
-      color: 'text-green-400'
+      color: 'text-green-400',
+      category: 'AI Development',
+      link: '/ai-vision'
     },
     {
       title: 'AI Automation',
@@ -37,7 +42,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Zap,
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
+      category: 'Automation',
+      link: '/ai-automation'
     },
     {
       title: 'AI Data Visualization',
@@ -45,15 +52,19 @@ const AISolutionsPage: React.FC = () => {
       icon: BarChart,
       price: '$1,100/month',
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
-      color: 'text-orange-400'
+      color: 'text-orange-400',
+      category: 'Data Science',
+      link: '/ai-data-visualization'
     },
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Box,
+      icon: Cube,
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
-      color: 'text-pink-400'
+      color: 'text-pink-400',
+      category: '3D & Graphics',
+      link: '/ai-3d-generation'
     },
     {
       title: 'AI Voice Synthesis',
@@ -61,7 +72,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Mic,
       price: '$1,300/month',
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
-      color: 'text-indigo-400'
+      color: 'text-indigo-400',
+      category: 'Voice Technology',
+      link: '/ai-voice-synthesis'
     },
     {
       title: 'AI Content Generation',
@@ -69,7 +82,9 @@ const AISolutionsPage: React.FC = () => {
       icon: FileText,
       price: '$1,000/month',
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
+      category: 'Content AI',
+      link: '/ai-content-writer'
     },
     {
       title: 'AI Predictive Analytics',
@@ -77,7 +92,9 @@ const AISolutionsPage: React.FC = () => {
       icon: TrendingUp,
       price: '$1,700/month',
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
-      color: 'text-red-400'
+      color: 'text-red-400',
+      category: 'Analytics',
+      link: '/ai-analytics'
     },
     {
       title: 'AI Recommendation Engine',
@@ -85,7 +102,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Target,
       price: '$1,400/month',
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
-      color: 'text-teal-400'
+      color: 'text-teal-400',
+      category: 'Personalization',
+      link: '/ai-sales-automation'
     },
     {
       title: 'AI Fraud Detection',
@@ -93,7 +112,9 @@ const AISolutionsPage: React.FC = () => {
       icon: Shield,
       price: '$1,900/month',
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
-      color: 'text-red-500'
+      color: 'text-red-500',
+      category: 'Security',
+      link: '/ai-fraud-detection'
     },
     {
       title: 'AI Document Processing',
@@ -101,82 +122,109 @@ const AISolutionsPage: React.FC = () => {
       icon: Search,
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
-      color: 'text-gray-400'
+      color: 'text-gray-400',
+      category: 'Document AI',
+      link: '/ai-customer-support'
     }
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Solutions - Zion Tech Group"
-        description="Advanced AI solutions including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge artificial intelligence."
-        keywords={['AI solutions', 'machine learning', 'NLP', 'computer vision', 'AI automation', 'predictive analytics', 'AI consulting']}
-        canonicalUrl="https://ziontechgroup.com/ai-solutions"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-              AI Solutions
-            </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Advanced Artificial Intelligence for Enterprise
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with cutting-edge AI solutions. From machine learning to natural language processing, 
-              we deliver intelligent systems that drive growth and efficiency.
-            </p>
-          </section>
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Solutions">
+            AI Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Advanced artificial intelligence solutions designed to transform your business operations and drive unprecedented growth.
+          </p>
+        </section>
 
-          {/* AI Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/contact" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Get Started
-                    </a>
-                  </div>
-                </article>
-              ))}
+        {/* AI Services Grid */}
+        <section className="mb-16" aria-labelledby="ai-services-heading">
+          <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">
+            Our AI Services
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Comprehensive AI solutions tailored to your business needs
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            {aiServices.map((service, index) => (
+              <a
+                key={index}
+                href={service.link}
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
+                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Why Choose Our AI Solutions */}
+        <section className="mb-16">
+          <div className="cyber-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Why Choose Our AI Solutions?
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology</h3>
+                <p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Custom Solutions</h3>
+                <p className="text-gray-300">Every AI solution is tailored to your specific business needs and requirements.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* CTA Section */}
-          <section className="cyber-card p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our AI experts help you implement the perfect solution for your business needs. 
-              Get a free consultation and see how AI can revolutionize your operations.
+        {/* Contact CTA */}
+        <section className="text-center">
+          <div className="cyber-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Contact us today to discuss how our AI solutions can revolutionize your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -189,15 +237,16 @@ const AISolutionsPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
+                <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950
               </a>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
+      </main>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

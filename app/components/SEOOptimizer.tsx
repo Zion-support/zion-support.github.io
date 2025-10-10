@@ -1,6 +1,4 @@
-'use client';
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -8,118 +6,139 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+  structuredData?: any;
+  preload?: Array<{ href: string; as: string; type?: string }>;
+  prefetch?: Array<{ href: string; as: string }>;
+  dnsPrefetch?: string[];
+  preconnect?: string[];
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation'],
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   structuredData,
+  preload = [],
+  prefetch = [],
+  dnsPrefetch = [],
+  preconnect = []
 }) => {
   useEffect(() => {
     // Update document title
-    if (title) {
-      document.title = title;
-    }
+    document.title = title;
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', description);
 
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
     }
+    metaKeywords.setAttribute('content', keywords.join(', '));
 
     // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', canonicalUrl);
-      } else {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        canonical.setAttribute('href', canonicalUrl);
-        document.head.appendChild(canonical);
-      }
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
+    canonical.setAttribute('href', canonicalUrl);
 
     // Update Open Graph tags
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
+    const ogTags = [
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:type', content: 'website' }
+    ];
 
-    updateMetaTag('og:title', title);
-    updateMetaTag('og:description', description);
-    updateMetaTag('og:type', ogType);
-    if (ogImage) {
-      updateMetaTag('og:image', ogImage);
-    }
-    if (canonicalUrl) {
-      updateMetaTag('og:url', canonicalUrl);
-    }
+    ogTags.forEach(({ property, content }) => {
+      let ogTag = document.querySelector(`meta[property="${property}"]`);
+      if (!ogTag) {
+        ogTag = document.createElement('meta');
+        ogTag.setAttribute('property', property);
+        document.head.appendChild(ogTag);
+      }
+      ogTag.setAttribute('content', content);
+    });
 
     // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
+    const twitterTags = [
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImage }
+    ];
 
-    updateTwitterTag('twitter:card', twitterCard);
-    updateTwitterTag('twitter:title', title);
-    updateTwitterTag('twitter:description', description);
-    if (ogImage) {
-      updateTwitterTag('twitter:image', ogImage);
-    }
+    twitterTags.forEach(({ name, content }) => {
+      let twitterTag = document.querySelector(`meta[name="${name}"]`);
+      if (!twitterTag) {
+        twitterTag = document.createElement('meta');
+        twitterTag.setAttribute('name', name);
+        document.head.appendChild(twitterTag);
+      }
+      twitterTag.setAttribute('content', content);
+    });
 
     // Add structured data
     if (structuredData) {
-      let script = document.querySelector('script[type="application/ld+json"]');
-      if (script) {
-        script.textContent = JSON.stringify(structuredData);
-      } else {
-        script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
-        document.head.appendChild(script);
+      let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+      if (!structuredDataScript) {
+        structuredDataScript = document.createElement('script');
+        structuredDataScript.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(structuredDataScript);
       }
+      structuredDataScript.textContent = JSON.stringify(structuredData);
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData]);
+
+    // Add preload links
+    preload.forEach(({ href, as, type }) => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'preload');
+      link.setAttribute('href', href);
+      link.setAttribute('as', as);
+      if (type) link.setAttribute('type', type);
+      document.head.appendChild(link);
+    });
+
+    // Add prefetch links
+    prefetch.forEach(({ href, as }) => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'prefetch');
+      link.setAttribute('href', href);
+      link.setAttribute('as', as);
+      document.head.appendChild(link);
+    });
+
+    // Add DNS prefetch
+    dnsPrefetch.forEach((domain) => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'dns-prefetch');
+      link.setAttribute('href', domain);
+      document.head.appendChild(link);
+    });
+
+    // Add preconnect
+    preconnect.forEach((domain) => {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'preconnect');
+      link.setAttribute('href', domain);
+      document.head.appendChild(link);
+    });
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, preload, prefetch, dnsPrefetch, preconnect]);
 
   return null;
 };
