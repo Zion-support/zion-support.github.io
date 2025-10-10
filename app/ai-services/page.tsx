@@ -1229,6 +1229,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         <section className="py-20">
@@ -1236,6 +1237,17 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services
             </h1>
+=======
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-glow-cyan">
+            AI Services
+          </h1>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dffe
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>
@@ -1277,9 +1289,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               key={service.id}
 
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
-                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
-
+                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20 neon-glow-purple' : ''
               }`}
             >
               {/* Animated Background */}

@@ -18,11 +18,15 @@ const AccessibilityEnhancer: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
+<<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
     dyslexia: false
+=======
+    focusVisible: true
+>>>>>>> cursor/fix-errors-and-merge-to-main-dffe
   });
 
   useEffect(() => {
@@ -87,6 +91,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [settings]);
 
+<<<<<<< HEAD
   // Screen reader optimizations
   useEffect(() => {
     const root = document.documentElement;
@@ -122,6 +127,8 @@ const AccessibilityEnhancer: React.FC = () => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dffe
   // Add CSS for accessibility features
   useEffect(() => {
     const style = document.createElement('style');

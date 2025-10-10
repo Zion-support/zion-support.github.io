@@ -19,7 +19,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
+<<<<<<< HEAD
     threshold: 0.5,
+=======
+    threshold: 0.5
+>>>>>>> cursor/fix-errors-and-merge-to-main-dffe
   });
 
   useEffect(() => {
