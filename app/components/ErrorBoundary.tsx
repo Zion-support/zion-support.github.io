@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-
+      }
     }
   }
 

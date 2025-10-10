@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-
+    });
   };
 
   const initializePerformanceMonitoring = () => {
@@ -79,7 +79,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         if (navigation) {
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
         }
-
+      });
     }
   };
 
