@@ -13,9 +13,9 @@ const preloadComponents = useCallback((...args) => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
-    }, 100)
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
   }
 }
 // Loading skeleton component

@@ -51,7 +51,6 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-      category: 'AI Automation & Workflow',
       ],
       category: 'AI Automation & Workflow',
       icon: Zap,
@@ -290,7 +289,7 @@ const AIServicesPage: React.FC = () => {
           link: 'https://ziontechgroup.com/ai-quantum-computing',
           popular: false
         }
-      ]
+      ],
       icon: Target,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
@@ -300,6 +299,11 @@ const AIServicesPage: React.FC = () => {
       name: 'AI Document Processing',
       description: 'Intelligent document processing and data extraction with OCR and NLP',
       price: '$799/month',
+      features: [
+        'OCR Technology',
+        'Data Extraction',
+        'Document Classification',
+        'Automated Processing'
       ]
     },
     {
@@ -358,8 +362,6 @@ const AIServicesPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}
             >
-              )}
-              
               <div className="p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
                   <service.icon className={`h-8 w-8 ${service.color}`} />
@@ -422,6 +424,8 @@ const AIServicesPage: React.FC = () => {
                       {capability}
                     </li>
                   ))}
+                </ul>
+              </div>
 
               {/* Features */}
               <div className="mb-6">

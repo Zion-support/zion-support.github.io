@@ -19,9 +19,9 @@ const preloadComponents = useCallback((...args) => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
-    }, 100)
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
   }
 }
 // Loading skeleton component
@@ -42,12 +42,10 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);}
-  }, [])
-  // Analytics tracking for phone clicks - optimized
+    return () => clearTimeout(timer);
+  }, []);
   
-    }
-  }, [])
+  // Analytics tracking for phone clicks - optimized
   return (
     <>
       <SEOOptimizer
@@ -78,16 +76,17 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'}
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'}
+            availableLanguage: 'en'
           }
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '364 E Main St STE 1008',
+          addressLocality: 'Middletown',
+          addressRegion: 'DE',
+          postalCode: '19709',
+          addressCountry: 'US'
+        }
         }}
       />
       <PerformanceOptimizer
@@ -1621,6 +1620,7 @@ const HomePage: React.FC = React.memo((props) => {
       <Footer />
     </div>
     </>
-  )
-}
-export default HomePage
+  );
+};
+
+export default HomePage;

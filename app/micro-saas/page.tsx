@@ -251,17 +251,10 @@
               Micro SAAS Solutions
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro SaaS Solutions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
-          </p>
-        </div>
+              Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
+            </p>
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -344,21 +337,7 @@
           </div>
         </section>
       </main>
-        </div>
-      </div>
-
-              <p className="text-gray-300 mb-6">{service.description}</p>
-
-              <div className="mb-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-3xl font-bold text-white">{service.price}</span>
-                  <span className="text-lg text-gray-400 line-through ml-2">{service.originalPrice}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-400">
-                  <Clock className="w-4 h-4 mr-1" />
-                  {service.freeTrial} free trial
-                </div>
-              </div>
+    </div>
 
               <div className="space-y-2 mb-6">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -410,5 +389,4 @@
   );
 };
 
-}
 export default MicroSaasPage;
