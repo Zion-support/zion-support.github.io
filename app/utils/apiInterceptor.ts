@@ -33,7 +33,7 @@ class APIInterceptor {
   removeRequestInterceptor(interceptor: (config: any) => any): void {
     ,
     const index = this.requestInterceptors.indexOf(interceptor);
-    if (index > -1) {,;
+    if (index > -1) {,
       this.requestInterceptors.splice(index, 1)
   }
     }
@@ -42,7 +42,7 @@ class APIInterceptor {
   removeResponseInterceptor(interceptor: (response: any) => any): void {
     ,
     const index = this.responseInterceptors.indexOf(interceptor);
-    if (index > -1) {,;
+    if (index > -1) {,
       this.responseInterceptors.splice(index, 1)
   }
     }
@@ -51,7 +51,7 @@ class APIInterceptor {
   removeErrorInterceptor(interceptor: (error: any) => any): void {
     ,
     const index = this.errorInterceptors.indexOf(interceptor);
-    if (index > -1) {,;
+    if (index > -1) {,
       this.errorInterceptors.splice(index, 1)
   }
     }
@@ -127,7 +127,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
-  handleNetworkError(erro,;
+  handleNetworkError(erro,
   r: Error, ur);
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
@@ -143,8 +143,8 @@ export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
 export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
-  headers: config.headers || {},;
-      interceptor,;
+  headers: config.headers || {},
+      interceptor,
   s: config.interceptors || {}
     }
     this.errorHandler = ErrorHandler.getInstance();
@@ -179,7 +179,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
       const url = this.buildURL(finalConfig);
-      const,;
+      const,
   fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
       }
       const response = await fetch(url, fetchOptions);
@@ -209,9 +209,9 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * GET request;
    */;
-  async get<T = unknown>(ur,;
+  async get<T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'GET' })
@@ -219,10 +219,10 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * POST request;
    */;
-  async post<T = unknown>(ur,;
+  async post<T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'POST', body })
@@ -230,10 +230,10 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PUT request;
    */;
-  async put<T = unknown>(ur,;
+  async put<T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PUT', body })
@@ -241,9 +241,9 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * DELETE request;
    */;
-  async delete<T = unknown>(ur,;
+  async delete<T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'DELETE' })
@@ -251,10 +251,10 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PATCH request;
    */;
-  async patch<T = unknown>(ur,;
+  async patch<T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PATCH', body })
@@ -264,11 +264,11 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    */;
   private prepareRequest(confi);
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */},
-      timeou,;
+      timeou,
   t: config.timeout || this.config.timeout,
-      retryAttempt,;
+      retryAttempt,
   s: config.retryAttempts ?? this.config.retryAttempts,
-      cach,;
+      cach,
   e: config.cache ?? this.config.enableCaching,
     }
   }
@@ -327,7 +327,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * Set response in cache;
    */;
-  private setInCache(ke,;
+  private setInCache(ke,
   y: string, respons);
   e: APIResponse): void {/* TODO: Fix JSX expression */}
     })

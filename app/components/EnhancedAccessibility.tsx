@@ -60,7 +60,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     })
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
     
     // High contrast mode
@@ -89,7 +89,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }
   }
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {;
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
@@ -103,7 +103,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
         if (skipLink) {
           skipLink.focus(),
@@ -112,7 +112,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
 
       // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape') {;
     const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur()
@@ -128,7 +128,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   useEffect(() => {
     if (!enableFocusManagement) return;
 
-    const handleFocusIn = (event: FocusEvent) => {
+    const handleFocusIn = (event: FocusEvent) => {;
       const target = event.target as HTMLElement;
       
       // Ensure focus is visible
@@ -137,7 +137,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
     }
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut = (event: FocusEvent) => {;
       const target = event.target as HTMLElement;
       
       // Remove focus styling
@@ -156,7 +156,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [enableFocusManagement]);
 
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (message: string) => {;
     if (!enableScreenReaderSupport) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');

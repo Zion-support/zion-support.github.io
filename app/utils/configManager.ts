@@ -84,7 +84,7 @@ const defaultConfig: AppConfig = {
     theme: 'auto',
     language: 'en',
   }
-    timezone: 'UTC'},;
+    timezone: 'UTC'},
   logging: {
     ,
     level: 'info',
@@ -166,67 +166,67 @@ export default configManager;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   }
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */}
   }
-  performanc,;
+  performanc,
   e: {/* TODO: Fix JSX expression */}
   }
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */}
   }
-  u,;
+  u,
   i: {/* TODO: Fix JSX expression */}
   }
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   defaultConfig: AppConfig = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  performanc,;
+  performanc,
   e: {/* TODO: Fix JSX expression */},
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */},
-  u,;
+  u,
   i: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */},
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
@@ -263,7 +263,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Deep merge two config objects;
    */;
-  private mergeConfig(bas,;
+  private mergeConfig(bas,
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
@@ -281,12 +281,12 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   get<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
-    nestedKe,;
+    nestedKe,
   y: NK;)
   ): AppConfig[K][NK],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKey?: NK;);
   ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
@@ -296,19 +296,19 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Set configuration value;
    */;
-  set<K extends keyof AppConfig>(ke,;
+  set<K extends keyof AppConfig>(ke,
   y: K, valu);
   e: AppConfig[K]): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
-    nestedKe,;
+    nestedKe,
   y: NK,
-    valu,;
+    valu,
   e: AppConfig[K][NK])
   ): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
-    nestedKeyOrValu,;
+    nestedKeyOrValu,
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK]);
   ): void {/* TODO: Fix JSX expression */}
@@ -326,15 +326,15 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   private getDefaultForKey<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */},
-      feature,;
+      feature,
   s: {/* TODO: Fix JSX expression */},
-      performanc,;
+      performanc,
   e: {/* TODO: Fix JSX expression */},
-      securit,;
+      securit,
   y: {/* TODO: Fix JSX expression */},
-      u,;
+      u,
   i: {/* TODO: Fix JSX expression */},
-      loggin,;
+      loggin,
   g: {/* TODO: Fix JSX expression */}
       }
     }

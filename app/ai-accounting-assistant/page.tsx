@@ -10,9 +10,9 @@ const AIAccountingAssistantPage: React.FC = () => {
     { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
     { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
         <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
@@ -39,7 +39,7 @@ const AIAccountingAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

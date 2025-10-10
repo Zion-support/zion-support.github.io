@@ -10,7 +10,7 @@ const EdgeComputingPage: React.FC = () => {
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
-      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
+      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'];
   },
     {
     icon: Globe,
@@ -41,8 +41,8 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
-  }
-    ]
+  },
+  ];];
 const services = [
     {
     icon: '⚡',
@@ -65,7 +65,7 @@ const services = [
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
-  ]
+  ];
 const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -76,8 +76,8 @@ const benefits = [
 
     'Real-time Processing',
 
-    'Global Scalability'
-  ]
+    'Global Scalability';
+  ];];];
 const useCases = [
     {
     title: 'Autonomous Vehicles',
@@ -110,7 +110,7 @@ const useCases = [
       icon: '🎮'
   }
     }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
@@ -306,4 +306,3 @@ return (
 };
 
 export default EdgeComputingPage;
-

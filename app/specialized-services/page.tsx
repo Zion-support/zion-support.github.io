@@ -9,8 +9,8 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-  }
-      {/* Features Section */}
+  },
+    {/* Features Section */}
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -100,8 +100,7 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   ),
-};
-
+};];];
 export default PagePage;
 
 import Navigation from '../components/Navigation';
@@ -129,16 +128,15 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ];
+  ];];];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve decision-making with real-time insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
-    'Ensure 99.9% uptime and reliability'
-  ]
-
+    'Ensure 99.9% uptime and reliability';
+  ];
   return (
     <>
       <Helmet>
@@ -245,4 +243,3 @@ const SpecializedServicesPage: React.FC = () => {
 };
 
 export default SpecializedServicesPage;
-

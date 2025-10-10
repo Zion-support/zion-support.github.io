@@ -8,7 +8,7 @@ export default function StatusPage() {
     const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 const refreshStatus = async () => {
-
+;
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -66,7 +66,7 @@ const services = [
       description: 'System monitoring and alerts'
   }
     }
-  ]
+  ];];];
 const incidents = [
     {
     id: 1,
@@ -76,7 +76,7 @@ const incidents = [
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
+      affectedServices: ['API Services', 'AI Services'];
   },
     {
     id: 2,
@@ -89,7 +89,7 @@ const incidents = [
       affectedServices: ['Database', 'API Services']
   }
     }
-  ]
+  ];
 const getStatusIcon = (;
     switch (status) {
     case 'operational':;

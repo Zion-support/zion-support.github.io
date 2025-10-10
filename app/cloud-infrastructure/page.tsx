@@ -6,28 +6,19 @@ const CloudInfrastructurePage: React.FC = () => {
   const features = [
     {
     }
-  ];
+  ];];];
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-<meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.

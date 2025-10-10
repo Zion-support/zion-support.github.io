@@ -15,9 +15,8 @@ const Breadcrumb: React.FC = () => {
   
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
-  ]
-
-  pathSegments.forEach((segment, index) => {
+  ];
+    pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     breadcrumbItems.push({ name, path, icon: null })

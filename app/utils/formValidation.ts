@@ -42,7 +42,7 @@ export const validationRules = {}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
     message}
 export const validationRules = {/* TODO: Fix JSX expression */}
-  }),;
+  }),
   /**;
    * Validate email format;
    */;
@@ -56,32 +56,32 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);},
     message;
-  emai,;
+  emai,
   l: (message = 'Please enter a valid email address'): ValidationRule<string> => ({/* TODO: Fix JSX expression */},
     message;);
-  }),;
+  }),
   /**;
    * Validate minimum length;
    */;
   minLength: (min: number, message?: string): ValidationRule<string> => ({}
     validate: (value: string) => value.length >= min}
     message: message || `Must be at least ${min} characters;
-  minLengt,;
+  minLengt,
   h: (mi),
   n: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
   e: message || `Must be at least ${min} characters`);
-  }),;
+  }),
   /**;
    * Validate maximum length;
    */;
   maxLength: (max: number, message?: string): ValidationRule<string> => ({}
     validate: (value: string) => value.length <= max,`}
     message: message || `Must be no more than ${max} characters;
-  maxLengt,;
+  maxLengt,
   h: (ma),
   x: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: message || `Must be no more than ${max} characters`);
-  }),;
+  }),
   /**;
    * Validate phone number (US format);
    */;
@@ -92,20 +92,20 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     validate: (value: string) => {}
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
-  phoneU,;
+  phoneU,
   S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
-    },;
+    },
     message;
-  }),;
+  }),
   /**;
    * Validate URL format;
    */;
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({
     ,
     validate: (value: string) => {,
-      try {,;
+      try {,
         new URL(value),
   }
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
@@ -117,34 +117,34 @@ export const validationRules = {/* TODO: Fix JSX expression */}
         return false;}
       },
     message;
-  ur,;
+  ur,
   l: (message = 'Please enter a valid URL'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
       },
     message;);
-  }),;
+  }),
   /**;
    * Validate number range;
    */;
   numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({}
     validate: (value: number) => value >= min && value <= max,`}
     message: message || `Must be between ${min} and ${max}
-  numberRang,;
+  numberRang,
   e: (mi,
   n: number, ma);
   x: number, message?: string): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`;
   e: message || `Must be between ${min} and ${max}`);
-  }),;
+  }),
   /**;
    * Validate pattern match;
    */;
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({}
     validate: (value: string) => regex.test(value),
     message}
-  patter,;
+  patter,
   n: (rege),
   x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-  }),;
+  }),
   /**;
    * Validate custom condition;
    */;
@@ -155,12 +155,12 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({}
     validate: validator,
     message}
-  custo,;
+  custo,
   m: <T>(validato,
   r: (valu),
-  e: T) => boolean, messag,;
+  e: T) => boolean, messag,
   e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
-  }),;
+  }),
   /**;
    * Validate password strength;
    */;
@@ -175,19 +175,19 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;
     ]/.test(value);
   strongPasswor,
   }
   d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</>
   ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;
     ]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
   },
     message;
-  }),;
+  }),
   /**;
    * Validate matching fields (e.g., password confirmation);
    */}</>
@@ -197,12 +197,12 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
     validate: (value: string) => value === otherFieldValue,`}
     message: `Must match ${fieldName}
-  matche,;
+  matche,
   s: (otherFieldValu,
   e: string, fieldNam);
   e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must match ${fieldName}`);
-  }),;
+  }),
   /**;
    * Validate file size;
    */;
@@ -215,19 +215,19 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;},
     message: message || `File size must not exceed ${maxSizeInMB}MB;
-  fileSiz,;
+  fileSiz,
   e: (maxSizeInM),
   B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */},
     messag,`;
   e: message || `File size must not exceed ${maxSizeInMB}MB`);
-  }),;
+  }),
   /**;
    * Validate file type;
    */;
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
     validate: (file: File) => allowedTypes.includes(file.type),`}
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
-  fileTyp,;
+  fileTyp,
   e: (allowedType),
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`;
   of: ${allowedTypes.join(', ')}`;
@@ -239,7 +239,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
     ,
   const errors: string[] = [],
-  for (const rule of rules) {,;
+  for (const rule of rules) {,
     if (!rule.validate(value)) {,
   }
       errors.push(rule.message);}
@@ -259,7 +259,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
     valid: errors.length === 0,
     errors}
   }
-export function validateField<T>(valu,;
+export function validateField<T>(valu,
   e: T, rule);
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
     }
@@ -276,12 +276,12 @@ export function validateForm<T extends Record<string, unknown>>(;
 ): Record<keyof T, ValidationResult> {}
   const results = {} as Record<keyof>
   for (const fieldName in validationSchema) {}
-    const value = formData[fieldName]
-    const rules = validationSchema[fieldName]
+    const value = formData[fieldName];
+    const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);}
-export function validateForm<T extends Record<string, unknown>>(formDat,;
+export function validateForm<T extends Record<string, unknown>>(formDat,
   a: T,
-  validationSchem,;
+  validationSchem,
   a: Record<keyof T, ValidationRule[]></keyof>);
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
   const results = {} as Record<keyof>
@@ -296,7 +296,7 @@ export function isFormValid<T extends Record<string, unknown>>(;
   validationResults: Record<keyof>
 ): boolean {}
   return Object.values(validationResults).every(result => result.valid);}
-export function isFormValid<T extends Record<string, unknown>>(validationResult,;
+export function isFormValid<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>);
 ): boolean {/* TODO: Fix JSX expression */}
 }
@@ -311,7 +311,7 @@ export function getFormErrors<T extends Record<string, unknown>>(;
     const result = validationResults[fieldName]
     if (!result.valid) {}
       errors[fieldName] = result.errors;}
-export function getFormErrors<T extends Record<string, unknown>>(validationResult,;
+export function getFormErrors<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof>
@@ -326,7 +326,7 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
 export function sanitizeInput(input: string): string {
     ,
   return input;
-    .trim(),;
+    .trim(),
     .replace(/[<>{]/g, '') // Remove potential HTML tags
   }
 export function sanitizeInput(input: string): string {}
@@ -348,7 +348,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
 ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters<T>) {,
-    const later = useCallback((...args) => {,;
+    const later = useCallback((...args) => {,
       timeout = null;
   func: T,
   wait: number
@@ -369,7 +369,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
 export function debounce<T extends (...arg);
   s: Parameters<T>) => ReturnType<T>>(fun,
   c: T,
-  wai,;
+  wai,
   t: number;)
 ): (...arg),
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}

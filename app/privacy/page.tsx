@@ -15,7 +15,7 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
       category: 'Technical Data',
       icon: Server,
     }
-  ];
+  ];];];
   const purposes = [
     {
     }
@@ -37,30 +37,9 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
-<<<<<<< HEAD
-    },
-    {
-      title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: Lock
-    },
-    {
-      title: 'Objection',
-      description: 'Object to certain types of processing',
-      icon: Shield
-    }
-  ]
-
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+      icon: Database];];
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
+;

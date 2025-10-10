@@ -26,7 +26,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData
   }
 }) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {
     "@context": "https: //schema.org",
@@ -63,9 +63,9 @@ return (
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta>
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph Meta Tags */}
+      {/* Canonical URL */},
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
@@ -93,4 +93,3 @@ return (
 };
 
 export default SEOHead;
-

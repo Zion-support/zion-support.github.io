@@ -1,4 +1,4 @@
-  private observers: PerformanceObserver[] = [],
+private observers: PerformanceObserver[] = [],
 constructor() {
     this.initializeMetrics()
   }
@@ -48,7 +48,7 @@ try {
 private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime
@@ -155,7 +155,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number
 ): T => {
-    let timeout: NodeJS.Timeout
+    let timeout: NodeJS.Timeout;
 return ((...args: Parameters<T>) => {
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
@@ -185,8 +185,8 @@ export const lazyLoad = (callback: () => void): void => {
   }
   }
 }
-export const preloadImage = (src: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
+export const preloadImage = (src: string): Promise<void> => {;
+    return new Promise((resolve, reject) => {;
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
@@ -194,7 +194,7 @@ export const preloadImage = (src: string): Promise<void> => {
   }
   })
 }
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
+export const preloadImages = (srcs: string[]): Promise<void[]> => {;
     return Promise.all(srcs.map(preloadImage))
   }
 }

@@ -10,7 +10,7 @@ const EnterprisePage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'];
   },
     {
     icon: Cloud,
@@ -41,14 +41,14 @@ const EnterprisePage: React.FC = () => {
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-  }
-    ]
+  },
+  ];];
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'];
   },
     {
     title: 'Customer Relationship Management',
@@ -68,7 +68,7 @@ const solutions = [
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
-    ]
+  ];
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -81,14 +81,14 @@ const benefits = [
 
     'Integrate with existing systems',
 
-    'Provide 24/7 support and monitoring'
-  ]
+    'Provide 24/7 support and monitoring';
+  ];];];
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
@@ -256,4 +256,3 @@ return (
 };
 
 export default EnterprisePage;
-

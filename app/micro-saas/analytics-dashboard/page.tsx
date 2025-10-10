@@ -34,7 +34,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
     }
-  ]
+  ];];];
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -45,14 +45,14 @@ const benefits = [
 
     'Multi-platform data integration',
 
-    'Mobile-responsive design'
-  ]
+    'Mobile-responsive design';
+  ];
 const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
+  ];];];
 return (
     <>
       <Helmet>
@@ -240,4 +240,3 @@ return (
 };
 
 export default AIAnalyticsDashboardPage;
-

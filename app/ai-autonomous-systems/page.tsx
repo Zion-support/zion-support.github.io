@@ -10,7 +10,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
@@ -30,9 +30,9 @@ const AiAutonomousSystemsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
-  ]
+  ];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
@@ -61,6 +61,18 @@ const AiAutonomousSystemsPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -167,21 +179,3 @@ const AiAutonomousSystemsPage: React.FC = () => {
       <Footer />
     </div>
   ),
-<<<<<<< HEAD
-};
-
-export default PagePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
-}
-export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

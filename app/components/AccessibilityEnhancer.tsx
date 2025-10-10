@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
             skipLink.focus();
@@ -46,12 +46,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableFocusManagement && typeof window !== 'undefined') {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
-      const trapFocus = (container: HTMLElement) => {
+      const trapFocus = (container: HTMLElement) => {;
         const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-        const handleTabKey = (e: KeyboardEvent) => {
+        const handleTabKey = (e: KeyboardEvent) => {;
           if (e.key !== 'Tab') return;
 
           if (e.shiftKey) {
@@ -89,7 +89,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(liveRegion);
 
       // Announce page changes
-      const announcePageChange = (message: string) => {
+      const announcePageChange = (message: string) => {;
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
@@ -122,7 +122,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
       
       const updateHighContrast = (e: MediaQueryListEvent) => {
-        if (e.matches) {
+        if (e.matches) {;
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');

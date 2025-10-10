@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
+    years: 10;
   };
 
   const statistics = [
@@ -46,8 +46,7 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ];
-
+  ];];];
   const achievements = [
     {
       icon: Brain,
@@ -67,13 +66,13 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
+    const timers = Object.keys(targetCounters).map(key => {;
       const target = targetCounters[key as keyof typeof targetCounters];
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       
       const timer = setInterval(() => {
-        setCounters(prev => {
+        setCounters(prev => {;
           const current = prev[key as keyof typeof prev];
           if (current < target) {
             return {

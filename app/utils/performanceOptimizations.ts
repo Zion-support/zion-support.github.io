@@ -7,7 +7,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,
-    clearTimeout(timeout),;
+    clearTimeout(timeout),
   func: T,
   wait: number
   }
@@ -26,7 +26,7 @@ export const throttle = <T extends (...args: any[]) => any>(,
     let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
-      func(...args),;
+      func(...args),
       inThrottle = true;
   func: T,
   limit: number
@@ -59,14 +59,14 @@ export const useIntersectionObserver = (;
             rootMargin: '50px',
             ...options}
           })
-        : null,;
+        : null,
     [callback, options]
   );
   const observe = useCallback(;
     (element: Element | null) => {
     ,
-      if (observer && element) {,;
-        observer.observe(element),;
+      if (observer && element) {,
+        observer.observe(element),
   const observe = useCallback()
   }
     (element: Element | null) => {}
@@ -79,7 +79,7 @@ export const useIntersectionObserver = (;
 export const debounce = <T extends (...arg);
   s: any[]) => any>(fun,
   c: T,
-  wai,;
+  wai,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -89,7 +89,7 @@ export const debounce = <T extends (...arg);
 export const throttle = <T extends (...arg);
   s: any[]) => any>(fun,
   c: T,
-  limi,;
+  limi,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -97,14 +97,14 @@ export const throttle = <T extends (...arg);
   }
 }
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = (callbac,;
+export const useIntersectionObserver = (callbac,
   k: (entrie),
   s: IntersectionObserverEntry[]) => void,
-  option,;
+  option,
   s: IntersectionObserverInit = {}
 ) => {/* TODO: Fix JSX expression */}
           })
-        : null,;
+        : null,
     [callback, options]
   );
   const observe = useCallback((elemen);
@@ -124,7 +124,7 @@ export const useIntersectionObserver = (callbac,;
   return { observe, disconnect }
 }
 // Image lazy loading hook;
-export const useLazyImage = useCallback((...args) => {
+export const useLazyImage = useCallback((...args) => {;
     const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false)
   }
@@ -170,15 +170,15 @@ export const useLazyImage = (sr);
             img.src = src;
           }
         })
-      },;
+      },
       [src, isLoaded, isError]
     );
   );
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook;
-export const usePerformanceMonitoring = useCallback((...args) => {
-    const [metrics, setMetrics] = useState<{
+export const usePerformanceMonitoring = useCallback((...args) => {;
+    const [metrics, setMetrics] = useState<{;
     fcp?: number;
     lcp?: number;
     fid?: number;
@@ -188,7 +188,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {
   }>({})
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {
+    const updateMetrics = useCallback((...args) => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
@@ -220,8 +220,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({)}
-        fcp,;
-        lcp,;
+        fcp,
+        lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
@@ -248,8 +248,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   return metrics;
 }
 // Memory usage monitoring;
-export const useMemoryMonitoring = useCallback((...args) => {
-    const [memoryInfo, setMemoryInfo] = useState<{
+export const useMemoryMonitoring = useCallback((...args) => {;
+    const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number;
     totalJSHeapSize?: number
   }
@@ -257,7 +257,7 @@ export const useMemoryMonitoring = useCallback((...args) => {
   }>({})
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {
+    const updateMemoryInfo = useCallback((...args) => {;
       const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({);
@@ -327,7 +327,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   return memoryInfo;
 }
 // Resource preloading utility;
-export const preloadResource = useCallback((...args) => {
+export const preloadResource = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
 // Resource preloading utility
   }
@@ -340,7 +340,7 @@ export const preloadResource = useCallback((...args) => {}
   document.head.appendChild(link);}
 }
 // Critical resource preloading;
-export const preloadCriticalResources = useCallback((...args) => {
+export const preloadCriticalResources = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
   // Preload critical fonts;
 // Critical resource preloading
@@ -357,8 +357,8 @@ export const preloadCriticalResources = useCallback((...args) => {}
   preloadResource('/styles/critical.css', 'style');}
 }
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = useCallback((...args) => {
-    const [bundleSize, setBundleSize] = useState<{
+export const useBundleSizeMonitoring = useCallback((...args) => {;
+    const [bundleSize, setBundleSize] = useState<{;
     totalSize?: number;
     jsSize?: number;
     cssSize?: number
@@ -367,7 +367,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
   }>({})
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {
+    const calculateBundleSize = useCallback((...args) => {;
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
       let jsSize = 0;
@@ -417,9 +417,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     // Calculate after page load;
     if (document.readyState === 'complete') {}
       setBundleSize({)}
-        totalSize,;
-        jsSize,;
-        cssSize,;
+        totalSize,
+        jsSize,
+        cssSize,
         imageSize}
       })
     }
@@ -436,19 +436,19 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
   return bundleSize;
 }
 export default {}
-  debounce,;
-  throttle,;
-  useIntersectionObserver,;
-  useLazyImage,;
-  usePerformanceMonitoring,;
-  useMemoryMonitoring,;
-  preloadResource,;
-  preloadCriticalResources,;
+  debounce,
+  throttle,
+  useIntersectionObserver,
+  useLazyImage,
+  usePerformanceMonitoring,
+  useMemoryMonitoring,
+  preloadResource,
+  preloadCriticalResources,
   useBundleSizeMonitoring}
 }
 }
 // Resource preloading utility;
-export const preloadResource = (hre,;
+export const preloadResource = (hre,
   f: string, a);
   s: string) => {/* TODO: Fix JSX expression */}
 }

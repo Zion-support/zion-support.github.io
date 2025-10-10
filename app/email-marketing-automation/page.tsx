@@ -50,7 +50,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
-  ]
+  ];];];
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -63,8 +63,8 @@ const benefits = [
 
     'Generate more qualified leads',
 
-    'Save time and resources'
-  ]
+    'Save time and resources';
+  ];
 return (
     <>
       <Helmet>
@@ -198,4 +198,3 @@ return (
 };
 
 export default EmailMarketingAutomationPage;
-

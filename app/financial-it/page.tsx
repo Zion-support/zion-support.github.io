@@ -10,7 +10,7 @@ const FinancialITPage: React.FC = () => {
       icon: DollarSign,
       title: 'SOX Compliance',
       description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
-      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
+      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails'];
   },
     {
     icon: Zap,
@@ -41,8 +41,8 @@ const FinancialITPage: React.FC = () => {
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
-  }
-    ]
+  },
+  ];];
 const services = [
     {
     icon: '🏦',
@@ -65,7 +65,7 @@ const services = [
       description: 'Cybersecurity and data protection solutions'
   }
     }
-  ]
+  ];
 const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -76,8 +76,8 @@ const benefits = [
 
     'Fraud Prevention',
 
-    'Advanced Analytics'
-  ]
+    'Advanced Analytics';
+  ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
@@ -248,4 +248,3 @@ return (
 };
 
 export default FinancialITPage;
-

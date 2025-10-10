@@ -14,7 +14,7 @@ const technologies = [
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
+  ];];];
 const process = [
     {
     step: '01',
@@ -41,9 +41,9 @@ const process = [
       icon: Shield,
   }
     }
-  ]
-return(<>
-
+  ];
+return (
+    <>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
@@ -94,7 +94,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ];
+  ];];];
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -128,8 +128,7 @@ const WebDevelopmentPage: React.FC = () => {
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
     }
-  ]
-
+  ];];];
   return (
     <>
       <SEOOptimizer
@@ -206,7 +205,7 @@ const WebDevelopmentPage: React.FC = () => {
               </a>
             </div>,
           </section>,
-,;
+,
           {/* Services Grid */}
 
       />
@@ -238,6 +237,18 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
 
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
           {/* Services Grid */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -502,4 +513,3 @@ export default WebDevelopmentPage
 };
 
 export default WebDevelopmentPage;
-

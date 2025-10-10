@@ -25,4 +25,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ]
+  ];

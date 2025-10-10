@@ -358,11 +358,11 @@ export class TestRunner {
 }
 
 // Custom render function with providers
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
   return (
     <BrowserRouter>
       {children}
-    </BrowserRouter>
+    </BrowserRouter>;
   );
 }
 
@@ -1019,7 +1019,7 @@ if ('memory' in performance) {}
     const violations: string[] = [],
     // Check for missing alt text on images;
     const images = container.querySelectorAll('img'),
-    images.forEach((img, index) => {
+    images.forEach((img, index) => {;
     // Basic accessibility checks;
     const violations: string[] = []
     // Check for missing alt text on images,
@@ -1654,7 +1654,7 @@ if ('memory' in performance) {}
   }
 }
 // React hook for testing;
-export const useTestRunner = useCallback((...args) => {
+export const useTestRunner = useCallback((...args) => {;
     const testRunner = TestRunner.getInstance();
   const runTest = useCallback(async (;
 // React hook for testing
@@ -1709,7 +1709,7 @@ export const useTestRunner = useCallback((...args) => {}
 export const testUtils = {
     // Create mock data</void>
   }
-  createMockData: (type: string, count: number = 10) => {}</void>
+  createMockData: (type: string, count: number = 10) => {}</void>;
 // Test utilities;
 export const testUtils = {}
   // Create mock data;
@@ -1826,7 +1826,7 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
 
 // Performance testing utilities
-export const measurePerformance = (fn: () => void): PerformanceMetrics => {
+export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
@@ -1882,7 +1882,6 @@ export const expect = (actual: unknown) => ({
   })
 })
 
-// Export everything
+// Export everything;
 export * from '@testing-library/react';
 export { customRender as render }
-

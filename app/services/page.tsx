@@ -38,7 +38,7 @@ const ServicesPage: React.FC = () => {
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+        benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
     },
     {
       icon: BarChart3,
@@ -702,18 +702,17 @@ const ServicesPage: React.FC = () => {
       features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification', 'Search & Retrieval', 'Integration APIs'],
       price: 'Starting at $139/month',
       marketPrice: '$250-600/month',
-      benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
-    },
-  ];
+        benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
+      }
+    ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
-  ]
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  ];
+    const filteredServices = services.filter(service => {
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;

@@ -35,9 +35,9 @@ export enum ErrorSeverity {}
 }
 // Error interface;
 export interface AppError {
-    id: string,,;
+    id: string,,
     type: ErrorType,
-  severity: ErrorSeverity,,;
+  severity: ErrorSeverity,,
     message: string,
 // Error interface
   }
@@ -58,13 +58,13 @@ export interface AppError {}
 }
 // Error handler configuration;
 export interface ErrorHandlerConfig {
-    enableLogging: boolean,,;
+    enableLogging: boolean,,
     enableReporting: boolean,
-  enableRetry: boolean,,;
+  enableRetry: boolean,,
     maxRetries: number,
-  retryDelay: number,,;
+  retryDelay: number,,
     enableUserNotification: boolean,
-  enableConsoleLogging: boolean,,;
+  enableConsoleLogging: boolean,,
     enableNetworkLogging: boolean,
 // Error handler configuration
   }
@@ -543,11 +543,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     const notification = document.createElement('div');
     notification.className = 'error-notification';
     notification.style.cssText = `;
-      position: fixed,,;
+      position: fixed,,
     top: 20 px
-      right: 20 px,,;
+      right: 20 px,,
     background: ${this.getNotificationColor(error.severity)}
-      color: white,,;
+      color: white,,
     padding: 15 px
       border-radius: 5 px,
       box-shadow: 0 2 px 10 px rgba(0,0,0,0.2);
@@ -671,7 +671,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return '#fd7 e14';
       case ErrorSeverity.MEDIUM:
         return '#ffc107'
-      case ErrorSeverity.LOW: return '#28a745',,;
+      case ErrorSeverity.LOW: return '#28a745',,
     default:  
       case ErrorSeverity.LOW:
         return '#28a745',
@@ -842,8 +842,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       },
       {} as Record<ErrorType, number>);
     const bySeverity = this.errors.reduce(
-      (acc, error) => {}
-      {} as Record<ErrorType>
+      (acc, error) => {},
+    {} as Record<ErrorType>;
             `);
 }
         }
@@ -1086,7 +1086,7 @@ export default ErrorHandler</string>
 </string>
 // React hook for error handling;
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */},
-    [errorHandler]
+    [errorHandler];
   );
   const handleNetworkError = useCallback((erro,
   r: Error, ur);
@@ -1105,4 +1105,3 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */},
 export default ErrorHandler;
 
 "`;
-

@@ -63,7 +63,7 @@ const initializePerformanceMonitoring = (;
     // Monitor Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {) => {
+          if (entry.entryType === 'largest-contentful-paint') {) => {;
   return (
     $3
   )
@@ -222,8 +222,8 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     return (
     <>
       <Analytics />
-  }
-      {children}
+  },
+    {children}
     </>
   );
 }

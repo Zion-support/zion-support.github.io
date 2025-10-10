@@ -46,4 +46,3 @@ return <>{children}</>
 };
 
 export default SecurityEnhancer;
-

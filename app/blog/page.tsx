@@ -46,11 +46,10 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-      image: '/images/blog/micro-saas.jpg'
-    }
-  ];
-  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
-
+        image: '/images/blog/micro-saas.jpg'
+      }
+    ];
+  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
   const filteredPosts = blogPosts.filter(post => 
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||

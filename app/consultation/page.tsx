@@ -59,8 +59,7 @@
       step: '4',
       title: 'Ongoing Support',
     }
-  ]
-
+  ];];];
   return (
     <>
       <Helmet>
@@ -204,8 +203,8 @@
         </div>
       </section>
 
-      {/* Selected Consultation Details */}
-      {selectedConsultation && (
+      {/* Selected Consultation Details */},
+    {selectedConsultation && (
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -254,9 +253,8 @@
   );
 };
 
-      )}
-
-      {/* Process Section */}
+      )},
+    {/* Process Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

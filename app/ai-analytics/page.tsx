@@ -10,7 +10,7 @@ const AiAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
@@ -41,13 +41,13 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     },
-  ];
+  ];];];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
   const useCases = [
     {
@@ -80,9 +80,9 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
     }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
@@ -110,6 +110,18 @@ const AiAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -158,7 +170,7 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   ),
 };
 

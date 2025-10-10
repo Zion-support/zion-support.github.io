@@ -15,7 +15,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     cssOptimized: 0,
     totalSavings: 0
   })
-  const optimizeImages = useCallback(() => {
+  const optimizeImages = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
@@ -33,7 +33,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const optimizeScripts = useCallback(() => {
+  const optimizeScripts = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
@@ -46,7 +46,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const optimizeCSS = useCallback(() => {
+  const optimizeCSS = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
@@ -60,7 +60,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const runOptimizations = useCallback(() => {
+  const runOptimizations = useCallback(() => {;
     if (!enableOptimizations) return;
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
@@ -81,7 +81,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Add performance monitoring
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
@@ -97,8 +97,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
+      {children},
+    {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',

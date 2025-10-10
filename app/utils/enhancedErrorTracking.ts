@@ -38,8 +38,8 @@ class EnhancedErrorTracker {}
   private maxErrors = 100,
   private sessionId: string,
   constructor() {
-    ,;
-    this.sessionId = this.generateSessionId(),;
+    ,
+    this.sessionId = this.generateSessionId(),
   private maxErrors = 100;
   private sessionId: string
   }
@@ -91,7 +91,7 @@ class EnhancedErrorTracker {}
       message: error.message,
       stack: error.stack,
       context: {}
-        ...context,;
+        ...context,
         sessionId: this.sessionId},
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent
@@ -175,7 +175,7 @@ class EnhancedErrorTracker {}
     })
     return {}
       total: this.errors.length,
-      byComponent,;
+      byComponent,
       recent: this.errors.slice(-10)}
     }
   }
@@ -200,14 +200,14 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       })
     }
   }
-  public trackError(erro,;
+  public trackError(erro,
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
-      timestam,;
+      timestam,
   p: new Date().toISOString(),
-      userAgen,;
+      userAgen,
   t: navigator.userAgent,
-      ur,;
+      ur,
   l: window.location.href,
     }
     this.errors.push(trackedError);

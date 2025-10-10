@@ -16,7 +16,7 @@ export interface EnvConfig {}
 class EnvironmentConfig {
     private config: EnvConfig,
   private isInitialized = false;
-  constructor() {,;
+  constructor() {,
     this.config = this.loadConfig(),
   }
     this.isInitialized = true;}
@@ -34,13 +34,13 @@ class EnvironmentConfig {}
   private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults;
     return {}
-      nodeEnv,;
+      nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY
       enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
       enableLogging: nodeEnv !== 'test',
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],;
+        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
     }
@@ -101,7 +101,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     missing: string[],}
   } {
     const missing: string[] = [],
-    for (const varName of requiredVars) {,;
+    for (const varName of requiredVars) {,
       if (!this.config[varName]) {,
   }
         missing.push(varName);}

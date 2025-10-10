@@ -32,7 +32,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
     },
     {
     icon: Globe,
-      title: 'Global Reach',
+      title: 'Global Reach',];];
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -59,13 +59,13 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
-  ];
+  ];];];
   const smartCityServices = [
     {
       icon: Building,
       title: 'Smart Buildings',
       description: 'Intelligent building management systems with IoT integration',
-      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
+      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort'];
     },
     {
       icon: Wifi,
@@ -86,7 +86,6 @@ const PagePage: React.FC = () => {
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
     }
   ]
-
           </div>
         </div>
       </section>
@@ -157,9 +156,8 @@ export default PagePage;
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-
+    'Proven track record of success';
+  ];];];
   return (
     <>
       <Helmet>
@@ -311,4 +309,3 @@ export default PagePage;
 };
 
 export default SmartCityInfrastructurePage;
-

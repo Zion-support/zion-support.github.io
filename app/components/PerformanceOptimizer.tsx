@@ -21,7 +21,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
-  const optimizeImages = useCallback(() => {
+  const optimizeImages = useCallback(() => {;
     if (!enableImageOptimization) return;
     
     const images = document.querySelectorAll('img');
@@ -36,7 +36,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization]);
 
   const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
+    if ('memory' in performance) {;
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
@@ -47,7 +47,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, []);
 
-  const runOptimizations = useCallback(async () => {
+  const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     const newOptimizations: string[] = []
     // Optimize images
@@ -80,10 +80,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <div className="performance-optimizer">
-      {children}
-      
-      {/* Performance Status Indicator (only in development) */}
-      {process.env.NODE_ENV === 'development' && (
+      {children},
+    {/* Performance Status Indicator (only in development) */},
+    {process.env.NODE_ENV === 'development' && (
         <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
           <div className="flex items-center space-x-2 mb-2">
             <Settings className="w-4 h-4 text-cyan-400" />
@@ -144,10 +143,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ]
-
-      criticalImages.forEach(src => {
+        '/images/logo.png';
+      ];
+      criticalImages.forEach(src => {];];
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
@@ -176,7 +174,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;

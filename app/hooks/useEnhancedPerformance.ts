@@ -14,9 +14,9 @@ export interface UseEnhancedPerformanceOptions {
 }
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
     const {
-    component = 'Unknown',;
-    trackErrors = true,;
-    trackPerformance = true,;
+    component = 'Unknown',
+    trackErrors = true,
+    trackPerformance = true,
     trackAnalytics = true,
   }
   } = _options;const _renderCountRef = useRef<number>(0);
@@ -35,9 +35,9 @@ return () => {
         if (duration > 5000) {
           // Long-lived component;
           analytics.trackCustomEvent(
-            'Performance',;
-            'Long Component Lifetime',;
-            component,;
+            'Performance',
+            'Long Component Lifetime',
+            component,
             Math.round(duration);
           )
   }
@@ -56,9 +56,9 @@ return () => {
 if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected;
       analytics.trackCustomEvent(
-        'Performance',;
-        'High Render Count',;
-        component,;
+        'Performance',
+        'High Render Count',
+        component,
         renderCountRef.current;
       )
   }
@@ -68,7 +68,7 @@ const trackError = useCallback(;
     (error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
         errorTracker.trackError(error, {
-          component,;
+          component,
           ...context,
   }
         })
@@ -93,19 +93,19 @@ return {
 if (trackPerformance) {
             analytics.trackPerformance(
   }
-              `${component}-${operationName}`,;
-              duration,;
+              `${component}-${operationName}`,
+              duration,
               duration > 1000 ? 'slow' : 'fast';
             );
           }
 return duration;
-        },;
+        },
       },
     [component, trackPerformance]
   );
 return {
-    trackError,;
-    trackUserAction,;
+    trackError,
+    trackUserAction,
     measureOperation,
   }
   }

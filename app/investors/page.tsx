@@ -9,8 +9,8 @@ const PagePage: React.FC = () => {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   },
-    {
-    ]
+    {;
+    ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -18,9 +18,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-  }
-
-      {/* Hero Section */}
+  },
+    {/* Hero Section */}
             <h2>
               Why Choose Our Page?
             </h2>
@@ -57,4 +56,3 @@ return (
 };
 
 export default PagePage;
-

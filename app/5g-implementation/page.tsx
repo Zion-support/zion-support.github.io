@@ -40,7 +40,7 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     },
-  ]
+  ];];
   return (
     <>
       <Helmet>
@@ -134,4 +134,3 @@ const FiveGImplementationPage: React.FC = () => {
 };
 
 export default FiveGImplementationPage;
-

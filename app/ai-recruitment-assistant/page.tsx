@@ -34,9 +34,9 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
@@ -69,7 +69,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

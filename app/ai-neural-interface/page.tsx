@@ -15,7 +15,7 @@ const AINeuralInterface: React.FC = () => {
       icon: Brain,
       title: 'Neural Signal Processing',
       description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response']
+      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
     },
     {
       icon: Eye,
@@ -34,9 +34,8 @@ const AINeuralInterface: React.FC = () => {
       title: 'Motor Control Interface',
       description: 'Precise motor control interface for prosthetics and assistive devices',
       benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
-    }
-  ];
-
+    },
+  ];];];
   const pricingPlans = [
     {
       name: 'Research',
@@ -115,8 +114,7 @@ const AINeuralInterface: React.FC = () => {
       icon: MessageSquare,
       results: 'Restored communication ability'
     }
-  ];
-
+  ];];];
   return (
     <>
       <Helmet>

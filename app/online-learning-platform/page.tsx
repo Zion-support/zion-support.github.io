@@ -10,9 +10,9 @@ const OnlineLearningPlatformPage: React.FC = () => {
     { icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
     { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
     { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
         <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
@@ -39,7 +39,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

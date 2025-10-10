@@ -27,7 +27,7 @@ import Footer from '../components/Footer';
     },
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
@@ -56,6 +56,18 @@ import Footer from '../components/Footer';
             </div>
           </div>
         </section>
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -159,22 +171,3 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentStudioPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

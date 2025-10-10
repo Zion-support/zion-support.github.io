@@ -96,7 +96,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "name": "Home",
                 "item": "https://ziontechgroup.com"
               }
-            ]
+  ]
           }
         }
       

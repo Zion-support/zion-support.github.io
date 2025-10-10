@@ -10,7 +10,7 @@ const Ai3dGenerationPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
     icon: BarChart,
@@ -31,13 +31,13 @@ const Ai3dGenerationPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   },
   ]
-];
+];];];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
 return (
     <>
@@ -154,4 +154,3 @@ return (
 };
 
 export default Ai3dGenerationPage;
-

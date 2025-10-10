@@ -71,8 +71,8 @@ public trapFocus(container: HTMLElement): () => void {
     const focusableElements = container.querySelectorAll(,
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement>
-const firstElement = focusableElements[0]
-    const lastElement = focusableElements[focusableElements.length - 1]
+const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
 const handleTabKey = (;
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {

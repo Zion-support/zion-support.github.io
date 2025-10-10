@@ -113,11 +113,11 @@ const width = window.innerWidth;
  */;
 // Simple logger for performance optimizer;
 const logger = {/* TODO: Fix JSX expression */},
-  performanc,;
+  performanc,
   e: (messag,
   e: string, dat);
   a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
-  erro,;
+  erro,
   r: (messag,
   e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */}
@@ -130,12 +130,12 @@ interface OptimizationConfig {/* TODO: Fix JSX expression */}
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
-  private,;
+  private,
   config: OptimizationConfig = {/* TODO: Fix JSX expression */}
   }
-  private,;
+  private,
   observers: PerformanceObserver[] = [],
-  private,;
+  private,
   isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }
@@ -206,7 +206,7 @@ observer.observe({ entryTypes: ['measure'] })
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
+        const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */}
           }
@@ -258,7 +258,7 @@ observer.observe({ entryTypes: ['measure'] })
   private observeCLS() {
     try {
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,
   }
@@ -530,7 +530,7 @@ images.forEach((img) => imageObserver.observe(img));
    * Add critical resource hints;
    */;
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },;
+  n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
   s: 'style' }]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
@@ -565,17 +565,17 @@ images.forEach((img) => imageObserver.observe(img));
    */;
   generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
   Score: ${score}/100;
-Load,;
+Load,
   Time: ${metrics.loadTime.toFixed(2)}ms;
-Render,;
+Render,
   Time: ${metrics.renderTime.toFixed(2)}ms;
-Memory,;
+Memory,
   Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-Bundle,;
+Bundle,
   Size: ${metrics.bundleSize}KB;
-Cache Hit,;
+Cache Hit,
   Rate: ${metrics.cacheHitRate}%;
-Recommendation,;
+Recommendation,
   s:;
 ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}

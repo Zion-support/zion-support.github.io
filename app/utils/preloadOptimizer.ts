@@ -2,39 +2,39 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */;
-export const preloadCriticalResources = useCallback((...args) => {
+export const preloadCriticalResources = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
   // Preload critical fonts
   }
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-  const fontPreloads = [
+  const fontPreloads = [;
     'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ],
   fontPreloads.forEach(href => {
     )
   }
-  fontPreloads.forEach(href => {)}
+  fontPreloads.forEach(href => {)}];];
     const link = document.createElement('link');
     link.rel = 'preload';
-    link.as = 'style',;
+    link.as = 'style',
     link.href = href;
-    link.crossOrigin = 'anonymous',;
+    link.crossOrigin = 'anonymous',
     document.head.appendChild(link)}
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
   // Preload critical images;
   const criticalImages = [
     '/images/hero-bg.webp',
-    '/images/logo.webp',;
+    '/images/logo.webp',
     '/images/favicon.ico';
-  ]
+  ];
   criticalImages.forEach(src => {
     )
   }
-  criticalImages.forEach(src => {)}
+  criticalImages.forEach(src => {)}];];
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
@@ -42,7 +42,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     document.head.appendChild(link)}
   })
 }
-export const preloadRoute = useCallback((...args) => {
+export const preloadRoute = useCallback((...args) => {;
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
   const routeResources = {}
@@ -50,8 +50,8 @@ export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
   const routeResources = {}
-    '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;
-    '/services': ['/api/services', '/images/services-hero.webp'],;
+    '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
+    '/services': ['/api/services', '/images/services-hero.webp'],
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
   }
   const resources = routeResources[route as keyof typeof routeResources]
@@ -67,7 +67,7 @@ export const preloadRoute = useCallback((...args) => {}
     })
   }
 }
-export const optimizeImages = useCallback((...args) => {
+export const optimizeImages = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]');
@@ -77,7 +77,7 @@ export const optimizeImages = useCallback((...args) => {
   })
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entries) => {;
       entries.forEach(entry => {);
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
@@ -123,7 +123,7 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
     lazyImages.forEach(img => imageObserver.observe(img));
   }
 }
-export const optimizeThirdPartyScripts = useCallback((...args) => {
+export const optimizeThirdPartyScripts = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]');

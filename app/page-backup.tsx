@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
 
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    if (typeof window !== 'undefined' && 'gtag' in window) {;
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'phone_click', {
         event_category: 'engagement',
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
     },
     {
       icon: Cloud,
@@ -79,14 +79,14 @@ const HomePage: React.FC = () => {
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     },
-  ];
+  ];];];
   const services = [
     {
       icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',
       href: '/ai-services',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'];
     },
     {
       icon: Cloud,
@@ -102,10 +102,9 @@ const HomePage: React.FC = () => {
       href: '/micro-saas',
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
-  ]
-
+  ];
   return (
-    <React.Fragment>
+    <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -247,7 +246,7 @@ const HomePage: React.FC = memo(() => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
     },
     {
       icon: Cloud,
@@ -279,14 +278,13 @@ const HomePage: React.FC = memo(() => {
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     },
-  ];
+  ];];];
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <StructuredData type="Organization" />
@@ -317,6 +315,18 @@ const HomePage: React.FC = memo(() => {
 
             </section>
 
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -518,11 +528,10 @@ const HomePage: React.FC = memo(() => {
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
 
-    </React.Fragment>
+    </>
   );
 }
 
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
-

@@ -16,8 +16,8 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
 {/* Hero Section */}
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -114,7 +114,5 @@ const benefits = [
       </section>
     </div>
   ),
-};
-
+};];];
 export default LazyImagePage;
-

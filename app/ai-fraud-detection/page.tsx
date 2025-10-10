@@ -11,7 +11,7 @@ const AiFraudDetectionPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
   },
     {
     icon: BarChart,
@@ -30,15 +30,15 @@ const AiFraudDetectionPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  },
+  ];];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
-  ]
+  ];
 return (
     <>
       <Helmet>
@@ -184,4 +184,3 @@ return (
 };
 
 export default AiFraudDetectionPage;
-

@@ -15,7 +15,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       icon: Rocket,
       title: 'Mission Trajectory Optimization',
       description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success',
-      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments']
+      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments'];
     },
     {
       icon: Target,
@@ -34,9 +34,8 @@ const AISpaceMissionOptimizer: React.FC = () => {
       title: 'Multi-Planetary Mission Planning',
       description: 'Complex mission planning for interplanetary and deep space exploration',
       benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']
-    }
-  ];
-
+    },
+  ];];];
   const pricingPlans = [
     {
       name: 'Explorer',
@@ -115,8 +114,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       icon: Eye,
       results: 'Enhanced mission success rates'
     }
-  ];
-
+  ];];];
   return (
     <>
       <Helmet>

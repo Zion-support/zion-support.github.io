@@ -11,7 +11,7 @@ const DemoPage: React.FC = () => {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
+      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'];
     },
     {
       title: 'AI Customer Support Bot',
@@ -25,8 +25,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ]
-
+  ];];
   return (
     <>
       <Helmet>

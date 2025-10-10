@@ -19,8 +19,8 @@ const PagePage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   },
-    {
-    ]
+    {;
+    ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -28,8 +28,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-  }
-      {/* Hero Section */}
+  },
+    {/* Hero Section */}
             </div>
           </div>
         </div>
@@ -127,4 +127,3 @@ return (
 };
 
 export default PagePage;
-

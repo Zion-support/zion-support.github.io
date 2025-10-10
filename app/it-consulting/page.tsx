@@ -77,7 +77,7 @@ import {
 const ITConsultingPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-const itServices = [
+const itServices = [;
     // IT Infrastructure Services;
     {
       id: 'it-infrastructure-design',
@@ -85,7 +85,7 @@ const itServices = [
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Network architecture design',
         'Server deployment and configuration',
@@ -125,7 +125,7 @@ const itServices = [
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
-      price: 'Starting at $3,000',;
+      price: 'Starting at $3,000',
       features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
@@ -165,7 +165,7 @@ const itServices = [
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
-      price: 'Starting at $2,500',;
+      price: 'Starting at $2,500',
       features: [,
         'Security risk assessment',
         'Penetration testing',
@@ -205,7 +205,7 @@ const itServices = [
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Network architecture design',
         'Bandwidth optimization',
@@ -245,7 +245,7 @@ const itServices = [
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
-      price: 'Starting at $1,500',;
+      price: 'Starting at $1,500',
       features: [,
         'Database design and architecture',
         'Performance optimization',
@@ -325,7 +325,7 @@ const itServices = [
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Requirements analysis',
         'Custom application development',
@@ -405,7 +405,7 @@ const itServices = [
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
-      price: 'Starting at $3,500',;
+      price: 'Starting at $3,500',
       features: [,
         'Business impact analysis',
         'Recovery time objective planning',
@@ -445,7 +445,7 @@ const itServices = [
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
@@ -480,7 +480,7 @@ const itServices = [
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ]
+  ];];];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -493,8 +493,8 @@ const categories = [
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
-const filteredServices = itServices.filter(service => {
+  ];
+const filteredServices = itServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -726,4 +726,3 @@ return (
 };
 
 export default ITConsultingPage;
-

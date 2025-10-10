@@ -106,8 +106,8 @@ export const,
   }
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props})
+        style={imageStyle},
+    {...props})
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
@@ -129,8 +129,8 @@ export const,
       sizes={sizes}
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
-      onError={handleError}
-      {...props}
+      onError={handleError},
+    {...props}
     >)</img>
 }</img>
 export default Image</img>
@@ -150,4 +150,3 @@ export default Image;
 export default Image;
 
 "`;
-

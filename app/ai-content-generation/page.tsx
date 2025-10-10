@@ -10,7 +10,7 @@ const AiContentGenerationPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
@@ -30,9 +30,9 @@ const AiContentGenerationPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
-  ]
+  ];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced content generation powered by AI technology." />
@@ -61,6 +61,18 @@ const AiContentGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -164,22 +176,3 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

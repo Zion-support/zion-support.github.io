@@ -14,7 +14,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
     setIsHighContrast(highContrastQuery.matches),
-    // Apply accessibility enhancements
+    // Apply accessibility enhancements;
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast')
@@ -38,7 +38,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       document.removeEventListener('mousedown', handleMouseDown)
   }
   }, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {
+  const toggleHighContrast = () => {;
     setIsHighContrast(!isHighContrast);
     document.documentElement.classList.toggle('high-contrast')
   }
@@ -81,7 +81,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         </div>
       </div>
       {children}
-    </div>
+    </div>;
   );
 };
 

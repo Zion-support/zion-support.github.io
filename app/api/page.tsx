@@ -63,7 +63,7 @@ const ApiPage: React.FC = () => {
             }
           }
         }
-      ]
+      ];
     },
     {
       category: 'IT Services',
@@ -100,7 +100,7 @@ const ApiPage: React.FC = () => {
             }
           }
         }
-      ]
+  ]
     },
     {
       category: 'Micro SaaS',
@@ -141,9 +141,9 @@ const ApiPage: React.FC = () => {
             }
           }
         }
-      ]
+  ]
     }
-  ];
+  ];];];
   const authenticationMethods = [
     {
       name: 'API Key',
@@ -168,8 +168,7 @@ const ApiPage: React.FC = () => {
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ]
-
+  ];];];
   return (
     <>
       <Helmet>

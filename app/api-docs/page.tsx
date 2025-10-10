@@ -28,7 +28,7 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '{
     "text": "Your text to analyze",
-    "features": ["sentiment", "entities", "key_phrases"]
+    "features": ["sentiment", "entities", "key_phrases"];
   }'`
         },
         {
@@ -44,7 +44,7 @@ export default function APIDocsPage() {
     "features": ["objects", "faces", "text"]
   }'`
         }
-      ]
+  ]
     },
     {
       title: 'Cloud Services',
@@ -69,7 +69,7 @@ export default function APIDocsPage() {
     }
   }'`
         }
-      ]
+  ]
     },
     {
       title: 'Data Analytics',
@@ -90,9 +90,9 @@ export default function APIDocsPage() {
     "output_format": "json"
   }'`
         }
-      ]
-    }
   ]
+    }
+  ];];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -110,14 +110,7 @@ export default function APIDocsPage() {
       />
       <Navigation />
       {/* Hero Section */}
-<<<<<<< HEAD
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
@@ -205,15 +198,15 @@ export default function APIDocsPage() {
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <React.Fragment>
+                            <>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </React.Fragment>
+                            </>
                           ) : (
-                            <React.Fragment>
+                            <>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </React.Fragment>
+                            </>
                           )}
                         </button>
                       </div>

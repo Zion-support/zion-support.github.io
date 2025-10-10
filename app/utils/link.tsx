@@ -1,5 +1,3 @@
-
-
 interface LinkProps {
     href: string,
     children: React.ReactNode
@@ -70,8 +68,8 @@ export const,
       target={target}
       rel={rel}
       onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
+      aria-label={ariaLabel},
+    {...props}
     >{children}</a>
     </a>
       aria-label={ariaLabel})

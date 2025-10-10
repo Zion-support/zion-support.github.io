@@ -24,7 +24,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null,
     memory: null,
   })
-  const measureWebVitals = useCallback(() => {
+  const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = []
@@ -48,7 +48,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
-        const fidObserver = new PerformanceObserver(list => {
+        const fidObserver = new PerformanceObserver(list => {;
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
@@ -74,7 +74,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list => {;
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
@@ -98,10 +98,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || []
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
-        ? navigationEntry.responseStart - navigationEntry.requestStart
+        ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
       // Measure Memory Usage
       const memory =
@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       })
     }
   }, []);
-  const measureResourceTiming = useCallback(() => {
+  const measureResourceTiming = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
@@ -145,7 +145,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       );
     }
   }, []);
-  const measureCoreWebVitals = useCallback(() => {
+  const measureCoreWebVitals = useCallback(() => {;
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
     try {
@@ -246,8 +246,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
           <div>
-            Memory:{' '}
-            {metrics.memory
+            Memory:{' '},
+    {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>

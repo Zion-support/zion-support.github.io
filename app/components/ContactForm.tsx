@@ -29,7 +29,7 @@ interface FormStatus {
     message: ''
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ interface FormStatus {
     }));
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' })
 
@@ -75,9 +75,8 @@ interface FormStatus {
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
-    'Other'
-  ]
-
+    'Other';
+  ];];];
   return (
     <div className="max-w-2xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>

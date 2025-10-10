@@ -11,7 +11,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-Time Analytics',
       description: 'Get instant insights with real-time data visualization and monitoring.',
-      benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring']
+      benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring'];
     },
     {
       icon: Brain,
@@ -30,15 +30,14 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       title: 'Performance Tracking',
       description: 'Monitor key performance indicators and track business metrics.',
       benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis']
-    }
-  ];
-
+    },
+  ];];];
   const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',
     'Improve operational efficiency by 40%',
     'Reduce reporting time by 80%',
-    'Gain competitive advantage with insights'
+    'Gain competitive advantage with insights';
   ];
 
   return (
@@ -74,6 +73,18 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -158,9 +169,3 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     </>
   );
 };
-
-<<<<<<< HEAD
-export default AIAnalyticsDashboard;
-=======
-export default AiAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

@@ -34,9 +34,9 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
@@ -69,7 +69,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

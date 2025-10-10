@@ -8,7 +8,7 @@ const BlockchainWeb3Page: React.FC = () => {
       icon: Zap,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']
+      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
   },
     {
     icon: Shield,
@@ -27,8 +27,8 @@ const BlockchainWeb3Page: React.FC = () => {
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
-  }
-    ]
+  },
+  ];];
 return (
     <>
       <Helmet>

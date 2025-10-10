@@ -12,7 +12,7 @@ export interface EnvConfig {}
 class EnvValidator {
     private errors: string[] = [],
   private warnings: string[] = [],
-  /**,;
+  /**,
    * Validate all environment variables;
    */,
   }
@@ -66,10 +66,10 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']}
   }
   private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
+    const nodeEnv = process.env['NODE_ENV'];
+    const validEnvs = ['development', 'production', 'test'];
     if (!nodeEnv) {}
-      this.errors.push('NODE_ENV is not set');
+      this.errors.push('NODE_ENV is not set');];];
       return;
     }
     if (!validEnvs.includes(nodeEnv)) {}

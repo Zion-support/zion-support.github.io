@@ -16,8 +16,8 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
 </div>
         </div>
       </section>
@@ -47,6 +47,5 @@ const benefits = [
           </div>
         </div>
       </section>
-};
-
+};];];
 export default PagePage;

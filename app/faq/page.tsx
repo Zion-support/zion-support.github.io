@@ -8,7 +8,7 @@ const FAQPage: React.FC = () => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
-        : [...prev, index]
+        : [...prev, index];
     );
   }
   const faqs = [
@@ -44,9 +44,9 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -89,7 +89,7 @@ const FAQPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -89,7 +89,7 @@ export async function registerServiceWorker();
             // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
-export async function registerServiceWorker(confi,;
+export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }

@@ -10,7 +10,7 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
   },
     {
     icon: BarChart,
@@ -29,8 +29,8 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  },
+  ];];
 return (
     <>
       <Helmet>
@@ -146,4 +146,3 @@ return (
 };
 
 export default PagePage;
-

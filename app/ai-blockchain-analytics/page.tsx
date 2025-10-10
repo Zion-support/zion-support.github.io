@@ -10,7 +10,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
@@ -30,9 +30,9 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
-  ]
+  ];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
         <meta name="keywords" content="AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics" />
@@ -60,6 +60,18 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -166,21 +178,3 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       <Footer />
     </div>
   ),
-<<<<<<< HEAD
-};
-
-export default PagePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
-}
-export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

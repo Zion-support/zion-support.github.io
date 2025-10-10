@@ -47,8 +47,8 @@ export class PerformanceMonitor {
     private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
-  static getInstance(): PerformanceMonitor {,;
-    if (!PerformanceMonitor.instance) {,;
+  static getInstance(): PerformanceMonitor {,
+    if (!PerformanceMonitor.instance) {,
 // Performance monitoring utilities
   }
 export class PerformanceMonitor {}
@@ -74,7 +74,7 @@ export class PerformanceMonitor {}
   // Track memory usage;
   trackMemory(componentName: string) {
     ,
-    if ('memory' in performance) {,;
+    if ('memory' in performance) {,
   // Track memory usage
   }
   trackMemory(componentName: string) {}
@@ -84,7 +84,7 @@ export class PerformanceMonitor {}
 export const debounce = <T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
-  wai,;
+  wai,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -94,7 +94,7 @@ export const debounce = <T extends (...arg);
 export const throttle = <T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
-  limi,;
+  limi,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -107,7 +107,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return PerformanceMonitor.instance;
   }
   // Track component render time;
-  trackRender(componentNam,;
+  trackRender(componentNam,
   e: string, renderTim);
   e: number) {/* TODO: Fix JSX expression */}
     this.metrics.set(`${componentName}_render`, renderTime);
@@ -149,7 +149,7 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
 const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => {
+    list.getEntries().forEach((entry) => {;
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics
   }
@@ -206,7 +206,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
   return {}
     trackRender: (fn: () => void) => {}
       const start = performance.now();
-      fn();,;
+      fn();,
       const duration = performance.now() - start;
         if (entry.duration > 50) {
     // Tasks longer than 50ms
@@ -265,8 +265,8 @@ export const preloadCriticalResources = () => {}
   if (typeof window === 'undefined') return;
   const criticalResources = [
     '/fonts/inter-var.woff2',
-    '/css/critical.css']
-  criticalResources.forEach((resource) => {}
+    '/css/critical.css'];
+  criticalResources.forEach((resource) => {}];];
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -282,7 +282,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 export const optimizeScrollPerformance = (;
   if (typeof window === 'undefined') return;
   let ticking = false;
-  const updateScrollPosition = () => {
+  const updateScrollPosition = () => {;
     // Update scroll position indicators;) => {
   return (
     $3
@@ -309,7 +309,7 @@ export const optimizeScrollPerformance = () => {}
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {
-    ,;) => {
+    ,) => {
   return (
     $3
   )
@@ -471,11 +471,11 @@ export const collectPerformanceMetrics = () => {}
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
 // totalTime: navigation.loadEventEnd - navigation.fetchStart,
-    },;
+    },
     paint: {}
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
-    },;
+    },
     memory: getMemoryUsage()}
 }
 // Initialize performance enhancements;
@@ -509,9 +509,9 @@ export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
 }
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
-    pain,;
+    pain,
   t: {/* TODO: Fix JSX expression */},
-    memor,;
+    memor,
   y: getMemoryUsage(),
   }
 }

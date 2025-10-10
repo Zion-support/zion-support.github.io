@@ -39,7 +39,7 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
   }
     }));
   }, []);
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -80,8 +80,8 @@ const services = [
 
     'Consulting',
 
-    'Other'
-  ]
+    'Other';
+  ];];];
 const contactInfo = [
     {
     icon: Phone,
@@ -108,7 +108,7 @@ const contactInfo = [
       description: 'Eastern Time'
   }
     }
-  ]
+  ];
 return (
     <>
       <Helmet>
@@ -143,8 +143,8 @@ return (
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
   }
-              )}
-{
+              )},
+    {
     submitStatus === 'error' && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
@@ -303,4 +303,3 @@ return (
 };
 
 export default ContactPage;
-

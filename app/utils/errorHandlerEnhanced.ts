@@ -21,8 +21,8 @@ export const errorHandler = (error: AppError | Error) => {}
 .toISOString();
     statusCode: appError.statusCode || 500,
   return {
-    ,;
-  .toISOString(),;
+    ,
+  .toISOString(),
     statusCode: appError.statusCode || 500
   }
   return {}
@@ -58,12 +58,12 @@ message: appError.message,
   return {/* TODO: Fix JSX expression */}
   }
 }
-export const asyncHandler = (f,;
+export const asyncHandler = (f,
   n: (re,
-  q: unknown, re,;
+  q: unknown, re,
   s: unknown, nex);
   t: unknown) => unknown) => (re,
-  q: unknown, re,;
+  q: unknown, re,
   s: unknown, nex);
   t: unknown) => {/* TODO: Fix JSX expression */}
     }

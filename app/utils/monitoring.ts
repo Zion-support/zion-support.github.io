@@ -57,7 +57,7 @@ class MonitoringService {}
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay;
-        const fidObserver = new PerformanceObserver((list) => {
+        const fidObserver = new PerformanceObserver((list) => {;
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
@@ -68,7 +68,7 @@ class MonitoringService {}
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift;
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list => {;
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
@@ -81,7 +81,7 @@ class MonitoringService {}
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver(list => {
+        const fcpObserver = new PerformanceObserver(list => {;
     const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
@@ -112,8 +112,8 @@ class MonitoringService {}
   }
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
+      try {;
+        const resourceObserver = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
     // Keep HEAD version
   }
@@ -140,7 +140,7 @@ class MonitoringService {}
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({}
-        message: `Unhandled Promise Rejection: ${event.reason}`,;
+        message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -154,7 +154,7 @@ class MonitoringService {}
   }
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
+    if (thresholds) {;
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
     // Keep HEAD version;
     // Send to analytics (if configured);

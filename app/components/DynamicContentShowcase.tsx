@@ -48,8 +48,7 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Globe,
       color: 'from-teal-500 to-cyan-600'
     }
-  ];
-
+  ];];];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -58,7 +57,7 @@ const DynamicContentShowcase: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of success';
   ];
 
   const testimonials = [
@@ -85,8 +84,8 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  useEffect(() => {];];
+    const timer = setInterval(() => {;
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
 

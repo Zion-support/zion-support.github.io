@@ -15,7 +15,7 @@ const AISmartContractAuditor: React.FC = () => {
       icon: Shield,
       title: 'Automated Security Analysis',
       description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',
-      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives']
+      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'];
     },
     {
       icon: Code,
@@ -34,9 +34,8 @@ const AISmartContractAuditor: React.FC = () => {
       title: 'Machine Learning Models',
       description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
-    }
-  ];
-
+    },
+  ];];];
   const pricingPlans = [
     {
       name: 'Starter',
@@ -115,8 +114,7 @@ const AISmartContractAuditor: React.FC = () => {
       icon: Globe,
       results: 'Prevented $50M+ in potential losses'
     }
-  ];
-
+  ];];];
   return (
     <>
       <Helmet>

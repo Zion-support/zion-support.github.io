@@ -15,8 +15,8 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
 <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -116,7 +116,5 @@ const benefits = [
       </section>
     </div>
   ),
-};
-
+};];];
 export default PagePage;
-

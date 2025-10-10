@@ -5,7 +5,7 @@ export const generateId = (prefix: string = 'id'): string => {}
 export const createAriaLabel = (text: string, context?: string): string => {}
   return context ? `${text}, ${context}` : text;
 }
-export const announceToScreenReader = (message: string): void => {
+export const announceToScreenReader = (message: string): void => {;
     const announcement = document.createElement('div'),
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -23,7 +23,7 @@ export const focusElement = (element: HTMLElement | null): void => {
   }
   }
 }
-export const trapFocus = (container: HTMLElement): (() => void) => {
+export const trapFocus = (container: HTMLElement): (() => void) => {;
     const focusableElements = container.querySelectorAll(,
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
@@ -73,7 +73,7 @@ const ariaLabelledBy = element.getAttribute('aria-labelledby');
   }
 return errors;
 }
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {
+export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
     element.setAttribute('tabindex', '0');
 element.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -83,7 +83,7 @@ element.addEventListener('keydown', (e) => {
     }
   })
 }
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
     const skipLink = document.createElement('a')
   }
   skipLink.href = `#${targetId}`;
@@ -96,7 +96,7 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g)
     if (!rgb) return 0,
-const [r, g, b] = rgb.map(Number).map(c => {
+const [r, g, b] = rgb.map(Number).map(c => {;
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
@@ -108,7 +108,7 @@ const l1 = getLuminance(foreground);
 const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 return contrast >= 4.5; // WCAG AA standard;
 }
-export const addFocusIndicators = (): void => {
+export const addFocusIndicators = (): void => {;
     const style = document.createElement('style');
   style.textContent = `;
     *:focus {
@@ -142,7 +142,7 @@ export const addFocusIndicators = (): void => {
   `;
 document.head.appendChild(style);
 }
-export const initializeAccessibility = (): void => {
+export const initializeAccessibility = (): void => {;
     addFocusIndicators();
 // Add skip link to main content;
   const mainContent = document.querySelector('main');

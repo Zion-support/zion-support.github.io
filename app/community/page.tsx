@@ -11,7 +11,7 @@ const CommunityPage: React.FC = () => {
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ];
+  ];];];
   const events = [
     {
       title: 'AI Development Workshop',
@@ -63,7 +63,7 @@ const CommunityPage: React.FC = () => {
       posts: 2100,
       members: 3000
     }
-  ];
+  ];];];
   const benefits = [
     {
       icon: Users,
@@ -85,8 +85,7 @@ const CommunityPage: React.FC = () => {
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
     }
-  ]
-
+  ];
   return (
     <>
       <Helmet>
@@ -169,8 +168,8 @@ const CommunityPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Overview Tab */}
-          {activeTab === 'overview' && (
+          {/* Overview Tab */},
+    {activeTab === 'overview' && (
             <div className="space-y-12">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
@@ -226,10 +225,9 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Events Tab */}
-          {activeTab === 'events' && (
+          )},
+    {/* Events Tab */},
+    {activeTab === 'events' && (
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
@@ -273,10 +271,9 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Forums Tab */}
-          {activeTab === 'forums' && (
+          )},
+    {/* Forums Tab */},
+    {activeTab === 'forums' && (
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
@@ -309,10 +306,9 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Benefits Tab */}
-          {activeTab === 'benefits' && (
+          )},
+    {/* Benefits Tab */},
+    {activeTab === 'benefits' && (
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
@@ -333,9 +329,8 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Join Community CTA */}
+          )},
+    {/* Join Community CTA */}
           <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">

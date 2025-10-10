@@ -13,7 +13,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
+        requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
     },
     {
       title: 'Cloud Architect',
@@ -31,9 +31,9 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
-    }
-  ];
+        requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
+      }
+    ];
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -41,7 +41,7 @@ const CareersPage: React.FC = () => {
     'Professional development budget',
     'Top-tier equipment and tools',
     'Team building events',
-    'Career growth opportunities'
+      'Career growth opportunities'
   ];
   const values = [
     {
@@ -62,10 +62,9 @@ const CareersPage: React.FC = () => {
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
-    }
-  ]
-
+        description: 'We strive for the highest quality in everything we do'
+      }
+    ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

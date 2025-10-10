@@ -136,4 +136,3 @@ return (
 };
 
 export default OptimizedImagePage;
-

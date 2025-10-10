@@ -15,7 +15,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       icon: Cpu,
       title: 'Quantum Circuit Simulation',
       description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms',
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support']
+      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
     },
     {
       icon: Brain,
@@ -34,9 +34,8 @@ const AIQuantumComputingSimulator: React.FC = () => {
       title: 'Quantum Error Correction',
       description: 'Advanced error correction algorithms to simulate realistic quantum computing conditions',
       benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
-    }
-  ];
-
+    },
+  ];];];
   const pricingPlans = [
     {
       name: 'Researcher',
@@ -115,8 +114,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       icon: Zap,
       results: 'Accurate molecular modeling'
     }
-  ];
-
+  ];];];
   return (
     <>
       <Helmet>

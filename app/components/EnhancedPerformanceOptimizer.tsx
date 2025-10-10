@@ -20,7 +20,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (!enableImageOptimization) return;
 
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
       images.forEach((img) => {
         const image = img as HTMLImageElement;
@@ -43,7 +43,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
           }
@@ -62,7 +62,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enablePreloading) return;
 
     const preloadCriticalResources = () => {
-      // Preload critical CSS
+      // Preload critical CSS;
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
       criticalCSS.href = '/styles/critical.css';
@@ -87,7 +87,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableCodeSplitting) return;
 
     const optimizeCodeSplitting = () => {
-      // Preload next likely routes
+      // Preload next likely routes;
       const links = document.querySelectorAll('a[href^="/"]');
       links.forEach((link) => {
         link.addEventListener('mouseenter', () => {
@@ -107,7 +107,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
-      if ('performance' in window) {
+      if ('performance' in window) {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
         
@@ -119,7 +119,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
 
         // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {
+        if (typeof window !== 'undefined' && 'gtag' in window) {;
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
           gtag('event', 'performance_metrics', {
             event_category: 'performance',

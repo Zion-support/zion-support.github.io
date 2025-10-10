@@ -38,10 +38,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Customer Churn Prediction', url: '/ai-customer-churn', description: 'Churn prevention' },
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
-    { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
-  ]
-
-
+      { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
+    ];
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
@@ -77,7 +75,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
   ];
 
-
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -85,10 +82,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Blog', url: '/blog' },
     { name: 'Careers', url: '/careers' },
     { name: 'Partners', url: '/partners' },
-    { name: 'Support', url: '/support' },
-    { name: 'Status', url: '/status' }
-  ]
-
+      { name: 'Support', url: '/support' },
+      { name: 'Status', url: '/status' }
+    ];
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -98,17 +94,15 @@ const Footer: React.FC = memo(() => {
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
     { name: 'Compliance', url: '/compliance' }
-  ]
-
+  ];
   const enterpriseLinks = [
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Edge Computing', url: '/edge-computing' },
-    { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
-  ]
-
+      { name: 'Consultation', url: '/consultation' },
+      { name: 'Custom Development', url: '/custom-software' }
+    ];
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Futuristic Background Effects */}

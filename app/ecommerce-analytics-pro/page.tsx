@@ -34,9 +34,9 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ]
+  ];];];
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
@@ -69,7 +69,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -17,12 +17,12 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
+      const shouldMonitor = process.env.NODE_ENV === 'development' ||
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {;
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     }
 
@@ -57,7 +57,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
-      } catch (e) {
+      } catch (e) {;
         console.warn('Performance Observer not supported:', e);
       }
 
@@ -105,36 +105,32 @@ const PerformanceMonitor: React.FC = () => {
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
           </div>
-        )}
-        
-        {metrics.fid && (
+        )},
+    {metrics.fid && (
           <div className="flex justify-between">
             <span>FID:</span>
             <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
           </div>
-        )}
-        
-        {metrics.cls && (
+        )},
+    {metrics.cls && (
           <div className="flex justify-between">
             <span>CLS:</span>
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
           </div>
-        )}
-        
-        {metrics.fcp && (
+        )},
+    {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
           </div>
-        )}
-        
-        {metrics.ttfb && (
+        )},
+    {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>

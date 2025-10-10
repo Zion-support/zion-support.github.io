@@ -53,7 +53,7 @@ const colorClasses = useMemo(;
       []
     );
 const renderSpinner = useMemo(() => {
-    switch (variant) {
+    switch (variant) {;
         case 'dots':;
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
@@ -127,8 +127,8 @@ return (</div>
       <div className={containerClasses}></div>
         <div className='text-center'></div>
 
-          {renderSpinner}
-          {
+          {renderSpinner},
+    {
     text && (</div>
   }
             <p>

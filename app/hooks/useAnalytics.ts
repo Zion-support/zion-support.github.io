@@ -7,7 +7,7 @@ interface AnalyticsEvent {
 }
 export const useAnalytics = (;
   const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
-    ) => {
+    ) => {;
   return (
     $3
   )
@@ -35,8 +35,8 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {
     }
   }, []);
 return {
-    trackEvent,;
-    trackPageView,;
+    trackEvent,
+    trackPageView,
     trackConversion,
   }
   }

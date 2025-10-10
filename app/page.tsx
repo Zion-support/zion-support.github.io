@@ -30,16 +30,15 @@ const HomePage: React.FC = () => {
       icon: Zap,
       title: 'Automation',
       description: 'Streamline your workflows with intelligent automation solutions.',
-      color: 'from-yellow-500 to-green-600'
-    }
-  ];
-
+        color: 'from-yellow-500 to-green-600'
+      }
+    ];
   const services = [
     {
       title: 'AI Development',
       description: 'Custom AI solutions tailored to your business needs',
       icon: Brain,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+        features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       title: 'Cloud Services',
@@ -64,10 +63,9 @@ const HomePage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Happy Clients' },
     { number: '1000+', label: 'Projects Completed' },
-    { number: '99%', label: 'Client Satisfaction' },
-    { number: '10+', label: 'Years Experience' }
-  ];
-
+      { number: '99%', label: 'Client Satisfaction' },
+      { number: '10+', label: 'Years Experience' }
+    ];
   return (
     <>
       <Helmet>
