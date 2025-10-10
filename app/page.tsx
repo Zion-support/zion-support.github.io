@@ -1467,12 +1467,15 @@ const HomePage: React.FC = () => {
           
           {/* Hero Section */}
           <section className="relative pt-20 pb-16 overflow-hidden">
+            <div className="cyber-grid-enhanced absolute inset-0"></div>
+            <div className="neural-network-bg absolute inset-0"></div>
+            <div className="quantum-particles absolute inset-0"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 className="cyber-text-3d text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="block neon-rainbow">
                     AI-Powered Solutions
                   </span>
                 </h1>
@@ -1483,7 +1486,7 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold"
+                    className="cyber-button-enhanced px-8 py-4 text-lg font-semibold"
                     onClick={handlePhoneClick}
                   >
                     Get Started Today

@@ -239,6 +239,12 @@ const Navigation: React.FC = () => {
             <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
             </a>
+            <a href="/ai-services" className="text-white hover:text-cyan-400 transition-colors">
+              AI Services
+            </a>
+            <a href="/it-services" className="text-white hover:text-cyan-400 transition-colors">
+              IT Services
+            </a>
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
