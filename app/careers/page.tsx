@@ -59,7 +59,82 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Join Our <span className="text-cyan-400">Team</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Work on cutting-edge AI and IT solutions that are transforming industries. 
+              Join a team of passionate innovators building the future of technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <Heart className="w-5 h-5" />
+                <span>Apply Now</span>
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Why Work With Us */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
+                <p className="text-gray-300">
+                  Work on the latest technologies and be part of groundbreaking projects that shape the future.
+                </p>
               </div>
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Great Team</h3>
+                <p className="text-gray-300">
+                  Collaborate with talented professionals who share your passion for technology and innovation.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Work-Life Balance</h3>
+                <p className="text-gray-300">
+                  Flexible work arrangements and comprehensive benefits to support your personal and professional growth.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefits */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Benefits & Perks</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
+                >
+                  <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -114,18 +189,18 @@ const CareersPage: React.FC = () => {
               Send us your resume and let's discuss how you can contribute.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Send Your Resume
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Learn About Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

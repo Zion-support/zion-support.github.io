@@ -58,8 +58,48 @@ const MicroSaasPage: React.FC = () => {
         <meta name="keywords" content="micro SaaS, SaaS solutions, business tools, AI tools, affordable software, subscription software" />
       </Helmet>
 
-              </div>
-            ))}
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Micro <span className="text-cyan-400">SaaS</span> Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Affordable, scalable AI and IT tools designed for growing businesses. 
+              Start with low monthly costs and scale as you grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-5 h-5" />
+                <span>Start Free Trial</span>
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+
+          {/* Benefits */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Choose Our Micro SaaS?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
+                >
+                  <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Products Grid */}
@@ -164,11 +204,29 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
 
+          {/* CTA Section */}
+          <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Choose the micro SaaS solution that fits your business needs. 
               Start with a free trial and scale as you grow.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-5 h-5" />
+                <span>Start Free Trial</span>
+              </Link>
+              <Link
+                to="/pricing"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
+              >
+                View All Plans
+              </Link>
             </div>
           </div>
         </div>
