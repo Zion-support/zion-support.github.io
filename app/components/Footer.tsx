@@ -67,6 +67,7 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
+<<<<<<< HEAD
             <div className="space-y-2">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
@@ -79,6 +80,24 @@ const Footer: React.FC = memo(() => {
               <div className="flex items-start text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+=======
+            <div className="space-y-3">
+              <div className="flex items-center text-sm text-gray-300">
+                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start text-sm text-gray-300">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>Mon-Fri: 9AM-6PM EST</span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
               </div>
             </div>
           </div>
@@ -94,11 +113,16 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
 =======
                     to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
+=======
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                   >
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
@@ -126,11 +150,16 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
 =======
                     to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
+=======
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                   >
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
@@ -204,8 +233,13 @@ const Footer: React.FC = memo(() => {
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
+<<<<<<< HEAD
                     to={link.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
+=======
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                   >
                     {link.name}
                   </Link>
@@ -276,13 +310,13 @@ const Footer: React.FC = memo(() => {
 =======
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

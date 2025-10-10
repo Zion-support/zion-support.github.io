@@ -713,6 +713,7 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       icon: Zap,
+<<<<<<< HEAD
       title: 'AI Strategy & Consulting',
       description: 'Strategic AI consulting to identify opportunities and plan your AI transformation journey.',
       price: 'Starting at $5,000/month',
@@ -724,17 +725,37 @@ const AIServicesPage: React.FC = () => {
       description: 'End-to-end AI solution development with our expert team of AI engineers and data scientists.',
       price: 'Starting at $15,000/project',
       features: ['Custom AI model development', 'Data pipeline creation', 'API development', 'Integration services', 'Testing and validation']
+=======
+      title: 'AI Strategy Consulting',
+      description: 'Strategic AI consulting to identify opportunities, develop AI roadmaps, and plan your digital transformation journey with ROI analysis.',
+      price: '$5,000 - $25,000',
+      duration: '2-8 weeks'
+    },
+    {
+      icon: Shield,
+      title: 'Custom AI Development',
+      description: 'End-to-end custom AI solution development including machine learning models, neural networks, and AI applications tailored to your business needs.',
+      price: '$15,000 - $100,000',
+      duration: '3-12 months'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     {
       icon: TrendingUp,
       title: 'AI Model Optimization',
+<<<<<<< HEAD
       description: 'Optimize your existing AI systems for better performance, accuracy, and efficiency.',
       price: 'Starting at $3,000/month',
       features: ['Performance analysis', 'Model fine-tuning', 'Hyperparameter optimization', 'A/B testing', 'Continuous monitoring']
+=======
+      description: 'Optimize existing AI systems for better performance, accuracy, and efficiency with advanced techniques like model pruning and quantization.',
+      price: '$3,000 - $15,000',
+      duration: '2-6 weeks'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     {
       icon: Target,
       title: 'AI Training & Education',
+<<<<<<< HEAD
       description: 'Comprehensive training programs to upskill your team in AI technologies and best practices.',
       price: 'Starting at $2,500/session',
       features: ['Custom training programs', 'Hands-on workshops', 'Certification courses', 'Ongoing support', 'Team mentoring']
@@ -766,6 +787,39 @@ const AIServicesPage: React.FC = () => {
       description: 'Custom computer vision applications for image recognition, quality control, and automation.',
       price: 'Starting at $12,000/project',
       features: ['Object detection', 'Image classification', 'OCR solutions', 'Quality inspection', 'Real-time processing']
+=======
+      description: 'Comprehensive AI training programs for your team including workshops, certification courses, and hands-on project mentoring.',
+      price: '$2,000 - $10,000',
+      duration: '1-4 weeks'
+    },
+    {
+      icon: Brain,
+      title: 'Computer Vision Solutions',
+      description: 'Advanced computer vision applications including object detection, image recognition, facial recognition, and medical imaging analysis.',
+      price: '$10,000 - $50,000',
+      duration: '2-8 months'
+    },
+    {
+      icon: MessageSquare,
+      title: 'NLP & Chatbot Development',
+      description: 'Natural language processing solutions including chatbots, voice assistants, sentiment analysis, and language translation systems.',
+      price: '$8,000 - $40,000',
+      duration: '2-6 months'
+    },
+    {
+      icon: BarChart,
+      title: 'Predictive Analytics',
+      description: 'AI-powered predictive analytics for forecasting, demand planning, risk assessment, and business intelligence with real-time insights.',
+      price: '$12,000 - $60,000',
+      duration: '3-9 months'
+    },
+    {
+      icon: FileText,
+      title: 'AI Document Processing',
+      description: 'Intelligent document processing including OCR, data extraction, automated classification, and workflow automation for business documents.',
+      price: '$6,000 - $30,000',
+      duration: '2-5 months'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     }
   ];
 
@@ -882,11 +936,16 @@ const AIServicesPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105">
+=======
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300 group">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                 <ul className="space-y-2 text-sm text-gray-300">
@@ -899,6 +958,15 @@ const AIServicesPage: React.FC = () => {
                 </ul>
                 <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Learn More
+=======
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div className="space-y-2">
+                  <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
+                  <div className="text-gray-400 text-sm">Duration: {service.duration}</div>
+                </div>
+                <button className="mt-4 w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Quote
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                 </button>
               </div>
             ))}
