@@ -266,6 +266,160 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
       popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'AI Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex optimization and cryptography',
+      price: '$2,999/month',
+      marketPrice: '$5000-15000/month',
+      features: ['Quantum algorithm development', 'Cryptographic security enhancement', 'Optimization problem solving', 'Quantum machine learning', 'Quantum simulation', 'Quantum annealing', 'Quantum error correction', 'Hybrid classical-quantum systems'],
+      benefits: ['Exponential speed improvements', 'Unbreakable encryption', 'Complex optimization', 'Future-proof technology'],
+      category: 'Quantum Computing',
+      popular: false
+    },
+    {
+      icon: Rocket,
+      title: 'AI Autonomous Systems',
+      description: 'Self-driving vehicles, drones, and robotic systems with advanced AI control',
+      price: '$1,999/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Autonomous vehicle control', 'Drone navigation systems', 'Robotic process automation', 'Sensor fusion algorithms', 'Path planning optimization', 'Collision avoidance', 'Real-time decision making', 'Machine learning adaptation'],
+      benefits: ['Reduced human error', '24/7 operation', 'Cost efficiency', 'Scalable automation'],
+      category: 'Autonomous Systems',
+      popular: true
+    },
+    {
+      icon: Layers,
+      title: 'AI Neural Networks',
+      description: 'Custom neural network development and training for complex pattern recognition',
+      price: '$799/month',
+      marketPrice: '$1500-4000/month',
+      features: ['Deep learning model development', 'Custom architecture design', 'Transfer learning optimization', 'Model compression', 'Edge deployment', 'Real-time inference', 'Multi-modal learning', 'Federated learning'],
+      benefits: ['Custom AI solutions', 'Optimized performance', 'Edge computing ready', 'Continuous learning'],
+      category: 'Machine Learning',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI Natural Language Processing',
+      description: 'Advanced text analysis, translation, and language understanding systems',
+      price: '$499/month',
+      marketPrice: '$800-2500/month',
+      features: ['Text classification and sentiment analysis', 'Machine translation (100+ languages)', 'Named entity recognition', 'Text summarization', 'Question answering systems', 'Language generation', 'Multilingual processing', 'Custom model training'],
+      benefits: ['Better text understanding', 'Multilingual support', 'Automated content analysis', 'Natural communication'],
+      category: 'NLP',
+      popular: true
+    },
+    {
+      icon: Target,
+      title: 'AI Recommendation Systems',
+      description: 'Personalized recommendation engines for e-commerce, content, and services',
+      price: '$399/month',
+      marketPrice: '$700-2000/month',
+      features: ['Collaborative filtering', 'Content-based recommendations', 'Hybrid recommendation models', 'Real-time personalization', 'A/B testing framework', 'Cold start problem solving', 'Multi-armed bandit algorithms', 'Explainable recommendations'],
+      benefits: ['Increased conversion rates', 'Better user engagement', 'Personalized experiences', 'Higher customer satisfaction'],
+      category: 'Recommendation Systems',
+      popular: true
+    },
+    {
+      icon: Database,
+      title: 'AI Data Mining',
+      description: 'Intelligent data discovery and pattern recognition in large datasets',
+      price: '$599/month',
+      marketPrice: '$1000-3000/month',
+      features: ['Pattern recognition algorithms', 'Anomaly detection', 'Clustering and segmentation', 'Association rule mining', 'Time series analysis', 'Text mining', 'Graph mining', 'Automated feature engineering'],
+      benefits: ['Hidden insights discovery', 'Anomaly detection', 'Data-driven decisions', 'Automated analysis'],
+      category: 'Data Mining',
+      popular: false
+    },
+    {
+      icon: Settings,
+      title: 'AI Process Optimization',
+      description: 'Intelligent process improvement and optimization using machine learning',
+      price: '$699/month',
+      marketPrice: '$1200-3500/month',
+      features: ['Process mining and analysis', 'Bottleneck identification', 'Resource optimization', 'Predictive maintenance', 'Quality control automation', 'Supply chain optimization', 'Energy efficiency', 'Cost reduction algorithms'],
+      benefits: ['Process efficiency gains', 'Cost reduction', 'Quality improvement', 'Predictive insights'],
+      category: 'Process Optimization',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'AI Threat Intelligence',
+      description: 'Advanced threat detection and cybersecurity intelligence using AI',
+      price: '$899/month',
+      marketPrice: '$1500-4000/month',
+      features: ['Threat hunting automation', 'Malware analysis', 'Network anomaly detection', 'Behavioral analysis', 'Threat intelligence correlation', 'Incident response automation', 'Vulnerability assessment', 'Security orchestration'],
+      benefits: ['Proactive threat detection', 'Faster incident response', 'Reduced false positives', 'Enhanced security posture'],
+      category: 'Cybersecurity',
+      popular: true
+    },
+    {
+      icon: Heart,
+      title: 'AI Drug Discovery',
+      description: 'Accelerated drug discovery and development using AI and machine learning',
+      price: '$1,999/month',
+      marketPrice: '$3000-8000/month',
+      features: ['Molecular property prediction', 'Drug-target interaction modeling', 'Compound optimization', 'Clinical trial optimization', 'Side effect prediction', 'Drug repurposing', 'Biomarker discovery', 'Personalized medicine'],
+      benefits: ['Faster drug development', 'Reduced costs', 'Better success rates', 'Personalized treatments'],
+      category: 'Healthcare AI',
+      popular: false
+    },
+    {
+      icon: DollarSign,
+      title: 'AI Algorithmic Trading',
+      description: 'High-frequency trading and portfolio optimization using AI algorithms',
+      price: '$1,499/month',
+      marketPrice: '$2500-6000/month',
+      features: ['High-frequency trading algorithms', 'Portfolio optimization', 'Risk management', 'Market prediction models', 'Sentiment analysis', 'Arbitrage detection', 'Backtesting frameworks', 'Real-time execution'],
+      benefits: ['Higher returns', 'Risk reduction', 'Automated trading', 'Market advantage'],
+      category: 'Financial AI',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI Climate Solutions',
+      description: 'Environmental monitoring and climate change solutions using AI',
+      price: '$799/month',
+      marketPrice: '$1200-3000/month',
+      features: ['Climate modeling and prediction', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental monitoring', 'Disaster prediction', 'Sustainability reporting', 'Green technology optimization', 'Emission reduction strategies'],
+      benefits: ['Environmental impact', 'Cost savings', 'Sustainability', 'Climate resilience'],
+      category: 'Climate AI',
+      popular: false
+    },
+    {
+      icon: Users,
+      title: 'AI Social Media Analytics',
+      description: 'Advanced social media monitoring and sentiment analysis using AI',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: ['Social media monitoring', 'Sentiment analysis', 'Influencer identification', 'Trend prediction', 'Brand reputation tracking', 'Crisis management', 'Content optimization', 'Audience insights'],
+      benefits: ['Better brand management', 'Crisis prevention', 'Audience understanding', 'Content optimization'],
+      category: 'Social Media AI',
+      popular: true
+    },
+    {
+      icon: FileText,
+      title: 'AI Legal Document Analysis',
+      description: 'Intelligent legal document review and contract analysis using AI',
+      price: '$599/month',
+      marketPrice: '$1000-2500/month',
+      features: ['Contract analysis', 'Legal document review', 'Risk assessment', 'Compliance checking', 'Clause extraction', 'Legal research', 'Document comparison', 'Automated summaries'],
+      benefits: ['Faster legal review', 'Risk reduction', 'Cost savings', 'Better compliance'],
+      category: 'Legal AI',
+      popular: false
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Predictive Maintenance',
+      description: 'Equipment maintenance prediction and optimization using AI and IoT',
+      price: '$799/month',
+      marketPrice: '$1200-3000/month',
+      features: ['Equipment health monitoring', 'Failure prediction', 'Maintenance scheduling', 'IoT sensor integration', 'Cost optimization', 'Downtime reduction', 'Asset lifecycle management', 'Performance analytics'],
+      benefits: ['Reduced downtime', 'Cost savings', 'Extended asset life', 'Predictive insights'],
+      category: 'Industrial AI',
+      popular: true
     }
   ];
 
@@ -420,6 +574,127 @@ description: 'Custom API development, third-party integrations, and microservice
       benefits: ['On-time delivery', 'Budget control', 'Quality assurance', 'Risk mitigation'],
       category: 'Project Management',
       popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for real-time processing and low latency',
+      price: '$2,200/month',
+      marketPrice: '$3500-10000/month',
+      features: ['Edge server deployment', 'Real-time data processing', 'IoT device management', 'Content delivery optimization', 'Latency reduction', 'Bandwidth optimization', 'Edge AI deployment', 'Distributed analytics'],
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Real-time processing', 'Improved performance'],
+      category: 'Edge Computing',
+      popular: true
+    },
+    {
+      icon: Zap,
+      title: '5G Network Implementation',
+      description: 'Next-generation 5G network design, deployment, and optimization services',
+      price: '$3,500/month',
+      marketPrice: '$5000-15000/month',
+      features: ['5G network planning', 'Small cell deployment', 'Network slicing', 'Massive MIMO optimization', 'Beamforming configuration', 'Network performance monitoring', 'IoT connectivity', 'Ultra-reliable low-latency communication'],
+      benefits: ['Ultra-fast connectivity', 'Massive device support', 'Low latency', 'Future-proof infrastructure'],
+      category: '5G Networks',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security model implementation and management',
+      price: '$2,800/month',
+      marketPrice: '$4000-12000/month',
+      features: ['Identity and access management', 'Micro-segmentation', 'Continuous verification', 'Privileged access management', 'Device trust verification', 'Network access control', 'Data encryption', 'Security analytics'],
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance assurance', 'Continuous monitoring'],
+      category: 'Security Architecture',
+      popular: true
+    },
+    {
+      icon: Database,
+      title: 'Blockchain Solutions',
+      description: 'Blockchain technology implementation for secure transactions and data integrity',
+      price: '$2,500/month',
+      marketPrice: '$4000-12000/month',
+      features: ['Smart contract development', 'Distributed ledger implementation', 'Cryptocurrency integration', 'Supply chain tracking', 'Digital identity management', 'Decentralized applications', 'Consensus mechanism design', 'Blockchain analytics'],
+      benefits: ['Enhanced security', 'Transparency', 'Decentralization', 'Immutable records'],
+      category: 'Blockchain',
+      popular: false
+    },
+    {
+      icon: Globe,
+      title: 'IoT Platform Development',
+      description: 'Comprehensive Internet of Things platform design and implementation',
+      price: '$1,800/month',
+      marketPrice: '$3000-8000/month',
+      features: ['IoT device management', 'Data collection and processing', 'Real-time monitoring', 'Device provisioning', 'Firmware updates', 'Edge computing integration', 'Analytics and insights', 'Security implementation'],
+      benefits: ['Connected devices', 'Real-time insights', 'Automated processes', 'Scalable infrastructure'],
+      category: 'IoT',
+      popular: true
+    },
+    {
+      icon: Settings,
+      title: 'API Gateway Management',
+      description: 'Enterprise API gateway design, implementation, and management services',
+      price: '$1,200/month',
+      marketPrice: '$2000-6000/month',
+      features: ['API design and documentation', 'Rate limiting and throttling', 'Authentication and authorization', 'API versioning', 'Monitoring and analytics', 'Load balancing', 'Security policies', 'Developer portal'],
+      benefits: ['Centralized API management', 'Enhanced security', 'Better performance', 'Developer experience'],
+      category: 'API Management',
+      popular: true
+    },
+    {
+      icon: Monitor,
+      title: 'IT Infrastructure Monitoring',
+      description: 'Comprehensive monitoring and alerting for IT infrastructure and applications',
+      price: '$800/month',
+      marketPrice: '$1200-4000/month',
+      features: ['Server and network monitoring', 'Application performance monitoring', 'Log aggregation and analysis', 'Alert management', 'Capacity planning', 'Uptime monitoring', 'Performance optimization', 'Incident response'],
+      benefits: ['Proactive issue detection', 'Reduced downtime', 'Better performance', 'Cost optimization'],
+      category: 'Monitoring',
+      popular: true
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
+      description: 'Comprehensive multi-cloud strategy and management across AWS, Azure, and GCP',
+      price: '$2,000/month',
+      marketPrice: '$3000-8000/month',
+      features: ['Multi-cloud architecture design', 'Cost optimization', 'Security compliance', 'Disaster recovery', 'Data migration', 'Cloud governance', 'Performance monitoring', 'Vendor management'],
+      benefits: ['Vendor independence', 'Cost optimization', 'Risk mitigation', 'Best-of-breed solutions'],
+      category: 'Multi-Cloud',
+      popular: true
+    },
+    {
+      icon: Users,
+      title: 'Digital Workplace Solutions',
+      description: 'Modern digital workplace implementation with collaboration and productivity tools',
+      price: '$1,500/month',
+      marketPrice: '$2500-6000/month',
+      features: ['Microsoft 365/Google Workspace', 'Video conferencing solutions', 'Collaboration platforms', 'Document management', 'Mobile device management', 'Security policies', 'User training', 'Support services'],
+      benefits: ['Improved productivity', 'Better collaboration', 'Enhanced security', 'Remote work enablement'],
+      category: 'Digital Workplace',
+      popular: true
+    },
+    {
+      icon: FileText,
+      title: 'IT Documentation Services',
+      description: 'Comprehensive IT documentation and knowledge management solutions',
+      price: '$600/month',
+      marketPrice: '$1000-2500/month',
+      features: ['System documentation', 'Process documentation', 'Knowledge base creation', 'User manuals', 'Technical specifications', 'Change management docs', 'Compliance documentation', 'Document versioning'],
+      benefits: ['Better knowledge management', 'Reduced training time', 'Compliance assurance', 'Improved efficiency'],
+      category: 'Documentation',
+      popular: false
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Business Intelligence',
+      description: 'Advanced business intelligence and data visualization for IT operations',
+      price: '$1,400/month',
+      marketPrice: '$2200-5000/month',
+      features: ['IT metrics dashboards', 'Performance analytics', 'Cost analysis', 'Capacity planning', 'Trend analysis', 'Predictive analytics', 'Custom reporting', 'Data integration'],
+      benefits: ['Data-driven decisions', 'Cost optimization', 'Performance insights', 'Predictive planning'],
+      category: 'IT Analytics',
+      popular: true
     }
   ];
 
@@ -948,15 +1223,15 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed px-4">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
@@ -985,32 +1260,32 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 </div>
               </div>
               {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="cyber-button-enhanced w-full sm:w-auto text-center"
+                  className="cyber-button-enhanced w-full sm:w-auto text-center px-6 py-3 sm:px-8 sm:py-4"
                   aria-label="Call us at (302) 464-0950"
                 >
                   📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto text-center">
                   📧 Email Us
                 </a>
                 <a 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 w-full sm:w-auto text-center">
                   Get Free Consultation
                 </a>
               </div>
               {/* Contact Info */}
-              <div className="mt-8 text-center">
-                <p className="text-gray-300 text-sm mb-2">
+              <div className="mt-8 text-center px-4">
+                <p className="text-gray-300 text-xs sm:text-sm mb-2">
                   📍 364 E Main St STE 1008, Middletown, DE 19709
                 </p>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-xs sm:text-sm">
                   ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
                 </p>
               </div>
@@ -1022,14 +1297,14 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
               Our Impact
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center cyber-card-enhanced p-6">
-                  <div className="flex justify-center mb-4">
+                <div key={index} className="text-center cyber-card-enhanced p-4 sm:p-6">
+                  <div className="flex justify-center mb-3 sm:mb-4">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -1043,7 +1318,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI solutions designed to transform your business operations
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {aiServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
@@ -1102,7 +1377,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {itServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
@@ -1161,7 +1436,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Ready-to-use business tools that solve specific problems with AI and automation
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
               {microSaasServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
