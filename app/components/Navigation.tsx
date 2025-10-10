@@ -146,7 +146,8 @@ const Navigation: React.FC = () => {
     { name: 'Security Automation', href: '/security-automation', icon: Shield, description: 'Automated security' },
     { name: 'Data Visualization & BI', href: '/data-visualization', icon: BarChart, description: 'Advanced dashboards' },
     { name: 'Workflow Automation', href: '/workflow-automation', icon: Settings, description: 'Process automation' },
-    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
+    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' },
+    { name: 'IoT Development', href: '/iot-development', icon: Wifi, description: 'Internet of Things solutions' }
   ];
 
   const microSaasServices = [
@@ -185,17 +186,20 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
+    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' },
+    { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor', icon: Eye, description: 'AI video editing' },
+    { name: 'Zion AI Project Manager', href: '/zion-ai-project-manager', icon: Calendar, description: 'AI project management' }
   ];
 
   const emergingTech = [
+    { name: 'Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum processing power' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: LinkIcon, description: 'Web3 & DeFi solutions' },
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }

@@ -73,7 +73,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Security Automation', url: '/security-automation', description: 'Automated security' },
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
-    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
+    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' },
+    { name: 'IoT Development', url: '/iot-development', description: 'Internet of Things solutions' },
+    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Web3 & DeFi solutions' }
   ];
 
   const microSaasServices = [
@@ -108,7 +110,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
+    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
+    { name: 'Zion AI Project Manager', url: '/zion-ai-project-manager', description: 'AI project management' }
   ];
 
   const companyLinks = [

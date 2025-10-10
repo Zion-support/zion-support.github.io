@@ -1,190 +1,190 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Cpu, Zap, Shield, Brain, Globe, Database, Target, Users, BarChart, Settings, Lock, Cloud, Code, FileText, MessageSquare, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, TrendingUp, Calendar, CheckSquare, Award, Rocket, Layers, BarChart3, Headphones, Smartphone, HardDrive, Printer, Router } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Wifi, Zap, Shield, Brain, Globe, Database, Target, Users, BarChart, Settings, Lock, Cloud, Code, FileText, MessageSquare, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, TrendingUp, Calendar, CheckSquare, Award, Rocket, Layers, BarChart3, Headphones, Smartphone, HardDrive, Printer, Router } from 'lucide-react';
 
-const AiAutonomousSystemsPage: React.FC = () => {
+const IotDevelopmentPage: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Self-Learning Systems',
-      description: 'AI systems that continuously learn and adapt without human intervention'
+      icon: Wifi,
+      title: 'IoT Device Integration',
+      description: 'Seamless connectivity and data collection from various IoT devices'
     },
     {
-      icon: Zap,
-      title: 'Real-Time Decision Making',
-      description: 'Instant autonomous decision making based on complex data analysis'
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud platforms for IoT data processing and storage'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Intelligent data analysis and predictive insights from IoT sensors'
     },
     {
       icon: Shield,
-      title: 'Safety & Compliance',
-      description: 'Built-in safety protocols and regulatory compliance for autonomous operations'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Domain Integration',
-      description: 'Seamless integration across different operational domains and environments'
+      title: 'Security & Compliance',
+      description: 'End-to-end security for IoT devices and data transmission'
     }
   ];
 
   const services = [
     {
-      icon: Rocket,
-      title: 'Autonomous Vehicle Systems',
-      description: 'Complete self-driving vehicle solutions with advanced AI and sensor fusion',
-      price: '$50,000/month',
-      marketPrice: '$80,000-150,000/month',
+      icon: Wifi,
+      title: 'Smart Home Solutions',
+      description: 'Complete smart home automation with AI-powered control and monitoring',
+      price: '$8,000/project',
+      marketPrice: '$15,000-30,000/project',
       features: [
-        'Computer vision and object detection',
-        'Path planning and navigation',
-        'Sensor fusion and data processing',
-        'Real-time decision making',
-        'Safety monitoring and control',
-        'Fleet management integration'
+        'Smart lighting and climate control',
+        'Security and surveillance systems',
+        'Energy monitoring and optimization',
+        'Voice control integration',
+        'Mobile app development',
+        'Predictive maintenance alerts'
       ],
       benefits: [
-        'Reduced transportation costs',
-        'Improved safety and reliability',
-        '24/7 autonomous operation',
-        'Optimized route planning'
+        'Enhanced comfort and convenience',
+        'Reduced energy consumption',
+        'Improved security and safety',
+        'Remote monitoring and control'
+      ],
+      category: 'Smart Home',
+      popular: true
+    },
+    {
+      icon: Factory,
+      title: 'Industrial IoT (IIoT)',
+      description: 'Smart manufacturing and industrial automation solutions',
+      price: '$25,000/project',
+      marketPrice: '$50,000-100,000/project',
+      features: [
+        'Equipment monitoring and maintenance',
+        'Production line optimization',
+        'Quality control automation',
+        'Predictive maintenance systems',
+        'Real-time data analytics',
+        'Integration with ERP systems'
+      ],
+      benefits: [
+        'Increased operational efficiency',
+        'Reduced downtime and maintenance costs',
+        'Improved product quality',
+        'Data-driven decision making'
+      ],
+      category: 'Industrial',
+      popular: true
+    },
+    {
+      icon: Heart,
+      title: 'Healthcare IoT',
+      description: 'Medical device integration and patient monitoring systems',
+      price: '$20,000/project',
+      marketPrice: '$40,000-80,000/project',
+      features: [
+        'Patient monitoring devices',
+        'Medical equipment integration',
+        'Health data analytics',
+        'Emergency alert systems',
+        'HIPAA-compliant data handling',
+        'Telemedicine platform integration'
+      ],
+      benefits: [
+        'Improved patient outcomes',
+        'Remote patient monitoring',
+        'Reduced healthcare costs',
+        'Enhanced care coordination'
+      ],
+      category: 'Healthcare',
+      popular: false
+    },
+    {
+      icon: Car,
+      title: 'Connected Vehicles',
+      description: 'Vehicle telematics and fleet management solutions',
+      price: '$15,000/project',
+      marketPrice: '$30,000-60,000/project',
+      features: [
+        'Vehicle tracking and monitoring',
+        'Driver behavior analysis',
+        'Fuel efficiency optimization',
+        'Maintenance scheduling',
+        'Route optimization',
+        'Fleet management dashboard'
+      ],
+      benefits: [
+        'Reduced fuel costs',
+        'Improved driver safety',
+        'Optimized fleet operations',
+        'Real-time vehicle diagnostics'
       ],
       category: 'Transportation',
       popular: true
     },
     {
-      icon: Package,
-      title: 'Autonomous Warehouse Systems',
-      description: 'Intelligent warehouse automation with robotic systems and AI optimization',
-      price: '$35,000/month',
-      marketPrice: '$60,000-120,000/month',
+      icon: Building,
+      title: 'Smart Building Management',
+      description: 'Intelligent building automation and energy management',
+      price: '$18,000/project',
+      marketPrice: '$35,000-70,000/project',
       features: [
-        'Robotic picking and sorting',
-        'Inventory management automation',
-        'Predictive maintenance',
-        'Dynamic space optimization',
-        'Quality control automation',
-        'Integration with WMS systems'
+        'HVAC and lighting control',
+        'Occupancy monitoring',
+        'Energy consumption tracking',
+        'Access control systems',
+        'Environmental monitoring',
+        'Maintenance automation'
       ],
       benefits: [
-        'Increased operational efficiency',
-        'Reduced labor costs',
-        'Improved accuracy and speed',
-        'Scalable automation solutions'
+        'Significant energy savings',
+        'Improved occupant comfort',
+        'Reduced operational costs',
+        'Sustainable building operations'
       ],
-      category: 'Logistics',
-      popular: true
-    },
-    {
-      icon: Monitor,
-      title: 'Autonomous Security Systems',
-      description: 'AI-powered security systems with autonomous threat detection and response',
-      price: '$25,000/month',
-      marketPrice: '$40,000-80,000/month',
-      features: [
-        'Intelligent video surveillance',
-        'Behavioral analysis and detection',
-        'Automated threat response',
-        'Access control integration',
-        'Real-time alerting system',
-        'Predictive security analytics'
-      ],
-      benefits: [
-        'Enhanced security coverage',
-        'Reduced false alarms',
-        'Proactive threat prevention',
-        '24/7 autonomous monitoring'
-      ],
-      category: 'Security',
+      category: 'Smart Buildings',
       popular: false
-    },
-    {
-      icon: Settings,
-      title: 'Autonomous Manufacturing',
-      description: 'Smart manufacturing systems with autonomous quality control and optimization',
-      price: '$40,000/month',
-      marketPrice: '$70,000-130,000/month',
-      features: [
-        'Predictive quality control',
-        'Autonomous process optimization',
-        'Real-time defect detection',
-        'Adaptive production planning',
-        'Energy efficiency optimization',
-        'Maintenance prediction'
-      ],
-      benefits: [
-        'Improved product quality',
-        'Reduced waste and defects',
-        'Optimized production efficiency',
-        'Lower operational costs'
-      ],
-      category: 'Manufacturing',
-      popular: true
     },
     {
       icon: Globe,
-      title: 'Autonomous Drone Systems',
-      description: 'Intelligent drone fleets for surveillance, delivery, and inspection operations',
-      price: '$30,000/month',
-      marketPrice: '$50,000-100,000/month',
+      title: 'Smart City Solutions',
+      description: 'Urban IoT infrastructure for smart city initiatives',
+      price: '$50,000/project',
+      marketPrice: '$100,000-200,000/project',
       features: [
-        'Autonomous flight planning',
-        'Obstacle avoidance and navigation',
-        'Payload management and delivery',
-        'Fleet coordination and control',
-        'Weather adaptation',
-        'Battery optimization'
+        'Traffic management systems',
+        'Environmental monitoring',
+        'Public safety solutions',
+        'Waste management optimization',
+        'Smart street lighting',
+        'Citizen engagement platforms'
       ],
       benefits: [
-        'Cost-effective aerial operations',
-        'Reduced human risk',
-        'Faster delivery times',
-        'Scalable drone operations'
+        'Improved urban efficiency',
+        'Enhanced citizen services',
+        'Reduced environmental impact',
+        'Data-driven city planning'
       ],
-      category: 'Aerial Systems',
+      category: 'Smart Cities',
       popular: false
-    },
-    {
-      icon: Heart,
-      title: 'Autonomous Healthcare Systems',
-      description: 'AI-powered healthcare automation for patient monitoring and care delivery',
-      price: '$45,000/month',
-      marketPrice: '$75,000-140,000/month',
-      features: [
-        'Patient monitoring automation',
-        'Medication management systems',
-        'Diagnostic assistance AI',
-        'Treatment optimization',
-        'Emergency response automation',
-        'Health data analysis'
-      ],
-      benefits: [
-        'Improved patient outcomes',
-        'Reduced medical errors',
-        '24/7 patient monitoring',
-        'Optimized treatment plans'
-      ],
-      category: 'Healthcare',
-      popular: true
     }
   ];
 
   const benefits = [
-    'Complete operational autonomy with minimal human intervention',
-    'Continuous learning and adaptation to changing conditions',
-    'Enhanced safety through AI-powered risk assessment',
-    'Significant cost reduction through automation',
-    '24/7 operation without fatigue or human limitations',
-    'Scalable solutions that grow with your business',
-    'Integration with existing systems and workflows',
-    'Real-time monitoring and performance optimization'
+    'Real-time data collection and analysis from connected devices',
+    'Automated processes and intelligent decision making',
+    'Reduced operational costs through predictive maintenance',
+    'Enhanced safety and security monitoring',
+    'Scalable cloud infrastructure for growing IoT networks',
+    'Integration with existing business systems and workflows',
+    'Comprehensive security and data privacy protection',
+    '24/7 monitoring and technical support'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Autonomous Systems Solutions | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary autonomous systems powered by AI for vehicles, manufacturing, security, and more. Self-operating solutions for the future." />
-        <meta name="keywords" content="autonomous systems, self-driving vehicles, autonomous manufacturing, AI automation, robotic systems, autonomous drones" />
+        <title>IoT Development Services | Zion Tech Group</title>
+        <meta name="description" content="Professional IoT development services for smart homes, industrial automation, healthcare, and smart cities. Connect and optimize your devices." />
+        <meta name="keywords" content="IoT development, smart home, industrial IoT, healthcare IoT, connected vehicles, smart buildings, IoT solutions" />
       </Helmet>
       
       {/* Hero Section */}
@@ -193,18 +193,18 @@ const AiAutonomousSystemsPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Autonomous Systems
+                IoT Development
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <span className="text-white">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future with self-operating systems powered by advanced AI. 
-              Our autonomous solutions deliver unprecedented efficiency, safety, and reliability.
+              Connect and optimize your world with our comprehensive IoT development services. 
+              From smart homes to industrial automation, we build intelligent connected solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Autonomous Consultation
+                Get IoT Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
@@ -220,10 +220,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Autonomous System Capabilities
+              IoT Development Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our autonomous systems are designed to operate independently while maintaining safety and efficiency.
+              Our IoT solutions connect devices, collect data, and provide intelligent insights for better decision making.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -245,10 +245,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Autonomous System Services
+              IoT Development Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive autonomous solutions across multiple industries and applications.
+              Comprehensive IoT solutions across multiple industries and use cases.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -306,10 +306,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Autonomous System Benefits
+              Why Choose Our IoT Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of autonomous systems for your business.
+              Partner with IoT experts who understand connectivity, data, and intelligent automation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -328,10 +328,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Go Autonomous?
+              Ready to Connect Your World?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our autonomous systems experts to discuss how self-operating solutions can transform your business.
+              Contact our IoT development experts to discuss your connected device requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -350,4 +350,4 @@ const AiAutonomousSystemsPage: React.FC = () => {
   );
 };
 
-export default AiAutonomousSystemsPage;
+export default IotDevelopmentPage;
