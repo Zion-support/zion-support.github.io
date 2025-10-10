@@ -1,9 +1,15 @@
 'use client'
 import React, { useState, useCallback } from 'react'
+<<<<<<< HEAD
 interface ImageProps {
 <<<<<<< HEAD
   src: string,
     alt: string
+=======
+interface ImageProps {}
+  src: string
+  alt: string
+>>>>>>> origin/merge-error-fixes
   width?: number
   height?: number
   className?: string
@@ -27,7 +33,11 @@ interface ImageProps {
   onError?: () => void;}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const Image: React.FC<ImageProps>= ({
+=======
+export const Image: React.FC<ImageProps> = ({}
+>>>>>>> origin/merge-error-fixes
   src,
 =======
 export const Image: React.FC<ImageProps> = ({,
@@ -47,31 +57,45 @@ export const Image: React.FC<ImageProps> = ({,
   onLoad,
   onError,
   ...props}
-}) => {
+}) => {}
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {
+  const handleLoad = useCallback(() => {}
     setIsLoaded(true)
     if (onLoad) onLoad();}
   }, [onLoad])
-  const handleError = useCallback(() => {
+  const handleError = useCallback(() => {}
     setHasError(true)
     if (onError) onError();}
   }, [onError])
+<<<<<<< HEAD
   const imageStyle: React.CSSProperties = {
     ...style;
     ...(fill && {
       position: 'absolute'
       top: 0;
       left: 0;
+=======
+  const imageStyle: React.CSSProperties = {}
+    ...style,
+    ...(fill && {}
+      position: 'absolute',
+      top: 0,
+      left: 0,
+>>>>>>> origin/merge-error-fixes
       width: '100%',
       height: '100%',
       objectFit: 'cover'}
     })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (hasError) {</ImageProps>
     return (</ImageProps>
+=======
+  if (hasError) {}
+    return (
+>>>>>>> origin/merge-error-fixes
       <div}
 =======
   if (hasError) {

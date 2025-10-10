@@ -3,7 +3,7 @@
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */
-export interface EnvConfig {
+export interface EnvConfig {}
   nodeEnv: 'development' | 'production' | 'test'
   apiUrl: string;
   apiKey?: string;
@@ -13,6 +13,7 @@ export interface EnvConfig {
   sentryDsn?: string;
   gaTrackingId?: string;}
 }
+<<<<<<< HEAD
 class EnvironmentConfig {
   private config: EnvConfig;
   private isInitialized = false;
@@ -23,6 +24,19 @@ class EnvironmentConfig {
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults;
     return {
+=======
+class EnvironmentConfig {}
+  private config: EnvConfig
+  private isInitialized = false
+  constructor() {}
+    this.config = this.loadConfig()
+    this.isInitialized = true;}
+  }
+  private loadConfig(): EnvConfig {}
+    // Safely access environment variables with defaults
+
+    return {}
+>>>>>>> origin/merge-error-fixes
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
@@ -43,30 +57,35 @@ class EnvironmentConfig {
   /**
    * Get a specific configuration value;
    */
+<<<<<<< HEAD
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
+=======
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
+>>>>>>> origin/merge-error-fixes
     return this.config[key];}
   }
   /**
    * Check if running in production;
    */
-  public isProduction(): boolean {
+  public isProduction(): boolean {}
     return this.config.nodeEnv === 'production';}
   }
   /**
    * Check if running in development;
    */
-  public isDevelopment(): boolean {
+  public isDevelopment(): boolean {}
     return this.config.nodeEnv === 'development';}
   }
   /**
    * Check if running in test mode;
    */
-  public isTest(): boolean {
+  public isTest(): boolean {}
     return this.config.nodeEnv === 'test';}
   }
   /**
    * Validate required environment variables;
    */
+<<<<<<< HEAD
   public validate(requiredVars: (keyof EnvConfig)[]): {,
     valid: boolean;
     missing: string[];}
@@ -79,14 +98,28 @@ class EnvironmentConfig {
     }
     return {
       valid: missing.length === 0;
+=======
+  public validate(requiredVars: (keyof EnvConfig)[]): {}
+    valid: boolean
+    missing: string[];}
+  } {}
+    const missing: string[] = []
+    for (const varName of requiredVars) {}
+      if (!this.config[varName]) {}
+        missing.push(varName);}
+      }
+    }
+    return {}
+      valid: missing.length === 0,
+>>>>>>> origin/merge-error-fixes
       missing}
     }
   }
   /**
    * Get API headers with authentication;
    */
-  public getApiHeaders(): Record<string, string> {
-    const headers: Record<string, string> = {
+  public getApiHeaders(): Record<string, string> {}
+    const headers: Record<string, string> = {}
       'Content-Type': 'application/json'}
     }
     if (this.config.apiKey) {}
@@ -97,9 +130,9 @@ class EnvironmentConfig {
   /**
    * Log configuration in development mode;
    */
-  public logConfig(): void {
+  public logConfig(): void {}
     if (this.isDevelopment()) {
-
+}
     }
   }
 }

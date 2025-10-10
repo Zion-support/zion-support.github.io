@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   Building2,
   Handshake,
   Users,
@@ -18,44 +18,44 @@ import {
   BarChart;
 } from 'lucide-react';
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = () => {}
   const partners = [
-    {
+    {}
       name: 'Microsoft',
       logo: '🏢',
       description: 'Strategic cloud and AI partnership',
       category: 'Technology',
       tier: 'Platinum',
     },
-    {
+    {}
       name: 'Amazon Web Services',
       logo: '☁️',
       description: 'Cloud infrastructure and AI services',
       category: 'Cloud',
       tier: 'Platinum',
     },
-    {
+    {}
       name: 'Google Cloud',
       logo: '🔍',
       description: 'AI and machine learning solutions',
       category: 'AI/ML',
       tier: 'Gold',
     },
-    {
+    {}
       name: 'IBM',
       logo: '💼',
       description: 'Enterprise AI and quantum computing',
       category: 'Enterprise',
       tier: 'Gold',
     },
-    {
+    {}
       name: 'NVIDIA',
       logo: '🎮',
       description: 'GPU acceleration and AI hardware',
       category: 'Hardware',
       tier: 'Silver',
     },
-    {
+    {}
       name: 'Salesforce',
       logo: '💼',
       description: 'CRM and business automation',
@@ -65,23 +65,43 @@ const PartnersPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     {
       icon: Handshake;
+=======
+    {}
+      icon: Handshake,
+>>>>>>> origin/merge-error-fixes
       title: 'Strategic Partnerships',
       description: 'Collaborate with industry leaders to deliver cutting-edge solutions',
     },
+<<<<<<< HEAD
     {
       icon: Globe;
+=======
+    {}
+      icon: Globe,
+>>>>>>> origin/merge-error-fixes
       title: 'Global Reach',
       description: 'Access to worldwide markets through our partner network',
     },
+<<<<<<< HEAD
     {
       icon: Award;
+=======
+    {}
+      icon: Award,
+>>>>>>> origin/merge-error-fixes
       title: 'Certified Solutions',
       description: 'Verified and certified integrations with top platforms',
     },
+<<<<<<< HEAD
     {
       icon: Users;
+=======
+    {}
+      icon: Users,
+>>>>>>> origin/merge-error-fixes
       title: 'Joint Innovation',
       description: 'Co-develop innovative solutions with our partners',
     }
@@ -146,7 +166,11 @@ const PartnersPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {partners.map((partner, index) => (</div>
+=======
+            {partners.map((partner, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div
                 key={index}
                 className="cyber-card p-8 hover:scale-105 transition-all duration-300 relative"
@@ -157,8 +181,13 @@ const PartnersPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{partner.name}</h3>
                   <p className="text-gray-300 mb-4">{partner.description}</p>
 
+<<<<<<< HEAD
                   <div className="flex items-center justify-center space-x-4 mb-4"></div>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+=======
+                  <div className="flex items-center justify-center space-x-4 mb-4">
+                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${}
+>>>>>>> origin/merge-error-fixes
                       partner.tier === 'Platinum' ? 'bg-yellow-500/20 text-yellow-400' :
                       partner.tier === 'Gold' ? 'bg-yellow-600/20 text-yellow-300' :}
                       'bg-gray-500/20 text-gray-300'}
@@ -190,10 +219,17 @@ const PartnersPage: React.FC = () => {
               Why partner with Zion Tech Group? Discover the advantages of joining our ecosystem;
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {benefits.map((benefit, index) => (
+=======
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
 =======

@@ -3,34 +3,58 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, BarChart, MessageSquare, CheckCircle, Target, Users, Shield } from 'lucide-react';
 
+<<<<<<< HEAD
 const AISentimentAnalyzer: React.FC = memo(() => {,
+=======
+const AISentimentAnalyzer: React.FC = memo(() => {}
+>>>>>>> origin/merge-error-fixes
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain;
+=======
+    {}
+      icon: Brain,
+>>>>>>> origin/merge-error-fixes
       title: 'Real-time Sentiment Analysis',
       description: 'Analyze customer sentiment across all channels in real-time with 95% accuracy',
       color: 'text-purple-400',
     },
+<<<<<<< HEAD
     {
       icon: BarChart;
+=======
+    {}
+      icon: BarChart,
+>>>>>>> origin/merge-error-fixes
       title: 'Advanced Analytics Dashboard',
       description: 'Comprehensive insights with trend analysis, emotion mapping, and predictive modeling',
       color: 'text-blue-400',
     },
+<<<<<<< HEAD
     {
       icon: MessageSquare;
+=======
+    {}
+      icon: MessageSquare,
+>>>>>>> origin/merge-error-fixes
       title: 'Multi-Channel Support',
       description: 'Monitor sentiment across social media, reviews, emails, and customer support tickets',
       color: 'text-green-400',
     },
+<<<<<<< HEAD
     {
       icon: Target;
+=======
+    {}
+      icon: Target,
+>>>>>>> origin/merge-error-fixes
       title: 'Custom AI Models',
       description: 'Train custom models for your industry with our advanced machine learning algorithms',
       color: 'text-orange-400',
@@ -38,7 +62,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: 'Starter',
       price: '$99',
       period: '/month',
@@ -55,8 +79,12 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
 =======
       popular: false;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
+=======
+    {}
+>>>>>>> origin/merge-error-fixes
       name: 'Professional',
       price: '$299',
       period: '/month',
@@ -74,9 +102,14 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
 =======
       popular: true;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Enterprise'
+=======
+    {}
+      name: 'Enterprise',
+>>>>>>> origin/merge-error-fixes
       price: '$999',
       period: '/month',
       description: 'For large organizations',
@@ -97,25 +130,25 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Customer Experience Optimization',
       description: 'Identify pain points and improve customer satisfaction by 40%',
       icon: Users;
       result: '+40% satisfaction',
     },
-    {
+    {}
       title: 'Brand Reputation Management',
       description: 'Monitor and protect your brand reputation across all platforms',
       icon: Shield;
       result: '99.9% uptime',
     },
-    {
+    {}
       title: 'Product Development Insights',
       description: 'Use customer feedback to guide product improvements and new features',
       icon: TrendingUp;
       result: '+60% engagement',
     },
-    {
+    {}
       title: 'Competitive Intelligence',
       description: 'Track competitor sentiment and market positioning',
       icon: Target;
@@ -229,8 +262,15 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
         {/* Features */}
         <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-start space-x-4">
 =======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
@@ -270,7 +310,13 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -312,10 +358,15 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -325,9 +376,21 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
+=======
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (}
+                    <li key={featureIndex} className="flex items-center space-x-3">
+>>>>>>> origin/merge-error-fixes
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -339,10 +402,17 @@ const AISentimentAnalyzer: React.FC = memo(() => {,
                 <a;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href="/contact"
+<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700',}
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'}
+=======
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+>>>>>>> origin/merge-error-fixes
                   }`}
 <<<<<<< HEAD
                 >Get Started</a>

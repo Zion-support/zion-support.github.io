@@ -200,11 +200,16 @@ const AIAutomationPage: React.FC = () => {
             <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
 =======
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
                 {stats.map((stat, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (}
+>>>>>>> origin/merge-error-fixes
                   <div key={index} className="text-center cyber-card p-6">
 =======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</section>
@@ -221,7 +226,15 @@ const AIAutomationPage: React.FC = () => {
             <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Advanced Automation Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+                Advanced Automation Features
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {features.map((feature, index) => (}
+>>>>>>> origin/merge-error-fixes
                   <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -244,6 +257,7 @@ const AIAutomationPage: React.FC = () => {
                         <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                         <p className="text-gray-300 mb-4">{feature.description}</p>
                         <ul className="space-y-2">
+<<<<<<< HEAD
                           {feature.benefits.map((benefit, benefitIndex) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
 =======
@@ -256,6 +270,9 @@ const AIAutomationPage: React.FC = () => {
                       <div></div>
                         <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+                          {feature.benefits.map((benefit, benefitIndex) => (}
+>>>>>>> origin/merge-error-fixes
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                             </CheckCircle>
@@ -272,6 +289,7 @@ const AIAutomationPage: React.FC = () => {
             <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Choose Your Plan<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
 =======
@@ -285,8 +303,15 @@ const AIAutomationPage: React.FC = () => {
               </h2>,
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
                 {pricingPlans.map((plan, index) => (
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+                Choose Your Plan
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
                   <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                    {plan.popular && (
+                    {plan.popular && (}
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                           Most Popular;
@@ -295,10 +320,24 @@ const AIAutomationPage: React.FC = () => {
                       </div>
                     )}
 
+<<<<<<< HEAD
                     <div className="text-center mb-8"></div>
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center"></div>
                         <span className="text-4xl font-bold text-cyan-400">{plan.price}</span><span className="text-gray-300 ml-1">{plan.period}</span><ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
+=======
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <p className="text-gray-300 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                        <span className="text-gray-300 ml-1">{plan.period}</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-4 mb-8">
+                      {plan.features.map((feature, featureIndex) => (}
+>>>>>>> origin/merge-error-fixes
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>
@@ -311,10 +350,17 @@ const AIAutomationPage: React.FC = () => {
                     <a;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       href="/contact"
+<<<<<<< HEAD
                       className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         plan.popular;
                           ? 'cyber-button'}
                           : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'}
+=======
+                      className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                        plan.popular
+                          ? 'cyber-button'
+                          : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+>>>>>>> origin/merge-error-fixes
                       }`}
 <<<<<<< HEAD
                     >Get Started</a>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Search, Filter, TrendingUp, Star, Eye, MessageCircle, BookOpen, Brain, Cloud, Shield, Code } from 'lucide-react';
 
-export default function BlogPage() {
+export default function BlogPage() {}
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -15,8 +15,13 @@ export default function BlogPage() {
     { name: 'technology', label: 'Technology', count: 3 }
   ];
 
+<<<<<<< HEAD
   const featuredPost = {
     id: 1;
+=======
+  const featuredPost = {}
+    id: 1,
+>>>>>>> origin/merge-error-fixes
     title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
     excerpt: 'Explore the latest trends in enterprise AI adoption, from quantum computing integration to autonomous systems, and discover how businesses are leveraging AI for competitive advantage.',
     author: 'Dr. Sarah Chen'
@@ -34,8 +39,13 @@ export default function BlogPage() {
   };
 
   const blogPosts = [
+<<<<<<< HEAD
     {
       id: 2;
+=======
+    {}
+      id: 2,
+>>>>>>> origin/merge-error-fixes
       title: 'Cloud Migration Best Practices: A Complete Guide',
       excerpt: 'Learn the essential steps and strategies for successful cloud migration, including planning, execution, and optimization techniques.',
       author: 'Michael Rodriguez'
@@ -50,6 +60,7 @@ export default function BlogPage() {
       likes: 67;
       comments: 15;
     },
+<<<<<<< HEAD
     {
       id: 3;
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions'
@@ -58,6 +69,16 @@ export default function BlogPage() {
       authorRole: 'Head of AI Research'
       authorImage: '/images/authors/emily-watson.webp'
       publishDate: '2024-01-10'
+=======
+    {}
+      id: 3,
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
+      excerpt: 'Discover how AI is both creating new security challenges and providing innovative solutions to protect enterprise data and systems.',
+      author: 'Dr. Emily Watson',
+      authorRole: 'Head of AI Research',
+      authorImage: '/images/authors/emily-watson.webp',
+      publishDate: '2024-01-10',
+>>>>>>> origin/merge-error-fixes
       readTime: '7 min read',
       category: 'security',
       image: '/images/blog/ai-cybersecurity.webp',
@@ -66,8 +87,13 @@ export default function BlogPage() {
       likes: 78;
       comments: 19;
     },
+<<<<<<< HEAD
     {
       id: 4;
+=======
+    {}
+      id: 4,
+>>>>>>> origin/merge-error-fixes
       title: 'Digital Transformation: How to Lead Change in Your Organization',
       excerpt: 'A comprehensive guide to leading successful digital transformation initiatives, from strategy development to implementation.',
       author: 'Kleber Santos'
@@ -82,6 +108,7 @@ export default function BlogPage() {
       likes: 72;
       comments: 21;
     },
+<<<<<<< HEAD
     {
       id: 5;
       title: 'The Rise of Edge Computing: Bringing AI Closer to Data'
@@ -90,6 +117,16 @@ export default function BlogPage() {
       authorRole: 'Head of Engineering'
       authorImage: '/images/authors/michael-rodriguez.webp'
       publishDate: '2024-01-05'
+=======
+    {}
+      id: 5,
+      title: 'The Rise of Edge Computing: Bringing AI Closer to Data',
+      excerpt: 'Explore how edge computing is revolutionizing AI deployment and enabling real-time processing at the network edge.',
+      author: 'Michael Rodriguez',
+      authorRole: 'Head of Engineering',
+      authorImage: '/images/authors/michael-rodriguez.webp',
+      publishDate: '2024-01-05',
+>>>>>>> origin/merge-error-fixes
       readTime: '5 min read',
       category: 'technology',
       image: '/images/blog/edge-computing.webp',
@@ -98,6 +135,7 @@ export default function BlogPage() {
       likes: 54;
       comments: 12;
     },
+<<<<<<< HEAD
     {
       id: 6;
       title: 'AI Ethics: Building Responsible AI Systems'
@@ -106,6 +144,16 @@ export default function BlogPage() {
       authorRole: 'Head of AI Research'
       authorImage: '/images/authors/sarah-chen.webp'
       publishDate: '2024-01-03'
+=======
+    {}
+      id: 6,
+      title: 'AI Ethics: Building Responsible AI Systems',
+      excerpt: 'Learn about the importance of AI ethics and how to implement responsible AI practices in your organization.',
+      author: 'Dr. Sarah Chen',
+      authorRole: 'Head of AI Research',
+      authorImage: '/images/authors/sarah-chen.webp',
+      publishDate: '2024-01-03',
+>>>>>>> origin/merge-error-fixes
       readTime: '6 min read',
       category: 'ai',
       image: '/images/blog/ai-ethics.webp',
@@ -116,12 +164,17 @@ export default function BlogPage() {
     }
   ];
 
+<<<<<<< HEAD
   const filteredPosts = blogPosts.filter(post => {)
+=======
+  const filteredPosts = blogPosts.filter(post => {)}
+>>>>>>> origin/merge-error-fixes
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     const icons = {
       ai: Brain;
@@ -129,12 +182,21 @@ export default function BlogPage() {
       security: Shield;
       business: TrendingUp;
       technology: Code;
+=======
+  const getCategoryIcon = (category: string) => {}
+    const icons = {}
+      ai: Brain,
+      cloud: Cloud,
+      security: Shield,
+      business: TrendingUp,
+      technology: Code
+>>>>>>> origin/merge-error-fixes
     };
     return icons[category as keyof typeof icons] || BookOpen;
   };
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
+  const getCategoryColor = (category: string) => {}
+    const colors = {}
       ai: 'text-purple-400',
       cloud: 'text-blue-400',
       security: 'text-red-400',
@@ -210,6 +272,7 @@ export default function BlogPage() {
                 /><div className="flex gap-2 overflow-x-auto">{categories.map((category) => (<button
 =======
                   onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors"
                 />,
               </div>,
@@ -226,6 +289,20 @@ export default function BlogPage() {
                       selectedCategory === category.name;
                         ? 'bg-cyan-500 text-white'}
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                />
+              </div>
+              <div className="flex gap-2 overflow-x-auto">
+                {categories.map((category) => (}
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                      selectedCategory === category.name
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                     }`}
                   ></button>
                     {category.label} ({category.count})</button>
@@ -288,7 +365,7 @@ export default function BlogPage() {
                   <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">{featuredPost.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{featuredPost.excerpt}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {featuredPost.tags.map((tag, index) => (
+                    {featuredPost.tags.map((tag, index) => (}
                       <span key={index} className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
                         {tag}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -369,12 +446,18 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-8">Latest Articles<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPosts.map((post) => (</div>
 =======
         <div className="container mx-auto px-4"></section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 className="text-2xl font-bold text-white mb-8">Latest Articles</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPosts.map((post) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+            <h2 className="text-2xl font-bold text-white mb-8">Latest Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (}
+>>>>>>> origin/merge-error-fixes
                 <article key={post.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300">
                   <div className="relative"></div>
                     <img
@@ -395,10 +478,25 @@ export default function BlogPage() {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="p-6"></div>
                     <div className="flex items-center space-x-2 mb-3"></div>
                       <span className="text-cyan-400 font-medium text-sm capitalize">{post.category}</span><span className="text-gray-400">•</span><span className="text-gray-400 text-sm">{post.readTime}</span><h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{post.title}</h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}</p><div className="flex flex-wrap gap-1 mb-4">{post.tags.slice(0, 3).map((tag, index) => (</div><span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tag}</span>
+=======
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="text-cyan-400 font-medium text-sm capitalize">{post.category}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-gray-400 text-sm">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{post.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {post.tags.slice(0, 3).map((tag, index) => (}
+                        <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
+                          {tag}
+>>>>>>> origin/merge-error-fixes
                         </span>
                       ))}
                     </div>

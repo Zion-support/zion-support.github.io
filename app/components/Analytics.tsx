@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Analytics: React.FC = () => {
   useEffect(() => {
     // Google Analytics 4 setup
@@ -148,6 +149,9 @@ declare global {
 export default Analytics;
 =======
 interface AnalyticsProps {
+=======
+interface AnalyticsProps {}
+>>>>>>> origin/merge-error-fixes
   enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
@@ -155,7 +159,11 @@ interface AnalyticsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps>= ({
+=======
+const Analytics: React.FC<AnalyticsProps> = ({}
+>>>>>>> origin/merge-error-fixes
   enableGoogleAnalytics = true,
 =======
 const Analytics: React.FC<AnalyticsProps> = ({,
@@ -163,28 +171,40 @@ const Analytics: React.FC<AnalyticsProps> = ({,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
+<<<<<<< HEAD
   enableUserBehaviorTracking = true;
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
+=======
+  enableUserBehaviorTracking = true
+}) => {}
+  useEffect(() => {}
+    if (enableGoogleAnalytics) {}
+>>>>>>> origin/merge-error-fixes
       initializeGoogleAnalytics();
     }
 
-    if (enablePerformanceMonitoring) {
+    if (enablePerformanceMonitoring) {}
       initializePerformanceMonitoring();
     }
 
-    if (enableErrorTracking) {
+    if (enableErrorTracking) {}
       initializeErrorTracking();
     }
 
-    if (enableUserBehaviorTracking) {
+    if (enableUserBehaviorTracking) {}
       initializeUserBehaviorTracking();
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
+<<<<<<< HEAD
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics;
+=======
+  const initializeGoogleAnalytics = () => {}
+    // Load Google Analytics
+>>>>>>> origin/merge-error-fixes
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
@@ -192,14 +212,22 @@ const Analytics: React.FC<AnalyticsProps> = ({,
 
     // Initialize gtag;
     (window as any).dataLayer = (window as any).dataLayer || [];
+<<<<<<< HEAD
     function gtag(...args: any[]) {,
+=======
+    function gtag(...args: any[]) {}
+>>>>>>> origin/merge-error-fixes
       (window as any).dataLayer.push(args);
     }
     (window as any).gtag = gtag;
 
     gtag('js', new Date());
 <<<<<<< HEAD
+<<<<<<< HEAD
     gtag('config', 'GA_MEASUREMENT_ID', {
+=======
+    gtag('config', 'GA_MEASUREMENT_ID', {)}
+>>>>>>> origin/merge-error-fixes
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
@@ -211,6 +239,7 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       send_page_view: true;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
   };
+<<<<<<< HEAD
 )
     const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
@@ -218,12 +247,21 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
+=======
+
+  const initializePerformanceMonitoring = () => {}
+    if ('PerformanceObserver' in window) {}
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {}
+        for (const entry of list.getEntries()) {}
+          if (entry.entryType === 'largest-contentful-paint') {}
+>>>>>>> origin/merge-error-fixes
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
-          } else if (entry.entryType === 'first-input') {
+          } else if (entry.entryType === 'first-input') {}
             const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
+          } else if (entry.entryType === 'layout-shift') {}
+            if (!(entry as any).hadRecentInput) {}
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
           }
@@ -231,21 +269,33 @@ const Analytics: React.FC<AnalyticsProps> = ({,
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
+<<<<<<< HEAD
       // Monitor page load time;
       window.addEventListener('load', () => {
+=======
+      // Monitor page load time
+      window.addEventListener('load', () => {}
+>>>>>>> origin/merge-error-fixes
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
+        if (navigation) {}
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
         }
       });
     }
   };
 
+<<<<<<< HEAD
   const initializeErrorTracking = () => {
     // Track JavaScript errors;
     window.addEventListener('error', (event) => {
 <<<<<<< HEAD
       trackEvent('error', 'javascript_error', {
+=======
+  const initializeErrorTracking = () => {}
+    // Track JavaScript errors
+    window.addEventListener('error', (event) => {}
+      trackEvent('error', 'javascript_error', {)}
+>>>>>>> origin/merge-error-fixes
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
@@ -254,19 +304,35 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       });
     });
 
+<<<<<<< HEAD
     // Track unhandled promise rejections)
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
+=======
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {}
+      trackEvent('error', 'unhandled_promise_rejection', {)}
+>>>>>>> origin/merge-error-fixes
         reason: event.reason,
         promise: event.promise
       });
     });
 
+<<<<<<< HEAD
     // Track resource loading errors)
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {)
     type: (event.target as any).tagName,
+=======
+
+    // Track resource loading errors
+    window.addEventListener('error', (event) => {}
+      if (event.target !== window) {}
+        trackEvent('error', 'resource_error', {)}
+          type: (event.target as any).tagName,
+>>>>>>> origin/merge-error-fixes
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
         });
@@ -294,10 +360,14 @@ const Analytics: React.FC<AnalyticsProps> = ({,
     }, true);
   };
 
+<<<<<<< HEAD
   const initializeUserBehaviorTracking = () => {
 <<<<<<< HEAD
+=======
+  const initializeUserBehaviorTracking = () => {}
+>>>>>>> origin/merge-error-fixes
     // Track page views
-    trackEvent('page_view', 'page_view', {
+    trackEvent('page_view', 'page_view', {)}
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
@@ -313,12 +383,16 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       page_path: window.location.pathname;
     // Track scroll depth;
     let maxScroll = 0;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     window.addEventListener('scroll', () => {
+=======
+    window.addEventListener('scroll', () => {}
+>>>>>>> origin/merge-error-fixes
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
+      if (scrollPercent > maxScroll) {}
         maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%}
           trackEvent('engagement', 'scroll_depth', maxScroll);
         }
       }
@@ -326,18 +400,24 @@ const Analytics: React.FC<AnalyticsProps> = ({,
 
     // Track time on page;
     const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {
+    window.addEventListener('beforeunload', () => {}
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       trackEvent('engagement', 'time_on_page', timeOnPage);
     });
 
+<<<<<<< HEAD
     // Track clicks on important elements;
     document.addEventListener('click', (event) => {
+=======
+    // Track clicks on important elements
+    document.addEventListener('click', (event) => {}
+>>>>>>> origin/merge-error-fixes
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
 
-      if (tagName === 'a') {
+      if (tagName === 'a') {}
         const href = (target as HTMLAnchorElement).href;
+<<<<<<< HEAD
 <<<<<<< HEAD
         trackEvent('engagement', 'link_click', {
 <<<<<<< HEAD
@@ -352,6 +432,15 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       } else if (tagName === 'button') {
         trackEvent('engagement', 'button_click', {)
     button_text: target.textContent?.trim(),
+=======
+        trackEvent('engagement', 'link_click', {)}
+          link_url: href,
+          link_text: target.textContent?.trim()
+
+      } else if (tagName === 'button') {}
+        trackEvent('engagement', 'button_click', {)}
+          button_text: target.textContent?.trim(),
+>>>>>>> origin/merge-error-fixes
           button_class: target.className
         });
 =======
@@ -367,11 +456,18 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       }
     });
 
+<<<<<<< HEAD
     // Track form submissions;
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
 <<<<<<< HEAD
       trackEvent('engagement', 'form_submit', {
+=======
+    // Track form submissions
+    document.addEventListener('submit', (event) => {}
+      const form = event.target as HTMLFormElement;
+      trackEvent('engagement', 'form_submit', {)}
+>>>>>>> origin/merge-error-fixes
         form_id: form.id,
         form_class: form.className,
         form_action: form.action
@@ -384,6 +480,7 @@ const Analytics: React.FC<AnalyticsProps> = ({,
         form_action: form.action;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
   };
+<<<<<<< HEAD
 )
     const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -391,6 +488,14 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       (window as any).gtag('event', action, {
         event_category: category,)
     event_label: typeof value === 'object' ? JSON.stringify(value) : value,
+=======
+
+  const trackEvent = (category: string, action: string, value?: any) => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', action, {)}
+        event_category: category,
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value,
+>>>>>>> origin/merge-error-fixes
         value: typeof value === 'number' ? value : undefined
       });
 =======

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
+import {}
   ArrowRight,
   CheckCircle,
   Star,
@@ -65,7 +65,7 @@ import {
   Clock3;
 } from 'lucide-react';
 
-export default function CaseStudiesPage() {
+export default function CaseStudiesPage() {}
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
 
@@ -87,9 +87,15 @@ export default function CaseStudiesPage() {
   ];
 
   const caseStudies = [
+<<<<<<< HEAD
     {
       id: 1;
       title: 'Healthcare AI Revolution: 90% Faster Diagnosis'
+=======
+    {}
+      id: 1,
+      title: 'Healthcare AI Revolution: 90% Faster Diagnosis',
+>>>>>>> origin/merge-error-fixes
       company: 'MedTech Solutions',
       industry: 'healthcare',
       service: 'ai-solutions',
@@ -105,20 +111,28 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['Machine Learning', 'Computer Vision', 'Cloud Computing', 'API Integration'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "Dr. Sarah Johnson",
         role: "Chief Medical Officer",
         avatar: "SJ",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '400%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '400%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         timesSaved: '2.5 days',
@@ -126,9 +140,15 @@ export default function CaseStudiesPage() {
         costReduction: '60%',
       }
     },
+<<<<<<< HEAD
     {
       id: 2;
       title: 'Financial Services: AI-Powered Fraud Detection'
+=======
+    {}
+      id: 2,
+      title: 'Financial Services: AI-Powered Fraud Detection',
+>>>>>>> origin/merge-error-fixes
       company: 'SecureBank International',
       industry: 'finance',
       service: 'ai-solutions',
@@ -144,20 +164,28 @@ export default function CaseStudiesPage() {
       duration: '4 months',
       teamSize: '8 experts',
       technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'API Integration'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "Michael Chen",
         role: "Chief Security Officer",
         avatar: "MC",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '500%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '500%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         accuracy: '99.8%',
@@ -165,10 +193,17 @@ export default function CaseStudiesPage() {
         lossesReduced: '50%',
       }
     },
+<<<<<<< HEAD
     {
       id: 3;
       title: 'Manufacturing: Smart Factory Transformation'
       company: 'Global Manufacturing Corp'
+=======
+    {}
+      id: 3,
+      title: 'Manufacturing: Smart Factory Transformation',
+      company: 'Global Manufacturing Corp',
+>>>>>>> origin/merge-error-fixes
       industry: 'manufacturing',
       service: 'it-services',
       challenge: 'Outdated manufacturing systems were causing 20% production delays and high maintenance costs.',
@@ -183,20 +218,28 @@ export default function CaseStudiesPage() {
       duration: '8 months',
       teamSize: '15 experts',
       technologies: ['IoT', 'AI Analytics', 'Cloud Computing', 'Automation'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "Emily Rodriguez",
         role: "Operations Director",
         avatar: "ER",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '350%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '350%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         efficiency: '30%',
@@ -204,6 +247,7 @@ export default function CaseStudiesPage() {
         quality: '99.5%',
       }
     },
+<<<<<<< HEAD
     {
       id: 4;
       title: 'Retail: AI-Powered Customer Experience'
@@ -211,6 +255,15 @@ export default function CaseStudiesPage() {
       industry: 'retail'
       service: 'ai-solutions'
       challenge: 'Poor customer experience was leading to 30% customer churn and declining sales.'
+=======
+    {}
+      id: 4,
+      title: 'Retail: AI-Powered Customer Experience',
+      company: 'RetailMax Stores',
+      industry: 'retail',
+      service: 'ai-solutions',
+      challenge: 'Poor customer experience was leading to 30% customer churn and declining sales.',
+>>>>>>> origin/merge-error-fixes
       solution: 'Implemented AI-powered personalization engine with recommendation systems and chatbot support.',
       results: [,
         '45% increase in customer engagement',
@@ -222,20 +275,28 @@ export default function CaseStudiesPage() {
       duration: '5 months',
       teamSize: '10 experts',
       technologies: ['Machine Learning', 'NLP', 'Recommendation Engine', 'Chatbot'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "David Kim",
         role: "Chief Marketing Officer",
         avatar: "DK",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '280%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '280%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         engagement: '45%',
@@ -243,9 +304,15 @@ export default function CaseStudiesPage() {
         orderValue: '25%',
       }
     },
+<<<<<<< HEAD
     {
       id: 5;
       title: 'Education: AI Learning Platform'
+=======
+    {}
+      id: 5,
+      title: 'Education: AI Learning Platform',
+>>>>>>> origin/merge-error-fixes
       company: 'EduTech University',
       industry: 'education',
       service: 'ai-solutions',
@@ -261,20 +328,28 @@ export default function CaseStudiesPage() {
       duration: '7 months',
       teamSize: '14 experts',
       technologies: ['Machine Learning', 'NLP', 'Adaptive Learning', 'Analytics'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "Professor Lisa Wang",
         role: "Dean of Technology",
         avatar: "LW",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '320%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '320%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         performance: '50%',
@@ -282,6 +357,7 @@ export default function CaseStudiesPage() {
         satisfaction: '85%',
       }
     },
+<<<<<<< HEAD
     {
       id: 6;
       title: 'Cloud Migration: Seamless Digital Transformation'
@@ -289,6 +365,15 @@ export default function CaseStudiesPage() {
       industry: 'technology'
       service: 'cloud-migration'
       challenge: 'Legacy on-premise systems were limiting scalability and increasing operational costs.'
+=======
+    {}
+      id: 6,
+      title: 'Cloud Migration: Seamless Digital Transformation',
+      company: 'TechStart Solutions',
+      industry: 'technology',
+      service: 'cloud-migration',
+      challenge: 'Legacy on-premise systems were limiting scalability and increasing operational costs.',
+>>>>>>> origin/merge-error-fixes
       solution: 'Complete cloud migration to AWS with microservices architecture and automated deployment pipelines.',
       results: [,
         '70% reduction in infrastructure costs',
@@ -300,20 +385,28 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+<<<<<<< HEAD
       testimonial: {,
 <<<<<<< HEAD
     quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
 =======
+=======
+      testimonial: {}
+>>>>>>> origin/merge-error-fixes
         quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         author: "Robert Johnson",
         role: "CTO",
         avatar: "RJ",
       },
+<<<<<<< HEAD
       metrics: {,
 <<<<<<< HEAD
     roi: '450%',
 =======
+=======
+      metrics: {}
+>>>>>>> origin/merge-error-fixes
         roi: '450%',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         costReduction: '70%',
@@ -323,6 +416,7 @@ export default function CaseStudiesPage() {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const filteredCaseStudies = caseStudies.filter(study => {
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
@@ -345,13 +439,34 @@ export default function CaseStudiesPage() {
       retail: ShoppingCart;
       education: GraduationCap;
       technology: Code;
+=======
+  const filteredCaseStudies = caseStudies.filter(study => {)}
+    const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
+    const serviceMatch = selectedService === 'all' || study.service === selectedService;
+    return industryMatch && serviceMatch;
+
+  const getIndustryIcon = (industry: string) => {}
+    const icons = {}
+      healthcare: Stethoscope,
+      finance: CreditCard,
+      manufacturing: Factory,
+      retail: ShoppingCart,
+      education: GraduationCap,
+      technology: Code
+>>>>>>> origin/merge-error-fixes
     };
     return icons[industry as keyof typeof icons] || Building;
   };
 
+<<<<<<< HEAD
   const getIndustryColor = (industry: string) => {
     const colors = {
       healthcare: 'text-green-400'
+=======
+  const getIndustryColor = (industry: string) => {}
+    const colors = {}
+      healthcare: 'text-green-400',
+>>>>>>> origin/merge-error-fixes
       finance: 'text-blue-400',
       manufacturing: 'text-orange-400',
       retail: 'text-purple-400',
@@ -426,6 +541,7 @@ export default function CaseStudiesPage() {
               <div className="flex gap-2 overflow-x-auto">{industries.map((industry) => (<button
 =======
               </div>
+<<<<<<< HEAD
               <div className="flex gap-2 overflow-x-auto">,
                 {industries.map((industry) => (,
                   <button;
@@ -439,6 +555,17 @@ export default function CaseStudiesPage() {
                       selectedIndustry === industry.name;
                         ? 'bg-cyan-500 text-white'}
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+              <div className="flex gap-2 overflow-x-auto">
+                {industries.map((industry) => (}
+                  <button
+                    key={industry.name}
+                    onClick={() => setSelectedIndustry(industry.name)}
+                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                      selectedIndustry === industry.name
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                     }`}
                   ></button>
                     {industry.label} ({industry.count})</button>
@@ -451,6 +578,7 @@ export default function CaseStudiesPage() {
               </div>
             </div>
             <div className="flex gap-2 overflow-x-auto">
+<<<<<<< HEAD
               {services.map((service) => (
                 <button;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -463,6 +591,16 @@ export default function CaseStudiesPage() {
                     selectedService === service.name;
                       ? 'bg-purple-500 text-white'}
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+              {services.map((service) => (}
+                <button
+                  key={service.name}
+                  onClick={() => setSelectedService(service.name)}
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                    selectedService === service.name
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                   }`}
                 ></button>
                   {service.label} ({service.count})</button>
@@ -479,6 +617,7 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <div className="container mx-auto px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -486,6 +625,12 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
                 <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group"></div>
                   <div className="relative"></div>
+=======
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredCaseStudies.map((study) => (}
+                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
+                  <div className="relative">
+>>>>>>> origin/merge-error-fixes
                     <img
                       src={study.image}
                       alt={study.title}
@@ -565,12 +710,18 @@ export default function CaseStudiesPage() {
 <<<<<<< HEAD
                     <div className="mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
 =======
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results: </h4>,
                       <div className="grid grid-cols-2 gap-2">,
                         {study.results.slice(0, 4).map((result, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {study.results.slice(0, 4).map((result, index) => (}
+>>>>>>> origin/merge-error-fixes
                           <div key={index} className="flex items-center text-sm text-gray-300">
 =======
                     <div className="mb-6"></div>
@@ -586,11 +737,17 @@ export default function CaseStudiesPage() {
 <<<<<<< HEAD
                     <div className="mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:<div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tech}</span>
 =======
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used: </h4>,
                       <div className="flex flex-wrap gap-2">,
                         {study.technologies.map((tech, index) => (
+=======
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {study.technologies.map((tech, index) => (}
+>>>>>>> origin/merge-error-fixes
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {tech}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796

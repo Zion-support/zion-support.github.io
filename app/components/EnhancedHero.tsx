@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 interface HeroStats {
   clients: number;,
     savings: string;
@@ -9,6 +10,16 @@ interface HeroStats {
 }
 
 const EnhancedHero: React.FC = () => {,
+=======
+interface HeroStats {}
+  clients: number;
+  savings: string;
+  uptime: string;
+  support: string;
+}
+
+const EnhancedHero: React.FC = () => {}
+>>>>>>> origin/merge-error-fixes
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -18,20 +29,28 @@ const EnhancedHero: React.FC = () => {,
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
   ];
 
-  useEffect(() => {
+  useEffect(() => {}
     setIsVisible(true);
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {}
       setCurrentStat((prev) => (prev + 1) % stats.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [stats.length]);
 
+<<<<<<< HEAD
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
 <<<<<<< HEAD
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',)
     event_label: 'main_phone_number',
+=======
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {)}
+        event_category: 'engagement',
+        event_label: 'main_phone_number',
+>>>>>>> origin/merge-error-fixes
 
 =======
       (window as any).gtag('event', 'phone_click', {)
@@ -41,14 +60,22 @@ const EnhancedHero: React.FC = () => {,
     }
   }, []);
 
-  const containerVariants = {
+  const containerVariants = {}
     hidden: { opacity: 0, y: 50 },
+<<<<<<< HEAD
 <<<<<<< HEAD
     visible: {,
     opacity: 1,
       y: 0,
       transition: {,
     duration: 0.8,
+=======
+    visible: {}
+      opacity: 1,
+      y: 0,
+      transition: {}
+        duration: 0.8,
+>>>>>>> origin/merge-error-fixes
         staggerChildren: 0.2
 =======
     visible: {
@@ -62,11 +89,16 @@ const EnhancedHero: React.FC = () => {,
     }
   };
 
-  const itemVariants = {
+  const itemVariants = {}
     hidden: { opacity: 0, y: 30 },
+<<<<<<< HEAD
     visible: {,
 <<<<<<< HEAD
     opacity: 1,
+=======
+    visible: {}
+      opacity: 1,
+>>>>>>> origin/merge-error-fixes
       y: 0,
 =======
       opacity: 1;
@@ -76,8 +108,9 @@ const EnhancedHero: React.FC = () => {,
     }
   };
 
-  const statVariants = {
+  const statVariants = {}
     hidden: { opacity: 0, scale: 0.8 },
+<<<<<<< HEAD
     visible: {,
 <<<<<<< HEAD
     opacity: 1,
@@ -86,6 +119,15 @@ const EnhancedHero: React.FC = () => {,
     },
     exit: {,
     opacity: 0,
+=======
+    visible: {}
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 }
+    },
+    exit: {}
+      opacity: 0,
+>>>>>>> origin/merge-error-fixes
       scale: 0.8,
 =======
       opacity: 1;
@@ -123,11 +165,12 @@ const EnhancedHero: React.FC = () => {,
         <motion.div;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
-          animate={{
+          animate={{}
             y: [0, -20, 0],
             x: [0, 10, 0],}
             scale: [1, 1.1, 1]}
           }}
+<<<<<<< HEAD
           transition={{
             duration: 4;
             repeat: Infinity;}
@@ -145,6 +188,25 @@ const EnhancedHero: React.FC = () => {,
             duration: 3),
             repeat: Infinity),}
             ease: "easeInOut"}
+=======
+          transition={{}
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"
+          animate={{}
+            y: [0, 20, 0],
+            x: [0, -10, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{}
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+>>>>>>> origin/merge-error-fixes
           }}
         />
       </div>

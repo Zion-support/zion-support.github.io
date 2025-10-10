@@ -3,34 +3,58 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, DollarSign, CheckCircle, Brain, AlertTriangle, Lock } from 'lucide-react';
 
+<<<<<<< HEAD
 const AICybersecurityMonitor: React.FC = memo(() => {,
+=======
+const AICybersecurityMonitor: React.FC = memo(() => {}
+>>>>>>> origin/merge-error-fixes
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
+<<<<<<< HEAD
     {
       icon: Shield;
+=======
+    {}
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       title: 'Real-time Threat Detection',
       description: 'AI-powered monitoring that detects and responds to threats in real-time with 99.9% accuracy',
       color: 'text-purple-400',
     },
+<<<<<<< HEAD
     {
       icon: Brain;
+=======
+    {}
+      icon: Brain,
+>>>>>>> origin/merge-error-fixes
       title: 'Machine Learning Analysis',
       description: 'Advanced ML algorithms learn from your environment to identify unusual patterns and behaviors',
       color: 'text-blue-400',
     },
+<<<<<<< HEAD
     {
       icon: AlertTriangle;
+=======
+    {}
+      icon: AlertTriangle,
+>>>>>>> origin/merge-error-fixes
       title: 'Automated Response',
       description: 'Automatically block threats, isolate compromised systems, and alert security teams',
       color: 'text-green-400',
     },
+<<<<<<< HEAD
     {
       icon: Lock;
+=======
+    {}
+      icon: Lock,
+>>>>>>> origin/merge-error-fixes
       title: 'Zero Trust Architecture',
       description: 'Implement zero trust security model with continuous verification and least privilege access',
       color: 'text-orange-400',
@@ -38,8 +62,13 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: 'Essential'
+=======
+    {}
+      name: 'Essential',
+>>>>>>> origin/merge-error-fixes
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses',
@@ -56,9 +85,14 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
 =======
       popular: false;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Professional'
+=======
+    {}
+      name: 'Professional',
+>>>>>>> origin/merge-error-fixes
       price: '$799',
       period: '/month',
       description: 'Ideal for growing companies',
@@ -76,8 +110,12 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
 =======
       popular: true;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
+=======
+    {}
+>>>>>>> origin/merge-error-fixes
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -100,25 +138,25 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Threat Prevention',
       description: 'Prevent cyber attacks before they happen with predictive threat analysis',
       icon: Shield;
       result: '99.9% prevention',
     },
-    {
+    {}
       title: 'Incident Response',
       description: 'Rapidly detect and respond to security incidents with automated workflows',
       icon: AlertTriangle;
       result: '90% faster',
     },
-    {
+    {}
       title: 'Compliance',
       description: 'Maintain compliance with GDPR, HIPAA, SOX, and other regulations',
       icon: Lock;
       result: '100% compliant',
     },
-    {
+    {}
       title: 'Cost Reduction',
       description: 'Reduce security costs while improving protection with AI automation',
       icon: DollarSign;
@@ -210,12 +248,17 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{securityMetrics.map((metric, index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20">
                 <div className={`text-3xl font-bold ${metric.color} mb-2`}>{metric.metric}<div className="text-white font-semibold mb-2">{metric.label}<div className="text-gray-400 text-sm">Industry-leading security performance</div>
 =======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {securityMetrics.map((metric, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {securityMetrics.map((metric, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20">
                 <div className={`text-3xl font-bold ${metric.color} mb-2`}>{metric.metric}</div>
                 <div className="text-white font-semibold mb-2">{metric.label}</div>
@@ -235,8 +278,15 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-start space-x-4">
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2>
@@ -267,8 +317,15 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
               </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (}
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-red-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
@@ -309,10 +366,15 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -322,9 +384,21 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
+=======
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (}
+                    <li key={featureIndex} className="flex items-center space-x-3">
+>>>>>>> origin/merge-error-fixes
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -336,10 +410,17 @@ const AICybersecurityMonitor: React.FC = memo(() => {,
                 <a;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href="/contact"
+<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700',}
                       : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'}
+=======
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
+                      : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
+>>>>>>> origin/merge-error-fixes
                   }`}
 <<<<<<< HEAD
                 >Get Protected</a>

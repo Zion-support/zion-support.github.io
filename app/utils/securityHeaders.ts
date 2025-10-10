@@ -2,6 +2,7 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
+<<<<<<< HEAD
 export interface SecurityHeadersConfig {
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
@@ -13,6 +14,19 @@ export interface SecurityHeadersConfig {
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
   contentSecurityPolicy: [,
+=======
+export interface SecurityHeadersConfig {}
+  contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
+  referrerPolicy?: string
+  permissionsPolicy?: string;}
+}
+export const defaultSecurityHeaders: SecurityHeadersConfig = {}
+  // Content Security Policy
+  contentSecurityPolicy: [
+>>>>>>> origin/merge-error-fixes
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",
@@ -48,29 +62,34 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
 /**
  * Get security headers as key-value pairs;
  */
+<<<<<<< HEAD
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
+=======
+export function getSecurityHeaders()
+  customConfig?: Partial<SecurityHeadersConfig>
+>>>>>>> origin/merge-error-fixes
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {
+  const headers: Record<string, string> = {}
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
-  if (config.contentSecurityPolicy) {
+  if (config.contentSecurityPolicy) {}
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
   }
-  if (config.strictTransportSecurity) {
+  if (config.strictTransportSecurity) {}
     headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
   }
-  if (config.xFrameOptions) {
+  if (config.xFrameOptions) {}
     headers['X-Frame-Options'] = config.xFrameOptions;}
   }
-  if (config.xContentTypeOptions) {
+  if (config.xContentTypeOptions) {}
     headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
   }
-  if (config.referrerPolicy) {
+  if (config.referrerPolicy) {}
     headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-  if (config.permissionsPolicy) {
+  if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
   }
   return headers;
@@ -78,10 +97,16 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 /**
  * Get security headers in Next.js format;
  */
+<<<<<<< HEAD
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
+=======
+export function getNextSecurityHeaders()
+  customConfig?: Partial<SecurityHeadersConfig>
+): Array<{ key: string; value: string }> {}
+>>>>>>> origin/merge-error-fixes
   const headers = getSecurityHeaders(customConfig)
-  return Object.entries(headers).map(([key, value]) => ({
+  return Object.entries(headers).map(([key, value]) => ({}
     key,
     value}
   }))

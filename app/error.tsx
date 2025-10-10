@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 export default function Error({)
   error)
   reset)
@@ -9,6 +10,17 @@ export default function Error({)
 }) {
   useEffect(() => {
     // Log the error to an error reporting service;
+=======
+export default function Error({)}
+  error,
+  reset,
+}: {}
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {}
+  useEffect(() => {}
+    // Log the error to an error reporting service
+>>>>>>> origin/merge-error-fixes
     // }, [error]);
 
 <<<<<<< HEAD

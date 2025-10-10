@@ -49,10 +49,11 @@ const ITServicesPage: React.FC = () => {
 =======
 import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
 
-export default function ITServicesPage() {
+export default function ITServicesPage() {}
   const [activeTab, setActiveTab] = useState('overview');
 
   const itServices = [
+<<<<<<< HEAD
     {
       category: 'Cloud Infrastructure & Migration'
       icon: Cloud;
@@ -60,6 +61,15 @@ export default function ITServicesPage() {
       bgColor: 'bg-blue-500/10'
       services: [,
         {,
+=======
+    {}
+      category: 'Cloud Infrastructure & Migration',
+      icon: Cloud,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Cloud Migration & Setup',
           description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized performance',
           features: ['Multi-cloud Strategy', 'Hybrid Cloud Solutions', 'Cost Optimization', 'Security Implementation', 'Performance Tuning'],
@@ -69,7 +79,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/cloud-migration',
           popular: true;
         },
-        {
+        {}
           name: 'IT Infrastructure Design',
           description: 'Scalable and secure infrastructure architecture tailored to your business needs',
           features: ['Network Design', 'Server Configuration', 'Load Balancing', 'Disaster Recovery', 'Scalability Planning'],
@@ -79,7 +89,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/it-infrastructure',
           popular: true;
         },
-        {
+        {}
           name: 'Database Management & Optimization',
           description: 'Comprehensive database administration with performance tuning and security hardening',
           features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Monitoring', 'Scalability'],
@@ -89,7 +99,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/database-management',
           popular: false;
         },
-        {
+        {}
           name: 'Cloud Cost Optimization',
           description: 'Reduce cloud costs by up to 40% with intelligent resource management and optimization',
           features: ['Cost Analysis', 'Resource Optimization', 'Auto-scaling', 'Reserved Instances', 'Cost Monitoring'],
@@ -106,6 +116,7 @@ export default function ITServicesPage() {
         }
       ]
     },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
       category: 'Cybersecurity & Compliance'
@@ -181,13 +192,20 @@ export default function ITServicesPage() {
           quote: 'Our security posture improved dramatically with their solutions.',
           rating: 5
 =======
+=======
+    {}
+>>>>>>> origin/merge-error-fixes
       category: 'Cybersecurity & Compliance',
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
+<<<<<<< HEAD
         {,
+=======
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Enterprise Cybersecurity Suite',
           description: 'Comprehensive security solutions with 24/7 monitoring and threat detection',
           features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing'],
@@ -197,7 +215,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/cybersecurity',
           popular: true;
         },
-        {
+        {}
           name: 'Compliance Management Platform',
           description: 'Ensure compliance with GDPR, HIPAA, SOX, and other industry regulations',
           features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support', 'Policy Management'],
@@ -207,7 +225,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/compliance-management',
           popular: true;
         },
-        {
+        {}
           name: 'Security Awareness Training',
           description: 'Comprehensive employee security training with phishing simulation and assessment',
           features: ['Phishing Simulation', 'Security Workshops', 'Policy Development', 'Assessment', 'Certification'],
@@ -217,7 +235,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/security-training',
           popular: false;
         },
-        {
+        {}
           name: 'Zero Trust Security Architecture',
           description: 'Implement zero trust security model with identity verification and micro-segmentation',
           features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring'],
@@ -234,6 +252,7 @@ export default function ITServicesPage() {
         }
       ]
     },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
       category: 'IT Support & Management'
@@ -309,13 +328,20 @@ export default function ITServicesPage() {
           quote: 'Seamless integration saved us 20 hours per week.',
           rating: 5
 =======
+=======
+    {}
+>>>>>>> origin/merge-error-fixes
       category: 'IT Support & Management',
       icon: Settings,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
+<<<<<<< HEAD
         {,
+=======
+        {}
+>>>>>>> origin/merge-error-fixes
           name: '24/7 IT Support & Monitoring',
           description: 'Round-the-clock technical support with proactive monitoring and maintenance',
           features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'Emergency Response', 'SLA Guarantee'],
@@ -325,7 +351,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/it-support',
           popular: true;
         },
-        {
+        {}
           name: 'System Administration Services',
           description: 'Complete system administration with user management and performance optimization',
           features: ['User Management', 'System Updates', 'Performance Monitoring', 'Backup Management', 'Patch Management'],
@@ -335,7 +361,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/system-administration',
           popular: true;
         },
-        {
+        {}
           name: 'IT Strategic Consulting',
           description: 'Strategic IT planning and technology consulting for digital transformation',
           features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Budget Planning', 'Digital Transformation'],
@@ -345,7 +371,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/it-consulting',
           popular: false;
         },
-        {
+        {}
           name: 'IT Asset Management',
           description: 'Comprehensive IT asset lifecycle management with tracking and optimization',
           features: ['Asset Tracking', 'Lifecycle Management', 'License Management', 'Cost Optimization', 'Disposal Services'],
@@ -362,6 +388,7 @@ export default function ITServicesPage() {
         }
       ]
     },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
       category: 'Software Development & Integration'
@@ -402,13 +429,20 @@ export default function ITServicesPage() {
           quote: 'Network security incidents dropped to zero after implementation.',
           rating: 5
 =======
+=======
+    {}
+>>>>>>> origin/merge-error-fixes
       category: 'Software Development & Integration',
       icon: Code,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
+<<<<<<< HEAD
         {,
+=======
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Custom Software Development',
           description: 'Tailored software solutions built with modern technologies and best practices',
           features: ['Web Applications', 'Mobile Apps', 'API Development', 'Integration Services', 'Quality Assurance'],
@@ -418,7 +452,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/custom-development',
           popular: true;
         },
-        {
+        {}
           name: 'System Integration & APIs',
           description: 'Connect and integrate disparate systems with robust API development and management',
           features: ['API Integration', 'Data Migration', 'Workflow Automation', 'Legacy System Modernization', 'API Management'],
@@ -428,7 +462,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/system-integration',
           popular: true;
         },
-        {
+        {}
           name: 'DevOps & CI/CD Implementation',
           description: 'Streamline development and deployment with automated testing and continuous integration',
           features: ['Automated Testing', 'Continuous Integration', 'Deployment Automation', 'Monitoring', 'Infrastructure as Code'],
@@ -438,7 +472,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/devops-cicd',
           popular: true;
         },
-        {
+        {}
           name: 'Legacy System Modernization',
           description: 'Modernize legacy systems with cloud migration and technology updates',
           features: ['Legacy Assessment', 'Cloud Migration', 'Technology Updates', 'Data Migration', 'User Training'],
@@ -450,6 +484,7 @@ export default function ITServicesPage() {
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Network & Infrastructure'
       icon: Wifi;
@@ -457,6 +492,15 @@ export default function ITServicesPage() {
       bgColor: 'bg-orange-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'Network & Infrastructure',
+      icon: Wifi,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Network Design & Implementation',
           description: 'Secure and scalable network infrastructure with wireless and wired solutions',
           features: ['Network Design', 'Wireless Solutions', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
@@ -466,7 +510,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/network-design',
           popular: true;
         },
-        {
+        {}
           name: 'Disaster Recovery & Backup',
           description: 'Comprehensive disaster recovery solutions with automated backup and recovery testing',
           features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Testing', 'Documentation'],
@@ -476,7 +520,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/disaster-recovery',
           popular: false;
         },
-        {
+        {}
           name: 'IT Performance Monitoring',
           description: 'Real-time monitoring and alerting for IT infrastructure and applications',
           features: ['Real-time Monitoring', 'Performance Metrics', 'Alerting', 'Reporting', 'Capacity Planning'],
@@ -486,7 +530,7 @@ export default function ITServicesPage() {
           link: 'https://ziontechgroup.com/performance-monitoring',
           popular: false;
         },
-        {
+        {}
 name: 'AI-Powered Infrastructure Management',
           description: 'Intelligent infrastructure management with AI-driven optimization and predictive maintenance',
           features: ['AI Optimization', 'Predictive Maintenance', 'Automated Scaling', 'Performance Tuning', 'Cost Optimization'],
@@ -496,7 +540,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-infrastructure',
           popular: true;
         },
-        {
+        {}
           name: 'Quantum-Safe Security Implementation',
           description: 'Next-generation security solutions resistant to quantum computing threats',
           features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance'],
@@ -506,7 +550,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/quantum-security',
           popular: false;
         },
-        {
+        {}
           name: 'Edge Computing Infrastructure',
           description: 'Distributed computing infrastructure for IoT and real-time applications',
           features: ['Edge Nodes', 'Real-time Processing', 'Low Latency', 'IoT Integration', 'Distributed Analytics'],
@@ -518,6 +562,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'AI-Powered IT Solutions'
       icon: Brain;
@@ -525,6 +570,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-purple-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'AI Infrastructure Monitoring Pro',
           description: 'Advanced AI-powered infrastructure monitoring with predictive analytics and automated issue resolution',
           features: ['Predictive Analytics', 'Automated Issue Resolution', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
@@ -534,7 +588,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-infrastructure-monitoring',
           popular: true;
         },
-        {
+        {}
           name: 'AI Security Operations Center',
           description: 'Intelligent security operations with AI-powered threat detection, response, and prevention',
           features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence', 'Incident Response', 'Compliance Monitoring'],
@@ -544,7 +598,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-security-operations',
           popular: true;
         },
-        {
+        {}
           name: 'AI Cloud Cost Optimization',
           description: 'Intelligent cloud cost optimization with AI-driven resource management and cost prediction',
           features: ['Cost Prediction', 'Resource Optimization', 'Auto-scaling', 'Reserved Instance Management', 'Cost Allocation', 'Budget Alerts'],
@@ -554,7 +608,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-cloud-optimization',
           popular: true;
         },
-        {
+        {}
           name: 'AI Data Center Management',
           description: 'Smart data center management with AI-powered optimization, monitoring, and automation',
           features: ['Smart Monitoring', 'Predictive Maintenance', 'Energy Optimization', 'Capacity Planning', 'Automated Operations', 'Performance Analytics'],
@@ -566,6 +620,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Blockchain & Web3 Solutions'
       icon: Shield;
@@ -573,6 +628,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-green-500/10'
       services: [,
         {,
+=======
+    {}
+      category: 'Blockchain & Web3 Solutions',
+      icon: Shield,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Blockchain Integration Services Pro',
           description: 'Comprehensive blockchain integration with smart contracts, DeFi, and Web3 solutions',
           features: ['Smart Contract Development', 'DeFi Integration', 'NFT Solutions', 'Cross-chain Interoperability', 'Web3 Development', 'Token Economics'],
@@ -582,7 +646,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/blockchain-integration-services',
           popular: true;
         },
-        {
+        {}
           name: 'Smart Contract Security Audit Pro',
           description: 'Advanced smart contract security auditing with AI-powered vulnerability detection',
           features: ['AI Vulnerability Detection', 'Code Review', 'Security Testing', 'Gas Optimization', 'Compliance Check', 'Audit Reports'],
@@ -592,7 +656,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/smart-contract-security-audit',
           popular: true;
         },
-        {
+        {}
           name: 'Decentralized Infrastructure',
           description: 'Decentralized infrastructure solutions with distributed computing and storage',
           features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2P Networks', 'Consensus Mechanisms', 'Token Incentives'],
@@ -604,6 +668,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Advanced Analytics & BI'
       icon: BarChart;
@@ -611,6 +676,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-blue-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'Advanced Analytics & BI',
+      icon: BarChart,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'AI Business Intelligence Pro',
           description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
           features: ['Predictive Analytics', 'Automated Insights', 'Natural Language Queries', 'Real-time Dashboards', 'Data Visualization', 'Machine Learning'],
@@ -620,7 +694,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-business-intelligence',
           popular: true;
         },
-        {
+        {}
           name: 'Data Lake & Warehouse Solutions',
           description: 'Comprehensive data lake and warehouse solutions with AI-powered data processing',
           features: ['Data Lake Architecture', 'ETL/ELT Pipelines', 'Data Quality Management', 'Real-time Processing', 'Data Governance', 'AI Data Processing'],
@@ -630,7 +704,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/data-lake-warehouse',
           popular: true;
         },
-        {
+        {}
           name: 'Real-time Analytics Platform',
           description: 'Real-time analytics platform with streaming data processing and instant insights',
           features: ['Streaming Analytics', 'Real-time Processing', 'Event-driven Architecture', 'Instant Insights', 'Scalable Processing', 'Data Integration'],
@@ -642,6 +716,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'IoT & Edge Computing'
       icon: Cpu;
@@ -649,6 +724,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-orange-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'IoT & Edge Computing',
+      icon: Cpu,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'IoT Platform Development',
           description: 'Comprehensive IoT platform development with device management and data analytics',
           features: ['Device Management', 'Data Analytics', 'Edge Computing', 'Protocol Support', 'Security', 'Scalability'],
@@ -658,7 +742,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/iot-platform-development',
           popular: true;
         },
-        {
+        {}
           name: 'Edge Computing Solutions',
           description: 'Edge computing solutions with real-time processing and low-latency applications',
           features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5G Integration'],
@@ -668,7 +752,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/edge-computing-solutions',
           popular: true;
         },
-        {
+        {}
           name: 'Smart City Solutions',
           description: 'Comprehensive smart city solutions with IoT integration and data analytics',
           features: ['Smart Infrastructure', 'Data Analytics', 'Citizen Services', 'Traffic Management', 'Energy Management', 'Public Safety'],
@@ -680,6 +764,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Advanced AI-Powered IT Solutions'
       icon: Brain;
@@ -687,6 +772,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-purple-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'Advanced AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'AI Quantum Security Implementation',
           description: 'Next-generation quantum-resistant security solutions for future-proof cybersecurity',
           features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance', 'Quantum Key Distribution'],
@@ -696,7 +790,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-quantum-security',
           popular: true;
         },
-        {
+        {}
           name: 'AI Neural Network Infrastructure',
           description: 'Advanced neural network infrastructure for AI model training and deployment',
           features: ['Neural Network Training', 'Model Deployment', 'GPU Clusters', 'Distributed Computing', 'Auto-scaling', 'Performance Optimization'],
@@ -706,7 +800,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-neural-infrastructure',
           popular: true;
         },
-        {
+        {}
           name: 'AI Edge Computing Platform',
           description: 'Intelligent edge computing platform with AI-powered decision making at the edge',
           features: ['Edge AI Processing', 'Real-time Decision Making', 'Low Latency', 'Distributed Intelligence', 'Edge Analytics', 'Autonomous Operations'],
@@ -716,7 +810,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ai-edge-computing-platform',
           popular: true;
         },
-        {
+        {}
           name: 'AI Quantum Computing Infrastructure',
           description: 'Quantum computing infrastructure for complex problem solving and optimization',
           features: ['Quantum Processors', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Simulation', 'Optimization Problems', 'Cryptographic Security'],
@@ -728,6 +822,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Specialized Industry IT Solutions'
       icon: Building;
@@ -735,6 +830,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-blue-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'Specialized Industry IT Solutions',
+      icon: Building,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: 'Healthcare IT Solutions Pro',
           description: 'HIPAA-compliant healthcare IT solutions with AI-powered patient care and medical data management',
           features: ['HIPAA Compliance', 'Electronic Health Records', 'Medical Imaging AI', 'Patient Monitoring', 'Telemedicine Platform', 'Medical Data Security'],
@@ -744,7 +848,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/healthcare-it-solutions-pro',
           popular: true;
         },
-        {
+        {}
           name: 'Financial Services IT Pro',
           description: 'SOX-compliant financial IT solutions with AI-powered fraud detection and risk management',
           features: ['SOX Compliance', 'Fraud Detection AI', 'Risk Management', 'Financial Data Security', 'Regulatory Reporting', 'Transaction Monitoring'],
@@ -754,7 +858,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/financial-it-solutions-pro',
           popular: true;
         },
-        {
+        {}
           name: 'Manufacturing IT Solutions Pro',
           description: 'Industrial IT solutions with AI-powered manufacturing optimization and predictive maintenance',
           features: ['Industrial IoT', 'Predictive Maintenance', 'Quality Control AI', 'Supply Chain Integration', 'Manufacturing Analytics', 'Safety Monitoring'],
@@ -764,7 +868,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/manufacturing-it-solutions-pro',
           popular: true;
         },
-        {
+        {}
           name: 'Retail IT Solutions Pro',
           description: 'E-commerce and retail IT solutions with AI-powered customer experience and inventory management',
           features: ['E-commerce Platform', 'Customer Analytics', 'Inventory AI', 'Personalization Engine', 'Payment Processing', 'Omnichannel Integration'],
@@ -776,6 +880,7 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
+<<<<<<< HEAD
     {
       category: 'Emerging Technology Solutions'
       icon: Rocket;
@@ -783,6 +888,15 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-pink-500/10'
       services: [
         {,
+=======
+    {}
+      category: 'Emerging Technology Solutions',
+      icon: Rocket,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      services: [
+        {}
+>>>>>>> origin/merge-error-fixes
           name: '5G Network Implementation Pro',
           description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
           features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
@@ -792,7 +906,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/5g-implementation-pro',
           popular: false;
         },
-        {
+        {}
           name: 'AR/VR Infrastructure Pro',
           description: 'Immersive technology infrastructure for augmented and virtual reality applications',
           features: ['AR/VR Hardware', 'Spatial Computing', 'Haptic Feedback', 'Motion Tracking', 'Content Management', 'User Analytics'],
@@ -802,7 +916,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/ar-vr-infrastructure-pro',
           popular: true;
         },
-        {
+        {}
           name: 'Digital Twin Platform Pro',
           description: 'Digital twin technology for real-time monitoring and simulation of physical assets',
           features: ['Real-time Monitoring', 'Predictive Simulation', 'Asset Management', 'Performance Analytics', 'Maintenance Optimization', 'Virtual Testing'],
@@ -812,7 +926,7 @@ name: 'AI-Powered Infrastructure Management',
           link: 'https://ziontechgroup.com/digital-twin-platform-pro',
           popular: true;
         },
-        {
+        {}
           name: 'Metaverse Infrastructure Pro',
           description: 'Infrastructure for metaverse applications with AI-powered virtual worlds and social interaction',
           features: ['Virtual Worlds', 'Avatar Technology', 'Social Interaction', 'Virtual Economy', 'Content Creation', 'User Management'],
@@ -870,26 +984,46 @@ name: 'AI-Powered Infrastructure Management',
       services: ['Fleet management', 'Route optimization', 'Tracking systems', 'Compliance monitoring']
 =======
   const benefits = [
+<<<<<<< HEAD
     {
       icon: TrendingUp;
+=======
+    {}
+      icon: TrendingUp,
+>>>>>>> origin/merge-error-fixes
       title: 'Proven Results',
       description: 'Our clients see 40% improvement in system performance',
       stat: '40%',
     },
+<<<<<<< HEAD
     {
       icon: Clock;
+=======
+    {}
+      icon: Clock,
+>>>>>>> origin/merge-error-fixes
       title: 'Rapid Response',
       description: 'Average response time of 15 minutes for critical issues',
       stat: '15 min',
     },
+<<<<<<< HEAD
     {
       icon: DollarSign;
+=======
+    {}
+      icon: DollarSign,
+>>>>>>> origin/merge-error-fixes
       title: 'Cost Savings',
       description: 'Reduce IT costs by up to 60% through optimization',
       stat: '60%',
     },
+<<<<<<< HEAD
     {
       icon: Shield;
+=======
+    {}
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       title: 'Security First',
       description: 'Zero security breaches with our comprehensive approach',
       stat: '100%',
@@ -897,22 +1031,22 @@ name: 'AI-Powered Infrastructure Management',
   ];
 
   const technologies = [
-    {
+    {}
       category: 'Cloud Platforms',
       icon: Cloud;
       techs: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud']
     },
-    {
+    {}
       category: 'Security Tools',
       icon: Shield;
       techs: ['CrowdStrike', 'Palo Alto', 'Cisco', 'Fortinet', 'Splunk']
     },
-    {
+    {}
       category: 'Databases',
       icon: Database;
       techs: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
-    {
+    {}
       category: 'Monitoring',
       icon: BarChart;
       techs: ['Datadog', 'New Relic', 'Prometheus', 'Grafana', 'Zabbix']
@@ -920,32 +1054,57 @@ name: 'AI-Powered Infrastructure Management',
   ];
 
   const process = [
+<<<<<<< HEAD
     {
       step: 1;
+=======
+    {}
+      step: 1,
+>>>>>>> origin/merge-error-fixes
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current IT infrastructure and needs',
       duration: '1-2 weeks',
     },
+<<<<<<< HEAD
     {
       step: 2;
+=======
+    {}
+      step: 2,
+>>>>>>> origin/merge-error-fixes
       title: 'Strategy Development',
       description: 'Create a detailed IT strategy aligned with your business goals',
       duration: '1-2 weeks',
     },
+<<<<<<< HEAD
     {
       step: 3;
+=======
+    {}
+      step: 3,
+>>>>>>> origin/merge-error-fixes
       title: 'Implementation',
       description: 'Deploy solutions with minimal disruption to your operations',
       duration: '2-8 weeks',
     },
+<<<<<<< HEAD
     {
       step: 4;
+=======
+    {}
+      step: 4,
+>>>>>>> origin/merge-error-fixes
       title: 'Testing & Optimization',
       description: 'Thorough testing and performance optimization',
       duration: '1-2 weeks',
     },
+<<<<<<< HEAD
     {
       step: 5;
+=======
+    {}
+      step: 5,
+>>>>>>> origin/merge-error-fixes
       title: 'Support & Monitoring',
       description: 'Ongoing support, monitoring, and continuous improvement',
       duration: 'Ongoing',
@@ -953,7 +1112,7 @@ name: 'AI-Powered Infrastructure Management',
   ];
 
   const caseStudies = [
-    {
+    {}
       company: 'ManufacturingCorp',
       industry: 'Manufacturing',
       challenge: 'Outdated IT infrastructure causing production delays',
@@ -961,7 +1120,7 @@ name: 'AI-Powered Infrastructure Management',
       results: ['50% faster processing', '99.9% uptime', '40% cost reduction'],
       image: '/images/case-studies/manufacturing.webp',
     },
-    {
+    {}
       company: 'FinanceFirst Bank',
       industry: 'Banking',
       challenge: 'Security vulnerabilities and compliance issues',
@@ -969,7 +1128,7 @@ name: 'AI-Powered Infrastructure Management',
       results: ['Zero security incidents', '100% compliance', '60% faster audits'],
       image: '/images/case-studies/banking.webp',
     },
-    {
+    {}
       company: 'RetailMax Stores',
       industry: 'Retail',
       challenge: 'Disconnected systems and poor customer experience',
@@ -1289,11 +1448,19 @@ export default ITServicesPage;
               Why Choose Our IT Services?
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Proven expertise and enterprise-grade solutions that deliver measurable business value;)
             </p>)
           </div>,)
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">),
             {benefits.map((benefit, index) => (
+=======
+              Proven expertise and enterprise-grade solutions that deliver measurable business value
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
                   <benefit.icon className="w-10 h-10 text-white" />,
@@ -1334,11 +1501,19 @@ export default ITServicesPage;
               Our IT Services;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Comprehensive IT solutions designed to meet your business needs;
             </p>,
           </div>,
           <div className="space-y-16">,
             {itServices.map((category, categoryIndex) => (
+=======
+              Comprehensive IT solutions designed to meet your business needs
+            </p>
+          </div>
+          <div className="space-y-16">
+            {itServices.map((category, categoryIndex) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={categoryIndex}>
                 <div className="flex items-center space-x-3 mb-8">
                   <category.icon className={`w-8 h-8 ${category.color}`} />
@@ -1346,10 +1521,15 @@ export default ITServicesPage;
                 </div>
                 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8">,
                   {category.services.map((service, serviceIndex) => (
-
+}
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
 <div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
+<<<<<<< HEAD
                       {service.popular && (
+=======
+
+                      {service.popular && (}
+>>>>>>> origin/merge-error-fixes
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -1369,19 +1549,30 @@ export default ITServicesPage;
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
 =======
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" />
+<<<<<<< HEAD
                             Key Features: </h5>,
                           <ul className="space-y-2">,
                             {service.features.slice(0, 4).map((feature, featureIndex) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                            Key Features:
+                          </h5>
+                          <ul className="space-y-2">
+                            {service.features.slice(0, 4).map((feature, featureIndex) => (}
+>>>>>>> origin/merge-error-fixes
                               <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span>{feature}</span>
                               </li>
                             ))}
+<<<<<<< HEAD
                             {service.features.length > 4 && (
 <<<<<<< HEAD
                               <li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more features</li>
 =======
+=======
+                            {service.features.length > 4 && (}
+>>>>>>> origin/merge-error-fixes
                               <li className="text-cyan-400 text-sm font-medium">
                                 +{service.features.length - 4} more features;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -1506,12 +1697,20 @@ export default ITServicesPage;
               Technologies We Work With;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               We work with the latest and most reliable technologies in the industry;
             </p>,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {technologies.map((tech, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              We work with the latest and most reliable technologies in the industry
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
 =======
@@ -1523,7 +1722,14 @@ export default ITServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <tech.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
+<<<<<<< HEAD
                 <div className="space-y-2">{tech.techs.map((technology, techIndex) => (</div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
+=======
+                <div className="space-y-2">
+                  {tech.techs.map((technology, techIndex) => (}
+                    <div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">
+                      {technology}
+>>>>>>> origin/merge-error-fixes
                     </div>
                   ))}
                 </div>
@@ -1547,6 +1753,7 @@ export default ITServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto"></div>
             <div className="relative"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
@@ -1564,6 +1771,12 @@ export default ITServicesPage;
             <div className="relative">,
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>,
               {process.map((step, index) => (
+=======
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
+              {process.map((step, index) => (}
+>>>>>>> origin/merge-error-fixes
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
@@ -1591,7 +1804,19 @@ export default ITServicesPage;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
+=======
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Success Stories
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Real results from real clients across various industries
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
@@ -1642,10 +1867,16 @@ export default ITServicesPage;
                     <p className="text-sm text-gray-400">{study.solution}</p>
                   </div>
                   <div>
+<<<<<<< HEAD
                     <h4 className="text-sm font-semibold text-gray-300 mb-1">Results: </h4>,
                     <ul className="space-y-1">,
                       {study.results.map((result, resultIndex) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:</h4>
+                    <ul className="space-y-1">
+                      {study.results.map((result, resultIndex) => (}
+>>>>>>> origin/merge-error-fixes
                         <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
                           <CheckCircle className="w-3 h-3 flex-shrink-0" />
                           <span>{result}</span>

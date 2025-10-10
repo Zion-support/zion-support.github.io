@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { logger } from '../utils/logger';
 
+<<<<<<< HEAD
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';,
     language: string;
@@ -12,6 +13,17 @@ interface UserPreferences {
 
 export const UserExperienceEnhancer: React.FC = () => {,
   const [preferences, setPreferences] = useState<UserPreferences>({
+=======
+interface UserPreferences {}
+  theme: 'light' | 'dark' | 'auto';
+  language: string;
+  notifications: boolean;
+  analytics: boolean;
+}
+
+export const UserExperienceEnhancer: React.FC = () => {}
+  const [preferences, setPreferences] = useState<UserPreferences>({}
+>>>>>>> origin/merge-error-fixes
     theme: 'auto',
     language: 'en',
     notifications: true;
@@ -19,21 +31,26 @@ export const UserExperienceEnhancer: React.FC = () => {,
   const [isLoading, setIsLoading] = useState(true);
   const [showWelcome, setShowWelcome] = useState(false);
 
+<<<<<<< HEAD
   // Load user preferences;
   useEffect(() => {
+=======
+  // Load user preferences
+  useEffect(() => {}
+>>>>>>> origin/merge-error-fixes
     const savedPreferences = localStorage.getItem('user-preferences');
-    if (savedPreferences) {
-      try {
+    if (savedPreferences) {}
+      try {}
         const parsed = JSON.parse(savedPreferences);
         setPreferences(parsed);
-      } catch (error) {
+      } catch (error) {}
         logger.error('Failed to parse user preferences', error);
       }
     }
 
     // Check if first visit;
     const isFirstVisit = !localStorage.getItem('has-visited');
-    if (isFirstVisit) {
+    if (isFirstVisit) {}
       setShowWelcome(true);
       localStorage.setItem('has-visited', 'true');
     }
@@ -41,26 +58,39 @@ export const UserExperienceEnhancer: React.FC = () => {,
     setIsLoading(false);
   }, []);
 
+<<<<<<< HEAD
   // Apply theme;
   const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {
     const root = document.documentElement;
 ,
     if (theme === 'auto') {,
+=======
+  // Apply theme
+  const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {}
+    const root = document.documentElement;
+
+    if (theme === 'auto') {}
+>>>>>>> origin/merge-error-fixes
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       root.classList.toggle('dark', prefersDark);
-    } else {
+    } else {}
       root.classList.toggle('dark', theme === 'dark');
     }
 
     // Update meta theme-color;
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
+    if (metaThemeColor) {}
       metaThemeColor.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
     }
   }, []);
 
+<<<<<<< HEAD
   // Apply preferences;
   useEffect(() => {
+=======
+  // Apply preferences
+  useEffect(() => {}
+>>>>>>> origin/merge-error-fixes
     if (isLoading) return;
 
     applyTheme(preferences.theme);
@@ -71,19 +101,30 @@ export const UserExperienceEnhancer: React.FC = () => {,
     logger.info('User preferences applied', preferences);
   }, [preferences, isLoading, applyTheme]);
 
+<<<<<<< HEAD
   // Handle theme change;
   const handleThemeChange = useCallback((theme: 'light' | 'dark' | 'auto') => {,
+=======
+  // Handle theme change
+  const handleThemeChange = useCallback((theme: 'light' | 'dark' | 'auto') => {}
+>>>>>>> origin/merge-error-fixes
     setPreferences(prev => ({ ...prev, theme }));
     applyTheme(theme);
   }, [applyTheme]);
 
+<<<<<<< HEAD
   // Handle language change;
   const handleLanguageChange = useCallback((language: string) => {,
+=======
+  // Handle language change
+  const handleLanguageChange = useCallback((language: string) => {}
+>>>>>>> origin/merge-error-fixes
     setPreferences(prev => ({ ...prev, language }));
     // In a real app, you would implement i18n here;
     logger.info('Language changed', { language });
   }, []);
 
+<<<<<<< HEAD
   // Handle notification preference;
   const handleNotificationChange = useCallback((notifications: boolean) => {,
     setPreferences(prev => ({ ...prev, notifications }));
@@ -95,32 +136,61 @@ export const UserExperienceEnhancer: React.FC = () => {,
 =======
         if (permission === 'granted') {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+  // Handle notification preference
+  const handleNotificationChange = useCallback((notifications: boolean) => {}
+    setPreferences(prev => ({ ...prev, notifications }));
+
+    if (notifications && 'Notification' in window) {}
+      Notification.requestPermission().then(permission => {)}
+        if (permission === 'granted') {}
+>>>>>>> origin/merge-error-fixes
           logger.info('Notification permission granted');
         }
 
     }
   }, []);
 
+<<<<<<< HEAD
   // Show notification;
   const showNotification = useCallback((title: string, body: string) => {
     if (!preferences.notifications || !('Notification' in window)) return;
 ,
     if (Notification.permission === 'granted') {,
+=======
+  // Show notification
+  const showNotification = useCallback((title: string, body: string) => {}
+    if (!preferences.notifications || !('Notification' in window)) return;
+
+    if (Notification.permission === 'granted') {}
+>>>>>>> origin/merge-error-fixes
       new Notification(title, { body, icon: '/logo.webp' });
     }
   }, [preferences.notifications]);
 
+<<<<<<< HEAD
   // Track user interactions;
   const trackInteraction = useCallback((action: string, element: string) => {,
+=======
+  // Track user interactions
+  const trackInteraction = useCallback((action: string, element: string) => {}
+>>>>>>> origin/merge-error-fixes
     if (!preferences.analytics) return;
 ,
     logger.info('User interaction tracked', { action, element });
 
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window) {
 <<<<<<< HEAD
       (window as any).gtag('event', action, {
         event_category: 'User Interaction',)
     event_label: element,
+=======
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', action, {)}
+        event_category: 'User Interaction',
+        event_label: element,
+>>>>>>> origin/merge-error-fixes
 
 =======
       (window as any).gtag('event', action, {)
@@ -130,9 +200,15 @@ export const UserExperienceEnhancer: React.FC = () => {,
     }
   }, [preferences.analytics]);
 
+<<<<<<< HEAD
   // Add click tracking to interactive elements;
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {,
+=======
+  // Add click tracking to interactive elements
+  useEffect(() => {}
+    const handleClick = (event: MouseEvent) => {}
+>>>>>>> origin/merge-error-fixes
       const target = event.target as HTMLElement;
       const element = target.tagName.toLowerCase();
       const text = target.textContent?.slice(0, 50) || '';
@@ -144,11 +220,20 @@ export const UserExperienceEnhancer: React.FC = () => {,
     return () => document.removeEventListener('click', handleClick);
   }, [trackInteraction]);
 
+<<<<<<< HEAD
   // Show welcome message for new users;
   useEffect(() => {
     if (showWelcome) {
       setTimeout(() => {
         showNotification('Welcome to Zion Tech Group!')
+=======
+  // Show welcome message for new users
+  useEffect(() => {}
+    if (showWelcome) {}
+      setTimeout(() => {}
+        showNotification()
+          'Welcome to Zion Tech Group!',
+>>>>>>> origin/merge-error-fixes
           'Discover our advanced AI and IT solutions.'
         );
         setShowWelcome(false);
@@ -156,6 +241,7 @@ export const UserExperienceEnhancer: React.FC = () => {,
     }
   }, [showWelcome, showNotification]);
 
+<<<<<<< HEAD
   // Keyboard shortcuts;
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -164,12 +250,27 @@ export const UserExperienceEnhancer: React.FC = () => {,
         event.preventDefault();
         const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
         if (searchInput) {,
+=======
+  // Keyboard shortcuts
+  useEffect(() => {}
+    const handleKeyDown = (event: KeyboardEvent) => {}
+      // Ctrl/Cmd + K for search
+      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {}
+        event.preventDefault();
+        const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
+        if (searchInput) {}
+>>>>>>> origin/merge-error-fixes
           searchInput.focus();
         }
       }
 
+<<<<<<< HEAD
       // Ctrl/Cmd + D for theme toggle;
       if ((event.ctrlKey || event.metaKey) && event.key === 'd') {
+=======
+      // Ctrl/Cmd + D for theme toggle
+      if ((event.ctrlKey || event.metaKey) && event.key === 'd') {}
+>>>>>>> origin/merge-error-fixes
         event.preventDefault();
         const currentTheme = preferences.theme;
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -188,6 +289,7 @@ export const UserExperienceEnhancer: React.FC = () => {,
     <>
       {/* Theme Toggle Button */}
       <button
+<<<<<<< HEAD
         onClick={() =>{
 =======
 
@@ -196,6 +298,9 @@ export const UserExperienceEnhancer: React.FC = () => {,
       <button;)
         onClick={() => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+        onClick={() => {}
+>>>>>>> origin/merge-error-fixes
           const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
           handleThemeChange(newTheme);}
           trackInteraction('theme_toggle', newTheme);}

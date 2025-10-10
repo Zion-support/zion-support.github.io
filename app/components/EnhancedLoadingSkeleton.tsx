@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-interface SkeletonProps {
+interface SkeletonProps {}
   className?: string;
   children?: React.ReactNode;
 }

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Heart,
   Brain,
   MessageCircle,
@@ -671,11 +671,11 @@ import {
   Yocto as YoctoIcon;
 } from 'lucide-react';
 
-interface MentalHealthCompanionProps {
+interface MentalHealthCompanionProps {}
   className?: string;
 }
 
-export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {
+export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {}
   const [currentMood, setCurrentMood] = useState('neutral');
   const [chatMessages, setChatMessages] = useState<any[]>([]);
   const [userInput, setUserInput] = useState('');
@@ -695,37 +695,37 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
   ];
 
   const features = [
-    {
+    {}
       title: "24/7 AI Companion",
       description: "Always available mental health support powered by advanced AI",
       icon: Heart;
       price: "Included",
     },
-    {
+    {}
       title: "Mood Tracking",
       description: "Track your daily mood and emotional patterns over time",
       icon: BarChart3;
       price: "Included",
     },
-    {
+    {}
       title: "Crisis Support",
       description: "Immediate support and resources during mental health crises",
       icon: Shield;
       price: "Included",
     },
-    {
+    {}
       title: "Therapy Sessions",
       description: "AI-powered therapy sessions with evidence-based techniques",
       icon: MessageCircle;
       price: "Included",
     },
-    {
+    {}
       title: "Progress Monitoring",
       description: "Track your mental health journey and celebrate milestones",
       icon: Target;
       price: "Included",
     },
-    {
+    {}
       title: "Professional Referrals",
       description: "Connect with licensed mental health professionals when needed",
       icon: Users;
@@ -734,8 +734,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: "Basic"
+=======
+    {}
+      name: "Basic",
+>>>>>>> origin/merge-error-fixes
       price: "$19",
       period: "/month",
       description: "Essential mental health support for individuals",
@@ -748,8 +753,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       ],
       popular: false;
     },
+<<<<<<< HEAD
     {
       name: "Professional"
+=======
+    {}
+      name: "Professional",
+>>>>>>> origin/merge-error-fixes
       price: "$49",
       period: "/month",
       description: "Comprehensive mental health support with advanced features",
@@ -764,8 +774,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       ],
       popular: true;
     },
+<<<<<<< HEAD
     {
       name: "Family"
+=======
+    {}
+      name: "Family",
+>>>>>>> origin/merge-error-fixes
       price: "$99",
       period: "/month",
       description: "Mental health support for the whole family",
@@ -783,21 +798,27 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     }
   ];
 
-  const handleMoodSelection = (moodId: string) => {
+  const handleMoodSelection = (moodId: string) => {}
     setCurrentMood(moodId);
+<<<<<<< HEAD
     const newMoodEntry = {
       id: Date.now()
       mood: moodId;
+=======
+    const newMoodEntry = {}
+      id: Date.now(),
+      mood: moodId,
+>>>>>>> origin/merge-error-fixes
       timestamp: new Date(),
       note: '',
     };
     setMoodHistory(prev => [...prev, newMoodEntry]);
   };
 
-  const handleSendMessage = async () => {
+  const handleSendMessage = async () => {}
     if (!userInput.trim()) return;
 
-    const userMessage = {
+    const userMessage = {}
       id: Date.now(),
       type: 'user',
       content: userInput;
@@ -808,10 +829,17 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     setUserInput('');
     setIsTyping(true);
 
+<<<<<<< HEAD
     // Simulate AI response;
     setTimeout(() => {
       const aiResponse = {
         id: Date.now() + 1;
+=======
+    // Simulate AI response
+    setTimeout(() => {}
+      const aiResponse = {}
+        id: Date.now() + 1,
+>>>>>>> origin/merge-error-fixes
         type: 'ai',
         content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
         timestamp: new Date(),
@@ -821,8 +849,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     }, 2000);
   };
 
-  const handleCrisisSupport = () => {
-    const crisisMessage = {
+  const handleCrisisSupport = () => {}
+    const crisisMessage = {}
       id: Date.now(),
       type: 'system',
       content: "Crisis support activated. Please know that you're not alone. If you're having thoughts of self-harm, please contact the National Suicide Prevention Lifeline at 988 or text HOME to 741741.",
@@ -964,18 +992,29 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 <div className="space-y-6"></div>
                   <div className="grid grid-cols-2 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {moods.map((mood) => (
                       <button;
 =======
                     {moods.map((mood) => (</div>
+=======
+                    {moods.map((mood) => (}
+>>>>>>> origin/merge-error-fixes
                       <button
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         key={mood.id}
                         onClick={() => handleMoodSelection(mood.id)}
+<<<<<<< HEAD
                         className={`p-4 rounded-lg border-2 transition-all duration-300 ${
                           currentMood === mood.id;
                             ? 'border-pink-400 bg-pink-400/10'}
                             : 'border-white/20 hover:border-pink-400/50'}
+=======
+                        className={`p-4 rounded-lg border-2 transition-all duration-300 ${}
+                          currentMood === mood.id
+                            ? 'border-pink-400 bg-pink-400/10'
+                            : 'border-white/20 hover:border-pink-400/50'
+>>>>>>> origin/merge-error-fixes
                         }`}
                       >
                         <mood.icon className={`w-8 h-8 mx-auto mb-2 ${mood.color}`} />
@@ -987,8 +1026,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   <div className="bg-white/5 rounded-lg p-4"></div>
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">
+<<<<<<< HEAD
                       {moodHistory.slice(-5).map((entry) => (</div>
                         <div key={entry.id} className="flex items-center justify-between text-sm"></div>
+=======
+                      {moodHistory.slice(-5).map((entry) => (}
+                        <div key={entry.id} className="flex items-center justify-between text-sm">
+>>>>>>> origin/merge-error-fixes
                           <span className="text-gray-300">
                             {entry.timestamp.toLocaleDateString()}
                           </span>
@@ -1012,8 +1056,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 <div className="space-y-4">
                   {/* Chat Messages */}</div>
                   <div className="h-64 overflow-y-auto space-y-4 mb-4">
+<<<<<<< HEAD
                     {chatMessages.length === 0 ? (</div>
                       <div className="text-center py-8"></div>
+=======
+                    {chatMessages.length === 0 ? (}
+                      <div className="text-center py-8">
+>>>>>>> origin/merge-error-fixes
                         <MessageCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                         <p className="text-gray-400">Start a conversation with your AI companion</p>
                       </div>
@@ -1028,8 +1077,12 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 =======
                         ></div>
                           <div
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             className={`max-w-xs px-4 py-2 rounded-lg ${
+=======
+                            className={`max-w-xs px-4 py-2 rounded-lg ${}
+>>>>>>> origin/merge-error-fixes
                               message.type === 'user'
                                 ? 'bg-pink-500 text-white'
                                 : message.type === 'system'
@@ -1045,10 +1098,17 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                         </div>
                       ))
                     )}
+<<<<<<< HEAD
                     {isTyping && (
                       <div className="flex justify-start"></div>
                         <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg"></div>
                           <div className="flex space-x-1"></div>
+=======
+                    {isTyping && (}
+                      <div className="flex justify-start">
+                        <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg">
+                          <div className="flex space-x-1">
+>>>>>>> origin/merge-error-fixes
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
@@ -1127,9 +1187,15 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+=======
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+>>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -1172,11 +1238,18 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {pricingPlans.map((plan, index) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+=======
+            {pricingPlans.map((plan, index) => (}
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
+                {plan.popular && (}
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+>>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular;
                     </span>
@@ -1193,7 +1266,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -1201,10 +1274,17 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   ))}
                 </ul>
 
+<<<<<<< HEAD
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700 transform hover:scale-105',}
                     : 'bg-white/10 text-white hover:bg-white/20'}
+=======
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                  plan.popular
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+>>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>

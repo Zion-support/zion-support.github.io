@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,
+=======
+export const generateSitemap = useCallback((...args) => {}
+  const baseUrl = 'https://ziontechgroup.com'
+  const staticPages = [
+>>>>>>> origin/merge-error-fixes
     '',
     '/services',
     '/contact',
@@ -41,8 +47,13 @@ export const generateSitemap = useCallback((...args) => {
     '/productivity'
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   ${staticPages.map(page =>),
+=======
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${staticPages.map(page =>)}
+>>>>>>> origin/merge-error-fixes
   <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -52,7 +63,7 @@ export const generateSitemap = useCallback((...args) => {
 </urlset>`
   return sitemap;
 }
-export const generateRobotsTxt = useCallback((...args) => {
+export const generateRobotsTxt = useCallback((...args) => {}
   return `User-agent: *
 Allow: /
 

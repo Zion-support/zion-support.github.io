@@ -2,7 +2,7 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {
+interface SEOData {}
   title: string;
   description: string;
   keywords: string[];
@@ -24,7 +24,7 @@ interface SEOData {
   tags?: string[];
 }
 
-interface AdvancedSEOOptimizerProps {
+interface AdvancedSEOOptimizerProps {}
   seoData: SEOData;
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
@@ -32,22 +32,32 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
+<<<<<<< HEAD
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
   seoData;
+=======
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
+  seoData,
+>>>>>>> origin/merge-error-fixes
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
-}) => {
+}) => {}
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) {
+  const generateStructuredData = useCallback(() => {}
+    if (!enableStructuredData || !seoData.structuredData) {}
       return null;
     }
 
+<<<<<<< HEAD
     const baseStructuredData = {
       '@context': 'https: //schema.org',
+=======
+    const baseStructuredData = {}
+      '@context': 'https://schema.org',
+>>>>>>> origin/merge-error-fixes
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
@@ -58,14 +68,23 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
         'https: //twitter.com/ziontechgroup',
         'https: //github.com/zion-tech-group',
       ],
+<<<<<<< HEAD
       contactPoint: {,
+=======
+      contactPoint: {}
+>>>>>>> origin/merge-error-fixes
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
         availableLanguage: 'English',
       },
+<<<<<<< HEAD
       address: {
         '@type': 'PostalAddress'
+=======
+      address: {}
+        '@type': 'PostalAddress',
+>>>>>>> origin/merge-error-fixes
         streetAddress: '123 Tech Innovation Drive',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
@@ -75,37 +94,38 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
       ...seoData.structuredData,
     };
 
-    if (seoData.author) {
-      baseStructuredData.author = {
+    if (seoData.author) {}
+      baseStructuredData.author = {}
         '@type': 'Person',
         name: seoData.author;
       };
     }
 
-    if (seoData.publishedTime) {
+    if (seoData.publishedTime) {}
       baseStructuredData.datePublished = seoData.publishedTime;
     }
 
-    if (seoData.modifiedTime) {
+    if (seoData.modifiedTime) {}
       baseStructuredData.dateModified = seoData.modifiedTime;
     }
 
-    if (seoData.section) {
+    if (seoData.section) {}
       baseStructuredData.articleSection = seoData.section;
     }
 
-    if (seoData.tags && seoData.tags.length > 0) {
+    if (seoData.tags && seoData.tags.length > 0) {}
       baseStructuredData.keywords = seoData.tags.join(', ');
     }
 
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.breadcrumbs) {
+  const generateBreadcrumbStructuredData = useCallback(() => {}
+    if (!enableStructuredData || !seoData.breadcrumbs) {}
       return null;
     }
 
+<<<<<<< HEAD
     return {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
@@ -114,15 +134,26 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
         position: index + 1;
         name: breadcrumb.name;
         item: breadcrumb.url;
+=======
+    return {}
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({}
+        '@type': 'ListItem',
+        position: index + 1,
+        name: breadcrumb.name,
+        item: breadcrumb.url
+>>>>>>> origin/merge-error-fixes
       }))
     };
   }, [seoData, enableStructuredData]);
 
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.faqs) {
+  const generateFAQStructuredData = useCallback(() => {}
+    if (!enableStructuredData || !seoData.faqs) {}
       return null;
     }
 
+<<<<<<< HEAD
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
@@ -130,6 +161,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
         '@type': 'Question'
         name: faq.question;
         acceptedAnswer: {,
+=======
+    return {}
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seoData.faqs.map((faq: any) => ({}
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {}
+>>>>>>> origin/merge-error-fixes
           '@type': 'Answer',
           text: faq.answer;
         }
@@ -137,6 +177,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     };
   }, [seoData, enableStructuredData]);
 
+<<<<<<< HEAD
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
@@ -168,6 +209,39 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
 
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {
+=======
+  // Generate Open Graph data
+  const generateOpenGraphData = useCallback(() => {}
+    if (!enableOpenGraph) return {};
+
+    return {}
+      'og:title': seoData.ogTitle || seoData.title,
+      'og:description': seoData.ogDescription || seoData.description,
+      'og:url': seoData.canonicalUrl,
+      'og:type': seoData.ogType || 'website',
+      'og:image': seoData.ogImage || '/og-image.webp',
+      'og:site_name': 'Zion Tech Group',
+      'og:locale': 'en_US',
+    };
+  }, [seoData, enableOpenGraph]);
+
+  // Generate Twitter Card data
+  const generateTwitterCardData = useCallback(() => {}
+    if (!enableTwitterCards) return {};
+
+    return {}
+      'twitter:card': 'summary_large_image',
+      'twitter:title': seoData.ogTitle || seoData.title,
+      'twitter:description': seoData.ogDescription || seoData.description,
+      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
+      'twitter:site': '@ziontechgroup',
+      'twitter:creator': '@ziontechgroup',
+    };
+  }, [seoData, enableTwitterCards]);
+
+  // Generate meta tags
+  const generateMetaTags = useCallback(() => {}
+>>>>>>> origin/merge-error-fixes
     const metaTags = [
       { name: 'description', content: seoData.description },
       { name: 'keywords', content: seoData.keywords.join(', ') },
@@ -181,15 +255,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     return metaTags;
   }, [seoData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
+  const generateBreadcrumbStructuredData = useCallback(() => {}
+    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {}
       return null;
     }
 
+<<<<<<< HEAD
     return {
       '@context': 'https: //schema.org',
+=======
+    return {}
+      '@context': 'https://schema.org',
+>>>>>>> origin/merge-error-fixes
       '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
+      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({}
         '@type': 'ListItem',
         position: index + 1;
         name: breadcrumb.name;
@@ -198,11 +277,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     };
   }, [seoData.breadcrumbs]);
 
-  const generateFAQStructuredData = useCallback(() => {
-    if (!seoData.faqs || seoData.faqs.length === 0) {
+  const generateFAQStructuredData = useCallback(() => {}
+    if (!seoData.faqs || seoData.faqs.length === 0) {}
       return null;
     }
 
+<<<<<<< HEAD
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
@@ -212,6 +292,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
         acceptedAnswer: {,
           '@type': 'Answer'),
           text: faq.answer;
+=======
+    return {}
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seoData.faqs.map(faq => ({)}
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {}
+          '@type': 'Answer',
+          text: faq.answer
+>>>>>>> origin/merge-error-fixes
         }
       }))
     };
@@ -222,13 +313,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
 
+<<<<<<< HEAD
   useEffect(() => {
     // Update page title and meta description for better SEO;
     if (typeof document !== 'undefined') {
+=======
+  useEffect(() => {}
+    // Update page title and meta description for better SEO
+    if (typeof document !== 'undefined') {}
+>>>>>>> origin/merge-error-fixes
       document.title = seoData.title;
 
       let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
+      if (!metaDescription) {}
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription);
@@ -237,7 +334,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
 
       // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
+      if (!canonicalLink) {}
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
@@ -246,9 +343,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     }
   }, [seoData]);
 
+<<<<<<< HEAD
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data;
     if (structuredDataRef.current) {
+=======
+  const addStructuredData = (data: Record<string, unknown>) => {}
+    // Remove existing structured data
+    if (structuredDataRef.current) {}
+>>>>>>> origin/merge-error-fixes
       structuredDataRef.current.remove();
     }
 
@@ -259,12 +362,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     structuredDataRef.current = script;
   };
 
-  useEffect(() => {
-    if (structuredData) {
+  useEffect(() => {}
+    if (structuredData) {}
       addStructuredData(structuredData);
     }
   }, [structuredData]);
 
+<<<<<<< HEAD
   useEffect(() => {
     // Track page performance;
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -274,6 +378,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
         if (typeof (window as any).gtag === 'function') {
 <<<<<<< HEAD
           (window as any).gtag('event', 'page_load_performance', {
+=======
+  useEffect(() => {}
+    // Track page performance
+    if (typeof window !== 'undefined' && 'performance' in window) {}
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {}
+        // Track performance metrics
+        if (typeof (window as any).gtag === 'function') {}
+          (window as any).gtag('event', 'page_load_performance', {)}
+>>>>>>> origin/merge-error-fixes
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
@@ -289,25 +403,33 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
     }
   }, []);
 
+<<<<<<< HEAD
   return(<Helmet>)
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
+=======
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{seoData.title}</title>
+      {metaTags.map((tag, index) => (}
+>>>>>>> origin/merge-error-fixes
         <meta key={index} name={tag.name} content={tag.content} />
       ))}
 
       {/* Canonical URL */}
-      {seoData.canonicalUrl && (
+      {seoData.canonicalUrl && (}
         <link rel="canonical" href={seoData.canonicalUrl} />
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
+      {Object.entries(openGraphData).map(([property, content]) => (}
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
+      {Object.entries(twitterCardData).map(([name, content]) => (}
         <meta key={name} name={name} content={content} />
       ))}
 

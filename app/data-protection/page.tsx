@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   Shield,
   Lock,
   Eye,
@@ -20,58 +20,79 @@ import {
   Phone;
 } from 'lucide-react';
 
-const DataProtectionPage: React.FC = () => {
+const DataProtectionPage: React.FC = () => {}
   const principles = [
+<<<<<<< HEAD
     {
       icon: Shield;
+=======
+    {}
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       title: 'Data Minimization',
       description: 'We collect only the data necessary for providing our services and delete it when no longer needed.',
     },
+<<<<<<< HEAD
     {
       icon: Lock;
+=======
+    {}
+      icon: Lock,
+>>>>>>> origin/merge-error-fixes
       title: 'Encryption',
       description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols.',
     },
+<<<<<<< HEAD
     {
       icon: Eye;
+=======
+    {}
+      icon: Eye,
+>>>>>>> origin/merge-error-fixes
       title: 'Transparency',
       description: 'We provide clear information about what data we collect and how it is used.',
     },
+<<<<<<< HEAD
     {
       icon: Users;
+=======
+    {}
+      icon: Users,
+>>>>>>> origin/merge-error-fixes
       title: 'User Control',
       description: 'Users have full control over their data and can access, modify, or delete it at any time.'
     }
   ];
 
   const rights = [
-    {
+    {}
       title: 'Right to Access',
       description: 'You have the right to know what personal data we hold about you and how it is processed.',
     },
-    {
+    {}
       title: 'Right to Rectification',
       description: 'You can request correction of inaccurate or incomplete personal data.',
     },
-    {
+    {}
       title: 'Right to Erasure',
       description: 'You can request deletion of your personal data under certain circumstances.',
     },
-    {
+    {}
       title: 'Right to Portability',
       description: 'You can receive your personal data in a structured, machine-readable format.'
     },
-    {
+    {}
       title: 'Right to Object',
       description: 'You can object to processing of your personal data for certain purposes.',
     },
-    {
+    {}
       title: 'Right to Restrict Processing',
       description: 'You can request restriction of processing of your personal data.',
     }
   ];
 
   const securityMeasures = [
+<<<<<<< HEAD
     {
       icon: Database;
       title: 'Secure Data Storage',
@@ -79,16 +100,35 @@ const DataProtectionPage: React.FC = () => {
     },
     {
       icon: Server;
+=======
+    {}
+      icon: Database,
+      title: 'Secure Data Storage',
+      description: 'Data is stored in secure, encrypted databases with access controls and monitoring.'
+    },
+    {}
+      icon: Server,
+>>>>>>> origin/merge-error-fixes
       title: 'Infrastructure Security',
       description: 'Our infrastructure is protected by multiple layers of security controls and monitoring.',
     },
+<<<<<<< HEAD
     {
       icon: Key;
+=======
+    {}
+      icon: Key,
+>>>>>>> origin/merge-error-fixes
       title: 'Access Controls',
       description: 'Strict access controls ensure only authorized personnel can access personal data.',
     },
+<<<<<<< HEAD
     {
       icon: Globe;
+=======
+    {}
+      icon: Globe,
+>>>>>>> origin/merge-error-fixes
       title: 'International Standards',
       description: 'We comply with international data protection standards and regulations.',
     }
@@ -140,10 +180,17 @@ const DataProtectionPage: React.FC = () => {
               We follow strict data protection principles to ensure your privacy and security;
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {principles.map((principle, index) => (
+=======
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {principles.map((principle, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
 =======
@@ -182,6 +229,7 @@ const DataProtectionPage: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {rights.map((right, index) => (
               <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
@@ -193,6 +241,12 @@ const DataProtectionPage: React.FC = () => {
             {rights.map((right, index) => (</div>
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {rights.map((right, index) => (}
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+>>>>>>> origin/merge-error-fixes
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                   <div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -236,10 +290,17 @@ const DataProtectionPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
             {securityMeasures.map((measure, index) => (</div>
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+=======
+            {securityMeasures.map((measure, index) => (}
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+>>>>>>> origin/merge-error-fixes
                     <measure.icon className="w-6 h-6 text-white" />
                   </div>
                   <div></div>

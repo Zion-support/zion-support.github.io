@@ -3,34 +3,58 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, Target, Clock, CheckCircle, Brain, Share2, TrendingUp, BarChart, MessageSquare } from 'lucide-react';
 
+<<<<<<< HEAD
 const AISocialMediaScheduler: React.FC = memo(() => {,
+=======
+const AISocialMediaScheduler: React.FC = memo(() => {}
+>>>>>>> origin/merge-error-fixes
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
+<<<<<<< HEAD
     {
       icon: Calendar;
+=======
+    {}
+      icon: Calendar,
+>>>>>>> origin/merge-error-fixes
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on your audience engagement patterns',
       color: 'text-purple-400',
     },
+<<<<<<< HEAD
     {
       icon: Brain;
+=======
+    {}
+      icon: Brain,
+>>>>>>> origin/merge-error-fixes
       title: 'Content Generation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI technology',
       color: 'text-blue-400',
     },
+<<<<<<< HEAD
     {
       icon: BarChart;
+=======
+    {}
+      icon: BarChart,
+>>>>>>> origin/merge-error-fixes
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and insights to track performance across all platforms',
       color: 'text-green-400',
     },
+<<<<<<< HEAD
     {
       icon: Share2;
+=======
+    {}
+      icon: Share2,
+>>>>>>> origin/merge-error-fixes
       title: 'Multi-Platform Support',
       description: 'Schedule and manage content across Instagram, Facebook, Twitter, LinkedIn, and TikTok',
       color: 'text-orange-400',
@@ -38,8 +62,13 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: 'Starter'
+=======
+    {}
+      name: 'Starter',
+>>>>>>> origin/merge-error-fixes
       price: '$19',
       period: '/month',
       description: 'Perfect for small businesses',
@@ -56,9 +85,14 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
 =======
       popular: false;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Professional'
+=======
+    {}
+      name: 'Professional',
+>>>>>>> origin/merge-error-fixes
       price: '$49',
       period: '/month',
       description: 'Ideal for growing businesses',
@@ -76,9 +110,14 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
 =======
       popular: true;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Enterprise'
+=======
+    {}
+      name: 'Enterprise',
+>>>>>>> origin/merge-error-fixes
       price: '$149',
       period: '/month',
       description: 'For large organizations',
@@ -100,25 +139,25 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Content Planning',
       description: 'Plan and schedule your content calendar weeks in advance',
       icon: Calendar;
       result: '3x efficiency',
     },
-    {
+    {}
       title: 'Engagement Boost',
       description: 'Increase engagement with AI-optimized posting times and content',
       icon: TrendingUp;
       result: '150% more',
     },
-    {
+    {}
       title: 'Brand Consistency',
       description: 'Maintain consistent brand voice across all platforms',
       icon: Target;
       result: '100% consistent',
     },
-    {
+    {}
       title: 'Time Saving',
       description: 'Save hours every week with automated scheduling and content generation',
       icon: Clock;
@@ -241,8 +280,15 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
         {/* Features */}
         <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-start space-x-4">
 =======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
@@ -287,9 +333,15 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
                 <div className="text-4xl mb-2">{platform.icon}<div className={`font-medium ${platform.color}`}>{platform.name}</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Platforms</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
             {supportedPlatforms.map((platform, index) => (
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300 text-center">,
+=======
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {supportedPlatforms.map((platform, index) => (}
+              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
+>>>>>>> origin/merge-error-fixes
                 <div className="text-4xl mb-2">{platform.icon}</div>
                 <div className={`font-medium ${platform.color}`}>{platform.name}</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -307,7 +359,13 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -349,10 +407,15 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -362,9 +425,21 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
+=======
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (}
+                    <li key={featureIndex} className="flex items-center space-x-3">
+>>>>>>> origin/merge-error-fixes
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -376,10 +451,17 @@ const AISocialMediaScheduler: React.FC = memo(() => {,
                 <a;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href="/contact"
+<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700',}
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'}
+=======
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+>>>>>>> origin/merge-error-fixes
                   }`}
 <<<<<<< HEAD
                 >Get Started</a>

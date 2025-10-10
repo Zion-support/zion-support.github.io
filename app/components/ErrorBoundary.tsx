@@ -1,16 +1,17 @@
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
 }
 
-interface State {
+interface State {}
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State>{
   constructor(props: Props) {
@@ -18,10 +19,15 @@ class ErrorBoundary extends Component<Props, State>{
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+class ErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) {}
+>>>>>>> origin/merge-error-fixes
     super(props);
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error };
   }
@@ -33,6 +39,18 @@ class ErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && window.gtag) {
 <<<<<<< HEAD
       window.gtag('event', 'exception', {
+=======
+  static getDerivedStateFromError(error: Error): State {}
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({ error, errorInfo });
+
+    // Log error to monitoring service
+    if (typeof window !== 'undefined' && window.gtag) {}
+      window.gtag('event', 'exception', {)}
+>>>>>>> origin/merge-error-fixes
         description: error.message,
         fatal: false,
       }
@@ -43,18 +61,23 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     }
   }
+<<<<<<< HEAD
 )
     handleRetry = () => {
+=======
+
+  handleRetry = () => {}
+>>>>>>> origin/merge-error-fixes
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-  handleGoHome = () => {
+  handleGoHome = () => {}
     window.location.href = '/';
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+  render() {}
+    if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return this.props.fallback;
       }
 <<<<<<< HEAD
@@ -86,10 +109,17 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
 
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && ()
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">)
                 <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>,)
                 <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">),
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
+>>>>>>> origin/merge-error-fixes
                   {this.state.error.toString()}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
 =======
@@ -97,8 +127,14 @@ class ErrorBoundary extends Component<Props, State> {
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3><pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">{this.state.error.toString()}</pre>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </pre>
+<<<<<<< HEAD
                 {this.state.errorInfo && (
                   <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32 mt-2">{this.state.errorInfo.componentStack}</pre>
+=======
+                {this.state.errorInfo && (}
+                  <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32 mt-2">
+                    {this.state.errorInfo.componentStack}
+>>>>>>> origin/merge-error-fixes
                   </pre>
                 )}
               </div>

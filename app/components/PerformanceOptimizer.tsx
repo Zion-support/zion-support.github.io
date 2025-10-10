@@ -55,6 +55,7 @@ export default PerformanceOptimizer;
 =======
 import React, { useEffect, useState, useCallback } from 'react';
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
   lcp: number;,
     fid: number;
@@ -77,12 +78,42 @@ export const PerformanceOptimizer: React.FC = () => {,
     serviceWorker: false;
     optimized: false;
   const collectWebVitals = useCallback(() => {
+=======
+interface PerformanceMetrics {}
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+}
+
+interface OptimizationStatus {}
+  preloaded: number;
+  codeSplit: boolean;
+  serviceWorker: boolean;
+  optimized: boolean;
+}
+
+export const PerformanceOptimizer: React.FC = () => {}
+  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({}
+    preloaded: 0,
+    codeSplit: false,
+    serviceWorker: false,
+    optimized: false
+
+  const collectWebVitals = useCallback(() => {}
+>>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
 <<<<<<< HEAD
     // Collect Core Web Vitals
+<<<<<<< HEAD
     const vitals: PerformanceMetrics = {,
     lcp: 0,
+=======
+    const vitals: PerformanceMetrics = {}
+      lcp: 0,
+>>>>>>> origin/merge-error-fixes
       fid: 0,
       cls: 0,
       fcp: 0,
@@ -98,28 +129,43 @@ export const PerformanceOptimizer: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     };
 
+<<<<<<< HEAD
     // LCP - Largest Contentful Paint;
     const lcpObserver = new PerformanceObserver((list) => {
+=======
+    // LCP - Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {}
+>>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
 
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
+<<<<<<< HEAD
     // FID - First Input Delay;
     const fidObserver = new PerformanceObserver((list) => {
+=======
+    // FID - First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {}
+>>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((entry) => {}
         vitals.fid = entry.processingStart - entry.startTime;
 
 
     fidObserver.observe({ entryTypes: ['first-input'] });
 
+<<<<<<< HEAD
     // CLS - Cumulative Layout Shift;
     const clsObserver = new PerformanceObserver((list) => {
+=======
+    // CLS - Cumulative Layout Shift
+    const clsObserver = new PerformanceObserver((list) => {}
+>>>>>>> origin/merge-error-fixes
       let clsValue = 0;
-      for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
+      for (const entry of list.getEntries()) {}
+        if (!(entry as any).hadRecentInput) {}
           clsValue += (entry as any).value;
         }
       }
@@ -127,19 +173,29 @@ export const PerformanceOptimizer: React.FC = () => {,
 
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+<<<<<<< HEAD
     // FCP - First Contentful Paint;
     const fcpObserver = new PerformanceObserver((list) => {
+=======
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {}
+>>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((entry) => {}
         vitals.fcp = entry.startTime;
 
 
     fcpObserver.observe({ entryTypes: ['paint'] });
 
+<<<<<<< HEAD
     // TTFB - Time to First Byte;
     const ttfbObserver = new PerformanceObserver((list) => {
+=======
+    // TTFB - Time to First Byte
+    const ttfbObserver = new PerformanceObserver((list) => {}
+>>>>>>> origin/merge-error-fixes
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((entry) => {}
         vitals.ttfb = entry.responseStart - entry.requestStart;
 
 
@@ -148,7 +204,7 @@ export const PerformanceOptimizer: React.FC = () => {,
     setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
   }, []);
 
-  const preloadCriticalResources = useCallback(() => {
+  const preloadCriticalResources = useCallback(() => {}
     if (typeof window === 'undefined') return;
 
     const criticalResources = [
@@ -157,10 +213,14 @@ export const PerformanceOptimizer: React.FC = () => {,
       '/js/critical.js'
     ];
 
+<<<<<<< HEAD
     criticalResources.forEach(resource => {)
 <<<<<<< HEAD
     const link = document.createElement('link');
 =======
+=======
+    criticalResources.forEach(resource => {)}
+>>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = 'preload';
@@ -171,12 +231,17 @@ export const PerformanceOptimizer: React.FC = () => {,
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   }, []);
 
+<<<<<<< HEAD
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports;
+=======
+  const setupCodeSplitting = () => {}
+    // This would be handled by Next.js dynamic imports
+>>>>>>> origin/merge-error-fixes
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
 
-  const addResourceHints = () => {
+  const addResourceHints = () => {}
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -186,10 +251,14 @@ export const PerformanceOptimizer: React.FC = () => {,
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
+<<<<<<< HEAD
     hints.forEach(hint => {)
 <<<<<<< HEAD
     const link = document.createElement('link');
 =======
+=======
+    hints.forEach(hint => {)}
+>>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = hint.rel;
@@ -198,18 +267,18 @@ export const PerformanceOptimizer: React.FC = () => {,
 
   };
 
-  const registerServiceWorker = async () => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      try {
+  const registerServiceWorker = async () => {}
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {}
+      try {}
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-      } catch (error) {
+      } catch (error) {}
         }
     }
   };
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
+  useEffect(() => {}
+    if (typeof window !== 'undefined') {}
       collectWebVitals();
       preloadCriticalResources();
       setupCodeSplitting();

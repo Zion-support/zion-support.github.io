@@ -3,34 +3,58 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
 
+<<<<<<< HEAD
 const AIExpenseTracker: React.FC = memo(() => {,
+=======
+const AIExpenseTracker: React.FC = memo(() => {}
+>>>>>>> origin/merge-error-fixes
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
+<<<<<<< HEAD
     {
       icon: Receipt;
+=======
+    {}
+      icon: Receipt,
+>>>>>>> origin/merge-error-fixes
       title: 'Smart Receipt Scanning',
       description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
       color: 'text-purple-400',
     },
+<<<<<<< HEAD
     {
       icon: Brain;
+=======
+    {}
+      icon: Brain,
+>>>>>>> origin/merge-error-fixes
       title: 'AI Categorization',
       description: 'Intelligently categorize expenses and learn from your spending patterns over time',
       color: 'text-blue-400',
     },
+<<<<<<< HEAD
     {
       icon: BarChart;
+=======
+    {}
+      icon: BarChart,
+>>>>>>> origin/merge-error-fixes
       title: 'Advanced Analytics',
       description: 'Get detailed insights into your spending habits with beautiful charts and reports',
       color: 'text-green-400',
     },
+<<<<<<< HEAD
     {
       icon: Target;
+=======
+    {}
+      icon: Target,
+>>>>>>> origin/merge-error-fixes
       title: 'Budget Management',
       description: 'Set budgets, track progress, and get alerts when approaching limits',
       color: 'text-orange-400',
@@ -38,8 +62,13 @@ const AIExpenseTracker: React.FC = memo(() => {,
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: 'Personal'
+=======
+    {}
+      name: 'Personal',
+>>>>>>> origin/merge-error-fixes
       price: '$9',
       period: '/month',
       description: 'Perfect for individuals',
@@ -56,9 +85,14 @@ const AIExpenseTracker: React.FC = memo(() => {,
 =======
       popular: false;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Business'
+=======
+    {}
+      name: 'Business',
+>>>>>>> origin/merge-error-fixes
       price: '$29',
       period: '/month',
       description: 'Ideal for small businesses',
@@ -76,9 +110,14 @@ const AIExpenseTracker: React.FC = memo(() => {,
 =======
       popular: true;
     },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Enterprise'
+=======
+    {}
+      name: 'Enterprise',
+>>>>>>> origin/merge-error-fixes
       price: '$99',
       period: '/month',
       description: 'For large organizations',
@@ -100,25 +139,25 @@ const AIExpenseTracker: React.FC = memo(() => {,
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Personal Finance',
       description: 'Track personal expenses and build better financial habits',
       icon: Receipt;
       result: '30% savings',
     },
-    {
+    {}
       title: 'Business Expenses',
       description: 'Manage business expenses and improve cash flow visibility',
       icon: BarChart;
       result: '50% faster',
     },
-    {
+    {}
       title: 'Tax Preparation',
       description: 'Organize receipts and expenses for easy tax filing',
       icon: Target;
       result: '90% easier',
     },
-    {
+    {}
       title: 'Team Management',
       description: 'Track team expenses and enforce spending policies',
       icon: Users;
@@ -210,12 +249,17 @@ const AIExpenseTracker: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading performance</div>
 =======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {benefits.map((benefit, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
@@ -235,8 +279,15 @@ const AIExpenseTracker: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-start space-x-4">
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
@@ -267,8 +318,15 @@ const AIExpenseTracker: React.FC = memo(() => {,
         <section className="mb-16">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
               </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (}
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> origin/merge-error-fixes
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
@@ -309,10 +367,15 @@ const AIExpenseTracker: React.FC = memo(() => {,
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -322,9 +385,21 @@ const AIExpenseTracker: React.FC = memo(() => {,
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
+=======
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (}
+                    <li key={featureIndex} className="flex items-center space-x-3">
+>>>>>>> origin/merge-error-fixes
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -336,10 +411,17 @@ const AIExpenseTracker: React.FC = memo(() => {,
                 <a;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href="/contact"
+<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700',}
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'}
+=======
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+>>>>>>> origin/merge-error-fixes
                   }`}
 <<<<<<< HEAD
                 >Get Started</a>

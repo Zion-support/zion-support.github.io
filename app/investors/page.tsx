@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   TrendingUp,
   DollarSign,
   BarChart,
@@ -21,28 +21,48 @@ import {
   Activity;
 } from 'lucide-react';
 
-const InvestorsPage: React.FC = () => {
+const InvestorsPage: React.FC = () => {}
   const metrics = [
+<<<<<<< HEAD
     {
       icon: DollarSign;
+=======
+    {}
+      icon: DollarSign,
+>>>>>>> origin/merge-error-fixes
       value: '$50M+',
       label: 'Total Funding Raised',
       description: 'Series A and B rounds completed',
     },
+<<<<<<< HEAD
     {
       icon: TrendingUp;
+=======
+    {}
+      icon: TrendingUp,
+>>>>>>> origin/merge-error-fixes
       value: '300%',
       label: 'Revenue Growth',
       description: 'Year-over-year growth rate',
     },
+<<<<<<< HEAD
     {
       icon: Users;
+=======
+    {}
+      icon: Users,
+>>>>>>> origin/merge-error-fixes
       value: '500+',
       label: 'Enterprise Clients',
       description: 'Fortune 500 companies served',
     },
+<<<<<<< HEAD
     {
       icon: Globe;
+=======
+    {}
+      icon: Globe,
+>>>>>>> origin/merge-error-fixes
       value: '25+',
       label: 'Countries',
       description: 'Global market presence',
@@ -50,25 +70,25 @@ const InvestorsPage: React.FC = () => {
   ];
 
   const investors = [
-    {
+    {}
       name: 'Sequoia Capital',
       logo: '🌲',
       type: 'Lead Investor',
       description: 'Series A lead investor with deep AI expertise',
     },
-    {
+    {}
       name: 'Andreessen Horowitz',
       logo: '🚀',
       type: 'Series B',
       description: 'Strategic partner for enterprise growth',
     },
-    {
+    {}
       name: 'Accel Partners',
       logo: '⚡',
       type: 'Growth Capital',
       description: 'Supporting international expansion',
     },
-    {
+    {}
       name: 'GV (Google Ventures)',
       logo: '🔍',
       type: 'Strategic',
@@ -77,23 +97,43 @@ const InvestorsPage: React.FC = () => {
   ];
 
   const highlights = [
+<<<<<<< HEAD
     {
       icon: Award;
+=======
+    {}
+      icon: Award,
+>>>>>>> origin/merge-error-fixes
       title: 'Industry Recognition',
       description: 'Named "AI Company of the Year" by TechCrunch',
     },
+<<<<<<< HEAD
     {
       icon: Shield;
+=======
+    {}
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       title: 'Financial Stability',
       description: 'Strong balance sheet with 24+ months runway',
     },
+<<<<<<< HEAD
     {
       icon: Zap;
+=======
+    {}
+      icon: Zap,
+>>>>>>> origin/merge-error-fixes
       title: 'Rapid Growth',
       description: 'Consistent 300%+ revenue growth year-over-year',
     },
+<<<<<<< HEAD
     {
       icon: Target;
+=======
+    {}
+      icon: Target,
+>>>>>>> origin/merge-error-fixes
       title: 'Market Leadership',
       description: 'Leading position in enterprise AI solutions',
     }
@@ -145,10 +185,17 @@ const InvestorsPage: React.FC = () => {
               Strong financial performance and market position;
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {metrics.map((metric, index) => (
+=======
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
 =======
@@ -198,7 +245,11 @@ const InvestorsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
             {investors.map((investor, index) => (</div>
+=======
+            {investors.map((investor, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div
                 key={index}
                 className="cyber-card p-8 hover:scale-105 transition-all duration-300 text-center"
@@ -230,10 +281,17 @@ const InvestorsPage: React.FC = () => {
               Key factors that make Zion Tech Group an attractive investment opportunity;
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {highlights.map((highlight, index) => (
+=======
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {highlights.map((highlight, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
 =======

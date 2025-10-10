@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Home,
   Lightbulb,
   Thermometer,
@@ -679,10 +679,11 @@ import {
   Yocto as YoctoIcon;
 } from 'lucide-react';
 
-interface SmartHomeControllerProps {
+interface SmartHomeControllerProps {}
   className?: string;
 }
 
+<<<<<<< HEAD
 export default function SmartHomeController({ className = '' }: SmartHomeControllerProps) {
   const [devices, setDevices] = useState([)
     { id: 1, name: 'Living Room Light', type: 'light', status: 'on', brightness: 80, room: 'Living Room' },)
@@ -690,10 +691,20 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     { id: 3, name: 'Thermostat', type: 'thermostat', status: 'on', temperature: 72, room: 'Living Room' })
     { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' })
     { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' })
+=======
+export default function SmartHomeController({ className = '' }: SmartHomeControllerProps) {}
+  const [devices, setDevices] = useState([)
+    { id: 1, name: 'Living Room Light', type: 'light', status: 'on', brightness: 80, room: 'Living Room' },
+    { id: 2, name: 'Bedroom Light', type: 'light', status: 'off', brightness: 0, room: 'Bedroom' },
+    { id: 3, name: 'Thermostat', type: 'thermostat', status: 'on', temperature: 72, room: 'Living Room' },
+    { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' },
+    { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' },
+>>>>>>> origin/merge-error-fixes
     { id: 6, name: 'Door Lock', type: 'lock', status: 'locked', room: 'Front Door' }
   ]);
 
   const [scenes, setScenes] = useState([)
+<<<<<<< HEAD
     { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false })
     { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false })
     { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false })
@@ -705,40 +716,53 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     thisWeek: 312.8;
     thisMonth: 1284.5;
     savings: 15.3;
+=======
+    { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false },
+    { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false },
+    { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false },
+    { id: 4, name: 'Away Mode', icon: Shield, devices: ['All Lights', 'Door Lock', 'Security Camera'], active: false }
+  ]);
+
+  const [energyUsage, setEnergyUsage] = useState({)}
+    today: 45.2,
+    thisWeek: 312.8,
+    thisMonth: 1284.5,
+    savings: 15.3
+>>>>>>> origin/merge-error-fixes
   };
 
   const features = [
-    {
+    {}
       title: "Voice Control",
       description: "Control your home with natural voice commands using AI",
       icon: Microphone;
       price: "Included",
     },
-    {
+    {}
       title: "Predictive Maintenance",
       description: "AI predicts when devices need maintenance or replacement",
       icon: Brain;
       price: "Included",
     },
-    {
+    {}
       title: "Energy Optimization",
       description: "Automatically optimize energy usage to reduce costs",
       icon: Zap;
       price: "Included",
     },
-    {
+    {}
       title: "Security Integration",
       description: "Comprehensive security monitoring and alerts",
       icon: Shield;
       price: "Included",
     },
-    {
+    {}
       title: "Custom Scenes",
       description: "Create and manage custom automation scenes",
       icon: Settings;
       price: "Included",
     },
-    {
+    {}
       title: "Mobile App",
       description: "Control your home from anywhere with our mobile app",
       icon: Smartphone;
@@ -747,8 +771,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: "Starter"
+=======
+    {}
+      name: "Starter",
+>>>>>>> origin/merge-error-fixes
       price: "$29",
       period: "/month",
       description: "Perfect for small apartments and single rooms",
@@ -761,8 +790,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       ],
       popular: false;
     },
+<<<<<<< HEAD
     {
       name: "Home"
+=======
+    {}
+      name: "Home",
+>>>>>>> origin/merge-error-fixes
       price: "$79",
       period: "/month",
       description: "Ideal for medium-sized homes and families",
@@ -777,8 +811,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       ],
       popular: true;
     },
+<<<<<<< HEAD
     {
       name: "Mansion"
+=======
+    {}
+      name: "Mansion",
+>>>>>>> origin/merge-error-fixes
       price: "$199",
       period: "/month",
       description: "For large homes and estates with complex needs",
@@ -796,33 +835,57 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     }
   ];
 
+<<<<<<< HEAD
   const toggleDevice = (deviceId: number) => {,
     setDevices(devices.map(device =>,)
       device.id === deviceId;),
+=======
+  const toggleDevice = (deviceId: number) => {}
+    setDevices(devices.map(device =>)
+      device.id === deviceId
+>>>>>>> origin/merge-error-fixes
         ? { ...device, status: device.status === 'on' ? 'off' : 'on' }
         : device;
     ));
   };
 
+<<<<<<< HEAD
   const adjustBrightness = (deviceId: number, brightness: number) => {,
     setDevices(devices.map(device =>,)
       device.id === deviceId;),
+=======
+  const adjustBrightness = (deviceId: number, brightness: number) => {}
+    setDevices(devices.map(device =>)
+      device.id === deviceId
+>>>>>>> origin/merge-error-fixes
         ? { ...device, brightness }
         : device;
     ));
   };
 
+<<<<<<< HEAD
   const adjustTemperature = (deviceId: number, temperature: number) => {,
     setDevices(devices.map(device =>,)
       device.id === deviceId;),
+=======
+  const adjustTemperature = (deviceId: number, temperature: number) => {}
+    setDevices(devices.map(device =>)
+      device.id === deviceId
+>>>>>>> origin/merge-error-fixes
         ? { ...device, temperature }
         : device;
     ));
   };
 
+<<<<<<< HEAD
   const activateScene = (sceneId: number) => {,
     setScenes(scenes.map(scene =>,)
       scene.id === sceneId;),
+=======
+  const activateScene = (sceneId: number) => {}
+    setScenes(scenes.map(scene =>)
+      scene.id === sceneId
+>>>>>>> origin/merge-error-fixes
         ? { ...scene, active: !scene.active }
         : scene;
     ));
@@ -946,6 +1009,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
 =======
 
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Devices Control */}</div>
@@ -959,6 +1023,10 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
 ,
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
                   {devices.map((device) => (,
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {devices.map((device) => (}
+>>>>>>> origin/merge-error-fixes
                     <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-center justify-between mb-3">
 =======
@@ -972,19 +1040,32 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                         <button;
                           onClick={() => toggleDevice(device.id)}
                           className={`w-12 h-6 rounded-full transition-colors ${}
+<<<<<<< HEAD
                             device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'}
                           }`}
                         >
                           <div className={`w-5 h-5 bg-white rounded-full transition-transform ${}
                             device.status === 'on' ? 'translate-x-6' : 'translate-x-0.5'}
+=======
+                            device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'
+                          }`}
+                        >
+                          <div className={`w-5 h-5 bg-white rounded-full transition-transform ${}
+                            device.status === 'on' ? 'translate-x-6' : 'translate-x-0.5'
+>>>>>>> origin/merge-error-fixes
                           }`} />
                         </button>
                       </div>
 
                       <p className="text-gray-400 text-sm mb-3">{device.room}</p>
 
+<<<<<<< HEAD
                       {device.type === 'light' && (
                         <div className="space-y-2"></div>
+=======
+                      {device.type === 'light' && (}
+                        <div className="space-y-2">
+>>>>>>> origin/merge-error-fixes
                           <label className="text-gray-300 text-sm">Brightness: {device.brightness}%</label>
                           <input;
                             type="range"
@@ -997,8 +1078,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                         </div>
                       )}
 
+<<<<<<< HEAD
                       {device.type === 'thermostat' && (
                         <div className="space-y-2"></div>
+=======
+                      {device.type === 'thermostat' && (}
+                        <div className="space-y-2">
+>>>>>>> origin/merge-error-fixes
                           <label className="text-gray-300 text-sm">Temperature: {device.temperature}°F</label>
                           <input;
                             type="range"
@@ -1011,16 +1097,26 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                         </div>
                       )}
 
+<<<<<<< HEAD
                       {device.type === 'speaker' && (
                         <div className="space-y-2"></div>
+=======
+                      {device.type === 'speaker' && (}
+                        <div className="space-y-2">
+>>>>>>> origin/merge-error-fixes
                           <label className="text-gray-300 text-sm">Volume: {device.volume}%</label>
                           <input;
                             type="range"
                             min="0"
                             max="100"
                             value={device.volume}
+<<<<<<< HEAD
                             onChange={(e) => setDevices(devices.map(d =>})
                               d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d;
+=======
+                            onChange={(e) => setDevices(devices.map(d =>)}
+                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
+>>>>>>> origin/merge-error-fixes
                             ))}
                             className="w-full"
                           />
@@ -1041,18 +1137,29 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                   </h3>
                   <div className="space-y-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {scenes.map((scene) => (
                       <button;
 =======
                     {scenes.map((scene) => (</div>
+=======
+                    {scenes.map((scene) => (}
+>>>>>>> origin/merge-error-fixes
                       <button
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         key={scene.id}
                         onClick={() => activateScene(scene.id)}
+<<<<<<< HEAD
                         className={`w-full p-3 rounded-lg border transition-all ${
                           scene.active;
                             ? 'border-green-400 bg-green-400/10'}
                             : 'border-white/20 hover:border-green-400/50'}
+=======
+                        className={`w-full p-3 rounded-lg border transition-all ${}
+                          scene.active
+                            ? 'border-green-400 bg-green-400/10'
+                            : 'border-white/20 hover:border-green-400/50'
+>>>>>>> origin/merge-error-fixes
                         }`}
                       >
                         <div className="flex items-center"></div>
@@ -1126,9 +1233,15 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
+=======
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+>>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -1171,11 +1284,18 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {pricingPlans.map((plan, index) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+=======
+            {pricingPlans.map((plan, index) => (}
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
+                {plan.popular && (}
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+>>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular;
                     </span>
@@ -1192,7 +1312,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -1200,10 +1320,17 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                   ))}
                 </ul>
 
+<<<<<<< HEAD
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover: from-green-600 hover:to-blue-700 transform hover:scale-105',}
                     : 'bg-white/10 text-white hover:bg-white/20'}
+=======
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                  plan.popular
+                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+>>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>

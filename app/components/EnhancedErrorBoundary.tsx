@@ -3,11 +3,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
 }
 
+<<<<<<< HEAD
 interface State {
   hasError: boolean;,
     error: Error | null;
@@ -27,18 +28,45 @@ class EnhancedErrorBoundary extends Component<Props, State>{
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true;
+=======
+interface State {}
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) {}
+    super(props);
+    this.state = {}
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): State {}
+    return {}
+      hasError: true,
+>>>>>>> origin/merge-error-fixes
       error,
       errorInfo: null;
     };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
     this.setState({
+=======
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({)}
+>>>>>>> origin/merge-error-fixes
       error,
       errorInfo
     });
 
+<<<<<<< HEAD
     // Log error to console in development)
     if (process.env.NODE_ENV === 'development') {
 =======
@@ -54,13 +82,28 @@ class EnhancedErrorBoundary extends Component<Props, State>{
     // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry;
+=======
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {}
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {}
+      // Here you would typically send the error to a service like Sentry
+>>>>>>> origin/merge-error-fixes
       console.error('Error caught by boundary:', error);
     }
   }
 
+<<<<<<< HEAD
   handleRetry = () => {
 <<<<<<< HEAD
     this.setState({
+=======
+  handleRetry = () => {}
+    this.setState({)}
+>>>>>>> origin/merge-error-fixes
       hasError: false,
       error: null,)
     errorInfo: null
@@ -73,17 +116,17 @@ class EnhancedErrorBoundary extends Component<Props, State>{
     });
   };
 
-  handleReload = () => {
+  handleReload = () => {}
     window.location.reload();
   };
 
-  handleGoHome = () => {
+  handleGoHome = () => {}
     window.location.href = '/';
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+  render() {}
+    if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return this.props.fallback;
       }
 <<<<<<< HEAD
@@ -115,17 +158,29 @@ class EnhancedErrorBoundary extends Component<Props, State>{
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && ()
               <details className="mb-6 text-left">)
                 <summary className="text-red-400 cursor-pointer font-medium mb-2">)
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
+              <details className="mb-6 text-left">
+                <summary className="text-red-400 cursor-pointer font-medium mb-2">
+>>>>>>> origin/merge-error-fixes
                   Error Details (Development)
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </summary>
                 <div className="bg-slate-900/50 rounded-lg p-4 text-sm"></div>
                   <pre className="text-red-300 whitespace-pre-wrap">{this.state.error.toString()}</pre>
                   </pre>
+<<<<<<< HEAD
                   {this.state.errorInfo && (
                     <pre className="text-gray-400 whitespace-pre-wrap mt-2">{this.state.errorInfo.componentStack}</pre>
+=======
+                  {this.state.errorInfo && (}
+                    <pre className="text-gray-400 whitespace-pre-wrap mt-2">
+                      {this.state.errorInfo.componentStack}
+>>>>>>> origin/merge-error-fixes
                     </pre>
                   )}
                 </div>

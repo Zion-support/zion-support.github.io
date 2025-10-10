@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   TrendingUp,
   TrendingDown,
   DollarSign,
@@ -672,10 +672,11 @@ import {
   Yocto as YoctoIcon;
 } from 'lucide-react';
 
-interface InvestmentOptimizerProps {
+interface InvestmentOptimizerProps {}
   className?: string;
 }
 
+<<<<<<< HEAD
 export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {
   const [portfolio, setPortfolio] = useState([)
     { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },)
@@ -684,6 +685,16 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 })
     { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 })
     { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 })
+=======
+export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {}
+  const [portfolio, setPortfolio] = useState([)
+    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },
+    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },
+    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 },
+    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 },
+    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 },
+    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 },
+>>>>>>> origin/merge-error-fixes
     { symbol: 'META', name: 'Meta Platforms Inc.', shares: 40, price: 485.20, value: 19408, allocation: 28.3, change: -2.15 }
   ]);
 
@@ -696,37 +707,37 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   const totalValue = portfolio.reduce((sum, stock) => sum + stock.value, 0);
 
   const features = [
-    {
+    {}
       title: "AI Portfolio Analysis",
       description: "Advanced AI analyzes your portfolio and suggests optimizations",
       icon: Brain;
       price: "Included",
     },
-    {
+    {}
       title: "Risk Assessment",
       description: "Comprehensive risk analysis and diversification recommendations",
       icon: Shield;
       price: "Included",
     },
-    {
+    {}
       title: "Market Prediction",
       description: "AI-powered market predictions and trend analysis",
       icon: TrendingUp;
       price: "Included",
     },
-    {
+    {}
       title: "Auto Rebalancing",
       description: "Automatically rebalance your portfolio based on market conditions",
       icon: RefreshCw;
       price: "Included",
     },
-    {
+    {}
       title: "Tax Optimization",
       description: "Minimize tax impact with smart tax-loss harvesting",
       icon: DollarSign;
       price: "Pro Feature",
     },
-    {
+    {}
       title: "Professional Advisor",
       description: "Access to certified financial advisors for complex strategies",
       icon: Users;
@@ -735,8 +746,13 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: "Individual"
+=======
+    {}
+      name: "Individual",
+>>>>>>> origin/merge-error-fixes
       price: "$39",
       period: "/month",
       description: "Perfect for individual investors and small portfolios",
@@ -749,8 +765,13 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       ],
       popular: false;
     },
+<<<<<<< HEAD
     {
       name: "Professional"
+=======
+    {}
+      name: "Professional",
+>>>>>>> origin/merge-error-fixes
       price: "$99",
       period: "/month",
       description: "Ideal for serious investors and larger portfolios",
@@ -765,8 +786,13 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       ],
       popular: true;
     },
+<<<<<<< HEAD
     {
       name: "Enterprise"
+=======
+    {}
+      name: "Enterprise",
+>>>>>>> origin/merge-error-fixes
       price: "$299",
       period: "/month",
       description: "For institutional investors and wealth management firms",
@@ -783,8 +809,9 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     }
   ];
 
-  const handleOptimizePortfolio = () => {
+  const handleOptimizePortfolio = () => {}
     setIsOptimizing(true);
+<<<<<<< HEAD
     // Simulate optimization process;
     setTimeout(() => {
       setOptimizationResults({)
@@ -794,6 +821,17 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
         recommendations: [),
           { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' })
           { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' })
+=======
+    // Simulate optimization process
+    setTimeout(() => {}
+      setOptimizationResults({)}
+        expectedReturn: 12.5,
+        riskLevel: 'Moderate',
+        sharpeRatio: 1.8,
+        recommendations: [
+          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' },
+          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' },
+>>>>>>> origin/merge-error-fixes
           { action: 'Hold', symbol: 'MSFT', shares: 50, reason: 'Stable performance and dividend yield' }
 <<<<<<< HEAD
 =======
@@ -806,11 +844,19 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     }, 3000);
   };
 
+<<<<<<< HEAD
   const getChangeColor = (change: number) => {,
     return change >= 0 ? 'text-green-400' : 'text-red-400';
   };
 
   const getChangeIcon = (change: number) => {,
+=======
+  const getChangeColor = (change: number) => {}
+    return change >= 0 ? 'text-green-400' : 'text-red-400';
+  };
+
+  const getChangeIcon = (change: number) => {}
+>>>>>>> origin/merge-error-fixes
     return change >= 0 ? TrendingUp : TrendingDown;
   };
 
@@ -954,7 +1000,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 </div>
 
                 <div className="space-y-4">
-                  {portfolio.map((stock) => {
+                  {portfolio.map((stock) => {}
                     const ChangeIcon = getChangeIcon(stock.change);
 <<<<<<< HEAD
                     return(<div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">)
@@ -1059,9 +1105,15 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 </div>,
 ,
                 {/* Optimization Results */}
+<<<<<<< HEAD
                 {optimizationResults && (
                   <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"></div>
                     <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h3>
+=======
+                {optimizationResults && (}
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+>>>>>>> origin/merge-error-fixes
                       <Target className="w-6 h-6 text-blue-400 mr-2" />
                       Optimization Results;
                     </h3>
@@ -1088,7 +1140,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   disabled={isOptimizing}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  {isOptimizing ? (
+                  {isOptimizing ? (}
                     <>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                       Optimizing...
@@ -1137,9 +1189,15 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+=======
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+>>>>>>> origin/merge-error-fixes
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -1182,11 +1240,18 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
             {pricingPlans.map((plan, index) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+=======
+            {pricingPlans.map((plan, index) => (}
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
+                {plan.popular && (}
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+>>>>>>> origin/merge-error-fixes
                     <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular;
                     </span>
@@ -1203,7 +1268,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -1211,10 +1276,17 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   ))}
                 </ul>
 
+<<<<<<< HEAD
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700 transform hover:scale-105',}
                     : 'bg-white/10 text-white hover:bg-white/20'}
+=======
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+>>>>>>> origin/merge-error-fixes
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>

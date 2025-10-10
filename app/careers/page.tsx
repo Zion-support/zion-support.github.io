@@ -1,6 +1,6 @@
 'use client';
 import { Link } from 'react-router-dom';
-import {
+import {}
   Briefcase,
   MapPin,
   Clock,
@@ -62,7 +62,7 @@ import {
   Navigation;
 } from 'lucide-react';
 
-export default function CareersPage() {
+export default function CareersPage() {}
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -90,6 +90,7 @@ export default function CareersPage() {
   ];
 
   const openPositions = [
+<<<<<<< HEAD
     {
       id: 1;
       title: 'Senior AI Engineer'
@@ -97,6 +98,15 @@ export default function CareersPage() {
       location: 'remote'
       type: 'full-time'
       level: 'Senior'
+=======
+    {}
+      id: 1,
+      title: 'Senior AI Engineer',
+      department: 'engineering',
+      location: 'remote',
+      type: 'full-time',
+      level: 'Senior',
+>>>>>>> origin/merge-error-fixes
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [,
         '5+ years experience in AI/ML',
@@ -115,6 +125,7 @@ export default function CareersPage() {
       experience: '5+ years',
       skills: ['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Docker']
     },
+<<<<<<< HEAD
     {
       id: 2;
       title: 'AI Research Scientist'
@@ -122,6 +133,15 @@ export default function CareersPage() {
       location: 'san-francisco-ca'
       type: 'full-time'
       level: 'Senior'
+=======
+    {}
+      id: 2,
+      title: 'AI Research Scientist',
+      department: 'ai-research',
+      location: 'san-francisco-ca',
+      type: 'full-time',
+      level: 'Senior',
+>>>>>>> origin/merge-error-fixes
       description: 'Conduct groundbreaking research in artificial intelligence and machine learning.',
       requirements: [,
         'PhD in AI/ML or related field',
@@ -140,6 +160,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['Research', 'Deep Learning', 'Quantum Computing', 'Publications']
     },
+<<<<<<< HEAD
     {
       id: 3;
       title: 'Data Scientist'
@@ -147,6 +168,15 @@ export default function CareersPage() {
       location: 'remote'
       type: 'full-time'
       level: 'Mid'
+=======
+    {}
+      id: 3,
+      title: 'Data Scientist',
+      department: 'data-science',
+      location: 'remote',
+      type: 'full-time',
+      level: 'Mid',
+>>>>>>> origin/merge-error-fixes
       description: 'Analyze complex data sets and build predictive models for business insights.',
       requirements: [,
         '3+ years data science experience',
@@ -165,6 +195,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['Python', 'R', 'SQL', 'Machine Learning', 'Statistics']
     },
+<<<<<<< HEAD
     {
       id: 4;
       title: 'Product Manager'
@@ -172,6 +203,15 @@ export default function CareersPage() {
       location: 'middletown-de'
       type: 'full-time'
       level: 'Senior'
+=======
+    {}
+      id: 4,
+      title: 'Product Manager',
+      department: 'product',
+      location: 'middletown-de',
+      type: 'full-time',
+      level: 'Senior',
+>>>>>>> origin/merge-error-fixes
       description: 'Lead product strategy and development for AI-powered solutions.',
       requirements: [,
         '5+ years product management',
@@ -190,6 +230,7 @@ export default function CareersPage() {
       experience: '5+ years',
       skills: ['Product Strategy', 'AI Products', 'Analytics', 'Leadership']
     },
+<<<<<<< HEAD
     {
       id: 5;
       title: 'DevOps Engineer'
@@ -197,6 +238,15 @@ export default function CareersPage() {
       location: 'remote'
       type: 'full-time'
       level: 'Mid'
+=======
+    {}
+      id: 5,
+      title: 'DevOps Engineer',
+      department: 'engineering',
+      location: 'remote',
+      type: 'full-time',
+      level: 'Mid',
+>>>>>>> origin/merge-error-fixes
       description: 'Build and maintain scalable cloud infrastructure for AI applications.',
       requirements: [,
         '3+ years DevOps experience',
@@ -215,6 +265,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'CI/CD']
     },
+<<<<<<< HEAD
     {
       id: 6;
       title: 'UX Designer'
@@ -222,6 +273,15 @@ export default function CareersPage() {
       location: 'san-francisco-ca'
       type: 'full-time'
       level: 'Mid'
+=======
+    {}
+      id: 6,
+      title: 'UX Designer',
+      department: 'product',
+      location: 'san-francisco-ca',
+      type: 'full-time',
+      level: 'Mid',
+>>>>>>> origin/merge-error-fixes
       description: 'Design intuitive user experiences for AI-powered applications.',
       requirements: [,
         '3+ years UX design experience',
@@ -242,18 +302,24 @@ export default function CareersPage() {
     }
   ];
 
-  const filteredPositions = openPositions.filter(position => {
+  const filteredPositions = openPositions.filter(position => {)}
     const departmentMatch = selectedDepartment === 'all' || position.department === selectedDepartment;
     const locationMatch = selectedLocation === 'all' || position.location === selectedLocation;
     const typeMatch = selectedType === 'all' || position.type === selectedType;
     return departmentMatch && locationMatch && typeMatch;
 
   const benefits = [
+<<<<<<< HEAD
     {
       icon: Award;
+=======
+    {}
+      icon: Award,
+>>>>>>> origin/merge-error-fixes
       title: 'Competitive Compensation',
       description: 'Above-market salaries with equity participation and performance bonuses',
     },
+<<<<<<< HEAD
     {
       icon: Heart;
       title: 'Health & Wellness',
@@ -261,9 +327,19 @@ export default function CareersPage() {
     },
     {
       icon: Home;
+=======
+    {}
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health, dental, and vision insurance with mental health support'
+    },
+    {}
+      icon: Home,
+>>>>>>> origin/merge-error-fixes
       title: 'Flexible Work',
       description: 'Remote-first culture with flexible hours and unlimited PTO',
     },
+<<<<<<< HEAD
     {
       icon: Brain;
       title: 'Learning & Growth',
@@ -271,27 +347,42 @@ export default function CareersPage() {
     },
     {
       icon: Users;
+=======
+    {}
+      icon: Brain,
+      title: 'Learning & Growth',
+      description: 'Annual learning budget, conference attendance, and mentorship programs'
+    },
+    {}
+      icon: Users,
+>>>>>>> origin/merge-error-fixes
       title: 'Team Culture',
       description: 'Collaborative environment with regular team events and company retreats',
     },
+<<<<<<< HEAD
     {
       icon: Globe;
+=======
+    {}
+      icon: Globe,
+>>>>>>> origin/merge-error-fixes
       title: 'Global Impact',
       description: 'Work on projects that make a real difference in the world',
     }
   ];
 
   const culture = [
-    {
+    {}
       title: 'Innovation First',
       description: 'We encourage experimentation and reward bold ideas that push boundaries',
       icon: Sparkles;
     },
-    {
+    {}
       title: 'Collaboration',
       description: 'We believe the best solutions come from diverse teams working together',
       icon: Users;
     },
+<<<<<<< HEAD
     {
       title: 'Growth Mindset',)
       description: 'We invest in our people\'s development and provide opportunities to learn',)
@@ -307,6 +398,22 @@ export default function CareersPage() {
 )
     const getDepartmentIcon = (department: string) => {
     const icons = {
+=======
+    {}
+      title: 'Growth Mindset',
+      description: 'We invest in our people\'s development and provide opportunities to learn',
+      icon: TrendingUp
+    },
+    {}
+      title: 'Work-Life Balance',
+      description: 'We understand that great work comes from well-rested, happy people',
+      icon: Clock
+    }
+  ];
+
+  const getDepartmentIcon = (department: string) => {}
+    const icons = {}
+>>>>>>> origin/merge-error-fixes
       engineering: Code,
 =======
 
@@ -321,8 +428,13 @@ export default function CareersPage() {
     return icons[department as keyof typeof icons] || Briefcase;
   };
 
+<<<<<<< HEAD
   const getDepartmentColor = (department: string) => {,
     const colors = {,
+=======
+  const getDepartmentColor = (department: string) => {}
+    const colors = {}
+>>>>>>> origin/merge-error-fixes
       engineering: 'text-blue-400',
       'ai-research': 'text-purple-400',
       'data-science': 'text-green-400',
@@ -396,6 +508,7 @@ export default function CareersPage() {
               <div className="flex gap-2 overflow-x-auto">{departments.map((dept) => (<button
 =======
               </div>
+<<<<<<< HEAD
               <div className="flex gap-2 overflow-x-auto">,
                 {departments.map((dept) => (,
                   <button;
@@ -409,6 +522,17 @@ export default function CareersPage() {
                       selectedDepartment === dept.name;
                         ? 'bg-cyan-500 text-white'}
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+              <div className="flex gap-2 overflow-x-auto">
+                {departments.map((dept) => (}
+                  <button
+                    key={dept.name}
+                    onClick={() => setSelectedDepartment(dept.name)}
+                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                      selectedDepartment === dept.name
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                     }`}
                   ></button>
                     {dept.label} ({dept.count})</button>
@@ -421,6 +545,7 @@ export default function CareersPage() {
               </div>
             </div>
             <div className="flex gap-2 overflow-x-auto">
+<<<<<<< HEAD
               {locations.map((location) => (
                 <button;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -433,6 +558,16 @@ export default function CareersPage() {
                     selectedLocation === location.name;
                       ? 'bg-purple-500 text-white'}
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+              {locations.map((location) => (}
+                <button
+                  key={location.name}
+                  onClick={() => setSelectedLocation(location.name)}
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                    selectedLocation === location.name
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                   }`}
                 ></button>
                   {location.label} ({location.count})</button>
@@ -444,6 +579,7 @@ export default function CareersPage() {
 =======
             </div>
             <div className="flex gap-2 overflow-x-auto mt-2">
+<<<<<<< HEAD
               {jobTypes.map((type) => (
                 <button;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -456,6 +592,16 @@ export default function CareersPage() {
                     selectedType === type.name;
                       ? 'bg-green-500 text-white'}
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
+=======
+              {jobTypes.map((type) => (}
+                <button
+                  key={type.name}
+                  onClick={() => setSelectedType(type.name)}
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
+                    selectedType === type.name
+                      ? 'bg-green-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+>>>>>>> origin/merge-error-fixes
                   }`}
                 ></button>
                   {type.label} ({type.count})</button>
@@ -472,7 +618,13 @@ export default function CareersPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-8">Open Positions<div className="space-y-6">{filteredPositions.map((position) => (</div>
+=======
+            <h2 className="text-3xl font-bold text-white mb-8">Open Positions</h2>
+            <div className="space-y-6">
+              {filteredPositions.map((position) => (}
+>>>>>>> origin/merge-error-fixes
                 <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div className="flex-1">
@@ -536,12 +688,20 @@ export default function CareersPage() {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">,
                     <div>,
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>,
                       <ul className="space-y-1">,
                         {position.requirements.slice(0, 3).map((req, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
+                      <ul className="space-y-1">
+                        {position.requirements.slice(0, 3).map((req, index) => (}
+>>>>>>> origin/merge-error-fixes
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{req}</CheckCircle>
                           </CheckCircle>
@@ -551,11 +711,17 @@ export default function CareersPage() {
 <<<<<<< HEAD
                     <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:<div className="flex flex-wrap gap-2">{position.skills.map((skill, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{skill}</span>
 =======
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills: </h4>,
                       <div className="flex flex-wrap gap-2">,
                         {position.skills.map((skill, index) => (
+=======
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {position.skills.map((skill, index) => (}
+>>>>>>> origin/merge-error-fixes
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {skill}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
@@ -609,7 +775,19 @@ export default function CareersPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Work With Us?<p className="text-lg text-gray-300 max-w-3xl mx-auto">We offer competitive benefits and a culture that values innovation, growth, and work-life balance<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+=======
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Why Work With Us?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We offer competitive benefits and a culture that values innovation, growth, and work-life balance
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -652,7 +830,19 @@ export default function CareersPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Culture<p className="text-lg text-gray-300 max-w-3xl mx-auto">The values and principles that shape how we work together<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) => (</div>
+=======
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Our Culture
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              The values and principles that shape how we work together
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {culture.map((item, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8 text-white" />

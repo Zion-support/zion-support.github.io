@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   BookOpen,
   Play,
   Award,
@@ -24,7 +24,11 @@ import {
   MapPin;
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const TrainingPage: React.FC = () => {,
+=======
+const TrainingPage: React.FC = () => {}
+>>>>>>> origin/merge-error-fixes
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -36,6 +40,7 @@ const TrainingPage: React.FC = () => {,
   ];
 
   const courses = [
+<<<<<<< HEAD
     {
       id: 1;
       title: 'AI Fundamentals for Business Leaders'
@@ -47,10 +52,24 @@ const TrainingPage: React.FC = () => {,
       students: 1250;
       price: 'Free'
       instructor: 'Dr. Sarah Chen'
+=======
+    {}
+      id: 1,
+      title: 'AI Fundamentals for Business Leaders',
+      description: 'Learn the basics of AI and how it can transform your business operations',
+      category: 'ai-fundamentals',
+      duration: '4 hours',
+      level: 'Beginner',
+      rating: 4.8,
+      students: 1250,
+      price: 'Free',
+      instructor: 'Dr. Sarah Chen',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '🧠',
       modules: 8;
       certificate: true;
     },
+<<<<<<< HEAD
     {
       id: 2;
       title: 'Implementing AI Workflow Automation'
@@ -62,10 +81,24 @@ const TrainingPage: React.FC = () => {,
       students: 890;
       price: '$199'
       instructor: 'Mike Rodriguez'
+=======
+    {}
+      id: 2,
+      title: 'Implementing AI Workflow Automation',
+      description: 'Step-by-step guide to implementing AI automation in your organization',
+      category: 'implementation',
+      duration: '6 hours',
+      level: 'Intermediate',
+      rating: 4.9,
+      students: 890,
+      price: '$199',
+      instructor: 'Mike Rodriguez',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '⚡',
       modules: 12;
       certificate: true;
     },
+<<<<<<< HEAD
     {
       id: 3;
       title: 'Advanced AI Analytics and Machine Learning'
@@ -77,10 +110,24 @@ const TrainingPage: React.FC = () => {,
       students: 456;
       price: '$399'
       instructor: 'Dr. James Liu'
+=======
+    {}
+      id: 3,
+      title: 'Advanced AI Analytics and Machine Learning',
+      description: 'Deep dive into advanced analytics and ML techniques for enterprise',
+      category: 'advanced',
+      duration: '10 hours',
+      level: 'Advanced',
+      rating: 4.7,
+      students: 456,
+      price: '$399',
+      instructor: 'Dr. James Liu',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '📊',
       modules: 15;
       certificate: true;
     },
+<<<<<<< HEAD
     {
       id: 4;
       title: 'AI Security and Compliance'
@@ -92,10 +139,24 @@ const TrainingPage: React.FC = () => {,
       students: 678;
       price: '$299'
       instructor: 'Lisa Wang'
+=======
+    {}
+      id: 4,
+      title: 'AI Security and Compliance',
+      description: 'Learn about AI security best practices and regulatory compliance',
+      category: 'certification',
+      duration: '5 hours',
+      level: 'Intermediate',
+      rating: 4.6,
+      students: 678,
+      price: '$299',
+      instructor: 'Lisa Wang',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '🛡️',
       modules: 10;
       certificate: true;
     },
+<<<<<<< HEAD
     {
       id: 5;
       title: 'AI Content Generation Masterclass'
@@ -107,10 +168,24 @@ const TrainingPage: React.FC = () => {,
       students: 734;
       price: '$249'
       instructor: 'Emily Watson'
+=======
+    {}
+      id: 5,
+      title: 'AI Content Generation Masterclass',
+      description: 'Master the art of AI-powered content creation and optimization',
+      category: 'implementation',
+      duration: '7 hours',
+      level: 'Intermediate',
+      rating: 4.8,
+      students: 734,
+      price: '$249',
+      instructor: 'Emily Watson',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '✍️',
       modules: 14;
       certificate: true;
     },
+<<<<<<< HEAD
     {
       id: 6;
       title: 'Quantum Computing for AI Applications'
@@ -122,6 +197,19 @@ const TrainingPage: React.FC = () => {,
       students: 234;
       price: '$499'
       instructor: 'Dr. Alex Quantum'
+=======
+    {}
+      id: 6,
+      title: 'Quantum Computing for AI Applications',
+      description: 'Explore the intersection of quantum computing and artificial intelligence',
+      category: 'advanced',
+      duration: '8 hours',
+      level: 'Advanced',
+      rating: 4.5,
+      students: 234,
+      price: '$499',
+      instructor: 'Dr. Alex Quantum',
+>>>>>>> origin/merge-error-fixes
       thumbnail: '⚛️',
       modules: 16;
       certificate: true;
@@ -129,7 +217,7 @@ const TrainingPage: React.FC = () => {,
   ];
 
   const upcomingEvents = [
-    {
+    {}
       title: 'AI Implementation Workshop',
       date: 'March 20, 2024',
       time: '9:00 AM - 5:00 PM EST',
@@ -138,7 +226,7 @@ const TrainingPage: React.FC = () => {,
       spots: 25;
       price: '$299',
     },
-    {
+    {}
       title: 'AI Security Certification Bootcamp',
       date: 'April 5-7, 2024',
       time: '9:00 AM - 5:00 PM EST',
@@ -147,7 +235,7 @@ const TrainingPage: React.FC = () => {,
       spots: 15;
       price: '$1,299'
     },
-    {
+    {}
       title: 'Advanced AI Analytics Masterclass',
       date: 'April 15, 2024',
       time: '10:00 AM - 4:00 PM EST',
@@ -212,9 +300,15 @@ const TrainingPage: React.FC = () => {,
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
             {stats.map((stat, index) => (
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (}
+>>>>>>> origin/merge-error-fixes
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
 =======
@@ -257,15 +351,26 @@ const TrainingPage: React.FC = () => {,
               <button;
 =======
           <div className="flex flex-wrap justify-center gap-4 mb-12">
+<<<<<<< HEAD
             {categories.map((category) => (</div>
+=======
+            {categories.map((category) => (}
+>>>>>>> origin/merge-error-fixes
               <button
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
+<<<<<<< HEAD
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                   selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white'}
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'}
+=======
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${}
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+>>>>>>> origin/merge-error-fixes
                 }`}
               >
                 <category.icon className="w-5 h-5" />
@@ -282,10 +387,16 @@ const TrainingPage: React.FC = () => {,
                 <div className="text-center mb-4">,
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {filteredCourses.map((course) => (</div>
               <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-center mb-4"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+            {filteredCourses.map((course) => (}
+              <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-center mb-4">
+>>>>>>> origin/merge-error-fixes
                   <div className="text-6xl mb-4">{course.thumbnail}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{course.description}</p>
@@ -319,7 +430,7 @@ const TrainingPage: React.FC = () => {,
                   </div>
                   <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Level:</span>
-                    <span className={`px-2 py-1 rounded text-xs ${
+                    <span className={`px-2 py-1 rounded text-xs ${}
                       course.level === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       course.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
@@ -362,8 +473,13 @@ const TrainingPage: React.FC = () => {,
 
                 <div className="flex items-center justify-between mb-4"></div>
                   <div className="text-2xl font-bold text-cyan-400">{course.price}</div>
+<<<<<<< HEAD
                   {course.certificate && (
                     <div className="flex items-center space-x-1 text-green-400"></div>
+=======
+                  {course.certificate && (}
+                    <div className="flex items-center space-x-1 text-green-400">
+>>>>>>> origin/merge-error-fixes
                       <Certificate className="w-4 h-4" />
                       <span className="text-xs">Certificate</span>
                     </div>
@@ -406,11 +522,18 @@ const TrainingPage: React.FC = () => {,
           </div>
 
           <div className="space-y-6">
+<<<<<<< HEAD
             {upcomingEvents.map((event, index) => (</div>
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="flex items-start justify-between"></div>
                   <div className="flex-1"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+            {upcomingEvents.map((event, index) => (}
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+>>>>>>> origin/merge-error-fixes
                     <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
                     <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4"></div>
                       <div className="flex items-center space-x-1"></div>

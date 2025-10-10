@@ -4,40 +4,70 @@ import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Server
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const CloudMigrationPage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {}
   const features = [
+<<<<<<< HEAD
     {
       icon: Cloud;
+=======
+    {}
+      icon: Cloud,
+>>>>>>> origin/merge-error-fixes
       title: 'Seamless Migration',
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption',
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
+<<<<<<< HEAD
     {
       icon: Database;
+=======
+    {}
+      icon: Database,
+>>>>>>> origin/merge-error-fixes
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
       benefits: ['Data validation', 'Incremental sync', 'Backup & recovery']
     },
+<<<<<<< HEAD
     {
       icon: Server;
+=======
+    {}
+      icon: Server,
+>>>>>>> origin/merge-error-fixes
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
     },
+<<<<<<< HEAD
     {
       icon: Shield;
+=======
+    {}
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       title: 'Security First',
       description: 'Enterprise-grade security throughout the migration process',
       benefits: ['Data encryption', 'Access controls', 'Compliance']
     },
+<<<<<<< HEAD
     {
       icon: Zap;
+=======
+    {}
+      icon: Zap,
+>>>>>>> origin/merge-error-fixes
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
+<<<<<<< HEAD
     {
       icon: Target;
+=======
+    {}
+      icon: Target,
+>>>>>>> origin/merge-error-fixes
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
@@ -45,27 +75,27 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const migrationSteps = [
-    {
+    {}
       step: '01',
       title: 'Assessment',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements',
       duration: '1-2 weeks',
       icon: CheckCircle;
     },
-    {
+    {}
       step: '02',
       title: 'Architecture Design',
       description: 'Design optimal cloud architecture tailored to your business needs.',
       duration: '1-2 weeks',
     },
-    {
+    {}
       step: '03',
       title: 'Migration',
       description: 'Execute the migration with zero downtime and data integrity',
       duration: '2-4 weeks',
       icon: Cloud;
     },
-    {
+    {}
       step: '04',
       title: 'Optimization',
       description: 'Optimize performance and provide ongoing support and monitoring.',
@@ -75,7 +105,7 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: 'Assessment',
       price: '$5,000',
       description: 'Comprehensive infrastructure assessment and migration planning',
@@ -88,7 +118,7 @@ const CloudMigrationPage: React.FC = () => {
       ],
       popular: false;
     },
-    {
+    {}
       name: 'Standard Migration',
       price: '$15,000',
       description: 'Complete migration service for small to medium businesses',
@@ -101,7 +131,7 @@ const CloudMigrationPage: React.FC = () => {
       ],
       popular: true;
     },
-    {
+    {}
       name: 'Enterprise Migration',
       price: 'Custom',
       description: 'Full-service migration for large enterprises',
@@ -118,22 +148,22 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const benefits = [
-    {
+    {}
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
       percentage: '40%',
     },
-    {
+    {}
       title: 'Improved Performance',
       description: 'Achieve 99.9% uptime with cloud infrastructure.',
       percentage: '99.9%',
     },
-    {
+    {}
       title: 'Enhanced Security',
       description: 'Enterprise-grade security with automated updates and monitoring.',
       percentage: '100%',
     },
-    {
+    {}
       title: 'Scalability',
       description: 'Scale resources up or down based on demand automatically.',
       percentage: 'Unlimited',
@@ -229,6 +259,7 @@ const CloudMigrationPage: React.FC = () => {
                   from planning to optimization.
                 </p>
               </div>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
                 {features.map((feature, index) => (
                   <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">,
@@ -238,6 +269,18 @@ const CloudMigrationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-300 mb-6">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
+=======
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {features.map((feature, index) => (}
+                  <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                    <p className="text-gray-300 mb-6">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (}
+>>>>>>> origin/merge-error-fixes
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
                         </CheckCircle>
@@ -260,9 +303,14 @@ const CloudMigrationPage: React.FC = () => {
                 <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>
                 <p className="text-xl text-gray-300">A proven methodology for successful cloud migrations</p>
               </div>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
                 {migrationSteps.map((step, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {migrationSteps.map((step, index) => (}
+>>>>>>> origin/merge-error-fixes
                   <div key={index} className="cyber-card p-6">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
@@ -276,8 +324,13 @@ const CloudMigrationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <span className="text-white font-bold text-lg">{step.step}</span>
                       </div>
+<<<<<<< HEAD
                       {step.icon && (
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
+=======
+                      {step.icon && (}
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+>>>>>>> origin/merge-error-fixes
                           <step.icon className="w-6 h-6 text-white" />
                         </div>
                       )}
@@ -296,6 +349,7 @@ const CloudMigrationPage: React.FC = () => {
 <<<<<<< HEAD
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
+<<<<<<< HEAD
                   <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Cloud Migration?<div className="space-y-6">{benefits.map((benefit, index) => (</div>
 =======
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
@@ -304,6 +358,11 @@ const CloudMigrationPage: React.FC = () => {
                   <div className="space-y-6">,
                     {benefits.map((benefit, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                  <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Cloud Migration?</h2>
+                  <div className="space-y-6">
+                    {benefits.map((benefit, index) => (}
+>>>>>>> origin/merge-error-fixes
                       <div key={index} className="flex items-start">
                         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
 =======
@@ -377,10 +436,15 @@ const CloudMigrationPage: React.FC = () => {
                 <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>
                 <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
               </div>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
                 {pricingPlans.map((plan, index) => (
+=======
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricingPlans.map((plan, index) => (}
+>>>>>>> origin/merge-error-fixes
                   <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                    {plan.popular && (
+                    {plan.popular && (}
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular;
@@ -388,15 +452,33 @@ const CloudMigrationPage: React.FC = () => {
                         </span>
                       </div>
                     )}
+<<<<<<< HEAD
                     <div className="text-center mb-6"></div>
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div><span className="text-lg text-gray-400">{plan.period}</span>
                       <p className="text-gray-300">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
+=======
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <div className="text-4xl font-bold text-cyan-400 mb-2">
+                        {plan.price}
+                        <span className="text-lg text-gray-400"> {plan.period}</span>
+                      </div>
+                      <p className="text-gray-300">{plan.description}</p>
+                    </div>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, idx) => (}
+>>>>>>> origin/merge-error-fixes
                         <li key={idx} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" >{feature}</CheckCircle>
                         </CheckCircle>
                       ))}
+<<<<<<< HEAD
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
 <<<<<<< HEAD
+=======
+                    </ul>
+                    <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${}
+>>>>>>> origin/merge-error-fixes
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'

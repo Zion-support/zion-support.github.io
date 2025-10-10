@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const ContentStatistics: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)
@@ -20,66 +21,139 @@ const ContentStatistics: React.FC = () => {,
       value: 500;
       suffix: '+'
       icon: Award;
+=======
+const ContentStatistics: React.FC = () => {}
+  const [isVisible, setIsVisible] = useState(false);
+  const [counts, setCounts] = useState({)}
+    projects: 0,
+    clients: 0,
+    uptime: 0,
+    satisfaction: 0,
+    countries: 0,
+    years: 0
+  });
+
+  const stats = [
+    {}
+      id: 'projects',
+      label: 'Projects Completed',
+      value: 500,
+      suffix: '+',
+      icon: Award,
+>>>>>>> origin/merge-error-fixes
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       description: 'Successful AI and IT implementations',
     },
+<<<<<<< HEAD
     {
       id: 'clients'
       label: 'Happy Clients'
       value: 200;
       suffix: '+'
       icon: Users;
+=======
+    {}
+      id: 'clients',
+      label: 'Happy Clients',
+      value: 200,
+      suffix: '+',
+      icon: Users,
+>>>>>>> origin/merge-error-fixes
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description: 'Satisfied customers worldwide',
     },
+<<<<<<< HEAD
     {
       id: 'uptime'
       label: 'Uptime Guarantee'
       value: 99.9;
       suffix: '%'
       icon: Shield;
+=======
+    {}
+      id: 'uptime',
+      label: 'Uptime Guarantee',
+      value: 99.9,
+      suffix: '%',
+      icon: Shield,
+>>>>>>> origin/merge-error-fixes
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       description: 'Reliable service delivery',
     },
+<<<<<<< HEAD
     {
       id: 'satisfaction'
       label: 'Client Satisfaction'
       value: 98;
       suffix: '%'
       icon: Star;
+=======
+    {}
+      id: 'satisfaction',
+      label: 'Client Satisfaction',
+      value: 98,
+      suffix: '%',
+      icon: Star,
+>>>>>>> origin/merge-error-fixes
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
       description: 'Customer satisfaction rate',
     },
+<<<<<<< HEAD
     {
       id: 'countries'
       label: 'Countries Served'
       value: 25;
       suffix: '+'
       icon: Globe;
+=======
+    {}
+      id: 'countries',
+      label: 'Countries Served',
+      value: 25,
+      suffix: '+',
+      icon: Globe,
+>>>>>>> origin/merge-error-fixes
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'Global presence and reach',
     },
+<<<<<<< HEAD
     {
       id: 'years'
       label: 'Years Experience'
       value: 10;
       suffix: '+'
       icon: Clock;
+=======
+    {}
+      id: 'years',
+      label: 'Years Experience',
+      value: 10,
+      suffix: '+',
+      icon: Clock,
+>>>>>>> origin/merge-error-fixes
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10',
       description: 'Industry expertise and knowledge',
     }
   ];
+<<<<<<< HEAD
 )
     useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+=======
+
+  useEffect(() => {}
+    const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
+>>>>>>> origin/merge-error-fixes
           setIsVisible(true);
         }
       },
@@ -87,37 +161,43 @@ const ContentStatistics: React.FC = () => {,
     );
 
     const element = document.getElementById('statistics-section');
-    if (element) {
+    if (element) {}
       observer.observe(element);
     }
 
-    return () => {
-      if (element) {
+    return () => {}
+      if (element) {}
         observer.unobserve(element);
       }
     };
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (isVisible) {
       const duration = 2000; // 2 seconds;
+=======
+  useEffect(() => {}
+    if (isVisible) {}
+      const duration = 2000; // 2 seconds
+>>>>>>> origin/merge-error-fixes
       const steps = 60;
       const stepDuration = duration / steps;
 
-      stats.forEach((stat) => {
+      stats.forEach((stat) => {}
         let currentStep = 0;
         const increment = stat.value / steps;
 
-        const timer = setInterval(() => {
+        const timer = setInterval(() => {}
           currentStep++;
-          setCounts((prev) => ({
+          setCounts((prev) => ({}
             ...prev,
             [stat.id]: Math.min(Math.floor(increment * currentStep), stat.value)
           }));
 
-          if (currentStep >= steps) {
+          if (currentStep >= steps) {}
             clearInterval(timer);
-            setCounts((prev) => ({
+            setCounts((prev) => ({}
               ...prev,
               [stat.id]: stat.value;
             }));
@@ -135,9 +215,22 @@ const ContentStatistics: React.FC = () => {,
 =======
   return (
     <section id="statistics-section" className="py-16" aria-labelledby="statistics-heading">
+<<<<<<< HEAD
       <div className="container mx-auto px-4"></section>
         <h2 id="statistics-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-4 neon-text">Our Impact</h2><p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.</p><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">{stats.map((stat) => (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
+=======
+      <div className="container mx-auto px-4">
+        <h2 id="statistics-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-4 neon-text">
+          Our Impact
+        </h2>
+        <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+          Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {stats.map((stat) => (}
+>>>>>>> origin/merge-error-fixes
             <div
 =======
         <h2 id="statistics-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-4 neon-text">
@@ -157,7 +250,15 @@ const ContentStatistics: React.FC = () => {,
               <div className="flex justify-center mb-4"></div>
                 <div className={`p-3 rounded-full ${stat.bgColor} ${stat.color}`}></div>
                   <stat.icon className="w-8 h-8" />
+<<<<<<< HEAD
                 <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>{stat.id === 'uptime' || stat.id === 'satisfaction'
+=======
+                </div>
+              </div>
+
+              <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
+                {stat.id === 'uptime' || stat.id === 'satisfaction'}
+>>>>>>> origin/merge-error-fixes
                   ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`</div>
                 }</div>

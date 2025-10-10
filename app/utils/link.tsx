@@ -1,15 +1,25 @@
 
+<<<<<<< HEAD
 interface LinkProps {
 <<<<<<< HEAD
   href: string,
     children: React.ReactNode
+=======
+interface LinkProps {}
+  href: string
+  children: React.ReactNode
+>>>>>>> origin/merge-error-fixes
   className?: string
   target?: string
   rel?: string
   onClick?: () => void
   'aria-label'?: string;}
 }
+<<<<<<< HEAD
 export const Link: React.FC<LinkProps>= ({
+=======
+export const Link: React.FC<LinkProps> = ({}
+>>>>>>> origin/merge-error-fixes
   href,
 =======
   href: string;
@@ -30,13 +40,18 @@ export const Link: React.FC<LinkProps> = ({,
   onClick,
   'aria-label': ariaLabel,
   ...props}
-}) => {
-  const handleClick = useCallback((...args) => {
-    if (onClick) {
+}) => {}
+  const handleClick = useCallback((...args) => {}
+    if (onClick) {}
       onClick();}
     }
+<<<<<<< HEAD
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
+=======
+    // Handle internal navigation
+    if (href.startsWith('/') && !href.startsWith('//')) {}
+>>>>>>> origin/merge-error-fixes
       e.preventDefault()
       window.location.href = href;}
     }
