@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -152,48 +151,3 @@ const LoadingSkeletonPage: React.FC = () => {
 };
 
 export default LoadingSkeletonPage;
-=======
-export const ServiceCardSkeleton: React.FC = React.memo(() => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-6"><div className="h-6 bg-gray-700 rounded mb-3"><div className="h-4 bg-gray-700 rounded mb-4"><div className="space-y-2 mb-4">
-      <div className="h-3 bg-gray-700 rounded"><div className="h-3 bg-gray-700 rounded"><div className="h-3 bg-gray-700 rounded w-3/4"><div className="h-8 bg-gray-700 rounded">);</div>
-export const HeroSkeleton: React.FC = React.memo(() => (</div><div className="text-center mb-16 animate-pulse">
-    <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"><div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"><div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl"><div className="flex justify-center gap-4">
-      <div className="h-12 bg-gray-700 rounded w-48"><div className="h-12 bg-gray-700 rounded w-48">);
-</div>
-export const ContentSkeleton: React.FC = React.memo(() => (</div><div className="animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded w-3/4">);</div>
-export const CardSkeleton: React.FC = React.memo(() => (</div><div className="cyber-card p-6 animate-pulse">
-    <div className="h-6 bg-gray-700 rounded mb-4"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded w-2/3">);</div>
-export default ServiceCardSkeleton;</div>
-export const HeroSkeleton: React.FC = React.memo(() => (
-  <div className="text-center mb-16 animate-pulse">
-    <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl">
-    <div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl">
-    <div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl">
-    <div className="flex justify-center gap-4">
-      <div className="h-12 bg-gray-700 rounded w-48">
-      <div className="h-12 bg-gray-700 rounded w-48">
-    </div>
-);
-
-export const ContentSkeleton: React.FC = React.memo(() => (
-  <div className="animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4">
-    <div className="h-4 bg-gray-700 rounded mb-2">
-    <div className="h-4 bg-gray-700 rounded mb-2">
-    <div className="h-4 bg-gray-700 rounded w-3/4">
-  </div>
-);
-
-export const CardSkeleton: React.FC = React.memo(() => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="h-6 bg-gray-700 rounded mb-4">
-    <div className="h-4 bg-gray-700 rounded mb-2">
-    <div className="h-4 bg-gray-700 rounded mb-2">
-    <div className="h-4 bg-gray-700 rounded w-2/3">
-  </div>
-);
-,
-export default ServiceCardSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

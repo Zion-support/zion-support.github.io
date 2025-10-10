@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -38,20 +37,8 @@ const ServiceCardPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
-interface ServiceCardProps {
-  icon: LucideIcon,
-  title: string,
-  description: string,
-  features: string[];
-  price: string,
-  popular?: boolean;
-  onSelect: () => void;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ServiceCard | Zion Tech Group</title>
@@ -86,34 +73,6 @@ interface ServiceCardProps {
           </div>
         </div>
       </section>
-=======
-    <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ''}`}>
-      {popular && (</div>
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      
-      <div className="text-center mb-6">
-        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <Icon className="w-8 h-8 text-white" />
-        </div>
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 mb-4">{description}</p>
-        <div className="text-3xl font-bold text-cyan-400 mb-2">{price}</div>
-        <div className="text-sm text-gray-400">per month</div>
-
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-300">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0">
-            {feature}
-          </li>
-        ))}
-      </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

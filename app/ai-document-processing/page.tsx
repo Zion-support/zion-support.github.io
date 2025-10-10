@@ -38,14 +38,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
-=======
-const $1: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,</div>
-      <SEOOptimizer;
-        title="AI Document Processing - Zion Tech Group",
-const AiDocumentProcessingPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -82,71 +74,18 @@ const AiDocumentProcessingPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/ai-document-processing",
-      />,
-      <Navigation />,
-      <main className="container mx-auto px-4 py-16 pt-24">,
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <div className="max-w-4xl mx-auto"></section>
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
-              <FileText className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Document Processing<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent document processing with AI-powered extraction, classification, and analysis.</p>
-            </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI Document Processing;</h1>
-            </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Intelligent document processing with AI-powered extraction, classification, and analysis.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
-              <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Document Processing</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent document processing with AI-powered extraction, classification, and analysis.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-              >Get Started Today</a>
-              >
-                Get Started Today;
-              </a>
-              <a;
-                href="tel:+13024640950"
-                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" >+1 302 464 0950</Phone>
-              </Phone>
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Features Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Features;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -157,68 +96,22 @@ const AiDocumentProcessingPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-            </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">OCR Processing</h3><p className="text-gray-300">Advanced ocr processing capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data Extraction</h3><p className="text-gray-300">Advanced data extraction capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Document Classification</h3><p className="text-gray-300">Advanced document classification capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Form Recognition</h3><p className="text-gray-300">Advanced form recognition capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Contract Analysis</h3><p className="text-gray-300">Advanced contract analysis capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Knowledge Management</h3><p className="text-gray-300">Advanced knowledge management capabilities powered by AI</p>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Benefits Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Document Processing?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Document Processing?
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -226,90 +119,15 @@ const AiDocumentProcessingPage: React.FC = () => {
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Document Processing?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-            </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">90% Time Savings</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Accurate Extraction</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Automated Processing</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Better Organization</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto"></div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Document Processing</h3><div className="text-4xl font-bold text-cyan-400 mb-4">$1,200/month</div>
-              <p className="text-gray-300 mb-6">per month</p><a
-                href="/contact"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
-              >Get Started</a>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Pricing;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees;
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto">,</div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Document Processing</h3>,
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$1,200/month</div>
-              <p className="text-gray-300 mb-6">per month</p>
-              <a;
-                href="/contact"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
-              >
-                Get Started;
-              </a>
-            </div>)
-          </div>)
-        </section>)
-),
-        {/* Contact Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

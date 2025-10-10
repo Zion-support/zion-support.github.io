@@ -6,7 +6,6 @@ import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
-<<<<<<< HEAD
   const blogPosts = [
     {
       title: 'The Future of AI in Business',
@@ -63,18 +62,6 @@ const categories = [
                 Insights, trends, and expert perspectives on AI, technology, and business transformation.
               </p>
             </div>
-=======
-    return () => clearTimeout(timer);
-  }, []);const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50"></div>
-        <div className="container mx-auto px-4 py-8"></div>
-          <div className="text-center mb-12"></div>
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
 
@@ -114,7 +101,6 @@ const categories = [
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Latest Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {filteredPosts.map((post) => (
               <div key={post.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
                 <div className="h-48 bg-gradient-to-r from-purple-500/20 to-blue-500/20 flex items-center justify-center">
@@ -165,21 +151,12 @@ const categories = [
                     </button>
                   </div>
                 </div>
-=======
-            {[1, 2, 3, 4, 5, 6].map(item => (</div>
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse"></div>
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* All Posts */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -225,68 +202,6 @@ const categories = [
                 </div>
               </article>
             ))}
-=======
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Blog & Insights</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Stay updated with the latest trends in AI, cloud computing, cybersecurity,</p>
-              and digital transformation. Expert insights from our team of specialists.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}</div>
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">)</div>
-          <div className="max-w-4xl mx-auto text-center">)</div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">)
-              Blog & Insights;)</h1>
-            </h1>),
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
-              Stay updated with the latest trends in AI, cloud computing, cybersecurity)
-              and digital transformation. Expert insights from our team of specialists.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4"></div>
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
-                <BookOpen className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Expert Insights</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
-                <TrendingUp className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Latest Trends</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
-                <Star className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">Industry Leaders</span>
-              </div>
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Read our latest insights on AI, technology, and business solutions. Stay updated with industry trends and best practices." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Blog</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Insights, trends, and best practices in AI and technology.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned for our latest articles and insights!
-                </p>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

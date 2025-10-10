@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PWAInstallerPage: React.FC = () => {
   const features = [
     {
@@ -25,22 +24,6 @@ const PWAInstallerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-const $1: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-
-  useEffect(() => {
-    // Check if app is already installed;
-    if (window.matchMedia('(display-mode: standalone)').matches) {,
-      setIsInstalled(true);
-      return;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -63,7 +46,6 @@ const $1: React.FC = () => {
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -89,58 +71,9 @@ const $1: React.FC = () => {
               </button>
             </div>
           </div>
-=======
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-
-    try {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      
-      if (outcome === 'accepted') {
-        // eslint-disable-next-line no-console
-        console.log('User accepted the install prompt');
-      } else {
-        // eslint-disable-next-line no-console
-        console.log('User dismissed the install prompt');
-      }
-      
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error('Error installing PWA:', error);
-    }
-  };
-
-  if (isInstalled || !showInstallButton) {
-    return null;
-  }
-</BeforeInstallPromptEvent>
-  return (</BeforeInstallPromptEvent>
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-</div>
-  return(<div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -215,46 +148,6 @@ const $1: React.FC = () => {
       </section>
     </div>
   );
-=======
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold mb-1">Install App</h3><p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
-
-          <div className="flex space-x-2">
-            <button;
-          <div className="flex space-x-2">
-            <button
-              onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
-            >Install</button><button
-              onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
-            ></<<<button>Maybe</button></<<button>later</button><button
-          onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
-        ></button>
-          ×</button>
-        </button>
-      </div>
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200")
-            >)
-              Install;)
-            </button>)
-),
-            <button;),
-              onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200"
-            >
-              Maybe later;
-            </button>
-          </div>,
-,
-        <button;
-          onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
-        >
-          ×,
-        </button>,
-      </div>,
-    </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PWAInstallerPage;

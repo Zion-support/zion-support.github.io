@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedSEOPage: React.FC = () => {
   const features = [
     {
@@ -27,41 +26,6 @@ const EnhancedSEOPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
-interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  locale?: string;
-  alternateLocales?: string[];
-  robots?: string;
-  viewport?: string;
-  themeColor?: string;
-  colorScheme?: string;
-  preload?: Array<{
-    href: string;,
-    as: string,
-    type?: string;}>;
-  prefetch?: Array<{
-    href: string;,
-    as: string,
-  }>;
-  dnsPrefetch?: string[];
-  preconnect?: string[];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',

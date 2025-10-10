@@ -2,27 +2,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const SupportPage: React.FC = () => {
-<<<<<<< HEAD
+export default function SupportPage() {
   const [searchQuery, setSearchQuery] = useState('');
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Support</h1>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Get help and support for our services
-          </p>
-        </div>
-      </section>
-    </div>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const faqs = [
     {
@@ -38,144 +23,113 @@ const SupportPage: React.FC = () => {
       answer: 'Implementation time varies based on project complexity, but most projects are completed within 4-12 weeks.'
     },
     {
-question: 'Do you provide training for our team?',
+      question: 'Do you provide training for our team?',
       answer: 'Yes! We provide comprehensive training programs including hands-on workshops, documentation, and ongoing support to ensure your team can effectively use our solutions.'
-
     }
   ];
 
   const supportChannels = [
     {
-icon: Phone,
+      icon: Phone,
       title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      contact: '+1-302-464-0950',
-      availability: '24/7'
-
+      description: 'Call us for immediate assistance',
+      contact: '+1 (555) 123-4567',
+      hours: '24/7'
     },
     {
       icon: Mail,
       title: 'Email Support',
-description: 'Get detailed responses to your questions',
+      description: 'Send us an email and we\'ll respond within 24 hours',
       contact: 'support@ziontechgroup.com',
-      availability: '24/7'
+      hours: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
-      description: 'Instant help through our website chat',
+      description: 'Chat with our support team in real-time',
       contact: 'Available on website',
-      availability: 'Business Hours'
-
+      hours: '9 AM - 6 PM EST'
     }
   ];
 
-  const resources = [
-    {
-icon: FileText,
+  const filteredFaqs = faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-      title: 'Documentation',
-      description: 'Comprehensive guides and API references',
-      icon: BookOpen,
-      link: '/docs'
-    },
-    {
-icon: Book,
-      title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides',
-      link: '/knowledge-base'
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Support | Zion Tech Group</title>
+        <meta name="description" content="Get help and support for your Zion Tech Group solutions. 24/7 technical support and comprehensive documentation." />
+        <meta name="keywords" content="support, help, technical support, customer service, Zion Tech Group" />
+      </Helmet>
 
-    },
-    {
-      title: 'Community Forum',
-description: 'Connect with other users and experts',
+      <Navigation />
+      
+      <div className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Support Center
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Get the help you need with our comprehensive support resources and expert assistance.
+              </p>
+            </div>
 
-      link: '/community'
-    },
-    {
-      title: 'Status Page',
-      description: 'Check system status and uptime',
-      icon: Globe,
-      link: '/status'
-    }
-  ];
-
-  const filteredFaqs = selectedCategory === 'all' 
-    ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
-
-  const searchedFaqs = searchQuery 
-    ? filteredFaqs.filter(faq => 
-        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : filteredFaqs;
-
-{/* Search */}
-          <div className="max-w-2xl mx-auto mb-16">
-
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help articles, guides, and solutions..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+            {/* Search */}
+            <div className="max-w-2xl mx-auto mb-16">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for help..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Support */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
               <p className="text-xl text-gray-300">Get in touch with our support team</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <channel.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <p className="text-cyan-400 font-medium mb-2">{channel.contact}</p>
+                  <p className="text-sm text-gray-400">{channel.hours}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Phone Support</h3>
-                <p className="text-gray-300 mb-4">24/7 technical support</p>
-                <p className="text-cyan-400 font-semibold">+1 (555) 123-4567</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Email Support</h3>
-                <p className="text-gray-300 mb-4">Get help via email</p>
-                <p className="text-cyan-400 font-semibold">support@ziontechgroup.com</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Live Chat</h3>
-                <p className="text-gray-300 mb-4">Chat with our experts</p>
-                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors">
-                  Start Chat
-                </button>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 bg-slate-800/50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300">Find answers to common questions</p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="cyber-card p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+              {filteredFaqs.map((faq, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
@@ -184,29 +138,27 @@ description: 'Connect with other users and experts',
         </section>
 
         {/* Business Hours */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="cyber-card p-8">
-              <div className="flex items-center justify-center mb-4">
-                <Clock className="w-8 h-8 text-cyan-400 mr-3" />
-                <h2 className="text-2xl font-bold text-white">Business Hours</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Support Hours</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Clock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Technical Support</h3>
+                <p className="text-gray-300">24/7 availability</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Technical Support</h3>
-                  <p className="text-gray-300">24/7 availability</p>
-                  <p className="text-gray-300">Emergency support included</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
-                </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Response Time</h3>
+                <p className="text-gray-300">Within 2 hours for critical issues</p>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
-);
+
+      <Footer />
+      <SEOOptimizer />
+    </div>
+  );
 }

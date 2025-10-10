@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -26,31 +25,6 @@ const PagePage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-=======
-      icon: Target,
-      title: 'AI-Powered Subject Lines',
-      description: 'Generate compelling subject lines that increase open rates by up to 40%'},
-    {
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Track email performance with detailed analytics and insights'},
-    {
-      icon: Users,
-      title: 'Audience Segmentation',
-      description: 'Automatically segment your audience for personalized campaigns'},
-    {
-      icon: Zap,
-      title: 'A/B Testing',
-      description: 'Test different versions to find the most effective content'},
-    {
-      icon: Shield,
-      title: 'Deliverability Optimization',
-      description: 'Ensure your emails reach the inbox with advanced deliverability tools'},
-    {
-      icon: TrendingUp,
-      title: 'ROI Tracking',
-      description: 'Measure and optimize your email marketing ROI in real-time'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   const benefits = [
@@ -65,7 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -97,45 +70,10 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center mb-16"></div>
-          <h1 className="text-5xl font-bold text-white mb-6"></h1>
-            Email</h1> <span className="text-cyan-400">Optimizer</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your email marketing with AI-powered optimization. Increase open rates,</p>
-            boost engagement, and maximize ROI with our intelligent email optimization platform.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center mb-16">)</div>
-          <h1 className="text-5xl font-bold text-white mb-6">)</h1>
-            Email <span className="text-cyan-400">Optimizer</span>)
-          </h1>)
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">)
-            Transform your email marketing with AI-powered optimization. Increase open rates)
-            boost engagement, and maximize ROI with our intelligent email optimization platform.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <Link;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <Mail className="w-5 h-5 mr-2" >Get Started</Mail>
-            </Mail>
-            <Link
-              href="/demo"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            ></Lin>
-              <BarChart className="w-5 h-5 mr-2" >View Demo</BarChar>
-            </BarChart>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -154,46 +92,6 @@ const PagePage: React.FC = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-=======
-        {/* Features Section */}
-        <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful</h2> <span className="text-cyan-400">Features</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              ></div>
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
-                  <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
-              <Mail className="w-5 h-5 mr-2" />
-              Get Started;
-            </Link>
-            <Link;
-              href="/demo"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <BarChart className="w-5 h-5 mr-2" />
-              View Demo;
-            </Link>
-          </div>,
-        </div>,
-,
-        {/* Features Section */}
-        <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful <span className="text-cyan-400">Features</span>
-          </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (</div>
-              <div;
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
-              >,</div>
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,</div>
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -202,7 +100,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -220,30 +117,12 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
-        {/* Benefits Section */}
-        <div className="mb-16"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Proven <span className="text-cyan-400">Results<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-            Proven <span className="text-cyan-400">Results</span>
-          </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center"></div>
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
-            Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center"></div>
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
-                  <TrendingUp className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -264,37 +143,6 @@ const PagePage: React.FC = () => {
                 Email Us
               </button>
             </div>
-=======
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Email Marketing?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of marketers using our AI-powered email optimization to boost their campaigns.</p>
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <Link;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" >Start Optimizing</ArrowRight>
-            </ArrowRight>
-            <Link
-              href="/pricing"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            ></Lin>
-              <Target className="w-5 h-5 mr-2" >View Pricing</Targe>
-            </Target>
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Start Optimizing;
-            </Link>
-            <Link;
-              href="/pricing"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Target className="w-5 h-5 mr-2" />
-              View Pricing;
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
