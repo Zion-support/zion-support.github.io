@@ -4,31 +4,31 @@ import { Helmet } from 'react-helmet-async';
 const DataAnalyticsBiPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Data Analytics & BI - Zion Tech Group</title>
-        <meta name="description" content="Advanced data analytics and business intelligence solutions including data visualization, reporting, and insights for data-driven decision making." />
-        <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions" />
+        <meta name="description" content="Advanced data analytics and business intelligence solutions including data visualization, reporting, and insights for data-driven decision making." /></meta>
+        <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions" /></meta>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1>
               Data Analytics & Business Intelligence
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Transform your data into actionable insights with our comprehensive data analytics 
               and business intelligence solutions for data-driven decision making.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Visualization</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 Interactive dashboards and visualizations to make complex data easily understandable.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• Interactive dashboards</li>
                 <li>• Real-time charts</li>
                 <li>• Custom visualizations</li>
@@ -36,12 +36,12 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Predictive Analytics</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 Machine learning models to predict future trends and behaviors.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• Forecasting models</li>
                 <li>• Trend analysis</li>
                 <li>• Risk assessment</li>
@@ -49,12 +49,12 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Warehousing</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 Centralized data storage and management for efficient analytics.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• Data integration</li>
                 <li>• ETL processes</li>
                 <li>• Data quality</li>
@@ -62,12 +62,12 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Reporting Solutions</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 Automated reporting and self-service analytics for all stakeholders.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• Automated reports</li>
                 <li>• Self-service BI</li>
                 <li>• Scheduled delivery</li>
@@ -75,12 +75,12 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Performance Metrics</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 KPI tracking and performance monitoring across all business functions.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• KPI dashboards</li>
                 <li>• Performance tracking</li>
                 <li>• Benchmarking</li>
@@ -88,12 +88,12 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Governance</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4"></p>
                 Comprehensive data governance and compliance management.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 <li>• Data lineage</li>
                 <li>• Access controls</li>
                 <li>• Compliance monitoring</li>
@@ -102,15 +102,15 @@ const DataAnalyticsBiPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+          <div className="text-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></button>
               Start Your Analytics Journey
             </button>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+  };
 
 export default DataAnalyticsBiPage;

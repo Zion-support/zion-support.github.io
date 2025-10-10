@@ -5,26 +5,26 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const LayoutPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
+      icon: Brain,
+      title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'High Performance',;
+    icon: Zap,
+      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Enterprise Security',;
+    icon: Shield,
+      title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   }
-    },;
+    },
     {
-    icon: Globe,;
-      title: 'Global Reach',;
+    icon: Globe,
+      title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
   }
     }
@@ -37,36 +37,36 @@ const benefits = [
     '24/7 technical support',;
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Proven track record of success'
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Layout | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta /></meta>
+        <meta /></meta>
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
-            <h1>
-              <span>
+            <h1></h1>
+              <span></span>
                 Layout;
               </span>
-              <br>
+              <br></br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>
+            <p></p>
               Transform your business with our advanced layout solutions.;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
+              <button></button>
                 Get Started
-                <ArrowRight>
+                <ArrowRight></ArrowRight>
               </button>
-              <button>
+              <button></button>
                 Learn More,
               </button>
             </div>
@@ -77,10 +77,10 @@ return (
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
+            <h2></h2>
               Why Choose Our Layout?,
             </h2>
-            <p>
+            <p></p>
               Our layout solutions deliver unmatched performance, security, and scalability.;
             </p>
           </div>
@@ -90,7 +90,7 @@ return (
   }
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
+                  <feature></feature>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -103,10 +103,10 @@ return (
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
+            <h2></h2>
               Key Benefits
             </h2>
-            <p>
+            <p></p>
               Experience the power of our layout solutions for your business.,
             </p>
           </div>
@@ -115,7 +115,7 @@ return (
     benefits.map((benefit, index) => (
   }
               <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
+                <CheckCircle></CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -126,19 +126,19 @@ return (
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
+            <h2></h2>
               Ready to Get Started?;
             </h2>
-            <p>
+            <p></p>
               Contact our experts to discuss your layout needs and get a customized solution.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
+              <button></button>
+                <Phone></Phone>
                 Call Now
               </button>
-              <button>
-                <Mail>
+              <button></button>
+                <Mail></Mail>
                 Email Us
               </button>
             </div>
@@ -146,7 +146,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-}
+  )
+  }
 export default LayoutPage;
 

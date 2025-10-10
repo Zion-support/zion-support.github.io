@@ -24,23 +24,23 @@ useEffect(() => {
         element.addEventListener('click', () => {}
           setLoadingStates(prev => ({ ...prev, [index]: true }));
           setTimeout(() => {}
-            setLoadingStates(prev => ({ ...prev, [index]: false }));
-          }, 1000);
-        });
-      });
+            setLoadingStates(prev => ({ ...prev, [index]: false }))
+  }, 1000)
+  })
+  });
 // Add focus indicators;
 
       const style = document.createElement('style');
       style.textContent = `;
         *:focus {
     outline: 2px solid #06b6d4,
-          outline-offset: 2px,
+          outline-offset: 2px
   }
         }
       `;
-      document.head.appendChild(style);
-    }
-enhanceUX();
+      document.head.appendChild(style)
+  }
+enhanceUX()
   }, []);
 return <>{children}</>
 }

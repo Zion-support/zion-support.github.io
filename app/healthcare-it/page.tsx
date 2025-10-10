@@ -5,69 +5,69 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-icon: Heart,;
-      title: 'HIPAA Compliance',;
+icon: Heart,
+      title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',;
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management'];
-    },;
+      benefits: ['Automated compliance', 'Audit trails', 'Risk management']
+  },
     {
-    icon: Zap,;
-      title: 'Patient Data Security',;
+    icon: Zap,
+      title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',;
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
   }
-    },;
+    },
     {
-    icon: Clock,;
-      title: '24/7 System Monitoring',;
-      description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',;
+    icon: Clock,
+      title: '24/7 System Monitoring',
+      description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
   }
-    },;
+    },
     {
-    icon: Users,;
-      title: 'Interoperability',;
+    icon: Users,
+      title: 'Interoperability',
       description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',;
       benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
   }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Cybersecurity',;
-      description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',;
+    icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
       benefits: ['Threat detection', 'Incident response', 'Security training']
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Healthcare Analytics',;
-      description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',;
+    icon: BarChart,
+      title: 'Healthcare Analytics',
+      description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
   }
     }
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
-      <SEOOptimizer>
-      <Navigation>
+      <SEOOptimizer></SEOOptimizer>
+      <Navigation></Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1>
+          <h1></h1>
             Healthcare;
-            <span>
+            <span></span>
               IT Solutions;
             </span>
           </h1>
-          <p>
+          <p></p>
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;
             Protect patient data while improving operational efficiency.;
           </p>
-              <ArrowRight>
+              <ArrowRight></ArrowRight>
             </button>
-            <button>
+            <button></button>
               Learn More;
             </button>
 </div>
@@ -75,7 +75,7 @@ return (
       </section>
 {/* Features Section */}
       <section className="py-20 px-4"></section>
-            <p>
+            <p></p>
               Comprehensive IT solutions for all aspects of healthcare delivery and management.;
             </p>
           </div>
@@ -96,10 +96,10 @@ return (
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
+            <h2></h2>
               Why Choose Our Healthcare IT Solutions?;
             </h2>
-            <p>
+            <p></p>
               Experience the benefits of modern healthcare technology with our proven solutions.;
             </p>
           </div>
@@ -109,7 +109,7 @@ return (
   }
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -120,13 +120,13 @@ return (
       {/* CTA Section */}
 <section className="py-20 px-4"></section>
             </button>
-            <button>
+            <button></button>
               View Case Studies;
             </button>
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer></Footer>
 </div>
-  );
-}
+  )
+  }

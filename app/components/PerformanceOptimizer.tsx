@@ -32,7 +32,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.decoding) {
     img.decoding = 'async'
   }
-    });
+    })
   }, [enableImageOptimization]);
 
   const optimizeMemory = useCallback(() => {
@@ -66,7 +66,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     newOptimizations.push(`Performance score: ${score}/100`);
 
     setOptimizations(newOptimizations);
-    setIsOptimizing(false);
+    setIsOptimizing(false)
   }, [enableImageOptimization, optimizeImages, optimizeMemory]);
 
   useEffect(() => {
@@ -75,41 +75,41 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       runOptimizations()
   }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer)
   }, [runOptimizations]);
 
   return (
-    <div className="performance-optimizer">
+    <div className="performance-optimizer"></div>
       {children}
       
       {/* Performance Status Indicator (only in development) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
-          <div className="flex items-center space-x-2 mb-2">
-            <Settings className="w-4 h-4 text-cyan-400" />
+        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs"></div>
+          <div className="flex items-center space-x-2 mb-2"></div>
+            <Settings className="w-4 h-4 text-cyan-400" /></Settings>
             <span className="font-semibold">Performance Optimizer</span>
           </div>
           
           {isOptimizing ? (
-            <div className="flex items-center space-x-2 text-yellow-400">
-              <Zap className="w-4 h-4 animate-pulse" />
+            <div className="flex items-center space-x-2 text-yellow-400"></div>
+              <Zap className="w-4 h-4 animate-pulse" /></Zap>
               <span>Optimizing...</span>
             </div>
           ) : (
-            <div className="space-y-2">
+            <div className="space-y-2"></div>
               {performanceScore && (
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                <div className="flex items-center space-x-2"></div>
+                  <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
                   <span>Score: {performanceScore}/100</span>
                 </div>
               )}
               
-              <div className="text-xs text-gray-300">
+              <div className="text-xs text-gray-300"></div>
                 {optimizations.length > 0 ? (
-                  <ul className="space-y-1">
+                  <ul className="space-y-1"></ul>
                     {optimizations.map((opt, index) => (
-                      <li key={index} className="flex items-center space-x-1">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                      <li key={index} className="flex items-center space-x-1"></li>
+                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" /></CheckCircle>
                         <span>{opt}</span>
                       </li>
                     ))}
@@ -153,8 +153,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.href = src;
         link.as = 'image';
         document.head.appendChild(link)
-  });
-    }
+  })
+  }
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
@@ -169,8 +169,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (!img.hasAttribute('decoding')) {
     img.decoding = 'async'
   }
-      });
-    }
+      })
+  }
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -184,12 +184,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(img)
   }
           }
-        });
-      });
+        })
+  });
 
       const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
+      lazyImages.forEach(img => imageObserver.observe(img))
+  }
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -201,19 +201,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'first-input') {
             // FID measurement logged for performance monitoring
           }
-        });
-      });
+        })
+  });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
+  } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  return null;
-
-}
+  return null
+  }
 
 export default PerformanceOptimizer;

@@ -92,56 +92,56 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
-        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
-        <link rel="canonical" href="https://ziontechgroup.com/community" />
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." /></meta>
+        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/community" /></link>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                <Users className="w-8 h-8 text-white" />
+          <div className="text-center mb-16"></div>
+            <div className="flex items-center justify-center mb-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4"></div>
+                <Users className="w-8 h-8 text-white" /></Users>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced"></h1>
                 Community
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
               Connect, learn, and grow together.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <a
                 href="#join"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
+              ></a>
                 Join Community
               </a>
               <a
                 href="#events"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 View Events
               </a>
               <a
                 href="#forums"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Browse Forums
               </a>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"></div>
             {communityStats.map((stat, index) => (
-              <div key={index} className="cyber-card-enhanced p-6 text-center">
-                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+              <div key={index} className="cyber-card-enhanced p-6 text-center"></div>
+                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" /></stat>
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
@@ -149,8 +149,8 @@ const CommunityPage: React.FC = () => {
           </div>
 
           {/* Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-4">
+          <div className="mb-8"></div>
+            <div className="flex flex-wrap justify-center gap-4"></div>
               {[
                 { id: 'overview', name: 'Overview' },
                 { id: 'events', name: 'Events' },
@@ -174,54 +174,54 @@ const CommunityPage: React.FC = () => {
 
           {/* Overview Tab */}
           {activeTab === 'overview' && (
-            <div className="space-y-12">
-              <div className="cyber-card-enhanced p-8">
+            <div className="space-y-12"></div>
+              <div className="cyber-card-enhanced p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   Our community is a place where developers, entrepreneurs, and tech enthusiasts come together 
                   to share knowledge, collaborate on projects, and support each other's growth. Whether you're 
                   just starting out or you're a seasoned professional, you'll find value in our diverse and 
                   welcoming community.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-3">What You'll Find</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                    <ul className="space-y-2"></ul>
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Technical discussions and problem-solving
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Project showcases and feedback
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Career advice and networking
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Industry insights and trends
                       </li>
                     </ul>
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lg font-semibold text-white mb-3">Community Guidelines</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                    <ul className="space-y-2"></ul>
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Be respectful and inclusive
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Share knowledge generously
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Help others learn and grow
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <li className="flex items-center text-gray-300"></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                         Keep discussions relevant and constructive
                       </li>
                     </ul>
@@ -233,33 +233,33 @@ const CommunityPage: React.FC = () => {
 
           {/* Events Tab */}
           {activeTab === 'events' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
+            <div className="space-y-8"></div>
+              <div className="cyber-card-enhanced p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
-                <div className="space-y-6">
+                <div className="space-y-6"></div>
                   {events.map((event, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1">
+                    <div key={index} className="bg-slate-800 rounded-lg p-6"></div>
+                      <div className="flex items-start justify-between mb-4"></div>
+                        <div className="flex-1"></div>
                           <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                           <p className="text-gray-300 mb-3">{event.description}</p>
-                          <div className="flex items-center space-x-6 text-sm text-gray-400">
-                            <span className="flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
+                          <div className="flex items-center space-x-6 text-sm text-gray-400"></div>
+                            <span className="flex items-center"></span>
+                              <Calendar className="w-4 h-4 mr-1" /></Calendar>
                               {event.date}
                             </span>
-                            <span className="flex items-center">
-                              <Clock className="w-4 h-4 mr-1" />
+                            <span className="flex items-center"></span>
+                              <Clock className="w-4 h-4 mr-1" /></Clock>
                               {event.time}
                             </span>
-                            <span className="flex items-center">
-                              <Users className="w-4 h-4 mr-1" />
+                            <span className="flex items-center"></span>
+                              <Users className="w-4 h-4 mr-1" /></Users>
                               {event.attendees} attendees
                             </span>
                           </div>
                         </div>
-                        <div className="ml-6">
-                          <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">
+                        <div className="ml-6"></div>
+                          <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded"></span>
                             {event.type}
                           </span>
                         </div>
@@ -267,9 +267,9 @@ const CommunityPage: React.FC = () => {
                       <a
                         href="#"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
-                      >
+                      ></a>
                         Register Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
                       </a>
                     </div>
                   ))}
@@ -280,22 +280,22 @@ const CommunityPage: React.FC = () => {
 
           {/* Forums Tab */}
           {activeTab === 'forums' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
+            <div className="space-y-8"></div>
+              <div className="cyber-card-enhanced p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   {forums.map((forum, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
+                    <div key={index} className="bg-slate-800 rounded-lg p-6"></div>
                       <h3 className="text-lg font-semibold text-white mb-2">{forum.name}</h3>
                       <p className="text-gray-300 mb-4">{forum.description}</p>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
-                          <span className="flex items-center">
-                            <MessageCircle className="w-4 h-4 mr-1" />
+                      <div className="flex items-center justify-between mb-4"></div>
+                        <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
+                          <span className="flex items-center"></span>
+                            <MessageCircle className="w-4 h-4 mr-1" /></MessageCircle>
                             {forum.posts} posts
                           </span>
-                          <span className="flex items-center">
-                            <Users className="w-4 h-4 mr-1" />
+                          <span className="flex items-center"></span>
+                            <Users className="w-4 h-4 mr-1" /></Users>
                             {forum.members} members
                           </span>
                         </div>
@@ -303,9 +303,9 @@ const CommunityPage: React.FC = () => {
                       <a
                         href="#"
                         className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center"
-                      >
+                      ></a>
                         Visit Forum
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                       </a>
                     </div>
                   ))}
@@ -316,18 +316,18 @@ const CommunityPage: React.FC = () => {
 
           {/* Benefits Tab */}
           {activeTab === 'benefits' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
+            <div className="space-y-8"></div>
+              <div className="cyber-card-enhanced p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                          <benefit.icon className="w-6 h-6 text-white" />
+                    <div key={index} className="flex items-start space-x-4"></div>
+                      <div className="flex-shrink-0"></div>
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
+                          <benefit.icon className="w-6 h-6 text-white" /></benefit>
                         </div>
                       </div>
-                      <div>
+                      <div></div>
                         <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300">{benefit.description}</p>
                       </div>
@@ -339,53 +339,53 @@ const CommunityPage: React.FC = () => {
           )}
 
           {/* Join Community CTA */}
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
+          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center"></div>
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
               Start connecting, learning, and growing today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
+              ></a>
                 Join Now
               </a>
               <a
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Learn More
               </a>
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8 mt-8">
+          <div className="cyber-card-enhanced p-8 mt-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-6 h-6 text-cyan-400" />
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+              <div className="flex items-center space-x-3"></div>
+                <Mail className="w-6 h-6 text-cyan-400" /></Mail>
+                <div></div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300"></a>
                     community@ziontechgroup.com
                   </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-6 h-6 text-cyan-400" />
-                <div>
+              <div className="flex items-center space-x-3"></div>
+                <Phone className="w-6 h-6 text-cyan-400" /></Phone>
+                <div></div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300"></a>
                     +1 (302) 464-0950
                   </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-6 h-6 text-cyan-400" />
-                <div>
+              <div className="flex items-center space-x-3"></div>
+                <MapPin className="w-6 h-6 text-cyan-400" /></MapPin>
+                <div></div>
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
                 </div>
@@ -395,7 +395,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+  };
 
 export default CommunityPage;

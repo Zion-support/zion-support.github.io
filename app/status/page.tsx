@@ -18,80 +18,80 @@ const refreshStatus = async () => {
   }
 const services = [
     {
-    name: 'API Services',;
-      status: 'operational',;
-      uptime: '99.9%',;
-      responseTime: '45ms',;
-      lastIncident: '2024-01-15',;
+    name: 'API Services',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '45ms',
+      lastIncident: '2024-01-15',
       description: 'Core API endpoints and authentication'
   }
-    },;
+    },
     {
-    name: 'AI Services',;
-      status: 'operational',;
-      uptime: '99.8%',;
-      responseTime: '120ms',;
-      lastIncident: '2024-01-10',;
+    name: 'AI Services',
+      status: 'operational',
+      uptime: '99.8%',
+      responseTime: '120ms',
+      lastIncident: '2024-01-10',
       description: 'Machine learning and AI processing'
   }
-    },;
+    },
     {
-    name: 'Cloud Infrastructure',;
-      status: 'operational',;
-      uptime: '99.95%',;
-      responseTime: '25ms',;
-      lastIncident: '2024-01-05',;
+    name: 'Cloud Infrastructure',
+      status: 'operational',
+      uptime: '99.95%',
+      responseTime: '25ms',
+      lastIncident: '2024-01-05',
       description: 'Cloud hosting and storage services'
   }
-    },;
+    },
     {
-    name: 'Database',;
-      status: 'operational',;
-      uptime: '99.9%',;
-      responseTime: '15ms',;
-      lastIncident: '2024-01-12',;
+    name: 'Database',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '15ms',
+      lastIncident: '2024-01-12',
       description: 'Primary and backup databases'
   }
-    },;
+    },
     {
-    name: 'CDN',;
-      status: 'operational',;
-      uptime: '99.99%',;
-      responseTime: '8ms',;
-      lastIncident: '2024-01-08',;
+    name: 'CDN',
+      status: 'operational',
+      uptime: '99.99%',
+      responseTime: '8ms',
+      lastIncident: '2024-01-08',
       description: 'Content delivery network'
   }
-    },;
+    },
     {
-    name: 'Monitoring',;
-      status: 'operational',;
-      uptime: '100%',;
-      responseTime: '5ms',;
-      lastIncident: 'Never',;
+    name: 'Monitoring',
+      status: 'operational',
+      uptime: '100%',
+      responseTime: '5ms',
+      lastIncident: 'Never',
       description: 'System monitoring and alerts'
   }
     }
   ];
 const incidents = [
     {
-    id: 1,;
-      title: 'API Response Time Degradation',;
-      status: 'resolved',;
-      severity: 'minor',;
-      startTime: '2024-01-15T10:30:00Z',;
-      endTime: '2024-01-15T11:45:00Z',;
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',;
+    id: 1,
+      title: 'API Response Time Degradation',
+      status: 'resolved',
+      severity: 'minor',
+      startTime: '2024-01-15T10:30:00Z',
+      endTime: '2024-01-15T11:45:00Z',
+      description: 'Some API endpoints experienced increased response times due to high traffic load.',
       affectedServices: ['API Services', 'AI Services']
   }
-    },;
+    },
     {
-    id: 2,;
-      title: 'Database Connection Issues',;
-      status: 'resolved',;
-      severity: 'major',;
-      startTime: '2024-01-12T14:20:00Z',;
-      endTime: '2024-01-12T16:30:00Z',;
-      description: 'Intermittent database connection issues affecting some user operations.',;
+    id: 2,
+      title: 'Database Connection Issues',
+      status: 'resolved',
+      severity: 'major',
+      startTime: '2024-01-12T14:20:00Z',
+      endTime: '2024-01-12T16:30:00Z',
+      description: 'Intermittent database connection issues affecting some user operations.',
       affectedServices: ['Database', 'API Services']
   }
     }
@@ -100,13 +100,13 @@ const getStatusIcon = (;
     switch (status) {
     case 'operational':;
 
-        return <CheckCircle>
+        return <CheckCircle></CheckCircle>
       case 'degraded':;
-        return <AlertTriangle>
+        return <AlertTriangle></AlertTriangle>
       case 'outage':;
-        return <XCircle>
-
-      default:;) => {
+        return <XCircle></XCircle>
+      default:
+  ) => {
   return (
     $3
   )
@@ -122,12 +122,14 @@ const getStatusColor = (;
         return 'text-yellow-400';
       case 'outage':;
         return 'text-red-400';
-      default:;) => {
+      default:
+  ) => {
   return (
     $3
   )
   }
-        return 'text-gray-400';}
+        return 'text-gray-400'
+  }
     }
   }
 const getSeverityColor = (;
@@ -138,12 +140,14 @@ const getSeverityColor = (;
         return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
       case 'minor':;
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default:;) => {
+      default:
+  ) => {
   return (
     $3
   )
   }
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'
+  }
     }
   }
 const overallStatus = services.every(service => service.status === 'operational');
@@ -153,27 +157,27 @@ const overallStatus = services.every(service => service.status === 'operational'
       : 'degraded';
 return (
           </h1>
-          <p>
-            Real-time status of all our services. We're committed to providing reliable,;
+          <p></p>
+            Real-time status of all our services. We're committed to providing reliable,
             high-performance AI and IT solutions.;
           </p>
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
 
               {getStatusIcon(overallStatus)}
-              <span>
+              <span></span>
                 {
     overallStatus === 'operational' ? 'All Systems Operational' :
   }
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
-            <button>
-              <RefreshCw>
+            <button></button>
+              <RefreshCw></RefreshCw>
               Refresh;
             </button>
           </div>
-          <p>
+          <p></p>
             Last updated: {lastUpdated.toLocaleString()}
           </p>
         </div>
@@ -193,7 +197,7 @@ return (
                     {getStatusIcon(service.status)}
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
-                  <span>
+                  <span></span>
                     {service.status}
 
                   </span>
@@ -237,10 +241,10 @@ return (
                     </div>
                   </div>
                   <div className="flex items-center gap-2"></div>
-                    <span>
+                    <span></span>
                       {incident.severity}
                     </span>
-                    <span>
+                    <span></span>
                       {incident.status}
 
                     </span>
@@ -263,28 +267,28 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <TrendingUp>
+                <TrendingUp></TrendingUp>
               </div>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Zap>
+                <Zap></Zap>
               </div>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Users>
+                <Users></Users>
               </div>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <Activity>
+                <Activity></Activity>
               </div>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
@@ -295,23 +299,23 @@ return (
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
+          <h2></h2>
             Need More Information?;
           </h2>
-          <p>
+          <p></p>
             Subscribe to status updates or contact our support team for more details.;
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
+            <button></button>
               Subscribe to Updates
             </button>
-            <button>
+            <button></button>
               Contact Support
             </button>
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer></Footer>
     </div>
-  ),
-}
+  )
+  }

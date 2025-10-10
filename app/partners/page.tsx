@@ -98,7 +98,7 @@ const PartnersPage: React.FC = () => {
         'Joint solution development',
         'Dedicated account management'
       ]
-    },
+  },
     {
       name: 'Gold',
       icon: <Users className="w-8 h-8 text-blue-500" />,
@@ -109,7 +109,7 @@ const PartnersPage: React.FC = () => {
         'Marketing collaboration',
         'Technical integration support'
       ]
-    },
+  },
     {
       name: 'Silver',
       icon: <Handshake className="w-8 h-8 text-gray-500" />,
@@ -120,7 +120,7 @@ const PartnersPage: React.FC = () => {
         'Training resources',
         'Referral opportunities'
       ]
-    }
+  }
   ];
 
   const partnershipBenefits = [
@@ -148,33 +148,32 @@ const PartnersPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Partners - Zion Tech Group</title>
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />
+        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." /></meta>
       </Helmet>
       
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <Navigation /></Navigation>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-6xl mx-auto"></div>
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 Our Partners
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Join our growing ecosystem of technology partners and unlock new opportunities for growth and innovation.
               </p>
             </div>
 
             {/* Partnership Benefits */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">Why Partner With Us?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
                 {partnershipBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                    <div className="flex justify-center mb-4">
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                    <div className="flex justify-center mb-4"></div>
                       {benefit.icon}
                     </div>
                     <h3 className="text-lg font-bold text-white mb-3">{benefit.title}</h3>
@@ -185,20 +184,20 @@ const PartnersPage: React.FC = () => {
             </div>
 
             {/* Partner Tiers */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">Partnership Tiers</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
                 {partnerTiers.map((tier, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <div className="flex items-center mb-4">
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                    <div className="flex items-center mb-4"></div>
                       {tier.icon}
                       <h3 className="text-xl font-bold text-white ml-3">{tier.name}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{tier.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul>
                       {tier.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        <li key={benefitIndex} className="flex items-start space-x-2"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" /></CheckCircle>
                           <span className="text-sm text-gray-300">{benefit}</span>
                         </li>
                       ))}
@@ -209,29 +208,29 @@ const PartnersPage: React.FC = () => {
             </div>
 
             {/* Current Partners */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">Our Technology Partners</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                 {partners.map((partner, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className="flex items-center mb-4">
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                    <div className="flex items-center mb-4"></div>
                       <div className="text-3xl mr-3">{partner.logo}</div>
-                      <div>
+                      <div></div>
                         <h3 className="text-lg font-bold text-white">{partner.name}</h3>
                         <span className={`text-xs px-2 py-1 rounded-full ${
                           partner.tier === 'Platinum' ? 'bg-yellow-500/20 text-yellow-400' :
                           partner.tier === 'Gold' ? 'bg-blue-500/20 text-blue-400' :
                           'bg-gray-500/20 text-gray-400'
-                        }`}>
+                        }`}></span>
                           {partner.tier}
                         </span>
                       </div>
                     </div>
                     <p className="text-gray-300 text-sm mb-4">{partner.description}</p>
-                    <div className="space-y-2">
+                    <div className="space-y-2"></div>
                       {partner.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                        <div key={benefitIndex} className="flex items-center space-x-2"></div>
+                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" /></CheckCircle>
                           <span className="text-xs text-gray-300">{benefit}</span>
                         </div>
                       ))}
@@ -242,25 +241,25 @@ const PartnersPage: React.FC = () => {
             </div>
 
             {/* Become a Partner */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-4"></h2>
                   Become a Partner
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
                   Ready to join our partner ecosystem? Let's discuss how we can work together to deliver exceptional solutions to our customers.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Partner With Us
                   </a>
                   <a
                     href="mailto:partners@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Email Partners Team
                   </a>
                 </div>
@@ -270,9 +269,9 @@ const PartnersPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
-};
+  )
+  };
 
 export default PartnersPage;

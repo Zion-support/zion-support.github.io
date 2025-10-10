@@ -7,8 +7,8 @@ interface SEOOptimizerProps {
   description: string;
   keywords?: string[];
   canonicalUrl?: string;
-  structuredData?: object;
-}
+  structuredData?: object
+  }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
@@ -20,32 +20,29 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const keywordsString = keywords.join(', ');
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywordsString} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
-      
+      <meta name="description" content={description} /></meta>
+      <meta name="keywords" content={keywordsString} /></meta>
+      <meta name="robots" content="index, follow" /></meta>
+      <link rel="canonical" href={canonicalUrl} /></link>
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      
+      <meta property="og:title" content={title} /></meta>
+      <meta property="og:description" content={description} /></meta>
+      <meta property="og:type" content="website" /></meta>
+      <meta property="og:url" content={canonicalUrl} /></meta>
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      
+      <meta name="twitter:card" content="summary_large_image" /></meta>
+      <meta name="twitter:title" content={title} /></meta>
+      <meta name="twitter:description" content={description} /></meta>
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>
-  );
-};
+  )
+  };
 
 export default SEOOptimizer;

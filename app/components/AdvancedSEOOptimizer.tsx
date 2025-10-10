@@ -74,7 +74,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     newRecommendations.push('Add internal links for better SEO')
   }
     setSeoScore(score);
-    setRecommendations(newRecommendations);
+    setRecommendations(newRecommendations)
   }, [title, description, keywords]);
   useEffect(() => {
     analyzeSEO()
@@ -92,28 +92,28 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://linkedin.com/company/ziontechgroup"
       ]
     }
-    return structuredData || defaultStructuredData;
+    return structuredData || defaultStructuredData
   }
   return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        <meta name="description" content={description} /></meta>
+        <meta name="keywords" content={keywords} /></meta>
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} /></meta>
+        <meta property="og:description" content={description} /></meta>
+        <meta property="og:image" content={ogImage} /></meta>
+        <meta property="og:type" content="website" /></meta>
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content={twitterCard} /></meta>
+        <meta name="twitter:title" content={title} /></meta>
+        <meta name="twitter:description" content={description} /></meta>
+        <meta name="twitter:image" content={ogImage} /></meta>
         {/* Structured Data */}
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
@@ -130,12 +130,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
-        }}>
+        }}></div>
           <div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
-            <div>
+            <div></div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}></ul>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}
@@ -145,7 +145,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </div>
       )}
     </React.Fragment>
-  );
-}
+  )
+  }
 export default AdvancedSEOOptimizer;
   </SEOOptimizerProps>

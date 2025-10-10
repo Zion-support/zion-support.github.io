@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer)
   }, []);
   
   // Analytics tracking for phone clicks - optimized
@@ -55,8 +55,8 @@ const HomePage: React.FC = () => {
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
-    }
+      })
+  }
   }, []);
 
   // Real AI Services with actual capabilities and pricing
@@ -920,13 +920,14 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced"></div>
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
           Skip to main content
         </a>
         
@@ -935,7 +936,7 @@ description: 'Custom API development, third-party integrations, and microservice
           <ContentPromotionBanner />
         </Suspense>
         
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main"></main>
           {/* Hero Section */}
           <section
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
@@ -944,73 +945,73 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 : 'opacity-0 translate-y-8'
             }`}
             aria-labelledby="hero-heading"
-          >
-            <div className="max-w-6xl mx-auto">
+          ></section>
+            <div className="max-w-6xl mx-auto"></div>
               <h1 
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
                 data-text="Zion Tech Group"
-              >
+              ></h1>
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle"></p>
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
               </p>
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4"></div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                   <div className="text-2xl sm:text-3xl mb-3">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                   <div className="text-2xl sm:text-3xl mb-3">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
                   <div className="text-2xl sm:text-3xl mb-3">🔒</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1"></div>
                   <div className="text-2xl sm:text-3xl mb-3">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
               {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="cyber-button-enhanced w-full sm:w-auto text-center"
                   aria-label="Call us at (302) 464-0950"
-                >
+                ></a>
                   📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></a>
                   📧 Email Us
                 </a>
                 <a 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"></a>
                   Get Free Consultation
                 </a>
               </div>
               {/* Contact Info */}
-              <div className="mt-8 text-center">
-                <p className="text-gray-300 text-sm mb-2">
+              <div className="mt-8 text-center"></div>
+                <p className="text-gray-300 text-sm mb-2"></p>
                   📍 364 E Main St STE 1008, Middletown, DE 19709
                 </p>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm"></p>
                   ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
                 </p>
               </div>
@@ -1018,14 +1019,14 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* Stats Section */}
-          <section className="mb-16" aria-labelledby="stats-heading">
-            <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
+          <section className="mb-16" aria-labelledby="stats-heading"></section>
+            <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced"></h2>
               Our Impact
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center cyber-card-enhanced p-6">
-                  <div className="flex justify-center mb-4">
+                <div key={index} className="text-center cyber-card-enhanced p-6"></div>
+                  <div className="flex justify-center mb-4"></div>
                     {stat.icon}
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
@@ -1036,55 +1037,55 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* AI Services Section */}
-          <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
+          <section className="mb-16" aria-labelledby="ai-services-heading"></section>
+            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced"></h2>
               AI Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4"></p>
               Comprehensive AI solutions designed to transform your business operations
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"></div>
               {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced"></div>
+                  <div className="p-6"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                      <service.icon className="w-8 h-8 text-white" /></service>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-between">
+                    <div className="space-y-3 mb-6"></div>
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-cyan-400 font-semibold">Our Price:</span>
                         <span className="text-white font-bold">{service.price}</span>
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-gray-400 text-sm">Market Price:</span>
                         <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
                       </div>
                     </div>
 
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6"></ul>
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between"></div>
                       <a 
                         href="/contact"
                         className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                      >
+                      ></a>
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                      >
+                      ></a>
                         Get Quote
                       </a>
                     </div>
@@ -1095,55 +1096,55 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* IT Services Section */}
-          <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
+          <section className="mb-16" aria-labelledby="it-services-heading"></section>
+            <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced"></h2>
               IT Services
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4"></p>
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"></div>
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced"></div>
+                  <div className="p-6"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                      <service.icon className="w-8 h-8 text-white" /></service>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-between">
+                    <div className="space-y-3 mb-6"></div>
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-purple-400 font-semibold">Our Price:</span>
                         <span className="text-white font-bold">{service.price}</span>
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-gray-400 text-sm">Market Price:</span>
                         <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
                       </div>
                     </div>
 
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6"></ul>
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between"></div>
                       <a 
                         href="/contact"
                         className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                      >
+                      ></a>
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                      >
+                      ></a>
                         Get Quote
                       </a>
                     </div>
@@ -1154,59 +1155,59 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* Micro SaaS Section */}
-          <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
+          <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
+            <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced"></h2>
               Micro SaaS Solutions
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4"></p>
               Ready-to-use business tools that solve specific problems with AI and automation
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"></div>
               {microSaasServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced"></div>
+                  <div className="p-6"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                      <service.icon className="w-8 h-8 text-white" /></service>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-between">
+                    <div className="space-y-3 mb-6"></div>
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-green-400 font-semibold">Our Price:</span>
                         <span className="text-white font-bold">{service.price}</span>
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-gray-400 text-sm">Market Price:</span>
                         <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
                       </div>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between"></div>
                         <span className="text-gray-400 text-sm">Users:</span>
                         <span className="text-gray-300 text-sm">{service.users}</span>
                       </div>
                     </div>
 
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6"></ul>
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between"></div>
                       <a 
                         href="/contact"
                         className="flex items-center text-green-400 hover:text-green-300 transition-colors"
-                      >
+                      ></a>
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                       </a>
                       <a 
                         href="/contact"
                         className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                      >
+                      ></a>
                         Start Trial
                       </a>
                     </div>
@@ -1217,29 +1218,29 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* CTA Section */}
-          <section className="mb-16" aria-labelledby="cta-heading">
-            <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
+          <section className="mb-16" aria-labelledby="cta-heading"></section>
+            <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center"></div>
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
                 Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="cyber-button-enhanced"
                   aria-label="Call us at (302) 464-0950"
-                >
+                ></a>
                   📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></a>
                   📧 Email Us
                 </a>
                 <a 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"></a>
                   Get Free Consultation
                 </a>
               </div>
@@ -1247,10 +1248,10 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
         </main>
         
-        <Footer />
+        <Footer /></Footer>
       </div>
     </React.Fragment>
-  );
-};
+  )
+  };
 
 export default HomePage;

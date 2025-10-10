@@ -4,23 +4,23 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Send,;
+    Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle
   }
 } from 'lucide-react';
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
-    name: '',;
-    email: '',;
-    company: '',;
-phone: '',;
-    service: '',;
-    budget: '',;
-    timeline: '',;
+    name: '',
+    email: '',
+    company: '',
+phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
     message: ''
   }
   });
@@ -30,10 +30,10 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
 
     const { name, value } = e.target;
     setFormData(prev => ({
-    ...prev,;
+    ...prev,
       [name]: value
   }
-    }));
+    }))
   }, []);
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,17 +45,17 @@ try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        budget: '',;
-        timeline: '',;
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
         message: ''
   }
-      });
-    } catch (error) {
+      })
+  } catch (error) {
     setSubmitStatus('error')
   }
     } finally {
@@ -72,56 +72,56 @@ const services = [
     'Cybersecurity',;
     'DevOps',;
     'Consulting',;
-    'Other';
+    'Other'
   ];
 const contactInfo = [
     {
-    icon: Phone,;
-      title: 'Phone',;
-      details: '+1 (302) 464-0950',;
+    icon: Phone,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
       description: 'Mon-Fri 9AM-6PM EST'
   }
-    },;
+    },
     {
-    icon: Mail,;
-      title: 'Email',;
-      details: 'kleber@ziontechgroup.com',;
+    icon: Mail,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
   }
-    },;
+    },
     {
-    icon: MapPin,;
-      title: 'Address',;
+    icon: MapPin,
+      title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',;
       description: 'Visit our office'
   }
-    },;
+    },
     {
-    icon: Clock,;
-      title: 'Business Hours',;
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',;
+    icon: Clock,
+      title: 'Business Hours',
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
   }
     }
   ];
 return (
-    <></>
-      <Helmet>
+    <>
+      <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta>
-        <meta>
+        <meta /></meta>
+        <meta /></meta>
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
           {/* Header */}
           <div className="text-center mb-16"></div>
-            <h1>
+            <h1></h1>
               Get in;
-              <span>
+              <span></span>
                 {' '}Touch;
               </span>
             </h1>
-            <p>
+            <p></p>
               Ready to transform your business? Let's discuss your project and explore;
               how our AI and IT solutions can help you achieve your goals.;
             </p>
@@ -134,7 +134,7 @@ return (
               {
     submitStatus === 'success' && (;
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
   }
@@ -146,60 +146,59 @@ return (
                 </div>
   }
               )}
-<form>
+<form></form>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div></div>
-                    <label>
+                    <label></label>
                       Full Name *;
                     </label>
                     <div className="relative"></div>
-                      <User>
-                      <input>
+                      <User></User>
+                      <input></input>
                     </div>
                   </div>
                   <div></div>
-                    <label>
+                    <label></label>
                       Email Address *;
                     </label>
                     <div className="relative"></div>
-                      <Mail>
-                      <input>
+                      <Mail></Mail>
+                      <input></input>
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div></div>
-                    <label>
+                    <label></label>
                       Company
                     </label>
                     <div className="relative"></div>
-                      <Building>
-                      <input>
+                      <Building></Building>
+                      <input></input>
                     </div>
                   </div>
                   <div></div>
-                    <label>
+                    <label></label>
                       Phone Number
                     </label>
                     <div className="relative"></div>
-                      <Phone>
-                      <input>
+                      <Phone></Phone>
+                      <input></input>
                     </div>
                   </div>
                 </div>
                 <div></div>
-                  <label>
+                  <label></label>
                     Service Interest,
                   </label>
                   <div className="relative"></div>
-                    <Globe>
-                    <select>
+                    <Globe></Globe>
+                    <select></select>
                       <option value="">Select a service</option>
                       {
     services.map((service) => (
   }
-                        <option>
-
+                        <option></option>
                           {service}
                         </option>
                       ))}
@@ -208,15 +207,15 @@ return (
                   </div>
                 </div>
                 <div></div>
-                  <label>
+                  <label></label>
                     Message *;
                   </label>
                   <div className="relative"></div>
-                    <MessageCircle>
-                    <textarea>
+                    <MessageCircle></MessageCircle>
+                    <textarea></textarea>
                   </div>
                 </div>
-                <button>
+                <button></button>
                   {
     isSubmitting ? (;
                     <></>
@@ -225,7 +224,7 @@ return (
                     </>
                   ) : (;
                     <></>
-                      <Send>
+                      <Send></Send>
                       <span>Send Message</span>
                     </>
   }
@@ -237,7 +236,7 @@ return (
             <div className="space-y-8"></div>
               <div></div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
+                <p></p>
                   We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.;
                 </p>
@@ -246,24 +245,23 @@ return (
               <div className="space-y-8"></div>
                 <div></div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
+                  <p></p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.;
                   </p>
                 </div>
                 <div className="space-y-6"></div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone>
+                      <Phone></Phone>
                     </div>
                     <div></div>
-<h3>
-
+<h3></h3>
                         {info.title}
                       </h3>
-                      <p>
+                      <p></p>
                         {info.details}
                       </p>
-                      <p>
+                      <p></p>
                         {info.description}
 
                       </p>
@@ -271,7 +269,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail>
+                      <Mail></Mail>
                     </div>
                     <div></div>
                       <h3 className="text-lg font-semibold text-white">Email</h3>
@@ -280,7 +278,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin>
+                      <MapPin></MapPin>
                     </div>
                     <div></div>
                       <h3 className="text-lg font-semibold text-white">Address</h3>
@@ -289,7 +287,7 @@ return (
                   </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock>
+                      <Clock></Clock>
                     </div>
                     <div></div>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
@@ -303,7 +301,7 @@ return (
         </section>
       </div>
 </div>
-  ),
-}
+  )
+  }
 export default ContactPage;
 

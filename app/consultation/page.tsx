@@ -53,25 +53,25 @@ const ConsultationPage: React.FC = () => {
       step: 1,
       title: 'Initial Contact',
       description: 'Reach out to us via phone, email, or our contact form',
-      icon: <Users className="w-6 h-6 text-cyan-400" />
+      icon: <Users className="w-6 h-6 text-cyan-400" /></Users>
     },
     {
       step: 2,
       title: 'Discovery Call',
       description: 'We schedule a 30-minute call to understand your needs',
-      icon: <Clock className="w-6 h-6 text-cyan-400" />
+      icon: <Clock className="w-6 h-6 text-cyan-400" /></Clock>
     },
     {
       step: 3,
       title: 'Assessment',
       description: 'We conduct a thorough analysis of your current state',
-      icon: <Shield className="w-6 h-6 text-cyan-400" />
+      icon: <Shield className="w-6 h-6 text-cyan-400" /></Shield>
     },
     {
       step: 4,
       title: 'Recommendations',
       description: 'We provide detailed recommendations and next steps',
-      icon: <CheckCircle className="w-6 h-6 text-cyan-400" />
+      icon: <CheckCircle className="w-6 h-6 text-cyan-400" /></CheckCircle>
     }
   ];
 
@@ -85,34 +85,33 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Free Consultation - Zion Tech Group</title>
-        <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how we can transform your business with cutting-edge technology." />
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how we can transform your business with cutting-edge technology." /></meta>
       </Helmet>
       
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <Navigation /></Navigation>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-6xl mx-auto"></div>
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 Free Consultation
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Get expert advice on how AI and IT solutions can transform your business. No obligation, just valuable insights.
               </p>
             </div>
 
             {/* Benefits */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">Why Choose Our Consultation?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-white" />
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                      <CheckCircle className="w-8 h-8 text-white" /></CheckCircle>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-3">{benefit}</h3>
                   </div>
@@ -121,24 +120,24 @@ const ConsultationPage: React.FC = () => {
             </div>
 
             {/* Services */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">Consultation Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
                 {services.map((service, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className="flex items-center mb-4">
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                    <div className="flex items-center mb-4"></div>
                       {service.icon}
                       <h3 className="text-xl font-bold text-white ml-3">{service.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-4"></div>
                       <span className="text-cyan-400 font-semibold">{service.duration}</span>
                       <span className="text-green-400 font-bold">{service.price}</span>
                     </div>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul>
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center space-x-2"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /></CheckCircle>
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -149,12 +148,12 @@ const ConsultationPage: React.FC = () => {
             </div>
 
             {/* Process Steps */}
-            <div className="mb-16">
+            <div className="mb-16"></div>
               <h2 className="text-2xl font-bold text-white text-center mb-8">How It Works</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
                 {consultationSteps.map((step, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                       {step.icon}
                     </div>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">Step {step.step}</div>
@@ -166,31 +165,31 @@ const ConsultationPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-4"></h2>
                   Ready to Get Started?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
                   Schedule your free consultation today and discover how we can help transform your business with AI and IT solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Call: (302) 464-0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Email Us
                   </a>
                   <a
                     href="/contact"
                     className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Contact Form
                   </a>
                 </div>
@@ -200,9 +199,9 @@ const ConsultationPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
-};
+  )
+  };
 
 export default ConsultationPage;

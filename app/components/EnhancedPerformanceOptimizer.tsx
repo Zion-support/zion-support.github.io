@@ -6,8 +6,8 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
+  enableCodeSplitting?: boolean
+  }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
@@ -26,14 +26,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const image = img as HTMLImageElement;
         if (image.dataset.src) {
           image.src = image.dataset.src;
-          image.removeAttribute('data-src');
-        }
-      });
-    };
+          image.removeAttribute('data-src')
+  }
+      })
+  };
 
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer)
   }, [enableImageOptimization]);
 
   // Lazy loading
@@ -45,17 +45,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            target.classList.add('loaded');
-          }
-        });
-      },
+            target.classList.add('loaded')
+  }
+        })
+  },
       { threshold: 0.1 }
     );
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    return () => observer.disconnect()
   }, [enableLazyLoading]);
 
   // Preloading
@@ -77,10 +77,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);
-    };
+      document.head.appendChild(criticalFont)
+  };
 
-    preloadCriticalResources();
+    preloadCriticalResources()
   }, [enablePreloading]);
 
   // Code splitting optimization
@@ -95,14 +95,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#')) {
             // Preload the route
-            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
-          }
-        });
-      });
-    };
+            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`)
+  }
+        })
+  })
+  };
 
     const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer)
   }, [enableCodeSplitting]);
 
   // Performance monitoring
@@ -126,17 +126,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             event_category: 'performance',
             event_label: 'page_load',
             value: Math.round(metrics.domContentLoaded)
-          });
-        }
+          })
+  }
       }
     };
 
     // Measure performance after page load
     window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
+    return () => window.removeEventListener('load', measurePerformance)
   }, []);
 
-  return <>{children}</>;
-};
+  return <>{children}</>
+  };
 
 export default PerformanceOptimizer;

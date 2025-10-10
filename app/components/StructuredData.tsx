@@ -3,8 +3,8 @@ import React from 'react';
 
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
-}
+  data?: Record<string, unknown></string>
+  }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
@@ -163,8 +163,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         };
       
       default:
-        return {};
-    }
+        return {}
+  }
   };
 
   const structuredData = data || getDefaultData();
@@ -175,8 +175,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)
       }}
-    />
-  );
-};
+    /></script>
+  )
+  };
 
 export default StructuredData;

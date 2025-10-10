@@ -3,20 +3,20 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-},;
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
+  },
     {
-    icon: Clock,;
-      title: '24/7 Monitoring',;
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',;
+    icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
   }
-    },;
+    },
     {}
     }
   ];
 return (
-            <p>
+            <p></p>
               Our IoT platform provides everything you need to build, deploy, and scale;
               Internet of Things solutions for any industry or use case.;
             </p>
@@ -34,11 +34,11 @@ return (
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
+            <h2></h2>
               IoT Use Cases;
             </h2>
-            <p>
-              Our IoT platform supports a wide range of industries and applications,;
+            <p></p>
+              Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.;
             </p>
           </div>
@@ -59,11 +59,11 @@ return (
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
+            <h2></h2>
               Why Choose Our IoT Platform?;
             </h2>
-            <p>
-              Experience the benefits of a comprehensive IoT platform designed for scale,;
+            <p></p>
+              Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.;
             </p>
           </div>
@@ -73,7 +73,7 @@ return (
   }
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
+                  <CheckCircle></CheckCircle>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -82,20 +82,20 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-          <p>
+          <p></p>
             Start building your IoT platform today. Get started with a free consultation;
             and discover how we can help you succeed.;
           </p>
             </button>
-            <button>
+            <button></button>
               Schedule Demo;
             </button>
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer></Footer>
 </div>
-  );
-}
+  )
+  }
 export default PagePage;
 

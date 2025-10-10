@@ -111,20 +111,20 @@ const DigitalTransformationPage = lazy(() => import('./digital-transformation/pa
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 // Loading component
 const AppLoadingSpinner = () => (
-  <LoadingSpinner />
+  <LoadingSpinner /></LoadingSpinner>
 );
 
 const App: React.FC = () => {
     return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App">
-            <PerformanceMonitor>
-              <AccessibilityEnhancer />
+    <ErrorBoundary></ErrorBoundary>
+      <HelmetProvider></HelmetProvider>
+        <BrowserRouter></BrowserRouter>
+          <div className="App"></div>
+            <PerformanceMonitor></PerformanceMonitor>
+              <AccessibilityEnhancer /></AccessibilityEnhancer>
             </PerformanceMonitor>
             <Suspense fallback={<AppLoadingSpinner />}>
-              <Routes>
+              <Routes></Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -225,6 +225,6 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
-};
+  )
+  };
 export default App;

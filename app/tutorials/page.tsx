@@ -164,118 +164,118 @@ const TutorialsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
-        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
-        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
+        <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." /></meta>
+        <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials" /></link>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced"></h1>
               Tutorials & Learning
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Master our AI, IT, and Micro SaaS services with step-by-step tutorials, 
               code examples, and best practices from our expert team.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <a
                 href="#featured"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
+              ></a>
                 Featured Tutorials
               </a>
               <a
                 href="#all-tutorials"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Browse All
               </a>
               <a
                 href="/contact"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Request Tutorial
               </a>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="cyber-card-enhanced p-6 text-center">
-              <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"></div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
+              <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-4" /></BookOpen>
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">Tutorials</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Users className="w-8 h-8 text-green-400 mx-auto mb-4" />
+            <div className="cyber-card-enhanced p-6 text-center"></div>
+              <Users className="w-8 h-8 text-green-400 mx-auto mb-4" /></Users>
               <div className="text-2xl font-bold text-white mb-2">5,000+</div>
               <div className="text-gray-300">Students</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Star className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
+            <div className="cyber-card-enhanced p-6 text-center"></div>
+              <Star className="w-8 h-8 text-yellow-400 mx-auto mb-4" /></Star>
               <div className="text-2xl font-bold text-white mb-2">4.8</div>
               <div className="text-gray-300">Average Rating</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Clock className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+            <div className="cyber-card-enhanced p-6 text-center"></div>
+              <Clock className="w-8 h-8 text-purple-400 mx-auto mb-4" /></Clock>
               <div className="text-2xl font-bold text-white mb-2">20+</div>
               <div className="text-gray-300">Hours of Content</div>
             </div>
           </div>
 
           {/* Featured Tutorials */}
-          <section id="featured" className="mb-16">
+          <section id="featured" className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {featuredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
-                  <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center">
-                      <Play className="w-16 h-16 text-white opacity-80" />
+                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300"></div>
+                  <div className="relative"></div>
+                    <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center"></div>
+                      <Play className="w-16 h-16 text-white opacity-80" /></Play>
                     </div>
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4"></div>
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
                           : 'bg-red-600 text-white'
-                      }`}>
+                      }`}></span>
                         {tutorial.difficulty}
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <div className="p-6"></div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h3>
                       {tutorial.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p>
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
+                        <span className="flex items-center"></span>
+                          <Clock className="w-4 h-4 mr-1" /></Clock>
                           {tutorial.duration}
                         </span>
-                        <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                        <span className="flex items-center"></span>
+                          <Users className="w-4 h-4 mr-1" /></Users>
                           {tutorial.students}
                         </span>
-                        <span className="flex items-center">
-                          <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        <span className="flex items-center"></span>
+                          <Star className="w-4 h-4 mr-1 text-yellow-400" /></Star>
                           {tutorial.rating}
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4"></div>
                       {tutorial.tags.slice(0, 3).map((tag, index) => (
-                        <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
+                        <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded"></span>
                           {tag}
                         </span>
                       ))}
@@ -283,9 +283,9 @@ const TutorialsPage: React.FC = () => {
                     <a
                       href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-                    >
+                    ></a>
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
                     </a>
                   </div>
                 </div>
@@ -294,9 +294,9 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Category Filter */}
-          <section className="mb-12">
+          <section className="mb-12"></section>
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -307,7 +307,7 @@ const TutorialsPage: React.FC = () => {
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
-                  <category.icon className="w-5 h-5" />
+                  <category.icon className="w-5 h-5" /></category>
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -315,53 +315,53 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16">
+          <section id="all-tutorials" className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
-                  <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center">
-                      <BookOpen className="w-16 h-16 text-white opacity-80" />
+                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300"></div>
+                  <div className="relative"></div>
+                    <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center"></div>
+                      <BookOpen className="w-16 h-16 text-white opacity-80" /></BookOpen>
                     </div>
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4"></div>
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
                           : 'bg-red-600 text-white'
-                      }`}>
+                      }`}></span>
                         {tutorial.difficulty}
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <div className="p-6"></div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h3>
                       {tutorial.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p>
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
+                        <span className="flex items-center"></span>
+                          <Clock className="w-4 h-4 mr-1" /></Clock>
                           {tutorial.duration}
                         </span>
-                        <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                        <span className="flex items-center"></span>
+                          <Users className="w-4 h-4 mr-1" /></Users>
                           {tutorial.students}
                         </span>
-                        <span className="flex items-center">
-                          <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        <span className="flex items-center"></span>
+                          <Star className="w-4 h-4 mr-1 text-yellow-400" /></Star>
                           {tutorial.rating}
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4"></div>
                       {tutorial.tags.map((tag, index) => (
-                        <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
+                        <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded"></span>
                           {tag}
                         </span>
                       ))}
@@ -369,9 +369,9 @@ const TutorialsPage: React.FC = () => {
                     <a
                       href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-                    >
+                    ></a>
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
                     </a>
                   </div>
                 </div>
@@ -380,160 +380,160 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Learning Paths */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
-                  <Brain className="w-8 h-8 text-cyan-400 mr-3" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
+                  <Brain className="w-8 h-8 text-cyan-400 mr-3" /></Brain>
                   <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Master AI development from basics to advanced implementations.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <ul className="space-y-2 mb-6"></ul>
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     AI Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     API Integration
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Advanced AI Features
                   </li>
                 </ul>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold">
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold"></a>
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" /></ArrowRight>
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
-                  <Cloud className="w-8 h-8 text-green-400 mr-3" />
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
+                  <Cloud className="w-8 h-8 text-green-400 mr-3" /></Cloud>
                   <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Learn cloud architecture and infrastructure management.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <ul className="space-y-2 mb-6"></ul>
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Cloud Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Security & Compliance
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Advanced Architecture
                   </li>
                 </ul>
-                <a href="#" className="text-green-400 hover:text-green-300 font-semibold">
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
+                <a href="#" className="text-green-400 hover:text-green-300 font-semibold"></a>
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" /></ArrowRight>
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
-                  <Zap className="w-8 h-8 text-purple-400 mr-3" />
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
+                  <Zap className="w-8 h-8 text-purple-400 mr-3" /></Zap>
                   <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Build and scale your own SaaS business from scratch.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <ul className="space-y-2 mb-6"></ul>
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     SaaS Fundamentals
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Business Models
                   </li>
-                  <li className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <li className="flex items-center text-sm text-gray-300"></li>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Scaling & Growth
                   </li>
                 </ul>
-                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
+                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold"></a>
+                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" /></ArrowRight>
                 </a>
               </div>
             </div>
           </section>
 
           {/* Resources */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="cyber-card-enhanced p-6 text-center">
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+              <div className="cyber-card-enhanced p-6 text-center"></div>
+                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></Code>
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Ready-to-use code examples for all our services
                 </p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
-                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" />
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm"></a>
+                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" /></ExternalLink>
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
-                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <div className="cyber-card-enhanced p-6 text-center"></div>
+                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" /></Download>
                 <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Official SDKs for popular programming languages
                 </p>
-                <a href="/api" className="text-green-400 hover:text-green-300 text-sm">
-                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" />
+                <a href="/api" className="text-green-400 hover:text-green-300 text-sm"></a>
+                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" /></ExternalLink>
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
-                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <div className="cyber-card-enhanced p-6 text-center"></div>
+                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" /></Users>
                 <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Join our developer community for support and discussions
                 </p>
-                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm">
-                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" />
+                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm"></a>
+                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" /></ExternalLink>
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
-                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
+              <div className="cyber-card-enhanced p-6 text-center"></div>
+                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" /></BookOpen>
                 <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Comprehensive API and service documentation
                 </p>
-                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm">
-                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" />
+                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm"></a>
+                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" /></ExternalLink>
                 </a>
               </div>
             </div>
           </section>
 
           {/* CTA */}
-          <section className="mb-16">
-            <div className="cyber-card-enhanced p-8 text-center">
+          <section className="mb-16"></section>
+            <div className="cyber-card-enhanced p-8 text-center"></div>
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6"></p>
                 Join thousands of developers who are already building amazing applications with our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4"></div>
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
+                ></a>
                   Get Started Free
                 </a>
                 <a
                   href="/demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                ></a>
                   Request Demo
                 </a>
               </div>
@@ -542,7 +542,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+  };
 
 export default TutorialsPage;

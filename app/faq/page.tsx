@@ -9,7 +9,7 @@ const FAQPage: React.FC = () => {
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
+    )
   };
   const faqs = [
     {
@@ -46,40 +46,40 @@ const FAQPage: React.FC = () => {
     }
   ];
   return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
+        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." /></meta>
+        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" /></meta>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Find answers to common questions about our AI and IT services, pricing, and implementation.
             </p>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="space-y-4"></div>
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20"></div>
                   <button
                     onClick={() => toggleItem(index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronUp>
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronDown>
                     )}
                   </button>
                   {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
+                    <div className="px-6 pb-4"></div>
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
@@ -90,6 +90,6 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
+  )
+  };
 export default FAQPage;

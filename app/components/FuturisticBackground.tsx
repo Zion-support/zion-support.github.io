@@ -13,8 +13,8 @@ const FuturisticBackground: React.FC = () => {
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+      canvas.height = window.innerHeight
+  };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -27,8 +27,8 @@ const FuturisticBackground: React.FC = () => {
       vy: number;
       size: number;
       opacity: number;
-      color: string;
-    }> = [];
+      color: string
+  }> = [];
 
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
 
@@ -42,8 +42,8 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
+      })
+  }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -80,11 +80,11 @@ const FuturisticBackground: React.FC = () => {
               ctx.strokeStyle = particle.color;
               ctx.globalAlpha = (100 - distance) / 100 * 0.1;
               ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
+              ctx.stroke()
+  }
           }
-        });
-      });
+        })
+  });
 
       // Draw cyber grid
       ctx.globalAlpha = 0.1;
@@ -95,25 +95,25 @@ const FuturisticBackground: React.FC = () => {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
+        ctx.stroke()
+  }
 
       for (let y = 0; y < canvas.height; y += 20) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
+        ctx.stroke()
+  }
 
       ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
-    };
+      requestAnimationFrame(animate)
+  };
 
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
+      window.removeEventListener('resize', resizeCanvas)
+  }
   }, []);
 
   return (
@@ -121,8 +121,8 @@ const FuturisticBackground: React.FC = () => {
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'transparent' }}
-    />
-  );
-};
+    /></canvas>
+  )
+  };
 
 export default FuturisticBackground;

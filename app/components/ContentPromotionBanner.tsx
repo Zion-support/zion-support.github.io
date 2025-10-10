@@ -59,40 +59,40 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
+      <div className="max-w-7xl mx-auto"></div>
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="text-center mb-16"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Join thousands of businesses already using our cutting-edge AI and IT solutions to drive growth, 
             improve efficiency, and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-            >
+            ></a>
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
             </a>
             <a
               href="/demo"
               className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
-            >
+            ></a>
               Watch Demo
             </a>
           </div>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
           {features.map((feature, index) => (
-            <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center hover:bg-slate-800/70 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-white" />
+            <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center hover:bg-slate-800/70 transition-all duration-300"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                <feature.icon className="w-8 h-8 text-white" /></feature>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -101,11 +101,11 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"></div>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
+            <div key={index} className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                <stat.icon className="w-8 h-8 text-white" /></stat>
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-lg font-semibold text-gray-300 mb-1">{stat.label}</div>
@@ -115,14 +115,14 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-slate-800/30 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+        <div className="bg-slate-800/30 rounded-lg p-8"></div>
+          <h2 className="text-2xl font-bold text-white text-center mb-8"></h2>
             Why Choose Our Solutions?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+              <div key={index} className="flex items-center space-x-3"></div>
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300 text-sm">{benefit}</span>
               </div>
             ))}
@@ -130,7 +130,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default ContentPromotionBanner;

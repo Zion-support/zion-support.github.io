@@ -8,9 +8,9 @@ interface AnalyticsProps {
   }
 }
 const Analytics: React.FC<AnalyticsProps> = ({
-    enableGoogleAnalytics = true,;
-  enablePerformanceMonitoring = true,;
-  enableErrorTracking = true,;
+    enableGoogleAnalytics = true,
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
   enableUserBehaviorTracking = true
   }
 }) => {
@@ -47,16 +47,17 @@ const initializeGoogleAnalytics = (;
     $3
   )
   }
-      (window as any).dataLayer.push(args);}
+      (window as any).dataLayer.push(args)
+  }
     }
     (window as any).gtag = gtag;
 gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
-    page_title: document.title,;
-      page_location: window.location.href,;
+    page_title: document.title,
+      page_location: window.location.href,
       send_page_view: true
   }
-    });
+    })
   }
 const initializePerformanceMonitoring = (;
     if ('PerformanceObserver' in window) {
@@ -68,7 +69,8 @@ const initializePerformanceMonitoring = (;
     $3
   )
   }
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
+            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime))
+  }
           } else if (entry.entryType === 'first-input') {
     const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid))
@@ -89,55 +91,59 @@ observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layo
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))
   }
         }
-      });
-    }
+      })
+  }
   }
 const initializeErrorTracking = (;
     // Track JavaScript errors;
     window.addEventListener('error', (event) => {
     trackEvent('error', 'javascript_error', {
-        message: event.message,;
-        filename: event.filename,;
-        lineno: event.lineno,;
-        colno: event.colno,;) => {
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno
+  ) => {
   return (
     $3
   )
   }
-        error: event.error?.stack,}
-      });
-    });
+        error: event.error?.stack
+  }
+      })
+  });
 // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
     trackEvent('error', 'unhandled_promise_rejection', {
-        reason: event.reason,;
+        reason: event.reason,
         promise: event.promise
   }
-      });
-    });
+      })
+  });
 // Track resource loading errors;
     window.addEventListener('error', (event) => {
     if (event.target !== window) {
         trackEvent('error', 'resource_error', {
-          type: (event.target as any).tagName,;
-          src: (event.target as any).src || (event.target as any).href,;
+          type: (event.target as any).tagName,
+          src: (event.target as any).src || (event.target as any).href,
           error: event.type
   }
 
-        });
-      }
-    }, true);
+        })
+  }
+    }, true)
   }
 const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {
-    page_title: document.title,;
-      page_location: window.location.href,;) => {
+    page_title: document.title,
+      page_location: window.location.href
+  ) => {
   return (
     $3
   )
   }
-      page_path: window.location.pathname,}
+      page_path: window.location.pathname
+  }
     });
 // Track scroll depth;
 
@@ -168,44 +174,46 @@ if (tagName === 'a') {
 
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
-          link_url: href,;
+          link_url: href,
           link_text: target.textContent?.trim()
   }
-        });
-      } else if (tagName === 'button') {
+        })
+  } else if (tagName === 'button') {
     trackEvent('engagement', 'button_click', {
-          button_text: target.textContent?.trim(),;
+          button_text: target.textContent?.trim(),
           button_class: target.className
   }
-        });
-      }
+        })
+  }
     });
 // Track form submissions;
     document.addEventListener('submit', (event) => {
     const form = event.target as HTMLFormElement;
       trackEvent('engagement', 'form_submit', {
-        form_id: form.id,;
-        form_class: form.className,;
+        form_id: form.id,
+        form_class: form.className,
         form_action: form.action
   }
-      });
-    });
+      })
+  })
   }
 const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', action, {
-        event_category: category,;
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,;) => {
+        event_category: category,
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value
+  ) => {
   return (
     $3
   )
   }
-        value: typeof value === 'number' ? value : undefined,}
-      });
-    }
+        value: typeof value === 'number' ? value : undefined
   }
-return null;
-}
+      })
+  }
+  }
+return null
+  }
 // Extend Window interface for gtag;
 declare global {
     interface Window {
@@ -219,10 +227,10 @@ export default Analytics;
 // Analytics Provider for context;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-    <></>
-      <Analytics />
+    <>
+      <Analytics /></Analytics>
   }
       {children}
     </>
-  );
-}
+  )
+  }

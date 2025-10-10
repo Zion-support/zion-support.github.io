@@ -36,49 +36,49 @@ const ContentCarousel: React.FC = () => {
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
+        setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }, 5000);
+      return () => clearInterval(interval)
+  }
   }, [isPlaying, slides.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   };
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying)
   };
 
   return (
-    <div className="relative bg-slate-900 rounded-lg overflow-hidden">
-      <div className="relative h-96">
+    <div className="relative bg-slate-900 rounded-lg overflow-hidden"></div>
+      <div className="relative h-96"></div>
         {slides.map((slide, index) => (
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-500 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
-          >
-            <div className="h-full bg-gradient-to-r from-slate-800 to-slate-900 flex items-center">
-              <div className="w-full px-8 md:px-16">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          ></div>
+            <div className="h-full bg-gradient-to-r from-slate-800 to-slate-900 flex items-center"></div>
+              <div className="w-full px-8 md:px-16"></div>
+                <div className="max-w-4xl mx-auto"></div>
+                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4"></h2>
                     {slide.title}
                   </h2>
-                  <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+                  <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl"></p>
                     {slide.description}
                   </p>
                   <a
                     href={slide.href}
                     className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     {slide.cta}
-                    <ChevronRight className="w-5 h-5 ml-2" />
+                    <ChevronRight className="w-5 h-5 ml-2" /></ChevronRight>
                   </a>
                 </div>
               </div>
@@ -88,20 +88,20 @@ const ContentCarousel: React.FC = () => {
       </div>
 
       {/* Navigation Controls */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-4"></div>
         <button
           onClick={prevSlide}
           className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
           aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5" />
+        ></button>
+          <ChevronLeft className="w-5 h-5" /></ChevronLeft>
         </button>
         
         <button
           onClick={togglePlayPause}
           className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}
-        >
+        ></button>
           {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </button>
         
@@ -109,13 +109,13 @@ const ContentCarousel: React.FC = () => {
           onClick={nextSlide}
           className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
           aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5" />
+        ></button>
+          <ChevronRight className="w-5 h-5" /></ChevronRight>
         </button>
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 right-4 flex space-x-2">
+      <div className="absolute bottom-4 right-4 flex space-x-2"></div>
         {slides.map((_, index) => (
           <button
             key={index}
@@ -128,7 +128,7 @@ const ContentCarousel: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default ContentCarousel;

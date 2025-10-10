@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-}
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+  }
   ];
 const benefits = [
     'Advanced AI technology integration',;
@@ -12,11 +12,11 @@ const benefits = [
     '24/7 technical support',;
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Proven track record of success'
   ];
 return (
             </h1>
-            <p>
+            <p></p>
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.;
             </p>
@@ -42,6 +42,6 @@ return (
         </div>
       </section>
     </div>
-  );
-}
+  )
+  }
 export default PagePage;

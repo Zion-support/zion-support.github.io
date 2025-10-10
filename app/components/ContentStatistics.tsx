@@ -31,19 +31,19 @@ const ContentStatistics: React.FC = () => {
   ];
 
   return (
-    <div className="bg-slate-800/30 rounded-lg p-8">
-      <div className="text-center mb-8">
+    <div className="bg-slate-800/30 rounded-lg p-8"></div>
+      <div className="text-center mb-8"></div>
         <h2 className="text-2xl font-bold text-white mb-4">Our Track Record</h2>
-        <p className="text-gray-300">
+        <p className="text-gray-300"></p>
           Numbers that speak for our commitment to excellence
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
         {stats.map((stat, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <stat.icon className="w-8 h-8 text-white" />
+          <div key={index} className="text-center"></div>
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+              <stat.icon className="w-8 h-8 text-white" /></stat>
             </div>
             <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
             <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>
@@ -52,7 +52,7 @@ const ContentStatistics: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default ContentStatistics;

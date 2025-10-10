@@ -36,118 +36,118 @@ const DynamicContentShowcase: React.FC = () => {
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % showcases.length);
-      }, 4000);
-      return () => clearInterval(interval);
-    }
+        setCurrentIndex((prev) => (prev + 1) % showcases.length)
+  }, 4000);
+      return () => clearInterval(interval)
+  }
   }, [isPlaying, showcases.length]);
 
   const nextShowcase = () => {
-    setCurrentIndex((prev) => (prev + 1) % showcases.length);
+    setCurrentIndex((prev) => (prev + 1) % showcases.length)
   };
 
   const prevShowcase = () => {
-    setCurrentIndex((prev) => (prev - 1 + showcases.length) % showcases.length);
+    setCurrentIndex((prev) => (prev - 1 + showcases.length) % showcases.length)
   };
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying)
   };
 
   const resetShowcase = () => {
     setCurrentIndex(0);
-    setIsPlaying(true);
+    setIsPlaying(true)
   };
 
   const currentShowcase = showcases[currentIndex];
 
   return (
-    <div className="bg-slate-800/50 rounded-lg p-8">
-      <div className="text-center mb-8">
+    <div className="bg-slate-800/50 rounded-lg p-8"></div>
+      <div className="text-center mb-8"></div>
         <h2 className="text-2xl font-bold text-white mb-4">Dynamic Solutions Showcase</h2>
-        <p className="text-gray-300">
+        <p className="text-gray-300"></p>
           Explore our innovative solutions and see how they can transform your business
         </p>
       </div>
 
-      <div className="relative">
-        <div className="bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg p-8 min-h-[400px] flex items-center">
-          <div className="w-full">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center space-x-4">
-                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+      <div className="relative"></div>
+        <div className="bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg p-8 min-h-[400px] flex items-center"></div>
+          <div className="w-full"></div>
+            <div className="flex items-center justify-between mb-6"></div>
+              <div className="flex items-center space-x-4"></div>
+                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold"></span>
                   {currentShowcase.category}
                 </span>
-                <span className="text-gray-400 text-sm">
+                <span className="text-gray-400 text-sm"></span>
                   {currentIndex + 1} of {showcases.length}
                 </span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <button
                   onClick={prevShowcase}
                   className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors"
                   aria-label="Previous showcase"
-                >
-                  <ArrowRight className="w-4 h-4 rotate-180" />
+                ></button>
+                  <ArrowRight className="w-4 h-4 rotate-180" /></ArrowRight>
                 </button>
                 <button
                   onClick={togglePlayPause}
                   className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors"
                   aria-label={isPlaying ? 'Pause' : 'Play'}
-                >
+                ></button>
                   {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={resetShowcase}
                   className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors"
                   aria-label="Reset showcase"
-                >
-                  <RotateCcw className="w-4 h-4" />
+                ></button>
+                  <RotateCcw className="w-4 h-4" /></RotateCcw>
                 </button>
                 <button
                   onClick={nextShowcase}
                   className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors"
                   aria-label="Next showcase"
-                >
-                  <ArrowRight className="w-4 h-4" />
+                ></button>
+                  <ArrowRight className="w-4 h-4" /></ArrowRight>
                 </button>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"></div>
+              <div></div>
                 <h3 className="text-3xl font-bold text-white mb-4">{currentShowcase.title}</h3>
                 <p className="text-gray-300 text-lg mb-6">{currentShowcase.description}</p>
                 
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-4 mb-6"></div>
                   {currentShowcase.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                    <div key={index} className="flex items-center space-x-2"></div>
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex space-x-4">
+                <div className="flex space-x-4"></div>
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     Learn More
                   </a>
                   <a
                     href="/demo"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></a>
                     View Demo
                   </a>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg p-8 text-center text-white">
+              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg p-8 text-center text-white"></div>
                 <div className="text-6xl mb-4">🚀</div>
                 <h4 className="text-xl font-bold mb-2">Interactive Demo</h4>
-                <p className="text-cyan-100">
+                <p className="text-cyan-100"></p>
                   Experience our solutions in action
                 </p>
               </div>
@@ -156,7 +156,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
 
         {/* Progress Indicator */}
-        <div className="mt-4 flex justify-center space-x-2">
+        <div className="mt-4 flex justify-center space-x-2"></div>
           {showcases.map((_, index) => (
             <button
               key={index}
@@ -170,7 +170,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default DynamicContentShowcase;

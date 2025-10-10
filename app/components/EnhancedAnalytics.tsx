@@ -15,8 +15,8 @@ export const useAnalytics = () => {
     console.warn('useAnalytics must be used within an AnalyticsProvider');
     return null
   }
-  return context;
-}
+  return context
+  }
 
 interface AnalyticsProviderProps {
     children: React.ReactNode,
@@ -47,8 +47,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href
-      });
-    }
+      })
+  }
   }, [trackingId]);
 
   const track = useCallback((event: string, parameters?: Record<string, any>) => {
@@ -58,8 +58,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         event_label: parameters?.label,
         value: parameters?.value,
         ...parameters
-      });
-    }
+      })
+  }
   }, []);
 
   const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
@@ -68,8 +68,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: pageName,
         page_location: window.location.href,
         ...parameters
-      });
-    }
+      })
+  }
   }, [trackingId]);
 
   const identify = useCallback((userId: string, traits?: Record<string, any>) => {
@@ -77,8 +77,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         user_id: userId,
         ...traits
-      });
-    }
+      })
+  }
   }, [trackingId]);
 
   const value: AnalyticsContextType = {
@@ -88,10 +88,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-  );
-}
+  )
+  }
 
 export default AnalyticsProvider;

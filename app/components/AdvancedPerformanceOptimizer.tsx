@@ -31,7 +31,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
   }
     });
-    return optimizedCount;
+    return optimizedCount
   }, []);
   const optimizeScripts = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -44,7 +44,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
   }
     });
-    return optimizedCount;
+    return optimizedCount
   }, []);
   const optimizeCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -58,7 +58,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
   }
     });
-    return optimizedCount;
+    return optimizedCount
   }, []);
   const runOptimizations = useCallback(() => {
     if (!enableOptimizations) return;
@@ -71,7 +71,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
     });
-    setIsOptimized(true);
+    setIsOptimized(true)
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {
     // Run optimizations after component mount
@@ -90,13 +90,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.warn('Page load time exceeded 1 second')
   }
         }
-      });
-    });
+      })
+  });
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    return () => observer.disconnect();
+    return () => observer.disconnect()
   }, []);
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
+    <div className="performance-optimized" data-optimized={isOptimized}></div>
       {children}
       {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
@@ -109,7 +109,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000
-        }}>
+        }}></div>
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
           <div>CSS: {optimizationMetrics.cssOptimized}</div>
@@ -117,7 +117,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  );
-}
+  )
+  }
 export default AdvancedPerformanceOptimizer;
   </PerformanceOptimizerProps>

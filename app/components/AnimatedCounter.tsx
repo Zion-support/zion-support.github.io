@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 interface AnimatedCounterProps {
-    end: number,;
+    end: number,
 
   end: number;
 
@@ -33,10 +33,10 @@ interface AnimatedCounterProps {
     }
   }, [end, duration]);
   return (
-    <span className={className}>
+    <span className={className}></span>
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-    end,;
-  duration = 2000,;
+    end,
+  duration = 2000,
   prefix = '',;
   suffix = '',;
   className = ''
@@ -44,8 +44,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }) => {
     const [count, setCount] = useState(0);
 useEffect(() => {
-    let startTime: number,;
-    let animationFrame: number,;
+    let startTime: number,
+    let animationFrame: number,
     const animate = (;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
@@ -58,7 +58,8 @@ if (progress < 1) {) => {
     $3
   )
   }
-        animationFrame = requestAnimationFrame(animate);}
+        animationFrame = requestAnimationFrame(animate)
+  }
       }
     }
 animationFrame = requestAnimationFrame(animate);
@@ -70,11 +71,10 @@ return () => {
     }
   }, [end, duration]);
 return (
-    <span>
-
+    <span></span>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
-  );
-}
+  )
+  }
 export default AnimatedCounter;
 
