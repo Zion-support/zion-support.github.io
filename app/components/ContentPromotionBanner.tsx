@@ -60,7 +60,6 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -85,45 +84,48 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <stat.icon className="w-8 h-8 text-white" />
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-white/10 rounded-full">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-              <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
+              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-lg font-semibold text-gray-300 mb-1">{stat.label}</div>
+              <div className="text-sm text-gray-400">{stat.description}</div>
             </div>
           ))}
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {/* Features Section */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <feature.icon className="w-8 h-8 text-white" />
+            <div key={index} className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-white/10 rounded-full">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300 text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive AI and IT solutions that deliver real results for your business.
+              We deliver exceptional value through innovative technology and unmatched expertise
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+              <div key={index} className="flex items-start">
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -132,62 +134,17 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join the future of business technology. Get started with our AI solutions today and see the difference.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
-            </div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Business with AI
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge AI and IT solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/80 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
-                <span className="text-white/90">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join the future of business technology. Contact us today for a free consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+              Schedule Consultation
             </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+              View Our Solutions
+            </button>
           </div>
         </div>
       </div>
