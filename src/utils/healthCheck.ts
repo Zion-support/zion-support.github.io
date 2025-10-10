@@ -172,8 +172,9 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
-      const reportData = JSON.parse(report)
+      // Check if performance monitoring is available
+      const hasPerformance = typeof window !== 'undefined' && 'performance' in window
+      const reportData = hasPerformance ? { loadTime: performance.now() } : {}
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = 'Performance metrics available'
       
