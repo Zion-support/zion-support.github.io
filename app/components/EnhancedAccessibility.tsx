@@ -11,7 +11,6 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 
-<<<<<<< HEAD
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -261,7 +260,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       `}</style>
     </>
   );
-=======
 interface EnhancedAccessibilityProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -443,7 +441,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 };
 
 export default EnhancedAccessibility;

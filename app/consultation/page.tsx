@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -125,7 +124,6 @@ const ConsultationPage: React.FC = () => {
       description: 'Visit our headquarters'
     }
   ];
-=======
 import { CheckCircle, Clock, Users, Award, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -218,25 +216,20 @@ const ConsultationPage: React.FC = () => {
     // Handle form submission
     console.log('Form submitted:', formData);
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Consultation Services - Zion Tech Group</title>
         <meta name="description" content="Get expert consultation on IT strategy, AI implementation, cybersecurity, and cloud migration. Professional guidance to accelerate your digital transformation." />
         <meta name="keywords" content="IT consultation, AI consulting, cybersecurity audit, cloud migration, technology strategy, digital transformation" />
-=======
         <title>Consultation - Zion Tech Group | Expert Technology Consulting</title>
         <meta name="description" content="Get expert technology consulting from Zion Tech Group. AI strategy, cloud migration, digital transformation, and cybersecurity consulting services." />
         <meta name="keywords" content="technology consulting, AI strategy, cloud migration, digital transformation, cybersecurity consulting" />
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -254,7 +247,6 @@ const ConsultationPage: React.FC = () => {
                   View Services
                 </button>
               </div>
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -270,12 +262,10 @@ const ConsultationPage: React.FC = () => {
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 View Our Experts
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -293,7 +283,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
-=======
         {/* Statistics */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -305,7 +294,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
                 </div>
               ))}
             </div>
@@ -313,7 +301,6 @@ const ConsultationPage: React.FC = () => {
         </section>
 
         {/* Consultation Types */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -358,7 +345,6 @@ const ConsultationPage: React.FC = () => {
                   </button>
                 </div>
               ))}
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Consultation Types</h2>
@@ -504,13 +490,11 @@ const ConsultationPage: React.FC = () => {
                   Schedule Consultation
                 </button>
               </form>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>
 
         {/* Contact Information */}
-<<<<<<< HEAD
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -551,7 +535,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Get in Touch</h2>
@@ -580,7 +563,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </div>
     </>
   );

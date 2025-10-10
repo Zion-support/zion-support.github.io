@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -82,7 +81,6 @@ const PerformanceMonitor: React.FC = () => {
       }, 10000);
     };
 
-<<<<<<< HEAD
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
@@ -111,7 +109,6 @@ const PerformanceMonitor: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
-=======
 import { useAnalytics } from './AnalyticsProvider';
 
 interface PerformanceMetrics {
@@ -314,18 +311,14 @@ const PerformanceMonitor: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600"
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
         >
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       
       if (slowResources.length > 0) {
         console.warn('Slow resources detected:', slowResources.map((r: any) => ({
@@ -380,7 +373,6 @@ const PerformanceMonitor: React.FC = () => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
         
-<<<<<<< HEAD
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
@@ -398,7 +390,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-=======
 
       <div className="space-y-3">
         {/* FCP */}
@@ -474,11 +465,9 @@ const PerformanceMonitor: React.FC = () => {
         >
           Refresh Metrics
         </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </div>
     </div>
   );
-=======
         if (metrics.fcp) gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp) });
         if (metrics.lcp) gtag('event', 'web_vitals', { metric_name: 'LCP', metric_value: Math.round(metrics.lcp) });
         if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid) });
@@ -497,7 +486,6 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything visible
   return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 };
 
 export default PerformanceMonitor;

@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -75,7 +74,6 @@ export const usePerformanceMonitor = () => {
       window.removeEventListener('load', handleLoad);
     };
   }, []);
-=======
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 
@@ -225,5 +223,4 @@ export const usePerformanceMonitor = () => {
     measureMemoryUsage,
     measureUserInteraction
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
 };

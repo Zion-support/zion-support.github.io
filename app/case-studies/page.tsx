@@ -3,11 +3,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, ExternalLink, Calendar, User, Building, Award, TrendingUp, Shield, Zap } from 'lucide-react';
-=======
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
 interface CaseStudy {
   id: string;
@@ -31,26 +28,22 @@ const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
       id: '1',
-<<<<<<< HEAD
       title: 'AI-Powered Healthcare Analytics Platform',
       client: 'MedTech Solutions',
       industry: 'Healthcare',
       challenge: 'MedTech Solutions needed to analyze large volumes of patient data to identify patterns and improve treatment outcomes, but their existing systems were unable to process the data efficiently.',
       solution: 'We developed a comprehensive AI-powered analytics platform that processes patient data in real-time, uses machine learning algorithms to identify patterns, and provides actionable insights to healthcare providers.',
-=======
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
       challenge: 'High customer service costs and long response times affecting customer satisfaction.',
       solution: 'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       results: [
         '40% improvement in treatment accuracy',
         '60% reduction in data processing time',
         '25% increase in patient satisfaction',
         '30% cost savings in operational expenses'
       ],
-<<<<<<< HEAD
       duration: '6 months',
       team: '8 specialists',
       technologies: ['Python', 'TensorFlow', 'AWS', 'React', 'PostgreSQL'],
@@ -65,7 +58,6 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Finance',
       challenge: 'A major financial institution needed to modernize their cybersecurity infrastructure to protect against sophisticated cyber threats while maintaining compliance with strict regulatory requirements.',
       solution: 'We implemented a comprehensive cybersecurity framework including advanced threat detection, zero-trust architecture, and automated incident response systems.',
-=======
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
       team: '8 specialists'
@@ -77,14 +69,12 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
       challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       results: [
         '99.9% reduction in security incidents',
         '50% faster threat detection',
         '100% compliance with regulatory requirements',
         '40% reduction in security operation costs'
       ],
-<<<<<<< HEAD
       duration: '8 months',
       team: '12 specialists',
       technologies: ['SIEM', 'SOAR', 'Zero Trust', 'AWS Security', 'Python'],
@@ -95,7 +85,6 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: '3',
       title: 'Cloud Migration for E-commerce Platform',
-=======
       image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
       team: '12 specialists'
@@ -120,13 +109,11 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: '4',
       title: 'Machine Learning for Predictive Analytics',
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       client: 'RetailMax',
       industry: 'Retail',
       challenge: 'RetailMax needed to migrate their legacy e-commerce platform to the cloud to improve scalability and performance during peak shopping seasons.',
       solution: 'We designed and executed a comprehensive cloud migration strategy using microservices architecture, containerization, and auto-scaling capabilities.',
       results: [
-<<<<<<< HEAD
         '300% improvement in peak traffic handling',
         '50% reduction in infrastructure costs',
         '99.9% uptime during peak seasons',
@@ -208,7 +195,6 @@ const CaseStudiesPage: React.FC = () => {
   );
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
-=======
         '40% reduction in stockouts',
         '25% decrease in excess inventory',
         '15% increase in revenue',
@@ -260,7 +246,6 @@ const CaseStudiesPage: React.FC = () => {
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   return (
     <>
@@ -272,7 +257,6 @@ const CaseStudiesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -282,7 +266,6 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
                 Discover how we've helped organizations transform their operations and achieve remarkable results through innovative technology solutions.
               </p>
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -303,12 +286,10 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Case Studies */}
         {featuredCaseStudies.length > 0 && (
           <section className="py-16 bg-white">
@@ -350,7 +331,6 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                   </div>
                 ))}
-=======
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -443,7 +423,6 @@ const CaseStudiesPage: React.FC = () => {
                 >
                   Explore Our Services
                 </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
               </div>
             </div>
           </section>

@@ -157,7 +157,6 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             </div>
           </div>
 
@@ -181,18 +180,14 @@ const ContentCarousel: React.FC = () => {
                   }`}
                 />
               ))}
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
 
-<<<<<<< HEAD
             <button
               onClick={nextSlide}
               className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
-=======
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -245,7 +240,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </div>
       </div>

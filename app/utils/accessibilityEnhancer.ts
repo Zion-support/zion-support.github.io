@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -25,7 +24,6 @@ export class AccessibilityEnhancer {
       enableReducedMotion: true,
       ...options
     };
-=======
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -50,7 +48,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     }
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
   }
 
   public initialize(): void {
@@ -284,8 +281,5 @@ const AccessibilityEnhancerPage: React.FC = () => {
     });
   }
 }
-<<<<<<< HEAD
 
 export default AccessibilityEnhancer;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f

@@ -1,13 +1,10 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -20,25 +17,19 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   featured: boolean;
   image: string;
-=======
   image: string;
   featured: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
 
   // Sample blog posts data
-=======
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
   const blogPosts: BlogPost[] = [
     {
       id: '1',
@@ -50,7 +41,6 @@ const BlogPage: React.FC = () => {
       readTime: '5 min read',
       category: 'AI & Machine Learning',
       tags: ['AI', 'Enterprise', 'Innovation'],
-<<<<<<< HEAD
       featured: true,
       image: '/images/blog/ai-enterprise.jpg'
     },
@@ -135,7 +125,6 @@ const BlogPage: React.FC = () => {
 
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.slice(0, 3);
-=======
       image: '/images/blog/ai-enterprise.jpg',
       featured: true
     },
@@ -199,24 +188,19 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   return (
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, digital transformation" />
-=======
         <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -240,7 +224,6 @@ const BlogPage: React.FC = () => {
                   />
                 </div>
               </div>
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -279,13 +262,11 @@ const BlogPage: React.FC = () => {
                   {category}
                 </button>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>
 
         {/* Featured Posts */}
-<<<<<<< HEAD
         {featuredPosts.length > 0 && (
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -456,7 +437,6 @@ const BlogPage: React.FC = () => {
                   </div>
                 )}
               </main>
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -565,7 +545,6 @@ const BlogPage: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 Subscribe
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>

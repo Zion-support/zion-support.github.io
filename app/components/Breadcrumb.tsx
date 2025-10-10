@@ -14,8 +14,6 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-<<<<<<< HEAD
-=======
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: BreadcrumbItem[] = [
@@ -45,12 +43,10 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbs = generateBreadcrumbs();
 
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-<<<<<<< HEAD
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
@@ -84,7 +80,6 @@ const Breadcrumb: React.FC = () => {
                 {item.icon && <item.icon className="w-4 h-4" />}
                 <span>{item.name}</span>
               </a>
-=======
 
   return (
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
@@ -117,7 +112,6 @@ const Breadcrumb: React.FC = () => {
                   {item.name}
                 </Link>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </li>
           ))}
         </ol>
