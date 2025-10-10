@@ -1,7 +1,7 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Brain,}
+import React, {useState} from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Brain,
   Cloud,
   Shield,
   BarChart3,
@@ -18,16 +18,16 @@ import {Brain,}
   Users,
   MessageSquare,
   FileText,
-  Target;}from 'lucide-react';
+  Target} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ServicesPage: React.FC = () => {,
+const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
-    // AI Services;
+    // AI Services
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
@@ -36,7 +36,8 @@ const ServicesPage: React.FC = () => {,
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']},
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+    },
     {icon: BarChart3,
       title: 'AI Data Analytics',
       description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling.',
