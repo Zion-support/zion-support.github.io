@@ -6,25 +6,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SitemapPage: React.FC = () => {
-<<<<<<< HEAD
-  const lastUpdated = new Date().toISOString().split('T')[0]
-  ;
-  const pageCategories = [
-=======
+
   const sitemapSections = [
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
     {
       title: 'Main Pages',
       icon: Home,
       pages: [
-<<<<<<< HEAD
-        { name: 'Home', url: '/', description: 'Main landing page' },
-        { name: 'About', url: '/about', description: 'About Zion Tech Group' },
-        { name: 'Services', url: '/services', description: 'Our service offerings' },
-        { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },
-        { name: 'Contact', url: '/contact', description: 'Contact information' }
-      ];
-=======
+
         { name: 'Home', url: '/', description: 'Landing page with company overview and services' },
         { name: 'About Us', url: '/about', description: 'Company information, team, and mission' },
         { name: 'Contact', url: '/contact', description: 'Contact information and inquiry form' },
@@ -34,24 +23,13 @@ const SitemapPage: React.FC = () => {
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and client projects' },
         { name: 'Careers', url: '/careers', description: 'Job opportunities and company culture' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
     },
     {
       title: 'AI Services',
       icon: Brain,
       pages: [
-<<<<<<< HEAD
-        { name: 'AI Services Overview', url: '/ai-services', description: 'Complete AI services catalog' },
-        { name: 'AI Analytics', url: '/ai-analytics', description: 'AI-powered data analytics' },
-        { name: 'AI Automation', url: '/ai-automation', description: 'Process automation solutions' },
-        { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Build intelligent chatbots' },
-        { name: 'AI CRM', url: '/ai-crm', description: 'AI-powered customer relationship management' },
-        { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-driven security solutions' },
-        { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analytics' },
-        { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' },
-        { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }
-  ]
-=======
+
         { name: 'AI Services Overview', url: '/ai-services', description: 'Comprehensive AI solutions and capabilities' },
         { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time business intelligence platform' },
         { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation platform' },
@@ -65,7 +43,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI solutions' },
         { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI tools' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
     },
     {
       title: 'IT Services',
@@ -76,35 +54,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
         { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
         { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
-<<<<<<< HEAD
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }
-  ]
-    },
-    {
-      title: 'Micro SaaS',
-      icon: Zap,
-      pages: [
-        { name: 'Micro SaaS Overview', url: '/micro-saas', description: 'Complete Micro SaaS catalog' },
-        { name: 'AI Content Writer', url: '/ai-content-writer', description: 'Automated content creation' },
-        { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
-        { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Financial tracking solution' },
-        { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
-        { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }
-  ]
-    },
-    {
-      title: 'Emerging Technologies',
-      icon: Code,
-      pages: [
-        { name: '5G Implementation', url: '/5g-implementation', description: 'Next-generation connectivity' },
-        { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D content creation' },
-        { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Immersive work environments' },
-        { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating systems' },
-        { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Decentralized AI solutions' },
-        { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }
-  ]
-=======
+
         { name: 'API Development', url: '/api-development', description: 'RESTful and GraphQL API services' },
         { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automated deployment and operations' },
         { name: 'Database Management', url: '/database-management', description: 'Database design and optimization' },
@@ -131,7 +81,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing AI' },
         { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
     },
     {
       title: 'Resources',
@@ -140,34 +90,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
         { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
-<<<<<<< HEAD
-        { name: 'Demo', url: '/demo', description: 'Request a demo' },
-        { name: 'Consultation', url: '/consultation', description: 'Free consultation' }
-  ]
-    },
-    {
-      title: 'Documentation',
-      icon: Code,
-      pages: [
-        { name: 'Documentation', url: '/docs', description: 'Complete documentation' },
-        { name: 'API Reference', url: '/api', description: 'API documentation' },
-        { name: 'Tutorials', url: '/tutorials', description: 'Learning resources' },
-        { name: 'Community', url: '/community', description: 'Developer community' }
-  ]
-    },
-    {
-      title: 'Legal',
-      icon: Shield,
-      pages: [
-        { name: 'Privacy Policy', url: '/privacy', description: 'Privacy policy and data protection' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
-        { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
-  ]
-    }
-  ];];
-  const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
-=======
+
         { name: 'Support', url: '/support', description: 'Technical support and help center' },
         { name: 'Community', url: '/community', description: 'User community and forums' },
         { name: 'Demo', url: '/demo', description: 'Request a product demonstration' },
@@ -195,7 +118,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Pricing', url: '/pricing', icon: DollarSign },
     { name: 'Blog', url: '/blog', icon: FileText }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
 
   return (
     <>
