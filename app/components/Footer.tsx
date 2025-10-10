@@ -120,7 +120,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' },
-    { name: 'Status', url: '/status' }
+    { name: 'Status', url: '/status' },
+    { name: 'News', url: '/news' },
+    { name: 'Press Kit', url: '/press' },
+    { name: 'Investor Relations', url: '/investors' },
+    { name: 'Leadership', url: '/leadership' }
   ]
 
   const resourcesLinks = [
@@ -131,7 +135,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'Help Center', url: '/help' },
+    { name: 'Video Tutorials', url: '/videos' },
+    { name: 'Webinars', url: '/webinars' },
+    { name: 'White Papers', url: '/whitepapers' }
   ]
 
   const enterpriseLinks = [
