@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components
-import Footer from '../components
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',

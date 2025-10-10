@@ -5,7 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -213,4 +214,5 @@ const PagePage: React.FC = () => {
 export default PagePage;
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [

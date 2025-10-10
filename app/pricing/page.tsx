@@ -97,8 +97,6 @@ const PagePage: React.FC = () => {
       </div>
     </>
   );
-  );
-  ));)
 };
 
-export default PagePage;
+export default PricingPage;

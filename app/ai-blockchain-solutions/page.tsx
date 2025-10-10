@@ -1,6 +1,7 @@
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
