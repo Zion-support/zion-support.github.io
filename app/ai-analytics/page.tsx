@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const AiAnalyticsPage: React.FC = () => {const features = [
+
+const AiAnalyticsPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -14,8 +15,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-=======
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -34,7 +33,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: Globe,
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -46,25 +44,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
-;
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-    <>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />;
-const useCases = [
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
-const useCases = [
-=======
 
   const benefits = [
     'Transform raw data into actionable insights',
@@ -76,7 +55,6 @@ const useCases = [
   ];
 
   const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -156,19 +134,6 @@ const useCases = [
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-=======
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
@@ -202,9 +167,8 @@ const useCases = [
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
@@ -250,11 +214,7 @@ const useCases = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-              ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+              ))}
             </div>
           </div>
         </section>
@@ -292,13 +252,6 @@ const useCases = [
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default AiAnalyticsPage;
-    </React.Fragment>)
-export default AiAnalyticsPage;
-=======
 };
 
 export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
