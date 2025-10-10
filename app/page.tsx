@@ -2,16 +2,7 @@
 import React, { Suspense } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Lock, Settings, Cpu, Database, Cloud, Smartphone, Monitor, Server, Wifi, Code, Palette, Search, MessageSquare, Calendar, FileText, TrendingUp, Award, Clock, CheckCircle2, ArrowRight as ArrowRightIcon, Play, Download, ExternalLink, ChevronRight, Star as StarIcon, Quote, User, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar as CalendarIcon, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Eye, Sparkles } from 'lucide-react';
 import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
 import Navigation from './components/Navigation';
-import OptimizedImage from './components/OptimizedImage';
-import EnhancedLoading from './components/EnhancedLoading';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 const HomePage: React.FC = () => {
   const stats = [
@@ -69,11 +60,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead 
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI and technology solutions. Expert consulting, cloud services, and digital transformation."
-        keywords="AI solutions, technology consulting, cloud services, digital transformation, machine learning"
-      />
       <Navigation />
       
       {/* Hero Section */}

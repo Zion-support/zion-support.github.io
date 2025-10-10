@@ -60,12 +60,14 @@ interface OptimizationStatus {
   optimized: boolean;
 }
 
-export const PerformanceOptimizer: React.FC = () => {,
+export const PerformanceOptimizerComponent: React.FC = () => {
   const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0;,
-    codeSplit: false;,
-    serviceWorker: false;,
-    optimized: false;
+    preloaded: 0,
+    codeSplit: false,
+    serviceWorker: false,
+    optimized: false
+  });
+
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
