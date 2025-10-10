@@ -34,34 +34,9 @@ import {
   ChevronRight,
   Phone,
   Mail,
-<<<<<<< HEAD
   MapPin
-=======
-<<<<<<< HEAD
-
 } from 'lucide-react';
 
-const AboutPage: React.FC = () => {
-  return (<div>
-        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions<
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." 
-        <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" 
-      <
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section *
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group
-              <
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-  MapPin;)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-} from 'lucide-react';
-;
 const AboutPage: React.FC = () => {
   return (
     <>
@@ -79,38 +54,15 @@ const AboutPage: React.FC = () => {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About Zion Tech Group
               </h1>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              <
-            <
-          <
-        <
+              </p>
+            </div>
+          </div>
+        </section>
 
-<<<<<<< HEAD
-        {/* Mission Section *
-<section className="py-20 bg-slate-800
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission<
-                <p className="text-lg text-gray-300 mb-6">
-                  To democratize advanced AI and technology solutions, making them accessible 
-                  to businesses of all sizes while delivering unprecedented value and innovation.
-                <
-                <p className="text-lg text-gray-300 mb-8">
-                  We believe that every organization deserves access to cutting-edge technology 
-                  that can transform their operations, enhance their capabilities, and drive 
-                  sustainable growth.
-                <
-                <div className="flex flex-col sm: flex-row gap-4">
-=======
         {/* Mission Section */}
-        <section className="py-20 bg-slate-800/50">
+        <section className="py-20 bg-slate-800">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -124,52 +76,11 @@ const AboutPage: React.FC = () => {
                   that can transform their operations, enhance their capabilities, and drive 
                   sustainable growth.
                 </p>
-<<<<<<< HEAD
                 <div className="flex flex-col sm:flex-row gap-4">
-=======
-                <div className="flex flex-col sm:flex-row gap-4"></div>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   <a
-                    href="
+                    href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-<<<<<<< HEAD
                   >
-=======
-<<<<<<< HEAD
-                  >
-                    <MessageCircle className="w-5 h-5" 
-                    <span>Get in Touch<
-                  <
-                  <a
-                    href="
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white
-                  >
-                    <Settings className="w-5 h-5" 
-                    <span>Our Services<
-                  <
-                <
-              <
-              <div className="relative">
-                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"><
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"><
-                      <div className="w-3 h-3 bg-green-500 rounded-full"><
-                    <
-                    <div className="space-y-4">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"><
-                      <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4"><
-                      <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2"><
-                    <
-                    <div className="text-center text-white">
-                      <div className="text-2xl font-bold">AI Dashboard<
-                      <div className="text-sm text-gray-300">Real-time Analytics<
-                    <
-=======
-                  ></a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <MessageCircle className="w-5 h-5" />
                     <span>Get in Touch</span>
                   </a>
@@ -213,27 +124,15 @@ const AboutPage: React.FC = () => {
                       <h3 className="text-white font-semibold mb-2">Global Reach</h3>
                       <p className="text-gray-300 text-sm">25+ countries</p>
                     </div>
-<<<<<<< HEAD
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-=======
->>>>>>> main
 
-                  <
-                <
-              <
-            <
-          <
-<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-<<<<<<< HEAD
-        {/* Values Section *
-        <section className="py-16 px-4 bg-slate-800
+        {/* Values Section */}
+        <section className="py-16 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values<
@@ -279,35 +178,14 @@ const AboutPage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hove,
     r:text-cyan-600 transition-colors">
                 Contact Us
-              <
-            <
-          <
-        <
-      <
-    <)
-);
-=======
-        {/* Values Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These principles guide everything we do and shape our approach to delivering exceptional solutions.
-              </p>
+              </a>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-                <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Innovation</h3>
-                <p className="text-gray-300">
-                  We constantly push the boundaries of what's possible, embracing new technologies and methodologies to deliver cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
                   <Heart className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Integrity</h3>
@@ -428,12 +306,7 @@ const AboutPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
-);)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 
 export default AboutPage;
