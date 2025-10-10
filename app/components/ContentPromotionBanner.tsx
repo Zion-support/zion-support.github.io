@@ -1,43 +1,59 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-const ContentPromotionBannerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-    }
-  ];
+interface ContentPromotionBannerProps {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  features?: string[];
+  className?: string;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title = "Transform Your Business with AI",
+  description = "Discover how our AI solutions can revolutionize your operations and drive growth.",
+  ctaText = "Get Started Today",
+  ctaLink = "/contact",
+  features = [
+    "Advanced AI Technology",
+    "Real-time Analytics",
+    "Enterprise Security",
+    "24/7 Support"
+  ],
+  className = ""
+}) => {
   return (
+    <div className={`bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12 px-4 ${className}`}>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {title}
+          </h2>
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <CheckCircle className="w-5 h-5 text-green-300 mr-2" />
+              <span className="text-purple-100">{feature}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <button className="bg-white text-purple-600 hover:bg-purple-50 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+            {ctaText}
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ContentPromotionBannerPage;
+export default ContentPromotionBanner;

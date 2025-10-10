@@ -60,5 +60,5 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
-module.exports = withSentry(handler);
+module.exports = handler;
 

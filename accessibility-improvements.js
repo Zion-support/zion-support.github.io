@@ -49,48 +49,50 @@ const trapFocus = (element) => {
 //   Skip to main content
 // </a>
 
-// 6. Use semantic HTML;
+// 6. Use semantic HTML
 // <main>
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="/">Home</a></li>
-    </ul>
-  </nav>
-  <section></section>
-    <h2>Section</h2> Title</h2>
-    <article></article>
-      <h3>Article</h3> Title</h3>
-    </article>
-  </section>
+//   <nav aria-label="Main navigation">
+//     <ul>
+//       <li><a href="/">Home</a></li>
+//     </ul>
+//   </nav>
+//   <section>
+//     <h2>Section Title</h2>
+//     <article>
+//       <h3>Article Title</h3>
+//     </article>
+//   </section>
 // </main>
 
-// 7. Form accessibility;
+// 7. Form accessibility
 // <form>
-  <fieldset>
-    <legend>Contact Information</legend>
-    <label htmlFor="email">Email Address</label>
-    <input;
-      id="email" 
-      type="email" 
-      required;
-      aria-describedby="email-error"
-    /></input>
-    <div id="email-error" role="alert" aria-live="polite"></di>
-      {emailError}
-    </div>
-  </fieldset>
+//   <fieldset>
+//     <legend>Contact Information</legend>
+//     <label htmlFor="email">Email Address</label>
+//     <input
+//       id="email" 
+//       type="email" 
+//       required
+//       aria-describedby="email-error"
+//     />
+//     <div id="email-error" role="alert" aria-live="polite">
+//       {emailError}
+//     </div>
+//   </fieldset>
 // </form>
 
-// 8. Image accessibility;
-<img;
-  src="chart.png" 
-  alt="Sales chart showing 25% increase in Q3 2024"
-  role="img"
-/>
-// 9. Color contrast considerations;
-// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
-// - Large text: 3:1;
-// - UI components: 3:1;
+// 8. Image accessibility
+// <img
+//   src="chart.png" 
+//   alt="Sales chart showing 25% increase in Q3 2024"
+//   role="img"
+// />
+
+// 9. Color contrast considerations
+// Ensure sufficient contrast ratios:
+// - Normal text: 4.5:1
+// - Large text: 3:1
+// - UI components: 3:1
 // 10. Keyboard navigation;
 // All interactive elements should be:
 // - Focusable with Tab key;

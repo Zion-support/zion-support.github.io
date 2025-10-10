@@ -1,138 +1,116 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Eye, Camera, Image, Zap, Shield, ArrowRight, Brain, Target, Users, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { Brain, BarChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const AIComputerVisionPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
-      title: 'Object Detection',
-      description: 'Advanced object detection and recognition using state-of-the-art computer vision algorithms.',
-      benefits: ['Real-time detection', 'Multi-class recognition', 'High accuracy', 'Custom training']
-    },
-    {
-      icon: Camera,
-      title: 'Image Analysis',
-      description: 'Comprehensive image analysis including classification, segmentation, and feature extraction.',
-      benefits: ['Image classification', 'Semantic segmentation', 'Feature extraction', 'Quality assessment']
-    },
-    {
       icon: Brain,
-      title: 'Deep Learning Models',
-      description: 'Custom deep learning models trained on your specific data for optimal performance.',
-      benefits: ['Custom models', 'Transfer learning', 'Model optimization', 'Continuous learning']
+      title: 'AI-Powered Page',
+      description: 'Advanced AI technology for page.',
+      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Optimized performance']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and reporting for page.',
+      benefits: ['Live monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: 'Real-time Processing',
-      description: 'Process images and videos in real-time with optimized algorithms and hardware acceleration.',
-      benefits: ['Real-time processing', 'Hardware acceleration', 'Low latency', 'High throughput']
-    },
-    {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Secure computer vision solutions with privacy protection and data encryption.',
-      benefits: ['Data encryption', 'Privacy protection', 'Secure processing', 'Compliance ready']
-    },
-    {
-      icon: Zap,
-      title: 'Edge Computing',
-      description: 'Deploy computer vision models on edge devices for offline processing and reduced latency.',
-      benefits: ['Edge deployment', 'Offline processing', 'Reduced latency', 'Cost optimization']
-    }
-  ];
-
-  const benefits = [
-    'Improve accuracy by 95%',
-    'Reduce processing time by 80%',
-    'Lower operational costs by 60%',
-    'Enable real-time insights',
-    'Automate visual tasks',
-    'Scale across devices',
-    'Enhance user experience',
-    'Enable new applications'
-  ];
-
-  const useCases = [
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Computer vision for self-driving cars and advanced driver assistance systems',
-      icon: '🚗'
-    },
-    {
-      title: 'Medical Imaging',
-      description: 'AI-powered medical image analysis for diagnosis and treatment planning',
-      icon: '🏥'
-    },
-    {
-      title: 'Quality Control',
-      description: 'Automated quality inspection and defect detection in manufacturing',
-      icon: '🏭'
-    },
-    {
-      title: 'Security & Surveillance',
-      description: 'Intelligent surveillance systems with facial recognition and behavior analysis',
-      icon: '🔒'
-    },
-    {
-      title: 'Retail Analytics',
-      description: 'Customer behavior analysis and inventory management in retail',
-      icon: '🛒'
-    },
-    {
-      title: 'Agriculture',
-      description: 'Crop monitoring, disease detection, and yield prediction in agriculture',
-      icon: '🌾'
+      title: 'Goal Optimization',
+      description: 'AI-driven optimization to achieve your page goals.',
+      benefits: ['Goal tracking', 'Performance optimization', 'ROI analysis', 'Success metrics']
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Computer Vision - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our AI Computer Vision solutions. Advanced object detection, image analysis, and real-time processing for better insights." />
-        <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions powered by advanced AI technology." />
+        <meta name="keywords" content="AI page, artificial intelligence, automation, page" />
       </Helmet>
-
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
-              <Eye className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Computer Vision
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our AI Computer Vision solutions. Advanced object detection, 
-              image analysis, and real-time processing for better insights.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Page solutions powered by advanced AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
-                Start Building
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
               </button>
-              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
-                View Demo
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>
         </section>
 
-              </div>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Advanced Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Cutting-edge AI technology for modern page
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer />
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-white/50">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your page with our AI-powered solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Us Today
+              </button>
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export default AIComputerVisionPage;
+export default PagePage;

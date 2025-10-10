@@ -1,86 +1,84 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Shield, Code, AlertTriangle, CheckCircle, XCircle, Eye, Lock, Unlock, FileText, Search, Filter, Download, Upload, Settings, Zap, Star, Users, Clock, Globe, Phone, Mail, MapPin, ArrowRight, Brain, BarChart3, DollarSign, Calendar, MessageSquare, Activity, TrendingUp, Target, Award, Sparkles } from 'lucide-react';
+import { Brain, BarChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const AICodeSecurityAuditorPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Page',
+      description: 'Advanced AI technology for page.',
+      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Optimized performance']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and reporting for page.',
+      benefits: ['Live monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Goal Optimization',
+      description: 'AI-driven optimization to achieve your page goals.',
+      benefits: ['Goal tracking', 'Performance optimization', 'ROI analysis', 'Success metrics']
     }
   ];
 
-  const benefits = [
-    'Reduce security vulnerabilities by 90%',
-    'Improve code security by 85%',
-    'Lower security risks by 80%',
-    'Increase compliance by 95%',
-    'Enable automated security testing',
-    'Accelerate security audits',
-    'Scale security across teams',
-    'Enhance security awareness'
-  ];
-
-  const useCases = [
-    {
-      title: 'Application Security',
-      description: 'Secure web and mobile applications with comprehensive security auditing',
-      icon: '🔒'
-    },
-    {
-      title: 'Code Review',
-      description: 'Automate security code reviews and identify potential vulnerabilities',
-      icon: '🔍'
-    },
-    {
-      title: 'Compliance Auditing',
-      description: 'Ensure compliance with security standards and regulations',
-      icon: '📋'
-    },
-    {
-      title: 'Penetration Testing',
-      description: 'Identify security weaknesses through automated penetration testing',
-      icon: '🎯'
-    },
-    {
-      title: 'Security Training',
-      description: 'Educate developers on secure coding practices and common vulnerabilities',
-      icon: '📚'
-    },
-    {
-      title: 'Risk Management',
-      description: 'Assess and manage security risks across the development lifecycle',
-      icon: '⚠️'
-    }
-  ];
-
-
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions powered by advanced AI technology." />
+        <meta name="keywords" content="AI page, artificial intelligence, automation, page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
-              <Shield className="w-10 h-10 text-white" />
-            </div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Secure your code with our AI Code Security Auditor. Automated vulnerability detection, 
-              security analysis, and compliance checking for better code security.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Page solutions powered by advanced AI technology.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Advanced Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Cutting-edge AI technology for modern page
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -91,45 +89,28 @@ const AICodeSecurityAuditorPage: React.FC = () => {
           </div>
         </section>
 
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                  </div>
-                  <p className="text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Secure Your Code?
-              </h2>
-              <p className="text-xl text-red-100 mb-8">
-                Join thousands of developers who are already using our AI Code Security Auditor
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                </button>
-              </div>
+        <section className="py-20 px-4 bg-white/50">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your page with our AI-powered solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Us Today
+              </button>
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
+      </div>
     </>
   );
 };
 
-export default AICodeSecurityAuditorPage;
+export default PagePage;

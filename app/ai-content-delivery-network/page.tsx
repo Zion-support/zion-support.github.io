@@ -1,138 +1,116 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Globe, Zap, Shield, ArrowRight, Brain, Target, Users, Star, Phone, Mail, MapPin, Cloud, Server, Database, Settings, Activity, TrendingUp } from 'lucide-react';
+import { Brain, BarChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const AIContentDeliveryNetworkPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Globe,
-      title: 'Global Edge Network',
-      description: 'Worldwide network of edge servers for ultra-fast content delivery and reduced latency.',
-      benefits: ['Global coverage', 'Low latency', 'High availability', 'Edge computing']
-    },
-    {
-      icon: Zap,
-      title: 'AI-Powered Optimization',
-      description: 'Intelligent content optimization and caching strategies powered by machine learning.',
-      benefits: ['Smart caching', 'Content optimization', 'Predictive loading', 'Performance tuning']
-    },
-    {
-      icon: Shield,
-      title: 'Advanced Security',
-      description: 'Comprehensive security features including DDoS protection and SSL encryption.',
-      benefits: ['DDoS protection', 'SSL encryption', 'WAF integration', 'Security monitoring']
-    },
-    {
       icon: Brain,
-      title: 'Intelligent Routing',
-      description: 'AI-driven traffic routing and load balancing for optimal performance.',
-      benefits: ['Smart routing', 'Load balancing', 'Traffic optimization', 'Failover protection']
+      title: 'AI-Powered Page',
+      description: 'Advanced AI technology for page.',
+      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Optimized performance']
     },
     {
-      icon: Cloud,
-      title: 'Cloud Integration',
-      description: 'Seamless integration with major cloud providers and content management systems.',
-      benefits: ['Cloud integration', 'CMS support', 'API compatibility', 'Easy deployment']
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and reporting for page.',
+      benefits: ['Live monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Activity,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive analytics and monitoring for performance insights and optimization.',
-      benefits: ['Real-time metrics', 'Performance monitoring', 'Usage analytics', 'Custom dashboards']
-    }
-  ];
-
-  const benefits = [
-    'Improve page load speed by 80%',
-    'Reduce bandwidth costs by 60%',
-    'Increase global reach by 95%',
-    'Lower server load by 70%',
-    'Enable global scalability',
-    'Automate content optimization',
-    'Enhance user experience',
-    'Reduce infrastructure costs'
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce Platforms',
-      description: 'Accelerate product images and content for better shopping experience',
-      icon: '🛒'
-    },
-    {
-      title: 'Media & Streaming',
-      description: 'Deliver video and audio content with minimal buffering and high quality',
-      icon: '🎬'
-    },
-    {
-      title: 'Web Applications',
-      description: 'Optimize web app performance and reduce load times globally',
-      icon: '🌐'
-    },
-    {
-      title: 'Mobile Apps',
-      description: 'Accelerate mobile app content delivery and improve user experience',
-      icon: '📱'
-    },
-    {
-      title: 'Gaming',
-      description: 'Deliver game assets and updates with minimal latency for better gaming',
-      icon: '🎮'
-    },
-    {
-      title: 'Software Distribution',
-      description: 'Distribute software updates and downloads efficiently worldwide',
-      icon: '💻'
+      icon: Target,
+      title: 'Goal Optimization',
+      description: 'AI-driven optimization to achieve your page goals.',
+      benefits: ['Goal tracking', 'Performance optimization', 'ROI analysis', 'Success metrics']
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Content Delivery Network - Zion Tech Group</title>
-        <meta name="description" content="Accelerate your content delivery with our AI-powered CDN. Global edge network, intelligent optimization, and advanced security for better performance." />
-        <meta name="keywords" content="AI CDN, content delivery network, edge computing, global CDN, content optimization, CDN security" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions powered by advanced AI technology." />
+        <meta name="keywords" content="AI page, artificial intelligence, automation, page" />
       </Helmet>
-
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8">
-              <Globe className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Content Delivery Network
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Accelerate your content delivery with our AI-powered CDN. Global edge network, 
-              intelligent optimization, and advanced security for better performance.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Page solutions powered by advanced AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
-                Start Delivering
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
               </button>
-              <button className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                View Demo
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>
         </section>
 
-              </div>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Advanced Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Cutting-edge AI technology for modern page
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-500">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer />
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-white/50">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your page with our AI-powered solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Us Today
+              </button>
+              <button className="border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export default AIContentDeliveryNetworkPage;
+export default PagePage;

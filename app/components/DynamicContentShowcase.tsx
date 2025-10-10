@@ -1,61 +1,156 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
-    {
-      icon: Brain,
+interface ShowcaseItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  featured?: boolean;
+}
+
+interface DynamicContentShowcaseProps {
+  items: ShowcaseItem[];
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  showControls?: boolean;
+  className?: string;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
+  items,
+  autoPlay = true,
+  autoPlayInterval = 4000,
+  showControls = true,
+  className = ""
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
+
+  useEffect(() => {
+    if (isPlaying && items.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => 
+          prevIndex === items.length - 1 ? 0 : prevIndex + 1
+        );
+      }, autoPlayInterval);
+
+      return () => clearInterval(interval);
     }
-  ];
+  }, [isPlaying, autoPlayInterval, items.length]);
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  if (!items || items.length === 0) {
+    return null;
+  }
+
+  const currentItem = items[currentIndex];
 
   return (
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+    <div className={`relative w-full ${className}`}>
+      {/* Main Showcase */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-purple-900">
+        <div className="aspect-video relative">
+          <img
+            src={currentItem.image}
+            alt={currentItem.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          
+          {/* Content Overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="max-w-4xl">
+              <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
+                {currentItem.category}
+              </span>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {currentItem.title}
+              </h3>
+              <p className="text-xl text-gray-200 mb-6 max-w-2xl">
+                {currentItem.description}
+              </p>
+              <button className="bg-white text-purple-600 hover:bg-purple-50 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Learn More
               </button>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our DynamicContentShowcase?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our dynamiccontentshowcase solutions deliver unmatched performance, security, and scalability.
-            </p>
+        {/* Navigation Controls */}
+        {showControls && items.length > 1 && (
+          <div className="absolute top-4 right-4 flex space-x-2">
+            <button
+              onClick={goToPrevious}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={togglePlayPause}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+            >
+              {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+            </button>
+            <button
+              onClick={goToNext}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
+        )}
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* Thumbnail Navigation */}
+      {items.length > 1 && (
+        <div className="mt-4 flex space-x-2 overflow-x-auto">
+          {items.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setCurrentIndex(index)}
+              className={`flex-shrink-0 w-20 h-12 rounded-lg overflow-hidden transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'ring-2 ring-purple-500 scale-105' 
+                  : 'opacity-70 hover:opacity-100'
+              }`}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+            </button>
+          ))}
         </div>
-      </section>
+      )}
 
+      {/* Progress Indicator */}
+      {isPlaying && items.length > 1 && (
+        <div className="mt-4 w-full bg-gray-200 rounded-full h-1">
+          <div 
+            className="bg-purple-600 h-1 rounded-full transition-all duration-100"
+            style={{ 
+              width: `${((currentIndex + 1) / items.length) * 100}%` 
+            }}
+          />
+        </div>
+      )}
+    </div>
   );
 };
 
-export default DynamicContentShowcasePage;
+export default DynamicContentShowcase;

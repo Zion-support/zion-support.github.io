@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BarChart3,
   TrendingUp,
@@ -54,6 +55,7 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   MapPin as Location
+} from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [

@@ -4,10 +4,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, details } = req.body || {};
+    const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      return;
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
     // Process quote submission logic here
