@@ -7,7 +7,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
+jest.mock('./app/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -17,25 +17,16 @@ jest.mock('./src/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./src/utils/analytics.ts', () => ({
+jest.mock('./app/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./src/utils/errorTracking.ts', () => ({
+jest.mock('./app/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
-
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
-
-// usePerformanceMonitoring hook mock removed - hook doesn't exist
 
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
@@ -60,20 +51,7 @@ jest.mock('react-router-dom', () => {
       return React.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      const React = require('react');
-      return React.createElement(RouterProvider, { router });
-    },
+    MemoryRouter: ({ children }) => children,
     RouterProvider: ({ router }) => null,
   };
 });

@@ -7,8 +7,8 @@ export interface EnvConfig {
   nodeEnv: 'development' | 'production' | 'test'
   apiUrl: string
   apiKey?: string
-  enableAnalytics: boolean
-  enableLogging: boolean
+  enableAnalytics: boolean,
+    enableLogging: boolean
   logLevel: 'debug' | 'info' | 'warn' | 'error'
   sentryDsn?: string
   gaTrackingId?: string;}
@@ -71,7 +71,7 @@ class EnvironmentConfig {
    * Validate required environment variables
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {
-    valid: boolean
+    valid: boolean,
     missing: string[];}
   } {
     const missing: string[] = []

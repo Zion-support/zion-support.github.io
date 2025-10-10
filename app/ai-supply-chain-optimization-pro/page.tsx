@@ -41,15 +41,15 @@ const aisupplychainoptimizationproPage: React.FC = () => {
             <div className="space-y-4">
               <a
                 href="/contact"
-                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              >
+        className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+      >
                 Get Started Today
               </a>
               <div>
                 <a
                   href="/"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+      >
                   ← Back to Home
                 </a>
               </div>

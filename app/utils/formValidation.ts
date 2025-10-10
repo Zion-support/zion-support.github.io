@@ -8,8 +8,8 @@ export interface ValidationRule<T = unknown> {
   message: string;}
 }
 export interface ValidationResult {
-  valid: boolean
-  errors: string[];}
+  valid: boolean,
+    errors: string[];}
 }
 export interface FieldValidation {
   [fieldName: string]: ValidationRule[];}
@@ -203,7 +203,7 @@ export function sanitizeInput(input: string): string {
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
   func: T,
   wait: number
-): (...args: Parameters<T>) => void {
+  ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null
   return function executedFunction(...args: Parameters<T>) {
     const later = useCallback((...args) => {

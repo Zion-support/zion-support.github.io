@@ -175,15 +175,15 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
+        className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+      >
                 Get Free Assessment
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="#demo"
-                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
+        className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
+      >
                 Watch Demo
               </a>
             </div>
@@ -398,15 +398,15 @@ const AIPredictiveMaintenancePage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors flex items-center space-x-2"
-            >
+        className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors flex items-center space-x-2"
+      >
               <Phone className="w-5 h-5" />
               <span>+1 302 464 0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors flex items-center space-x-2"
-            >
+        className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors flex items-center space-x-2"
+      >
               <Mail className="w-5 h-5" />
               <span>kleber@ziontechgroup.com</span>
             </a>

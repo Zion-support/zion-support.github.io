@@ -177,8 +177,8 @@ const DocsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
                 to="/api-docs"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
                   API Reference
@@ -188,8 +188,8 @@ const DocsPage: React.FC = () => {
 
               <Link
                 to="/micro-saas"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
                   Micro SAAS
@@ -199,8 +199,8 @@ const DocsPage: React.FC = () => {
 
               <Link
                 to="/compliance"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
                   Compliance
@@ -210,8 +210,8 @@ const DocsPage: React.FC = () => {
 
               <Link
                 to="/contact"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
                   Get Help
@@ -234,15 +234,15 @@ const DocsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="cyber-button px-8 py-4"
-              >
+        className="cyber-button px-8 py-4"
+      >
                 Contact Support
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+      >
                 Call: (302) 464-0950
               </a>
             </div>

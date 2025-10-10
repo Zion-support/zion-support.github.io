@@ -250,7 +250,7 @@ export function validateComposite(
 export async function validateAsync(
   validator: (val: unknown) => Promise<ValidationResult>,
   value: unknown
-): Promise<ValidationResult> {
+  ): Promise<ValidationResult> {
   try {
     return await validator(value);
   } catch (error) {

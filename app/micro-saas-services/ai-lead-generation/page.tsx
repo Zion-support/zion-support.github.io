@@ -151,14 +151,14 @@ const AILeadGeneration: React.FC = () => {
           <div className="text-center">
             <a
               href="tel:+13024640950"
-              className="cyber-button mr-4"
-            >
+        className="cyber-button mr-4"
+      >
               📞 Call: (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+        className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+      >
               Start Generating
             </a>
           </div>

@@ -144,14 +144,14 @@ const AISalesAutomationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="cyber-button w-full sm:w-auto text-center"
-              >
+        className="cyber-button w-full sm:w-auto text-center"
+      >
                 📞 Call: (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+      >
                 ✉️ Get Quote
               </a>
             </div>
@@ -255,14 +255,14 @@ const AISalesAutomationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="cyber-button w-full sm:w-auto text-center"
-              >
+        className="cyber-button w-full sm:w-auto text-center"
+      >
                 📞 Call: (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+      >
                 ✉️ Email Us
               </a>
             </div>

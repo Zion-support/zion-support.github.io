@@ -4,8 +4,8 @@
  * Provides comprehensive analytics tracking with event batching and offline support
  */
 export interface AnalyticsEvent {
-  category: string
-  action: string
+  category: string,
+    action: string
   label?: string
   value?: number
   metadata?: Record<string, unknown>;}
@@ -210,9 +210,9 @@ class EnhancedAnalytics {
     return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {
-    queueSize: number
+    queueSize: number,
     offlineQueueSize: number
-    sessionId: string
+    sessionId: string,
     userProperties: UserProperties;}
   } {
     return {

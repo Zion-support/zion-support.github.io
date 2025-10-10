@@ -4,10 +4,10 @@
  * Provides comprehensive SEO enhancements and monitoring
  */
 interface SEOConfig {
-  siteName: string
-  siteUrl: string
-  defaultTitle: string
-  defaultDescription: string
+  siteName: string,
+    siteUrl: string
+  defaultTitle: string,
+    defaultDescription: string
   defaultImage: string
   twitterHandle?: string
   facebookAppId?: string
@@ -15,8 +15,8 @@ interface SEOConfig {
   googleTagManagerId?: string;}
 }
 interface PageSEOData {
-  title: string
-  description: string
+  title: string,
+    description: string
   keywords: string[]
   image?: string
   url?: string

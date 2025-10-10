@@ -151,8 +151,8 @@ const EnhancedHero: React.FC = () => {
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
-                exit="exit"
-              >
+        exit="exit"
+      >
                 <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">
                   {stats[currentStat].clients}+
                 </div>
@@ -167,8 +167,8 @@ const EnhancedHero: React.FC = () => {
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
-                exit="exit"
-              >
+        exit="exit"
+      >
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">
                   {stats[currentStat].savings}
                 </div>
@@ -183,8 +183,8 @@ const EnhancedHero: React.FC = () => {
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
-                exit="exit"
-              >
+        exit="exit"
+      >
                 <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">
                   {stats[currentStat].uptime}
                 </div>
@@ -199,8 +199,8 @@ const EnhancedHero: React.FC = () => {
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
-                exit="exit"
-              >
+        exit="exit"
+      >
                 <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">
                   {stats[currentStat].support}
                 </div>

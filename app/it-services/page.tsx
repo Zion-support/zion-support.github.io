@@ -847,8 +847,8 @@ name: 'AI-Powered Infrastructure Management',
                           </a>
                           <a
                             href="/contact"
-                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                          >
+        className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+      >
                             Get Started
                           </a>
                         </div>
@@ -862,8 +862,8 @@ name: 'AI-Powered Infrastructure Management',
                         </a>
                         <a
                           href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
+        className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
+      >
                           Get Started
                         </a>
                       </div>
@@ -1006,19 +1006,15 @@ name: 'AI-Powered Infrastructure Management',
             <a
               href="https://ziontechgroup.com/contact"
 className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
-
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-
-            >
+        className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+      >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
-
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-
-            >
+        className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+      >
               <Phone className="w-5 h-5 mr-2" />
               Call: +1 (302) 464-0950
             </a>

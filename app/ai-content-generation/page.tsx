@@ -70,15 +70,15 @@ const AIContentGenerationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
-              >
+        className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+      >
                 <span>Call Now: (302) 464-0950</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="/contact"
-                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
-              >
+        className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+      >
                 Get Free Consultation
               </a>
             </div>

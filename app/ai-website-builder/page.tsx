@@ -143,15 +143,15 @@ const AIWebsiteBuilderPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
+        className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+      >
                 Start Building
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="/demo"
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
+        className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+      >
                 View Demo
               </a>
             </div>
@@ -266,14 +266,14 @@ const AIWebsiteBuilderPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
-                >
+        className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
+      >
                   Start Building Now
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="cyber-button-outline px-8 py-4 text-lg font-semibold inline-flex items-center"
-                >
+        className="cyber-button-outline px-8 py-4 text-lg font-semibold inline-flex items-center"
+      >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
                 </a>

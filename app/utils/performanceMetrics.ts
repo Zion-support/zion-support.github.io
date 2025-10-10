@@ -4,10 +4,10 @@
  * Advanced performance tracking and monitoring for web applications
  */
 export interface PerformanceMetric {
-  name: string
-  value: number
-  unit: string
-  timestamp: Date
+  name: string,
+    value: number
+  unit: string,
+    timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record<string, unknown>;}
 }
@@ -23,9 +23,9 @@ export interface PerformanceReport {
   metrics: PerformanceMetric[]
   webVitals: WebVitalsMetrics
   summary: {
-    avgLoadTime: number
+    avgLoadTime: number,
     totalMetrics: number
-    performanceScore: number
+    performanceScore: number,
     recommendations: string[];}
   }
   timestamp: Date
@@ -356,8 +356,8 @@ interface PerformanceWithMemory extends Performance {
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
-  value: number
-  hadRecentInput: boolean;}
+  value: number,
+    hadRecentInput: boolean;}
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance()

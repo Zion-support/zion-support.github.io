@@ -267,15 +267,15 @@ const APIDocsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="cyber-button px-8 py-4"
-              >
+        className="cyber-button px-8 py-4"
+      >
                 Get API Key
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+      >
                 Call: (302) 464-0950
               </a>
             </div>

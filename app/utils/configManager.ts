@@ -10,39 +10,39 @@ export type Environment = 'development' | 'staging' | 'production' | 'test'
 export interface AppConfig {
   environment: Environment
   api: {
-    baseURL: string
+    baseURL: string,
     timeout: number
-    retryAttempts: number
+    retryAttempts: number,
     enableCaching: boolean
   }
   features: {
-    enableAnalytics: boolean
+    enableAnalytics: boolean,
     enableErrorReporting: boolean
-    enablePerformanceMonitoring: boolean
+    enablePerformanceMonitoring: boolean,
     enableAccessibility: boolean
-    enableSEO: boolean
+    enableSEO: boolean,
     enablePWA: boolean
   }
   performance: {
-    enableCodeSplitting: boolean
+    enableCodeSplitting: boolean,
     enableLazyLoading: boolean
-    enableImageOptimization: boolean
+    enableImageOptimization: boolean,
     enableCaching: boolean
   }
   security: {
-    enableCSP: boolean
+    enableCSP: boolean,
     enableCORS: boolean
-    enableRateLimiting: boolean
+    enableRateLimiting: boolean,
     maxRequestsPerMinute: number
   }
   ui: {
     theme: 'light' | 'dark' | 'auto'
-    language: string
+    language: string,
     timezone: string
   }
   logging: {
     level: 'debug' | 'info' | 'warn' | 'error'
-    enableConsole: boolean
+    enableConsole: boolean,
     enableNetwork: boolean
   }
 }

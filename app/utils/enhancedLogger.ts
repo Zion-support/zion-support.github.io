@@ -475,7 +475,7 @@ export class EnhancedLogger {
    * @returns Object containing log statistics
    */
   public getStatistics(): {
-    total: number
+    total: number,
     byLevel: Record<string, number>
     bySource: Record<string, number>
   } {

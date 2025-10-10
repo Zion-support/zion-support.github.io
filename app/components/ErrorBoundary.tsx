@@ -96,8 +96,8 @@ class ErrorBoundary extends Component<Props, State> {
               <p>If this problem persists, please contact our support team:</p>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+      >
                 kleber@ziontechgroup.com
               </a>
             </div>

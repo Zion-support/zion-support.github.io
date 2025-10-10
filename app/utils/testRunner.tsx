@@ -6,26 +6,26 @@
 import React, { ReactElement, useCallback } from 'react';
 // Test result types
 export interface PerformanceMetrics {
-  renderTime: number
-  memoryUsage: number
+  renderTime: number,
+    memoryUsage: number
   timestamp: string;}
 }
 export interface CoverageMetrics {
-  statements: number
-  branches: number
-  functions: number
-  lines: number;}
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number;}
 }
 // Test configuration interface
 export interface TestConfig {
-  enableMocking: boolean
-  enableCoverage: boolean
-  enablePerformance: boolean
-  enableAccessibility: boolean
+  enableMocking: boolean,
+    enableCoverage: boolean
+  enablePerformance: boolean,
+    enableAccessibility: boolean
   enableVisualRegression: boolean
   mockDataPath?: string
-  coverageThreshold: number
-  performanceThreshold: number
+  coverageThreshold: number,
+    performanceThreshold: number
   accessibilityThreshold: number
   timeout?: number
   verbose?: boolean
@@ -66,15 +66,15 @@ interface AssertionResult {
   message?: string;}
 }
 interface CoverageResult {
-  statements: number
-  branches: number
-  functions: number
-  lines: number
+  statements: number,
+    branches: number
+  functions: number,
+    lines: number
   uncovered: string[];}
 }
 interface TestSuite {
-  name: string
-  tests: Test[]
+  name: string,
+    tests: Test[]
   beforeAll: (() => void | Promise<void>)[]
   afterAll: (() => void | Promise<void>)[]
   beforeEach: (() => void | Promise<void>)[]

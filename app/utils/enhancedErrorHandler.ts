@@ -6,8 +6,8 @@
 interface ErrorContext {
   userId?: string
   sessionId?: string
-  url: string
-  userAgent: string
+  url: string,
+    userAgent: string
   timestamp: string
   component?: string
   action?: string
@@ -35,14 +35,14 @@ interface ErrorReport {
   resolvedBy?: string;}
 }
 interface ErrorHandlerConfig {
-  enableConsoleLogging: boolean
-  enableRemoteReporting: boolean
-  enableErrorRecovery: boolean
-  enableErrorCategorization: boolean
-  enableErrorAggregation: boolean
-  enablePerformanceImpact: boolean
-  maxErrorsPerMinute: number
-  errorRetentionDays: number
+  enableConsoleLogging: boolean,
+    enableRemoteReporting: boolean
+  enableErrorRecovery: boolean,
+    enableErrorCategorization: boolean
+  enableErrorAggregation: boolean,
+    enablePerformanceImpact: boolean
+  maxErrorsPerMinute: number,
+    errorRetentionDays: number
   remoteEndpoint?: string
   apiKey?: string;}
 }
@@ -559,7 +559,7 @@ class EnhancedErrorHandler {
    * Get error statistics
    */
   public getErrorStatistics(): {
-    totalErrors: number
+    totalErrors: number,
     errorsByType: Record<string, number>
     errorsByCategory: Record<string, number>
     errorsBySeverity: Record<string, number>

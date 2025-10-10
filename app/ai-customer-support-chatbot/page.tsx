@@ -203,15 +203,15 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
+        className="cyber-button inline-flex items-center justify-center"
+      >
               <Phone className="w-4 h-4 mr-2" />
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Chatbot Demo"
-              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-            >
+        className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
+      >
               Get Free Demo
             </a>
           </div>
@@ -355,14 +355,14 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+        className="bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+      >
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors"
-            >
+        className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors"
+      >
               Email Us
             </a>
           </div>

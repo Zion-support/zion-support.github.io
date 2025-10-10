@@ -4,8 +4,8 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 export interface PerformanceMetric {
-  name: string
-  value: number
+  name: string,
+    value: number
   rating: 'good' | 'needs-improvement' | 'poor'
   timestamp: number;}
 }
@@ -18,8 +18,8 @@ export interface WebVitals {
   INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {
-  name: string
-  value: number
+  name: string,
+    value: number
   unit: 'ms' | 'bytes' | 'count' | 'percentage'
   timestamp: number;}
 }
@@ -198,7 +198,7 @@ class PerformanceMonitoringService {
    * Get performance summary
    */
   getSummary(): {
-    score: number
+    score: number,
     webVitals: WebVitals
     customMetrics: CustomMetric[]
     recommendations: string[];}
@@ -301,10 +301,10 @@ export enum MetricUnit {
 // Simple metrics structure for testing
 interface MetricData {
   values: number[]
-  count: number
-  average: number
-  min: number
-  max: number
+  count: number,
+    average: number
+  min: number,
+    max: number
   unit: string
   rating?: 'good' | 'needs-improvement' | 'poor';}
 }

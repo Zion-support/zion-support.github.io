@@ -396,8 +396,8 @@ const CompliancePage: React.FC = () => {
                 </p>
                 <a
                   href="mailto:compliance@ziontechgroup.com"
-                  className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-                >
+        className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+      >
                   <FileText className="w-4 h-4 mr-2" />
                   Request Documentation
                 </a>

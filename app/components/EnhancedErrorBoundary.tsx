@@ -141,15 +141,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <div className="flex flex-col sm:flex-row gap-2 text-sm">
                 <a
                   href="mailto:support@ziontechgroup.com"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+      >
                   support@ziontechgroup.com
                 </a>
                 <span className="hidden sm:inline text-gray-500">•</span>
                 <a
                   href="tel:+13024640950"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+      >
                   +1 (302) 464-0950
                 </a>
               </div>

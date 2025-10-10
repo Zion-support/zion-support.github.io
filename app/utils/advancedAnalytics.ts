@@ -1,42 +1,42 @@
 'use client'
 
 interface UserEvent {
-  id: string
-  type: string
+  id: string,
+    type: string
   name: string
   value?: number
-  timestamp: string
-  sessionId: string
+  timestamp: string,
+    sessionId: string
   userId?: string
   url: string
   metadata?: Record<string, unknown>
 }
 
 interface UserSession {
-  id: string
-  startTime: string
+  id: string,
+    startTime: string
   endTime?: string
   duration?: number
-  pageViews: number
-  events: UserEvent[]
+  pageViews: number,
+    events: UserEvent[]
   referrer?: string
   userAgent: string
   device: 'desktop' | 'mobile' | 'tablet'
-  browser: string
-  os: string
+  browser: string,
+    os: string
   country?: string
   city?: string
 }
 
 interface AnalyticsConfig {
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
+  enableTracking: boolean,
+    enableHeatmaps: boolean
+  enableSessionRecording: boolean,
+    enableA_BTesting: boolean
+  enableConversionTracking: boolean,
+    enablePerformanceTracking: boolean
+  enableErrorTracking: boolean,
+    enableUserJourneyTracking: boolean
 }
 
 class AdvancedAnalytics {

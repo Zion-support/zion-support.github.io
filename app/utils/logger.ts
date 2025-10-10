@@ -23,7 +23,7 @@ export interface LogContext {
 class Logger {
   private logLevel: LogLevel = LogLevel.INFO
   private logs: Array<{
-    level: LogLevel
+    level: LogLevel,
     message: string
     context?: LogContext
     metadata?: Record<string, unknown>
@@ -126,7 +126,7 @@ class Logger {
   }
 
   getLogs(level?: LogLevel): Array<{
-    level: LogLevel
+    level: LogLevel,
     message: string
     context?: LogContext
     metadata?: Record<string, unknown>

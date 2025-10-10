@@ -10,8 +10,8 @@ export enum ErrorSeverity {
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {
-  timestamp: string
-  severity: ErrorSeverity
+  timestamp: string,
+    severity: ErrorSeverity
   message: string
   error?: Error
   context?: Record<string, unknown>

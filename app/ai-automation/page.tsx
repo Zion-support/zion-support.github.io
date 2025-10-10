@@ -139,15 +139,15 @@ const AIAutomationPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 inline-flex items-center"
-                >
+        className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 inline-flex items-center"
+      >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a
                   href="/demo"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
-                >
+        className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
+      >
                   View Demo
                 </a>
               </div>
@@ -257,14 +257,14 @@ const AIAutomationPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
-                  >
+        className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
+      >
                     Start Free Trial
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                  >
+        className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+      >
                     <Phone className="w-5 h-5" />
                     +1 302 464 0950
                   </a>

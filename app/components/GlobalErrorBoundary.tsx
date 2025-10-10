@@ -85,8 +85,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
               <a
                 href="/"
-                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              >
+        className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+      >
                 Go Home
               </a>
             </div>

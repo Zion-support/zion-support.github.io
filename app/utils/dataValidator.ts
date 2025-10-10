@@ -159,7 +159,7 @@ export function sanitizeHTML(html: string): string {
 export function createCustomValidator<T>(
   validator: (value: T) => boolean,
   message: string
-): (value: T) => { isValid: boolean; errors: string[] } {
+  ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
     const isValid = validator(value);
     return {
@@ -204,7 +204,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
 export function validateForm<T extends Record<string, unknown>>(
   data: T,
   rules: ValidationRules
-): ValidationResult {
+  ): ValidationResult {
   const errors: Record<string, string[]> = {};
   for (const field in rules) {
     const value = data[field];

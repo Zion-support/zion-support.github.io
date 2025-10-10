@@ -51,20 +51,20 @@ export const generateMetaTags = (data: {
 };
 // SEO Config interface
 interface SEOConfig {
-  title: string
-  description: string
+  title: string,
+    description: string
   keywords: string[]
-  canonicalUrl: string
-  ogImage: string
-  ogType: string
-  twitterCard: string
-  twitterSite: string
-  twitterCreator: string
+  canonicalUrl: string,
+    ogImage: string
+  ogType: string,
+    twitterCard: string
+  twitterSite: string,
+    twitterCreator: string
   structuredData: Record<string, unknown>
-  robots: string
-  language: string
-  locale: string
-  siteName: string
+  robots: string,
+    language: string
+  locale: string,
+    siteName: string
   author: string
   publishedTime?: string
   modifiedTime?: string

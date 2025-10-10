@@ -7,18 +7,18 @@ export interface ErrorReport {
   message: string
   stack?: string
   componentStack?: string
-  timestamp: string
-  userAgent: string
+  timestamp: string,
+    userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record<string, unknown>;}
 }
 export interface ErrorReporterConfig {
-  enableConsoleLogging: boolean
-  enableRemoteLogging: boolean
+  enableConsoleLogging: boolean,
+    enableRemoteLogging: boolean
   remoteEndpoint?: string
-  maxErrorsInMemory: number
-  captureContext: boolean;}
+  maxErrorsInMemory: number,
+    captureContext: boolean;}
 }
 const defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
@@ -144,7 +144,7 @@ export class ErrorReporter {
    * Get error statistics
    */
   getErrorStats(): {
-    totalErrors: number
+    totalErrors: number,
     uniqueErrors: number
     errorsByType: Record<string, number>;}
   } {
@@ -193,7 +193,7 @@ export const captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
   componentName: string
-): void => {
+  ): void => {
   const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {
     componentName,

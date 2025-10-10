@@ -205,15 +205,15 @@ export default function AISpaceTechnologyProPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#features"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-              >
+        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+      >
                 <Play className="w-5 h-5 mr-2" />
                 Explore Features
               </a>
               <a
                 href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+      >
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo
               </a>
@@ -371,8 +371,8 @@ export default function AISpaceTechnologyProPage() {
               <div className="text-center">
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-                >
+        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+      >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Get Started Today
                 </a>
@@ -432,15 +432,15 @@ export default function AISpaceTechnologyProPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
+        className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+      >
               <MessageSquare className="w-5 h-5 mr-2" />
               Start Free Trial
             </a>
             <a
               href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
+        className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+      >
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Demo
             </a>

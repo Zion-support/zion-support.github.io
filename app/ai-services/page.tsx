@@ -1230,6 +1230,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Support</div>
               AI Services
+              </div>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
@@ -1361,8 +1362,8 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   </a>
                   <a
                     href="/contact"
-                    className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                  >
+        className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+      >
                     Learn More
                   </a>
                 </div>
@@ -1385,14 +1386,14 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a
               href="https://ziontechgroup.com/contact"
-              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
+        className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+      >
               Start Your Free Trial
             </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
+        className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+      >
               Call: +1 (302) 464-0950
             </a>
           </div>

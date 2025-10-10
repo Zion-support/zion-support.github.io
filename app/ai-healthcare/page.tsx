@@ -153,15 +153,15 @@ const AIHealthcarePage: React.FC = memo(() => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
+        className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+      >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-            >
+        className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
+      >
               Get Healthcare Demo
             </a>
           </div>
@@ -270,15 +270,15 @@ const AIHealthcarePage: React.FC = memo(() => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
+        className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+      >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-            >
+        className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+      >
               <Mail className="w-5 h-5 mr-2" />
               Email Us
             </a>
@@ -286,7 +286,9 @@ const AIHealthcarePage: React.FC = memo(() => {
         </section>
       </div>
     </div>
-  );
+  );};
+
+
 
 AIHealthcarePage.displayName = 'AIHealthcarePage';
 

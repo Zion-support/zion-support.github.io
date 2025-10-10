@@ -20,8 +20,8 @@ export enum ErrorCategory {
 }
 
 export interface ErrorMetadata {
-  category: ErrorCategory
-  severity: ErrorSeverity
+  category: ErrorCategory,
+    severity: ErrorSeverity
   userId?: string
   sessionId?: string
   context?: Record<string, unknown>
@@ -33,12 +33,12 @@ export interface ErrorMetadata {
 }
 
 export interface TrackedError {
-  id: string
-  message: string
-  metadata: ErrorMetadata
-  occurrences: number
-  firstSeen: number
-  lastSeen: number
+  id: string,
+    message: string
+  metadata: ErrorMetadata,
+    occurrences: number
+  firstSeen: number,
+    lastSeen: number
 }
 
 class ErrorTrackingService {
@@ -202,7 +202,7 @@ class ErrorTrackingService {
   }
 
   getErrorStats(): {
-    total: number
+    total: number,
     byCategory: Record<ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
   } {

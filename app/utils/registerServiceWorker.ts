@@ -114,8 +114,8 @@ export function clearCaches(): void {
  * Get service worker registration status
  */
 export async function getServiceWorkerStatus(): Promise<{
-  supported: boolean
-  registered: boolean
+  supported: boolean,
+    registered: boolean
   active: boolean;}
 }> {
   if (!('serviceWorker' in navigator)) {

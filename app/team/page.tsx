@@ -448,15 +448,15 @@ export default function TeamPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/careers"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
+        className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+      >
               <Briefcase className="w-5 h-5 mr-2" />
               View Open Positions
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
+        className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+      >
               <MessageSquare className="w-5 h-5 mr-2" />
               Contact Us
             </Link>

@@ -162,15 +162,15 @@ const CloudMigrationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="cyber-button px-8 py-4 text-lg"
-              >
+        className="cyber-button px-8 py-4 text-lg"
+      >
                 Start Migration
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="/demo"
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
+        className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+      >
                 Free Assessment
               </a>
             </div>
@@ -266,14 +266,14 @@ const CloudMigrationPage: React.FC = () => {
                   <div className="space-y-4">
                     <a
                       href="/contact"
-                      className="cyber-button w-full inline-flex items-center justify-center py-3"
-                    >
+        className="cyber-button w-full inline-flex items-center justify-center py-3"
+      >
                       Get Free Assessment
                     </a>
                     <a
                       href="/demo"
-                      className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
-                    >
+        className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
+      >
                       Schedule Consultation
                     </a>
                   </div>

@@ -161,14 +161,14 @@ export default function AIContentWriterPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="#pricing"
-                className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
-              >
+        className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
+      >
                 Start Free Trial
               </a>
               <a
                 href="#demo"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+      >
                 Watch Demo
               </a>
             </div>
@@ -343,8 +343,8 @@ export default function AIContentWriterPage() {
                   </p>
                   <a
                     href="/contact?service=ai-content-writer&plan=enterprise"
-                    className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                  >
+        className="text-cyan-400 hover:text-cyan-300 font-semibold"
+      >
                     Contact Sales →
                   </a>
                 </div>
@@ -440,14 +440,14 @@ export default function AIContentWriterPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
-              >
+        className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
+      >
                 Call: (302) 464-0950
               </a>
               <a
                 href="/contact?service=ai-content-writer"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+        className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+      >
                 Get Started Now
               </a>
             </div>

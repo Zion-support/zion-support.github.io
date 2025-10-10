@@ -13,10 +13,10 @@ export interface ErrorContext {
 export interface TrackedError {
   message: string
   stack?: string
-  context: ErrorContext
-  timestamp: string
-  userAgent: string
-  url: string;}
+  context: ErrorContext,
+    timestamp: string
+  userAgent: string,
+    url: string;}
 }
 class EnhancedErrorTracker {
   private errors: TrackedError[] = []
@@ -96,7 +96,7 @@ class EnhancedErrorTracker {
     this.errors = [];}
   }
   public getErrorStats(): {
-    total: number
+    total: number,
     byComponent: Record<string, number>
     recent: TrackedError[];}
   } {}
