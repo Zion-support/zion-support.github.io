@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {
   Brain,
   Cloud,
@@ -13,20 +14,32 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Settings,
+  Users
 } from 'lucide-react';
-<<<<<<< HEAD
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
+
   const services = [
     // AI Services
     {
+      id: 1,
       icon: Brain,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
+      marketPrice: '$2500-8000/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      benefits: ['60% efficiency increase', '40% cost reduction', 'Real-time insights', 'Scalable solutions']
     },
     {
       icon: Brain,
