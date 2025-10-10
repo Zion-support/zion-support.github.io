@@ -13,7 +13,7 @@ const LoadingSpinner: React.FC = React.memo(() => (
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
   </div>
-);
+));
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
