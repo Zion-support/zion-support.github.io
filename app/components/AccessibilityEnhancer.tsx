@@ -13,17 +13,13 @@ const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
-<<<<<<< HEAD
+    fontSize: 'medium',
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
     dyslexia: false
-=======
-    fontSize: 'medium',
-    focusVisible: true
   });
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
 
   useEffect(() => {
     // Check for user preferences
@@ -87,7 +83,6 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [settings]);
 
-<<<<<<< HEAD
     // Screen reader optimizations
     if (newSettings.screenReader) {
       root.classList.add('screen-reader-optimized');
@@ -118,13 +113,9 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Store settings in localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  }, []);
 
-    }, []);
-
-  // Initialize accessibility settings
-=======
   // Add CSS for accessibility features
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `

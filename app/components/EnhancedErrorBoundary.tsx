@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { RefreshCw, Home } from 'lucide-react';
-=======
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
 
 interface Props {
   children: ReactNode;
