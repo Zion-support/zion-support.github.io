@@ -19,11 +19,12 @@ const preloadComponents = useCallback((...args) => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
-    }, 100)
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
   }
 }
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -42,12 +43,10 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);}
-  }, [])
-  // Analytics tracking for phone clicks - optimized
+    return () => clearTimeout(timer);
+  }, []);
   
-    }
-  }, [])
+  // Analytics tracking for phone clicks - optimized
   return (
     <>
       <SEOOptimizer
@@ -78,6 +77,7 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
+<<<<<<< HEAD
             availableLanguage: 'en'}
           },
           address: {
@@ -86,8 +86,20 @@ const HomePage: React.FC = React.memo((props) => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'}
+            addressCountry: 'US'
+=======
+            availableLanguage: 'en'
+>>>>>>> cursor/analyze-improve-and-deploy-application-7c78
           }
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '364 E Main St STE 1008',
+          addressLocality: 'Middletown',
+          addressRegion: 'DE',
+          postalCode: '19709',
+          addressCountry: 'US'
+        }
         }}
       />
       <PerformanceOptimizer
@@ -124,16 +136,15 @@ const HomePage: React.FC = React.memo((props) => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-         aria-label="
-          Skip to main content
-        ">
+          aria-label="Skip to main content"
+        >
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main" id="main-content">
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
@@ -1620,7 +1631,14 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
+<<<<<<< HEAD
   )
 }
 export default HomePage
+=======
+    </>
+  );
+};
+
+export default HomePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-7c78

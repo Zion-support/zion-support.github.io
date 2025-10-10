@@ -48,8 +48,9 @@ const CloudMigrationPage: React.FC = React.memo(() => {
     {
       step: '01',
       title: 'Assessment',
-      description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
-      duration: '1-2 weeks'
+      description: 'Comprehensive analysis of your current infrastructure and migration requirements',
+      duration: '1-2 weeks',
+      icon: CheckCircle
     },
     {
       step: '02',
@@ -59,9 +60,10 @@ const CloudMigrationPage: React.FC = React.memo(() => {
     },
     {
       step: '03',
-      title: 'Migration Execution',
-      description: 'Execute the migration with minimal downtime and maximum data integrity.',
-      duration: '2-4 weeks'
+      title: 'Migration',
+      description: 'Execute the migration with zero downtime and data integrity',
+      duration: '2-4 weeks',
+      icon: Cloud
     },
     {
       step: '04',
@@ -74,51 +76,42 @@ const CloudMigrationPage: React.FC = React.memo(() => {
 
   const pricingPlans = [
     {
-      name: 'Small Business',
-      price: '$2,500',
-      period: 'one-time',
-      description: 'Perfect for small businesses with basic cloud needs',
+      name: 'Assessment',
+      price: '$5,000',
+      description: 'Comprehensive infrastructure assessment and migration planning',
       features: [
-        'Up to 10 servers',
-        'Basic migration planning',
-        'Standard security setup',
-        'Email support',
-        '30-day post-migration support',
-        'Basic monitoring'
+        'Infrastructure audit',
+        'Migration strategy',
+        'Cost analysis',
+        'Timeline planning',
+        'Risk assessment'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$7,500',
-      description: 'Ideal for growing businesses with complex requirements',
+      name: 'Standard Migration',
+      price: '$15,000',
+      description: 'Complete migration service for small to medium businesses',
       features: [
-        'Up to 50 servers',
-        'Comprehensive migration planning',
-        'Advanced security configuration',
-        'Priority support',
-        '90-day post-migration support',
-        'Advanced monitoring',
-        'Performance optimization',
-        'Cost optimization'
+        'Everything in Assessment',
+        'Data migration',
+        'Application migration',
+        'Testing and validation',
+        '30 days support'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
+      name: 'Enterprise Migration',
       price: 'Custom',
-      period: 'pricing',
-      description: 'Comprehensive solution for large organizations',
+      description: 'Full-service migration for large enterprises',
       features: [
-        'Unlimited servers',
-        'Custom migration strategy',
-        'Enterprise security',
-        '24/7 dedicated support',
-        '1-year post-migration support',
-        'Full monitoring suite',
-        'Multi-cloud architecture',
-        'Dedicated account manager',
-        'Custom integrations'
+        'Everything in Standard',
+        'Custom architecture design',
+        'Multi-cloud strategy',
+        'Advanced security setup',
+        '6 months support',
+        'Dedicated team'
       ],
       popular: false
     }
@@ -169,7 +162,7 @@ const CloudMigrationPage: React.FC = React.memo(() => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+                className="cyber-button px-8 py-4 text-lg"
               >
                 Start Migration
                 <ArrowRight className="w-5 h-5 ml-2" />

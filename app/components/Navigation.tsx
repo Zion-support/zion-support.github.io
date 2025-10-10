@@ -1,13 +1,88 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
+import { 
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  Users, 
+  Zap,
+  Star,
+  TrendingUp,
+  Settings,
+  Globe,
+  Target,
+  ArrowRight,
+  Sparkles,
+  Database,
+  MessageSquare,
+  Eye,
+  Cpu,
+  Lock,
+  BarChart3,
+  FileText,
+  Search,
+  Bot,
+  Palette,
+  Camera,
+  Music,
+  Video,
+  Gamepad2,
+  ShoppingCart,
+  CreditCard,
+  Building,
+  Factory,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Home,
+  Heart,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Wrench,
+  Hammer,
+  Paintbrush,
+  Scissors,
+  BookOpen,
+  Calculator,
+  Calendar,
+  Clock3,
+  Compass,
+  Navigation as NavIcon,
+  PieChart,
+  TrendingDown,
+  Activity,
+  Zap as Lightning,
+  Target as Crosshair,
+  Shield as Security,
+  Users as People,
+  Star as StarIcon,
+  CheckCircle as Check,
+  ArrowRight as Arrow,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as Location,
+  Truck,
+  Smartphone,
+  ChefHat,
+  Rocket,
+  Sprout,
+  Scale
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,9 +94,6 @@ const Navigation: React.FC = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
         setServicesOpen(false);
-        setAiServicesOpen(false);
-        setItServicesOpen(false);
-        setMicroSaasOpen(false);
       }
     };
 
@@ -35,15 +107,11 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = () => {
     setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
     setIsOpen(false);
   };
 
   const serviceCategories = [
     {
-<<<<<<< HEAD
-=======
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -61,29 +129,11 @@ const Navigation: React.FC = () => {
       ]
     },
     {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
-<<<<<<< HEAD
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
-=======
         { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
         { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
         { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
@@ -93,7 +143,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     },
     {
@@ -102,41 +151,6 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-<<<<<<< HEAD
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' },
-        { name: 'Network Services', path: '/networking' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Productivity Tools', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
-=======
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
@@ -162,27 +176,76 @@ const Navigation: React.FC = () => {
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     }
   ];
 
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
+
+  const microSAASServices = [
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$199/mo' },
+    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$89/mo' },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$129/mo' },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generator', icon: Video, category: 'Content', price: '$199/mo' },
+    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: Smartphone, category: 'Marketing', price: '$99/mo' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$79/mo' },
+    { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant', icon: Users, category: 'Business', price: '$149/mo' },
+    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: DollarSign, category: 'Finance', price: '$299/mo' },
+    { name: 'AI Code Assistant Pro', href: '/ai-code-assistant', icon: Code, category: 'Development', price: '$99/mo' },
+    { name: 'AI API Manager Pro', href: '/ai-api-manager', icon: Settings, category: 'Development', price: '$179/mo' },
+    { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor', icon: Shield, category: 'Security', price: '$249/mo' },
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' }
+  ];
+
+  const aiServices = [
+    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
+    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
+    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
+    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
+    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
+    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
+    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
+    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
+  ];
+
+  const itServices = [
+    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
+    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
+    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
+    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
+    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
+    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
+    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
+    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
+  ];
+
+  const specializedServices = [
+    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$5,000/mo' },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$4,000/mo' },
+    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,500/mo' },
+    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
+  ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
+            className="flex items-center space-x-2 text-2xl font-bold group"
             onClick={closeAllMenus}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white neon-text">
+            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
               Zion Tech Group
             </span>
           </Link>
@@ -191,21 +254,24 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
               onClick={closeAllMenus}
             >
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
-            
             <Link 
               to="/about" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               About
+            </Link>
+            <Link 
+              to="/services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Services
             </Link>
 
             {/* Services Dropdown */}
@@ -229,14 +295,14 @@ const Navigation: React.FC = () => {
                           <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
+                              to={service.path}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-cyan-400/20 hover:text-cyan-600 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
                               {service.name}
@@ -284,7 +350,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="cyber-button inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started
@@ -320,6 +386,13 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link 
+                to="/services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Services
               </Link>
 
               {/* Mobile Services */}
