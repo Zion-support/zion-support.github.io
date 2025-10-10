@@ -140,11 +140,7 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-=======
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Home
             </Link>
             
@@ -405,21 +401,6 @@ const Navigation: React.FC = () => {
               Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-=======
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
-            </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Contact
             </Link>
           </div>
