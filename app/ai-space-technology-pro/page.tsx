@@ -1,280 +1,202 @@
-import React, { useState } from 'react';
-import { CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Clock, Users, Award, Target, Shield, Zap, Brain, Cloud, Code, BarChart, TrendingUp, DollarSign, Calendar, MessageSquare, ExternalLink, Rocket, Satellite, Orbit, Telescope, Planet, Star as StarIcon, Sun, Moon, Comet, Meteor, Galaxy, Universe, Activity, AlertTriangle, CheckSquare, Play, Pause, RotateCcw, Settings, Download, Upload, Eye, Search, Filter, SortAsc, SortDesc, Maximize, Minimize, X, Plus, Minus, RefreshCw, Save, Edit, Trash2, Copy, Share, Bookmark, Flag, ThumbsUp, ThumbsDown, MessageCircle, Send, Reply, Forward, Archive, Tag, Link, ExternalLink as ExternalLinkIcon, Info, HelpCircle, AlertCircle, CheckCircle2, XCircle, Clock as ClockIcon, Calendar as CalendarIcon, User, Users as UsersIcon, Building, Home, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Globe, Lock, Unlock, Key, Shield as ShieldIcon, Zap as ZapIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, TrendingUp as TrendingUpIcon, DollarSign as DollarSignIcon, Award as AwardIcon, Target as TargetIcon, Star as StarIcon2, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Phone as PhoneIcon2, Mail as MailIcon2, MapPin as MapPinIcon2, Clock as ClockIcon2, Users as UsersIcon2, Award as AwardIcon2, Target as TargetIcon2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon2, Cloud as CloudIcon2, Code as CodeIcon2, BarChart as BarChartIcon2, TrendingUp as TrendingUpIcon2, DollarSign as DollarSignIcon2, Calendar as CalendarIcon2, MessageSquare as MessageSquareIcon2, ExternalLink as ExternalLinkIcon2 } from 'lucide-react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+'use client';
 
-export default function AISpaceTechnologyProPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedFeature, setSelectedFeature] = useState(0);
+import React from 'react';
+import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock, TrendingUp, DollarSign, PieChart, Activity, AlertTriangle, Star, Award, Phone, Mail, MapPin, Satellite, Orbit, Telescope } from 'lucide-react';
 
+const AISpaceTechnologyPro: React.FC = () => {
   const features = [
     {
-      title: 'Satellite Operations Management',
-      description: 'AI-powered satellite constellation management with autonomous operations and predictive maintenance',
       icon: Satellite,
-      benefits: [
-        'Autonomous satellite operations',
-        'Predictive maintenance alerts',
-        'Orbital optimization',
-        'Real-time monitoring'
-      ],
-      image: '/images/ai-space-technology/satellite-operations.jpg'
+      title: "Satellite Operations Management",
+      description: "AI-powered satellite constellation management and orbital optimization",
+      benefits: ["Automated orbital adjustments", "Collision avoidance", "Mission planning optimization"]
     },
     {
-      title: 'Space Mission Planning',
-      description: 'Intelligent mission planning with trajectory optimization and resource allocation for space missions',
-      icon: Rocket,
-      benefits: [
-        'Optimal trajectory planning',
-        'Resource optimization',
-        'Risk assessment',
-        'Mission success prediction'
-      ],
-      image: '/images/ai-space-technology/mission-planning.jpg'
-    },
-    {
-      title: 'Astronomical Data Analysis',
-      description: 'Advanced AI analysis of astronomical data with pattern recognition and discovery algorithms',
-      icon: Telescope,
-      benefits: [
-        'Automated data processing',
-        'Pattern recognition',
-        'Discovery algorithms',
-        'Real-time analysis'
-      ],
-      image: '/images/ai-space-technology/astronomical-data.jpg'
-    },
-    {
-      title: 'Orbital Mechanics Optimization',
-      description: 'AI-driven orbital mechanics calculations and optimization for spacecraft navigation',
       icon: Orbit,
-      benefits: [
-        'Precise orbital calculations',
-        'Navigation optimization',
-        'Collision avoidance',
-        'Fuel efficiency optimization'
+      title: "Space Mission Planning",
+      description: "Advanced AI algorithms for complex space mission design and execution",
+      benefits: ["Trajectory optimization", "Resource allocation", "Risk assessment"]
+    },
+    {
+      icon: Telescope,
+      title: "Space Data Analysis",
+      description: "Process and analyze vast amounts of space data with AI insights",
+      benefits: ["Astronomical data processing", "Pattern recognition", "Predictive modeling"]
+    },
+    {
+      icon: Rocket,
+      title: "Launch Optimization",
+      description: "Optimize rocket launches and space vehicle operations",
+      benefits: ["Launch window optimization", "Payload management", "Fuel efficiency"]
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      name: "Research",
+      price: "$2,999",
+      period: "per month",
+      description: "Perfect for space research institutions and universities",
+      features: [
+        "Up to 5 satellite management",
+        "Basic mission planning",
+        "Data analysis tools",
+        "Email support",
+        "Research collaboration tools"
       ],
-      image: '/images/ai-space-technology/orbital-mechanics.jpg'
+      popular: false
+    },
+    {
+      name: "Commercial",
+      price: "$7,999",
+      period: "per month",
+      description: "Ideal for commercial space companies and satellite operators",
+      features: [
+        "Up to 50 satellite management",
+        "Advanced mission planning",
+        "Real-time monitoring",
+        "Priority support",
+        "API access",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$19,999",
+      period: "per month",
+      description: "For large space agencies and major satellite constellations",
+      features: [
+        "Unlimited satellite management",
+        "Custom mission algorithms",
+        "Advanced analytics",
+        "Dedicated support",
+        "Full API access",
+        "Custom development",
+        "On-premise deployment"
+      ],
+      popular: false
     }
   ];
 
-  const capabilities = [
+  const applications = [
     {
-      category: 'Satellite Management',
-      items: [
-        'Constellation coordination',
-        'Orbital positioning',
-        'Communication optimization',
-        'Power management',
-        'Payload operations',
-        'Ground station coordination'
-      ]
+      icon: Satellite,
+      title: "Satellite Constellations",
+      description: "Manage large satellite networks with AI optimization",
+      examples: ["Starlink management", "Earth observation", "Communication networks"]
     },
     {
-      category: 'Mission Planning',
-      items: [
-        'Trajectory optimization',
-        'Launch window analysis',
-        'Resource allocation',
-        'Risk assessment',
-        'Timeline planning',
-        'Success probability modeling'
-      ]
+      icon: Rocket,
+      title: "Launch Services",
+      description: "Optimize rocket launches and space vehicle operations",
+      examples: ["Launch scheduling", "Payload optimization", "Mission planning"]
     },
     {
-      category: 'Data Analysis',
-      items: [
-        'Astronomical data processing',
-        'Image analysis',
-        'Signal processing',
-        'Pattern recognition',
-        'Anomaly detection',
-        'Scientific discovery'
-      ]
+      icon: Telescope,
+      title: "Space Exploration",
+      description: "Plan and execute deep space missions with AI assistance",
+      examples: ["Mars missions", "Asteroid exploration", "Deep space probes"]
     },
     {
-      category: 'Navigation & Control',
-      items: [
-        'Autonomous navigation',
-        'Attitude control',
-        'Orbital maneuvers',
-        'Collision avoidance',
-        'Precision landing',
-        'Formation flying'
-      ]
+      icon: Globe,
+      title: "Earth Observation",
+      description: "Monitor Earth from space with AI-powered analysis",
+      examples: ["Climate monitoring", "Disaster response", "Resource mapping"]
     }
   ];
-
-  const pricing = {
-    monthly: 5500,
-    yearly: 55000,
-    features: [
-      'Unlimited satellite operations',
-      'Advanced AI algorithms',
-      'Real-time data processing',
-      '24/7 technical support',
-      'Custom model training',
-      'API access',
-      'Data export/import',
-      'White-label options'
-    ],
-    addOns: [
-      {
-        name: 'Custom Space Models',
-        price: 2500,
-        description: 'Train AI models on your specific space data'
-      },
-      {
-        name: 'Dedicated Support',
-        price: 1500,
-        description: 'Dedicated space technology specialist'
-      },
-      {
-        name: 'On-premise Deployment',
-        price: 8000,
-        description: 'Deploy on your infrastructure'
-      }
-    ]
-  };
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Johnson',
-      role: 'Mission Director',
-      company: 'SpaceX',
-      content: 'AI Space Technology Pro revolutionized our satellite operations. We achieved 99.9% uptime and reduced operational costs by 60% while improving mission success rates.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Chief Technology Officer',
-      company: 'Blue Origin',
-      content: 'The mission planning capabilities are incredible. We optimized our launch trajectories and reduced fuel consumption by 40% while maintaining mission success rates.',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Research Director',
-      company: 'NASA',
-      content: 'The astronomical data analysis helped us discover 3 new exoplanets and identify 15 potential habitable zones. This is exactly what we needed for our research missions.',
-      rating: 5,
-      avatar: 'ER'
-    }
-  ];
-
-  const stats = [
-    { number: '99.9%', label: 'Satellite Uptime', icon: Satellite },
-    { number: '60%', label: 'Cost Reduction', icon: DollarSign },
-    { number: '40%', label: 'Fuel Efficiency', icon: Rocket },
-    { number: '25+', label: 'Space Agencies', icon: Building }
-  ];
-
-  const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
-              <Rocket className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-medium">AI Space Technology Pro</span>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="max-w-7xl mx-auto relative">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-400/20 rounded-full px-4 py-2 mb-6">
+              <Rocket className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Space Technology</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered Space Technology
-              <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Exploring the Universe
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-purple-500 bg-clip-text text-transparent">
+                AI Space Technology Pro
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced space exploration and satellite management with AI-powered mission planning, 
-              orbital mechanics optimization, and astronomical data analysis. Reach for the stars.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Revolutionize space operations with AI-powered satellite management, mission planning, 
+              and space data analysis. The future of space technology is here.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#features"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Explore Features
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </a>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
+                Watch Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+
+          {/* Key Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Mission Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">50%</div>
+              <div className="text-gray-300">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Space Monitoring</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">1000+</div>
+              <div className="text-gray-300">Satellites Managed</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-4">
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section id="features" className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Space AI Capabilities
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Space Technology Solutions
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology designed specifically for space exploration and satellite operations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Space Technology Pro platform combines cutting-edge artificial intelligence 
+              with space engineering to deliver unprecedented space operations capabilities.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-blue-400/50 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-blue-400">
+                          <CheckCircle className="w-4 h-4" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{benefit}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             ))}
@@ -282,28 +204,29 @@ export default function AISpaceTechnologyProPage() {
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Applications Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Space Technology Platform
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Space Industry Applications
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              End-to-end AI-powered solutions for space exploration and satellite operations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI Space Technology Pro is transforming the space industry.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {capabilities.map((capability, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">{capability.category}</h3>
-                <ul className="space-y-3">
-                  {capability.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{item}</span>
-                    </li>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {applications.map((application, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                  <application.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{application.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{application.description}</p>
+                <ul className="space-y-1">
+                  {application.examples.map((example, exampleIndex) => (
+                    <li key={exampleIndex} className="text-xs text-blue-400">• {example}</li>
                   ))}
                 </ul>
               </div>
@@ -312,108 +235,54 @@ export default function AISpaceTechnologyProPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Enterprise Pricing
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your Space Technology Plan
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for space agencies and aerospace companies
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Select the perfect plan for your space operations needs.
             </p>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/50 rounded-2xl p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-2">AI Space Technology Pro</h3>
-                <p className="text-gray-300 mb-6">Complete AI-powered space technology platform</p>
-                
-                <div className="flex items-baseline justify-center mb-6">
-                  <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
-                  <span className="text-gray-400 ml-2">/month</span>
-                </div>
-                
-                <div className="text-green-400 text-sm mb-8">
-                  Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
-                  <ul className="space-y-3">
-                    {pricing.features.map((feature, index) => (
-                      <li key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
-                  <ul className="space-y-3">
-                    {pricing.addOns.map((addon, index) => (
-                      <li key={index} className="flex items-center justify-between">
-                        <div>
-                          <div className="text-white font-medium">{addon.name}</div>
-                          <div className="text-gray-400 text-sm">{addon.description}</div>
-                        </div>
-                        <div className="text-cyan-400 font-bold">+${addon.price.toLocaleString()}/mo</div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-                >
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Get Started Today
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Trusted by Leading Space Agencies
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how our AI technology is transforming space exploration
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${tier.popular ? 'border-blue-400 shadow-lg shadow-blue-400/25' : 'border-gray-700'}`}>
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold text-blue-400">{tier.price}</span>
+                    <span className="text-gray-400 ml-2">{tier.period}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
                   ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-cyan-400">{testimonial.role}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
-                  </div>
-                </div>
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  tier.popular 
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white' 
+                    : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
+                }`}>
+                  Get Started
+                </button>
               </div>
             ))}
           </div>
@@ -421,41 +290,34 @@ export default function AISpaceTechnologyProPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Explore the Universe?
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-600/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Launch Your Space Operations into the Future
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join leading space agencies using AI to advance space exploration and satellite operations.
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading space agencies and companies who trust our AI technology 
+            to optimize their space operations. Start your free trial today.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </a>
-            <a
-              href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">
+              Start Your Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
               Schedule Demo
-            </a>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
-          
-          <div className="text-gray-200 text-sm">
-            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
-            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
-            <p>📍 Address: {contactInfo.address}</p>
+
+          <div className="mt-8 text-sm text-gray-400">
+            <p>Contact us: <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 (302) 464-0950</a> | <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-}
+};
+
+export default AISpaceTechnologyPro;

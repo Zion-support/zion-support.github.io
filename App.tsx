@@ -85,6 +85,13 @@ const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
+// New innovative services
+const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const AINeuralMemoryAssistantPage = React.lazy(() => import('./app/ai-neural-memory-assistant/page'));
+const AIHolographicWorkspacePage = React.lazy(() => import('./app/ai-holographic-workspace/page'));
+const AISpaceTechnologyProPage = React.lazy(() => import('./app/ai-space-technology-pro/page'));
+const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'));
+
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -128,7 +135,14 @@ const App: React.FC = memo(() => {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
-<Route path="/services" element={<ServicesPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      
+                      {/* New innovative service routes */}
+                      <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
+                      <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistantPage />} />
+                      <Route path="/ai-holographic-workspace" element={<AIHolographicWorkspacePage />} />
+                      <Route path="/ai-space-technology-pro" element={<AISpaceTechnologyProPage />} />
+                      <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
                     </Routes>
                   </Suspense>
                   </main>

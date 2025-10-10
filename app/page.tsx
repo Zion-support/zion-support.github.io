@@ -11,6 +11,36 @@ import Footer from './components/Footer';
 // Service data
 const microSAASServices = [
   {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial predictions with 99.7% accuracy for market analysis",
+    price: "$299/mo",
+    features: ["Quantum Predictions", "Risk Assessment", "Trading Signals", "Compliance Monitoring"],
+    category: "Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced AI with persistent memory that learns and remembers like a human brain",
+    price: "$149/mo",
+    features: ["Persistent Memory", "Cognitive Enhancement", "Knowledge Graph", "Natural Conversation"],
+    category: "AI Assistant",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Immersive 3D workspace with holographic displays and spatial computing capabilities",
+    price: "$199/mo",
+    features: ["3D Interface", "VR Integration", "Spatial Computing", "Collaborative Workspaces"],
+    category: "Productivity",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
@@ -314,6 +344,26 @@ const microSAASServices = [
 
 const aiServices = [
   {
+    name: "AI Space Technology Pro",
+    description: "Revolutionary space operations with AI-powered satellite management and mission planning",
+    price: "$7,999/mo",
+    features: ["Satellite Operations", "Mission Planning", "Space Data Analysis", "Launch Optimization"],
+    category: "Space Technology",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-technology-pro"
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "Combat climate change with AI-powered environmental monitoring and carbon management",
+    price: "$599/mo",
+    features: ["Carbon Analysis", "Climate Prediction", "Water Management", "Environmental Monitoring"],
+    category: "Environmental AI",
+    enterprise: false,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+  },
+  {
     name: "AI Drug Discovery Pro",
     description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
     price: "$4,500/mo",
@@ -322,16 +372,6 @@ const aiServices = [
     enterprise: true,
     icon: Brain,
     link: "https://ziontechgroup.com/ai-drug-discovery-pro"
-  },
-  {
-    name: "AI Climate Solutions Pro",
-    description: "Combat climate change with intelligent environmental monitoring and carbon footprint optimization",
-    price: "$3,200/mo",
-    features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
-    category: "Environmental AI",
-    enterprise: false,
-    icon: Globe,
-    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
   },
   {
     name: "AI Space Technology Pro",
@@ -511,7 +551,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Header />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 sm:py-20 lg:py-24">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -519,13 +559,33 @@ const HomePage: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Enterprise Solutions
+            Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
+            Leading provider of revolutionary AI-powered solutions, quantum computing, space technology, and digital transformation services. 
+            Transform your business with our cutting-edge AI capabilities and innovative micro SAAS solutions.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              <span>99.9% Uptime Guarantee</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              <span>24/7 Expert Support</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              <span>Enterprise-Grade Security</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              <span>Free 30-Day Trial</span>
+            </div>
+          </div>
           
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -533,6 +593,28 @@ const HomePage: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Watch Demo
             </button>
+          </div>
+
+          {/* Contact Information */}
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 max-w-4xl mx-auto mb-16">
+            <h3 className="text-xl font-semibold text-white mb-4 text-center">Ready to Transform Your Business?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center space-y-2">
+                <Phone className="w-6 h-6 text-cyan-400" />
+                <span className="text-gray-300 font-medium">Call Us</span>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold">+1 (302) 464-0950</a>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <Mail className="w-6 h-6 text-cyan-400" />
+                <span className="text-gray-300 font-medium">Email Us</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <MapPin className="w-6 h-6 text-cyan-400" />
+                <span className="text-gray-300 font-medium">Visit Us</span>
+                <span className="text-cyan-400 font-semibold">364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </div>
+            </div>
           </div>
 
           {/* Stats */}
@@ -558,7 +640,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
@@ -700,7 +782,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* AI Services Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -758,7 +840,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* IT Services Section */}
-      <section className="py-16 bg-white/5">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

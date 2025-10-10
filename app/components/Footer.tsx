@@ -10,18 +10,18 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
         { name: 'AI Customer Support', href: '/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
         { name: 'AI Content Generation', href: '/ai-content-generation' },
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
-        { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Computer Vision', href: '/ai-computer-vision' }
       ]
     },
     {
@@ -46,6 +46,9 @@ const Footer: React.FC = memo(() => {
       title: 'Micro SAAS',
       icon: Code,
       services: [
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
@@ -54,10 +57,7 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Studio', href: '/ai-content-studio' },
         { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
-        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
-        { name: 'AI Content Writer', href: '/ai-content-writer' },
-        { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' }
       ]
     },
     {
@@ -137,9 +137,9 @@ const Footer: React.FC = memo(() => {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services. Transforming businesses 
-              with cutting-edge technology and innovative solutions.
+              Leading provider of revolutionary AI-powered enterprise solutions, quantum computing, 
+              space technology, autonomous systems, and digital transformation services. 
+              Transforming businesses with cutting-edge technology and innovative micro SAAS solutions.
             </p>
 
             {/* Contact Info */}
