@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
   Users,
   Award,
@@ -23,18 +23,16 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AboutPage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
-
+  ]
   const values = [
     {
       icon: Brain,
@@ -56,8 +54,7 @@ const AboutPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
-  ];
-
+  ]
   const team = [
     {
       name: 'Sarah Johnson',
@@ -83,8 +80,7 @@ const AboutPage: React.FC = () => {
       image: '/team/david.jpg',
       bio: 'Full-stack developer with 10+ years experience'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -245,7 +241,6 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
-
-export default AboutPage;
+  )
+}
+export default AboutPage

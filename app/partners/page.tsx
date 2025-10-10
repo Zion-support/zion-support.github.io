@@ -1,16 +1,15 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react'
 interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
+  name: string
+  logo: string
+  description: string
+  category: string
+  website?: string
+  tier: 'strategic' | 'preferred' | 'certified'
 }
 
 const PartnersPage: React.FC = () => {
@@ -63,8 +62,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://oracle.com',
       tier: 'certified'
     }
-  ];
-
+  ]
   const benefits = [
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
@@ -72,8 +70,7 @@ const PartnersPage: React.FC = () => {
     'Co-marketing and co-selling programs',
     'Dedicated partner success manager',
     'Priority support and resources'
-  ];
-
+  ]
   const tiers = [
     {
       name: 'Strategic Partners',
@@ -93,15 +90,13 @@ const PartnersPage: React.FC = () => {
       icon: <CheckCircle className="w-8 h-8 text-green-500" />,
       color: 'from-green-400 to-teal-500'
     }
-  ];
-
+  ]
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '1000+', label: 'Joint Customers' },
     { icon: <Zap className="w-8 h-8 text-purple-500" />, value: '95%', label: 'Success Rate' },
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -265,7 +260,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default PartnersPage;
+  )
+}
+export default PartnersPage

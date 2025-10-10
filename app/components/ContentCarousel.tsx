@@ -1,22 +1,19 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 interface Slide {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  features: string[]
   stats?: {
-    value: string;
-    label: string;
-  }[];
+    value: string
+    label: string
+  }[]
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
     {
       icon: Brain,
@@ -62,23 +59,18 @@ const ContentCarousel: React.FC = () => {
         { value: '24/7', label: 'Global Support' }
       ]
     }
-  ];
-
+  ]
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const currentSlideData = slides[currentSlide];
-
+    const timer = setInterval(nextSlide, 5000)
+    return () => clearInterval(timer)
+  }, [])
+  const currentSlideData = slides[currentSlide]
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -180,7 +172,6 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel

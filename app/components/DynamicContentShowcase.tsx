@@ -1,28 +1,25 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react'
 interface Testimonial {
-  id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar: string;
+  id: number
+  name: string
+  company: string
+  role: string
+  content: string
+  rating: number
+  avatar: string
 }
 
 interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  benefits: string[];
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  benefits: string[]
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const testimonials: Testimonial[] = [
     {
       id: 1,
@@ -51,8 +48,7 @@ const DynamicContentShowcase: React.FC = () => {
       rating: 5,
       avatar: '/images/avatars/emily.jpg'
     }
-  ];
-
+  ]
   const features: Feature[] = [
     {
       icon: Brain,
@@ -78,8 +74,7 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -89,28 +84,23 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '10,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '99.9%', label: 'Uptime' },
     { icon: Star, value: '4.9/5', label: 'Rating' },
     { icon: Zap, value: '24/7', label: 'Support' }
-  ];
-
+  ]
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  }
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
   useEffect(() => {
-    const timer = setInterval(nextTestimonial, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
+    const timer = setInterval(nextTestimonial, 5000)
+    return () => clearInterval(timer)
+  }, [])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -299,7 +289,6 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default DynamicContentShowcase;
+  )
+}
+export default DynamicContentShowcase

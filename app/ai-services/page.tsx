@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIServicesPage: React.FC = () => {
   const features = [
     {
@@ -31,8 +30,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Extract insights from images and videos using computer vision technology.',
       benefits: ['Image recognition', 'Object detection', 'Video analysis', 'Visual search']
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -54,8 +52,7 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Training',
       description: 'Comprehensive training programs to upskill your team in AI technologies.'
     }
-  ];
-
+  ]
   const benefits = [
     'Increased operational efficiency',
     'Better decision making with data insights',
@@ -65,15 +62,13 @@ const AIServicesPage: React.FC = () => {
     'Scalable AI solutions',
     '24/7 AI-powered support',
     'Continuous learning and improvement'
-  ];
-
+  ]
   const stats = [
     { icon: Brain, value: '95%', label: 'Accuracy Rate' },
     { icon: Zap, value: '10x', label: 'Faster Processing' },
     { icon: Shield, value: '99.9%', label: 'Uptime' },
     { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -226,7 +221,6 @@ const AIServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIServicesPage;
+  )
+}
+export default AIServicesPage

@@ -82,7 +82,7 @@ function processFile(filePath) {
 }
 
 // Main function
-function main() {
+async function main() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
@@ -107,8 +107,9 @@ function main() {
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-if (require.main === module) {
+// Run main function if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = { fixSyntaxErrors, processFile };
+export { fixSyntaxErrors, processFile };

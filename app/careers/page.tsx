@@ -1,22 +1,20 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react'
 interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
+  id: string
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  requirements: string[]
+  benefits: string[]
+  posted: string
+  featured: boolean
 }
 
 const CareersPage: React.FC = () => {
@@ -117,8 +115,7 @@ const CareersPage: React.FC = () => {
       posted: '1 week ago',
       featured: false
     }
-  ];
-
+  ]
   const companyValues = [
     {
       icon: <Star className="w-8 h-8 text-blue-600" />,
@@ -140,8 +137,7 @@ const CareersPage: React.FC = () => {
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
-  ];
-
+  ]
   const benefits = [
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
@@ -153,8 +149,7 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -338,7 +333,6 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CareersPage;
+  )
+}
+export default CareersPage
