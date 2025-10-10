@@ -31,11 +31,25 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
         { name: '24/7 IT Support', href: '/it-support' },
         { name: 'Custom Development', href: '/custom-development' },
+<<<<<<< HEAD
         { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
         { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
         { name: 'Financial Services IT', href: '/financial-it' },
         { name: 'Edge Computing Solutions', href: '/edge-computing' },
         { name: 'Blockchain Integration', href: '/blockchain-integration' },
+=======
+        { name: 'AI IT Operations', href: '/ai-ops' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing' },
+        { name: '5G Network Implementation', href: '/5g-implementation' },
+        { name: 'IoT Platform Development', href: '/iot-platform' },
+        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
+        { name: 'Database Management', href: '/database-management' },
+        { name: 'Network Design', href: '/network-design' },
+        { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
+        { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
         { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }

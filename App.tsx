@@ -93,16 +93,20 @@ const ServicesPage = React.lazy(() => import('./app/services/page'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,6 +203,8 @@ const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -258,16 +264,20 @@ const App: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                       <Route path="/ai-ops" element={<AIOpsPage />} />
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/financial-it" element={<FinancialITPage />} />
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -364,6 +374,8 @@ const App: React.FC = memo(() => {
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
                     </Routes>
                   </Suspense>
                   </main>
