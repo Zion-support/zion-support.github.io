@@ -3,6 +3,7 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
+<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private skipLinks: HTMLElement[] = [];
@@ -127,6 +128,31 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
+=======
+const AccessibilityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-00a6
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
@@ -356,16 +382,27 @@ export class AccessibilityEnhancer {
     this.skipLinks = [];
     this.landmarks = [];
   }
+<<<<<<< HEAD
 }
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+=======
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-00a6
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
 };
 
+<<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
 };
@@ -377,3 +414,6 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 };
+=======
+export default AccessibilityEnhancerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-00a6
