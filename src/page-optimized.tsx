@@ -3,6 +3,8 @@ import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Fallback component
 const EmptyComponent = () => null;
@@ -34,6 +36,9 @@ export default function OptimizedHomePage() {
         <div />
       </AccessibilityEnhancer>
       <PerformanceMonitor />
+      
+      {/* Navigation */}
+      <Navigation />
       
       {/* Main Content */}
       <main className="relative">
@@ -173,6 +178,9 @@ export default function OptimizedHomePage() {
           </div>
         </section>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

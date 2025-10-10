@@ -78,6 +78,21 @@ const WebDevelopmentPage = lazy(() => import('./web-development/page'));
 const AIFraudDetectionPage = lazy(() => import('./ai-fraud-detection/page'));
 const AIContentWriterPage = lazy(() => import('./ai-content-writer/page'));
 
+// Additional Missing Pages
+const AIDesignStudioPage = lazy(() => import('./ai-design-studio/page'));
+const AIFinancialAdvisorPage = lazy(() => import('./ai-financial-advisor/page'));
+const AILegalAssistantPage = lazy(() => import('./ai-legal-assistant/page'));
+const AIStockPortfolioManagerPage = lazy(() => import('./ai-stock-portfolio-manager/page'));
+const AISupplyChainPage = lazy(() => import('./ai-supply-chain/page'));
+const AIWebsiteBuilderPage = lazy(() => import('./ai-website-builder/page'));
+const CloudComputingPage = lazy(() => import('./cloud-computing/page'));
+const DataManagementPage = lazy(() => import('./data-management/page'));
+const NetworkSecurityPage = lazy(() => import('./network-security/page'));
+const BlockchainSolutionsPage = lazy(() => import('./blockchain-solutions/page'));
+const IoTDevelopmentPage = lazy(() => import('./iot-development/page'));
+const ARVRDevelopmentPage = lazy(() => import('./ar-vr-development/page'));
+const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
+
 // Missing Pages
 const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
 const AIBusinessIntelligencePage = lazy(() => import('./ai-business-intelligence/page'));
@@ -288,6 +303,21 @@ const App: React.FC = () => {
             <Route path="/web-development" element={<WebDevelopmentPage />} />
             <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
             <Route path="/ai-content-writer" element={<AIContentWriterPage />} />
+            
+            {/* Additional Missing Pages */}
+            <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
+            <Route path="/ai-financial-advisor" element={<AIFinancialAdvisorPage />} />
+            <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+            <Route path="/ai-stock-portfolio-manager" element={<AIStockPortfolioManagerPage />} />
+            <Route path="/ai-supply-chain" element={<AISupplyChainPage />} />
+            <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
+            <Route path="/cloud-computing" element={<CloudComputingPage />} />
+            <Route path="/data-management" element={<DataManagementPage />} />
+            <Route path="/network-security" element={<NetworkSecurityPage />} />
+            <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+            <Route path="/iot-development" element={<IoTDevelopmentPage />} />
+            <Route path="/ar-vr-development" element={<ARVRDevelopmentPage />} />
+            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             
             {/* Missing Pages */}
             <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
