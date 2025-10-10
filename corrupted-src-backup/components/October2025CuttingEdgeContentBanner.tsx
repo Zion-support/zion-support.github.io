@@ -57,8 +57,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {
       metri, c, s: ["3, 4, 0% Reven, u, e", "S, u, b-50ms, Latenc, y", "10, 0, M+ Use, r, s"]";
     }
   ];
-  return (
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */}
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, to, p-0 -le, f, t-4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-bl, o, b"></d, i, v>";
@@ -94,14 +93,14 @@ const, October2025CuttingEdgeContentBanne, r = () => {
             <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!";
           </p>
         </d, i, v>
-        {/* Featured, Articles, Grid */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+        {/* Featured, Articles, Grid */})
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
-            <Li, n, k
+            <Li, n, k;
   k, e, y={ind, e, x}
               to={artic, l, e.li, n, k}
-              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             >
               {/* Card, gradient, overlay */}
@@ -118,9 +117,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
+                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e;
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
+                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e;
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">";
                   {artic, l, e.tit, l, e}
                 </h3>
@@ -131,7 +130,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                 {/* Metri, c, s */}
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
                   {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
-                    <sp, a, n
+                    <sp, a, n;
   k, e, y={i, d, x}
                       classNa, m, e="te, x, t-xs, p, x-2, p, y-1, rounde, d-md, b, g-sla, t, e-7, 0, 0/50, tex, t-gr, a, y-300, border, border-sla, t, e-6, 0, 0/50"
                     >
@@ -145,7 +144,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
               </d, i, v>
@@ -157,9 +156,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
-              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e
+              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e;
   r:sca, l, e-1, 0, 5"
             >
               <span, className="flex, item, s-center, ga, p-2">";
@@ -168,9 +167,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </sp, a, n>
             </Li, n, k>
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
-              classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e
+              classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e;
   r:bg-sla, t, e-7, 0, 0/80, transitio, n-all, duratio, n-3, 0, 0"
             >
               Schedule, Expert, Consultation;
@@ -193,13 +192,13 @@ const, October2025CuttingEdgeContentBanne, r = () => {
           66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9); }
         }
         .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite
+          animati, o, n: blob, 7s, infinite;
         }
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2s
+          animati, o, n-del, a, y: 2s;
         }
         .animati, o, n-del, a, y-40, 0, 0 {
-          animati, o, n-del, a, y: 4s
+          animati, o, n-del, a, y: 4s;
           animati, o, n: blob, 7s, infinite;
         }
         .animati, o, n-del, a, y-20, 0, 0 {

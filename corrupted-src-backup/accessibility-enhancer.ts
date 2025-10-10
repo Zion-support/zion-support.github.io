@@ -1,7 +1,7 @@
 class AccessibilityEnhancer {
   private static instance: AccessibilityEnhancer;
   private isInitialized: boolean = false;
-
+,
   private constructor() {}
 
   public static getInstance(): AccessibilityEnhancer {
@@ -19,7 +19,7 @@ class AccessibilityEnhancer {
   }
 
   private setupAccessibilityFeatures(): void {
-    // Add accessibility enhancements here
+    // Add accessibility enhancements here;
     //     }
 }
 

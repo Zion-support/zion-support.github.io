@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
-// Function to resolve merge conflicts by keeping the newer version
+// Function to resolve merge conflicts by keeping the newer version;
 function resolveConflicts() {
   try {
     console.log('📋 Attempting to merge PR branch...');
@@ -15,14 +14,14 @@ function resolveConflicts() {
   } catch (error) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     
-    // Get list of conflicted files
+    // Get list of conflicted files;
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
     
-    console.log(`📁 Found ${conflictedFiles.length} conflicted files:`);
+    console.log(`📁 Found ${conflictedFiles.length} conflicted files: `);
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
     
     // Resolve conflicts by keeping the incoming version (theirs)
-    conflictedFiles.forEach(file => {
+    conflictedFiles.forEach(file => {)
       if (fs.existsSync(file)) {
         console.log(`🔧 Resolving conflicts in ${file}...`);
         try {
@@ -39,7 +38,7 @@ function resolveConflicts() {
   }
 }
 
-// Function to clean up console.log statements
+// Function to clean up console.log statements;
 function cleanConsoleLogs() {
   console.log('🧹 Cleaning up console.log statements...');
   
@@ -51,17 +50,17 @@ function cleanConsoleLogs() {
     'app/layout.tsx'
   ];
   
-  filesToClean.forEach(file => {
+  filesToClean.forEach(file => {)
     if (fs.existsSync(file)) {
       try {
         let content = fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
         
-        // Remove console.log statements
+        // Remove console.log statements;
         content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
         content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
         
-        // Remove empty lines that might be left behind
+        // Remove empty lines that might be left behind;
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
         
         if (content.length !== originalLength) {
@@ -75,21 +74,21 @@ function cleanConsoleLogs() {
   });
 }
 
-// Function to optimize performance
+// Function to optimize performance;
 function optimizePerformance() {
   console.log('⚡ Optimizing performance...');
   
-  // Update package.json scripts for better performance
+  // Update package.json scripts for better performance;
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
     try {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-      // Add performance optimization scripts
+      // Add performance optimization scripts;
       packageJson.scripts = {
         ...packageJson.scripts,
-        'build:optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
-        'build:production': 'NODE_OPTIONS="--max-old-space-size=4096" next build && next export',
+        'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
+        'build: production': 'NODE_OPTIONS="--max-old-space-size=4096" next build && next export',
         'analyze': 'ANALYZE=true next build',
         'lint:fix': 'eslint . --ext .ts,.tsx,.js,.jsx --fix',
         'type-check': 'tsc --noEmit'
@@ -103,15 +102,15 @@ function optimizePerformance() {
   }
 }
 
-// Main execution
+// Main execution;
 async function main() {
   try {
-    // Step 1: Resolve merge conflicts
+    // Step 1: Resolve merge conflicts;
     const hasConflicts = !resolveConflicts();
     
-    if (hasConflicts) {
+    if (hasConflicts) {,
       console.log('🔄 Retrying merge after conflict resolution...');
-      try {
+      try {,
         execSync('git commit -m "Resolve merge conflicts and integrate improvements"', { stdio: 'pipe' });
         console.log('✅ Merge completed successfully');
       } catch (error) {
@@ -120,42 +119,40 @@ async function main() {
       }
     }
     
-    // Step 2: Clean up console.log statements
-    
-    // Step 3: Optimize performance
-    
-    // Step 4: Run type check
+    // Step 2: Clean up console.log statements;
+    // Step 3: Optimize performance;
+    // Step 4: Run type check;
     console.log('🔍 Running TypeScript type check...');
-    try {
+    try {,
       execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
       console.log('✅ TypeScript type check passed');
     } catch (error) {
       console.log('⚠️  TypeScript type check failed:', error.message);
     }
     
-    // Step 5: Run linting
+    // Step 5: Run linting;
     console.log('🔍 Running ESLint...');
-    try {
+    try {,
       execSync('npm run lint:fix', { stdio: 'pipe' });
       console.log('✅ ESLint passed');
     } catch (error) {
       console.log('⚠️  ESLint failed:', error.message);
     }
     
-    // Step 6: Commit all changes
+    // Step 6: Commit all changes;
     console.log('💾 Committing all improvements...');
     execSync('git add .', { stdio: 'pipe' });
     execSync('git commit -m "Comprehensive improvements: resolve conflicts, clean console.logs, optimize performance"', { stdio: 'pipe' });
     
     console.log('🎉 All merge conflicts resolved and improvements applied!');
-    console.log('📊 Summary:');
+    console.log('📊 Summary: ');
     console.log('  ✅ Merge conflicts resolved');
     console.log('  ✅ Console.log statements cleaned');
     console.log('  ✅ Performance optimizations applied');
     console.log('  ✅ TypeScript type check completed');
     console.log('  ✅ ESLint cleanup completed');
     console.log('  ✅ All changes committed');
-    
+    ,
   } catch (error) {
     console.error('❌ Error during merge conflict resolution:', error.message);
     process.exit(1);

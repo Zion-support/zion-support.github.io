@@ -16,26 +16,25 @@ interface OptimizationStatus {
   optimized: boolean;
 }
 
-export const PerformanceOptimizer: React.FC = () => {
+export const PerformanceOptimizer: React.FC = () => {,
   const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0,
-    codeSplit: false,
-    serviceWorker: false,
-    optimized: false
-
+    preloaded: 0;
+    codeSplit: false;
+    serviceWorker: false;
+    optimized: false;
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Collect Core Web Vitals
+    // Collect Core Web Vitals;
     const vitals: PerformanceMetrics = {
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      fcp: 0,
-      ttfb: 0,
+      lcp: 0;
+      fid: 0;
+      cls: 0;
+      fcp: 0;
+      ttfb: 0;
     };
 
-    // LCP - Largest Contentful Paint
+    // LCP - Largest Contentful Paint;
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
@@ -43,7 +42,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // FID - First Input Delay
+    // FID - First Input Delay;
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -52,7 +51,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // CLS - Cumulative Layout Shift
+    // CLS - Cumulative Layout Shift;
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       for (const entry of list.getEntries()) {
@@ -64,7 +63,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // FCP - First Contentful Paint
+    // FCP - First Contentful Paint;
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -73,7 +72,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-    // TTFB - Time to First Byte
+    // TTFB - Time to First Byte;
     const ttfbObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -94,7 +93,7 @@ export const PerformanceOptimizer: React.FC = () => {
       '/js/critical.js'
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {)
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -105,7 +104,7 @@ export const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
+    // This would be handled by Next.js dynamic imports;
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
 
@@ -119,7 +118,7 @@ export const PerformanceOptimizer: React.FC = () => {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
-    hints.forEach(hint => {
+    hints.forEach(hint => {)
       const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
@@ -149,7 +148,7 @@ export const PerformanceOptimizer: React.FC = () => {
     }
   }, [collectWebVitals, preloadCriticalResources]);
 
-  // This component doesn't render anything visible
+  // This component doesn't render anything visible;
   return null;
 };
 

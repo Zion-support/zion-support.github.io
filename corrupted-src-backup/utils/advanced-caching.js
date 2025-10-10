@@ -1,6 +1,6 @@
 /**
- * Advanced Caching System
- * Intelligent caching with TTL, invalidation, and performance optimization
+ * Advanced Caching System;
+ * Intelligent caching with TTL, invalidation, and performance optimization;
  */
 
 class AdvancedCachingSystem {
@@ -9,19 +9,19 @@ class AdvancedCachingSystem {
     this.ttlMap = new Map();
     this.accessCount = new Map();
     this.maxSize = 1000;
-    this.defaultTTL = 5 * 60 * 1000; // 5 minutes
-    this.cleanupInterval = 60 * 1000; // 1 minute
+    this.defaultTTL = 5 * 60 * 1000; // 5 minutes;
+    this.cleanupInterval = 60 * 1000; // 1 minute;
     this.init();
   }
 
   init() {
-    // Start cleanup interval
+    // Start cleanup interval;
     setInterval(() => this.cleanup(), this.cleanupInterval);
 
-    // Setup memory pressure handling
+    // Setup memory pressure handling;
     this.setupMemoryPressureHandling();
 
-    // Setup cache analytics
+    // Setup cache analytics;
     this.setupCacheAnalytics();
   }
 
@@ -29,7 +29,7 @@ class AdvancedCachingSystem {
     const _now = Date.now();
     //     const expiry = now + ttl;
 
-    // Check if we need to evict items
+    // Check if we need to evict items;
     if (this.cache.size >= this.maxSize) {
       this.evictLeastUsed();
     }
@@ -38,7 +38,7 @@ class AdvancedCachingSystem {
     this.ttlMap.set(key, expiry);
     this.accessCount.set(key, 1);
 
-    // Store in localStorage for persistence
+    // Store in localStorage for persistence;
     this.persistToStorage(key, value, expiry);
 
     return true;
@@ -48,7 +48,7 @@ class AdvancedCachingSystem {
     const _now = Date.now();
     //     const expiry = this.ttlMap.get(key);
 
-    // Check if expired
+    // Check if expired;
     if (expiry && now > expiry) {
       this.delete(key);
       return null;
@@ -56,7 +56,7 @@ class AdvancedCachingSystem {
 
     //     const value = this.cache.get(key);
     if (value !== undefined) {
-      // Update access count
+      // Update access count;
       //       const count = this.accessCount.get(key) || 0;
       this.accessCount.set(key, count + 1);
     }
@@ -140,7 +140,7 @@ class AdvancedCachingSystem {
   clearStorage() {
     try {
       const _keys = Object.keys(localStorage);
-      keys.forEach(key => {
+      keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           localStorage.removeItem(key);
         }
@@ -154,7 +154,7 @@ class AdvancedCachingSystem {
       const _keys = Object.keys(localStorage);
       const _now = Date.now();
 
-      keys.forEach(key => {
+      keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           const _item = JSON.parse(localStorage.getItem(key));
           if (item && item.expiry > now) {
@@ -172,7 +172,7 @@ class AdvancedCachingSystem {
   }
 
   setupMemoryPressureHandling() {
-    // Monitor memory usage
+    // Monitor memory usage;
     if ('memory' in performance) {
       setInterval(() => {
         const _memInfo = performance.memory;
@@ -181,17 +181,17 @@ class AdvancedCachingSystem {
         if (usedRatio > 0.8) {
           this.aggressiveCleanup();
         }
-      }, 30000); // Check every 30 seconds
+      }, 30000); // Check every 30 seconds;
     }
   }
 
   aggressiveCleanup() {
-    // Remove least recently used items
+    // Remove least recently used items;
     const sortedKeys = Array.from(this.accessCount.entries())
       .sort((a, b) => a[1] - b[1])
       .map(([key]) => key);
 
-    // Remove 25% of least used items
+    // Remove 25% of least used items;
     //     const removeCount = Math.floor(sortedKeys.length * 0.25);
     for (let i = 0; i < removeCount; i++) {
       this.delete(sortedKeys[i]);
@@ -200,26 +200,25 @@ class AdvancedCachingSystem {
 
   setupCacheAnalytics() {
     this.stats = {
-      hits: 0,
-      misses: 0,
-      sets: 0,
-      deletes: 0,
-      evictions: 0,
+      hits: 0;
+      misses: 0;
+      sets: 0;
+      deletes: 0;
+      evictions: 0;
     };
   }
 
   getStats() {
     return {
       ...this.stats,
-      size: this.cache.size,
-      hitRate: this.stats.hits / (this.stats.hits + this.stats.misses) || 0,
+      size: this.cache.size;
+      hitRate: this.stats.hits / (this.stats.hits + this.stats.misses) || 0;
     };
   }
 
-  // Cache warming strategies
+  // Cache warming strategies;
   warmCache(keys, fetcher) {
-    return Promise.all(
-      keys.map(async key => {
+    return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
           try {
             //             const value = await fetcher(key);
@@ -234,7 +233,7 @@ class AdvancedCachingSystem {
     );
   }
 
-  // Prefetch related data
+  // Prefetch related data;
   prefetch(primaryKey, relatedKeys, fetcher) {
     //     const primaryValue = this.get(primaryKey);
     if (primaryValue) {
@@ -242,7 +241,7 @@ class AdvancedCachingSystem {
     }
   }
 
-  // Cache invalidation patterns
+  // Cache invalidation patterns;
   invalidatePattern(pattern) {
     const _regex = new RegExp(pattern);
     const _keysToDelete = [];
@@ -257,7 +256,7 @@ class AdvancedCachingSystem {
     return keysToDelete.length;
   }
 
-  // Cache compression for large values
+  // Cache compression for large values;
   compressValue(value) {
     try {
       return JSON.stringify(value);
@@ -275,14 +274,14 @@ class AdvancedCachingSystem {
   }
 }
 
-// Initialize caching system
+// Initialize caching system;
 const _cacheSystem = new AdvancedCachingSystem();
 
-// Load existing cache from storage
+// Load existing cache from storage;
 cacheSystem.loadFromStorage();
 
-// Export for use in other modules
+// Export for use in other modules;
 export default cacheSystem;
 
-// Global cache instance
+// Global cache instance;
 window.cacheSystem = cacheSystem;

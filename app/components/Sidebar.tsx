@@ -31,7 +31,7 @@ import {
   TrendingUp,
   CheckCircle,
   Menu,
-  X
+  X;
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -43,20 +43,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
+  const toggleSection = (section: string) => {,
+    setExpandedSections(prev =>,)
+      prev.includes(section),
+        ? prev.filter(s => s !== section),
         : [...prev, section]
     );
   };
 
   const serviceCategories = [
     {
-      title: 'AI Services',
-      icon: Brain,
+      title: 'AI Services'
+      icon: Brain;
       color: 'text-purple-400',
-      services: [
+      services: [,
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics' },
@@ -69,10 +69,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'IT Services',
-      icon: Cloud,
+      title: 'IT Services'
+      icon: Cloud;
       color: 'text-blue-400',
-      services: [
+      services: [,
         { name: 'Cloud Migration', path: '/cloud-migration' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
@@ -84,10 +84,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'Micro SAAS',
-      icon: Code,
+      title: 'Micro SAAS'
+      icon: Code;
       color: 'text-cyan-400',
-      services: [
+      services: [,
         { name: 'AI Project Manager', path: '/ai-project-manager' },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
@@ -99,10 +99,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'Emerging Tech',
-      icon: Sparkles,
+      title: 'Emerging Tech'
+      icon: Sparkles;
       color: 'text-pink-400',
-      services: [
+      services: [,
         { name: 'Quantum Computing', path: '/ai-quantum-computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3' },
@@ -154,17 +154,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  return (
-    <>
+  return(<>
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+      <div;
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
         onClick={onClose}
       />
-
       {/* Sidebar */}
-      <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
-        <div className="flex flex-col h-full">
+      <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg: hidden">,
+        <div className="flex flex-col h-full">,
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-700">
             <div className="flex items-center space-x-2">
@@ -173,30 +171,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
               <span className="text-white font-bold text-lg">Zion Tech Group</span>
             </div>
-            <button
+            <button;
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover: text-white transition-colors"
             >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
+              <X className="w-6 h-6" />,)
+            </button>,)
+          </div>,)
+),
           {/* Navigation Content */}
           <div className="flex-1 overflow-y-auto p-6 space-y-6">
             {/* Main Navigation */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Main Navigation
+                Main Navigation;
               </h3>
               <nav className="space-y-1">
                 {mainLinks.map((link, index) => (
-                  <Link
+                  <Link;
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -210,16 +208,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {/* Services */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Our Services
+                Our Services;
               </h3>
               <div className="space-y-2">
                 {serviceCategories.map((category, categoryIndex) => (
                   <div key={categoryIndex}>
-                    <button
+                    <button;
                       onClick={() => toggleSection(category.title)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"
-                    >
-                      <div className="flex items-center space-x-3">
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: bg-gray-700/50 hover:text-white rounded-lg transition-colors",
+                    >,
+                      <div className="flex items-center space-x-3">,
                         <category.icon className={`w-5 h-5 ${category.color}`} />
                         <span>{category.title}</span>
                       </div>
@@ -233,13 +231,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     {expandedSections.includes(category.title) && (
                       <div className="ml-8 space-y-1 mt-2">
                         {category.services.map((service, serviceIndex) => (
-                          <Link
+                          <Link;
                             key={serviceIndex}
                             to={service.path}
                             className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
-                              location.pathname === service.path
-                                ? 'bg-cyan-500/20 text-cyan-400'
-                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'
+                              location.pathname === service.path;
+                                ? 'bg-cyan-500/20 text-cyan-400'}
+                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'}
                             }`}
                             onClick={onClose}
                           >
@@ -256,17 +254,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {/* Support */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Support
+                Support;
               </h3>
               <nav className="space-y-1">
                 {supportLinks.map((link, index) => (
-                  <Link
+                  <Link;
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -280,17 +278,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {/* Legal */}
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Legal
+                Legal;
               </h3>
               <nav className="space-y-1">
                 {legalLinks.map((link, index) => (
-                  <Link
+                  <Link;
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -319,24 +317,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
               {/* Social Links */}
               <div className="flex space-x-4">
-                <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https: //linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
-
+                <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">,
+                  <Github className="w-5 h-5" />,
+                </a>,
+              </div>,
+,
               {/* CTA Button */}
-              <Link
+              <Link;
                 to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center",
                 onClick={onClose}
               >
-                Get Started Today
+                Get Started Today;
               </Link>
             </div>
           </div>

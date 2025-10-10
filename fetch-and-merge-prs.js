@@ -1,19 +1,19 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
-//Configuration
+//Configuration;
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }
-//Function to make GitHub API requests
+//Function to make GitHub API requests;
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
-      port: 443,
-  path: path,
+      port: 443;
+  path: path;
       method: 'GET'}
-      headers: {
+      headers: {,
         'Authorization': `token ${GITHUB_TOKEN}`,
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
@@ -34,18 +34,18 @@ function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     req.end();
   });
 }
-//Function to merge a PR
+//Function to merge a PR;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
-    const postData = JSON.stringify({
+    const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
-      merge_method: 'merge'
+      merge_method: 'merge',
     });
     const options = {hostname: 'api.github.com',
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
-      headers: {
+      headers: {,
         'Authorization': `token ${GITHUB_TOKEN}`,
         'User-Agent': 'Node.js',
         'Accept': 'application/vnd.github.v3+json',
@@ -73,30 +73,30 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     req.end();
   });
 }
-//Main function
+//Main function;
 async function main() {try {
 //     // console.log('🔍 Fetching open pull requests...')}
-    //Fetch open PRs
+    //Fetch open PRs;
 //     //     if (prs.length === 0) {return}
     }
-    //Display PRs
+    //Display PRs;
 //     // console.log('\n📝 Open Pull Requests: '),
-    prs.forEach((pr) index) => {
+    prs.forEach((pr) index) => {,
 //       //       //       //       });
-    //Save PR list to file
+    //Save PR list to file;
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
-//     //Filter mergeable PRs
-//     //Merge mergeable PRs
+//     //Filter mergeable PRs;
+//     //Merge mergeable PRs;
     for (const pr of mergeablePRs) {
       try {
 //         const result = await mergePR(pr.number) pr.title);
 //         //         } catch (error) {
 //         }
     }
-    // Handle non-mergeable PRs
+    // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
-      nonMergeablePRs.forEach(pr => {
+      nonMergeablePRs.forEach(pr => {),
 //         });
 //       }
 //     //   } catch (error) {process.exit(1);

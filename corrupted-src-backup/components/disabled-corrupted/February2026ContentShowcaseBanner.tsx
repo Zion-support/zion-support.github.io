@@ -39,8 +39,7 @@ const February2026ContentShowcaseBanne, r = () => {
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syst, e, m, s',
       description: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learn, i, n, g'
      }
-  ]; return (
-    <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+  ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -53,23 +52,23 @@ const February2026ContentShowcaseBanne, r = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-emera, l, d-5, 0, 0/30, m, b-8">
             <Sparkles, className="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e" />
             <span, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
-              🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE
+              🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE;
             </sp, a, n>
             <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" />
           </div>
           <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now
+            The, Future, of AI, is, Now;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
             Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
           </p>
-          {/* Achievement, St, a, t, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">
-            { [
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
+          {/* Achievement, St, a, t, s */})
+          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">)
+            { [)
+              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  })
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  })
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  })
               {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }
             ].m, a, p((achieveme, n, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r">
@@ -149,11 +148,11 @@ const February2026ContentShowcaseBanne, r = () => {
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                EXCLUSIVE, FEBRUARY, OFFER
+                EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
             </div>
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Unlock, Premium, AI Insigh, t, s
+              Unlock, Premium, AI Insigh, t, s;
             </h3>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
               Get, exclusive, access to, cuttin, g-edge, resea, r, c, h, early, content, releases, and, premium, AI insigh, t, s. 
@@ -187,7 +186,7 @@ const February2026ContentShowcaseBanne, r = () => {
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0">
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-                Stay, Ahead, with Our, Newslette, r
+                Stay, Ahead, with Our, Newslette, r;
               </h3>
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, revolutionary, AI breakthroug, h, s. 

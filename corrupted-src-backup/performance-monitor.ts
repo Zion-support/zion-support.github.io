@@ -1,7 +1,7 @@
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private isInitialized: boolean = false;
-
+,
   private constructor() {}
 
   static getInstance(): PerformanceMonitor {

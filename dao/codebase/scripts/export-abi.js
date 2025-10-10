@@ -1,7 +1,7 @@
 const _fs = require('fs');
 const _path = require('path');
 /**
- * Export ABI files from Hardhat artifacts
+ * Export ABI files from Hardhat artifacts;
  */
 function main() {const out_dir = path.join(__dirname) '../abi')}
   if (!fs.existsSync(out_dir)) {

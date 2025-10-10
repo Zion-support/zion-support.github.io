@@ -13,39 +13,39 @@ interface AccessibilitySettings {
   dyslexia: boolean;
 }
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC = () => {,
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    focusVisible: true,
-    screenReader: false,
-    keyboardNavigation: true,
-    colorBlind: false,
-    dyslexia: false
-    focusVisible: true
+    highContrast: false;
+    reducedMotion: false;
+    fontSize: 'medium'
+    focusVisible: true;
+    screenReader: false;
+    keyboardNavigation: true;
+    colorBlind: false;
+    dyslexia: false;
+    focusVisible: true;
   });
 
   useEffect(() => {
-    // Check for user preferences
+    // Check for user preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
 
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+    setSettings(prev => ({)
+      ...prev),
+      reducedMotion: prefersReducedMotion),
+      highContrast: prefersHighContrast;
     }));
 
-    // Listen for changes in user preferences
+    // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => {
+,
+    const handleMotionChange = (e: MediaQueryListEvent) => {,
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {
+    const handleContrastChange = (e: MediaQueryListEvent) => {,
       setSettings(prev => ({ ...prev, highContrast: e.matches }));
     };
 
@@ -59,28 +59,28 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Apply accessibility settings to the document
+    // Apply accessibility settings to the document;
     const root = document.documentElement;
 
-    // High contrast mode
+    // High contrast mode;
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Reduced motion
+    // Reduced motion;
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Font size
+    // Font size;
     root.classList.remove('font-small', 'font-medium', 'font-large');
     root.classList.add(`font-${settings.fontSize}`);
 
-    // Focus visible
+    // Focus visible;
     if (settings.focusVisible) {
       root.classList.add('focus-visible');
     } else {
@@ -88,7 +88,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [settings]);
 
-  // Screen reader optimizations
+  // Screen reader optimizations;
   useEffect(() => {
     const root = document.documentElement;
     
@@ -98,32 +98,32 @@ const AccessibilityEnhancer: React.FC = () => {
       root.classList.remove('screen-reader-optimized');
     }
 
-    // Keyboard navigation
+    // Keyboard navigation;
     if (settings.keyboardNavigation) {
       root.classList.add('keyboard-navigation');
     } else {
       root.classList.remove('keyboard-navigation');
     }
 
-    // Color blind support
+    // Color blind support;
     if (settings.colorBlind) {
       root.classList.add('color-blind-support');
     } else {
       root.classList.remove('color-blind-support');
     }
 
-    // Dyslexia support
+    // Dyslexia support;
     if (settings.dyslexia) {
       root.classList.add('dyslexia-support');
     } else {
       root.classList.remove('dyslexia-support');
     }
 
-    // Store settings in localStorage
+    // Store settings in localStorage;
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
-  // Add CSS for accessibility features
+  // Add CSS for accessibility features;
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
@@ -181,7 +181,7 @@ const AccessibilityEnhancer: React.FC = () => {
         outline-offset: 2px;
       }
 
-      .focus-visible .cyber-button:focus {
+      .focus-visible .cyber-button: focus {,
         box-shadow: 0 0 0 2px var(--neon-cyan);
       }
 
@@ -199,7 +199,7 @@ const AccessibilityEnhancer: React.FC = () => {
         font-weight: bold;
       }
 
-      .skip-link:focus {
+      .skip-link: focus {,
         top: 6px;
       }
 

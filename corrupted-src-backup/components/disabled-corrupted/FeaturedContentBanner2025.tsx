@@ -31,24 +31,23 @@ export default function FeaturedContentBanner20, 2, 5() {
       readTime: '40, min, rea, d',
       publishDa, t, e: 'Ja, n, 2, 5, 20, 2, 5'
     }
-  ]; return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
+  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6">
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              🚀 Latest, AI, Breakthroughs & Innovatio, n, s
+              🚀 Latest, AI, Breakthroughs & Innovatio, n, s;
             </sp, a, n>
           </div>
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Featured, Conten, t
+            Featured, Conten, t;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
             Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
           </p>
-        </div>
-
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+        </div>)
+)
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
             <a, ke, y = { in, d, e, x  }, hr, e, f={ conte, n, t.hr, e, f } className="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
             >
@@ -98,12 +97,12 @@ export default function FeaturedContentBanner20, 2, 5() {
               <a, hre, f="/conta, c, t" 
                 className="bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-gre, e, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
               >
-                Get, Free, Assessment
+                Get, Free, Assessment;
               </a>
               <a, hre, f="/ca, s, e-studi, e, s" 
                 className="bord, e, r-2, borde, r-gre, e, n-500, tex, t-gre, e, n-400, hove, r:bg-gre, e, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
               >
-                View, Success, Stories
+                View, Success, Stories;
               </a>
             </div>
           </div>
@@ -118,12 +117,12 @@ export default function FeaturedContentBanner20, 2, 5() {
               <a, hre, f="/conta, c, t" 
                 className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
               >
-                Join, Innovation, Lab
+                Join, Innovation, Lab;
               </a>
               <a, hre, f="/servic, e, s" 
                 className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
               >
-                Explore, Service, s
+                Explore, Service, s;
               </a>
             </div>
           </div>
@@ -141,9 +140,8 @@ export default function FeaturedContentBanner20, 2, 5() {
               placehold, e, r="Enter, your, email addre, s, s"
               className="fl, e, x-1, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-lg, tex, t-white, placeholde, r-gr, a, y-400, focu, s:bord, e, r-bl, u, e-500, focu, s:outli, n, e-no, n, e"
 />
-
 <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0">
-              Subscri, b, e
+              Subscri, b, e;
             </button>
           </div>
           <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">

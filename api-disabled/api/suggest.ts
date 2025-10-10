@@ -12,8 +12,8 @@ const SAMPLE_QUERIES = [
   'DevOps engineers with Kubernetes',
 ];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {,
+  if (req.method !== 'GET') {,
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { q = '' } = req.query;
     const _query = Array.isArray(q) ? q[0] : q;
 
-    const suggestions = SAMPLE_QUERIES.filter(s =>
+    const suggestions = SAMPLE_QUERIES.filter(s =>)
       s.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 5);
 

@@ -1,9 +1,9 @@
 'use client';
 export const useRouter = () => {
-  const push = useCallback((url: string) => {
+  const push = useCallback((url: string) => {,
     window.location.href = url;}
   }, [])
-  const replace = useCallback((url: string) => {
+  const replace = useCallback((url: string) => {,
     window.location.replace(url);}
   }, [])
   const back = useCallback(() => {

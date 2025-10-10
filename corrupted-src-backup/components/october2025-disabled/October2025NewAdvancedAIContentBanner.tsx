@@ -1,6 +1,5 @@
 export default function October2025NewAdvancedAIContentBann, e, r() { 
-  return (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-20'>
         <div, className='absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
@@ -15,14 +14,14 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
         >
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4'>
             <Sparkles, className='w-5 h-5, animat, e-pul, s, e' />
-            OCTOBER, 2025, BREAKTHROUGH
+            OCTOBER, 2025, BREAKTHROUGH;
             <Sparkles, className='w-5 h-5, animat, e-pul, s, e' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'>
-            🚀 3, Revolutionary, AI Platform, Breakthrough, s
+            🚀 3, Revolutionary, AI Platform, Breakthrough, s;
           </h2>
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'>
-            Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance
+            Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance;
           </p>
           <div, className='flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d'>
             <div, className='flex, item, s-center, ga, p-2'>
@@ -55,11 +54,11 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                     <Brain, className='w-6 h-6, tex, t-whi, t, e' />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r'>
-                    Federated, A, I
+                    Federated, A, I;
                   </sp, a, n>
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
-                  Advanced, Federated, AI Enterprise, Revolutio, n
+                  Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
                   Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}
@@ -78,7 +77,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                   <div, className='flex, item, s-center, ga, p-2'>
                     <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>
-                      94.7% model, accuracy, matching centralized, trainin, g
+                      94.7% model, accuracy, matching centralized, trainin, g;
                     </sp, a, n>
                   </div>
                 </div>
@@ -103,11 +102,11 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                     <Database, className='w-6 h-6, tex, t-whi, t, e' />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r'>
-                    Synthetic, Dat, a
+                    Synthetic, Dat, a;
                   </sp, a, n>
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
-                  Synthetic, Data, Generation Enterprise, Breakthroug, h
+                  Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
                   Unlimited, privac, y-safe, data, generati, o, n.{' '}
@@ -149,11 +148,11 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                     <Shield, className='w-6 h-6, tex, t-whi, t, e' />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'>
-                    AI, Governanc, e
+                    AI, Governanc, e;
                   </sp, a, n>
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>
-                  AI, Model, Governance & Compliance, Breakthroug, h
+                  AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
                   Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}
@@ -192,11 +191,11 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
             className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
           >
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
-            <Link, className='w-5 h-5' />
-          </Li, n, k>
-          <p, className='mt-4, tex, t-bl, u, e-200, tex, t-sm'>
-            Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I,
-            synthetic, dat, a, and, enterprise, governance
+            <Link, className='w-5 h-5' />)
+          </Li, n, k>)
+          <p, className='mt-4, tex, t-bl, u, e-200, tex, t-sm'>)
+            Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I)
+            synthetic, dat, a, and, enterprise, governance;
           </p>
         </moti, o, n.d, i, v>
       </div>

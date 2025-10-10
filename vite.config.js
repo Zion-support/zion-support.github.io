@@ -107,14 +107,14 @@ export default defineConfig({
         negate_iife: true,
         typeofs: true,
         global_defs: {
-          'process.env.NODE_ENV': '"production"'
+          'process.env.NODE_ENV': '"production"',
         }
       },
       mangle: {
         safari10: true,
         toplevel: true,
         properties: {
-          regex: /^_/
+          regex: /^_/,
         }
       },
       format: {
@@ -137,7 +137,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'react', 
+      'react',
       'react-dom', 
       'react-router-dom', 
       'framer-motion', 

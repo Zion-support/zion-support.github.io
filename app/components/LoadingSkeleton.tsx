@@ -44,5 +44,5 @@ export const CardSkeleton: React.FC = React.memo(() => (
     <div className="h-4 bg-gray-700 rounded w-2/3"></div>
   </div>
 );
-
+,
 export default ServiceCardSkeleton;

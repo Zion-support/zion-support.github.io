@@ -1,9 +1,9 @@
 'use client'
 /**
- * SEO Enhancement Utilities
- * Tools to improve search engine optimization
+ * SEO Enhancement Utilities;
+ * Tools to improve search engine optimization;
  */
-// Generate meta tags
+// Generate meta tags;
 export const generateMetaTags = (data: {
 // title: string;
 // description: string;
@@ -28,54 +28,54 @@ export const generateMetaTags = (data: {
     { property: 'og:title', content: data.ogTitle || data.title },
     {
       property: 'og:description',
-      content: data.ogDescription || data.description
+      content: data.ogDescription || data.description;
     },
     { property: 'og:image', content: data.ogImage || '/og-image.webp' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Zion Holdings' },
     {
       name: 'twitter:card',
-      content: data.twitterCard || 'summary_large_image'
+      content: data.twitterCard || 'summary_large_image',
     },
     { name: 'twitter:title', content: data.twitterTitle || data.title },
     {
       name: 'twitter:description',
-      content: data.twitterDescription || data.description
+      content: data.twitterDescription || data.description;
     },
     {
       name: 'twitter:image',
-      content: data.twitterImage || data.ogImage || '/og-image.webp'
+      content: data.twitterImage || data.ogImage || '/og-image.webp',
     },
   ];
   return tags;
 };
-// SEO Config interface
+// SEO Config interface;
 interface SEOConfig {
-  title: string
-  description: string
+  title: string;
+  description: string;
   keywords: string[]
-  canonicalUrl: string
-  ogImage: string
-  ogType: string
-  twitterCard: string
-  twitterSite: string
-  twitterCreator: string
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  twitterSite: string;
+  twitterCreator: string;
   structuredData: Record<string, unknown>
-  robots: string
-  language: string
-  locale: string
-  siteName: string
-  author: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  robots: string;
+  language: string;
+  locale: string;
+  siteName: string;
+  author: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[];}
 }
-// Default SEO config
+// Default SEO config;
 const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Holdings',
-  description: 'Leading provider of AI-powered business solutions',
-  keywords: [],
+  title: 'Zion Holdings'
+  description: 'Leading provider of AI-powered business solutions'
+  keywords: []
   canonicalUrl: 'https://zion.app',
   ogImage: '/og-image.webp',
   ogType: 'website',
@@ -87,32 +87,32 @@ const defaultSEOConfig: SEOConfig = {
   language: 'en',
   locale: 'en_US',
   siteName: 'Zion Holdings',
-  author: 'Zion Holdings'
+  author: 'Zion Holdings',
 }
-// Generate structured data
+// Generate structured data;
 export const generateStructuredData = (data: {
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
 // name: string;
 // description: string;
 // url?: string;
 // logo?: string;
-// sameAs?: string[];
+// sameAs?: string[];,
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': data.type,
-    name: data.name,
-    description: data.description,
+    name: data.name;
+    description: data.description;
     url: data.url || '',
     logo: data.logo || '',
     sameAs: data.sameAs || []}
   }
   return { ...baseStructure, ...data }
 }
-// SEO Enhancer class
+// SEO Enhancer class;
 export class SEOEnhancer {
-  private static instance: SEOEnhancer
+  private static instance: SEOEnhancer;
   private config: SEOConfig;}
   constructor(config: Partial<SEOConfig> = {}) {}
     this.config = { ...defaultSEOConfig, ...config }
@@ -121,35 +121,35 @@ export class SEOEnhancer {
     if (!SEOEnhancer.instance) {
       SEOEnhancer.instance = new SEOEnhancer(config);}
     }
-    return SEOEnhancer.instance
+    return SEOEnhancer.instance;
   }
-  // Update page title
-  updateTitle(title: string) {
-    if (typeof document !== 'undefined') {
+  // Update page title;
+  updateTitle(title: string) {,
+    if (typeof document !== 'undefined') {,
       document.title = title;}
     }
   }
-  // Update meta description
-  updateDescription(description: string) {
+  // Update meta description;
+  updateDescription(description: string) {,
     this.updateMetaTag('description', description);}
   }
-  // Update meta keywords
-  updateKeywords(keywords: string[]) {
+  // Update meta keywords;
+  updateKeywords(keywords: string[]) {,
     this.updateMetaTag('keywords', keywords.join(', '));}
   }
-  // Update canonical URL
+  // Update canonical URL;
   updateCanonicalUrl(url: string) {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {,
+      canonical = document.createElement('link'),
+      canonical.rel = 'canonical',
       document.head.appendChild(canonical);}
     }
-    canonical.href = url
+    canonical.href = url;
   }
-  // Update Open Graph tags
-  updateOpenGraph(config: Partial<SEOConfig>) {
-
+  // Update Open Graph tags;
+  updateOpenGraph(config: Partial<SEOConfig>) {,
+,
     if (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime })
     }
@@ -166,8 +166,8 @@ export class SEOEnhancer {
       this.updateMetaTag(property, content);}
     })
   }
-  // Update Twitter Card tags
-  updateTwitterCard(config: Partial<SEOConfig>) {
+  // Update Twitter Card tags;
+  updateTwitterCard(config: Partial<SEOConfig>) {,
     const twitterTags = [}
       { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
       { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },
@@ -180,77 +180,76 @@ export class SEOEnhancer {
       this.updateMetaTag(name, content);}
     })
   }
-  // Update structured data
+  // Update structured data;
   updateStructuredData(data: Record<string, unknown>) {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
-    // Remove existing structured data
+    // Remove existing structured data;
     const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {
       existingScript.remove();}
     }
     document.head.appendChild(script)
   }
-  // Update robots meta tag
-  updateRobots(robots: string) {
+  // Update robots meta tag;
+  updateRobots(robots: string) {,
     this.updateMetaTag('robots', robots);}
   }
-  // Update language
-  updateLanguage(language: string) {
-    if (typeof document !== 'undefined') {
+  // Update language;
+  updateLanguage(language: string) {,
+    if (typeof document !== 'undefined') {,
       document.documentElement.lang = language;}
     }
   }
-  // Update author
-  updateAuthor(author: string) {
+  // Update author;
+  updateAuthor(author: string) {,
     this.updateMetaTag('author', author);}
   }
-  // Helper method to update meta tags
-  private updateMetaTag(nameOrProperty: string, content: string) {
-    if (typeof document === 'undefined') return
-    let meta = document.querySelector(}
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
-    ) as HTMLMetaElement
+  // Helper method to update meta tags;
+  private updateMetaTag(nameOrProperty: string, content: string) {,
+    if (typeof document === 'undefined') return;
+    let meta = document.querySelector(})
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
+    ) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
         meta.setAttribute('property', nameOrProperty);}
       } else {
         meta.setAttribute('name', nameOrProperty);}
       }
       document.head.appendChild(meta)
     }
-    meta.content = content
+    meta.content = content;
   }
-  // Generate sitemap
-  generateSitemap(
-    pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
+  // Generate sitemap;
+  generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages
-  .map(
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+${pages;
+  .map(,
     page => `  <url>}
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>
+    <changefreq>${page.changefreq}</changefreq>)
+    <priority>${page.priority}</priority>)
+  </url>)
   )
   .join('\n')}
 </urlset>`
-    return sitemap
+    return sitemap;
   }
-  // Generate robots.txt
-  generateRobotsTxt(disallowPaths: string[] = []) {
-    const robots = `User-agent: *
+  // Generate robots.txt;
+  generateRobotsTxt(disallowPaths: string[] = []) {,
+    const robots = `User-agent: *,
 Allow: /`}
 ${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
-    return robots
+    return robots;
   }
-  // Initialize SEO
+  // Initialize SEO;
   initialize(config?: Partial<SEOConfig>) {
     if (typeof document === 'undefined') return;}
     const finalConfig = { ...this.config, ...config }
@@ -267,46 +266,45 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
       this.updateStructuredData(finalConfig.structuredData);}
     }
   }
-  // Get current SEO data
+  // Get current SEO data;
   getCurrentSEO() {}
     if (typeof document === 'undefined') return {}
     return {
-      title: document.title,
-      description:
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      title: document.title;
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}
     }
   }
 }
-// Generate structured data with type-specific properties
+// Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (data: {
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
 // name: string;
 // description: string;
 // url?: string;
 // logo?: string;
-// sameAs?: string[];
+// sameAs?: string[];,
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': data.type,
-    name: data.name,
-    description: data.description,
+    name: data.name;
+    description: data.description;
     url: data.url || '',
     logo: data.logo || '',
     sameAs: data.sameAs || []}
   }
-  // Add type-specific properties
+  // Add type-specific properties;
   if (data.type === 'Organization') {
     return {
       ...baseStructure,
-      address: {
+      address: {,
 // '@type': 'PostalAddress',
-// addressCountry: 'US'
+// addressCountry: 'US',
       },
-      contactPoint: {
+      contactPoint: {,
         '@type': 'ContactPoint',
         telephone: '+1-555-0123',
         contactType: 'customer service'}
@@ -316,9 +314,9 @@ export const generateAdvancedStructuredData = (data: {
   if (data.type === 'WebSite') {
     return {
       ...baseStructure,
-      potentialAction: {
+      potentialAction: {,
         '@type': 'SearchAction',
-        target: {
+        target: {,
           '@type': 'EntryPoint',`}
           urlTemplate: `${data.url}/search?q={search_term_string}
         },
@@ -329,89 +327,89 @@ export const generateAdvancedStructuredData = (data: {
   if (data.type === 'Article') {
     return {
       ...baseStructure,
-      author: {
+      author: {,
         '@type': 'Organization',
         name: 'Zion Holdings'}
       },
-      publisher: {
+      publisher: {,
         '@type': 'Organization',
         name: 'Zion Holdings',
-        logo: {
+        logo: {,
           '@type': 'ImageObject',
           url: data.logo || '/logo.webp'}
         }
       },
       datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString()
+      dateModified: new Date().toISOString(),
     }
   }
-  return baseStructure
+  return baseStructure;
 }
-// Generate sitemap data
+// Generate sitemap data;
 export const generateSitemapData = useCallback((...args) => {
   return {
     urlset: {
-      '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({
-        loc: page.url,
-        lastmod: page.lastModified,
-        changefreq: page.changeFrequency,
+      '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9'
+      url: pages.map(page => ({),
+        loc: page.url;),
+        lastmod: page.lastModified),
+        changefreq: page.changeFrequency),
         priority: page.priority}
       }))
     }
   }
 }
-// Generate robots.txt content
+// Generate robots.txt content;
 export const generateRobotsTxt = useCallback((...args) => {`}
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
-  return `User-agent: *
+  return `User-agent: *,
 ${disallowRules}
 Sitemap: ${sitemapUrl}`
 }
-// SEO validation
+// SEO validation;
 export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
   const issues: string[] = [];
-  // Check title length
-  if (data.title.length < 30) {
+  // Check title length;,
+  if (data.title.length < 30) {,
     issues.push('Title is too short (recommended: 30-60 characters)');}
   } else if (data.title.length > 60) {
     issues.push('Title is too long (recommended: 30-60 characters)');}
   }
-  // Check description length
+  // Check description length;
   if (data.description.length < 120) {
     issues.push('Description is too short (recommended: 120-160 characters)');}
   } else if (data.description.length > 160) {
     issues.push('Description is too long (recommended: 120-160 characters)');}
   }
-  // Check URL format
+  // Check URL format;
   if (!data.url.startsWith('http')) {
     issues.push('URL should start with http:// or https://');}
   }
-  return issues
+  return issues;
 }
-// Generate breadcrumb data
+// Generate breadcrumb data;
 export const generateBreadcrumbData = useCallback((...args) => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
-      position: index + 1,
-      name: crumb.name,
+      position: index + 1;
+      name: crumb.name;
       item: crumb.url}
     }))
   }
 }
-// Initialize SEO enhancements
+// Initialize SEO enhancements;
 export const initializeSEOEnhancements = useCallback((...args) => {
-  if (typeof document === 'undefined') return
-  // Add structured data for organization
-  const organizationData = generateStructuredData({
-    type: 'Organization',
-    name: 'Zion Holdings',
-    description: 'Leading provider of AI-powered business solutions',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/logo.webp',
+  if (typeof document === 'undefined') return;
+  // Add structured data for organization;
+  const organizationData = generateStructuredData({)
+    type: 'Organization',)
+    name: 'Zion Holdings',)
+    description: 'Leading provider of AI-powered business solutions',)
+    url: 'https://zion.app'),
+    logo: 'https://zion.app/logo.webp'),
     sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']}
   })
   const script = document.createElement('script')

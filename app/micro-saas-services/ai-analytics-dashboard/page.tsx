@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIAnalyticsDashboard: React.FC = () => {
+const AIAnalyticsDashboard: React.FC = () => {,
   const [selectedMetric, setSelectedMetric] = useState('revenue');
 
   const metrics = [
@@ -13,27 +13,25 @@ const AIAnalyticsDashboard: React.FC = () => {
     { id: 'engagement', name: 'Engagement', value: '67.8%', change: '+5.1%' }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Analytics Dashboard
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+            AI Analytics Dashboard;
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
-            Get intelligent insights from your data with AI-powered analytics
-          </p>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-              {metrics.map((metric) => (
-                <div
+            Get intelligent insights from your data with AI-powered analytics;
+          </p>)
+)
+          <div className="cyber-card p-8 mb-8">)
+            <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview</h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">),
+              {metrics.map((metric) => (,
+                <div;
                   key={metric.id}
-                  className={`cyber-card p-4 cursor-pointer transition-all duration-300 ${
-                    selectedMetric === metric.id ? 'border-cyan-400' : ''
+                  className={`cyber-card p-4 cursor-pointer transition-all duration-300 ${}
+                    selectedMetric === metric.id ? 'border-cyan-400' : ''}
                   }`}
                   onClick={() => setSelectedMetric(metric.id)}
                 >
@@ -50,7 +48,7 @@ const AIAnalyticsDashboard: React.FC = () => {
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">AI-Powered Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -126,24 +124,24 @@ const AIAnalyticsDashboard: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button mr-4"
             >
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Analytics
+              Start Analytics;
             </a>
           </div>
         </div>
       </main>
 
-      <Footer />
-    </div>
+      <Footer />,
+    </div>,
   );
 };
 

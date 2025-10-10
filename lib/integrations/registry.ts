@@ -2,11 +2,11 @@
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
+,
+export const PROVIDERS: IntegrationProviderMeta[] = [,
+export const PROVIDERS: IntegrationProviderMeta[] = [,
+,
+export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
@@ -19,11 +19,11 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
+export const PROVIDERS: IntegrationProviderMeta[] = [,
+,
+export const PROVIDERS: IntegrationProviderMeta[] = [,
+,
+export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -31,7 +31,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-  {
+  {,
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
@@ -92,14 +92,13 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
     description: 'HRIS & ATS',
   },
 ];
 
-export function getProviderById(
-  id: string
-): IntegrationProviderMeta | undefined {
+export function getProviderById(id: string;),
+): IntegrationProviderMeta | undefined {,
   return PROVIDERS.find(p => p.id === id);
 }
 

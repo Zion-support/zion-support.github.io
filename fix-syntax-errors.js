@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files with syntax errors
+// List of files with syntax errors;
 const filesToFix = [
   'src/ai-analytics/page.tsx',
   'src/ai-automation/page.tsx',
@@ -37,40 +37,39 @@ const filesToFix = [
   'src/ai-marketing/page.tsx'
 ];
 
-// Template for a simple coming soon page
+// Template for a simple coming soon page;
 const createComingSoonPage = (title, description) => `import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,)
+      <Navigation />,)
+      <div className="flex items-center justify-center min-h-screen">,)
+        <div className="text-center">),
           <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
           <p className="text-gray-300 mb-8">${description}</p>
-          <Link 
+          <Link;
             to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
+            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
           >
-            Contact Us
+            Contact Us;
           </Link>
         </div>
       </div>
-      <Footer />
-    </div>
+      <Footer />,
+    </div>,
   );
 };
 
 export default ${title}Page;`;
 
-// Fix each file
-filesToFix.forEach(filePath => {
+// Fix each file;
+filesToFix.forEach(filePath => {)
   const fullPath = path.join(__dirname, filePath);
   const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
+  const title = fileName.split('-').map(word => )
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   

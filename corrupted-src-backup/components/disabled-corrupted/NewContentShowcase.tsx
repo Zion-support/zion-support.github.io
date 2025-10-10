@@ -1,28 +1,27 @@
 import React from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-const NewContentShowcas, e: React.FC = () => { 
-  const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
+const NewContentShowcas, e: React.FC = () => { ,
+  const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-purp, l, e-100, rounde, d-full, tex, t-purp, l, e-700, fon, t-semibold, m, b-4">
-            🌟 JUST, RELEASE, D
+            🌟 JUST, RELEASE, D;
           </div>
           <h2, className="te, x, t-5xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            New, Conten, t & Servic, e, s
+            New, Conten, t & Servic, e, s;
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            Explore, our, latest breakthrough, articles, and revolutionary, services
+            Explore, our, latest breakthrough, articles, and revolutionary, services;
           </p>
         </div>
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6">
               <BookOpen, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>
-            </div>
-            <div, className="spa, c, e-y-4">
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>)
+            </div>)
+            <div, className="spa, c, e-y-4">)
               { topArticl, e, s.m, a, p((arti, c, l, e) = > (
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 >
@@ -42,7 +41,7 @@ const NewContentShowcas, e: React.FC = () => {
               <Link, t, o="/bl, o, g"
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"
               >
-                View, All, Articles
+                View, All, Articles;
                 <Link, className="w-5 h-5" />
               </Li, n, k>
             </div>
@@ -76,7 +75,7 @@ const NewContentShowcas, e: React.FC = () => {
               <Link, t, o="/servic, e, s"
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"
               >
-                View, All, Services
+                View, All, Services;
                 <Link, className="w-5 h-5" />
               </Li, n, k>
             </div>

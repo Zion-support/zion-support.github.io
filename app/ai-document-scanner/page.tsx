@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   Scan, 
   FileText, 
   Upload, 
@@ -145,10 +145,10 @@ import {
   BluetoothFull,
   UsbFull,
   PlugFull,
-  PowerFull
+  PowerFull;
 } from 'lucide-react';
 
-const AIDocumentScannerPage: React.FC = () => {
+const AIDocumentScannerPage: React.FC = () => {,
   const [isLoaded, setIsLoaded] = useState(false);
   const [isScanning, setIsScanning] = useState(false);
   const [scanProgress, setScanProgress] = useState(0);
@@ -160,47 +160,47 @@ const AIDocumentScannerPage: React.FC = () => {
 
   const features = [
     {
-      icon: Scan,
+      icon: Scan;
       title: 'Advanced OCR Technology',
       description: '99% accuracy OCR with support for 100+ languages and handwriting recognition',
-      stats: '99% accuracy'
+      stats: '99% accuracy',
     },
     {
-      icon: Zap,
+      icon: Zap;
       title: 'Real-Time Processing',
       description: 'Process 1000+ documents per hour with instant results and batch processing',
-      stats: '1000+ docs/hour'
+      stats: '1000+ docs/hour',
     },
     {
-      icon: Brain,
+      icon: Brain;
       title: 'AI Data Extraction',
       description: 'Intelligent data extraction with smart field recognition and validation',
-      stats: 'Smart extraction'
+      stats: 'Smart extraction',
     },
     {
-      icon: Shield,
+      icon: Shield;
       title: 'Enterprise Security',
       description: 'Bank-level encryption with SOC 2 compliance and audit trails',
-      stats: 'SOC 2 compliant'
+      stats: 'SOC 2 compliant',
     },
     {
-      icon: Cloud,
+      icon: Cloud;
       title: 'Cloud Storage',
       description: 'Secure cloud storage with automatic backup and version control',
-      stats: 'Unlimited storage'
+      stats: 'Unlimited storage',
     },
     {
-      icon: Globe,
+      icon: Globe;
       title: 'API Integration',
       description: 'RESTful API for seamless integration with existing workflows',
-      stats: 'RESTful API'
+      stats: 'RESTful API',
     }
   ];
 
   const capabilities = [
     {
       category: 'Document Types',
-      items: [
+      items: [,
         'Invoices and receipts',
         'Contracts and agreements',
         'Forms and applications',
@@ -213,7 +213,7 @@ const AIDocumentScannerPage: React.FC = () => {
     },
     {
       category: 'Data Extraction',
-      items: [
+      items: [,
         'Text and numbers',
         'Tables and charts',
         'Signatures and stamps',
@@ -226,7 +226,7 @@ const AIDocumentScannerPage: React.FC = () => {
     },
     {
       category: 'Processing Features',
-      items: [
+      items: [,
         'Batch processing',
         'Auto-categorization',
         'Quality enhancement',
@@ -239,7 +239,7 @@ const AIDocumentScannerPage: React.FC = () => {
     },
     {
       category: 'Integration',
-      items: [
+      items: [,
         'Cloud storage sync',
         'CRM integration',
         'ERP systems',
@@ -258,7 +258,7 @@ const AIDocumentScannerPage: React.FC = () => {
       price: '$49',
       period: '/month',
       description: 'Perfect for small businesses and individuals',
-      features: [
+      features: [,
         '1,000 scans/month',
         '5 languages',
         'Basic OCR',
@@ -268,15 +268,15 @@ const AIDocumentScannerPage: React.FC = () => {
         'PDF export',
         'Basic analytics'
       ],
-      popular: false,
-      cta: 'Start Free Trial'
+      popular: false;
+      cta: 'Start Free Trial',
     },
     {
       name: 'Professional',
       price: '$149',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
-      features: [
+      features: [,
         '10,000 scans/month',
         '25 languages',
         'Advanced OCR',
@@ -288,15 +288,15 @@ const AIDocumentScannerPage: React.FC = () => {
         'Team collaboration',
         'Custom fields'
       ],
-      popular: true,
-      cta: 'Start Free Trial'
+      popular: true;
+      cta: 'Start Free Trial',
     },
     {
-      name: 'Enterprise',
+      name: 'Enterprise'
       price: '$399',
       period: '/month',
       description: 'For large organizations with high volume needs',
-      features: [
+      features: [,
         'Unlimited scans',
         '100+ languages',
         'AI-powered extraction',
@@ -308,35 +308,35 @@ const AIDocumentScannerPage: React.FC = () => {
         'White-label options',
         'Dedicated support'
       ],
-      popular: false,
-      cta: 'Contact Sales'
+      popular: false;
+      cta: 'Contact Sales',
     }
   ];
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
+      name: 'Jennifer Martinez'
       role: 'Office Manager',
       company: 'Legal Firm Inc',
       content: 'We process hundreds of legal documents daily. This AI scanner has reduced our processing time by 80% and improved accuracy significantly.',
-      rating: 5,
-      avatar: 'JM'
+      rating: 5;
+      avatar: 'JM',
     },
     {
-      name: 'David Kim',
+      name: 'David Kim'
       role: 'CFO',
       company: 'Retail Corp',
       content: 'The invoice processing automation has been a game-changer. We can now process thousands of invoices in minutes instead of hours.',
-      rating: 5,
-      avatar: 'DK'
+      rating: 5;
+      avatar: 'DK',
     },
     {
-      name: 'Lisa Thompson',
+      name: 'Lisa Thompson'
       role: 'Operations Director',
       company: 'Healthcare Group',
       content: 'HIPAA compliance was crucial for us. The security features and audit trails give us complete confidence in our document processing.',
-      rating: 5,
-      avatar: 'LT'
+      rating: 5;
+      avatar: 'LT',
     }
   ];
 
@@ -344,35 +344,33 @@ const AIDocumentScannerPage: React.FC = () => {
     {
       title: 'Invoice Processing',
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems',
-      icon: FileText,
+      icon: FileText;
       benefits: ['90% time reduction', '99% accuracy', 'Auto-validation']
     },
     {
       title: 'Contract Management',
       description: 'Scan and analyze contracts, extract key terms, and track important dates and obligations',
-      icon: Shield,
+      icon: Shield;
       benefits: ['Risk mitigation', 'Compliance tracking', 'Auto-alerts']
     },
     {
       title: 'Form Processing',
       description: 'Process application forms, surveys, and questionnaires with intelligent data extraction',
-      icon: Edit,
+      icon: Edit;
       benefits: ['Instant processing', 'Data validation', 'Workflow automation']
     },
     {
       title: 'Receipt Management',
       description: 'Capture and categorize receipts for expense tracking and reimbursement processing',
-      icon: Receipt,
+      icon: Receipt;
       benefits: ['Auto-categorization', 'Expense tracking', 'Tax preparation']
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
-      {/* Animated Background */}
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">)
+      {/* Animated Background */})
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      
       {/* Floating Particles */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
@@ -387,13 +385,13 @@ const AIDocumentScannerPage: React.FC = () => {
               <span className="text-blue-400 font-medium">AI Document Scanner Pro</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-              AI Document Scanner Pro
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              AI Document Scanner Pro;
+            </h1>,
+            ,
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
-              and seamless integration. Transform your paper documents into digital assets 
+              and seamless integration. Transform your paper documents into digital assets;
               with advanced processing capabilities.
             </p>
 
@@ -401,8 +399,8 @@ const AIDocumentScannerPage: React.FC = () => {
             <div className="max-w-2xl mx-auto mb-12">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
                 <div className="flex items-center justify-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    isScanning ? 'bg-green-500 animate-pulse' : 'bg-blue-500'
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${}
+                    isScanning ? 'bg-green-500 animate-pulse' : 'bg-blue-500'}
                   }`}>
                     {isScanning ? <Scan className="w-8 h-8 text-white" /> : <Upload className="w-8 h-8 text-white" />}
                   </div>
@@ -413,20 +411,20 @@ const AIDocumentScannerPage: React.FC = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="border-2 border-dashed border-blue-400/50 rounded-lg p-8 text-center hover:border-blue-400 transition-colors">
+                  <div className="border-2 border-dashed border-blue-400/50 rounded-lg p-8 text-center hover: border-blue-400 transition-colors">
                     <Upload className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                     <p className="text-gray-300 mb-2">Drag and drop your document here</p>
                     <p className="text-sm text-gray-400">or click to browse</p>
                   </div>
-                  
-                  {isScanning && (
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm text-gray-300">
-                        <span>Processing...</span>
+                  ,
+                  {isScanning && (,
+                    <div className="space-y-2">,
+                      <div className="flex justify-between text-sm text-gray-300">,
+                        <span>Processing...</span>,
                         <span>{scanProgress}%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
+                        <div;
                           className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
                           style={{ width: `${scanProgress}%` }}
                         ></div>
@@ -435,7 +433,7 @@ const AIDocumentScannerPage: React.FC = () => {
                   )}
                   
                   <div className="flex space-x-2">
-                    <button 
+                    <button;
                       onClick={() => {
                         setIsScanning(!isScanning);
                         if (!isScanning) {
@@ -444,44 +442,44 @@ const AIDocumentScannerPage: React.FC = () => {
                             progress += 10;
                             setScanProgress(progress);
                             if (progress >= 100) {
-                              clearInterval(interval);
-                              setIsScanning(false);
+                              clearInterval(interval);}
+                              setIsScanning(false);}
                             }
                           }, 200);
                         }
                       }}
-                      className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
-                    >
+                      className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300",
+                    >,
                       {isScanning ? 'Processing...' : 'Start Scan'}
                     </button>
-                    <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-3 px-6 rounded-lg transition-colors">
+                    <button className="flex-1 bg-slate-700 hover: bg-slate-600 text-white py-3 px-6 rounded-lg transition-colors">
                       <Settings className="w-4 h-4 mx-auto" />
                     </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+,
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                Watch Demo;
               </button>
-            </div>
-          </div>
-
+            </div>,
+          </div>,
+,
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20">,
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 hover: border-blue-400/40 transition-all duration-300 group">,
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
+                  <feature.icon className="w-6 h-6 text-white" />,
+                </div>,
                 <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-3">{feature.description}</p>
                 <div className="text-blue-400 font-semibold text-sm">{feature.stats}</div>
@@ -492,15 +490,15 @@ const AIDocumentScannerPage: React.FC = () => {
           {/* Use Cases */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Real-World Use Cases
+              Real-World Use Cases;
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
+                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/40 transition-all duration-300 group">,
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
+                    <useCase.icon className="w-6 h-6 text-white" />,
+                  </div>,
                   <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
                   <div className="space-y-1">
@@ -519,10 +517,10 @@ const AIDocumentScannerPage: React.FC = () => {
           {/* Capabilities */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Powerful Capabilities
+              Powerful Capabilities;
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {capabilities.map((category, index) => (
                 <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20">
                   <h3 className="text-xl font-semibold mb-4 text-blue-400">{category.category}</h3>
@@ -542,18 +540,18 @@ const AIDocumentScannerPage: React.FC = () => {
           {/* Pricing */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular ? 'border-blue-400 shadow-lg shadow-blue-400/25' : 'border-gray-600'
+                <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover: scale-105 ${,}
+                  plan.popular ? 'border-blue-400 shadow-lg shadow-blue-400/25' : 'border-gray-600'}
                 }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -577,9 +575,9 @@ const AIDocumentScannerPage: React.FC = () => {
                   </ul>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white' 
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
+                    plan.popular;
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white' ,}
+                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'}
                   }`}>
                     {plan.cta}
                   </button>
@@ -591,10 +589,10 @@ const AIDocumentScannerPage: React.FC = () => {
           {/* Testimonials */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              What Our Users Say
+              What Our Users Say;
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20">
                   <div className="flex items-center mb-4">
@@ -623,20 +621,20 @@ const AIDocumentScannerPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have transformed their document processing with AI Document Scanner Pro.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 };
 

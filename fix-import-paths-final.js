@@ -4,8 +4,7 @@ import { fileURLToPath } from 'url';
 
 function processFile(filePath) {
   try {
-
-    // Determine correct relative paths based on file location
+    // Determine correct relative paths based on file location;
     const isInApp =
       filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
 
@@ -25,18 +24,18 @@ function processFile(filePath) {
       typesPath = './types/';
     }
 
-    // Fix import paths
+    // Fix import paths;
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: `import Link from '${utilsPath}link';`,
       },
       {
-        pattern: /import\s+Image\s+from\s+'\.\/utils\/image';/g,
+        pattern: /import\s+Image\s+from\s+'\.\/utils\/image';/g;
         replacement: `import Image from '${utilsPath}image';`,
       },
       {
-        pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g,
+        pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g;
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       },
       {
@@ -72,7 +71,7 @@ function processFile(filePath) {
       }
     });
 
-    // Fix MetadataRoute namespace issue
+    // Fix MetadataRoute namespace issue;
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
@@ -92,8 +91,8 @@ function processFile(filePath) {
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -106,5 +105,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-// Process the app directory
-
+// Process the app directory;

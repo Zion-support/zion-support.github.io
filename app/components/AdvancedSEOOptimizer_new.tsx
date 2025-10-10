@@ -13,7 +13,7 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;
+  twitterDescription?: string;,
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
   robots?: string;
@@ -32,8 +32,8 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+  seoData;
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
@@ -47,25 +47,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     const baseStructuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'TechCompany',
-      name: 'Zion Tech Group',
-      description: seoData.description,
-      url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.webp',
+      name: 'Zion Tech Group'
+      description: seoData.description;
+      url: seoData.canonicalUrl;
+      logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
+        'https: //twitter.com/ziontechgroup',
+        'https: //github.com/zion-tech-group',
       ],
-      contactPoint: {
+      contactPoint: {,
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
         availableLanguage: 'English',
       },
       address: {
-        '@type': 'PostalAddress',
+        '@type': 'PostalAddress'
         streetAddress: '123 Tech Innovation Drive',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
@@ -78,7 +78,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (seoData.author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: seoData.author,
+        name: seoData.author;
       };
     }
 
@@ -101,33 +101,33 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  // Generate Open Graph data
+  // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
 
     return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.webp',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
+      'og: title': seoData.ogTitle || seoData.title;
+      'og: description': seoData.ogDescription || seoData.description;
+      'og: url': seoData.canonicalUrl;
+      'og: type': seoData.ogType || 'website'
+      'og: image': seoData.ogImage || '/og-image.webp',
+      'og: site_name': 'Zion Tech Group',
+      'og: locale': 'en_US',
     };
   }, [seoData, enableOpenGraph]);
 
-  // Generate Twitter Card data
+  // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
     const faqData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
+        {,
           '@type': 'Question',
           name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
+          acceptedAnswer: {,
             '@type': 'Answer',
             text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
           },
@@ -135,7 +135,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {
           '@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
+          acceptedAnswer: {,
             '@type': 'Answer',
             text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
           },
@@ -143,7 +143,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {
           '@type': 'Question',
           name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
+          acceptedAnswer: {,
             '@type': 'Answer',
             text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
           },
@@ -152,7 +152,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     };
   }, [seoData, enableTwitterCards]);
 
-  // Generate meta tags
+  // Generate meta tags;
   const generateMetaTags = useCallback(() => {
     const metaTags = [
       { name: 'description', content: seoData.description },
@@ -173,7 +173,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const metaTags = generateMetaTags();
 
   useEffect(() => {
-    // Update page title and meta description for better SEO
+    // Update page title and meta description for better SEO;
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
 
@@ -185,7 +185,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       metaDescription.setAttribute('content', seoData.description);
 
-      // Update canonical URL
+      // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement('link');
@@ -197,7 +197,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
+    // Remove existing structured data;
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
@@ -215,26 +215,24 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [structuredData]);
 
   useEffect(() => {
-    // Track page performance
+    // Track page performance;
     if (typeof window !== 'undefined' && 'performance' in window) {
       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (perfData) {
-        // Track performance metrics
+        // Track performance metrics;
         if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
+          (window as any).gtag('event', 'page_load_performance', {)
+            event_category: 'Performance'),
+            event_label: 'Page Load'),
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-
         }
       }
     }
   }, []);
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
+  return(<Helmet>)
+      {/* Basic Meta Tags */})
+      <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
         <meta key={index} name={tag.name} content={tag.content} />
       ))}
@@ -260,20 +258,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
       <link rel="manifest" href="/site.webmanifest" />
-
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="preconnect" href="https://www.google-analytics.com" />,
+      <link rel="preconnect" href="https://www.googletagmanager.com" />,
+,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />

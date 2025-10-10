@@ -18,15 +18,15 @@ async function fetchFromGitHub(): Promise<any[]> {
     const _files = (await resp.json()) as Array<{name: string, download_url: string, type: string}>;
     const _jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
     const results: unknown[] = [];
-    
-    for (const f of jsonFiles.slice(-50).reverse()) {
-      try {
+    ,
+    for (const f of jsonFiles.slice(-50).reverse()) {,
+      try {,
         const _r = await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
         results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights});
       } catch {
-        // ignore
+        // ignore;
       }
     }
     
@@ -36,7 +36,7 @@ async function fetchFromGitHub(): Promise<any[]> {
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
 //   const dir = path.join(process.cwd(), 'automation_logs');
   
   try {
@@ -53,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     return res.status(200).json({ logs });
   } catch {
-    // fall through to GitHub
+    // fall through to GitHub;
   }
   
 //   const remote = await fetchFromGitHub();

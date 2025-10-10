@@ -1,47 +1,45 @@
 import fs from 'fs';
 
-// // 1. Fix test imports
+// // 1. Fix test imports;
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {
 
-  // Fix jest imports
-  content = content.replace(
-    /import \{ describe, it, expect \} from 'jest';/,
+  // Fix jest imports;
+  content = content.replace(/import \{ describe, it, expect \} from 'jest';/)
     `import { describe, it, expect } from '@jest/globals';`
   );
 
   fs.writeFileSync(appMinimalTestPath, content);
   //     }
 
-// 2. Fix blog page metadata
+// 2. Fix blog page metadata;
 // const blogPages = [
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
 ];
 
-blogPages.forEach(pagePath => {
+blogPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
-    // Remove publishedTime from metadata
+    // Remove publishedTime from metadata;
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
 
     fs.writeFileSync(pagePath, content);
     //         }
 });
 
-// 3. Fix OpenGraph authors
+// 3. Fix OpenGraph authors;
 // const openGraphPages = [
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
 ];
 
-openGraphPages.forEach(pagePath => {
+openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
-    // Fix authors format to match Author type
-    content = content.replace(
-      /authors: \['Zion Tech Group'\]/g,
+    // Fix authors format to match Author type;
+    content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
     );
 
@@ -49,24 +47,23 @@ openGraphPages.forEach(pagePath => {
     //         }
 });
 
-// 4. Fix Calculator import
+// 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
 
-  // Replace Calculator with CalculatorIcon
+  // Replace Calculator with CalculatorIcon;
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
   content = content.replace(/<Calculator/g, '<CalculatorIcon');
 
   fs.writeFileSync(calculatorPagePath, content);
   //     }
 
-// 5. Fix AdvancedSEOOptimizer component
+// 5. Fix AdvancedSEOOptimizer component;
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {
 
-  // Update the interface to include all missing props
-  content = content.replace(
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
+  // Update the interface to include all missing props;
+  content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
     `interface AdvancedSEOOptimizerProps {
   config?: {
     title: string;
@@ -74,7 +71,7 @@ if (fs.existsSync(seoOptimizerPath)) {
     keywords: string[];
     canonicalUrl: string;
     ogImage: string;
-    structuredData?: unknown;
+    structuredData?: unknown;,
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -89,14 +86,14 @@ if (fs.existsSync(seoOptimizerPath)) {
   fs.writeFileSync(seoOptimizerPath, content);
   //     }
 
-// 6. Fix AnalyticsTracker
+// 6. Fix AnalyticsTracker;
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
 
-  // Remove conflicting declarations
+  // Remove conflicting declarations;
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
-  // Add proper imports and declarations at the top
+  // Add proper imports and declarations at the top;
   content = `
 declare global {
   interface Window {
@@ -110,36 +107,34 @@ ${content}`;
   fs.writeFileSync(analyticsTrackerPath, content);
   //     }
 
-// 7. Fix SystemMonitor
+// 7. Fix SystemMonitor;
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
 
-  // Add proper React imports
-  content = content.replace(
-    /import React from 'react';/,
+  // Add proper React imports;
+  content = content.replace(/import React from 'react';/)
     `import React, { useState, useEffect } from 'react';`
   );
 
-  // Remove the performanceEnhancer import and usage
-  content = content.replace(
-    /import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,
+  // Remove the performanceEnhancer import and usage;
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g)
     ''
   );
 
-  // Replace performanceEnhancer calls with direct performance API calls
+  // Replace performanceEnhancer calls with direct performance API calls;
   content = content.replace(/performanceEnhancer\./g, '');
 
   fs.writeFileSync(systemMonitorPath, content);
   //     }
 
-// 8. Fix lib/performance.ts
+// 8. Fix lib/performance.ts;
 // // const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {
 
-  // Remove conflicting declarations
+  // Remove conflicting declarations;
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
-  // Add proper declaration at the top
+  // Add proper declaration at the top;
   content = `declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

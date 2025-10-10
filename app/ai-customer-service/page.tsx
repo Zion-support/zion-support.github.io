@@ -2,27 +2,25 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function AICustomerServicePage() {
-  return (
-    <div><Helmet>
+  return(<div><Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." />
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        <Navigation />
-
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
+      </Helmet>,
+,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+        <Navigation />,
+        <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Customer Service Solutions
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
+              AI Customer Service Solutions;
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Revolutionary 24/7 AI-powered customer support
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+              Revolutionary 24/7 AI-powered customer support;
+            </p>,
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             </p>
           </section>
@@ -30,11 +28,11 @@ export default function AICustomerServicePage() {
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3>
-                <p className="text-gray-300 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              <div className="cyber-card p-6 energy-pulse">,
+                <div className="text-4xl mb-4 text-center">🤖</div>,
+                <h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3>,
+                <p className="text-gray-300 text-center">,
                   Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
                 </p>
               </div>
@@ -84,11 +82,11 @@ export default function AICustomerServicePage() {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg">/month</span></div>
-                <ul className="text-gray-300 space-y-3 mb-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+              <div className="cyber-card p-8 text-center">,
+                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>,
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg">/month</span></div>,
+                <ul className="text-gray-300 space-y-3 mb-8">,
                   <li>Up to 1,000 conversations/month</li>
                   <li>5 languages supported</li>
                   <li>Basic analytics</li>
@@ -131,10 +129,10 @@ export default function AICustomerServicePage() {
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3>
-                <p className="text-gray-300">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,)
+              <div className="cyber-card p-6">,)
+                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3>,)
+                <p className="text-gray-300">),
                   Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
                 </p>
               </div>
@@ -168,19 +166,19 @@ export default function AICustomerServicePage() {
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950
+                📞 Call: (302) 464-0950;
               </a>
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Demo
+                Get Free Demo;
               </a>
             </div>
           </section>
         </main>
 
         <Footer />
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 }

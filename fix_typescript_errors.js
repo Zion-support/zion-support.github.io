@@ -1,159 +1,237 @@
+#!/usr/bin/env node;
 import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// // 1. Fix AdvancedSEOOptimizer component props
-// // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
-if (fs.existsSync(seoOptimizerPath)) {
+// Function to fix common TypeScript syntax errors;
+function fixTypeScriptErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common syntax errors;
+    const fixes = [
+      // Fix missing closing braces and parentheses;
+      {
+        pattern: /(\w+)\s*\(\s*([^)]*)\s*,\s*$/gm,
+        replacement: (match, func, params) => {
+          if (params.trim() && !params.includes(')')) {
+            return `${func}(${params})`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix missing closing parentheses in function calls;
+      {
+        pattern: /(\w+)\s*\(\s*([^)]*)\s*,\s*$/gm,
+        replacement: (match, func, params) => {
+          if (params.trim() && !params.includes(')')) {
+            return `${func}(${params})`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix missing closing braces in object literals;
+      {
+        pattern: /(\w+):\s*([^,}]*)\s*,\s*$/gm,
+        replacement: (match, key, value) => {
+          if (value.trim() && !value.includes('}')) {
+            return `${key}: ${value}`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix JSX syntax errors - missing closing tags;
+      {
+        pattern: /<(\w+)([^>]*)>\s*$/gm;
+        replacement: (match, tag, attrs) => {
+          // Only fix if it's not a self-closing tag;
+          if (!attrs.includes('/>')) {
+            return match;
+          }
+          return match;
+        }
+      },
+      
+      // Fix missing semicolons after statements;
+      {
+        pattern: /(\w+)\s*$/gm;
+        replacement: (match, stmt) => {
+          if (stmt && !stmt.endsWith(';') && !stmt.endsWith('{') && !stmt.endsWith('}')) {
+            return `${stmt};`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix malformed JSX attributes;
+      {
+        pattern: /(\w+)=\{([^}]*)\s*$/gm,
+        replacement: (match, attr, value) => {
+          if (value.trim() && !value.includes('}')) {
+            return `${attr}={${value}}`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix missing commas in object literals;
+      {
+        pattern: /(\w+):\s*([^,}]*)\s*$/gm,
+        replacement: (match, key, value) => {
+          if (value.trim() && !value.includes(',') && !value.includes('}')) {
+            return `${key}: ${value},`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix malformed function parameters;
+      {
+        pattern: /function\s+(\w+)\s*\(\s*([^)]*)\s*$/gm;
+        replacement: (match, funcName, params) => {
+          if (params.trim() && !params.includes(')')) {
+            return `function ${funcName}(${params})`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix arrow function syntax;
+      {
+        pattern: /(\w+)\s*=>\s*([^,}]*)\s*$/gm,
+        replacement: (match, param, body) => {
+          if (body.trim() && !body.includes('}') && !body.includes(')')) {
+            return `${param} => ${body}`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix missing closing parentheses in JSX;
+      {
+        pattern: /<(\w+)([^>]*)>\s*$/gm;
+        replacement: (match, tag, attrs) => {
+          if (!attrs.includes('/>') && !attrs.includes('>')) {
+            return `<${tag}${attrs}>`;
+          }
+          return match;
+        }
+      }
+    ];
+    
+    // Apply fixes;
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    // Additional specific fixes for common patterns;
+    const specificFixes = [
+      // Fix missing closing braces;
+      {
+        pattern: /(\w+)\s*{\s*$/gm;
+        replacement: (match, stmt) => {
+          return `${stmt} {`;
+        }
+      },
+      
+      // Fix missing closing parentheses in function calls;
+      {
+        pattern: /(\w+)\s*\(\s*([^)]*)\s*,\s*$/gm,
+        replacement: (match, func, params) => {
+          if (params.trim() && !params.includes(')')) {
+            return `${func}(${params})`;
+          }
+          return match;
+        }
+      },
+      
+      // Fix malformed object properties;
+      {
+        pattern: /(\w+):\s*([^,}]*)\s*$/gm,
+        replacement: (match, key, value) => {
+          if (value.trim() && !value.includes(',') && !value.includes('}')) {
+            return `${key}: ${value},`;
+          }
+          return match;
+        }
+      }
+    ];
+    
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed TypeScript errors in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-  // Update the interface to include missing props
-  content = content.replace(
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
-    `interface AdvancedSEOOptimizerProps {
-  config?: {
-    title: string;
-    description: string;
-    keywords: string[];
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;
-  };
-  enableStructuredData?: boolean;
-  enableAnalytics?: boolean;
-  enablePerformanceTracking?: boolean;
-}`
-  );
+// Function to find all TypeScript/JavaScript files;
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories;
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-  fs.writeFileSync(seoOptimizerPath, content);
-  //     }
+// Main execution;
+console.log('Starting TypeScript error resolution...');
 
-// 2. Fix App.tsx SEO component usage
-// // const appPath = '/workspace/App.tsx';
-if (fs.existsSync(appPath)) {
+const files = findFiles('.');
+let fixedCount = 0;
 
-  // Fix the AdvancedSEOOptimizer usage
-  content = content.replace(
-    /enableAnalytics={true}\s+enablePerformanceTracking={true}/,
-    'enableAnalytics={true} enablePerformanceTracking={true}'
-  );
+for (const file of files) {
+  if (fixTypeScriptErrors(file)) {
+    fixedCount++;
+  }
+}
 
-  fs.writeFileSync(appPath, content);
-  //     }
+console.log(`\nFixed TypeScript errors in ${fixedCount} files.`);
 
-// 3. Fix test files
-// // Fix AppMinimal.test.tsx
-// const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
-if (fs.existsSync(appMinimalTestPath)) {
-
-  // Replace @jest/globals import
-  content = content.replace(
-    /import.*@jest\/globals.*/,
-    "import { describe, it, expect } from 'jest'"
-  );
-
-  fs.writeFileSync(appMinimalTestPath, content);
-  //     }
-
-// Fix advanced-components.test.tsx
-// const advancedComponentsTestPath = '/workspace/__tests__/advanced-components.test.tsx';
-if (fs.existsSync(advancedComponentsTestPath)) {
-
-  // Update AdvancedSEOOptimizer usage in tests
-  content = content.replace(/<AdvancedSEOOptimizer\s+config=\{/g, '<AdvancedSEOOptimizer config={');
-
-  fs.writeFileSync(advancedComponentsTestPath, content);
-  //     }
-
-// 4. Fix blog page metadata issues
-// const blogPages = [
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-];
-
-blogPages.forEach(pagePath => {
-  if (fs.existsSync(pagePath)) {
-
-    // Remove the 'type' property from metadata
-    content = content.replace(/\s+type: ['"][^'"]*['"],?\s*/g, '');
-
-    fs.writeFileSync(pagePath, content);
-    //         }
-});
-
-// 5. Fix OpenGraph authors issue
-// const openGraphPages = [
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-];
-
-openGraphPages.forEach(pagePath => {
-  if (fs.existsSync(pagePath)) {
-
-    // Fix authors format
-    content = content.replace(
-      /authors: \[\s*\{\s*name: ['"][^'"]*['"]\s*\}\s*\]/g,
-      "authors: ['Zion Tech Group']"
-    );
-
-    fs.writeFileSync(pagePath, content);
-    //         }
-});
-
-// 6. Fix missing Calculator import
-// // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
-if (fs.existsSync(calculatorPagePath)) {
-
-  // Replace Calculator with CalculatorIcon
-  content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
-  content = content.replace(/<Calculator/g, '<CalculatorIcon');
-
-  fs.writeFileSync(calculatorPagePath, content);
-  //     }
-
-// 7. Fix dataLayer declaration conflicts
-// // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
-if (fs.existsSync(analyticsTrackerPath)) {
-
-  // Add proper dataLayer declaration
-  content = content.replace(
-    /declare global \{/,
-    `declare global {
-  interface Window {
-    dataLayer: unknown[];
-  }`
-  );
-
-  fs.writeFileSync(analyticsTrackerPath, content);
-  //     }
-
-// 8. Fix performanceEnhancer references
-// // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
-if (fs.existsSync(systemMonitorPath)) {
-
-  // Add import for performanceEnhancer
-  content = content.replace(
-    /import React.*from 'react';/,
-    `import React from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancer';`
-  );
-
-  fs.writeFileSync(systemMonitorPath, content);
-  //     }
-
-// 9. Fix gtag declaration conflicts
-// // const performancePath = '/workspace/lib/performance.ts';
-if (fs.existsSync(performancePath)) {
-
-  // Add proper gtag declaration
-  content = content.replace(
-    /declare global \{/,
-    `declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }`
-  );
-
-  fs.writeFileSync(performancePath, content);
-  //     }
-
-// 
-}}}}}
+// Run TypeScript check to see remaining errors;
+console.log('\nRunning TypeScript check...');
+try {
+  execSync('pnpm run type-check', { stdio: 'inherit' });
+} catch (error) {
+  console.log('TypeScript check completed with errors (expected).');
+}

@@ -13,8 +13,8 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-  enableAdvancedCaching = true,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
+  enableAdvancedCaching = true;
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -22,21 +22,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableResourceHints = true,
   enableServiceWorker = true,
   enableCriticalCSS = true,
-  enableWebVitals = true
+  enableWebVitals = true;
 }) => {
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
+  const [performanceMetrics, setPerformanceMetrics] = useState({)
+    fcp: 0;)
+    lcp: 0;)
+    fid: 0),
+    cls: 0),
+    ttfb: 0;
   });
 
-  // Web Vitals monitoring
+  // Web Vitals monitoring;
   useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
-        // First Contentful Paint
+        // First Contentful Paint;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -45,21 +45,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           }
         }).observe({ entryTypes: ['paint'] });
 
-        // Largest Contentful Paint
+        // Largest Contentful Paint;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
-        // First Input Delay
+        // First Input Delay;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
         }).observe({ entryTypes: ['first-input'] });
 
-        // Cumulative Layout Shift
+        // Cumulative Layout Shift;
         let clsValue = 0;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
@@ -75,11 +75,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     }
   }, [enableWebVitals]);
 
-  // Advanced caching strategies
+  // Advanced caching strategies;
   const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Service Worker for advanced caching
+    // Service Worker for advanced caching;
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
@@ -90,7 +90,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         });
     }
 
-    // Memory-based caching for API responses
+    // Memory-based caching for API responses;
     const cache = new Map();
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
@@ -110,7 +110,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     };
   }, [enableServiceWorker]);
 
-  // Image optimization with WebP and lazy loading
+  // Image optimization with WebP and lazy loading;
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -121,11 +121,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           const img = entry.target as HTMLImageElement;
           const src = img.dataset.src;
           if (src) {
-            // Check for WebP support
+            // Check for WebP support;
             const canvas = document.createElement('canvas');
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-
-            if (webpSupported && !src.includes('.webp')) {
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0;
+,
+            if (webpSupported && !src.includes('.webp')) {,
               img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
             } else {
               img.src = src;
@@ -140,7 +140,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     images.forEach((img) => imageObserver.observe(img));
   }, []);
 
-  // Critical resource preloading
+  // Critical resource preloading;
   const preloadCriticalResources = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -159,7 +159,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   }, []);
 
-  // Resource hints for better performance
+  // Resource hints for better performance;
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -181,7 +181,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   }, []);
 
-  // Critical CSS inlining
+  // Critical CSS inlining;
   const inlineCriticalCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -197,21 +197,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     document.head.insertBefore(style, document.head.firstChild);
   }, []);
 
-  // Performance monitoring and reporting
+  // Performance monitoring and reporting;
   const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Report to analytics
+    // Report to analytics;
     if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(performanceMetrics.lcp),
-        custom_map: {
+      (window as any).gtag('event', 'web_vitals', {)
+        event_category: 'Performance')
+        event_label: 'Core Web Vitals')
+        value: Math.round(performanceMetrics.lcp)
+        custom_map: {,
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000;
         }
 
     }

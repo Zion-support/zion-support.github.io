@@ -1,5 +1,5 @@
 const analyticsOptimizer = {
-  trackPageView: () => {
+  trackPageView: () => {,
     //     },
 };
 

@@ -5,8 +5,7 @@ import { fileURLToPath } from 'url';
 
 function processFile(filePath) {
   try {
-
-    // Fix keywords type issues - convert string to array
+    // Fix keywords type issues - convert string to array;
     const replacements = [
       {
         pattern: /keywords:\s*'([^']+)',/g,
@@ -35,8 +34,8 @@ function processFile(filePath) {
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -49,5 +48,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-// Process the app directory
-
+// Process the app directory;

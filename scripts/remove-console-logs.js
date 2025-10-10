@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Find all TypeScript and JavaScript files
+// Find all TypeScript and JavaScript files;
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -26,22 +25,22 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   return files;
 };
 
-// Remove console.log statements
+// Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Remove console.log, console.warn, console.error, console.info statements
-    // This regex matches console.method() calls including multi-line ones
+    // Remove console.log, console.warn, console.error, console.info statements;
+    // This regex matches console.method() calls including multi-line ones;
     const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*/g;
     content = content.replace(consoleRegex, '');
     
-    // Remove standalone console statements
+    // Remove standalone console statements;
     const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*$/gm;
     content = content.replace(standaloneConsoleRegex, '');
     
-    // Remove console statements that might be in template literals or complex expressions
+    // Remove console statements that might be in template literals or complex expressions;
     const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
     content = content.replace(complexConsoleRegex, '');
     
@@ -58,13 +57,13 @@ const removeConsoleLogs = (filePath) => {
   }
 };
 
-// Main execution
+// Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
 const appDir = path.join(__dirname, '..', 'app');
 
 console.log('Starting console.log removal...');
 
-// Find all files
+// Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
 const allFiles = [...srcFiles, ...appFiles];

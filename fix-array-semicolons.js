@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 
-// Function to fix semicolons in arrays
+// Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix semicolons after arrays in object properties
+    // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
     });
@@ -21,7 +20,7 @@ function fixArraySemicolons(filePath) {
   }
 }
 
-// Main function
+// Main function;
 function main() {
   const files = [
     'src/ai-ab-testing/page.tsx',
@@ -40,7 +39,7 @@ function main() {
   console.log('Fixing array semicolons...');
   
   let fixedCount = 0;
-  files.forEach(file => {
+  files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
         fixedCount++;

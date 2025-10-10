@@ -1,23 +1,22 @@
-// Performance optimization utilities
-
+// Performance optimization utilities;
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
+  func: T;
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) => {,
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
+  func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+    if (!inThrottle) {,
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
@@ -43,7 +42,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
   return observer;
 };
 
-export const preloadImage = (src: string): Promise<void> => {
+export const preloadImage = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
@@ -52,7 +51,7 @@ export const preloadImage = (src: string): Promise<void> => {
 
 };
 
-export const preloadScript = (src: string): Promise<void> => {
+export const preloadScript = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = src;
@@ -62,8 +61,8 @@ export const preloadScript = (src: string): Promise<void> => {
 
 };
 
-export const measurePerformance = (name: string, fn: () => void) => {
-  if (typeof window === 'undefined' || !('performance' in window)) {
+export const measurePerformance = (name: string, fn: () => void) => {,
+  if (typeof window === 'undefined' || !('performance' in window)) {,
     fn();
     return;
   }
@@ -83,37 +82,37 @@ export const getDeviceInfo = () => {
 
   const width = window.innerWidth;
   return {
-    isMobile: width < 768,
-    isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024,
+    isMobile: width < 768;
+    isTablet: width >= 768 && width < 1024;
+    isDesktop: width >= 1024;
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {
+  constructor(config?: Partial<OptimizationConfig>) {,
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
   /**
-   * Initialize performance monitoring
+   * Initialize performance monitoring;
    */
   private initializePerformanceMonitoring(): void {
     if (typeof window === 'undefined') return;
-    // Monitor page load performance
+    // Monitor page load performance;
     window.addEventListener('load', () => {
       this.measureLoadTime();
       this.measureMemoryUsage();
 
-    // Monitor render performance
+    // Monitor render performance;
     this.measureRenderTime();
   }
   /**
-   * Public init method for external initialization
+   * Public init method for external initialization;
    */
   public init(): void {
     this.initializePerformanceMonitoring();
   }
   /**
-   * Measure page load time
+   * Measure page load time;
    */
   private measureLoadTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
@@ -125,7 +124,7 @@ export const getDeviceInfo = () => {
       }
     } catch () {}}
   /**
-   * Measure render time using PerformanceObserver
+   * Measure render time using PerformanceObserver;
    */
   private measureRenderTime(): void {
     // Check if PerformanceObserver exists (may not be available in test environments)
@@ -142,7 +141,7 @@ export const getDeviceInfo = () => {
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
+      // PerformanceObserver may not support 'measure' entryType in some environments;
       }
   }
   private observeLCP() {
@@ -150,46 +149,46 @@ export const getDeviceInfo = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime
+        this.metrics.lcp = lastEntry.startTime;
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFID() {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {,
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeCLS() {
     try {
-      let clsValue = 0
+      let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {,
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value
+            clsValue += clsEntry.value;
           }
         })
-        this.metrics.cls = clsValue
+        this.metrics.cls = clsValue;
       })
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFCP() {
@@ -198,43 +197,43 @@ export const getDeviceInfo = () => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            this.metrics.fcp = entry.startTime
+            this.metrics.fcp = entry.startTime;
           }
         })
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeTTFB() {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {,
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
           }
         })
       })
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
+      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       if (memory) {
-        this.metrics.memoryUsage = memory.usedJSHeapSize
+        this.metrics.memoryUsage = memory.usedJSHeapSize;
       }
     }
   }
   /**
-   * Measure memory usage
+   * Measure memory usage;
    */
   private measureMemoryUsage(): void {
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
@@ -250,24 +249,24 @@ export const getDeviceInfo = () => {
     }
   }
   /**
-   * Optimize images for better performance
+   * Optimize images for better performance;
    */
   public optimizeImages(): void {
     if (typeof window === 'undefined') return;
     if (!this.config.enableImageOptimization) return;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" for better performance
+      // Add loading="lazy" for better performance;
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      // Add proper alt text if missing
+      // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group content');
       }
-      // Optimize image format
+      // Optimize image format;
       if (img.src.includes('.webp') || img.src.includes('.webp')) {
-        // Convert to WebP if supported
+        // Convert to WebP if supported;
         if (this.supportsWebP()) {
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }

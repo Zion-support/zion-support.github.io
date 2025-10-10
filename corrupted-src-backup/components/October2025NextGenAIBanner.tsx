@@ -1,6 +1,5 @@
 const, October2025NextGenAIBanne, r = () => {
-  return (
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
@@ -74,7 +73,7 @@ const, October2025NextGenAIBanne, r = () => {
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-purp, l, e-300, m, b-2">98.7%</d, i, v>";
             <div, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Prediction, Accurac, y</d, i, v>";
           </d, i, v>
-          <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-pi, n, k-300, m, b-2">11.7x</d, i, v>";
             <div, className="te, x, t-pi, n, k-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>";
@@ -84,9 +83,9 @@ const, October2025NextGenAIBanne, r = () => {
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Collaborative, AI, Agent Tea, m, s */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-collaborati, v, e-ai-age, n, t-tea, m, s-enterpri, s, e"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-cy, a, n-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-cy, a, n-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6">
@@ -102,14 +101,14 @@ const, October2025NextGenAIBanne, r = () => {
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
   r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Collaborative, AI, Agent Tea, m, s: Enterprise, Coordination, Revolution
+              Collaborative, AI, Agent Tea, m, s: Enterprise, Coordination, Revolution;
             </h3>
             <p, className="te, x, t-bl, u, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">";
-              Collaborative, AI, Agent Te, a, m
-  s: Enterprise, Coordination, Revolution
+              Collaborative, AI, Agent Te, a, m;
+  s: Enterprise, Coordination, Revolution;
             </h3>
             <p, className="te, x, t-bl, u, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
               Discover, how, collaborative agent, teams, achieve <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">3, 4, 0% productivity, gain, s</sp, a, n> throu, g, h ";
@@ -152,9 +151,9 @@ const, October2025NextGenAIBanne, r = () => {
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Re, a, l-Time, Adaptive, AI */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-adapti, v, e-ai-enterpri, s, e-syste, m, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-bl, u, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-bl, u, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6">
@@ -170,14 +169,14 @@ const, October2025NextGenAIBanne, r = () => {
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
   r: te, x, t-bl, u, e-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Re, a, l-Time, Adaptive, AI: Se, l, f-Learning, Enterprise, Systems
+              Re, a, l-Time, Adaptive, AI: Se, l, f-Learning, Enterprise, Systems;
             </h3>
             <p, className="te, x, t-bl, u, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colors, leadin, g-tig, h, t">";
-              Re, a, l-Time, Adaptive, A
-  I: Se, l, f-Learning, Enterprise, Systems
+              Re, a, l-Time, Adaptive, A;
+  I: Se, l, f-Learning, Enterprise, Systems;
             </h3>
             <p, className="te, x, t-bl, u, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
               Transform, your, enterprise with, AI, that learns, and, adapts continuous, l, y. Achie, v, e <span, className="te, x, t-bl, u, e-300, fon, t-semibo, l, d">4, 2, 0% faster, response, times</sp, a, n> a, n, d ";
@@ -220,9 +219,9 @@ const, October2025NextGenAIBanne, r = () => {
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Hybrid, Huma, n-AI, Intelligenc, e */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-hybr, i, d-hum, a, n-ai-intelligen, c, e-augmentati, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-purp, l, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-purp, l, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-purp, l, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-purp, l, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6">
@@ -238,14 +237,14 @@ const, October2025NextGenAIBanne, r = () => {
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
   r: te, x, t-purp, l, e-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Hybrid, Huma, n-AI, Intelligenc, e: Cognitive, Augmentation, Revolution
+              Hybrid, Huma, n-AI, Intelligenc, e: Cognitive, Augmentation, Revolution;
             </h3>
             <p, className="te, x, t-purp, l, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colors, leadin, g-tig, h, t">";
-              Hybrid, Huma, n-AI, Intelligen, c
-  e: Cognitive, Augmentation, Revolution
+              Hybrid, Huma, n-AI, Intelligen, c;
+  e: Cognitive, Augmentation, Revolution;
             </h3>
             <p, className="te, x, t-purp, l, e-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
               Amplify, human, intelligence by <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">5, 8, 0%</sp, a, n> through, seamless, human-AI, collaboratio, n. ";
@@ -301,18 +300,18 @@ const, October2025NextGenAIBanne, r = () => {
             creati, n, g <span, className="te, x, t-bl, u, e-300, fon, t-semibo, l, d">$18.7B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">11.7x, RO, I</sp, a, n>.";
           </p>
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e;
   r:sca, l, e-1, 0, 5"
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
               <Link, className="w-5 h-5  />
               <Link, className="w-5 h-5" />";
             </Li, n, k>
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e;
   r:sca, l, e-1, 0, 5"
             >
               <sp, a, n>Schedule, Consultatio, n</sp, a, n>
@@ -350,9 +349,9 @@ const, October2025NextGenAIBanne, r = () => {
               <span, className="fo, n, t-semibo, l, d">$18.7B, Client, Value Creat, e, d</sp, a, n>";
             </d, i, v>
           </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </d, i, v>)
+      </d, i, v>)
+    </d, i, v>)
   );
 };
 export default October2025NextGenAIBanner;

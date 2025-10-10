@@ -7,7 +7,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   {
-    ignores: [
+    ignores: [,
       'node_modules/**',
       '.next/**',
       'out/**',
@@ -67,46 +67,46 @@ export default [
       '__tests__/**'
     ]
   },
-  // Base JavaScript configuration
+  // Base JavaScript configuration;
   {
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    languageOptions: {,
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
+      parserOptions: {,
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
+        ecmaFeatures: {,
+          jsx: true;
         },
       },
     },
-    rules: {
-      ...js.configs.recommended.rules,
+    rules: {,
+      ...js.configs.recommended.rules;
       'no-unused-vars': 'warn',
       'no-console': 'warn',
     },
   },
-  // TypeScript configuration
+  // TypeScript configuration;
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    languageOptions: {,
       globals: { ...globals.browser, ...globals.node },
-      parser: tsParser,
+      parser: tsParser;
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 'latest'
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
+        ecmaFeatures: {,
+          jsx: true;
         },
       },
     },
-    plugins: {
-      '@typescript-eslint': tseslint,
+    plugins: {,
+      '@typescript-eslint': tseslint;
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
-    rules: {
-      ...tseslint.configs.recommended.rules,
+    rules: {,
+      ...tseslint.configs.recommended.rules;
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',

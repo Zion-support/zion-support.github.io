@@ -23,10 +23,9 @@ if (!container) {
 }
 
 const _root = createRoot(container);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+root.render(<React.StrictMode>)
+    <App />)
+  </React.StrictMode>)
 );
 
 reportWebVitals();

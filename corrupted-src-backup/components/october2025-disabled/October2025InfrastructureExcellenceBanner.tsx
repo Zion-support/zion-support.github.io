@@ -27,27 +27,26 @@ const October2025InfrastructureExcellenceBanne, r = () => {
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       metri, c, s: ['Kaf, k, a + Fl, i, n, k', 'Exact, l, y-on, c, e', '42% cost, cu, t'],
     },
-  ]; return (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>
+  ]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
         <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />
-      <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>
+      <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>,
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>
             <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />
             <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>
-              NEW, OCTOBER, 2025 CONTE, N, T
+              NEW, OCTOBER, 2025 CONTE, N, T;
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>
-            Infrastructure, Excellenc, e
+            Infrastructure, Excellenc, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
             Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
-            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
+            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from;
             enterprises, processing, billions of, events, daily.
           </p>
         </div>
@@ -72,9 +71,9 @@ const October2025InfrastructureExcellenceBanne, r = () => {
                   {/* Descripti, o, n */}
                   <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
                     {artic, l, e.description}
-                  </p>
-                  {/* Metri, c, s */}
-                  <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>
+                  </p>)
+                  {/* Metri, c, s */})
+                  <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>)
                     { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
                       <span, ke, y = { id, x  }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10'
                       >

@@ -2,27 +2,25 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function AIProjectManagementPage() {
-  return (
-    <div><Helmet>
+  return(<div><Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." />
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-project-management" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        <Navigation />
-
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-project-management" />
+      </Helmet>,
+,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+        <Navigation />,
+        <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Project Management
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
+              AI Project Management;
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Intelligent project management powered by AI
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+              Intelligent project management powered by AI;
+            </p>,
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
           </section>
@@ -30,11 +28,11 @@ export default function AIProjectManagementPage() {
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔮</div>
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>
-                <p className="text-gray-300 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              <div className="cyber-card p-6 energy-pulse">,
+                <div className="text-4xl mb-4 text-center">🔮</div>,
+                <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>,
+                <p className="text-gray-300 text-center">,
                   AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.
                 </p>
               </div>
@@ -84,7 +82,7 @@ export default function AIProjectManagementPage() {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Team</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg">/month</span></div>
@@ -123,15 +121,15 @@ export default function AIProjectManagementPage() {
                   <li>24/7 dedicated support</li>
                   <li>Custom AI training</li>
                 </ul>
-                <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
-            </div>
-          </section>
-
+                <a href="/contact" className="cyber-button w-full">Contact Sales</a>,
+              </div>,
+            </div>,
+          </section>,
+,
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="cyber-card p-6 text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-4">40%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Faster Delivery</h3>
@@ -154,29 +152,29 @@ export default function AIProjectManagementPage() {
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>
                 <p className="text-gray-300">85% increase in team productivity</p>
-              </div>
-            </div>
-          </section>
-
+              </div>,)
+            </div>,)
+          </section>,)
+),
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950
+                📞 Call: (302) 464-0950;
               </a>
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Trial
+                Get Free Trial;
               </a>
             </div>
           </section>
         </main>
 
         <Footer />
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 }

@@ -6,42 +6,42 @@ import { Cpu, Wifi, Shield, Zap, CheckCircle, ArrowRight, Star, Database, Globe,
 const IoTEdgeComputingPage: React.FC = () => {
   const services = [
     {
-      icon: Cpu,
+      icon: Cpu;
       title: 'Edge AI Processing',
       description: 'Deploy AI models directly on edge devices for real-time decision making and reduced latency.',
       features: ['Real-time AI inference', 'Model optimization', 'Edge training', 'Federated learning'],
       benefits: ['Ultra-low latency', 'Reduced bandwidth', 'Offline capabilities', 'Privacy protection']
     },
     {
-      icon: Wifi,
+      icon: Wifi;
       title: 'IoT Device Management',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       features: ['Device provisioning', 'Remote monitoring', 'OTA updates', 'Fleet management'],
       benefits: ['Centralized control', 'Automated updates', 'Predictive maintenance', 'Cost optimization']
     },
     {
-      icon: Shield,
+      icon: Shield;
       title: 'Edge Security',
       description: 'Advanced security solutions for edge devices and IoT networks with zero-trust architecture.',
       features: ['Device authentication', 'Encrypted communication', 'Threat detection', 'Compliance management'],
       benefits: ['End-to-end security', 'Real-time monitoring', 'Automated response', 'Regulatory compliance']
     },
     {
-      icon: Database,
+      icon: Database;
       title: 'Edge Data Management',
       description: 'Intelligent data processing and storage at the edge with cloud synchronization.',
       features: ['Local data processing', 'Smart filtering', 'Cloud sync', 'Data analytics'],
       benefits: ['Reduced data transfer', 'Faster insights', 'Cost efficiency', 'Real-time analytics']
     },
     {
-      icon: Globe,
+      icon: Globe;
       title: '5G Integration',
       description: 'Seamless integration with 5G networks for ultra-fast connectivity and low latency.',
       features: ['5G connectivity', 'Network slicing', 'Edge computing', 'Mobile edge computing'],
       benefits: ['Ultra-fast speeds', 'Low latency', 'High reliability', 'Massive connectivity']
     },
     {
-      icon: Settings,
+      icon: Settings;
       title: 'Edge Infrastructure',
       description: 'Complete edge computing infrastructure setup and management for your IoT ecosystem.',
       features: ['Edge servers', 'Network setup', 'Monitoring systems', 'Backup solutions'],
@@ -69,14 +69,14 @@ const IoTEdgeComputingPage: React.FC = () => {
     {
       title: 'Smart Manufacturing',
       description: 'Transform your factory with AI-powered edge computing for predictive maintenance and quality control.',
-      features: [
+      features: [,
         'Predictive maintenance',
         'Real-time quality control',
         'Automated defect detection',
         'Production optimization',
         'Energy efficiency monitoring'
       ],
-      benefits: [
+      benefits: [,
         '30% reduction in downtime',
         '25% improvement in quality',
         '20% energy savings',
@@ -86,14 +86,14 @@ const IoTEdgeComputingPage: React.FC = () => {
     {
       title: 'Connected Healthcare',
       description: 'Revolutionize patient care with edge computing for remote monitoring and real-time diagnostics.',
-      features: [
+      features: [,
         'Remote patient monitoring',
         'Real-time vital signs',
         'AI-powered diagnostics',
         'Emergency alerts',
         'Data privacy compliance'
       ],
-      benefits: [
+      benefits: [,
         'Faster diagnosis',
         'Reduced hospital visits',
         'Better patient outcomes',
@@ -103,14 +103,14 @@ const IoTEdgeComputingPage: React.FC = () => {
     {
       title: 'Smart Cities',
       description: 'Build intelligent cities with edge computing for traffic management, public safety, and resource optimization.',
-      features: [
+      features: [,
         'Smart traffic lights',
         'Public safety monitoring',
         'Environmental sensing',
         'Resource optimization',
         'Citizen services'
       ],
-      benefits: [
+      benefits: [,
         'Reduced traffic congestion',
         'Improved public safety',
         'Better resource utilization',
@@ -119,26 +119,25 @@ const IoTEdgeComputingPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group | Smart Device Solutions</title>
         <meta name="description" content="Transform your business with IoT and edge computing solutions. Real-time processing, AI at the edge, device management, and smart infrastructure." />
         <meta name="keywords" content="IoT development, edge computing, smart devices, real-time processing, AI at edge, device management, 5G integration" />
-        <link rel="canonical" href="https://ziontechgroup.com/iot-edge-computing" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+        <link rel="canonical" href="https: //ziontechgroup.com/iot-edge-computing" />,
+      </Helmet>,
+,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">,
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-cyan-500/20"></div>
           <div className="relative container mx-auto px-4 py-24">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">IoT & Edge Computing</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with intelligent IoT solutions and edge computing.
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">IoT & Edge Computing</span>,)
+              </h1>,)
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">,)
+                Transform your business with intelligent IoT solutions and edge computing.),
                 Real-time processing, AI at the edge, and smart device management for the connected world.
               </p>
               <div className="flex flex-wrap justify-center gap-8 mt-12">
@@ -165,20 +164,20 @@ const IoTEdgeComputingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 group">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover: border-green-400/40 transition-all duration-300 group">,
+                <div className="flex items-center mb-6">,
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">,
+                    <service.icon className="w-6 h-6 text-white" />,
+                  </div>,
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-green-400 mb-2">Features:</h4>
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">Features: </h4>,
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -187,7 +186,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                   ))}
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-700">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: </h4>,
                   {service.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
@@ -210,12 +209,12 @@ const IoTEdgeComputingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">,
               {industries.map((industry, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <industry.icon className="w-8 h-8 text-white" />
-                  </div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover: scale-110 transition-transform duration-300">,
+                    <industry.icon className="w-8 h-8 text-white" />,
+                  </div>,
                   <h3 className="text-white font-semibold mb-2">{industry.name}</h3>
                   <p className="text-gray-400 text-sm">{industry.description}</p>
                 </div>
@@ -233,17 +232,17 @@ const IoTEdgeComputingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover: border-green-400/40 transition-all duration-300">,
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-green-400 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-lg font-semibold text-green-400 mb-3">Key Features: </h4>,
+                  <ul className="space-y-2">,
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -254,8 +253,8 @@ const IoTEdgeComputingPage: React.FC = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits: </h4>,
+                  <ul className="space-y-2">,
                     {solution.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
@@ -265,11 +264,11 @@ const IoTEdgeComputingPage: React.FC = () => {
                   </ul>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
+                <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover: from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
+                  Learn More;
+                  <ArrowRight className="w-4 h-4 ml-2" />,
+                </button>,
+              </div>,
             ))}
           </div>
         </div>
@@ -282,24 +281,24 @@ const IoTEdgeComputingPage: React.FC = () => {
               Let our IoT and edge computing experts help you build intelligent, connected solutions.
               From concept to deployment, we've got you covered.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a;
                 href="/contact"
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Start Your Project;
               </a>
-              <a
+              <a;
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
-                View Case Studies
+                View Case Studies;
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div>,
+    </>,
   );
 };
 

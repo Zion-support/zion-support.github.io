@@ -1,7 +1,7 @@
 /**
- * Banner Lazy Loader Utility
+ * Banner Lazy Loader Utility;
  *
- * Optimizes banner loading by implementing lazy loading and code splitting
+ * Optimizes banner loading by implementing lazy loading and code splitting;
  * to improve initial page load performance.
  */
 
@@ -10,16 +10,16 @@ interface BannerModule {
 }
 
 /**
- * Lazy load a banner component with retry logic
+ * Lazy load a banner component with retry logic;
  */
 export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>,
-      // Retry once after a delay
+  importFn: () => Promise<BannerModule>
+      // Retry once after a delay;
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
-            .then(resolve)
-            .catch(retryError => {
+            .then(resolve),
+            .catch(retryError => {),
             });
         }, 1000);
       });
@@ -28,22 +28,22 @@ export const lazyLoadBanner = (
 };
 
 /**
- * Preload banner components for better performance
+ * Preload banner components for better performance;
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
-    // Preload on idle
+    // Preload on idle;
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        importFn().catch(() => {
-          // Silently fail for preload
+      requestIdleCallback(() => {,
+        importFn().catch(() => {,
+          // Silently fail for preload;
         });
       });
   }
 };
 
 /**
- * Banner loader with intersection observer
+ * Banner loader with intersection observer;
  */
 export const createBannerLoader = () => {
   const observer = new IntersectionObserver(
@@ -51,7 +51,7 @@ export const createBannerLoader = () => {
           const _element = entry.target as HTMLElement;
           const _importFn = element.dataset.bannerImport;
           if (importFn) {
-            // Load the banner when it comes into view
+            // Load the banner when it comes into view;
             eval(importFn)();
           }
         }

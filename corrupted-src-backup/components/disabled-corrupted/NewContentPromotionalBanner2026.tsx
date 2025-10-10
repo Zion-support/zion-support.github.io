@@ -25,8 +25,7 @@ const NewContentPromotionalBanner202, 6 = () => {
       ic, o, n: '🚀',
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
     }
-  ]; return (
-    <div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+  ]; return(<div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -39,19 +38,19 @@ const NewContentPromotionalBanner202, 6 = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6">
             <Globe, className="w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e" />
             <span, className="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
-              🌍 NEW, 2026, CONTENT REVOLUTI, O, N
+              🌍 NEW, 2026, CONTENT REVOLUTI, O, N;
             </sp, a, n>
             <Globe, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" />
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Revolutionary, Content, Just Releas, e, d
+            Revolutionary, Content, Just Releas, e, d;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
           </p>
-        </div>
-        {/* Content, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+        </div>)
+        {/* Content, G, r, i, d */})
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
@@ -98,7 +97,7 @@ const NewContentPromotionalBanner202, 6 = () => {
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12">
           <div, className="te, x, t-center, m, b-8">
             <h3, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Global, Impact, of Our, Revolutionary, Content
+              Global, Impact, of Our, Revolutionary, Content;
             </h3>
             <p, className="te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o">
               Our, innovative, content is, transforming, industries worldwide, and, creating unprecedented, valu, e.
@@ -129,7 +128,7 @@ const NewContentPromotionalBanner202, 6 = () => {
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-viol, e, t-500, vi, a-purp, l, e-500, t, o-bl, u, e-5, 0, 0">
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-                Join, the, Content Revoluti, o, n
+                Join, the, Content Revoluti, o, n;
               </h3>
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, 

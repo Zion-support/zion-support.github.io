@@ -13,31 +13,30 @@ interface AnalyticsProviderProps {
   trackingId?: string;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({,
+  children;
+  trackingId = 'G-XXXXXXXXXX',
 }) => {
   useEffect(() => {
-    // Initialize Google Analytics
+    // Initialize Google Analytics;
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-      // Load Google Analytics script
+      // Load Google Analytics script;
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
-      // Initialize gtag
+      // Initialize gtag;
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: any[]) {,
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
 
       gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
-
+      gtag('config', trackingId, {)
+        page_title: document.title),
+        page_location: window.location.href),
     }
   }, [trackingId]);
 
@@ -46,48 +45,45 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('event', event, properties);
     }
 
-    // Also log in development
+    // Also log in development;
     if (process.env.NODE_ENV === 'development') {
       }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        page_title: name,
-        page_location: window.location.href,
-        ...properties,
-
+      window.gtag('config', trackingId, {)
+        page_title: name;,)
+        page_location: window.location.href),
+        ...properties),
     }
 
-    // Also log in development
+    // Also log in development;
     if (process.env.NODE_ENV === 'development') {
       }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits,
-
+      window.gtag('config', trackingId, {)
+        user_id: userId),
+        ...traits),
     }
 
-    // Also log in development
+    // Also log in development;
     if (process.env.NODE_ENV === 'development') {
       }
   };
 
-  const value: AnalyticsContextType = {
-    track,
+  const value: AnalyticsContextType = {,
+    track;
     page,
     identify,
   };
 
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+  return(<AnalyticsContext.Provider value={value}>)
+      {children})
+    </AnalyticsContext.Provider>)
   );
 };
 
@@ -99,7 +95,7 @@ export const useAnalytics = (): AnalyticsContextType => {
   return context;
 };
 
-// Declare global gtag function
+// Declare global gtag function;
 declare global {
   interface Window {
     dataLayer: any[];

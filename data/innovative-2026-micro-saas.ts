@@ -1,8 +1,8 @@
 
   id: string;
   name: string;
-  tagline: string,
-  price: string,
+  tagline: string;
+  price: string;
   description: string;
   features: string[];
   link: string;
@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Innovative2026MicroSaas {;
+export interface Innovative2026MicroSaas {;,
     address: string}
 };
   id: string;
@@ -29,49 +29,49 @@ export interface Innovative2026MicroSaas {;
     address: string}
   }
 }
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
-  id: string, name: string,
-  tagline: string, price: string,
+  id: string, name: string;
+  tagline: string, price: string;
   description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: unknown,
-    mobile: string, email: string,
-    address: string,
+  link: string, category: string;
+  realImplementation: boolean;
+  contactInfo: unknown;
+    mobile: string, email: string;
+    address: string;
   }
 }
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [,
     id: "2026-micro-saas", name: "2026 Micro SAAS Platform",
-    tagline: "Next-generation micro SAAS solutions", price: "$89/month",
-    description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.",
+    tagline: "Next-generation micro SAAS solutions", price: "$89/month"
+    description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities."
     features: [;
       "Micro SAAS solutions"
       "Advanced features"
       "Scalable platform"
-      "Integration capabilities"
-      "Future-ready architecture"
+      "Integration capabilities",
+      "Future-ready architecture",
     ],
     link: "/services/2026-micro-saas", category: "Innovative 2026 Micro SAAS",
-    realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"
+    realImplementation: true;
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
-      email: "kleber@ziontechgroup.com"
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
 ;
-    id: "2026-micro-saas",
+    id: "2026-micro-saas"
     name: "2026 Micro SAAS Platform",
     tagline: "Next-generation micro SAAS solutions",
     price: "$89/month",
@@ -83,22 +83,22 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [,
       "Integration capabilities",
       "Future-ready architecture"
     ],
-    link: "/services/2026-micro-saas",
-    category: "Innovative 2026 Micro SAAS",
-    realImplementation: true,
-    contactInfo: unknown,
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
+    link: "/services/2026-micro-saas"
+    category: "Innovative 2026 Micro SAAS"
+    realImplementation: true;
+    contactInfo: unknown;
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   };
-];      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+];      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];

@@ -2,26 +2,26 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Star, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = () => {,
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
     {
-      id: 'ai-solutions',
-      title: 'AI Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      id: 'ai-solutions'
+      title: 'AI Solutions'
+      icon: Brain;
+      color: 'text-purple-400'
+      bgColor: 'bg-purple-500/10'
       content: {
         title: 'Revolutionary AI Solutions',
         description: 'Transform your business with cutting-edge artificial intelligence technologies',
-        features: [
+        features: [,
           { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
           { name: 'Natural Language Processing', description: 'Advanced text analysis and understanding', icon: '💬' },
           { name: 'Computer Vision', description: 'Image and video analysis capabilities', icon: '👁️' },
           { name: 'Predictive Analytics', description: 'Forecast trends and make data-driven decisions', icon: '📊' }
         ],
-        stats: [
+        stats: [,
           { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
           { label: 'Processing Speed', value: '10x Faster', icon: Zap },
           { label: 'Cost Reduction', value: '60%', icon: TrendingUp }
@@ -29,21 +29,21 @@ const DynamicContentShowcase: React.FC = () => {
       }
     },
     {
-      id: 'it-services',
-      title: 'IT Services',
-      icon: Shield,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
+      id: 'it-services'
+      title: 'IT Services'
+      icon: Shield;
+      color: 'text-blue-400'
+      bgColor: 'bg-blue-500/10'
       content: {
         title: 'Enterprise IT Solutions',
         description: 'Comprehensive IT services to keep your business running smoothly',
-        features: [
+        features: [,
           { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
           { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: '🔒' },
           { name: 'Network Management', description: 'Optimized network performance and reliability', icon: '🌐' },
           { name: '24/7 Support', description: 'Round-the-clock technical assistance', icon: '🛠️' }
         ],
-        stats: [
+        stats: [,
           { label: 'Uptime', value: '99.9%', icon: Clock },
           { label: 'Response Time', value: '< 1min', icon: Zap },
           { label: 'Client Satisfaction', value: '98%', icon: Star }
@@ -51,21 +51,21 @@ const DynamicContentShowcase: React.FC = () => {
       }
     },
     {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
-      icon: Zap,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
+      id: 'digital-transformation'
+      title: 'Digital Transformation'
+      icon: Zap;
+      color: 'text-green-400'
+      bgColor: 'bg-green-500/10'
       content: {
         title: 'Digital Transformation',
         description: 'Modernize your business processes with our digital transformation services',
-        features: [
+        features: [,
           { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
           { name: 'Legacy Modernization', description: 'Update outdated systems and technologies', icon: '🔄' },
           { name: 'Data Migration', description: 'Secure and efficient data transfer solutions', icon: '📦' },
           { name: 'Change Management', description: 'Support your team through digital transitions', icon: '👥' }
         ],
-        stats: [
+        stats: [,
           { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },
           { label: 'Time Saved', value: '40hrs/week', icon: Clock },
           { label: 'ROI', value: '250%', icon: TrendingUp }
@@ -76,24 +76,23 @@ const DynamicContentShowcase: React.FC = () => {
 
   const currentTab = tabs[activeTab];
 
-  return (
-    <section className="py-16" aria-labelledby="showcase-heading">
-      <div className="container mx-auto px-4">
-        <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-          Our Solutions
-        </h2>
-
-        <div className="max-w-6xl mx-auto">
+  return(<section className="py-16" aria-labelledby="showcase-heading">
+      <div className="container mx-auto px-4">)
+        <h2 id="showcase-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">)
+          Our Solutions;)
+        </h2>)
+),
+        <div className="max-w-6xl mx-auto">),
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {tabs.map((tab, index) => (
-              <button
+              <button;
                 key={tab.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
-                  activeTab === index
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  activeTab === index;}
                     ? `${tab.bgColor} ${tab.color} border-2 border-current`
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
                 }`}
                 aria-selected={activeTab === index}
                 role="tab"
@@ -105,21 +104,21 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md: p-12 cyber-card">,
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
               {/* Content */}
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">,
                   {currentTab.content.title}
                 </h3>
                 <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                   {currentTab.content.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">,
                   {currentTab.content.features.map((feature, index) => (
-                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
-                      <div className="flex items-start space-x-3">
+                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover: bg-slate-700/70 transition-colors">,
+                      <div className="flex items-start space-x-3">,
                         <span className="text-2xl">{feature.icon}</span>
                         <div>
                           <h4 className="font-semibold text-white mb-1">{feature.name}</h4>
@@ -150,7 +149,7 @@ const DynamicContentShowcase: React.FC = () => {
                 </div>
 
                 <div className="pt-6">
-                  <a
+                  <a;
                     href={`/${currentTab.id}`}
                     className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
                   >

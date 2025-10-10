@@ -3,13 +3,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Function to fix specific files with known issues
+// Function to fix specific files with known issues;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix App.tsx - remove unused imports
+    // Fix App.tsx - remove unused imports;
     if (filePath.includes('App.tsx')) {
       const unusedImports = [
         'ITConsultingPage',
@@ -23,8 +23,8 @@ function fixFile(filePath) {
         'CookiesPage'
       ];
       
-      // Remove unused imports
-      unusedImports.forEach(importName => {
+      // Remove unused imports;
+      unusedImports.forEach(importName => {)
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g');
         if (content.match(regex)) {
           content = content.replace(regex, '');
@@ -32,38 +32,38 @@ function fixFile(filePath) {
         }
       });
       
-      // Fix unused error parameter
+      // Fix unused error parameter;
       content = content.replace(/\(error\) => \{/, '() => {');
       modified = true;
     }
 
-    // Fix about/page.tsx - remove unused imports and fix export
+    // Fix about/page.tsx - remove unused imports and fix export;
     if (filePath.includes('about/page.tsx')) {
-      // Remove unused imports
+      // Remove unused imports;
       content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '');
       content = content.replace(/import\s+SEOOptimizer\s+from[^;]+;\s*/, '');
       
-      // Fix export
+      // Fix export;
       content = content.replace(/const AboutPage: React\.FC = \(\) => \{/, 'export default function AboutPage() {');
       content = content.replace(/export default AboutPage;/, '');
       modified = true;
     }
 
-    // Fix ai-crm/page.tsx - remove unused imports
+    // Fix ai-crm/page.tsx - remove unused imports;
     if (filePath.includes('ai-crm/page.tsx')) {
       content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '');
       content = content.replace(/import\s+Footer\s+from[^;]+;\s*/, '');
       modified = true;
     }
 
-    // Fix ai-customer-support/page.tsx - fix export
+    // Fix ai-customer-support/page.tsx - fix export;
     if (filePath.includes('ai-customer-support/page.tsx')) {
       content = content.replace(/const AICustomerSupportPage: React\.FC = \(\) => \{/, 'export default function AICustomerSupportPage() {');
       content = content.replace(/export default AICustomerSupportPage;/, '');
       modified = true;
     }
 
-    // Fix ai-writing-assistant/page.tsx - fix export
+    // Fix ai-writing-assistant/page.tsx - fix export;
     if (filePath.includes('ai-writing-assistant/page.tsx')) {
       content = content.replace(/const AIWritingAssistantPage: React\.FC = \(\) => \{/, 'export default function AIWritingAssistantPage() {');
       content = content.replace(/export default AIWritingAssistantPage;/, '');
@@ -79,7 +79,7 @@ function fixFile(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 console.log('🔧 Fixing remaining issues...\n');
 
 const filesToFix = [

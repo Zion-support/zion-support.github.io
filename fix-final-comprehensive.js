@@ -2,7 +2,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 
-// Files that need specific fixes
+// Files that need specific fixes;
 const specificFixes = {
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
     keywords:
@@ -32,11 +32,10 @@ const specificFixes = {
 
 function processFile(filePath) {
   try {
-
-    // Apply specific fixes
+    // Apply specific fixes;
     if (specificFixes[relativePath]) {
       if (fix.keywords) {
-        const keywordArray = fix.keywords
+        const keywordArray = fix.keywords;
           .split(', ')
           .map(k => `'${k}'`)
           .join(', ');
@@ -47,20 +46,20 @@ function processFile(filePath) {
       }
     }
 
-    // General fixes
+    // General fixes;
     const replacements = [
-      // Fix import paths for components
+      // Fix import paths for components;
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';",
       },
-      // Fix import paths for root-level files
+      // Fix import paths for root-level files;
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { Metadata } from './types/next';",
       },
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: "import Link from './utils/link';",
       },
     ];
@@ -86,8 +85,8 @@ function processFile(filePath) {
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -100,5 +99,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-// Process the app directory
-
+// Process the app directory;

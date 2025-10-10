@@ -59,7 +59,7 @@ import {
   PieChart,
   TrendingDown,
   Compass,
-  Navigation
+  Navigation;
 } from 'lucide-react';
 
 export default function CareersPage() {
@@ -91,20 +91,20 @@ export default function CareersPage() {
 
   const openPositions = [
     {
-      id: 1,
-      title: 'Senior AI Engineer',
-      department: 'engineering',
-      location: 'remote',
-      type: 'full-time',
-      level: 'Senior',
+      id: 1;
+      title: 'Senior AI Engineer'
+      department: 'engineering'
+      location: 'remote'
+      type: 'full-time'
+      level: 'Senior'
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
+      requirements: [,
         '5+ years experience in AI/ML',
         'Strong Python and TensorFlow skills',
         'Experience with cloud platforms',
         'PhD in Computer Science preferred'
       ],
-      benefits: [
+      benefits: [,
         'Competitive salary + equity',
         'Health, dental, vision insurance',
         '401k with company matching',
@@ -116,20 +116,20 @@ export default function CareersPage() {
       skills: ['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Docker']
     },
     {
-      id: 2,
-      title: 'AI Research Scientist',
-      department: 'ai-research',
-      location: 'san-francisco-ca',
-      type: 'full-time',
-      level: 'Senior',
+      id: 2;
+      title: 'AI Research Scientist'
+      department: 'ai-research'
+      location: 'san-francisco-ca'
+      type: 'full-time'
+      level: 'Senior'
       description: 'Conduct groundbreaking research in artificial intelligence and machine learning.',
-      requirements: [
+      requirements: [,
         'PhD in AI/ML or related field',
         'Strong publication record',
         'Experience with deep learning',
         'Knowledge of quantum computing'
       ],
-      benefits: [
+      benefits: [,
         'Research budget and resources',
         'Conference attendance',
         'Patent filing support',
@@ -141,20 +141,20 @@ export default function CareersPage() {
       skills: ['Research', 'Deep Learning', 'Quantum Computing', 'Publications']
     },
     {
-      id: 3,
-      title: 'Data Scientist',
-      department: 'data-science',
-      location: 'remote',
-      type: 'full-time',
-      level: 'Mid',
+      id: 3;
+      title: 'Data Scientist'
+      department: 'data-science'
+      location: 'remote'
+      type: 'full-time'
+      level: 'Mid'
       description: 'Analyze complex data sets and build predictive models for business insights.',
-      requirements: [
+      requirements: [,
         '3+ years data science experience',
         'Strong statistical background',
         'Python/R programming skills',
         'Experience with big data tools'
       ],
-      benefits: [
+      benefits: [,
         'Learning and development budget',
         'Mentorship program',
         'Career growth opportunities',
@@ -166,20 +166,20 @@ export default function CareersPage() {
       skills: ['Python', 'R', 'SQL', 'Machine Learning', 'Statistics']
     },
     {
-      id: 4,
-      title: 'Product Manager',
-      department: 'product',
-      location: 'middletown-de',
-      type: 'full-time',
-      level: 'Senior',
+      id: 4;
+      title: 'Product Manager'
+      department: 'product'
+      location: 'middletown-de'
+      type: 'full-time'
+      level: 'Senior'
       description: 'Lead product strategy and development for AI-powered solutions.',
-      requirements: [
+      requirements: [,
         '5+ years product management',
         'Experience with AI products',
         'Strong analytical skills',
         'MBA preferred'
       ],
-      benefits: [
+      benefits: [,
         'Product ownership',
         'Cross-functional collaboration',
         'Customer interaction',
@@ -191,20 +191,20 @@ export default function CareersPage() {
       skills: ['Product Strategy', 'AI Products', 'Analytics', 'Leadership']
     },
     {
-      id: 5,
-      title: 'DevOps Engineer',
-      department: 'engineering',
-      location: 'remote',
-      type: 'full-time',
-      level: 'Mid',
+      id: 5;
+      title: 'DevOps Engineer'
+      department: 'engineering'
+      location: 'remote'
+      type: 'full-time'
+      level: 'Mid'
       description: 'Build and maintain scalable cloud infrastructure for AI applications.',
-      requirements: [
+      requirements: [,
         '3+ years DevOps experience',
         'AWS/Azure/GCP expertise',
         'Kubernetes and Docker',
         'Infrastructure as Code'
       ],
-      benefits: [
+      benefits: [,
         'Cutting-edge technology',
         'Scalable systems',
         'Automation focus',
@@ -216,20 +216,20 @@ export default function CareersPage() {
       skills: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'CI/CD']
     },
     {
-      id: 6,
-      title: 'UX Designer',
-      department: 'product',
-      location: 'san-francisco-ca',
-      type: 'full-time',
-      level: 'Mid',
+      id: 6;
+      title: 'UX Designer'
+      department: 'product'
+      location: 'san-francisco-ca'
+      type: 'full-time'
+      level: 'Mid'
       description: 'Design intuitive user experiences for AI-powered applications.',
-      requirements: [
+      requirements: [,
         '3+ years UX design experience',
         'Portfolio of AI/ML products',
         'Figma and prototyping skills',
         'User research experience'
       ],
-      benefits: [
+      benefits: [,
         'Creative freedom',
         'User impact',
         'Design system ownership',
@@ -250,34 +250,34 @@ export default function CareersPage() {
 
   const benefits = [
     {
-      icon: Award,
+      icon: Award;
       title: 'Competitive Compensation',
-      description: 'Above-market salaries with equity participation and performance bonuses'
+      description: 'Above-market salaries with equity participation and performance bonuses',
     },
     {
-      icon: Heart,
+      icon: Heart;
       title: 'Health & Wellness',
       description: 'Comprehensive health, dental, and vision insurance with mental health support'
     },
     {
-      icon: Home,
+      icon: Home;
       title: 'Flexible Work',
-      description: 'Remote-first culture with flexible hours and unlimited PTO'
+      description: 'Remote-first culture with flexible hours and unlimited PTO',
     },
     {
-      icon: Brain,
+      icon: Brain;
       title: 'Learning & Growth',
       description: 'Annual learning budget, conference attendance, and mentorship programs'
     },
     {
-      icon: Users,
+      icon: Users;
       title: 'Team Culture',
-      description: 'Collaborative environment with regular team events and company retreats'
+      description: 'Collaborative environment with regular team events and company retreats',
     },
     {
-      icon: Globe,
+      icon: Globe;
       title: 'Global Impact',
-      description: 'Work on projects that make a real difference in the world'
+      description: 'Work on projects that make a real difference in the world',
     }
   ];
 
@@ -285,57 +285,56 @@ export default function CareersPage() {
     {
       title: 'Innovation First',
       description: 'We encourage experimentation and reward bold ideas that push boundaries',
-      icon: Sparkles
+      icon: Sparkles;
     },
     {
       title: 'Collaboration',
       description: 'We believe the best solutions come from diverse teams working together',
-      icon: Users
+      icon: Users;
     },
     {
-      title: 'Growth Mindset',
-      description: 'We invest in our people\'s development and provide opportunities to learn',
-      icon: TrendingUp
-    },
+      title: 'Growth Mindset',)
+      description: 'We invest in our people\'s development and provide opportunities to learn',)
+      icon: TrendingUp;,)
+    })
     {
-      title: 'Work-Life Balance',
-      description: 'We understand that great work comes from well-rested, happy people',
-      icon: Clock
+      title: 'Work-Life Balance'),
+      description: 'We understand that great work comes from well-rested, happy people')
+      icon: Clock;
     }
   ];
 
-  const getDepartmentIcon = (department: string) => {
-    const icons = {
-      engineering: Code,
+  const getDepartmentIcon = (department: string) => {,
+    const icons = {,
+      engineering: Code;
       'ai-research': Brain,
       'data-science': BarChart,
-      product: Target
+      product: Target;
     };
     return icons[department as keyof typeof icons] || Briefcase;
   };
 
-  const getDepartmentColor = (department: string) => {
-    const colors = {
+  const getDepartmentColor = (department: string) => {,
+    const colors = {,
       engineering: 'text-blue-400',
       'ai-research': 'text-purple-400',
       'data-science': 'text-green-400',
-      product: 'text-orange-400'
+      product: 'text-orange-400',
     };
     return colors[department as keyof typeof colors] || 'text-gray-400';
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Join Our Team
+              Join Our Team;
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Build the future of AI with us. Join a team of passionate innovators
+              Build the future of AI with us. Join a team of passionate innovators;
               working on cutting-edge technology that transforms businesses worldwide.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -350,34 +349,34 @@ export default function CareersPage() {
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <Award className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Top Benefits</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+              </div>)
+            </div>)
+          </div>)
+        </div>)
+      </section>),
+),
       {/* Filters */}
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex flex-col md: flex-row gap-4 mb-8">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search positions..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
               </div>
-              <div className="flex gap-2 overflow-x-auto">
-                {departments.map((dept) => (
-                  <button
+              <div className="flex gap-2 overflow-x-auto">,
+                {departments.map((dept) => (,
+                  <button;
                     key={dept.name}
                     onClick={() => setSelectedDepartment(dept.name)}
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
-                      selectedDepartment === dept.name
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                      selectedDepartment === dept.name;
+                        ? 'bg-cyan-500 text-white'}
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
                     }`}
                   >
                     {dept.label} ({dept.count})
@@ -387,13 +386,13 @@ export default function CareersPage() {
             </div>
             <div className="flex gap-2 overflow-x-auto">
               {locations.map((location) => (
-                <button
+                <button;
                   key={location.name}
                   onClick={() => setSelectedLocation(location.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
-                    selectedLocation === location.name
-                      ? 'bg-purple-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                    selectedLocation === location.name;
+                      ? 'bg-purple-500 text-white'}
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
                   }`}
                 >
                   {location.label} ({location.count})
@@ -402,13 +401,13 @@ export default function CareersPage() {
             </div>
             <div className="flex gap-2 overflow-x-auto mt-2">
               {jobTypes.map((type) => (
-                <button
+                <button;
                   key={type.name}
                   onClick={() => setSelectedType(type.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
-                    selectedType === type.name
-                      ? 'bg-green-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                    selectedType === type.name;
+                      ? 'bg-green-500 text-white'}
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
                   }`}
                 >
                   {type.label} ({type.count})
@@ -426,10 +425,10 @@ export default function CareersPage() {
             <h2 className="text-3xl font-bold text-white mb-8">Open Positions</h2>
             <div className="space-y-6">
               {filteredPositions.map((position) => (
-                <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
+                <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-700/50 transition-all duration-300">,
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">,
+                    <div className="flex-1">,
+                      <div className="flex items-center space-x-3 mb-2">,
                         <h3 className="text-2xl font-bold text-white">{position.title}</h3>
                         <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                           {position.level}
@@ -451,16 +450,16 @@ export default function CareersPage() {
                       </div>
                       <p className="text-gray-300 mb-4">{position.description}</p>
                     </div>
-                    <div className="lg:ml-6 lg:text-right">
+                    <div className="lg: ml-6 lg:text-right">,
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}</div>
                       <div className="text-gray-400 text-sm">{position.experience}</div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">,
+                    <div>,
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>,
+                      <ul className="space-y-1">,
                         {position.requirements.slice(0, 3).map((req, index) => (
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -470,8 +469,8 @@ export default function CareersPage() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills: </h4>,
+                      <div className="flex flex-wrap gap-2">,
                         {position.skills.map((skill, index) => (
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {skill}
@@ -481,19 +480,19 @@ export default function CareersPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
+                  <div className="flex flex-col sm: flex-row gap-4">,
+                    <Link;
                       to={`/careers/${position.id}`}
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover: from-cyan-600 hover:to-purple-700 transition-all text-center"
                     >
-                      Apply Now
+                      Apply Now;
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </Link>
                     <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">
-                      Save Job
-                    </button>
-                  </div>
-                </div>
+                      Save Job;
+                    </button>,
+                  </div>,
+                </div>,
               ))}
             </div>
           </div>
@@ -504,19 +503,19 @@ export default function CareersPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Why Work With Us?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We offer competitive benefits and a culture that values innovation, growth, and work-life balance
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">,
+              Why Work With Us?,
+            </h2>,
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
+              We offer competitive benefits and a culture that values innovation, growth, and work-life balance;
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
+                  <benefit.icon className="w-8 h-8 text-white" />,
+                </div>,
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
@@ -529,19 +528,19 @@ export default function CareersPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Culture
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Our Culture;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The values and principles that shape how we work together
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              The values and principles that shape how we work together;
+            </p>,
+          </div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {culture.map((item, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
+                  <item.icon className="w-8 h-8 text-white" />,
+                </div>,
                 <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
               </div>
@@ -553,31 +552,31 @@ export default function CareersPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Don't See the Right Role?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            We're always looking for talented individuals. Send us your resume and we'll
+            We're always looking for talented individuals. Send us your resume and we'll;
             reach out when we have a position that matches your skills.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Send Your Resume
+              Send Your Resume;
             </Link>
-            <Link
+            <Link;
               to="/team"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Users className="w-5 h-5 mr-2" />
-              Meet Our Team
+              Meet Our Team;
             </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </section>,
+    </div>,
   );
 }

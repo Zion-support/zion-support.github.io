@@ -8,7 +8,7 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
       bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
-      sta, t, s: [
+      sta, t, s: [,
         { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
         { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' },
@@ -22,7 +22,7 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
       bgGradie, n, t: 'fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-bl, u, e-5, 0, 0/3, 0',
-      sta, t, s: [
+      sta, t, s: [,
         { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t' },
         { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s' },
@@ -36,7 +36,7 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
       bgGradie, n, t: 'fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-emera, l, d-5, 0, 0/3, 0',
-      sta, t, s: [
+      sta, t, s: [,
         { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y' },
         { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e' },
@@ -50,7 +50,7 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-cy, a, n-600, t, o-bl, u, e-60, 0',
       bgGradie, n, t: 'fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-cy, a, n-5, 0, 0/3, 0',
-      sta, t, s: [
+      sta, t, s: [,
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s' },
         { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k' },
         { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s' },
@@ -64,35 +64,33 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
       bgGradie, n, t: 'fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-purp, l, e-5, 0, 0/3, 0',
-      sta, t, s: [
+      sta, t, s: [,
         { val, u, e: '<10, 0, m, s', lab, e, l: 'P95, Laten, c, y' },
         { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g' },
         { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' },
       ],
     },
-  ]; return (
-    <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
+  ]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'>
         {/* Head, e, r */}
         <div, className='te, x, t-center, m, b-12'>
           <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e'>
             <Sparkles, className='w-5 h-5, m, r-2' />
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5
+            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-            Latest, AI, Solutions & Insigh, t, s
+            Latest, AI, Solutions & Insigh, t, s;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to
-            enterprise, organization, s
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
+            enterprise, organization, s;
           </p>
-        </div>
-        {/* Featured, Content, Car, d, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>
+        </div>)
+        {/* Featured, Content, Car, d, s */})
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
-            const Ico, n = conte, n, t.ic, o, n; return (
-              <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+            const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
               >
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`}
@@ -111,9 +109,9 @@ const October2025FeaturedContentBanne, r = () => {
                         {conte, n, t.description}
                       </p>
                     </div>
-                  </div>
-                  {/* Sta, t, s */}
-                  <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
+                  </div>)
+                  {/* Sta, t, s */})
+                  <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>)
                     { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
                        > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
@@ -129,10 +127,10 @@ const October2025FeaturedContentBanne, r = () => {
                   {/* C, T, A */}
                   <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
-                      Published, Octobe, r , 1, 20, 2, 5
+                      Published, Octobe, r , 1, 20, 2, 5;
                     </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     >
-                      Read, Full, Article
+                      Read, Full, Article;
                       <Link, classNam, e = 'w-4 h-4, m, l-2' />
                     </div>
                   </div>
@@ -149,13 +147,13 @@ const October2025FeaturedContentBanne, r = () => {
             <Link, t, o='/bl, o, g'
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             >
-              Explore, All, Articles
+              Explore, All, Articles;
               <TrendingUp, className='w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
             >
-              Get, a, Free Consultati, o, n
+              Get, a, Free Consultati, o, n;
               <Link, className='w-5 h-5, m, l-2' />
             </Li, n, k>
           </div>
@@ -165,7 +163,7 @@ const October2025FeaturedContentBanne, r = () => {
           <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
             <d, i, v>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
-                $31.1M
+                $31.1M;
               </div>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Combined, Annual, Value</div>
             </div>
@@ -177,7 +175,7 @@ const October2025FeaturedContentBanne, r = () => {
             </div>
             <d, i, v>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
-                8-12, Week, s
+                8-12, Week, s;
               </div>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Implementation, Tim, e</div>
             </div>

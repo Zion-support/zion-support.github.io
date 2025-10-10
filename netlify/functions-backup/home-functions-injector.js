@@ -1,11 +1,11 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
+  const res = spawnSync('node', [abs, ...args], {)
+    stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
@@ -21,8 +21,8 @@ exports.handler = async () => {const logs = []}
     return status;
   };
   process.env.CANONICAL_URL =
-    process.env.CANONICAL_URL || 'https: //ziontechgroup.com'
-  step('home:functions:inject') () =>
+    process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
+  step('home:functions:inject') () =>,
     runNode('automation/home-functions-injector.cjs'),
   );
   step('git: sync') () => runNode('automation/advanced-git-sync.cjs'));

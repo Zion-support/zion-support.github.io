@@ -12,35 +12,34 @@ interface State {
 }
 
 export class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: Props) {,
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({ error, errorInfo });
 
-    // Log error to monitoring service
-    //     // Send to error tracking service
+    // Log error to monitoring service;
+    //     // Send to error tracking service;
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as any).gtag('event', 'exception', {)
         description: error.toString(),
-        fatal: false,
+        fatal: false;
       });
     }
   }
 
   render() {
     if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className="error-boundary">
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
+      return(this.props.fallback || ()
+          <div className="error-boundary">)
+            <h2>Something went wrong.</h2>)
+            <details style={{ whiteSpace: 'pre-wrap' }}>)
               {this.state.error && this.state.error.toString()}
               <br />
               {this.state.errorInfo?.componentStack}

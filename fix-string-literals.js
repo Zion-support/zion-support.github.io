@@ -1,24 +1,23 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
 console.log('🔧 Fixing unterminated string literals and syntax errors...');
 
-// Function to fix string literals and syntax errors
+// Function to fix string literals and syntax errors;
 function fixStringLiterals(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix unterminated string literals
+    // Fix unterminated string literals;
     const lines = content.split('\n');
     const newLines = [];
     
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
       
-      // Fix unterminated double quotes
+      // Fix unterminated double quotes;
       if (line.includes('"') && !line.match(/"[^"]*"/)) {
         const quoteCount = (line.match(/"/g) || []).length;
         if (quoteCount % 2 === 1) {
@@ -27,7 +26,7 @@ function fixStringLiterals(filePath) {
         }
       }
       
-      // Fix unterminated single quotes
+      // Fix unterminated single quotes;
       if (line.includes("'") && !line.match(/'[^']*'/)) {
         const quoteCount = (line.match(/'/g) || []).length;
         if (quoteCount % 2 === 1) {
@@ -36,7 +35,7 @@ function fixStringLiterals(filePath) {
         }
       }
       
-      // Fix unterminated template literals
+      // Fix unterminated template literals;
       if (line.includes('`') && !line.match(/`[^`]*`/)) {
         const backtickCount = (line.match(/`/g) || []).length;
         if (backtickCount % 2 === 1) {
@@ -45,73 +44,73 @@ function fixStringLiterals(filePath) {
         }
       }
       
-      // Fix incomplete imports
+      // Fix incomplete imports;
       if (line.startsWith('import ') && !line.endsWith(';') && !line.includes('{') && !line.includes('(')) {
         line = line + ';';
         modified = true;
       }
       
-      // Fix incomplete exports
+      // Fix incomplete exports;
       if (line.startsWith('export ') && !line.endsWith(';') && !line.includes('{') && !line.includes('(')) {
         line = line + ';';
         modified = true;
       }
       
-      // Fix incomplete function declarations
+      // Fix incomplete function declarations;
       if (line.match(/^\s*function\s+\w+\s*\(\s*\)\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  return null;\n}');
         modified = true;
       }
       
-      // Fix incomplete arrow functions
+      // Fix incomplete arrow functions;
       if (line.match(/^\s*const\s+\w+\s*=\s*\(\s*\)\s*=>\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  return null;\n}');
         modified = true;
       }
       
-      // Fix incomplete JSX elements
+      // Fix incomplete JSX elements;
       if (line.match(/<\w+\s*$/)) {
         line = line + '>';
         modified = true;
       }
       
-      // Fix incomplete JSX closing tags
+      // Fix incomplete JSX closing tags;
       if (line.match(/<\/\s*$/)) {
         line = line + 'div>';
         modified = true;
       }
       
-      // Fix incomplete object declarations
+      // Fix incomplete object declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  // TODO: Add properties\n}');
         modified = true;
       }
       
-      // Fix incomplete array declarations
+      // Fix incomplete array declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
         line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
-        modified = true;
+        modified = true;,
       }
       
-      // Fix incomplete function calls
+      // Fix incomplete function calls;
       if (line.match(/^\s*\w+\s*\(\s*$/)) {
         line = line.replace(/\(\s*$/, '()');
         modified = true;
       }
       
-      // Fix incomplete object property access
+      // Fix incomplete object property access;
       if (line.match(/^\s*\w+\.\s*$/)) {
         line = line.replace(/\.\s*$/, '');
         modified = true;
       }
       
-      // Fix incomplete comments
+      // Fix incomplete comments;
       if (line.match(/\/\*[^*]*$/)) {
         line = line + ' */';
         modified = true;
       }
       
-      // Fix incomplete single-line comments
+      // Fix incomplete single-line comments;
       if (line.trim() === '//') {
         line = '// TODO: Add comment';
         modified = true;
@@ -122,20 +121,19 @@ function fixStringLiterals(filePath) {
     
     content = newLines.join('\n');
     
-    // Fix empty files
+    // Fix empty files;
     if (content.trim().length === 0) {
       content = `export default function Page() {
-  return (
-    <div>
-      <h1>Page</h1>
-      <p>Content coming soon...</p>
-    </div>
+  return(<div>)
+      <h1>Page</h1>)
+      <p>Content coming soon...</p>)
+    </div>)
   );
 }`;
       modified = true;
     }
     
-    // Ensure file ends with newline
+    // Ensure file ends with newline;
     if (!content.endsWith('\n')) {
       content += '\n';
       modified = true;
@@ -154,7 +152,7 @@ function fixStringLiterals(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const files = [];
   
@@ -167,7 +165,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          // Skip node_modules and other common directories
+          // Skip node_modules and other common directories;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath);
           }
@@ -179,7 +177,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         }
       }
     } catch (error) {
-      // Skip directories we can't read
+      // Skip directories we can't read;
     }
   }
   
@@ -187,7 +185,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-// Main execution
+// Main execution;
 const srcDir = path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
@@ -207,7 +205,7 @@ for (const file of files) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: `);
 console.log(`✅ Files fixed: ${fixedCount}`);
 console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);

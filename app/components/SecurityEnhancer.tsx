@@ -10,21 +10,20 @@ interface SecurityMetrics {
   suspiciousActivity: number;
 }
 
-export const SecurityEnhancer: React.FC = () => {
+export const SecurityEnhancer: React.FC = () => {,
   const [metrics, setMetrics] = useState<SecurityMetrics>({
-    cspViolations: 0,
-    xssAttempts: 0,
-    csrfAttempts: 0,
-    suspiciousActivity: 0,
-
+    cspViolations: 0;
+    xssAttempts: 0;
+    csrfAttempts: 0;
+    suspiciousActivity: 0;
   const [isSecure, setIsSecure] = useState(true);
   const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
 
-  // Content Security Policy monitoring
+  // Content Security Policy monitoring;
   const monitorCSP = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor CSP violations
+    // Monitor CSP violations;
     const originalConsoleError = console.error;
     console.error = (...args) => {
       const message = args.join(' ');
@@ -35,10 +34,10 @@ export const SecurityEnhancer: React.FC = () => {
       originalConsoleError.apply(console, args);
     };
 
-    // Monitor for XSS attempts
+    // Monitor for XSS attempts;
     const checkForXSS = () => {
       const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
+      scripts.forEach(script => {)
         if (script.src && !script.src.startsWith(window.location.origin)) {
           setMetrics(prev => ({ ...prev, xssAttempts: prev.xssAttempts + 1 }));
           logger.warn('Potential XSS attempt detected', { src: script.src });
@@ -48,9 +47,9 @@ export const SecurityEnhancer: React.FC = () => {
 
     checkForXSS();
 
-    // Monitor form submissions for CSRF
+    // Monitor form submissions for CSRF;
     const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
+    forms.forEach(form => {)
       form.addEventListener('submit', (e) => {
         const formData = new FormData(form as HTMLFormElement);
         const token = formData.get('csrf_token');
@@ -63,20 +62,20 @@ export const SecurityEnhancer: React.FC = () => {
 
   }, []);
 
-  // Input sanitization
-  const sanitizeInput = useCallback((input: string): string => {
-    return input
+  // Input sanitization;
+  const sanitizeInput = useCallback((input: string): string => {,
+    return input;
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
       .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+\s*=/gi, '');
   }, []);
 
-  // Validate URLs
-  const validateURL = useCallback((url: string): boolean => {
-    try {
+  // Validate URLs;
+  const validateURL = useCallback((url: string): boolean => {,
+    try {,
       const urlObj = new URL(url);
-      const allowedProtocols = ['http:', 'https:'];
+      const allowedProtocols = ['http:', 'https: '];
       const allowedHosts = ['ziontechgroup.com', 'www.ziontechgroup.com'];
 
       return allowedProtocols.includes(urlObj.protocol) &&
@@ -86,11 +85,11 @@ export const SecurityEnhancer: React.FC = () => {
     }
   }, []);
 
-  // Monitor suspicious activity
+  // Monitor suspicious activity;
   const monitorSuspiciousActivity = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for suspicious patterns
+    // Monitor for suspicious patterns;
     const suspiciousPatterns = [
       /eval\s*\(/gi,
       /Function\s*\(/gi,
@@ -102,15 +101,15 @@ export const SecurityEnhancer: React.FC = () => {
 
     const checkSuspiciousCode = () => {
       const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
-        const content = script.textContent || '';
-        suspiciousPatterns.forEach(pattern => {
+      scripts.forEach(script => {)
+        const content = script.textContent || '';)
+        suspiciousPatterns.forEach(pattern => {)
           if (pattern.test(content)) {
             setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-            logger.warn('Suspicious code pattern detected', {
+            logger.warn('Suspicious code pattern detected', {)
               pattern: pattern.toString(),
-              script: script.id || 'inline'
-
+              script: script.id || 'inline',
+,
           }
 
 
@@ -118,7 +117,7 @@ export const SecurityEnhancer: React.FC = () => {
 
     checkSuspiciousCode();
 
-    // Monitor for unusual network requests
+    // Monitor for unusual network requests;
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
@@ -134,14 +133,14 @@ export const SecurityEnhancer: React.FC = () => {
 
   }, [validateURL]);
 
-  // Security headers validation
+  // Security headers validation;
   const validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     const warnings: string[] = [];
 
-    // Check for HTTPS
-    if (location.protocol !== 'https:') {
+    // Check for HTTPS;
+    if (location.protocol !== 'https:') {,
       warnings.push('Site is not served over HTTPS');
       setIsSecure(false);
     }
@@ -167,15 +166,15 @@ export const SecurityEnhancer: React.FC = () => {
     }
   }, []);
 
-  // Rate limiting
+  // Rate limiting;
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
     const windowStart = now - windowMs;
-
+,
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
-
-    if (requests.length >= limit) {
+,
+    if (requests.length >= limit) {,
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
       return false;
     }
@@ -185,40 +184,38 @@ export const SecurityEnhancer: React.FC = () => {
     return true;
   }, []);
 
-  // Initialize security monitoring
+  // Initialize security monitoring;
   useEffect(() => {
     monitorCSP();
     monitorSuspiciousActivity();
     validateSecurityHeaders();
 
-    // Set up periodic security checks
+    // Set up periodic security checks;
     const interval = setInterval(() => {
       validateSecurityHeaders();
-    }, 30000); // Check every 30 seconds
-
+    }, 30000); // Check every 30 seconds;
     return () => clearInterval(interval);
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
 
-  // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
+  // Security event handlers;
+  const handleSecurityEvent = useCallback((event: string, data: any) => {,
     logger.info('Security event', { event, data });
 
-    // Rate limit security events
+    // Rate limit security events;
     if (!rateLimit('security_events', 10, 60000)) {
       return;
     }
 
-    // Send to security monitoring service
+    // Send to security monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'security_event', {
-        event_category: 'Security',
-        event_label: event,
-        custom_map: data,
-
+      (window as any).gtag('event', 'security_event', {)
+        event_category: 'Security',)
+        event_label: event),
+        custom_map: data),
     }
   }, [rateLimit]);
 
-  // Expose security utilities globally for debugging
+  // Expose security utilities globally for debugging;
   useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).securityUtils = {
@@ -227,18 +224,17 @@ export const SecurityEnhancer: React.FC = () => {
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings,
+        warnings: securityWarnings;
       };
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
-  return (
-    <>
-      {/* Security Status Indicator */}
-      {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
+  return(<>)
+      {/* Security Status Indicator */})
+      {!isSecure && ()
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">)
+          ⚠️ Security Warning: This site is not served over HTTPS;),
+        </div>),
       )}
 
       {/* Security Warnings */}

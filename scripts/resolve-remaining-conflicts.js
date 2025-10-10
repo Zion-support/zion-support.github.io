@@ -1,39 +1,38 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🔧 Resolving remaining merge conflicts...\n');
 
-// Function to resolve merge conflicts in a file
+// Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
+    // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`);
       
-      // Advanced conflict resolution strategy
-      let resolvedContent = content
-        // Handle standard merge conflicts - prefer incoming changes
+      // Advanced conflict resolution strategy;
+      let resolvedContent = content;
+        // Handle standard merge conflicts - prefer incoming changes;
         .replace(/[\s\S]*?[\s\S]*?          const parts = match.split('');
           if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming;
-          }
-          return match;
+            const incoming = parts[1].replace(/            return incoming;)
+          })
+          return match;)
         })
-        // Handle other conflict patterns
+        // Handle other conflict patterns;
         .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?          const parts = match.split('');
           if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming;
-          }
-          return match;
+            const incoming = parts[1].replace(/            return incoming;)
+          })
+          return match;)
         })
-        // Clean up any remaining conflict markers
+        // Clean up any remaining conflict markers;
         .replace(/<<<<<<< [^\n]+/g, '')
         .replace(//g, '')
-        .replace(/      
+        .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
       console.log(`✅ Resolved merge conflicts in ${filePath}`);
       return true;
@@ -45,7 +44,7 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
-// List of files with conflicts
+// List of files with conflicts;
 const conflictedFiles = [
   'App.tsx',
   'app/ai-services/page.tsx',
@@ -58,7 +57,7 @@ const conflictedFiles = [
 async function main() {
   console.log('🚀 Resolving remaining merge conflicts...\n');
   
-  // Resolve conflicts in each file
+  // Resolve conflicts in each file;
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
@@ -69,7 +68,7 @@ async function main() {
   console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
   
   if (resolvedCount > 0) {
-    // Add resolved files
+    // Add resolved files;
     console.log('\n📝 Adding resolved files...');
     try {
       execSync('git add .', { encoding: 'utf8', cwd: process.cwd() });
@@ -78,7 +77,7 @@ async function main() {
       console.log('❌ Error adding files:', error.message);
     }
     
-    // Commit the resolution
+    // Commit the resolution;
     console.log('\n📝 Committing merge resolution...');
     try {
       execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() });
@@ -88,9 +87,9 @@ async function main() {
     }
   }
   
-  // Final status
-  console.log('\n📊 Final Status:');
-  try {
+  // Final status;
+  console.log('\n📊 Final Status: ');
+  try {,
     const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() });
     console.log(status);
   } catch (error) {

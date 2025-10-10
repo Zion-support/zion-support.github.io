@@ -3,62 +3,60 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const CloudMigration: React.FC = () => {
+const CloudMigration: React.FC = () => {,
   const [currentInfrastructure, setCurrentInfrastructure] = useState('');
   const [targetCloud, setTargetCloud] = useState('');
   const [migrationScope, setMigrationScope] = useState('');
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cloud Migration Services
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+            Cloud Migration Services;
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
-            Seamlessly migrate your infrastructure to the cloud with zero downtime
+            Seamlessly migrate your infrastructure to the cloud with zero downtime;
           </p>
 
           <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-white font-medium mb-2">Current Infrastructure</label>
-                  <select
+            <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>)
+            <div className="space-y-6">)
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
+                <div>)
+                  <label className="block text-white font-medium mb-2">Current Infrastructure</label>),
+                  <select;),
                     value={currentInfrastructure}
                     onChange={(e) => setCurrentInfrastructure(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
                   >
                     <option value="">Select current setup...</option>
                     <option value="on-premise">On-Premise</option>
                     <option value="hybrid">Hybrid Cloud</option>
                     <option value="other-cloud">Other Cloud Provider</option>
                     <option value="legacy">Legacy Systems</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Target Cloud</label>
-                  <select
+                  </select>,
+                </div>,
+                <div>,
+                  <label className="block text-white font-medium mb-2">Target Cloud</label>,
+                  <select;
                     value={targetCloud}
                     onChange={(e) => setTargetCloud(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
                   >
                     <option value="">Select target...</option>
                     <option value="aws">Amazon Web Services</option>
                     <option value="azure">Microsoft Azure</option>
                     <option value="gcp">Google Cloud Platform</option>
                     <option value="multi-cloud">Multi-Cloud</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Migration Scope</label>
-                  <select
+                  </select>,
+                </div>,
+                <div>,
+                  <label className="block text-white font-medium mb-2">Migration Scope</label>,
+                  <select;
                     value={migrationScope}
                     onChange={(e) => setMigrationScope(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
                   >
                     <option value="">Select scope...</option>
                     <option value="lift-shift">Lift & Shift</option>
@@ -69,7 +67,7 @@ const CloudMigration: React.FC = () => {
                 </div>
               </div>
               <button className="cyber-button w-full">
-                Get Migration Plan
+                Get Migration Plan;
               </button>
             </div>
           </div>
@@ -158,9 +156,9 @@ const CloudMigration: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
+            <div className="cyber-card p-6 text-center">,
+              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
               <ul className="text-gray-300 space-y-2">
                 <li>Up to 10 servers</li>
@@ -194,24 +192,24 @@ const CloudMigration: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <a
-              href="tel:+13024640950"
+            <a;
+              href="tel: +13024640950"
               className="cyber-button mr-4"
             >
-              📞 Call: (302) 464-0950
+              📞 Call: (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Migration Quote
+              Get Migration Quote;
             </a>
           </div>
         </div>
       </main>
 
-      <Footer />
-    </div>
+      <Footer />,
+    </div>,
   );
 };
 

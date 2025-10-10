@@ -1,6 +1,6 @@
 /**
- * Advanced Performance Monitor
- * Real-time performance monitoring and optimization
+ * Advanced Performance Monitor;
+ * Real-time performance monitoring and optimization;
  */
 
 interface PerformanceData {
@@ -28,21 +28,21 @@ class AdvancedPerformanceMonitor {
   private data: PerformanceData[] = [];
   private thresholds: PerformanceThresholds;
   private observer: PerformanceObserver | null = null;
-  private isMonitoring = false;
-
+  private isMonitoring = false;,
+,
   constructor(thresholds: Partial<PerformanceThresholds> = {}) {
     this.thresholds = {
-      loadTime: 3000,
-      firstContentfulPaint: 1800,
-      largestContentfulPaint: 2500,
-      cumulativeLayoutShift: 0.1,
-      firstInputDelay: 100,
+      loadTime: 3000;
+      firstContentfulPaint: 1800;
+      largestContentfulPaint: 2500;
+      cumulativeLayoutShift: 0.1;
+      firstInputDelay: 100;
       ...thresholds,
     };
   }
 
   /**
-   * Start performance monitoring
+   * Start performance monitoring;
    */
   public startMonitoring(): void {
     if (this.isMonitoring || typeof window === 'undefined') return;
@@ -56,7 +56,7 @@ class AdvancedPerformanceMonitor {
     //     }
 
   /**
-   * Stop performance monitoring
+   * Stop performance monitoring;
    */
   public stopMonitoring(): void {
     this.isMonitoring = false;
@@ -67,14 +67,14 @@ class AdvancedPerformanceMonitor {
     //     }
 
   /**
-   * Get performance data
+   * Get performance data;
    */
   public getPerformanceData(): PerformanceData[] {
     return [...this.data];
   }
 
   /**
-   * Get performance summary
+   * Get performance summary;
    */
   public getPerformanceSummary(): {
     averageLoadTime: number;
@@ -86,12 +86,12 @@ class AdvancedPerformanceMonitor {
   } {
     if (this.data.length === 0) {
       return {
-        averageLoadTime: 0,
-        averageFCP: 0,
-        averageLCP: 0,
-        averageCLS: 0,
-        averageFID: 0,
-        performanceScore: 0,
+        averageLoadTime: 0;
+        averageFCP: 0;
+        averageLCP: 0;
+        averageCLS: 0;
+        averageFID: 0;
+        performanceScore: 0;
       };
     }
 
@@ -104,80 +104,80 @@ class AdvancedPerformanceMonitor {
     const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
 
     // Calculate performance score (0-100)
-    const performanceScore = this.calculatePerformanceScore({
-      loadTime: avgLoadTime,
-      firstContentfulPaint: avgFCP,
-      largestContentfulPaint: avgLCP,
-      cumulativeLayoutShift: avgCLS,
-      firstInputDelay: avgFID,
+    const performanceScore = this.calculatePerformanceScore({)
+      loadTime: avgLoadTime;)
+      firstContentfulPaint: avgFCP;)
+      largestContentfulPaint: avgLCP;),
+      cumulativeLayoutShift: avgCLS),
+      firstInputDelay: avgFID),
     });
 
     return {
-      averageLoadTime: avgLoadTime,
-      averageFCP: avgFCP,
-      averageLCP: avgLCP,
-      averageCLS: avgCLS,
-      averageFID: avgFID,
+      averageLoadTime: avgLoadTime;
+      averageFCP: avgFCP;
+      averageLCP: avgLCP;
+      averageCLS: avgCLS;
+      averageFID: avgFID;
       performanceScore,
     };
   }
 
   /**
-   * Setup Performance Observer
+   * Setup Performance Observer;
    */
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver' in window)) return;
 
-    this.observer = new PerformanceObserver(list => {
+    this.observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      entries.forEach(entry => {
+      entries.forEach(entry => {)
         this.handlePerformanceEntry(entry);
       });
     });
 
     try {
-      this.observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'],
+      this.observer.observe({)
+        entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
       });
     } catch (error) {
       //       }
   }
 
   /**
-   * Setup Web Vitals monitoring
+   * Setup Web Vitals monitoring;
    */
   private setupWebVitals(): void {
     if (typeof window === 'undefined') return;
 
-    // Dynamic import to avoid bundle size impact
+    // Dynamic import to avoid bundle size impact;
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(metric => {
+        getCLS(metric => {)
           this.updateMetric('cumulativeLayoutShift', metric.value);
         });
 
-        getFID(metric => {
+        getFID(metric => {)
           this.updateMetric('firstInputDelay', metric.value);
         });
 
-        getFCP(metric => {
+        getFCP(metric => {)
           this.updateMetric('firstContentfulPaint', metric.value);
         });
 
-        getLCP(metric => {
+        getLCP(metric => {)
           this.updateMetric('largestContentfulPaint', metric.value);
         });
 
-        getTTFB(metric => {
+        getTTFB(metric => {)
           this.updateMetric('loadTime', metric.value);
         });
       })
-      .catch(error => {
+      .catch(error => {)
         //         });
   }
 
   /**
-   * Setup memory monitoring
+   * Setup memory monitoring;
    */
   private setupMemoryMonitoring(): void {
     if (!('memory' in performance)) return;
@@ -189,13 +189,13 @@ class AdvancedPerformanceMonitor {
       }
     };
 
-    // Check memory every 30 seconds
+    // Check memory every 30 seconds;
     setInterval(checkMemory, 30000);
-    checkMemory(); // Initial check
+    checkMemory(); // Initial check;
   }
 
   /**
-   * Setup network monitoring
+   * Setup network monitoring;
    */
   private setupNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
@@ -207,12 +207,12 @@ class AdvancedPerformanceMonitor {
   }
 
   /**
-   * Handle performance entry
+   * Handle performance entry;
    */
-  private handlePerformanceEntry(entry: PerformanceEntry): void {
-    const data: Partial<PerformanceData> = {
+  private handlePerformanceEntry(entry: PerformanceEntry): void {,
+    const data: Partial<PerformanceData> = {,
       timestamp: Date.now(),
-      url: window.location.href,
+      url: window.location.href;
     };
 
     switch (entry.entryType) {
@@ -239,79 +239,75 @@ class AdvancedPerformanceMonitor {
     }
 
     if (Object.keys(data).length > 2) {
-      // More than just timestamp and url
+      // More than just timestamp and url;
       this.addPerformanceData(data as PerformanceData);
     }
   }
 
   /**
-   * Update metric
+   * Update metric;
    */
   private updateMetric(metric: keyof PerformanceData, value: unknown): void {
     const _latestData = this.data[this.data.length - 1];
-    if (latestData && Date.now() - latestData.timestamp < 1000) {
-      // Update latest entry if it's recent
-      (latestData as any)[metric] = value;
+    if (latestData && Date.now() - latestData.timestamp < 1000) {,
+      // Update latest entry if it's recent;
+      (latestData as any)[metric] = value;,
     } else {
-      // Create new entry
-      this.addPerformanceData({
-        timestamp: Date.now(),
-        url: window.location.href,
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
-        timeToInteractive: 0,
-        memoryUsage: 0,
-        networkInfo: null,
+      // Create new entry;
+      this.addPerformanceData({)
+        timestamp: Date.now()
+        url: window.location.href;
+        loadTime: 0;
+        firstContentfulPaint: 0;
+        largestContentfulPaint: 0;
+        cumulativeLayoutShift: 0;
+        firstInputDelay: 0;
+        timeToInteractive: 0;
+        memoryUsage: 0;
+        networkInfo: null;
         [metric]: value,
       } as PerformanceData);
     }
   }
 
   /**
-   * Add performance data
+   * Add performance data;
    */
   private addPerformanceData(data: PerformanceData): void {
     this.data.push(data);
 
-    // Keep only last 100 entries to prevent memory issues
-    if (this.data.length > 100) {
+    // Keep only last 100 entries to prevent memory issues;
+    if (this.data.length > 100) {,
       this.data = this.data.slice(-100);
     }
 
-    // Check thresholds and log warnings
+    // Check thresholds and log warnings;
     this.checkThresholds(data);
   }
 
   /**
-   * Check performance thresholds
+   * Check performance thresholds;
    */
   private checkThresholds(data: PerformanceData): void {
     const warnings: string[] = [];
-
-    if (data.loadTime > this.thresholds.loadTime) {
+,
+    if (data.loadTime > this.thresholds.loadTime) {,
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
-      warnings.push(
-        `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
+      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
       );
     }
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
-      warnings.push(
-        `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
+      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
       );
     }
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
-      warnings.push(
-        `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
+      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
       );
     }
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
-      warnings.push(
-        `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
+      warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
       );
     }
 
@@ -320,14 +316,14 @@ class AdvancedPerformanceMonitor {
   }
 
   /**
-   * Calculate performance score
+   * Calculate performance score;
    */
-  private calculatePerformanceScore(metrics: {
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-    firstInputDelay: number;
+  private calculatePerformanceScore(metrics: {)
+    loadTime: number;)
+    firstContentfulPaint: number;)
+    largestContentfulPaint: number;)
+    cumulativeLayoutShift: number;),
+    firstInputDelay: number;),
   }): number {
     let _score = 100;
 
@@ -358,29 +354,28 @@ class AdvancedPerformanceMonitor {
   }
 
   /**
-   * Export performance data
+   * Export performance data;
    */
   public exportData(): string {
-    return JSON.stringify(
-      {
-        data: this.data,
+    return JSON.stringify({)
+        data: this.data),
         summary: this.getPerformanceSummary(),
-        thresholds: this.thresholds,
+        thresholds: this.thresholds;
         timestamp: new Date().toISOString(),
       },
       null,
-      2
+      2;
     );
   }
 
   /**
-   * Clear performance data
+   * Clear performance data;
    */
   public clearData(): void {
     this.data = [];
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 // const performanceMonitor = new AdvancedPerformanceMonitor();
 export default performanceMonitor;

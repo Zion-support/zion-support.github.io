@@ -5,40 +5,40 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
+const AICustomerSupportPage: React.FC = () => {,
+  const features = [,
+    {,
+      icon: Bot;
       title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
       benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
     },
     {
-      icon: MessageCircle,
+      icon: MessageCircle;
       title: 'Omnichannel Communication',
       description: 'Seamless integration across email, chat, phone, and social media platforms.',
       benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
     },
     {
-      icon: Zap,
+      icon: Zap;
       title: 'Intelligent Automation',
       description: 'Automated ticket routing, priority assignment, and resolution suggestions based on AI analysis.',
       benefits: ['Faster resolution', 'Reduced workload', 'Smart prioritization']
     },
     {
-      icon: Shield,
+      icon: Shield;
       title: 'Advanced Security',
       description: 'Enterprise-grade security with data encryption and compliance with industry standards.',
       benefits: ['Data protection', 'Compliance ready', 'Secure communication']
     },
     {
-      icon: BarChart,
+      icon: BarChart;
       title: 'Analytics & Insights',
       description: 'Real-time analytics and performance metrics to optimize customer support operations.',
       benefits: ['Performance tracking', 'Data-driven insights', 'Continuous improvement']
     },
     {
-      icon: Users,
+      icon: Users;
       title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency']
@@ -51,21 +51,21 @@ const AICustomerSupportPage: React.FC = () => {
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      features: [,
         'Up to 1,000 conversations/month',
         'Basic AI chatbot',
         'Email & chat support',
         'Standard analytics',
         'Email support'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
       price: '$499',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      features: [,
         'Up to 10,000 conversations/month',
         'Advanced AI with custom training',
         'Omnichannel support',
@@ -73,14 +73,14 @@ const AICustomerSupportPage: React.FC = () => {
         'Priority support',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      features: [,
         'Unlimited conversations',
         'Custom AI models',
         'All communication channels',
@@ -89,82 +89,80 @@ const AICustomerSupportPage: React.FC = () => {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
   const benefits = [
     {
-      icon: Clock,
+      icon: Clock;
       title: '24/7 Availability',
-      description: 'Never miss a customer inquiry with round-the-clock AI support'
+      description: 'Never miss a customer inquiry with round-the-clock AI support',
     },
     {
-      icon: Users,
+      icon: Users;
       title: 'Scalable Solutions',
-      description: 'Handle increasing support volume without proportional cost increase'
+      description: 'Handle increasing support volume without proportional cost increase',
     },
     {
-      icon: CheckCircle,
+      icon: CheckCircle;
       title: 'Consistent Quality',
       description: 'Deliver consistent, high-quality support experiences every time'
     },
     {
-      icon: Star,
+      icon: Star;
       title: 'Customer Satisfaction',
       description: 'Improve customer satisfaction scores with faster, more accurate responses'
     }
   ];
 
-  return (
-    <>
-      <SEOOptimizer
+  return(<>
+      <SEOOptimizer;
         title="AI Customer Support - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation. Transform your customer service with cutting-edge AI technology."
         keywords={['AI customer support', 'chatbots', 'customer service automation', 'omnichannel support', 'AI helpdesk']}
-        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        <Navigation />
-
-        <main className="container mx-auto px-4 py-16 pt-24">
+        canonicalUrl="https: //ziontechgroup.com/ai-customer-support",
+      />,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+        <Navigation />,
+        <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+              AI Customer Support;
             </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Revolutionary AI-powered customer support solutions
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your customer service with intelligent chatbots, omnichannel communication,
+            <p className="text-xl text-cyan-400 mb-8 font-medium">)
+              Revolutionary AI-powered customer support solutions;)
+            </p>,)
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">),
+              Transform your customer service with intelligent chatbots, omnichannel communication)
               and automated workflows that deliver exceptional customer experiences 24/7.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a;
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
               >
-                📞 Call: (302) 464-0950
+                📞 Call: (302) 464-0950;
               </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Get Quote
+                ✉️ Get Quote;
               </a>
-            </div>
-          </section>
-
+            </div>,
+          </section>,
+,
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Key Features
+              Key Features;
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -183,15 +181,15 @@ const AICustomerSupportPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Pricing Plans
+              Pricing Plans;
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -211,15 +209,15 @@ const AICustomerSupportPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                  <a;
+                    href="mailto: kleber@ziontechgroup.com",
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                      plan.popular;
+                        ? 'bg-cyan-400 text-black hover:bg-cyan-300',}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </a>
                 </div>
               ))}
@@ -231,7 +229,7 @@ const AICustomerSupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Why Choose Our AI Customer Support?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
@@ -248,29 +246,29 @@ const AICustomerSupportPage: React.FC = () => {
               Ready to Transform Your Customer Support?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get started with our AI customer support solutions today. Contact us for a free consultation
+              Get started with our AI customer support solutions today. Contact us for a free consultation;
               and custom implementation plan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a;
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
               >
-                📞 Call: (302) 464-0950
+                📞 Call: (302) 464-0950;
               </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Email Us
+                ✉️ Email Us;
               </a>
             </div>
           </section>
         </main>
 
         <Footer />
-      </div>
-    </>
+      </div>,
+    </>,
   );
 };
 

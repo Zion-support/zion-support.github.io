@@ -8,27 +8,26 @@ interface ServiceCardProps {
   description: string;
   features: string[];
   price?: string;
-  popular?: boolean;
+  popular?: boolean;,
   href?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = memo(({
-  icon: Icon,
-  title,
-  description,
-  features,
-  price,
-  popular = false,
+const ServiceCard: React.FC<ServiceCardProps> = memo(({,
+  icon: Icon;)
+  title,)
+  description,)
+  features)
+  price)
+  popular = false)
   href = '/contact'
 }) => {
-  return (
-    <div className={`quantum-card p-8 space-y-6 relative ${popular ? 'border-2 border-cyan-400' : ''}`}>
+  return(<div className={`quantum-card p-8 space-y-6 relative ${popular ? 'border-2 border-cyan-400' : ''}`}>
       {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Most Popular
-          </span>
-        </div>
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">)
+          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">)
+            Most Popular;)
+          </span>)
+        </div>)
       )}
 
       <div className="text-center space-y-4">
@@ -41,8 +40,8 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
       </div>
 
       <div className="space-y-3">
-        <h4 className="text-white font-semibold">Key Features:</h4>
-        <ul className="space-y-2">
+        <h4 className="text-white font-semibold">Key Features: </h4>,
+        <ul className="space-y-2">,
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-gray-300">
               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -52,15 +51,15 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         </ul>
       </div>
 
-      <Link
+      <Link;
         to={href}
         className="w-full cyber-button inline-flex items-center justify-center px-6 py-3 text-center font-semibold rounded-lg transition-all duration-300 group"
       >
         <span>Get Started</span>
-        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />
       </Link>
     </div>
   );
-
+,
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;

@@ -1,4 +1,4 @@
-// netlify/functions/orphan-page-detector.js
+// netlify/functions/orphan-page-detector.js;
 exports.handler = async function () {
   const { execSync } = require('child_process');
   try {execSync('node automation/orphan-page-detector.cjs'} { stdio: 'inherit' });
@@ -6,22 +6,22 @@ exports.handler = async function () {
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(reports): orphan pages report [ci skip]" || true) && (git push origin main || true)',
       {stdio: 'inherit'} shell: true },
     );
-    return {statusCode: 200,
-      body: JSON.stringify({ ok: true,
+    return {statusCode: 200;
+      body: JSON.stringify({ ok: true),
         task: 'orphan-page-detector' });
     };
   } catch (e) {return {
-      statusCode: 200,
-      body: JSON.stringify({ ok: false,
-        error: String(e
+      statusCode: 200;
+      body: JSON.stringify({ ok: false),
+        error: String(e;),
       });
     };
   }
 };
-// netlify/functions/orphan-page-detector.js exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/orphan-page-detector.cjs'} { stdio: 'inherit' });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(reports): orphan pages report [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true
-      });' return {statusCode: 200,
-        body: JSON.stringify({ok: true,
-        task: 'orphan-page-detector' }) }; } catch (e) {return { statusCode: 200,
-        body: JSON.stringify({ok: false,
-        error: String(e
+// netlify/functions/orphan-page-detector.js exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/orphan-page-detector.cjs'} { stdio: 'inherit' });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(reports): orphan pages report [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
+      });' return {statusCode: 200;
+        body: JSON.stringify({ok: true),
+        task: 'orphan-page-detector' }) }; } catch (e) {return { statusCode: 200;
+        body: JSON.stringify({ok: false),
+        error: String(e;),
       }) }; } };'

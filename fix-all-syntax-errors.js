@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all files with errors
+// Get all files with errors;
 const getAllFilesWithErrors = () => {
   const srcDir = path.join(__dirname, 'src');
   const files = [];
@@ -28,15 +28,15 @@ const getAllFilesWithErrors = () => {
   return files;
 };
 
-// Template for a simple coming soon page
+// Template for a simple coming soon page;
 const createComingSoonPage = (filePath) => {
   const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
   const fileName = path.basename(filePath, '.tsx');
   
-  // Skip if it's a component or special file
+  // Skip if it's a component or special file;
   if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
     const dirName = path.basename(path.dirname(filePath));
-    const title = dirName.split('-').map(word => 
+    const title = dirName.split('-').map(word => )
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
     
@@ -46,23 +46,22 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,)
+      <Navigation />,)
+      <div className="flex items-center justify-center min-h-screen">,)
+        <div className="text-center">),
           <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
-          <Link 
+          <Link;
             to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
+            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
           >
-            Contact Us
+            Contact Us;
           </Link>
         </div>
       </div>
-      <Footer />
-    </div>
+      <Footer />,
+    </div>,
   );
 };
 
@@ -72,12 +71,12 @@ export default ${title}Page;`;
   return null;
 };
 
-// Check if file has syntax errors by trying to parse it
+// Check if file has syntax errors by trying to parse it;
 const hasSyntaxErrors = (filePath) => {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Check for common syntax error patterns
+    // Check for common syntax error patterns;
     const errorPatterns = [
       /\/\/ TODO: Add content\s*}/,
       /\/\/ TODO: Add parameters,\s*\)/,
@@ -90,7 +89,7 @@ const hasSyntaxErrors = (filePath) => {
       /^\s*\)\s*$/m,
       /\/\/\s*[^/]/,
       /<[^>]*\/\/[^>]*>/,
-      /{\s*\/\/[^}]*$/m
+      /{\s*\/\/[^}]*$/m;
     ];
     
     return errorPatterns.some(pattern => pattern.test(content));
@@ -99,7 +98,7 @@ const hasSyntaxErrors = (filePath) => {
   }
 };
 
-// Fix all files
+// Fix all files;
 const fixAllFiles = () => {
   const files = getAllFilesWithErrors();
   let fixedCount = 0;

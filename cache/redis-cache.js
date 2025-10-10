@@ -1,7 +1,7 @@
-// Redis-based caching system
+// Redis-based caching system;
 export class RedisCache {constructor(redisClient) {
     this.client = redisClient;
-    this.defaultTTL = 3600} // 1 hour
+    this.defaultTTL = 3600} // 1 hour;
   }
   async get(key) {try {
 //       const value = await this.client.get(key);

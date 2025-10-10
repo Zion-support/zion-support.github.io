@@ -1,5 +1,5 @@
 import Reac, t, { useState } fr, o, m 'rea, c, t';
-interface NewContentPromotionBannerProp, s { 
+interface NewContentPromotionBannerProp, s {
   varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
   title?: string;
   description?: string;
@@ -35,8 +35,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
       err, o, r: "te, x, t-r, e, d-40, 0",
       defau, l, t: "te, x, t-bl, u, e-40, 0",
       premi, u, m: "te, x, t-purp, l, e-30, 0"
-  }; return (
-    <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
+  }; return(<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
       {/* Background, Patter, n */}
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
@@ -49,7 +48,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
               <div, className="flex, item, s-center, ga, p-2" > <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
-                  Fresh, Conten, t
+                  Fresh, Conten, t;
                 </sp, a, n>
               </div>
               <div, className="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
@@ -93,9 +92,9 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
           </div>
           { dismissib, l, e  && (
             <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
-            >
-                <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />
-              </bu, t, t, o, n>
+            >)
+                <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />)
+              </bu, t, t, o, n>)
           )}
         </div>
       </div>

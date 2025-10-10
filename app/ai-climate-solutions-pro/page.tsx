@@ -8,59 +8,59 @@ export default function AIClimateSolutionsProPage() {
 
   const features = [
     {
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations',
-      icon: Leaf,
-      benefits: [
+      title: 'Carbon Footprint Analysis'
+      description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations'
+      icon: Leaf;
+      benefits: [,
         'Real-time carbon tracking',
         'Automated reduction recommendations',
         'Industry-specific benchmarks',
         'Regulatory compliance monitoring'
       ],
-      image: '/images/ai-climate-solutions/carbon-footprint.webp'
+      image: '/images/ai-climate-solutions/carbon-footprint.webp',
     },
     {
-      title: 'Weather Prediction & Modeling',
-      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
-      icon: Cloud,
-      benefits: [
+      title: 'Weather Prediction & Modeling'
+      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction'
+      icon: Cloud;
+      benefits: [,
         '95% accuracy in weather predictions',
         'Extreme weather early warning',
         'Climate trend analysis',
         'Long-term forecasting'
       ],
-      image: '/images/ai-climate-solutions/weather-prediction.webp'
+      image: '/images/ai-climate-solutions/weather-prediction.webp',
     },
     {
-      title: 'Sustainability Planning',
-      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
-      icon: Target,
-      benefits: [
+      title: 'Sustainability Planning'
+      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies'
+      icon: Target;
+      benefits: [,
         'Custom sustainability roadmaps',
         'ROI analysis for green initiatives',
         'Resource optimization',
         'Progress tracking & reporting'
       ],
-      image: '/images/ai-climate-solutions/sustainability-planning.webp'
+      image: '/images/ai-climate-solutions/sustainability-planning.webp',
     },
     {
-      title: 'Emission Tracking & Monitoring',
-      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
-      icon: Activity,
-      benefits: [
+      title: 'Emission Tracking & Monitoring'
+      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations'
+      icon: Activity;
+      benefits: [,
         'Real-time emission monitoring',
         'Automated compliance reporting',
         'Predictive emission modeling',
         'Regulatory alert system'
       ],
-      image: '/images/ai-climate-solutions/emission-tracking.webp'
+      image: '/images/ai-climate-solutions/emission-tracking.webp',
     }
   ];
 
   const capabilities = [
     {
       category: 'Environmental Monitoring',
-      items: [
+      items: [,
         'Air quality monitoring',
         'Water quality assessment',
         'Soil health analysis',
@@ -71,7 +71,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Climate Analytics',
-      items: [
+      items: [,
         'Temperature trend analysis',
         'Precipitation modeling',
         'Sea level rise prediction',
@@ -82,7 +82,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Sustainability Management',
-      items: [
+      items: [,
         'Carbon footprint calculation',
         'Energy efficiency optimization',
         'Waste reduction strategies',
@@ -93,7 +93,7 @@ export default function AIClimateSolutionsProPage() {
     },
     {
       category: 'Compliance & Reporting',
-      items: [
+      items: [,
         'Environmental regulation tracking',
         'Automated compliance reporting',
         'Audit preparation',
@@ -105,9 +105,9 @@ export default function AIClimateSolutionsProPage() {
   ];
 
   const pricing = {
-    monthly: 3200,
-    yearly: 32000,
-    features: [
+    monthly: 3200;
+    yearly: 32000;
+    features: [,
       'Unlimited environmental monitoring',
       'Advanced AI climate models',
       'Real-time data processing',
@@ -117,49 +117,49 @@ export default function AIClimateSolutionsProPage() {
       'Data export/import',
       'White-label options'
     ],
-    addOns: [
-      {
+    addOns: [,
+      {,
         name: 'Custom Climate Models',
-        price: 1500,
-        description: 'Train AI models on your specific climate data'
+        price: 1500;
+        description: 'Train AI models on your specific climate data',
       },
       {
         name: 'Dedicated Support',
-        price: 800,
-        description: 'Dedicated environmental specialist'
+        price: 800;
+        description: 'Dedicated environmental specialist',
       },
       {
         name: 'On-premise Deployment',
-        price: 3000,
-        description: 'Deploy on your infrastructure'
+        price: 3000;
+        description: 'Deploy on your infrastructure',
       }
     ]
   };
 
   const testimonials = [
     {
-      name: 'Jennifer Walsh',
+      name: 'Jennifer Walsh'
       role: 'VP of Sustainability',
       company: 'GreenTech Solutions',
       content: 'AI Climate Solutions Pro helped us reduce our carbon footprint by 40% while improving operational efficiency. The ROI was evident within the first quarter.',
-      rating: 5,
-      avatar: 'JW'
+      rating: 5;
+      avatar: 'JW',
     },
     {
       name: 'Dr. Michael Chen',
       role: 'Environmental Director',
       company: 'EcoCorp International',
       content: 'The weather prediction accuracy is incredible. We achieved 95% accuracy in forecasting extreme weather events, helping us prepare better for climate risks.',
-      rating: 5,
-      avatar: 'MC'
+      rating: 5;
+      avatar: 'MC',
     },
     {
-      name: 'Sarah Rodriguez',
+      name: 'Sarah Rodriguez'
       role: 'Chief Sustainability Officer',
       company: 'ClimateFirst Industries',
       content: 'The sustainability planning feature helped us create a comprehensive roadmap to net-zero emissions. This is exactly what we needed for our climate goals.',
-      rating: 5,
-      avatar: 'SR'
+      rating: 5;
+      avatar: 'SR',
     }
   ];
 
@@ -176,12 +176,10 @@ export default function AIClimateSolutionsProPage() {
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -191,49 +189,49 @@ export default function AIClimateSolutionsProPage() {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered Climate Solutions
-              <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Saving Our Planet
-              </span>
-            </h1>
-
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Combat climate change with intelligent environmental monitoring, carbon footprint optimization,
+              AI-Powered Climate Solutions;
+              <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">)
+                Saving Our Planet;)
+              </span>)
+            </h1>)
+),
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
+              Combat climate change with intelligent environmental monitoring, carbon footprint optimization)
               and sustainability planning. Make data-driven decisions for a greener future.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <a;
                 href="#features"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Explore Features
+                Explore Features;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
+        </div>,
+      </section>,
+,
       {/* Stats */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-6xl mx-auto">,
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-4">
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                </div>
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover: scale-110 transition-transform duration-300">,
+                    <stat.icon className="w-10 h-10 text-white" />,
+                  </div>,
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>,
+                </div>,
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </div>
@@ -246,22 +244,22 @@ export default function AIClimateSolutionsProPage() {
       <section id="features" className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Climate AI Capabilities
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Advanced Climate AI Capabilities;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology designed specifically for environmental monitoring and climate solutions
+              Cutting-edge AI technology designed specifically for environmental monitoring and climate solutions;
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          </div>,
+,
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">,
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
+              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover: bg-slate-700/50 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-6">,
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">,
+                    <feature.icon className="w-8 h-8 text-white" />,
+                  </div>,
+                  <div>,
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
@@ -285,15 +283,15 @@ export default function AIClimateSolutionsProPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Climate Solutions Platform
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Comprehensive Climate Solutions Platform;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              End-to-end AI-powered solutions for environmental monitoring and climate action
+              End-to-end AI-powered solutions for environmental monitoring and climate action;
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">,
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{capability.category}</h3>
@@ -315,11 +313,11 @@ export default function AIClimateSolutionsProPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Enterprise Pricing
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Enterprise Pricing;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for organizations committed to climate action
+              Flexible pricing options for organizations committed to climate action;
             </p>
           </div>
 
@@ -327,22 +325,22 @@ export default function AIClimateSolutionsProPage() {
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-2">AI Climate Solutions Pro</h3>
-                <p className="text-gray-300 mb-6">Complete AI-powered climate solutions platform</p>
-
-                <div className="flex items-baseline justify-center mb-6">
+                <p className="text-gray-300 mb-6">Complete AI-powered climate solutions platform</p>,
+,
+                <div className="flex items-baseline justify-center mb-6">,
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
                   <span className="text-gray-400 ml-2">/month</span>
                 </div>
 
                 <div className="text-green-400 text-sm mb-8">
-                  Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
+                  Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing;
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
-                  <ul className="space-y-3">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-8">,
+                <div>,
+                  <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>,
+                  <ul className="space-y-3">,
                     {pricing.features.map((feature, index) => (
                       <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -353,8 +351,8 @@ export default function AIClimateSolutionsProPage() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
-                  <ul className="space-y-3">
+                  <h4 className="text-lg font-semibold text-white mb-4">Add-ons: </h4>,
+                  <ul className="space-y-3">,
                     {pricing.addOns.map((addon, index) => (
                       <li key={index} className="flex items-center justify-between">
                         <div>
@@ -369,32 +367,32 @@ export default function AIClimateSolutionsProPage() {
               </div>
 
               <div className="text-center">
-                <a
+                <a;
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Get Started Today
+                  Get Started Today;
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </div>,
+      </section>,
+,
       {/* Testimonials */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Trusted by Leading Environmental Organizations
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Trusted by Leading Environmental Organizations;
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how our AI technology is transforming climate action
+              See how our AI technology is transforming climate action;
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                 <div className="flex items-center mb-4">
@@ -422,7 +420,7 @@ export default function AIClimateSolutionsProPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Take Climate Action?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
@@ -430,25 +428,25 @@ export default function AIClimateSolutionsProPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
+            <a;
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Start Free Trial
+              Start Free Trial;
             </a>
-            <a
+            <a;
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              Schedule Demo
+              Schedule Demo;
             </a>
           </div>
 
-          <div className="text-gray-200 text-sm">
-            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
-            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
+          <div className="text-gray-200 text-sm">,
+            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>,
+            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>,
             <p>📍 Address: {contactInfo.address}</p>
           </div>
         </div>

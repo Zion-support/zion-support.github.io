@@ -1,30 +1,30 @@
 /**
- * Environment Configuration
- * Centralizes all environment variables with validation and type safety
+ * Environment Configuration;
+ * Centralizes all environment variables with validation and type safety;
  */
 
 interface EnvConfig {
-  // App Configuration
+  // App Configuration;
   NODE_ENV: 'development' | 'production' | 'test';
   APP_URL: string;
   APP_NAME: string;
 
-  // Analytics
+  // Analytics;
   GOOGLE_ANALYTICS_ID?: string;
 
-  // API Configuration
+  // API Configuration;
   API_BASE_URL: string;
   API_TIMEOUT: number;
 
-  // Feature Flags
+  // Feature Flags;
   ENABLE_ANALYTICS: boolean;
   ENABLE_ERROR_TRACKING: boolean;
   ENABLE_PERFORMANCE_MONITORING: boolean;
 
-  // Logging
+  // Logging;
   LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
 
-  // Build Configuration
+  // Build Configuration;
   BUILD_ID?: string;
   VERSION?: string;
 }
@@ -33,7 +33,7 @@ class EnvironmentConfig {
   private static instance: EnvironmentConfig;
   private config: EnvConfig;
 
-  private constructor() {
+  private constructor() {,
     this.config = this.loadConfig();
     this.validate();
   }
@@ -47,7 +47,7 @@ class EnvironmentConfig {
 
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
-      // Check both regular and NEXT_PUBLIC_ prefixed versions
+      // Check both regular and NEXT_PUBLIC_ prefixed versions;
       return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
     }
     return defaultValue || '';
@@ -59,7 +59,7 @@ class EnvironmentConfig {
     return value.toLowerCase() === 'true' || value === '1';
   }
 
-  private getNumberEnvVar(key: string, defaultValue: number): number {
+  private getNumberEnvVar(key: string, defaultValue: number): number {,
     const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
     return isNaN(parsed) ? defaultValue : parsed;
@@ -67,27 +67,26 @@ class EnvironmentConfig {
 
   private loadConfig(): EnvConfig {
     return {
-      // App Configuration
+      // App Configuration;
       NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
-      APP_URL: this.getEnvVar('APP_URL', 'https://ziontechgroup.com'),
+      APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
 
-      // Analytics
+      // Analytics;
       GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
-
-      // API Configuration
-      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https://api.ziontechgroup.com'),
+      // API Configuration;
+      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com'),
       API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
 
-      // Feature Flags
+      // Feature Flags;
       ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS', true),
       ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING', true),
       ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
 
-      // Logging
+      // Logging;
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
 
-      // Build Configuration
+      // Build Configuration;
       BUILD_ID: this.getEnvVar('BUILD_ID'),
       VERSION: this.getEnvVar('VERSION', '1.0.0'),
     };
@@ -95,13 +94,13 @@ class EnvironmentConfig {
 
   private validate(): void {
     const errors: string[] = [];
-
-    // Validate NODE_ENV
+,
+    // Validate NODE_ENV;
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
     }
 
-    // Validate URLs
+    // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
     }
@@ -110,21 +109,21 @@ class EnvironmentConfig {
       errors.push(`Invalid API_BASE_URL: ${this.config.API_BASE_URL}`);
     }
 
-    // Validate timeout
+    // Validate timeout;
     if (this.config.API_TIMEOUT < 0) {
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
     }
 
     if (errors.length > 0) {
-      //       // In production, we might want to throw, but in development just warn
+      //       // In production, we might want to throw, but in development just warn;
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
       }
     }
   }
 
-  private isValidUrl(url: string): boolean {
-    try {
+  private isValidUrl(url: string): boolean {,
+    try {,
       new URL(url);
       return true;
     } catch {
@@ -148,7 +147,7 @@ class EnvironmentConfig {
     return this.config.NODE_ENV === 'test';
   }
 
-  // Convenience getters
+  // Convenience getters;
   public getAppUrl(): string {
     return this.config.APP_URL;
   }
@@ -174,10 +173,10 @@ class EnvironmentConfig {
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 export const env = EnvironmentConfig.getInstance();
 
-// Export typed config
+// Export typed config;
 export type { EnvConfig };
 
 export default env;

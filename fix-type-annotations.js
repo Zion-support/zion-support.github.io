@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,9 +6,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix malformed type annotations
+// Function to fix malformed type annotations;
 function fixTypeAnnotations(content) {
-  // Fix malformed type annotations with comments inside
+  // Fix malformed type annotations with comments inside;
   content = content.replace(
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {
@@ -17,18 +16,16 @@ function fixTypeAnnotations(content) {
     }
   );
 
-  // Fix specific patterns we've seen
-  content = content.replace(
-    /\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g,
+  // Fix specific patterns we've seen;
+  content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
   );
 
-  content = content.replace(
-    /\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g,
+  content = content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)
     '{ value: number }'
   );
 
-  // Fix variable name issues
+  // Fix variable name issues;
   content = content.replace(
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
     'const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;\n          memoryUsage = _memory?.'
@@ -37,13 +34,13 @@ function fixTypeAnnotations(content) {
   return content;
 }
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Apply fixes
+    // Apply fixes;
     const originalContent = content;
     
     content = fixTypeAnnotations(content);
@@ -60,7 +57,7 @@ function processFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -72,12 +69,12 @@ function findSourceFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
+        // Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           walkDir(fullPath);
         }
       } else if (stat.isFile()) {
-        // Check for TypeScript/JavaScript files
+        // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
         }
@@ -89,7 +86,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting type annotation fixes...');
 
 const srcDir = path.join(__dirname, 'src');

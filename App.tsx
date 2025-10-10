@@ -18,13 +18,13 @@ import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 import PerformanceMonitor from './src/components/PerformanceMonitor';
 
-// Structured data for SEO
+// Structured data for SEO;
 const structuredData = {
-  "@context": "https://schema.org",
+  "@context": "https: //schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
+  "url": "https: //ziontechgroup.com",
+  "logo": "https: //ziontechgroup.com/logo.png",
   "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
   "address": {
     "@type": "PostalAddress",
@@ -41,9 +41,9 @@ const structuredData = {
     "email": "kleber@ziontechgroup.com"
   },
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/zion-tech-group"
+    "https: //linkedin.com/company/zion-tech-group",
+    "https: //twitter.com/ziontechgroup",
+    "https: //github.com/zion-tech-group",
   ],
   "foundingDate": "2020",
   "numberOfEmployees": "50-100",
@@ -60,7 +60,7 @@ const structuredData = {
   ]
 };
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -88,15 +88,14 @@ const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
-// Performance monitoring hook
+// Performance monitoring hook;
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
   return <>{children}</>;
 };
 
 const App: React.FC = memo(() => {
-  return (
-    <ErrorBoundary>
+  return(<ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>
@@ -105,11 +104,11 @@ const App: React.FC = memo(() => {
                 <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
-                <div className="min-h-screen bg-white overflow-x-hidden">
-                  <SkipLink to="#main-content">Skip to main content</SkipLink>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" className="w-full">
+                <div className="min-h-screen bg-white overflow-x-hidden">)
+                  <SkipLink to="#main-content">Skip to main content</SkipLink>,)
+                  <Navigation />,)
+                  <Breadcrumb />,)
+                  <main id="main-content" className="w-full">),
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
 <Route path="/" element={<HomePage />} />

@@ -1,12 +1,12 @@
 /**
- * Advanced Caching System
- * Provides intelligent caching with TTL, LRU eviction, and persistent storage
+ * Advanced Caching System;
+ * Provides intelligent caching with TTL, LRU eviction, and persistent storage;
  */
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
+  ttl?: number; // Time to live in milliseconds;
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries
+  maxSize?: number; // Maximum number of entries;
 }
 
 export interface CacheEntry<T> {
@@ -20,27 +20,27 @@ class AdvancedCache<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
-
+  private storageKey = 'advanced-cache';,
+,
   constructor(options: CacheOptions = {}) {
     this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
+      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes;
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100
+      maxSize: options.maxSize || 100;
     };
 
-    // Load from persistent storage if needed
+    // Load from persistent storage if needed;
     if (this.options.storage !== 'memory') {
       this.loadFromStorage();
     }
 
-    // Setup periodic cleanup
+    // Setup periodic cleanup;
     this.setupCleanup();
   }
 
   private setupCleanup(): void {
     if (typeof window !== 'undefined') {
-      // Clean expired entries every minute
+      // Clean expired entries every minute;
       setInterval(() => {
         this.cleanExpired();
       }, 60 * 1000);
@@ -69,7 +69,7 @@ class AdvancedCache<T = unknown> {
       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache),
-        accessOrder: this.accessOrder
+        accessOrder: this.accessOrder;
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
@@ -84,22 +84,21 @@ class AdvancedCache<T = unknown> {
         return window.localStorage;
       case 'sessionStorage':
         return window.sessionStorage;
-      default:
-        return null;
+      default: return null;
     }
   }
 
   private cleanExpired(): void {
     const now = Date.now();
     const expiredKeys: string[] = [];
-
+,
     for (const [key, entry] of this.cache.entries()) {
       if (entry.expiry <= now) {
         expiredKeys.push(key);
       }
     }
 
-    expiredKeys.forEach(key => {
+    expiredKeys.forEach(key => {)
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
       if (index > -1) {
@@ -110,7 +109,7 @@ class AdvancedCache<T = unknown> {
       this.saveToStorage();
     }
 
-    // Update access statistics
+    // Update access statistics;
     entry.hits++;
     entry.lastAccessed = now;
     this.updateAccessOrder(key);
@@ -126,9 +125,9 @@ class AdvancedCache<T = unknown> {
     this.accessOrder.shift();
   }
 
-  private updateAccessOrder(key: string): void {
+  private updateAccessOrder(key: string): void {,
     const index = this.accessOrder.indexOf(key);
-    if (index > -1) {
+    if (index > -1) {,
       this.accessOrder.splice(index, 1);
     }
     this.accessOrder.push(key);
@@ -138,7 +137,7 @@ class AdvancedCache<T = unknown> {
     const now = Date.now();
     const ttl = customTTL || this.options.ttl;
 
-    // Remove existing entry if it exists
+    // Remove existing entry if it exists;
     if (this.cache.has(key)) {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
@@ -147,16 +146,16 @@ class AdvancedCache<T = unknown> {
       }
     }
 
-    // Check if we need to evict entries
+    // Check if we need to evict entries;
     while (this.cache.size >= this.options.maxSize) {
       this.evictLRU();
     }
 
     const entry: CacheEntry<T> = {
-      value,
-      expiry: now + ttl,
-      hits: 0,
-      lastAccessed: now
+      value;
+      expiry: now + ttl;
+      hits: 0;
+      lastAccessed: now;
     };
 
     this.cache.set(key, entry);
@@ -172,14 +171,14 @@ class AdvancedCache<T = unknown> {
     if (entry.expiry <= now) {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
+      if (index > -1) {,
         this.accessOrder.splice(index, 1);
       }
       this.saveToStorage();
       return null;
     }
 
-    // Update access statistics
+    // Update access statistics;
     entry.hits++;
     entry.lastAccessed = now;
     this.updateAccessOrder(key);
@@ -195,7 +194,7 @@ class AdvancedCache<T = unknown> {
     if (entry.expiry <= now) {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
+      if (index > -1) {,
         this.accessOrder.splice(index, 1);
       }
       this.saveToStorage();
@@ -207,9 +206,9 @@ class AdvancedCache<T = unknown> {
 
   delete(key: string): boolean {
     const deleted = this.cache.delete(key);
-    if (deleted) {
+    if (deleted) {,
       const index = this.accessOrder.indexOf(key);
-      if (index > -1) {
+      if (index > -1) {,
         this.accessOrder.splice(index, 1);
       }
       this.saveToStorage();
@@ -247,25 +246,23 @@ class AdvancedCache<T = unknown> {
     const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
 
     return {
-      size: this.cache.size,
-      maxSize: this.options.maxSize,
+      size: this.cache.size;
+      maxSize: this.options.maxSize;
       hitRate,
       oldestEntry,
-      newestEntry
+      newestEntry;
     };
   }
 }
 
-// Create singleton instances for different use cases
+// Create singleton instances for different use cases;
 export const memoryCache = new AdvancedCache({ storage: 'memory' });
-export const localStorageCache = new AdvancedCache({
-  storage: 'localStorage',
-  ttl: 30 * 60 * 1000, // 30 minutes
-  maxSize: 50
-
-export const sessionStorageCache = new AdvancedCache({
-  storage: 'sessionStorage',
-  ttl: 10 * 60 * 1000, // 10 minutes
-  maxSize: 25
-
+export const localStorageCache = new AdvancedCache({)
+  storage: 'localStorage'),
+  ttl: 30 * 60 * 1000, // 30 minutes;
+  maxSize: 50;
+export const sessionStorageCache = new AdvancedCache({,)
+  storage: 'sessionStorage'),
+  ttl: 10 * 60 * 1000, // 10 minutes;
+  maxSize: 25;
 export default AdvancedCache;

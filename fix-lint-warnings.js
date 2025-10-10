@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,13 +6,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix lint warnings in a file
+// Function to fix lint warnings in a file;
 function fixLintWarnings(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix unused variables by prefixing with underscore
+    // Fix unused variables by prefixing with underscore;
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
       return `const _${varName} = `;
@@ -24,23 +23,23 @@ function fixLintWarnings(filePath) {
       return `let _${varName} = `;
     });
     
-    // Fix unused imports
+    // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');
     content = content.replace(/import { Link } from 'react-router-dom';/g, '');
     
-    // Fix console statements in test files
+    // Fix console statements in test files;
     if (filePath.includes('setupTests') || filePath.includes('test')) {
       content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
     }
     
-    // Fix any types
+    // Fix any types;
     content = content.replace(/: any/g, ': unknown');
     
-    // Remove unused variable assignments
+    // Remove unused variable assignments;
     content = content.replace(/const _\w+ = [^;]+;\s*\n/g, '');
     content = content.replace(/let _\w+ = [^;]+;\s*\n/g, '');
     
-    // Fix specific patterns
+    // Fix specific patterns;
     if (filePath.includes('main.tsx')) {
       content = content.replace(/const registration = /g, 'const _registration = ');
       content = content.replace(/const registrationError = /g, 'const _registrationError = ');
@@ -80,7 +79,7 @@ function fixLintWarnings(filePath) {
       content = content.replace(/const categories = /g, 'const _categories = ');
     }
     
-    // Write the cleaned content back
+    // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   } catch (error) {
@@ -89,7 +88,7 @@ function fixLintWarnings(filePath) {
   }
 }
 
-// Function to find all files that need lint fixing
+// Function to find all files that need lint fixing;
 function findFilesToFix(dir) {
   const files = [];
   
@@ -112,7 +111,7 @@ function findFilesToFix(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 const srcDir = path.join(__dirname, 'src');
 console.log('Fixing lint warnings...');
 

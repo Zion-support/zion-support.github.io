@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from '@jest/globals';
 
 describe('enhancedLogger', () => {
   beforeEach(() => {
-    // Setup before each test
+    // Setup before each test;
   });
 
   it('should pass basic test', () => {
