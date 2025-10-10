@@ -1,6 +1,6 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +102,9 @@ import {
   Award
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 } from 'lucide-react';
+=======
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,10 +113,17 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+      }
+    };
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+<<<<<<< HEAD
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
@@ -124,9 +134,13 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
+=======
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -137,6 +151,7 @@ const Navigation: React.FC = () => {
     setSidebarOpen(false);
   };
 
+<<<<<<< HEAD
   const serviceCategories = [
     {
 <<<<<<< HEAD
@@ -1110,6 +1125,15 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
   ];
 
+=======
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      closeAllMenus();
+    }
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
@@ -1148,6 +1172,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold group quantum-ripple"
@@ -1230,6 +1255,13 @@ const Navigation: React.FC = () => {
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
           </Link>
 
           {/* Desktop Navigation */}
@@ -1238,6 +1270,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
             <Link
               to="/"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1319,9 +1352,23 @@ const Navigation: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              About
+            </Link>
+            
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
             {/* Services Dropdown */}
             <div className="relative group">
               <button
+<<<<<<< HEAD
                 onClick={() => setServicesOpen(!servicesOpen)}
 <<<<<<< HEAD
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200"
@@ -1379,10 +1426,45 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {servicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <Link
+                    to="/ai-services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    AI Services
+                  </Link>
+                  <Link
+                    to="/it-services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    IT Services
+                  </Link>
+                  <Link
+                    to="/micro-saas"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Micro SAAS
+                  </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
             {/* Company Links */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200">
@@ -1542,6 +1624,27 @@ const Navigation: React.FC = () => {
 =======
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+            <Link
+              to="/contact"
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              Pricing
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/demo"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
             >
               <Rocket className="w-4 h-4 mr-2" />
               Get Started
@@ -1569,6 +1672,7 @@ const Navigation: React.FC = () => {
 =======
           {/* Mobile Menu Button */}
           <button
+<<<<<<< HEAD
             onClick={() => setIsOpen(!isOpen)}
 <<<<<<< HEAD
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
@@ -1576,6 +1680,10 @@ const Navigation: React.FC = () => {
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200 neon-glow"
             aria-label="Toggle menu"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+            onClick={toggleMenu}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -1585,6 +1693,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
         {/* Mobile Menu */}
         {isOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:hidden cyber-card-ultra mt-2 p-4">
@@ -1597,18 +1706,32 @@ const Navigation: React.FC = () => {
               <Link
                 to="/"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
+=======
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-white hover:text-cyan-400 transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
+<<<<<<< HEAD
               
               <Link 
                 to="/about" 
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
+=======
+              <Link
+                to="/about"
+                className="text-white hover:text-cyan-400 transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
                 onClick={closeAllMenus}
               >
                 About
               </Link>
+<<<<<<< HEAD
               
               <Link 
                 to="/services" 
@@ -1934,6 +2057,46 @@ const Navigation: React.FC = () => {
 =======
                 className="block cyber-button text-center mt-4"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+              <Link
+                to="/ai-services"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link
+                to="/it-services"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link
+                to="/micro-saas"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link
+                to="/contact"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/pricing"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/demo"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
                 onClick={closeAllMenus}
               >
                 <Rocket className="w-4 h-4 mr-2 inline" />

@@ -11,6 +11,7 @@ import './src/styles/futuristic.css';
 =======
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ErrorBoundary } from 'react-error-boundary';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 import Navigation from './app/components/Navigation';
@@ -30,6 +31,10 @@ import { AnalyticsProvider } from './src/components/Analytics';
 import Navigation from './app/components/EnhancedNavigation';
 import Footer from './app/components/EnhancedFooter';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
+=======
+import Navigation from './src/components/Navigation';
+import Footer from './src/components/Footer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
 import LoadingSpinner from './src/components/LoadingSpinner';
 <<<<<<< HEAD
 import PerformanceMonitor from './src/components/PerformanceMonitor';
@@ -111,6 +116,7 @@ const structuredData = {
 };
 
 // Lazy load pages for better performance
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -180,6 +186,28 @@ const NetworkingPage = React.lazy(() => import('./app/networking/page'));
 const HealthPage = React.lazy(() => import('./app/health/page'));
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
 const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
+=======
+const AboutPage = React.lazy(() => import('./src/about/page'));
+const ContactPage = React.lazy(() => import('./src/contact/page'));
+const PricingPage = React.lazy(() => import('./src/pricing/page'));
+const AIServicesPage = React.lazy(() => import('./src/ai-services/page'));
+const ITServicesPage = React.lazy(() => import('./src/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./src/micro-saas/page'));
+const BlogPage = React.lazy(() => import('./src/blog/page'));
+const CaseStudiesPage = React.lazy(() => import('./src/case-studies/page'));
+const TeamPage = React.lazy(() => import('./src/team/page'));
+const CareersPage = React.lazy(() => import('./src/careers/page'));
+const PrivacyPage = React.lazy(() => import('./src/privacy/page'));
+const TermsPage = React.lazy(() => import('./src/terms/page'));
+const CookiesPage = React.lazy(() => import('./src/cookies/page'));
+const DocsPage = React.lazy(() => import('./src/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./src/api-docs/page'));
+const SupportPage = React.lazy(() => import('./src/support/page'));
+const StatusPage = React.lazy(() => import('./src/status/page'));
+const DemoPage = React.lazy(() => import('./src/demo/page'));
+const ConsultationPage = React.lazy(() => import('./src/consultation/page'));
+const ServicesPage = React.lazy(() => import('./src/services/page'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -654,6 +682,7 @@ const App: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 });
@@ -675,3 +704,10 @@ export default App;
 
 export default App;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
+=======
+});
+
+App.displayName = 'App';
+
+export default App;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de

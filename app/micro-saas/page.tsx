@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
 'use client';
@@ -5871,9 +5872,163 @@ export default function MicroSAASPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, Globe, Smartphone, Database, BarChart3, Mail, Calendar, FileText, Image, Video, Music, Code, Palette, Search, Lock, Cloud, Wifi, Monitor, Headphones, Camera, Printer, HardDrive, Cpu, MemoryStick, Wrench, Settings, Bell, Heart, ThumbsUp, Share2, Download, Upload, Eye, Edit, Trash2, Plus, Minus, X, Check, AlertCircle, Info, HelpCircle, ExternalLink, Brain, Cpu as CpuIcon, Bot, Target, Layers, BarChart, PieChart, LineChart, Activity, Zap as ZapIcon, Sparkles, Atom, Cpu as CpuIcon2 } from 'lucide-react';
 
+const MicroSaasPage: React.FC = () => {
+  const microSaasServices = [
+    {
+      id: 1,
+      name: 'AI Project Manager Pro',
+      description: 'Intelligent project management with AI-powered task optimization and team collaboration',
+      price: '$99/month',
+      features: [
+        'AI Task Prioritization',
+        'Smart Resource Allocation',
+        'Automated Progress Tracking',
+        'Team Performance Analytics',
+        'Risk Assessment & Mitigation',
+        'Custom Workflow Builder',
+        'Integration with 50+ Tools',
+        'Mobile App Access'
+      ],
+      icon: <Target className="w-8 h-8" />,
+      category: 'Productivity',
+      popular: true,
+      rating: 4.9,
+      users: '5,200+',
+      color: 'from-blue-500 to-purple-600'
+    },
+    {
+      id: 2,
+      name: 'AI Content Writer Pro',
+      description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing',
+      price: '$49/month',
+      features: [
+        'Multi-Language Support',
+        'SEO Optimization',
+        'Brand Voice Training',
+        'Content Calendar Management',
+        'Plagiarism Detection',
+        'Grammar & Style Check',
+        'Social Media Templates',
+        'Analytics Dashboard'
+      ],
+      icon: <FileText className="w-8 h-8" />,
+      category: 'Content Creation',
+      popular: true,
+      rating: 4.8,
+      users: '8,500+',
+      color: 'from-green-500 to-teal-600'
+    },
+    {
+      id: 3,
+      name: 'AI Analytics Dashboard',
+      description: 'Comprehensive business intelligence platform with AI-powered insights and reporting',
+      price: '$149/month',
+      features: [
+        'Real-time Data Visualization',
+        'Predictive Analytics',
+        'Custom Report Builder',
+        'Automated Alerts',
+        'Multi-Data Source Integration',
+        'White-label Options',
+        'API Access',
+        '24/7 Support'
+      ],
+      icon: <BarChart3 className="w-8 h-8" />,
+      category: 'Analytics',
+      popular: false,
+      rating: 4.7,
+      users: '2,100+',
+      color: 'from-orange-500 to-red-600'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Micro SAAS Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Powerful, focused AI tools designed for modern businesses. 
+            Get started quickly with our ready-to-use micro SAAS solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {microSaasServices.map((service) => (
+            <div
+              key={service.id}
+              className={`bg-white rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105 ${
+                service.popular ? 'ring-2 ring-cyan-400' : ''
+              }`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color}`}>
+                  {service.icon}
+                </div>
+                {service.popular && (
+                  <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Popular
+                  </span>
+                )}
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {service.name}
+              </h3>
+              
+              <p className="text-gray-600 mb-4">
+                {service.description}
+              </p>
+              
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${
+                        i < Math.floor(service.rating) ? 'fill-current' : ''
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-500 ml-2">
+                  {service.rating} ({service.users} users)
+                </span>
+              </div>
+              
+              <div className="mb-6">
+                <span className="text-3xl font-bold text-gray-900">
+                  {service.price}
+                </span>
+                <span className="text-gray-500">/month</span>
+              </div>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.map((feature, index) => (
+                  <li key={index} className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
+            </div>
+          ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
+        </div>
+
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -7160,9 +7315,14 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 neon-text-advanced cyber-text-3d">
             Ready to Transform Your Business?
+=======
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            Ready to Get Started?
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses that have already transformed their operations with our micro SAAS solutions.
+          <p className="text-xl text-gray-300 mb-8">
+            Choose your micro SAAS solution and start transforming your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
@@ -7559,6 +7719,7 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
             Join thousands of businesses already using our AI-powered micro SAAS solutions to drive growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -7749,3 +7910,25 @@ export default MicroSaasPage;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
+=======
+            <Link
+              to="/contact"
+              className="bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/demo"
+              className="bg-transparent border-2 border-cyan-500 text-cyan-500 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-colors"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MicroSaasPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de

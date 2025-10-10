@@ -175,45 +175,11 @@ const MainLoadingSpinner = () => (
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [, setEnhancers] = useState<{
-    performance: unknown;
-    seo: unknown;
-    accessibility: unknown;
-    security: unknown;
-    ux: unknown;
-  } | null>(null);
 
   useEffect(() => {
-    initializeEnhancers();
+    // Simple initialization without complex enhancer instantiation
+    setIsInitialized(true);
   }, []);
-
-  const initializeEnhancers = async () => {
-    try {
-      // Initialize enhancers
-      const performanceEnhancer = new PerformanceEnhancer();
-      const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI and IT solutions for modern enterprises',
-        keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-        canonicalUrl: 'https://ziontechgroup.com',
-      });
-      const accessibilityEnhancer = new AccessibilityEnhancer();
-      const securityEnhancer = new SecurityEnhancer();
-      const uxEnhancer = new UserExperienceEnhancer();
-
-      setEnhancers({
-        performance: performanceEnhancer,
-        seo: seoEnhancer,
-        accessibility: accessibilityEnhancer,
-        security: securityEnhancer,
-        ux: uxEnhancer,
-      });
-      setIsInitialized(true);
-    } catch (error) {
-      // Error logged to monitoring service
-      setIsInitialized(true);
-    }
-  };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
