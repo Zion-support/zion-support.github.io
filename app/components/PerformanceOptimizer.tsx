@@ -125,8 +125,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -216,9 +214,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 };
 
 export default PerformanceOptimizer;

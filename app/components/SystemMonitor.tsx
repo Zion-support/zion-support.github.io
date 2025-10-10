@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
+
     }
   ];
               </span>
@@ -28,7 +28,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 };
 export default SystemMonitorPage;
   </button>
-=======
+
 ;
     }
   ];
@@ -56,4 +56,4 @@ export default SystemMonitorPage;
 };
 ;
 export default SystemMonitorPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

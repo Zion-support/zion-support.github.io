@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-<<<<<<< HEAD
+
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -201,7 +201,7 @@ export default AIAnalyticsDashboardPage;
   </p>
   </p>
   </button>
-=======
+
 ;
 const AIAnalyticsDashboardPage: React.FC = () => {;
   const features = [;
@@ -401,4 +401,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {;
 };
 ;
 export default AIAnalyticsDashboardPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

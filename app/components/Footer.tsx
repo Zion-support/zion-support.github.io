@@ -7,38 +7,7 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-writer', description: 'Automated content' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
-    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Speech recognition' },
-    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Fintech AI' }
-  ];
 
-  const itServices = [
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-ci-cd', description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', url: '/ai-cybersecurity-suite', description: 'Security solutions' },
-    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
-    { name: 'API Development', url: '/ai-api-management', description: 'API solutions' },
-    { name: 'Server Management', url: '/server-management', description: '24/7 monitoring' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic planning' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation' },
-    { name: 'Zion HR Assistant', url: '/zion-hr-assistant', description: 'HR management' },
-    { name: 'Zion Finance Pro', url: '/zion-finance-pro', description: 'Financial management' },
-    { name: 'Zion Lead Gen AI', url: '/zion-lead-gen-ai', description: 'Lead generation' }
-=======
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
@@ -81,7 +50,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Email Marketing Pro', url: '/micro-saas', description: 'Email automation' },
     { name: 'Zion Lead Gen AI', url: '/micro-saas', description: 'Lead generation' },
     { name: 'Zion Data Sync', url: '/micro-saas', description: 'Data integration' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
+ cursor/enhance-app-with-new-services-and-futuristic-design-228f
   ];
 
   const companyLinks = [

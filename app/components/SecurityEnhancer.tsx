@@ -2,7 +2,7 @@
 import React from 'react';
 'use client';
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
+
 interface SecurityEnhancerProps {
   children: React.ReactNode;
 }
@@ -18,7 +18,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
       // Add CSP meta tag
-=======
+
 ;
 interface SecurityEnhancerProps {;
   children: React.ReactNode;}
@@ -41,12 +41,12 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {;
       };
 ;
       // Add CSP meta tag;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
       const cspMeta = document.createElement('meta');
       cspMeta.httpEquiv = 'Content-Security-Policy';
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(cspMeta);
-<<<<<<< HEAD
+
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
@@ -64,7 +64,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {;
 };
 export default SecurityEnhancer;
   </SecurityEnhancerProps>
-=======
+
 ;
       // Disable right-click context menu;
       document.addEventListener('contextmenu', (e) => {;
@@ -86,4 +86,4 @@ export default SecurityEnhancer;
 };
 ;
 export default SecurityEnhancer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

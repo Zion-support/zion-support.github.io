@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
+
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -120,7 +120,7 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
+
 ;
 const EnterprisePage: React.FC = () => {;
   const features = [;
@@ -241,7 +241,7 @@ const EnterprisePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
       {/* Stats Section */}
       <section className="py-20 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -255,7 +255,7 @@ const EnterprisePage: React.FC = () => {;
                 <div className="text-gray-300 text-sm">{stat.label}</div>;
               </div>;
             ))}
-<<<<<<< HEAD
+
           </div>
         </div>
       </section>
@@ -279,7 +279,7 @@ const EnterprisePage: React.FC = () => {;
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
+
           </div>;
         </div>;
       </section>;
@@ -303,14 +303,14 @@ const EnterprisePage: React.FC = () => {;
                   {feature.benefits.map((benefit, idx) => (;}
                     <li key={idx} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
+
           </div>
         </div>
       </section>
@@ -322,7 +322,7 @@ const EnterprisePage: React.FC = () => {;
             </p>
           </div>
                     </li>
-=======
+
           </div>;
         </div>;
       </section>;
@@ -334,12 +334,12 @@ const EnterprisePage: React.FC = () => {;
             </p>;
           </div>;
                     </li>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
+
           </div>
         </div>
       </section>
@@ -381,7 +381,7 @@ export default EnterprisePage;
   </h2>
   </span>
   </SEOOptimizer>
-=======
+
           </div>;
         </div>;
       </section>;
@@ -419,4 +419,4 @@ export default EnterprisePage;
 };
 ;
 export default EnterprisePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

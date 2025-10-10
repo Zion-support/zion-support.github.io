@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
+
 const TeamPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -35,7 +35,7 @@ const TeamPage: React.FC = () => {
     </React.Fragment>
   );
 };
-=======
+
 ;
 const TeamPage: React.FC = () => {;
   return (;
@@ -69,6 +69,6 @@ const TeamPage: React.FC = () => {;
   );}
 };
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 export default TeamPage;
 ;

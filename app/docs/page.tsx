@@ -4,18 +4,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, G
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-export default function DocsPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const docCategories = [
-    {
-      title: 'Getting Started',
-      icon: 'rocket',
-      description: 'Quick start guides and basic setup instructions',
-      docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-=======
+
 ;
 export default function DocsPage() {;
   const [searchQuery, setSearchQuery] = useState('');
@@ -28,7 +17,7 @@ export default function DocsPage() {;
       docs: [;}
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },;
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ];
     },;
@@ -63,7 +52,7 @@ export default function DocsPage() {;
       ];
     }
   ];
-<<<<<<< HEAD
+
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
@@ -89,7 +78,7 @@ export default function DocsPage() {;
           </div>
         </div>
       </section>
-=======
+
 ;
   const popularDocs = [;
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },;
@@ -118,7 +107,7 @@ export default function DocsPage() {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
       {/* Popular Docs */}
       <section className="py-16 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -138,7 +127,7 @@ export default function DocsPage() {;
                 <p className="text-gray-300 text-sm mb-4">{doc.description}</p>;
                 <a;
                   href={doc.link}
-<<<<<<< HEAD
+
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
@@ -173,7 +162,7 @@ export default function DocsPage() {;
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
-=======
+
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm";
                 >;
                   Read More;
@@ -210,7 +199,7 @@ export default function DocsPage() {;
                       <div className="flex items-center justify-between"></div>;
                         <div></div>;
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
                             {doc.title}
                           </h4>;
                           <p className="text-gray-300 text-sm">{doc.description}</p>;
@@ -222,7 +211,7 @@ export default function DocsPage() {;
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
+
           </div>
         </div>
       </section>
@@ -252,7 +241,7 @@ export default function DocsPage() {;
   </button>
   </button>
   </SEOOptimizer>
-=======
+
           </div>;
         </div>;
       </section>;
@@ -280,4 +269,4 @@ export default function DocsPage() {;
   );
 }
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

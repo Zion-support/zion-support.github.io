@@ -4,19 +4,7 @@
  * Provides advanced testing capabilities, mocking, and test automation
  */
 import React, { ReactElement, useCallback } from 'react';
-<<<<<<< HEAD
-// Test result types;
-<<<<<<< HEAD
-export interface PerformanceMetrics {
-  renderTime: number,
-    memoryUsage: number,
-    timestamp: string;}
-}
-export interface CoverageMetrics {
-  statements: number,
-    branches: number,
-    functions: number,
-=======
+
 export interface PerformanceMetrics {;
   renderTime: number,;
     memoryUsage: number;}
@@ -26,7 +14,7 @@ export interface CoverageMetrics {;
   statements: number,;
     branches: number;
   functions: number,;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     lines: number;}
   renderTime: number,;
   memoryUsage: number,;
@@ -39,77 +27,34 @@ export interface CoverageMetrics {;
   lines: number;}
 }
 // Test configuration interface;
-<<<<<<< HEAD
-export interface TestConfig {
-  enableMocking: boolean,
-    enableCoverage: boolean,
-    enablePerformance: boolean,
-    enableAccessibility: boolean
-// Test result types
-export interface PerformanceMetrics {}
-  renderTime: number,
-    memoryUsage: number
-  timestamp: string;}
-}
-export interface CoverageMetrics {}
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number;}
-=======
-export interface TestConfig {;
-  enableMocking: boolean,;
-    enableCoverage: boolean;
-  enablePerformance: boolean,;
-    enableAccessibility: boolean;
-// Test result types;}
-export interface PerformanceMetrics {}
-=======
+
 import { render, RenderOptions } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
 export interface PerformanceMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+ cursor/analyze-improve-and-deploy-application-0f89
   renderTime: number;
   memoryUsage: number;
   timestamp: string;
 }
-<<<<<<< HEAD
+
 export interface CoverageMetrics {}
   statements: number;
   branches: number;
   functions: number;
   lines: number;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 }
 // Test configuration interface;
 export interface TestConfig {}
-<<<<<<< HEAD
-  enableMocking: boolean,
-    enableCoverage: boolean
-  enablePerformance: boolean,
-    enableAccessibility: boolean
-  enableVisualRegression: boolean
-  mockDataPath?: string
-  coverageThreshold: number,
-    performanceThreshold: number,
-    accessibilityThreshold: number
-  timeout?: number
-  verbose?: boolean
-  bail?: boolean
-  enableMocking: boolean,
-  enableCoverage: boolean,
-  enablePerformance: boolean,
-  enableAccessibility: boolean,
-  enableVisualRegression: boolean,
-=======
+
   enableMocking: boolean;
   enableCoverage: boolean;
   enablePerformance: boolean;
   enableAccessibility: boolean;
   enableVisualRegression: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   mockDataPath?: string;
   coverageThreshold: number,;
     performanceThreshold: number;
@@ -138,7 +83,7 @@ export interface TestConfig {}
   includePattern?: string[],;
   excludePattern?: string[];}
 }
-<<<<<<< HEAD
+
 // Default test configuration
 export const defaultTestConfig: TestConfig = {,
     enableMocking: true,
@@ -189,8 +134,7 @@ interface Test {</void>
   name: string,</void>
     fn: () => void | Promise<void>timeout?: number
   skip?: boolean
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 // Default test configuration;
 export const defaultTestConfig: TestConfig = {,;
     enableMocking: true,;}
@@ -277,7 +221,7 @@ interface CoverageResult {;
 interface TestSuite {;
   name: string,;}
 interface CoverageResult {}
-<<<<<<< HEAD
+
   statements: number,
     branches: number
   functions: number,
@@ -290,11 +234,9 @@ interface TestSuite {}
   beforeAll: (() => void | Promise<void>)[],
   afterAll: (() => void | Promise<void>)[],
   beforeEach: (() => void | Promise<void>)[],
-=======
-=======
 
 export interface CoverageMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
   statements: number;
   branches: number;
   functions: number;
@@ -341,16 +283,16 @@ interface CoverageResult {
 interface TestSuite {
   name: string;
   tests: Test[];
-<<<<<<< HEAD
+
   beforeAll: (() => void | Promise<void>)[],;
   afterAll: (() => void | Promise<void>)[],;
   beforeEach: (() => void | Promise<void>)[],;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
   afterEach: (() => void | Promise<void>)[];}
-=======
+
   beforeEach?: () => void;
   afterEach?: () => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
 }
 
 interface Test {
@@ -358,8 +300,7 @@ interface Test {
   fn: () => void | Promise<void>;
   timeout?: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 export class TestRunner {
   private static instance: TestRunner,
   private config: TestConfig,
@@ -389,18 +330,17 @@ export class TestRunner {}
   private isRunning: boolean = false
   private startTime: number = 0
   constructor(config: Partial<TestConfig>= {}) {
-=======
+
 export class TestRunner {}
   private static instance: TestRunner;
   private config: TestConfig;
   private suites: TestSuite[] = [];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
   private currentSuite: TestSuite | null = null;
   private results: TestResult[] = [];
   private testResults: Array<{}
     name: string;
     status: 'passed' | 'failed' | 'skipped',;
-=======
 
 export class TestRunner {
   private tests: Test[] = [];
@@ -497,7 +437,7 @@ export class TestRunner {
     passed: number;
     failed: number;
     skipped: number;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
     duration: number;
   } {
     const total = results.length;
@@ -528,7 +468,7 @@ const customRender = (
   }
   return render(ui, { wrapper: AllTheProviders, ...options });
 };
-<<<<<<< HEAD
+
 interface TestResult {/* TODO: Fix JSX expression */}
 }
 interface AssertionResult {/* TODO: Fix JSX expression */}
@@ -697,19 +637,16 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-<<<<<<< HEAD
-      if ('memory' in performance) {
-=======
+
 ;
       if ('memory' in performance) {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {;
           memoryUsage = memory.usedJSHeapSize;
-<<<<<<< HEAD
-=======
+
 ;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         }
       }
       unmount();
@@ -1252,7 +1189,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>;
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-<<<<<<< HEAD
+
             </div>
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
@@ -1263,7 +1200,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>
     <div class="tests">
         ${this.results;
-=======
+
             </div>;
         <h3 id="heading-summary">Summary</h3>;
         <p>Total: ${this.results.length}</p>;
@@ -1274,7 +1211,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>;
     <div class="tests"></div>;
         ${this.results;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
           .map(result => `}
         ${this.results}
           .map();
@@ -1544,7 +1481,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JUnit report;
    */;
   private generateJunitReport(): void {}
-<<<<<<< HEAD
+
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
@@ -1768,7 +1705,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-=======
+
     const xml = `<?xml version="1.0" encoding="UTF-8"?>;
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
         ${this.results;
@@ -1780,7 +1717,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           .map();
             result => `}
             <testcase name="${result.name}" time="${result.duration / 1000}">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>;
             </skipped>;
@@ -2295,7 +2232,6 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
     }
   }, [testRunner]);
   return {/* TODO: Fix JSX expression */}
-=======
 
 // Performance testing utilities
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {
@@ -2311,7 +2247,7 @@ export const measurePerformance = (fn: () => void): PerformanceMetrics => {
     renderTime: endTime - startTime,
     memoryUsage: endMemory - startMemory,
     timestamp: new Date().toISOString()
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
   };
 };
 
@@ -2326,8 +2262,7 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
     }
   });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 "`
   </T>
   </T>
@@ -2375,10 +2310,8 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
   </void>
   </void>
   </void>
-=======
+
 "`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
 
 // Assertion utilities
 export const expect = (actual: unknown) => ({
@@ -2409,4 +2342,4 @@ export const expect = (actual: unknown) => ({
 // Export everything
 export * from '@testing-library/react';
 export { customRender as render };
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+

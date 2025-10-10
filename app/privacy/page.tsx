@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
+
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
   const dataTypes = [
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-=======
+
 ;
 export default function PrivacyPage() {;
   const lastUpdated = 'January 1, 2024';
@@ -198,7 +198,7 @@ export default function PrivacyPage() {;
                 By using our services, you agree to the collection and use of information in accordance with this policy.;
               </p>;
             </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
             {/* Information We Collect */}
             <section></section>;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>;
@@ -217,13 +217,13 @@ export default function PrivacyPage() {;
                     </ul>;
                   </div>;
                 ))}
-<<<<<<< HEAD
+
               </div>
             </section>
-=======
+
               </div>;
             </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
             {/* How We Use Information */}
             <section></section>;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>;
@@ -239,7 +239,7 @@ export default function PrivacyPage() {;
                     </div>;
                   </div>;
                 ))}
-<<<<<<< HEAD
+
               </div>
             </section>
             {/* Data Security */}
@@ -263,7 +263,7 @@ export default function PrivacyPage() {;
                 </div>
               </div>
             </section>
-=======
+
               </div>;
             </section>;
             {/* Data Security */}
@@ -287,7 +287,7 @@ export default function PrivacyPage() {;
                 </div>;
               </div>;
             </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
             {/* Your Rights */}
             <section></section>;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>;
@@ -301,7 +301,7 @@ export default function PrivacyPage() {;
                     <p className="text-gray-700">{right.description}</p>;
                   </div>;
                 ))}
-<<<<<<< HEAD
+
               </div>
             </section>
             {/* Contact Information */}
@@ -329,7 +329,7 @@ export default function PrivacyPage() {;
                 </div>
               </div>
             </section>
-=======
+
               </div>;
             </section>;
             {/* Contact Information */}
@@ -357,7 +357,7 @@ export default function PrivacyPage() {;
                 </div>;
               </div>;
             </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
             {/* Updates */}
             <section></section>;
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>;

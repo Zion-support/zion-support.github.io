@@ -23,7 +23,7 @@ import {;
   Calendar,;
   FileText;}
 } from 'lucide-react';
-<<<<<<< HEAD
+
 const ProjectManagementProPage: React.FC = () => {
   const features = [
     {
@@ -169,7 +169,7 @@ export default ProjectManagementProPage;
   </button>
   </button>
   </h1>
-=======
+
 ;
 const ProjectManagementProPage: React.FC = () => {;
   const features = [;
@@ -312,4 +312,4 @@ const ProjectManagementProPage: React.FC = () => {;
 };
 ;
 export default ProjectManagementProPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

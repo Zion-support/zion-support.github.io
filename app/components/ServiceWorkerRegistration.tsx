@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
     {
@@ -146,7 +146,7 @@ export default ServiceWorkerRegistrationPage;
   </h2>
   </button>
   </span>
-=======
+
 ;
 const ServiceWorkerRegistrationPage: React.FC = () => {;
   const features = [;
@@ -290,4 +290,4 @@ const ServiceWorkerRegistrationPage: React.FC = () => {;
 };
 ;
 export default ServiceWorkerRegistrationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

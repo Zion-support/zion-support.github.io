@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
+
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -100,11 +98,8 @@ const Next.dPage: React.FC = () => {
 };
 
 export default Next.dPage;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+
+ cursor/fix-errors-and-merge-to-main-581e
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -251,10 +246,7 @@ declare module 'next' {
   }
 }
 
-<<<<<<< HEAD
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
+
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+

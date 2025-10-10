@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
+
     }
   ];
   const benefits = [
@@ -29,7 +29,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-=======
+
 ;
     }
   ];
@@ -59,19 +59,19 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
       {/* Benefits Section */}
               </div>;
             ))}
-<<<<<<< HEAD
+
           </div>
         </div>
       </section>
-=======
+
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
       {/* CTA Section */}
           </div>;
         </div>;
@@ -79,8 +79,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
+
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+ cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

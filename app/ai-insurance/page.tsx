@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-<<<<<<< HEAD
+
 const AiInsurancePage: React.FC = () => {
   const features = [
     {
@@ -93,7 +93,7 @@ const AiInsurancePage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
+
 ;
 const AiInsurancePage: React.FC = () => {;
   const features = [;
@@ -185,7 +185,7 @@ const AiInsurancePage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
                           {benefit}
                         </li>;
                       ))}
@@ -193,7 +193,7 @@ const AiInsurancePage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
+
             </div>
           </div>
         </section>
@@ -255,7 +255,7 @@ export default AiInsurancePage;
   </button>
   </button>
   </h1>
-=======
+
             </div>;
           </div>;
         </section>;
@@ -310,4 +310,4 @@ export default AiInsurancePage;
 };
 ;
 export default AiInsurancePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
