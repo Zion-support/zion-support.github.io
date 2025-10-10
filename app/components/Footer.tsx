@@ -55,19 +55,23 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
               </div>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <Mail className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <MapPin className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start text-sm text-gray-300">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>Mon-Fri: 9AM-6PM EST</span>
+              </div>
             </div>
           </div>
 
@@ -78,8 +82,8 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -95,8 +99,8 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -112,8 +116,8 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    to={service.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -130,13 +134,13 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>
