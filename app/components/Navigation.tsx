@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Eye, Mic, MessageSquare, Share, Headphones, Server } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +36,50 @@ const Navigation: React.FC = () => {
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+
+  const closeAllMenus = () => {
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+    setIsOpen(false);
+  };
+
+  // AI Services data
+  const aiServices = [
+    { name: 'AI Chatbots', href: '/ai-services', description: 'Intelligent customer support', icon: Brain },
+    { name: 'Content Generation', href: '/ai-services', description: 'AI-powered content creation', icon: FileText },
+    { name: 'Data Analytics', href: '/ai-services', description: 'Advanced AI analytics', icon: BarChart },
+    { name: 'Computer Vision', href: '/ai-services', description: 'Image and video analysis', icon: Eye },
+    { name: 'Voice Processing', href: '/ai-services', description: 'Speech recognition & synthesis', icon: Mic },
+    { name: 'Workflow Automation', href: '/ai-services', description: 'Intelligent process automation', icon: Zap },
+    { name: 'Cybersecurity AI', href: '/ai-services', description: 'AI-powered security solutions', icon: Shield },
+    { name: 'Mobile AI Apps', href: '/ai-services', description: 'AI-integrated mobile applications', icon: Smartphone }
+  ];
+
+  // IT Services data
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/it-services', description: 'AWS, Azure, GCP solutions', icon: Cloud },
+    { name: 'Cybersecurity', href: '/it-services', description: 'Comprehensive security services', icon: Shield },
+    { name: 'DevOps & CI/CD', href: '/it-services', description: 'Modern development operations', icon: Settings },
+    { name: 'Database Management', href: '/it-services', description: 'Expert database solutions', icon: Database },
+    { name: 'IT Infrastructure', href: '/it-services', description: 'Complete infrastructure setup', icon: Server },
+    { name: 'Managed IT Services', href: '/it-services', description: '24/7 IT support and monitoring', icon: Headphones },
+    { name: 'Web Development', href: '/it-services', description: 'Custom web applications', icon: Globe },
+    { name: 'Mobile Development', href: '/it-services', description: 'iOS and Android apps', icon: Smartphone }
+  ];
+
+  // Micro SAAS Services data
+  const microSaasServices = [
+    { name: 'Analytics Dashboard', href: '/micro-saas', description: 'Real-time business analytics', icon: BarChart },
+    { name: 'Customer Support Bot', href: '/micro-saas', description: 'AI-powered customer service', icon: MessageSquare },
+    { name: 'Security Monitor', href: '/micro-saas', description: 'Enterprise security monitoring', icon: Shield },
+    { name: 'Cloud Backup', href: '/micro-saas', description: 'Automated cloud backup solutions', icon: Cloud },
+    { name: 'Performance Tracker', href: '/micro-saas', description: 'Application performance monitoring', icon: TrendingUp },
+    { name: 'Workflow Automation', href: '/micro-saas', description: 'AI-powered process automation', icon: Zap },
+    { name: 'Email Marketing', href: '/micro-saas', description: 'Advanced email automation', icon: Mail },
+    { name: 'Social Media Manager', href: '/micro-saas', description: 'Complete social media management', icon: Share }
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
