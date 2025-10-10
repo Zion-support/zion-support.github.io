@@ -1,11 +1,7 @@
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 
 // // 1. Performance Optimizations
 // // Update package.json with performance optimizations
 // const packageJsonPath = '/workspace/package.json';
-const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 // Add performance optimization scripts
 packageJson.scripts = {
@@ -20,8 +16,6 @@ packageJson.scripts = {
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script
 // const performanceScript = `import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 
 // // Optimize images
 // try {
@@ -90,7 +84,6 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 
 // // Monitor performance
 // try {
-    const _memUsage = process.memoryUsage();
 //     // console.log('Memory usage:', {
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',

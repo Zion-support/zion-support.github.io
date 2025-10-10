@@ -12,19 +12,11 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
 // // Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
     // Extract metadata information
-    const _metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
-    let _metadata = {};
     
     if (metadataMatch) {
       try {
         // Parse the metadata object (this is a simple parser)
-        const _metadataStr = metadataMatch[1];
-        const _titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
-        const _descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
-        const _typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
-        const _urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
         
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
@@ -56,12 +48,8 @@ function processFile(filePath) {
     content = content.replace(/export default function (\w+)\(\) \{/, 'const $1: React.FC = () => {');
     
     // Add Helmet component at the beginning of the return statement
-    const _returnMatch = content.match(/(\s+)return \(\s*<([^>]+)>/);
     if (returnMatch) {
-      const _indent = returnMatch[1];
-      const _firstTag = returnMatch[2];
       
-      const _helmetComponent = `${indent}return (\n${indent}  <>\n${indent}    <Helmet>\n${indent}      <title>${metadata.title || 'Zion Tech Group'}</title>\n${indent}      <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />\n${indent}      ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}\n${indent}      ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}\n${indent}    </Helmet>\n${indent}    <${firstTag}>`;
       
       content = content.replace(/(\s+)return \(\s*<([^>]+)>/, helmetComponent);
     }
@@ -70,25 +58,4 @@ function processFile(filePath) {
     content = content.replace(/^\s*}\s*$/, '  );\n};\n\nexport default Page;');
     
     // Fix any remaining syntax issues
-    content = content.replace(/\n\nexport default function/g, '\n\nconst Page: React.FC = () => {');
-    
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-//       return true;
-    }
-    
-    return false;
-  } catch (error) {
-//     return false;
-  }
-}
-
-// Process all files
-let _fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-
-// 
+}}

@@ -1,9 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
-<<<<<<< HEAD
-const React = require('react');
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4927
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -39,17 +35,12 @@ jest.mock('./src/hooks/usePerformance.ts', () => ({
   })),
 }));
 
-jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
+// usePerformanceMonitoring hook mock removed - hook doesn't exist
 
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
+  const mockReact = require('react');
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -61,9 +52,11 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
+      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
+      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
@@ -78,6 +71,7 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
+      const React = require('react');
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
@@ -111,8 +105,10 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
-const originalError = console.error;
+let _originalError;
+
 beforeAll(() => {
+  _originalError = console.error;
   console.error = jest.fn((...args) => {
     if (
       typeof args[0] === 'string' &&
@@ -121,10 +117,12 @@ beforeAll(() => {
     ) {
       return;
     }
-    originalError.call(console, ...args);
+    _originalError.call(console, ...args);
   });
 });
 
 afterAll(() => {
-  console.error = originalError;
+  if (_originalError) {
+    console.error = _originalError;
+  }
 });

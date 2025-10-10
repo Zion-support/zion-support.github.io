@@ -12,23 +12,22 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and keep HEAD version
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> origin/main
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> origin/main'
-        content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        if ' and before >>>>>>>
+        pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
+        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
         # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> cursor/...
         pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor/[^\n]+'
         content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
         
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> cursor/...
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor/[^\n]+'
-        content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        # Pattern 3: Remove any remaining ======= lines
+        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
         
-        # Remove any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        # Pattern 4: Remove any remaining 
+        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
+        
+        # Clean up any double newlines
+        content = re.sub(r'\n\n\n+', '\n\n', content)
         
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)

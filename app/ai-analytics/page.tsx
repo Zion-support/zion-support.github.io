@@ -1,6 +1,6 @@
 'use client';
 import React, { lazy } from 'react';
-import { CheckCircle, TrendingUp, Brain, BarChart, Target, Users } from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
@@ -54,7 +54,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       title: 'Financial Analytics',
       description: 'Monitor financial health and profitability.',
       icon: BarChart,
-      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']}
+      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
     }
   ]
   const pricingPlans = [
@@ -71,7 +71,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         '1,000 data points/month',
         'Basic integrations'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Professional',
@@ -88,7 +88,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'API access',
         'Custom metrics'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -105,7 +105,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'Advanced security',
         'Dedicated account manager'
       ],
-      popular: false}
+      popular: false
     }
   ]
   const integrations = [
@@ -133,14 +133,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg" aria-label="
-                Start Free Trial
-              " tabIndex="0">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
                 Start Free Trial
               </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
-                View Demo
-              " tabIndex="0">
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">
                 View Demo
               </button>
             </div>
@@ -260,7 +256,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>}
+                  </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -281,10 +277,8 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'`}
-                }`} aria-label="
-                  Get Started
-                " tabIndex="0">
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                }`} aria-label="Get Started" tabIndex="0">
                   Get Started
                 </button>
               </div>
@@ -301,14 +295,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             Join thousands of businesses using AI analytics to make smarter decisions and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg" aria-label="
-              Start Free Trial
-            " tabIndex="0">
+            <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
               Start Free Trial
             </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
-              Contact Sales
-            " tabIndex="0">
+            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">
               Contact Sales
             </button>
           </div>

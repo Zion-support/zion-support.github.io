@@ -1,12 +1,4 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import ArrowLeft, from 'luci, d, e-rea, c, t';
-import Calendar, from 'luci, d, e-rea, c, t';
-import Clock, from 'luci, d, e-rea, c, t';
-import Cpu, from 'luci, d, e-rea, c, t';
-import Database, from 'luci, d, e-rea, c, t';
-import Gauge, from 'luci, d, e-rea, c, t';
-import TrendingUp, from 'luci, d, e-rea, c, t';
-import Zap, from 'luci, d, e-rea, c, t';
 const RealTimeAIInferenceOptimization202, 5 = () => { 
   return (
     <>

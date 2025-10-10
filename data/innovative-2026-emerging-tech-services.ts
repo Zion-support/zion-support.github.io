@@ -942,7 +942,6 @@ export const getEmergingTechServicesByPriceRange = (min_price: number) max_price
     return price >= minPrice && price <= maxPrice
   })
 }
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026EmergingTechService {;
   id: string;
   name: string;

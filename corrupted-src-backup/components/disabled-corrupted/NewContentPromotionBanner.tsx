@@ -1,5 +1,4 @@
 import Reac, t, { useState } fr, o, m 'rea, c, t';
-import { Link } from 'react-router-dom';
 interface NewContentPromotionBannerProp, s { 
   varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
   title?: string;

@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
 //Function to fix corrupted syntax by removing extra commas and spaces
 function fixCorruptedSyntax(content) {
@@ -11,13 +10,11 @@ function fixCorruptedSyntax(content) {
 
   //Fix import statements - remove extra commas and spaces
   content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
-    const _cleaned = importContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `import ${cleaned};`;
   });
 
   //Fix export statements
   content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
-    const _cleaned = exportContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `export const ${cleaned} =`;
   });
 
@@ -45,19 +42,15 @@ function fixCorruptedSyntax(content) {
 //Function to find all corrupted blog files
 function findCorruptedFiles() {
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
-  const _corruptedFiles = [];
 
   function walkDir(_dir) {
-    const _files = fs.readdirSync(dir);
 
     for (const file of files) {
       //       const filePath = path.join(dir, file);
-      const _stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
         walkDir(filePath);
       } else if (file.endsWith('.tsx') && !file.includes('backup')) {
-        const _content = fs.readFileSync(filePath, 'utf8');
         if (content.includes('imp, o, r, t') || content.includes('exp, o, r, t')) {
           corruptedFiles.push(filePath);
         }
@@ -88,4 +81,3 @@ function main() {
 
   //   }
 
-main();

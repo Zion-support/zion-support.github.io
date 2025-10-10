@@ -1,188 +1,294 @@
 'use client';
-import React from 'react';
-import { CreditCard, BarChart, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, DollarSign, Users, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { useState, useCallback, memo } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Receipt, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, BarChart, PieChart, TrendingUp } from 'lucide-react';
 
-const AIExpenseTrackerPage: React.FC = () => {
+const AIExpenseTracker: React.FC = memo(() => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  React.useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const features = [
     {
-      title: 'Automatic Expense Capture',
-      description: 'AI automatically captures and categorizes expenses from receipts and bank statements.',
-      icon: CreditCard
+      icon: Receipt,
+      title: 'Smart Receipt Scanning',
+      description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
+      color: 'text-purple-400'
     },
     {
-      title: 'Smart Categorization',
-      description: 'Intelligently categorizes expenses and learns from your spending patterns.',
-      icon: Target
+      icon: Brain,
+      title: 'AI Categorization',
+      description: 'Intelligently categorize expenses and learn from your spending patterns over time',
+      color: 'text-blue-400'
     },
     {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Get detailed insights into your spending habits with beautiful charts and reports',
+      color: 'text-green-400'
+    },
+    {
+      icon: Target,
       title: 'Budget Management',
-      description: 'Set budgets and get real-time alerts when you approach spending limits.',
-      icon: BarChart
+      description: 'Set budgets, track progress, and get alerts when approaching limits',
+      color: 'text-orange-400'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Personal',
+      price: '$9',
+      period: '/month',
+      description: 'Perfect for individuals',
+      features: [
+        'Unlimited receipts',
+        'Basic categorization',
+        'Monthly reports',
+        'Email support',
+        'Mobile app',
+        '1 user account'
+      ],
+      popular: false
     },
     {
-      title: 'Receipt Scanning',
-      description: 'Scan receipts with your phone and automatically extract expense data.',
-      icon: Zap
+      name: 'Business',
+      price: '$29',
+      period: '/month',
+      description: 'Ideal for small businesses',
+      features: [
+        'Unlimited receipts',
+        'AI categorization',
+        'Advanced analytics',
+        'Priority support',
+        'Team collaboration',
+        'Custom categories',
+        '5 user accounts'
+      ],
+      popular: true
     },
     {
-      title: 'Team Expense Tracking',
-      description: 'Track team expenses and manage reimbursements efficiently.',
-      icon: Users
+      name: 'Enterprise',
+      price: '$99',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited everything',
+        'Advanced AI features',
+        'Custom integrations',
+        '24/7 support',
+        'White-label solution',
+        'API access',
+        'Unlimited users'
+      ],
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Personal Finance',
+      description: 'Track personal expenses and build better financial habits',
+      icon: Receipt,
+      result: '30% savings'
     },
     {
-      title: 'Financial Reports',
-      description: 'Generate detailed reports on spending patterns and budget performance.',
-      icon: DollarSign
+      title: 'Business Expenses',
+      description: 'Manage business expenses and improve cash flow visibility',
+      icon: BarChart,
+      result: '50% faster'
+    },
+    {
+      title: 'Tax Preparation',
+      description: 'Organize receipts and expenses for easy tax filing',
+      icon: Target,
+      result: '90% easier'
+    },
+    {
+      title: 'Team Management',
+      description: 'Track team expenses and enforce spending policies',
+      icon: Users,
+      result: '100% control'
     }
   ];
 
   const benefits = [
-    '85% Faster Expense Entry',
-    '90% Reduction in Manual Work',
-    'Real-time Budget Alerts',
-    'Automatic Categorization',
-    'Receipt Scanning',
-    'Team Collaboration'
+    { metric: '99%', label: 'OCR Accuracy', color: 'text-green-400' },
+    { metric: '5 min', label: 'Setup Time', color: 'text-blue-400' },
+    { metric: '30%', label: 'Time Saved', color: 'text-purple-400' },
+    { metric: '24/7', label: 'Available', color: 'text-orange-400' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Expense Tracker <span className="text-cyan-400">Pro</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Take control of your finances with AI-powered expense tracking. Automatically capture, 
-              categorize, and analyze your spending to make better financial decisions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Free Trial
-              </a>
-              <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Helmet>
+        <title>AI Expense Tracker - Smart Financial Management | Zion Tech Group</title>
+        <meta name="description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization. Save time and money with intelligent expense management." />
+        <meta name="keywords" content="expense tracker, receipt scanning, financial management, AI categorization, budget tracking" />
+        <meta property="og:title" content="AI Expense Tracker - Smart Financial Management" />
+        <meta property="og:description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
+      </Helmet>
 
-      {/* Features Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-            <p className="text-xl text-gray-300">Everything you need to track expenses efficiently</p>
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Receipt className="w-4 h-4" />
+            <span>AI-Powered Finance</span>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Expense Tracker Pro?</h2>
-            <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
-          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Expense Tracker
+          </h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your expense management with AI-powered receipt scanning and intelligent categorization. 
+            Save time, reduce errors, and gain valuable insights into your spending habits.
+          </p>
 
-      {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Simple Pricing</h2>
-            <p className="text-xl text-gray-300">Choose the plan that fits your needs</p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 text-center">
-            <div className="mb-8">
-              <h3 className="text-3xl font-bold text-white mb-2">AI Expense Tracker Pro</h3>
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$29<span className="text-xl text-gray-300">/month</span></div>
-              <p className="text-gray-300">Per user, billed monthly</p>
-            </div>
-            
-            <ul className="space-y-4 mb-8 text-left max-w-md mx-auto">
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                Unlimited expenses
-              </li>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                Automatic categorization
-              </li>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                Budget management
-              </li>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                Receipt scanning
-              </li>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                24/7 support
-              </li>
-            </ul>
-            
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-              Get Started Today
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Start Tracking
             </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Take Control of Your Expenses?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of users already using AI Expense Tracker Pro to manage their finances better.
+        {/* Benefits */}
+        <section className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+                <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
+                <div className="text-white font-semibold mb-2">{benefit.label}</div>
+                <div className="text-gray-400 text-sm">Industry-leading performance</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
+                    <feature.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-400">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Use Cases */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
+                  <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
+                <p className="text-gray-400 text-sm">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                  }`}
+                >
+                  Get Started
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 10,000+ users already saving time and money with our AI Expense Tracker.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-              Start Free Trial
+            <a
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: (302) 464-0950
             </a>
-            <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-              Call +1 302 464 0950
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+            >
+              <MessageSquare className="w-5 h-5 mr-2" />
+              Email Us
             </a>
           </div>
-        </div>
-      </section>
-
-      <Footer />
+        </section>
+      </div>
     </div>
   );
-};
+});
 
-export default AIExpenseTrackerPage;
+AIExpenseTracker.displayName = 'AIExpenseTracker';
+
+export default AIExpenseTracker;

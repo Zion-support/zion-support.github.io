@@ -33,3 +33,5 @@ export class BannerRegistry {
   private maxConcurrentBanners: number = 3;
   private loadingPromises: Map<string, Promise<void>> = new Map();
 
+
+}

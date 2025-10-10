@@ -6,8 +6,6 @@ import { glob } from 'glob';
 // Function to process a file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Fix duplicate React imports
     if (content.includes("import React from 'react';\nimport React from 'react';")) {
@@ -61,9 +59,7 @@ function processFile(filePath) {
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-  let _fixedCount = 0;
   files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
