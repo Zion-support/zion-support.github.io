@@ -7,7 +7,9 @@ async function main() {
   //   files.forEach(file => {
 return (
 )
-    try {)
+    try {
+
+)
       //Fix common JSX syntax issues;)
       //1. Fix key prop placement: <div>
 );
@@ -83,10 +85,11 @@ const inputFix = content.replace()
 
       if (modified) {/* TODO: Fix JSX expression */}
         //         }
-    } catch (error) {/* TODO: Fix JSX expression */}
-      //       }
-  });
+    
 
+} catch (error) {/* TODO: Fix JSX expression */}
+      //       }
+  })
   //   }
 
 // main().catch(console.error);

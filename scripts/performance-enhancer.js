@@ -31,11 +31,12 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async analyzeBundle() {
 //     try {
+
+
       // Build with analysis;
-      execSync('npm run build:analyze', { stdio: 'pipe' });
+      execSync('npm run build:analyze', { stdio: 'pipe' })
   async analyzeBundle() {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-      
+  o: 'pipe' })
 //       const distPath = path.join(process.cwd(), 'dist');
 //       const files = await fs.readdir(distPath);
       ;
@@ -62,22 +63,28 @@ let _totalSize = 0;
       
       this.report.optimizations.push({/* TODO: Fix JSX expression */})`
   size: ${(totalSize / 1024).toFixed(2)} KB`
-      });
+      })
       `
 //       // // console.log removed for production
 `
-  size: ${(totalSize / 1024).toFixed(2)} KB`)} catch (error) {/* TODO: Fix JSX expression */}
+  size: ${(totalSize / 1024).toFixed(2)} KB`)
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async optimizeImages() {
 //     try {
+
+
 //       const publicPath = path.join(process.cwd(), 'public');
 //       const imagesPath = path.join(publicPath, 'images');
       
       // Check if images directory exists;
       try {
-        await fs.access(imagesPath)} catch {
+        await fs.access(imagesPath)
+
+} catch {
 //         return;
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
@@ -98,14 +105,15 @@ const _images = await fs.readdir(imagesPath);
         details: `Processed ${optimizedCount} images`
       this.report.optimizations.push({/* TODO: Fix JSX expression */}`
   s: `Processed ${optimizedCount} images`)
-      });
-      
+      })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async optimizeCSS() {
 //     try {
+
+
       // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
@@ -149,14 +157,17 @@ const _images = await fs.readdir(imagesPath);
         status: 'completed'),
         details: 'Critical CSS generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
-      
-//       } catch (error) {/* TODO: Fix JSX expression */}
+      })
+//       
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async optimizeJavaScript() {
 //     try {
+
+
       // Generate performance monitoring script;
       const performanceScript = `
 // Performance monitoring script;
@@ -170,8 +181,7 @@ const _images = await fs.readdir(imagesPath);
       new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
-//         }).observe({ entryTypes: ['largest-contentful-paint'] });
-      
+//         }).observe({ entryTypes: ['largest-contentful-paint'] })
       // FID;
       new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
@@ -180,18 +190,16 @@ const _entries = list.getEntries();
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      
+  s: ['largest-contentful-paint'] })
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 //           })}).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      
+  s: ['first-input'] })
       // CLS;
       let _clsValue = 0;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
-        });
+        })
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })}
   }
@@ -214,14 +222,17 @@ const _entries = list.getEntries();
         status: 'completed'),
         details: 'Performance monitoring script generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
-      
-//       } catch (error) {/* TODO: Fix JSX expression */}
+      })
+//       
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async generateServiceWorker() {
-//     try {;
+//     try {
+
+;
 const serviceWorkerScript = `
 // Service Worker for caching and offline support;
 // const CACHE_NAME = 'zion-app-v1';
@@ -236,8 +247,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-  )});
-
+  )})
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -245,12 +255,10 @@ self.addEventListener('fetch', (event) => {
         // Return cached version or fetch from network;
         return response || fetch(event.request);
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
-});
-
+})
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
       })
-  )});
-
+  )})
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
           }
         })
@@ -266,14 +274,17 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Service worker generated for offline support',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
-      
-//       } catch (error) {/* TODO: Fix JSX expression */}
+      })
+//       
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async optimizeBuild() {
 //     try {
+
+
       // Check if vite.config.js exists;
 //       const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
       
@@ -292,7 +303,9 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */}
         }
         
-      } catch {/* TODO: Fix JSX expression */}
+      
+
+} catch {/* TODO: Fix JSX expression */}
 //         }
       
       this.report.optimizations.push({)
@@ -300,16 +313,14 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Build configuration analyzed',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
-      
+      })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async generateReport() {
 //     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
-    await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
-    
+    await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2))
     // Generate markdown report;
 //     const markdownReport = this.generateMarkdownReport();
 //     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md');

@@ -29,8 +29,7 @@ const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',')) {
       return `${key}: ${value},`}
-    return match});
-
+    return match})
   // Fix missing commas in object properties;
 const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
   if (missingCommaPattern.test(content)) {
@@ -58,15 +57,19 @@ return true}
 
 // Get all TypeScript files with errors;
 function getFilesWithErrors() {
-  try {;
-const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+  try {
+
+;
+const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' })
     const files = new Set();
     output.split('\n').forEach(line => {;
 const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
       if (match) {
         files.add(match[1])}
-    });
-    return Array.from(files)} catch (error) {
+    })
+    return Array.from(files)
+
+} catch (error) {
     return []}
 }
 
@@ -81,14 +84,17 @@ let fixedCount = 0;
   files.forEach(file => {
     if (fixDataStructures(file)) {
       fixedCount++}
-  });
-
+  })
   // console.log removed for production
 // Run type check again
   // console.log removed for production
 try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
+
+
+    execSync('pnpm run type-check', { stdio: 'inherit' })
     // console.log removed for production
+
+
 } catch (error) {
     // console.log removed for production
 }

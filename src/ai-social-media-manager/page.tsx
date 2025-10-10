@@ -117,7 +117,6 @@ const pricing = [
                   {platform.name}
                 </h3>
             ))}
-
       {/* Features Section */}
       <section className="py-16 px-4">
               Powerful AI Features

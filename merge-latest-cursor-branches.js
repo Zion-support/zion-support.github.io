@@ -21,14 +21,16 @@ const latestCursorBranches = [
 //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
 
-    return { success: true, result }} catch (error) {
+
+    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+    return { success: true, result }
+
+} catch (error) {
 
     return { success: false, error: error.message };
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-
+  o: 'pipe' })
     return {/* TODO: Fix JSX expression */}
   s: true, result }} catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }}
@@ -37,11 +39,15 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });
+
+
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' })
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    return true} catch {/* TODO: Fix JSX expression */}
+  o: 'pipe' })
+    return true
+
+} catch {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -61,7 +67,7 @@ for (const branch of latestCursorBranches) {
       branch)
       status: 'not_found'),
 for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
-    });
+    })
     continue}
 
   //Try to merge the branch;
@@ -84,9 +90,7 @@ for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
       error: mergeResult.error),
   //Try to merge the branch;`;
 const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`
-    `Merge ${branch}`)
-  );
-
+    `Merge ${branch}`))
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     })} else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
@@ -132,15 +136,7 @@ const report = {/* TODO: Fix JSX expression */}`
   s: mergedCount > 0 ? 'success' : 'no-changes'};
 
 // Save detailed report;
-fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
-
+fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2))
 if (report.systemChecks.allPassed) {} else {
 if (report.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}

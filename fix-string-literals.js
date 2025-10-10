@@ -5,7 +5,9 @@ import path from 'path';
 // console.log removed for production
 // Function to fix string literals and syntax errors;
 function fixStringLiterals(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -124,7 +126,9 @@ const backtickCount = (line.match(/`/g) || []).length;
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -134,7 +138,9 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 const files = [];
   ;
 function traverse(currentDir) {
-    try {;
+    try {
+
+;
 const items = fs.readdirSync(currentDir);
       
       for (const item of items) {;
@@ -151,7 +157,9 @@ const ext = path.extname(item);
             files.push(fullPath)}
         }
       }
-    } catch (error) {
+    
+
+} catch (error) {
       // Skip directories we can't read}
   }
   
@@ -169,9 +177,13 @@ let errorCount = 0;
 
 for (const file of files) {
   try {
+
+
     if (fixStringLiterals(file)) {
       fixedCount++}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.error removed for production
 errorCount++}
 }

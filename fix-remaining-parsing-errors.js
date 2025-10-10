@@ -23,7 +23,9 @@ const filesWithErrors = [
 ];
 ;
 function fixParsingError(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -36,7 +38,9 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
   d: ${path.relative(__dirname, filePath)}`)}
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 }
 }
@@ -48,7 +52,6 @@ const fullPath = path.join(__dirname, file);
     fixParsingError(fullPath)}
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // console.log removed for production
 `

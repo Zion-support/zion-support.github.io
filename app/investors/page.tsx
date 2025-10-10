@@ -1,19 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    {
+const PagePage: React.FC = () => {const features = [    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -127,16 +117,10 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ));
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-          </div>
+            ))</div>
         </section>
 
         {/* Benefits Section */}
@@ -157,35 +141,7 @@ const PagePage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-            ));
-=======
-              <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                  <div className="text-center">
-                    <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Brain className="w-10 h-10 text-cyan-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
-                    <p className="text-gray-300 mb-6">
-                      Leverage the power of artificial intelligence to transform your business.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-          </div>
+            ))</div>
         </section>
 
         {/* CTA Section */}
@@ -214,18 +170,6 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-    </div>)
-=======
-        </section>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default PagePage;
+    </div>)export default PagePage;

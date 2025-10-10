@@ -4,7 +4,9 @@ import fs from 'fs';
 import path from 'path';
 ;
 function fixJsxFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -38,7 +40,9 @@ const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);
     if (modified) {
       fs.writeFileSync(filePath, content);
       return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -67,7 +71,6 @@ let fixedCount = 0;
 tsxFiles.forEach(file => {
   if (fixJsxFile(file)) {
     fixedCount++}
-});
-
+})
 // console.log removed for production
 // console.log removed for production

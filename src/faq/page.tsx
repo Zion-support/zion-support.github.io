@@ -148,7 +148,6 @@ const globalIndex = categoryIndex * 100 + itemIndex;
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
             ))}
-
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -182,8 +181,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
 return (
-
-  return (
     <div>Coming Soon</div>
 );
 }
@@ -331,9 +328,7 @@ const toggleItem = (inde)
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
   })).filter(category => category.questions.length > 0);
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -431,7 +426,6 @@ type="text" placeholder="Search FAQs..."
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
             ))}
-
 {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">

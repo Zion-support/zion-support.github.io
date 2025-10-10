@@ -11,9 +11,7 @@ const SEO: React.FC<SEOProps> = ({,
   image = '/og-image.jpg',
   url = 'https: //zion.app',
   type = 'website'}) => {
-return (
-
-  return(<Helmet>
+return (<Helmet>
       <title>
 );
 }{title}</title>

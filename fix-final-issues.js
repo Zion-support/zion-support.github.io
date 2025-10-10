@@ -5,6 +5,8 @@ import { glob } from 'glob';
 // Function to process a file;
 function processFile(filePath) {
   try {
+
+
     // Fix duplicate React imports;
     if (content.includes("import React from 'react';\nimport React from 'react';")) {
       content = content.replace(/import React from 'react';\nimport React from 'react';/g)
@@ -51,7 +53,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

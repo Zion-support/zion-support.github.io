@@ -106,9 +106,7 @@ const observer = new IntersectionObserver(
  }
  })},
  {/* TODO: Fix JSX expression */}
-  d: 0.1 }
- );
-;
+  d: 0.1 })
 const elements = document.querySelectorAll('.animate-on-scroll');
  elements.forEach(el => observer.observe(el))};
 

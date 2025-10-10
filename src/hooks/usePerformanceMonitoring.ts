@@ -22,22 +22,24 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       return () => {}}
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       // LCP - Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        reportMetric('LCP', lastEntry.startTime)});
+        reportMetric('LCP', lastEntry.startTime)})
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
       // FID - First Input Delay;
 const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
 //         entries.forEach()
           (entr)
@@ -48,13 +50,13 @@ const entries = list.getEntries();
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid)
           }
-        )});
+        )})
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] })
 // CLS - Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
 //         entries.forEach()
 //           ()
@@ -71,15 +73,14 @@ const entries = list.getEntries();
   O: Add content}
 }
               clsValue += entry.value}
-          }
-        );
-        reportMetric('CLS', clsValue)});
+          })
+        reportMetric('CLS', clsValue)})
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
       // FCP - First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
         entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -88,13 +89,13 @@ const entries = list.getEntries();
   O: Add content}
 }
             reportMetric('FCP', entry.startTime)}
-        })});
+        })})
       fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] })
       // TTFB - Time to First Byte;
 const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -105,13 +106,13 @@ const entries = list.getEntries();
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb)}
-        })});
+        })})
       navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation'] })
       // Resource timing;
 const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -127,9 +128,9 @@ const entries = list.getEntries();
               // Only track slow resources;
               reportMetric('SLOW_RESOURCE', loadTime)}
           }
-        })});
+        })})
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+  s: ['resource'] })
       // Cleanup;
       return () => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -139,7 +140,9 @@ const entries = list.getEntries();
         clsObserver.disconnect();
         fcpObserver.disconnect();
         navigationObserver.disconnect();
-        resourceObserver.disconnect()}} catch (error) {/* TODO: Fix JSX expression */}
+        resourceObserver.disconnect()}
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       return () => {}}

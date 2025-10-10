@@ -6,6 +6,8 @@ import path from 'path';
 // Function to fix critical syntax errors
 function fixCriticalSyntax(filePath) {
   try {
+
+
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -59,7 +61,9 @@ function fixCriticalSyntax(filePath) {
     }
     
     return modified;
-  } catch (error) {
+  
+
+} catch (error) {
     console.error(`Error fixing syntax in ${filePath}:`, error.message);
     return false;
   }

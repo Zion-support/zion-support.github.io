@@ -14,7 +14,9 @@ export enum ErrorSeverity {// TODO: Add content}
   CRITICAL = 'critical'
 }
 
-export interface ErrorLogEntry {// TODO: Add content}
+export interface ErrorLogEntry {
+
+// TODO: Add content}
 
 };
   timestam,
@@ -157,7 +159,9 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
                 name: entry.error.name,
                 stack: entry.error.stack}
             : undefined})
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       // Silently fail to avoid infinite loop;

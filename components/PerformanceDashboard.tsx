@@ -15,7 +15,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0});
+    fps: 0})
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {;

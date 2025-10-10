@@ -78,11 +78,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
-    });
-
+    })
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     document.body.insertBefore(skipLink, document.body.firstChild)}
 
   private setupHighContrast(): void {
@@ -177,13 +175,12 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _previousLevel = 0;
 
     headings.forEach(heading => {)
-      //       const level = parseInt(heading.tagName.charAt(1));
+      //       const level = parseInt(heading.tagName.charAt(1))
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels;
   private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
       }
-      previousLevel = level});
-
+      previousLevel = level})
     return Math.max(0, score)}
 
   public getMetrics(): AccessibilityMetric[] {/* TODO: Fix JSX expression */}

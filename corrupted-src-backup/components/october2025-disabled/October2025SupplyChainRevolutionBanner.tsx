@@ -21,8 +21,6 @@ return (
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />;
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {
 return (
- 
-  return (
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  >
 );
 } {/* Animated, Background, Elemen, t, s */ }</div>

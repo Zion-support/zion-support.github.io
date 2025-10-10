@@ -6,7 +6,7 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
     return}
 ;
 const { productId, userId } = req.body || {};
@@ -14,10 +14,12 @@ const { productId, userId } = req.body || {};
   if (!productId) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
+    res.end(JSON.stringify({ error: 'Product ID is required' }))
     return}
 
   try {
+
+
     // Basic checkout session creation logic;
 const sessionData = {
       productId,
@@ -38,7 +40,9 @@ const sessionData = {
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
       data: sessionData
-    }))} catch (error) {
+    }))
+
+} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

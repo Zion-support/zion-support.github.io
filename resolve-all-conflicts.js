@@ -7,7 +7,9 @@ import { readFileSync, writeFileSync } from 'fs';
 // console.log removed for production
 ;
 function resolveConflicts(filePath) {
-  try {;
+  try {
+
+;
 const content = readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
@@ -15,7 +17,7 @@ const content = readFileSync(filePath, 'utf8');
       return false; // No conflicts;
 // Get list of files with conflicts;
 const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */})
-  g: 'utf8' });
+  g: 'utf8' })
 const conflictFiles = gitStatus;
   .split('\n')
   .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
@@ -53,17 +55,20 @@ const line = lines[i];
     }
     
     // Write the resolved content;
-    writeFileSync(filePath, resolvedLines.join('\n'));
+    writeFileSync(filePath, resolvedLines.join('\n'))
     // console.log removed for production
-return true} catch (error) {
+return true
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
 
 try {
+
+
   // Get list of files with conflicts;
-  const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-  
+  const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
   if (!conflictFiles.trim()) {
     // console.log removed for production
 process.exit(0)}
@@ -81,18 +86,18 @@ const files = conflictFiles.trim().split('\n');
     }
     // Check if file has conflict markers;
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' })
     // console.log removed for production
+
+
 } catch (error) {/* TODO: Fix JSX expression */}
   }
 
   // console.log removed for production
 // Add all resolved files;
-  execSync('git add .', { stdio: 'inherit' });
-
+  execSync('git add .', { stdio: 'inherit' })
   // Commit the resolution;
-  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' });
-
+  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' })
   // console.log removed for production
 } catch (error) {
   // console.error removed for production

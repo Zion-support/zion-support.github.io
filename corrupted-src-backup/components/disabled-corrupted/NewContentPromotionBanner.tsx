@@ -126,8 +126,7 @@ const variantClasse, s = {/* TODO: Fix JSX expression */}
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />)
             ></button>"
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" /></X>
-              </bu, t, t, o, n>)
-          )}
+              </bu, t, t, o, n>))}
         </div>
       </div>
     </div>

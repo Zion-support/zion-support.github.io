@@ -18,22 +18,15 @@ import {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
   Clock;)
 } from 'lucide-react';
 ;
 const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 const location = useLocation();
-=======
-  Clock]
-    } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-
   useEffect(() => {;
 const handleResize = () => {
       if (window.innerWidth >= 1024) {
-<<<<<<< HEAD
         setIsOpen(false););
     };
 
@@ -47,29 +40,7 @@ const newExpanded = new Set(expandedSections);
 } else {
       newExpanded.add(section););
     setExpandedSections(newExpanded););
-const navigationSections = [
-=======
-        setIsOpen(false)]
-    }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize)]
-    }, []);
-
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-      newExpanded.delete(section)]
-    } else {
-      newExpanded.add(section)]
-    }
-    setExpandedSections(newExpanded)]
-    };
-
-  const navigationSections = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    {
+const navigationSections = [    {
       title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
@@ -149,26 +120,13 @@ const navigationSections = [
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-<<<<<<< HEAD
-      ];);
-=======
-      ]]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      ];);  ];
 ;
 const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
-    hours: 'Mon-Fri 9AM-6PM EST';);
-=======
-    hours: 'Mon-Fri 9AM-6PM EST']
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  return (
+    hours: 'Mon-Fri 9AM-6PM EST';);  return (
     <React.Fragment>
       {/* Mobile Menu Button */}
       <button
@@ -245,11 +203,10 @@ const contactInfo = {
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
                         </Link>
-                      ));
-                    </div>
+                      ))</div>
                   );
                 </div>
-              ));
+              ))
             </nav>
           </div>
 
@@ -276,14 +233,5 @@ const contactInfo = {
           </div>
       </aside>
     </>
-<<<<<<< HEAD
   ););
-Sidebar.displayName = 'Sidebar'
-=======
-  )]
-    };
-
-Sidebar.displayName = 'Sidebar';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default Sidebar;
+Sidebar.displayName = 'Sidebar'export default Sidebar;

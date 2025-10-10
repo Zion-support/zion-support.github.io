@@ -6,7 +6,9 @@ import { fileURLToPath } from 'url';
 
 // Function to fix specific files with known issues;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -30,8 +32,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g');
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
         }
-      });
-      
+      })
       // Fix unused error parameter;
       content = content.replace(/\(error\) => \{/, '() => {');
       modified = true}
@@ -86,7 +87,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}`
       // console.log removed for production
 }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.log removed for production
 }
 }

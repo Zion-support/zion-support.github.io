@@ -29,8 +29,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
           // Handle tab navigation;
           // console.log removed for production
 }
-      }
-  )
+      })
     }
   }
 

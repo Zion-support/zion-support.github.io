@@ -11,7 +11,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
-        files = files.concat(getAllFiles(fullPath, extensions));
+        files = files.concat(getAllFiles(fullPath, extensions))
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -29,8 +29,7 @@ const newParams = params.split(',').map(param => {)
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
         return `_${trimmed}`}
       return trimmed}).join(', ');
-    return match.replace(params, newParams)});
-
+    return match.replace(params, newParams)})
   // Fix unused parameters in arrow functions;
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {;
 const newParams = params.split(',').map(param => {)
@@ -38,16 +37,14 @@ const newParams = params.split(',').map(param => {)
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
         return `_${trimmed}`}
       return trimmed}).join(', ');
-    return match.replace(params, newParams)});
-
+    return match.replace(params, newParams)})
   // Fix unused variable declarations;
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match}
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
     }`
-    return match.replace(varName, `_${varName}`)});
-
+    return match.replace(varName, `_${varName}`)})
   return content}
 
 // Fix unused imports;
@@ -56,11 +53,10 @@ function fixUnusedImports(content) {
   // Find all used identifiers;
   lines.forEach(line => {)
     if (matches) {
-      matches.forEach(match => usedIdentifiers.add(match));
+      matches.forEach(match => usedIdentifiers.add(match))
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
-  });
-  
+  })
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
     if (importMatch) {
@@ -70,8 +66,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
       }
     }
     return true;)
-  });
-  
+  })
   return filteredLines.join('\n')}
 
 // Fix console statements;
@@ -112,7 +107,9 @@ function main() {
 
   
   files.forEach(file => {)
-    try {)
+    try {
+
+)
       // Apply fixes;)
       content = fixConsoleStatements(content);
       content = fixUnusedVariables(content);
@@ -126,7 +123,9 @@ function main() {
         fs.writeFileSync(file, content, 'utf8');
 
         fixedFiles++}
-    } catch (error) {;
+    
+
+} catch (error) {;
 function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
 }
 

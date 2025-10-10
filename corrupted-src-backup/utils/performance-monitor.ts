@@ -45,13 +45,14 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
 
     try {
+
+
       this.observer = new PerformanceObserver(list => {)
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
     try {/* TODO: Fix JSX expression */}
         }
-      });
-
+      })
       // Observe different types of performance entries;
       this.observer.observe({)
         entryTypes: [)
@@ -61,7 +62,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           'layout-shift')
         ])
       this.observer.observe({/* TODO: Fix JSX expression */})
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
@@ -131,8 +134,7 @@ const interaction: UserInteraction = {,
 
     // Measure page load time;
     window.addEventListener('load', () => {
-      this.metrics.loadTime = performance.now() - this.metrics.navigationStart});
-
+      this.metrics.loadTime = performance.now() - this.metrics.navigationStart})
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {
       this.metrics.domContentLoaded =
@@ -150,8 +152,7 @@ const interaction: UserInteraction = {,
 
     // Measure page load time;
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
     })}

@@ -70,14 +70,18 @@ class AdvancedCache;
   O: Add content}
 }
     if (typeof window === 'undefined') return;
-    try {const data = storage?.getItem(this.storageKey)}
+    try {
+
+const data = storage?.getItem(this.storageKey)}
       if (data) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         const parsed = JSON.parse(data);
-        this.cache = new Map(Object.entries(parsed.cache));
+        this.cache = new Map(Object.entries(parsed.cache))
         this.accessOrder = parsed.accessOrder || []}
-    } catch (error) {/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       }
@@ -86,7 +90,9 @@ class AdvancedCache;
   O: Add content}
 }
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       const storage = this.getStorage();
@@ -97,7 +103,9 @@ class AdvancedCache;
   e: Object.fromEntries(this.cache.entries()),
         accessOrde,
   r: this.accessOrder};
-      storage?.setItem(this.storageKey, JSON.stringify(data))} catch (error) {/* TODO: Fix JSX expression */}
+      storage?.setItem(this.storageKey, JSON.stringify(data))
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       }
@@ -133,7 +141,7 @@ class AdvancedCache;
       hits: 0,
       lastAccessed: Date.now()
 
-    });
+    })
     // Update access order;
     this.updateAccessOrder(key);
     // Save to storage if needed;
@@ -236,8 +244,8 @@ class AdvancedCache;
   O: Add content}
 }
         keysToDelete.push(key)}
-    });
-    keysToDelete.forEach(key => this.delete(key));
+    })
+    keysToDelete.forEach(key => this.delete(key))
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -282,7 +290,7 @@ class AdvancedCache;
   s: entry.hits,
         ag,
   e: now - entry.lastAccessed;)
-      })});
+      })})
     return {/* TODO: Fix JSX expression */}
   O: Add content}
 };

@@ -38,8 +38,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           paintEntries.forEach(entry => {/* TODO: Fix JSX expression */})
             } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
             }
-          });
-
+          })
           // Track performance metrics;
           analytics.trackPerformance('page_load', metrics.loadComplete);
           analytics.trackPerformance('dom_content_loaded', metrics.domContentLoaded);
@@ -76,8 +75,7 @@ export const useComponentPerformance = (componentName: string) => {
 export const useComponentPerformance = (componentNam)
   e: string) => {/* TODO: Fix JSX expression */}`
       analytics.trackPerformance(\`\${componentName}_render\`, renderTime);
-      analytics.track('component_performance', 'render', componentName, undefined, renderTime)}});
-
+      analytics.track('component_performance', 'render', componentName, undefined, renderTime)}})
   return {
     renderCount: renderCount.current;
   return {/* TODO: Fix JSX expression */}
@@ -192,8 +190,7 @@ let scrollTimeout: NodeJS.Timeout;
     };
 
     window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true });
-
+  e: true })
     return () => {/* TODO: Fix JSX expression */}
     }}, [])};
 

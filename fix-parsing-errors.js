@@ -116,10 +116,11 @@ const files = await glob(pattern, {
         '**/*.d.ts',
         '**/node_modules/**'
       ]
-    });
-    
+    })
     for (const file of files) {
-      try {;
+      try {
+
+;
 const content = fs.readFileSync(file, 'utf8');
         let fixed = content;
         
@@ -132,7 +133,9 @@ const content = fs.readFileSync(file, 'utf8');
           fs.writeFileSync(file, fixed, 'utf8');
           // console.log removed for production
 processedCount++}
-      } catch (error) {
+      
+
+} catch (error) {
         // console.error removed for production
 errorCount++}
     }

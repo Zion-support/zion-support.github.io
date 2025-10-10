@@ -32,8 +32,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 return (
 ;
 const unusedImports = importList.filter(imp => {)
-          return !content.includes(varName) || content.split(varName).length <= 2});
-
+          return !content.includes(varName) || content.split(varName).length <= 2})
         if (unusedImports.length >
 );
 } 0) {;
@@ -44,8 +43,7 @@ const fixedImports = importList;
   n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fi,
   x: (match, imports) => {/* TODO: Fix JSX expression */}
-        });
-
+        })
         if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
                 return imp.replace(varName, `_${varName}`)}
               return imp})
@@ -96,9 +94,17 @@ filesToFix.forEach(fixUnusedVariables);
 
 // Run linter to check results;
 try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' })} catch (error) {
 
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })} catch (error) {/* TODO: Fix JSX expression */}
+
+  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' })
+
+} catch (error) {
+
+try {
+
+/* TODO: Fix JSX expression */}
+  o: 'inherit' })
+
+} catch (error) {/* TODO: Fix JSX expression */}
 }
 "`

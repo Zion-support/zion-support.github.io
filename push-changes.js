@@ -9,6 +9,8 @@ function main() {/* TODO: Fix JSX expression */}
 }
   // console.log removed for production
 try {
+
+
     // Push with force-with-lease;
     // console.log removed for production
 const pushResult = runCommand('git push --force-with-lease origin main');
@@ -34,7 +36,9 @@ status:');
     const statusResult = runCommand('git status');
     // console.log removed for production
 // console.log removed for production
-return true} catch (error) {
+return true
+
+} catch (error) {
     // console.log removed for production
 return false} catch (error) {/* TODO: Fix JSX expression */}
   }

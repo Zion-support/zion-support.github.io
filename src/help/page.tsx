@@ -198,7 +198,6 @@ const filteredArticles = getCurrentArticles().filter(article =>
                   <span className="font-medium">{category.name}</span>
                 </button>
               ))}
-
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">

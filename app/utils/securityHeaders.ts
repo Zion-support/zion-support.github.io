@@ -8,7 +8,7 @@ export interface SecurityHeadersConfig {
   xFrameOptions?: string;
   xContentTypeOptions?: string;
   referrerPolicy?: string;
-  permissionsPolicy?: string;});
+  permissionsPolicy?: string;})
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
@@ -19,7 +19,7 @@ export interface SecurityHeadersConfig {}
   xFrameOptions?: string
   xContentTypeOptions?: string
   referrerPolicy?: string
-  permissionsPolicy?: string;});
+  permissionsPolicy?: string;})
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy
@@ -52,13 +52,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'interest-cohort=()',
     'accelerometer=()',
     'gyroscope=()',
-<<<<<<< HEAD
-    'magnetometer=()'].join(', '););
-=======
-    'magnetometer=()'].join(', ')]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+    'magnetometer=()'].join(', '););/**
  * Get security headers as key-value pairs;
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
@@ -68,29 +62,29 @@ export function getSecurityHeaders()
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string></string> = {}
     'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on'});
+    'X-DNS-Prefetch-Control': 'on'})
 }
   if (config.contentSecurityPolicy) {}
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;});
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy;})
 }
   if (config.strictTransportSecurity) {}
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;});
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity;})
 }
   if (config.xFrameOptions) {}
-    headers['X-Frame-Options'] = config.xFrameOptions;});
+    headers['X-Frame-Options'] = config.xFrameOptions;})
 }
   if (config.xContentTypeOptions) {}
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;});
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions;})
 }
   if (config.referrerPolicy) {}
-    headers['Referrer-Policy'] = config.referrerPolicy;});
+    headers['Referrer-Policy'] = config.referrerPolicy;})
 }
   if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */});
+export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */})
 }
 export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */});
+  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */})
 };
 /**
  * Get security headers as key-value pairs;
@@ -99,27 +93,21 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string></string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const,
-  headers: Record<string, string></string> = {/* TODO: Fix JSX expression */});
+  headers: Record<string, string></string> = {/* TODO: Fix JSX expression */})
 };
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */});
+  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */})
 }
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */});
+  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */})
 }
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */});
+  if (config.xFrameOptions) {/* TODO: Fix JSX expression */})
 }
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */});
+  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */})
 }
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */});
+  if (config.referrerPolicy) {/* TODO: Fix JSX expression */})
 }
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */});
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */})
 }
-<<<<<<< HEAD
-  return headers;);
-=======
-  return headers]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  return headers;);/**
  * Get security headers in Next.js format;
  */
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
@@ -130,15 +118,9 @@ export function getNextSecurityHeaders()
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({}
     key,
-    value});
+    value})
 });)
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
-  e: string }> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-}););)
-=======
-});)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default defaultSecurityHeaders;
+  e: string }> {/* TODO: Fix JSX expression */})
+}););)export default defaultSecurityHeaders;

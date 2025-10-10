@@ -119,6 +119,8 @@ const replacements = [
 // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Apply replacements;
     replacements.forEach(({ from, to, context }) => {
       if (context) {
@@ -142,8 +144,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           );
           modified = true}
       }
-    });
-
+    })
     // Additional cleanup;
     content = content;
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
@@ -159,17 +160,17 @@ const [, importsStr, module] = match;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
           })
-        });
-
+        })
         return ()
           Object.entries(imports)
             .join('\n') + '\n'
-        )});
-
+        )})
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -188,8 +189,7 @@ const files = await glob(pattern, {)
         '**/*backup*/**',
         '**/*corrupted*/**',
         '**/*temp*/**',
-        '**/*.broken/**']});
-
+        '**/*.broken/**']})
     files.forEach(file => {)
       totalFiles++;)
       if (processFile(file)) {
@@ -198,8 +198,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory;
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-
+    })
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
     })}

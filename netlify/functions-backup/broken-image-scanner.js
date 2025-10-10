@@ -9,15 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Broken image scanner executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
-function: 'broken-image-scanner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'broken-image-scanner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        source: event.source || 'unknown',
+function: 'broken-image-scanner'        source: event.source || 'unknown',
         scanning: {,
           status: 'active',
           imagesScanned: 0;

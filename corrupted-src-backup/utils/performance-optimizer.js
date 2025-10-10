@@ -25,11 +25,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if ('web-vitals' in window) {
       import('web-vitals').then(
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(this.updateMetric.bind(this, 'cumulativeLayoutShift'));
-          getFID(this.updateMetric.bind(this, 'firstInputDelay'));
-          getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'));
-          getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'));
-          getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'));
+          getCLS(this.updateMetric.bind(this, 'cumulativeLayoutShift'))
+          getFID(this.updateMetric.bind(this, 'firstInputDelay'))
+          getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'))
+          getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'))
+          getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'))
   setupWebVitals() {/* TODO: Fix JSX expression */}
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
         }
@@ -63,8 +63,7 @@ const _img = entry.target;
   setupImageOptimization() {/* TODO: Fix JSX expression */}
             }
           }
-        })});
-
+        })})
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
@@ -124,8 +123,7 @@ const _component = entry.target;
 
   setupLazyLoading() {/* TODO: Fix JSX expression */}
           }
-        })});
-
+        })})
       lazyComponents.forEach(component => {)
         lazyObserver.observe(component);
       lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
@@ -199,9 +197,7 @@ const _link = document.createElement('link');
 
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components;
-    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
-    );
-
+    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`))
     if ('IntersectionObserver' in window) {;
 const componentObserver = new IntersectionObserver(entries => {)
         entries.forEach(entry => {)
@@ -214,8 +210,7 @@ const componentObserver = new IntersectionObserver(entries => {)
 
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
           }
-        })});
-
+        })})
       componentElements.forEach(element => {)
         componentObserver.observe(element);
       componentElements.forEach(element => {/* TODO: Fix JSX expression */})
@@ -224,6 +219,8 @@ const componentObserver = new IntersectionObserver(entries => {)
 
   async loadComponent(componentName, element) {
     try {
+
+
       // Only load components that are not already statically imported;
       const staticallyImportedComponents = [
         'ErrorBoundary',
@@ -242,7 +239,9 @@ const _component = await import(`../components/${componentName}.tsx`);
         element.innerHTML = component.default();
       if (component.default) {/* TODO: Fix JSX expression */}
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
@@ -334,7 +333,7 @@ const nonCriticalCSS = document.querySelectorAll(
 
   // Memory management;
   cleanup() {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers.clear()}
 
   // Performance monitoring;
@@ -342,8 +341,7 @@ const nonCriticalCSS = document.querySelectorAll(
     if ('PerformanceObserver' in window) {;
 const observer = new PerformanceObserver(list => {)
         list.getEntries().forEach(entry => {)
-          this.handlePerformanceEntry(entry)})});
-
+          this.handlePerformanceEntry(entry)})})
       observer.observe({)
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
   cleanup() {/* TODO: Fix JSX expression */}
@@ -351,10 +349,9 @@ const observer = new PerformanceObserver(list => {)
 
   // Performance monitoring;
   startPerformanceMonitoring() {/* TODO: Fix JSX expression */}
-        })});
-
+        })})
       observer.observe({/* TODO: Fix JSX expression */})
-      });
+      })
       this.observers.set('performance', observer)}
   }
 

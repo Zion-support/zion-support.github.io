@@ -1,8 +1,7 @@
 import fs from 'fs';
 
 // Read missing pages;
-const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page => page.trim());
-
+const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page => page.trim())
 // Page configurations;
 const pageConfigs = {
   'ai-fintech': {
@@ -684,6 +683,5 @@ export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + 
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
   // console.log removed for production
-});
-
+})
 // console.log removed for production

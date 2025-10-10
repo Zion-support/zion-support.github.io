@@ -9,6 +9,8 @@ function main() {/* TODO: Fix JSX expression */}
 }
   // console.log removed for production
 try {
+
+
     // First, fetch the latest changes;
     // console.log removed for production
 const fetchResult = runCommand('git fetch origin');
@@ -54,7 +56,9 @@ status:');
     const statusResult = runCommand('git status');
     // console.log removed for production
 // console.log removed for production
-return true} catch (error) {
+return true
+
+} catch (error) {
     // console.log removed for production
 return false} catch (error) {/* TODO: Fix JSX expression */}
   }

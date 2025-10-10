@@ -195,21 +195,11 @@ export const,
         'Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'],
       roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
       competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
-<<<<<<< HEAD
       market_size: '$397.4B cloud computing market'
       growth_rate: '23% annual growth';
 variant: 'quantum - cloud - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$397.4B cloud computing market',
-      growth_rate: '23% annual growth',
-      variant: 'quantum - cloud - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -294,21 +284,11 @@ varian,
         'Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'],
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
-<<<<<<< HEAD
       marketSize: '$67 && 67.8B edge computing market'
       growthRate: '37% annual growth';
 variant: 'edge-computing-enterprise'
       contactInfo: unknown;
-      color: 'from - green - 600 to - teal - 600'
-=======
-      marketSize: '$67 && 67.8B edge computing market',
-      growthRate: '37% annual growth',
-      variant: 'edge-computing-enterprise',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - green - 600 to - teal - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - green - 400',
+      color: 'from - green - 600 to - teal - 600'      text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
       market_position: unknown;
         'Competes with AWS CloudFront ($0.085 / GB), Cloudflare ($20 / month). Our advantage: AI optimization with 40% better performance and global edge distribution.',
@@ -369,21 +349,11 @@ varian,
         'Content delivery, IoT applications, Gaming platforms, Video streaming, E - commerce optimization'],
       roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
       competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
-<<<<<<< HEAD
       market_size: '$67.8B edge computing market'
       growth_rate: '37% annual growth';
 variant: 'edge - computing - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$67.8B edge computing market',
-      growth_rate: '37% annual growth',
-      variant: 'edge - computing - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -470,21 +440,11 @@ varian,
         'Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'],
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-<<<<<<< HEAD
       marketSize: '$8 && 8.2B DevOps market'
       growthRate: '24% annual growth';
 variant: 'autonomous-devops-enterprise'
       contactInfo: unknown;
-      color: 'from - purple - 600 to - pink - 600'
-=======
-      marketSize: '$8 && 8.2B DevOps market',
-      growthRate: '24% annual growth',
-      variant: 'autonomous-devops-enterprise',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - purple - 600 to - pink - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - purple - 400',
+      color: 'from - purple - 600 to - pink - 600'      text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / autonomous - devops',
       market_position: unknown;
         'Competes with GitLab ($99 / user / month), GitHub Enterprise ($21 / user / month). Our advantage: AI automation reduces manual DevOps work by 80% and improves deployment success rates.',
@@ -545,21 +505,11 @@ varian,
         'Software development, CI / CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'],
       roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
       competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-<<<<<<< HEAD
       market_size: '$8.2B DevOps market'
       growth_rate: '24% annual growth';
 variant: 'autonomous - devops - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8.2B DevOps market',
-      growth_rate: '24% annual growth',
-      variant: 'autonomous - devops - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -642,21 +592,11 @@ varian,
       popular: true;
       icon: '',
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'],
-<<<<<<< HEAD
       marketSize: '$19 && 19.9B blockchain market'
       growthRate: '87% annual growth';
 variant: 'blockchain-enterprise'
       contactInfo: unknown;
-      color: 'from - orange - 600 to - red - 600'
-=======
-      marketSize: '$19 && 19.9B blockchain market',
-      growthRate: '87% annual growth',
-      variant: 'blockchain-enterprise',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - orange - 600 to - red - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - orange - 400',
+      color: 'from - orange - 600 to - red - 600'      text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / blockchain - infrastructure',
       market_position: unknown;
         'Competes with IBM Blockchain Platform ($10) 000 / month), AWS Managed Blockchain ($0.30 / hour). Our advantage: AI - powered consensus with 50% better performance and lower costs.',
@@ -716,21 +656,11 @@ varian,
       competitor,
   s: [,
         'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'],
-<<<<<<< HEAD
       market_size: '$19.9B blockchain market'
       growth_rate: '87% annual growth';
 variant: 'blockchain - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$19.9B blockchain market',
-      growth_rate: '87% annual growth',
-      variant: 'blockchain - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -854,21 +784,11 @@ varian,
         'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'],
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei'],
-<<<<<<< HEAD
       market_size: '$25.3B quantum computing market'
       growth_rate: '32% annual growth';
 variant: 'quantum - networking - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$25.3B quantum computing market',
-      growth_rate: '32% annual growth',
-      variant: 'quantum - networking - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -944,16 +864,9 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       ]
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei']
-<<<<<<< HEAD
       marketSize: '$25.3 B quantum computing market'
       growthRate: '32% annual growth';
-variant: 'quantum-networking-enterprise',
-=======
-      marketSize: '$25.3 B quantum computing market',
-      growthRate: '32% annual growth',
-      variant: 'quantum-networking-enterprise',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-networking-enterprise',      contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'}
@@ -986,14 +899,8 @@ variant: 'quantum-networking-enterprise',
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-<<<<<<< HEAD
     marketSize: '$397.4B cloud computing market', growthRate: '23% annual growth';
-variant: 'quantum-cloud-enterprise'
-=======
-    marketSize: '$397.4B cloud computing market', growthRate: '23% annual growth',
-    variant: 'quantum-cloud-enterprise',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: unknown;
+variant: 'quantum-cloud-enterprise'    contactInfo: unknown;
   ];    features: [;
       'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration',
       'Performance analytics24 / 7 network monitoring'],

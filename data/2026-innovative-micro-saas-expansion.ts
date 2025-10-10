@@ -1276,8 +1276,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string)
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string)
 ) =>
-  return innovativeMicroSaasServices2026.filter(service => service.category === category)
-  )}
+  return innovativeMicroSaasServices2026.filter(service => service.category === category))}
 export const getPopularInnovativeMicroSaasServices2026 = () =>
 };
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
@@ -2106,9 +2105,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   return innovativeMicroSaasServices2026.filter(service =>);
 const _price = parseInt(service.price.replace('$') ''))};
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') ''));
+const _price = parseInt(service && service.price.replace('$') ''))
   return innovativeMicroSaasServices2026.filter(service =>);
-const _price = parseInt(service.price.replace('$') ''));
+const _price = parseInt(service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})}})
 }
 ;
@@ -2131,7 +2130,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return innovativeMicroSaasServices2026.filter (service =>);
-const _price = parse_int (service.price.replace ('$') ''));
+const _price = parse_int (service.price.replace ('$') ''))
     return price >= min_price && price <= max_price})}}    return price >= min_price && price <= max_price})}
 ;
 export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
@@ -2578,8 +2577,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number)
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => {});
-const _price = parseInt(service.price.replace('$') ''));
+  return innovativeMicroSaasServices2026.filter(service => {})
+const _price = parseInt(service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})};    return price >= minPrice && price <= maxPrice})
 };
 i,

@@ -41,7 +41,7 @@ let newContent = content;
     newContent = newContent.replace(setStatePattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });'}
-      return match});
+      return match})
     fixed = true}
 
   // Fix missing closing braces for function calls;
@@ -50,7 +50,7 @@ let newContent = content;
     newContent = newContent.replace(functionCallPattern, (match) => {
       if (!match.includes('});') && !match.includes('});')) {
         return match + '\n      });'}
-      return match});
+      return match})
     fixed = true}
 
   // Fix missing closing braces for if statements;
@@ -59,7 +59,7 @@ let newContent = content;
     newContent = newContent.replace(ifStatementPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n    }'}
-      return match});
+      return match})
     fixed = true}
 
   // Fix missing closing braces for forEach;
@@ -68,7 +68,7 @@ let newContent = content;
     newContent = newContent.replace(forEachPattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });'}
-      return match});
+      return match})
     fixed = true}
 
   // Fix missing closing braces for object methods;
@@ -77,7 +77,7 @@ let newContent = content;
     newContent = newContent.replace(objectMethodPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n  }'}
-      return match});
+      return match})
     fixed = true}
 
   // Clean up multiple empty lines;
@@ -86,7 +86,9 @@ let newContent = content;
   return { content: newContent, fixed }}
 ;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     const result = fixSyntaxErrors(content);
     
@@ -95,7 +97,9 @@ const content = fs.readFileSync(filePath, 'utf8');
       // console.log removed for production
 fixedFiles++}
 
-    processedFiles++} catch (error) {
+    processedFiles++
+
+} catch (error) {
     // console.error removed for production
 }
 }
@@ -107,7 +111,7 @@ async function main() {
   for (const pattern of filePatterns) {;
 const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()})
     allFiles.push(...files)}
 
   // Remove duplicates;

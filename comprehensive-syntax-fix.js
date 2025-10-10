@@ -3,11 +3,23 @@
 return (
 ' //Only fix if it's not a self-closing tag and doesn't have a closing tag' if (!match.endsWith('/>') && !content.includes(`</${tagName}>
 );
-}`)) {modified = true} return match + `</${tagName}>`} return match} ); //Fix broken object literals and arrays content = content.replace(/\\[\\s*([^\\]]*)\\s*\\]/g, (match) arrayContent) => {if (items.length > 1) { modified = true; return `[${items.join(})}]`} } return match}); //Fix malformed string literals' content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match) str) => {modified = true} return `"${str}"`}); //Fix broken variable declarations } ); //Fix broken arrow functions' content = content.replace(/=>\s*\(\s*\)\s*=>/g, '=> () =>'); //Fix malformed JSX attributes content = content.replace(' /className\s*=\s*['"]([^'"]*)\s*['"]\s*['"]/g, (match) className) => {modified = true} return `className="${className}" `} ); //Fix broken template literals content = content.replace(/`([^`]*)\\s*`\\s*`/g, (match) content) => {modified = true} return `\\`${content}\\``}); //Fix missing commas in function parameters } ); //Fix broken return statements' content = content.replace(/return\s*\(\s*\(\s*\)\s*=>/g; 'return () =>'); //Fix malformed JSX expressions content = content.replace(/\\{\\s*([^}]*)\\s*\\}\\s*\\}/g, (match) content) => {' if (content.includes('{') && !content.includes('}')) {modified = true}' return match.replace('}}}')} return match}); return {content} modified }} //Function to fix syntax errors in a file function fixSyntaxErrors(filePath) {try { if (modified) {' fs.writeFileSync(filePath} fixedContent) 'utf8'); return true} return false} catch (error) { // // console.error removed for production
-error.message); return false} } //Function to find all TypeScript and JavaScript files' function findFiles(dir, extensions = ['.ts,.tsx).js;.jsx']) {let files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir) item); const stat = fs.statSync(fullPath)} if ( stat.isDirectory() &&' !item.startsWith('.') &&' item !== 'node_modules' ) { files = files.concat(findFiles(fullPath} extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { // // console.error removed for production
+}`)) {modified = true} return match + `</${tagName}>`} return match} ); //Fix broken object literals and arrays content = content.replace(/\\[\\s*([^\\]]*)\\s*\\]/g, (match) arrayContent) => {if (items.length > 1) { modified = true; return `[${items.join(})}]`} } return match}); //Fix malformed string literals' content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match) str) => {modified = true} return `"${str}"`}); //Fix broken variable declarations } ); //Fix broken arrow functions' content = content.replace(/=>\s*\(\s*\)\s*=>/g, '=> () =>'); //Fix malformed JSX attributes content = content.replace(' /className\s*=\s*['"]([^'"]*)\s*['"]\s*['"]/g, (match) className) => {modified = true} return `className="${className}" `} ); //Fix broken template literals content = content.replace(/`([^`]*)\\s*`\\s*`/g, (match) content) => {modified = true} return `\\`${content}\\``}); //Fix missing commas in function parameters } ); //Fix broken return statements' content = content.replace(/return\s*\(\s*\(\s*\)\s*=>/g; 'return () =>'); //Fix malformed JSX expressions content = content.replace(/\\{\\s*([^}]*)\\s*\\}\\s*\\}/g, (match) content) => {' if (content.includes('{') && !content.includes('}')) {modified = true}' return match.replace('}}}')} return match}); return {content} modified }} //Function to fix syntax errors in a file function fixSyntaxErrors(filePath) {try {
+
+ if (modified) {' fs.writeFileSync(filePath} fixedContent) 'utf8'); return true} return false
+
+} catch (error) { // // console.error removed for production
+error.message); return false} } //Function to find all TypeScript and JavaScript files' function findFiles(dir, extensions = ['.ts,.tsx).js;.jsx']) {let files = []; try {
+
+ const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir) item); const stat = fs.statSync(fullPath)} if ( stat.isDirectory() &&' !item.startsWith('.') &&' item !== 'node_modules' ) { files = files.concat(findFiles(fullPath} extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } 
+
+} catch (error) { // // console.error removed for production
 error.message)} return files} //Main execution function main() {' // // console.log removed for production
-} ' const srcDir = path.join(process.cwd()} 'src'); const files = findFiles(srcDir); let fixedCount = 0; for (const file of files) { if (fixSyntaxErrors(file)) { fixedCount++} } //Run linting to check remaining errors' try {/* TODO: Fix JSX expression */}`
-  o: 'inherit' })} catch (error) {' // // console.log removed for production
+} ' const srcDir = path.join(process.cwd()} 'src'); const files = findFiles(srcDir); let fixedCount = 0; for (const file of files) { if (fixSyntaxErrors(file)) { fixedCount++} } //Run linting to check remaining errors' try {
+
+/* TODO: Fix JSX expression */}`
+  o: 'inherit' })
+
+} catch (error) {' // // console.log removed for production
 } } //Run if this is the main module if (import.meta.url === `fil)`
   e://${process.argv[1]}`) { main()} export {fixSyntaxErrors} findFiles }; '
 "`

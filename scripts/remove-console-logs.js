@@ -23,7 +23,9 @@ const fullPath = path.join(dir, item);
 
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
@@ -62,8 +64,7 @@ const excludePatterns = [
 
 // Get all TypeScript and JavaScript files;
 const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
-});
-;
+})
 let totalRemoved = 0;
 let filesProcessed = 0;
 
@@ -93,7 +94,9 @@ for (const file of files) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
       return true}
     
-    filesProcessed++} catch (error) {/* TODO: Fix JSX expression */}`
+    filesProcessed++
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 `
 // console.log removed for production

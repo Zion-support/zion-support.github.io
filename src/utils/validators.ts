@@ -7,9 +7,13 @@ export interface ValidationResult {
 // URL Validation
 export const isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
-  try {;
+  try {
+
+;
 const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:'} catch {
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:'
+
+} catch {
     return false}
 };
 
@@ -149,8 +153,12 @@ export const validateJSON = (jsonString: string): ValidationResult => {
     return { isValid: false, error: 'JSON string is required' }}
   
   try {
+
+
     JSON.parse(jsonString);
-    return { isValid: true }} catch (error) {
+    return { isValid: true }
+
+} catch (error) {
     return { isValid: false, error: 'Invalid JSON format' }}
 };
 
@@ -177,5 +185,5 @@ const result = validator(value);
 // Async Validation Helper
 export const asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
-  await new Promise(resolve => setTimeout(resolve, 100));
+  await new Promise(resolve => setTimeout(resolve, 100))
   return 'success'};

@@ -8,9 +8,7 @@ import, Reac, t, { me, m, o } fr, o, m "rea, c, t";';
  * @description, Hig, h-performance, promotional, banner with, accessibility, features;
  */;
 const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
-return (
-
-  return(<secti, o, n;
+return (<secti, o, n;
   classNa, m, e="relative, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, overflo, w-hidd, e, n"
       ar, i, a-lab, e, l="Cognitive, Mesh, Platform Launch, Announcemen, t"
     ></secti>
@@ -466,7 +464,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         </d, i, v>)
       </d, i, v>)
     </secti, o, n>)
-  )});
+  )})
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';';
 export default October2025CognitiveMeshLaunchBanner;

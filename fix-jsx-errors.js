@@ -131,10 +131,11 @@ async function processFiles() {
         '**/*.backup',
         '**/*.broken'
       ]
-    });
-    
+    })
     for (const file of files) {
       try {
+
+
         const content = fs.readFileSync(file, 'utf8');
         
         // Check if file has JSX issues
@@ -152,7 +153,9 @@ async function processFiles() {
           fs.writeFileSync(file, fixed);
           processedCount++;
         }
-      } catch (error) {
+      
+
+} catch (error) {
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
       }

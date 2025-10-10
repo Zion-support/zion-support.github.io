@@ -29,11 +29,12 @@ const requiredFiles = [
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
   missing: ${file}`)} else {/* TODO: Fix JSX expression */}
 //     }
-});
-
+})
 // Check package.json for critical dependencies;
-try {;
-const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));
+try {
+
+;
+const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'))
   const _requiredDeps = ['next', 'react', 'react-dom'];
   
   requiredDeps.forEach((dep) => {
@@ -41,20 +42,24 @@ const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.jso
       errors.push(`Missing required dependency: ${dep}`);
 try {/* TODO: Fix JSX expression */}`
   dependency: ${dep}`)}
-  });
-  
-//   } catch (error) {/* TODO: Fix JSX expression */}
+  })
+//   
+
+} catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // Check TypeScript configuration;
-try {;
-const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
-  
+try {
+
+;
+const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'))
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions')} else {
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
 //     }
+
+
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 

@@ -195,7 +195,6 @@ const caseStudies = [
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
-
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -330,8 +329,6 @@ import Footer from '../components/Footer';
 ;
 const GreenITPage: React.FC = () => {
 return (
-
-  return (
     <div>Coming Soon</div>
 );
 }
@@ -580,9 +577,7 @@ const caseStudies = [,
         'Enhanced brand reputation'
       ico,
   n: Building,
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

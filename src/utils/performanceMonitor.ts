@@ -42,57 +42,73 @@ class PerformanceMonitor {
     this.observeCLS()}
 
   private observePaint(name: string, metric: keyof PerformanceMetrics): void {
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         const entry = entries[entries.length - 1];
         if (entry) {
           (this._metrics as any)[metric] = entry.startTime}
-      });
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer)} catch (error) {
+      })
+      observer.observe({ entryTypes: ['paint'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
 
   private observeLCP(): void {
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this._metrics.lcp = lastEntry.startTime}
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer)} catch (error) {
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
 
   private observeFID(): void {
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         entries.forEach((entry) => {
-          this._metrics.fid = entry.processingStart - entry.startTime})});
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer)} catch (error) {
+          this._metrics.fid = entry.processingStart - entry.startTime})})
+      observer.observe({ entryTypes: ['first-input'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
 
   private observeCLS(): void {
-    try {;
+    try {
+
+;
 let clsValue = 0;
       const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value}
-        });
-        this._metrics.cls = clsValue});
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer)} catch (error) {
+        })
+        this._metrics.cls = clsValue})
+      observer.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
@@ -130,7 +146,7 @@ const entries = list.getEntries();
   }
 
   cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers = [];
     this.isInitialized = false}
 }

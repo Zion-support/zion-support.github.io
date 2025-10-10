@@ -68,8 +68,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
                   <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
-              ));
-            </div>
+              ))</div>
           </div>
         </section>
 

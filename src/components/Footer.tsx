@@ -390,7 +390,6 @@ const achievements = [
         </div>
       </div>
     </footer>
-  )});
-
+  )})
 Footer.displayName = 'Footer';
 export default Footer;

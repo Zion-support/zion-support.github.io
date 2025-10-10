@@ -146,7 +146,11 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
         return}
       setIsSubmitting(true);
       try {
-        await onSubmit(values)} catch (error) {
+
+
+        await onSubmit(values)
+
+} catch (error) {
         // console.error removed for production
 } finally {
         setIsSubmitting(false);

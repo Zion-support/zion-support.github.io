@@ -217,21 +217,11 @@ export const,
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS'],
-<<<<<<< HEAD
       market_size: '$12.8B market'
       growth_rate: '380% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$12.8B market',
-      growth_rate: '380% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -382,21 +372,11 @@ varian,
         'Twist Bioscience',
         'Illumina',
         'Pacific Biosciences'],
-<<<<<<< HEAD
       market_size: '$8.9B market'
       growth_rate: '520% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8.9B market',
-      growth_rate: '520% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -545,21 +525,11 @@ varian,
         'Xanadu',
         'Intel Silicon Photonics',
         'IBM Photonics'],
-<<<<<<< HEAD
       market_size: '$15.6B market'
       growth_rate: '420% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$15.6B market',
-      growth_rate: '420% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -706,21 +676,11 @@ varian,
         'RealView',
         'Hologram USA',
         'HoloLens'],
-<<<<<<< HEAD
       market_size: '$23.4B market'
       growth_rate: '280% annual growth';
 variant: 'ai - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$23.4B market',
-      growth_rate: '280% annual growth',
-      variant: 'ai - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -863,21 +823,11 @@ varian,
         'Customer verification'],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
       competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
-<<<<<<< HEAD
       market_size: '$34.8B market'
       growth_rate: '320% annual growth';
 variant: 'ai - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$34.8B market',
-      growth_rate: '320% annual growth',
-      variant: 'ai - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -1026,21 +976,11 @@ varian,
         'Toshiba Quantum',
         'NTT Quantum',
         'Chinese Quantum Network'],
-<<<<<<< HEAD
       market_size: '$18.7B market'
       growth_rate: '480% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$18.7B market',
-      growth_rate: '480% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -1366,15 +1306,14 @@ review,
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>;
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
-    service && service.category.toLowerCase().includes(category && category.toLowerCase())
-  )}
+    service && service.category.toLowerCase().includes(category && category.toLowerCase()))}
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number)
   maxPric,
   e: number)
 ) =>
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
+const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''))
     return price >= minPrice && price <= maxPrice})}
     return price >= minPrice && price <= maxPrice;
 export interface Innovative2026EmergingTechService {id: string, name: string;
@@ -2018,15 +1957,14 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: 
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>,
   return innovative2026EmergingTechServices.filter(service =>)
-    service.category.toLowerCase().includes(category.toLowerCase())
-  </div>
+    service.category.toLowerCase().includes(category.toLowerCase())</div>
 )
 };
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') '').replace(; ''));
+const _price = parseInt(service && service.price.replace('$') '').replace(; ''))
     return price >= minPrice && price <= maxPrice})
 }};
 reviews: 30}];
@@ -2049,7 +1987,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''))
     return price >= min_price && price <= max_price})}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
@@ -2058,11 +1996,11 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price})}}}
 ;
-  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */});
-const _price = parseInt(service.price.replace('$') '').replace(} ''));
+  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */})
+const _price = parseInt(service.price.replace('$') '').replace(} ''))
     return price >= minPrice && price <= maxPrice})
 }
 export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
@@ -2108,7 +2046,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''))
     return price >= min_price && price <= max_price})}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
@@ -2117,7 +2055,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price})
 };
 reviews: 30}];
@@ -2140,7 +2078,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (') '; ''))
     return price >= min_price && price <= max_price})}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
@@ -2149,7 +2087,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (; ''));
+const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price})
 };
 i,
@@ -2790,7 +2728,7 @@ i,
   s: 60, ratin,
   g: 4.9, review,
   s: 30 } ]; export const getPopularEmergingTechServices = () => return innovative2026EmergingTechServices.filter(service => service.popular) }; export const getEmergingTechServicesByCategory = (categor)
-  y: string) => return innovative2026EmergingTechServices.filter(service => service.category.toLowerCase().includes(category.toLowerCase()) </div> ) }; export const getEmergingTechServicesByPriceRange = (minPric)
+  y: string) => return innovative2026EmergingTechServices.filter(service => service.category.toLowerCase().includes(category.toLowerCase())</div> ) }; export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(; '')); return price >= minPrice && price <= maxPrice }) }}; review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)

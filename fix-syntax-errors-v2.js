@@ -6,7 +6,9 @@ import { execSync } from 'child_process';
 
 // Function to fix specific syntax errors in a file;
 function fixSyntaxErrors(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -106,16 +108,22 @@ const newContent = content.replace(fix.pattern, fix.replacement);
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
 
 // Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {
-  try {;
-const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
+  try {
+
+;
+const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' })
+    return result.trim().split('\n').filter(file => file.length > 0)
+
+} catch (error) {
     // console.error removed for production
 return []}
 }
@@ -134,14 +142,18 @@ for (const file of filesWithErrors) {
 
 // console.log removed for production
 // Verify no more syntax errors exist
-try {;
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
-  const count = parseInt(remainingErrors.trim());
+try {
+
+;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' })
+  const count = parseInt(remainingErrors.trim())
   if (count === 0) {
     // console.log removed for production
 } else {
     // console.log removed for production
 }
+
+
 } catch (error) {
   // console.log removed for production
 }

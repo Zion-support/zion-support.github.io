@@ -69,7 +69,7 @@ constructor() {}
           component: 'Global',
           action: 'Unhandled Promise Rejection'}
         })
-      });
+      })
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
@@ -129,7 +129,7 @@ const trackedError: TrackedError = {}
         description: error.message,
         fatal: false,
         component: error.context.component}
-      });
+      })
   }
   public getErrors(): TrackedError[] {}
     return [...this.errors]}
@@ -174,9 +174,9 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`}
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
-        })});
+        })})
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-        })});
+        })})
   }
   public trackError(erro,
   r: Error, contex)
@@ -204,7 +204,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
     ) {/* TODO: Fix JSX expression */}
         }
       ).gtag('event', 'exception', {/* TODO: Fix JSX expression */})
-      });
+      })
   }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
   }
@@ -214,7 +214,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
   byComponent: Record<string, number> = {};
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
-    });
+    })
     return {/* TODO: Fix JSX expression */}
     }}
 }

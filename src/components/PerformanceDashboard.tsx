@@ -27,18 +27,19 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
 const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
-  });
-
+  })
   useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
-      });
-    });
+  p: entry.startTime }))}
+      })
+    })
+    try {
 
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
+/* TODO: Fix JSX expression */}
+  s: ['paint'] })
       return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
     }
   }, []);
 

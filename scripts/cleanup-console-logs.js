@@ -3,7 +3,9 @@ import { glob } from 'glob';
 
 // Function to remove console.log statements from a file;
 function removeConsoleLogs(filePath) {
-  try {;
+  try {
+
+;
 let _content = fs.readFileSync(filePath, 'utf8');
     let _modified = false;
     
@@ -21,7 +23,9 @@ const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
     
-    return modified} catch (error) {/* TODO: Fix JSX expression */}
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -46,19 +50,16 @@ const files = await glob(pattern, { )
         '**/*.test.*')
         '**/*.spec.*'
       ]
-    });
-    
+    })
     files.forEach(file => {)
       totalFiles++;)
       if (removeConsoleLogs(file)) {
         modifiedFiles++}
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-    
+    })
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
-    })});
-  
+    })})
 //   //   //   }
 
 // Run the cleanup;

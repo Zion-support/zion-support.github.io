@@ -66,7 +66,7 @@ class UserExperienceEnhancer {
             behavior: 'smooth',
             block:           ,
 $4})}
-      })});
+      })})
     // Add smooth scrolling to window
     window.scrollTo = new Proxy(window.scrollTo, {
       apply: (target, thisArg, args) => {
@@ -81,13 +81,13 @@ const buttons = document.querySelectorAll('button[type="submit"], button[data-lo
     
     buttons.forEach(button => {
       button.addEventListener('click', () => {
-        this.showLoadingState(button as HTMLButtonElement)})});
+        this.showLoadingState(button as HTMLButtonElement)})})
     // Add loading states to forms;
 const forms = document.querySelectorAll('form');
     
     forms.forEach(form => {
       form.addEventListener('submit', () => {
-        this.showFormLoadingState(form)})});
+        this.showFormLoadingState(form)})})
     // Add loading states to links;
 const links = document.querySelectorAll('a[data-loading]');
     
@@ -151,10 +151,10 @@ const spinner = document.createElement('span');
     if (!this.config.enableErrorBoundaries) return;
     // Global error handler
     window.addEventListener('error', (event) => {
-      this.handleError(event.error, 'JavaScript Error')});
+      this.handleError(event.error, 'JavaScript Error')})
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
-      this.handleError(event.reason, 'Unhandled Promise Rejection')});
+      this.handleError(event.reason, 'Unhandled Promise Rejection')})
     // Error boundary for React components (if using React)
     this.setupReactErrorBoundary()}
   private handleError(error: Error, type: string): void {
@@ -222,7 +222,7 @@ const target = event.target as HTMLElement;
         timestamp: Date.now()
       };
       
-      this.sendAnalytics('user_interaction', interactionData)});
+      this.sendAnalytics('user_interaction', interactionData)})
     // Track form submissions
     document.addEventListener('submit', (event) => {;
 const form = event.target as HTMLFormElement;
@@ -233,7 +233,7 @@ const form = event.target as HTMLFormElement;
         timestamp: Date.now()
       };
       
-      this.sendAnalytics('form_submit', formData)});
+      this.sendAnalytics('form_submit', formData)})
     // Track scroll depth
     window.addEventListener('scroll', () => {;
 const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -265,8 +265,7 @@ let satisfactionScore = 100;
     // Decrease score for errors
     window.addEventListener('error', () => {
       satisfactionScore -= 10;
-      this.metrics.userSatisfaction = Math.max(0, satisfactionScore)});
-    
+      this.metrics.userSatisfaction = Math.max(0, satisfactionScore)})
     // Decrease score for slow interactions;
 let lastInteractionTime = Date.now();
     document.addEventListener('click', () => {;
@@ -365,14 +364,13 @@ const installButton = document.createElement('button');
           // console.log removed for production
 }
         deferredPrompt = null;
-        installButton.remove()})});
-    
+        installButton.remove()})})
     document.body.appendChild(installButton)}
   private setupOfflineSupport(): void {
     if (!this.config.enableOfflineSupport) return;
     // Show offline indicator
     window.addEventListener('online', () => {
-      this.showOfflineIndicator(false)});
+      this.showOfflineIndicator(false)})
     window.addEventListener('offline', () => {
       this.showOfflineIndicator(true)})}
   private showOfflineIndicator(isOffline: boolean): void {;
@@ -423,8 +421,7 @@ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       if (e.matches) {
         document.documentElement.classList.add('dark')} else {
         document.documentElement.classList.remove('dark')}
-    });
-    
+    })
     // Add dark mode toggle
     this.addDarkModeToggle()}
   private addDarkModeToggle(): void {;
@@ -437,8 +434,7 @@ const toggle = document.createElement('button');
       document.documentElement.classList.toggle('dark');
       const isDark = document.documentElement.classList.contains('dark');
       toggle.innerHTML = isDark ? '☀️' : '🌙';
-      localStorage.setItem('darkMode', isDark.toString())});
-    
+      localStorage.setItem('darkMode', isDark.toString())})
     // Load saved preference;
 const savedDarkMode = localStorage.getItem('darkMode');
     if (savedDarkMode === 'true') {
@@ -453,7 +449,7 @@ const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in')}
-      })});
+      })})
     // Observe elements with animation classes;
 const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => observer.observe(el))}
@@ -475,15 +471,13 @@ const observer = new PerformanceObserver((list) => {
           if (entry.entryType === 'measure') {
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)}
         }
-      });
-      
+      })
       observer.observe({ entryTypes: ['measure'] })}
   }
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics;
 const accessibilityObserver = new MutationObserver(() => {
-      this.metrics.accessibilityScore = this.calculateAccessibilityScore()});
-    
+      this.metrics.accessibilityScore = this.calculateAccessibilityScore()})
     accessibilityObserver.observe(document.body, {
       childList: true,
       subtree: true,

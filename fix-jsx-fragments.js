@@ -21,6 +21,8 @@ const filesToFix = [
 // // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Remove extra empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
@@ -64,13 +66,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       ''
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
   l:\s*['"`][^'"`]*['"`]\s*\}/g,
-      '')
-    );
-
+      ''))
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -80,6 +82,5 @@ filesToFix.forEach(file => {)
     fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // "`

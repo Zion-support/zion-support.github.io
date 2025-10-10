@@ -282,21 +282,11 @@ import React from 'react';
       'Telecommunications'],
     roi: 'Space companies achieve 300% ROI through operational efficiency and mission success rates.',
     competitors: ['SpaceX', 'OneWeb', 'Planet Labs', 'Maxar Technologies'],
-<<<<<<< HEAD
     market_size: '$469B space economy'
     growth_rate: '400% annual growth';
 variant: 'quantum - space'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$469B space economy',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - space',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -441,21 +431,11 @@ varian,
       'Disease modeling'],
     roi: 'Pharma companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: ['Insitro', 'Recursion', 'Atomwise', 'BenevolentAI'],
-<<<<<<< HEAD
     market_size: '$150B AI in healthcare'
     growth_rate: '250% annual growth';
 variant: 'neural - quantum'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$150B AI in healthcare',
-    growth_rate: '250% annual growth',
-    variant: 'neural - quantum',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -606,21 +586,11 @@ varian,
       'Two Sigma',
       'Citadel',
       'Bridgewater'],
-<<<<<<< HEAD
     market_size: '$15T algorithmic trading'
     growth_rate: '150% annual growth';
 variant: 'quantum - cyberpunk'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$15T algorithmic trading',
-    growth_rate: '150% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -769,21 +739,11 @@ varian,
       'Palo Alto Networks',
       'SentinelOne',
       'Cylance'],
-<<<<<<< HEAD
     market_size: '$200B cybersecurity market'
     growth_rate: '200% annual growth';
 variant: 'cyberpunk - holographic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$200B cybersecurity market',
-    growth_rate: '200% annual growth',
-    variant: 'cyberpunk - holographic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -924,21 +884,11 @@ varian,
       'Defense applications'],
     roi: 'Organizations achieve 400% ROI through enhanced security and reduced cyber threats.',
     competitors: ['Cloudflare', 'Akamai', 'Fastly', 'Imperva'],
-<<<<<<< HEAD
     market_size: '$50B network security'
     growth_rate: '180% annual growth';
 variant: 'quantum - holographic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$50B network security',
-    growth_rate: '180% annual growth',
-    variant: 'quantum - holographic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1090,21 +1040,11 @@ varian,
       'Microsoft Azure IoT',
       'Google Cloud IoT',
       'IBM Watson IoT'],
-<<<<<<< HEAD
     market_size: '$1.1T IoT market'
     growth_rate: '220% annual growth';
 variant: 'neural - quantum - cyberpunk'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$1.1T IoT market',
-    growth_rate: '220% annual growth',
-    variant: 'neural - quantum - cyberpunk',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1247,21 +1187,11 @@ varian,
       'Compliance'],
     roi: 'Logistics companies achieve 300% ROI through operational efficiency and cost reduction.',
     competitors: ['Flexport', 'Convoy', 'Project44', 'FourKites'],
-<<<<<<< HEAD
     market_size: '$12T logistics market'
     growth_rate: '160% annual growth';
 variant: 'quantum - matrix'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$12T logistics market',
-    growth_rate: '160% annual growth',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1409,21 +1339,11 @@ varian,
       'Social interactions'],
     roi: 'Companies achieve 400% ROI through virtual experiences and new revenue streams.',
     competitors: ['Meta', 'Roblox', 'Decentraland', 'The Sandbox'],
-<<<<<<< HEAD
     market_size: '$800B metaverse market'
     growth_rate: '350% annual growth';
 variant: 'holographic - matrix'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$800B metaverse market',
-    growth_rate: '350% annual growth',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1570,21 +1490,11 @@ varian,
       'Service robotics'],
     roi: 'Manufacturing companies achieve 400% ROI through automation and operational efficiency.',
     competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC'],
-<<<<<<< HEAD
     market_size: '$45B robotics market'
     growth_rate: '280% annual growth';
 variant: 'neural - cyberpunk'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$45B robotics market',
-    growth_rate: '280% annual growth',
-    variant: 'neural - cyberpunk',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1742,21 +1652,11 @@ varian,
       'GE Digital',
       'Rockwell Automation',
       'Schneider Electric'],
-<<<<<<< HEAD
     market_size: '$200B smart manufacturing'
     growth_rate: '240% annual growth';
 variant: 'ai - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$200B smart manufacturing',
-    growth_rate: '240% annual growth',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1899,21 +1799,11 @@ varian,
       'Defense applications'],
     roi: 'Transportation companies achieve 300% ROI through operational efficiency and safety improvements.',
     competitors: ['Waymo', 'Tesla', 'Cruise', 'Argo AI'],
-<<<<<<< HEAD
     market_size: '$60B autonomous vehicles'
     growth_rate: '320% annual growth';
 variant: 'quantum - entanglement'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$60B autonomous vehicles',
-    growth_rate: '320% annual growth',
-    variant: 'quantum - entanglement',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -2228,16 +2118,9 @@ export const,
       'Disease modeling'],
     roi: 'Pharma companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: ['Insitro', 'Recursion', 'Atomwise', 'BenevolentAI']
-<<<<<<< HEAD
     marketSize: '$150 B AI in healthcare'
     growthRate: '250% annual growth';
-variant: 'neural-quantum',
-=======
-    marketSize: '$150 B AI in healthcare',
-    growthRate: '250% annual growth',
-    variant: 'neural-quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'neural-quantum',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2379,19 +2262,10 @@ varian,
       'Citadel'
       'Bridgewater'
     ]
-<<<<<<< HEAD
     marketSize: '$15T algorithmic trading'
     growthRate: '150% annual growth';
 variant: 'quantum-cyberpunk'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15T algorithmic trading',
-    growthRate: '150% annual growth',
-    variant: 'quantum-cyberpunk',
-    contactInfo:
-        contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true;
@@ -2527,19 +2401,10 @@ varian,
       'SentinelOne'
       'Cylance'
     ]
-<<<<<<< HEAD
     marketSize: '$200B cybersecurity market'
     growthRate: '200% annual growth';
 variant: 'cyberpunk-holographic'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B cybersecurity market',
-    growthRate: '200% annual growth',
-    variant: 'cyberpunk-holographic',
-    contactInfo:
-        contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true;
@@ -2664,16 +2529,9 @@ varian,
       'Defense applications'],
     roi: 'Organizations achieve 400% ROI through enhanced security and reduced cyber threats.',
     competitors: ['Cloudflare', 'Akamai', 'Fastly', 'Imperva']
-<<<<<<< HEAD
     marketSize: '$50 B network security'
     growthRate: '180% annual growth';
-variant: 'quantum-holographic',
-=======
-    marketSize: '$50 B network security',
-    growthRate: '180% annual growth',
-    variant: 'quantum-holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-holographic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2815,19 +2673,10 @@ varian,
       'Google Cloud IoT'
       'IBM Watson IoT'
     ]
-<<<<<<< HEAD
     marketSize: '$1.1T IoT market'
     growthRate: '220% annual growth';
 variant: 'neural-quantum-cyberpunk'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$1.1T IoT market',
-    growthRate: '220% annual growth',
-    variant: 'neural-quantum-cyberpunk',
-    contactInfo:
-        contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true;
@@ -2962,16 +2811,9 @@ varian,
       'Compliance'],
     roi: 'Logistics companies achieve 300% ROI through operational efficiency and cost reduction.',
     competitors: ['Flexport', 'Convoy', 'Project44', 'FourKites']
-<<<<<<< HEAD
     marketSize: '$12 T logistics market'
     growthRate: '160% annual growth';
-variant: 'quantum-matrix',
-=======
-    marketSize: '$12 T logistics market',
-    growthRate: '160% annual growth',
-    variant: 'quantum-matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-matrix',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3103,16 +2945,9 @@ varian,
       'Social interactions'],
     roi: 'Companies achieve 400% ROI through virtual experiences and new revenue streams.',
     competitors: ['Meta', 'Roblox', 'Decentraland', 'The Sandbox']
-<<<<<<< HEAD
     marketSize: '$800 B metaverse market'
     growthRate: '350% annual growth';
-variant: 'holographic-matrix',
-=======
-    marketSize: '$800 B metaverse market',
-    growthRate: '350% annual growth',
-    variant: 'holographic-matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'holographic-matrix',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3254,16 +3089,9 @@ varian,
       'Service robotics'],
     roi: 'Manufacturing companies achieve 400% ROI through automation and operational efficiency.',
     competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC']
-<<<<<<< HEAD
     marketSize: '$45 B robotics market'
     growthRate: '280% annual growth';
-variant: 'neural-cyberpunk',
-=======
-    marketSize: '$45 B robotics market',
-    growthRate: '280% annual growth',
-    variant: 'neural-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'neural-cyberpunk',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3407,19 +3235,10 @@ varian,
       'Rockwell Automation'
       'Schneider Electric'
     ]
-<<<<<<< HEAD
     marketSize: '$200B smart manufacturing'
     growthRate: '240% annual growth';
 variant: 'ai-futuristic'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B smart manufacturing',
-    growthRate: '240% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true;
@@ -3544,16 +3363,9 @@ varian,
       'Defense applications'],
     roi: 'Transportation companies achieve 300% ROI through operational efficiency and safety improvements.',
     competitors: ['Waymo', 'Tesla', 'Cruise', 'Argo AI']
-<<<<<<< HEAD
     marketSize: '$60 B autonomous vehicles'
     growthRate: '320% annual growth';
-variant: 'quantum-entanglement',
-=======
-    marketSize: '$60 B autonomous vehicles',
-    growthRate: '320% annual growth',
-    variant: 'quantum-entanglement',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-entanglement',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3775,14 +3587,8 @@ export const newInnovativeServices = [{id: 'quantum - ai - brain - computer - in
     roi: '1000% ROI within 6 months for research institutions',
     competitors: ['Neuralink ($10) 000+/month)', 'Kernel ($50) 000+/month)'],
     market_size: '$2B BCI market, 500% annual growth',
-<<<<<<< HEAD
     growth_rate: '500% annual growth';
-variant: 'quantum - neural - advanced'
-=======
-    growth_rate: '500% annual growth',
-    variant: 'quantum - neural - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - neural - advanced'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3931,14 +3737,8 @@ export const,
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)'],
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
-<<<<<<< HEAD
     growth_rate: '400% annual growth';
-variant: 'quantum - cyberpunk'
-=======
-    growth_rate: '400% annual growth',
-    variant: 'quantum - cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - cyberpunk'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4089,14 +3889,8 @@ varian,
       'Rockwell Automation ($150K+ setup)',
       'ABB ($200K+ setup)'],
     market_size: '$200B manufacturing automation market, 15% annual growth',
-<<<<<<< HEAD
     growth_rate: '15% annual growth';
-variant: 'ai - futuristic'
-=======
-    growth_rate: '15% annual growth',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'ai - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4237,14 +4031,8 @@ varian,
       'Reuters ($25K / year)',
       'Custom solutions ($500K+ setup)'],
     market_size: '$15B algorithmic trading market, 25% annual growth',
-<<<<<<< HEAD
     growth_rate: '25% annual growth';
-variant: 'quantum - financial'
-=======
-    growth_rate: '25% annual growth',
-    variant: 'quantum - financial',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - financial'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4385,14 +4173,8 @@ varian,
       'ESA systems (European only)',
       'Custom solutions ($2 M+ setup)'],
     market_size: '$400B space industry, 20% annual growth',
-<<<<<<< HEAD
     growth_rate: '20% annual growth';
-variant: 'quantum - space'
-=======
-    growth_rate: '20% annual growth',
-    variant: 'quantum - space',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - space'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4404,20 +4186,10 @@ variant: 'quantum - space'
     customers:
         customers: 12;
     rating: 4 && 4.9;
-<<<<<<< HEAD
     reviews: 6}];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    customers: 12;
-=======
-    reviews: 6;
-  }];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    customers:
-        customers: 12;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    rating: 4 && 4.9;
+    customers: 12;    rating: 4 && 4.9;
     reviews: 6}
 ];
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -5054,16 +4826,9 @@ varian,
       'Performance enhancement'],
     roi: 'Research institutions report 500% ROI through accelerated discoveries and breakthrough research capabilities.',
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI']
-<<<<<<< HEAD
     marketSize: '$1.5 B BCI market'
     growthRate: '300% annual growth';
-variant: 'quantum-neural-advanced',
-=======
-    marketSize: '$1.5 B BCI market',
-    growthRate: '300% annual growth',
-    variant: 'quantum-neural-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-neural-advanced',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -5198,21 +4963,11 @@ varian,
       'Telecommunications'],
     roi: 'Space companies achieve 300% ROI through operational efficiency and mission success rates.',
     competitors: ['SpaceX', 'OneWeb', 'Planet Labs', 'Maxar Technologies']
-<<<<<<< HEAD
     marketSize: '$469 B space economy'
     growthRate: '400% annual growth';
 variant: 'quantum-space'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$469 B space economy',
-    growthRate: '400% annual growth',
-    variant: 'quantum-space',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5348,21 +5103,11 @@ varian,
       'Disease modeling'],
     roi: 'Pharma companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: ['Insitro', 'Recursion', 'Atomwise', 'BenevolentAI']
-<<<<<<< HEAD
     marketSize: '$150 B AI in healthcare'
     growthRate: '250% annual growth';
 variant: 'neural-quantum'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$150 B AI in healthcare',
-    growthRate: '250% annual growth',
-    variant: 'neural-quantum',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5505,21 +5250,11 @@ varian,
       'Citadel'
       'Bridgewater'
     ]
-<<<<<<< HEAD
     marketSize: '$15T algorithmic trading'
     growthRate: '150% annual growth';
 variant: 'quantum-cyberpunk'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15T algorithmic trading',
-    growthRate: '150% annual growth',
-    variant: 'quantum-cyberpunk',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5655,21 +5390,11 @@ varian,
       'SentinelOne'
       'Cylance'
     ]
-<<<<<<< HEAD
     marketSize: '$200B cybersecurity market'
     growthRate: '200% annual growth';
 variant: 'cyberpunk-holographic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B cybersecurity market',
-    growthRate: '200% annual growth',
-    variant: 'cyberpunk-holographic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5799,21 +5524,11 @@ varian,
       'Defense applications'],
     roi: 'Organizations achieve 400% ROI through enhanced security and reduced cyber threats.',
     competitors: ['Cloudflare', 'Akamai', 'Fastly', 'Imperva']
-<<<<<<< HEAD
     marketSize: '$50 B network security'
     growthRate: '180% annual growth';
 variant: 'quantum-holographic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$50 B network security',
-    growthRate: '180% annual growth',
-    variant: 'quantum-holographic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6069,21 +5784,11 @@ varian,
       'Compliance'],
     roi: 'Logistics companies achieve 300% ROI through operational efficiency and cost reduction.',
     competitors: ['Flexport', 'Convoy', 'Project44', 'FourKites']
-<<<<<<< HEAD
     marketSize: '$12 T logistics market'
     growthRate: '160% annual growth';
 variant: 'quantum-matrix'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$12 T logistics market',
-    growthRate: '160% annual growth',
-    variant: 'quantum-matrix',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6217,21 +5922,11 @@ varian,
       'Social interactions'],
     roi: 'Companies achieve 400% ROI through virtual experiences and new revenue streams.',
     competitors: ['Meta', 'Roblox', 'Decentraland', 'The Sandbox']
-<<<<<<< HEAD
     marketSize: '$800 B metaverse market'
     growthRate: '350% annual growth';
 variant: 'holographic-matrix'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$800 B metaverse market',
-    growthRate: '350% annual growth',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6362,21 +6057,11 @@ varian,
       'Service robotics'],
     roi: 'Manufacturing companies achieve 400% ROI through automation and operational efficiency.',
     competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC']
-<<<<<<< HEAD
     marketSize: '$45 B robotics market'
     growthRate: '280% annual growth';
 variant: 'neural-cyberpunk'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$45 B robotics market',
-    growthRate: '280% annual growth',
-    variant: 'neural-cyberpunk',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6518,21 +6203,11 @@ varian,
       'Rockwell Automation'
       'Schneider Electric'
     ]
-<<<<<<< HEAD
     marketSize: '$200B smart manufacturing'
     growthRate: '240% annual growth';
 variant: 'ai-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B smart manufacturing',
-    growthRate: '240% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6662,21 +6337,11 @@ varian,
       'Defense applications'],
     roi: 'Transportation companies achieve 300% ROI through operational efficiency and safety improvements.',
     competitors: ['Waymo', 'Tesla', 'Cruise', 'Argo AI']
-<<<<<<< HEAD
     marketSize: '$60 B autonomous vehicles'
     growthRate: '320% annual growth';
 variant: 'quantum-entanglement'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$60 B autonomous vehicles',
-    growthRate: '320% annual growth',
-    variant: 'quantum-entanglement',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6804,19 +6469,10 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
       'Brain mapping'],
     roi: '1000% ROI within 6 months for research institutions',
     competitors: ['Neuralink ($10)000+/month)', 'Kernel ($50)000+/month)']
-<<<<<<< HEAD
     marketSize: '$2B BCI market, 500% annual growth'
     growthRate: '500% annual growth';
 variant: 'quantum-neural-advanced'
-    contactInfo: unknown;
-=======
-    marketSize: '$2B BCI market, 500% annual growth',
-    growthRate: '500% annual growth',
-    variant: 'quantum-neural-advanced',
-    contactInfo:
-        contactInfo: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      mobile: '+1 302 464 0950',
+    contactInfo: unknown;      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'}
@@ -6928,21 +6584,11 @@ varian,
     ],
     roi: '500% ROI within 12 months through security cost savings',
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)'],
-<<<<<<< HEAD
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually'
     growthRate: '400% annual growth';
 variant: 'quantum-cyberpunk'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
-    growthRate: '400% annual growth',
-    variant: 'quantum-cyberpunk',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -7047,21 +6693,11 @@ varian,
       'Siemens ($100K+ setup)'
       'Rockwell Automation ($150K+ setup)',
       'ABB ($200K+ setup)'],
-<<<<<<< HEAD
     marketSize: '$200B manufacturing automation market, 15% annual growth'
     growthRate: '15% annual growth';
 variant: 'ai-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B manufacturing automation market, 15% annual growth',
-    growthRate: '15% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -7170,21 +6806,11 @@ varian,
       'Bloomberg ($24K/year)'
       'Reuters ($25K/year)',
       'Custom solutions ($500K+ setup)'],
-<<<<<<< HEAD
     marketSize: '$15B algorithmic trading market, 25% annual growth'
     growthRate: '25% annual growth';
 variant: 'quantum-financial'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15B algorithmic trading market, 25% annual growth',
-    growthRate: '25% annual growth',
-    variant: 'quantum-financial',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -7293,21 +6919,11 @@ varian,
       'NASA systems (Government only)'
       'ESA systems (European only)',
       'Custom solutions ($2M+ setup)'],
-<<<<<<< HEAD
     marketSize: '$400B space industry, 20% annual growth'
     growthRate: '20% annual growth';
 variant: 'quantum-space'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$400B space industry, 20% annual growth',
-    growthRate: '20% annual growth',
-    variant: 'quantum-space',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -7317,15 +6933,8 @@ variant: 'quantum-space'
     customers:
         customers: 12;
     rating: 4 && 4.9;
-<<<<<<< HEAD
     reviews: 6}];      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-=======
-    reviews: 6;
-  }];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+      email: 'kleber@ziontechgroup && ziontechgroup.com'    realImplementation: true;
     implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',
     launchDate: '2024-08-01',
       website: 'https://ziontechgroup.com'}

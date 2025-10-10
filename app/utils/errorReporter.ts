@@ -12,24 +12,12 @@ export interface ErrorReport {
   userAgent: string,
   url: string,
   severity: 'low' | 'medium' | 'high' | 'critical',
-<<<<<<< HEAD
-  context?: Record<string></string>;});;)
-=======
-  context?: Record<string></string>;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export interface ErrorReporterConfig {
+  context?: Record<string></string>;});;)export interface ErrorReporterConfig {
   enableConsoleLogging: boolean,
   enableRemoteLogging: boolean,
   remoteEndpoint?: string;
   maxErrorsInMemory: number,
-<<<<<<< HEAD
-  captureContext: boolean;});;);
-=======
-  captureContext: boolean;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-const defaultConfig: ErrorReporterConfig = {,
+  captureContext: boolean;});;);const defaultConfig: ErrorReporterConfig = {,
 export interface ErrorReport {}
   message: string
   stack?: string
@@ -38,30 +26,18 @@ export interface ErrorReport {}
     userAgent: string,
   url: string,
   severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record<string></string>;}</strin>});
+  context?: Record<string></string>;}</strin>})
 }
 export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean,
   enableRemoteLogging: boolean
   remoteEndpoint?: string
   maxErrorsInMemory: number,
-<<<<<<< HEAD
-    captureContext: boolean;});;);
-=======
-    captureContext: boolean;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-const defaultConfig: ErrorReporterConfig = {}
+    captureContext: boolean;});;);const defaultConfig: ErrorReporterConfig = {}
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-<<<<<<< HEAD
-  captureContext: true});;);
-=======
-  captureContext: true});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  captureContext: true});;);/**
  * ErrorReporter class for comprehensive error handling;
  */
 export class ErrorReporter {
@@ -75,26 +51,15 @@ export class ErrorReporter {}
   private errorCount: Map<string></string> = new Map();}
   private constructor(config: Partial<ErrorReporterConfig></ErrorReporterConfig> = {}); {}
     this.config = { ...defaultConfig, ...config }
-<<<<<<< HEAD
 export interface ErrorReport {/* TODO: Fix JSX expression */});;)
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */});;);
 const,
-  defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */});;);
-=======
-export interface ErrorReport {/* TODO: Fix JSX expression */});]
-    }
-export interface ErrorReporterConfig {/* TODO: Fix JSX expression */});]
-    }
-const,
-  defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */});;);/**
  * ErrorReporter class for comprehensive error handling;
  */
 export class ErrorReporter {/* TODO: Fix JSX expression */}
   g: Partial<ErrorReporterConfig></ErrorReporterConfig> = {}); {/* TODO: Fix JSX expression */}
-    this.config = { ...defaultConfig, ...config }});
+    this.config = { ...defaultConfig, ...config }})
 }
   /**
    * Get singleton instance;
@@ -102,13 +67,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {}
     if (!ErrorReporter.instance) {}
       ErrorReporter.instance = new ErrorReporter(config);}
-<<<<<<< HEAD
-  static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */});;);
-=======
-  static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return ErrorReporter.instance});
+  static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */});;);    return ErrorReporter.instance})
 }
   /**
    * Report an error with full context;
@@ -132,42 +91,20 @@ const errorReport: ErrorReport = {,
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity,
-<<<<<<< HEAD
-      context: this.config.captureContext ? context : undefined});;);
-=======
-      context: this.config.captureContext ? context : undefined});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    // Track error frequency;
+      context: this.config.captureContext ? context : undefined});;);    // Track error frequency;
 const errorKey = `${error.name}:${error.message}`
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport)
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {}
-<<<<<<< HEAD
       this.errorQueue.shift();});;);
     // Console logging;
     if (this.config.enableConsoleLogging) {
-      this.logToConsole(errorReport);});;);
-=======
-      this.errorQueue.shift();});]
-    }
-    // Console logging;
-    if (this.config.enableConsoleLogging) {
-      this.logToConsole(errorReport);});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    // Remote logging;
+      this.logToConsole(errorReport);});;);    // Remote logging;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
     // Console logging
     if (this.config.enableConsoleLogging) {}
-<<<<<<< HEAD
-      this.logToConsole(errorReport);});;);
-=======
-      this.logToConsole(errorReport);});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    // Remote logging
+      this.logToConsole(errorReport);});;);    // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);
   reportError(erro,
@@ -175,86 +112,38 @@ const errorKey = `${error.name}:${error.message}`
     severit,
   y: ErrorReport['severity'] = 'medium',
     context?: Record<string></string>)
-<<<<<<< HEAD
-  ): void {/* TODO: Fix JSX expression */});;);
-=======
-  ): void {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    // Track error frequency;
+  ): void {/* TODO: Fix JSX expression */});;);    // Track error frequency;
 const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);
-<<<<<<< HEAD
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */});;);
     // Console logging;
     if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */});;);
     // Remote logging;
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});;);
-=======
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */});]
-    }
-    // Console logging;
-    if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */});]
-    }
-    // Remote logging;
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  }
+    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});;);  }
   /**
    * Log error to console with formatting;
    */
   private logToConsole(report: ErrorReport): void {,
   private logToConsole(report: ErrorReport): void {}
-<<<<<<< HEAD
     const style = this.getConsoleStyle(report.severity);`});;)
 }] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development') {});;);
     if (process.env['NODE_ENV'] === 'development') {});;);
     if (process.env['NODE_ENV'] === 'development') {});;);
     if (report.stack) {}
-      if (process.env['NODE_ENV'] === 'development') {});;);
-=======
-    const style = this.getConsoleStyle(report.severity);`});]
-    }] Error Report`, style)
-    if (process.env['NODE_ENV'] === 'development') {});]
-    }
-    if (process.env['NODE_ENV'] === 'development') {});]
-    }
-    if (process.env['NODE_ENV'] === 'development') {});]
-    }
-    if (report.stack) {}
-      if (process.env['NODE_ENV'] === 'development') {});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    }
+      if (process.env['NODE_ENV'] === 'development') {});;);    }
     if (report.context) {}
       if (process.env['NODE_ENV'] === 'development') {}
   private logToConsole(repor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
     if (report.stack) {/* TODO: Fix JSX expression */});;);
     }
-    if (report.context) {/* TODO: Fix JSX expression */});;);
-=======
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});]
-    }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});]
-    }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});]
-    }
-    if (report.stack) {/* TODO: Fix JSX expression */});]
-    }
-    }
-    if (report.context) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    });
+    if (report.context) {/* TODO: Fix JSX expression */});;);    })
 }
 }
   /**
@@ -267,27 +156,19 @@ const styles = {,
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-<<<<<<< HEAD
       critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});;);
     return styles[severity]
   private getConsoleStyle(severit)
-  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});;);
-=======
-      critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});]
-    }
-    return styles[severity]
-  private getConsoleStyle(severit)
-  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return styles[severity]});
+  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});;);    return styles[severity]})
 }
   /**
    * Send error to remote logging service;
    */
   private async sendToRemote(report: ErrorReport): Promise<void></void> {,
     if (!this.config.remoteEndpoint) return;
-    try {,
+    try {
+
+,
       await fetch(this.config.remoteEndpoint, {)
         method: 'POST'),
         headers: {,
@@ -298,9 +179,11 @@ const styles = {,
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'});]
-    });
+    })
         body: JSON.stringify(report);)]
-    } catch (error) {
+    
+
+} catch (error) {
       // Silently fail to avoid infinite loop;
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
@@ -310,31 +193,15 @@ const styles = {,
   t: ErrorReport): Promise<void></void> {/* TODO: Fix JSX expression */});]
     },
         bod,
-<<<<<<< HEAD
   y: JSON.stringify(report);)
 });;)
 } catch (error) {/* TODO: Fix JSX expression */});;);
-    });;);
-=======
-  y: JSON.stringify(report)]
-    });]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  /**
+    });;);  /**
    * Get all errors in queue;
    */
   getErrorQueue(): ErrorReport[] {}
     return [...this.errorQueue];}
-<<<<<<< HEAD
-  getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */});;);
-=======
-  getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  /**
+  getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */});;);  /**
    * Get error statistics;
    */
   getErrorStats(): {
@@ -353,32 +220,17 @@ const styles = {,
     return {}
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
-<<<<<<< HEAD
       errorsByType: Object.fromEntries(this.errorCount);););
   getErrorStats(): {/* TODO: Fix JSX expression */});;)
 } {/* TODO: Fix JSX expression */});;)
-}});
-=======
-      errorsByType: Object.fromEntries(this.errorCount);)]
-    }
-  getErrorStats(): {/* TODO: Fix JSX expression */});]
-    } {/* TODO: Fix JSX expression */});]
-    }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-}
+}});}
   /**
    * Clear error queue;
    */
   clearQueue(): void {}
     this.errorQueue = []
     this.errorCount.clear();}
-<<<<<<< HEAD
-  clearQueue(): void {/* TODO: Fix JSX expression */});;);
-=======
-  clearQueue(): void {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  /**
+  clearQueue(): void {/* TODO: Fix JSX expression */});;);  /**
    * Export errors as JSON;
    */
   exportErrors(): string {
@@ -397,13 +249,7 @@ const styles = {,
     },
       null,
       2;
-<<<<<<< HEAD
-    ););
-=======
-    )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-}
+    ););}
 /**
  * Convenience function to report errors;
  */
@@ -412,13 +258,7 @@ export const reportError = (
   severity?: ErrorReport['severity'],
   context?: Record<string></string>
 ): void => {}
-<<<<<<< HEAD
-  ErrorReporter.getInstance().reportError(error, severity, context);});;);
-=======
-  ErrorReporter.getInstance().reportError(error, severity, context);});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  ErrorReporter.getInstance().reportError(error, severity, context);});;);/**
  * React error boundary helper;
  */
 export const captureComponentError = (
@@ -433,27 +273,13 @@ const report = ErrorReporter.getInstance(),
   const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {);
     componentName,
-<<<<<<< HEAD
     componentStack: errorInfo.componentStack});;)
 });;)
-export default ErrorReporter
-=======
-    componentStack: errorInfo.componentStack});]
-    });]
-    }
-export default ErrorReporter;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export const reportError = (erro,
+export default ErrorReporterexport const reportError = (erro,
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string></string>)
-<<<<<<< HEAD
-): void => {/* TODO: Fix JSX expression */});;);
-=======
-): void => {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+): void => {/* TODO: Fix JSX expression */});;);/**
  * React error boundary helper;
  */
 export const captureComponentError = (erro,
@@ -463,14 +289,7 @@ export const captureComponentError = (erro,
   k: string },
   componentNam,
   e: string}
-<<<<<<< HEAD
 ): void => {/* TODO: Fix JSX expression */});;)
-});;)
-=======
-): void => {/* TODO: Fix JSX expression */});]
-    });]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default ErrorReporter;
+});;)export default ErrorReporter;
 `
 }

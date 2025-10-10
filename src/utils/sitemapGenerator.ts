@@ -48,9 +48,7 @@ ${urls}
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.8}</priority>`
   </url>`
-  }
-  )
-
+  })
   .join('
 ')}
 

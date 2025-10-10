@@ -5,11 +5,15 @@ import fs from 'fs';
 // // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-//     return { success: true, result }} catch (error) {
+
+
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+//     return { success: true, result }
+
+} catch (error) {
 //     return { success: false, error: error.message };
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' })
 //     return {/* TODO: Fix JSX expression */}
   s: true, result }} catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }}
@@ -18,14 +22,17 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
+
+
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
       { stdio: 'pipe' }
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */}
-  o: 'pipe' }
-    );
-    return true} catch {/* TODO: Fix JSX expression */}
+  o: 'pipe' })
+    return true
+
+} catch {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -95,7 +102,7 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
   );
 //   //Check if branch exists;
   if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */}
-    });
+    })
     continue}
 
 //   //Try to merge the branch;
@@ -124,9 +131,7 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
       error: mergeResult.error),
 //   //Try to merge the branch;`;
 const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`
-    `Merge ${pr.branch}`)
-  );
-
+    `Merge ${pr.branch}`))
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     })} else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
@@ -150,13 +155,10 @@ if (mergedCount > 0) {
   if (pushResult.success) {,
 //     } else {
 // const typeCheck = safeGitCommand('pnpm run type-check',
-  'TypeScript type checking')
-);
+  'TypeScript type checking'))
 const buildCheck = safeGitCommand('pnpm run,
   build:no-check',
-  'Production build')
-);
-
+  'Production build'))
 //Push changes if any were merged;
 if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 //     } else {/* TODO: Fix JSX expression */}
@@ -204,9 +206,7 @@ const finalReport = {/* TODO: Fix JSX expression */}`
 //Save detailed final report;
 fs.writeFileSync('ultimate-pr-merge-report.json')
 fs.writeFileSync('ultimate-pr-merge-report.json')
-  JSON.stringify(finalReport, null, 2)
-);
-
+  JSON.stringify(finalReport, null, 2))
 // // // // // // // // // // // if (finalReport.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
 //   } else {/* TODO: Fix JSX expression */}
 //   }

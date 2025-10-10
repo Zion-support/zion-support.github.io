@@ -25,8 +25,8 @@ constructor() {
 const navObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('navigation', entry.duration)}
-      });
-      navObserver.observe({ entryTypes: ['navigation'] });
+      })
+      navObserver.observe({ entryTypes: ['navigation'] })
       this.observers.push(navObserver)}
     
     // Monitor resource timing
@@ -34,8 +34,8 @@ const navObserver = new PerformanceObserver((list) => {
 const resourceObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('resource', entry.duration)}
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      })
+      resourceObserver.observe({ entryTypes: ['resource'] })
       this.observers.push(resourceObserver)}
     
     // Monitor paint timing
@@ -43,8 +43,8 @@ const resourceObserver = new PerformanceObserver((list) => {
 const paintObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric(entry.name, entry.startTime)}
-      });
-      paintObserver.observe({ entryTypes: ['paint'] });
+      })
+      paintObserver.observe({ entryTypes: ['paint'] })
       this.observers.push(paintObserver)}
     
     // Monitor largest contentful paint
@@ -54,8 +54,8 @@ const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this.recordMetric('lcp', lastEntry.startTime)}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      })
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(lcpObserver)}
     
     // Monitor first input delay
@@ -65,8 +65,8 @@ const fidObserver = new PerformanceObserver((list) => {
 const fidEntry = entry as PerformanceEventTiming;
           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid)}
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      })
+      fidObserver.observe({ entryTypes: ['first-input'] })
       this.observers.push(fidObserver)}
     
     // Monitor layout shift
@@ -79,8 +79,8 @@ const layoutShiftEntry = entry as LayoutShift;
             clsValue += layoutShiftEntry.value;
             this.recordMetric('cls', clsValue)}
         }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      })
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(clsObserver)}
   }
   
@@ -149,9 +149,13 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
     if (typeof performance === 'undefined' || !performance.measure) return 0;
     
     try {
+
+
       performance.measure(name, startMark, endMark);
       const measures = performance.getEntriesByName(name, 'measure');
-      return measures[measures.length - 1]?.duration || 0} catch (error) {
+      return measures[measures.length - 1]?.duration || 0
+
+} catch (error) {
 //       // // console.error removed for production
 return 0}
   }
@@ -212,7 +216,7 @@ const memory = (performance as PerformanceWithMemory).memory;
    * Disconnect all observers
    */
   disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers = []}
 }
 
@@ -331,23 +335,23 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
   // TOD,
   O: Add content}
-          this.recordMetric('navigation', entry.duration)});
+          this.recordMetric('navigation', entry.duration)})
       navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation'] })
       this.observers.push(navObserver);
           this.recordMetric('resource', entry.duration);
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+  s: ['resource'] })
       this.observers.push(resourceObserver);
           this.recordMetric(entry.name, entry.startTime);
       paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] })
       this.observers.push(paintObserver);
           const fidEntry = entry as PerformanceEventTiming;
           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] })
       this.observers.push(fidObserver);
 // Types;
 //   PerformanceReport,

@@ -165,24 +165,13 @@ const newUtilities = {
           backgroundSize: '20 px 20 px'},
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
-<<<<<<< HEAD
           border: 'none'
           color: 'white'
           padding: '12px 24px'
           borderRadius: '8px'
           fontWeight: '600'
           textTransform: 'uppercase',;
-letterSpacing: '1 px',
-=======
-          border: 'none',
-          color: 'white',
-          padding: '12px 24px',
-          borderRadius: '8px',
-          fontWeight: '600',
-          textTransform: 'uppercase',
-          letterSpacing: '1 px',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-          position: 'relative',
+letterSpacing: '1 px',          position: 'relative',
           overflow: 'hidden',
           transition: 'all 0.3 s ease'},
         '.cyber-button: hover': {,

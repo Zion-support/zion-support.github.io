@@ -31,9 +31,7 @@ export const Link: React.FC;
       e.preventDefault();
       window.location.href = href}
   }
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <a></a>
       href={href}
       className={className}

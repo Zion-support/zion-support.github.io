@@ -1,5 +1,7 @@
 exports.handler = async function (event, context) {
   try {
+
+
     // Unused media scanning simulation;
     const result = {
       statusCode: 200;
@@ -8,15 +10,8 @@ exports.handler = async function (event, context) {
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
         message: 'Unused media scanner executed successfully')
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
-function: 'unused-media-scanner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'unused-media-scanner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        source: event.source || 'unknown'
+function: 'unused-media-scanner'        source: event.source || 'unknown'
         scanning: {
           status: 'active',
           mediaScanned:
@@ -25,7 +20,9 @@ function: 'unused-media-scanner'
           lastScan: new Date().toISOString()}
       })
     };
-    return result} catch (error) {
+    return result
+
+} catch (error) {
 
     return {
       statusCode: 500;

@@ -2,15 +2,14 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import './index.css';
 
 // Lazy load pages for better performance;
-// const Home = lazy(() => import('./pages/Home'));
-// const About = lazy(() => import('./pages/About'));
-// const Services = lazy(() => import('./pages/Services'));
-// const Blog = lazy(() => import('./pages/Blog'));
-// const Contact = lazy(() => import('./pages/Contact'));
-// const Team = lazy(() => import('./pages/Team'));
-// const Privacy = lazy(() => import('./pages/Privacy'));
-// const Terms = lazy(() => import('./pages/Terms'));
-;
+// const Home = lazy(() => import('./pages/Home'))
+// const About = lazy(() => import('./pages/About'))
+// const Services = lazy(() => import('./pages/Services'))
+// const Blog = lazy(() => import('./pages/Blog'))
+// const Contact = lazy(() => import('./pages/Contact'))
+// const Team = lazy(() => import('./pages/Team'))
+// const Privacy = lazy(() => import('./pages/Privacy'))
+// const Terms = lazy(() => import('./pages/Terms'))
 function App() {
   useEffect(() => {
     // Initialize basic optimizations;
@@ -50,9 +49,7 @@ function App() {/* TODO: Fix JSX expression */}
           </Suspense>
         </Router>
       </div>
-    </ErrorBoundary>)
-  )}
-
+    </ErrorBoundary>))}
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
@@ -98,7 +95,6 @@ class ErrorBoundary extends React.Component<
               </button>
             </div>
           </div>))}
-
     return this.props.children}
 }
 

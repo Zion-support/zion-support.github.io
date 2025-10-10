@@ -752,9 +752,7 @@ $4}
   n: 'Partnerships with leading universities and research institutions'
     }
   ];
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

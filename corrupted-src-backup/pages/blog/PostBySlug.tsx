@@ -88,9 +88,7 @@ const featuredPosts = [
     }];
 
   // Find the current post;
-  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
-  );
-
+  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;))
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
     return (
@@ -108,9 +106,7 @@ const featuredPosts = [
             Back to Blog;)
           </a>)
         </div>)
-      </div>)
-    )}
-
+      </div>))}
   return(<div className="min-h-screen bg-gray-50">
   return (
     <div className="min-h-screen bg-gray-50"></div>

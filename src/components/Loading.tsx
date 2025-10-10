@@ -2,8 +2,6 @@ import React from 'react';
 ;
 const Loading: React.FC = () => {
 return (
-
-  return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="text-center"></div>
         <div className="cyber-loader mx-auto mb-4"></div>

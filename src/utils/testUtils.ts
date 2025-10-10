@@ -104,7 +104,7 @@ export class MockStorage implements Storage {// TODO: Add content}
   x: number): string | null {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    const keys = Array.from(this.store.keys());
+    const keys = Array.from(this.store.keys())
     return keys[index] || null}
   removeItem(ke)
   y: string): void {/* TODO: Fix JSX expression */}
@@ -178,8 +178,7 @@ export const createMockPerformance = (): Performance => {// TODO: Add content}
         duratio,
   n: 0,
         toJSO,
-  N: () => ({})
-  )
+  N: () => ({}))
       } as PerformanceEntry)
     },
 
@@ -193,8 +192,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
         duratio,
   n: 100,
         toJSO,
-  N: () => ({})
-  )
+  N: () => ({}))
       } as PerformanceEntry)
     },
 
@@ -418,10 +416,14 @@ export const retryWithBackoff = async;
           < maxRetries; i++) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      return await fn()} catch (error) {/* TODO: Fix JSX expression */}
+      return await fn()
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       lastError = error as Error;

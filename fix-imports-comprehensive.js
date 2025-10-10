@@ -51,6 +51,8 @@ const iconReplacements = {
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
   try {
+
+
     //Remove duplicate Link imports;
     const linkImportRegex =
       /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g;
@@ -121,7 +123,9 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
 //       }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //     }
 }
 
@@ -133,10 +137,9 @@ const dirFiles = fs;
 directories.forEach(dir => {/* TODO: Fix JSX expression */})
   e: true })
       .filter(file => file.endsWith('.tsx'))
-      .map(file => path.join(dir, file));
+      .map(file => path.join(dir, file))
     files.push(...dirFiles)}
-});
-
+})
 // Process each file;
 files.forEach(fixImportsInFile);
 

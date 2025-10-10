@@ -3,19 +3,10 @@ import https from 'https';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-<<<<<<< HEAD
   return new Promise((resolve, reject) => {;
 const options = {
       hostname: 'api.github.com'
-      port: 443;
-=======
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      port:
-        port: 443;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      path: endpoint;
+      port: 443;      path: endpoint;
       method: 'GET',
       headers:
         headers: {,
@@ -26,19 +17,19 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
     };
 ;
 const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
-      });
+      })
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))}
-      })});
-
+      })})
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     req.end()})}
 
 async function checkOpenPRs() {
   try {
+
+
     // Get open pull requests;
     if (prs.length === 0) {
 
@@ -72,16 +63,16 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
     for (const pr of prs) {/* TODO: Fix JSX expression */}
       })}
     
-    return prDetails} catch (error) {/* TODO: Fix JSX expression */}
+    return prDetails
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Run the check;
-checkOpenPRs().then(prs => {)
-)
-  process.exit(0)}).catch(error => {)
-)
-  process.exit(1)});
+checkOpenPRs().then(prs => {))
+  process.exit(0)}).catch(error => {))
+  process.exit(1)})
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

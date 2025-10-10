@@ -38,8 +38,7 @@ const,
         <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'></div>
           <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'></div>
             {/* TODO: Fix JSX expression */}
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)
-            )}
+              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>))}
             <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></div>
               <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}</h3>
               <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}</p>

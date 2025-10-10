@@ -124,7 +124,7 @@ export interface A11yCheckResult {
  *
  * @example
  * ```typescript
- * const result = checker.checkElement(document.getElementById('main'));
+ * const result = checker.checkElement(document.getElementById('main'))
  * if (import.meta.env.DEV) {}
  * ```
  */
@@ -168,7 +168,7 @@ export interface A11yCheckResult {// TODO: Add content}
  *
  * @example;
  * ```typescript;
- * const result = checker.checkElement(document.getElementById('main'));
+ * const result = checker.checkElement(document.getElementById('main'))
  * if (import.meta.env.DEV) {}`
  * ```
  */
@@ -319,9 +319,7 @@ const alt = img.getAttribute('alt');
           
           "
           <img src="..." alt="Description of image" />'
-        })
-  )
-      }
+        }))}
       // Check for empty alt on decorative images without role;
       if (alt === '' && role !== 'presentation') {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -347,12 +345,12 @@ const alt = img.getAttribute('alt');
    * @param element - Root element to check
    */
   private checkHeadings(element: Element): void {;
-const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'))
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {
 return (
 ;
-const level = parseInt(heading.tagName.charAt(1));
+const level = parseInt(heading.tagName.charAt(1))
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
         this.addIssue({
@@ -371,11 +369,8 @@ const level = parseInt(heading.tagName.charAt(1));
           <img src="..." alt="" role="presentation" />
 );
 }'
-        })
-  )
-      }
-    }
-  )
+        }))}
+    })
   }
   /**
    * Check heading hierarchy;
@@ -387,12 +382,12 @@ const level = parseInt(heading.tagName.charAt(1));
   private checkHeadings(element: Element): void {// TODO: Add content}
 
 }
-    const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'))
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parseInt(heading.tagName.charAt(1))
       // Check for skipped heading levels;
       if (level > previousLevel + 1 && previousLevel !== 0) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -413,8 +408,7 @@ const level = parseInt(heading.tagName.charAt(1));
       // Check for empty headings
       if (!heading.textContent?.trim()) {
         this.addIssue({
-          type: 'empty-heading'}
-  )
+          type: 'empty-heading'})
       }
       // Check for empty headings;
       if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
@@ -432,7 +426,7 @@ const level = parseInt(heading.tagName.charAt(1));
           element: heading.tagName.toLowerCase(),
           fix:         ,
 $4})}
-      previousLevel = level});
+      previousLevel = level})
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;
     if (h1Count > 1) {
@@ -440,10 +434,9 @@ const h1Count = element.querySelectorAll('h1').length;
         type: 'multiple-h1',
           fix: 'Add descriptive text to the heading'
 
-        }
-  )
+        })
       }
-      previousLevel = level});
+      previousLevel = level})
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;
     if (h1Count > 1) {/* TODO: Fix JSX expression */}
@@ -473,8 +466,7 @@ const links = element.querySelectorAll('a');
     links.forEach((link, index) => {
         fix: 'Use only one h1 per page for the main heading'
 
-      }
-  )
+      })
     }
   }
   /**
@@ -532,8 +524,7 @@ const links = element.querySelectorAll('a');
           
           "
           <Link to="..." aria-label="Description">...</Link>'
-        }
-  )
+        })
       }
       // Check for generic link text;
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
@@ -560,8 +551,7 @@ const target = link.getAttribute('target');
         !text?.includes('(opens in new window)')
       ) {
         this.addIssue({
-          type: 'new-window-no-warning'}
-  )
+          type: 'new-window-no-warning'})
       }
       // Check for links opening in new window without warning;
 const target = link.getAttribute('target')
@@ -619,11 +609,9 @@ const text = button.textContent?.trim();
           <Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>
 );
 }'
-        }
-  )
+        })
       }
-    }
-  )
+    })
   }
   /**
    * Check buttons for accessibility;
@@ -692,11 +680,8 @@ const id = input.getAttribute('id');
           
           "
           <button aria-label="Close dialog"></button>'
-        })
-  )
-      }
-    }
-  )
+        }))}
+    })
   }
   /**
    * Check form elements for accessibility;
@@ -736,7 +721,7 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           fix: 'Associate a label with the form control',
           codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
         })}
-    });
+    })
           codeExample: '
 
           
@@ -749,11 +734,9 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           "
           <label for="email">Emai,"
   l:</label><input id="email" name="email" />'
-        }
-  )
+        })
       }
-    }
-  )
+    })
   }
   /**
    * Check color contrast (basic check)
@@ -782,7 +765,7 @@ const style = el.getAttribute('style');
 const elementsWithColor = element.querySelectorAll('[style*="color"]');
     elementsWithColor.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const style = el.getAttribute('style');
       if (style?.includes('colo)
   r: ') && !style.includes('background')) {/* TODO: Fix JSX expression */}
@@ -817,11 +800,9 @@ const tabindex = el.getAttribute('tabindex');
           type: 'interactive-not-focusable',
           fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
 
-        }
-  )
+        })
       }
-    }
-  )
+    })
   }
   /**
    * Check keyboard accessibility;
@@ -837,7 +818,7 @@ const tabindex = el.getAttribute('tabindex');
 const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -855,7 +836,7 @@ const tabindex = el.getAttribute('tabindex');
           fix: 'Remove tabindex="-1" or use tabindex="0"',
           codeExample: '<button tabindex="0">Accessible button</button>'
         })}
-    });
+    })
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
     clickableNonInteractive.forEach(el => {
@@ -881,15 +862,14 @@ const role = el.getAttribute('role');
           <button tabindex="0">Accessible button</button>
 );
 }'
-        }
-  )
+        })
       }
-    });
+    })
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
     clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const role = el.getAttribute('role');
       const tabindex = el.getAttribute('tabindex');
       const onKeyDown = el.getAttribute('onkeydown');
@@ -959,11 +939,9 @@ const validRoles = [
           <button onClick={handleClick}>
 );
 }Click me</button>'
-        }
-  )
+        })
       }
-    }
-  )
+    })
   }
   /**
    * Check ARIA usage;
@@ -980,7 +958,7 @@ const validRoles = [
     );
     elementsWithAria.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const role = el.getAttribute('role');
       // Check for invalid ARIA roles;
 const validRoles = [
@@ -1028,8 +1006,7 @@ const referencedElement = document.getElementById(labelledBy);
             type: 'aria-labelledby-missing',
           fix: 'Use a valid ARIA role or remove the role attribute'
 
-        }
-  )
+        })
       }
       // Check aria-labelledby references;
 const labelledBy = el.getAttribute('aria-labelledby');
@@ -1068,12 +1045,10 @@ const hasMain = element.querySelector('main, [role="main"]');
         type: 'missing-main-landmark',
             fix: 'Ensure the referenced element exists'
 
-          }
-  )
+          })
         }
       }
-    }
-  )
+    })
   }
   /**
    * Check for proper use of landmark regions;
@@ -1172,9 +1147,7 @@ const score = Math.max(0, 100 - totalPenalty);
           <main> element or role="main"',
         codeExampl,
   e: '<main><!-- Main content --></main>'
-      })
-  )
-    }
+      }))}
   }
   /**
    * Add an issue to the list;

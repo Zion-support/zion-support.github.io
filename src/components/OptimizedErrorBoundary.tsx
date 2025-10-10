@@ -34,7 +34,7 @@ $4}}
     this.setState({
       error,
       errorInfo
-    });
+    })
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
@@ -233,8 +233,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         )}
       </div>
     </div>
-  )
-);
+  ))
 ErrorFallback.displayName = 'ErrorFallback';
 
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
@@ -253,8 +252,7 @@ ErrorFallback.displayName = 'ErrorFallback';
         )}
       </div>
     </div>
-//   )
-);
+//   ))
 ErrorFallback.displayName = 'ErrorFallback';
 
 

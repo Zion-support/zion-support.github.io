@@ -39,9 +39,7 @@ const observer = new IntersectionObserver(
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01}
-    );
-
+        threshold: 0.01})
     if (imgRef.current) {
       observer.observe(imgRef.current)}
 
@@ -86,9 +84,7 @@ const svg = `
           <div className="text-4xl mb-2">⚠️</div>
           <div className="text-sm">Image failed to load</div>)
         </div>)
-      </div>)
-    )}
-
+      </div>))}
   return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}

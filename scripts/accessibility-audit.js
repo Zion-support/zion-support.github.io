@@ -78,8 +78,7 @@ function auditHTMLFiles() {
   // console.log removed for production
 ;
 const distDir = path.join(__dirname, '../dist');
-  const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
-  
+  const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'))
   htmlFiles.forEach(file => {);
 const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
@@ -102,8 +101,7 @@ const filePath = path.join(distDir, file);
       if (!img.includes('alt=')) {
         // console.log removed for production
 }
-    });
-    
+    })
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
@@ -121,8 +119,7 @@ function auditCSSFiles() {
   // console.log removed for production
 ;
 const distDir = path.join(__dirname, '../dist');
-  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
-  
+  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'))
   cssFiles.forEach(file => {);
 const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
@@ -175,9 +172,7 @@ const report = {
   
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
-    JSON.stringify(report, null, 2)
-  );
-  
+    JSON.stringify(report, null, 2))
   // console.log removed for production
 }
 
@@ -290,6 +285,8 @@ const focusableElements = element.querySelectorAll(
 // Main audit function;
 function audit() {
   try {
+
+
     auditHTMLFiles();
     auditCSSFiles();
     generateAccessibilityReport();
@@ -298,6 +295,8 @@ function audit() {
     // console.log removed for production
 // console.log removed for production
 // console.log removed for production
+
+
 } catch (error) {
     // console.error removed for production
 process.exit(1)}

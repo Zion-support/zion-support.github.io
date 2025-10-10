@@ -5,7 +5,9 @@ import fs from 'fs';
 // console.log removed for production
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
@@ -32,7 +34,9 @@ const incoming = parts[1].replace(/            return incoming;)
       fs.writeFileSync(filePath, resolvedContent);
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
@@ -61,8 +65,12 @@ if (resolvedCount > 0) {
     // Add resolved files;
     // console.log removed for production
 try {
-      execSync('git add .', { encoding: 'utf8', cwd: process.cwd() });
+
+
+      execSync('git add .', { encoding: 'utf8', cwd: process.cwd() })
       // console.log removed for production
+
+
 } catch (error) {
       // console.log removed for production
 }
@@ -70,8 +78,12 @@ try {
     // Commit the resolution;
     // console.log removed for production
 try {
-      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() });
+
+
+      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() })
       // console.log removed for production
+
+
 } catch (error) {
       // console.log removed for production
 }
@@ -79,9 +91,13 @@ try {
   
   // Final status;
   // console.log removed for production
-try {,;
-const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() });
+try {
+
+,;
+const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() })
     // console.log removed for production
+
+
 } catch (error) {
     // console.log removed for production
 }

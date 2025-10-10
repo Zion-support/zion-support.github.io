@@ -3,7 +3,9 @@
 import fs from 'fs';
 ;
 function fixMainPage() {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them
@@ -29,7 +31,9 @@ let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
     // console.log removed for production
-return true} catch (error) {
+return true
+
+} catch (error) {
     // console.error removed for production
 return false}
 }

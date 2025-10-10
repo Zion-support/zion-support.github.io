@@ -1413,8 +1413,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
 ];
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>;
-  return specializedITSolutions2026.filter(solution => solution.category === category)
-  )}
+  return specializedITSolutions2026.filter(solution => solution.category === category))}
 export const getPopularSpecializedITSolutions2026 = () =>
 };
 export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
@@ -1431,7 +1430,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number)
 ) =>
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>);
-const _price = parseInt(solution && solution.price.replace('$') ''));
+const _price = parseInt(solution && solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})
 };    return price >= minPrice && price <= maxPrice})
 }
@@ -2107,7 +2106,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return specializedITSolutions2026.filter(solution =>);
-const _price = parseInt(solution.price.replace('$') ''));
+const _price = parseInt(solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})
 };
 ;
@@ -2129,7 +2128,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>);
-const _price = parse_int (solution.price.replace ('$') ''));
+const _price = parse_int (solution.price.replace ('$') ''))
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
@@ -2179,7 +2178,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>);
-const _price = parse_int (solution.price.replace ('$') ''));
+const _price = parse_int (solution.price.replace ('$') ''))
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface SpecializedITSolution2026};

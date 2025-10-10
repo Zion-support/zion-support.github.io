@@ -146,9 +146,7 @@ titl,
     }
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"

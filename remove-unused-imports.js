@@ -14,19 +14,20 @@ const filePath = path.join(dir, file);
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
+        results = results.concat(getAllFiles(filePath, extensions))
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
-  
+  })
   return results}
 
 // Remove unused imports from a file;
 function removeUnusedImports(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
@@ -37,8 +38,7 @@ const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --
         stdio: 'pipe',;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})
-      });
-      ;
+      })
 const lintResults = JSON.parse(result);
       if (lintResults.length === 0) return false;
       ;
@@ -64,15 +64,13 @@ const unusedVars = lintResults[0].messages;
             line.includes(`, ${varName}`) ||
             line.includes(`${varName},`) ||
             line.includes(`${varName} `) ||
-            line.includes(`${varName}`) && line.includes('from')
-          );
-          
+            line.includes(`${varName}`) && line.includes('from'))
           if (hasUnusedVar) {
             // If this import only has unused vars, remove the entire line;
             const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
             if (importMatch) {;
-const imports = importMatch[1].split(',').map(imp => imp.trim());
-              const usedImports = imports.filter(imp => !unusedVars.includes(imp));
+const imports = importMatch[1].split(',').map(imp => imp.trim())
+              const usedImports = imports.filter(imp => !unusedVars.includes(imp))
               if (usedImports.length === 0) {
                 return false; // Remove entire import line} else {
                 // Keep the line but remove unused imports;
@@ -86,9 +84,7 @@ const imports = importMatch[1].split(',').map(imp => imp.trim());
             line.includes(`, ${varName}`) ||`
             line.includes(`${varName},`) ||`
             line.includes(`${varName} `) ||`
-            line.includes(`${varName}`) && line.includes('from')
-          );
-          
+            line.includes(`${varName}`) && line.includes('from'))
           if (hasUnusedVar) {/* TODO: Fix JSX expression */}
             const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
             if (importMatch) {/* TODO: Fix JSX expression */}
@@ -97,14 +93,15 @@ const imports = importMatch[1].split(',').map(imp => imp.trim());
             }
             return false; // Remove line if it's a default import}
         }
-        return true});
-      ;
+        return true})
 const newContent = newLines.join('\n');
       if (newContent !== originalContent) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
         return true}
       
-    } catch (error) {
+    
+
+} catch (error) {
       // If ESLint fails, try a simpler approach} catch (error) {/* TODO: Fix JSX expression */}`
       // console.log removed for production
 }
@@ -124,16 +121,14 @@ const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
     !file.includes('.git') &&
     !file.includes('dist') &&
     !file.includes('.next') &&
-    !file.includes('out')
-  );
-;
+    !file.includes('out'))
 let fixedCount = 0;
 files.forEach(file => {)
   if (removeUnusedImports(file)) {
     fixedCount++}
 files.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+})
 `
 // console.log removed for production
 }"`

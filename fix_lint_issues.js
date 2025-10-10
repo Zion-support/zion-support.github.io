@@ -8,6 +8,8 @@ import { fileURLToPath } from 'url';
 // Function to fix common lint issues in a file;
 function fixLintIssues(filePath) {
   try {
+
+
     // Skip if not a source file;
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
       return false}
@@ -150,13 +152,17 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
     
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Function to recursively fix lint issues;
 function fixAllLintIssues(_dir) {
   try {
+
+
     for (const file of files) {
       
       try {
@@ -169,7 +175,9 @@ function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
           fixedCount += fixAllLintIssues(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {/* TODO: Fix JSX expression */}
           }
         }
-      } catch (error) {/* TODO: Fix JSX expression */}
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }
     }
     

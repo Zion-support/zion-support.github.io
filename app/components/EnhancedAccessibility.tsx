@@ -10,30 +10,21 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
-<<<<<<< HEAD
 ;
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-const [settings, setSettings] = useState<AccessibilitySettings>({
-=======
-
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    highContrast: false,
+const [settings, setSettings] = useState<AccessibilitySettings>({    highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true
-  });
+  })
 const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     // Load saved settings from localStorage;
 const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
-
+      setSettings(JSON.parse(savedSettings))}
     // Apply initial settings
     applyAccessibilitySettings(settings);
   }, []);
@@ -79,7 +70,7 @@ const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {;
 const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
   };
 
   return (
@@ -261,7 +252,6 @@ const newSettings = { ...settings, [key]: value };
       `}</style>
     </>
   );
-<<<<<<< HEAD
 =======
 interface EnhancedAccessibilityProps {
   enableKeyboardNavigation?: boolean;
@@ -300,13 +290,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       skipLink.addEventListener('focus', () => {
         skipLink.style.left = '16px';
         skipLink.style.top = '16px';
-      });
-      
+      })
       skipLink.addEventListener('blur', () => {
         skipLink.style.left = '-9999px';
         skipLink.style.top = '0';
-      });
-      
+      })
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
 
@@ -359,11 +347,9 @@ const observer = new MutationObserver((mutations) => {
               announceToScreenReader('Main content has loaded');
             }
           }
-        });
-      });
-
-      observer.observe(document.body, { childList: true, subtree: true });
-
+        })
+      })
+      observer.observe(document.body, { childList: true, subtree: true })
       return () => {
         observer.disconnect();
       };
@@ -426,13 +412,12 @@ const lastFocusableElement = focusableContent[focusableContent.length - 1] as HT
               }
             }
           }
-        });
+        })
       };
 
       // Apply focus trapping to modals and dropdowns;
 const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-    }
+      modals.forEach(modal => trapFocus(modal as HTMLElement))}
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
@@ -472,10 +457,6 @@ const style = document.createElement('style');
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-
     // Cleanup function
     return () => {;
 const skipLink = document.querySelector('a[href="#main-content"]');

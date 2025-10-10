@@ -23,7 +23,9 @@ const fullPath = path.join(dir, item);
   return files}
 ;
 function fixTsxFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -47,8 +49,7 @@ return (
         return `<${tagName}${attributes}>
 );
 }${text}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 4: Fix self-closing tags that should have content;
 const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
@@ -59,14 +60,12 @@ return (
         return `<${tagName}${attributes}>
 );
 }${text}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 5: Fix malformed className attributes;
 const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g;
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true;
-      return `className="${className}"${rest}>`});
-
+      return `className="${className}"${rest}>`})
     // Fix 6: Fix malformed closing tags;
 const malformedClosingPattern = /<\/undefined><\/undefined>/g;
     content = content.replace(malformedClosingPattern, '');
@@ -89,8 +88,7 @@ return (
         return `<${tagName}${attributes}>
 );
 }${content}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 9: Fix malformed return statements;
 const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;
     content = content.replace(malformedReturnPattern, 'return (\n    <div');
@@ -107,7 +105,9 @@ const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;
 }`);
       return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -121,6 +121,5 @@ let fixedCount = 0;
 tsxFiles.forEach(filePath => {
   if (fixTsxFile(filePath)) {
     fixedCount++}
-});
-
+})
 // console.log removed for production

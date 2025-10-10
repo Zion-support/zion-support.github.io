@@ -46,12 +46,16 @@ export function validateURL(ur)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'URL is required' }}
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
     new URL(url);
     return {/* TODO: Fix JSX expression */}
-  d: true }} catch {/* TODO: Fix JSX expression */}
+  d: true }
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
 
@@ -263,12 +267,16 @@ export function validateJSON(jsonStrin)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'JSON string is required' }}
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
     JSON.parse(jsonString);
     return {/* TODO: Fix JSX expression */}
-  d: true }} catch {/* TODO: Fix JSX expression */}
+  d: true }
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
 
@@ -305,10 +313,14 @@ export async function validateAsync()
   value: string): Promise<ValidationResult> {// TODO: Add content}
 
 }
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return await validator(value)} catch (error) {/* TODO: Fix JSX expression */}
+    return await validator(value)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
 

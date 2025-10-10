@@ -50,6 +50,10 @@
   s: //linkedin.com/company/zion-tech-group", "http,"
   s: //github.com/ZionClouds" ], "offers": {"@type": "Offer", "description": "AI Services, Micro SaaS Solutions, IT Services"} "category": "Technology Services" } }; fs.writeFileSync(' path.join(__dirname) '../public/structured-data.json'), JSON.stringify(structuredData, null) 2) );' } // Function to generate SEO report function generateSEOReport() {' // // console.log removed for production
 } const report = {/* TODO: Fix JSX expression */}
-  O: [' 'Create comprehensive service pages',' 'Write detailed case studies',' 'Develop blog content strategy',' 'Add customer testimonials',' 'Create resource center',' 'Develop FAQ sections'}' 'Add industry-specific content' ] }; fs.writeFileSync(' path.join(__dirname) '../seo-optimization-report.json'), JSON.stringify(report, null) 2) ); ' } // Main execution async function main() {try { generateSitemap(); generateRobotsTxt(); generateMetaTags(); generateStructuredData(); generateSEOReport(); ' ' ' ' ' ' // // console.log removed for production
+  O: [' 'Create comprehensive service pages',' 'Write detailed case studies',' 'Develop blog content strategy',' 'Add customer testimonials',' 'Create resource center',' 'Develop FAQ sections'}' 'Add industry-specific content' ] }; fs.writeFileSync(' path.join(__dirname) '../seo-optimization-report.json'), JSON.stringify(report, null) 2) ); ' } // Main execution async function main() {try {
+
+ generateSitemap(); generateRobotsTxt(); generateMetaTags(); generateStructuredData(); generateSEOReport(); ' ' ' ' ' ' // // console.log removed for production
 }' // // console.log removed for production
-} } catch (error) {' process.exit(1)} } main();'"`
+} 
+
+} catch (error) {' process.exit(1)} } main();'"`

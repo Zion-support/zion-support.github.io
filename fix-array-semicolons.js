@@ -3,20 +3,23 @@ import fs from 'fs';
 
 // Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
-    });
-    
+    })
     fs.writeFileSync(filePath, content);
     // console.log removed for production
 `
   in: ${filePath}`);
-    return true} catch (error) {/* TODO: Fix JSX expression */}`
+    return true
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }
@@ -49,7 +52,7 @@ let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
     })
-  });
+  })
   `
   // console.log removed for production
 }

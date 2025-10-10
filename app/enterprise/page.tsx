@@ -40,13 +40,7 @@ const EnterprisePage: React.FC = () => {const features = [
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-<<<<<<< HEAD
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
-=======
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);  ];
 ;
 const solutions = [
     {
@@ -71,13 +65,7 @@ const solutions = [
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-<<<<<<< HEAD
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];);
-=======
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];);  ];
 ;
 const benefits = [
     'Reduce operational costs by 30%',
@@ -145,8 +133,7 @@ const stats = [
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -173,11 +160,10 @@ const stats = [
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -190,11 +176,10 @@ const stats = [
           </div>
           
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -230,11 +215,4 @@ const stats = [
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default EnterprisePage;
+  );)export default EnterprisePage;

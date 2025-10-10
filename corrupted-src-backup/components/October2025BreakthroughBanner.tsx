@@ -1,7 +1,5 @@
 const, October2025BreakthroughBanne, r = () => {
-return (
-
-  return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">
+return (<section, className="relative, p, y-20, overflo, w-hidd, e, n">
 );
 })
       {/* Background, Effect, s */};)

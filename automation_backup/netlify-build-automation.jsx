@@ -17,12 +17,20 @@
   0: * * * *)'' ') asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: this.checkBuildHealth()}) // Schedule daily optimization} asyn,
-  c: monitorBuildStatus() { try { // Check if there are local changes} // Monito,
+  c: monitorBuildStatus() { try {
+
+ // Check if there are local changes} // Monito,
   r: existing builds, awai,`
-  t: this.monitorExistingBuilds()} catch (error) { this.error( } async getCurrentBuild() { try { const builds = await this.getBuilds(1)} async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Analyzing build error for build ${build.id}...`); // Ge,
+  t: this.monitorExistingBuilds()
+
+} catch (error) { this.error( } async getCurrentBuild() { try {
+
+ const builds = await this.getBuilds(1)} async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Analyzing build error for build ${build.id}...`); // Ge,
   t: build logs; cons,
   t: logs = await this.getBuildLogs(build.id); i,`
-  f: (logs) {// Analyze error patterns} req.end()})} async getSiteInfo() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}`)} catch (error) {/* TODO: Fix JSX expression */}
+  f: (logs) {// Analyze error patterns} req.end()})} async getSiteInfo() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}`)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   t: tsErrors = logs.match( /Type.*is not assignable|Cannot find name|Property.*does not exist/g); /Build failed|Compilation failed|Module not found/g)} i,
   f: (buildErrors) {/* TODO: Fix JSX expression */}
   s: buildErrors.slice()0} 3)})} // Dependenc,

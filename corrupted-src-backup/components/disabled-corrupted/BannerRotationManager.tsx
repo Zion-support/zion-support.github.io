@@ -94,8 +94,7 @@ export const,
         }
       >
         <BannerComponent />
-      </Suspense>)
-)
+      </Suspense>))
       {/* Banner indicators */})
       {visibleBanners.length > 1 && ()
         <div className='flex justify-center mt-4 space-x-2'></div>)

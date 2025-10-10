@@ -133,15 +133,13 @@ const existingPages = [
 ];
 
 // Find missing pages;
-const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
-
+const missingPages = navigationLinks.filter(link => !existingPages.includes(link))
 // console.log removed for production
 missingPages.forEach(page => // console.log removed for production
 );
 
 // Find pages that exist but aren't in navigation;
-const extraPages = existingPages.filter(page => !navigationLinks.includes(page));
-
+const extraPages = existingPages.filter(page => !navigationLinks.includes(page))
 // console.log removed for production
 extraPages.forEach(page => // console.log removed for production
 );
@@ -150,8 +148,7 @@ extraPages.forEach(page => // console.log removed for production
 const brokenLinks = missingPages.filter(page => {
   // These are critical pages that should exist;
 const criticalPages = ['/blockchain-web3'];
-  return criticalPages.includes(page)});
-
+  return criticalPages.includes(page)})
 // console.log removed for production
 :');
 brokenLinks.forEach(page => // console.log removed for production

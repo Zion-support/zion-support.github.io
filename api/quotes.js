@@ -2,7 +2,9 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return}
 
-  try {;
+  try {
+
+;
 const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
@@ -33,7 +35,9 @@ res.statusCode = 200;
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
       data: quoteData
-    }))} catch (error) {
+    }))
+
+} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

@@ -143,7 +143,7 @@ export async function batchAsync;
   O: Add content}
 }
     const batch = items.slice(i, i + batchSize);
-    const batchResults = await Promise.all(batch.map(operation));
+    const batchResults = await Promise.all(batch.map(operation))
     results.push(...batchResults)}
     const batch = items.slice(i, i + batchSize);
 const batchResults = await Promise.all(batch.map(operation))
@@ -298,8 +298,7 @@ export function setupLazyImages()
           img.removeAttribute('data-src');
           observer.unobserve(img)}
       }
-    }
-  )
+    })
   }, options)
   images.forEach((img) => observer.observe(img))
   return () => observer.disconnect()
@@ -329,12 +328,16 @@ export function supportsCodeSplitting(): boolean {// TODO: Add content}
 }
   // Dynamic imports are supported in modern browsers;
   // We can check by testing if Function constructor accepts import syntax;
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
     new Function('return import("dat,")
   a:text/javascript,")');
-    return true} catch {/* TODO: Fix JSX expression */}
+    return true
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     return false}
@@ -407,7 +410,7 @@ export class FPSMonitor {// TODO: Add content}
       if (now >= this.lastTime + 1000) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        this.fps = Math.round((this.frames * 1000) / (now - this.lastTime));
+        this.fps = Math.round((this.frames * 1000) / (now - this.lastTime))
         this.frames = 0;
         this.lastTime = now;
         if (callback) {/* TODO: Fix JSX expression */}

@@ -21,9 +21,7 @@ function fixCorruptedSyntax(text) {
 function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {/* TODO: Fix JSX expression */}
-    }
-  );
-
+    })
   //Fix corrupted import statements;
   fixed = fixed.replace(
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
@@ -35,31 +33,24 @@ const cleanImports = imports;
   fixed = fixed.replace(")
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {/* TODO: Fix JSX expression */}
-    }
-  );
-
+    })
   //Fix corrupted variable declarations;
   fixed = fixed.replace(
   fixed = fixed.replace()
     /const\s*\[([^]+),\s*([^]+)\]\s*=\s*useState\s*\(/g,
-    'const [$1, $2] = useState(')
-  );
+    'const [$1, $2] = useState('))
   fixed = fixed.replace()
     /const\s*\[([^]+),\s*([^]+)\]\s*=\s*useState\s*\(/g,
-    'const [$1, $2] = useState(')
-  );
-
+    'const [$1, $2] = useState('))
   //Fix corrupted function declarations;
   fixed = fixed.replace(
   fixed = fixed.replace()
     /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
-    'export default function $1(')
-  );
+    'export default function $1('))
   fixed = fixed.replace()
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
     'const $1: React.FC = (',
-    'const $1: React.FC = (')
-  );
+    'const $1: React.FC = ('))
   fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX;
@@ -81,12 +72,10 @@ const cleanImports = imports;
 
   //Fix corrupted arrow functions;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
-    return match.replace(/\s+/g, ' ').trim()});
-
+    return match.replace(/\s+/g, ' ').trim()})
   //Fix corrupted string literals;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
-  });
-
+  })
   //Fix corrupted string literals;"
   fixed = fixed.replace(/['"]([^'"]*),\s*([^'"]*)['"]/g, '"$1$2"');
 
@@ -114,7 +103,9 @@ const cleanImports = imports;
   fixed = fixed.replace(/while\s*\(\s*([^)]+)\s*\)\s*\{/g, 'while ($1) {');
 
   //Fix corrupted try-catch blocks;
-  fixed = fixed.replace(/try\s*\{/g, 'try {');
+  fixed = fixed.replace(/try\s*\{/g, 'try {
+
+');
   fixed = fixed.replace(/catch\s*\(\s*([^)]+)\s*\)\s*\{/g, 'catch ($1) {');
 
   //Fix corrupted class declarations;
@@ -170,8 +161,7 @@ const cleanImports = imports;
   fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g)
     'useState, useEffect, Suspense'
   fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g,
-    'useState, useEffect, Suspense')
-  );
+    'useState, useEffect, Suspense'))
   fixed = fixed.replace(/RouterRoutesRoute/g, 'Router, Routes, Route');
   fixed = fixed.replace(/HelmetProvider/g, 'HelmetProvider');
   fixed = fixed.replace(/renderscreenwaitFor/g, 'render, screen, waitFor');
@@ -190,15 +180,11 @@ const cleanImports = imports;
   fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g)
     'performanceMetrics, setPerformanceMetrics'
   fixed = fixed.replace(/isMobileMenuOpensetIsMobileMenuOpen/g,
-    'isMobileMenuOpen, setIsMobileMenuOpen')
-  );
+    'isMobileMenuOpen, setIsMobileMenuOpen'))
   fixed = fixed.replace(/showPerformanceMonitorsetShowPerformanceMonitor/g,
-    'showPerformanceMonitor, setShowPerformanceMonitor')
-  );
+    'showPerformanceMonitor, setShowPerformanceMonitor'))
   fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g,
-    'performanceMetrics, setPerformanceMetrics')
-  );
-
+    'performanceMetrics, setPerformanceMetrics'))
   return fixed}
 
 //Function to process a file;
@@ -212,7 +198,9 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -220,6 +208,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 function processDirectory(dirPath) {
 
   try {
+
+
     //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
@@ -240,7 +230,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
         }
       }
     }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 
   return processedCount}

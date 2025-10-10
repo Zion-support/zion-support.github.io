@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Read the missing pages from the analysis;
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
 const missingPages = analysisData.missingPagesList;
 
 // Template for creating pages;
@@ -19,9 +19,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 ;
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-return (
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="${title} - Zion Tech Group"
         description="${description}"
@@ -302,7 +300,7 @@ const config = pageConfigs[route];
 }
   } else {
     // Create a generic page for routes without specific configs;
-    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
     const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
     const category = 'Technology';
     

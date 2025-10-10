@@ -17,9 +17,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />;
 const CognitiveAutomationEnterpriseRevolution: () => {
-return (
-
-  return(<div>),
+return (<div>),
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;

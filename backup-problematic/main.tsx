@@ -6,7 +6,6 @@ const root = document.getElementById('root');
 if (_root) {
   ReactDOM.createRoot(_root).render(<React.StrictMode>)
       <App />)
-    </React.StrictMode>)
-  );
+    </React.StrictMode>))
 if (_root) {/* TODO: Fix JSX expression */}
 }

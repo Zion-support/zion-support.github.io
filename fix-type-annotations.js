@@ -12,9 +12,7 @@ function fixTypeAnnotations(content) {
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
-      return `{ ${body.trim()} }`}
-  );
-
+      return `{ ${body.trim()} }`})
   // Fix specific patterns we've seen;
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
@@ -29,15 +27,11 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/\{/* TODO: Fix JSX expression */}
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
-  e: number }')
-  );
-
+  e: number }'))
   content = content.replace(/\{/* TODO: Fix JSX expression */}
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
-  e: number }')
-  );
-
+  e: number }'))
   // Fix variable name issues;
   content = content.replace()
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
@@ -49,7 +43,9 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
 // Function to process a single file;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -64,7 +60,9 @@ let content = fs.readFileSync(filePath, 'utf8');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }

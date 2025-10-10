@@ -1,4 +1,6 @@
-} ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
+} ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {
+
+;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)
   t: helpText() }); return}' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
   d: 'POST'})' header,
@@ -13,32 +15,21 @@
   e: 'ephemeral'} tex,
   t: 'Project not found.' }); return}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)`
-  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}
-=======
-  t: '*${data.project.name}* – statu,
-  s: ${data.project.status}\\nMilestone)',
-  s:
-        s: ${JSON.stringify(data.project.milestones)}` }); return; } ;' await respond({/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-  e: 'ephemeral'} tex)
-  t: helpText() })} catch (er)
+  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}  e: 'ephemeral'} tex)
+  t: helpText() })
+
+} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `Erro,`
-  r: ${err.message || 'unknown'}` })} }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
-=======
-  t: 'Erro,',
-  r:
-        r: ${err.message || 'unknown'}` }); } }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-  p: //localhos,
+  r: ${err.message || 'unknown'}` })} }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,  p: //localhos,
   t:4000'; const app = new App({/* TODO: Fix JSX expression */})
   n: process.env.SLACK_APP_LEVEL_TOKEN)} socketMod,`
-  e: true} }); function helpText(): string {; return [;' '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'' ].join('\n')} } ;' app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
+  e: true} }); function helpText(): string {; return [;' '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'' ].join('\n')} } ;' app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {
+
+;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)`
   t: helpText() }); return}' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
   d: 'POST'})' header,
@@ -53,25 +44,13 @@
   e: 'ephemeral'} tex,
   t: 'Project not found.' }); return}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)`
-  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}
-=======
-  t: '*${data.project.name}* – statu,
-  s: ${data.project.status}\\nMilestone)',
-  s:
-        s: ${JSON.stringify(data.project.milestones)}` }); return; } ;' await respond({/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-  e: 'ephemeral'} tex)
-  t: helpText() })} catch (er)
+  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}  e: 'ephemeral'} tex)
+  t: helpText() })
+
+} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `Erro,`
   r: ${err.message || 'unknown'}` })} }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
-=======
-  t: 'Erro,',
-  r:
-        r: ${err.message || 'unknown'}` }); } }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81

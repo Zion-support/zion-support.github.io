@@ -35,8 +35,7 @@ constructor(config: SEOConfig) {
     this.updateMetaTag('description', this.config.description);
 
     // Update meta keywords
-    this.updateMetaTag('keywords', this.config.keywords.join(', '));
-
+    this.updateMetaTag('keywords', this.config.keywords.join(', '))
     // Update canonical URL
     this.updateCanonicalUrl();
 
@@ -64,7 +63,7 @@ constructor(config: SEOConfig) {
     // Update tags
     if (this.config.tags) {
       this.config.tags.forEach(tag => {
-        this.addMetaTag('article:tag', tag)});
+        this.addMetaTag('article:tag', tag)})
   }
 
   private updateMetaTag(name: string, content: string): void {
@@ -97,9 +96,9 @@ const ogTags = [
       { property: 'og:url', content: this.config.canonicalUrl || window.location.href }];
 
     if (this.config.ogImage) {
-      ogTags.push({ property: 'og:image', content: this.config.ogImage });
+      ogTags.push({ property: 'og:image', content: this.config.ogImage })
     ogTags.forEach(tag => {
-      this.updateMetaTagByProperty(tag.property, tag.content)});
+      this.updateMetaTagByProperty(tag.property, tag.content)})
   private updateTwitterTags(): void {
     if (typeof document === 'undefined') return;
 ;
@@ -109,9 +108,9 @@ const twitterTags = [
       { name: 'twitter:description', content: this.config.twitterDescription || this.config.description }];
 
     if (this.config.twitterImage) {
-      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage });
+      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
     twitterTags.forEach(tag => {
-      this.updateMetaTag(tag.name, tag.content)});
+      this.updateMetaTag(tag.name, tag.content)})
   private updateMetaTagByProperty(property: string, content: string): void {
     if (typeof document === 'undefined') return;
 ;

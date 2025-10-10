@@ -4,13 +4,13 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -29,8 +29,7 @@ exports.handler = async () => {const logs = []}
   step('front: directory-builder')
   step('fron,
   t: directory-builder')
-    'automation/front-index-directory-builder.cjs')
-  );
+    'automation/front-index-directory-builder.cjs'))
   step('fron)
   t: ads') 'automation/front-index-ads.cjs');
   step('og-imag)

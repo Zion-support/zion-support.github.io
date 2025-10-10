@@ -7,7 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Function to fix lint warnings in a file;
 function fixLintWarnings(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -15,11 +17,9 @@ let content = fs.readFileSync(filePath, 'utf8');
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
-      return `const _${varName} = `});
-    
+      return `const _${varName} = `})
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
-      return `let _${varName} = `});
-    
+      return `let _${varName} = `})
     // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');
     content = content.replace(/import { Link } from 'react-router-dom';/g, '');
@@ -64,7 +64,9 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
-    return true} catch (error) {/* TODO: Fix JSX expression */}`
+    return true
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }

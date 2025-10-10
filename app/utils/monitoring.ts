@@ -39,6 +39,8 @@ constructor() {
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
+
+
         // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
@@ -52,8 +54,8 @@ const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid)})});
-        fidObserver.observe({ entryTypes: ['first-input'] });
+            this.reportMetric('fid', this.metrics.fid)})})
+        fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift;
 let clsValue = 0;
 const clsObserver = new PerformanceObserver(list => {;
@@ -71,32 +73,41 @@ const fcpObserver = new PerformanceObserver(list => {;
 const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)})});
-        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
+            this.reportMetric('fcp', entry.startTime)})})
+        fcpObserver.observe({ entryTypes: ['paint'] })
+
+} catch (error) {
     // Keep HEAD version
     }
   }
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {
+
+;
 const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
     // Keep HEAD version
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
-      } catch (error) {
+
+} catch (error) {
         // Long task API might not be available
       }
     }
   }
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
+
+;
 const resourceObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
     // Keep HEAD version
-          })});
-        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
+          })})
+        resourceObserver.observe({ entryTypes: ['resource'] })
+
+} catch (_error) {
     // Keep HEAD version
     }
   }
@@ -119,7 +130,7 @@ const entries = list.getEntries();
         userAgent: navigator.userAgent,
         url: window.location.href
       })
-    });
+    })
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
@@ -133,7 +144,7 @@ const entries = list.getEntries();
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-      });
+      })
   }
   public logError(error: ErrorReport): void {
     this.errors.push(error)

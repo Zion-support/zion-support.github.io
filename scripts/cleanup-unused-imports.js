@@ -9,7 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 // console.log removed for production
 // Function to remove unused imports and console statements;
 function cleanupFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -27,31 +29,31 @@ const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm;
       // Extract imported items;);
 const match = importStatement.match(/import\s+{([^}]+)}\s+from/);
       if (match) {;
-const importedItems = match[1].split(',').map(item => item.trim());
+const importedItems = match[1].split(',').map(item => item.trim())
         const unusedItems = importedItems.filter(item => {);
 const itemName = item.split(' as ')[0].trim();
           // Check if the imported item is actually used in the file;
           const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
           const matches = content.match(usageRegex) || [];
-          return matches.length <= 1; // Only appears in the import statement});
-        
+          return matches.length <= 1; // Only appears in the import statement})
         if (unusedItems.length === importedItems.length) {
           // Remove entire import if all items are unused;
           content = content.replace(importStatement, '');
           modified = true} else if (unusedItems.length > 0) {
           // Remove unused items from import;
-          const usedItems = importedItems.filter(item => !unusedItems.includes(item));
+          const usedItems = importedItems.filter(item => !unusedItems.includes(item))
           const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};`;
           content = content.replace(importStatement, newImport);
           modified = true}
       }
-    });
-
+    })
     if (modified) {
       fs.writeFileSync(filePath, content);
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -60,7 +62,9 @@ return false}
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 let files = [];
   
-  try {;
+  try {
+
+;
 const items = fs.readdirSync(dir);
     
     for (const item of items) {;
@@ -74,7 +78,9 @@ const fullPath = path.join(dir, item);
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)}
     }
-  } catch (error) {
+  
+
+} catch (error) {
     // Skip directories we can't read}
   
   return files}
@@ -87,14 +93,17 @@ let cleanedCount = 0;
 files.forEach(file => {)
   if (cleanupFile(file)) {
     cleanedCount++}
-});
-
+})
 // console.log removed for production
 // Run ESLint fix to clean up remaining issues;
 // console.log removed for production
 try {
-  execSync('npm run lint:fix', { stdio: 'inherit' });
+
+
+  execSync('npm run lint:fix', { stdio: 'inherit' })
   // console.log removed for production
+
+
 } catch (error) {
   // console.log removed for production
 }

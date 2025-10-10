@@ -7,20 +7,26 @@ import path from 'path';
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
+
+
     // console.log removed for production
 const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'});
+      stdio: 'pipe'})
     // console.log removed for production
-return result} catch (error) {
+return result
+
+} catch (error) {
     // console.log removed for production
 return null}
 }
 
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
@@ -47,7 +53,9 @@ const incoming = parts[1].replace(/            return incoming;)
       fs.writeFileSync(filePath, resolvedContent);
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
@@ -56,8 +64,10 @@ return false}
 function resolveAllMergeConflicts() {
   // console.log removed for production
 try {
+
+
     // Find all files with merge conflicts;
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0);
     
     if (conflictedFiles.length === 0) {
@@ -76,23 +86,28 @@ conflictedFiles.forEach(file => // console.log removed for production
     }
     
     // console.log removed for production
-return resolvedCount === conflictedFiles.length} catch (error) {
+return resolvedCount === conflictedFiles.length
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
 
 // Function to get all remote branches;
 function getAllRemoteBranches() {
-  try {;
-const result = execSync('git branch -r', { encoding: 'utf8' });
+  try {
+
+;
+const result = execSync('git branch -r', { encoding: 'utf8' })
     const branches = result;
       .split('\n')
       .map(line => line.trim())
       .filter(line => line && !line.includes('HEAD'))
       .map(line => line.replace('origin/', ''))
-      .filter(branch => !branch.includes('main'));
-    
-    return branches} catch (error) {
+      .filter(branch => !branch.includes('main'))
+    return branches
+
+} catch (error) {
     // console.log removed for production
 return []}
 }
@@ -101,6 +116,8 @@ return []}
 function mergeBranch(branchName) {
   // console.log removed for production
 try {
+
+
     // Check if branch exists;
     const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists`);
     
@@ -122,7 +139,9 @@ return false}
     } else {
       // console.log removed for production
 return false}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
@@ -192,7 +211,7 @@ for (const branch of priorityBranches) {
   }
   
   // Merge other branches in batches;
-  const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch));
+  const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch))
   const batchSize = 5;
   
   // console.log removed for production
@@ -206,7 +225,6 @@ const batch = otherBranches.slice(i, i + batchSize);
     
     // Small delay between batches;
     await new Promise(resolve => setTimeout(resolve, 1000))}
-  
   // Step 8: Final status check;
   // console.log removed for production
 execGitCommand('git status', 'Final git status');

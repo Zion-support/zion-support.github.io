@@ -153,7 +153,7 @@ const _announcement = document.createElement('div');
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
             (main as HTMLElement).focus()}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' })
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""

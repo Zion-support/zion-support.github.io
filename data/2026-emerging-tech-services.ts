@@ -50,15 +50,8 @@ import React from 'react';
 export const emergingTechServices2026: EmergingTechService2026[] = [;
   // Quantum Computing Services;
 ];,
-<<<<<<< HEAD
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
-    id: 'ai-digital-twin-platform'
-=======
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
-};
-    id: 'ai-digital-twin-platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI Digital Twin Platform',
+    id: 'ai-digital-twin-platform'    name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights',
     price: '$349',
     period: '/month',
@@ -301,8 +294,7 @@ export const getEmergingTechServices2026ByCategory = (categor)
 ];
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>;
-  return emergingTechServices2026.filter(service => service.category === category)
-  );
+  return emergingTechServices2026.filter(service => service.category === category))
 ],
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
 export const emergingTechServices2026: EmergingTechService2026[] = [
@@ -1022,8 +1014,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>;
 ];
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>;
-  return emergingTechServices2026.filter(service => service.category === category)
-  )}
+  return emergingTechServices2026.filter(service => service.category === category))}
 export const getPopularEmergingTechServices2026 = () =>
 };
 export const getPopularEmergingTechServices2026 = () => {/* TODO: Fix JSX expression */}
@@ -1039,7 +1030,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
   e: number)
 ) =>
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') ''));
+const _price = parseInt(service && service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})
 };    return price >= minPrice && price <= maxPrice})
 }
@@ -1634,7 +1625,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return emergingTechServices2026.filter(service =>);
-const _price = parseInt(service.price.replace('$') ''));
+const _price = parseInt(service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice})
 };
 ;
@@ -1656,7 +1647,7 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>);
-const _price = parse_int (service.price.replace ('$') ''));
+const _price = parse_int (service.price.replace ('$') ''))
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
@@ -1704,7 +1695,7 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return emergingTechServices2026.filter (service =>);
-const _price = parse_int (service.price.replace ('$') ''));
+const _price = parse_int (service.price.replace ('$') ''))
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface EmergingTechService2026};

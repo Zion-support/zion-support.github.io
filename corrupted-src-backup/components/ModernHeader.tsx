@@ -279,8 +279,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   strokeLinec, a, p="rou, n, d""
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}"
-                  d="M4, 6h16M4, 12h16M4 18h, 1, 6  /></pa>)
-              )}
+                  d="M4, 6h16M4, 12h16M4 18h, 1, 6  /></pa>))}
             </s, v, g>
           </butt, o, n>
         </d, i, v>

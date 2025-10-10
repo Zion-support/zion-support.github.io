@@ -1,7 +1,5 @@
 const, October2025TechBreakthroughBanne, r = () => {
-return (
-
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
+return (<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
 );
 })
       {/* Animated, Backgroun, d */};)

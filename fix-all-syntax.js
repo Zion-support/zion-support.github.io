@@ -5,6 +5,8 @@ import path from 'path';
 
 function fixAllSyntaxErrors(filePath) {
   try {
+
+
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -12,8 +14,7 @@ function fixAllSyntaxErrors(filePath) {
     content = content.replace(/(\w+):\s*\1:\s*['"`][^'"`]*['"`]/g, (match, prop) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];
       return `${prop}: '${value}'`;
-    });
-    
+    })
     // Fix missing commas before properties
     content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
       const lines = match.split('\n');
@@ -25,33 +26,31 @@ function fixAllSyntaxErrors(filePath) {
         }
       }
       return match;
-    });
-    
+    })
     // Fix duplicate website properties
     content = content.replace(/website:\s*\n\s*website:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];
       return `website: '${value}'`;
-    });
-    
+    })
     // Fix duplicate image properties
     content = content.replace(/image:\s*\n\s*image:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];
       return `image: '${value}'`;
-    });
-    
+    })
     // Fix duplicate tier properties
     content = content.replace(/tier:\s*\n\s*tier:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];
       return `tier: '${value}'`;
-    });
-    
+    })
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  
+
+} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }

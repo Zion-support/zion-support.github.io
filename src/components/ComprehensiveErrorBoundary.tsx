@@ -75,7 +75,7 @@ constructor(props: ErrorBoundaryProps) {
 }
 //       error,
 //       errorInfo;)
-    });
+    })
     if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -140,9 +140,9 @@ constructor(props: ErrorBoundaryProps) {
   O: Add content}
 }
       this.setState({/* TODO: Fix JSX expression */})
-  g: true });
+  g: true })
       // Simulate retry delay;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -175,9 +175,7 @@ constructor(props: ErrorBoundaryProps) {
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        return (<div>Coming Soon</div>)
-  )
-          
+        return (<div>Coming Soon</div>))
           <ModernLoadingSpinner></ModernLoadingSpinner>
             size="lg""
 
@@ -186,8 +184,7 @@ constructor(props: ErrorBoundaryProps) {
 //           />
         )}
 
-      return (<div>Coming Soon</div>)
-  )
+      return (<div>Coming Soon</div>))
         "
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"

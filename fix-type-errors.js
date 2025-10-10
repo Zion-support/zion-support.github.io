@@ -13,6 +13,8 @@ const filesToFix = [
 // // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Fix <a> tags with 'to' prop to use Link components;
     if (content.includes('<a') && content.includes('to=')) {
       // Add Link import if not present;
@@ -71,7 +73,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -81,7 +85,6 @@ filesToFix.forEach(file => {)
     fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // 
 }}}}}}}}}}"

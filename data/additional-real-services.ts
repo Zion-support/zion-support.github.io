@@ -585,17 +585,9 @@ variant: 'ai-futuristic',
     customers:
         customers: 35;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 24},
     id: 'churn-risk-alerts'
-    name: 'Churn Risk Alerts for Slack'
-=======
-    reviews: 24;
-  },
-    id: 'churn-risk-alerts',
-    name: 'Churn Risk Alerts for Slack',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'Behavior + sentiment = proactive retention pings',
+    name: 'Churn Risk Alerts for Slack'    tagline: 'Behavior + sentiment = proactive retention pings',
     price: '$49',
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
@@ -886,19 +878,10 @@ varian,
     useCases: ['ISO readiness, Continuous compliance'],
     roi: 'Cuts audit prep by 60%',
     competitors: ['Vanta, Drata'],
-<<<<<<< HEAD
     marketSize: '$5.5B GRC'
     growthRate: '13% CAGR';
 variant: 'security-futuristic'
-      contactInfo: contact;
-=======
-    marketSize: '$5.5B GRC',
-    growthRate: '13% CAGR',
-          variant: 'security-futuristic',
-      contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      realImplementation: true;
+      contactInfo: contact;      realImplementation: true;
       implementationDetails: 'Connectors + evidence timelines.',
       launchDate: '2025-06-15',
       customers: 18;
@@ -992,19 +975,10 @@ varian,
     useCases: ['Changelog, Deprecation management'],
     roi: 'Reduces integrator breakage by 70%',
     competitors: ['ReadMe, Stoplight (partial)'],
-<<<<<<< HEAD
     marketSize: '$1.5B dev tools'
     growthRate: '18% CAGR';
 variant: 'ai-futuristic'
-    contactInfo: contact;
-=======
-    marketSize: '$1.5B dev tools',
-    growthRate: '18% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Schema watchers + release generator.',
     launchDate: '2025-05-01',
     customers: 30;
@@ -1098,19 +1072,10 @@ varian,
     useCases: ['SRE runbooks, On-call playbooks'],
     roi: 'Faster incident resolution by 2030%',
     competitors: ['Blameless (partial), Notion'],
-<<<<<<< HEAD
     marketSize: '$7.2B DevOps'
     growthRate: '19% CAGR';
 variant: 'monitoring-futuristic'
-      contactInfo: contact;
-=======
-    marketSize: '$7.2B DevOps',
-    growthRate: '19% CAGR',
-          variant: 'monitoring-futuristic',
-      contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      realImplementation: true;
+      contactInfo: contact;      realImplementation: true;
       implementationDetails: 'Incident parsers + templates.',
       launchDate: '2025-02-20',
       customers: 26;
@@ -1204,19 +1169,10 @@ varian,
     useCases: ['Major incident comms, RCA inputs'],
     roi: 'Reduces coordination overhead by 50%',
     competitors: ['Blameless, Incident.io (partial)'],
-<<<<<<< HEAD
     marketSize: '$7.2B DevOps'
     growthRate: '19% CAGR';
 variant: 'holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$7.2B DevOps',
-    growthRate: '19% CAGR',
-    variant: 'holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Event collectors + composer.',
     launchDate: '2025-03-15',
     customers: 19;
@@ -1310,19 +1266,10 @@ varian,
     useCases: ['Ad variants, Landing page assets'],
     roi: 'Improves CTR by 1020% on average',
     competitors: ['Canva (partial), Jasper'],
-<<<<<<< HEAD
     marketSize: '$8.9B martech genAI'
     growthRate: '22% CAGR';
 variant: 'quantum-holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$8.9B martech genAI',
-    growthRate: '22% CAGR',
-    variant: 'quantum-holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Brand presets + asset generator.',
     launchDate: '2025-07-15',
     customers: 33;
@@ -1460,19 +1407,10 @@ varian,
     useCases: ['Performance tuning', 'SLO management', 'Incident response'],
     roi: 'Reduce p95 latency by 2050% in month 1',
     competitors: ['Percona PMM', 'Datadog APM', 'New Relic'],
-<<<<<<< HEAD
     marketSize: '$6B DB monitoring'
     growthRate: '15% CAGR';
 variant: 'holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$6B DB monitoring',
-    growthRate: '15% CAGR',
-    variant: 'holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Agent collectors with SaaS UI and AI advisory.',
     launchDate: '2024-12-12',
     customers: 60;
@@ -1863,19 +1801,10 @@ varian,
     useCases: ['Security testing', 'Pre-deploy checks'],
     roi: 'Reduce security escapes by 60%',
     competitors: ['StackHawk', 'Noname'],
-<<<<<<< HEAD
     marketSize: '$4B API security'
     growthRate: '23% CAGR';
 variant: 'quantum-cyberpunk'
-    contactInfo: contact;
-=======
-    marketSize: '$4B API security',
-    growthRate: '23% CAGR',
-    variant: 'quantum-cyberpunk',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Hosted scanner with agents and reports.',
     launchDate: '2025-02-10',
     customers: 52;
@@ -1981,17 +1910,9 @@ variant: 'neural-quantum-cyberpunk',
     customers:
         customers: 33;
     rating: 4.5;
-<<<<<<< HEAD
     reviews: 11},
     id: 'status-pages-slo'
-    name: 'Status Pages & SLO'
-=======
-    reviews: 11;
-  },
-    id: 'status-pages-slo',
-    name: 'Status Pages & SLO',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'Beautiful status pages and SLO dashboards for your services',
+    name: 'Status Pages & SLO'    tagline: 'Beautiful status pages and SLO dashboards for your services',
     price: '$39',
     period: '/month',
     description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
@@ -2084,19 +2005,10 @@ varian,
     useCases: ['Customer comms', 'Reliability transparency'],
     roi: 'Reduce support tickets during incidents by 40%',
     competitors: ['Statuspage', 'Better Uptime'],
-<<<<<<< HEAD
     marketSize: '$1B status pages'
     growthRate: '10% CAGR';
 variant: 'neural-cyberpunk'
-    contactInfo: contact;
-=======
-    marketSize: '$1B status pages',
-    growthRate: '10% CAGR',
-    variant: 'neural-cyberpunk',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Hosted status pages driven by metrics and incidents.',
     launchDate: '2024-07-22',
     customers: 75;
@@ -2190,19 +2102,10 @@ varian,
     useCases: ['SLO governance', 'Release checks'],
     roi: 'Catch issues before customers notice',
     competitors: ['Checkly', 'UptimeRobot'],
-<<<<<<< HEAD
     marketSize: '$1.2B synthetic'
     growthRate: '14% CAGR';
 variant: 'quantum-matrix'
-    contactInfo: contact;
-=======
-    marketSize: '$1.2B synthetic',
-    growthRate: '14% CAGR',
-    variant: 'quantum-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Distributed workers with central analytics.',
     launchDate: '2024-11-10',
     customers: 130;
@@ -2294,24 +2197,12 @@ varian,
     technology: ['Node.js', 'Redis', 'S3'],
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     useCases: ['Webhook reliability', 'Local testing', 'Sandboxing'],
-<<<<<<< HEAD
     roi: 'Reduce missed events to near-zero'
     competitors: ['Hookdeck']
     marketSize: '$500M webhook tools'
     growthRate: '16% CAGR';
 variant: 'holographic-quantum'
-    contactInfo: contact;
-=======
-    roi: 'Reduce missed events to near-zero',
-    competitors:
-        competitors: ['Hookdeck']
-    marketSize: '$500M webhook tools',
-    growthRate: '16% CAGR',
-    variant: 'holographic-quantum',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'SaaS relay with signed storage and replay workers.',
     launchDate: '2024-06-30',
     customers: 58;
@@ -2405,19 +2296,10 @@ varian,
     useCases: ['Gradual rollouts', 'A/B tests', 'Emergency off-switch'],
     roi: 'Ship faster with fewer incidents',
     competitors: ['LaunchDarkly', 'Unleash'],
-<<<<<<< HEAD
     marketSize: '$1.8B flags'
     growthRate: '20% CAGR';
 variant: 'quantum-holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$1.8B flags',
-    growthRate: '20% CAGR',
-    variant: 'quantum-holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Edge worker evaluators and admin UI.',
     launchDate: '2024-09-01',
     customers: 42;
@@ -2511,19 +2393,10 @@ varian,
     useCases: ['Enterprise SSO', 'Provisioning', 'B2 B readiness'],
     roi: 'Unblock enterprise deals faster',
     competitors: ['WorkOS', 'Auth0'],
-<<<<<<< HEAD
     marketSize: '$6B identity'
     growthRate: '24% CAGR';
 variant: 'neural-quantum-cyberpunk'
-    contactInfo: contact;
-=======
-    marketSize: '$6B identity',
-    growthRate: '24% CAGR',
-    variant: 'neural-quantum-cyberpunk',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Hosted IdP brokering and SCIM sync service.',
     launchDate: '2024-10-30',
     customers: 150;
@@ -2815,19 +2688,10 @@ varian,
     useCases: ['Reliability', 'On-call ops'],
     roi: 'Reduce data downtime by 60%',
     competitors: ['Meto', 'Monte Carlo'],
-<<<<<<< HEAD
     marketSize: '$1.2B data observability'
     growthRate: '26% CAGR';
 variant: 'quantum-holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$1.2B data observability',
-    growthRate: '26% CAGR',
-    variant: 'quantum-holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Collectors and SaaS dashboards with lineage.',
     launchDate: '2024-10-10',
     customers: 44;
@@ -3020,19 +2884,10 @@ varian,
     useCases: ['Pipeline growth', 'Outbound automation'],
     roi: 'Increase qualified meetings by 2035%',
     competitors: ['Apollo', 'Outreach'],
-<<<<<<< HEAD
     marketSize: '$4B sales tech'
     growthRate: '18% CAGR';
 variant: 'ai-futuristic'
-    contactInfo: contact;
-=======
-    marketSize: '$4B sales tech',
-    growthRate: '18% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Orchestrator with CRM connectors and copilot UI.',
     launchDate: '2024-08-28',
     customers: 66;
@@ -3126,19 +2981,10 @@ varian,
     useCases: ['Analytics sandboxes', 'Non-prod testing', 'Model pre-training'],
     roi: 'Unblock data access, cut compliance review time by 70%',
     competitors: ['Mostly AI', 'Gretel'],
-<<<<<<< HEAD
     marketSize: '$1.5B privacy tech'
     growthRate: '25% CAGR';
 variant: 'holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$1.5B privacy tech',
-    growthRate: '25% CAGR',
-    variant: 'holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'DP pipelines with evaluators and dataset catalog.',
     launchDate: '2025-02-01',
     customers: 25;
@@ -3527,24 +3373,12 @@ varian,
     technology: ['Headless browser', 'CI annotations'],
     integrations: ['GitHub', 'GitLab', 'Slack'],
     useCases: ['AppSec hygiene', 'Compliance checks'],
-<<<<<<< HEAD
     roi: 'Reduce security review cycles 50%'
     competitors: ['Mozilla Observatory']
     marketSize: '$3B AppSec'
     growthRate: '15% CAGR';
 variant: 'quantum-cyberpunk'
-    contactInfo: contact;
-=======
-    roi: 'Reduce security review cycles 50%',
-    competitors:
-        competitors: ['Mozilla Observatory']
-    marketSize: '$3B AppSec',
-    growthRate: '15% CAGR',
-    variant: 'quantum-cyberpunk',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Scanner fleet with report UI and CI plugins.',
     launchDate: '2025-02-12',
     customers: 10;
@@ -3737,19 +3571,10 @@ varian,
     useCases: ['ELT ingestion', 'Analytics', 'Compliance archiving'],
     roi: 'Reduce pipeline toil by 60%',
     competitors: ['Fivetran (files)', 'Airbyte'],
-<<<<<<< HEAD
     marketSize: '$3B data ingest'
     growthRate: '20% CAGR';
 variant: 'neural-quantum'
-    contactInfo: contact;
-=======
-    marketSize: '$3B data ingest',
-    growthRate: '20% CAGR',
-    variant: 'neural-quantum',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Connector jobs with schema registry and monitor.',
     launchDate: '2025-02-08',
     customers: 9;
@@ -3853,17 +3678,9 @@ variant: 'holographic-matrix',
     customers:
         customers: 15;
     rating: 4.5;
-<<<<<<< HEAD
     reviews: 7},
     id: 'data-masking-proxy'
-    name: 'Data Masking Proxy'
-=======
-    reviews: 7;
-  },
-    id: 'data-masking-proxy',
-    name: 'Data Masking Proxy',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'PII/PHI tokenization for lower environments and analytics',
+    name: 'Data Masking Proxy'    tagline: 'PII/PHI tokenization for lower environments and analytics',
     price: '$89',
     period: '/month',
     description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
@@ -4065,17 +3882,9 @@ variant: 'ai-futuristic',
     customers:
         customers: 28;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 13},
     id: 'compliance-policy-as-code'
-    name: 'Compliance Policy as Code'
-=======
-    reviews: 13;
-  },
-    id: 'compliance-policy-as-code',
-    name: 'Compliance Policy as Code',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'OPA/Rego and cloud policies with CI gates and reports',
+    name: 'Compliance Policy as Code'    tagline: 'OPA/Rego and cloud policies with CI gates and reports',
     price: '$129',
     period: '/month',
     description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
@@ -4879,17 +4688,9 @@ variant: 'ai-futuristic',
     customers:
         customers: 22;
     rating: 4.3;
-<<<<<<< HEAD
     reviews: 13},
     id: 'quantum-ai-fusion-platform'
-    name: 'Quantum AI Fusion Platform'
-=======
-    reviews: 13;
-  },
-    id: 'quantum-ai-fusion-platform',
-    name: 'Quantum AI Fusion Platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'Quantum computing meets AI for breakthrough insights',
+    name: 'Quantum AI Fusion Platform'    tagline: 'Quantum computing meets AI for breakthrough insights',
     price: '$299',
     period: '/month',
     description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
@@ -5593,17 +5394,9 @@ variant: 'ai-futuristic',
     customers:
         customers: 52;
     rating: 4.7;
-<<<<<<< HEAD
     reviews: 38},
     id: 'quantum-cryptography-suite'
-    name: 'Quantum Cryptography Suite'
-=======
-    reviews: 38;
-  },
-    id: 'quantum-cryptography-suite',
-    name: 'Quantum Cryptography Suite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'Future-proof cryptography for quantum era',
+    name: 'Quantum Cryptography Suite'    tagline: 'Future-proof cryptography for quantum era',
     price: '$179',
     period: '/month',
     description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
@@ -6607,17 +6400,9 @@ variant: 'autonomous-futuristic',
     customers:
         customers: 22;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 16},
     id: 'quantum-cybersecurity-suite'
-    name: 'Quantum Cybersecurity Suite'
-=======
-    reviews: 16;
-  },
-    id: 'quantum-cybersecurity-suite',
-    name: 'Quantum Cybersecurity Suite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    tagline: 'Quantum-resistant cybersecurity for the post-quantum era',
+    name: 'Quantum Cybersecurity Suite'    tagline: 'Quantum-resistant cybersecurity for the post-quantum era',
     price: '$379',
     period: '/month',
     description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
@@ -7610,23 +7395,12 @@ varian,
     useCases: ['Outbound prospecting', 'Lead qualification', 'Meeting booking'],
     roi: '24 x meetings per rep',
     competitors: ['Regie.ai', 'Lyne.ai'],
-<<<<<<< HEAD
     marketSize: '$12B sales tech'
     growthRate: '19% CAGR';
 variant: 'agentic-suite'
     contactInfo: unknown;
       mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-=======
-    marketSize: '$12B sales tech',
-    growthRate: '19% CAGR',
-    variant: 'agentic-suite',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      mobile: '+1 302 464 0950',
+      email: "kleber@ziontechgroup.com"      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",

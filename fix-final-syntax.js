@@ -18,6 +18,8 @@ const filesToFix = [
 // // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Remove any remaining metadata exports;
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
 
@@ -72,7 +74,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -82,6 +86,5 @@ filesToFix.forEach(file => {)
     fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // `

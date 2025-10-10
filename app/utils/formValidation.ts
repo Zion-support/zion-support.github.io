@@ -89,7 +89,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   phoneU,
   S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));
+      return phoneRegex.test(value.replace(/\s/g, ''))
     },
     message;
   }),
@@ -98,14 +98,18 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    */
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,
     validate: (value: string) => {,
-      try {,
+      try {
+
+,
         new URL(value),
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
     validate: (value: string) => {}
       try {}
         new URL(value)
         return true;}
-      } catch {}
+      
+
+} catch {}
         return false;}
       }
     },

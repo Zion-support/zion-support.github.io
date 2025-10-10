@@ -24,7 +24,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0});
+    fps: 0})
 const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {;
@@ -46,7 +46,7 @@ let _fps = 0;
 const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
             frameCount = 0;
             lastTime = currentTime}
           requestAnimationFrame(measureFPS);
@@ -55,7 +55,7 @@ const measureFPS = (currentTime: number) => {
         loadTime,
         renderTime,
         memoryUsage,
-        fps});
+        fps})
     updateMetrics();
 
     // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);

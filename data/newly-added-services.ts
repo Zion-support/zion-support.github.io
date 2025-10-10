@@ -398,16 +398,9 @@ variant: 'quantum - matrix',
         competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'];
     rating: 4 && 4.8;
     reviews: 7;
-<<<<<<< HEAD
     market_size: '$40 B GenAI apps'
     growth_rate: '45% CAGR';
-variant: 'quantum - matrix',
-=======
-    market_size: '$40 B GenAI apps',
-    growth_rate: '45% CAGR',
-    variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Templates, infra modules, eval notebooks, and dashboards.',
     launch_date: '2025 - 03 - 08',
@@ -493,24 +486,12 @@ variant: 'network - futuristic',
     technology: ['BigQuery, Athena, Cost Explorer, dbt'];
     integrations: ['Slack, GitHub, PagerDuty'];
     use_cases: ['Cost visibility, Budget protection, Forecasting'];
-<<<<<<< HEAD
     roi: 'Prevent surprise bills, 1030% cost reduction potential'
     competitors: ['Vantage, CloudZero, Anodot'];
     market_size: '$6 B FinOps tooling'
     growth_rate: '27% CAGR';
 variant: 'holographic - advanced'
-    contact_info: contact;
-=======
-    roi: 'Prevent surprise bills, 1030% cost reduction potential',
-    competitors:
-        competitors: ['Vantage, CloudZero, Anodot'];
-    market_size: '$6 B FinOps tooling',
-    growth_rate: '27% CAGR',
-    variant: 'holographic - advanced',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'ETL + anomaly models + alerting with IaC guidance.',
     launch_date: '2025 - 03 - 09',
     customers: 11;
@@ -591,15 +572,8 @@ variant: 'ai - futuristic',
     launch_date: '2025 - 02 - 10',
     customers: 34;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 14}
-    id: 'seo - technical - auditor - pro'
-=======
-    reviews: 14;
-  }
-    id: 'seo - technical - auditor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'SEO Technical Auditor Pro',
+    id: 'seo - technical - auditor - pro'    name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
     price: '$59',
     link: 'https://ziontechgroup && ziontechgroup.com/services/seo-technical-auditor-pro',
@@ -682,19 +656,10 @@ variant: 'holographic - advanced',
     roi: 'Reduce legal risk while preserving conversion rates',
     integrations: ['Google Consent Mode Manager, Segment'];
     competitors: ['OneTrust, CookieYes, Cookiebot'];
-<<<<<<< HEAD
     market_size: '$4 B privacy tech'
     growth_rate: '22% CAGR';
 variant: 'holographic'
-    contact_info: contact;
-=======
-    market_size: '$4 B privacy tech',
-    growth_rate: '22% CAGR',
-    variant: 'holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Hosted CMP with edge storage and region - aware rendering.',
     launch_date: '2025 - 03 - 03',
     customers: 40;
@@ -826,19 +791,10 @@ variant: 'neural - quantum',
     use_cases: ['Next.js / React upgrades, Typescript migrations, Policy refactors'];
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'];
-<<<<<<< HEAD
     market_size: '$9 B DevTools AI'
     growth_rate: '24% CAGR';
 variant: 'holographic'
-    contact_info: contact;
-=======
-    market_size: '$9 B DevTools AI',
-    growth_rate: '24% CAGR',
-    variant: 'holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'AST - driven codemods with safety rails and CI checks.',
     launch_date: '2025 - 02 - 18',
     customers: 18;
@@ -846,18 +802,9 @@ variant: 'holographic'
     reviews: 10}
     id: 'incident-statuspage-automation-pro',
     name: 'Incident StatusPage Automation',
-<<<<<<< HEAD
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms'
     rating: 4.5;
-    reviews: 10}
-=======
-    tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
-    rating:
-        rating: 4.5;
-    reviews: 10;
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    id: 'incident - statuspage - automation - pro',
+    reviews: 10}    id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms',
     price: '$79',
@@ -1043,15 +990,8 @@ variant: 'holographic - advanced',
     launch_date: '2025 - 02 - 12',
     customers: 63;
     rating: 4.5;
-<<<<<<< HEAD
     reviews: 24}
-    id: 'ai - sales - sequences - pro'
-=======
-    reviews: 24;
-  }
-    id: 'ai - sales - sequences - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI Sales Sequences',
+    id: 'ai - sales - sequences - pro'    name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
     price: '$99',
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-sales-sequences-pro',
@@ -1373,19 +1313,10 @@ variant: 'ai - futuristic',
     roi: 'Cut MTTR by 2040%',
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
     competitors: ['FireHydrant, Rootly'];
-<<<<<<< HEAD
     market_size: '$5 B incident mgmt'
     growth_rate: '18% CAGR';
 variant: 'quantum'
-    rating: 4 && 4.7;
-=======
-    market_size: '$5 B incident mgmt',
-    growth_rate: '18% CAGR',
-    variant: 'quantum',
-    rating:
-        rating: 4 && 4.7;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    reviews: 4;
+    rating: 4 && 4.7;    reviews: 4;
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Ingestion of alerts, timeline builder, and report generator.',
@@ -1489,19 +1420,10 @@ variant: 'ai - futuristic',
     roi: 'Reduce data incidents by 3050%',
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
     competitors: ['Monte Carlo, Bigeye, Soda'];
-<<<<<<< HEAD
     market_size: '$6 B data observability'
     growth_rate: '23% CAGR';
 variant: 'quantum'
-    rating: 4 && 4.6;
-=======
-    market_size: '$6 B data observability',
-    growth_rate: '23% CAGR',
-    variant: 'quantum',
-    rating:
-        rating: 4 && 4.6;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    reviews: 3;
+    rating: 4 && 4.6;    reviews: 3;
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registry UI, checks engine, and connectors for lineage & tickets.',
@@ -1546,16 +1468,9 @@ variant: 'quantum'
         competitors: ['Front + AIZendesk AI']
     rating: 4 && 4.7;
     reviews: 3;
-<<<<<<< HEAD
     market_size: '$9 B shared inbox'
     growth_rate: '15% CAGR';
-variant: 'ai - futuristic',
-=======
-    market_size: '$9 B shared inbox',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'ai - futuristic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'OAuth mail connectors, policy engine, review queues.',
     launch_date: '2025 - 03 - 18',
@@ -1576,21 +1491,11 @@ variant: 'ai - futuristic',
     technology: ['Next && Next.jsServerlessPostgreSQL'];
     integrations: ['ZapierSlackHubSpot'];
     useCases: ['NPSMarket researchUX surveys'];
-<<<<<<< HEAD
     roi: 'Increase completion rates 1 && 1.52 && 2.5 x'
     competitors: ['TypeformSurveyMonkey'];
     marketSize: '$5 B surveys'
     growthRate: '12% CAGR';
-variant: 'holographic-advanced',
-=======
-    roi: 'Increase completion rates 1 && 1.52 && 2.5 x',
-    competitors:
-        competitors: ['TypeformSurveyMonkey'];
-    marketSize: '$5 B surveys',
-    growthRate: '12% CAGR',
-    variant: 'holographic-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: contact;
+variant: 'holographic-advanced',    contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Survey builder, response store, analytics.',
     launchDate: '2025-03-18',
@@ -1640,21 +1545,11 @@ variant: 'holographic-advanced',
     technology: ['Next.jsServerlessPostgreSQL'];
     integrations: ['ZapierSlackHubSpot'];
     use_cases: ['NPSMarket researchUX surveys'];
-<<<<<<< HEAD
     roi: 'Increase completion rates 1.52.5 x'
     competitors: ['TypeformSurveyMonkey'];
     market_size: '$5 B surveys'
     growth_rate: '12% CAGR';
-variant: 'holographic - advanced',
-=======
-    roi: 'Increase completion rates 1.52.5 x',
-    competitors:
-        competitors: ['TypeformSurveyMonkey'];
-    market_size: '$5 B surveys',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - advanced',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Survey builder, response store, analytics.',
     launch_date: '2025 - 03 - 18',
@@ -1691,16 +1586,9 @@ variant: 'holographic - advanced',
         competitors: ['Loop ReturnsReturnly']
     rating: 4 && 4.7;
     reviews: 2;
-<<<<<<< HEAD
     market_size: '$3 B returns tech'
     growth_rate: '18% CAGR';
-variant: 'neural - quantum',
-=======
-    market_size: '$3 B returns tech',
-    growth_rate: '18% CAGR',
-    variant: 'neural - quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'neural - quantum',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Portal, policy engine, carrier / commerce connectors.',
     launch_date: '2025 - 03 - 18',
@@ -2107,16 +1995,9 @@ variant: 'quantum - cyberpunk',
     technology: ['Next && Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail/Outlook'];
     useCases: ['Outbound sequencesCall notesCRM hygiene'];
-<<<<<<< HEAD
     market_size: '$8 B privacy tech'
     growth_rate: '20% CAGR';
-variant: 'holographic - matrix',
-=======
-    market_size: '$8 B privacy tech',
-    growth_rate: '20% CAGR',
-    variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Policy templates, discovery connectors, redaction pipeline.',
     launch_date: '2025 - 08 - 01',
@@ -2148,39 +2029,20 @@ variant: 'holographic - matrix',
     technology: ['Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail / Outlook'],
     use_cases: ['Outbound sequences_call notesCRM hygiene'],
-<<<<<<< HEAD
     roi: 'Increase replies by 23 x, reduce admin time 50%'
     competitors: ['OutreachSalesloft'];
     market_size: '$6 B sales engagement'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Increase replies by 23 x, reduce admin time 50%',
-    competitors:
-        competitors: ['OutreachSalesloft'];
-    market_size: '$6 B sales engagement',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Sequence engine with deliverability checks and CRM sync.',
     launch_date: '2025 - 07 - 10',
     customers: 21;
     rating: 4 && 4.6;
     reviews: 12;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 12}
-    id: 'security - evidence - automation - lite'
-=======
-    reviews: 12;
-  }
-    id: 'security - evidence - automation - lite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Security Evidence Automation Lite',
+    id: 'security - evidence - automation - lite'    name: 'Security Evidence Automation Lite',
     tagline: 'SOC2 / ISO evidence capture with zero - spreadsheet workflows',
     price: '$199',
     link: 'https://ziontechgroup && ziontechgroup.com/services/security-evidence-automation-lite',
@@ -2213,24 +2075,12 @@ variant: 'holographic - matrix'
     technology: ['Cloud APIsNext.js_queue workers'];
     integrations: ['AWSGCPAzureJiraGitHub'];
     use_cases: ['SOC2 evidenceISO controls_audit prep'];
-<<<<<<< HEAD
     roi: 'Save 4060% audit prep time'
     competitors: ['DrataVanta (lite)'];
     market_size: '$3 B compliance ops'
     growth_rate: '22% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Save 4060% audit prep time',
-    competitors:
-        competitors: ['DrataVanta (lite)'];
-    market_size: '$3 B compliance ops',
-    growth_rate: '22% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Agentless collectors with export pipelines.',
     launch_date: '2025 - 06 - 01',
     customers: 11;
@@ -2271,24 +2121,12 @@ variant: 'holographic - matrix'
     technology: ['LLM pipelinesEmbeddingsCrawlers'];
     integrations: ['G2 Twitter / XRedditApp Store'];
     use_cases: ['Market scans_voice of customer_roadmap inputs'];
-<<<<<<< HEAD
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)'];
     market_size: '$2 B CI tools'
     growth_rate: '15% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Cut research time by 70%',
-    competitors:
-        competitors: ['CrayonKlue (lite)'];
-    market_size: '$2 B CI tools',
-    growth_rate: '15% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Scheduled crawlers + summarization with citations.',
     launch_date: '2025 - 07 - 01',
     customers: 18;
@@ -2329,24 +2167,12 @@ variant: 'holographic - matrix'
     technology: ['LLM promptsTemplatesExports'];
     integrations: ['Google DriveNotion'];
     use_cases: ['Campaign planning_brief standardization_rapid iteration'];
-<<<<<<< HEAD
     roi: 'Reduce planning time 80%'
     competitors: ['Notion templates_agency briefs'];
     market_size: '$1 B planning tools'
     growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Reduce planning time 80%',
-    competitors:
-        competitors: ['Notion templates_agency briefs'];
-    market_size: '$1 B planning tools',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Guided workflow with template library and exports.',
     launch_date: '2025 - 05 - 15',
     customers: 25;
@@ -2404,30 +2230,16 @@ variant: 'holographic - matrix'
         competitors: ['CannyProductboard (lite)']
     rating: 4 && 4.6;
     reviews: 8;
-<<<<<<< HEAD
     market_size: '$1.2 B feedback tools'
     growth_rate: '14% CAGR';
-variant: 'holographic - matrix',
-=======
-    market_size: '$1.2 B feedback tools',
-    growth_rate: '14% CAGR',
-    variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Embed widgets, event ingestors, tagging pipeline.',
     launch_date: '2025 - 06 - 25',
     customers: 15;
     rating: 4.6;
-<<<<<<< HEAD
     reviews: 8}
-    id: 'real - time - feature - flags - lite'
-=======
-    reviews: 8;
-  }
-    id: 'real - time - feature - flags - lite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Real - Time Feature Flags Lite',
+    id: 'real - time - feature - flags - lite'    name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
     price: '$59',
     link: 'https://ziontechgroup && ziontechgroup.com/services/real-time-feature-flags-lite',
@@ -2457,24 +2269,12 @@ variant: 'holographic - matrix',
     technology: ['Edge runtimeKV storeSDKs'];
     integrations: ['VercelCloudflareNetlify'];
     use_cases: ['Kill switchesExperimentsProgressive rollout'];
-<<<<<<< HEAD
     roi: 'Speed up releases and reduce incidents'
     competitors: ['LaunchDarkly (lite)'];
     market_size: '$2 B feature flagging'
     growth_rate: '16% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Speed up releases and reduce incidents',
-    competitors:
-        competitors: ['LaunchDarkly (lite)'];
-    market_size: '$2 B feature flagging',
-    growth_rate: '16% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Edge functions and SDK package templates.',
     launch_date: '2025 - 07 - 20',
     customers: 10;
@@ -2511,24 +2311,12 @@ variant: 'holographic - matrix'
     technology: ['LLMVector DBTemplate engine'];
     integrations: ['SharePointGoogle Drive'];
     use_cases: ['Playbook adherence_negotiation prep_drafting'];
-<<<<<<< HEAD
     roi: 'Reduce review cycle 3050%'
     competitors: ['Ironclad (assist)LinkSquares (assist)'];
     market_size: '$1 B legal tech AI'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Reduce review cycle 3050%',
-    competitors:
-        competitors: ['Ironclad (assist)LinkSquares (assist)'];
-    market_size: '$1 B legal tech AI',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Template packs + contract parsers.',
     launch_date: '2025 - 05 - 28',
     customers: 8;
@@ -2581,24 +2369,12 @@ variant: 'holographic - matrix'
     technology: ['APM APIsLLMDiff engine'];
     integrations: ['PagerDutyDatadogNew RelicGitHub'];
     use_cases: ['Incident summarization_regression detection_runbook upkeep'];
-<<<<<<< HEAD
     roi: 'Reduce MTTR and toil'
     competitors: ['FireHydrant (assist)Rootly (assist)'];
     market_size: '$5 B incident mgmt'
     growth_rate: '17% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Reduce MTTR and toil',
-    competitors:
-        competitors: ['FireHydrant (assist)Rootly (assist)'];
-    market_size: '$5 B incident mgmt',
-    growth_rate: '17% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Event ingestors and summarization pipelines.',
     launch_date: '2025 - 08 - 05',
     customers: 7;
@@ -2644,16 +2420,9 @@ variant: 'holographic - matrix'
         competitors: ['Monte Carlo (lite)']
     rating: 4 && 4.6;
     reviews: 6;
-<<<<<<< HEAD
     market_size: '$3 B data ops'
     growth_rate: '20% CAGR';
-variant: 'holographic - matrix',
-=======
-    market_size: '$3 B data ops',
-    growth_rate: '20% CAGR',
-    variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Warehouse connectors, alerting, and PR generators.',
     launch_date: '2025 - 07 - 14',
@@ -2691,24 +2460,12 @@ variant: 'holographic - matrix',
     technology: ['LLMExperimentsSDK'];
     integrations: ['FigmaLaunchDarklyHeap'];
     use_cases: ['ActivationOnboardingPaywall copy'];
-<<<<<<< HEAD
     roi: 'Lift conversion 515%'
     competitors: ['Mutiny (lite)'];
     market_size: '$1 B CRO tools'
     growth_rate: '14% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Lift conversion 515%',
-    competitors:
-        competitors: ['Mutiny (lite)'];
-    market_size: '$1 B CRO tools',
-    growth_rate: '14% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Browser extension + flag hooks + PR templates.',
     launch_date: '2025 - 06 - 18',
     customers: 14;
@@ -2762,19 +2519,10 @@ variant: 'holographic - matrix'
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery']
     useCases: ['Real-time features, Batch features, A/B parity']
     competitors: ['Tecton, Feast DIY']
-<<<<<<< HEAD
     marketSize: '$5 B ML platform tooling'
     growthRate: '30% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    marketSize: '$5 B ML platform tooling',
-    growthRate: '30% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails:,
       'Provisioned infra, SDKs, CI templates, and dashboards.'
     launchDate: '2025-03-15',
@@ -2789,19 +2537,10 @@ variant: 'holographic-matrix'
     use_cases: ['Real - time features, Batch features, A / B parity'],
     roi: 'Reduce feature delivery time by 6080%',
     competitors: ['Tecton, Feast DIY'],
-<<<<<<< HEAD
     market_size: '$5B ML platform tooling'
     growth_rate: '30% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$5B ML platform tooling',
-    growth_rate: '30% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Provisioned infra, SDKs, CI templates, and dashboards.',
     launch_date: '2025 - 03 - 15',
@@ -7552,34 +7291,18 @@ varian,
     use_cases: ['Latency SLOs, Regression detection, Peak readiness'],
     roi: 'Cut p95 latency by 2560% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'],
-<<<<<<< HEAD
     market_size: '$12B APM'
     growth_rate: '18% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$12B APM',
-    growth_rate: '18% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Synthetic test agents, results store, optimization engine, and IaC exporter.',
     launch_date: '2025 - 03 - 01',
     customers:
         customers: 12;
     rating: 4 && 4.8;
-<<<<<<< HEAD
     reviews: 9},
-    id: 'ai - rag - starter - blueprint'
-=======
-    reviews: 9;
-  },
-    id: 'ai - rag - starter - blueprint',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI RAG Starter Blueprint',
+    id: 'ai - rag - starter - blueprint'    name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
     price: '$149',
     period: '/month',
@@ -7676,19 +7399,10 @@ varian,
     use_cases: ['Internal KB, Agent assist augmentation'],
     roi: 'Ship a quality RAG MVP in days, not months',
     competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'],
-<<<<<<< HEAD
     market_size: '$40B GenAI apps'
     growth_rate: '45% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$40B GenAI apps',
-    growth_rate: '45% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Templates, infra modules, eval notebooks, and dashboards.',
     launch_date: '2025 - 03 - 08',
@@ -7796,34 +7510,18 @@ varian,
     use_cases: ['Backoffice automation, Scraping with ethics, QA journeys'],
     roi: 'Automate repetitive browser work, reduce toil 6090%',
     competitors: ['Browserless, Superblocks, UI.Vision'],
-<<<<<<< HEAD
     market_size: '$12B RPA'
     growth_rate: '25% CAGR';
 variant: 'network - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$12B RPA',
-    growth_rate: '25% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Runner fleet, state store, DSL compiler, and replay UI.',
     launch_date: '2025 - 03 - 05',
     customers:
         customers: 22;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 12},
-    id: 'cloud - cost - anomaly - guard'
-=======
-    reviews: 12;
-  },
-    id: 'cloud - cost - anomaly - guard',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Cloud Cost Anomaly Guard',
+    id: 'cloud - cost - anomaly - guard'    name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
     price: '$69',
     period: '/month',
@@ -7920,19 +7618,10 @@ varian,
     use_cases: ['Cost visibility, Budget protection, Forecasting'],
     roi: 'Prevent surprise bills, 1030% cost reduction potential',
     competitors: ['Vantage, CloudZero, Anodot'],
-<<<<<<< HEAD
     market_size: '$6B FinOps tooling'
     growth_rate: '27% CAGR';
 variant: 'holographic - advanced'
-    contact_info: contact;
-=======
-    market_size: '$6B FinOps tooling',
-    growth_rate: '27% CAGR',
-    variant: 'holographic - advanced',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'ETL + anomaly models + alerting with IaC guidance.',
     launch_date: '2025 - 03 - 09',
     customers: 11;
@@ -8037,34 +7726,18 @@ varian,
     use_cases: ['ETL jobs, Data sync, Cleanup & lifecycle'],
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud'],
-<<<<<<< HEAD
     market_size: '$8B workflow orchestration'
     growth_rate: '20% CAGR';
 variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$8B workflow orchestration',
-    growth_rate: '20% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Managed specs, runners, and observability with audit trails.',
     launch_date: '2025 - 02 - 10',
     customers:
         customers: 34;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 14},
-    id: 'seo - technical - auditor - pro'
-=======
-    reviews: 14;
-  },
-    id: 'seo - technical - auditor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'SEO Technical Auditor Pro',
+    id: 'seo - technical - auditor - pro'    name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
     price: '$59',
     period: '/month',
@@ -8162,34 +7835,18 @@ varian,
     use_cases: ['CWV compliance, Link hygiene, Schema coverage'],
     roi: 'Lift organic traffic by 1030% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit'],
-<<<<<<< HEAD
     market_size: '$6B SEO tooling'
     growth_rate: '16% CAGR';
 variant: 'holographic - advanced'
-    contact_info: contact;
-=======
-    market_size: '$6B SEO tooling',
-    growth_rate: '16% CAGR',
-    variant: 'holographic - advanced',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Crawl scheduler, render lab, rules engine, and PR bot.',
     launch_date: '2025 - 02 - 15',
     customers:
         customers: 58;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 31},
-    id: 'gdpr - cookie - consent - manager - pro'
-=======
-    reviews: 31;
-  },
-    id: 'gdpr - cookie - consent - manager - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'GDPR Cookie Consent Manager Pro',
+    id: 'gdpr - cookie - consent - manager - pro'    name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
     price: '$49',
     period: '/month',
@@ -8286,19 +7943,10 @@ varian,
     use_cases: ['GDPR / CCPA compliance, Consent analytics'],
     roi: 'Reduce legal risk while preserving conversion rates',
     competitors: ['OneTrust, CookieYes, Cookiebot'],
-<<<<<<< HEAD
     market_size: '$4B privacy tech'
     growth_rate: '22% CAGR';
 variant: 'holographic'
-    contact_info: contact;
-=======
-    market_size: '$4B privacy tech',
-    growth_rate: '22% CAGR',
-    variant: 'holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Hosted CMP with edge storage and region - aware rendering.',
     launch_date: '2025 - 03 - 03',
@@ -8406,19 +8054,10 @@ varian,
     use_cases: ['QBRs, Standups, Demos'],
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies.ai, Otter.ai, Avoma'],
-<<<<<<< HEAD
     market_size: '$5B meeting AI'
     growth_rate: '28% CAGR';
 variant: 'neural - quantum'
-    contact_info: contact;
-=======
-    market_size: '$5B meeting AI',
-    growth_rate: '28% CAGR',
-    variant: 'neural - quantum',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Recording bot, summarization pipeline, and secure storage.',
     launch_date: '2025 - 02 - 01',
@@ -8525,19 +8164,10 @@ varian,
       'Next.js / React upgrades, Typescript migrations, Policy refactors'],
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'],
-<<<<<<< HEAD
     market_size: '$9B DevTools AI'
     growth_rate: '24% CAGR';
 variant: 'holographic'
-    contact_info: contact;
-=======
-    market_size: '$9B DevTools AI',
-    growth_rate: '24% CAGR',
-    variant: 'holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'AST - driven codemods with safety rails and CI checks.',
     launch_date: '2025 - 02 - 18',
@@ -8645,19 +8275,10 @@ varian,
     use_cases: ['Public comms, Internal updates, RCA library'],
     roi: 'Reduce incident comms toil by 70%',
     competitors: ['Atlassian Statuspage, Better Uptime'],
-<<<<<<< HEAD
     market_size: '$2B incident tooling'
     growth_rate: '19% CAGR';
 variant: 'neural - cyberpunk'
-    contact_info: contact;
-=======
-    market_size: '$2B incident tooling',
-    growth_rate: '19% CAGR',
-    variant: 'neural - cyberpunk',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'SLO integrations, templates, and messaging pipeline.',
     launch_date: '2025 - 02 - 22',
@@ -8762,19 +8383,10 @@ varian,
     use_cases: ['Ransomware recovery, Compliance DR, Audit evidence'],
     roi: 'Reduce RTO / RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU'],
-<<<<<<< HEAD
     market_size: '$10B backup & recovery'
     growth_rate: '17% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$10B backup & recovery',
-    growth_rate: '17% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Policy engine, snapshot orchestrator, and drill runner.',
     launch_date: '2025 - 03 - 05',
@@ -8889,15 +8501,8 @@ variant: 'holographic - advanced',
     customers:
         customers: 63;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 24},
-    id: 'ai - sales - sequences - pro'
-=======
-    reviews: 24;
-  },
-    id: 'ai - sales - sequences - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI Sales Sequences',
+    id: 'ai - sales - sequences - pro'    name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
     price: '$99',
     period: '/month',
@@ -9109,15 +8714,8 @@ variant: 'quantum - matrix',
     customers:
         customers: 11;
     rating: 4 && 4.4;
-<<<<<<< HEAD
     reviews: 6},
-    id: 'sso - rapid - integration - pro'
-=======
-    reviews: 6;
-  },
-    id: 'sso - rapid - integration - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'SSO Rapid Integration',
+    id: 'sso - rapid - integration - pro'    name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
     price: '$99',
     period: '/month',
@@ -9212,19 +8810,10 @@ varian,
     use_cases: ['Enterprise deals, Compliance readiness'],
     roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'],
-<<<<<<< HEAD
     market_size: '$7B identity & access'
     growth_rate: '19% CAGR';
 variant: 'holographic'
-    contact_info: contact;
-=======
-    market_size: '$7B identity & access',
-    growth_rate: '19% CAGR',
-    variant: 'holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Config UI, metadata exchange, and provisioning agent.',
     launch_date: '2025 - 01 - 30',
@@ -9330,19 +8919,10 @@ varian,
     ]
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage']
-<<<<<<< HEAD
     marketSize: '$10 B cloud cost optimization'
     growthRate: '20% CAGR';
 variant: 'quantum-matrix'
-    contactInfo: contact;
-=======
-    marketSize: '$10 B cloud cost optimization',
-    growthRate: '20% CAGR',
-    variant: 'quantum-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: color: 'from - emerald - 600 to - green - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / finops - cost - anomaly - guard',
@@ -9400,34 +8980,18 @@ varian,
       'Budget overrun prevention hygiene, Commitment utilization'],
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
-<<<<<<< HEAD
     market_size: '$10B cloud cost optimization'
     growth_rate: '20% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$10B cloud cost optimization',
-    growth_rate: '20% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',
     launch_date: '2025 - 03 - 10',
     customers:
         customers: 11;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 6},
-    id: 'gdpr - dsar - automation - suite'
-=======
-    reviews: 6;
-  },
-    id: 'gdpr - dsar - automation - suite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'GDPR DSAR Automation Suite',
+    id: 'gdpr - dsar - automation - suite'    name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
     price: '$199',
     period: '/month',
@@ -9498,19 +9062,10 @@ varian,
     use_cases: ['DSAR handling, Regulatory audits, Customer trust'],
     roi: 'Reduce DSAR processing time by 7090%',
     competitors: ['Transcend, OneTrust, DataGrail'],
-<<<<<<< HEAD
     market_size: '$12B privacy ops'
     growth_rate: '22% CAGR';
 variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$12B privacy ops',
-    growth_rate: '22% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Configurable workflows, connectors, and export pipeline with redaction.',
     launch_date: '2025 - 03 - 12',
@@ -9619,34 +9174,18 @@ varian,
     use_cases: ['On - call assist, Comms automation, RCA support'],
     roi: 'Cut MTTR by 2040%',
     competitors: ['FireHydrant, Rootly'],
-<<<<<<< HEAD
     market_size: '$5B incident mgmt'
     growth_rate: '18% CAGR';
 variant: 'quantum'
-    contact_info: contact;
-=======
-    market_size: '$5B incident mgmt',
-    growth_rate: '18% CAGR',
-    variant: 'quantum',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Ingestion of alerts, timeline builder, and report generator.',
     launch_date: '2025 - 03 - 14',
     customers:
         customers: 9;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 4},
-    id: 'ai - sales - prospecting - studio'
-=======
-    reviews: 4;
-  },
-    id: 'ai - sales - prospecting - studio',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI Sales Prospecting Studio',
+    id: 'ai - sales - prospecting - studio'    name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
     price: '$99',
     period: '/month',
@@ -9855,34 +9394,18 @@ varian,
     use_cases: ['Breaking change prevention, Data SLAs, Ownership clarity'],
     roi: 'Reduce data incidents by 3050%',
     competitors: ['Monte Carlo, Bigeye, Soda'],
-<<<<<<< HEAD
     market_size: '$6B data observability'
     growth_rate: '23% CAGR';
 variant: 'quantum'
-    contact_info: contact;
-=======
-    market_size: '$6B data observability',
-    growth_rate: '23% CAGR',
-    variant: 'quantum',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Registry UI, checks engine, and connectors for lineage & tickets.',
     launch_date: '2025 - 03 - 16',
     customers:
         customers: 6;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 3},
-    id: 'ai - powered - email - responder'
-=======
-    reviews: 3;
-  },
-    id: 'ai - powered - email - responder',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI - Powered Email Responder',
+    id: 'ai - powered - email - responder'    name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
     price: '$39',
     period: '/month',
@@ -9979,34 +9502,18 @@ varian,
     use_cases: ['Support inbox', 'Sales replies', 'Backoffice'],
     roi: 'Reduce manual email time by 5080%',
     competitors: ['Front + AI', 'Zendesk AI'],
-<<<<<<< HEAD
     market_size: '$9B shared inbox'
     growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$9B shared inbox',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'OAuth mail connectors, policy engine, review queues.',
     launch_date: '2025 - 03 - 18',
     customers:
         customers: 6;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 3},
-    id: 'mobile - first - survey - tool'
-=======
-    reviews: 3;
-  },
-    id: 'mobile - first - survey - tool',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Mobile - First Survey Tool',
+    id: 'mobile - first - survey - tool'    name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
     price: '$25',
     period: '/month',
@@ -10208,19 +9715,10 @@ varian,
     use_cases: ['RMA automation', 'Refunds', 'Analytics'],
     roi: 'Cut return handling time by 4070%',
     competitors: ['Loop Returns', 'Returnly'],
-<<<<<<< HEAD
     market_size: '$3B returns tech'
     growth_rate: '18% CAGR';
 variant: 'neural - quantum'
-    contact_info: contact;
-=======
-    market_size: '$3B returns tech',
-    growth_rate: '18% CAGR',
-    variant: 'neural - quantum',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Portal, policy engine, carrier / commerce connectors.',
     launch_date: '2025 - 03 - 18',
@@ -10345,34 +9843,18 @@ varian,
     use_cases: ['Support triage, Sales inquiries, Vendor emails'],
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)'],
-<<<<<<< HEAD
     market_size: '$10B productivity tooling'
     growth_rate: '20% CAGR';
 variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$10B productivity tooling',
-    growth_rate: '20% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'OAuth connections, safe prompt templates, analytics and handoff.',
     launch_date: '2026 - 03 - 10',
     customers:
         customers: 32;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 14},
-    id: 'mobile - first - survey - studio'
-=======
-    reviews: 14;
-  },
-    id: 'mobile - first - survey - studio',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'MobileFirst Survey Studio',
+    id: 'mobile - first - survey - studio'    name: 'MobileFirst Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
     price: '$29',
     period: '/month',
@@ -10680,19 +10162,10 @@ varian,
     use_cases: ['Accessibility, SEO, repurposing'],
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev'],
-<<<<<<< HEAD
     market_size: '$2B creator tooling'
     growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$2B creator tooling',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Batch processing pipeline, editor UI, and export tools.',
     launch_date: '2026 - 03 - 09',
@@ -10798,19 +10271,10 @@ varian,
     use_cases: ['Returns, exchanges, refunds'],
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly'],
-<<<<<<< HEAD
     market_size: '$3B ecommerce tooling'
     growth_rate: '16% CAGR';
 variant: 'network - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$3B ecommerce tooling',
-    growth_rate: '16% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Branded portal, webhook flows, and SLA notifications.',
     launch_date: '2026 - 03 - 08',
@@ -11059,19 +10523,10 @@ varian,
       'Evidence collection'],
     roi: 'Reduce manual privacy ops hours by 6080%',
     competitors: ['OneTrust', 'Transcend', 'Securiti'],
-<<<<<<< HEAD
     market_size: '$8B privacy tech'
     growth_rate: '20% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$8B privacy tech',
-    growth_rate: '20% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Policy templates, discovery connectors, redaction pipeline.',
     launch_date: '2025 - 08 - 01',
@@ -11147,19 +10602,10 @@ varian,
     use_cases: ['Outbound sequences', 'Call notes', 'CRM hygiene'],
     roi: 'Increase replies by 23 x, reduce admin time 50%',
     competitors: ['Outreach', 'Salesloft'],
-<<<<<<< HEAD
     market_size: '$6B sales engagement'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$6B sales engagement',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Sequence engine with deliverability checks and CRM sync.',
     launch_date: '2025 - 07 - 10',
@@ -11267,19 +10713,10 @@ varian,
     use_cases: ['SOC2 evidence', 'ISO controls', 'Audit prep'],
     roi: 'Save 4060% audit prep time',
     competitors: ['Drata', 'Vanta (lite)'],
-<<<<<<< HEAD
     market_size: '$3B compliance ops'
     growth_rate: '22% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$3B compliance ops',
-    growth_rate: '22% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Agentless collectors with export pipelines.',
     launch_date: '2025 - 06 - 01',
     customers: 11;
@@ -11381,19 +10818,10 @@ varian,
     use_cases: ['Market scans', 'Voice of customer', 'Roadmap inputs'],
     roi: 'Cut research time by 70%',
     competitors: ['Crayon', 'Klue (lite)'],
-<<<<<<< HEAD
     market_size: '$2B CI tools'
     growth_rate: '15% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$2B CI tools',
-    growth_rate: '15% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Scheduled crawlers + summarization with citations.',
     launch_date: '2025 - 07 - 01',
     customers: 18;
@@ -11498,19 +10926,10 @@ varian,
     use_cases: ['Campaign planning', 'Brief standardization', 'Rapid iteration'],
     roi: 'Reduce planning time 80%',
     competitors: ['Notion templates', 'Agency briefs'],
-<<<<<<< HEAD
     market_size: '$1B planning tools'
     growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$1B planning tools',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Guided workflow with template library and exports.',
     launch_date: '2025 - 05 - 15',
     customers: 25;
@@ -11624,15 +11043,8 @@ variant: 'holographic - matrix',
     customers:
         customers: 15;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 8},
-    id: 'real - time - feature - flags - lite'
-=======
-    reviews: 8;
-  },
-    id: 'real - time - feature - flags - lite',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Real - Time Feature Flags Lite',
+    id: 'real - time - feature - flags - lite'    name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
     price: '$59',
     period: '/month',
@@ -11724,37 +11136,18 @@ varian,
     technology: ['Edge runtime', 'KV store', 'SDKs'],
     integrations: ['Vercel', 'Cloudflare', 'Netlify'],
     use_cases: ['Kill switches', 'Experiments', 'Progressive rollout'],
-<<<<<<< HEAD
     roi: 'Speed up releases and reduce incidents'
     competitors: ['LaunchDarkly (lite)']
     market_size: '$2B feature flagging'
     growth_rate: '16% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Speed up releases and reduce incidents',
-    competitors:
-        competitors: ['LaunchDarkly (lite)']
-    market_size: '$2B feature flagging',
-    growth_rate: '16% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Edge functions and SDK package templates.',
     launch_date: '2025 - 07 - 20',
     customers: 10;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 5},
-    id: 'ai - legal - clause - recommender'
-=======
-    reviews: 5;
-  },
-    id: 'ai - legal - clause - recommender',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI Legal Clause Recommender',
+    id: 'ai - legal - clause - recommender'    name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
     price: '$179',
     period: '/month',
@@ -11849,19 +11242,10 @@ varian,
     use_cases: ['Playbook adherence', 'Negotiation prep', 'Drafting'],
     roi: 'Reduce review cycle 3050%',
     competitors: ['Ironclad (assist)', 'LinkSquares (assist)'],
-<<<<<<< HEAD
     market_size: '$1B legal tech AI'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$1B legal tech AI',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Template packs + contract parsers.',
     launch_date: '2025 - 05 - 28',
     customers: 8;
@@ -11997,19 +11381,10 @@ varian,
       'Runbook upkeep'],
     roi: 'Reduce MTTR and toil',
     competitors: ['FireHydrant (assist)', 'Rootly (assist)'],
-<<<<<<< HEAD
     market_size: '$5B incident mgmt'
     growth_rate: '17% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$5B incident mgmt',
-    growth_rate: '17% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Event ingestors and summarization pipelines.',
     launch_date: '2025 - 08 - 05',
     customers: 7;
@@ -12093,15 +11468,8 @@ variant: 'holographic - matrix',
     customers:
         customers: 12;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 6},
-    id: 'ai - ux - copy - optimizer'
-=======
-    reviews: 6;
-  },
-    id: 'ai - ux - copy - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI UX Copy Optimizer',
+    id: 'ai - ux - copy - optimizer'    name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
     price: '$59',
     period: '/month',
@@ -12195,24 +11563,12 @@ varian,
     technology: ['LLM', 'Experiments', 'SDK'],
     integrations: ['Figma', 'LaunchDarkly', 'Heap'],
     use_cases: ['Activation', 'Onboarding', 'Paywall copy'],
-<<<<<<< HEAD
     roi: 'Lift conversion 515%'
     competitors: ['Mutiny (lite)']
     market_size: '$1B CRO tools'
     growth_rate: '14% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Lift conversion 515%',
-    competitors:
-        competitors: ['Mutiny (lite)']
-    market_size: '$1B CRO tools',
-    growth_rate: '14% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Browser extension + flag hooks + PR templates.',
     launch_date: '2025 - 06 - 18',
     customers: 14;
@@ -12312,24 +11668,12 @@ varian,
     technology: ['Registry', 'Evals', 'Workflows'],
     integrations: ['GitHub', 'Jira', 'Slack'],
     use_cases: ['Model registry', 'Risk tracking', 'Policy compliance'],
-<<<<<<< HEAD
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)']
     market_size: '$1.5B AI governance'
     growth_rate: '21% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Reduce policy drift and audit risk',
-    competitors:
-        competitors: ['Holistic AI (lite)']
-    market_size: '$1.5B AI governance',
-    growth_rate: '21% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Registry + eval runners + approval flows.',
     launch_date: '2025 - 08 - 15',
     customers: 5;
@@ -14210,19 +13554,10 @@ varian,
     useCases: ['Cost visibility, Budget protection, Forecasting'],
     roi: 'Prevent surprise bills, 1030% cost reduction potential',
     competitors: ['Vantage, CloudZero, Anodot'],
-<<<<<<< HEAD
     marketSize: '$6B FinOps tooling'
     growthRate: '27% CAGR';
 variant: 'holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$6B FinOps tooling',
-    growthRate: '27% CAGR',
-    variant: 'holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'ETL + anomaly models + alerting with IaC guidance.',
     launchDate: '2025-03-09',
     customers: 11;
@@ -14509,19 +13844,10 @@ varian,
     useCases: ['GDPR/CCPA compliance, Consent analytics'],
     roi: 'Reduce legal risk while preserving conversion rates',
     competitors: ['OneTrust, CookieYes, Cookiebot'],
-<<<<<<< HEAD
     marketSize: '$4B privacy tech'
     growthRate: '22% CAGR';
 variant: 'holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$4B privacy tech',
-    growthRate: '22% CAGR',
-    variant: 'holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Hosted CMP with edge storage and region-aware rendering.',
     launchDate: '2025-03-03',
     customers: 40;
@@ -14710,19 +14036,10 @@ varian,
     useCases: ['Next.js/React upgrades, Typescript migrations, Policy refactors'],
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'],
-<<<<<<< HEAD
     marketSize: '$9B DevTools AI'
     growthRate: '24% CAGR';
 variant: 'holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$9B DevTools AI',
-    growthRate: '24% CAGR',
-    variant: 'holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'AST-driven codemods with safety rails and CI checks.',
     launchDate: '2025-02-18',
     customers: 18;
@@ -16871,19 +16188,10 @@ varian,
     useCases: ['Outbound sequencesCall notes', 'CRM hygiene'],
     roi: 'Increase replies by 23x, reduce admin time 50%',
     competitors: ['OutreachSalesloft']
-<<<<<<< HEAD
     marketSize: '$6B sales engagement'
     growthRate: '18% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    marketSize: '$6B sales engagement',
-    growthRate: '18% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Sequence engine with deliverability checks and CRM sync.',
     launchDate: '2025-07-10',
     customers: 21;
@@ -16973,24 +16281,12 @@ varian,
     technology: ['Cloud APIsNext.js', 'Queue workers'],
     integrations: ['AWSGCP', 'AzureJira', 'GitHub'],
     useCases: ['SOC2 evidenceISO controls', 'Audit prep'],
-<<<<<<< HEAD
     roi: 'Save 4060% audit prep time'
     competitors: ['DrataVanta (lite)']
     marketSize: '$3B compliance ops'
     growthRate: '22% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Save 4060% audit prep time',
-    competitors:
-        competitors: ['DrataVanta (lite)']
-    marketSize: '$3B compliance ops',
-    growthRate: '22% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Agentless collectors with export pipelines.',
     launchDate: '2025-06-01',
     customers: 11;
@@ -17080,24 +16376,12 @@ varian,
     technology: ['LLM pipelinesEmbeddings', 'Crawlers'],
     integrations: ['G2 Twitter/X', 'RedditApp Store'],
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
-<<<<<<< HEAD
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)']
     marketSize: '$2B CI tools'
     growthRate: '15% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Cut research time by 70%',
-    competitors:
-        competitors: ['CrayonKlue (lite)']
-    marketSize: '$2B CI tools',
-    growthRate: '15% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Scheduled crawlers + summarization with citations.',
     launchDate: '2025-07-01',
     customers: 18;
@@ -17189,24 +16473,12 @@ varian,
     technology: ['LLM promptsTemplates', 'Exports'],
     integrations: ['Google DriveNotion'],
     useCases: ['Campaign planningBrief standardization', 'Rapid iteration'],
-<<<<<<< HEAD
     roi: 'Reduce planning time 80%'
     competitors: ['Notion templatesAgency briefs']
     marketSize: '$1B planning tools'
     growthRate: '12% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce planning time 80%',
-    competitors:
-        competitors: ['Notion templatesAgency briefs']
-    marketSize: '$1B planning tools',
-    growthRate: '12% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Guided workflow with template library and exports.',
     launchDate: '2025-05-15',
     customers: 25;
@@ -17398,24 +16670,12 @@ varian,
     technology: ['Edge runtimeKV store', 'SDKs'],
     integrations: ['VercelCloudflare', 'Netlify'],
     useCases: ['Kill switchesExperiments', 'Progressive rollout'],
-<<<<<<< HEAD
     roi: 'Speed up releases and reduce incidents'
     competitors: ['LaunchDarkly (lite)']
     marketSize: '$2B feature flagging'
     growthRate: '16% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Speed up releases and reduce incidents',
-    competitors:
-        competitors: ['LaunchDarkly (lite)']
-    marketSize: '$2B feature flagging',
-    growthRate: '16% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Edge functions and SDK package templates.',
     launchDate: '2025-07-20',
     customers: 10;
@@ -17512,24 +16772,12 @@ varian,
     technology: ['LLMVector DB', 'Template engine'],
     integrations: ['SharePointGoogle Drive'],
     useCases: ['Playbook adherenceNegotiation prep', 'Drafting'],
-<<<<<<< HEAD
     roi: 'Reduce review cycle 3050%'
     competitors: ['Ironclad (assist)LinkSquares (assist)']
     marketSize: '$1B legal tech AI'
     growthRate: '18% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce review cycle 3050%',
-    competitors:
-        competitors: ['Ironclad (assist)LinkSquares (assist)']
-    marketSize: '$1B legal tech AI',
-    growthRate: '18% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Template packs + contract parsers.',
     launchDate: '2025-05-28',
     customers: 8;
@@ -17619,24 +16867,12 @@ varian,
     technology: ['APM APIsLLM', 'Diff engine'],
     integrations: ['PagerDutyDatadog', 'New RelicGitHub'],
     useCases: ['Incident summarizationRegression detection', 'Runbook upkeep'],
-<<<<<<< HEAD
     roi: 'Reduce MTTR and toil'
     competitors: ['FireHydrant (assist)Rootly (assist)']
     marketSize: '$5B incident mgmt'
     growthRate: '17% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce MTTR and toil',
-    competitors:
-        competitors: ['FireHydrant (assist)Rootly (assist)']
-    marketSize: '$5B incident mgmt',
-    growthRate: '17% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Event ingestors and summarization pipelines.',
     launchDate: '2025-08-05',
     customers: 7;
@@ -17836,24 +17072,12 @@ varian,
     technology: ['LLMExperiments', 'SDK'],
     integrations: ['FigmaLaunchDarkly', 'Heap'],
     useCases: ['ActivationOnboarding', 'Paywall copy'],
-<<<<<<< HEAD
     roi: 'Lift conversion 515%'
     competitors: ['Mutiny (lite)']
     marketSize: '$1B CRO tools'
     growthRate: '14% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Lift conversion 515%',
-    competitors:
-        competitors: ['Mutiny (lite)']
-    marketSize: '$1B CRO tools',
-    growthRate: '14% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Browser extension + flag hooks + PR templates.',
     launchDate: '2025-06-18',
     customers: 14;
@@ -17952,24 +17176,12 @@ varian,
     technology: ['RegistryEvals', 'Workflows'],
     integrations: ['GitHubJira', 'Slack'],
     useCases: ['Model registryRisk tracking', 'Policy compliance'],
-<<<<<<< HEAD
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)']
     marketSize: '$1 && 1.5B AI governance'
     growthRate: '21% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce policy drift and audit risk',
-    competitors:
-        competitors: ['Holistic AI (lite)']
-    marketSize: '$1 && 1.5B AI governance',
-    growthRate: '21% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Registry + eval runners + approval flows.',
     launchDate: '2025-08-15',
     customers: 5;
@@ -18504,24 +17716,12 @@ varian,
     technology: ['Registry', 'Evals', 'Workflows']
     integrations: ['GitHub', 'Jira', 'Slack']
     useCases: ['Model registry', 'Risk tracking', 'Policy compliance']
-<<<<<<< HEAD
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)'];
     marketSize: '$1.5 B AI governance'
     growthRate: '21% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce policy drift and audit risk',
-    competitors:
-        competitors: ['Holistic AI (lite)'];
-    marketSize: '$1.5 B AI governance',
-    growthRate: '21% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Registry + eval runners + approval flows.',
     launchDate: '2025-08-15',
     customers: 5;
@@ -19390,19 +18590,10 @@ varian,
     useCases: ['Cost visibility, Budget protection, Forecasting'],
     roi: 'Prevent surprise bills, 1030% cost reduction potential',
     competitors: ['Vantage, CloudZero, Anodot'],
-<<<<<<< HEAD
     marketSize: '$6B FinOps tooling'
     growthRate: '27% CAGR';
 variant: 'holographic-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$6B FinOps tooling',
-    growthRate: '27% CAGR',
-    variant: 'holographic-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'ETL + anomaly models + alerting with IaC guidance.',
     launchDate: '2025-03-09',
     customers: 11;
@@ -19777,19 +18968,10 @@ varian,
     useCases: ['GDPR/CCPA compliance, Consent analytics'],
     roi: 'Reduce legal risk while preserving conversion rates',
     competitors: ['OneTrust, CookieYes, Cookiebot'],
-<<<<<<< HEAD
     marketSize: '$4B privacy tech'
     growthRate: '22% CAGR';
 variant: 'holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$4B privacy tech',
-    growthRate: '22% CAGR',
-    variant: 'holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Hosted CMP with edge storage and region-aware rendering.',
     launchDate: '2025-03-03',
     customers: 40;
@@ -20040,19 +19222,10 @@ varian,
     useCases: ['Next.js/React upgrades, Typescript migrations, Policy refactors'],
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'],
-<<<<<<< HEAD
     marketSize: '$9B DevTools AI'
     growthRate: '24% CAGR';
 variant: 'holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$9B DevTools AI',
-    growthRate: '24% CAGR',
-    variant: 'holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'AST-driven codemods with safety rails and CI checks.',
     launchDate: '2025-02-18',
     customers: 18;
@@ -22869,19 +22042,10 @@ varian,
     useCases: ['Outbound sequencesCall notes', 'CRM hygiene'],
     roi: 'Increase replies by 23x, reduce admin time 50%',
     competitors: ['OutreachSalesloft']
-<<<<<<< HEAD
     marketSize: '$6B sales engagement'
     growthRate: '18% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    marketSize: '$6B sales engagement',
-    growthRate: '18% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Sequence engine with deliverability checks and CRM sync.',
     launchDate: '2025-07-10',
     customers: 21;
@@ -23017,24 +22181,12 @@ varian,
     technology: ['Cloud APIsNext.js', 'Queue workers'],
     integrations: ['AWSGCP', 'AzureJira', 'GitHub'],
     useCases: ['SOC2 evidenceISO controls', 'Audit prep'],
-<<<<<<< HEAD
     roi: 'Save 4060% audit prep time'
     competitors: ['DrataVanta (lite)']
     marketSize: '$3B compliance ops'
     growthRate: '22% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Save 4060% audit prep time',
-    competitors:
-        competitors: ['DrataVanta (lite)']
-    marketSize: '$3B compliance ops',
-    growthRate: '22% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Agentless collectors with export pipelines.',
     launchDate: '2025-06-01',
     customers: 11;
@@ -23159,24 +22311,12 @@ varian,
     technology: ['LLM pipelinesEmbeddings', 'Crawlers'],
     integrations: ['G2 Twitter/X', 'RedditApp Store'],
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
-<<<<<<< HEAD
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)']
     marketSize: '$2B CI tools'
     growthRate: '15% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Cut research time by 70%',
-    competitors:
-        competitors: ['CrayonKlue (lite)']
-    marketSize: '$2B CI tools',
-    growthRate: '15% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Scheduled crawlers + summarization with citations.',
     launchDate: '2025-07-01',
     customers: 18;
@@ -23301,24 +22441,12 @@ varian,
     technology: ['LLM promptsTemplates', 'Exports'],
     integrations: ['Google DriveNotion'],
     useCases: ['Campaign planningBrief standardization', 'Rapid iteration'],
-<<<<<<< HEAD
     roi: 'Reduce planning time 80%'
     competitors: ['Notion templatesAgency briefs']
     marketSize: '$1B planning tools'
     growthRate: '12% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce planning time 80%',
-    competitors:
-        competitors: ['Notion templatesAgency briefs']
-    marketSize: '$1B planning tools',
-    growthRate: '12% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Guided workflow with template library and exports.',
     launchDate: '2025-05-15',
     customers: 25;
@@ -23573,24 +22701,12 @@ varian,
     technology: ['Edge runtimeKV store', 'SDKs'],
     integrations: ['VercelCloudflare', 'Netlify'],
     useCases: ['Kill switchesExperiments', 'Progressive rollout'],
-<<<<<<< HEAD
     roi: 'Speed up releases and reduce incidents'
     competitors: ['LaunchDarkly (lite)']
     marketSize: '$2B feature flagging'
     growthRate: '16% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Speed up releases and reduce incidents',
-    competitors:
-        competitors: ['LaunchDarkly (lite)']
-    marketSize: '$2B feature flagging',
-    growthRate: '16% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Edge functions and SDK package templates.',
     launchDate: '2025-07-20',
     customers: 10;
@@ -23715,24 +22831,12 @@ varian,
     technology: ['LLMVector DB', 'Template engine'],
     integrations: ['SharePointGoogle Drive'],
     useCases: ['Playbook adherenceNegotiation prep', 'Drafting'],
-<<<<<<< HEAD
     roi: 'Reduce review cycle 3050%'
     competitors: ['Ironclad (assist)LinkSquares (assist)']
     marketSize: '$1B legal tech AI'
     growthRate: '18% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce review cycle 3050%',
-    competitors:
-        competitors: ['Ironclad (assist)LinkSquares (assist)']
-    marketSize: '$1B legal tech AI',
-    growthRate: '18% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Template packs + contract parsers.',
     launchDate: '2025-05-28',
     customers: 8;
@@ -23895,24 +22999,12 @@ varian,
     technology: ['APM APIsLLM', 'Diff engine'],
     integrations: ['PagerDutyDatadog', 'New RelicGitHub'],
     useCases: ['Incident summarizationRegression detection', 'Runbook upkeep'],
-<<<<<<< HEAD
     roi: 'Reduce MTTR and toil'
     competitors: ['FireHydrant (assist)Rootly (assist)']
     marketSize: '$5B incident mgmt'
     growthRate: '17% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce MTTR and toil',
-    competitors:
-        competitors: ['FireHydrant (assist)Rootly (assist)']
-    marketSize: '$5B incident mgmt',
-    growthRate: '17% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Event ingestors and summarization pipelines.',
     launchDate: '2025-08-05',
     customers: 7;
@@ -24022,15 +23114,8 @@ variant: 'holographic-matrix',
     rating: 4.6;
     reviews: 6;
     reviews: 6;
-<<<<<<< HEAD
     reviews: 6},
-    id: 'ai-ux-copy-optimizer'
-=======
-    reviews: 6;
-  },
-    id: 'ai-ux-copy-optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'AI UX Copy Optimizer',
+    id: 'ai-ux-copy-optimizer'    name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
     price: '$59',
     period: '/month',
@@ -24158,24 +23243,12 @@ varian,
     technology: ['LLMExperiments', 'SDK'],
     integrations: ['FigmaLaunchDarkly', 'Heap'],
     useCases: ['ActivationOnboarding', 'Paywall copy'],
-<<<<<<< HEAD
     roi: 'Lift conversion 515%'
     competitors: ['Mutiny (lite)']
     marketSize: '$1B CRO tools'
     growthRate: '14% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Lift conversion 515%',
-    competitors:
-        competitors: ['Mutiny (lite)']
-    marketSize: '$1B CRO tools',
-    growthRate: '14% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Browser extension + flag hooks + PR templates.',
     launchDate: '2025-06-18',
     customers: 14;
@@ -24303,24 +23376,12 @@ varian,
     technology: ['RegistryEvals', 'Workflows'],
     integrations: ['GitHubJira', 'Slack'],
     useCases: ['Model registryRisk tracking', 'Policy compliance'],
-<<<<<<< HEAD
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)']
     marketSize: '$1.5B AI governance'
     growthRate: '21% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce policy drift and audit risk',
-    competitors:
-        competitors: ['Holistic AI (lite)']
-    marketSize: '$1.5B AI governance',
-    growthRate: '21% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Registry + eval runners + approval flows.',
     launchDate: '2025-08-15',
     customers: 5;

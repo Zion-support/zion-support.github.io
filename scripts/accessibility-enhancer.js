@@ -42,9 +42,9 @@ const skipLink = document.createElement('a');
             transition: top 0.3 s;
           \`;
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px'});
+            this.style.top = '6 px'})
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px'});
+            this.style.top = '-40 px'})
           document.body.insertBefore(skipLink, document.body.firstChild)}
         
         // High contrast mode toggle;
@@ -67,7 +67,7 @@ const toggle = document.createElement('button');
           \`;
           toggle.addEventListener('click', function() {
             document.body.classList.toggle('high-contrast');
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'});
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'})
           document.body.appendChild(toggle)}
         
         // Font size controls;
@@ -92,19 +92,16 @@ const increaseBtn = document.createElement('button');
           increaseBtn.textContent = 'A+';
           increaseBtn.addEventListener('click', () => {;
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});
-          ;
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px'})
 const decreaseBtn = document.createElement('button');
           decreaseBtn.textContent = 'A-';
           decreaseBtn.addEventListener('click', () => {;
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});
-          ;
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'})
 const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px'});
-          
+            document.documentElement.style.fontSize = '16 px'})
           controls.appendChild(increaseBtn);
           controls.appendChild(decreaseBtn);
           controls.appendChild(resetBtn);
@@ -153,16 +150,14 @@ const icon = button.querySelector('svg, i');
             if (icon) {;
 const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
               button.setAttribute('aria-label', \`\${iconName} button\`)}
-          });
-          
+          })
           // Add role="button" to clickable divs;
 const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
               div.setAttribute('role', 'button');
               div.setAttribute('tabindex', '0')}
-          });
-          
+          })
           // Add aria-expanded to collapsible elements;
 const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
           collapsibles.forEach(element => {
@@ -202,8 +197,7 @@ const originalPushState = history.pushState;
           addFontSizeControls();
           enhanceFocusManagement();
           addAriaLabels();
-          addLiveRegion()});
-        
+          addLiveRegion()})
         // Add high contrast styles;
 const highContrastStyles = \`
           .high-contrast {
@@ -297,27 +291,17 @@ const accessibilityReport = {
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-report.json'), 
-    JSON.stringify(accessibilityReport, null, 2)
-  );
+    JSON.stringify(accessibilityReport, null, 2))
   // console.log removed for production
 }
 
 // 2. Generate accessibility checklist;
 function generateAccessibilityChecklist() {
-<<<<<<< HEAD
   // console.log removed for production
 ;
 const checklist = {
     title: "Zion Tech Group Accessibility Checklist"
-    version: "1.0.0"
-=======
-  console.log('✅ Generating accessibility checklist...');
-  
-  const checklist = {
-    title: 'Zion Tech Group Accessibility Checklist',
-    version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    lastUpdated: new Date().toISOString()
+    version: "1.0.0"    lastUpdated: new Date().toISOString()
     categories: [,
       {,
         name: "Visual Design",
@@ -369,8 +353,7 @@ const checklist = {
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-checklist.json'), 
-    JSON.stringify(checklist, null, 2)
-  );
+    JSON.stringify(checklist, null, 2))
   // console.log removed for production
 }
 
@@ -413,27 +396,17 @@ const improvements = [
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-improvements.json'), 
-    JSON.stringify(improvements, null, 2)
-  );
+    JSON.stringify(improvements, null, 2))
   // console.log removed for production
 }
 
 // 4. Generate accessibility testing guide;
 function generateAccessibilityTestingGuide() {
-<<<<<<< HEAD
   // console.log removed for production
 ;
 const testingGuide = {
     title: "Accessibility Testing Guide"
-    version: "1.0.0"
-=======
-  console.log('🧪 Generating accessibility testing guide...');
-  
-  const testingGuide = {
-    title: 'Accessibility Testing Guide',
-    version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    lastUpdated: new Date().toISOString()
+    version: "1.0.0"    lastUpdated: new Date().toISOString()
     tools: [,
       {,
         name: "axe-core",
@@ -478,12 +451,16 @@ This website is partially conformant with WCAG 2.1 level AA. Partially conforman
 // Run all accessibility enhancements;
 async function runAccessibilityEnhancements() {
   try {
+
+
     generateAccessibilityReport();
     generateAccessibilityChecklist();
     generateAccessibilityImprovements();
     generateAccessibilityTestingGuide();
     
     // console.log removed for production
+
+
 } catch (error) {
     // console.error removed for production
 process.exit(1)}

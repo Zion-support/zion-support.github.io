@@ -41,8 +41,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             Comprehensive AI solutions designed for enterprise-scale deployments and large;)
             organizations.)
           </p>)
-        </div>)
-)
+        </div>))
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
           {solutions.map((solution, index) => (
             <div;

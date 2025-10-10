@@ -3416,8 +3416,6 @@ $4}
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
 return (
-
-  return (
     <div>Coming Soon</div>
 );
 }
@@ -10311,8 +10309,7 @@ const categories = [
     {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Game Development').length }
   ];
-  return (<div>Coming Soon</div>)
-  )
+  return (<div>Coming Soon</div>))
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"

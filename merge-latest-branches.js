@@ -3,6 +3,8 @@ import { execSync } from 'child_process';
 
 // console.log removed for production
 try {
+
+
   // List of recent branches to check and potentially merge;
   const branchesToCheck = [
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
@@ -24,8 +26,7 @@ let mergedCount = 0;
     try {
       // console.log removed for production
 // Check if branch has unique commits;
-      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
-      
+      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' })
       if (!uniqueCommits.trim()) {
         // console.log removed for production
 skippedCount++;
@@ -33,18 +34,22 @@ skippedCount++;
 
       // console.log removed for production
 // console.log removed for production
-.slice(0, 3).join('\n'));
-
+.slice(0, 3).join('\n'))
       // Try to merge the branch;
       // console.log removed for production
-execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });
-      
+execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' })
       // console.log removed for production
-mergedCount++} catch (error) {
+mergedCount++
+
+} catch (error) {
       // console.log removed for production
 // Try to abort the merge if it failed;
       try {
-        execSync('git merge --abort', { stdio: 'pipe' })} catch (abortError) {
+
+
+        execSync('git merge --abort', { stdio: 'pipe' })
+
+} catch (abortError) {
         // Ignore abort errors}
     }
   }
@@ -54,8 +59,7 @@ mergedCount++} catch (error) {
 // console.log removed for production
 // Push all changes;
   // console.log removed for production
-execSync('git push origin main', { stdio: 'inherit' });
-
+execSync('git push origin main', { stdio: 'inherit' })
   // console.log removed for production
 } catch (error) {
   // console.error removed for production

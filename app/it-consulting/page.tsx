@@ -72,25 +72,13 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
 const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
 const [searchTerm, setSearchTerm] = useState('');
 ;
-const itServices = [
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon]
-    } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    // IT Infrastructure Services
+const itServices = [    // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
@@ -409,13 +397,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
-=======
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);  ];
 ;
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
@@ -434,7 +416,7 @@ const categories = [
 const filteredServices = itServices.filter(service => {;
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch]
     });;
 
@@ -499,7 +481,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   <option key={category.id} value={category.id}></option>
                     {category.name}
                   </option>
-                ));
+                ))
               </select>
             </div>
           </div>
@@ -518,8 +500,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               >
                 {category.name}
               </button>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -551,7 +532,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ));
+                      ))
                     </ul>
                   </div>
                   
@@ -563,7 +544,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ));
+                      ))
                     </ul>
                   </div>
                 </div>
@@ -607,8 +588,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </a>
                 </div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -641,11 +621,4 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default ITConsultingPage;
+  );)export default ITConsultingPage;

@@ -47,7 +47,7 @@ const EnhancedPerformanceMonitor: React.FC;
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null});
+    ttfb: null})
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement;
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -64,9 +64,9 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   p: entry.startTime }))}
       }
-    });
+    })
     fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] })
     // Largest Contentful Paint (LCP);
 const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -74,9 +74,9 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: lastEntry.startTime }))});
+  p: lastEntry.startTime }))})
     lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
     // First Input Delay (FID);
 const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -86,9 +86,9 @@ const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 }
         setMetrics(prev => ({/* TODO: Fix JSX expression */})
   d: entry.processingStart - entry.startTime }))}
-    });
+    })
     fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] })
     // Cumulative Layout Shift (CLS);
 const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -103,9 +103,9 @@ const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: clsValue }))}
       }
-    });
+    })
     clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
     // Time to First Byte (TTFB);
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {/* TODO: Fix JSX expression */}
@@ -126,9 +126,9 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   p: entry.startTime }))}
       }
-    });
+    })
     fmpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] })
     // Total Blocking Time (TBT) - approximation;
 const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -143,9 +143,9 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT}
       }
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  t: totalBlockingTime }))});
+  t: totalBlockingTime }))})
     tbtObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['longtask'] });
+  s: ['longtask'] })
     // Speed Index (SI) - approximation using LCP;
 const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -159,9 +159,9 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   i: entry.startTime }))}
       }
-    });
+    })
     siObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
     return () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -195,7 +195,7 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
 }
       resourceMetrics.totalSize += resource.transferSize || 0;
       if (resource.duration > 1000) resourceMetrics.slowResources++;
-      if (resource.transferSize === 0) resourceMetrics.cachedResources++});
+      if (resource.transferSize === 0) resourceMetrics.cachedResources++})
     return resourceMetrics}, []);
   // Memory usage monitoring;
 const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -306,11 +306,14 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   fcp: metrics.fcp,
           lcp: metrics.lcp,
           fid: metrics.fid,
-          cls: metrics.cls}})});
+          cls: metrics.cls}})})
+    try {
 
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect()} catch (error) {/* TODO: Fix JSX expression */}
+/* TODO: Fix JSX expression */}
+  s: ['paint'] })
+      return () => observer.disconnect()
+
+} catch (error) {/* TODO: Fix JSX expression */}
     }
     // Callback for custom handling;
     onMetricsUpdate?.(metrics);
@@ -348,9 +351,7 @@ Report:', report)}, [metrics, enableReporting, calculatePerformanceScore, analyz
     return () => window.removeEventListener('keydown', handleKeyPress)}, []);
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics);
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>"
       <div className="flex items-center justify-between mb-2"></div>"
         <h3 className="font-bold text-cyan-400">Performance Monitor</h3>

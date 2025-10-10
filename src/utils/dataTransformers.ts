@@ -176,8 +176,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   O: Add content}
 }
       result[key] = obj[key]}
-  }
-  )
+  })
   return result}
 /**
  * Omit specific keys from an object;
@@ -197,7 +196,7 @@ export function omit;
   O: Add content}
 }
     delete result[key];)
-  });
+  })
   return result as Omit;
           <T, K>}
 /**
@@ -244,8 +243,7 @@ export function unique<T>(array: T[], key?: keyof T): T[] {// TODO: Add content}
 }
       return false}
     seen.add(value)
-    return true}
-  )
+    return true})
 }
 /**
  * Sort array by multiple keys;
@@ -289,8 +287,7 @@ const aComp =
       if (aComp;)
           < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1}
-    return 0}
-  )
+    return 0})
 }
 /**
  * Chunk array into smaller arrays;
@@ -306,8 +303,7 @@ export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content}
   O: Add content}
 }
     chunks.push(array.slice(i, i + size))}
-    chunks.push(array.slice(i, i + size))
-  }
+    chunks.push(array.slice(i, i + size))}
   return chunks}
 /**
  * Zip multiple arrays together;
@@ -317,7 +313,7 @@ export function zip;
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  const length = Math.max(...arrays.map(arr => arr.length));
+  const length = Math.max(...arrays.map(arr => arr.length))
   const,
   result: T[][] = [];
   for (let i = 0; i;)
@@ -325,8 +321,7 @@ export function zip;
   O: Add content}
 }
     result.push(arrays.map(arr => arr[i]))}
-    result.push(arrays.map(arr => arr[i]))
-  }
+    result.push(arrays.map(arr => arr[i]))}
   return result}
 /**
  * Format bytes to human readable string;

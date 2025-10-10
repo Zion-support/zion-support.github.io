@@ -23,7 +23,9 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 
 // Remove unused imports from a file;
 function removeUnusedImports(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
@@ -42,8 +44,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     // Get unused variables using ESLint;
     try {/* TODO: Fix JSX expression */}
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
-      });
-      ;
+      })
 const lintResults = JSON.parse(result);
       if (lintResults.length === 0) return;
       ;
@@ -62,23 +63,20 @@ const match = msg.message.match(/'([^']+)'/);
 // Remove unused imports from import statements;
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       content = content.replace(importRegex, (match, imports) => {;
-const importList = imports.split(',').map(imp => imp.trim());
+const importList = imports.split(',').map(imp => imp.trim())
         const usedImports = importList.filter(imp => {);
 const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-          return !unusedVars.includes(cleanImp)});
-        
+          return !unusedVars.includes(cleanImp)})
         if (usedImports.length === 0) {
           return ''; // Remove entire import if no imports are used;
       // Remove unused imports from import statements;";
 const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       content = content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
-        });
-        
+        })
         if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
         }
         
-        return match.replace(imports, usedImports.join(', '))});
-      
+        return match.replace(imports, usedImports.join(', '))})
       // Remove entire import lines that are now empty;
       content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '');
       
@@ -90,13 +88,14 @@ const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       // Remove unused variable declarations;
       unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`;
 const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
-        content = content.replace(varRegex, '')});
-      
+        content = content.replace(varRegex, '')})
       if (content !== originalContent) {/* TODO: Fix JSX expression */}`
         // console.log removed for production
 }
       
-    } catch (error) {
+    
+
+} catch (error) {
       // Skip files that can't be linted;
       return} catch (error) {/* TODO: Fix JSX expression */}
     }
@@ -116,7 +115,7 @@ const batchSize = 10;
 for (let i = 0; i < files.length; i += batchSize) {;
 const batch = files.slice(i, i + batchSize);
   batch.forEach(file => {)
-    removeUnusedImports(file)});
+    removeUnusedImports(file)})
 for (let i = 0; i < files.length; i += batchSize) {/* TODO: Fix JSX expression */}
   });`
   // console.log removed for production

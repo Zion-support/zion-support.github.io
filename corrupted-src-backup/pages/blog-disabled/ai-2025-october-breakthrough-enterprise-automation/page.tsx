@@ -1,8 +1,6 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 const EnterpriseAutomation202, 5 = () => {
-return (
- 
-  return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
+return (:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
     <React.Fragment>
       <Helm, e, t>
         <title>

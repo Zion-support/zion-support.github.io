@@ -458,7 +458,9 @@ clas,
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: checkLintStatus() {try { this.log(#!/usr/bin/"env": node;' import fs from'fs'';' import path from'path''}' import { execSync} spawn } from'child_process'';' import chokidar from'chokidar'';' import { fileURLToPath } from'url'';' import { dirname } from'path''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'';' import chokidar from'chokidar'') // __dirname removed
+  c: checkLintStatus() {try {
+
+ this.log(#!/usr/bin/"env": node;' import fs from'fs'';' import path from'path''}' import { execSync} spawn } from'child_process'';' import chokidar from'chokidar'';' import { fileURLToPath } from'url'';' import { dirname } from'path''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'';' import chokidar from'chokidar'') // __dirname removed
 "class": LintMonitor {/* TODO: Fix JSX expression */}
   v: node; import fs from'fs; import path from';path} import { execSync}spawn } from 'child_process; import chokidar from';chokidar; import { fileURLToPath } from 'url; import { dirname } from';path; // __dirname removed
 clas,
@@ -479,7 +481,9 @@ clas,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
   s: 'true'}error,
-  s: '0' } } catch (error) {/* TODO: Fix JSX expression */}`
+  s: '0' } 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
   k: = new Date()} this.log(`❌ Lin)`
   t: check failed - ${this.errorCount}} errors found`); retur,
   n: {/* TODO: Fix JSX expression */}

@@ -98,4 +98,4 @@ const ext = assetInfo.name?.split('.').pop();
   css: {
     devSourcemap: true
   }
-});
+})

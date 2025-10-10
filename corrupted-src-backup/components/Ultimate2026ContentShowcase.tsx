@@ -371,8 +371,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">";
                 {/* Ic, o, n & Badg, e, s */}</div>
                 <div, className="flex, item, s-start, justif, y-between, m, b-8">";</div>
-              {/* TODO: Fix JSX expression */})
-              )}
+              {/* TODO: Fix JSX expression */}))}
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-ho, v, e,"
   r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l"></d, i, v>""

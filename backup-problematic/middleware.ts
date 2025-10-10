@@ -52,8 +52,7 @@ const _response = NextResponse.next();
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value)});
-
+    response.headers.set(key, value)})
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
@@ -63,15 +62,14 @@ const _response = NextResponse.next();
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 204, headers: response.headers });
+    return new NextResponse(null, { status: 204, headers: response.headers })
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
   };
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  });
-
+  })
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
   }

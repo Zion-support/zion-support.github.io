@@ -103,8 +103,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
-  )});
-
+  )})
 ServiceCard.displayName = 'ServiceCard';
 
 export default ServiceCard;"`

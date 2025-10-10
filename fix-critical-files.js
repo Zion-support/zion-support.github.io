@@ -60,8 +60,12 @@ export default function RootLayout({
 
   for (const file of criticalFiles) {
     try {
+
+
       fs.writeFileSync(file.path, file.content, 'utf8');
       // console.log removed for production
+
+
 } catch (error) {
       // console.error removed for production
 }
@@ -85,6 +89,8 @@ const problematicFiles = [
 
   for (const filePath of problematicFiles) {
     try {
+
+
       if (fs.existsSync(filePath)) {
         // Create minimal valid content for each file type;
 let content = '';
@@ -96,7 +102,9 @@ let content = '';
         fs.writeFileSync(filePath, content, 'utf8');
         // console.log removed for production
 }
-    } catch (error) {
+    
+
+} catch (error) {
       // console.error removed for production
 }
   }

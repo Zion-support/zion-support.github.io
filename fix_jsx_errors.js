@@ -3,6 +3,8 @@ import fs from 'fs';
 ;
 function fixJSXErrors(filePath) {
   try {
+
+
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>;
 const patterns = [
       {
@@ -44,11 +46,12 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
 
     patterns.forEach(fix => {/* TODO: Fix JSX expression */}
       })
-    });
-
+    })
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

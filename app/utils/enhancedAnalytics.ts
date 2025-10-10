@@ -198,9 +198,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
-      });
+      })
       window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
   private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */}
@@ -212,7 +212,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     // Track initialization;
     this.trackEvent({/* TODO: Fix JSX expression */}
       })
-    });
+    })
   }
   public setUserProperties(propertie)
   s: UserProperties): void {/* TODO: Fix JSX expression */}
@@ -237,7 +237,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     ) {/* TODO: Fix JSX expression */}
         }
       ).gtag('event', event.action, {/* TODO: Fix JSX expression */})
-      });
+      })
     }
   }
   public trackPageView(pagePat)
@@ -278,7 +278,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         ...context}
   public trackUserInteraction(actio)
   n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */}
-    });
+    })
   }
   public trackError(erro)
   r: Error, context?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
@@ -424,7 +424,7 @@ export default analytics;
     value?: number,
     metadata?: Record<string, unknown></string>)
   ): void {/* TODO: Fix JSX expression */}
-    });
+    })
   }
   private flush(): void {/* TODO: Fix JSX expression */}
     }

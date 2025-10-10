@@ -30,7 +30,7 @@ const script = document.createElement('script');
         window.dataLayer.push(args)}
       window.gtag = gtag;
 
-      gtag('js', new Date());
+      gtag('js', new Date())
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href})}

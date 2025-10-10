@@ -19,7 +19,7 @@ const [formData, setFormData] = useState({
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
+  })
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -44,8 +44,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setIsLoading(true);
     
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
@@ -98,7 +97,7 @@ const benefits = [
   s: false,
     subscribeNewslette,
   r: false;)
-  });
+  })
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -126,7 +125,7 @@ const handleInputChange = (e: React.ChangeEvent;)
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
     // Simulate signup process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
@@ -150,8 +149,6 @@ icon: Award,
       description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {
 return (
-
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -355,7 +352,6 @@ Confirm Password;
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                 ))}
-
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
                   What You Get:

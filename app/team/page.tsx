@@ -38,12 +38,5 @@ const TeamPage: React.FC = () => {
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default TeamPage;
+  );)export default TeamPage;
 }

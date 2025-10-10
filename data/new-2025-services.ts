@@ -115,16 +115,9 @@ varian,
     category: 'Developer Tools',
     realService: true;
     technology: ['Node && Node.jsCRONCloud Functions'];
-<<<<<<< HEAD
     market_size: '$3.5 B+ AI safety & governance'
     growth_rate: '200% annual growth';
-variant: 'holographic - matrix',
-=======
-    market_size: '$3.5 B+ AI safety & governance',
-    growth_rate: '200% annual growth',
-    variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Inline middleware, policy DSL, exporters and dashboards.',
     launch_date: '2025 - 03 - 10',
@@ -161,30 +154,16 @@ variant: 'holographic - matrix',
         competitors: ['Temporal (schedules)AirflowCloud Scheduler']
     rating: 4 && 4.7;
     reviews: 19;
-<<<<<<< HEAD
     market_size: '$8 B workflow automation'
     growth_rate: '22% CAGR';
-variant: 'quantum - matrix',
-=======
-    market_size: '$8 B workflow automation',
-    growth_rate: '22% CAGR',
-    variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Config registry, scheduler runners, and audit dashboard.',
     launch_date: '2025 - 02 - 20',
     customers: 40;
     rating: 4.7;
-<<<<<<< HEAD
     reviews: 19}
-    id: 'gdpr - dsar - automation - pro'
-=======
-    reviews: 19;
-  }
-    id: 'gdpr - dsar - automation - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'GDPR / CCPA DSAR Automation Pro',
+    id: 'gdpr - dsar - automation - pro'    name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
     price: '$199',
     link: 'https://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-automation-pro',
@@ -222,16 +201,9 @@ variant: 'quantum - matrix',
         competitors: ['TranscendOneTrustDidomi']
     rating: 4 && 4.7;
     reviews: 13;
-<<<<<<< HEAD
     market_size: '$4 B privacy tech'
     growth_rate: '28% CAGR';
-variant: 'quantum - cyberpunk',
-=======
-    market_size: '$4 B privacy tech',
-    growth_rate: '28% CAGR',
-    variant: 'quantum - cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - cyberpunk',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Workflow engine, connectors, secure storage and audit logs.',
     launch_date: '2025 - 01 - 28',
@@ -267,17 +239,9 @@ variant: 'quantum - cyberpunk',
     competitors:
         competitors: ['StoplightOpticRedocly'],
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 10}
     id: 'cloud-cost-finops-copilot'
-    name: 'Cloud Cost FinOps Copilot'
-=======
-    reviews: 10;
-  }
-    id: 'cloud-cost-finops-copilot',
-    name: 'Cloud Cost FinOps Copilot',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    market_size: '$7B API economy tools',
+    name: 'Cloud Cost FinOps Copilot'    market_size: '$7B API economy tools',
     growth_rate: '20% CAGR',;
 variant: 'ai - futuristic',
     contact_info: contact;
@@ -322,17 +286,9 @@ variant: 'ai - futuristic',
     competitors:
         competitors: ['CloudHealthVantageCloudZero'],
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 14}
     id: 'email-deliverability-warmup-monitor'
-    name: 'Email Deliverability Warmup & Monitor'
-=======
-    reviews: 14;
-  }
-    id: 'email-deliverability-warmup-monitor',
-    name: 'Email Deliverability Warmup & Monitor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    market_size: '$6B cloud cost mgmt',
+    name: 'Email Deliverability Warmup & Monitor'    market_size: '$6B cloud cost mgmt',
     growth_rate: '25% CAGR',;
 variant: 'quantum - holographic',
     contact_info: contact;
@@ -381,16 +337,9 @@ variant: 'quantum - holographic',
         competitors: ['MailreachWarmup InboxLemlist']
     rating: 4 && 4.6;
     reviews: 12;
-<<<<<<< HEAD
     market_size: '$2 B email tooling'
     growth_rate: '18% CAGR';
-variant: 'ai - futuristic',
-=======
-    market_size: '$2 B email tooling',
-    growth_rate: '18% CAGR',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'ai - futuristic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Mailbox network, test harness and alerting.',
     launch_date: '2025 - 03 - 02',
@@ -431,24 +380,12 @@ variant: 'ai - futuristic',
     technology: ['Next.jsPineconeWeaviatePGVector'];
     integrations: ['S3 GCSSlack'],
     use_cases: ['Semantic search_knowledge bases_retrieval augmentation'],
-<<<<<<< HEAD
     roi: 'Ship search MVPs in days, not months'
     competitors: ['Pinecone starters_weaviate templates'];
     market_size: '$5 B vector DBs'
     growth_rate: '40% CAGR';
 variant: 'quantum - holographic'
-    contact_info: contact;
-=======
-    roi: 'Ship search MVPs in days, not months',
-    competitors:
-        competitors: ['Pinecone starters_weaviate templates'];
-    market_size: '$5 B vector DBs',
-    growth_rate: '40% CAGR',
-    variant: 'quantum - holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Scaffold generators and eval harness.',
     launch_date: '2025 - 02 - 12',
     customers: 31;
@@ -552,16 +489,9 @@ variant: 'quantum - cyberpunk',
         competitors: ['Nobl9Datadog SLO']
     rating: 4 && 4.6;
     reviews: 9;
-<<<<<<< HEAD
     market_size: '$15 B observability'
     growth_rate: '19% CAGR';
-variant: 'quantum - matrix',
-=======
-    market_size: '$15 B observability',
-    growth_rate: '19% CAGR',
-    variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'SLO engine, alerting and reports.',
     launch_date: '2025 - 02 - 18',
@@ -621,16 +551,9 @@ variant: 'quantum - matrix',
     category: 'Enterprise IT',
     realService: true;
     technology: ['Node && Node.jsNext.jsIdP SDKs'];
-<<<<<<< HEAD
     market_size: '$9 B personalization'
     growth_rate: '21% CAGR';
-variant: 'ai - futuristic',
-=======
-    market_size: '$9 B personalization',
-    growth_rate: '21% CAGR',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'ai - futuristic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Audience engine, variant manager and edge runtime.',
     launch_date: '2025 - 02 - 25',
@@ -662,24 +585,12 @@ variant: 'ai - futuristic',
     technology: ['Node.js_next.jsIdP SDKs'];
     integrations: ['OktaAuth0 WorkOS'];
     use_cases: ['Close enterprise deals_reduce integration time'];
-<<<<<<< HEAD
     roi: 'Shorten sales cycles by 2040%'
     competitors: ['WorkOSAuth0 blueprints'];
     market_size: '$12 B identity'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    roi: 'Shorten sales cycles by 2040%',
-    competitors:
-        competitors: ['WorkOSAuth0 blueprints'];
-    market_size: '$12 B identity',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Reference implementations and test harnesses.',
     launch_date: '2025 - 01 - 30',
     customers: 19;
@@ -712,24 +623,12 @@ variant: 'holographic - matrix'
     technology: ['PostgreSQLPatroniPgBouncer'];
     integrations: ['GrafanaPrometheusPagerDuty'];
     use_cases: ['HA databases_disaster recovery_performance tuning'];
-<<<<<<< HEAD
     roi: 'Reduce downtime risk and improve throughput by 2040%'
     competitors: ['Crunchy DataAiven'];
     market_size: '$10 B managed DBs'
     growth_rate: '24% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    roi: 'Reduce downtime risk and improve throughput by 2040%',
-    competitors:
-        competitors: ['Crunchy DataAiven'];
-    market_size: '$10 B managed DBs',
-    growth_rate: '24% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'IaC blueprints and managed ops playbooks.',
     launch_date: '2025 - 03 - 04',
     customers: 8;
@@ -790,16 +689,9 @@ variant: 'quantum - matrix'
         rating: 4 && 4.7;
     reviews: 21;
     competitors: ['SmartleadReply.io_apollo.io'];
-<<<<<<< HEAD
     market_size: '$5 B sales tech'
     growth_rate: '26% CAGR';
-variant: 'ai - futuristic',
-=======
-    market_size: '$5 B sales tech',
-    growth_rate: '26% CAGR',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'ai - futuristic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Sequence engine, inbox rotation and safety checks.',
     launch_date: '2025 - 02 - 16',
@@ -836,16 +728,9 @@ variant: 'ai - futuristic',
         competitors: ['AxoniusLansweeper']
     rating: 4 && 4.5;
     reviews: 6;
-<<<<<<< HEAD
     market_size: '$7 B ITAM'
     growth_rate: '17% CAGR';
-variant: 'quantum - holographic',
-=======
-    market_size: '$7 B ITAM',
-    growth_rate: '17% CAGR',
-    variant: 'quantum - holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - holographic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Lightweight agents, collectors and API.',
     launch_date: '2025 - 01 - 22',
@@ -894,7 +779,6 @@ variant: 'quantum - holographic',
     ];
     popular: true;
     icon: '';
-<<<<<<< HEAD
     color: 'from-purple-600 to-fuchsia-700'
     textColor: 'text-purple-300'
     link: 'https://ziontechgroup && ziontechgroup.com/services/llm-finetune-ops-manager'
@@ -904,21 +788,7 @@ variant: 'quantum - holographic',
     setupTime: '2 days'
     market_size: '$3 B feature mgmt'
     growth_rate: '24% CAGR';
-variant: 'quantum - matrix',
-=======
-    color: 'from-purple-600 to-fuchsia-700',
-    textColor: 'text-purple-300',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/llm-finetune-ops-manager',
-    marketPosition: 'Brings product rigor to fine-tuning with guardrails and metrics.',
-    targetAudience: 'AI product and research teams',
-    trialDays:
-        trialDays: 14;
-    setupTime: '2 days',
-    market_size: '$3 B feature mgmt',
-    growth_rate: '24% CAGR',
-    variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'quantum - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Rule engine, SDKs, metrics pipeline and UI.',
     launch_date: '2025 - 03 - 14',
@@ -973,18 +843,10 @@ variant: 'quantum - matrix',
     marketPosition: 'Opinionated budgets and PRs, not just charts.',
     targetAudience: 'Frontend and platform teams',
     trialDays: 14;
-<<<<<<< HEAD
     setupTime: '1 day'
     market_size: '$4 B model ops'
     growth_rate: '35% CAGR';
-variant: 'holographic - matrix',
-=======
-    setupTime: '1 day',
-    market_size: '$4 B model ops',
-    growth_rate: '35% CAGR',
-    variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'holographic - matrix',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Run tracker, registry and eval pipelines.',
     launch_date: '2025 - 03 - 13',
@@ -1019,17 +881,9 @@ variant: 'holographic - matrix',
     competitors:
         competitors: ['SpeedCurveCalibre'],
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 5}
     id: 'ai-governance-registry'
-    name: 'AI Governance Registry'
-=======
-    reviews: 5;
-  }
-    id: 'ai-governance-registry',
-    name: 'AI Governance Registry',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    market_size: '$2B web perf',
+    name: 'AI Governance Registry'    market_size: '$2B web perf',
     growth_rate: '16% CAGR',;
 variant: 'quantum - holographic',
     contact_info: contact;
@@ -1078,16 +932,9 @@ variant: 'quantum - holographic',
 ];
     realImplementation: true;
     implementationDetails:
-<<<<<<< HEAD
     market_size: '$3 B AI governance'
     growth_rate: '30% CAGR';
-variant: 'ai - futuristic',
-=======
-    market_size: '$3 B AI governance',
-    growth_rate: '30% CAGR',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: contact;
+variant: 'ai - futuristic',    contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registry, policies and approval workflows.',
     launch_date: '2025 - 03 - 07',
@@ -2795,34 +2642,18 @@ varian,
     use_cases: ['Scheduled syncs', 'Data pipelines', 'Maintenance tasks'],
     roi: 'Cut failed schedules by 90% with automated retries and DLQ',
     competitors: ['Temporal (schedules)', 'Airflow', 'Cloud Scheduler'],
-<<<<<<< HEAD
     market_size: '$8B workflow automation'
     growth_rate: '22% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$8B workflow automation',
-    growth_rate: '22% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Config registry, scheduler runners, and audit dashboard.',
     launch_date: '2025 - 02 - 20',
     customers:
         customers: 40;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 19},
-    id: 'gdpr - dsar - automation - pro'
-=======
-    reviews: 19;
-  },
-    id: 'gdpr - dsar - automation - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'GDPR / CCPA DSAR Automation Pro',
+    id: 'gdpr - dsar - automation - pro'    name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
     price: '$199',
     period: '/month',
@@ -2919,34 +2750,18 @@ varian,
     use_cases: ['Right to access', 'Right to erase', 'Compliance evidence'],
     roi: 'Reduce DSAR handling time by 80%',
     competitors: ['Transcend', 'OneTrust', 'Didomi'],
-<<<<<<< HEAD
     market_size: '$4B privacy tech'
     growth_rate: '28% CAGR';
 variant: 'quantum - cyberpunk'
-    contact_info: contact;
-=======
-    market_size: '$4B privacy tech',
-    growth_rate: '28% CAGR',
-    variant: 'quantum - cyberpunk',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Workflow engine, connectors, secure storage and audit logs.',
     launch_date: '2025 - 01 - 28',
     customers:
         customers: 18;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 13},
-    id: 'api - contract - testing - hub'
-=======
-    reviews: 13;
-  },
-    id: 'api - contract - testing - hub',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'API Contract Testing Hub',
+    id: 'api - contract - testing - hub'    name: 'API Contract Testing Hub',
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners',
     price: '$79',
     period: '/month',
@@ -3152,19 +2967,10 @@ varian,
     use_cases: ['Cost reduction', 'Budget control', 'Capacity planning'],
     roi: 'Save 1035% cloud spend in first 90 days',
     competitors: ['CloudHealth', 'Vantage', 'CloudZero'],
-<<<<<<< HEAD
     market_size: '$6B cloud cost mgmt'
     growth_rate: '25% CAGR';
 variant: 'quantum - holographic'
-    contact_info: contact;
-=======
-    market_size: '$6B cloud cost mgmt',
-    growth_rate: '25% CAGR',
-    variant: 'quantum - holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: unknown;
       'Ingestion, heuristics engine and alerting with reports.',
     launch_date: '2025 - 02 - 05',
@@ -3382,19 +3188,10 @@ varian,
     use_cases: ['Semantic search', 'Knowledge bases', 'Retrieval augmentation'],
     roi: 'Ship search MVPs in days, not months',
     competitors: ['Pinecone starters', 'Weaviate templates'],
-<<<<<<< HEAD
     market_size: '$5B vector DBs'
     growth_rate: '40% CAGR';
 variant: 'quantum - holographic'
-    contact_info: contact;
-=======
-    market_size: '$5B vector DBs',
-    growth_rate: '40% CAGR',
-    variant: 'quantum - holographic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Scaffold generators and eval harness.',
     launch_date: '2025 - 02 - 12',
     customers: 31;
@@ -3821,32 +3618,16 @@ varian,
     use_cases: ['Close enterprise deals', 'Reduce integration time'],
     roi: 'Shorten sales cycles by 2040%',
     competitors: ['WorkOS', 'Auth0 blueprints'],
-<<<<<<< HEAD
     market_size: '$12B identity'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
-    contact_info: contact;
-=======
-    market_size: '$12B identity',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'Reference implementations and test harnesses.',
     launch_date: '2025 - 01 - 30',
     customers: 19;
     rating: 4 && 4.8;
-<<<<<<< HEAD
     reviews: 9},
-    id: 'managed - postgres - ha - pro'
-=======
-    reviews: 9;
-  },
-    id: 'managed - postgres - ha - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Managed Postgres HA Pro',
+    id: 'managed - postgres - ha - pro'    name: 'Managed Postgres HA Pro',
     tagline: 'Production - grade Postgres with automated backups and failover',
     price: '$179',
     period: '/month',
@@ -3940,19 +3721,10 @@ varian,
     use_cases: ['HA databases', 'Disaster recovery', 'Performance tuning'],
     roi: 'Reduce downtime risk and improve throughput by 2040%',
     competitors: ['Crunchy Data', 'Aiven'],
-<<<<<<< HEAD
     market_size: '$10B managed DBs'
     growth_rate: '24% CAGR';
 variant: 'quantum - matrix'
-    contact_info: contact;
-=======
-    market_size: '$10B managed DBs',
-    growth_rate: '24% CAGR',
-    variant: 'quantum - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    real_implementation: true;
+    contact_info: contact;    real_implementation: true;
     implementation_details: 'IaC blueprints and managed ops playbooks.',
     launch_date: '2025 - 03 - 04',
     customers: 8;
@@ -4063,15 +3835,8 @@ variant: 'ai - futuristic',
     customers:
         customers: 42;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 21},
-    id: 'it - asset - discovery - agent - pro'
-=======
-    reviews: 21;
-  },
-    id: 'it - asset - discovery - agent - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'IT Asset Discovery Agent Pro',
+    id: 'it - asset - discovery - agent - pro'    name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
     price: '$119',
     period: '/month',
@@ -6157,21 +5922,11 @@ varian,
     technology: ['TypeScript', 'PostgreSQL']
     integrations: ['GitHub', 'Jira', 'Slack']
     useCases: ['Audit readiness', 'Asset ownership', 'Policy enforcement']
-<<<<<<< HEAD
     roi: 'Reduce compliance cycle time by 50%'
     competitors: ['Model governance suites'];
     marketSize: '$3 B AI governance'
     growthRate: '30% CAGR';
-variant: 'ai-futuristic',
-=======
-    roi: 'Reduce compliance cycle time by 50%',
-    competitors:
-        competitors: ['Model governance suites'];
-    marketSize: '$3 B AI governance',
-    growthRate: '30% CAGR',
-    variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: contact;
+variant: 'ai-futuristic',    contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Registry, policies and approval workflows.',
     launchDate: '2025-03-07',
@@ -6293,24 +6048,12 @@ variant: 'holographic-matrix',
     technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'];
     integrations: ['SlackPagerDutyDatadogGitHub Actions'];
     useCases: ['Prevent unsafe outputsCompliance readinessModel regression detection'];
-<<<<<<< HEAD
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks'
     competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
     marketSize: '$3.5 B+ AI safety & governance'
     growthRate: '200% annual growth';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors:
-        competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
-    marketSize: '$3.5 B+ AI safety & governance',
-    growthRate: '200% annual growth',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: contact;
+    contactInfo: contact;    contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.',
     launchDate: '2025-03-10',
@@ -6942,19 +6685,10 @@ varian,
     useCases: ['Semantic searchKnowledge bases', 'Retrieval augmentation'],
     roi: 'Ship search MVPs in days, not months',
     competitors: ['Pinecone startersWeaviate templates']
-<<<<<<< HEAD
     marketSize: '$5B vector DBs'
     growthRate: '40% CAGR';
 variant: 'quantum-holographic'
-    contactInfo: contact;
-=======
-    marketSize: '$5B vector DBs',
-    growthRate: '40% CAGR',
-    variant: 'quantum-holographic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Scaffold generators and eval harness.',
     launchDate: '2025-02-12',
     customers: 31;
@@ -7342,24 +7076,12 @@ varian,
     technology: ['Node.jsNext.js', 'IdP SDKs'],
     integrations: ['OktaAuth0', 'WorkOS'],
     useCases: ['Close enterprise dealsReduce integration time']
-<<<<<<< HEAD
     roi: 'Shorten sales cycles by 2040%'
     competitors: ['WorkOSAuth0 blueprints']
     marketSize: '$12B identity'
     growthRate: '18% CAGR';
 variant: 'holographic-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Shorten sales cycles by 2040%',
-    competitors:
-        competitors: ['WorkOSAuth0 blueprints']
-    marketSize: '$12B identity',
-    growthRate: '18% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Reference implementations and test harnesses.',
     launchDate: '2025-01-30',
     customers: 19;
@@ -7450,24 +7172,12 @@ varian,
     technology: ['PostgreSQLPatroni', 'PgBouncer'],
     integrations: ['GrafanaPrometheus', 'PagerDuty'],
     useCases: ['HA databasesDisaster recovery', 'Performance tuning'],
-<<<<<<< HEAD
     roi: 'Reduce downtime risk and improve throughput by 2040%'
     competitors: ['Crunchy DataAiven']
     marketSize: '$10B managed DBs'
     growthRate: '24% CAGR';
 variant: 'quantum-matrix'
-    contactInfo: contact;
-=======
-    roi: 'Reduce downtime risk and improve throughput by 2040%',
-    competitors:
-        competitors: ['Crunchy DataAiven']
-    marketSize: '$10B managed DBs',
-    growthRate: '24% CAGR',
-    variant: 'quantum-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'IaC blueprints and managed ops playbooks.',
     launchDate: '2025-03-04',
     customers: 8;

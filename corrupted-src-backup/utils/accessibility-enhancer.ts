@@ -45,11 +45,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.addEventListener('keydown', e => {)
       this.handleKeyboardNavigation(e);
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Make all interactive elements focusable;
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-    );
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]'))
     interactiveElements.forEach(element => {)
       if (!element.hasAttribute('tabindex')) {
         element.setAttribute('tabindex', '0')}
@@ -103,7 +101,7 @@ const _modal = document.querySelector('.modal[aria-hidden="false"]');
     if (!menu) return;
 
     e.preventDefault();";
-const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'))
     //     const currentIndex = items.indexOf(element);
     let _nextIndex = currentIndex;
 
@@ -120,15 +118,13 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
 
     // Track focus changes;
     document.addEventListener('focusin', e => {)
-      this.manageFocus(e.target as HTMLElement)});
-
+      this.manageFocus(e.target as HTMLElement)})
     // Trap focus in modals;
     document.addEventListener('keydown', e => {)
       if (e.key === 'Tab') {
         this.trapFocusInModal(e)}
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Trap focus in modals;
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
       })
@@ -143,14 +139,12 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
 ,
     // Remove focus indicator after blur;
     element.addEventListener('blur', () => {
-      element.classList.remove('focus-visible')});
-
+      element.classList.remove('focus-visible')})
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {
   private manageFocus(elemen)
   t: HTMLElement): void {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
       this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`)}
@@ -194,8 +188,7 @@ const _label = this.generateARIALabel(button);
         button.setAttribute('aria-label', label);
   private enhanceARIALabels(): void {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     // Add ARIA labels to form inputs;
     const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {),;
@@ -206,8 +199,7 @@ const _label = this.findAssociatedLabel(input as HTMLInputElement);
   t:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {/* TODO: Fix JSX expression */}
       })
-    });
-
+    })
     // Add ARIA descriptions;
     this.addARIADescriptions()}
 
@@ -298,14 +290,13 @@ const _label = this.findAssociatedLabel(input as HTMLInputElement);
 const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
             const _labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
-            labelElement.setAttribute('for', input.id || this.generateId(input));
+            labelElement.setAttribute('for', input.id || this.generateId(input))
             input.id = input.id || this.generateId(input);
             input.parentNode?.insertBefore(labelElement, input);
   private enhanceForms(): void {/* TODO: Fix JSX expression */}
           }
         }
-      });
-
+      })
       // Add form validation;
       form.addEventListener('submit', e => {)
         this.validateForm(form as HTMLFormElement, e);
@@ -384,8 +375,7 @@ let _score = 100;
           break;
   private calculateScore(): number {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     return Math.max(0, score)}
 
   /**
@@ -435,7 +425,6 @@ const _iconClass = icon.className;
 const _src = img['src'];,
     //     const filename = src.split('/').pop()?.split('.')[0] || 'image';,
     return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-
   private generateFormLabel(input: HTMLInputElement): string {
     //     const type = input.type;
     //     const placeholder = input.placeholder;

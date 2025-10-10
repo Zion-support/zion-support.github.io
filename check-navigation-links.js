@@ -72,7 +72,6 @@ fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages}, null, 2));
-
+  existingPagesList: existingPages}, null, 2))
 // console.log removed for production
 // console.log removed for production

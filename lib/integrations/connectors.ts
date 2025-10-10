@@ -151,9 +151,13 @@ export const ats = {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'ats.pushApplicant', { applicant })},
 
 export async function testConnection(connection: ProviderConnection;)): Promise<boolean> {,
-  try {,
+  try {
+
+,
     await simulateAction(connection, 'test_connection');
-    return true} catch {
+    return true
+
+} catch {
     return false}
 }
 
@@ -220,11 +224,15 @@ export async function syncData(connectio,
   async addEmailTouchpoint(connectio,
   n: ProviderConnection, touc)
   h: Record<string, any>) {/* TODO: Fix JSX expression */}
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  try {;
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
+  try {
+
+;
 const { log } = await simulateAction(connection, 'sync_data', {)
-      lastSync: connection.lastSync?.toISOString()});
-    logs.push(log)} catch (error) {
+      lastSync: connection.lastSync?.toISOString()})
+    logs.push(log)
+
+} catch (error) {
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
       connectionId: connection.id;
@@ -244,10 +252,14 @@ const { log } = await simulateAction(connection, 'sync_data', {)
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
     const { log } = await simulateAction(connection, 'sync_data', {/* TODO: Fix JSX expression */})
-    });
-    logs.push(log)} catch (error) {/* TODO: Fix JSX expression */}
+    })
+    logs.push(log)
+
+} catch (error) {/* TODO: Fix JSX expression */}
     })}
 
 

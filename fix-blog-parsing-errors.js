@@ -16,7 +16,9 @@ function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
 findBlogFiles(blogDir);
 ;
 function fixParsingErrors(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -48,7 +50,9 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
     
     if (modified) {/* TODO: Fix JSX expression */}
   errors: ${path.relative(__dirname, filePath)}`)}
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 }
 }
@@ -57,7 +61,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 blogFiles.forEach(file => {)
   fixParsingErrors(file);
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
-});
+})
 `
 // console.log removed for production
 `

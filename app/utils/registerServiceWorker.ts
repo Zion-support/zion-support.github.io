@@ -33,12 +33,13 @@ export async function registerServiceWorker()
 const isLocalhost = Boolean()
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  )
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/))
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {}
     }
   try {
+
+
     // Wait for page to load;
     await new Promise<void>((resolve) => {
       if (document.readyState === 'complete') {
@@ -48,9 +49,8 @@ const isLocalhost = Boolean()
       if (document.readyState === 'complete') {}
         resolve();
       } else {}
-        window.addEventListener('load', () => resolve());
-      }
-    });
+        window.addEventListener('load', () => resolve())}
+    })
 const registration = await navigator.serviceWorker.register('/service-worker.js', {)
       scope: '/'})
     })
@@ -92,17 +92,16 @@ export async function registerServiceWorker(confi,
   // Only register in production or if explicitly enabled;
 const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||)
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  );
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/))
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {/* TODO: Fix JSX expression */}
     }
   try {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    });
+    })
 const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */})
-    });
+    })
     // Handle updates;
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
             }
@@ -112,7 +111,9 @@ const registration = await navigator.serviceWorker.register('/service-worker.js'
         }
       })
     })
-    return registration} catch (error) {
+    return registration
+
+} catch (error) {
     if (config.onError && error instanceof Error) {
     return registration
   } catch (error) {}
@@ -129,18 +130,26 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
   if (!('serviceWorker' in navigator)) {}
     return false}
   }
-  try {;
+  try {
+
+;
 const registration = await navigator.serviceWorker.ready;
   try {}
     const registration = await navigator.serviceWorker.ready;
 const result = await registration.unregister()
     return result}
-  } catch (error) {}
+  
+
+} catch (error) {}
     return false}
 export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 /**
@@ -150,16 +159,24 @@ export async function checkForUpdates(): Promise<void> {}
   if (!('serviceWorker' in navigator)) {}
     return}
   }
-  try {;
+  try {
+
+;
 const registration = await navigator.serviceWorker.ready;
   try {}
     const registration = await navigator.serviceWorker.ready
     await registration.update();
-    } catch (error) {}
+    
+
+} catch (error) {}
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
     }
 }
 /**
@@ -173,7 +190,7 @@ export function skipWaiting(): void {}
 export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'skipWaiting' });
+  n: 'skipWaiting' })
 /**
  * Clear all caches;
  */
@@ -185,7 +202,7 @@ export function clearCaches(): void {}
 export function clearCaches(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'clearCache' });
+  n: 'clearCache' })
 /**
  * Get service worker registration status;
  */
@@ -210,14 +227,18 @@ export async function getServiceWorkerStatus(): Promise<{}
       active: false}
     }
   }
-  try {}
+  try {
+
+}
     const registration = await navigator.serviceWorker.getRegistration()
     return {
       supported: true,
       registered: !!registration;
       active: !!registration?.active}
     }
-  } catch {
+  
+
+} catch {
     return {
       supported: true,
       registered: false,
@@ -235,8 +256,12 @@ export async function getServiceWorkerStatus(): Promise<{}
 export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
 }> {/* TODO: Fix JSX expression */}
     }}
-  try {/* TODO: Fix JSX expression */}
-    }} catch {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
+    }
+
+} catch {/* TODO: Fix JSX expression */}
     }}
 }
 export default registerServiceWorker;

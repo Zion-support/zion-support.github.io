@@ -7,9 +7,7 @@ import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"

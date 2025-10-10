@@ -178,7 +178,7 @@ const description = pageDescription || this.currentPageData?.description || this
     this.setMetaTag('description', description);
     this.setMetaTag('keywords', keywords);
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
-    this.setMetaTag('robots', this.getRobotsContent());
+    this.setMetaTag('robots', this.getRobotsContent())
     // Open Graph tags
     this.setMetaTag('og:title', title, 'property');
     this.setMetaTag('og:description', description, 'property');
@@ -381,7 +381,7 @@ const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)}
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      }).observe({ entryTypes: ['largest-contentful-paint'] })
       // Monitor CLS (Cumulative Layout Shift);
 let clsValue = 0;
       new PerformanceObserver((list) => {
@@ -451,7 +451,7 @@ const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`)}
-    });
+    })
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {
@@ -507,8 +507,7 @@ export default seoOptimizer;
   n: this.currentPageData.section,
         keyword)
   s: this.generateKeywords()
-      }
-  )
+      })
     }
     this.addStructuredData(structuredData)
   }
@@ -552,8 +551,7 @@ private addStructuredData(data: unknown): void {const script = document.createEl
         if (lastEntry.startTime > 4000) {// Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)}
       }).observe({/* TODO: Fix JSX expression */}
-  s: ['largest-contentful-paint'] })
-  )
+  s: ['largest-contentful-paint'] }))
       // Monitor CLS (Cumulative Layout Shift);
 let clsValue = 0;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -570,9 +568,7 @@ let clsValue = 0;
         if (clsValue > 0.25) {// Poor CLS}
           this.trackSEOMetric('poor_cls', clsValue)}
       }).observe({/* TODO: Fix JSX expression */}
-  s: ['layout-shift'] })
-  )
-    }
+  s: ['layout-shift'] }))}
   }
   /**
    * Track SEO-related metrics;
@@ -592,8 +588,7 @@ let clsValue = 0;
         metric_value: Math.round(value),
         event_category: 'seo'
 
-      }
-  )
+      })
     }
   }
   /**
@@ -685,7 +680,7 @@ const images = document.querySelectorAll('img');
   O: Add content}
 }`
         issues.push(`Image ${index + 1} is missing alt text`)}
-    });
+    })
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
@@ -694,8 +689,7 @@ const h1s = document.querySelectorAll('h1');
       issues.push('Page is missing H1 tag')} else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      issues.push('Page has multiple H1 tags')}
-  )
+      issues.push('Page has multiple H1 tags')})
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}

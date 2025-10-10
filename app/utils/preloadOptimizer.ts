@@ -57,7 +57,7 @@ const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
       document.head.appendChild(link);
-    });
+    })
 }
 export const optimizeImages = useCallback((...args) => {
   if (typeof window === 'undefined') return;
@@ -96,7 +96,7 @@ export const preloadRoute = (rout)
   }
 const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {/* TODO: Fix JSX expression */}
-    });
+    })
 }
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
   })
@@ -105,10 +105,9 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
           }
         }
       })
-    });
+    })
 const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach(img => imageObserver.observe(img));
-}
+    lazyImages.forEach(img => imageObserver.observe(img))}
 export const optimizeThirdPartyScripts = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;

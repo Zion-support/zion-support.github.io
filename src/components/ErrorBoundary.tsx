@@ -18,8 +18,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Log error to monitoring service;
     // // console.error removed for production
 error:', error, errorInfo);
@@ -54,8 +53,7 @@ error:', error, errorInfo);
                 {/* TODO: Fix JSX expression */}
                       {this.state.errorInfo.componentStack}
                     </pre>
-                  </details>)
-                )}
+                  </details>))}
               </div>
             )}
 "

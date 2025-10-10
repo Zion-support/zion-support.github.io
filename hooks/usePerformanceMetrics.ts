@@ -4,7 +4,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
 export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
 }
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
   const [isSupported, setIsSupported] = useState(false);
 
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -17,18 +17,16 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
 const _entries = list.getEntries();
       const _fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   p: fcpEntry.startTime }))}
     }).observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-
+  s: ['paint'] })
     // Largest Contentful Paint;
     new PerformanceObserver(list => {);
 const _entries = list.getEntries();
       const _lastEntry = entries[entries.length - 1];
-      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}).observe({ entryTypes: ['largest-contentful-paint'] });
-
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}).observe({ entryTypes: ['largest-contentful-paint'] })
     // First Input Delay;
     new PerformanceObserver(list => {);
 const _entries = list.getEntries();
@@ -39,13 +37,11 @@ const _inputEntry = entry as PerformanceEventTiming;)
           fid: inputEntry.processingStart - inputEntry.startTime),
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   p: lastEntry.startTime }))}).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-
+  s: ['largest-contentful-paint'] })
     // First Input Delay;
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
         }))})}).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-
+  s: ['first-input'] })
     // Cumulative Layout Shift;
     let _clsValue = 0;
     new PerformanceObserver(list => {);
@@ -61,11 +57,10 @@ const layoutEntry = entry as PerformanceEntry & {)
         };)
         if (!layoutEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
         }
-      });
+      })
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: clsValue }))}).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-
+  s: ['layout-shift'] })
     // Time to First Byte;
     new PerformanceObserver(list => {);
 const _entries = list.getEntries();

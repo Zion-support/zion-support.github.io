@@ -42,6 +42,8 @@ const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
+
+
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
       
@@ -52,7 +54,9 @@ const handleInstallClick = async () => {
 }
       
       setDeferredPrompt(null);
-      setShowInstallButton(false)} catch (error) {
+      setShowInstallButton(false)
+
+} catch (error) {
       // console.error removed for production
 }
   };

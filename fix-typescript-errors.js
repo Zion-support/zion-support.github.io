@@ -38,7 +38,9 @@ const patterns = [
 ];
 ;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -71,8 +73,7 @@ const patterns = [
 );
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-      return match});
-
+      return match})
     // Fix 2: Fix malformed JSX attributes with quotes;
 const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g;
     content = content.replace(malformedJsxPattern, (match, attr, value) => {
@@ -80,8 +81,7 @@ const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g;
         modified = true;
         const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
         return `${attr}="${fixedValue}"`}
-      return match});
-
+      return match})
     // Fix 3: Fix missing closing tags in JSX;
 const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
     content = content.replace(unclosedTagPattern, (match, tagName, attributes) => {
@@ -101,37 +101,32 @@ const nextLine = lines[lineIndex + 1];
       modified = true;
       return `${match}</${tagName}>
 );
-}`});
-
+}`})
     // Fix 4: Fix missing commas in object literals;
 const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
     content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
         return `${key1}: ${value1.trim()},\n    ${key2}:`}
-      return match});
-
+      return match})
     // Fix 5: Fix malformed SVG URLs in className;
 const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
 const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
-
+      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`})
     // Fix 6: Fix missing closing parentheses in function calls;
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
         return `${funcCall})\n    ${nextToken}`}
-      return match});
-
+      return match})
     // Fix 7: Fix reserved word usage (like 'false' as identifier);
 const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g;
     content = content.replace(reservedWordPattern, (match, reserved, separator) => {
       modified = true;
-      return `: ${reserved}${separator}`});
-
+      return `: ${reserved}${separator}`})
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
@@ -139,7 +134,9 @@ return true;
     if (modified) {/* TODO: Fix JSX expression */}
     }
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -167,6 +164,5 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
-
+  })
 // console.log removed for production

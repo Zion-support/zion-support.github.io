@@ -8,8 +8,7 @@ let content = fs.readFileSync(filePath, 'utf8');
 
 // Fix all the syntax errors by removing extra closing braces;
 content = content.replace(/color: 'text-\w+-\d+'}[\s]*},/g, (match) => {
-  return match.replace('}', '')});
-
+  return match.replace('}', '')})
 // Fix any remaining syntax issues;
 content = content.replace(/},\s*}/g, '}');
 

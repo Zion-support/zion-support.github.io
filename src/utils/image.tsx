@@ -191,9 +191,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       </div>
     )
   }
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <img></img>
       src={src}
       alt={alt}

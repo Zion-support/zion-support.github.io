@@ -21,13 +21,7 @@ const dataTypes = [
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-<<<<<<< HEAD
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
-=======
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);  ];
 ;
 const purposes = [
     {
@@ -48,13 +42,7 @@ const purposes = [
     {
       title: 'Security',
       icon: Shield,
-<<<<<<< HEAD
-      description: 'To protect against fraud and abuse';);
-=======
-      description: 'To protect against fraud and abuse']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      description: 'To protect against fraud and abuse';);  ];
 ;
 const rights = [
     {
@@ -75,13 +63,7 @@ const rights = [
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-<<<<<<< HEAD
-      icon: Database;);
-=======
-      icon: Database]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      icon: Database;);  ];
 
   return (
     <div>
@@ -128,11 +110,10 @@ const rights = [
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
                       {type.examples.map((example, idx) => (
                         <li key={idx}></l>• {example}</li>
-                      ));
+                      ))
                     </ul>
                   </div>
-                ));
-              </div>
+                ))</div>
             </section>
 
             {/* How We Use Information */}
@@ -149,8 +130,7 @@ const rights = [
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
-                ));
-              </div>
+                ))</div>
             </section>
 
             {/* Data Security */}
@@ -187,8 +167,7 @@ const rights = [
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
-                ));
-              </div>
+                ))</div>
             </section>
 
             {/* Contact Information */}
@@ -235,9 +214,4 @@ const rights = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ););
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

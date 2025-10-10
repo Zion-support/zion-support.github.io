@@ -3,44 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
 const AIContentWriterPage: React.FC = () => {const features = [
     {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
-      benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    },
+      benefits: ['Automated writing', 'Content optimization', 'Multi-language support']    },
     {
       icon: Globe,
       title: 'Global Reach',
@@ -48,7 +17,6 @@ const PagePage: React.FC = () => {
       benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
     },
     {
-<<<<<<< HEAD
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
@@ -57,23 +25,7 @@ const PagePage: React.FC = () => {
 const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-=======
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security to protect your data and operations.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-
-  const benefits = [
-    'Transform your business with AI technology',
-    'Make data-driven decisions with confidence',
-    'Identify trends and opportunities early',
-    'Optimize business processes and workflows',
-    'Reduce costs through intelligent automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    'Gain competitive advantage with advanced technology'
+    'Scale operations without proportional staff increases',    'Gain competitive advantage with advanced technology'
   ];
 
   return (
@@ -84,7 +36,6 @@ const benefits = [
         <meta name="keywords" content="page" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
@@ -181,11 +132,10 @@ const benefits = [
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -207,8 +157,7 @@ const benefits = [
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -231,15 +180,7 @@ const benefits = [
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -282,7 +223,6 @@ const benefits = [
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -292,23 +232,9 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
-                    </ul>);
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-                </div>
-              ));
-            </div>
+                      ))
+                    </ul>);                </div>
+              ))</div>
           </div>
         </section>
 
@@ -352,12 +278,7 @@ const benefits = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-              ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-            </div>
+              ))</div>
           </div>
         </section>
 
@@ -388,7 +309,6 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <Footer />
       </div>
       <Footer />
@@ -405,13 +325,3 @@ const benefits = [
 export default AIContentWriterPage;
       </section>export default AiContentWriterPage
 export default AIContentWriterPage;
-=======
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

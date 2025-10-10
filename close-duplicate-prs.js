@@ -2,15 +2,13 @@
 //Function to close duplicate PRs;
 async function closeDuplicatePRs() {
   try {
-//     //Get all open PRs;
-    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
-    );
 
+
+//     //Get all open PRs;
+    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'))
 //     const duplicatePRs = prs.filter(pr =>)
         pr.title === 'Fix errors and merge to main' &&)
-        (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
-    );
-
+        (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty'))
 //     let closedCount = 0;
 ,
     for (const pr of duplicatePRs) {,
@@ -33,15 +31,15 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
             },
             bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-            })}
-        );
-
+            })})
         if (closeResponse.ok) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }
 
         // Add a small delay to avoid rate limiting;
-        await new Promise(resolve => setTimeout(resolve, 100))} catch (error) {/* TODO: Fix JSX expression */}
+        await new Promise(resolve => setTimeout(resolve, 100))
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }
     }
 

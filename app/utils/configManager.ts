@@ -281,8 +281,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
           }
         }
-      }
-    );
+      })
     return result;
   }
   /**

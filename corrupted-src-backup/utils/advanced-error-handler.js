@@ -24,8 +24,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         userAgent: navigator.userAgent;
         url: window.location.href;
   setupGlobalErrorHandlers() {/* TODO: Fix JSX expression */}
-      })});
-
+      })})
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
@@ -77,18 +76,16 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online');
   setupNetworkErrorHandler() {/* TODO: Fix JSX expression */}
-    });
-
+    })
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
     })}
 
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types;
-    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
-    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
-    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
+    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this))
+    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this))
+    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this))
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this))}
-
   handleError(errorInfo) {
     // Log error;
     this.logError(errorInfo);

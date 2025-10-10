@@ -1,5 +1,7 @@
 exports.handler = async (event, context) => {
   try {
+
+
     // Ping search engines about sitemap updates;
     const _sitemapUrl = 'https: //ziontechgroup.com/sitemap.xml';
     
@@ -10,7 +12,9 @@ exports.handler = async (event, context) => {
         message: 'Sitemap pinged successfully'),
         sitemapUrl),
         timestamp: new Date().toISOString()})
-    }} catch (error) {
+    }
+
+} catch (error) {
     return {
       statusCode: 500;
       body: JSON.stringify({),

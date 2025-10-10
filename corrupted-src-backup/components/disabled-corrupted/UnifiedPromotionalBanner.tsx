@@ -62,8 +62,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         {/* TODO: Fix JSX expression */}
                 {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   }
                 {bad, g, e}
-              </span>)
-            )}
+              </span>))}
             {/* TODO: Fix JSX expression */}
               <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {date  }</span>
             )}

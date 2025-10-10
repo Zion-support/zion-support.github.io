@@ -14,8 +14,6 @@ return (
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8'>;
 const January2025ContentShowcaseBanne, r: React.FC = () => {
 return (
- 
-  return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' >
 );
 } {' ' }

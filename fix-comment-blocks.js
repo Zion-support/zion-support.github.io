@@ -19,9 +19,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line}).join('\n');
-      return `// console.${method}(...): {\n${fixedBody}\n// }`}
-  );
-
+      return `// console.${method}(...): {\n${fixedBody}\n// }`})
   // Fix malformed comment blocks that are missing proper commenting;
   content = content.replace(
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
@@ -34,9 +32,7 @@ const fixedBody = body.split('\n').map(line => {)
     (match, body) => {/* TODO: Fix JSX expression */}
         }
         return line}).join('\n');
-      return match.replace(body, fixedBody)}
-  );
-
+      return match.replace(body, fixedBody)})
   // Fix specific patterns we've seen;
   content = content.replace(
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
@@ -50,14 +46,14 @@ const lines = body.split('\n');
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line});`
-      return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}
-  );
-
+      return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`})
   return content}
 
 // Function to process a single file;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -72,7 +68,9 @@ let content = fs.readFileSync(filePath, 'utf8');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }

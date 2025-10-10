@@ -9,18 +9,9 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
     text: string;)
 }>;
-  onSubscribe?: (email: string) => void;);
-=======
-    text: string]
-    }>;
-  onSubscribe?: (email: string) => void]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
+  onSubscribe?: (email: string) => void;);const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
@@ -40,7 +31,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       text: "Global community access";);
   ],
   onSubscribe;)
@@ -48,51 +38,28 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
 const [email, setEmail] = useState('');
 const [isSubscribed, setIsSubscribed] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
-      text: "Global community access"]
-    }
-  ],
-  onSubscribe]
-    }); => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();
     if (!email) return;
 
     setIsLoading(true);
     
     try {
+
+
       if (onSubscribe) {
         await onSubscribe(email)]
     } else {
         // Simulate API call
-<<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000)););
       setIsSubscribed(true);
       setEmail('');)
+
+
 } catch (error) {
       // console.error removed for production
 )
 } finally {
-      setIsLoading(false););
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000))]
-    }
-      
-      setIsSubscribed(true);
-      setEmail('')]
-    } catch (error) {
-      console.error('Subscription failed:', error)]
-    } finally {
-      setIsLoading(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  };
+      setIsLoading(false););  };
 
   if (isSubscribed) {
     return (
@@ -115,14 +82,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-    ););
-=======
-    )]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  return (
+    ););  return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
@@ -143,8 +103,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                   <span className="text-blue-100"></spa>{feature.text}</span>
                 </div>
-              ));
-            </div>
+              ))</div>
           </div>
 
           {/* Newsletter Form */}
@@ -191,12 +150,5 @@ const handleSubmit = async (e: React.FormEvent) => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default ContentNewsletterSignup;
+  );)export default ContentNewsletterSignup;
 }

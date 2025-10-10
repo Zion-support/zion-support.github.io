@@ -10,8 +10,7 @@
       new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
-//         }).observe({ entryTypes: ['largest-contentful-paint'] });
-      
+//         }).observe({ entryTypes: ['largest-contentful-paint'] })
       // FID;
       new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
@@ -20,18 +19,16 @@ const _entries = list.getEntries();
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      
+  s: ['largest-contentful-paint'] })
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 //           })}).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      
+  s: ['first-input'] })
       // CLS;
       let _clsValue = 0;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
-        });
+        })
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })}
   }

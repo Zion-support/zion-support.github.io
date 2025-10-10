@@ -34,30 +34,30 @@ const filesToProcess = [
   'src/ai-ecommerce-optimizer/page.tsx',
   'src/ai-ecommerce-solutions/page.tsx';
 function cleanUnusedImports(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove unused imports from lucide-react;
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {;
-const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());
+const imports = lucideImportMatch[1].split(',').map(imp => imp.trim())
       const usedImports = [];
       
       // Check which imports are actually used in the file;
       imports.forEach(imp => {)
         if (content.includes(imp) && !imp.includes('//')) {
           usedImports.push(imp)}
-      });
-
+      })
       if (usedImports.length !== imports.length) {;
 const newImport = usedImports.length > 0;
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
         }
-      });
-
+      })
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
           : '';
@@ -85,6 +85,8 @@ const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s
     if (modified) {
       fs.writeFileSync(filePath, content);
       // console.log removed for production
+
+
 } catch (error) {
     // console.error removed for production
 // Process all files;
@@ -171,7 +173,7 @@ function isImportUsed(content, importLine) {
   // Extract the imported names from the import line;
   const importMatch = importLine.match(/import\s*{([^}]+)}\s*from/);
   if (importMatch) {;
-const imports = importMatch[1].split(',').map(imp => imp.trim());
+const imports = importMatch[1].split(',').map(imp => imp.trim())
     return imports.some(imp => {);
 const name = imp.split(' as ')[0].trim();
       // Check if the name is used in the content (excluding the import line itself);
@@ -204,7 +206,7 @@ const filePath = path.join(dir, file);
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
+        results = results.concat(getAllFiles(filePath, extensions))
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         results.push(filePath);
@@ -223,9 +225,7 @@ const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
     !file.includes('out') &&
     !file.includes('build') &&
     !file.includes('remove-unused-imports.js') &&
-    !file.includes('fix-unused-imports.js')
-  );
-;
+    !file.includes('fix-unused-imports.js'))
 let fixedCount = 0;
 files.forEach(file => {)
   if (removeUnusedImportsFromFile(file)) {

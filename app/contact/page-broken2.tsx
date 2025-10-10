@@ -10,28 +10,18 @@ import {
   MapPin,
   Clock,
   Send,
-<<<<<<< HEAD
   CheckCircle;)
 } from 'lucide-react';
 ;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-=======
-  CheckCircle]
-    } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    name: '',
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({    name: '',
     email: '',
     company: '',
 phone: '',
     service: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
     message: '';)
-});
+})
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
@@ -41,31 +31,15 @@ const { name, value } = e.target;
       [name]: value;)
 }););)
 }, []);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
-    message: '']
-    });;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value]
-    });)]
-    }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
     try {
+
+
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -75,23 +49,14 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
-<<<<<<< HEAD
         message: '';)
 });;)
+
+
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
-      setIsSubmitting(false););
-=======
-        message: '']
-    });]
-    } catch (error) {
-      setSubmitStatus('error')]
-    } finally {
-      setIsSubmitting(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  };
+      setIsSubmitting(false););  };
 ;
 const services = [
     'AI Solutions',
@@ -128,13 +93,7 @@ const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time';);
-=======
-      description: 'Eastern Time']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      description: 'Eastern Time';);  ];
 
   return (
     <>
@@ -272,7 +231,7 @@ const contactInfo = [
                         <option key={service} value={service}></option>
                           {service}
                         </option>
-                      ));
+                      ))
                     </select>
                   </div>
                 </div>
@@ -391,11 +350,4 @@ const contactInfo = [
       </div>
 </div>
 
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default ContactPage;
+  );)export default ContactPage;

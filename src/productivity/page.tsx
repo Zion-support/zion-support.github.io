@@ -9,8 +9,6 @@ import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 const ProductivityPage: React.FC = () => {
 return (
-
-  return (
     <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -78,8 +76,7 @@ return (
                           </li>
                         ))}
                         {tool.features.length > 3 && (}"
-<li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>)
-                        )}
+<li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>))}
                       </ul>"
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
   s:</h5>

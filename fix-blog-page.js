@@ -34,10 +34,14 @@ function fixBlogPage(content) {
 
 // Read and fix the blog page
 try {
+
+
   const content = fs.readFileSync('app/blog/page.tsx', 'utf8');
   const fixed = fixBlogPage(content);
   fs.writeFileSync('app/blog/page.tsx', fixed);
   console.log('Blog page fixed successfully!');
+
+
 } catch (error) {
   console.error('Error fixing blog page:', error.message);
 }

@@ -7,12 +7,10 @@ interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 const,
   AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
-
+  })
   // Detect user preferences;
   useEffect(() => {/* TODO: Fix JSX expression */}
-    }));
-
+    }))
     // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motio)
   n: reduce)');
@@ -101,14 +99,12 @@ const originalPushState = history.pushState;
   const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', `Button ${index + 1}`)}
-    });
-
+    })
     // Add ARIA labels to images;
     const images = document.querySelectorAll('im)
   g:not([alt])');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-      img.setAttribute('alt', `Image ${index + 1}`)});
-
+      img.setAttribute('alt', `Image ${index + 1}`)})
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('inpu)
   t:not([aria-label]):not([aria-labelledby])');
@@ -132,8 +128,7 @@ const skipLinksContainer = document.createElement('div');
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
 
     skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     document.body.insertBefore(skipLinksContainer, document.body.firstChild)}, []);
 
   // Color contrast checking;

@@ -22,6 +22,8 @@ const specificFixes = {/* TODO: Fix JSX expression */}
 ;
 function processFile(filePath) {
   try {
+
+
     // Apply specific fixes;
     if (specificFixes[relativePath]) {
       if (fix.keywords) {;
@@ -63,18 +65,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 ;
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
-)
+  items.forEach(item => {))
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
@@ -83,8 +85,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   return totalFixed}
 
 // Process the app directory;

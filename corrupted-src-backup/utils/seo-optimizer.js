@@ -114,8 +114,7 @@ return (
       xml += `    <lastmod>${lastmod}</lastmod>\n`;`
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
       xml += `    <priority>${page.priority}</priority>\n`;
-      xml += '  </url>\n'});
-
+      xml += '  </url>\n'})
     xml += '</urlset>';
     return xml}
 
@@ -182,10 +181,10 @@ Disallow: /middleware/`;
     // Open Graph meta tags;
     this.addOGTag('og:type', 'website');
     this.addOGTag('og:site_name', this.seoConfig.siteName);
-    this.addOGTag('og:title', this.getPageTitle());
-    this.addOGTag('og:description', this.getPageDescription());
+    this.addOGTag('og:title', this.getPageTitle())
+    this.addOGTag('og:description', this.getPageDescription())
     this.addOGTag('og:url', this.seoConfig.siteUrl + window.location.pathname);
-    this.addOGTag('og:image', this.getPageImage());
+    this.addOGTag('og:image', this.getPageImage())
     this.addOGTag('og:locale', 'en_US');
   createSitemapFile(sitemap) {/* TODO: Fix JSX expression */}
   }
@@ -287,9 +286,9 @@ Disallo,`
     this.addTwitterTag('twitter:card', 'summary_large_image');
     this.addTwitterTag('twitter:site', this.seoConfig.twitterHandle);
     this.addTwitterTag('twitter:creator', this.seoConfig.twitterHandle);
-    this.addTwitterTag('twitter:title', this.getPageTitle());
-    this.addTwitterTag('twitter:description', this.getPageDescription());
-    this.addTwitterTag('twitter:image', this.getPageImage());
+    this.addTwitterTag('twitter:title', this.getPageTitle())
+    this.addTwitterTag('twitter:description', this.getPageDescription())
+    this.addTwitterTag('twitter:image', this.getPageImage())
   setupTwitterCards() {/* TODO: Fix JSX expression */}
   }
 

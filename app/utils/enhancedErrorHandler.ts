@@ -160,8 +160,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       })
     })
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-      });
-    });
+      })
+    })
   }
   /**
    * Setup unhandled promise rejection handler;
@@ -180,8 +180,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       })
     })
   private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
-      });
-    });
+      })
+    })
   }
   /**
    * Setup resource error handler;
@@ -226,7 +226,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   t: event.target?.constructor.name,
             sr,
   c: target?.src || target?.href;)
-          });
+          })
         }
       },
       true;
@@ -239,7 +239,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor fetch requests;
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
-      try {,
+      try {
+
+,
         const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
@@ -251,7 +253,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           })
         }
         return response;
-      } catch (error) {
+      
+
+} catch (error) {
         this.handleError({)
           type: 'network',`})
           message: `Network request failed: ${error}`)
@@ -261,7 +265,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor fetch requests
     const originalFetch = window.fetch
     window.fetch = async (...args: Parameters<typeof fetch>) => {}
-      try {}
+      try {
+
+}
         const response = await originalFetch(...args)
         if (!response.ok) {}
           this.handleError({)}
@@ -273,7 +279,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           })
         }
         return response
-      } catch (error) {}
+      
+
+} catch (error) {}
         this.handleError({)}
           type: 'network',`}
           message: `Network request failed: ${error}`,
@@ -288,7 +296,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   s: response.status,
             statusTex,
   t: response.statusText;
-          });
+          })
         }
         return response;
       } catch (error) {/* TODO: Fix JSX expression */}`
@@ -297,7 +305,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   l: args[0] as string,
           erro,
   r: error instanceof Error ? error : new Error(String(error))
-        });
+        })
         throw error;
       }
     }
@@ -310,6 +318,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
       try {
+
+
         const observer = new PerformanceObserver(list => {)
           list.getEntries().forEach(entry => {)
             if (entry.duration > 100) {
@@ -334,19 +344,20 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           })
         })
         observer.observe({ type: 'longtask', buffered: true })
-      } catch (error) {}
+
+} catch (error) {}
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
   detected: ${entry.duration.toFixed(2)}ms`,
                 duratio,
   n: entry.duration,
                 categor,
   y: 'performance'
-              });
+              })
             }
-          });
-        });
+          })
+        })
         observer.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       } catch (error) {/* TODO: Fix JSX expression */}
         }
     }
@@ -807,7 +818,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     if (!this.config.remoteEndpoint) return;
-    try {,
+    try {
+
+,
       await fetch(this.config.remoteEndpoint, {)
         method: 'POST'),
         headers: {,
@@ -821,14 +834,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           Authorization: 'Bearer ${this.config.apiKey}
         })
         body: JSON.stringify(errorReport)})
-    } catch (error) {}
+
+} catch (error) {}
   private async reportToRemote(errorRepor)
   t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}',
   n: 'Bearer ${this.config.apiKey}'
         },
         bod,
   y: JSON.stringify(errorReport)
-      });
+      })
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
@@ -941,14 +955,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const,
   errorsBySeverity: Record<string, number> = {};
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
-    });
+    })
     const recentErrors = this.errors;
       .filter(error => !error.resolved)
       .sort()
         (a, b) =>
           new Date(b.context.timestamp).getTime() -
-          new Date(a.context.timestamp).getTime()
-      )
+          new Date(a.context.timestamp).getTime())
       .slice(0, 10)
     return {
       totalErrors: this.errors.length;
@@ -1002,7 +1015,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     this.processError(errorReport)
   public reportError(messag)
   e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */}
-    });
+    })
     this.processError(errorReport);
     return errorReport.id;
   }

@@ -20,8 +20,7 @@ return (
 const [isOnline, setIsOnline] = useState(true);
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>
 );
-}>({});
-
+}>({})
   // Handle online/offline status
   useEffect(() => {;
 const handleOffline = () => setIsOnline(false);
@@ -51,8 +50,7 @@ interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
 const,
   UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
   // Handle online/offline status;
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -146,7 +144,7 @@ $4})}
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
               event_category:             ,
-$4});
+$4})
   // Analytics enhancement;
   useEffect(() => {/* TODO: Fix JSX expression */}
             })}
@@ -215,7 +213,7 @@ const timeOnPage = Math.round((Date.now() - startTime) / 1000);
             name: 'time_on_page',
             value: timeOnPage,
             event_category:           ,
-$4});
+$4})
       // Track time on page;
       const startTime = Date.now();
       const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
@@ -223,7 +221,7 @@ $4});
       };
 
       document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('scroll', handleScroll, { passive: true })
       window.addEventListener('beforeunload', handleBeforeUnload);
 
       return () => {
@@ -231,7 +229,7 @@ $4});
         window.removeEventListener('scroll', handleScroll);
         window.removeEventListener('beforeunload', handleBeforeUnload);
       window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true });
+  e: true })
       window.addEventListener('beforeunload', handleBeforeUnload);
 
       return () => {/* TODO: Fix JSX expression */}
@@ -288,7 +286,7 @@ $4})}
                   name: 'CLS',
                   value: Math.round((entry as any).value * 1000),
                   event_category:                 ,
-$4});
+$4})
   // Performance monitoring;
   useEffect(() => {/* TODO: Fix JSX expression */}
               })}
@@ -299,15 +297,12 @@ $4});
             }
           }
         }
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
       return () => {
         observer.disconnect();
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
       return () => {/* TODO: Fix JSX expression */}
       }}
   }, []);

@@ -30,8 +30,7 @@ constructor(props: Props) {
     // Log error details;
 //     this.setState({),
       error),
-      errorInfo)});
-
+      errorInfo)})
     // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -45,8 +44,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   override componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
@@ -85,7 +83,9 @@ const errorReport = {
 //       }).catch(console.error)}
 
     // Store in localStorage for debugging;
-    try {;
+    try {
+
+;
 const existingErrors = JSON.parse(
         localStorage.getItem('errorLogs') || '[]'
       );
@@ -95,7 +95,9 @@ const existingErrors = JSON.parse(
         existingErrors.splice(0, existingErrors.length - 10);
     try {/* TODO: Fix JSX expression */}
       }
-      localStorage.setItem('errorLogs', JSON.stringify(existingErrors))} catch (e) {/* TODO: Fix JSX expression */}
+      localStorage.setItem('errorLogs', JSON.stringify(existingErrors))
+
+} catch (e) {/* TODO: Fix JSX expression */}
 //       }
   };
 
@@ -199,8 +201,7 @@ const errorDetails = {
               </p>
               {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
-                </p>)
-              )}
+                </p>))}
             </div>
 
             <div className='space-y-4'></div>

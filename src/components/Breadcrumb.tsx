@@ -30,8 +30,7 @@ let currentPath = '';
       breadcrumbs.push({)
         name)
         href: currentPath),
-        current: isLast})});
-
+        current: isLast})})
     return breadcrumbs};
 ;
 const breadcrumbs = generateBreadcrumbs();

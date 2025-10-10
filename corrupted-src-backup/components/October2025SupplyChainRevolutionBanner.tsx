@@ -2,9 +2,7 @@ impo, r, t { Glo, b, e, as, GlobeAltIc, o, n } fr, o, m "luci, d, e-rea, c, t";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
-return (
-
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">
+return (<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">
 );
 }";
       {/* Animated, Background, Elements */}

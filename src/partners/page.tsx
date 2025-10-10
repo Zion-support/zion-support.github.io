@@ -182,8 +182,6 @@ icon: Globe,
       description: 'Access to worldwide markets and customers through our partner network',;
 const PagePage: React.FC = () => {
 return (
-
-  return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -219,7 +217,6 @@ return (
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
                       <p className="text-gray-300 text-sm">{partner.description}</p>
                   ))}
-
           {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Partner With Us?

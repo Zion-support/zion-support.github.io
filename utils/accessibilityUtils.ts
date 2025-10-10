@@ -122,7 +122,7 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
       c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 export const colorContrast = {/* TODO: Fix JSX expression */}
-    });
+    })
 //     const lum1 = colorContrast.getLuminance(...color1);
 //     const lum2 = colorContrast.getLuminance(...color2);
 //     const brightest = Math.max(lum1, lum2);
@@ -156,7 +156,7 @@ export const formAccessibility = {
   ): HTMLLabelElement => {,;
 const _label = document.createElement('label');
     label.textContent = labelText;
-    label.setAttribute('for', input.id || formAccessibility.generateInputId());
+    label.setAttribute('for', input.id || formAccessibility.generateInputId())
     if (!input.id) {
       input.id = label.getAttribute('for')!;
   // Check if contrast meets WCAG standards,
@@ -215,10 +215,10 @@ export const accessibilityTesting = {
   checkImageAltText: (): {,
     missing: HTMLImageElement[];
     empty: HTMLImageElement[]} => {;
-const _images = Array.from(document.querySelectorAll('img'));
-    const _missing = images.filter(img => !img.hasAttribute('alt'));
+const _images = Array.from(document.querySelectorAll('img'))
+    const _missing = images.filter(img => !img.hasAttribute('alt'))
     const _empty = images.filter(img => img.getAttribute('alt') === '');
-    return { missing, empty }});
+    return { missing, empty }})
     return inputs.filter(input => {)
 //       const id = input.id;)
 export const screenReaderUtils = {/* TODO: Fix JSX expression */}
@@ -234,12 +234,12 @@ export const screenReaderUtils = {/* TODO: Fix JSX expression */}
 // Accessibility testing utilities;
 export const accessibilityTesting = {/* TODO: Fix JSX expression */}
   } => {/* TODO: Fix JSX expression */}
-    return { missing, empty }});
+    return { missing, empty }})
     return inputs.filter(input => {/* TODO: Fix JSX expression */})`;
 const _label = id ? document.querySelector(`label[for="${id}"]`) : null;
 //       const ariaLabel = input.getAttribute('aria-label');
 //       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      return !label && !ariaLabel && !ariaLabelledBy}) as HTMLInputElement[]});
+      return !label && !ariaLabel && !ariaLabelledBy}) as HTMLInputElement[]})
     const,
   issues: string[] = [];
     const,
@@ -251,7 +251,7 @@ const _label = id ? document.querySelector(`label[for="${id}"]`) : null;
       }
       if (level > previousLevel + 1) {/* TODO: Fix JSX expression */}
       }
-      previousLevel = level});
+      previousLevel = level})
   // Generate accessibility report;
   generateReport: (): {,
     images: { missing: number; empty: number };
@@ -300,7 +300,7 @@ const focusableSelectors = [,
       'select: not([disabled])',
       'textarea: not([disabled])',
       'a[href]'];
-    return focusableSelectors.some(selector => element.matches(selector));
+    return focusableSelectors.some(selector => element.matches(selector))
   // Check if element is focusable,
   isFocusable: (elemen)
   t: HTMLElement): boolean => {/* TODO: Fix JSX expression */}
@@ -327,8 +327,8 @@ export const initAccessibility = (): void => {
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '6px';
 export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}
-  });
+  })
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-  });
+  })
   document.body.insertBefore(skipLink, document.body.firstChild);
 "`

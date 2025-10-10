@@ -127,6 +127,8 @@ const fixes = [
 ;
 function fixFile(filePath) {
   try {
+
+
     fixes.forEach(fix => {)
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -160,12 +162,13 @@ function fixFile(filePath) {
 );
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -185,8 +188,7 @@ async function main() {/* TODO: Fix JSX expression */}
       fixedCount++}
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
-
+  })
   //   }
 
 `

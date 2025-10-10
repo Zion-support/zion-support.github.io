@@ -133,9 +133,13 @@ const errors: string[] = [];
   }
 
   private isValidUrl(url: string): boolean {,
-    try {,
+    try {
+
+,
       new URL(url);
-      return true} catch {
+      return true
+
+} catch {
       return false;
   private isValidUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}

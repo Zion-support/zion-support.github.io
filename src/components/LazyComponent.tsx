@@ -18,8 +18,6 @@ const DefaultFallback = () => (
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
 return (
-
-  return (
     <Suspense fallback={fallback}>
 );
 }</Suspens>
@@ -144,16 +142,13 @@ const,
   O: Add content}
 }
 //         threshold,
-//         rootMargin}
-    );
+//         rootMargin})
     if (elementRef.current) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       observer.observe(elementRef.current)}
     return () => observer.disconnect()}, [delay, threshold, rootMargin]);
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div ref={elementRef}></div>
       {isVisible ? ()}
           <Suspense fallback={fallback}></Suspense>
@@ -232,7 +227,7 @@ const fontPreloads = [
     link.rel = 'preload';
     link.as = 'style';
     link.href = href;
-    document.head.appendChild(link)});
+    document.head.appendChild(link)})
   // Preload critical images;
 const imagePreloads = [
   // TOD,

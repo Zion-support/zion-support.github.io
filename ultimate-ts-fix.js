@@ -23,7 +23,9 @@ const fullPath = path.join(dir, item);
   return files}
 ;
 function fixTsxFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -47,8 +49,7 @@ return (
         return `<${tagName}${attributes}>
 );
 }${text}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 4: Fix self-closing tags that should have content;
 const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
@@ -59,14 +60,12 @@ return (
         return `<${tagName}${attributes}>
 );
 }${text}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 5: Fix malformed className attributes;
 const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g;
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true;
-      return `className="${className}"${rest}>`});
-
+      return `className="${className}"${rest}>`})
     // Fix 6: Fix malformed closing tags;
 const malformedClosingPattern = /<\/undefined><\/undefined>/g;
     content = content.replace(malformedClosingPattern, '');
@@ -89,8 +88,7 @@ return (
         return `<${tagName}${attributes}>
 );
 }${content}</${tagName}>`}
-      return match});
-
+      return match})
     // Fix 9: Fix malformed return statements;
 const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;
     content = content.replace(malformedReturnPattern, 'return (\n    <div');
@@ -109,8 +107,7 @@ return (
       modified = true;
       return `<${tagName}${attributes}>
 );
-}</${tagName}>`});
-
+}</${tagName}>`})
     // Fix 12: Fix malformed JSX with incorrect opening tags;
 const malformedJsxOpeningPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>/g;
     content = content.replace(malformedJsxOpeningPattern, (match, tag1, attr1, tag2, attr2) => {
@@ -119,8 +116,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2}>`});
-
+}<${tag2}${attr2}>`})
     // Fix 13: Fix malformed JSX with incorrect nesting;
 const malformedNestingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\2>/g;
     content = content.replace(malformedNestingPattern, (match, tag1, attr1, tag2, attr2, text) => {
@@ -129,8 +125,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`});
-
+}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`})
     // Fix 14: Fix malformed JSX with incorrect closing tags;
 const malformedClosingTagPattern = /<\/\w+><\/\w+>/g;
     content = content.replace(malformedClosingTagPattern, (match) => {
@@ -142,8 +137,7 @@ const tags = match.match(/<\/\w+>
       if (tags && tags.length > 1) {
         modified = true;
         return tags[0]}
-      return match});
-
+      return match})
     // Fix 15: Fix malformed JSX with incorrect opening tags;
 const malformedOpeningTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>/g;
     content = content.replace(malformedOpeningTagPattern, (match, tag1, attr1, tag2, attr2, text) => {
@@ -152,8 +146,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`});
-
+}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`})
     // Fix 16: Fix malformed JSX with incorrect self-closing tags;
 const malformedSelfClosingTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>/g;
     content = content.replace(malformedSelfClosingTagPattern, (match, tag1, attr1, tag2, attr2) => {
@@ -162,8 +155,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2} /></${tag1}>`});
-
+}<${tag2}${attr2} /></${tag1}>`})
     // Fix 17: Fix malformed JSX with incorrect nesting;
 const malformedNestingPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g;
     content = content.replace(malformedNestingPattern2, (match, tag1, attr1, tag2, attr2, text) => {
@@ -172,8 +164,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`});
-
+}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`})
     // Fix 18: Fix malformed JSX with incorrect closing tags;
 const malformedClosingTagPattern2 = /<\/\w+><\/\w+><\/\w+>/g;
     content = content.replace(malformedClosingTagPattern2, (match) => {
@@ -185,8 +176,7 @@ const tags = match.match(/<\/\w+>
       if (tags && tags.length > 2) {
         modified = true;
         return tags[0]}
-      return match});
-
+      return match})
     // Fix 19: Fix malformed JSX with incorrect opening tags;
 const malformedOpeningTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g;
     content = content.replace(malformedOpeningTagPattern2, (match, tag1, attr1, tag2, attr2, text) => {
@@ -195,8 +185,7 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`});
-
+}<${tag2}${attr2}>${text}</${tag2}></${tag1}>`})
     // Fix 20: Fix malformed JSX with incorrect self-closing tags;
 const malformedSelfClosingTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>\s*<\/\1>/g;
     content = content.replace(malformedSelfClosingTagPattern2, (match, tag1, attr1, tag2, attr2) => {
@@ -205,15 +194,16 @@ return (
       modified = true;
       return `<${tag1}${attr1}>
 );
-}<${tag2}${attr2} /></${tag1}>`});
-
+}<${tag2}${attr2} /></${tag1}>`})
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
 }`);
       return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -227,6 +217,5 @@ let fixedCount = 0;
 tsxFiles.forEach(filePath => {
   if (fixTsxFile(filePath)) {
     fixedCount++}
-});
-
+})
 // console.log removed for production

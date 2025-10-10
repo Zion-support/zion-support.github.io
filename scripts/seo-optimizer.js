@@ -15,7 +15,9 @@ constructor() {
 const htmlFiles = await glob('dist/**/*.html');
     
     for (const file of htmlFiles) {
-      try {;
+      try {
+
+;
 const content = fs.readFileSync(file, 'utf8');
         
         // Check for essential meta tags;
@@ -35,7 +37,9 @@ const content = fs.readFileSync(file, 'utf8');
         if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title`);
         if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description`);
         if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);
-        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`)} catch (error) {
+        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`)
+
+} catch (error) {
         // console.error removed for production
 }
     }
@@ -49,11 +53,12 @@ this.optimizations.push('Meta tags validation')}
 ;
 const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    });
-;
+    })
 let headingIssues = 0;
     for (const file of tsxFiles) {
-      try {;
+      try {
+
+;
 const content = fs.readFileSync(file, 'utf8');
         
         // Check for h1 tags;
@@ -68,7 +73,9 @@ const content = fs.readFileSync(file, 'utf8');
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++}
         
-      } catch (error) {
+      
+
+} catch (error) {
         // console.error removed for production
 }
     }
@@ -85,11 +92,12 @@ if (headingIssues > 0) {
 ;
 const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    });
-;
+    })
 let altIssues = 0;
     for (const file of tsxFiles) {
-      try {;
+      try {
+
+;
 const content = fs.readFileSync(file, 'utf8');
         
         // Find img tags without alt attributes;
@@ -100,7 +108,9 @@ const content = fs.readFileSync(file, 'utf8');
             altIssues++}
         }
         
-      } catch (error) {
+      
+
+} catch (error) {
         // console.error removed for production
 }
     }
@@ -117,16 +127,19 @@ if (altIssues > 0) {
 ;
 const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    });
-;
+    })
 let linkCount = 0;
     for (const file of tsxFiles) {
-      try {;
+      try {
+
+;
 const content = fs.readFileSync(file, 'utf8');
         
         // Count internal links;
         const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
-        linkCount += internalLinks.length} catch (error) {
+        linkCount += internalLinks.length
+
+} catch (error) {
         // console.error removed for production
 }
     }
@@ -141,13 +154,12 @@ this.optimizations.push('Internal links analysis')}
 // console.log removed for production
 this.optimizations.forEach((opt, index) => {
       // console.log removed for production
-});
-    
+})
     if (this.issues.length > 0) {
       // console.log removed for production
 this.issues.slice(0, 10).forEach((issue, index) => {
         // console.log removed for production
-});
+})
       if (this.issues.length > 10) {
         // console.log removed for production
 }
@@ -173,6 +185,8 @@ this.issues.slice(0, 10).forEach((issue, index) => {
   async run() {
     // console.log removed for production
 try {
+
+
       await this.checkMetaTags();
       await this.checkHeadingStructure();
       await this.checkAltAttributes();
@@ -180,6 +194,8 @@ try {
       this.generateReport();
       
       // console.log removed for production
+
+
 } catch (error) {
       // console.error removed for production
 }
@@ -295,9 +311,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
   
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
-    JSON.stringify(metaOptimizations, null, 2)
-  );
-  
+    JSON.stringify(metaOptimizations, null, 2))
   // // console.log removed for production
 optimized: seo-optimizations.json')}
 ;
@@ -349,9 +363,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
-    JSON.stringify(structuredData, null, 2)
-  );
-  
+    JSON.stringify(structuredData, null, 2))
   // // console.log removed for production
 generated: public/structured-data.json')}
 

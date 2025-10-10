@@ -270,8 +270,7 @@ featur, e, d: fal, s, e}
                       </d, i, v>
                     )}
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
-              )}
+              {/* TODO: Fix JSX expression */}))}
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e,"

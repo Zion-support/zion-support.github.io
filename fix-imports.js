@@ -30,6 +30,8 @@ const iconMappings = {
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
   try {
+
+
     //Fix lucide-react imports;
     for (const [broken, correct] of Object.entries(iconMappings)) {
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
@@ -42,7 +44,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       //       const newImport = `lucide-react`;
 
       if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'));
+          new RegExp(`import ${correct} from '${oldImport}';`, 'g'))
         modified = true}
     }
 
@@ -55,7 +57,9 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
       //       }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
 
@@ -66,8 +70,7 @@ const files = fs;
   .readdirSync(blogDir, {/* TODO: Fix JSX expression */})
   e: true })
   .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
-
+  .map(file => path.join(blogDir, file))
 // Process each file;
 files.forEach(fixImportsInFile);
 

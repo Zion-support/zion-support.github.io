@@ -29,9 +29,13 @@ const path = match.match(/path:\s*'([^']+)'/)[1];
 // Get all existing pages;
 const existingPages = [];
 const { execSync } = require('child_process');
-try {;
-const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
-  existingPages.push(...result.trim().split('\n').filter(Boolean))} catch (error) {
+try {
+
+;
+const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' })
+  existingPages.push(...result.trim().split('\n').filter(Boolean))
+
+} catch (error) {
   // console.error removed for production
 }
 
@@ -40,8 +44,7 @@ const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
 const existingPagesSet = new Set(existingPages);
 
 // Find missing pages;
-const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
-
+const missingPages = allLinks.filter(link => !existingPagesSet.has(link))
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
@@ -54,7 +57,7 @@ missingPages.forEach(page => // console.log removed for production
 }
 
 // Check for pages that exist but aren't linked;
-const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
+const unlinkedPages = existingPages.filter(page => !allLinks.includes(page))
 // console.log removed for production
 ===`);
 if (unlinkedPages.length > 0) {

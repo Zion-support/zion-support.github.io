@@ -82,9 +82,13 @@ export function validateEmail(email: string): boolean {
  * Validate URL
  */
 export function validateURL(url: string): boolean {
-  try {;
+  try {
+
+;
 const parsed = new URL(url);
-    return parsed.protocol === 'http:' || parsed.protocol === 'https:'} catch {
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:'
+
+} catch {
  * Validate email address;
  */
 
@@ -98,13 +102,17 @@ export function validateEmail(email: string): boolean {return emailRegex.test(em
 export function validateURL(url: string): boolean {// TODO: Add content}
 
 }
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const parsed = new URL(url);
     return parsed.protocol === 'htt,
   p:' || parsed.protocol === 'http,
-  s:'} catch {/* TODO: Fix JSX expression */}
+  s:'
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     return false}
@@ -222,8 +230,7 @@ export function validateDate(value: unknown): boolean {// TODO: Add content}
     const date = new Date(value);
     return !isNaN(date.getTime())}
     const date = new Date(value)
-    return !isNaN(date.getTime())
-  }
+    return !isNaN(date.getTime())}
   return false}
 /**
  * Validate date range;
@@ -443,8 +450,7 @@ export function validateForm<T extends Record<string, unknown>
 //             field,
             error,
   s: fieldErrors}
-        }
-  )
+        })
     }
   }
 

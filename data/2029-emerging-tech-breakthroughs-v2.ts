@@ -162,21 +162,11 @@ export const,
       competitors: [,
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
       ]
-<<<<<<< HEAD
       marketSize: '$5 B market'
       growthRate: '800% annual growth';
 variant: 'space-futuristic'
       contactInfo: unknown;
-      color: 'from - purple - 600 via - pink - 600 to - rose - 600'
-=======
-      marketSize: '$5 B market',
-      growthRate: '800% annual growth',
-      variant: 'space-futuristic',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - purple - 600 via - pink - 600 to - rose - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - purple - 400',
+      color: 'from - purple - 600 via - pink - 600 to - rose - 600'      text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / brain - computer - interface - enterprise',
       market_position: unknown;
         'Pioneering brain - computer interface technology. First - to - market solution for enterprise neural computing applications.',
@@ -236,21 +226,11 @@ varian,
       competitor,
   s: [,
         'Neuralink, CTRL - labs, Kernel, Traditional assistive technology'],
-<<<<<<< HEAD
       market_size: '$5B market'
       growth_rate: '800% annual growth';
 variant: 'space - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$5B market',
-      growth_rate: '800% annual growth',
-      variant: 'space - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -343,21 +323,11 @@ varian,
       competitors: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
       ]
-<<<<<<< HEAD
       marketSize: '$8 B market'
       growthRate: '600% annual growth';
 variant: 'quantum-futuristic'
       contactInfo: unknown;
-      color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
-=======
-      marketSize: '$8 B market',
-      growthRate: '600% annual growth',
-      variant: 'quantum-futuristic',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - blue - 400',
+      color: 'from - blue - 600 via - indigo - 600 to - purple - 600'      text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / quantum - internet - gateway - enterprise',
       market_position: unknown;
         'Leading quantum internet gateway provider. First enterprise solution for quantum network connectivity and quantum cloud computing.',
@@ -417,21 +387,11 @@ varian,
       competitor,
   s: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'],
-<<<<<<< HEAD
       market_size: '$8B market'
       growth_rate: '600% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8B market',
-      growth_rate: '600% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -526,21 +486,11 @@ varian,
       competitors: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
       ]
-<<<<<<< HEAD
       marketSize: '$18 B market'
       growthRate: '500% annual growth';
 variant: 'biotech-futuristic'
       contactInfo: unknown;
-      color: 'from - green - 600 via - emerald - 600 to - teal - 600'
-=======
-      marketSize: '$18 B market',
-      growthRate: '500% annual growth',
-      variant: 'biotech-futuristic',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - green - 600 via - emerald - 600 to - teal - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - green - 400',
+      color: 'from - green - 600 via - emerald - 600 to - teal - 600'      text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / synthetic - biology - platform - enterprise',
       market_position: unknown;
         'Leading synthetic biology platform. Competes with traditional biotechnology but offers superior design capabilities and automation.',
@@ -600,21 +550,11 @@ varian,
       competitor,
   s: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'],
-<<<<<<< HEAD
       market_size: '$18B market'
       growth_rate: '500% annual growth';
 variant: 'biotech - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$18B market',
-      growth_rate: '500% annual growth',
-      variant: 'biotech - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -709,21 +649,11 @@ varian,
       competitors: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
       ]
-<<<<<<< HEAD
       marketSize: '$12 B market'
       growthRate: '700% annual growth';
 variant: 'quantum-energy-revolutionary'
       contactInfo: unknown;
-      color: 'from - yellow - 600 via - orange - 600 to - red - 600'
-=======
-      marketSize: '$12 B market',
-      growthRate: '700% annual growth',
-      variant: 'quantum-energy-revolutionary',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - yellow - 600 via - orange - 600 to - red - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - yellow - 400',
+      color: 'from - yellow - 600 via - orange - 600 to - red - 600'      text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / fusion - energy - management - platform',
       market_position: unknown;
         'Leading fusion energy management platform. First - to - market solution for commercial fusion power generation.',
@@ -783,21 +713,11 @@ varian,
       competitor,
   s: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'],
-<<<<<<< HEAD
       market_size: '$12B market'
       growth_rate: '700% annual growth';
 variant: 'quantum - energy - revolutionary'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$12B market',
-      growth_rate: '700% annual growth',
-      variant: 'quantum - energy - revolutionary',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -890,21 +810,11 @@ varian,
       competitors: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'
       ]
-<<<<<<< HEAD
       marketSize: '$20 B market'
       growthRate: '1000% annual growth';
 variant: 'space-futuristic'
       contactInfo: unknown;
-      color: 'from - purple - 600 via - indigo - 600 to - blue - 600'
-=======
-      marketSize: '$20 B market',
-      growthRate: '1000% annual growth',
-      variant: 'space-futuristic',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - purple - 600 via - indigo - 600 to - blue - 600',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      text_color: 'text - purple - 400',
+      color: 'from - purple - 600 via - indigo - 600 to - blue - 600'      text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / space - mining - operations - platform',
       market_position: unknown;
         'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.',
@@ -964,21 +874,11 @@ varian,
       competitor,
   s: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'],
-<<<<<<< HEAD
       market_size: '$20B market'
       growth_rate: '1000% annual growth';
 variant: 'space - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$20B market',
-      growth_rate: '1000% annual growth',
-      variant: 'space - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;

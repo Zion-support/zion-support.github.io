@@ -9,7 +9,7 @@ interface LogEntry {}
   message: string,
   data?: unknown;
   timestamp: string,
-  context?: string});
+  context?: string})
 }
 
 class ProductionLogger {}
@@ -25,7 +25,7 @@ const entry: LogEntry = {,
       message,
       data,
       timestamp: new Date().toISOString(),
-      context});
+      context})
 };
 
     // Only log in development;
@@ -41,7 +41,7 @@ const entry: LogEntry = {,
         case 'warn':
           break;
         case 'error':
-          break});
+          break})
 }
     }
 
@@ -49,13 +49,7 @@ const entry: LogEntry = {,
     if (this.isProduction && level === 'error') {
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
-<<<<<<< HEAD
-      this.sendToMonitoring(entry););
-=======
-      this.sendToMonitoring(entry)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  }
+      this.sendToMonitoring(entry););  }
 
   private sendToMonitoring(entry: LogEntry): void {,
     // Send to analytics/monitoring service;
@@ -73,36 +67,18 @@ const entry: LogEntry = {,
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
-        event_category: 'Error'});
+        event_category: 'Error'})
 }
   }
 
   debug(message: string, data?: unknown, context?: string): void {}
-<<<<<<< HEAD
     this.log('debug', message, data, context););
   info(message: string, data?: unknown, context?: string): void {}
     this.log('info', message, data, context););
   warn(message: string, data?: unknown, context?: string): void {}
     this.log('warn', message, data, context););
   error(message: string, data?: unknown, context?: string): void {}
-    this.log('error', message, data, context););
-=======
-    this.log('debug', message, data, context)]
-    }
-
-  info(message: string, data?: unknown, context?: string): void {}
-    this.log('info', message, data, context)]
-    }
-
-  warn(message: string, data?: unknown, context?: string): void {}
-    this.log('warn', message, data, context)]
-    }
-
-  error(message: string, data?: unknown, context?: string): void {}
-    this.log('error', message, data, context)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-}
+    this.log('error', message, data, context););}
 
 export const logger = new ProductionLogger()
 export default logger;

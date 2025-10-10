@@ -25,7 +25,7 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
         content = content.replace(/,\s+/g, ',');
         
         fs.writeFileSync(filePath, content)}
-    });
+    })
 //     }
 }
 
@@ -51,7 +51,7 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
         }
         
         fs.writeFileSync(filePath, content)}
-    });
+    })
 //     }
 }
 

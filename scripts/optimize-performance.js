@@ -4,7 +4,9 @@ import { glob } from 'glob';
 
 // Function to optimize React components for better performance;
 function optimizeComponent(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -33,7 +35,9 @@ without key props`)}
       // // console.log removed for production
 }
     
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // // console.error removed for production
 return false}
 }
@@ -45,8 +49,7 @@ const componentFiles = await glob('app/components/**/*.{ts,tsx}', {)
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 }
   const componentFiles = await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})
-  });
-  
+  })
   // // console.log removed for production
 ;
 let totalFiles = 0;
@@ -105,9 +108,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   height,
   className = '',
   priority = false}) => {
-return (
-
-  return(<img;
+return (<img;
       src={src}
       alt={alt}
       width={width}

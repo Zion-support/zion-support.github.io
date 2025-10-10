@@ -6,8 +6,6 @@ import Footer from '../components/Footer';
 ;
 const QuantumComputingPage: React.FC = () => {
 return (
-
-  return (
     <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>

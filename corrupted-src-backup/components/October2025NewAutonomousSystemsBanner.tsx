@@ -1,7 +1,5 @@
 const, October2025NewAutonomousSystemsBanne, r = () => {
-return (
-
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
+return (<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
 );
 }
       {/* Animated, background, effects */};

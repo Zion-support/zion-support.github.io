@@ -29,7 +29,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content}
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // // console.error removed for production
 .toISOString(),
-    statusCode: appError.statusCode || 500});
+    statusCode: appError.statusCode || 500})
   return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -55,8 +55,7 @@ export const asyncHandler = (f,
   O: Add content}
 }
       next(error)}
-  }
-  )
+  })
 }
 
 

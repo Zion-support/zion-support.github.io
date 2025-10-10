@@ -189,7 +189,6 @@ icon$5: Award,
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
-
           {/* Search and Filters */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row gap-4 mb-8">

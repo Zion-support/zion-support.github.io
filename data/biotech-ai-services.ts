@@ -163,21 +163,11 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Industrial biotechnology'],
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
     competitors: ['Manual methods', 'Basic tools'],
-<<<<<<< HEAD
     market_size: '$50B genetic engineering market'
     growth_rate: '300% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$50B genetic engineering market',
-    growth_rate: '300% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -319,21 +309,11 @@ varian,
       'Drug delivery'],
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
     competitors: ['Basic tools', 'Manual design'],
-<<<<<<< HEAD
     market_size: '$30B protein engineering market'
     growth_rate: '280% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$30B protein engineering market',
-    growth_rate: '280% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -475,21 +455,11 @@ varian,
       'Performance tracking'],
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
     competitors: ['Basic tools', 'Manual management'],
-<<<<<<< HEAD
     market_size: '$45B clinical trial market'
     growth_rate: '220% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$45B clinical trial market',
-    growth_rate: '220% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -631,21 +601,11 @@ varian,
       'Research discovery'],
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
     competitors: ['Manual methods', 'Basic tools'],
-<<<<<<< HEAD
     market_size: '$25B biomarker market'
     growth_rate: '240% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$25B biomarker market',
-    growth_rate: '240% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -787,21 +747,11 @@ varian,
       'Healthcare research'],
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
     competitors: ['Basic analysis', 'Limited tools'],
-<<<<<<< HEAD
     market_size: '$60B personalized medicine market'
     growth_rate: '260% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$60B personalized medicine market',
-    growth_rate: '260% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -943,21 +893,11 @@ varian,
       'Research discovery'],
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time - to - market and cost savings.',
     competitors: ['Manual research', 'Basic tools'],
-<<<<<<< HEAD
     market_size: '$20B drug repurposing market'
     growth_rate: '200% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$20B drug repurposing market',
-    growth_rate: '200% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1101,21 +1041,11 @@ varian,
       'Statistical analysis'],
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
     competitors: ['Basic tools', 'Manual analysis'],
-<<<<<<< HEAD
     market_size: '$35B bioinformatics market'
     growth_rate: '230% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$35B bioinformatics market',
-    growth_rate: '230% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1257,21 +1187,11 @@ varian,
       'Performance monitoring'],
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitors: ['Basic optimization', 'Manual processes'],
-<<<<<<< HEAD
     market_size: '$40B biomanufacturing market'
     growth_rate: '210% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$40B biomanufacturing market',
-    growth_rate: '210% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -1612,19 +1532,10 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Industrial biotechnology'],
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
     competitors: ['Manual methods', 'Basic tools']
-<<<<<<< HEAD
     marketSize: '$50 B genetic engineering market'
     growthRate: '300% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$50 B genetic engineering market',
-    growthRate: '300% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Basic protein design tools exist but lack AI capabilities. Our advantage: AI-powered design and comprehensive features.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Basic protein design tools exist but lack AI capabilities. Our advantage: AI-powered design and comprehensive features.',
     targetAudience:,
       'Industrial biotechnology'
     ]
@@ -1675,19 +1586,10 @@ varian,
       'Drug delivery'],
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
     competitors: ['Basic tools', 'Manual design']
-<<<<<<< HEAD
     marketSize: '$30 B protein engineering market'
     growthRate: '280% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$30 B protein engineering market',
-    growthRate: '280% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Traditional trial management uses basic tools. Our advantage: AI optimization and comprehensive features.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Traditional trial management uses basic tools. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
       'Drug delivery'
     ]
@@ -1738,19 +1640,10 @@ varian,
       'Performance tracking'],
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
     competitors: ['Basic tools', 'Manual management']
-<<<<<<< HEAD
     marketSize: '$45 B clinical trial market'
     growthRate: '220% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$45 B clinical trial market',
-    growthRate: '220% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Basic biomarker research uses manual methods. Our advantage: AI discovery and comprehensive analysis.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Basic biomarker research uses manual methods. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
       'Performance tracking'
     ]
@@ -1801,19 +1694,10 @@ varian,
       'Research discovery'],
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
     competitors: ['Manual methods', 'Basic tools']
-<<<<<<< HEAD
     marketSize: '$25 B biomarker market'
     growthRate: '240% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$25 B biomarker market',
-    growthRate: '240% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Basic personalized medicine uses limited analysis. Our advantage: AI-powered precision and comprehensive features.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Basic personalized medicine uses limited analysis. Our advantage: AI-powered precision and comprehensive features.',
     targetAudience:,
       'Research discovery'
     ]
@@ -1864,19 +1748,10 @@ varian,
       'Healthcare research'],
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
     competitors: ['Basic analysis', 'Limited tools']
-<<<<<<< HEAD
     marketSize: '$60 B personalized medicine market'
     growthRate: '260% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$60 B personalized medicine market',
-    growthRate: '260% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Basic repurposing uses manual research. Our advantage: AI discovery and comprehensive analysis.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Basic repurposing uses manual research. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
       'Healthcare research'
     ]
@@ -1927,19 +1802,10 @@ varian,
       'Research discovery'],
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.',
     competitors: ['Manual research', 'Basic tools']
-<<<<<<< HEAD
     marketSize: '$20 B drug repurposing market'
     growthRate: '200% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$20 B drug repurposing market',
-    growthRate: '200% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Basic bioinformatics tools exist but lack AI capabilities. Our advantage: AI-powered analysis and comprehensive features.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Basic bioinformatics tools exist but lack AI capabilities. Our advantage: AI-powered analysis and comprehensive features.',
     targetAudience:,
       'Research discovery'
     ]
@@ -1990,19 +1856,10 @@ varian,
       'Statistical analysis'],
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
     competitors: ['Basic tools', 'Manual analysis']
-<<<<<<< HEAD
     marketSize: '$35 B bioinformatics market'
     growthRate: '230% annual growth';
 variant: 'biotech-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
-    marketSize: '$35 B bioinformatics market',
-    growthRate: '230% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo:
-        contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      'Revolutionary technology with no direct competitors. Traditional biomanufacturing uses basic optimization. Our advantage: AI optimization and comprehensive features.',
+    contactInfo: marketPosition: unknown;      'Revolutionary technology with no direct competitors. Traditional biomanufacturing uses basic optimization. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
       'Statistical analysis'
     ]
@@ -2053,16 +1910,9 @@ varian,
       'Performance monitoring'],
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitors: ['Basic optimization', 'Manual processes']
-<<<<<<< HEAD
     marketSize: '$40 B biomanufacturing market'
     growthRate: '210% annual growth';
-variant: 'biotech-futuristic',
-=======
-    marketSize: '$40 B biomanufacturing market',
-    growthRate: '210% annual growth',
-    variant: 'biotech-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'biotech-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}

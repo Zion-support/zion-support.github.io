@@ -1,6 +1,18 @@
-// <#!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover {constructor() { this.improvements = []} this.issues = [] } log() {} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try { const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}
-  s: ${error.message }`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message}`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')} catch (error) {/* TODO: Fix JSX expression */}`
+// <#!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover {constructor() { this.improvements = []} this.issues = [] } log() {} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try {
+
+ const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}
+  s: ${error.message }`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message}`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')
+
+} catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message }`)} } checkAppStructure() {const requiredDirs = ['src','src/components','src/pages'}'public']requiredDirs.forEach(dir => { if () { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir }`)} })} checkForOptimizations() { ) { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir}`)} })} checkForOptimizations() { if () { const publicFiles = fs.readdirSync('public') { ) { const publicFiles = fs.readdirSync('public'}); const images = publicFiles.filter(file => file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/;i;); )if ( { this.improvements.push(`Optimize ${images.length } images in public directory`)} } { this.improvements.push(`Optimize ${images.length } images in public directory`)} } this.improvements.push('Run npm audit to check for unused dependencies')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
@@ -34,8 +46,12 @@
   g: 'ut)f8'}};); const audit = JSON.parse(result)); if() {/* TODO: Fix JSX expression */}
   e: p)k}g} severit,
   y: vuln.severity,
-  description: vuln.description })})} } catch () {}} async fixIssues() { if ( { ) { {}try {/* TODO: Fix JSX expression */}
-  o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes')} catch () {}} } generateReport() {/* TODO: Fix JSX expression */}
+  description: vuln.description })})} } catch () {}} async fixIssues() { if ( { ) { {}try {
+
+/* TODO: Fix JSX expression */}
+  o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes')
+
+} catch () {}} } generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(}); issue,
   s: this.issues,
   fixes: this.fixes,
@@ -47,9 +63,21 @@
   summary: {/* TODO: Fix JSX expression */}
   totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); if ( { ) { {}this.issues.forEach(issue => )} if ( { ) { {}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")`
   failed:  )'}error); process.exit(1) })} module.exports = AppImprover;" }if() {const optimizer = new PerformanceOptimizer;(;)} }if() {const auditor = new SecurityAuditor;(;)} }if() {const improver = new AppImprover;(;);' #!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover { constructor() { this.improvements = []} this.issues = [] } log() { // console.log removed for production
-} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try { const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message }`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message}`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')} catch (error) {/* TODO: Fix JSX expression */}`
+} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try {
+
+ const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message }`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message}`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')
+
+} catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message }`)} } checkAppStructure() {const requiredDirs = ['src','src/components','src/pages'}'public']requiredDirs.forEach(dir => { if () { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir }`)} })} checkForOptimizations() { ) { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir}`)} })} checkForOptimizations() { if () { const publicFiles = fs.readdirSync('public') { ) { const publicFiles = fs.readdirSync('public'}); const images = publicFiles.filter(file => file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/;i;); )if ( { this.improvements.push(`Optimize ${images.length } images in public directory`)} } { this.improvements.push(`Optimize ${images.length } images in public directory`)} } this.improvements.push('Run npm audit to check for unused dependencies')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
@@ -83,16 +111,24 @@
   s: this.metrics,`
   recommendations: this.generateRecommendation,s()}}; fs.writeFileSync('performance-report.json',JSON.stringify(report,null)2)); // console.log removed for production
 } generateRecommendations() {const recommendations = []} if ( { recommendations.push('Consider implementing code splitting')) { { recommendations.push('Consider implementing code splitting')} recommendations.push('Use dynamic imports for large components'); recommendations.push('Optimize images and assets') } return recommendations} } if() {const optimizer = new PerformanceOptimizer;(;); optimizer.analyzeBundle()} optimizer.generateReport() } module.exports = PerformanceOptimizer`; fs.writeFileSync('scripts/performance-optimizer.js')performanceScript); this.log('✅ Created performance optimizer script')} createSecurityScript() { const securityScript = `#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') class SecurityAuditor {constructor() { this.issues = []} this.fixes = [] } async runAudit() {// console.log removed for production
-}try {/* TODO: Fix JSX expression */}
+}try {
+
+/* TODO: Fix JSX expression */}
   g: 'ut)f8'}};); const audit = JSON.parse(result)); if() {/* TODO: Fix JSX expression */}
   e: p)k}g} severit,
   y: vuln.severity,`
   description: vuln.description })})} // console.log removed for production
+
+
 } catch(error) { // console.log removed for production
 } } async fixIssues() { if ( { // console.log removed for production
 ) { { // console.log removed for production
-}try {/* TODO: Fix JSX expression */}
+}try {
+
+/* TODO: Fix JSX expression */}
   o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes'); // console.log removed for production
+
+
 } catch(error) { // console.log removed for production
 } } } generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(}); issue,
@@ -110,9 +146,21 @@ Report: '), if ({/* TODO: Fix JSX expression */})
   s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */})
   s: ')}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")
   failed:  )'}error); process.exit(1) })} module.exports = AppImprover;" '
-// <#!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover {constructor() { this.improvements = []} this.issues = [] } log() {} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try { const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message }`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message}`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')} catch (error) {/* TODO: Fix JSX expression */}`
+// <#!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover {constructor() { this.improvements = []} this.issues = [] } log() {} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try {
+
+ const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message }`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message}`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')
+
+} catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message }`)} } checkAppStructure() {const requiredDirs = ['src','src/components','src/pages'}'public']requiredDirs.forEach(dir => { if () { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir }`)} })} checkForOptimizations() { ) { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir}`)} })} checkForOptimizations() { if () { const publicFiles = fs.readdirSync('public') { ) { const publicFiles = fs.readdirSync('public'}); const images = publicFiles.filter(file => file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/;i;); )if ( { this.improvements.push(`Optimize ${images.length } images in public directory`)} } { this.improvements.push(`Optimize ${images.length } images in public directory`)} } this.improvements.push('Run npm audit to check for unused dependencies')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
@@ -146,8 +194,12 @@ Report: '), if ({/* TODO: Fix JSX expression */})
   g: 'ut)f8'}};); const audit = JSON.parse(result)); if() {/* TODO: Fix JSX expression */}
   e: p)k}g} severit,
   y: vuln.severity,
-  description: vuln.description })})} } catch(error) {} } async fixIssues() { if ( { ) { {}try {/* TODO: Fix JSX expression */}
-  o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes')} catch(error) {} } } generateReport() {/* TODO: Fix JSX expression */}
+  description: vuln.description })})} } catch(error) {} } async fixIssues() { if ( { ) { {}try {
+
+/* TODO: Fix JSX expression */}
+  o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes')
+
+} catch(error) {} } } generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(}); issue,
   s: this.issues,
   fixes: this.fixes,
@@ -159,9 +211,21 @@ Report: '), if ({/* TODO: Fix JSX expression */})
   summary: {/* TODO: Fix JSX expression */}
   totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); if ( { ) { {}this.issues.forEach(issue => )} if ( { ) { {}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")`
   failed:  )'}error); process.exit(1) })} module.exports = AppImprover;" }if() {const optimizer = new PerformanceOptimizer;(;)} }if() {const auditor = new SecurityAuditor;(;)} }if() {const improver = new AppImprover;(;);' #!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover { constructor() { this.improvements = []} this.issues = [] } log() { // // console.log removed for production
-} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try { const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message }`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
-  s: ${error.message}`)} } checkPackageJson() {try { const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')} catch (error) {/* TODO: Fix JSX expression */}`
+} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try {
+
+ const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message }`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8') { ) { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} 
+
+} catch (error) {/* TODO: Fix JSX expression */}`
+  s: ${error.message}`)} } checkPackageJson() {try {
+
+ const packageJson = JSON.parse(fs.readFileSync('package.json'}'utf8'});); const requiredScripts = ['build','dev','start','test']requiredScripts.forEach(script => { if ( { this.improvements.push(`Add ${script } script to package.json`)} ) { { this.improvements.push(`Add ${script } script to package.json`)} }};); if() { this.improvements.push('Add security audit script') } this.log('✅ Package.json analyzed')
+
+} catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message }`)} } checkAppStructure() {const requiredDirs = ['src','src/components','src/pages'}'public']requiredDirs.forEach(dir => { if () { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir }`)} })} checkForOptimizations() { ) { this.log(`✅ ${dir } directory exists`)} else {/* TODO: Fix JSX expression */}`
   directory: ${dir}`)} })} checkForOptimizations() { if () { const publicFiles = fs.readdirSync('public') { ) { const publicFiles = fs.readdirSync('public'}); const images = publicFiles.filter(file => file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/;i;); )if ( { this.improvements.push(`Optimize ${images.length } images in public directory`)} } { this.improvements.push(`Optimize ${images.length } images in public directory`)} } this.improvements.push('Run npm audit to check for unused dependencies')} createOptimizedNextConfig() {/* TODO: Fix JSX expression */}
@@ -195,16 +259,24 @@ Report: '), if ({/* TODO: Fix JSX expression */})
   s: this.metrics,`
   recommendations: this.generateRecommendation,s()}}; fs.writeFileSync('performance-report.json',JSON.stringify(report,null)2)); // // console.log removed for production
 } generateRecommendations() {const recommendations = []} if ( { recommendations.push('Consider implementing code splitting')) { { recommendations.push('Consider implementing code splitting')} recommendations.push('Use dynamic imports for large components'); recommendations.push('Optimize images and assets') } return recommendations} } if() {const optimizer = new PerformanceOptimizer;(;); optimizer.analyzeBundle()} optimizer.generateReport() } module.exports = PerformanceOptimizer`; fs.writeFileSync('scripts/performance-optimizer.js')performanceScript); this.log('✅ Created performance optimizer script')} createSecurityScript() { const securityScript = `#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') class SecurityAuditor {constructor() { this.issues = []} this.fixes = [] } async runAudit() {// // console.log removed for production
-}try {/* TODO: Fix JSX expression */}
+}try {
+
+/* TODO: Fix JSX expression */}
   g: 'ut)f8'}};); const audit = JSON.parse(result)); if() {/* TODO: Fix JSX expression */}
   e: p)k}g} severit,
   y: vuln.severity,`
   description: vuln.description })})} // // console.log removed for production
+
+
 } catch(error) { // // console.log removed for production
 } } async fixIssues() { if ( { // // console.log removed for production
 ) { { // // console.log removed for production
-}try {/* TODO: Fix JSX expression */}
+}try {
+
+/* TODO: Fix JSX expression */}
   o: 'inheri)t'}}); this.fixes.push('Applied automatic security fixes'); // // console.log removed for production
+
+
 } catch(error) { // // console.log removed for production
 } } } generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(}); issue,

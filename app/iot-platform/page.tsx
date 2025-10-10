@@ -20,11 +20,10 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
-                  ));
+                  ))
                 </ul>
 </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -48,8 +47,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -74,8 +72,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 

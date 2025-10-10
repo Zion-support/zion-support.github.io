@@ -77,8 +77,7 @@ export function makeKeyboardAccessible(
 const { role = 'button', tabindex = 0 } = options;
   
   element.setAttribute('role', role);
-  element.setAttribute('tabindex', tabindex.toString());
-  ;
+  element.setAttribute('tabindex', tabindex.toString())
 const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -101,7 +100,7 @@ return (;
 const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
 const [r, g, b] = rgb.map(c => {
       c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)})
     return 0.2126 * r + 0.7152 * g + 0.0722 * b};
 ;
 const lum1 = getLuminance(color1);
@@ -142,11 +141,9 @@ const skipLink = document.createElement('a');
   skipLink.style.zIndex = '100';
   
   skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '0'});
-  
+    skipLink.style.top = '0'})
   skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px'});
-  
+    skipLink.style.top = '-40px'})
   return skipLink}
 
 /**
@@ -250,9 +247,4 @@ const focusableElements = container.querySelectorAll(
     );
 const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
-<<<<<<< HEAD
 }
-=======
-  }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

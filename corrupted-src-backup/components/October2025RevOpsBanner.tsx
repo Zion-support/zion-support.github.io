@@ -1,7 +1,5 @@
 const, October2025RevOpsBanne, r = () => {
-return (
-
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
+return (<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
 );
 }
       {/* Animated, background, elements */};

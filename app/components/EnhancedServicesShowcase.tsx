@@ -32,13 +32,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-<<<<<<< HEAD
-      stats: '95% Efficiency';);
-=======
-      stats: '95% Efficiency']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      stats: '95% Efficiency';);  ];
 
   return (
     <section className="py-16"></section>
@@ -70,7 +64,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
-                ));
+                ))
               </ul>
               
               <a
@@ -80,8 +74,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ));
-        </div>
+          ))</div>
 
         <div className="text-center mt-12"></div>
           <a
@@ -93,12 +86,5 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
           </a>
         </div>
     </section>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default EnhancedServicesShowcase;
+  );)export default EnhancedServicesShowcase;
 }

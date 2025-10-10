@@ -41,7 +41,7 @@ class EnhancedErrorTracker {
         this.trackError(event.error, {
           component: 'Global',
           action:         ,
-$4})});
+$4})})
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
@@ -98,7 +98,7 @@ $4})})}
     recent: TrackedError[]} {;
 const byComponent: Record<string, number> = {};
     this.errors.forEach(error => {
-      byComponent[component] = (byComponent[component] || 0) + 1});
+      byComponent[component] = (byComponent[component] || 0) + 1})
     return {
       total: this.errors.length,
       byComponent,
@@ -159,7 +159,7 @@ class EnhancedErrorTracker {// TODO: Add content}
   t: 'Global',
           actio,
   n: 'Uncaught Error')
-        })});
+        })})
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content}
 })
@@ -170,10 +170,8 @@ class EnhancedErrorTracker {// TODO: Add content}
   component: 'Global',
           action: 'Unhandled Promise Rejection'
 
-        }
-  )
-      }
-  )
+        })
+      })
     }
   }
 
@@ -275,7 +273,7 @@ class EnhancedErrorTracker {// TODO: Add content}
   byComponent: Record;
           <string, number> = {};
     this.errors.forEach(error => {byComponent[component] = (byComponent[component] || 0) + 1}
-    });
+    })
     return {/* TODO: Fix JSX expression */}
   O: Add content}
 };

@@ -2,8 +2,7 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 import crypto from 'crypto';
 ;
 const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true'});
-
+  enabled: process.env.ANALYZE === 'true'})
 /** @type {import('next').NextConfig} */;
 const nextConfig = {
   reactStrictMode: true,
@@ -29,9 +28,7 @@ const nextConfig = {
     if (isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
-          'self': 'undefined'})
-      )}
-
+          'self': 'undefined'}))}
     // Optimize bundle size
     config.optimization = {
       ...config.optimization,
@@ -54,7 +51,7 @@ const nextConfig = {
               )},
             name(module) {;
 const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
+              _hash.update(module.identifier())
               return _hash.digest('hex').substring(0, 8)},
             priority: 30,
             minChunks: 1,

@@ -21,8 +21,7 @@ const [formData, setFormData] = useState({
     budget: '',
     description: '',
     requirements:   ,
-$4});
-;
+$4})
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
@@ -75,8 +74,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitting(false);
     setIsSubmitted(true)};
 ;
@@ -477,7 +475,7 @@ $4}
   n: '',
     requirement,
   s: '')
-  });
+  })
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
@@ -542,7 +540,7 @@ $4}
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitting(false);
     setIsSubmitted(true)};
   const benefits = [
@@ -638,9 +636,7 @@ $4}
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return (<div>Coming Soon</div>)
-  )
-      
+    return (<div>Coming Soon</div>))
           <React.Fragment>
         <Navigation /></Navigation>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -736,9 +732,7 @@ $4}
         <Footer /></Footer>
       </React.Fragment>
     )}
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Navigation /></Navigation>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

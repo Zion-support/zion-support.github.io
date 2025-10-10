@@ -224,5 +224,4 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
           </p>
         </div>)
       </div>)
-    </secti, o, n>)
-  )}
+    </secti, o, n>))}

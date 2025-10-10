@@ -48,8 +48,7 @@ if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
 
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
-
+})
 // 5. Fix OpenGraph authors issue;
 // const openGraphPages = [
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
@@ -58,13 +57,10 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
   e: ['"][^'"]*['"]\s*\}\s*\]/g,"
       "author,"
-  s: ['Zion Tech Group']")
-    );
-
+  s: ['Zion Tech Group']"))
     fs.writeFileSync(pagePath, content);
     //         }
-});
-
+})
 // 6. Fix missing Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}

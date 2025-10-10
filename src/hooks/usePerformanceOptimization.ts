@@ -46,15 +46,15 @@ export const _usePerformanceOptimization = () => {// TODO: Add content}
     // Measure LCP;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        metrics.largestContentfulPaint = lastEntry.startTime});
+        metrics.largestContentfulPaint = lastEntry.startTime})
     lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
 // Measure CLS;
     const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -73,7 +73,7 @@ const entries = list.getEntries();
           clsValue += layoutShiftEntry.value || 0;
       metrics.cumulativeLayoutShift = clsValue;
     clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
 // Measure FID;
     const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
   // TOD,
@@ -82,7 +82,7 @@ const entries = list.getEntries();
         metrics.firstInputDelay =)
           (fidEntry.processingStart || 0) - entry.startTime;
     fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] })
     // Cleanup observers after a delay;
     setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -108,14 +108,14 @@ const entries = list.getEntries();
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
-    images.forEach(img => imageObserver.observe(img));
+    images.forEach(img => imageObserver.observe(img))
   const preloadCriticalResources = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;

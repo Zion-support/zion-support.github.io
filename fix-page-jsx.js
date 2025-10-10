@@ -1,7 +1,9 @@
 import fs from 'fs';
 ;
 function fixPageJSX() {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync('app/page.tsx', 'utf8');
     
     // Fix specific malformed patterns;
@@ -73,7 +75,9 @@ const newContent = content.replace(fix.pattern, fix.replacement);
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }

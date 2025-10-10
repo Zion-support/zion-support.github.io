@@ -23,7 +23,9 @@ const fullPath = path.join(dir, item);
 
 // Fix merge conflicts;
 const fixMergeConflicts = (filePath) => {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
@@ -41,7 +43,9 @@ let content = fs.readFileSync(filePath, 'utf8');
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 };

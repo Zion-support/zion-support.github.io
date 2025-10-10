@@ -272,7 +272,7 @@ export const performanceSEO = {/* content */}
   s: 'image' }
     ];
 
-    criticalResources.forEach(resource => {/* content */});
+    criticalResources.forEach(resource => {/* content */})
 const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;

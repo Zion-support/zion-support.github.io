@@ -168,7 +168,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   const, runSEOAudi, t = asy, n, c () => {
     setIsRunni, n, g(tr, u, e);
     // Simulate, audit, process;
-  await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0));
+  await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0))
     // Simulate, some, issues based, on, random facto, r, s;
   const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {;
 let, typ, e = iss, u, e.ty, p, e;);
@@ -220,7 +220,7 @@ let, scor, e = iss, u, e.sco, r, e;)
       } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {/* TODO: Fix JSX expression */}
       } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */}
       }
-      retu, r, n { ...iss, u, e, ty, p, e, sco, r, e }});
+      retu, r, n { ...iss, u, e, ty, p, e, sco, r, e }})
     const, error, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'err, o, r').leng, t, h;';
     const, warning, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'warni, n, g').leng, t, h;';
     const, overallScor, e = Ma, t, h.rou, n, d(issu, e, s.redu, c, e((s, u, m, iss, u, e) => s, u, m + iss, u, e.sco, r, e, 0) / issu, e, s.leng, t, h);
@@ -271,7 +271,7 @@ let, scor, e = iss, u, e.sco, r, e;)
         wordCou, n, t: 28, 4, 7;
         readabilitySco, r, e: 72}
       lastUpdat, e, d: Da, t, e.n, o, w()
-    });
+    })
     setIsRunni, n, g(fal, s, e)};
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 }

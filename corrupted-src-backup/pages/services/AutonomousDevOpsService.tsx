@@ -3,9 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 ;
 const AutonomousDevOpsServic, e = () => {
-return (
- 
-  return(<React.Fragment>
+return (<React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group;

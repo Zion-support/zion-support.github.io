@@ -1,5 +1,7 @@
 exports.handler = async function (event, context) {
   try {
+
+
     // Basic implementation - replace with actual logic;
     const _timestamp = new Date().toISOString();
     return {
@@ -8,7 +10,9 @@ exports.handler = async function (event, context) {
         message: 'ultrafast_orchestrator function executed successfully'),
         timestamp: timestamp),;
 function: 'ultrafast_orchestrator'})
-    }} catch (error) {
+    }
+
+} catch (error) {
 
     return {
       statusCode: 500;

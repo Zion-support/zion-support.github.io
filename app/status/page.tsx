@@ -5,14 +5,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer'
 export default function StatusPage() {;
-const [lastUpdated, setLastUpdated] = useState(new Date());
+const [lastUpdated, setLastUpdated] = useState(new Date())
 const [isRefreshing, setIsRefreshing] = useState(false);
 ;
 const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setLastUpdated(new Date())
     setIsRefreshing(false);
 ;
 const services = [
@@ -200,8 +200,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                   </div>
                 </div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -241,8 +240,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 

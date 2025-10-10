@@ -15,8 +15,6 @@ return (
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6'>;
 const October2025CognitiveRevolutionBanne, r: React.FC = () => {
 return (
- 
-  return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' >
 );
 } {/* Animated, background, effec, t, s */ }</div>

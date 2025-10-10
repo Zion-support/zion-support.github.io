@@ -5,6 +5,8 @@ import { glob } from 'glob';
 // Function to process a file;
 function processFile(filePath) {
   try {
+
+
     // Fix malformed closing tags;
     if (content.includes('</div>}')) {;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -60,7 +62,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 

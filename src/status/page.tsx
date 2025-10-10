@@ -10,8 +10,6 @@ import Footer from '../components/Footer';
 ;
 const Status: React.FC = () => {
 return (
-
-  return (
     <div>Coming Soon</div>
   )
     

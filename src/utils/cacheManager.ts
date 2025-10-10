@@ -113,7 +113,9 @@ export class CacheManager {// TODO: Add content}
         if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          try {/* TODO: Fix JSX expression */}
+          try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
             const item = localStorage.getItem(key);
@@ -127,14 +129,15 @@ export class CacheManager {// TODO: Add content}
 }
                 keysToRemove.push(key)}
             }
-          } catch {/* TODO: Fix JSX expression */}
+          
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
             keysToRemove.push(key)}
         }
       }
-      keysToRemove.forEach(key => localStorage.removeItem(key))
-    }
+      keysToRemove.forEach(key => localStorage.removeItem(key))}
     logger.debug('Cache cleanup completed')
   }
   /**
@@ -185,10 +188,14 @@ export class CacheManager {// TODO: Add content}
 //       window.localStorage) {// TODO: Add content}
 
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))} catch (error) {/* TODO: Fix JSX expression */}
+        localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         logger.error('Failed to set localStorage cache', error);
@@ -200,10 +207,14 @@ export class CacheManager {// TODO: Add content}
 //       window.sessionStorage) {// TODO: Add content}
 
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))} catch (error) {/* TODO: Fix JSX expression */}
+        sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         logger.error('Failed to set sessionStorage cache', error);
@@ -233,16 +244,20 @@ export class CacheManager {// TODO: Add content}
 // window.localStorage) {// TODO: Add content}
 
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const item = localStorage.getItem(this.getStorageKey(key));
+        const item = localStorage.getItem(this.getStorageKey(key))
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
           entry = JSON.parse(item) as CacheEntry;
           <T>}
-      } catch (error) {/* TODO: Fix JSX expression */}
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         logger.error('Failed to get localStorage cache', error)}
@@ -252,16 +267,20 @@ export class CacheManager {// TODO: Add content}
 //       window.sessionStorage) {// TODO: Add content}
 
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const item = sessionStorage.getItem(this.getStorageKey(key));
+        const item = sessionStorage.getItem(this.getStorageKey(key))
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
           entry = JSON.parse(item) as CacheEntry;
           <T>}
-      } catch (error) {/* TODO: Fix JSX expression */}
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         logger.error('Failed to get sessionStorage cache', error)}
@@ -343,8 +362,7 @@ export class CacheManager {// TODO: Add content}
 }
           keysToRemove.push(key)}
       }
-      keysToRemove.forEach(key => localStorage.removeItem(key))
-    }
+      keysToRemove.forEach(key => localStorage.removeItem(key))}
     if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
@@ -363,12 +381,9 @@ export class CacheManager {// TODO: Add content}
 }
           keysToRemove.push(key)}
       }
-      keysToRemove.forEach(key => sessionStorage.removeItem(key))
-    }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))}
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
-  e: this.storage })
-  )
-  }
+  e: this.storage }))}
   /**
    * Get or set with function (handles both sync and async)
    */

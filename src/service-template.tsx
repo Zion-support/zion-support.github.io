@@ -87,7 +87,6 @@ const,
                       {feature}
                     </li>
                   ))}
-
                 </ul>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block" Get Started;

@@ -96,7 +96,6 @@ const _now = Date.now();
     }
 
     expiredKeys.forEach(key => this.delete(key))}
-
   persistToStorage(key, value, expiry) {/* TODO: Fix JSX expression */}
       };
       localStorage.setItem(`cache_${key}`, JSON.stringify(item))} catch (error) {/* TODO: Fix JSX expression */}
@@ -109,19 +108,25 @@ const _now = Date.now();
   }
 
   clearStorage() {
-    try {;
+    try {
+
+;
 const _keys = Object.keys(localStorage);
       keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           localStorage.removeItem(key);
   clearStorage() {/* TODO: Fix JSX expression */}
         }
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
   loadFromStorage() {
-    try {;
+    try {
+
+;
 const _keys = Object.keys(localStorage);
       const _now = Date.now();
 
@@ -129,7 +134,7 @@ const _keys = Object.keys(localStorage);
 return (
 )
         if (key.startsWith('cache_')) {;
-const _item = JSON.parse(localStorage.getItem(key));
+const _item = JSON.parse(localStorage.getItem(key))
           if (item && item.expiry>now</expiry>
 );
 }) {
@@ -142,7 +147,9 @@ const _item = JSON.parse(localStorage.getItem(key));
           } else {/* TODO: Fix JSX expression */}
           }
         }
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
@@ -200,18 +207,20 @@ const _memInfo = performance.memory;
     return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
           try {
+
+
             //             const value = await fetcher(key);
             this.set(key, value);
-            return { key, success: true }} catch (error) {
+            return { key, success: true }
+
+} catch (error) {
             return { key, success: false, error };
   warmCache(keys, fetcher) {/* TODO: Fix JSX expression */}
   s: true }} catch (error) {/* TODO: Fix JSX expression */}
   s: false, error }}
         }
         return {/* TODO: Fix JSX expression */}
-  d: true }})
-    )}
-
+  d: true }}))}
   // Prefetch related data;
   prefetch(primaryKey, relatedKeys, fetcher) {
     //     const primaryValue = this.get(primaryKey);
@@ -233,13 +242,17 @@ const _regex = new RegExp(pattern);
       }
     }
 
-    keysToDelete.forEach(key => this.delete(key));
+    keysToDelete.forEach(key => this.delete(key))
     return keysToDelete.length}
 
   // Cache compression for large values;
   compressValue(value) {
     try {
-      return JSON.stringify(value)} catch (error) {
+
+
+      return JSON.stringify(value)
+
+} catch (error) {
       return value;
   compressValue(value) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}

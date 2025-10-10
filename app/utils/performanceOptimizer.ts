@@ -155,7 +155,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       this.measureMemoryUsage();
 
   private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
-    });
+    })
     // Monitor render performance;
     this.measureRenderTime();
   /**
@@ -171,13 +171,17 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private measureLoadTime(): void {}
     if (typeof window === 'undefined' || !window.performance) return;
     if (typeof window.performance.getEntriesByType !== 'function') return;
-    try {}
+    try {
+
+}
       const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {}
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
       }
-    } catch (error) {
+    
+
+} catch (error) {
     }
   }
   /**
@@ -186,7 +190,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private measureRenderTime(): void {}
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
-    try {}
+    try {
+
+}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
         entries.forEach((entry) => {}
@@ -194,24 +200,30 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.metrics.renderTime = entry.duration}
 
 
-      observer.observe({ entryTypes: ['measure'] });
-      this.observers.push(observer)} catch (error) {
+      observer.observe({ entryTypes: ['measure'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments} catch (error) {}
       // PerformanceObserver may not support 'measure' entryType in some environments
       }
   }
   private observeLCP() {}
-    try {}
+    try {
+
+}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */}
           }
-        })});
+        })})
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] });
-      this.observers.push(observer)} catch (error) {/* TODO: Fix JSX expression */}
+  s: ['measure'] })
+      this.observers.push(observer)
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   private observeLCP() {/* TODO: Fix JSX expression */}
@@ -225,13 +237,17 @@ const lastEntry = entries[entries.length - 1]
     }
   }
   private observeFID() {}
-    try {}
+    try {
+
+}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
-    } catch {/* TODO: Fix JSX expression */}
+    
+
+} catch {/* TODO: Fix JSX expression */}
     }
   }
   private observeFID() {/* TODO: Fix JSX expression */}
@@ -245,19 +261,25 @@ const lastEntry = entries[entries.length - 1]
       // Ignore if not supported}
   }
   private observeCLS() {
-    try {;
+    try {
+
+;
 let clsValue = 0;
 const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,;
 const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value} catch {}
+            clsValue += clsEntry.value
+
+} catch {}
       // Ignore if not supported
     }
   }
   private observeCLS() {}
-    try {}
+    try {
+
+}
       let clsValue = 0;
 const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
@@ -270,13 +292,17 @@ const observer = new PerformanceObserver((list) => {}
         this.metrics.cls = clsValue})
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
-    } catch {
+    
+
+} catch {
       // Ignore if not supported} catch {}
       // Ignore if not supported
     }
   }
   private observeFCP() {}
-    try {}
+    try {
+
+}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry) => {
@@ -285,7 +311,9 @@ const observer = new PerformanceObserver((list) => {}
         entries.forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
             this.metrics.fcp = entry.startTime
-    } catch {/* TODO: Fix JSX expression */}
+    
+
+} catch {/* TODO: Fix JSX expression */}
     }
   }
   private observeCLS() {/* TODO: Fix JSX expression */}
@@ -313,7 +341,9 @@ const observer = new PerformanceObserver((list) => {}
     }
   }
   private observeTTFB() {}
-    try {}
+    try {
+
+}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,;
@@ -324,7 +354,9 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {}
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-    } catch {/* TODO: Fix JSX expression */}
+    
+
+} catch {/* TODO: Fix JSX expression */}
     }
   }
   private observeTTFB() {/* TODO: Fix JSX expression */}
@@ -410,7 +442,7 @@ const images = document.querySelectorAll('img');
       }
 
 
-  images.forEach((img) => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img))
   public optimizeImages(): void {/* TODO: Fix JSX expression */}
       }
       // Add proper alt text if missing;
@@ -420,7 +452,7 @@ const images = document.querySelectorAll('img');
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
         }
       }
-    });
+    })
   /**
    * Check if browser supports WebP;
    */
@@ -435,9 +467,9 @@ const images = document.querySelectorAll('img');
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
           }
-        })});
+        })})
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
-      });
+      })
     this.metrics.lazyLoading = true}
   /**
    * Enable code splitting for better performance;
@@ -453,7 +485,7 @@ const images = document.querySelectorAll('img');
       })
       .catch((error) => {/* TODO: Fix JSX expression */}
         if (process.env.NODE_ENV === 'development') {}
-      });
+      })
   /**
    * Get current performance metrics;
    */
@@ -474,8 +506,8 @@ const images = document.querySelectorAll('img');
    */
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
         }
-      })});
-    images.forEach(img => imageObserver.observe(img));
+      })})
+    images.forEach(img => imageObserver.observe(img))
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
   /**
    * Add critical resource hints;
@@ -485,7 +517,7 @@ const images = document.querySelectorAll('img');
       {/* TODO: Fix JSX expression */}
   s: 'style' }];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
-    });
+    })
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
   /**
    * Measure page load metrics;
@@ -499,8 +531,8 @@ const images = document.querySelectorAll('img');
   s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
   g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */})
-          });
-      });
+          })
+      })
   }
   /**
    * Cleanup observers and resources;

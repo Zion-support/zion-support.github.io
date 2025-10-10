@@ -191,21 +191,11 @@ export const,
         'Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'],
       roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
       competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
-<<<<<<< HEAD
       market_size: '$45B supply chain management market'
       growth_rate: '28% annual growth';
 variant: 'logistics'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$45B supply chain management market',
-      growth_rate: '28% annual growth',
-      variant: 'logistics',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -334,21 +324,11 @@ varian,
       competitor,
   s: [,
         'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti'],
-<<<<<<< HEAD
       market_size: '$8B quantum computing market'
       growth_rate: '65% annual growth';
 variant: 'quantum - logistics'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8B quantum computing market',
-      growth_rate: '65% annual growth',
-      variant: 'quantum - logistics',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -475,21 +455,11 @@ varian,
       competitor,
   s: [,
         'Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
-<<<<<<< HEAD
       market_size: '$30B fleet management market'
       growth_rate: '32% annual growth';
 variant: 'iot - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$30B fleet management market',
-      growth_rate: '32% annual growth',
-      variant: 'iot - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -616,21 +586,11 @@ varian,
       competitor,
   s: [,
         'IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
-<<<<<<< HEAD
       market_size: '$22B blockchain supply chain market'
       growth_rate: '45% annual growth';
 variant: 'blockchain - futuristic'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$22B blockchain supply chain market',
-      growth_rate: '45% annual growth',
-      variant: 'blockchain - futuristic',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -734,21 +694,11 @@ varian,
       competitor,
   s: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
-<<<<<<< HEAD
       market_size: '$28B warehouse automation market'
       growth_rate: '38% annual growth';
 variant: 'ai - supply - chain - enterprise'
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$28B warehouse automation market',
-      growth_rate: '38% annual growth',
-      variant: 'ai - supply - chain - enterprise',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        mobile: '+1 302 464 0950'        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
@@ -933,16 +883,9 @@ export const,
       competitors: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
       ]
-<<<<<<< HEAD
       marketSize: '$28 B warehouse automation market'
       growthRate: '38% annual growth';
-variant: 'ai-supply-chain-enterprise',
-=======
-      marketSize: '$28 B warehouse automation market',
-      growthRate: '38% annual growth',
-      variant: 'ai-supply-chain-enterprise',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      contactInfo: mobile: '+1 302 464 0950',
+variant: 'ai-supply-chain-enterprise',      contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'}
@@ -1034,14 +977,8 @@ varian,
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth',;
 variant: 'logistics',
     contactInfo: unknown;
-<<<<<<< HEAD
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth';
-variant: 'ai-supply-chain-enterprise'
-=======
-    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth',
-    variant: 'ai-supply-chain-enterprise',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: unknown;
+variant: 'ai-supply-chain-enterprise'    contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1139,21 +1076,11 @@ varian,
     useCases: ['Fleet monitoring, Predictive maintenance, Route optimization, Driver management, Cost optimization'],
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.',
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
-<<<<<<< HEAD
     marketSize: '$30B fleet management market'
     growthRate: '32% annual growth';
 variant: 'iot-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$30B fleet management market',
-    growthRate: '32% annual growth',
-    variant: 'iot-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1266,21 +1193,11 @@ varian,
     useCases: ['Supply chain traceability, Quality assurance, Compliance, Sustainability, Risk management'],
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.',
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
-<<<<<<< HEAD
     marketSize: '$22B blockchain supply chain market'
     growthRate: '45% annual growth';
 variant: 'blockchain-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$22B blockchain supply chain market',
-    growthRate: '45% annual growth',
-    variant: 'blockchain-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1393,21 +1310,11 @@ varian,
     useCases: ['Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'],
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
-<<<<<<< HEAD
     marketSize: '$28B warehouse automation market'
     growthRate: '38% annual growth';
 variant: 'ai-manufacturing-enterprise'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$28B warehouse automation market',
-    growthRate: '38% annual growth',
-    variant: 'ai-manufacturing-enterprise',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;

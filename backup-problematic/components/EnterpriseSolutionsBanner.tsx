@@ -27,6 +27,5 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
           </p>
         </div>
       </div>
-    </div>)
-  )}
+    </div>))}
 "

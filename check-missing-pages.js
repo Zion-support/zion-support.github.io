@@ -80,14 +80,12 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages}, null, 2));
-
+  existingPagesList: existingPages}, null, 2))
 // console.log removed for production
 // console.log removed for production
 // Find missing pages;
 const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
-});
-
+})
 // console.log removed for production
 pages:');
 missingPages.forEach(page => // console.log removed for production

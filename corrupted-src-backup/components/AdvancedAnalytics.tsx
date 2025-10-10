@@ -24,8 +24,7 @@ const [analytics] = useState({
     })
     conversions: 0;
     performance: 0),
-    errors: 0)});
-
+    errors: 0)})
   useEffect(() => {
     // Initialize analytics tracking;
     if (enableConversionTracking) {
@@ -73,8 +72,7 @@ const,
     performanc,
   e: 0,
     error,
-  s: 0});
-
+  s: 0})
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
 

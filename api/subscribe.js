@@ -8,7 +8,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
     return}
 ;
 const { email, name, preferences } = req.body || {};
@@ -16,7 +16,7 @@ const { email, name, preferences } = req.body || {};
   if (!email) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email is required' }));
+    res.end(JSON.stringify({ error: 'Email is required' }))
     return}
 
   if (!fs.existsSync(dir)) {
@@ -24,11 +24,15 @@ const { email, name, preferences } = req.body || {};
 ;
 let existing = [];
   try {
+
+
     if (fs.existsSync(file)) {;
 const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = []}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.error removed for production
 existing = []}
 
@@ -37,7 +41,7 @@ const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    res.end(JSON.stringify({ error: 'Email already subscribed' }))
     return}
 ;
 const newSubscriber = {
@@ -52,14 +56,18 @@ const newSubscriber = {
   existing.push(newSubscriber);
 
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
-    }))} catch (error) {
+    }))
+
+} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

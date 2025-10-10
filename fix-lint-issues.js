@@ -16,24 +16,21 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
         return `_${trimmed}`}
       return trimmed}).join(', ');`
-    return `const { ${fixedVars} } = ${assignment};`});
-
+    return `const { ${fixedVars} } = ${assignment};`})
   // Fix unused variables in function parameters;
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
         return `_${varName}`}
-      return varName})});
-
+      return varName})})
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
         return `_${varName}`}
-      return varName})});
-
+      return varName})})
   return content}
 
 // Function to fix console statements;
@@ -68,8 +65,7 @@ function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 // Function to fix JSX parsing errors;
 function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
     }
-    return match});
-
+    return match})
   // Fix JSX expressions with multiple parent elements;
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
 return (
@@ -77,8 +73,7 @@ return (
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>
 );
 }/gs, (match) => {/* TODO: Fix JSX expression */}`
-    return `<div>${match.replace(/<React.Fragment>\s*|<\/>/g, '')}</div>`});
-
+    return `<div>${match.replace(/<React.Fragment>\s*|<\/>/g, '')}</div>`})
   return content}
 
 // Function to remove unused imports;
@@ -102,18 +97,19 @@ function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
   }
   
   // Filter import lines;
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */});
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
 const importMatch = line.match(/import\s*{([^}]+)}/);
       if (importMatch) {/* TODO: Fix JSX expression */}
       }
       return true; // Keep default imports and other patterns}
-    return true});
-  
+    return true})
   return filteredLines.join('\n')}
 
 // Function to process a single file;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -131,7 +127,9 @@ let content = fs.readFileSync(filePath, 'utf8');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }

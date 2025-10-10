@@ -6,6 +6,8 @@ import path from 'path';
 // Function to resolve merge conflicts by choosing the HEAD version
 function resolveMergeConflicts(filePath) {
   try {
+
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
@@ -45,7 +47,9 @@ function resolveMergeConflicts(filePath) {
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
-  } catch (error) {
+  
+
+} catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
@@ -66,11 +70,15 @@ function findFilesWithConflicts(dir) {
         searchDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
+
+
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
-        } catch (error) {
+        
+
+} catch (error) {
           // Skip files that can't be read
         }
       }

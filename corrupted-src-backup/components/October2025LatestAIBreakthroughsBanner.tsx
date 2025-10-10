@@ -234,8 +234,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
           </Li, n, k>
         </d, i, v>)
       </d, i, v>)
-    </d, i, v>)
-  );
+    </d, i, v>))
 export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
 }
 ;

@@ -23,11 +23,8 @@ interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
 }
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
-
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>([])
-  );
-;
+  })
+  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>([]))
 const, runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
      }

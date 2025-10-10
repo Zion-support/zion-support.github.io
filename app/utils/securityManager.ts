@@ -42,7 +42,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    * Validate and sanitize URL;
    */
   sanitizeUrl(url: string): string {,
-    try {,;
+    try {
+
+,;
 const parsed = new URL(url),
       if (!['http:', 'https: '].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
@@ -52,7 +54,9 @@ const parsed = new URL(url),
         throw new Error('Invalid protocol');
       }
       return parsed.toString()
-    } catch {}
+    
+
+} catch {}
       return ''}
   sanitizeUrl(ur)
   l: string): string {/* TODO: Fix JSX expression */}

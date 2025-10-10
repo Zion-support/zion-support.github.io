@@ -30,8 +30,7 @@ blogPages.forEach(pagePath => {)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
-
+})
 // 3. Fix OpenGraph authors;
 // const openGraphPages = [
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
@@ -44,13 +43,10 @@ openGraphPages.forEach(pagePath => {)
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' }]")
-    );
-
+  e: 'Zion Tech Group' }]"))
     fs.writeFileSync(pagePath, content);
     //         }
-});
-
+})
 // 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
@@ -130,9 +126,7 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
   content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g)
     ''
   content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,
-    '')
-  );
-
+    ''))
   // Replace performanceEnhancer calls with direct performance API calls;
   content = content.replace(/performanceEnhancer\./g, '');
 

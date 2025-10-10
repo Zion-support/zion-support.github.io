@@ -40,7 +40,9 @@ const firstTag = match.match(/<\/(\w+)>/)[1];
 ];
 ;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -57,7 +59,9 @@ const newContent = content.replace(fix.pattern, fix.replacement);
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -75,7 +79,7 @@ let allFiles = [];
   for (const pattern of priorityFiles) {;
 const files = await glob(pattern, {
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
-    });
+    })
     allFiles = [...allFiles, ...files]}
   
   // Remove duplicates

@@ -21,8 +21,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   handleNetworkError(erro,
   r: Error, ur)
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
-  r: error.message, url, config }
-  )
+  r: error.message, url, config })
   }
 }
 
@@ -71,7 +70,9 @@ export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
     headers: Headers;,
     config: RequestConfig
 }
-export interface CacheEntry {// TODO: Add content}
+export interface CacheEntry {
+
+// TODO: Add content}
 };
   data: unknown,
 
@@ -208,7 +209,9 @@ const data = await this.parseResponse;
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
-        config: finalConfig}} catch (error) {/* TODO: Fix JSX expression */}
+        config: finalConfig}
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       const duration = performance.now() - startTime;
@@ -360,7 +363,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      headers.set(key, value)});
+      headers.set(key, value)})
     return headers}
   /**
    * Create abort signal for timeout;
@@ -462,7 +465,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   getCacheStats() {// TODO: Add content}
 
 }
-    const entries = Array.from(this.cache.values());
+    const entries = Array.from(this.cache.values())
     const now = Date.now();
     const valid = entries.filter(e => now;)
           <= e.expiresAt).length;

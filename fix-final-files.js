@@ -31,8 +31,6 @@ const ${componentName}: React.FC<${componentName}Props> = ({
   className = '', 
   children}) => {
 return (
-
-  return (
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
 );
 }</div>

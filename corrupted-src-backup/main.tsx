@@ -3,7 +3,9 @@ import './index.css';
 
 async function reportWebVitals() {/* TODO: Fix JSX expression */}
 }
-  try {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metri,
   c: {/* TODO: Fix JSX expression */})
@@ -14,7 +16,9 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     onCLS(log);
     onLCP(log);
     onFCP(log);
-    onTTFB(log)} catch (error) {/* TODO: Fix JSX expression */}
+    onTTFB(log)
+
+} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
 
@@ -27,7 +31,5 @@ root.render(<React.StrictMode>)
     <App />)
 root.render(<React.StrictMode></React>
     <App /></App>
-  </React.StrictMode>)
-);
-
+  </React.StrictMode>))
 reportWebVitals();

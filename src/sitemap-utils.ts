@@ -42,7 +42,7 @@ export const generateSitemap = (pages: Array;)
     sitemap += `    <priority>${page.priority}</priority>
 `;
     sitemap += `  </url>
-`});
+`})
   sitemap += '</urlset>';
   return sitemap};
 // This would typically be handled by a server-side route;

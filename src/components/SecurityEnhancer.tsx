@@ -57,20 +57,16 @@ const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
 ;
 const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     // Prevent drag and drop;
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
@@ -87,8 +83,7 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
         }
       }
-    });
-
+    })
     // Monitor for suspicious activity;
     let suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
@@ -114,11 +109,9 @@ const formData = new FormData(form as HTMLFormElement);
         const token = formData.get('csrf_token');
         
         if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
+          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }))
           logger.warn('Potential CSRF attempt detected', { form: form.id })}
-      })});
-
-
+      })})
     // Track rapid keyboard input;
     let keyCount = 0;
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
@@ -134,8 +127,8 @@ const originalFetch = window.fetch;
 const url = args[0] as string;
       
       if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }))
+        logger.warn('Suspicious network request blocked', { url })
         throw new Error('Suspicious network request blocked')}
       
       return originalFetch.apply(window, args)}}, [validateURL]);
@@ -177,11 +170,11 @@ const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
     
     if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
+      logger.warn('Rate limit exceeded', { key, limit, windowMs })
       return false}
     
     requests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
+    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests))
     return true}, []);
 
   // Initialize security monitoring
@@ -198,8 +191,7 @@ const interval = setInterval(() => {
 
   // Security event handlers;
 const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
-    
+    logger.info('Security event', { event, data })
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
       return}

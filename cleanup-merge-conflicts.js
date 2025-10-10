@@ -6,7 +6,9 @@ import { execSync } from 'child_process';
 
 // Function to clean merge conflict markers from a file;
 function cleanMergeConflicts(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
@@ -41,7 +43,9 @@ let content = fs.readFileSync(filePath, 'utf8');
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -50,7 +54,9 @@ return false}
 function cleanDirectory(dirPath) {;
 let cleanedCount = 0;
   
-  try {;
+  try {
+
+;
 const items = fs.readdirSync(dirPath);
     
     for (const item of items) {;
@@ -70,7 +76,9 @@ const ext = path.extname(item);
         }
       }
     }
-  } catch (error) {
+  
+
+} catch (error) {
     // console.error removed for production
 }
   

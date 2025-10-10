@@ -42,8 +42,7 @@ const minified = styles;
     if (content.includes('const ') && content.includes(': React.FC')) {
       content = content.replace(
         /const (\w+): React\.FC = \(/g;
-        'const $1: React.FC = React.memo((')
-      );
+        'const $1: React.FC = React.memo(('))
       // Add closing parenthesis for React.memo;
       content = content.replace()
         /(\w+)\.displayName = '\w+';/g;
@@ -100,7 +99,9 @@ let processedFiles = 0;
 let optimizationsApplied = 0;
 ;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
@@ -111,14 +112,15 @@ const before = newContent;
       newContent = optimizer(newContent);
       if (newContent !== before) {
         fileOptimizations++}
-    });
-
+    })
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
 optimizationsApplied += fileOptimizations}
 
-    processedFiles++} catch (error) {
+    processedFiles++
+
+} catch (error) {
     // console.error removed for production
 }
 }
@@ -130,7 +132,7 @@ async function main() {
   for (const pattern of filePatterns) {;
 const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()})
     allFiles.push(...files)}
 
   // Remove duplicates;

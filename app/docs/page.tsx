@@ -104,8 +104,7 @@ const filteredDocs = docCategories.map(category => ({
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -143,11 +142,9 @@ const filteredDocs = docCategories.map(category => ({
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
                     </a>
-                  ));
-                </div>
+                  ))</div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 

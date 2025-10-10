@@ -48,8 +48,7 @@ export const errorHandler = (er,
     // eslint-disable-next-line no-console;
 //     // .toISOString(),
     userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
-
+    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})}
@@ -91,18 +90,7 @@ export const errorHandler = (er,
       userAgent: req.headers['user-agent'],
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
 
-  });
-
-
-
-
-
-
-
-
-
-
-
+  })
     timestam,
   p: new Date().toISOString(),
     userAgen,
@@ -134,8 +122,7 @@ export const asyncHandler =
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
-    stack: err.stack});
-
+    stack: err.stack})
   res.status(statusCode).json({)
     error: {)
       message: message || 'Internal Server Error'),
@@ -160,8 +147,7 @@ export const asyncHandler = {};
   t: Function) => {/* TODO: Fix JSX expression */}
   };
     stac,
-  k: err.stack});
-
+  k: err.stack})
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
   k: err.stack })
     }
@@ -207,7 +193,7 @@ export const asyncHandler =
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
 return (
 ,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
 export const asyncHandler = (f,
   n: (re,
   q: NextApiRequest, re)

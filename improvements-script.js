@@ -32,8 +32,7 @@ function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
       file.endsWith('.jsx')
     ) {/* TODO: Fix JSX expression */}
     }
-  });
-
+  })
   return fileList}
 
 // Improvement 1: Replace unwrapped console statements with logger;
@@ -151,6 +150,8 @@ function optimizeImports(content) {/* TODO: Fix JSX expression */}
 // Main processing function;
 function processFile(filePath) {
   try {
+
+
     // Apply improvements;
     if (loggingResult.improved) {
       newContent = loggingResult.content;
@@ -175,7 +176,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     if (fileImproved && newContent !== content) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     config.errors.push(`Error processing ${filePath}: ${error.message}`);
     return false}
 }
@@ -186,24 +189,22 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
 files.forEach(file => {)
   if (processFile(file)) {
     filesImproved++}
-});
-
+})
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {
   //   config.improvements.slice(0, 20).forEach((improvement, i) => {
 files.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {/* TODO: Fix JSX expression */}
-    //     });
+    //     })
   if (config.improvements.length > 20) {/* TODO: Fix JSX expression */}
     //     }
   //   }
 
 if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
-    //     });
+    //     })
   //   }
 
 // Save detailed report;
@@ -229,8 +230,7 @@ fs.writeFileSync(reportPath,
       error,
   s: config.errors},
     null,
-    2;)
-  )
+    2;))
 );
 
 // // process.exit(config.errors.length > 0 ? 1 : 0)}}`

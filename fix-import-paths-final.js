@@ -3,6 +3,8 @@ import { fileURLToPath } from 'url';
 ;
 function processFile(filePath) {
   try {
+
+
     // Determine correct relative paths based on file location;
     const isInApp =
       filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
@@ -68,8 +70,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     // Fix MetadataRoute namespace issue;
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
@@ -79,14 +80,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 ;
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
-)
+  items.forEach(item => {))
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
@@ -95,8 +97,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   return totalFixed}
 
 // Process the app directory;

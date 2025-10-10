@@ -106,7 +106,9 @@ class PerformanceMonitoringService {// TODO: Add content}
   O: Add content}
 }
       return}
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       // Observe paint metrics (FCP)
@@ -117,9 +119,9 @@ class PerformanceMonitoringService {// TODO: Add content}
   O: Add content}
 }
             this.recordWebVital('FCP', entry.startTime)}
-        })});
+        })})
       paintObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       this.observers.push(paintObserver);
       // Observe LCP;
 const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -133,9 +135,9 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */})
   e: number }).renderTime || (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */})
   e: number }).loadTime)}
-      });
+      })
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       this.observers.push(lcpObserver);
       // Observe CLS;
       const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -151,9 +153,9 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
             clsValue += (entry as PerformanceEntry & {/* TODO: Fix JSX expression */})
   e: number }).value;
             this.recordWebVital('CLS', clsValue)}
-        })});
+        })})
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       this.observers.push(clsObserver);
       // Observe FID;
 const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -163,9 +165,9 @@ const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 }
           this.recordWebVital('FID', (entry as PerformanceEntry & {/* TODO: Fix JSX expression */})
-  t: number }).processingStart - entry.startTime)})});
+  t: number }).processingStart - entry.startTime)})})
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB;
 const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -175,10 +177,12 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 }
           const navEntry = entry as PerformanceNavigationTiming;
-          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)})});
+          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)})})
       navObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
-      this.observers.push(navObserver)} catch (error) {/* TODO: Fix JSX expression */}
+  d: true })
+      this.observers.push(navObserver)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       logger.error('Failed to initialize performance observers', error as Error)}
@@ -204,7 +208,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     };
     this.webVitals[name] = metric;`
     logger.info(`Web)`
-  Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
+  Vital: ${name}`, 'PerformanceMonitoring', { value, rating })
     // Send to analytics;
     this.sendToAnalytics(metric)}
   /**
@@ -259,9 +263,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 }
       this.customMetrics.shift()}
-    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
-
-  )
+    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
   }
   /**
    * Send metric to analytics service;
@@ -271,7 +273,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
           <void> {// TODO: Add content}
 
 }
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
@@ -284,10 +288,11 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric)
-        }
-  )
+        })
       }
-    } catch (error) {// TODO: Add content}
+    
+
+} catch (error) {// TODO: Add content}
 
 }
       logger.error('Failed to send metric to analytics', error as Error)}
@@ -328,8 +333,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         case 'poor': return 0;
 
         default: return 0}
-    }
-  )
+    })
     return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.length)
   }
   /**
@@ -432,7 +436,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     if (typeof performance !== 'undefined' && 'measure' in performance) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
         performance.measure(name, startMark, endMark);
@@ -442,7 +448,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 }
           this.recordCustomMetric(name, measure.duration, 'ms');
           return measure.duration}
-      } catch (error) {/* TODO: Fix JSX expression */}
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         logger.error('Failed to measure performance', error as Error)}
@@ -464,7 +472,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   disconnect(): void {// TODO: Add content}
 
 }
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers = []}
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()

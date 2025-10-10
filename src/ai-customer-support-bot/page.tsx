@@ -94,7 +94,6 @@ const stats = [
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
-
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-slate-800/50 rounded-lg p-6">

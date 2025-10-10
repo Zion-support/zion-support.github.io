@@ -3,9 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 ;
 const QuantumAIHybrid202, 5 = () => {
-return (
- 
-  return(:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
+return (:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
     <React.Fragment>
       <Helm, e, t>
         <title>

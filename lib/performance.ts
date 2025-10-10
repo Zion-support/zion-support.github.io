@@ -138,8 +138,7 @@ const performanceMetric: PerformanceMetric = {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {)
       event_category: 'Web Vitals')
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
-      )
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;))
       event_label: metric.id;
       non_interaction: true;
       non_interaction: true;
@@ -217,6 +216,8 @@ const performanceMetric: PerformanceMetric = {
  */
 export function initPerformanceMonitoring(): void {
   try {
+
+
     // Core Web Vitals;
   if (typeof window === 'undefined') return;
 
@@ -234,7 +235,9 @@ export function initPerformanceMonitoring(): void {
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics)} catch (error) {
+    getTTFB(sendToAnalytics)
+
+} catch (error) {
 //     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
@@ -336,8 +339,12 @@ export function reportWebVitals(): void {
 export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
 ,
-  try {,
-    performance.mark(name)} catch (error) {
+  try {
+
+,
+    performance.mark(name)
+
+} catch (error) {
 //     }
   } catch (error) {
 
@@ -377,8 +384,12 @@ const _duration = performance.now() - startTime;
 export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
 ,
-  try {,
-    performance.mark(name)} catch (error) {
+  try {
+
+,
+    performance.mark(name)
+
+} catch (error) {
 
     // eslint-disable-next-line no-console;
 //     }
@@ -397,10 +408,14 @@ export function measureBetween(name: string)
 ): number {
   if (typeof performance === 'undefined') return 0;
 ,
-  try {,
+  try {
+
+,
     performance.measure(name, startMark, endMark);
     const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
-    return measure.duration} catch (error) {
+    return measure.duration
+
+} catch (error) {
 
     // eslint-disable-next-line no-console;
 //     return 0}
@@ -437,10 +452,14 @@ const _timing = performance.timing;
  */,
 export function measureBetween(name: string, startMark: string, endMark: string): number {,
   if (typeof performance !== 'undefined' && performance.measure) {,
-    try {,
+    try {
+
+,
       performance.measure(name, startMark, endMark);
       const _entries = performance.getEntriesByName(name, 'measure');
-      return entries.length > 0 ? entries[0]?.duration || 0 : 0} catch (error) {
+      return entries.length > 0 ? entries[0]?.duration || 0 : 0
+
+} catch (error) {
 //       return 0}
   }
   return 0}
@@ -469,7 +488,11 @@ const navigation = performance.getEntriesByType('navigation')
 /**
 
   try {
-    return performance.getEntriesByType('resource') as PerformanceResourceTiming[]} catch (error) {
+
+
+    return performance.getEntriesByType('resource') as PerformanceResourceTiming[]
+
+} catch (error) {
 //     return []}
 }
 
@@ -653,16 +676,20 @@ const end = performance.now();
       name,
       value: end - start,
       delta: end - start,
-      id: `${name}-${Date.now()}`});
+      id: `${name}-${Date.now()}`})
     return result})}
 
 
-  try {;
+  try {
+
+;
 const observer = new PerformanceObserver(list => {);
 const _entries = list.getEntries();
-      callback(entries)});
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer} catch (error) {
+      callback(entries)})
+    observer.observe({ entryTypes: ['longtask'] })
+    return observer
+
+} catch (error) {
 
     // eslint-disable-next-line no-console;
 //     return null}
@@ -674,12 +701,16 @@ const _entries = list.getEntries();
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
-  try {;
+  try {
+
+;
 const observer = new PerformanceObserver(list => {);
 const _entries = list.getEntries();
-      callback(entries)});
-    observer.observe({ entryTypes: ['layout-shift'] });
-    return observer} catch (error) {
+      callback(entries)})
+    observer.observe({ entryTypes: ['layout-shift'] })
+    return observer
+
+} catch (error) {
 
     // eslint-disable-next-line no-console;
 //     return null}
@@ -745,12 +776,16 @@ export function monitorLongTasks(
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
-  try {;
+  try {
+
+;
 const observer = new PerformanceObserver(list => {),;
 const _entries = list.getEntries();
-      callback(entries)});
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer} catch (error) {
+      callback(entries)})
+    observer.observe({ entryTypes: ['longtask'] })
+    return observer
+
+} catch (error) {
 //     return null}
 }
 
@@ -766,12 +801,16 @@ export function monitorLayoutShifts(
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
-  try {;
+  try {
+
+;
 const observer = new PerformanceObserver(list => {),;
 const _entries = list.getEntries();
-      callback(entries)});
-    observer.observe({ entryTypes: ['layout-shift'] });
-    return observer} catch (error) {
+      callback(entries)})
+    observer.observe({ entryTypes: ['layout-shift'] })
+    return observer
+
+} catch (error) {
 //     return null}
 }
 

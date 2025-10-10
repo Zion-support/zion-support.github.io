@@ -7,26 +7,22 @@ interface AdvancedPerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 const,
   AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
-
+  })
   // Web Vitals monitoring;
   useEffect(() => {/* TODO: Fix JSX expression */}
   p: entry.startTime }))}
           }
         }).observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-
+  s: ['paint'] })
         // Largest Contentful Paint;
         new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   p: lastEntry.startTime }))}).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-
+  s: ['largest-contentful-paint'] })
         // First Input Delay;
         new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   d: entry.processingStart - entry.startTime }))}
         }).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-
+  s: ['first-input'] })
         // Cumulative Layout Shift;
         let clsValue = 0;
         new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -67,8 +63,7 @@ const response = await originalFetch(input, init);
             img.classList.remove('lazy');
             imageObserver.unobserve(img)}
         }
-      })});
-
+      })})
     images.forEach((img) => imageObserver.observe(img))}, []);
 
   // Critical resource preloading;

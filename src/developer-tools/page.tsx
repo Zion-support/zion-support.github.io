@@ -217,9 +217,7 @@ $4}
   e: 'Starting at $179/month'
     }
   ];
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>

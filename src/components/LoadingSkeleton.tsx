@@ -54,15 +54,6 @@ export const,
         width={index === lines - 1 ? '75%' : '100%'}
 // />
     ))}
-  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 );
 export const,
@@ -75,8 +66,7 @@ export const,
     style={{ aspectRatio }}"
     role="status""
     aria-label="Loading image""
-  ><span className="sr-only">Loading image...</span></div>)
-);
+  ><span className="sr-only">Loading image...</span></div>))
 export const,
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
   "

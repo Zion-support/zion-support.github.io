@@ -5,7 +5,9 @@ import { fileURLToPath } from 'url';
 
 // Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -23,7 +25,9 @@ return}
     if (modified) {/* TODO: Fix JSX expression */}`
       // console.log removed for production
 }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.log removed for production
 }
 }

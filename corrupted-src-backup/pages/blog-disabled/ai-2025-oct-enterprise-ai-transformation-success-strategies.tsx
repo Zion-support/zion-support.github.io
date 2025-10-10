@@ -3,9 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 ;
 const EnterpriseAITransformationSuccessStrategie, s = () => {
-return (
- 
-  return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
+return (:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
     <React.Fragment>
       <Helm, e, t>
         <title>

@@ -34,9 +34,7 @@ const,
       whit,
   e: 'text-white'
     };
-    return (<div>Coming Soon</div>)
-  )
-      
+    return (<div>Coming Soon</div>))
           <div></div>
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status""
@@ -100,8 +98,7 @@ className="opacity-75""
           
           </svg>
       </div>
-    )}
-);
+    )})
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
@@ -146,8 +143,6 @@ $4};
           />
         </svg>
       </div>
-    )}
-);
-
+    )})
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

@@ -92,4 +92,4 @@ export default defineConfig({
     alias: {
       '@': '/src',
       '@app': '/app',
-      '@components': '/app/components'}}});
+      '@components': '/app/components'}}})

@@ -47,7 +47,7 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
 
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   }}
 export const asyncHandler = (f,

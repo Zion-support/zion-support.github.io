@@ -19,8 +19,7 @@ constructor(props: Props) {,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo});
-
+      errorInfo})
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       // // console.error removed for production
@@ -79,8 +78,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }

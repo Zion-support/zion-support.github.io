@@ -16,16 +16,14 @@ const [formData, setFormData] = useState({
     phone: '',
     service: '',
     message:   ,
-$4});
-;
+$4})
 const [isSubmitted, setIsSubmitted] = useState(false);
 ;
 const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
-  });
-;
+  })
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
@@ -50,8 +48,7 @@ setIsSubmitted(true);
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitted(true);
     setIsSubmitting(false)};
 ;

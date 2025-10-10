@@ -5,7 +5,7 @@ import path from 'path';
 // console.log removed for production
 // Function to create a proper React component;
 function createProperComponent(filePath) {;
-const fileName = path.basename(filePath, path.extname(filePath));
+const fileName = path.basename(filePath, path.extname(filePath))
   const isPage = filePath.includes('/page.tsx') || filePath.includes('/page.jsx');
   const isComponent = filePath.includes('/components/');
   const isUtil = filePath.includes('/utils/') || filePath.includes('/hooks/');
@@ -79,11 +79,15 @@ export default function ${fileName}() {
 
 // Function to fix a file;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 const content = createProperComponent(filePath);
     fs.writeFileSync(filePath, content);
     // console.log removed for production
-return true} catch (error) {
+return true
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -93,7 +97,9 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 const files = [];
   ;
 function traverse(currentDir) {
-    try {;
+    try {
+
+;
 const items = fs.readdirSync(currentDir);
       
       for (const item of items) {;
@@ -110,7 +116,9 @@ const ext = path.extname(item);
             files.push(fullPath)}
         }
       }
-    } catch (error) {
+    
+
+} catch (error) {
       // Skip directories we can't read}
   }
   
@@ -128,9 +136,13 @@ let errorCount = 0;
 
 for (const file of files) {
   try {
+
+
     if (fixFile(file)) {
       fixedCount++}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.error removed for production
 errorCount++}
 }

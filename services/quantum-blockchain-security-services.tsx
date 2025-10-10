@@ -54,6 +54,5 @@ export default function quantumblockchainsecurityservices() {/* TODO: Fix JSX ex
           </div>
         </div>
       </div>
-    </div>)
-  )}
+    </div>))}
 "

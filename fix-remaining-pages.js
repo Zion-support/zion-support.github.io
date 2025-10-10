@@ -12,6 +12,8 @@ const filesToFix = [
 // // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Remove any broken metadata lines;
     for (let i = 0; i < lines.length; i++) {
 
@@ -60,7 +62,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -70,7 +74,6 @@ filesToFix.forEach(file => {)
     fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // 
 }`

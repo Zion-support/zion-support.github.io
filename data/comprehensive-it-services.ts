@@ -146,14 +146,8 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
     market_size: '$1.2T IT services market, 8% annual growth',
-<<<<<<< HEAD
     growth_rate: '8% annual growth';
-variant: 'enterprise - futuristic'
-=======
-    growth_rate: '8% annual growth',
-    variant: 'enterprise - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'enterprise - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -401,14 +395,8 @@ varian,
       'Accenture',
       'Deloitte'],
     market_size: '$400B cloud services market, 20% annual growth',
-<<<<<<< HEAD
     growth_rate: '20% annual growth';
-variant: 'cloud - futuristic'
-=======
-    growth_rate: '20% annual growth',
-    variant: 'cloud - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'cloud - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -677,14 +665,8 @@ varian,
       'Carbon Black',
       'Cylance'],
     market_size: '$200B cybersecurity market, 15% annual growth',
-<<<<<<< HEAD
     growth_rate: '15% annual growth';
-variant: 'cybersecurity - futuristic'
-=======
-    growth_rate: '15% annual growth',
-    variant: 'cybersecurity - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'cybersecurity - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -999,14 +981,8 @@ export const,
       'CoreSite',
       'QTS Realty'],
     market_size: '$200B data center market, 12% annual growth',
-<<<<<<< HEAD
     growth_rate: '12% annual growth';
-variant: 'datacenter - futuristic'
-=======
-    growth_rate: '12% annual growth',
-    variant: 'datacenter - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'datacenter - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1162,14 +1138,8 @@ varian,
       'Palo Alto Networks',
       'Juniper Networks'],
     market_size: '$8B SD - WAN market, 35% annual growth',
-<<<<<<< HEAD
     growth_rate: '35% annual growth';
-variant: 'network - futuristic'
-=======
-    growth_rate: '35% annual growth',
-    variant: 'network - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'network - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1313,14 +1283,8 @@ varian,
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'],
     market_size: '$50B IT consulting market, 10% annual growth',
-<<<<<<< HEAD
     growth_rate: '10% annual growth';
-variant: 'consulting - futuristic'
-=======
-    growth_rate: '10% annual growth',
-    variant: 'consulting - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'consulting - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1475,14 +1439,8 @@ varian,
       'AWS Training',
       'Google Cloud Training'],
     market_size: '$15B IT training market, 12% annual growth',
-<<<<<<< HEAD
     growth_rate: '12% annual growth';
-variant: 'training - futuristic'
-=======
-    growth_rate: '12% annual growth',
-    variant: 'training - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'training - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1632,14 +1590,8 @@ varian,
       'Google Cloud',
       'Traditional cloud providers'],
     market_size: '$400B cloud market, quantum segment growing 400% annually',
-<<<<<<< HEAD
     growth_rate: '400% annual growth';
-variant: 'quantum - advanced'
-=======
-    growth_rate: '400% annual growth',
-    variant: 'quantum - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - advanced'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1787,14 +1739,8 @@ varian,
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     market_size: '$8B DevOps market, AI segment growing 350% annually',
-<<<<<<< HEAD
     growth_rate: '350% annual growth';
-variant: 'ai - futuristic'
-=======
-    growth_rate: '350% annual growth',
-    variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'ai - futuristic'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1946,14 +1892,8 @@ varian,
       'Traditional security tools'],
     market_size: unknown;
       '$150B cybersecurity market, quantum segment growing 400% annually',
-<<<<<<< HEAD
     growth_rate: '400% annual growth';
-variant: 'quantum - cyberpunk'
-=======
-    growth_rate: '400% annual growth',
-    variant: 'quantum - cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contact_info: unknown;
+variant: 'quantum - cyberpunk'    contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2580,16 +2520,9 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       'SentinelOne Vigilance'
       'Carbon Black',
       'Cylance'],
-<<<<<<< HEAD
     marketSize: '$200B cybersecurity market, 15% annual growth'
     growthRate: '15% annual growth';
-variant: 'cybersecurity-futuristic',
-=======
-    marketSize: '$200B cybersecurity market, 15% annual growth',
-    growthRate: '15% annual growth',
-    variant: 'cybersecurity-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'cybersecurity-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2744,16 +2677,9 @@ varian,
       'CyrusOne',
       'CoreSite',
       'QTS Realty'],
-<<<<<<< HEAD
     marketSize: '$200B data center market, 12% annual growth'
     growthRate: '12% annual growth';
-variant: 'datacenter-futuristic',
-=======
-    marketSize: '$200B data center market, 12% annual growth',
-    growthRate: '12% annual growth',
-    variant: 'datacenter-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'datacenter-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2908,16 +2834,9 @@ varian,
       'Fortinet'
       'Palo Alto Networks',
       'Juniper Networks'],
-<<<<<<< HEAD
     marketSize: '$8B SD-WAN market, 35% annual growth'
     growthRate: '35% annual growth';
-variant: 'network-futuristic',
-=======
-    marketSize: '$8B SD-WAN market, 35% annual growth',
-    growthRate: '35% annual growth',
-    variant: 'network-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'network-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3063,16 +2982,9 @@ varian,
       'Change management'],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
-<<<<<<< HEAD
     marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth';
-variant: 'consulting-futuristic',
-=======
-    marketSize: '$50 B IT consulting market, 10% annual growth',
-    growthRate: '10% annual growth',
-    variant: 'consulting-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'consulting-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3220,16 +3132,9 @@ varian,
       'Microsoft'
       'AWS Training',
       'Google Cloud Training'],
-<<<<<<< HEAD
     marketSize: '$15B IT training market, 12% annual growth'
     growthRate: '12% annual growth';
-variant: 'training-futuristic',
-=======
-    marketSize: '$15B IT training market, 12% annual growth',
-    growthRate: '12% annual growth',
-    variant: 'training-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'training-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3375,16 +3280,9 @@ varian,
       'Azure'
       'Google Cloud',
       'Traditional cloud providers'],
-<<<<<<< HEAD
     marketSize: '$400B cloud market, quantum segment growing 400% annually'
     growthRate: '400% annual growth';
-variant: 'quantum-advanced',
-=======
-    marketSize: '$400B cloud market, quantum segment growing 400% annually',
-    growthRate: '400% annual growth',
-    variant: 'quantum-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-advanced',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3533,16 +3431,9 @@ varian,
       'Resource optimization'],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
-<<<<<<< HEAD
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth';
-variant: 'ai-futuristic',
-=======
-    marketSize: '$8 B DevOps market, AI segment growing 350% annually',
-    growthRate: '350% annual growth',
-    variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'ai-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3698,14 +3589,8 @@ varian,
       'Traditional security tools'],
     marketSize:,
       '$150B cybersecurity market, quantum segment growing 400% annually'
-<<<<<<< HEAD
     growthRate: '400% annual growth';
-variant: 'quantum-cyberpunk',
-=======
-    growthRate: '400% annual growth',
-    variant: 'quantum-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'quantum-cyberpunk',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -4707,21 +4592,11 @@ export const,
       'Security enhancement'
       'Performance optimization',
       'Compliance management'],
-<<<<<<< HEAD
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
     marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth';
-variant: 'enterprise-futuristic',
-=======
-    roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
-    competitors:
-        competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
-    marketSize: '$1.2 T IT services market, 8% annual growth',
-    growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: mobile: '+1 302 464 0950',
+variant: 'enterprise-futuristic',    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -4861,21 +4736,11 @@ varian,
       'Google Cloud'
       'Accenture',
       'Deloitte'],
-<<<<<<< HEAD
     marketSize: '$400B cloud services market, 20% annual growth'
     growthRate: '20% annual growth';
 variant: 'cloud-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$400B cloud services market, 20% annual growth',
-    growthRate: '20% annual growth',
-    variant: 'cloud-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5015,21 +4880,11 @@ varian,
       'SentinelOne Vigilance'
       'Carbon Black',
       'Cylance'],
-<<<<<<< HEAD
     marketSize: '$200B cybersecurity market, 15% annual growth'
     growthRate: '15% annual growth';
 variant: 'cybersecurity-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B cybersecurity market, 15% annual growth',
-    growthRate: '15% annual growth',
-    variant: 'cybersecurity-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5153,21 +5008,11 @@ varian,
       'CyrusOne',
       'CoreSite',
       'QTS Realty'],
-<<<<<<< HEAD
     marketSize: '$200B data center market, 12% annual growth'
     growthRate: '12% annual growth';
 variant: 'datacenter-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$200B data center market, 12% annual growth',
-    growthRate: '12% annual growth',
-    variant: 'datacenter-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5307,21 +5152,11 @@ varian,
       'Fortinet'
       'Palo Alto Networks',
       'Juniper Networks'],
-<<<<<<< HEAD
     marketSize: '$8B SD-WAN market, 35% annual growth'
     growthRate: '35% annual growth';
 variant: 'network-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$8B SD-WAN market, 35% annual growth',
-    growthRate: '35% annual growth',
-    variant: 'network-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5456,21 +5291,11 @@ varian,
       'Change management'],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
-<<<<<<< HEAD
     marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth';
 variant: 'consulting-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$50 B IT consulting market, 10% annual growth',
-    growthRate: '10% annual growth',
-    variant: 'consulting-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5607,21 +5432,11 @@ varian,
       'Microsoft'
       'AWS Training',
       'Google Cloud Training'],
-<<<<<<< HEAD
     marketSize: '$15B IT training market, 12% annual growth'
     growthRate: '12% annual growth';
 variant: 'training-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15B IT training market, 12% annual growth',
-    growthRate: '12% annual growth',
-    variant: 'training-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5741,21 +5556,11 @@ varian,
       'Azure'
       'Google Cloud',
       'Traditional cloud providers'],
-<<<<<<< HEAD
     marketSize: '$400B cloud market, quantum segment growing 400% annually'
     growthRate: '400% annual growth';
 variant: 'quantum-advanced'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$400B cloud market, quantum segment growing 400% annually',
-    growthRate: '400% annual growth',
-    variant: 'quantum-advanced',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -5875,21 +5680,11 @@ varian,
       'Resource optimization'],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
-<<<<<<< HEAD
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth';
 variant: 'ai-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$8 B DevOps market, AI segment growing 350% annually',
-    growthRate: '350% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
     real_implementation: true;
@@ -6008,14 +5803,8 @@ varian,
       'Traditional security tools'],
     marketSize:,
       '$150B cybersecurity market, quantum segment growing 400% annually'
-<<<<<<< HEAD
     growthRate: '400% annual growth';
-variant: 'quantum-cyberpunk'
-=======
-    growthRate: '400% annual growth',
-    variant: 'quantum-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    contactInfo: unknown;
+variant: 'quantum-cyberpunk'    contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

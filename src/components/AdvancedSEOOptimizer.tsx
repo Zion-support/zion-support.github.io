@@ -143,7 +143,6 @@ const script = document.createElement('script');
       {/* TODO: Fix JSX expression */}
         <meta key={index} name={tag.name} content={tag.content} /></meta>)
       ))}
-
       {/* Canonical URL */}
       {/* TODO: Fix JSX expression */}"
         <link rel="canonical" href={seoData.canonicalUrl} /></link>
@@ -153,12 +152,10 @@ const script = document.createElement('script');
       {/* TODO: Fix JSX expression */}
         <meta key={property} property={property} content={content} /></meta>
       ))}
-
       {/* Twitter Card Tags */}
       {/* TODO: Fix JSX expression */}
         <meta key={name} name={name} content={content} /></meta>
       ))}
-
       {/* Additional SEO Tags */}"
       <meta name="format-detection" content="telephone=no" /></meta>"
       <meta name="mobile-web-app-capable" content="yes" /></meta>"

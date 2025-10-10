@@ -111,8 +111,7 @@ const element = node as Element
       childList: true,
       subtree: true
     })
-    this.eventListeners.push(() => observer.disconnect())
-  }
+    this.eventListeners.push(() => observer.disconnect())}
   private monitorNetworkRequests(): void {;
 const originalFetch = window.fetch
     window.fetch = async (input, init) => {;

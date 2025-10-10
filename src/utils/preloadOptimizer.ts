@@ -30,8 +30,7 @@ const link = document.createElement('link')
     link.href = href;
     link.crossOrigin = 'anonymous'
 //     document.head.appendChild(link)
-  }
-  )
+  })
   // Preload critical images;
 const criticalImages = [
 
@@ -51,8 +50,7 @@ const link = document.createElement('link')
     link.as = 'image'
     link.href = src;
 //     document.head.appendChild(link)
-  }
-  )
+  })
 }
 
 export const preloadRoute = (route: string) => {// TODO: Add content}
@@ -78,8 +76,7 @@ const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
 //       document.head.appendChild(link)
-    }
-  )
+    })
   }
 }
 
@@ -116,13 +113,10 @@ const images = document.querySelectorAll('img[data-lazy]')
 //             imageObserver.unobserve(img)
           }
         }
-      }
-  )
-    }
-  );
+      })
+    })
 const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach(img => imageObserver.observe(img))
-  }
+    lazyImages.forEach(img => imageObserver.observe(img))}
 }
 
 export const optimizeThirdPartyScripts = () => {// TODO: Add content}
@@ -141,8 +135,7 @@ const scripts = document.querySelectorAll('script[data-defer]')
   O: Add content}
 }
 
-    document.addEventListener('DOMContentLoaded', () => {}
-  )
+    document.addEventListener('DOMContentLoaded', () => {})
   } else {/* TODO: Fix JSX expression */}
   }
 }

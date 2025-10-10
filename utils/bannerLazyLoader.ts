@@ -65,8 +65,6 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
         }
       })},
     {/* TODO: Fix JSX expression */}
-  n: '50px' }
-  );
-
+  n: '50px' })
   return {/* TODO: Fix JSX expression */}
   }};

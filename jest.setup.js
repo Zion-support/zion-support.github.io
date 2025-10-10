@@ -15,27 +15,22 @@ jest.mock('./src/utils/logger.ts', () => ({
     info: jest.fn(),
     warn: jest.fn(),
     error: jest.fn(),
-    log: jest.fn()}}));
-
+    log: jest.fn()}}))
 jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
-  initAnalytics: jest.fn()}));
-
+  initAnalytics: jest.fn()}))
 jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
-  initErrorReporting: jest.fn()}));
-
+  initErrorReporting: jest.fn()}))
 jest.mock('./src/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
-    optimize: jest.fn()}))}));
-
+    optimize: jest.fn()}))}))
 jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
   usePerformanceMonitoring: jest.fn(() => ({
     metrics: {},
-    report: {}}))}));
-
+    report: {}}))}))
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {;
 const actual = jest.requireActual('react-router-dom');
@@ -61,10 +56,9 @@ const { createMemoryRouter, RouterProvider } = actual;
           path: '/',
           element: children}], {
         initialEntries: ['/'],
-        initialIndex: 0});
+        initialIndex: 0})
       return React.createElement(RouterProvider, { router })},
-    RouterProvider: ({ router }) => null}});
-
+    RouterProvider: ({ router }) => null}})
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -76,8 +70,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))});
-
+    dispatchEvent: jest.fn()}))})
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {;
 constructor() {}
@@ -98,7 +91,6 @@ beforeAll(() => {
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
       return}
-    originalError.call(console, ...args)})});
-
+    originalError.call(console, ...args)})})
 afterAll(() => {
-  console.error = originalError});
+  console.error = originalError})

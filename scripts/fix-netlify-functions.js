@@ -34,7 +34,9 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     return content; // Skip if no proper function found}
 
   // Add proper error handling if missing;
-  if (!fixed.includes('try {') && !fixed.includes('catch')) {;
+  if (!fixed.includes('try {
+
+') && !fixed.includes('catch')) {;
 const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {;
 const _body = handlerMatch[1].trim();
@@ -42,7 +44,9 @@ const _body = handlerMatch[1].trim();
         `exports.handler = async function (event, context) {
   try {
     ${body}
-  } catch (error) {
+  
+
+} catch (error) {
 
     return {
       statusCode: 500;
@@ -54,13 +58,17 @@ const _body = handlerMatch[1].trim();
   }
 
   // Add proper error handling if missing;
-  if (!fixed.includes('try {/* TODO: Fix JSX expression */});
+  if (!fixed.includes('try {
+
+/* TODO: Fix JSX expression */})
 const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
     ${body}
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }),
       header,
   s: {'Content-Type': 'application/json'}
@@ -80,12 +88,14 @@ async function main() {/* TODO: Fix JSX expression */}
 ;
 const files = (await readdir(functionsDir))
     .filter(file => file.endsWith('.js'))
-    .map(file => path.join(functionsDir, file));
+    .map(file => path.join(functionsDir, file))
   let _fixedCount = 0;
   let _errorCount = 0;
   
   files.forEach(filePath => {)
-    try {);
+    try {
+
+);
 const _content = fs.readFileSync(filePath, 'utf8');
       const _fixed = fixNetlifyFunction(content);
       
@@ -97,13 +107,11 @@ const _content = fs.readFileSync(filePath, 'utf8');
   d: ${path.basename(filePath)}`);
         fixedCount++} else {/* TODO: Fix JSX expression */}`
   d: ${path.basename(filePath)} (no changes needed)`)}
-    } catch (error) {/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
-
-
-
-
+  })
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }

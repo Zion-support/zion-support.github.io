@@ -42,8 +42,12 @@ const getStoredImpressions = (): BannerImpression[] => {/* TODO: Fix JSX express
  * Store impressions;
  */;
 const storeImpressions = (impressions: BannerImpression[]): void => {,
-  try {,
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions))} catch {
+  try {
+
+,
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions))
+
+} catch {
     // Silently fail if localStorage is not available;
 const storeImpressions = (impression)
   s: BannerImpression[]): void => {/* TODO: Fix JSX expression */}
@@ -61,7 +65,9 @@ return (
 
   if (typeof window === 'undefined') return;
 
-  try {;
+  try {
+
+;
 const _impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression;
@@ -78,7 +84,9 @@ export const recordBannerImpression = (impressio,
 
     // Keep only last 1000 impressions to prevent storage bloat;
     //     const trimmedImpressions = impressions.slice(-1000);
-    storeImpressions(trimmedImpressions)} catch (error) {/* TODO: Fix JSX expression */}
+    storeImpressions(trimmedImpressions)
+
+} catch (error) {/* TODO: Fix JSX expression */}
     //     }
 };
 
@@ -124,8 +132,7 @@ const recentImpressions = bannerImpressions.filter()
   //   const recencyScore = Math.min(1, recentImpressions.length / 10);
 
   // Calculate fatigue score (too many impressions = lower score)
-  //   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
-
+  //   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50))
   // Weighted combination;
   return banner.priority * 0.4 + engagementRate * 0.3 + recencyScore * 0.2 + fatigueScore * 0.1;
 export const calculateBannerScore = (banne)
@@ -151,8 +158,7 @@ export const selectBannersForRotation = (allBanner,
   maxBanner,
   s: number = MAX_VISIBLE_BANNERS;)
 ): BannerConfig[] => {/* TODO: Fix JSX expression */}
-  }));
-
+  }))
   // Sort by score (highest first)
   scoredBanners.sort((a, b) => b.score - a.score);
 

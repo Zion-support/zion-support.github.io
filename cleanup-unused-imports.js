@@ -6,7 +6,9 @@ import { fileURLToPath } from 'url';
 
 // Function to remove unused imports from a file;
 function removeUnusedImports(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if file doesn't exist or is empty;
@@ -14,8 +16,10 @@ const content = fs.readFileSync(filePath, 'utf8');
     
     // Run ESLint with --fix to remove unused imports;
     try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' });
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' })
       // console.log removed for production
+
+
 } catch (error) {
       // If ESLint fails, try a simpler approach;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
@@ -30,19 +34,18 @@ const lines = content.split('\n');
         // Skip import lines that are likely unused;)
         if (line.trim().startsWith('import') && line.includes('from')) {
           // Check if the import is actually used in the file;
-          const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
+          const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
           if (importName) {;
 const isUsed = importName.some(name => {);
 const cleanName = name.replace(/\s+as\s+\w+/, '').trim();
               return content.includes(cleanName) && !line.includes(cleanName);
-      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */});
-const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
+      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
           if (importName) {/* TODO: Fix JSX expression */}
-            });
+            })
             return isUsed}
         }
-        return true});
-      
+        return true})
       if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
         // console.log removed for production
 }

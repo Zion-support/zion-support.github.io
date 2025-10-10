@@ -1,7 +1,5 @@
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
-return (
-
-return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
+return (<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
 <div, className="m, a, x-w-7xl, m, x-au, t, o">
 <div, className="text-center mb-12">
 return (

@@ -37,8 +37,7 @@ constructor(props: Props) {
     this.setState({
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production
@@ -72,7 +71,7 @@ const errorData = {
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
 
     // console.error removed for production
@@ -83,7 +82,7 @@ const errorData = {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    })
   };
   
   handleGoHome = () => {

@@ -53,8 +53,7 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _previousLevel = 0;
 
     headings.forEach((heading, index) => {
-      //       const level = parseInt(heading.tagName.charAt(1));
-
+      //       const level = parseInt(heading.tagName.charAt(1))
       if (level > previousLevel + 1) {
         this.addIssue('serious')
           `heading[${index}]`)
@@ -118,8 +117,7 @@ const _buttons = document.querySelectorAll('button');
     )}
 
   private checkKeyboardNavigation(): void {;
-const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-    );
+const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]'))
     focusableElements.forEach((element, index) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         this.addIssue('moderate')

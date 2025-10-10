@@ -118,18 +118,9 @@ const stats = fs.statSync(file);
   }
   
   if (issues.length > 0) {
-<<<<<<< HEAD
     // // console.log removed for production
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
-=======
-    // console.log('⚠️  Performance issues found: ');
-  for (const file of files) {/* TODO: Fix JSX expression */}',
-  detected:
-        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-  }
+  detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}  }
   
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`
     issues.forEach(issue => // // console.log removed for production
@@ -141,6 +132,8 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 async function optimize() {
   // // console.log removed for production
 try {
+
+
     // Create public directory if it doesn't exist;
     if (!fs.existsSync('public')) {
       fs.mkdirSync('public');
@@ -166,6 +159,8 @@ Summary:');
 // // console.log removed for production
 // // console.log removed for production
 // // console.log removed for production
+
+
 } catch (error) {
     // // console.error removed for production
 process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}

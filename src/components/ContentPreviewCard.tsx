@@ -68,9 +68,7 @@ const,
       'default': 'from-gray-500 to-gray-600'
     };
     return colors[category] || colors.default};
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,

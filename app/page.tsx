@@ -7,12 +7,11 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 // Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -31,7 +30,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded mb-2"></div>
     <div className="h-3 bg-gray-300 rounded"></div>
   </div>
-));
+))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -53,7 +52,7 @@ const HomePage: React.FC = () => {
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
   }, []);
   return (
@@ -117,11 +116,11 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-        ></a>
+        >
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div></Suspense>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <ContentPromotionBanner />
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>
@@ -130,22 +129,22 @@ const HomePage: React.FC = () => {
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8']
-    }`}
+              : 'opacity-0 translate-y-8'
+          }`}
           aria-labelledby="hero-heading"
-        ></section>
-          <div className="max-w-6xl mx-auto"></div>
+        >
+          <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
-            ></h1>
+            >
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle"></p>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
               startups, and enterprises worldwide with proven results and 24/7 expert support.

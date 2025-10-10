@@ -9,15 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Orphan pages detector executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
-function: 'orphan-pages-detector'
-=======
-        timestamp: new Date().toISOString()
-        function: 'orphan-pages-detector',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        source: event.source || 'unknown',
+function: 'orphan-pages-detector'        source: event.source || 'unknown',
         detection: {,
           status: 'active',
           pagesScanned: 0;

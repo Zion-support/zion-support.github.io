@@ -8,15 +8,13 @@ constructor() {
     // Measure page load time
     window.addEventListener('load', () => {;
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart});
-
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart})
     // Measure Core Web Vitals
     this.measureCoreWebVitals();
   private measureCoreWebVitals(): void {
     // First Contentful Paint
     this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime});
-
+      this.metrics.firstContentfulPaint = entry.startTime})
     // Largest Contentful Paint
     this.observeLCP();
 
@@ -28,15 +26,19 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
   private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
             callback(entry);
         }
-      });
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer)} catch (error) {
+      })
+      observer.observe({ entryTypes: ['paint'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
@@ -44,13 +46,17 @@ const observer = new PerformanceObserver((list) => {
   private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
-        this.metrics.largestContentfulPaint = lastEntry.startTime});
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer)} catch (error) {
+        this.metrics.largestContentfulPaint = lastEntry.startTime})
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
@@ -58,13 +64,17 @@ const lastEntry = entries[entries.length - 1];
   private observeFID(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
+    try {
+
+;
 const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime}
-      });
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer)} catch (error) {
+      })
+      observer.observe({ entryTypes: ['first-input'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
@@ -72,16 +82,20 @@ const observer = new PerformanceObserver((list) => {
   private observeCLS(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
+    try {
+
+;
 let clsValue = 0;
 const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        this.metrics.cumulativeLayoutShift = clsValue});
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer)} catch (error) {
+        this.metrics.cumulativeLayoutShift = clsValue})
+      observer.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(observer)
+
+} catch (error) {
       // console.warn removed for production
 }
   }
@@ -111,7 +125,7 @@ const observer = new PerformanceObserver((list) => {
       this.metrics.firstInputDelay < 100 &&
       this.metrics.cumulativeLayoutShift < 0.1);
   public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers = []}
 }
 
@@ -175,4 +189,4 @@ const img = new Image();
     img.onerror = reject;
     img.src = src})
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(srcs.map(preloadImage));
+  return Promise.all(srcs.map(preloadImage))

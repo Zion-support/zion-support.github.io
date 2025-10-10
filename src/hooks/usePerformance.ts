@@ -14,8 +14,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics
 }: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0});
-;
+    networkLatency: 0})
 const optimize = useCallback(() => {
     // Performance optimization logic
     if ('requestIdleCallback' in window) {
@@ -99,12 +98,9 @@ const firstContentfulPaint =
 
               cumulativeLayoutShift += (entry as unknown as { value: number }).value}
           }
-        }
-  )
+        })
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['layout-shift'] })
-  )
-      }
+  s: ['layout-shift'] }))}
       // Measure FID (First Input Delay)
 
       if ('PerformanceObserver' in window) {// TODO: Add content}
@@ -127,12 +123,9 @@ const firstContentfulPaint =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime}
           }
-        }
-  )
+        })
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['first-input'] })
-  )
-      }
+  s: ['first-input'] }))}
         loadTim,
   e: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoade,

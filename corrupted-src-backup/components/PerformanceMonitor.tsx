@@ -12,7 +12,7 @@ return (
 ;
 const [metrics, setMetrics] = useState<WebVitalsMetrics>
 );
-}({});
+}({})
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const _link = document.createElement('link');
 const,
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -63,8 +63,7 @@ const,
 const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
-//         });
-      
+//         })
       return () => {/* TODO: Fix JSX expression */}
         }
       }}
@@ -79,30 +78,33 @@ const _entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
 //           const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
+          setMetrics(prev => ({ ...prev, LCP: lcp }))
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
+            performanceOptimizer.reportWebVitals({ LCP: lcp })
   useEffect(() => {/* TODO: Fix JSX expression */}
-  P: lcp }));
+  P: lcp }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
   P: lcp })}
         }
         
         if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-  D: fid }));
+  D: fid }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
   D: fid })}
         }
         
         if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-  S: cls }));
+  S: cls }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
   S: cls })}
         }
-      })});
+      })})
+    try {
 
-    try {/* TODO: Fix JSX expression */}
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })} catch (e) {/* TODO: Fix JSX expression */}
+/* TODO: Fix JSX expression */}
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+
+} catch (e) {/* TODO: Fix JSX expression */}
 //       }
 
     return () => {/* TODO: Fix JSX expression */}
@@ -142,14 +144,13 @@ const,
   onMetricsUpdate,
   onBudgetViolation;)
 }) => {/* TODO: Fix JSX expression */}
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
   const [isVisible, setIsVisible] = useState(false);
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
   s: string[] }>({/* TODO: Fix JSX expression */})
-  s: [] });
-;
+  s: [] })
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
+      setMetrics(prev => ({ ...prev, ...newMetrics }))
       onMetricsUpdate?.(newMetrics);
       
       // Check performance budget;
@@ -169,17 +170,15 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 
     // Monitor long tasks;
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-//       });
-
+//       })
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
-//       });
-
+//       })
     // Monitor Web Vitals;
     const reportVitals = (newMetric)
   s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
+      setMetrics(prev => ({ ...prev, ...newMetrics }))
       performanceOptimizer.reportWebVitals(newMetrics)};
 
     // Set up performance monitoring;
@@ -189,17 +188,15 @@ const observer = new PerformanceObserver((list) => {
           if (entry.entryType === 'paint') {;
 const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime });
+              reportVitals({ FCP: paintEntry.startTime })
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   P: paintEntry.startTime })}
           }
           if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
   P: lcpEntry.startTime })}
-        })});
-
+        })})
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint', 'largest-contentful-paint'] });
-
+  s: ['paint', 'largest-contentful-paint'] })
       return () => {/* TODO: Fix JSX expression */}
       }}
 

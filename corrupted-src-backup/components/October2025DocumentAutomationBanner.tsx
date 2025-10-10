@@ -1,7 +1,5 @@
 const, October2025DocumentAutomationBanne, r = () => {
-return (
-
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">
+return (<div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">
 );
 }
       {/* Animated, background, elements */};

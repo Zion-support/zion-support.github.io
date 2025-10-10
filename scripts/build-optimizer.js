@@ -18,6 +18,8 @@ constructor() {
   async optimize() {
     // console.log removed for production
 try {
+
+
       await this.analyzeBundle();
       await this.optimizeImages();
       await this.optimizeCSS();
@@ -29,7 +31,9 @@ try {
       await this.generateServiceWorker();
       
       // console.log removed for production
-this.printSummary()} catch (error) {
+this.printSummary()
+
+} catch (error) {
       // console.error removed for production
 process.exit(1)}
   }
@@ -48,13 +52,11 @@ const stats = fs.statSync(file);
       name: 'Bundle Analysis'),
       status: 'completed'),
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
-    });
-
+    })
     // Check for large files;
     const largeFiles = files.filter(file => {);
 const stats = fs.statSync(file);
-      return stats.size > 100 * 1024; // 100KB});
-
+      return stats.size > 100 * 1024; // 100KB})
     if (largeFiles.length > 0) {
       // console.log removed for production
 largeFiles.forEach(file => {);
@@ -75,7 +77,7 @@ const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
-        details: 'No images found'});
+        details: 'No images found'})
       return}
 
     // Add image optimization metadata;
@@ -90,8 +92,7 @@ const stats = fs.statSync(image);
 let content = fs.readFileSync(image, 'utf8');
         content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
         fs.writeFileSync(image, content)}
-    });
-
+    })
     this.optimizations.push({)
       name: 'Image Optimization'),
       status: 'completed'),
@@ -104,9 +105,7 @@ let content = fs.readFileSync(image, 'utf8');
 const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>
 );
 })
-      file.endsWith('.css')
-    );
-
+      file.endsWith('.css'))
     cssFiles.forEach(cssFile => {);
 let content = fs.readFileSync(cssFile, 'utf8');
       
@@ -119,8 +118,7 @@ let content = fs.readFileSync(cssFile, 'utf8');
       content = content.replace(/{\s*/g, '{');
       content = content.replace(/;\s*/g, ';');
       
-      fs.writeFileSync(cssFile, content)});
-
+      fs.writeFileSync(cssFile, content)})
     this.optimizations.push({)
       name: 'CSS Optimization'),
       status: 'completed'),
@@ -131,9 +129,7 @@ let content = fs.readFileSync(cssFile, 'utf8');
     // console.log removed for production
 ;
 const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
-      file.endsWith('.js')
-    );
-
+      file.endsWith('.js'))
     jsFiles.forEach(jsFile => {);
 let content = fs.readFileSync(jsFile, 'utf8');
       
@@ -144,8 +140,7 @@ let content = fs.readFileSync(jsFile, 'utf8');
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
       
-      fs.writeFileSync(jsFile, content)});
-
+      fs.writeFileSync(jsFile, content)})
     this.optimizations.push({)
       name: 'JavaScript Optimization'),
       status: 'completed'),
@@ -156,9 +151,7 @@ let content = fs.readFileSync(jsFile, 'utf8');
     // console.log removed for production
 ;
 const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
-      file.endsWith('.html')
-    );
-;
+      file.endsWith('.html'))
 const securityHeaders = `
 <!-- Security Headers -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
@@ -180,8 +173,7 @@ let content = fs.readFileSync(htmlFile, 'utf8');
 );
 }', `${securityHeaders}</head>`);
       
-      fs.writeFileSync(htmlFile, content)});
-
+      fs.writeFileSync(htmlFile, content)})
     this.optimizations.push({)
       name: 'Security Headers'),
       status: 'completed'),
@@ -260,8 +252,7 @@ Disallow: /private/`;
 const manifestPath = path.join(this.distPath, 'manifest.json');
     
     if (fs.existsSync(manifestPath)) {;
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-      
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
       // Ensure required fields are present;
       manifest.name = manifest.name || 'Zion Tech Group';
       manifest.short_name = manifest.short_name || 'Zion Tech';
@@ -271,7 +262,6 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
       manifest.background_color = manifest.background_color || '#0 f172 a';
       
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))}
-
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
@@ -306,8 +296,7 @@ const fullPath = path.join(dir, item);
       if (stat.isDirectory()) {
         files.push(...this.getFilesRecursively(fullPath))} else {
         files.push(fullPath)}
-    });
-    
+    })
     return files}
 
   printSummary() {
@@ -317,8 +306,7 @@ this.optimizations.forEach(opt => {);
 const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
       // console.log removed for production
-});
-    
+})
     // console.log removed for production
 }
 }

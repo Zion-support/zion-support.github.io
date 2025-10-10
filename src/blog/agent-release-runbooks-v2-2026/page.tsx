@@ -8,9 +8,6 @@ import Footer from '../components/Footer';
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
 return (
 
-
-  return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

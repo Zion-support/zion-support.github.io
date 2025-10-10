@@ -2,15 +2,23 @@ import React from 'react';
 // #!/usr/bin/env node /** * Code Quality Improvement Script * Analyzes and improves code quality across the project */ import fs from 'fs'' import path from 'path'' import { execSync } from 'child_process'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); // __dirname removed
 class CodeQualityImprover {/* TODO: Fix JSX expression */}
   s: []} metric,
-  s: {} }} async improve() {' try { // 1. Run linting and fix auto-fixable issues await this.runLinting(); // 2. Remove unused imports and variables await this.removeUnusedCode(); // 3. Optimize imports await this.optimizeImports(); // 4. Add missing type annotations await this.addTypeAnnotations(); // 5. Generate quality report await this.generateQualityReport(); ' // // console.log removed for production
+  s: {} }} async improve() {' try {
+
+ // 1. Run linting and fix auto-fixable issues await this.runLinting(); // 2. Remove unused imports and variables await this.removeUnusedCode(); // 3. Optimize imports await this.optimizeImports(); // 4. Add missing type annotations await this.addTypeAnnotations(); // 5. Generate quality report await this.generateQualityReport(); ' // // console.log removed for production
 }' // // console.log removed for production
 Report: '), // // console.log removed for production
-null} 2))} catch (error) {' process.exit(1)} } async runLinting() {' // // console.log removed for production
-} try {/* TODO: Fix JSX expression */}
+null} 2))
+
+} catch (error) {' process.exit(1)} } async runLinting() {' // // console.log removed for production
+} try {
+
+/* TODO: Fix JSX expression */}
   lint: fix'} {/* TODO: Fix JSX expression */}
   o: 'pipe' }); this.report.improvements.push({/* TODO: Fix JSX expression */}
   s: 'completed'}' messag)
-  e: 'ESLint auto-fix applied' }); ' } catch (error) {/* TODO: Fix JSX expression */}
+  e: 'ESLint auto-fix applied' }); ' 
+
+} catch (error) {/* TODO: Fix JSX expression */}
   issues: ') error.message)} this.report.issues.push({/* TODO: Fix JSX expression */}
   e: 'ESLint auto-fix failed'} detail)
   s: error.message })} } async removeUnusedCode() {' ' const srcPath = path.join(process.cwd(), 'src'); if (!fs.existsSync(srcPath)) return} ' const files = this.getAllFiles(srcPath) ['.ts'} '.tsx']); let removedCount = 0; files.forEach(file => {const improvements = this.cleanFile(file); removedCount += improvements} }); this.report.improvements.push({/* TODO: Fix JSX expression */}

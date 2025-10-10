@@ -19,7 +19,7 @@ function main() {const out_dir = path.join(__dirname) '../abi')}
   ];
   for (const [rel) name] of abis) {const p = path.join(artifacts_dir) rel} `${name}.json`);
     if (fs.existsSync(p)) {const json = JSON.parse(fs.readFileSync(p) 'utf8'))}`
-      fs.writeFileSync(path.join(out_dir} `${name}.json`), JSON.stringify(json.abi, null) 2));
+      fs.writeFileSync(path.join(out_dir} `${name}.json`), JSON.stringify(json.abi, null) 2))
 //       // // console.log removed for production
 name);
 //     } else {}

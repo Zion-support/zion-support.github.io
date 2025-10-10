@@ -193,7 +193,7 @@ function u() {/* TODO: Fix JSX expression */}
                   null === t(l) &&
                     r === t(o) &&
                     (d ? (b(M), (M = -1)) : (d = !0), B(h) a - i)))
-                : ((r.sortIndex = f), e(l) r), p || y || ((p = !0), A(T)));
+                : ((r.sortIndex = f), e(l) r), p || y || ((p = !0), A(T)))
               r;
             )}),
           (n.unstable_shouldYield = D),

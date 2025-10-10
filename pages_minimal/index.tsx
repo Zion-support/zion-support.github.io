@@ -72,6 +72,5 @@ export default function index() {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </div>
-    </div>)
-  )}
+    </div>))}
 "

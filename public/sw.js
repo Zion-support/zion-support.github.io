@@ -16,8 +16,7 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         // console.log removed for production
 })
-  )});
-
+  )})
 // Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
@@ -29,8 +28,7 @@ self.addEventListener('fetch', (event) => {
           if (event.request.destination === 'document') {
             return caches.match('/')}
         })})
-  )});
-
+  )})
 // Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -41,14 +39,12 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName)}
         })
       )})
-  )});
-
+  )})
 // Message event handler
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()}
-});
-
+})
 // Push event handler
 self.addEventListener('push', (event) => {
   if (event.data) {;
@@ -65,6 +61,5 @@ const data = event.data.json();
     };
     
     event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    )}
-});
+      self.registration.showNotification(data.title, options))}
+})

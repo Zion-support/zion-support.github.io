@@ -46,23 +46,20 @@ const links = document.querySelectorAll('a:not([aria-label])');
           link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`);
           link.setAttribute('target', '_blank');
           link.setAttribute('rel', 'noopener noreferrer')}
-      });
-
+      })
       // Add ARIA labels to images;
 const images = document.querySelectorAll('img:not([alt])');
       images.forEach(img => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', '')}
-      });
-
+      })
       // Add ARIA labels to form inputs;
 const inputs = document.querySelectorAll('input:not([aria-label])');
       inputs.forEach(input => {;
 const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
         if (label && !input.getAttribute('aria-label')) {
           input.setAttribute('aria-label', label.textContent?.trim() || '')}
-      });
-
+      })
       // Add skip links;
 const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -98,8 +95,7 @@ const [settings, setSettings] = useState<AccessibilitySettings>
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-    focusVisible: false});
-
+    focusVisible: false})
   useEffect(() => {
     // Check for user preferences;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -108,8 +104,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast}));
-
+      highContrast: prefersHighContrast}))
     // Apply accessibility settings;
 const root = document.documentElement;
     

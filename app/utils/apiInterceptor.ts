@@ -47,21 +47,33 @@ const index = this.errorInterceptors.indexOf(interceptor);
   applyRequestInterceptors(config: any): any {,
     return this.requestInterceptors.reduce((acc, interceptor) => {
       try {
-        return interceptor(acc)} catch (error) {
+
+
+        return interceptor(acc)
+
+} catch (error) {
         return acc}
     }, config);
   // Apply response interceptors;
   applyResponseInterceptors(response: any): any {,
     return this.responseInterceptors.reduce((acc, interceptor) => {
       try {
-        return interceptor(acc)} catch (error) {
+
+
+        return interceptor(acc)
+
+} catch (error) {
         return acc}
     }, response);
   // Apply error interceptors;
   applyErrorInterceptors(error: any): any {,
     return this.errorInterceptors.reduce((acc, interceptor) => {
       try {
-        return interceptor(acc)} catch (interceptorError) {
+
+
+        return interceptor(acc)
+
+} catch (interceptorError) {
         return acc}
     }, error);
   // Clear all interceptors;
@@ -101,7 +113,9 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
 }
 export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
-export interface CacheEntry {/* TODO: Fix JSX expression */}
+export interface CacheEntry {
+
+/* TODO: Fix JSX expression */}
 }
 export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -155,7 +169,9 @@ const duration = performance.now() - startTime;
       // Parse response data;
 const data = await this.parseResponse<T>(finalResponse);
       return {/* TODO: Fix JSX expression */}
-      }} catch (error) {/* TODO: Fix JSX expression */}
+      }
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }
       // Apply error interceptor;
       if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
@@ -170,7 +186,7 @@ const data = await this.parseResponse<T>(finalResponse);
     confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' });
+  d: 'GET' })
   /**
    * POST request;
    */
@@ -180,7 +196,7 @@ const data = await this.parseResponse<T>(finalResponse);
     confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body });
+  d: 'POST', body })
   /**
    * PUT request;
    */
@@ -190,7 +206,7 @@ const data = await this.parseResponse<T>(finalResponse);
     confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body });
+  d: 'PUT', body })
   /**
    * DELETE request;
    */
@@ -199,7 +215,7 @@ const data = await this.parseResponse<T>(finalResponse);
     confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' });
+  d: 'DELETE' })
   /**
    * PATCH request;
    */
@@ -209,7 +225,7 @@ const data = await this.parseResponse<T>(finalResponse);
     confi,
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body });
+  d: 'PATCH', body })
   /**
    * Prepare request configuration;
    */
@@ -238,7 +254,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   private buildHeaders(confi)
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-    });
+    })
     return headers}
   /**
    * Create abort signal for timeout;
@@ -274,7 +290,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   private setInCache(ke,
   y: string, respons)
   e: APIResponse): void {/* TODO: Fix JSX expression */}
-    });
+    })
   /**
    * Clear cache;
    */

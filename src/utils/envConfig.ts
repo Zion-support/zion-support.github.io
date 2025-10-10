@@ -171,7 +171,7 @@ class EnvironmentConfig {// TODO: Add content}
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
 
-        'GA Tracking ID Set': !!this.config.gaTrackingId});
+        'GA Tracking ID Set': !!this.config.gaTrackingId})
       console.groupEnd()}
   }
 }

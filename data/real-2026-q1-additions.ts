@@ -51,15 +51,8 @@ variant: 'ai - futuristic',
     customers:
         customers: 9;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 5},
-    id: 'api - security - posture - monitor'
-=======
-    reviews: 5;
-  },
-    id: 'api - security - posture - monitor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'API Security Posture Monitor',
+    id: 'api - security - posture - monitor'    name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
     price: '$199',
     period: '/month',
@@ -271,15 +264,8 @@ variant: 'holographic - matrix',
     customers:
         customers: 7;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 4},
-    id: 'email - parsing - routing - api'
-=======
-    reviews: 4;
-  },
-    id: 'email - parsing - routing - api',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Email Parsing & Routing API',
+    id: 'email - parsing - routing - api'    name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
     price: '$39',
     period: '/month',
@@ -706,15 +692,8 @@ variant: 'neural - quantum',
     customers:
         customers: 6;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 3},
-    id: 'slo - burn - rate - coach'
-=======
-    reviews: 3;
-  },
-    id: 'slo - burn - rate - coach',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'SLO Burn Rate Coach',
+    id: 'slo - burn - rate - coach'    name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn - rate risks',
     price: '$49',
     period: '/month',
@@ -819,15 +798,8 @@ variant: 'holographic - matrix',
     customers:
         customers: 10;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 6},
-    id: 'browser - performance - optimizer'
-=======
-    reviews: 6;
-  },
-    id: 'browser - performance - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    name: 'Browser Performance Optimizer',
+    id: 'browser - performance - optimizer'    name: 'Browser Performance Optimizer',
     tagline: 'Budget - driven CWV with hints and PR annotations',
     price: '$69',
     period: '/month',
@@ -1146,21 +1118,11 @@ variant: 'neural - quantum',
     reviews: 6}];
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
-<<<<<<< HEAD
 		roi: 'Grow partner revenue by 1025%'
 		competitors: ['ImpactPartnerStack'];
 		marketSize: '$5B+'
 		growthRate: '12% YoY',;
-variant: 'neural-quantum',
-=======
-		roi: 'Grow partner revenue by 1025%',
-		competitors:
-        competitors: ['ImpactPartnerStack'];
-		marketSize: '$5B+',
-		growthRate: '12% YoY',
-		variant: 'neural-quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'neural-quantum',		contactInfo: contact;
 		implementationDetails: 'Event ingestion, attribution, payout jobs',
 		launchDate: '2026-01-10',
 		customers: 12;
@@ -1188,21 +1150,11 @@ variant: 'neural-quantum',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
 		integrations: ['ZendeskIntercomG2 Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
-<<<<<<< HEAD
 		roi: 'Ship high-impact features faster'
 		competitors: ['UnitQEnjoyHQ'];
 		marketSize: '$2 B+'
 		growthRate: '18% CAGR';
-variant: 'ai-futuristic',
-=======
-		roi: 'Ship high-impact features faster',
-		competitors:
-        competitors: ['UnitQEnjoyHQ'];
-		marketSize: '$2 B+',
-		growthRate: '18% CAGR',
-		variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'ai-futuristic',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Connectors, clustering, scoring models',
 		launchDate: '2026-01-12',
@@ -1231,21 +1183,11 @@ variant: 'ai-futuristic',
 		technology: ['OpenAPI, Node, CI'];
 		integrations: ['GitHubGitLabJenkins'];
 		useCases: ['Pre-deploy API checksSecurity posture'];
-<<<<<<< HEAD
 		roi: 'Reduce security escapes by 60%'
 		competitors: ['StackHawk42 Crunch'];
 		marketSize: '$4 B'
 		growthRate: '20% CAGR';
-variant: 'quantum-cyberpunk',
-=======
-		roi: 'Reduce security escapes by 60%',
-		competitors:
-        competitors: ['StackHawk42 Crunch'];
-		marketSize: '$4 B',
-		growthRate: '20% CAGR',
-		variant: 'quantum-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'quantum-cyberpunk',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Spec analyzers, runners, annotations',
 		launchDate: '2026-01-14',
@@ -1275,21 +1217,11 @@ variant: 'quantum-cyberpunk',
         technology: ['Workers/LambdaWebhooks'];
 		integrations: ['AWSCloudflareGCP'];
 		useCases: ['Billing cyclesData syncs'];
-<<<<<<< HEAD
 		roi: 'Fewer missed jobs and incidents'
 		competitors: ['Temporal (overkill)DIY'];
 		marketSize: '$1 B+'
 		growthRate: '15% CAGR';
-variant: 'holographic-matrix',
-=======
-		roi: 'Fewer missed jobs and incidents',
-		competitors:
-        competitors: ['Temporal (overkill)DIY'];
-		marketSize: '$1 B+',
-		growthRate: '15% CAGR',
-		variant: 'holographic-matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'holographic-matrix',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Scheduler API, dashboard, webhooks',
 		launchDate: '2026-01-18',
@@ -1319,21 +1251,11 @@ variant: 'holographic-matrix',
         technology: ['SMTP/WebhooksVirus scan'];
 		integrations: ['SESSendGridMailgun'];
 		useCases: ['Ticket intakeCRM capture'];
-<<<<<<< HEAD
 		roi: 'Automate manual email triage'
 		competitors: ['MailparserIntegromat'];
 		marketSize: '$0 && 0.8 B'
 		growthRate: '10% CAGR';
-variant: 'neural-quantum',
-=======
-		roi: 'Automate manual email triage',
-		competitors:
-        competitors: ['MailparserIntegromat'];
-		marketSize: '$0 && 0.8 B',
-		growthRate: '10% CAGR',
-		variant: 'neural-quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'neural-quantum',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Inbound parsers, queueing, UI',
 		launchDate: '2026-01-20',
@@ -1362,21 +1284,11 @@ variant: 'neural-quantum',
 		technology: ['LLMs, Style prompts'];
 		integrations: ['HubSpotMailchimpWebflow'],
 		useCases: ['Blog, email, ads'];
-<<<<<<< HEAD
 		roi: 'Scale content 5 faster'
 		competitors: ['JasperWriter'];
 		marketSize: '$3 B+'
 		growthRate: '22% CAGR';
-variant: 'ai-futuristic',
-=======
-		roi: 'Scale content 5 faster',
-		competitors:
-        competitors: ['JasperWriter'];
-		marketSize: '$3 B+',
-		growthRate: '22% CAGR',
-		variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'ai-futuristic',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Template engine, tone guardrails',
 		launchDate: '2026-01-22',
@@ -1406,21 +1318,11 @@ variant: 'ai-futuristic',
         technology: ['NodePlaywright'];
 		integrations: ['GitHubGitLab'];
 		useCases: ['Header hardeningCompliance reports'];
-<<<<<<< HEAD
 		roi: 'Reduce risk and review toil'
 		competitors: ['Mozilla Observatory'];
 		marketSize: '$0 && 0.5 B'
 		growthRate: '8% CAGR';
-variant: 'holographic',
-=======
-		roi: 'Reduce risk and review toil',
-		competitors:
-        competitors: ['Mozilla Observatory'];
-		marketSize: '$0 && 0.5 B',
-		growthRate: '8% CAGR',
-		variant: 'holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'holographic',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Scanners, CI annotations, reports',
 		launchDate: '2026-01-25',
@@ -1449,21 +1351,11 @@ variant: 'holographic',
 		technology: ['DB, Vector/Key-Value'];
 		integrations: ['DatabricksdbtAirflow'];
 		useCases: ['Faster model delivery'];
-<<<<<<< HEAD
 		roi: 'Shorter time-to-prod models'
 		competitors: ['TectonFeast'];
 		marketSize: '$1 B+'
 		growthRate: '20% CAGR';
-variant: 'neural-quantum',
-=======
-		roi: 'Shorter time-to-prod models',
-		competitors:
-        competitors: ['TectonFeast'];
-		marketSize: '$1 B+',
-		growthRate: '20% CAGR',
-		variant: 'neural-quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'neural-quantum',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Schemas, validators, API',
 		launchDate: '2026-01-28',
@@ -1493,21 +1385,11 @@ variant: 'neural-quantum',
         technology: ['Prom/OTEL'];
 		integrations: ['PagerDutySlack'];
 		useCases: ['Error budgetsCoaching'];
-<<<<<<< HEAD
 		roi: 'Fewer incidents'
 		competitors: ['Nobl9'];
 		marketSize: '$0 && 0.8 B'
 		growthRate: '14% CAGR';
-variant: 'holographic-matrix',
-=======
-		roi: 'Fewer incidents',
-		competitors:
-        competitors: ['Nobl9'];
-		marketSize: '$0 && 0.8 B',
-		growthRate: '14% CAGR',
-		variant: 'holographic-matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'holographic-matrix',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'SLO calc, alerting, UI',
 		launchDate: '2026-02-01',
@@ -1536,21 +1418,11 @@ variant: 'holographic-matrix',
 		technology: ['Lighthouse, RUM'];
 		integrations: ['GitHubVercelNetlify'],
 		useCases: ['CWV, bundle size'];
-<<<<<<< HEAD
 		roi: '+20 LCP, fewer regressions'
 		competitors: ['SpeedCurveCalibre'];
 		marketSize: '$0 && 0.5 B'
 		growthRate: '12% CAGR';
-variant: 'neural-quantum-cyberpunk',
-=======
-		roi: '+20 LCP, fewer regressions',
-		competitors:
-        competitors: ['SpeedCurveCalibre'];
-		marketSize: '$0 && 0.5 B',
-		growthRate: '12% CAGR',
-		variant: 'neural-quantum-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'neural-quantum-cyberpunk',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'RUM SDK, CI checks, UI',
 		launchDate: '2026-02-05',
@@ -1580,21 +1452,11 @@ variant: 'neural-quantum-cyberpunk',
         technology: ['AWS/GCP/Azure APIs'];
 		integrations: ['DatadogSlackJira'];
 		useCases: ['Spend controlChargeback'];
-<<<<<<< HEAD
 		roi: 'Reduce overspend by 1030%'
 		competitors: ['CloudZeroFinout'];
 		marketSize: '$12 B'
 		growthRate: '25% YoY';
-variant: 'quantum-holographic',
-=======
-		roi: 'Reduce overspend by 1030%',
-		competitors:
-        competitors: ['CloudZeroFinout'];
-		marketSize: '$12 B',
-		growthRate: '25% YoY',
-		variant: 'quantum-holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'quantum-holographic',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Connectors, policies, exporters',
 		launchDate: '2026-02-08',
@@ -1623,21 +1485,11 @@ variant: 'quantum-holographic',
 		technology: ['OpenAPI, GraphQL, MDX'];
 		integrations: ['GitHubGitLab'];
 		useCases: ['Dev portalsSDKs'];
-<<<<<<< HEAD
 		roi: 'Docs/SDKs 5 faster'
 		competitors: ['ReadMeRedocly'];
 		marketSize: '$1 && 1.5 B'
 		growthRate: '18% CAGR';
-variant: 'neural-quantum',
-=======
-		roi: 'Docs/SDKs 5 faster',
-		competitors:
-        competitors: ['ReadMeRedocly'];
-		marketSize: '$1 && 1.5 B',
-		growthRate: '18% CAGR',
-		variant: 'neural-quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'neural-quantum',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Schema importers, generators, UI',
 		launchDate: '2026-02-12',
@@ -3858,21 +3710,11 @@ variant: 'ai-futuristic',
         technology: ['NodePlaywright']
 		integrations: ['GitHubGitLab']
 		useCases: ['Header hardeningCompliance reports']
-<<<<<<< HEAD
 		roi: 'Reduce risk and review toil'
 		competitors: ['Mozilla Observatory']
 		marketSize: '$0.5B'
 		growthRate: '8% CAGR';
-variant: 'holographic',
-=======
-		roi: 'Reduce risk and review toil',
-		competitors:
-        competitors: ['Mozilla Observatory']
-		marketSize: '$0.5B',
-		growthRate: '8% CAGR',
-		variant: 'holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'holographic',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Scanners, CI annotations, reports',
 		launchDate: '2026-01-25',
@@ -3939,21 +3781,11 @@ variant: 'neural-quantum',
         technology: ['Prom/OTEL']
 		integrations: ['PagerDutySlack']
 		useCases: ['Error budgetsCoaching']
-<<<<<<< HEAD
 		roi: 'Fewer incidents'
 		competitors: ['Nobl9']
 		marketSize: '$0.8B'
 		growthRate: '14% CAGR';
-variant: 'holographic-matrix',
-=======
-		roi: 'Fewer incidents',
-		competitors:
-        competitors: ['Nobl9']
-		marketSize: '$0.8B',
-		growthRate: '14% CAGR',
-		variant: 'holographic-matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-		contactInfo: contact;
+variant: 'holographic-matrix',		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'SLO calc, alerting, UI',
 		launchDate: '2026-02-01',

@@ -4,13 +4,13 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -28,7 +28,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     exit: sync.status),
     stdout: sync.stdout),
     stderr: sync.stderr}
-  });
+  })
   return {statusCode: 200}
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify()
@@ -39,7 +39,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const _sync = runNode('automation/advanced-git-sync.cjs');
   steps.push({/* TODO: Fix JSX expression */}
   r: sync.stderr})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   e: 200}
     header,

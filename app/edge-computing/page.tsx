@@ -170,11 +170,10 @@ const useCases = [
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -195,8 +194,7 @@ const useCases = [
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -217,8 +215,7 @@ const useCases = [
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -240,8 +237,7 @@ const useCases = [
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 

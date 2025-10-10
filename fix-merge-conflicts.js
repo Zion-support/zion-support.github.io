@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -74,8 +73,7 @@ function fixJSXSyntax(content) {
         return match + '</p>';
       }
       return match;
-    });
-  
+    })
   return fixed;
 }
 
@@ -121,10 +119,11 @@ async function processFiles() {
         '**/*.backup',
         '**/*.broken'
       ]
-    });
-    
+    })
     for (const file of files) {
       try {
+
+
         const content = fs.readFileSync(file, 'utf8');
         
         // Check if file has merge conflicts
@@ -138,14 +137,18 @@ async function processFiles() {
           fs.writeFileSync(file, resolved);
           processedCount++;
         }
-      } catch (error) {
+      
+
+} catch (error) {
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
 import { execSync } from 'child_process';
 
 // Function to resolve merge conflicts by keeping HEAD version;
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
@@ -179,7 +182,9 @@ const line = lines[i];
     ;
 const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    return true} catch (error) {
+    return true
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -197,51 +202,19 @@ const fullPath = path.join(currentDir, item);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         searchDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        try {;
+        try {
+
+;
 const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
             files.push(fullPath)}
-        } catch (error) {
-          // Skip files that can't be read
-=======
-import fs from 'fs';
-import path from 'path';
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Clean up any remaining artifacts
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove excessive newlines
-    content = content.replace(/^\s*\n/gm, ''); // Remove empty lines at start of lines
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-function findFilesWithMergeConflicts(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('') || content.includes('') || content.includes('          files.push(fullPath);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        }
+        
+
+} catch (error) {
+          // Skip files that can't be read        }
       }
     }
   }
-<<<<<<< HEAD
   
   console.log(`\nMerge conflict resolution complete!`);
   console.log(`Files processed: ${processedCount}`);
@@ -250,18 +223,3 @@ function findFilesWithMergeConflicts(dir) {
 
 // Run the script
 processFiles().catch(console.error);
-=======
-  traverse(dir);
-  return files;
-}
-// Main execution
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81

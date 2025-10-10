@@ -17,8 +17,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...',
   className = ''}) => {
 return (
-
-  return (
     <div className={`flex flex-col items-center justify-center gap-3 ${className}`} role="status" aria-label="Loading">
 );
 }

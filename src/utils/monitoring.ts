@@ -51,7 +51,9 @@ constructor() {
 
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
+
+;
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
@@ -59,15 +61,13 @@ const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
         // First Input Delay;
 const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid)})});
-        fidObserver.observe({ entryTypes: ['first-input'] });
-;
+            this.reportMetric('fid', this.metrics.fid)})})
+        fidObserver.observe({ entryTypes: ['first-input'] })
 let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {;
 const entries = list.getEntries();
@@ -79,14 +79,15 @@ const entries = list.getEntries();
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-
         // First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {;
 const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)})});
-        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
+            this.reportMetric('fcp', entry.startTime)})})
+        fcpObserver.observe({ entryTypes: ['paint'] })
+
+} catch (error) {
         // // console.error removed for production
 }
     }
@@ -94,14 +95,17 @@ const entries = list.getEntries();
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {
+
+;
 const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // // console.warn removed for production
 }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
-      } catch (error) {
+
+} catch (error) {
         // Long task API might not be available
       }
     }
@@ -109,7 +113,9 @@ const longTaskObserver = new PerformanceObserver((list) => {
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
+
+;
 const resourceObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {;
@@ -117,8 +123,10 @@ const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // // console.warn removed for production
 }
-          })});
-        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
+          })})
+        resourceObserver.observe({ entryTypes: ['resource'] })
+
+} catch (_error) {
         // // console.error removed for production
 }
     }
@@ -134,7 +142,6 @@ const resourceEntry = entry as PerformanceResourceTiming;
         url: window.location.href
       })
     })
-
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({

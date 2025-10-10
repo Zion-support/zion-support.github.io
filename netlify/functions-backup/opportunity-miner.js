@@ -4,13 +4,13 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -26,11 +26,11 @@ exports.handler = async () => {const logs = []}
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
     return status};
-  step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));
+  step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'))
   step('searc)
-  h: index') () => runNode('scripts/generate-search-index.js'));
+  h: index') () => runNode('scripts/generate-search-index.js'))
   step('gi)
-  t: sync') () => runNode('automation/advanced-git-sync.cjs'));
+  t: sync') () => runNode('automation/advanced-git-sync.cjs'))
   return {/* TODO: Fix JSX expression */}
   e: 200}
     header,

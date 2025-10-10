@@ -8,9 +8,7 @@ impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
 ;
 const October2025TechBreakthroughBanne, r = () => {
-return (
- 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' >
+return (<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' >
 );
 } {/* Animated, Backgroun, d */ })
       <div, className='absolute, inse, t-0, opacit, y-20'>)

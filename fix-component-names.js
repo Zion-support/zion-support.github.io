@@ -31,7 +31,9 @@ const files = getAllFilesWithErrors();
   let fixedCount = 0;
   
   for (const filePath of files) {
-    try {;
+    try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       
@@ -39,8 +41,7 @@ let content = fs.readFileSync(filePath, 'utf8');
       const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page: \s*React\.FC/);
       if (componentNameMatch) {,;
 const oldName = componentNameMatch[1];,;
-const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
-        
+const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase())
         if (oldName !== newName) {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
@@ -51,8 +52,7 @@ const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) 
       const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
       if (titleMatch) {;
 const oldTitle = titleMatch[1];
-        const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase());
-        
+        const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase())
         if (oldTitle !== newTitle) {
           content = content.replace(oldTitle, newTitle);
           modified = true}
@@ -63,7 +63,9 @@ const oldTitle = titleMatch[1];
         // console.log removed for production
 }`);
         fixedCount++}
-    } catch (error) {
+    
+
+} catch (error) {
       // console.error removed for production
 }
   }

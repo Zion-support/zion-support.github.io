@@ -36,8 +36,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
             Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
           </p>
-        </div>)
-)
+        </div>))
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
         </div>

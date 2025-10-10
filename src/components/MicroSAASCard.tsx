@@ -37,8 +37,6 @@ const MicroSAASCard: React.FC;
 ;
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
 return (
-
-  return (
     
           
           

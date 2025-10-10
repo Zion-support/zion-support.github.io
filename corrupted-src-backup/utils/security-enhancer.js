@@ -79,9 +79,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   generateCSRFToken() {
 //     const array = new Uint8 Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
-    )}
-
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(''))}
   setCSRFToken(token) {
     // Store token in sessionStorage;
     sessionStorage.setItem('csrf_token', token);
@@ -141,7 +139,7 @@ const _input = document.createElement('input');
     const _originalXHROpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
         }
-      });
+      })
       return originalXHROpen.call(this, method, url, ...args)}}
 
   setupInputValidation() {
@@ -175,8 +173,7 @@ const _inputs = form.querySelectorAll('input, textarea, select');
   validateForm(form) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     return isValid}
 
   validateInput(input) {/* TODO: Fix JSX expression */}
@@ -200,11 +197,14 @@ const _inputs = form.querySelectorAll('input, textarea, select');
   }
 
   validateURL(url) {
-    try {;
+    try {
+
+;
 const _urlObj = new URL(url);
       return this.securityConfig.trustedDomains.some(domain =>)
-          urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
-      )} catch {
+          urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain))
+
+} catch {
       return false;
   validateURL(url) {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
@@ -214,7 +214,6 @@ const _urlObj = new URL(url);
   validatePhone(phone) {/* TODO: Fix JSX expression */}
     const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''))}
-
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
     const passwordRegex =
@@ -368,8 +367,7 @@ const observer = new MutationObserver(mutations => {)
   monitorDOMChanges() {/* TODO: Fix JSX expression */}
             }
           })}
-      })});
-
+      })})
     observer.observe(document.body, {)
       childList: true),
       subtree: true),
@@ -388,7 +386,6 @@ const suspiciousPatterns = [
     ];
 ,
     return suspiciousPatterns.some(pattern => pattern.test(url))}
-
   checkForMaliciousContent(node) {;
 const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
 
@@ -401,7 +398,7 @@ const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
   }
 
   checkForMaliciousContent(node) {/* TODO: Fix JSX expression */}
-      });
+      })
       node.remove()}
   }
 

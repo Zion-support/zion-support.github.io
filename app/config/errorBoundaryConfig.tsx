@@ -46,16 +46,8 @@ export interface ErrorBoundaryConfig {
   fallbackComponents: {,
   default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
-<<<<<<< HEAD
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;)
-};);
-=======
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>]
-    }]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+};);/**
  * Default error messages
  */;
 const DEFAULT_ERROR_MESSAGES = {
@@ -64,14 +56,7 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-<<<<<<< HEAD
-  validation: 'Validation error. Please check your input.',;);
-=======
-  validation: 'Validation error. Please check your input.',]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  validation: 'Validation error. Please check your input.',;);/**
  * Get error boundary configuration based on environment
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
@@ -85,18 +70,9 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     fallbackComponents: {,
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-<<<<<<< HEAD
       notFound: NotFoundFallback,;)
 },;)
-};);
-=======
-      notFound: NotFoundFallback,]
-    },]
-    }]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+};);/**
  * Default error fallback component
  */;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }); {
@@ -143,14 +119,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  ););/**
  * Network error fallback component
  */;
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }); {
@@ -186,14 +155,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  ););/**
  * Not found error fallback component
  */;
 function NotFoundFallback(): JSX.Element {
@@ -221,19 +183,11 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  ););/**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-<<<<<<< HEAD
     return 'network';);
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound';);
@@ -243,27 +197,7 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
     return 'serverError';);
   if (error.message.includes('validation')) {
     return 'validation';);
-  return 'default';);
-=======
-    return 'network']
-    }
-  if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound']
-    }
-  if (error.message.includes('timeout')) {
-    return 'timeout']
-    }
-  if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError']
-    }
-  if (error.message.includes('validation')) {
-    return 'validation']
-    }
-  return 'default']
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-/**
+  return 'default';);/**
  * Format error for logging
  */
 export function formatErrorForLogging(error: Error): Record<string, unknown></string> {
@@ -274,14 +208,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-<<<<<<< HEAD
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',;)
-};)
-=======
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',]
-    }]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default getErrorBoundaryConfig;
+};)export default getErrorBoundaryConfig;
 }

@@ -103,8 +103,7 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
-    });
-
+    })
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {

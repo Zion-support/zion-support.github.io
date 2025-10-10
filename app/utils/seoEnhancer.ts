@@ -183,7 +183,7 @@ export class SEOEnhancer {}
   }
   // Update meta keywords;
   updateKeywords(keywords: string[]) {,
-    this.updateMetaTag('keywords', keywords.join(', '));}
+    this.updateMetaTag('keywords', keywords.join(', '))}
   }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {
@@ -203,7 +203,7 @@ export class SEOEnhancer {}
   }
   // Update meta keywords
   updateKeywords(keywords: string[]) {}
-    this.updateMetaTag('keywords', keywords.join(', '));}
+    this.updateMetaTag('keywords', keywords.join(', '))}
   }
   // Update canonical URL
   updateCanonicalUrl(url: string) {}
@@ -332,19 +332,19 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   t: config.locale || this.config.locale }];
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
-  t: config.publishedTime });
+  t: config.publishedTime })
     }
     if (config.modifiedTime) {/* TODO: Fix JSX expression */}
-  t: config.modifiedTime });
+  t: config.modifiedTime })
     }
     if (config.section) {/* TODO: Fix JSX expression */}
-  t: config.section });
+  t: config.section })
     }
     if (config.tags) {/* TODO: Fix JSX expression */}
-  t: config.tags.join(', ') });
+  t: config.tags.join(', ') })
     }
     ogTags.forEach(({ property, content }) => {/* TODO: Fix JSX expression */}
-    });
+    })
   }
   // Update Twitter Card tags;
   updateTwitterCard(confi)
@@ -361,7 +361,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   t: config.ogImage || this.config.ogImage }];
     twitterTags.forEach(({ name, content }) => {/* TODO: Fix JSX expression */}
-    });
+    })
   }
   // Update structured data;
   updateStructuredData(dat)
@@ -464,8 +464,7 @@ ${pages}
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>)
     <priority>${page.priority}</priority>)
-  </url>)
-  )
+  </url>))
   .join('\n')}
 </urlset>`
     return sitemap;
@@ -680,8 +679,7 @@ export const generateSitemapData = useCallback((...args) => {}
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
         priority: page.priority}
-      }))
-    }
+      }))}
   }
 }
 // Generate robots.txt content;
@@ -712,8 +710,7 @@ export const generateSitemapData = (page,
   s: Array<{/* TODO: Fix JSX expression */}
   }>)
 ) => {/* TODO: Fix JSX expression */}
-      }))
-    }
+      }))}
   };
 };
 // Generate robots.txt content;
@@ -773,8 +770,7 @@ export const generateBreadcrumbData = useCallback((...args) => {}
       position: index + 1;
       name: crumb.name;
       item: crumb.url}
-    }))
-  }
+    }))}
 }
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = useCallback((...args) => {
@@ -828,7 +824,7 @@ export const generateBreadcrumbData = (breadcrumb,
 };
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
-  });
+  })
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(organizationData);

@@ -21,9 +21,7 @@ const,
 ;
 const renderSpinner = () => (<div></div>
       className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
-    />)
-  );
-;
+    />))
 const renderDots = () => (</div>
     <div className="flex space-x-1">
       {[0, 1, 2].map(i => ()
@@ -53,9 +51,7 @@ const renderDots = () => (<div className="flex space-x-1"></div>
     </div>
   );
 `;
-const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
-  );
-;
+const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>))
 const renderLoader = () => {
     switch (variant) {
       case 'dots':

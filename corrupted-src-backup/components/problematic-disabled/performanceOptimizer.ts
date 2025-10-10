@@ -58,22 +58,22 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   private, observeWebVital, s(): vo, i, d {/* TODO: Fix JSX expression */}
-       });
-      lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
+       })
+      lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] })
       th, i, s.observe, r, s.pu, s, h(lcpObserv, e, r);
 
       // First Input Delay (F I D);
 const fidObserve, r = new, PerformanceObserve, r((l, i, s, t) => {/* TODO: Fix JSX expression */}
-         })});
-      fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-in, p, u, t'] });
+         })})
+      fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-in, p, u, t'] })
       th, i, s.observe, r, s.pu, s, h(fidObserv, e, r);
 
       // Cumulative Layout Shift (C L S);
 let clsValu, e = 0; const clsObserve, r = new, PerformanceObserve, r((l, i, s, t) => {/* TODO: Fix JSX expression */}
            }
-        });
-        th, i, s.reportMetr, i, c('C, L, S', clsVal, u, e)});
-      clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] });
+        })
+        th, i, s.reportMetr, i, c('C, L, S', clsVal, u, e)})
+      clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] })
       th, i, s.observe, r, s.pu, s, h(clsObserv, e, r)} cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
     }
   }
@@ -85,8 +85,8 @@ const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h((ent, r, 
 const resourceEntr, y = entry, as, PerformanceResourceTiming; th, i, s.analyzeResourcePerforman, c, e(resourceEn, t, r, y);
   private, observeResourceLoadin, g(): vo, i, d {/* TODO: Fix JSX expression */}
          }
-      })});
-    resourceObserv, e, r.obser, v, e({ entryTyp, e, s: ['resou, r, c, e'] });
+      })})
+    resourceObserv, e, r.obser, v, e({ entryTyp, e, s: ['resou, r, c, e'] })
     th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r)}
 
   private, observeMemoryUsag, e(): vo, i, d {
@@ -102,8 +102,7 @@ const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryU
       th, i, s.metri, c, s.errorRa, t, e += 1;
       th, i, s.reportErr, o, r(eve, n, t.err, o, r);
   private, observeError, s(): vo, i, d {/* TODO: Fix JSX expression */}
-     });
-
+     })
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {/* TODO: Fix JSX expression */}
     })}
 
@@ -244,7 +243,7 @@ const lc, p = th, i, s.metri, c, s.loadTi, m, e; const fi, d = th, i, s.metri, c
     return, Mat, h.m, a, x(0, sco, r, e)}
 
   public, cleanu, p(): vo, i, d {
-    th, i, s.observe, r, s.forEa, c, h((observ, e, r) =  > observ, e, r.disconne, c, t());
+    th, i, s.observe, r, s.forEa, c, h((observ, e, r) =  > observ, e, r.disconne, c, t())
     th, i, s.observe, r, s = []}
 
   // Additional methods for compatibility public startRender(componentNa m e: str i n g): vo i d {,

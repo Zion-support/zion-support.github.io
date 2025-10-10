@@ -57,8 +57,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
         colno: event.colno),
         error: event.error),
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-      })});
-
+      })})
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
@@ -85,7 +84,9 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor fetch requests;
     const _originalFetch = window.fetch;
     window.fetch = async (...args) => {
-      try {;
+      try {
+
+;
 const _response = await originalFetch(...args);
         if (!response.ok) {
           this.handleError({)
@@ -93,7 +94,9 @@ const _response = await originalFetch(...args);
             message: `HTTP ${response.status}: ${response.statusText}`)
             url: args[0] as string),
             status: response.status)})}
-        return response} catch (error) {
+        return response
+
+} catch (error) {
         this.handleError({)
           type: 'network'),
           message: error.message;),
@@ -106,7 +109,7 @@ const _response = await originalFetch(...args);
             statu,
   s: response.status})}
         return response} catch (error) {/* TODO: Fix JSX expression */}
-        });
+        })
         throw error}
     }}
 
@@ -234,11 +237,9 @@ const _severity = this.determineSeverity(errorData);
 )}
 
   private cleanupOldErrors(): void {;
-const _errorsArray = Array.from(this.errors.values());
+const _errorsArray = Array.from(this.errors.values())
     errorsArray.sort(
-      (a, b) => new Date(b.lastOccurrence).getTime() - new Date(a.lastOccurrence).getTime()
-    );
-
+      (a, b) => new Date(b.lastOccurrence).getTime() - new Date(a.lastOccurrence).getTime())
     // Keep only the most recent 500 errors;
     const _errorsToKeep = errorsArray.slice(0, 500);
     this.errors.clear();
@@ -270,7 +271,6 @@ const _errorsArray = Array.from(this.errors.values());
   y: JSON.stringify(errorReport)
     // }).catch(err => // // console.error removed for production
 report:', err))}
-
   private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
     })}
 

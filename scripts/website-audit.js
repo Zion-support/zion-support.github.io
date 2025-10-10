@@ -38,8 +38,7 @@ scanDirectory(appDir);
 // console.log removed for production
 allPages.forEach(page => {),
   // console.log removed for production
-});
-
+})
 // Check for missing pages referenced in Footer;
 const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
 const footerContent = fs.readFileSync(footerFile, 'utf8');
@@ -55,8 +54,7 @@ while ((match = hrefRegex.exec(footerContent)) !== null) {,
 // console.log removed for production
 footerLinks.forEach(link => {),
   // console.log removed for production
-});
-
+})
 // Check which footer links are missing pages;
 const missingPages = [];
 const existingRoutes = allPages.map(p => p.path);
@@ -64,14 +62,12 @@ const existingRoutes = allPages.map(p => p.path);
 footerLinks.forEach(link => {)
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
     missingPages.push(link)}
-});
-
+})
 // console.log removed for production
 :`);
 missingPages.forEach(page => {)
   // console.log removed for production
-});
-
+})
 // Check for other common missing pages;
 const commonPages = [
   '/about',
@@ -95,9 +91,7 @@ const commonPages = [
 ];
 ;
 const additionalMissing = commonPages.filter(page => )
-  !existingRoutes.includes(page) && !missingPages.includes(page)
-);
-
+  !existingRoutes.includes(page) && !missingPages.includes(page))
 if (additionalMissing.length > 0) {
   // console.log removed for production
 :`);
@@ -111,7 +105,9 @@ if (additionalMissing.length > 0) {
 const brokenLinks = [];
 
 allPages.forEach(page => {)
-  try {);
+  try {
+
+);
 const content = fs.readFileSync(page.file, 'utf8');
     
     // Find all internal links in the page;
@@ -125,11 +121,12 @@ const link = linkMatch[1];
           page: page.path),
           brokenLink: link})}
     }
-  } catch (error) {
+  
+
+} catch (error) {
     // console.log removed for production
 }
-});
-
+})
 if (brokenLinks.length > 0) {
   // console.log removed for production
 :`);
@@ -151,9 +148,7 @@ const report = {
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),
-  JSON.stringify(report, null, 2)
-);
-
+  JSON.stringify(report, null, 2))
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production

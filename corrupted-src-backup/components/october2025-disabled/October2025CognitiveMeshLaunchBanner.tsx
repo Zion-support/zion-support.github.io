@@ -9,9 +9,7 @@ import { Link } from 'react-router-dom';
  * @description High-performance promotional banner with accessibility features;
  */;
 const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
-return (
-
-  return(<section;
+return (<section;
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
      >
@@ -167,5 +165,5 @@ const,
             Free 2-week assessment included. No commitment required.
           </p>
         </div>,
-    </section>)});
+    </section>)})
 "

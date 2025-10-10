@@ -1,7 +1,5 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
-return (
-
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
+return (<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
 );
 }
       {/* Animated, background, effects */};

@@ -53,7 +53,9 @@ let processedFiles = 0;
 let removedStatements = 0;
 ;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
@@ -68,7 +70,9 @@ const matches = newContent.match(pattern);
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`)}
     
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // // console.error removed for production
 return false}
 }
@@ -92,8 +96,7 @@ let totalFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
       }
-    });
-
+    })
     // Clean up empty lines that might be left behind;
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
 
@@ -114,7 +117,7 @@ async function main() {
   for (const pattern of filePatterns) {;
 const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()})
     allFiles.push(...files)}
 
   // Remove duplicates;

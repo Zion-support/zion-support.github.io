@@ -96,6 +96,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     // Observe navigation timing;
     if ('PerformanceObserver' in window) {
       try {
+
+
         // Navigation timing;
         const navObserver = new PerformanceObserver(list => {)
           for (const entry of list.getEntries()) {
@@ -218,37 +220,39 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         this.observers.push(clsObserver)
-      } catch (error) {}
-        });
+      
+
+} catch (error) {}
+        })
         navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation'] })
         this.observers.push(navObserver);
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-              });
+              })
             }
           }
-        });
+        })
         paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] })
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-            });
+            })
           }
-        });
+        })
         lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver);
         // Layout Shift;
         const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
           }
           this.webVitals.CLS = clsValue;
           this.recordMetric({/* TODO: Fix JSX expression */})
-          });
-        });
+          })
+        })
         clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
         this.observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
         }
@@ -403,7 +407,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   p: new Date(),
       categor,
   y: 'runtime'
-    });
+    })
     return result;
   }
   /**
@@ -439,7 +443,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   p: new Date(),
       categor,
   y: 'runtime'
-    });
+    })
     return result;
   }
   /**
@@ -521,8 +525,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       if (this.webVitals.FID > 300) score -= 15
       else if (this.webVitals.FID > 100) score -= 8;}
     }
-    return Math.max(0, Math.min(100, score))
-  }
+    return Math.max(0, Math.min(100, score))}
   /**
    * Get performance recommendations;
    */

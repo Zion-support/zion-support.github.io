@@ -97,7 +97,6 @@ const consultingServices = [
                           {benefit}
                         </li>
                       ))}
-
                     </ul>
 
                     <div className="text-center">

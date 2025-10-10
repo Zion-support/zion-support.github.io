@@ -58,8 +58,7 @@ const SitemapPage: React.FC = () => {const pages = [
                   {page.path}
                 </p>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
 
         <div>
@@ -86,11 +85,4 @@ const SitemapPage: React.FC = () => {const pages = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default SitemapPage;
+  );)export default SitemapPage;

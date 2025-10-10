@@ -45,8 +45,7 @@ constructor(props: ErrorBoundaryProps) {
       error,
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production
@@ -58,7 +57,9 @@ constructor(props: ErrorBoundaryProps) {
   }
 
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {;
+    try {
+
+;
 const errorReport: ErrorReport = {
         errorId: this.state.errorId,
         error,
@@ -77,7 +78,9 @@ const errorReport: ErrorReport = {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'},
-        body: JSON.stringify(errorReport)})} catch (reportError) {
+        body: JSON.stringify(errorReport)})
+
+} catch (reportError) {
       // console.error removed for production
 }
   };

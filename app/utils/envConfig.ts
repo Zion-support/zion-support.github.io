@@ -56,7 +56,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public getConfig(): Readonly<EnvConfig> {}
     return Object.freeze({ ...this.config })
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config })
   /**
    * Get a specific configuration value;
    */
@@ -143,7 +143,7 @@ const missing: string[] = [],
   public logConfig(): void {}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
-      });
+      })
   }
 }
 // Export singleton instance

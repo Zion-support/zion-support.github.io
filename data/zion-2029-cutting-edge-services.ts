@@ -194,21 +194,11 @@ export const,
     useCases: ['Drug discovery optimization', 'Portfolio optimization', 'Supply chain optimization', 'Materials design', 'Cryptography'],
     roi: 'Average customer achieves 300% ROI within 6 months through quantum advantage in optimization problems.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],
-<<<<<<< HEAD
     marketSize: '$1.3B quantum computing market'
     growthRate: '32.1% annual growth';
 variant: 'quantum-ai-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$1.3B quantum computing market',
-    growthRate: '32.1% annual growth',
-    variant: 'quantum-ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -360,21 +350,11 @@ varian,
     useCases: ['Last-mile delivery', 'Infrastructure inspection', 'Agricultural monitoring', 'Security surveillance', 'Emergency response'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced delivery costs and improved efficiency.',
     competitors: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],
-<<<<<<< HEAD
     marketSize: '$45.8B drone market'
     growthRate: '16.3% annual growth';
 variant: 'autonomous-robotics'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$45.8B drone market',
-    growthRate: '16.3% annual growth',
-    variant: 'autonomous-robotics',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -526,21 +506,11 @@ varian,
     useCases: ['KYC/AML compliance', 'Healthcare identity', 'Government services', 'Financial services', 'Travel and hospitality'],
     roi: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.',
     competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
-<<<<<<< HEAD
     marketSize: '$28.6B identity management market'
     growthRate: '18.2% annual growth';
 variant: 'blockchain-identity'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$28.6B identity management market',
-    growthRate: '18.2% annual growth',
-    variant: 'blockchain-identity',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -692,21 +662,11 @@ varian,
     useCases: ['Climate risk assessment', 'Insurance underwriting', 'Real estate planning', 'Agricultural planning', 'Energy optimization'],
     roi: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.',
     competitors: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],
-<<<<<<< HEAD
     marketSize: '$15.2B climate tech market'
     growthRate: '24.5% annual growth';
 variant: 'climate-ai-sustainability'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15.2B climate tech market',
-    growthRate: '24.5% annual growth',
-    variant: 'climate-ai-sustainability',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -858,21 +818,11 @@ varian,
     useCases: ['Edge AI processing', 'IoT sensor networks', 'Robotics control', 'Healthcare monitoring', 'Autonomous vehicles'],
     roi: 'Average customer achieves 250% ROI within 18 months through reduced power costs and new AI capabilities.',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],
-<<<<<<< HEAD
     marketSize: '$8.7B neuromorphic computing market'
     growthRate: '28.9% annual growth';
 variant: 'neuromorphic-ai-futuristic'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$8.7B neuromorphic computing market',
-    growthRate: '28.9% annual growth',
-    variant: 'neuromorphic-ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1024,21 +974,11 @@ varian,
     useCases: ['Inventory optimization', 'Demand forecasting', 'Supplier management', 'Logistics optimization', 'Risk management'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.',
     competitors: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
-<<<<<<< HEAD
     marketSize: '$19.2B supply chain management market'
     growthRate: '11.8% annual growth';
 variant: 'supply-chain-ai'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$19.2B supply chain management market',
-    growthRate: '11.8% annual growth',
-    variant: 'supply-chain-ai',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1190,21 +1130,11 @@ varian,
     useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Drug discovery', 'Population health'],
     roi: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.',
     competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],
-<<<<<<< HEAD
     marketSize: '$45.2B AI healthcare market'
     growthRate: '23.7% annual growth';
 variant: 'healthcare-ai'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$45.2B AI healthcare market',
-    growthRate: '23.7% annual growth',
-    variant: 'healthcare-ai',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1356,21 +1286,11 @@ varian,
     useCases: ['Portfolio management', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Compliance automation'],
     roi: 'Average customer achieves 300% ROI within 12 months through improved returns and reduced costs.',
     competitors: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],
-<<<<<<< HEAD
     marketSize: '$12.8B algorithmic trading market'
     growthRate: '19.4% annual growth';
 variant: 'fintech-ai-autonomous'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$12.8B algorithmic trading market',
-    growthRate: '19.4% annual growth',
-    variant: 'fintech-ai-autonomous',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1522,21 +1442,11 @@ varian,
     useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance automation', 'Security training'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced security incidents and compliance costs.',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],
-<<<<<<< HEAD
     marketSize: '$182.3B cybersecurity market'
     growthRate: '13.4% annual growth';
 variant: 'cybersecurity-ai'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$182.3B cybersecurity market',
-    growthRate: '13.4% annual growth',
-    variant: 'cybersecurity-ai',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
@@ -1688,21 +1598,11 @@ varian,
     useCases: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Citizen services'],
     roi: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],
-<<<<<<< HEAD
     marketSize: '$225.1B smart city market'
     growthRate: '14.8% annual growth';
 variant: 'smart-city-ai'
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$225.1B smart city market',
-    growthRate: '14.8% annual growth',
-    variant: 'smart-city-ai',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950'      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;

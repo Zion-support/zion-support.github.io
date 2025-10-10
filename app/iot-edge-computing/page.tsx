@@ -22,13 +22,7 @@ const features = [
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses';);
-=======
-      description: 'Worldwide deployment and support for international businesses']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      description: 'Worldwide deployment and support for international businesses';);  ];
 ;
 const benefits = [
     'Advanced AI technology integration',
@@ -61,16 +55,14 @@ const benefits = [
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
               </div>
-            ));
-          </div>
+            ))</div>
         </div>
       </section>
 
@@ -80,11 +72,4 @@ const benefits = [
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default PagePage;
+  );)export default PagePage;

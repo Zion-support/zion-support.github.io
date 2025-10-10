@@ -124,8 +124,7 @@ const searchResults = async (searchQuery: string) => {
     setShowSuggestions(false);
 
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-;
+    await new Promise(resolve => setTimeout(resolve, 300))
 const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -136,8 +135,7 @@ const filteredResults = mockSearchResults.filter(result =>
 const sortedResults = filteredResults.sort((a, b) => {;
 const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance});
-
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance})
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false)};

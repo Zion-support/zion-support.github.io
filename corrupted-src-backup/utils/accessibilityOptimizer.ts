@@ -46,8 +46,7 @@ const _elements = document.querySelectorAll('button, input, select, textarea, a,
 
     elements.forEach(element => {;
 const improvements: string[] = [];);
-let _score = 0;)
-)
+let _score = 0;))
       if ()
         element.tagName === 'BUTTON' &&)
         !element.getAttribute('aria-label') &&,
@@ -78,13 +77,10 @@ let _score = 0;)
     })}
 
   private optimizeKeyboardNavigation(): void {;
-const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
-    );
-
+const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]'))
     focusableElements.forEach(element => {);
 const improvements: string[] = [];);
-let _score = 0;)
-)
+let _score = 0;))
       if ()
         !element.getAttribute('tabindex') &&
         element.tagName !== 'A' &&
@@ -139,13 +135,10 @@ const _styles = window.getComputedStyle(element);
     })}
 
   private optimizeFocusManagement(): void {;
-const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
-    );
-
+const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]'))
     focusableElements.forEach(element => {);
 const improvements: string[] = [];);
-let _score = 0;)
-)
+let _score = 0;))
       if ()
         !element.getAttribute('aria-describedby') &&,
         element.getAttribute('aria-invalid') === 'true') {,
@@ -169,8 +162,7 @@ const _elements = document.querySelectorAll('*');
 
     elements.forEach(element => {);
 const improvements: string[] = [];);
-let _score = 0;)
-)
+let _score = 0;))
       if (element.tagName === 'IMG' && !element.getAttribute('alt')) {,
         element.setAttribute('alt', '');
         element.setAttribute('aria-hidden', 'true');

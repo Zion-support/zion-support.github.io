@@ -131,12 +131,9 @@ export default Image</img>
       onLoad={handleLoad})
       onError={handleError})
       {...props})
-    />)
-  )
-}
+    />))}
 export default Image;
-    />)
-  );
+    />))
 };
 export default Image;
 "`

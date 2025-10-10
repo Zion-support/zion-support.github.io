@@ -9,15 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: PageSpeed insights runner executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
-function: 'pagespeed-insights-runner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'pagespeed-insights-runner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-        source: event.source || 'unknown',
+function: 'pagespeed-insights-runner'        source: event.source || 'unknown',
         insights: {,
           status: 'active',
           pagesAnalyzed: 0;

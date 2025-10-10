@@ -54,8 +54,7 @@ const,
   threshol,
   d: 0.1,
         rootMargi,
-  n: '50px'}
-    );
+  n: '50px'})
     if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -71,9 +70,7 @@ const,
 }
     setHasError(true);
     onError?.()};
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div></div>
       ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
@@ -88,16 +85,14 @@ const,
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
               'w-full h-full object-cover transition-opacity duration-300',
-              isLoaded ? 'opacity-100' : 'opacity-0')
-            )}
+              isLoaded ? 'opacity-100' : 'opacity-0'))}
             onLoad={handleLoad}
             onError={handleError}
             loading={priority ? 'eager' : 'lazy'}"
             decoding="async"
 // />
           {!isLoaded && !hasError && (}"
-          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>)
-          )}
+          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>))}
         </React.Fragment>
       )}
     </div>

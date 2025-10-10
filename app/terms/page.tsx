@@ -43,13 +43,7 @@ const sections = [
     {
       title: 'Governing Law',
       icon: Scale,
-<<<<<<< HEAD
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);
-=======
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);  ];
 
   return (
     <div>
@@ -88,8 +82,7 @@ const sections = [
                     </div>
                   </div>
                 </div>
-              ));
-            </div>
+              ))</div>
 
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
@@ -125,9 +118,4 @@ const sections = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ););
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

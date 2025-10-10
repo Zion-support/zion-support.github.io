@@ -208,7 +208,9 @@ const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
 }(null);
   // Update metrics;
 const updateMetrics = useCallback(() => {
-    try {;
+    try {
+
+;
 const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
@@ -240,7 +242,9 @@ const _networkInfo = getNetworkInfo();
         memory: memoryInfo,
         network: networkInfo
       setMetrics(newMetrics);
-      setLastUpdate(new Date())} catch (error) {}, []);
+      setLastUpdate(new Date())
+
+} catch (error) {}, []);
   // Initialize monitoring
   useEffect(() => {;
 const initializeMonitoring = () => {
@@ -290,7 +294,7 @@ const handleExport = () => {
       timestamp: new Date().toISOString();
 const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type:     ,
-$4});
+$4})
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -457,7 +461,9 @@ const,
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       const performanceMetrics = performanceOptimizer.getMetrics();
@@ -504,13 +510,15 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   y: error.severity,
             timestam,
   p: error.context.timestamp;)
-          }));
+          }))
   memor,
   y: memoryInfo,
         networ,
   k: networkInfo;
       setMetrics(newMetrics);
-      setLastUpdate(new Date())} catch (error) {if (!isMonitoring) return}
+      setLastUpdate(new Date())
+
+} catch (error) {if (!isMonitoring) return}
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval)}, [isMonitoring, refreshInterval, updateMetrics]);
       effectiveTyp,

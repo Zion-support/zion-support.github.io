@@ -213,13 +213,17 @@ $4};
   private async sendToRemote(report: ErrorReport): Promise<void> {
     if (!this.config.remoteEndpoint) return;
     try {
+
+
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
-      })} catch (error) {
+      })
+
+} catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
         logger.warn('Failed to send error to remote endpoint:', error);
@@ -289,7 +293,9 @@ $4};
 
 }
     if (!this.config.remoteEndpoint) return;
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       await fetch(this.config.remoteEndpoint, {/* TODO: Fix JSX expression */}
@@ -305,7 +311,9 @@ $4};
         },
         bod)
   y: JSON.stringify(report)
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       // Silently fail to avoid infinite loop;

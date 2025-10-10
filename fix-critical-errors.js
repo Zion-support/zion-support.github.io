@@ -7,7 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Function to fix critical parsing errors;
 function fixCriticalErrors(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -72,7 +74,9 @@ const line = lines[i];
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }

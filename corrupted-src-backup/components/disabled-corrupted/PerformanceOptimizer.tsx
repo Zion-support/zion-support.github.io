@@ -18,11 +18,8 @@ interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */}
 ;
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
-
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([])
-  );
-;
+  })
+  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([]))
 const runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
      }

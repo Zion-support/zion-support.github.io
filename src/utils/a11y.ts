@@ -101,15 +101,11 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {// TODO: Ad
   const tabindex = element.getAttribute('tabindex');
   const role = element.getAttribute('role');
   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes()
-//     element.tagName.toLowerCase()
-  )
-  return (<div>Coming Soon</div>)
-  )
+//     element.tagName.toLowerCase())
+  return (<div>Coming Soon</div>))
 // isInteractive ||
     (tabindex !== null && tabindex !== '-1') ||
-    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  )
-}
+    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role)))}
 /**
  * Add keyboard navigation support to custom interactive elements;
  */
@@ -127,7 +123,7 @@ export function makeKeyboardAccessible()
 }
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
-  element.setAttribute('tabindex', tabindex.toString());
+  element.setAttribute('tabindex', tabindex.toString())
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -164,7 +160,7 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
       return normalized;
           <= 0.03928;
 // ? normalized / 12.92;)
-        : Math.pow((normalized + 0.055) / 1.055, 2.4)});
+        : Math.pow((normalized + 0.055) / 1.055, 2.4)})
     return 0.2126 * r + 0.7152 * g + 0.0722 * b};
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
@@ -215,11 +211,11 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.addEventListener('focus', () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    skipLink.style.top = '0'});
+    skipLink.style.top = '0'})
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    skipLink.style.top = '-40px'});
+    skipLink.style.top = '-40px'})
   return skipLink}
 /**
  * Detect if user prefers reduced motion;
@@ -252,8 +248,7 @@ export function getAriaInvalid(hasError: boolean): {// TODO: Add content}
   O: Add content}
 }
     'aria-invalid': hasError,
-    ...(hasError && { 'aria-describedby': generateId('error') }
-  )
+    ...(hasError && { 'aria-describedby': generateId('error') })
   }
 }
 /**

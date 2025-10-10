@@ -54,8 +54,7 @@ export function useEnhancedPerformance(__option)
 //             'Performance',
 //             'Long Component Lifetime',
 //             component,
-//             Math.round(duration)
-          );
+//             Math.round(duration))
       // Track component unmount;
         analytics.trackCustomEvent('Component', 'Unmounted', component)}}, [component, trackAnalytics, trackPerformance]);
   // Track render performance;
@@ -65,7 +64,7 @@ export function useEnhancedPerformance(__option)
 }
       // Many re-renders detected;
 'High Render Count',
-        renderCountRef.current});
+        renderCountRef.current})
   const trackError = useCallback()
     (erro,
   r: Error, context?: Record;)

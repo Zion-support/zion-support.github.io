@@ -1,5 +1,7 @@
 exports.handler = async function (event, context) {
   try {
+
+
     return {
       statusCode: 200;
       body: JSON.stringify({)
@@ -14,7 +16,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }),
       header,
   s: {'Content-Type': 'application/json'}
-    }} catch (error) {
+    }
+
+} catch (error) {
 
     return {
       statusCode: 500;

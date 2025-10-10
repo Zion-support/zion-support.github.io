@@ -8,7 +8,9 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Function to fix merge conflicts and syntax errors;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -19,8 +21,7 @@ let content = fs.readFileSync(filePath, 'utf8');
       modified = true;
       return headContent.trim();
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    });
-
+    })
     // Fix common syntax issues;
     content = content;
       // Remove any remaining conflict markers;
@@ -155,7 +156,9 @@ if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
       return true}
     
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }
@@ -218,8 +221,12 @@ errorCount++}
 // console.log removed for production
 // Run linting to check for remaining issues;
 // console.log removed for production
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+try {
+
+/* TODO: Fix JSX expression */}
+  o: 'inherit' })
   // console.log removed for production
+
+
 } catch (error) {/* TODO: Fix JSX expression */}
 }"`

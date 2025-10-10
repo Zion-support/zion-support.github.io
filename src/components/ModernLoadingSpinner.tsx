@@ -94,9 +94,7 @@ const,
   const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative"></div>

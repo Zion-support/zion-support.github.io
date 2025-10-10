@@ -37,7 +37,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.href = src;
         link.as = 'image';
         document.head.appendChild(link);
-      });
+      })
     }
 
     // Optimize images
@@ -53,7 +53,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (!img.hasAttribute('decoding')) {
           img.decoding = 'async';
         }
-      });
+      })
     }
 
     // Intersection Observer for lazy loading
@@ -68,13 +68,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(img);
             }
           }
-        });
-      });
-
+        })
+      })
       const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
-
+      lazyImages.forEach(img => imageObserver.observe(img))}
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -85,12 +82,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
-        });
-      });
-
+        })
+      })
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
+
+} catch (e) {
         // Fallback for browsers that don't support these entry types
       }
     }

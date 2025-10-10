@@ -119,6 +119,8 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
 //Function to process a file;
 function processFile(filePath) {
   try {
+
+
     //     const content = fs.readFileSync(filePath, 'utf8');
     //     const fixedContent = fixCorruptedText(content);
     if (content !== fixedContent) {
@@ -126,12 +128,16 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
   try {
+
+
     //     const items = fs.readdirSync(dirPath);
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
@@ -150,7 +156,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
         }
       }
     }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
     //     }
   return processedCount}
 //Main execution;

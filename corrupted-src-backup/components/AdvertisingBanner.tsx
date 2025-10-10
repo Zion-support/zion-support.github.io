@@ -11,9 +11,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   imageUrl,
   backgroundColor = '#3 b82 f6',
   textColor = '#ffffff'}) => {
-return (
-
-  return(<div;
+return (<div;
       className="advertising-banner"
       style={{
         backgroundColor,

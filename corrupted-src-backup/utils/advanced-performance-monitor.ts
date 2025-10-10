@@ -82,8 +82,7 @@ const performanceScore = this.calculatePerformanceScore({)
       firstContentfulPaint: avgFCP;)
       largestContentfulPaint: avgLCP;),
       cumulativeLayoutShift: avgCLS),
-      firstInputDelay: avgFID)});
-
+      firstInputDelay: avgFID)})
     return {
       averageLoadTime: avgLoadTime;
       averageFCP: avgFCP;
@@ -92,8 +91,7 @@ const performanceScore = this.calculatePerformanceScore({)
       averageFID: avgFID;
       performanceScore,;
 const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */})
-    });
-
+    })
     return {/* TODO: Fix JSX expression */}
     }}
 
@@ -106,16 +104,18 @@ const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expres
     this.observer = new PerformanceObserver(list => {);
 const _entries = list.getEntries();
       entries.forEach(entry => {)
-        this.handlePerformanceEntry(entry)})});
-
+        this.handlePerformanceEntry(entry)})})
     try {
+
+
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
-      })});
-
+      })})
     try {/* TODO: Fix JSX expression */}
-      })} catch (error) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
@@ -129,33 +129,25 @@ const _entries = list.getEntries();
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS(metric => {)
-          this.updateMetric('cumulativeLayoutShift', metric.value)});
-
+          this.updateMetric('cumulativeLayoutShift', metric.value)})
         getFID(metric => {)
-          this.updateMetric('firstInputDelay', metric.value)});
-
+          this.updateMetric('firstInputDelay', metric.value)})
         getFCP(metric => {)
-          this.updateMetric('firstContentfulPaint', metric.value)});
-
+          this.updateMetric('firstContentfulPaint', metric.value)})
         getLCP(metric => {)
-          this.updateMetric('largestContentfulPaint', metric.value)});
-
+          this.updateMetric('largestContentfulPaint', metric.value)})
         getTTFB(metric => {)
           this.updateMetric('loadTime', metric.value)})})
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-        });
-
+        })
         getFID(metric => {/* TODO: Fix JSX expression */})
-        });
-
+        })
         getFCP(metric => {/* TODO: Fix JSX expression */})
-        });
-
+        })
         getLCP(metric => {/* TODO: Fix JSX expression */})
-        });
-
+        })
         getTTFB(metric => {/* TODO: Fix JSX expression */})
         })})
       .catch(error => {/* TODO: Fix JSX expression */})
@@ -262,14 +254,11 @@ const warnings: string[] = [];
     if (data.loadTime > this.thresholds.loadTime) {,
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
-      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
-      )}
+      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`))}
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
-      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
-      )}
+      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`))}
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
-      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
-      )}
+      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`))}
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
       warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
   private checkThresholds(dat)
@@ -326,7 +315,7 @@ let _score = 100;
     if (metrics.firstInputDelay > 300) score -= 10;
     else if (metrics.firstInputDelay > 100) score -= 5;
 
-    return Math.max(0, Math.min(100, score));
+    return Math.max(0, Math.min(100, score))
   private calculatePerformanceScore(metric,
   s: {/* TODO: Fix JSX expression */})
   }): number {/* TODO: Fix JSX expression */}

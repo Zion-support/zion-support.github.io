@@ -24,8 +24,7 @@ const [optimizationStatus, setOptimizationStatus] = useState({
     codeSplit: false,
     resourceHints: 0,
     serviceWorker: false
-  });
-
+  })
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages()}
@@ -61,8 +60,7 @@ const images = document.querySelectorAll('img');
       // Add proper alt text if missing
       if (!img.getAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')}
-    });
-    
+    })
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))};
 ;
 const setupLazyLoading = () => {
@@ -79,11 +77,9 @@ const img = entry.target as HTMLImageElement;
         })}, {
         rootMargin: '50px 0px',
         threshold: 0.1
-      });
-      ;
+      })
 const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-      
+      lazyImages.forEach((img) => observer.observe(img))
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))}
   };
 ;
@@ -108,8 +104,7 @@ const link = document.createElement('link');
       link.as = resource.as;
       if (resource.type) {
         link.type = resource.type}
-      document.head.appendChild(link)});
-
+      document.head.appendChild(link)})
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))};
 ;
 const setupCodeSplitting = () => {
@@ -132,15 +127,18 @@ const link = document.createElement('link');
       link.href = hint.href;
       if (hint.crossorigin) {
         link.crossOrigin = hint.crossorigin}
-      document.head.appendChild(link)});
-
+      document.head.appendChild(link)})
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))};
 ;
 const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
-      try {;
+      try {
+
+;
 const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))} catch (error) {
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))
+
+} catch (error) {
           // Service Worker registration failed - handled silently in production
         }
     }
@@ -161,8 +159,7 @@ const observer = new PerformanceObserver((list) => {
               })}
           }
         }
-      });
-      
+      })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })}
   }, []);
 

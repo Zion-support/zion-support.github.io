@@ -30,7 +30,9 @@ const filesToFix = [
 
 // Function to fix syntax errors in a file;
 function fixSyntaxErrors(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -137,7 +139,9 @@ const newContent = content.replace(fix.pattern, fix.replacement);
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }

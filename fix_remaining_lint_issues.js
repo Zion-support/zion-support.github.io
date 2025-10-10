@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 // Function to fix remaining lint issues in a file;
 function fixRemainingLintIssues(filePath) {
   try {
+
+
     // Skip if not a source file;
     if (
       !filePath.endsWith('.tsx') &&
@@ -77,8 +79,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
   1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
         return match.replace(param1, `_${param1}`)}
-      return match});
-
+      return match})
     // Fix 2: Comment out unused variable declarations;
     for (let i = 0; i < lines.length; i++) {
 
@@ -328,14 +329,13 @@ const fixedParams = params.map(p => {)
   3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
               return `_${p}`}
-            return p});
+            return p})
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(line.replace()
                 paramMatch[0])
           if (fixedParams.join(', ') !== params.join(', ')) {/* TODO: Fix JSX expression */}`
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})`
-              )
-            );
+              ))
             modified = true;
             continue}
         }
@@ -379,13 +379,17 @@ const fixedParams = params.map(p => {)
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Function to recursively fix remaining lint issues;
 function fixAllRemainingLintIssues(_dir) {
   try {
+
+
     for (const file of files) {
 
       try {
@@ -403,7 +407,9 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
         ) {/* TODO: Fix JSX expression */}
           }
         }
-      } catch (error) {/* TODO: Fix JSX expression */}
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}
       }
     }
 

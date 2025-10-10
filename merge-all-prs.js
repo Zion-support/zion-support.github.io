@@ -5,48 +5,58 @@ import fs from 'fs';
 // console.log removed for production
 // Function to get all open PRs;
 async function getOpenPRs() {
-  try {;
+  try {
+
+;
 const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
     const prs = await response.json();
-    return prs} catch (error) {
+    return prs
+
+} catch (error) {
     // console.error removed for production
 return [];
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+  try {
+
+/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Function to merge a PR branch;
 function mergePRBranch(branchName, prNumber) {
   try {
+
+
     // console.log removed for production
 ...`);
     
     // Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-    
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })
     // Try to merge;
     try {
-      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
+      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' })
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
     // console.log removed for production
 ...`);
     
     // Fetch the branch;`
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
+  o: 'pipe' })
     // Try to merge;
     try {/* TODO: Fix JSX expression */}`
       execSync(`git merge origin/${branchName} --no-commit`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
       // console.log removed for production
-return true} catch (mergeError) {/* TODO: Fix JSX expression */}`
+return true
+
+} catch (mergeError) {/* TODO: Fix JSX expression */}`
       // console.log removed for production
 // Get conflicted files;
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
 const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
   g: 'utf8' })
         .trim().split('\n').filter(f => f);
@@ -57,22 +67,25 @@ const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TOD
         conflictedFiles.forEach(file => {)
           if (fs.existsSync(file)) {
             try {
-              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
-              execSync(`git add "${file}"`, { stdio: 'pipe' });
+
+
+              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' })
+              execSync(`git add "${file}"`, { stdio: 'pipe' })
         conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
               execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
               // console.log removed for production
+
+
 } catch (error) {/* TODO: Fix JSX expression */}`
               // console.log removed for production
 }
           }
-        });
-        
+        })
         // Commit the merge;
-        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });
+        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' })
         // Commit the merge;"`
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */}
   o: 'pipe' });`
@@ -103,7 +116,9 @@ const commonFiles = [
   
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
-      try {;
+      try {
+
+;
 let content = fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
         
@@ -119,7 +134,9 @@ let content = fs.readFileSync(file, 'utf8');
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
           // console.log removed for production
 }
-      } catch (error) {/* TODO: Fix JSX expression */}`
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}`
         // console.log removed for production
 }
     }
@@ -133,9 +150,10 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
 // Update package.json with optimized scripts;
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
-    try {;
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
+    try {
+
+;
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
       packageJson.scripts = {
         ...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
@@ -149,8 +167,10 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       };
       
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
       // console.log removed for production
+
+
 } catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message}`)}
   }
@@ -159,6 +179,8 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 // Main execution;
 async function main() {
   try {
+
+
     // console.log removed for production
 const prs = await getOpenPRs();
     
@@ -192,7 +214,9 @@ const branchName = pr.head.ref;
 } else {/* TODO: Fix JSX expression */}`
           // console.log removed for production
 }
-      } catch (error) {/* TODO: Fix JSX expression */}`
+      
+
+} catch (error) {/* TODO: Fix JSX expression */}`
         // console.log removed for production
 }
     }
@@ -205,13 +229,11 @@ execSync('git add .', {/* TODO: Fix JSX expression */})
   o: 'pipe' });"
     execSync('git commit -m "Final,"
   optimizations: clean console.logs, optimize build, resolve all conflicts"', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
+  o: 'pipe' })
     // Push to main;
     // console.log removed for production
 execSync('git push origin main', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
+  o: 'pipe' })
     // console.log removed for production
 // console.log removed for production
 // console.log removed for production

@@ -44,7 +44,7 @@ const AdvancedPerformanceMonitor: React.FC;
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null});
+    memory: null})
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const,
@@ -56,19 +56,23 @@ const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
           const lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: _lastEntry.startTime }))});
+  p: _lastEntry.startTime }))})
         lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-        observers.push(lcpObserver)} catch (error) {/* TODO: Fix JSX expression */}
+  s: ['largest-contentful-paint'] })
+        observers.push(lcpObserver)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         }
@@ -77,12 +81,14 @@ const entries = list.getEntries();
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
         const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content}
-});
+})
 const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -101,10 +107,12 @@ const entries = list.getEntries();
                 fi,
   d: _fidEntry.processingStart - _fidEntry.startTime;)
               }))}
-          })});
+          })})
         fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-        observers.push(fidObserver)} catch (error) {/* TODO: Fix JSX expression */}
+  s: ['first-input'] })
+        observers.push(fidObserver)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         }
@@ -113,9 +121,11 @@ const entries = list.getEntries();
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      try {const clsObserver = new PerformanceObserver(list => {}
+      try {
+
+const clsObserver = new PerformanceObserver(list => {}
   // TOD,
-  O: Add content});
+  O: Add content})
 const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -134,16 +144,20 @@ const entries = list.getEntries();
                 setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: _clsValue }))}
             }
-          })});
+          })})
         clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-        observers.push(clsObserver)} catch (error) {/* TODO: Fix JSX expression */}
+  s: ['layout-shift'] })
+        observers.push(clsObserver)
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         }
     }
     // Measure Time to First Byte (TTFB)
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
@@ -164,7 +178,9 @@ const memory =
   p: _fcp,
 //         ttfb,
 //         memory;)
-      }))} catch (error) {/* TODO: Fix JSX expression */}
+      }))
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       }
@@ -175,10 +191,14 @@ const memory =
       observers.forEach(observer => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        try {/* TODO: Fix JSX expression */}
+        try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 })
-          observer.disconnect()} catch (error) {/* TODO: Fix JSX expression */}
+          observer.disconnect()
+
+} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
           }
@@ -203,7 +223,9 @@ const memory =
 }
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available;
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
 //       import('web-vitals')
@@ -218,8 +240,7 @@ const memory =
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value }))
-            )}
+  s: metric.value })))}
           if (onFCP) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -227,8 +248,7 @@ const memory =
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
-            )}
+  p: metric.value })))}
           if (onLCP) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -236,8 +256,7 @@ const memory =
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
-            )}
+  p: metric.value })))}
           if (onTTFB) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -245,13 +264,14 @@ const memory =
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value }))
-            )}
+  b: metric.value })))}
         })
         .catch(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          // web-vitals not available, continue without it})} catch {/* TODO: Fix JSX expression */}
+          // web-vitals not available, continue without it})
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       // web-vitals not available, continue without it}
@@ -324,9 +344,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return (<div>Coming Soon</div>)
-  )
-      
+    return (<div>Coming Soon</div>))
           <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'></div>

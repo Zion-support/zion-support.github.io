@@ -458,13 +458,17 @@ break
   private async logToNetwork(error: AppError) {
     if (!this.config.reportEndpoint) return;
     try {
+
+
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(error)
-      })} catch (err) {
+      })
+
+} catch (err) {
       // // // console.error removed for production
 }
   }
@@ -472,6 +476,8 @@ break
   private async reportError(error: AppError) {
     if (!this.config.reportEndpoint) return;
     try {
+
+
       await fetch(this.config.reportEndpoint, {
         method: 'POST',
         headers: {
@@ -481,7 +487,9 @@ break
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-      })} catch (err) {
+      })
+
+} catch (err) {
       // // // console.error removed for production
 }
   }
@@ -551,6 +559,8 @@ const retryItem = { error, retryCount: error.retryCount! + 1 };
   // Retry error
   private async retryError(retryItem: {// error: AppError; retryCount: number}) {
     try {
+
+
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
@@ -561,7 +571,9 @@ const retryItem = { error, retryCount: error.retryCount! + 1 };
         }
         // Add your retry logic here
       }
-    } catch {
+    
+
+} catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error)} else {
         // // // console.error removed for production
@@ -596,7 +608,9 @@ const error = this.errors.find(e => e.id === errorId);
   O: Add content}
 }
     if (!this.config.reportEndpoint) return;
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       await fetch(this.config.reportEndpoint, {/* TODO: Fix JSX expression */}
@@ -612,7 +626,9 @@ const error = this.errors.find(e => e.id === errorId);
         },
         bod)
   y: JSON.stringify(error)
-      })} catch (err) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (err) {/* TODO: Fix JSX expression */}
   network:', err)}
     }
   }
@@ -622,7 +638,9 @@ const error = this.errors.find(e => e.id === errorId);
   O: Add content}
 }
     if (!this.config.reportEndpoint) return;
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
       await fetch(this.config.reportEndpoint, {/* TODO: Fix JSX expression */}
@@ -644,7 +662,9 @@ const error = this.errors.find(e => e.id === errorId);
           timestam)
   p: error.timestamp.toISOString()
         })
-      })} catch (err) {/* TODO: Fix JSX expression */}
+      })
+
+} catch (err) {/* TODO: Fix JSX expression */}
   error:', err)}
     }
   }
@@ -787,7 +807,9 @@ const error = this.errors.find(e => e.id === errorId);
   // Retry error;
 private async retryError(retryIte,
   m: {/* TODO: Fix JSX expression */})
-  t: number}) {try {}
+  t: number}) {try {
+
+}
   // TOD,
   O: Add content}
       // Implement retry logic based on error type;
@@ -807,7 +829,9 @@ private async retryError(retryIte,
         }
         // Add your retry logic here}
 
-    } catch {// TODO: Add content}
+    
+
+} catch {// TODO: Add content}
 
 }
       if (retryItem.retryCount;)
@@ -891,7 +915,7 @@ const total = this.errors.length;
     if (typeof window !== 'undefined') {
       // Set up global error handler
       window.addEventListener('error', event => {
-        this.handleError(event.error || new Error(event.message))});
+        this.handleError(event.error || new Error(event.message))})
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {
   // Clear resolved errors;
@@ -954,7 +978,7 @@ const bySeverity = this.errors.reduce()
       window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content}
 })
-        this.handleError(event.error || new Error(event.message))});
+        this.handleError(event.error || new Error(event.message))})
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -1023,8 +1047,7 @@ export class ErrorBoundary extends React.Component;
 };
 
   component: 'ErrorBoundary'
-    }
-  )
+    })
   }
   render() {// TODO: Add content}
 
@@ -1063,17 +1086,14 @@ $4}}
             >
               Try again
             </button></div>
-        )
-      );
+        ))
                 cursor: 'pointer'
 
               }}
 >
               Try again;
           </button></div>
-        )
-      )
-    }
+        ))}
     return this.props.children}
 }
 // React hook for error handling

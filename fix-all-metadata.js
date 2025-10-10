@@ -18,13 +18,17 @@ const filesToFix = [
 // // Function to process a single file;
 function processFile(filePath) {
   try {
+
+
     // Extract metadata information before removing it;
     if (metadataMatch) {
       try {
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
         if (typeMatch) metadata.type = typeMatch[1];
-        if (urlMatch) metadata.url = urlMatch[1]} catch (e) {
+        if (urlMatch) metadata.url = urlMatch[1]
+
+} catch (e) {
         // If parsing fails, use defaults;
         metadata = {
           title: 'Zion Tech Group',
@@ -114,6 +118,5 @@ filesToFix.forEach(file => {)
     fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
-
+})
 // "`

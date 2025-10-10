@@ -4,13 +4,13 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -29,8 +29,7 @@ exports.handler = async () => {const logs = []}
     'automation/internal-link-orphan-audit.cjs'),
   step('link,
   s: internal-orphan-audit')
-    'automation/internal-link-orphan-audit.cjs')
-  );
+    'automation/internal-link-orphan-audit.cjs'))
   step('gi)
   t: sync') 'automation/advanced-git-sync.cjs');
   return {/* TODO: Fix JSX expression */}

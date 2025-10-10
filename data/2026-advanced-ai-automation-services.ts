@@ -421,27 +421,16 @@ export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
-      tech.toLowerCase().includes(technology.toLowerCase())
-  </div>))};
+      tech.toLowerCase().includes(technology.toLowerCase())</div>))};
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
-<<<<<<< HEAD
   return advancedAIAutomationServices.filter(service =>);
-const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+const _price = parseFloat(service.price.replace('$') '').replace(')'; ''))
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
-=======
-  return advancedAIAutomationServices.filter(service =>)
-    const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
-  });
-};
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    path: '/services/advanced-ai-automation-platform-2026',
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'    path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
     category: 'AI & Automation',
@@ -690,7 +679,7 @@ export interface AdvancedAIAutomationService,
   s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
   y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category)}; export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)}; export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )}; export const getAIAutomationServicesByPriceRange = (minPric)
+  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())</div> ) )}; export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})}; export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,

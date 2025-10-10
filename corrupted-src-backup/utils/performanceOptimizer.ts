@@ -22,8 +22,7 @@ const _img = entry.target as HTMLImageElement;
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
             }
           }
-        })});
-
+        })})
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
@@ -146,9 +145,9 @@ const _timing = window.performance.timing;
 
   // Initialize all optimizations;
   initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages())
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources())
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll())
   initialize(): void {/* TODO: Fix JSX expression */}
   }
 }

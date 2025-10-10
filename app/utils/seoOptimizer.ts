@@ -286,7 +286,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   n: this.currentPageData.section,
         keyword,
   s: this.generateKeywords()
-      });
+      })
     }
     this.addStructuredData(structuredData)
   }
@@ -332,7 +332,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
         }
       }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] })
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {
@@ -359,7 +359,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (clsValue > 0.25) {/* TODO: Fix JSX expression */}
         }
       }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
     }
   }
   /**
@@ -379,7 +379,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private trackSEOMetric(metri,
   c: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
   /**
@@ -482,7 +482,7 @@ Disallo,`
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         issues.push(`Image ${index + 1} is missing alt text`);
       }
-    });
+    })
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}

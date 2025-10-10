@@ -17,14 +17,12 @@ const buildDir = path.join(process.cwd(), '.next');
 const staticDir = path.join(buildDir, 'static');
 
 if (fs.existsSync(staticDir)) {;
-const files = fs.readdirSync(staticDir, { recursive: true });
-  const jsFiles = files.filter(file => file.endsWith('.js'));
-  
+const files = fs.readdirSync(staticDir, { recursive: true })
+  const jsFiles = files.filter(file => file.endsWith('.js'))
   jsFiles.forEach(file => {);
 const filePath = path.join(staticDir, file);
     const stats = fs.statSync(filePath);
-    performanceReport.buildSize += stats.size});
-  
+    performanceReport.buildSize += stats.size})
   performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB}
 
 // Performance recommendations;
@@ -39,8 +37,7 @@ performanceReport.recommendations.push('Consider using a CDN for static assets')
 
 // Write report;
 const reportPath = path.join(process.cwd(), 'performance-report.json');
-fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
-
+fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2))
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production

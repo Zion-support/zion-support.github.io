@@ -55,7 +55,7 @@ const now = Date.now();
     // No record or expired
     if (!record || now > record.resetTime) {;
 const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
+      this.requests.set(identifier, { count: 1, resetTime })
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     // Increment count
     if (record.count < this.config.max) {
@@ -70,7 +70,7 @@ const resetTime = now + this.config.windowMs;
     if (!record || now > record.resetTime) {// TODO: Add content}
 }
       const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
+      this.requests.set(identifier, { count: 1, resetTime })
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     // Increment count;
     if (record.count;
@@ -234,8 +234,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
             'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
             'X-RateLimit-Limit': String(limiter['config'].max),
             'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime)
-      );
+            'X-RateLimit-Reset': String(resetTime))
     // Request allowed - headers can be added to response later
     return null;
     // Request allowed - headers can be added to response later;

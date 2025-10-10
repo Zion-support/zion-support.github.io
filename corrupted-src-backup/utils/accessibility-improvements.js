@@ -55,8 +55,7 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
 
   // Color contrast checker,
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
-      });
-
+      })
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
     //     const l1 = getLuminance(foreground);

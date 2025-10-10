@@ -158,9 +158,13 @@ const _files = fs.readdirSync(functionsDir);
       if (shouldRemoveFunction(file)) {;
 const _filePath = path.join(functionsDir, file);
         try {
+
+
           fs.unlinkSync(filePath);
 
-          removedCount++} catch (error) {}
+          removedCount++
+
+} catch (error) {}
       } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})

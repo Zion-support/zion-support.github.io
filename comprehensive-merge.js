@@ -5,11 +5,15 @@ import fs from 'fs';
 // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    //     return { success: true, result }} catch (error) {
+
+
+    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+    //     return { success: true, result }
+
+} catch (error) {
     //     return { success: false, error: error.message };
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' })
     //     return {/* TODO: Fix JSX expression */}
   s: true, result }} catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }}
@@ -51,9 +55,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     //     //Try to abort the merge if there was a conflict;
   //Try to merge the branch;`;
 const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`
-    `Merge ${branch}`)
-  );
-
+    `Merge ${branch}`))
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`)}
@@ -78,5 +80,5 @@ const summary = {
 const summary = {/* TODO: Fix JSX expression */}
 };
 
-fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
+fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2))
 // "`

@@ -7,20 +7,26 @@ import path from 'path';
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
+
+
     // console.log removed for production
 const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'});
+      stdio: 'pipe'})
     // console.log removed for production
-return result} catch (error) {
+return result
+
+} catch (error) {
     // console.log removed for production
 return null}
 }
 
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
@@ -40,12 +46,13 @@ const incoming = parts[1].replace(/            return incoming;)
 const incoming = parts[1].replace(/            return incoming;)
           })
           return match;)
-        });
-      
+        })
       fs.writeFileSync(filePath, resolvedContent);
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
@@ -54,8 +61,10 @@ return false}
 function resolveAllMergeConflicts() {
   // console.log removed for production
 try {
+
+
     // Find all files with merge conflicts;
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0);
     
     if (conflictedFiles.length === 0) {
@@ -74,7 +83,9 @@ conflictedFiles.forEach(file => // console.log removed for production
     }
     
     // console.log removed for production
-return resolvedCount === conflictedFiles.length} catch (error) {
+return resolvedCount === conflictedFiles.length
+
+} catch (error) {
     // console.log removed for production
 return false}
 }
@@ -127,6 +138,8 @@ const branchesToMerge = [,
   for (const branch of branchesToMerge) {
     // console.log removed for production
 try {
+
+
       // Check if branch exists;
       const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
       
@@ -148,7 +161,9 @@ if (resolveAllMergeConflicts()) {
       } else {
         // console.log removed for production
 }
-    } catch (error) {
+    
+
+} catch (error) {
       // console.log removed for production
 }
   }

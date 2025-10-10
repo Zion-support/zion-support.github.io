@@ -213,9 +213,9 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
    * Add skip links for accessibility;
    */
   private addSkipLinks(): void {/* TODO: Fix JSX expression */}
-    });
+    })
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-    });
+    })
     document.body.insertBefore(skipLink, document.body.firstChild)}
 
   /**

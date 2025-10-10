@@ -3,9 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 ;
 const ZeroTrustAISecurityFramework202, 5 = () => {
-return (
- 
-  return(<React.Fragment>
+return (<React.Fragment>
       <Helm, e, t>
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |

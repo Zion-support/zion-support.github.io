@@ -76,7 +76,9 @@ const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   return { content: newContent, fixed }}
 ;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     const result = fixReactMemo(content);
     
@@ -85,7 +87,9 @@ const content = fs.readFileSync(filePath, 'utf8');
       // console.log removed for production
 fixedFiles++}
 
-    processedFiles++} catch (error) {
+    processedFiles++
+
+} catch (error) {
     // console.error removed for production
 }
 }
@@ -97,7 +101,7 @@ async function main() {
   for (const pattern of filePatterns) {;
 const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()})
     allFiles.push(...files)}
 
   // Remove duplicates;

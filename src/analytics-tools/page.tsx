@@ -69,8 +69,6 @@ import Footer from '../components/Footer';
 ;
 const PagePage: React.FC = () => {
 return (
-
-  return (
     
           
           

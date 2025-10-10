@@ -61,16 +61,20 @@ const,
   l: 100,
     colorBlin,
   d: 'none')
-  });
+  })
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage;
   useEffect(() => {if (savedSettings) {}
   // TOD,
   O: Add content}
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        setSettings(JSON.parse(savedSettings))} catch (error) {/* TODO: Fix JSX expression */}
+        setSettings(JSON.parse(savedSettings))
+
+} catch (error) {/* TODO: Fix JSX expression */}
   settings:', error)}
       }
     }
@@ -247,7 +251,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   a: number) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
+    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta))
     const newSettings = {/* TODO: Fix JSX expression */}
   l: newZoom };
     saveSettings(newSettings);`
@@ -280,9 +284,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   if (!isVisible) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return (<div>Coming Soon</div>)
-  )
-      
+    return (<div>Coming Soon</div>))
           <button></button>"
         onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
   hover:bg-slate-800 transition-colors duration-200 z-50""
@@ -324,8 +326,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
 // >
               {settings.reducedMotion ?}"
           <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button></div>)
-        )}
+            </button></div>))}
         {enableScreenReader && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button></button>`
               onClick={toggleScreenReader} className={`flex items-center px-3 py-1 rounded ${}

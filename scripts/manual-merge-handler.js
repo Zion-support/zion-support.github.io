@@ -6,13 +6,17 @@ import fs from 'fs';
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
+
+
     // console.log removed for production
 const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'});
+      stdio: 'pipe'})
     // console.log removed for production
-return result} catch (error) {
+return result
+
+} catch (error) {
     // console.log removed for production
 return null}
 }
@@ -40,6 +44,8 @@ execGitCommand('git status --porcelain', 'Checking git status');
   for (const branch of importantBranches) {
     // console.log removed for production
 try {
+
+
       // Check if branch exists;
       const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
       
@@ -55,13 +61,14 @@ try {
       } else {
         // console.log removed for production
 }
-    } catch (error) {
+    
+
+} catch (error) {
       // console.log removed for production
 }
     
     // Small delay between merges;
     await new Promise(resolve => setTimeout(resolve, 500))}
-  
   // Final status;
   // console.log removed for production
 execGitCommand('git status', 'Final git status');

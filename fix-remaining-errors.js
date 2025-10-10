@@ -31,7 +31,9 @@ const files = getAllFilesWithErrors();
   let fixedCount = 0;
   
   for (const filePath of files) {
-    try {;
+    try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       
@@ -42,8 +44,7 @@ const oldName = componentNameMatch[1];,;
 const newName = oldName;
           .replace(/\s+/g, '')
           .replace(/\-/g, '')
-          .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
-        
+          .replace(/^([a-z])/, (match, letter) => letter.toUpperCase())
         if (oldName !== newName) {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
@@ -58,8 +59,7 @@ const newName = oldName;
       
       // Fix any malformed JSX;
       content = content.replace(/\/\/\s*[^/]/g, '');
-      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''));
-      
+      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''))
       // Fix any incomplete function calls or objects;
       content = content.replace(/{\s*}\s*$/gm, '{}');
       content = content.replace(/\[\s*\]\s*$/gm, '[]');
@@ -70,7 +70,9 @@ const newName = oldName;
         // console.log removed for production
 }`);
         fixedCount++}
-    } catch (error) {
+    
+
+} catch (error) {
       // console.error removed for production
 }
   }

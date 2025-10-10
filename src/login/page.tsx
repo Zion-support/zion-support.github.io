@@ -14,7 +14,7 @@ const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
-  });
+  })
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 ;
@@ -30,8 +30,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setIsLoading(true);
     
     // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/'};
@@ -100,7 +99,7 @@ $4}
   d: '',
     rememberM,
   e: false;)
-  });
+  })
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent;)
@@ -120,7 +119,7 @@ $4}
     e.preventDefault();
     setIsLoading(true);
     // Simulate login process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000))
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/'};
@@ -159,9 +158,7 @@ $4}
   n: 'Access your account from any device, anywhere'
     }
   ];
-  return (<div>Coming Soon</div>)
-  )
-    
+  return (<div>Coming Soon</div>))
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"

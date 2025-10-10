@@ -9,18 +9,18 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Function to fix duplicate function declarations;
 function fixDuplicateDeclarations(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Fix duplicate function declarations;
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`});
-    
+      return `const ${name}: React.FC = () => {`})
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name} = () => {`});
-    
+      return `const ${name} = () => {`})
     // Fix missing closing braces in simple cases;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
 const lines = body.split('\n');
@@ -32,29 +32,25 @@ const lines = body.split('\n');
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-    });
-    
+    })
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
       return `const ${name} = () => {/* TODO: Fix JSX expression */}
-    });
-    
+    })
     // Fix missing closing braces in simple cases;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
         closeBraces += (line.match(/}/g) || []).length}
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
-      return match});
-    
+      return match})
     // Fix missing semicolons;
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
       }
-      return match});
-    
+      return match})
     // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -63,7 +59,9 @@ if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
       return true}
     
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    return false
+
+} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}
 }
@@ -73,7 +71,9 @@ function findFiles(dir) {;
 const files = [];
   ;
 function walkDir(currentPath) {
-    try {;
+    try {
+
+;
 const items = fs.readdirSync(currentPath);
       
       for (const item of items) {;
@@ -89,7 +89,9 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
           }
         }
       }
-    } catch (error) {
+    
+
+} catch (error) {
       // Skip directories that can't be read} catch (error) {/* TODO: Fix JSX expression */}
     }
   }
@@ -112,9 +114,13 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 // console.log removed for production
 // Run linting to check results;
 // console.log removed for production
-try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+try {
+
+/* TODO: Fix JSX expression */}
+  o: 'pipe' })
   // console.log removed for production
+
+
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 

@@ -71,8 +71,10 @@ const startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,
-    url: context.request.url});
-  try {// TODO: Add content}
+    url: context.request.url})
+  try {
+
+// TODO: Add content}
 }
     const result = await next();
     const duration = Date.now() - startTime;
@@ -86,7 +88,9 @@ const result = await next();
       url: context.request.url,
       status: context.response?.status,
       duration;
-    return result} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
+    return result
+
+} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
     throw error;
  * Authentication middleware;
 export const authMiddleware: Middleware = async (context, next) => {// TODO: Add content}
@@ -101,7 +105,7 @@ const duration = Date.now() - startTime;
       method: context.request.method,
       url: context.request.url,
       duration
-    });
+    })
     throw error}
 };
 /**
@@ -168,7 +172,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add cont
 if (context.request.method !== 'GET') {const cached = cache.get(key)}
     if (cached && Date.now() - cached.timestamp < ttl) {// TODO: Add content}
 }
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key })
       return cached.data;
     cache.set(key, {// TODO: Add content}
     return await next()}};
@@ -187,13 +191,13 @@ const cache = new Map<string, { data: unknown; timestamp: number }>
     const key = context.request.url;
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key })
       return cached.data}
     const result = await next();
     cache.set(key, {
       data: result,
       timestamp: Date.now()
-    });
+    })
     return result}};
   data: result,
       timestamp: Date.now()
@@ -209,7 +213,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
             {// TODO: Add content}
 };
   component: 'RetryMiddleware');
-          await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
+          await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)))
     throw lastError;
  * Timeout middleware;
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {return await Promise.race([}
@@ -260,7 +264,8 @@ const executor = new MiddlewareExecutor();
 //     .use(errorHandlingMiddleware)
 //     .use(authMiddleware)
 //     .use(timeoutMiddleware(30000))
-    .use(retryMiddleware(2, 1000));
+    .use(retryMiddleware(2, 1000))};
+
 export default {MiddlewareExecutor}
   loggingMiddleware,
   authMiddleware,

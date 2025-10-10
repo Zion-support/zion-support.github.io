@@ -46,8 +46,7 @@ export default function AI2026ImplementationRoadmap() {
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation;)
-          </h1>)
-          )
+          </h1>))
           <p className="text-xl text-gray-600 mb-6">),
             Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.
           </p>

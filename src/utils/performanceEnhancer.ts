@@ -29,14 +29,16 @@ constructor(config: OptimizationConfig) {this.config = config}
     this.observePerformance()}
 
   private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
-      try {const observer = new PerformanceObserver((list) => {}
+      try {
+
+const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {// Process performance entries}
             // console.log removed for production
-entry:', entry.name, entry.duration)})});
-        
+entry:', entry.name, entry.duration)})})
+        observer.observe({ entryTypes: ['measure', 'navigation'] })
 
-        observer.observe({ entryTypes: ['measure', 'navigation'] })} catch (error) {// console.warn removed for production
+} catch (error) {// console.warn removed for production
 }
 
       }

@@ -103,11 +103,15 @@ export const _validationRules = {// TODO: Add content}
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      try {/* TODO: Fix JSX expression */}
+      try {
+
+/* TODO: Fix JSX expression */}
   O: Add content}
 }
         new URL(value);
-        return true} catch {/* TODO: Fix JSX expression */}
+        return true
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         return false}
@@ -223,8 +227,7 @@ const hasMinLength = value.length >= 8;
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}`
 
-  }
-  )
+  })
 }
 /**
  * Validate a single field with multiple rules;

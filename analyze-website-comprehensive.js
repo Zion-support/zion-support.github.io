@@ -49,22 +49,18 @@ const req = client.request(requestOptions, (res) => {;
 let data = '';
       
       res.on('data', (chunk) => {
-        data += chunk});
-      
+        data += chunk})
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url})})});
-
+          url: url})})})
     req.on('error', (error) => {
-      reject(error)});
-
+      reject(error)})
     req.on('timeout', () => {
       req.destroy();
-      reject(new Error('Request timeout'))});
-
+      reject(new Error('Request timeout'))})
     req.setTimeout(TIMEOUT);
     req.end()})}
 
@@ -79,42 +75,52 @@ const dom = new JSDOM(html);
   anchorTags.forEach(anchor => {);
 const href = anchor.getAttribute('href');
     if (href) {
-      try {;
+      try {
+
+;
 const absoluteUrl = new URL(href, baseUrl).href;
         const linkText = anchor.textContent.trim();
         links.push({)
           url: absoluteUrl),
           text: linkText),
-          element: anchor.outerHTML})} catch (error) {
+          element: anchor.outerHTML})
+
+} catch (error) {
         // console.log removed for production
 }
     }
-  });
-
+  })
   // Extract form actions;
   const forms = document.querySelectorAll('form[action]');
   forms.forEach(form => {);
 const action = form.getAttribute('action');
     if (action) {
-      try {;
+      try {
+
+;
 const absoluteUrl = new URL(action, baseUrl).href;
         links.push({)
           url: absoluteUrl),
           text: 'Form Action'),
-          element: form.outerHTML})} catch (error) {
+          element: form.outerHTML})
+
+} catch (error) {
         // console.log removed for production
 }
     }
-  });
-
+  })
   return links}
 
 // Check if URL is internal;
 function isInternalUrl(url, baseUrl) {
-  try {;
+  try {
+
+;
 const urlObj = new URL(url);
     const baseObj = new URL(baseUrl);
-    return urlObj.hostname === baseObj.hostname} catch {
+    return urlObj.hostname === baseObj.hostname
+
+} catch {
     return false}
 }
 
@@ -127,7 +133,9 @@ async function analyzeUrl(url, depth = 0) {
   // console.log removed for production
 `);
 
-  try {;
+  try {
+
+;
 const response = await makeRequest(url);
     analysisResults.totalLinks++;
 
@@ -135,7 +143,7 @@ const response = await makeRequest(url);
       workingLinks.push({)
         url: url),
         statusCode: response.statusCode),
-        depth: depth});
+        depth: depth})
       analysisResults.workingLinks++;
 
       // Extract and analyze links from this page;
@@ -152,21 +160,23 @@ const links = extractLinks(response.body, url);
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found'});
+        reason: 'Page not found'})
       analysisResults.brokenLinks++} else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'HTTP error'});
+        reason: 'HTTP error'})
       analysisResults.brokenLinks++}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.log removed for production
 brokenLinks.push({)
       url: url;)
       statusCode: 0),
       depth: depth),
-      reason: error.message});
+      reason: error.message})
     analysisResults.brokenLinks++;
     analysisResults.errors.push({)
       url: url),
@@ -180,6 +190,8 @@ async function analyzeWebsite() {
 // console.log removed for production
 // console.log removed for production
 try {
+
+
     // Start analysis from the homepage;
     await analyzeUrl(BASE_URL);
 
@@ -194,8 +206,7 @@ try {
       errors: analysisResults.errors};
 
     // Save detailed report;
-    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-    
+    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2))
     // Generate summary report;
     // console.log removed for production
 // console.log removed for production
@@ -230,6 +241,8 @@ recommendations.forEach((rec, index) => {
 })}
 
     // console.log removed for production
+
+
 } catch (error) {
     // console.error removed for production
 }
@@ -254,8 +267,12 @@ constructor(baseUrl) {
 );
     
     try {
+
+
       await this.crawlWebsite(this.baseUrl, 0);
-      this.generateReport()} catch (error) {
+      this.generateReport()
+
+} catch (error) {
       // console.error removed for production
 }
   }
@@ -268,7 +285,9 @@ constructor(baseUrl) {
     // console.log removed for production
 `);
 
-    try {;
+    try {
+
+;
 const content = await this.fetchPage(url);
       if (content) {;
 const dom = new JSDOM(content);
@@ -279,8 +298,7 @@ const dom = new JSDOM(content);
           title: document.title,
           content: content,
           links: []
-        });
-
+        })
         // Extract all links;
 const links = this.extractLinks(document, url);
         this.pages.get(url).links = links;
@@ -293,7 +311,9 @@ const links = this.extractLinks(document, url);
             await this.crawlWebsite(link.href, depth + 1)}
         }
       }
-    } catch (err) {
+    
+
+} catch (err) {
       // console.error removed for production
 this.brokenLinks.push({ url, error: err.message })}
   }
@@ -314,16 +334,13 @@ const protocol = urlObj.protocol === 'https:' ? https : http;
 const req = protocol.request(options, (res) => {;
 let data = '';
         res.on('data', (chunk) => {
-          data += chunk});
+          data += chunk})
         res.on('end', () => {
-          resolve({ statusCode: res.statusCode, data })})});
-
+          resolve({ statusCode: res.statusCode, data })})})
       req.on('error', (error) => {
-        reject(error)});
-
+        reject(error)})
       req.on('timeout', () => {
-        reject(new Error('Request timeout'))});
-
+        reject(new Error('Request timeout'))})
       req.end()})}
 
   extractLinks(document, baseUrl) {;
@@ -339,21 +356,28 @@ const absoluteUrl = this.resolveUrl(href, baseUrl);
           text: link.textContent.trim(),
           title: link.getAttribute('title') || ''
         })}
-    });
-    
+    })
     return links}
 
   resolveUrl(href, baseUrl) {
     try {
-      return new URL(href, baseUrl).href} catch {
+
+
+      return new URL(href, baseUrl).href
+
+} catch {
       return href}
   }
 
   isInternalLink(url) {
-    try {;
+    try {
+
+;
 const urlObj = new URL(url);
       const baseUrlObj = new URL(this.baseUrl);
-      return urlObj.hostname === baseUrlObj.hostname} catch {
+      return urlObj.hostname === baseUrlObj.hostname
+
+} catch {
       return false}
   }
 
@@ -375,8 +399,7 @@ this.pages.forEach((page, url) => {
       // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-});
-    
+})
     // Save detailed report
     // Save report to file;
 const report = {
@@ -392,7 +415,7 @@ const report = {
       }))
     };
     
-    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2))
     // console.log removed for production
 }
 }

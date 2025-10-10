@@ -1,7 +1,5 @@
 const, October2025CuttingEdgeInnovationsBanne, r = () => {
-return (
-
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">)
+return (<div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">)
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
   g:px-8, p, y-6">"
         <div, className="flex, item, s-start, ga, p-4">

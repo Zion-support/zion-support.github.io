@@ -26,9 +26,13 @@ const initial: IntegrationsState = {,
 export function readState(): IntegrationsState {
   ensureDataDir();
 
-  try {;
+  try {
+
+;
 const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState} catch (error) {
+    return JSON.parse(raw) as IntegrationsState
+
+} catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
     return JSON.parse(raw) as IntegrationsState} catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
@@ -45,8 +49,12 @@ const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState} catch (error) {
 
   try {
+
+
 //     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState} catch (error) {
+    return JSON.parse(raw) as IntegrationsState
+
+} catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
     return JSON.parse(raw) as IntegrationsState} catch (error) {
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
@@ -105,9 +113,7 @@ const fullPath = path.join(this.basePath, filePath);
     const dir = path.dirname(fullPath);
 
     // Ensure directory exists;
-    await fs.promises.mkdir(dir, { recursive: true });
-
-
+    await fs.promises.mkdir(dir, { recursive: true })
     return fs.promises.writeFile(fullPath, content, this.encoding)}
 
   async exists(filePath: string): Promise<boolean> {,
@@ -116,8 +122,12 @@ const fullPath = path.join(this.basePath, filePath);
   async exists(filePath: string): Promise<boolean> {;
 const fullPath = path.join(this.basePath, filePath);
     try {
+
+
       await fs.promises.access(fullPath);
-      return true} catch {
+      return true
+
+} catch {
       return false}
   }
 
@@ -127,7 +137,7 @@ const fullPath = path.join(this.basePath, filePath);
 
   async listFiles(dirPath: string = ''): Promise<string[]> {,
 //     const fullPath = path.join(this.basePath, dirPath);
-//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
+//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true })
     return files;
   async deleteFile(filePath: string): Promise<void> {;
 const fullPath = path.join(this.basePath, filePath);
@@ -135,12 +145,11 @@ const fullPath = path.join(this.basePath, filePath);
 
   async listFiles(dirPath: string = ''): Promise<string[]> {;
 const fullPath = path.join(this.basePath, dirPath);
-    const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
+    const files = await fs.promises.readdir(fullPath, { withFileTypes: true })
     return files
 
       .filter(file => file.isFile())
       .map(file => path.join(dirPath, file.name))}
-
   async createDirectory(dirPath: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, dirPath);
     await fs.promises.mkdir(fullPath, { recursive: true })}

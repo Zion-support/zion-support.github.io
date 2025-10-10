@@ -799,9 +799,8 @@ const servicesPerPage = 12;
 const filteredServices = services.filter(service => {;
 const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
-;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch})
 const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
 const startIndex = (currentPage - 1) * servicesPerPage;
 const endIndex = startIndex + servicesPerPage;
@@ -863,7 +862,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                         <option key={category} value={category} className="bg-gray-800">
                           {category}
                         </option>
-                      ));
+                      ))
                     </select>
                   </div>
                 </div>
@@ -882,8 +881,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                   >
                     {category}
                   </button>
-                ));
-              </div>
+                ))</div>
             </div>
           </div>
         </section>
@@ -931,7 +929,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ));
+                      ))
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
@@ -954,14 +952,13 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     </button>
                   </div>
                 </div>
-              ));
-            </div>
+              ))</div>
             
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1));
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
@@ -981,11 +978,10 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     >
                       {page}
                     </button>
-                  ));
-                </div>
+                  ))</div>
                 
                 <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages));
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >

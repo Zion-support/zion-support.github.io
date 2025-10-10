@@ -137,21 +137,18 @@ const req = client.request(options, (res) => {
         url)
         status: res.statusCode),
         statusText: res.statusMessage),
-        headers: res.headers})});
-
+        headers: res.headers})})
     req.on('error', (error) => {
       resolve({)
         url)
         error: error.message),
-        status: 0})});
-
+        status: 0})})
     req.on('timeout', () => {
       req.destroy();
       resolve({)
         url)
         error: 'Request timeout'),
-        status: 0})});
-
+        status: 0})})
     req.end()})}
 
 async function auditWebsite() {
@@ -166,22 +163,21 @@ const route = routes[i];
 const result = await checkUrl(fullUrl);
     
     if (result.error) {
-      results.errors.push({ url: fullUrl, error: result.error });
+      results.errors.push({ url: fullUrl, error: result.error })
       // console.log removed for production
 } else if (result.status >= 200 && result.status < 300) {
-      results.working.push({ url: fullUrl, status: result.status });
+      results.working.push({ url: fullUrl, status: result.status })
       // console.log removed for production
 } else if (result.status === 404) {
-      results.missing.push({ url: fullUrl, status: result.status });
+      results.missing.push({ url: fullUrl, status: result.status })
       // console.log removed for production
 } else {
-      results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
+      results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText })
       // console.log removed for production
 }
     
     // Small delay to avoid overwhelming the server;
     await new Promise(resolve => setTimeout(resolve, 100))}
-
   // console.log removed for production
 );
   // console.log removed for production
@@ -191,24 +187,20 @@ const result = await checkUrl(fullUrl);
   // console.log removed for production
 results.working.forEach(item => {)
     // console.log removed for production
-`)});
-
+`)})
   // console.log removed for production
 results.broken.forEach(item => {)
     // console.log removed for production
-`)});
-
+`)})
   // console.log removed for production
 : ${results.missing.length}`);
   results.missing.forEach(item => {)
     // console.log removed for production
-});
-
+})
   // console.log removed for production
 results.errors.forEach(item => {)
     // console.log removed for production
-});
-
+})
   // console.log removed for production
 );
   // console.log removed for production
@@ -236,7 +228,7 @@ results.errors.forEach(item => {),
 
   // console.log removed for production
 // Save results to file;
-  fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2));
+  fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2))
   // console.log removed for production
 }
 

@@ -7,6 +7,8 @@ import { glob } from 'glob';
 
 for (const filePath of files) {
   try {
+
+
     //Fix orphaned /> tags (standalone /> on their own lines)
     content = content.replace(/^\s*\/>\s*$/gm, '');
 
@@ -15,8 +17,7 @@ for (const filePath of files) {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`}
-      return match});
-
+      return match})
     //Fix malformed <br> tags;
     content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
     content = content.replace(/<br\s*>\s*$/gm, '<br />');
@@ -31,7 +32,9 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
     }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  
+
+} catch (error) {/* TODO: Fix JSX expression */}
 //     }
 }
 

@@ -111,7 +111,6 @@ const pricingPlans = [
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <div className="text-cyan-400 font-medium">{feature.benefit}</div>
             ))}
-
         {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
@@ -179,8 +178,6 @@ import Footer from '../components/Footer';
 ;
 const PagePage: React.FC = () => {
 return (
-
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

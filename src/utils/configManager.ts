@@ -510,8 +510,7 @@ const baseValue = result[key];
 }
             result[key] = value as typeof baseValue}
         }
-      }
-    );
+      })
     return result}
   /**
    * Get configuration value

@@ -140,9 +140,7 @@ class Logger {/* TODO: Fix JSX expression */}
       context = errorOrContextOrMetadata as LogContext;
       meta = contextOrMetadata as Record;
           <string, unknown>}
-    this.log(LogLevel.ERROR, message, context, { ...meta, error })
-  )
-  }
+    this.log(LogLevel.ERROR, message, context, { ...meta, error }))}
   /**
    * Log a fatal error message;
    */

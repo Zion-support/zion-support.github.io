@@ -131,12 +131,10 @@ export const useLazyImage = (sr)
 }
               setIsError(true)};
             img.src = src}
-        }
-  )
+        })
       },
 //       [src, isLoaded, isError]
-//     )
-  );
+//     ))
   return { imageSrc, isLoaded, isError, observe }};
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
@@ -150,7 +148,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     lcp?: number;
     fid?: number;
     cls?: number;
-    ttfb?: number}>({});
+    ttfb?: number}>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -184,13 +182,13 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
         getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value })));
+  s: metric.value })))
         getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  d: metric.value })));
+  d: metric.value })))
         getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value })))
         getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value })))
         getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
   b: metric.value })))})}
     return () => {/* TODO: Fix JSX expression */}
@@ -208,7 +206,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
 }
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
-    jsHeapSizeLimit?: number}>({});
+    jsHeapSizeLimit?: number}>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -270,7 +268,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     totalSize?: number;
     jsSize?: number;
     cssSize?: number;
-    imageSize?: number}>({});
+    imageSize?: number}>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -297,7 +295,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
           imageSize += size}
-      });
+      })
       setBundleSize({/* TODO: Fix JSX expression */}
   O: Add content}
 }

@@ -49,7 +49,7 @@ const handleUnhandledRejection = (even)
       const error =
 //         rejectionEvent.reason instanceof Error;
 //           ? rejectionEvent.reason;
-          : new Error(String(rejectionEvent.reason));
+          : new Error(String(rejectionEvent.reason))
       reportError(error, 'unhandled_promise_rejection')};
     // React error boundary handler (if available);
 const handleReactError = (erro,

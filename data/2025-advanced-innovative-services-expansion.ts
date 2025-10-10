@@ -293,19 +293,10 @@ export const,
     ]
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
-<<<<<<< HEAD
     marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY';
 variant: 'ai-autonomous-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$8 B+ DevOps tools market',
-    growthRate: '25% YoY',
-    variant: 'ai-autonomous-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: capabilities: [
     ro,
   i: 'Reduce deployment time by 70% and infrastructure costs by 40%'
@@ -394,19 +385,10 @@ varian,
     ]
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
     competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
-<<<<<<< HEAD
     marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY';
 variant: 'quantum-finance-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$12 B+ financial modeling market',
-    growthRate: '35% YoY',
-    variant: 'quantum-finance-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Improve portfolio returns by 15-25% and reduce risk by 30%'
@@ -502,19 +484,10 @@ varian,
     ]
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
-<<<<<<< HEAD
     marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY';
 variant: 'ai-cybersecurity-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$20 B+ cybersecurity market',
-    growthRate: '40% YoY',
-    variant: 'ai-cybersecurity-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Reduce threat detection time by 80% and false positives by 60%'
@@ -571,19 +544,10 @@ varian,
     ]
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
-<<<<<<< HEAD
     marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY';
 variant: 'ai-edge-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$15 B+ edge computing market',
-    growthRate: '45% YoY',
-    variant: 'ai-edge-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
       'Predictive modeling'
     ]
@@ -719,19 +683,10 @@ varian,
     ]
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
     competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
-<<<<<<< HEAD
     marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY';
 variant: 'ai-space-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$8 B+ satellite operations market',
-    growthRate: '30% YoY',
-    variant: 'ai-space-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Improve mission success rate by 25% and reduce operational costs by 40%'
@@ -829,19 +784,10 @@ varian,
     ]
     roi: 'Accelerate BCI development by 5x and reduce development costs by 60%',
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
-<<<<<<< HEAD
     marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY';
 variant: 'neural-advanced'
-    contactInfo: contact;
-=======
-    marketSize: '$3 B+ BCI market',
-    growthRate: '50% YoY',
-    variant: 'neural-advanced',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Accelerate BCI development by 5x and reduce development costs by 60%'
@@ -939,19 +885,10 @@ varian,
     ]
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
     competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
-<<<<<<< HEAD
     marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY';
 variant: 'ai-analytics-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$18 B+ streaming analytics market',
-    growthRate: '30% YoY',
-    variant: 'ai-analytics-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Reduce decision latency by 90% and improve operational efficiency by 35%'
@@ -1048,19 +985,10 @@ varian,
     ]
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
     competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
-<<<<<<< HEAD
     marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY';
 variant: 'blockchain-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$22 B+ enterprise blockchain market',
-    growthRate: '40% YoY',
-    variant: 'blockchain-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Reduce blockchain deployment time by 70% and operational costs by 50%'
@@ -1156,19 +1084,10 @@ varian,
     ]
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
-<<<<<<< HEAD
     marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY';
 variant: 'ai-healthcare-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$35 B+ medical imaging market',
-    growthRate: '45% YoY',
-    variant: 'ai-healthcare-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%'
@@ -1266,19 +1185,10 @@ varian,
     ]
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
-<<<<<<< HEAD
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY';
 variant: 'ai-climate-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$12 B+ climate technology market',
-    growthRate: '35% YoY',
-    variant: 'ai-climate-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: benefits: [;
     ro,
   i: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%'
@@ -2801,19 +2711,10 @@ varian,
     ]
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
-<<<<<<< HEAD
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY';
 variant: 'ai-climate-enterprise'
-    contactInfo: contact;
-=======
-    marketSize: '$12 B+ climate technology market',
-    growthRate: '35% YoY',
-    variant: 'ai-climate-enterprise',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    realImplementation: true;
+    contactInfo: contact;    realImplementation: true;
     implementationDetails: 'Research-grade platform with environmental compliance and expert support',
     launchDate: '2025-02-15',
     customers: 23;

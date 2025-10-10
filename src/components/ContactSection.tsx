@@ -7,8 +7,7 @@ const [formData, setFormData] = useState({
     company: '',
     service: '',
     message: ''
-  });
-;
+  })
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,

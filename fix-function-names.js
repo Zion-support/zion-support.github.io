@@ -5,12 +5,14 @@ import path from 'path';
 // console.log removed for production
 // Function to fix function names;
 function fixFunctionNames(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix function names with hyphens;
-    const fileName = path.basename(filePath, path.extname(filePath));
+    const fileName = path.basename(filePath, path.extname(filePath))
     const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_');
     
     // Replace invalid function names;
@@ -39,7 +41,9 @@ let line = lines[i];
       // console.log removed for production
 return true}
     
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -49,7 +53,9 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 const files = [];
   ;
 function traverse(currentDir) {
-    try {;
+    try {
+
+;
 const items = fs.readdirSync(currentDir);
       
       for (const item of items) {;
@@ -66,7 +72,9 @@ const ext = path.extname(item);
             files.push(fullPath)}
         }
       }
-    } catch (error) {
+    
+
+} catch (error) {
       // Skip directories we can't read}
   }
   
@@ -84,9 +92,13 @@ let errorCount = 0;
 
 for (const file of files) {
   try {
+
+
     if (fixFunctionNames(file)) {
       fixedCount++}
-  } catch (error) {
+  
+
+} catch (error) {
     // console.error removed for production
 errorCount++}
 }

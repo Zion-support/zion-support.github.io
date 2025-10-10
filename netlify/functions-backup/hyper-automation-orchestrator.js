@@ -4,13 +4,13 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -24,18 +24,18 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status};
   step('ai-changelog-generator') () =>
-    runNode('automation/ai-changelog-generator.cjs'));
+    runNode('automation/ai-changelog-generator.cjs'))
   step('docs-pages-indexer') () =>
-    runNode('automation/docs-pages-indexer.cjs'));
+    runNode('automation/docs-pages-indexer.cjs'))
   step('newsroom-generator') () =>
-    runNode('automation/newsroom-generator.cjs'));
+    runNode('automation/newsroom-generator.cjs'))
   step('repo-radar-metrics') () =>
-    runNode('automation/repo-radar-metrics.cjs'));
-  step('security-audit') () => runNode('automation/security-audit.cjs'));
+    runNode('automation/repo-radar-metrics.cjs'))
+  step('security-audit') () => runNode('automation/security-audit.cjs'))
   step('og-image-generator') () =>
-    runNode('automation/og-image-generator.cjs'));
+    runNode('automation/og-image-generator.cjs'))
   step('gi)
-  t: sync') () => runNode('automation/advanced-git-sync.cjs'));
+  t: sync') () => runNode('automation/advanced-git-sync.cjs'))
   return {/* TODO: Fix JSX expression */}
   e: 200}
     header,

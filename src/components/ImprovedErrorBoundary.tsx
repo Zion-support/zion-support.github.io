@@ -40,7 +40,7 @@ constructor(props: Props) {
 ,
       userAgent: navigator.userAgent,
       url: window.location.href
-    });
+    })
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)}
@@ -48,7 +48,7 @@ constructor(props: Props) {
     this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1
-    }));
+    }))
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available)
@@ -112,7 +112,7 @@ p: Date.now(),
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href});
+  l: window.location.href})
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -125,7 +125,7 @@ p: Date.now(),
 //       errorInfo,
       errorCoun,
   t: prevState.errorCount + 1;)
-    }));
+    }))
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -234,9 +234,7 @@ p: Date.now(),
 }
         return this.props.fallback}
       // Default error UI;
-      return (<div>Coming Soon</div>)
-  )
-        
+      return (<div>Coming Soon</div>))
           <div className="error-boundary-container" style={styles.container}></div>
           <div style={styles.content}></div>
             <div style={styles.icon}></div>

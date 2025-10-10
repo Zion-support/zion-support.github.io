@@ -52,12 +52,16 @@ export class SecurityManager {// TODO: Add content}
   sanitizeUrl(url: string): string {// TODO: Add content}
 
 }
-    try {/* TODO: Fix JSX expression */}
+    try {
+
+/* TODO: Fix JSX expression */}
   s:'].includes(parsed.protocol)) {}
   // TOD,
   O: Add content}
         throw new Error('Invalid protocol')}
-      return parsed.toString()} catch {/* TODO: Fix JSX expression */}
+      return parsed.toString()
+
+} catch {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       return ''}

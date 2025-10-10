@@ -24,7 +24,9 @@ const fixes = [
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' }];
 ;
 function fixFile(filePath) {
-  try {;
+  try {
+
+;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -33,13 +35,14 @@ const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true}
-    });
-
+    })
     if (modified) {
       fs.writeFileSync(filePath, content);
       // console.log removed for production
 return true}
-    return false} catch (error) {
+    return false
+
+} catch (error) {
     // console.error removed for production
 return false}
 }
@@ -48,7 +51,9 @@ return false}
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 let files = [];
   
-  try {;
+  try {
+
+;
 const items = fs.readdirSync(dir);
     
     for (const item of items) {;
@@ -61,7 +66,9 @@ const fullPath = path.join(dir, item);
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)}
     }
-  } catch (error) {
+  
+
+} catch (error) {
     // Skip directories we can't read}
   
   return files}
@@ -74,6 +81,5 @@ let fixedCount = 0;
 files.forEach(file => {)
   if (fixFile(file)) {
     fixedCount++}
-});
-
+})
 // console.log removed for production

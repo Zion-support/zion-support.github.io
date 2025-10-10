@@ -40,8 +40,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         hidden: document.hidden),
         timestamp: Date.now(),
   setupEventListeners() {/* TODO: Fix JSX expression */}
-      })});
-
+      })})
     // Track scroll depth;
     let _maxScrollDepth = 0;
     window.addEventListener('scroll')
@@ -61,9 +60,7 @@ const scrollDepth = Math.round(
     window.addEventListener('scroll')
       this.throttle(() => {/* TODO: Fix JSX expression */}
           })}
-      }, 1000)
-    );
-
+      }, 1000))
     // Track click events;
     document.addEventListener('click', event => {;
 const _element = event.target;)
@@ -74,8 +71,7 @@ const _element = event.target;)
         text: element.textContent?.substring(0, 100),
         href: element.href;
     document.addEventListener('click', event => {/* TODO: Fix JSX expression */})
-      })});
-
+      })})
     // Track form submissions;
     document.addEventListener('submit', event => {)
       this.track('form_submit', {)
@@ -89,11 +85,11 @@ const _element = event.target;)
     // Track Core Web Vitals;
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(metric => this.trackWebVital('CLS', metric));
-        getFID(metric => this.trackWebVital('FID', metric));
-        getFCP(metric => this.trackWebVital('FCP', metric));
-        getLCP(metric => this.trackWebVital('LCP', metric));
-        getTTFB(metric => this.trackWebVital('TTFB', metric));
+        getCLS(metric => this.trackWebVital('CLS', metric))
+        getFID(metric => this.trackWebVital('FID', metric))
+        getFCP(metric => this.trackWebVital('FCP', metric))
+        getLCP(metric => this.trackWebVital('LCP', metric))
+        getTTFB(metric => this.trackWebVital('TTFB', metric))
   setupPerformanceTracking() {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
       })}
@@ -109,8 +105,7 @@ const _perfData = performance.getEntriesByType('navigation')[0];
           totalLoadTime: perfData.loadEventEnd - perfData.navigationStart),
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
         })}
-    });
-
+    })
     // Track resource loading;
     const observer = new PerformanceObserver(list => {)
       list.getEntries().forEach(entry => {)
@@ -120,7 +115,7 @@ const _perfData = performance.getEntriesByType('navigation')[0];
           size: entry.transferSize),
           type: entry.initiatorType),;
 const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-        })})});
+        })})})
     observer.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] })}
 
@@ -134,16 +129,14 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
         colno: event.colno),
         stack: event.error?.stack),
   setupErrorTracking() {/* TODO: Fix JSX expression */}
-      })});
-
+      })})
     // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', event => {)
       this.track('unhandled_rejection', {)
         reason: event.reason?.message || 'Unknown rejection'),
         stack: event.reason?.stack),
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-      })});
-
+      })})
     // Track fetch errors;
     const _originalFetch = window.fetch;
     window.fetch = (...args) => {
@@ -152,7 +145,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
           url: args[0]),
           error: error.message),
     window.fetch = (...args) => {/* TODO: Fix JSX expression */}
-        });
+        })
         throw error})}}
 
   setupUserBehaviorTracking() {
@@ -177,9 +170,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
     document.addEventListener('mousemove')
       this.throttle(() => {/* TODO: Fix JSX expression */}
           })}
-      }, 1000)
-    );
-
+      }, 1000))
     // Track keyboard activity;
     let _keystrokes = 0;
     document.addEventListener('keydown')
@@ -192,9 +183,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
     document.addEventListener('keydown')
       this.throttle(() => {/* TODO: Fix JSX expression */}
           })}
-      }, 1000)
-    )}
-
+      }, 1000))}
   setupPrivacyCompliance() {
     // Check for privacy settings;
     if (localStorage.getItem('privacy_mode') === 'true') {
@@ -288,7 +277,11 @@ const _events = [...this.eventQueue];
     this.eventQueue = [];
 
     try {
-      await this.sendEvents(events)} catch (error) {
+
+
+      await this.sendEvents(events)
+
+} catch (error) {
       //       // Re-queue events for retry;
       this.eventQueue.unshift(...events)}
   }
@@ -322,7 +315,9 @@ const payload = {
   }
 
   async sendToCustomEndpoint(payload) {
-    try {;
+    try {
+
+;
 const response = await fetch('/api/analytics', {)
         method: 'POST')
         headers: {)
@@ -331,19 +326,19 @@ const response = await fetch('/api/analytics', {)
   async sendToCustomEndpoint(payload) {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(payload)});
-
+  y: JSON.stringify(payload)})
       if (!response.ok) {/* TODO: Fix JSX expression */}`
   s: ${response.status}`)}
-    } catch (error) {/* TODO: Fix JSX expression */}
+    
+
+} catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
   throttle(func, delay) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
           },
-          delay - (currentTime - lastExecTime)
-        )}
+          delay - (currentTime - lastExecTime))}
     }}
 
   // Analytics insights and reporting;

@@ -4,13 +4,13 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -27,25 +27,24 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status};
   step('front-index: auto-advertiser') () =>
-    runNode('automation/front-index-auto-advertiser.cjs')
-  );
-  step('front: futurizer') () => runNode('automation/front-futurizer.cjs'));
+    runNode('automation/front-index-auto-advertiser.cjs'))
+  step('front: futurizer') () => runNode('automation/front-futurizer.cjs'))
   step('homepage: auto-advertiser') () =>
     runNode('automation/homepage-auto-advertiser.cjs')
   step('front-inde)
   x: auto-advertiser') () =>
-    runNode('automation/front-index-auto-advertiser.cjs'));
+    runNode('automation/front-index-auto-advertiser.cjs'))
   step('fron)
-  t: futurizer') () => runNode('automation/front-futurizer.cjs'));
+  t: futurizer') () => runNode('automation/front-futurizer.cjs'))
   step('homepag)
   e: auto-advertiser') () =>
-    runNode('automation/homepage-auto-advertiser.cjs'));
+    runNode('automation/homepage-auto-advertiser.cjs'))
   step('homepag)
-  e: updater') () => runNode('automation/homepage-updater.cjs'));
-  step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));
-  step('seo-audit') () => runNode('scripts/seo-audit.js'));
+  e: updater') () => runNode('automation/homepage-updater.cjs'))
+  step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'))
+  step('seo-audit') () => runNode('scripts/seo-audit.js'))
   step('gi)
-  t: sync') () => runNode('automation/advanced-git-sync.cjs'));
+  t: sync') () => runNode('automation/advanced-git-sync.cjs'))
   return {/* TODO: Fix JSX expression */}
   e: 200}
     header,

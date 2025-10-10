@@ -36,9 +36,7 @@ const _renderCountRef = useRef<number>(0);
             'Performance',
             'Long Component Lifetime',
             component,
-            Math.round(duration));
-      }
-
+            Math.round(duration))}
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
@@ -56,14 +54,13 @@ const _renderCountRef = useRef<number>(0);
         'High Render Count',
         component,
         renderCountRef.current);
-  });
-;
+  })
 const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context});
+          ...context})
     },
     [component, trackErrors]
   );

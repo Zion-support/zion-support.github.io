@@ -115,12 +115,11 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -136,7 +135,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
+))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 ;
 const HomePage: React.FC = () => {;

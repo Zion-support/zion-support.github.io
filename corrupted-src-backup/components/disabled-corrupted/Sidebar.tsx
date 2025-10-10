@@ -72,7 +72,6 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             </n, a, v>
           </div>
         ))}
-
         <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'></div>
           <Link, t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'

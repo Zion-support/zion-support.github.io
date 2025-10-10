@@ -65,8 +65,7 @@ const importedNames = importMatch[1]
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         const totalOccurrences = matches.length;
         
-        return totalOccurrences>importOccurrences</totalOccurrences>});
-
+        return totalOccurrences>importOccurrences</totalOccurrences>})
       // If no names are used, remove the entire import;
       if (usedNames.length === 0) {
         newContent = newContent.replace(importStatement, '');
@@ -92,15 +91,16 @@ const importName = defaultImportMatch[1];
           removedCount++}
       }
     }
-  });
-
+  })
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   return { content: newContent, removedCount }}
 ;
 function processFile(filePath) {
-  try {;
+  try {
+
+;
 const content = fs.readFileSync(filePath, 'utf8');
     const result = removeUnusedImports(content);
     
@@ -109,7 +109,9 @@ const content = fs.readFileSync(filePath, 'utf8');
       // console.log removed for production
 removedImports += result.removedCount}
 
-    processedFiles++} catch (error) {
+    processedFiles++
+
+} catch (error) {
     // console.error removed for production
 }
 }
@@ -121,7 +123,7 @@ async function main() {
   for (const pattern of filePatterns) {;
 const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()})
     allFiles.push(...files)}
 
   // Remove duplicates;

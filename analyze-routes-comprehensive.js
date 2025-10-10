@@ -264,22 +264,18 @@ const req = client.request(requestOptions, (res) => {;
 let data = '';
       
       res.on('data', (chunk) => {
-        data += chunk});
-      
+        data += chunk})
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url})})});
-
+          url: url})})})
     req.on('error', (error) => {
-      reject(error)});
-
+      reject(error)})
     req.on('timeout', () => {
       req.destroy();
-      reject(new Error('Request timeout'))});
-
+      reject(new Error('Request timeout'))})
     req.setTimeout(TIMEOUT);
     req.end()})}
 
@@ -289,6 +285,8 @@ const url = BASE_URL + route;
   results.total++;
   
   try {
+
+
     // console.log removed for production
 const response = await makeRequest(url);
     
@@ -296,7 +294,7 @@ const response = await makeRequest(url);
       results.working.push({)
         route: route),
         url: url),
-        statusCode: response.statusCode});
+        statusCode: response.statusCode})
       // console.log removed for production
 } else {
       results.broken.push({)
@@ -304,14 +302,16 @@ const response = await makeRequest(url);
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
-      });
+      })
       // console.log removed for production
 }
-  } catch (error) {
+  
+
+} catch (error) {
     results.errors.push({)
       route: route),
       url: url),
-      error: error.message});
+      error: error.message})
     // console.log removed for production
 }
 }
@@ -326,10 +326,13 @@ async function analyzeAllRoutes() {
   const batchSize = 10;
   for (let i = 0; i < definedRoutes.length; i += batchSize) {;
 const batch = definedRoutes.slice(i, i + batchSize);
-    const promises = batch.map(route => analyzeRoute(route));
-    
+    const promises = batch.map(route => analyzeRoute(route))
     try {
-      await Promise.all(promises)} catch (error) {
+
+
+      await Promise.all(promises)
+
+} catch (error) {
       // console.log removed for production
 }
     
@@ -352,8 +355,7 @@ const batch = definedRoutes.slice(i, i + batchSize);
     errors: results.errors};
 
   // Save detailed report;
-  fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
-  
+  fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2))
   // Generate summary;
   // console.log removed for production
 // console.log removed for production

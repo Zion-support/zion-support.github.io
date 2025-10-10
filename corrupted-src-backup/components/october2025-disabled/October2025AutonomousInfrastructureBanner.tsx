@@ -1,8 +1,6 @@
 
 const October2025AutonomousInfrastructureBanner = () => {
-return (
-
-  return(<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
+return (<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
   return (
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden"></div>

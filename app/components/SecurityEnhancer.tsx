@@ -88,7 +88,7 @@ const headers = new Headers(init?.headers);
         ...init,
         headers,
         credentials: 'same-origin'
-      });
+      })
     };
 
     // Input sanitization for forms;
@@ -108,9 +108,8 @@ const target = e.target as HTMLInputElement;
         if (target.value !== sanitizeInput(target.value)) {
           target.value = sanitizeInput(target.value);
         }
-      });
-    });
-
+      })
+    })
     // Console warning for security
     // console.log removed for production
 // console.log removed for production
