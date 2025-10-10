@@ -16,13 +16,16 @@ import {
   Star, 
   Clock,
   Users,
-  TrendingUp
+  TrendingUp,
+  Search,
+  Filter
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const services = [
     {
@@ -162,6 +165,305 @@ const AiServicesPage: React.FC = () => {
       category: 'Automation',
       popular: true,
       icon: Zap
+    },
+    {
+      id: 'ai-healthcare',
+      name: 'AI Healthcare Solutions',
+      description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Medical image analysis',
+        'Drug discovery algorithms',
+        'Patient risk assessment',
+        'Treatment recommendations',
+        'Clinical trial optimization'
+      ],
+      benefits: [
+        'Improved diagnosis accuracy',
+        'Faster drug development',
+        'Better patient outcomes',
+        'Cost reduction'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-fintech',
+      name: 'AI Financial Services',
+      description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management',
+      price: '$699/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Fraud detection algorithms',
+        'Algorithmic trading systems',
+        'Credit risk assessment',
+        'Market prediction models',
+        'Regulatory compliance'
+      ],
+      benefits: [
+        'Reduced fraud losses',
+        'Better trading performance',
+        'Risk mitigation',
+        'Compliance automation'
+      ],
+      category: 'Fintech',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-ecommerce',
+      name: 'AI E-commerce Optimization',
+      description: 'AI-powered solutions for product recommendations, pricing, and customer experience',
+      price: '$449/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Personalized recommendations',
+        'Dynamic pricing optimization',
+        'Inventory management',
+        'Customer behavior analysis',
+        'Conversion optimization'
+      ],
+      benefits: [
+        'Increased sales',
+        'Better customer experience',
+        'Optimized pricing',
+        'Reduced inventory costs'
+      ],
+      category: 'E-commerce',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-hr',
+      name: 'AI HR & Recruitment',
+      description: 'Intelligent HR solutions for talent acquisition, employee analytics, and workforce optimization',
+      price: '$399/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Resume screening AI',
+        'Candidate matching algorithms',
+        'Employee performance analytics',
+        'Predictive attrition models',
+        'Skills gap analysis'
+      ],
+      benefits: [
+        'Faster hiring',
+        'Better candidate fit',
+        'Reduced turnover',
+        'Data-driven HR decisions'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-cybersecurity',
+      name: 'AI Cybersecurity',
+      description: 'Advanced AI for threat detection, vulnerability assessment, and security automation',
+      price: '$599/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Threat detection algorithms',
+        'Vulnerability scanning',
+        'Security incident response',
+        'Behavioral analysis',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Proactive security',
+        'Faster threat response',
+        'Reduced false positives',
+        'Compliance assurance'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-iot',
+      name: 'AI IoT & Edge Computing',
+      description: 'AI solutions for Internet of Things devices and edge computing optimization',
+      price: '$549/month',
+      marketPrice: '$900-2500/month',
+      features: [
+        'Edge AI processing',
+        'IoT device optimization',
+        'Real-time data analysis',
+        'Predictive maintenance',
+        'Energy efficiency optimization'
+      ],
+      benefits: [
+        'Reduced latency',
+        'Lower bandwidth usage',
+        'Predictive maintenance',
+        'Energy savings'
+      ],
+      category: 'IoT',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-education',
+      name: 'AI Education Platform',
+      description: 'Personalized learning experiences with AI-powered adaptive education systems',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Adaptive learning paths',
+        'Intelligent tutoring systems',
+        'Automated assessment',
+        'Learning analytics',
+        'Content personalization'
+      ],
+      benefits: [
+        'Personalized learning',
+        'Better outcomes',
+        'Automated grading',
+        'Data-driven insights'
+      ],
+      category: 'Education',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-marketing',
+      name: 'AI Marketing Automation',
+      description: 'Intelligent marketing campaigns with AI-powered targeting and optimization',
+      price: '$349/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Customer segmentation AI',
+        'Predictive marketing models',
+        'Automated campaign optimization',
+        'Content personalization',
+        'ROI prediction'
+      ],
+      benefits: [
+        'Higher conversion rates',
+        'Better targeting',
+        'Automated optimization',
+        'Improved ROI'
+      ],
+      category: 'Marketing',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-supply-chain',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
+      price: '$499/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Demand forecasting',
+        'Inventory optimization',
+        'Route optimization',
+        'Supplier risk assessment',
+        'Real-time tracking'
+      ],
+      benefits: [
+        'Reduced costs',
+        'Better efficiency',
+        'Risk mitigation',
+        'Improved visibility'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-energy',
+      name: 'AI Energy Management',
+      description: 'Smart energy solutions with AI-powered optimization and renewable energy integration',
+      price: '$399/month',
+      marketPrice: '$700-2000/month',
+      features: [
+        'Energy consumption optimization',
+        'Renewable energy forecasting',
+        'Smart grid management',
+        'Carbon footprint tracking',
+        'Automated energy trading'
+      ],
+      benefits: [
+        'Energy cost reduction',
+        'Sustainability goals',
+        'Grid optimization',
+        'Carbon neutrality'
+      ],
+      category: 'Energy',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-real-estate',
+      name: 'AI Real Estate Analytics',
+      description: 'Property valuation, market analysis, and investment optimization using AI',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Property valuation models',
+        'Market trend analysis',
+        'Investment recommendations',
+        'Risk assessment',
+        'Automated property matching'
+      ],
+      benefits: [
+        'Accurate valuations',
+        'Better investments',
+        'Risk reduction',
+        'Market insights'
+      ],
+      category: 'Real Estate',
+      popular: false,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-legal',
+      name: 'AI Legal Assistant',
+      description: 'Intelligent legal research, document analysis, and contract review automation',
+      price: '$449/month',
+      marketPrice: '$800-2000/month',
+      features: [
+        'Legal document analysis',
+        'Contract review automation',
+        'Legal research assistance',
+        'Compliance monitoring',
+        'Case outcome prediction'
+      ],
+      benefits: [
+        'Faster document review',
+        'Reduced legal costs',
+        'Better accuracy',
+        'Compliance assurance'
+      ],
+      category: 'Legal',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-manufacturing',
+      name: 'AI Manufacturing Intelligence',
+      description: 'Smart manufacturing with AI-powered quality control and predictive maintenance',
+      price: '$599/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Quality control automation',
+        'Predictive maintenance',
+        'Production optimization',
+        'Defect detection',
+        'Supply chain integration'
+      ],
+      benefits: [
+        'Higher quality',
+        'Reduced downtime',
+        'Cost optimization',
+        'Better efficiency'
+      ],
+      category: 'Manufacturing',
+      popular: false,
+      icon: Box
     }
   ];
 
@@ -172,12 +474,28 @@ const AiServicesPage: React.FC = () => {
     { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
     { id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length },
     { id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
+    { id: 'Fintech', name: 'Fintech', count: services.filter(s => s.category === 'Fintech').length },
+    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
+    { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
+    { id: 'Education', name: 'Education', count: services.filter(s => s.category === 'Education').length },
+    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
+    { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
+    { id: 'Real Estate', name: 'Real Estate', count: services.filter(s => s.category === 'Real Estate').length },
+    { id: 'Legal', name: 'Legal', count: services.filter(s => s.category === 'Legal').length },
+    { id: 'Manufacturing', name: 'Manufacturing', count: services.filter(s => s.category === 'Manufacturing').length }
   ];
 
-  const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
-  );
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
@@ -202,22 +520,33 @@ const AiServicesPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Category Filter */}
+            {/* Search and Filter */}
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search AI services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Filter className="text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
