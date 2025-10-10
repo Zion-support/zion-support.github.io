@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Zap, Brain, Clock, ArrowRight, Phone, Mail, Settings, BarChart, Users, Shield, Target } from 'lucide-react';
+import { CheckCircle, Zap, Brain, Clock, ArrowRight, Phone, Settings, BarChart, Users, Shield, Target } from 'lucide-react'
 import Link from 'next/link';
 
 const AIAutomationPage: React.FC = () => {

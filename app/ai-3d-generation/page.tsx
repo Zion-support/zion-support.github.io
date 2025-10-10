@@ -49,19 +49,19 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
-      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']}
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
     },
     {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
-      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']}
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
     },
     {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
-      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']}
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
   ]
   const pricing = [
@@ -76,7 +76,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Email support',
         'Basic export formats'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Studio',
@@ -91,7 +91,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
