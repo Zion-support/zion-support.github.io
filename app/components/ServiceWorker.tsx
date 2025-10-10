@@ -1,11 +1,9 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-<<<<<<< HEAD
 const ServiceWorkerPage: React.FC = () => {
   const features = [
     {
@@ -86,7 +84,6 @@ const ServiceWorkerPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
 ;
 const ServiceWorkerPage: React.FC = () => {;
   const features = [;
@@ -169,7 +166,6 @@ const ServiceWorkerPage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {benefit}
                         </li>;
                       ))}
@@ -177,7 +173,6 @@ const ServiceWorkerPage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -215,7 +210,6 @@ export default ServiceWorkerPage;
   </button>
   </button>
   </h1>
-=======
             </div>;
           </div>;
         </section>;
@@ -247,8 +241,6 @@ export default ServiceWorkerPage;
 };
 ;
 export default ServiceWorkerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
 import { useEffect } from 'react';
 
 const ServiceWorker: React.FC = () => {
@@ -269,4 +261,3 @@ const ServiceWorker: React.FC = () => {
 };
 
 export default ServiceWorker;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431

@@ -1,9 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
     }
   ];
   const benefits = [
@@ -98,7 +96,6 @@ export default EnhancedErrorBoundaryPage;
   </button>
   </button>
   </h2>
-=======
 ;
     }
   ];
@@ -194,8 +191,6 @@ export default EnhancedErrorBoundaryPage;
 };
 ;
 export default EnhancedErrorBoundaryPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
@@ -311,4 +306,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431

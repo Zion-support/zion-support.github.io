@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -25,9 +21,6 @@ const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -36,13 +29,10 @@ import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
   // Sample blog posts data
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const blogPosts: BlogPost[] = [
     {
-<<<<<<< HEAD
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
@@ -121,13 +111,10 @@ const BlogPage: React.FC = () => {
       featured: false
     }
   ];
-<<<<<<< HEAD
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
-=======
 
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development'];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   useEffect(() => {
     let filtered = blogPosts;
     if (searchTerm) {
@@ -142,17 +129,13 @@ const BlogPage: React.FC = () => {
     }
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-<<<<<<< HEAD
-=======
 
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.slice(0, 3);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -160,8 +143,6 @@ import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
       id: 1,
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
@@ -199,8 +180,6 @@ const BlogPage: React.FC = () => {
     }
   ];
   const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
-<<<<<<< HEAD
-=======
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -210,7 +189,6 @@ const BlogPage: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
   return (
     <React.Fragment>
       <Helmet>
@@ -244,9 +222,7 @@ const BlogPage: React.FC = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-<<<<<<< HEAD
                   className="px-6 py-3 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
-=======
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full border transition-all duration-300 ${
                     selectedCategory === category
@@ -254,7 +230,6 @@ const BlogPage: React.FC = () => {
                       : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
                   }`}
                 >
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                   {category}
                 </button>
               ))}
@@ -311,7 +286,6 @@ const BlogPage: React.FC = () => {
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
-=======
         <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
         <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group's expert team." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, digital transformation" />
@@ -326,7 +300,6 @@ const BlogPage: React.FC = () => {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Stay ahead with expert insights on AI, cloud computing, cybersecurity, and digital transformation
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </p>
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
@@ -341,7 +314,6 @@ const BlogPage: React.FC = () => {
                 />
               </div>
             </div>
-<<<<<<< HEAD
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((category) => (
@@ -410,12 +382,10 @@ const BlogPage: React.FC = () => {
                           key={tag}
                           className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
                           #{tag}
-=======
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-white">
@@ -443,29 +413,23 @@ const BlogPage: React.FC = () => {
                       {post.tags.map((tag) => (
                         <span key={tag} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
                           {tag}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                         </span>
                       ))}
                     </div>
                     <Link
                       to={`/blog/${post.id}`}
-<<<<<<< HEAD
                       className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4" />
-=======
                       className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                     >
                       Read More <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     </Link>
                   </div>
                 </article>
               ))}
             </div>
-<<<<<<< HEAD
             {filteredPosts.length === 0 && (
-=======
           </div>
         </section>
       )}
@@ -500,7 +464,6 @@ const BlogPage: React.FC = () => {
             </h2>
             
             {filteredPosts.length === 0 ? (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
               </div>
@@ -573,7 +536,6 @@ const BlogPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default BlogPage;
   </span>
   </section>
@@ -585,11 +547,8 @@ export default BlogPage;
   </section>
   </div>
   </div>
-=======
 
 export default BlogPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search.</p>
@@ -609,4 +568,3 @@ export default BlogPage;
 };
 
 export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const SmartSupportBotPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -52,7 +51,6 @@ const SmartSupportBotPage: React.FC = () => {
 };
 export default SmartSupportBotPage;
   </button>
-=======
 ;
 const SmartSupportBotPage: React.FC = () => {;
   return (;
@@ -104,4 +102,3 @@ const SmartSupportBotPage: React.FC = () => {;
 };
 ;
 export default SmartSupportBotPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

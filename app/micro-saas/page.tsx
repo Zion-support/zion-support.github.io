@@ -4,12 +4,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
 const MicroSaasPage: React.FC = () => {
   const products = [
     {
@@ -27,14 +24,11 @@ const MicroSaasPage: React.FC = () => {
       features: ['Real-time data visualization', 'Custom reports', 'API integration', 'Automated alerts']
     },
     {
-<<<<<<< HEAD
       icon: BarChart,
       title: 'Project Management Pro',
       description: 'AI-enhanced project management with intelligent task allocation and progress tracking.',
       features: ['Smart task management', 'Team collaboration', 'Progress analytics', 'Resource optimization']
-=======
 import { Link } from 'react-router-dom';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 interface MicroSaasProduct {
   id: string;
@@ -52,8 +46,6 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '1',
       icon: '📊',
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Analytics Dashboard Pro',
       description: 'Advanced business intelligence with real-time analytics and predictive insights',
       features: [
@@ -67,7 +59,6 @@ const MicroSaasPage: React.FC = () => {
         'API access'
       ],
       price: '$49/month',
-=======
       title: 'Business Intelligence Dashboard',
       description: 'Advanced analytics and reporting platform with real-time data visualization and AI-powered insights',
       features: [
@@ -81,9 +72,7 @@ const MicroSaasPage: React.FC = () => {
         'Mobile-responsive dashboard'
       ],
       price: '$89/month',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
       users: 'Up to 10 users',
-=======
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
       features: [
@@ -98,16 +87,13 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$89/month',
       users: 'Up to 25 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: true,
       category: 'Analytics'
     },
     {
       id: '2',
       icon: '💬',
-<<<<<<< HEAD
       title: 'AI Customer Support Suite',
-<<<<<<< HEAD
       description: 'Complete customer support solution with AI chatbot and live chat',
       features: [
         'AI chatbot with NLP',
@@ -121,7 +107,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$79/month',
       users: 'Up to 15 users',
-=======
       description: 'Complete customer support solution with AI chatbot, live chat, and ticket management',
       features: [
         'Advanced AI chatbot with natural language processing',
@@ -135,8 +120,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$149/month',
       users: 'Up to 25 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
       title: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
       features: [
@@ -151,15 +134,12 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$149/month',
       users: 'Up to 50 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: true,
       category: 'Communication'
     },
     {
       id: '3',
       icon: '🔐',
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Security Monitor Pro',
       description: 'Enterprise-grade security monitoring with threat detection and compliance',
       features: [
@@ -174,7 +154,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$149/month',
       users: 'Up to 50 users',
-=======
       title: 'Enterprise Security Monitor',
       description: 'Comprehensive cybersecurity monitoring with threat detection and compliance management',
       features: [
@@ -189,8 +168,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$299/month',
       users: 'Up to 100 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
       title: 'Zion Security Shield',
       description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
       features: [
@@ -205,15 +182,12 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$299/month',
       users: 'Up to 100 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
       category: 'Security'
     },
     {
       id: '4',
       icon: '☁️',
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Cloud Backup Enterprise',
       description: 'Comprehensive cloud backup with disaster recovery and version control',
       features: [
@@ -228,7 +202,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$89/month',
       users: 'Up to 25 users',
-=======
       title: 'Smart Cloud Backup Pro',
       description: 'Intelligent cloud backup with disaster recovery and business continuity features',
       features: [
@@ -243,8 +216,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$79/month',
       users: 'Up to 50 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
       title: 'Zion Cloud Vault',
       description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
       features: [
@@ -259,15 +230,12 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$79/month',
       users: 'Up to 30 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
       category: 'Storage'
     },
     {
       id: '5',
       icon: '📈',
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Performance Tracker Plus',
       description: 'Advanced application performance monitoring with AI-powered insights',
       features: [
@@ -281,7 +249,6 @@ const MicroSaasPage: React.FC = () => {
         'Mobile app monitoring'
       ],
       price: '$99/month',
-=======
       title: 'Application Performance Monitor',
       description: 'Advanced APM solution with real-time monitoring, error tracking, and performance optimization',
       features: [
@@ -295,9 +262,7 @@ const MicroSaasPage: React.FC = () => {
         'Mobile app performance tracking'
       ],
       price: '$129/month',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
       users: 'Up to 30 users',
-=======
       title: 'Zion Performance AI',
       description: 'Advanced application performance monitoring with AI-powered optimization recommendations',
       features: [
@@ -312,16 +277,13 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$129/month',
       users: 'Up to 40 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
       category: 'Monitoring'
     },
     {
       id: '6',
       icon: '🤖',
-<<<<<<< HEAD
       title: 'AI Workflow Automation',
-<<<<<<< HEAD
       description: 'Intelligent process automation with AI-powered workflow optimization',
       features: [
         'Workflow automation',
@@ -335,7 +297,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$199/month',
       users: 'Up to 100 users',
-=======
       title: 'Zion AI Workflow',
       description: 'Intelligent business process automation with custom AI models and workflow optimization',
       features: [
@@ -350,14 +311,12 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$199/month',
       users: 'Up to 75 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: true,
       category: 'AI'
     },
     {
       id: '7',
       icon: '📧',
-<<<<<<< HEAD
       title: 'Email Marketing Pro',
       description: 'Advanced email marketing automation with AI-powered personalization',
       features: [
@@ -372,7 +331,6 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$69/month',
       users: 'Up to 20 users',
-=======
       title: 'Zion Email Marketing AI',
       description: 'AI-powered email marketing platform with advanced segmentation and personalization',
       features: [
@@ -387,13 +345,11 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$99/month',
       users: 'Up to 60 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
       category: 'Marketing'
     },
     {
       id: '8',
-<<<<<<< HEAD
       icon: '📱',
       title: 'Social Media Manager',
       description: 'Complete social media management with AI content generation and scheduling',
@@ -410,7 +366,6 @@ const MicroSaasPage: React.FC = () => {
       price: '$59/month',
       users: 'Up to 15 users',
       popular: false,
-<<<<<<< HEAD
       category: 'Support'
     }
   ];
@@ -446,7 +401,6 @@ return (
                     {tool.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-=======
       name: 'Customer Support Bot',
       description: 'Intelligent chatbot for customer service automation',
       price: '$39/month',
@@ -500,12 +454,10 @@ return (
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
@@ -517,7 +469,6 @@ return (
             </div>
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-=======
       category: 'Marketing'
     },
     {
@@ -654,7 +605,6 @@ return (
         'Progress analytics',
         'Integration capabilities',
         'Mobile app'
-=======
       description: 'Intelligent business process automation with AI-powered decision making and custom workflows',
       features: [
         'Visual workflow builder with 200+ integrations',
@@ -665,18 +615,15 @@ return (
         'Advanced analytics and reporting',
         'Multi-tenant architecture',
         'API access and webhook support'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
       ],
       price: '$199/month',
       users: 'Up to 100 users',
       popular: true,
-<<<<<<< HEAD
       category: 'Management'
     }
   ];
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Scheduling', 'Content', 'Sales', 'SEO', 'Research', 'Management'];
-=======
       category: 'AI'
     },
     {
@@ -802,8 +749,6 @@ return (
   ];
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Productivity', 'Sales'];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
       icon: '💰',
       title: 'Zion Finance AI',
       description: 'Intelligent financial management and accounting automation platform',
@@ -905,7 +850,6 @@ return (
   ];
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'HR', 'E-commerce', 'Development', 'SEO'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
 
   const benefits = [
     'Quick setup and deployment',
@@ -916,17 +860,14 @@ return (
     'Easy integration'
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
   ];
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -936,13 +877,11 @@ return (
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Quick setup, affordable pricing, powerful features." />
         <meta name="keywords" content="micro SaaS, business tools, analytics, customer chat, security, cloud backup, performance monitoring" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -954,7 +893,6 @@ return (
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-=======
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -989,7 +927,6 @@ return (
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
@@ -1001,7 +938,6 @@ return (
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Category Filter */}
         <section className="py-8 px-4">
@@ -1049,7 +985,6 @@ return (
   </
                     </div>
                   )}
-=======
         </div>
       </section>
 
@@ -1093,7 +1028,6 @@ return (
                     </div>
                   )}
                   
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">{product.icon}</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
@@ -1116,7 +1050,6 @@ return (
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <div className="flex flex-col gap-3">
                     <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
                       Start Free Trial;
@@ -1124,13 +1057,11 @@ return (
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
                       Learn More;
   </
-=======
 
                   <div className="text-center">
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
                       Start Free Trial
                     </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
@@ -1142,7 +1073,6 @@ return (
               </div>
             )}
           </div>
-<<<<<<< HEAD
         </section>
         {/* Benefits Section */}
         <section className="py-16 px-4">
@@ -1222,28 +1152,24 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
                   View All Plans;
   </
               </div>
-=======
                   <div className="border-t border-white/20 pt-4">
                     <div className="text-2xl font-bold text-white mb-1">{product.price}</div>
                     <div className="text-sm text-gray-400">{product.users}</div>
                   </div>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
             </div>
           </div>
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Micro SaaS?
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
         </div>
       </section>
 
@@ -1253,49 +1179,40 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Our Micro SaaS?</h2>
             <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">{benefit}</span>
-=======
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our Micro SaaS?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-8 text-blue-100">
               Choose from our collection of micro SaaS solutions and start solving your business problems today.
             </p>
-<<<<<<< HEAD
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
               View All Plans;
   </
           </div>
         </section>
       </main>
-=======
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Choose the perfect micro SaaS solution for your business needs.
@@ -1308,10 +1225,8 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Footer />
     </React.Fragment>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -1330,10 +1245,8 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
-<<<<<<< HEAD
 export default MicroSaasPage;
   </button>
   </Link>
@@ -1348,7 +1261,5 @@ export default MicroSaasPage;
   </div>
   </section>
   </div>
-=======
 
 export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277

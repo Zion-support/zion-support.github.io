@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 const ContentStatistics: React.FC = () => {
@@ -72,7 +69,6 @@ const ContentStatistics: React.FC = () => {
       description: 'Service reliability'
     }
   ];
-<<<<<<< HEAD
   const achievements = [
     {
       icon: Brain,
@@ -83,7 +79,6 @@ const ContentStatistics: React.FC = () => {
       icon: Shield,
       title: 'Security Excellence',
       description: 'Bank-level security for all our solutions'
-=======
 
   const features = [
     {
@@ -103,16 +98,12 @@ const ContentStatistics: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
 description: 'Worldwide deployment and support for international businesses',
-=======
       description: 'Worldwide deployment and support for international businesses',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
   ];
@@ -152,7 +143,6 @@ description: 'Worldwide deployment and support for international businesses',
     const stepDuration = duration / steps;
     const timers = Object.keys(targetCounters).map((key) => {
       const target = targetCounters[key as keyof typeof targetCounters];
-<<<<<<< HEAD
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       return setInterval(() => {
@@ -167,7 +157,6 @@ setCounters(prev => {
           return prev;
         });
       }, 16);
-=======
       const increment = target / steps;
       let current = 0;
 
@@ -181,7 +170,6 @@ setCounters(prev => {
           [key]: Math.floor(current)
         }));
       }, stepDuration);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     });
     return () => {
       timers.forEach(timer => clearInterval(timer));
@@ -196,7 +184,6 @@ setCounters(prev => {
   </
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've transformed businesses and delivered exceptional results.
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -206,11 +193,9 @@ setCounters(prev => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've helped businesses transform with our AI and IT solutions.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </p>
         </div>
         {/* Statistics Grid */}
-<<<<<<< HEAD
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
@@ -237,8 +222,6 @@ setCounters(prev => {
               <p className="text-gray-300 text-sm">{achievement.description}</p>
             </div>
           ))}
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
@@ -261,11 +244,8 @@ setCounters(prev => {
               Discover the powerful features that make our solutions stand out.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
@@ -293,11 +273,8 @@ setCounters(prev => {
               Recognition and milestones that showcase our commitment to excellence.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
           <div className="grid md:grid-cols-3 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {achievements.map((achievement, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -318,11 +295,8 @@ setCounters(prev => {
               Discover the advantages that make our solutions the preferred choice.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
           <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -343,16 +317,13 @@ setCounters(prev => {
                 <Zap className="w-5 h-5" />
                 Get Started Today
               </button>
-<<<<<<< HEAD
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 View Case Studies;
   </
-=======
               <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
                 <ArrowRight className="w-5 h-5" />
                 Learn More
               </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </div>

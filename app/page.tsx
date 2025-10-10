@@ -5,14 +5,10 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
 import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-<<<<<<< HEAD
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -30,8 +26,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -45,22 +39,14 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -72,8 +58,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-=======
   const features = [
     {
       icon: Brain,
@@ -137,7 +121,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -185,7 +168,6 @@ const HomePage: React.FC = () => {
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
-<<<<<<< HEAD
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
@@ -306,7 +288,6 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-=======
       >
         <AccessibilityEnhancer
           enableKeyboardNavigation={true}
@@ -328,7 +309,6 @@ const HomePage: React.FC = () => {
             {/* Hero Section */}
             <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -388,7 +368,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -465,8 +444,6 @@ const HomePage: React.FC = () => {
                     Send Message;
   </
                 </form>
-<<<<<<< HEAD
-=======
 
 const HomePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -549,7 +526,6 @@ const HomePage: React.FC = memo(() => {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <button 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                 aria-label="Get started with our AI and IT solutions"
@@ -563,7 +539,6 @@ const HomePage: React.FC = memo(() => {
               >
                 View Our Work
               </button>
-=======
               <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                 Call +1 302 464 0950
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -571,7 +546,6 @@ const HomePage: React.FC = memo(() => {
               <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                 Email Us
               </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
             </div>
           </div>
         </section>
@@ -635,7 +609,6 @@ const HomePage: React.FC = memo(() => {
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <button 
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                   aria-label="Contact us to discuss your business transformation needs"
@@ -648,18 +621,12 @@ const HomePage: React.FC = memo(() => {
                 >
                   Learn More
                 </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4e58
-=======
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                   Email kleber@ziontechgroup.com
                 </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
             </section>
 
             {/* Services Section */}
@@ -705,7 +672,6 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   ))}
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               </div>
             </section>
 
@@ -859,24 +825,18 @@ const HomePage: React.FC = memo(() => {
             {/* Footer */}
             <Footer />
           </div>
-<<<<<<< HEAD
         </section>
       </main>
       
       <Footer />
     </div>
-=======
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
     </React.Fragment>
   );
 };
 
 HomePage.displayName = 'HomePage';
-<<<<<<< HEAD
 
 export default HomePage;
-=======
 export default HomePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3800

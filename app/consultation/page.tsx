@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -46,19 +45,16 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Ongoing Support',
       description: 'Provide continuous guidance and support throughout implementation.'
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface ConsultationType {
   id: string;
   name: string;
@@ -69,9 +65,7 @@ interface ConsultationType {
   popular: boolean;
 }
 const ConsultationPage: React.FC = () => {
-<<<<<<< HEAD
   const [selectedType, setSelectedType] = useState<string>('');
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -83,7 +77,6 @@ const ConsultationPage: React.FC = () => {
     urgency: 'medium'
   });
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -129,7 +122,6 @@ const ConsultationPage: React.FC = () => {
         'ROI analysis'
       ],
       popular: false
-<<<<<<< HEAD
     },
     {
       id: 'security',
@@ -148,12 +140,10 @@ const ConsultationPage: React.FC = () => {
     }
   ];
   const experts = [
-=======
     }
   ];
 
   const services = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     {
       icon: Zap,
       title: 'AI & Machine Learning',
@@ -175,12 +165,10 @@ const ConsultationPage: React.FC = () => {
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
   ];
-<<<<<<< HEAD
   const handleBooking = (typeId: string) => {
     setSelectedType(typeId);
     // In a real app, this would open a booking modal or redirect to a booking page
     console.log(`Booking consultation: ${typeId}`);
-=======
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -195,20 +183,15 @@ const ConsultationPage: React.FC = () => {
     // In a real app, this would submit the form data
     // Form submitted successfully
     alert('Thank you for your interest! We will contact you within 24 hours.');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   };
   return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Expert Technology Consulting</title>
         <meta name="description" content="Get a free consultation with our technology experts. Discuss your AI, cloud, and digital transformation needs with Zion Tech Group." />
         <meta name="keywords" content="free consultation, technology consulting, AI consultation, cloud consulting, digital transformation" />
       </Helmet>
-<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -358,7 +341,6 @@ const ConsultationPage: React.FC = () => {
                       <span>{type.duration}</span>
                     </div>
                     <div className="text-3xl font-bold text-white">{type.price}</div>
-=======
     }
   ];
 
@@ -420,7 +402,6 @@ const ConsultationPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{step.step}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                   </div>
                   <ul className="space-y-3 mb-8">
                     {type.features.map((feature, index) => (
@@ -445,7 +426,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 {/* Expert Team */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -573,7 +553,6 @@ const ConsultationPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Implementation</h3>
               <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
-=======
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -612,12 +591,10 @@ const ConsultationPage: React.FC = () => {
                   <p className="text-gray-600">{service.description}</p>
                 </div>
               ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -657,7 +634,6 @@ export default ConsultationPage;
   </section>
   </div>
   </string>
-=======
 
       {/* Consultation Types */}
       <section className="py-16 bg-gray-100">
@@ -860,7 +836,6 @@ export default ConsultationPage;
         </div>
       </section>
     </div>
-=======
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -879,12 +854,7 @@ export default ConsultationPage;
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
   );
 };
 
 export default ConsultationPage;
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277

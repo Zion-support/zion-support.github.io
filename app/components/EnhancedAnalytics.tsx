@@ -1,9 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -148,7 +146,6 @@ export default EnhancedAnalyticsPage;
   </h2>
   </button>
   </span>
-=======
 ;
 const EnhancedAnalyticsPage: React.FC = () => {;
   const features = [;
@@ -171,7 +168,6 @@ const EnhancedAnalyticsPage: React.FC = () => {;
       icon: Globe,;
       title: 'Global Reach',;
       description: 'Worldwide deployment and support for international businesses';}
-=======
 import { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -253,7 +249,6 @@ class AnalyticsService {
         event_label: params.label,
         value: params.value
       });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     }
   }
 
@@ -275,11 +270,8 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   return <>{children}</>;
 };
-<<<<<<< HEAD
 ;
 export default EnhancedAnalyticsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
 
 export const useAnalytics = () => {
   return {
@@ -288,4 +280,3 @@ export const useAnalytics = () => {
 };
 
 export default AnalyticsService;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431

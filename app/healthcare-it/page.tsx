@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -129,7 +128,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
   </button>
   </span>
   </SEOOptimizer>
-=======
 ;
       icon: Heart,;
       title: 'HIPAA Compliance',;
@@ -253,4 +251,3 @@ import SEOOptimizer from '../components/SEOOptimizer';
   );
 }
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
