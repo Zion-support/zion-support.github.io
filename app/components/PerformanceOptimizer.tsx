@@ -21,6 +21,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
       if (!img.decoding) {
         img.decoding = 'async';
       }
+      // Add fetchpriority for above-the-fold images
+      if (img.getBoundingClientRect().top < window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+      // Add proper alt text if missing
+      if (!img.alt) {
+        img.alt = 'Zion Tech Group - AI and IT Solutions';
+      }
     });
   }, []);
 

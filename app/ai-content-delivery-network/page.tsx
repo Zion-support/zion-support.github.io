@@ -3,35 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiContentDeliveryNetworkPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -49,46 +20,20 @@ const PagePage: React.FC = () => {
     {
       title: 'Feature 3',
       description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-    }
-  ];
-
-  const benefits = [
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
-    'Benefit 1',
+    'Gain competitive advantage with advanced technology'    'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
     'Benefit 5',
-    'Benefit 6'
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-<<<<<<< HEAD
-        <title>Ai Content Delivery Network - Zion Tech Group</title>
+    'Benefit 6'        <title>Ai Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content delivery network solution for modern businesses." />
-        <meta name="keywords" content="AI ai content delivery network, artificial intelligence, ai content delivery network, AI solutions, intelligent automation" />
-=======
-        <title>Page | Zion Tech Group</title>
+        <meta name="keywords" content="AI ai content delivery network, artificial intelligence, ai content delivery network, AI solutions, intelligent automation" />        <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-      </Helmet>
-      
-      <Navigation />
-
-<<<<<<< HEAD
-      <Navigation />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -189,9 +134,7 @@ const PagePage: React.FC = () => {
                 </button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-                </button>
-=======
-      {/* Hero Section */}
+                </button>      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -242,16 +185,8 @@ const PagePage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
-                </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-              </div>
-            ))}
-          </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-=======
-        </div>
+                </ul>        </section>
+      </div>        </div>
       </section>
 
       {/* Benefits Section */}
@@ -294,15 +229,4 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-      <Footer />
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default AiContentDeliveryNetworkPage;
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
+export default AiContentDeliveryNetworkPage;export default PagePage;

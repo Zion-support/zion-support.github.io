@@ -3,35 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiAutonomousSystemsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -49,14 +20,7 @@ const PagePage: React.FC = () => {
     {
       title: 'Feature 3',
       description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-    }
-  ];
-
-  const benefits = [
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -172,9 +136,7 @@ const PagePage: React.FC = () => {
                 </button>
                 <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-                </button>
-=======
-    'Benefit 1',
+                </button>    'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
@@ -243,22 +205,14 @@ const PagePage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
-                </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
-              </div>
-            ))}
-          </div>
-<<<<<<< HEAD
-        </section>
+                </ul>        </section>
       </div>
       <Footer />
     </>
   );
 };
 
-export default AiAutonomousSystemsPage;
-=======
-        </div>
+export default AiAutonomousSystemsPage;        </div>
       </section>
 
       {/* Benefits Section */}
@@ -308,4 +262,3 @@ export default AiAutonomousSystemsPage;
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
