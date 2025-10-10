@@ -75,12 +75,12 @@ import {
   MapPin as Location,
   Truck,
   Smartphone,
-  ChefHat
+  ChefHat,
+  Rocket,
+  Sprout,
+  Scale
 } from 'lucide-react';
 import Sidebar from './Sidebar';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
->>>>>>> origin/main
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -212,25 +212,25 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
-    { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare, price: '$1,200/mo' },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,800/mo' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,400/mo' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, price: '$1,100/mo' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube, price: '$1,600/mo' },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic, price: '$1,300/mo' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, price: '$1,000/mo' }
+    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
+    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
+    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
+    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
+    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
+    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
+    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
+    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration Services', href: '/cloud-migration', icon: Cloud, price: '$2,000/mo' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Shield, price: '$1,800/mo' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, price: '$1,500/mo' },
-    { name: 'Database Services', href: '/database-services', icon: Database, price: '$1,200/mo' },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building, price: '$3,000/mo' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, price: '$1,400/mo' },
-    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone, price: '$1,500/mo' },
-    { name: 'Web Development', href: '/web-development', icon: Code, price: '$1,200/mo' }
+    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
+    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
+    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
+    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
+    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
+    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
+    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
+    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
   ];
 
   const specializedServices = [

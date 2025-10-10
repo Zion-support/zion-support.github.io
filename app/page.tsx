@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck, Rocket, Sprout, Scale } from 'lucide-react';
 
 // Import components from the correct path
 import Navigation from './components/Navigation';
@@ -3222,6 +3222,127 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '50+',
       freeTrial: '30 days'
+    },
+    // New Advanced AI Services
+    {
+      title: 'AI-Powered Drug Discovery Pro',
+      description: 'Revolutionary AI drug discovery platform with molecular design, clinical trial optimization, and personalized medicine.',
+      icon: Stethoscope,
+      price: '$4,500/month',
+      originalPrice: '$6,500/month',
+      features: ['Molecular Design', 'Clinical Trial Optimization', 'Personalized Medicine', 'Drug Interaction Analysis', 'Side Effect Prediction', 'Regulatory Compliance', 'Research Collaboration', 'Patent Analysis'],
+      benefits: ['Faster drug development', 'Reduced costs', 'Better success rates', 'Personalized treatments'],
+      link: '/ai-drug-discovery-pro',
+      popular: true,
+      category: 'Healthcare AI',
+      rating: 4.9,
+      users: '80+',
+      freeTrial: '60 days'
+    },
+    {
+      title: 'AI Climate Change Solutions Pro',
+      description: 'Advanced AI solutions for climate change mitigation, carbon footprint analysis, and sustainable technology optimization.',
+      icon: Globe,
+      price: '$3,200/month',
+      originalPrice: '$4,500/month',
+      features: ['Carbon Footprint Analysis', 'Climate Modeling', 'Sustainable Optimization', 'Renewable Energy Planning', 'Environmental Impact Assessment', 'Green Technology Integration', 'Compliance Monitoring', 'Reporting'],
+      benefits: ['Environmental impact', 'Cost savings', 'Compliance', 'Sustainability'],
+      link: '/ai-climate-solutions-pro',
+      popular: true,
+      category: 'Climate AI',
+      rating: 4.8,
+      users: '120+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Space Technology Pro',
+      description: 'Cutting-edge AI for space exploration, satellite management, and space mission optimization.',
+      icon: Rocket,
+      price: '$5,500/month',
+      originalPrice: '$8,000/month',
+      features: ['Space Mission Planning', 'Satellite Management', 'Orbital Optimization', 'Space Weather Prediction', 'Mission Control AI', 'Resource Optimization', 'Risk Assessment', 'Research Support'],
+      benefits: ['Mission success', 'Cost optimization', 'Risk reduction', 'Innovation leadership'],
+      link: '/ai-space-technology-pro',
+      popular: true,
+      category: 'Space AI',
+      rating: 4.9,
+      users: '30+',
+      freeTrial: '90 days'
+    },
+    {
+      title: 'AI-Powered Financial Crime Detection Pro',
+      description: 'Advanced AI for detecting financial crimes, money laundering, and fraud prevention in real-time.',
+      icon: Shield,
+      price: '$2,800/month',
+      originalPrice: '$4,000/month',
+      features: ['Real-time Fraud Detection', 'Money Laundering Prevention', 'Transaction Analysis', 'Risk Scoring', 'Compliance Monitoring', 'Alert Management', 'Investigation Support', 'Regulatory Reporting'],
+      benefits: ['Crime prevention', 'Compliance assurance', 'Cost savings', 'Risk reduction'],
+      link: '/ai-financial-crime-detection-pro',
+      popular: true,
+      category: 'FinTech AI',
+      rating: 4.9,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with AI-driven optimization, demand forecasting, and logistics automation.',
+      icon: Truck,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Automation', 'Supplier Management', 'Risk Assessment', 'Cost Optimization', 'Sustainability Tracking', 'Real-time Monitoring'],
+      benefits: ['Cost reduction', 'Efficiency gains', 'Risk mitigation', 'Sustainability'],
+      link: '/ai-supply-chain-optimization-pro',
+      popular: true,
+      category: 'Supply Chain AI',
+      rating: 4.8,
+      users: '350+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Energy Grid Management Pro',
+      description: 'Smart energy grid management with AI optimization, renewable energy integration, and demand response.',
+      icon: Zap,
+      price: '$3,500/month',
+      originalPrice: '$5,000/month',
+      features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Energy Storage Management', 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization', 'Sustainability Tracking'],
+      benefits: ['Energy efficiency', 'Cost savings', 'Renewable integration', 'Grid stability'],
+      link: '/ai-energy-grid-management-pro',
+      popular: true,
+      category: 'Energy AI',
+      rating: 4.8,
+      users: '150+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence Pro',
+      description: 'Smart agriculture solutions with AI-driven crop optimization, precision farming, and yield prediction.',
+      icon: Sprout,
+      price: '$1,800/month',
+      originalPrice: '$2,600/month',
+      features: ['Crop Optimization', 'Precision Farming', 'Yield Prediction', 'Soil Analysis', 'Weather Integration', 'Pest Detection', 'Resource Optimization', 'Sustainability Tracking'],
+      benefits: ['Higher yields', 'Resource efficiency', 'Cost reduction', 'Sustainability'],
+      link: '/ai-agricultural-intelligence-pro',
+      popular: true,
+      category: 'AgTech AI',
+      rating: 4.7,
+      users: '280+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Legal Research Pro',
+      description: 'Advanced AI legal research platform with case analysis, contract review, and legal document automation.',
+      icon: Scale,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Case Analysis', 'Contract Review', 'Legal Document Automation', 'Precedent Research', 'Compliance Checking', 'Risk Assessment', 'Document Generation', 'Research Collaboration'],
+      benefits: ['Faster research', 'Better accuracy', 'Cost savings', 'Risk reduction'],
+      link: '/ai-legal-research-pro',
+      popular: true,
+      category: 'Legal AI',
+      rating: 4.8,
+      users: '180+',
+      freeTrial: '30 days'
     }
   ];
 
@@ -3962,6 +4083,127 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '500+',
       freeTrial: '30 days'
+    },
+    // New Innovative IT Services
+    {
+      title: 'AI-Powered Infrastructure Monitoring Pro',
+      description: 'Advanced infrastructure monitoring with AI-driven insights, predictive maintenance, and automated optimization.',
+      icon: Activity,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['AI Infrastructure Insights', 'Predictive Maintenance', 'Automated Optimization', 'Real-time Monitoring', 'Anomaly Detection', 'Capacity Planning', 'Performance Tuning', 'Cost Optimization'],
+      benefits: ['Proactive maintenance', 'Better performance', 'Cost savings', 'Zero downtime'],
+      link: '/ai-infrastructure-monitoring',
+      popular: true,
+      category: 'Monitoring',
+      rating: 4.9,
+      users: '350+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Blockchain Integration Services Pro',
+      description: 'Comprehensive blockchain integration with smart contracts, DeFi protocols, and enterprise blockchain solutions.',
+      icon: Shield,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Smart Contract Development', 'DeFi Integration', 'Enterprise Blockchain', 'Token Economics', 'Security Audits', 'Cross-chain Solutions', 'Governance Systems', 'API Development'],
+      benefits: ['Decentralized solutions', 'Enhanced security', 'Transparency', 'Future-ready'],
+      link: '/blockchain-integration-services',
+      popular: true,
+      category: 'Blockchain',
+      rating: 4.8,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered API Management Pro',
+      description: 'Intelligent API management with AI-driven optimization, security, and performance monitoring for enterprise APIs.',
+      icon: Settings,
+      price: '$1,400/month',
+      originalPrice: '$2,000/month',
+      features: ['AI API Optimization', 'Security Management', 'Performance Monitoring', 'Rate Limiting', 'Analytics Dashboard', 'Developer Portal', 'API Gateway', 'Documentation'],
+      benefits: ['Better API performance', 'Enhanced security', 'Developer experience', 'Cost optimization'],
+      link: '/ai-api-management',
+      popular: true,
+      category: 'API Management',
+      rating: 4.7,
+      users: '450+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Intelligent Database Migration Pro',
+      description: 'AI-powered database migration with zero downtime, data integrity, and performance optimization across platforms.',
+      icon: Database,
+      price: '$2,200/month',
+      originalPrice: '$3,200/month',
+      features: ['Zero Downtime Migration', 'Data Integrity Assurance', 'Performance Optimization', 'Schema Conversion', 'Data Validation', 'Rollback Capability', 'Monitoring', 'Training'],
+      benefits: ['Zero downtime', 'Data safety', 'Better performance', 'Seamless transition'],
+      link: '/intelligent-database-migration',
+      popular: true,
+      category: 'Database',
+      rating: 4.9,
+      users: '280+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Load Testing Pro',
+      description: 'Intelligent load testing with AI-driven test scenarios, performance analysis, and automated optimization recommendations.',
+      icon: BarChart,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['AI Test Scenarios', 'Performance Analysis', 'Automated Optimization', 'Real User Simulation', 'Scalability Testing', 'Bottleneck Detection', 'Reporting', 'CI/CD Integration'],
+      benefits: ['Better performance', 'Scalability assurance', 'Cost optimization', 'Quality assurance'],
+      link: '/ai-load-testing',
+      popular: true,
+      category: 'Testing',
+      rating: 4.8,
+      users: '320+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Smart Contract Security Audit Pro',
+      description: 'Comprehensive smart contract security auditing with AI-powered vulnerability detection and automated testing.',
+      icon: Shield,
+      price: '$3,000/month',
+      originalPrice: '$4,500/month',
+      features: ['AI Vulnerability Detection', 'Automated Testing', 'Manual Code Review', 'Gas Optimization', 'Security Best Practices', 'Compliance Checking', 'Documentation', 'Remediation Support'],
+      benefits: ['Enhanced security', 'Vulnerability prevention', 'Compliance assurance', 'Peace of mind'],
+      link: '/smart-contract-security-audit',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '150+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI-Powered Content Delivery Network Pro',
+      description: 'Intelligent CDN with AI-driven optimization, edge computing, and real-time performance monitoring.',
+      icon: Globe,
+      price: '$1,600/month',
+      originalPrice: '$2,400/month',
+      features: ['AI CDN Optimization', 'Edge Computing', 'Real-time Monitoring', 'Global Distribution', 'Caching Intelligence', 'Performance Analytics', 'Security Features', 'API Integration'],
+      benefits: ['Faster content delivery', 'Better user experience', 'Cost optimization', 'Global reach'],
+      link: '/ai-content-delivery-network',
+      popular: true,
+      category: 'CDN',
+      rating: 4.8,
+      users: '400+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Intelligent Email Infrastructure Pro',
+      description: 'Advanced email infrastructure with AI-powered deliverability, security, and performance optimization.',
+      icon: Mail,
+      price: '$1,000/month',
+      originalPrice: '$1,500/month',
+      features: ['AI Deliverability Optimization', 'Security Management', 'Performance Monitoring', 'Spam Protection', 'Analytics Dashboard', 'API Integration', 'Compliance', 'Support'],
+      benefits: ['Better deliverability', 'Enhanced security', 'Performance optimization', 'Compliance assurance'],
+      link: '/intelligent-email-infrastructure',
+      popular: true,
+      category: 'Email',
+      rating: 4.7,
+      users: '600+',
+      freeTrial: '14 days'
     }
   ];
 
