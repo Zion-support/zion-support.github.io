@@ -3,41 +3,6 @@
 import React from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home } from 'lucide-react';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
-  FileText,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  Rocket,
-  Code,
-  Cloud,
-  Smartphone,
-  TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
-} from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0ad0
 
 // Service data
 const microSAASServices = [
