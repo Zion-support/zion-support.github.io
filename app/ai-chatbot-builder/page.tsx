@@ -126,7 +126,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Use Cases
@@ -162,15 +161,7 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>
-                Why Choose Our Solution?;
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Use Cases
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
-              </h2>
+                Why Choose Our Solution?;              </h2>
               <p className="text-xl text-gray-300">
                 Discover how chatbots can transform your business
               </p>
@@ -225,8 +216,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIChatbotBuilder;
-=======
-export default AiChatbotBuilderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
