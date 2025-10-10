@@ -31,14 +31,38 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Case Studies
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how we've helped businesses transform with cutting-edge AI and IT solutions
             </p>
           </div>
-        </section>
 
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-gray-400">Case Study Image</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {study.title || 'AI-Powered Business Transformation'}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {study.client || 'TechCorp'} - {study.industry || 'Technology'}
+                </p>
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
