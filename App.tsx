@@ -1,5 +1,9 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedAnalytics from './app/components/EnhancedAnalytics';
+import ErrorMonitoring from './app/components/ErrorMonitoring';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -163,6 +167,10 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
+        <AccessibilityEnhancer />
+        <PerformanceMonitor />
+        <EnhancedAnalytics />
+        <ErrorMonitoring />
         <div className="min-h-screen bg-white">
           <Suspense fallback={<LoadingSpinner />}>
             <UnifiedContentPromotion />
