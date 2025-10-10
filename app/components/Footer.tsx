@@ -24,7 +24,10 @@ const Footer: React.FC = () => {
       { name: 'AI Quantum Task Optimizer', url: '/ai-quantum-task-optimizer', description: 'Quantum-powered optimization' },
       { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: '3D immersive workspace' },
       { name: 'AI Neural Memory Assistant', url: '/ai-neural-memory-assistant', description: 'AI memory enhancement' },
-      { name: 'AI Telepathic Interface Pro', url: '/ai-telepathic-interface', description: 'Mind-controlled computing' }
+      { name: 'AI Telepathic Interface Pro', url: '/ai-telepathic-interface', description: 'Mind-controlled computing' },
+      { name: 'AI Predictive Analytics Engine', url: '/ai-predictive-analytics-engine', description: 'Advanced ML forecasting' },
+      { name: 'AI Quantum Neural Network', url: '/ai-quantum-neural-network', description: 'Quantum neural processing' },
+      { name: 'AI Autonomous Decision Engine', url: '/ai-autonomous-decision-engine', description: 'Self-learning AI decisions' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
@@ -71,6 +74,48 @@ const Footer: React.FC = () => {
     ],
     'Sales': [
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ],
+    'Real Estate': [
+      { name: 'AI Real Estate Analyzer Pro', url: '/ai-real-estate-analyzer', description: 'Property analysis & valuation' },
+      { name: 'AI Property Management Suite', url: '/ai-property-management', description: 'Complete property management' }
+    ],
+    'E-commerce': [
+      { name: 'AI E-commerce Optimizer Pro', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+      { name: 'AI Inventory Management Pro', url: '/ai-inventory-management', description: 'Smart inventory management' }
+    ],
+    'Legal & Compliance': [
+      { name: 'AI Legal Assistant Pro', url: '/ai-legal-assistant', description: 'Legal AI assistance' },
+      { name: 'AI Compliance Monitor Pro', url: '/ai-compliance-monitor', description: 'Automated compliance' }
+    ],
+    'Education & Training': [
+      { name: 'AI Learning Management System', url: '/ai-learning-management', description: 'Intelligent LMS' },
+      { name: 'AI Corporate Training Platform', url: '/ai-corporate-training', description: 'Corporate training AI' }
+    ],
+    'Manufacturing': [
+      { name: 'AI Manufacturing Intelligence', url: '/ai-manufacturing-intelligence', description: 'Smart manufacturing' },
+      { name: 'AI Quality Assurance Pro', url: '/ai-quality-assurance', description: 'Automated quality control' }
+    ],
+    'Transportation': [
+      { name: 'AI Fleet Management Pro', url: '/ai-fleet-management', description: 'Fleet optimization' },
+      { name: 'AI Logistics Optimizer', url: '/ai-logistics-optimizer', description: 'Logistics optimization' }
+    ],
+    'Energy & Sustainability': [
+      { name: 'AI Energy Management Pro', url: '/ai-energy-management', description: 'Smart energy management' },
+      { name: 'AI Sustainability Tracker', url: '/ai-sustainability-tracker', description: 'Sustainability tracking' }
+    ],
+    'Insurance & Risk': [
+      { name: 'AI Insurance Analytics Pro', url: '/ai-insurance-analytics', description: 'Insurance AI analytics' },
+      { name: 'AI Risk Assessment Engine', url: '/ai-risk-assessment', description: 'Risk assessment AI' }
+    ],
+    'Human Resources': [
+      { name: 'AI Talent Acquisition Pro', url: '/ai-talent-acquisition', description: 'Smart talent acquisition' },
+      { name: 'AI Employee Engagement Platform', url: '/ai-employee-engagement', description: 'Employee engagement AI' }
+    ],
+    'Advanced Technology': [
+      { name: 'AI Blockchain Integration Pro', url: '/ai-blockchain-integration', description: 'Blockchain AI integration' },
+      { name: 'AI IoT Management Platform', url: '/ai-iot-management', description: 'IoT AI management' },
+      { name: 'AI Edge Computing Solutions', url: '/ai-edge-computing', description: 'Edge computing AI' },
+      { name: 'AI Metaverse Development Suite', url: '/ai-metaverse-development', description: 'Metaverse AI development' }
     ]
   };
 
@@ -87,6 +132,24 @@ const Footer: React.FC = () => {
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
     { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
+    { name: 'AI Conversational Intelligence', href: '/ai-conversational-intelligence' },
+    { name: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
+    { name: 'AI Anomaly Detection', href: '/ai-anomaly-detection' },
+    { name: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
+    { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
+    { name: 'AI Speech Recognition', href: '/ai-speech-recognition' },
+    { name: 'AI Image Generation', href: '/ai-image-generation' },
+    { name: 'AI Video Analytics', href: '/ai-video-analytics' },
+    { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+    { name: 'AI Financial Services', href: '/ai-financial-services' },
+    { name: 'AI Customer Service', href: '/ai-customer-service' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance' },
+    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
   ];
 
   const itServices = [
@@ -102,6 +165,17 @@ const Footer: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Cloud Infrastructure Management', href: '/cloud-infrastructure-management' },
+    { name: 'Network Security Solutions', href: '/network-security-solutions' },
+    { name: 'Data Center Solutions', href: '/data-center-solutions' },
+    { name: 'IT Asset Management Pro', href: '/it-asset-management-pro' },
+    { name: 'IT Help Desk Solutions', href: '/it-help-desk-solutions' },
+    { name: 'IT Compliance & Governance', href: '/it-compliance-governance' },
+    { name: 'IT Performance Optimization', href: '/it-performance-optimization' },
+    { name: 'IT Disaster Recovery Services', href: '/it-disaster-recovery' },
+    { name: 'IT Training & Certification', href: '/it-training-certification' },
+    { name: 'IT Integration Services', href: '/it-integration-services' },
+    { name: 'IT Monitoring & Alerting', href: '/it-monitoring-alerting' },
     { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
     { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
     { name: 'Metaverse Development', href: '/metaverse-development' },
