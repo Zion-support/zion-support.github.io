@@ -1,153 +1,225 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  pricing: {
+    basic: number;
+    pro: number;
+    enterprise: number;
+  };
+  category: string;
+  icon: string;
+  benefits: string[];
+  useCases: string[];
+}
 
-const ServicesPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+export const services: Service[] = [
+  {
+    id: 'ai-development',
+    title: 'AI Development Services',
+    description: 'Custom AI solutions tailored to your business needs',
+    features: [
+      'Machine learning model development',
+      'Natural language processing',
+      'Computer vision solutions',
+      'Predictive analytics',
+      'AI integration and deployment'
+    ],
+    pricing: {
+      basic: 5000,
+      pro: 15000,
+      enterprise: 50000
     },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    category: 'AI & Machine Learning',
+    icon: '🤖',
+    benefits: [
+      'Automated decision making',
+      'Improved efficiency',
+      'Cost reduction',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Customer service automation',
+      'Predictive maintenance',
+      'Fraud detection',
+      'Recommendation systems'
+    ]
+  },
+  {
+    id: 'web-development',
+    title: 'Web Development',
+    description: 'Modern, responsive web applications and websites',
+    features: [
+      'Responsive design',
+      'Progressive web apps',
+      'E-commerce solutions',
+      'Content management systems',
+      'API development'
+    ],
+    pricing: {
+      basic: 3000,
+      pro: 8000,
+      enterprise: 25000
     },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+    category: 'Web Development',
+    icon: '🌐',
+    benefits: [
+      'Enhanced user experience',
+      'Mobile optimization',
+      'SEO optimization',
+      'Fast loading times'
+    ],
+    useCases: [
+      'Corporate websites',
+      'E-commerce platforms',
+      'Web applications',
+      'Portfolio sites'
+    ]
+  },
+  {
+    id: 'mobile-development',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications',
+    features: [
+      'iOS and Android development',
+      'Cross-platform solutions',
+      'UI/UX design',
+      'App store optimization',
+      'Backend integration'
+    ],
+    pricing: {
+      basic: 8000,
+      pro: 20000,
+      enterprise: 60000
     },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+    category: 'Mobile Development',
+    icon: '📱',
+    benefits: [
+      'Increased user engagement',
+      'Better customer reach',
+      'Offline functionality',
+      'Push notifications'
+    ],
+    useCases: [
+      'Business applications',
+      'E-commerce apps',
+      'Social media apps',
+      'Utility applications'
+    ]
+  },
+  {
+    id: 'cloud-solutions',
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and migration services',
+    features: [
+      'Cloud migration',
+      'Infrastructure setup',
+      'Auto-scaling solutions',
+      'Security implementation',
+      'Cost optimization'
+    ],
+    pricing: {
+      basic: 2000,
+      pro: 5000,
+      enterprise: 15000
+    },
+    category: 'Cloud Services',
+    icon: '☁️',
+    benefits: [
+      'Reduced infrastructure costs',
+      'Improved scalability',
+      'Enhanced security',
+      'Better performance'
+    ],
+    useCases: [
+      'Application hosting',
+      'Data storage',
+      'Backup solutions',
+      'Disaster recovery'
+    ]
+  },
+  {
+    id: 'data-analytics',
+    title: 'Data Analytics & BI',
+    description: 'Business intelligence and data visualization solutions',
+    features: [
+      'Data warehousing',
+      'ETL processes',
+      'Interactive dashboards',
+      'Predictive modeling',
+      'Real-time analytics'
+    ],
+    pricing: {
+      basic: 4000,
+      pro: 12000,
+      enterprise: 35000
+    },
+    category: 'Data & Analytics',
+    icon: '📊',
+    benefits: [
+      'Data-driven insights',
+      'Improved decision making',
+      'Performance tracking',
+      'Competitive analysis'
+    ],
+    useCases: [
+      'Sales analytics',
+      'Marketing performance',
+      'Financial reporting',
+      'Operational metrics'
+    ]
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity Services',
+    description: 'Comprehensive security solutions for your digital assets',
+    features: [
+      'Security assessment',
+      'Penetration testing',
+      'Security monitoring',
+      'Incident response',
+      'Compliance consulting'
+    ],
+    pricing: {
+      basic: 3000,
+      pro: 8000,
+      enterprise: 25000
+    },
+    category: 'Cybersecurity',
+    icon: '🔒',
+    benefits: [
+      'Protect sensitive data',
+      'Compliance assurance',
+      'Risk mitigation',
+      'Peace of mind'
+    ],
+    useCases: [
+      'Data protection',
+      'Network security',
+      'Compliance audits',
+      'Security training'
+    ]
+  }
+];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+export const serviceCategories = [
+  'All',
+  'AI & Machine Learning',
+  'Web Development',
+  'Mobile Development',
+  'Cloud Services',
+  'Data & Analytics',
+  'Cybersecurity'
+];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="services, AI solutions, IT services, Zion Tech Group, services" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Services
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced services solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our services solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our services solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your services needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default ServicesPage;
+export const serviceFeatures = [
+  'Custom development',
+  '24/7 support',
+  'Scalable solutions',
+  'Security focused',
+  'Modern technologies',
+  'Agile methodology',
+  'Quality assurance',
+  'Documentation'
+];

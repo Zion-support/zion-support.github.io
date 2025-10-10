@@ -1,153 +1,291 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+/**
+ * Accessibility utilities for improving web accessibility
+ */
 
-const AccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+export interface AccessibilityOptions {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+  announceChanges?: boolean;
+}
+
+export class AccessibilityManager {
+  private options: AccessibilityOptions;
+  private observers: MutationObserver[] = [];
+  private focusTrap: HTMLElement[] = [];
+
+  constructor(options: AccessibilityOptions = {}) {
+    this.options = {
+      enableKeyboardNavigation: true,
+      enableScreenReader: true,
+      enableHighContrast: false,
+      enableReducedMotion: false,
+      announceChanges: true,
+      ...options,
+    };
+  }
+
+  /**
+   * Initialize accessibility features
+   */
+  init(): void {
+    if (typeof window === 'undefined') return;
+
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupHighContrast();
+    this.setupReducedMotion();
+    this.setupFocusManagement();
+  }
+
+  /**
+   * Setup keyboard navigation
+   */
+  private setupKeyboardNavigation(): void {
+    if (!this.options.enableKeyboardNavigation) return;
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        this.handleTabNavigation(event);
+      }
+      if (event.key === 'Escape') {
+        this.handleEscapeKey(event);
+      }
+    });
+  }
+
+  /**
+   * Setup screen reader support
+   */
+  private setupScreenReaderSupport(): void {
+    if (!this.options.enableScreenReader) return;
+
+    // Create live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'accessibility-announcer';
+    document.body.appendChild(liveRegion);
+  }
+
+  /**
+   * Setup high contrast mode
+   */
+  private setupHighContrast(): void {
+    if (!this.options.enableHighContrast) return;
+
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    this.handleHighContrastChange(mediaQuery);
+    mediaQuery.addEventListener('change', this.handleHighContrastChange);
+  }
+
+  /**
+   * Setup reduced motion support
+   */
+  private setupReducedMotion(): void {
+    if (!this.options.enableReducedMotion) return;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    this.handleReducedMotionChange(mediaQuery);
+    mediaQuery.addEventListener('change', this.handleReducedMotionChange);
+  }
+
+  /**
+   * Setup focus management
+   */
+  private setupFocusManagement(): void {
+    // Track focus changes
+    document.addEventListener('focusin', (event) => {
+      this.announceFocusChange(event.target as HTMLElement);
+    });
+  }
+
+  /**
+   * Handle tab navigation
+   */
+  private handleTabNavigation(event: KeyboardEvent): void {
+    const focusableElements = this.getFocusableElements();
+    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+
+    if (event.shiftKey) {
+      // Shift + Tab - move backwards
+      if (currentIndex > 0) {
+        focusableElements[currentIndex - 1].focus();
+      } else {
+        focusableElements[focusableElements.length - 1].focus();
+      }
+    } else {
+      // Tab - move forwards
+      if (currentIndex < focusableElements.length - 1) {
+        focusableElements[currentIndex + 1].focus();
+      } else {
+        focusableElements[0].focus();
+      }
     }
-  ];
+  }
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  /**
+   * Handle escape key
+   */
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach((modal) => {
+      if (modal.getAttribute('aria-hidden') === 'false') {
+        this.closeModal(modal as HTMLElement);
+      }
+    });
+  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Accessibility | Zion Tech Group</title>
-        <meta name="description" content="Professional Accessibility services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibility, AI solutions, IT services, Zion Tech Group, accessibility" />
-      </Helmet>
+  /**
+   * Get all focusable elements
+   */
+  private getFocusableElements(): HTMLElement[] {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])',
+    ];
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Accessibility
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibility solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+  }
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Accessibility?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibility solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+  /**
+   * Announce changes to screen readers
+   */
+  announce(message: string): void {
+    if (!this.options.announceChanges) return;
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    const announcer = document.getElementById('accessibility-announcer');
+    if (announcer) {
+      announcer.textContent = message;
+    }
+  }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our accessibility solutions for your business.
-            </p>
-          </div>
+  /**
+   * Announce focus changes
+   */
+  private announceFocusChange(element: HTMLElement): void {
+    const label = this.getElementLabel(element);
+    if (label) {
+      this.announce(`Focused on ${label}`);
+    }
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Get element label for screen readers
+   */
+  private getElementLabel(element: HTMLElement): string | null {
+    const ariaLabel = element.getAttribute('aria-label');
+    if (ariaLabel) return ariaLabel;
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your accessibility needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    const ariaLabelledBy = element.getAttribute('aria-labelledby');
+    if (ariaLabelledBy) {
+      const labelElement = document.getElementById(ariaLabelledBy);
+      if (labelElement) return labelElement.textContent;
+    }
+
+    const textContent = element.textContent?.trim();
+    if (textContent) return textContent;
+
+    const placeholder = element.getAttribute('placeholder');
+    if (placeholder) return placeholder;
+
+    return null;
+  }
+
+  /**
+   * Handle high contrast change
+   */
+  private handleHighContrastChange = (mediaQuery: MediaQueryList): void => {
+    if (mediaQuery.matches) {
+      document.body.classList.add('high-contrast');
+    } else {
+      document.body.classList.remove('high-contrast');
+    }
+  };
+
+  /**
+   * Handle reduced motion change
+   */
+  private handleReducedMotionChange = (mediaQuery: MediaQueryList): void => {
+    if (mediaQuery.matches) {
+      document.body.classList.add('reduced-motion');
+    } else {
+      document.body.classList.remove('reduced-motion');
+    }
+  };
+
+  /**
+   * Close modal
+   */
+  private closeModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+    
+    // Return focus to trigger element
+    const trigger = document.querySelector(`[aria-controls="${modal.id}"]`) as HTMLElement;
+    if (trigger) {
+      trigger.focus();
+    }
+  }
+
+  /**
+   * Cleanup
+   */
+  destroy(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
+
+// Utility functions
+export const accessibilityUtils = {
+  /**
+   * Check if element is visible to screen readers
+   */
+  isVisibleToScreenReader(element: HTMLElement): boolean {
+    const style = window.getComputedStyle(element);
+    return (
+      style.display !== 'none' &&
+      style.visibility !== 'hidden' &&
+      element.getAttribute('aria-hidden') !== 'true'
+    );
+  },
+
+  /**
+   * Get accessible name for element
+   */
+  getAccessibleName(element: HTMLElement): string | null {
+    const manager = new AccessibilityManager();
+    return manager['getElementLabel'](element);
+  },
+
+  /**
+   * Check if element is focusable
+   */
+  isFocusable(element: HTMLElement): boolean {
+    const manager = new AccessibilityManager();
+    const focusableElements = manager['getFocusableElements']();
+    return focusableElements.includes(element);
+  },
+
+  /**
+   * Add skip link
+   */
+  addSkipLink(text: string = 'Skip to main content', targetId: string = 'main'): void {
+    const skipLink = document.createElement('a');
+    skipLink.href = `#${targetId}`;
+    skipLink.textContent = text;
+    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded';
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
 };
 
-export default AccessibilityPage;
+export default AccessibilityManager;

@@ -9,80 +9,80 @@ const FinancialITPage: React.FC = () => {
   const features = [
     {
       icon: DollarSign,
-      title: 'Financial Data Management',
-      description: 'Secure and efficient management of financial data with real-time processing and compliance.',
-      benefits: ['Real-time processing', 'Data security', 'Compliance ready']
+      title: 'Financial Analytics',
+      description: 'Advanced analytics and reporting for financial data with real-time insights and predictions.',
+      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
     },
     {
       icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Ensure full compliance with financial regulations including SOX, PCI-DSS, and GDPR.',
-      benefits: ['SOX compliance', 'PCI-DSS ready', 'GDPR compliant']
+      title: 'Compliance & Security',
+      description: 'Ensure regulatory compliance and data security with enterprise-grade financial solutions.',
+      benefits: ['Regulatory compliance', 'Data encryption', 'Audit trails']
     },
     {
       icon: BarChart,
-      title: 'Financial Analytics',
-      description: 'Advanced analytics and reporting tools for financial insights and decision making.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Custom dashboards']
+      title: 'Portfolio Management',
+      description: 'Comprehensive portfolio management tools with automated rebalancing and risk monitoring.',
+      benefits: ['Automated rebalancing', 'Risk monitoring', 'Performance tracking']
     },
     {
       icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of financial systems with automated alerts and responses.',
-      benefits: ['Round-the-clock monitoring', 'Automated alerts', 'System health checks']
+      title: 'Real-Time Trading',
+      description: 'High-frequency trading systems with ultra-low latency and advanced order management.',
+      benefits: ['Ultra-low latency', 'Order management', 'Market data integration']
     },
     {
       icon: Users,
-      title: 'Multi-User Access',
-      description: 'Secure multi-user access with role-based permissions and audit trails.',
-      benefits: ['Role-based access', 'Audit trails', 'User management']
+      title: 'Client Management',
+      description: 'Complete client relationship management with personalized financial services.',
+      benefits: ['Client profiles', 'Service customization', 'Communication tools']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Streamline financial processes with automated workflows and integrations.',
-      benefits: ['Process automation', 'System integrations', 'Workflow optimization']
+      title: 'Automated Processing',
+      description: 'Automate financial processes with AI-powered decision making and workflow optimization.',
+      benefits: ['Process automation', 'AI decision making', 'Workflow optimization']
     }
   ];
 
   const benefits = [
-    'Reduce financial processing time by 80%',
-    'Improve compliance accuracy by 95%',
-    'Cut operational costs by 70%',
-    'Enhance data security and privacy',
-    'Streamline financial workflows',
-    'Real-time financial insights'
+    'Improve financial decision making',
+    'Reduce operational costs by 40%',
+    'Enhance regulatory compliance',
+    'Increase trading efficiency by 60%',
+    'Better risk management',
+    'Streamlined financial operations'
   ];
 
-  const services = [
+  const useCases = [
     {
-      title: 'Core Banking Systems',
-      description: 'Modernize your core banking infrastructure with cloud-native solutions',
+      title: 'Investment Banking',
+      description: 'Advanced trading systems and risk management for investment banks',
       icon: '🏦'
     },
     {
-      title: 'Payment Processing',
-      description: 'Secure and fast payment processing with fraud detection',
-      icon: '💳'
-    },
-    {
-      title: 'Risk Management',
-      description: 'Advanced risk assessment and management tools',
-      icon: '⚠️'
-    },
-    {
-      title: 'Trading Systems',
-      description: 'High-performance trading platforms with real-time data',
+      title: 'Asset Management',
+      description: 'Portfolio management and client services for asset managers',
       icon: '📈'
+    },
+    {
+      title: 'Insurance',
+      description: 'Underwriting and claims processing with AI-powered risk assessment',
+      icon: '🛡️'
+    },
+    {
+      title: 'Fintech',
+      description: 'Digital banking and payment solutions for modern financial services',
+      icon: '💳'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Financial IT Solutions - Zion Tech Group | Banking & Finance Technology</title>
-        <meta name="description" content="Transform your financial institution with our comprehensive IT solutions. Secure, compliant, and efficient technology for banking, payments, and financial services." />
-        <meta name="keywords" content="financial IT, banking technology, payment processing, financial compliance, core banking, risk management" />
+        <title>Financial IT - Zion Tech Group | Financial Technology Solutions</title>
+        <meta name="description" content="Transform your financial operations with advanced IT solutions. Improve efficiency, compliance, and decision making with Zion Tech Group's financial technology services." />
+        <meta name="keywords" content="financial IT, fintech, trading systems, portfolio management, compliance, financial analytics" />
       </Helmet>
       
       <Navigation />
@@ -99,8 +99,8 @@ const FinancialITPage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your financial institution with secure, compliant, and efficient technology solutions. 
-            From core banking to payment processing, we deliver cutting-edge financial IT services.
+            Transform your financial operations with cutting-edge IT solutions. 
+            Improve efficiency, ensure compliance, and enhance decision making with our financial technology expertise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
@@ -109,75 +109,6 @@ const FinancialITPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -187,11 +118,11 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Financial Solutions
+              Financial Technology Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our financial IT solutions are designed to meet the unique needs of financial institutions, 
-              ensuring security, compliance, and operational excellence.
+              Our financial IT solutions combine advanced technology with deep financial expertise 
+              to deliver powerful tools for modern financial institutions.
             </p>
           </div>
           
@@ -211,72 +142,6 @@ const PagePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of financial services and banking operations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -288,10 +153,10 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Financial IT Solutions?
+              Why Choose Financial IT?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern financial technology with our proven solutions.
+              Experience the benefits of modern financial technology with measurable improvements in efficiency and compliance.
             </p>
           </div>
           
@@ -308,15 +173,39 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our financial IT solutions are designed for various financial institutions and use cases.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Modernize Your Financial IT?
+            Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your financial institution with our cutting-edge IT solutions. 
-            Get started with a free consultation and discover how we can help.
+            Discover how our financial IT solutions can revolutionize your operations. 
+            Get started with a free consultation and demo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -330,30 +219,8 @@ const PagePage: React.FC = () => {
       </section>
 
       <Footer />
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
 
-export default PagePage;
+export default FinancialITPage;

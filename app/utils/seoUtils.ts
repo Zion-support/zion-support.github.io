@@ -1,4 +1,6 @@
-// SEO utilities for optimizing search engine visibility and performance
+/**
+ * SEO utilities for optimizing search engine visibility and performance
+ */
 
 export interface SEOData {
   title: string;
@@ -7,13 +9,21 @@ export interface SEOData {
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;,
+  twitterCard?: string;
   structuredData?: unknown;
 }
 
 export const generateMetaTags = (data: SEOData): string => {
-  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
-  
+  const { 
+    title, 
+    description, 
+    keywords, 
+    canonicalUrl, 
+    ogImage = 'https://ziontechgroup.com/og-image.jpg', 
+    ogType = 'website', 
+    twitterCard = 'summary_large_image' 
+  } = data;
+
   return `
     <title>${title}</title>
     <meta name="description" content="${description}" />
@@ -23,11 +33,11 @@ export const generateMetaTags = (data: SEOData): string => {
     <!-- Open Graph -->
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
-    <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:image" content="${ogImage}" />
+    <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:type" content="${ogType}" />
     
-    <!-- Twitter Card -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="${twitterCard}" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
@@ -36,140 +46,197 @@ export const generateMetaTags = (data: SEOData): string => {
 };
 
 export const generateStructuredData = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Product' | 'Service';
   name: string;
   description: string;
   url: string;
   logo?: string;
-  address?: {
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
-  contactPoint?: {
-    telephone: string;
-    contactType: string;
-  };
+  sameAs?: string[];
+  [key: string]: any;
 }): string => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": data.name,
-    "description": data.description,
-    "url": data.url,
-    ...(data.logo && { "logo": data.logo }),
-    ...(data.address && { "address": data.address }),
-    ...(data.contactPoint && { "contactPoint": data.contactPoint })
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url,
   };
-  
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+
+  if (data.logo) {
+    baseStructure.logo = data.logo;
+  }
+
+  if (data.sameAs) {
+    baseStructure.sameAs = data.sameAs;
+  }
+
+  // Add additional properties
+  Object.keys(data).forEach(key => {
+    if (!['type', 'name', 'description', 'url', 'logo', 'sameAs'].includes(key)) {
+      baseStructure[key] = data[key];
+    }
+  });
+
+  return JSON.stringify(baseStructure);
 };
 
-export const generateSitemap = (pages: Array<{
-  url: string;
-  lastModified: string;
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
-}>): string => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+export const generateSitemap = (urls: string[]): string => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ziontechgroup.com';
+  
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  ${urls.map(url => `
+    <url>
+      <loc>${baseUrl}${url}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>${url === '' ? '1.0' : '0.8'}</priority>
+    </url>
+  `).join('')}
 </urlset>`;
-  
-  return sitemap;
 };
 
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true): string => {
+export const generateRobotsTxt = (allowAll: boolean = true): string => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ziontechgroup.com';
+  
   if (allowAll) {
     return `User-agent: *
 Allow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${baseUrl}/sitemap.xml`;
   } else {
     return `User-agent: *
 Disallow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${baseUrl}/sitemap.xml`;
   }
 };
 
-export const optimizeImages = (images: Array<{
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}>): Array<{
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  loading: 'lazy' | 'eager';
-  decoding: 'async' | 'sync' | 'auto';
-}> => {
-  return images.map((image, index) => ({
-    ...image,
-    loading: index < 3 ? 'eager' as const : 'lazy' as const,
-    decoding: 'async' as const
-  }));
-};
-
-export const generateBreadcrumbs = (items: Array<{
-  name: string;
-  url: string;
-}>): string => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.name,
-      "item": item.url
-    }))
-  };
-  
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
-};
-
-export const validateSEO = (data: SEOData): string[] => {
-  const errors: string[] = [];
-  
-  if (data.title.length < 30 || data.title.length > 60) {
-    errors.push('Title should be between 30-60 characters');
-  }
-  
-  if (data.description.length < 120 || data.description.length > 160) {
-    errors.push('Description should be between 120-160 characters');
-  }
-  
-  if (data.keywords.length === 0) {
-    errors.push('Keywords should not be empty');
-  }
-  
-  if (!data.canonicalUrl.startsWith('http')) {
-    errors.push('Canonical URL should be a valid URL');
-  }
-  
-  return errors;
-};
-
-export const generatePageSpeedInsights = (url: string): Promise<{
-  performance: number;
-  accessibility: number;
-  bestPractices: number;
-  seo: number;
-}> => {
-  // This would typically call the PageSpeed Insights API
-  return Promise.resolve({
-    performance: 85,
-    accessibility: 90,
-    bestPractices: 88,
-    seo: 92
+export const optimizeImages = (images: HTMLImageElement[]): void => {
+  images.forEach(img => {
+    // Add loading="lazy" for better performance
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    
+    // Add alt text if missing
+    if (!img.hasAttribute('alt')) {
+      img.setAttribute('alt', '');
+    }
+    
+    // Optimize srcset for responsive images
+    if (img.dataset.srcset) {
+      img.srcset = img.dataset.srcset;
+    }
   });
+};
+
+export const addBreadcrumbs = (items: { name: string; url: string }[]): string => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return JSON.stringify(structuredData);
+};
+
+export const generatePageSchema = (pageData: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
+  image?: string;
+}): string => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: pageData.title,
+    description: pageData.description,
+    url: pageData.url,
+  };
+
+  if (pageData.datePublished) {
+    schema.datePublished = pageData.datePublished;
+  }
+
+  if (pageData.dateModified) {
+    schema.dateModified = pageData.dateModified;
+  }
+
+  if (pageData.author) {
+    schema.author = {
+      '@type': 'Person',
+      name: pageData.author,
+    };
+  }
+
+  if (pageData.image) {
+    schema.image = pageData.image;
+  }
+
+  return JSON.stringify(schema);
+};
+
+export const checkSEOHealth = (): {
+  title: boolean;
+  description: boolean;
+  headings: boolean;
+  images: boolean;
+  links: boolean;
+  score: number;
+} => {
+  const issues = {
+    title: false,
+    description: false,
+    headings: false,
+    images: false,
+    links: false,
+  };
+
+  // Check title
+  const title = document.querySelector('title');
+  issues.title = !title || title.textContent!.length < 30 || title.textContent!.length > 60;
+
+  // Check description
+  const description = document.querySelector('meta[name="description"]');
+  issues.description = !description || description.getAttribute('content')!.length < 120 || description.getAttribute('content')!.length > 160;
+
+  // Check headings
+  const h1 = document.querySelector('h1');
+  issues.headings = !h1 || document.querySelectorAll('h1').length > 1;
+
+  // Check images
+  const images = document.querySelectorAll('img');
+  issues.images = Array.from(images).some(img => !img.hasAttribute('alt'));
+
+  // Check links
+  const links = document.querySelectorAll('a');
+  issues.links = Array.from(links).some(link => !link.hasAttribute('href') || link.getAttribute('href') === '#');
+
+  const score = Object.values(issues).filter(Boolean).length;
+  const totalChecks = Object.keys(issues).length;
+
+  return {
+    ...issues,
+    score: Math.round(((totalChecks - score) / totalChecks) * 100),
+  };
+};
+
+export default {
+  generateMetaTags,
+  generateStructuredData,
+  generateSitemap,
+  generateRobotsTxt,
+  optimizeImages,
+  addBreadcrumbs,
+  generatePageSchema,
+  checkSEOHealth,
 };
