@@ -69,7 +69,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Environmental', href: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
     { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
-    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
+    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Mic, description: 'Voice AI Platform' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, description: 'Maintenance AI' },
+    { name: 'AI Supply Chain', href: '/ai-supply-chain', icon: BarChart, description: 'Supply Chain AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
@@ -100,7 +103,8 @@ const Navigation: React.FC = () => {
     { name: 'Hybrid Cloud', href: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
     { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
-    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
+    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' },
+    { name: '5G Implementation', href: '/5g-implementation', icon: Wifi, description: '5G Networks' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
@@ -134,7 +138,8 @@ const Navigation: React.FC = () => {
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
     { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D AI Solutions' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
@@ -143,8 +148,8 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
-    { name: '5G Implementation', href: '/5g-implementation', icon: Globe, description: '5G Solutions' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
+    { name: '5G Implementation', href: '/5g-implementation', icon: Wifi, description: '5G Networks' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D AI Solutions' },
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
   ];
   return (

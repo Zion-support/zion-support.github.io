@@ -20,7 +20,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice AI platform' },
+    { name: 'AI Predictive Maintenance', url: '/ai-predictive-maintenance', description: 'Maintenance AI' },
+    { name: 'AI Supply Chain', url: '/ai-supply-chain', description: 'Supply chain AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
@@ -36,7 +39,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Analytics', url: '/data-analytics', description: 'Business intelligence' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile applications' },
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
-    { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
+    { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' },
+    { name: '5G Implementation', url: '/5g-implementation', description: '5G networks' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
@@ -54,7 +58,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Legal Document Manager', url: '/legal-document-manager', description: 'Legal & compliance' },
     { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -63,7 +68,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: '5G Implementation', url: '/5g-implementation', description: '5G solutions' },
+    { name: '5G Implementation', url: '/5g-implementation', description: '5G networks' },
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
     { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
   ];

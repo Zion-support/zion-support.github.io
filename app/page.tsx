@@ -144,7 +144,8 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-              startups, and enterprises worldwide with proven results and 24/7 expert support.
+              startups, and enterprises worldwide with proven results and 24/7 expert support. Our AI-powered solutions have helped 
+              clients reduce costs by 40%, increase efficiency by 60%, and generate over $2.5B in additional revenue.
             </p>
             
             {/* Key Benefits */}
@@ -643,8 +644,73 @@ const HomePage: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📡</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">5G Implementation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Deploy ultra-fast 5G networks with edge computing and IoT connectivity for smart cities and enterprises.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">Starting at $2,999/month</div>
+                  <a href="/5g-implementation" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI 3D Generation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Create stunning 3D models with AI from text descriptions, images, or sketches for gaming and design.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">Starting at $49/month</div>
+                  <a href="/ai-3d-generation" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎤</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Voice Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Build custom voice assistants with natural language processing and multi-language support.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">Starting at $299/month</div>
+                  <a href="/ai-voice-assistant" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Predictive Maintenance</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-orange-400 mb-2">Starting at $599/month</div>
+                  <a href="/ai-predictive-maintenance" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🚚</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Supply Chain</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Optimize supply chain operations with AI-driven demand forecasting and inventory management.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $899/month</div>
+                  <a href="/ai-supply-chain" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics & Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Intelligent robotic solutions for manufacturing, healthcare, and service industries.
                 </p>
@@ -657,7 +723,7 @@ const HomePage: React.FC = () => {
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge Computing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Connected devices and edge computing solutions for smart cities and industrial automation.
                 </p>
@@ -677,19 +743,6 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
                   <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Data-driven insights and predictive analytics to optimize business performance and decision-making.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
-                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
