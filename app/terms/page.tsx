@@ -1,8 +1,10 @@
 'use client';
+
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {
+const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
   
   const sections = [
@@ -49,37 +51,51 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white"></div>
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
-        <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Terms of Service</h1>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services
-          </p>
-          <div className="flex items-center justify-center text-sm text-blue-200"></div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
-          </div>
-        </div>
-      </div>
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group | Legal Terms</title>
+        <meta name="description" content="Read our terms of service and legal terms for using Zion Tech Group's AI and IT solutions." />
+        <meta name="keywords" content="terms of service, legal terms, user agreement, Zion Tech Group terms" />
+        <meta property="og:title" content="Terms of Service - Zion Tech Group" />
+        <meta property="og:description" content="Legal terms and conditions for our services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/terms" />
+      </Helmet>
 
-      <div className="py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Terms of <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Service</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Please read these terms carefully before using our services
+            </p>
+            <div className="flex items-center justify-center text-sm text-gray-400">
+              <Calendar className="h-4 w-4 mr-2" />
+              Last updated: {lastUpdated}
+            </div>
+          </div>
+        </section>
+
+        {/* Terms Sections */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {sections.map((section, index) => (</div>
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>
-                  <div className="flex items-start"></div>
-                    <div className="flex-shrink-0 mr-4"></div>
-                      <section.icon className="h-6 w-6 text-blue-600" />
+              {sections.map((section, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mr-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+                        <section.icon className="h-6 w-6 text-white" />
+                      </div>
                     </div>
-                    <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                    <div className="flex-1">
+                      <h2 className="text-2xl font-bold text-white mb-4">
                         {index + 1}. {section.title}
                       </h2>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed">
                         {section.content}
                       </p>
                     </div>
@@ -88,39 +104,42 @@ export default function TermsPage() {
               ))}
             </div>
 
-            <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-              <p className="text-gray-700 mb-6">
+            {/* Contact Information */}
+            <div className="mt-16 bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <p className="text-gray-300 mb-8">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-              <div className="grid md:grid-cols-2 gap-6"></div>
-                <div className="flex items-center"></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">legal@ziontechgroup.com</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">legal@ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center"></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">(302) 464-0950</span>
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">(302) 464-0950</span>
                 </div>
-                <div className="flex items-center"></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">ziontechgroup.com</span>
+                <div className="flex items-center">
+                  <Globe className="h-5 w-5 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center"></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Zion Tech Group Legal Team</span>
+                <div className="flex items-center">
+                  <User className="h-5 w-5 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">Zion Tech Group Legal Team</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 text-center"></div>
-              <p className="text-sm text-gray-500">
+            <div className="mt-8 text-center">
+              <p className="text-sm text-gray-400">
                 By using our services, you acknowledge that you have read and understood these terms.
               </p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default TermsPage;
