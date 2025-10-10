@@ -1,5 +1,12 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: string;
+  focusVisible: boolean;
+}
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -8,7 +15,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   });
-  const { trackEvent } = useAnalytics();
 
   useEffect(() => {
     // Add ARIA landmarks
@@ -25,15 +31,22 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
+      }
     };
 
     // Add skip links
     const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      const existingSkipLink = document.querySelector('a[href="#main-content"]');
+      if (!existingSkipLink) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#main-content';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
     };
 
     // Enhance focus management
@@ -95,21 +108,85 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       return () => document.removeEventListener('keydown', handleKeyDown);
     };
 
+    // Apply accessibility settings
+    const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+      const root = document.documentElement;
+      
+      if (newSettings.highContrast) {
+        root.classList.add('high-contrast');
+      } else {
+        root.classList.remove('high-contrast');
+      }
+      
+      if (newSettings.reducedMotion) {
+        root.classList.add('reduced-motion');
+      } else {
+        root.classList.remove('reduced-motion');
+      }
+    };
+
+    // Setup keyboard navigation
+    const setupKeyboardNavigation = () => {
+      // Enhanced keyboard navigation logic
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          const focusable = Array.from(document.querySelectorAll(focusableElements));
+          const firstFocusable = focusable[0] as HTMLElement;
+          const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              lastFocusable?.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              firstFocusable?.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleTabKey);
+      return () => document.removeEventListener('keydown', handleTabKey);
+    };
+
+    // Setup focus management
+    const setupFocusManagement = () => {
+      // Focus management logic
+      const manageFocus = (e: FocusEvent) => {
+        const target = e.target as HTMLElement;
+        if (target) {
+          target.setAttribute('data-focused', 'true');
+        }
+      };
+
+      const handleFocusOut = (e: FocusEvent) => {
+        const target = e.target as HTMLElement;
+        if (target) {
+          target.removeAttribute('data-focused');
+        }
+      };
+
+      document.addEventListener('focusin', manageFocus);
+      document.addEventListener('focusout', handleFocusOut);
+      
+      return () => {
+        document.removeEventListener('focusin', manageFocus);
+        document.removeEventListener('focusout', handleFocusOut);
+      };
+    };
+
     // Initialize accessibility enhancements
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
-    const cleanup = addKeyboardNavigation();
+    const cleanupKeyboard = addKeyboardNavigation();
+    const cleanupFocus = setupFocusManagement();
 
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -144,17 +221,19 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
 
-    // Setup keyboard navigation
-    setupKeyboardNavigation();
-
-    // Setup focus management
-    setupFocusManagement();
-
+    // Cleanup function
     return () => {
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
+      cleanupKeyboard();
+      cleanupFocus();
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
