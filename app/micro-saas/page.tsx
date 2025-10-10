@@ -349,7 +349,9 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.9,
       users: '150+',
-      trial: '30-day free trial'
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle',
+      capabilities: ['1000x faster calculations', '99.9% prediction accuracy', 'Quantum advantage', 'Real-time risk modeling']
     },
     { 
       name: 'AI 3D Generation Studio', 
@@ -999,10 +1001,162 @@ const MicroSAASPage: React.FC = () => {
       trial: '45-day free trial',
       link: 'https://ziontechgroup.com/ai-quantum-neural-networks',
       capabilities: ['Exponential computational power', 'Advanced learning', 'Pattern recognition', 'Training acceleration']
+    },
+
+    // New Revolutionary Micro SAAS Services 2025
+    { 
+      name: 'AI Code Security Auditor Pro', 
+      href: '/ai-code-security-auditor', 
+      icon: Shield, 
+      category: 'Security', 
+      price: '$399/mo',
+      description: 'Advanced AI-powered code security auditing with vulnerability detection, compliance checking, and automated fixes',
+      features: ['Vulnerability Detection', 'Compliance Checking', 'Automated Fixes', 'Security Scoring', 'Code Review', 'Threat Modeling', 'Penetration Testing', 'Security Training'],
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-code-security-auditor',
+      capabilities: ['99.8% vulnerability detection', 'Automated security fixes', 'Real-time threat analysis', 'Compliance automation']
+    },
+    { 
+      name: 'AI Investment Optimizer Pro', 
+      href: '/ai-investment-optimizer', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$599/mo',
+      description: 'AI-powered investment portfolio optimization with real-time market analysis and risk management',
+      features: ['Portfolio Optimization', 'Risk Management', 'Market Analysis', 'Asset Allocation', 'Performance Tracking', 'Tax Optimization', 'Rebalancing', 'Alerts'],
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-investment-optimizer',
+      capabilities: ['25% better returns', 'Risk reduction', 'Real-time optimization', 'Tax-efficient strategies']
+    },
+    { 
+      name: 'AI Mental Health Companion', 
+      href: '/ai-mental-health-companion', 
+      icon: Heart, 
+      category: 'Health', 
+      price: '$199/mo',
+      description: 'AI-powered mental health companion with mood tracking, therapy sessions, and wellness recommendations',
+      features: ['Mood Tracking', 'Therapy Sessions', 'Wellness Recommendations', 'Crisis Intervention', 'Progress Monitoring', 'Meditation Guides', 'Sleep Analysis', 'Stress Management'],
+      popular: true,
+      rating: 4.7,
+      users: '2,500+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-mental-health-companion',
+      capabilities: ['24/7 mental health support', 'Personalized therapy', 'Mood improvement tracking', 'Crisis prevention']
+    },
+    { 
+      name: 'AI Smart Home Controller Pro', 
+      href: '/ai-smart-home-controller', 
+      icon: Home, 
+      category: 'IoT', 
+      price: '$149/mo',
+      description: 'Intelligent smart home automation with AI-powered energy management and security monitoring',
+      features: ['Home Automation', 'Energy Management', 'Security Monitoring', 'Voice Control', 'Predictive Maintenance', 'Climate Control', 'Lighting Control', 'Appliance Management'],
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-smart-home-controller',
+      capabilities: ['40% energy savings', 'Smart automation', 'Security monitoring', 'Predictive maintenance']
+    },
+    { 
+      name: 'AI Voice Cloning Studio Pro', 
+      href: '/ai-voice-cloning-studio', 
+      icon: Mic, 
+      category: 'Audio', 
+      price: '$299/mo',
+      description: 'Professional voice cloning and synthesis with AI-powered voice generation and customization',
+      features: ['Voice Cloning', 'Voice Synthesis', 'Emotion Control', 'Language Translation', 'Voice Conversion', 'Audio Editing', 'Real-time Processing', 'API Integration'],
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-voice-cloning-studio',
+      capabilities: ['99% voice accuracy', 'Real-time synthesis', 'Emotion control', 'Multi-language support']
+    },
+    { 
+      name: 'AI Blockchain Analytics Pro', 
+      href: '/ai-blockchain-analytics', 
+      icon: Shield, 
+      category: 'Blockchain', 
+      price: '$799/mo',
+      description: 'Advanced blockchain analytics with transaction monitoring, fraud detection, and compliance reporting',
+      features: ['Transaction Monitoring', 'Fraud Detection', 'Compliance Reporting', 'Risk Assessment', 'Address Analysis', 'Smart Contract Auditing', 'DeFi Analytics', 'Regulatory Compliance'],
+      popular: true,
+      rating: 4.9,
+      users: '600+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-blockchain-analytics',
+      capabilities: ['Real-time monitoring', 'Fraud prevention', 'Compliance automation', 'Risk assessment']
+    },
+    { 
+      name: 'AI Quantum Cryptography Suite', 
+      href: '/ai-quantum-cryptography', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$1,999/mo',
+      description: 'Quantum-resistant cryptography with unbreakable encryption and secure communication protocols',
+      features: ['Quantum Encryption', 'Secure Communication', 'Key Distribution', 'Digital Signatures', 'Authentication', 'Compliance Tools', 'API Security', 'Audit Logging'],
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-cryptography',
+      capabilities: ['Unbreakable encryption', 'Quantum-safe security', 'Future-proof protection', 'Compliance automation']
+    },
+    { 
+      name: 'AI Space Mission Planner', 
+      href: '/ai-space-mission-planner', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$4,999/mo',
+      description: 'AI-powered space mission planning with orbital mechanics, trajectory optimization, and mission simulation',
+      features: ['Orbital Mechanics', 'Trajectory Optimization', 'Mission Simulation', 'Risk Assessment', 'Resource Planning', 'Launch Window Analysis', 'Satellite Management', 'Space Weather Integration'],
+      popular: false,
+      rating: 4.9,
+      users: '25+',
+      trial: '60-day free trial',
+      link: 'https://ziontechgroup.com/ai-space-mission-planner',
+      capabilities: ['99.9% mission success rate', 'Optimal trajectory planning', 'Real-time space monitoring', 'Advanced orbital calculations']
+    },
+    { 
+      name: 'AI Climate Prediction Engine', 
+      href: '/ai-climate-prediction', 
+      icon: Globe, 
+      category: 'Climate Tech', 
+      price: '$1,299/mo',
+      description: 'Advanced climate modeling and prediction with AI-powered environmental analysis and sustainability planning',
+      features: ['Climate Modeling', 'Weather Prediction', 'Environmental Analysis', 'Carbon Tracking', 'Sustainability Planning', 'Risk Assessment', 'Real-time Monitoring', 'Policy Recommendations'],
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-climate-prediction',
+      capabilities: ['95% prediction accuracy', 'Real-time climate monitoring', 'Carbon footprint optimization', 'Sustainability insights']
+    },
+    { 
+      name: 'AI Molecular Designer Pro', 
+      href: '/ai-molecular-designer', 
+      icon: FileText, 
+      category: 'Science', 
+      price: '$2,499/mo',
+      description: 'AI-powered molecular design and drug discovery with advanced chemistry modeling and simulation',
+      features: ['Molecular Modeling', 'Drug Design', 'Chemical Simulation', 'Property Prediction', 'Reaction Planning', 'Toxicity Analysis', 'Patent Search', 'Collaboration Tools'],
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-molecular-designer',
+      capabilities: ['90% accuracy in predictions', 'Faster drug discovery', 'Chemical property analysis', 'Patent-safe designs']
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education', 'Audio', 'IoT', 'Blockchain', 'Creative'];
 
   if (!isLoaded) {
     return (

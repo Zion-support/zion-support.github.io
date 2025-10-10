@@ -1153,6 +1153,258 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 31,
+      name: 'AI Code Security Auditor Pro',
+      description: 'Advanced AI-powered code security auditing with vulnerability detection, compliance checking, and automated fixes',
+      icon: Shield,
+      features: [
+        'Vulnerability Detection',
+        'Compliance Checking',
+        'Automated Fixes',
+        'Security Scoring',
+        'Code Review',
+        'Threat Modeling',
+        'Penetration Testing',
+        'Security Training'
+      ],
+      category: 'Security AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '99.8% vulnerability detection',
+        'Automated security fixes',
+        'Real-time threat analysis',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Investment Optimizer Pro',
+      description: 'AI-powered investment portfolio optimization with real-time market analysis and risk management',
+      icon: BarChart,
+      features: [
+        'Portfolio Optimization',
+        'Risk Management',
+        'Market Analysis',
+        'Asset Allocation',
+        'Performance Tracking',
+        'Tax Optimization',
+        'Rebalancing',
+        'Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '25% better returns',
+        'Risk reduction',
+        'Real-time optimization',
+        'Tax-efficient strategies'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Mental Health Companion',
+      description: 'AI-powered mental health companion with mood tracking, therapy sessions, and wellness recommendations',
+      icon: Stethoscope,
+      features: [
+        'Mood Tracking',
+        'Therapy Sessions',
+        'Wellness Recommendations',
+        'Crisis Intervention',
+        'Progress Monitoring',
+        'Meditation Guides',
+        'Sleep Analysis',
+        'Stress Management'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        '24/7 mental health support',
+        'Personalized therapy',
+        'Mood improvement tracking',
+        'Crisis prevention'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Smart Home Controller Pro',
+      description: 'Intelligent smart home automation with AI-powered energy management and security monitoring',
+      icon: Settings,
+      features: [
+        'Home Automation',
+        'Energy Management',
+        'Security Monitoring',
+        'Voice Control',
+        'Predictive Maintenance',
+        'Climate Control',
+        'Lighting Control',
+        'Appliance Management'
+      ],
+      category: 'IoT AI',
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        '40% energy savings',
+        'Smart automation',
+        'Security monitoring',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Voice Cloning Studio Pro',
+      description: 'Professional voice cloning and synthesis with AI-powered voice generation and customization',
+      icon: FileText,
+      features: [
+        'Voice Cloning',
+        'Voice Synthesis',
+        'Emotion Control',
+        'Language Translation',
+        'Voice Conversion',
+        'Audio Editing',
+        'Real-time Processing',
+        'API Integration'
+      ],
+      category: 'Audio AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        '99% voice accuracy',
+        'Real-time synthesis',
+        'Emotion control',
+        'Multi-language support'
+      ]
+    },
+    {
+      id: 36,
+      name: 'AI Blockchain Analytics Pro',
+      description: 'Advanced blockchain analytics with transaction monitoring, fraud detection, and compliance reporting',
+      icon: Shield,
+      features: [
+        'Transaction Monitoring',
+        'Fraud Detection',
+        'Compliance Reporting',
+        'Risk Assessment',
+        'Address Analysis',
+        'Smart Contract Auditing',
+        'DeFi Analytics',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.9,
+      users: '600+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Real-time monitoring',
+        'Fraud prevention',
+        'Compliance automation',
+        'Risk assessment'
+      ]
+    },
+    {
+      id: 37,
+      name: 'AI Space Mission Planner',
+      description: 'AI-powered space mission planning with orbital mechanics, trajectory optimization, and mission simulation',
+      icon: Rocket,
+      features: [
+        'Orbital Mechanics',
+        'Trajectory Optimization',
+        'Mission Simulation',
+        'Risk Assessment',
+        'Resource Planning',
+        'Launch Window Analysis',
+        'Satellite Management',
+        'Space Weather Integration'
+      ],
+      category: 'Space AI',
+      popular: false,
+      rating: 4.9,
+      users: '25+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Optimal trajectory planning',
+        'Real-time space monitoring',
+        'Advanced orbital calculations'
+      ]
+    },
+    {
+      id: 38,
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and prediction with AI-powered environmental analysis and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Environmental Analysis',
+        'Carbon Tracking',
+        'Sustainability Planning',
+        'Risk Assessment',
+        'Real-time Monitoring',
+        'Policy Recommendations'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '95% prediction accuracy',
+        'Real-time climate monitoring',
+        'Carbon footprint optimization',
+        'Sustainability insights'
+      ]
+    },
+    {
+      id: 39,
+      name: 'AI Molecular Designer Pro',
+      description: 'AI-powered molecular design and drug discovery with advanced chemistry modeling and simulation',
+      icon: FileText,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Chemical Simulation',
+        'Property Prediction',
+        'Reaction Planning',
+        'Toxicity Analysis',
+        'Patent Search',
+        'Collaboration Tools'
+      ],
+      category: 'Scientific AI',
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '90% accuracy in predictions',
+        'Faster drug discovery',
+        'Chemical property analysis',
+        'Patent-safe designs'
+      ]
+    },
+    {
+      id: 31,
       name: 'AI Quantum Financial Oracle Pro',
       description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
       icon: Brain,
@@ -1517,15 +1769,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
-=======
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
-=======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Immersive Learning'];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
->>>>>>> origin/main
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Immersive Learning', 'Security AI', 'IoT AI', 'Audio AI', 'Space AI', 'Climate AI'];
 
   if (!isLoaded) {
     return (
