@@ -428,10 +428,13 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <a 
+                href={service.href || '/contact'} 
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+              </a>
             </div>
           ))}
         </div>

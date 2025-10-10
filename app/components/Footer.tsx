@@ -10,28 +10,28 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+        { name: 'AI Customer Support Suite', href: '/ai-customer-support' },
+        { name: 'AI Data Analytics Platform', href: '/ai-data-analytics' },
+        { name: 'AI Content Generation Studio', href: '/ai-content-generation' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+        { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
+        { name: 'Enterprise Cybersecurity Suite', href: '/cybersecurity' },
+        { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
+        { name: '24/7 IT Support & Monitoring', href: '/it-support' },
+        { name: 'Custom Software Development', href: '/custom-development' },
+        { name: 'DevOps & CI/CD Implementation', href: '/devops-cicd' },
+        { name: 'Database Management & Optimization', href: '/database-management' }
       ]
     },
     {

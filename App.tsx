@@ -80,6 +80,11 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'));
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
+const QuantumCloudInfrastructurePage = React.lazy(() => import('./app/quantum-cloud-infrastructure/page'));
+const AINeuralMemoryAssistantPage = React.lazy(() => import('./app/ai-neural-memory-assistant/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -131,6 +136,11 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
+                      <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
+                      <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                      <Route path="/quantum-cloud-infrastructure" element={<QuantumCloudInfrastructurePage />} />
+                      <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistantPage />} />
                     </Routes>
                   </Suspense>
                   </main>
