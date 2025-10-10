@@ -72,6 +72,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
   const itServices = [
+    { name: 'Cloud Migration Services', href: '/cloud-migration-services', icon: Cloud, description: 'Expert Cloud Migration' },
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -104,6 +105,9 @@ const Navigation: React.FC = () => {
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe, description: 'Social Media AI' },
+    { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation', icon: Mail, description: 'Email Automation' },
+    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: Users, description: 'Support Chatbot' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
     { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation' },

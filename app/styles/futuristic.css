@@ -861,3 +861,293 @@ body {
     animation: none;
   }
 }
+
+/* Advanced Futuristic Components */
+
+/* Cyber Button with Advanced Effects */
+.cyber-button {
+  position: relative;
+  background: linear-gradient(45deg, #0f0f23, #1a1a2e);
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  color: #0f0f23;
+  background: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Quantum Card with Energy Pulse */
+.quantum-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.quantum-card:hover::before {
+  transform: translateX(100%);
+}
+
+.quantum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.6);
+}
+
+/* Energy Pulse Animation */
+.energy-pulse {
+  animation: energyPulse 2s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* Cyber Scan Line Effect */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #10b981);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: holographicShift 3s ease infinite;
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cyber Glow Effect */
+.cyber-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* Neural Network Background */
+.neural-network-bg {
+  position: relative;
+  background: #0f0f23;
+}
+
+.neural-network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.1) 2px, transparent 2px);
+  background-size: 100px 100px, 80px 80px, 120px 120px;
+  animation: neuralPulse 4s ease-in-out infinite;
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  background: #000;
+  color: #00ff00;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  animation: matrixRain 3s linear infinite;
+}
+
+/* Cyber Grid Pattern */
+.cyber-grid {
+  position: relative;
+  background: #0f0f23;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+/* Hologram Card */
+.hologram-card {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 50%, 
+    rgba(236, 72, 153, 0.1) 100%
+  );
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  animation: holographicFlicker 3s ease-in-out infinite;
+}
+
+@keyframes holographicFlicker {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+/* Neon Glow Advanced */
+.neon-glow {
+  box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+}
+
+/* Cyber Card */
+.cyber-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.6);
+}
+
+/* Advanced Responsive Design */
+@media (max-width: 640px) {
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .quantum-card,
+  .cyber-card,
+  .hologram-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .holographic-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quantum-card,
+  .cyber-card,
+  .hologram-card {
+    padding: 32px;
+    border-radius: 20px;
+  }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 2560px) {
+  .quantum-field::before,
+  .neural-network::before,
+  .holographic-stream::before {
+    animation-duration: 1.5s;
+  }
+  
+  .cyber-button {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+}

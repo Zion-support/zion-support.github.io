@@ -233,6 +233,36 @@ const HomePage: React.FC = () => {
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📱</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Social Media Manager</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Revolutionary AI-powered social media management platform. Automate content creation, scheduling, and analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">Starting at $29/month</div>
+                  <a href="/ai-social-media-manager" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📧</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Email Marketing</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Transform your email marketing with AI-powered automation. Create, send, and optimize email campaigns that convert.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2 neon-text">Starting at $49/month</div>
+                  <a href="/ai-email-marketing-automation" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
