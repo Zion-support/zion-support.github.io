@@ -49,11 +49,7 @@ export function isValidPhone(phone: string): boolean {,}
  */;
 export function isValidUrl(url: string): boolean {,}
     ,
-<<<<<<< HEAD
-  try {,;}
-=======
-  try {,
->>>>>>> origin/main
+try {,
     const urlObj = new URL(url);
     return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
 export function isValidUrl(url: string): boolean {,}
@@ -75,15 +71,10 @@ try {new URL(url);}
  */;
 export function isRequired(value: string | null | undefined): boolean {,}
     ,
-<<<<<<< HEAD
-  if (value === null || value === undefined) {,;
-    return false;}}
-=======
-  if (value === null || value === undefined) {,
+if (value === null || value === undefined) {,
     return false
   }
   }
->>>>>>> origin/main
   return value.toString().trim().length > 0;
 export function isRequired(value: string | null | undefined): boolean {,}
     return value !== null && value !== undefined && value.trim() !== ''}}
@@ -124,15 +115,10 @@ export function isStrongPassword(password: string): boolean {,}
     const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
-<<<<<<< HEAD
-  const hasNumber = /[0-9]/.test(password),,;
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;}}
-=======
-  const hasNumber = /[0-9]/.test(password),,
+const hasNumber = /[0-9]/.test(password),,
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber
   }
 }
->>>>>>> origin/main
 /**;
  * Get password strength score (0-4);
  */;
@@ -141,32 +127,22 @@ export function getPasswordStrength(password: string): number {,}
   if (password.length >= 8) score++;
   if (password.length >= 12) score++
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++
-<<<<<<< HEAD
-  if (/[0-9]/.test(password)) score++,,;
-  if (/[^a-zA-Z0-9]/.test(password)) score++;,;
-  return Math.min(score, 4)}}
-=======
-  if (/[0-9]/.test(password)) score++,,
+if (/[0-9]/.test(password)) score++,,
   if (/[^a-zA-Z0-9]/.test(password)) score++;,
   return Math.min(score, 4)
   }
 }
->>>>>>> origin/main
 /**;
  * Validate credit card number using Luhn algorithm;
  */;
 export function isValidCreditCard(cardNumber: string): boolean {,}
     ,
-<<<<<<< HEAD
-  const cleaned = cardNumber.replace(/\s/g, '')}if(!/^\d {13,19)}}$/.test(cleaned)) {return false;}}
-=======
-  const cleaned = cardNumber.replace(/\s/g, '')
+const cleaned = cardNumber.replace(/\s/g, '')
   }
   if (!/^\d{13,19}$/.test(cleaned)) {;
     return false
   }
   }
->>>>>>> origin/main
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned.charAt(i), 10);
@@ -201,17 +177,11 @@ export function validateObject<T extends Record<string, unknown>>(;
   schema: Record<keyof T, (value: unknown) => boolean>;,
 ): ValidationResult {const errors: string[] = [],}
   for (const key in schema) {
-<<<<<<< HEAD
-    const validator = schema[key]
-    const value = obj[key],,;
-    if (!validator(value)) {,}errors.push(`Invalid value for field: ${String(key),}`);
-=======
-    const validator = schema[key];
+const validator = schema[key];
     const value = obj[key],,
     if (!validator(value)) {,
   }
       errors.push(`Invalid value for field: ${String(key)}`);
->>>>>>> origin/main
     }
   }
   return {isValid: errors.length === 0,}
@@ -226,13 +196,6 @@ export interface FormField {value: string,}
     message: string,}}>;
 }
 export function validateForm(fields: Record<string, FormField>);
-<<<<<<< HEAD
-): Record<string, string[]> {}const errors: Record<string, string[]> = {}for (const fieldName in fields) {const field = fields[fieldName]
-    const fieldErrors: string[] = [],
-    for (const validator of field.validators) {,;
-      if (!validator.validate(field.value)) {,;
-        fieldErrors.push(validator.message)}}
-=======
 ): Record<string, string[]> {}
   const errors: Record<string, string[]> = {}
   for (const fieldName in fields) {
@@ -247,7 +210,6 @@ export function validateForm(fields: Record<string, FormField>);
     if (fieldErrors.length > 0) {
     errors[fieldName] = fieldErrors
   }
->>>>>>> origin/main
     }
     if (fieldErrors.length > 0) {errors[fieldName] = fieldErrors;}}
   }
@@ -258,24 +220,7 @@ export function validateForm(fields: Record<string, FormField>);
  */;
 export const validators = {required: (message = 'This field is required') => ({,
     validate: isRequired,
-<<<<<<< HEAD
-    message;}}),;
-  email: (message = 'Please enter a valid email address') => ({,
-    ,
-    validate: isValidEmail,
-    message;}}),;
-  phone: (message = 'Please enter a valid phone number') => ({,
-    ,
-    validate: isValidPhone,
-    message;}}),;
-  minLength: (min: number, message = `Minimum length is ${min}characters`) => ({validate: (value: string) => minLength(value, min),;
-    message;}}),;
-  maxLength: (max: number, message = `Maximum length is ${max}characters`) => ({validate: (value: string) => maxLength(value, max),;
-    message;}}),;
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({validate: isStrongPassword,
-    message;}})
-=======
-    message
+message
   }
   }),
   email: (message = 'Please enter a valid email address') => ({
@@ -309,7 +254,6 @@ export const validators = {required: (message = 'This field is required') => ({,
 export function hasMaxLength(value: string, maxLength: number): boolean {;
     return value && value.length <= maxLength
   }
->>>>>>> origin/main
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {,}
     return value && value.length <= maxLength;}}
@@ -319,15 +263,10 @@ export function hasMaxLength(value: string, maxLength: number): boolean {,}
 export function isStrongPassword(password: string): boolean {,}
     if (!password || password.length < 8) return false;
 const hasUpperCase = /[A-Z]/.test(password)
-<<<<<<< HEAD
-  const hasLowerCase = /[a-z]/.test(password),,;
-  const hasNumbers = /\d/.test(password)}const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{</React.Fragment>}</React.Fragment>{}{}]/.test(password);
-=======
-  const hasLowerCase = /[a-z]/.test(password),,
+const hasLowerCase = /[a-z]/.test(password),,
   const hasNumbers = /\d/.test(password)
   }
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
->>>>>>> origin/main
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 /**;
@@ -492,18 +431,7 @@ export function isValidState(state: string): boolean {,}
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
     'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
     'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY';
-<<<<<<< HEAD
-  ]
-  return states.includes(state.toUpperCase())}}
-/**;
- * Validate form data with multiple fields;
- */;
-export function validateFormData(;)
-  data: Record<string, unknown>,;
-  rules: Record<string, (value: unknown) => boolean>,
-): ValidationResult {const errors: string[] = [],}
-=======
-  ];];];
+];];];
   return states.includes(state.toUpperCase())
   }
 }
@@ -515,7 +443,6 @@ export function validateFormData(;
   rules: Record<string, (value: unknown) => boolean>
 ): ValidationResult {
   const errors: string[] = [],
->>>>>>> origin/main
 for (const [field, validator] of Object.entries(rules)) {
     const value = data[field]
     if (!validator(value)) {}errors.push(`Invalid value for field: ${String(field),}`);
@@ -640,13 +567,8 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
 export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {,}
   for (const validator of validators) {
     const result = validator(value),
-<<<<<<< HEAD
-    if (!result.isValid) {,;
-      return result;}}
-=======
-    if (!result.isValid) {,
+if (!result.isValid) {,
       return result
->>>>>>> origin/main
   }
   return {isValid: true, errors: [] ,}}}
 /**;
@@ -655,13 +577,8 @@ export function validateComposite(value: string, validators: Array<(val: string)
 export async function validateAsync(;)
   validator: (val: unknown) => Promise<ValidationResult>,
   value: unknown,
-<<<<<<< HEAD
-): Promise<ValidationResult> {,;
-  try {,;}
-=======
 ): Promise<ValidationResult> {,
   try {,
->>>>>>> origin/main
  * Validate required field with detailed result;
  */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {,}

@@ -12,15 +12,10 @@ const CaseStudiesPage: React.FC = () => {,
       industry: 'E-commerce',
       image: '/api/placeholder/600/400',
       description: 'Implemented AI chatbots and automated customer service solutions resulting in 40% reduction in response time.',
-<<<<<<< HEAD
-      results: ['40% faster response time', '60% cost reduction', '95% customer satisfaction']},
-    {title: 'Cloud Migration for Financial Services',
-=======
-        results: ['40% faster response time', '60% cost reduction', '95% customer satisfaction']
+results: ['40% faster response time', '60% cost reduction', '95% customer satisfaction']
     },
     {
       title: 'Cloud Migration for Financial Services',
->>>>>>> origin/main
       client: 'FinanceCorp',
       industry: 'Financial Services',
       image: '/api/placeholder/600/400',
@@ -31,19 +26,12 @@ const CaseStudiesPage: React.FC = () => {,
       industry: 'Healthcare',
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
-<<<<<<< HEAD
-      results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']}]
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
+results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
       }
     ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />

@@ -16,15 +16,10 @@ const AdvancedCachingPage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
+description: 'Worldwide deployment and support for international businesses'
   }
     }
   ];];];
->>>>>>> origin/main
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,16 +29,10 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success';
-<<<<<<< HEAD
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
-  ];
+];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
->>>>>>> origin/main
         <title>AdvancedCaching | Zion Tech Group</title>
         <meta />
         <meta />

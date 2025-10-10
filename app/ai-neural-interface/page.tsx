@@ -13,15 +13,10 @@ const AINeuralInterface: React.FC = () => {,
     {icon: Brain,
       title: 'Neural Signal Processing',
       description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
-<<<<<<< HEAD
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response']},
-    {icon: Eye,
-=======
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
+benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
     },
     {
       icon: Eye,
->>>>>>> origin/main
       title: 'Visual Cortex Interface',
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
       benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition']},
@@ -32,14 +27,9 @@ const AINeuralInterface: React.FC = () => {,
     {icon: Target,
       title: 'Motor Control Interface',
       description: 'Precise motor control interface for prosthetics and assistive devices',
-<<<<<<< HEAD
-      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']}];
-
-=======
-      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
+benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
     },
   ];];];
->>>>>>> origin/main
   const pricingPlans = [
     {name: 'Research',
       price: '$2,999',
@@ -102,19 +92,12 @@ const AINeuralInterface: React.FC = () => {,
     {title: 'Communication Aid',
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
-<<<<<<< HEAD
-      results: 'Restored communication ability',}];
-
-  return(<>)
-      <Helmet />
-=======
-      results: 'Restored communication ability'
+results: 'Restored communication ability'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />

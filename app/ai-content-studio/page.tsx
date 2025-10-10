@@ -20,14 +20,9 @@ import Footer from '../components/Footer';
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
-<<<<<<< HEAD
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-  return (
+return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
         <meta name="keywords" content="AI content studio, artificial intelligence, content creation, AI solutions, intelligent design" />
@@ -52,10 +47,7 @@ import Footer from '../components/Footer';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      </main>
+</main>
     </>
   );
 }
@@ -69,7 +61,6 @@ import Footer from '../components/Footer';
 }
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -162,22 +153,3 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentStudioPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

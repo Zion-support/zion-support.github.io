@@ -14,15 +14,10 @@ interface PerformanceMetrics {fcp: number | null;,}
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
-    memory: null,})
-  const measureWebVitals = useCallback(() => {if (typeof window === 'undefined' || !('performance' in window)) return;
-=======
-    memory: null,
+memory: null,
   })
   const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [],
     // Measure First Contentful Paint (FCP)
@@ -39,13 +34,9 @@ interface PerformanceMetrics {fcp: number | null;,}
         observers.push(lcpObserver);
       } catch (error) {// eslint-disable-next-line no-console;}}
     // Measure First Input Delay (FID)
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {try {const fidObserver = new PerformanceObserver(list => {)}
-=======
-    if ('PerformanceObserver' in window) {
+if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {;
->>>>>>> origin/main
           const entries = list.getEntries();
           entries.forEach(entry => {)
             if(entry.entryType === 'first-input' &&)
@@ -63,15 +54,10 @@ interface PerformanceMetrics {fcp: number | null;,}
         observers.push(fidObserver);
       } catch (error) {// eslint-disable-next-line no-console;}}
     // Measure Cumulative Layout Shift (CLS)
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {try {let clsValue = 0;}
-        const clsObserver = new PerformanceObserver(list => {)
-=======
-    if ('PerformanceObserver' in window) {
+if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {;
->>>>>>> origin/main
           const entries = list.getEntries();
           entries.forEach(entry => {)
             if(entry.entryType === 'layout-shift' &&)
@@ -90,16 +76,10 @@ interface PerformanceMetrics {fcp: number | null;,}
         observers.push(clsObserver);
       } catch (error) {// eslint-disable-next-line no-console;}}
     // Measure Time to First Byte (TTFB)
-<<<<<<< HEAD
-    try {const navigationEntries = performance.getEntriesByType?.('navigation') || []}
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry;
-=======
-    try {
+try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
->>>>>>> origin/main
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
       // Measure Memory Usage;
@@ -116,12 +96,8 @@ interface PerformanceMetrics {fcp: number | null;,}
         try {observer.disconnect()}}catch (error) {// eslint-disable-next-line no-console;}})
     }
   }, []);
-<<<<<<< HEAD
-  const measureResourceTiming = useCallback(() => {if (typeof window === 'undefined' || !('performance' in window)) return;
-=======
-  const measureResourceTiming = useCallback(() => {;
+const measureResourceTiming = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter()
       (resource: PerformanceResourceTiming) => resource.duration > 1000;,
@@ -136,16 +112,7 @@ interface PerformanceMetrics {fcp: number | null;,}
       );
     }
   }, []);
-<<<<<<< HEAD
-  const measureCoreWebVitals = useCallback(() => {if (typeof window === 'undefined') return;
-    // Use web-vitals library if available;
-    try {import('web-vitals')}
-        .then(webVitals => {)
-          const {onCLS, onFCP, onLCP, onTTFB}}= webVitals;
-          if (onCLS) {onCLS((metric: { value: number ,)}) =>
-              setMetrics(prev => ({...prev, cls: metric.value ,)}))
-=======
-  const measureCoreWebVitals = useCallback(() => {;
+const measureCoreWebVitals = useCallback(() => {;
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
     try {
@@ -155,7 +122,6 @@ interface PerformanceMetrics {fcp: number | null;,}
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
->>>>>>> origin/main
             );
           }
           if (onFCP) {onFCP((metric: { value: number ,)}) =>
@@ -203,15 +169,7 @@ interface PerformanceMetrics {fcp: number | null;,}
   if (process.env.NODE_ENV === 'development') {return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)</div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
-<<<<<<< HEAD
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A',</div>}</div>
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>Memory: {' ',</div>}{metrics.memory;
-=======
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+<div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
@@ -219,7 +177,6 @@ interface PerformanceMetrics {fcp: number | null;,}
           <div>
             Memory:{' '},
     {metrics.memory
->>>>>>> origin/main
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>

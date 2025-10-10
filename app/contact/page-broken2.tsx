@@ -30,11 +30,7 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
     ...prev,
       [name]: value;}}));
   }, []);
-<<<<<<< HEAD
-const handleSubmit = async (e: React.FormEvent) => {,
-=======
 const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -83,20 +79,13 @@ const contactInfo = [
     {icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time',}}
-  ]
-return(<>)
-      <Helmet />
-=======
-      description: 'Eastern Time'
+description: 'Eastern Time'
   }
     }
   ];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -120,16 +109,11 @@ return (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-<<<<<<< HEAD
-                </div>})}
-{submitStatus === 'error' && (;
-=======
-                </div>
+</div>
   }
               )},
     {
     submitStatus === 'error' && (;
->>>>>>> origin/main
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>})}

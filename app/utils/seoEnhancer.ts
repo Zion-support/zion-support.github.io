@@ -16,50 +16,6 @@ export const generateMetaTags = (data: {,
 // twitterTitle?: string;
 // twitterDescription?: string;
 // twitterImage?: string;
-<<<<<<< HEAD
-}) => {}const tags = [
-    {name: 'title', content: data.title ,},;
-    {name: 'description', content: data.description ,},;
-    {name: 'keywords', content: data.keywords || '' ,},;
-    {name: 'robots', content: 'index, follow'},;
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},;
-    {name: 'author', content: 'Zion Holdings' ,},;
-    {name: 'canonical', content: data.canonical || '' ,},;
-    {property: 'og:title', content: data.ogTitle || data.title ,},;
-    {}property: 'og:description',
-      content: data.ogDescription || data.description,
-    },;
-    {property: 'og:image', content: data.ogImage || '/og-image.webp' ,},;
-    {property: 'og:type', content: 'website' ,},;
-    {property: 'og:site_name', content: 'Zion Holdings' ,},;
-    {}name: 'twitter:card',
-      content: data.twitterCard || 'summary_large_image',},;
-    {name: 'twitter:title', content: data.twitterTitle || data.title ,},;
-    {}name: 'twitter:description',
-      content: data.twitterDescription || data.description,
-    },;
-    {}name: 'twitter:image',
-      content: data.twitterImage || data.ogImage || '/og-image.webp',
-// Generate meta tags;
-export const generateMetaTags = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}t: data.title ,},;
-    {/* TODO: Fix JSX expression */,}t: data.description ,},;
-    {/* TODO: Fix JSX expression */,}t: data.keywords || '' ,},;
-    {/* TODO: Fix JSX expression */,}t: 'index, follow' },;
-    {/* TODO: Fix JSX expression */,}t: 'width=device-width, initial-scale=1' },;
-    {/* TODO: Fix JSX expression */,}t: 'Zion Holdings' ,},;
-    {/* TODO: Fix JSX expression */,}t: data.canonical || '' ,},;
-    {/* TODO: Fix JSX expression */,}t: data.ogTitle || data.title ,},;
-    {/* TODO: Fix JSX expression */,},
-    {/* TODO: Fix JSX expression */,}t: data.ogImage || '/og-image.jpg' ,},;
-    {/* TODO: Fix JSX expression */,}t: 'website' ,},;
-    {/* TODO: Fix JSX expression */,}t: 'Zion Holdings' ,},;
-    {/* TODO: Fix JSX expression */,},
-    {/* TODO: Fix JSX expression */,}t: data.twitterTitle || data.title ,},;
-    {/* TODO: Fix JSX expression */,},
-    {/* TODO: Fix JSX expression */,}}]
-=======
 }) => {}
   const tags = [;
     { name: 'title', content: data.title },
@@ -120,7 +76,6 @@ export const generateMetaTags = (dat,
     {/* TODO: Fix JSX expression */},
     {/* TODO: Fix JSX expression */}
     }];
->>>>>>> origin/main
   return tags;
 }
 // SEO Config interface;
@@ -159,26 +114,14 @@ const defaultSEOConfig: SEOConfig = {,
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterSite: '@zionholdings',
-<<<<<<< HEAD
-  twitterCreator: '@zionholdings',}
-  structuredData: {,},;
-  robots: 'index, follow',;
-=======
-  twitterCreator: '@zionholdings'}
+twitterCreator: '@zionholdings'}
   structuredData: {},
   robots: 'index, follow',
->>>>>>> origin/main
   language: 'en',
   locale: 'en_US',
   siteName: 'Zion Holdings',
   author: 'Zion Holdings',}
 // Generate structured data;
-<<<<<<< HEAD
-export const generateStructuredData = (;) => {return($3;)
-  )}const baseStructure = {}'@context': 'https: //schema.org',}) => {}const baseStructure = {}'@context': 'https: //schema.org',
-    '@type': data.type,;
-    name: data.name;,
-=======
 export const generateStructuredData = (;) => {
     return (
     $3
@@ -190,7 +133,6 @@ export const generateStructuredData = (;) => {
     '@context': 'https: //schema.org',
     '@type': data.type,
     name: data.name
->>>>>>> origin/main
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
@@ -223,13 +165,7 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   // Update canonical URL;
   updateCanonicalUrl(url: string) {,
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,
-<<<<<<< HEAD
-    if (!canonical) {,;
-      canonical = document.createElement('link'),;
-      canonical.rel = 'canonical',;
-  // Update page title;}updateTitle(title: string) {,}if (typeof document !== 'undefined') {}document.title = title;}
-=======
-    if (!canonical) {,
+if (!canonical) {,
       canonical = document.createElement('link'),
       canonical.rel = 'canonical',
   // Update page title
@@ -237,7 +173,6 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   updateTitle(title: string) {}
     if (typeof document !== 'undefined') {}
       document.title = title;}
->>>>>>> origin/main
     }
   }
   // Update meta description;
@@ -257,17 +192,12 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   // Update Open Graph tags;
   updateOpenGraph(config: Partial<SEOConfig>) {,
     ,
-<<<<<<< HEAD
-,;
-  // Update Open Graph tags;}updateOpenGraph(config: Partial<SEOConfig>) {,}if (config.publishedTime) {}ogTags.push({property: 'og:published_time', content: config.publishedTime ,)})
-=======
 ,
   // Update Open Graph tags
   }
   updateOpenGraph(config: Partial<SEOConfig>) {}
     if (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime })
->>>>>>> origin/main
     }
     if (config.modifiedTime) {}ogTags.push({property: 'og:modified_time', content: config.modifiedTime ,)})
     }
@@ -281,21 +211,7 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   // Update Twitter Card tags;
   updateTwitterCard(config: Partial<SEOConfig>) {,
     ,
-<<<<<<< HEAD
-  // Update Twitter Card tags;}updateTwitterCard(config: Partial<SEOConfig>) {,}const twitterTags = [}
-      {name: 'twitter:card', content: config.twitterCard || this.config.twitterCard ,},;
-      {name: 'twitter:site', content: config.twitterSite || this.config.twitterSite ,},;
-      {name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator ,},;
-      {name: 'twitter:title', content: config.title || this.config.title ,},;
-      {name: 'twitter:description', content: config.description || this.config.description ,},;
-      {name: 'twitter:image', content: config.ogImage || this.config.ogImage ,}]
-    twitterTags.forEach(({name, content)}) => {}this.updateMetaTag(name, content);}
-    })
-  }
-  // Update structured data;
-  updateStructuredData(data: Record<string, unknown>) {// Update structured data;}updateStructuredData(data: Record<string, unknown>) {}const script = document.createElement('script');
-=======
-  // Update Twitter Card tags
+// Update Twitter Card tags
   }
   updateTwitterCard(config: Partial<SEOConfig>) {}
     const twitterTags = [},
@@ -315,7 +231,6 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   }
   updateStructuredData(data: Record<string, unknown>) {}];];
     const script = document.createElement('script');
->>>>>>> origin/main
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     // Remove existing structured data;
@@ -324,20 +239,12 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
 // SEO Config interface;
 interface SEOConfig {/* TODO: Fix JSX expression */,}}}
 // Default SEO config;
-<<<<<<< HEAD
-const,;
-  defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */,}a: {,},;
-  robot,;
-  s: 'index, follow',;
-  languag,;
-=======
 const,
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
   a: {},
   robot,
   s: 'index, follow',
   languag,
->>>>>>> origin/main
   e: 'en',
   local,
   e: 'en_US',
@@ -347,19 +254,12 @@ const,
   r: 'Zion Holdings',
 }
 // Generate structured data;
-<<<<<<< HEAD
-export const generateStructuredData = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}}
-  return {...baseStructure, ...data}}}
-=======
 export const generateStructuredData = (dat,
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
   return { ...baseStructure, ...data }
 }
->>>>>>> origin/main
 // SEO Enhancer class;
 export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultSEOConfig, ...config}}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */,}}}
@@ -382,17 +282,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   }
   // Update Open Graph tags;
   updateOpenGraph(confi);
-<<<<<<< HEAD
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */,}t: config.title || this.config.title ,},;
-      {/* TODO: Fix JSX expression */,}t: config.description || this.config.description ,},;
-      {/* TODO: Fix JSX expression */,}t: config.ogImage || this.config.ogImage ,},;
-      {/* TODO: Fix JSX expression */,}t: config.canonicalUrl || this.config.canonicalUrl ,},;
-      {/* TODO: Fix JSX expression */,}t: config.ogType || this.config.ogType ,},;
-      {/* TODO: Fix JSX expression */,}t: config.siteName || this.config.siteName ,},;
-      {/* TODO: Fix JSX expression */,}t: config.locale || this.config.locale ,}]
-    if (config.publishedTime) {/* TODO: Fix JSX expression */,}t: config.publishedTime ,})
-=======
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
+g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title },
       {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description },
@@ -408,7 +298,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   t: config.locale || this.config.locale }]
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
   t: config.publishedTime })
->>>>>>> origin/main
     }
     if (config.modifiedTime) {/* TODO: Fix JSX expression */,}t: config.modifiedTime ,})
     }
@@ -420,16 +309,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   }
   // Update Twitter Card tags;
   updateTwitterCard(confi);
-<<<<<<< HEAD
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */,}t: config.twitterCard || this.config.twitterCard ,},;
-      {/* TODO: Fix JSX expression */,}t: config.twitterSite || this.config.twitterSite ,},;
-      {/* TODO: Fix JSX expression */,}t: config.twitterCreator || this.config.twitterCreator ,},;
-      {/* TODO: Fix JSX expression */,}t: config.title || this.config.title ,},;
-      {/* TODO: Fix JSX expression */,}t: config.description || this.config.description ,},;
-      {/* TODO: Fix JSX expression */,}t: config.ogImage || this.config.ogImage ,}]
-    twitterTags.forEach(({name, content)}) => {/* TODO: Fix JSX expression */,}})
-=======
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
+g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.twitterCard || this.config.twitterCard },
       {/* TODO: Fix JSX expression */}
   t: config.twitterSite || this.config.twitterSite },
@@ -443,7 +323,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   t: config.ogImage || this.config.ogImage }]
     twitterTags.forEach(({ name, content }) => {/* TODO: Fix JSX expression */}
     })
->>>>>>> origin/main
   }
   // Update structured data;
   updateStructuredData(dat);
@@ -500,11 +379,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   updateAuthor(autho);
   r: string) {/* TODO: Fix JSX expression */,}}
   // Helper method to update meta tags;
-<<<<<<< HEAD
-  private updateMetaTag(nameOrPropert,;)
-=======
-  private updateMetaTag(nameOrPropert,
->>>>>>> origin/main
+private updateMetaTag(nameOrPropert,
   y: string, conten);
   t: string) {/* TODO: Fix JSX expression */,}`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
     ) as HTMLMetaElement;
@@ -518,11 +393,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   ) {const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages;
-<<<<<<< HEAD
-  .map(,;)
-=======
-  .map(,
->>>>>>> origin/main
+.map(,
   // Generate sitemap;
   generateSitemap()}pages: Array<{url: string; lastmod: string; changefreq: string, priority: string ,}>;
   ) {}const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
@@ -574,12 +445,6 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   }
 }
 // Generate structured data with type-specific properties;
-<<<<<<< HEAD
-export const generateAdvancedStructuredData = (;) => {return($3;)
-  )}const baseStructure = {}'@context': 'https: //schema.org',}) => {}const baseStructure = {}'@context': 'https: //schema.org',
-    '@type': data.type,;
-    name: data.name;,
-=======
 export const generateAdvancedStructuredData = (;) => {
     return (
     $3
@@ -591,23 +456,13 @@ export const generateAdvancedStructuredData = (;) => {
     '@context': 'https: //schema.org',
     '@type': data.type,
     name: data.name
->>>>>>> origin/main
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
     sameAs: data.sameAs || [],}
   }
   // Add type-specific properties;
-<<<<<<< HEAD
-  if (data.type === 'Organization') {return {...baseStructure,;}
-      address: {,
-  // Add type-specific properties;}if (data.type === 'Organization') {}return {}}...baseStructure,;
-      address: {,}// '@type': 'PostalAddress',;
-// addressCountry: 'US',},;
-      contactPoint: {,
-    ,}contactPoint: {,}'@type': 'ContactPoint',;
-=======
-  if (data.type === 'Organization') {
+if (data.type === 'Organization') {
     return {
       ...baseStructure,
       address: {,
@@ -624,21 +479,14 @@ export const generateAdvancedStructuredData = (;) => {
   }
       contactPoint: {}
         '@type': 'ContactPoint',
->>>>>>> origin/main
         telephone: '+1-555-0123',
         contactType: 'customer service',}
   // Generate sitemap;
-<<<<<<< HEAD
-  generateSitemap(page,;)
-  s: Array<{/* TODO: Fix JSX expression */,}y: string ,}>);
-  ) {/* TODO: Fix JSX expression */,} <loc>${page.url}</loc>
-=======
-  generateSitemap(page,
+generateSitemap(page,
   s: Array<{/* TODO: Fix JSX expression */}
   y: string }>);
   ) {/* TODO: Fix JSX expression */}
     <loc>${page.url}</loc>
->>>>>>> origin/main
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority</p>}</priority>`;
@@ -675,26 +523,6 @@ Sitema,`;
   }
 }
 // Generate structured data with type-specific properties;
-<<<<<<< HEAD
-export const generateAdvancedStructuredData = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}}
-  // Add type-specific properties;
-  if (data.type === 'Organization') {/* TODO: Fix JSX expression */,},
-      contactPoin,;
-  t: {/* TODO: Fix JSX expression */,}}
-    }
-  }
-  if (data.type === 'WebSite') {}return {}}...baseStructure,;
-      potentialAction: {,
-    ,
-        '@type': 'SearchAction',;
-        target: {,}potentialAction: {,}'@type': 'SearchAction',;
-        target: {,}'@type': 'EntryPoint',`}
-          urlTemplate: `${data.url,}/search?q={search_term_string}if (data.type === 'WebSite') {/* TODO: Fix JSX expression */,}`;
-  e: `${data.url,}/search?q={search_term_string}`;
-        },;
-=======
 export const generateAdvancedStructuredData = (dat,
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -722,35 +550,21 @@ export const generateAdvancedStructuredData = (dat,
   if (data.type === 'WebSite') {/* TODO: Fix JSX expression */}`;
   e: `${data.url}/search?q={search_term_string}`;
         },
->>>>>>> origin/main
         'query-input': 'required name=search_term_string';
       }
     }
   }
-<<<<<<< HEAD
-  if (data.type === 'Article') {}return {}}...baseStructure,;
-      author: {,
-=======
-  if (data.type === 'Article') {}
+if (data.type === 'Article') {}
     return {}
       ...baseStructure,
       author: {
->>>>>>> origin/main
     ,
         '@type': 'Organization',}name: 'Zion Holdings',},
       publisher: {,
     ,
         '@type': 'Organization',
         name: 'Zion Holdings',
-<<<<<<< HEAD
-        logo: {,}author: {,}'@type': 'Organization',;
-        name: 'Zion Holdings',},
-      publisher: {,}'@type': 'Organization',;
-        name: 'Zion Holdings',
-        logo: {,}'@type': 'ImageObject',;
-          url: data.logo || '/logo.webp',}
-=======
-        logo: {,
+logo: {,
   }
       author: {}
         '@type': 'Organization',
@@ -761,7 +575,6 @@ export const generateAdvancedStructuredData = (dat,
         logo: {}
           '@type': 'ImageObject',
           url: data.logo || '/logo.webp'}
->>>>>>> origin/main
         },
       datePublished: new Date().toISOString(),
       dateModified: new Date().toISOString(),}
@@ -769,13 +582,9 @@ export const generateAdvancedStructuredData = (dat,
   return baseStructure;
 }
 // Generate sitemap data;
-<<<<<<< HEAD
-export const generateSitemapData = useCallback((...args) => {return {urlset: {,}
-=======
 export const generateSitemapData = useCallback((...args) => {;
     return {
     urlset: {
->>>>>>> origin/main
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
       url: pages.map(page => ({),
         loc: page.url,),
@@ -796,19 +605,12 @@ export const generateRobotsTxt = useCallback((...args) => {`}const disallowRules
 ${disallowRules}Sitemap: ${sitemapUrl,}`;
 }
 // SEO validation;
-<<<<<<< HEAD
-export const validateSEOData = (data: {// title: string; description: string, url: string,}) => {}if (data.type === 'Article') {/* TODO: Fix JSX expression */,},
-      publishe,;
-  r: {/* TODO: Fix JSX expression */,}},
-      datePublishe,;
-=======
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   if (data.type === 'Article') {/* TODO: Fix JSX expression */},
       publishe,
   r: {/* TODO: Fix JSX expression */}
         },
       datePublishe,
->>>>>>> origin/main
   d: new Date().toISOString(),
       dateModifie,
   d: new Date().toISOString(),
@@ -817,17 +619,11 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   return baseStructure;
 }
 // Generate sitemap data;
-<<<<<<< HEAD
-export const generateSitemapData = (page,;
-  s: Array<{/* TODO: Fix JSX expression */,}}>);
-) => {/* TODO: Fix JSX expression */,}}));
-=======
 export const generateSitemapData = (page,
   s: Array<{/* TODO: Fix JSX expression */}
   }>);
 ) => {/* TODO: Fix JSX expression */}
       }));
->>>>>>> origin/main
     }
   }
 }
@@ -844,15 +640,7 @@ ${disallowRules}Sitema,`;
 }
 // SEO validation;
 export const validateSEOData = (;
-<<<<<<< HEAD
-  const issues: string[] = [],
-  // Check title length,,;
-  if (data.title.length < 30) {,;) => {
-  return($3;)
-  )}// SEO validation;}
-export const validateSEOData = (data: {// title: string; description: string, url: string,}) => {}const issues: string[] = [],
-=======
-  const issues: string[] = []
+const issues: string[] = []
   // Check title length,,
   if (data.title.length < 30) {
     ,) => {
@@ -863,7 +651,6 @@ export const validateSEOData = (data: {// title: string; description: string, ur
 // SEO validation;}
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   const issues: string[] = []
->>>>>>> origin/main
   // Check title length,
   if (data.title.length < 30) {}issues.push('Title is too short (recommended: 30-60 characters)'),}
   } else if (data.title.length > 60) {}issues.push('Title is too long (recommended: 30-60 characters)'),}
@@ -878,13 +665,6 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   return issues;
 }
 // Generate breadcrumb data;
-<<<<<<< HEAD
-export const generateBreadcrumbData = useCallback((...args) => {return {'@context': 'https: //schema.org',}
-// Generate breadcrumb data;}export const generateBreadcrumbData = useCallback((...args) => {}return {}}'@context': 'https: //schema.org',
-    '@type': 'BreadcrumbList',;
-    itemListElement: breadcrumbs.map((crumb, index) => ({}'@type': 'ListItem',;
-      position: index + 1;,
-=======
 export const generateBreadcrumbData = useCallback((...args) => {
     return {
     '@context': 'https: //schema.org',
@@ -897,19 +677,14 @@ export const generateBreadcrumbData = useCallback((...args) => {}
     itemListElement: breadcrumbs.map((crumb, index) => ({}
       '@type': 'ListItem',
       position: index + 1
->>>>>>> origin/main
       name: crumb.name,
       item: crumb.url,}
     }));
   }
 }
 // Initialize SEO enhancements;
-<<<<<<< HEAD
-export const initializeSEOEnhancements = useCallback((...args) => {if (typeof document === 'undefined') return;
-=======
 export const initializeSEOEnhancements = useCallback((...args) => {;
     if (typeof document === 'undefined') return;
->>>>>>> origin/main
   // Add structured data for organization;
   const organizationData = generateStructuredData({);
     type: 'Organization'),
@@ -939,17 +714,11 @@ export const initializeSEOEnhancements = useCallback((...args) => {;
   return issues;
 }
 // Generate breadcrumb data;
-<<<<<<< HEAD
-export const generateBreadcrumbData = (breadcrumb,;
-  s: Array<{/* TODO: Fix JSX expression */,}}>);
-) => {/* TODO: Fix JSX expression */,}}));
-=======
 export const generateBreadcrumbData = (breadcrumb,
   s: Array<{/* TODO: Fix JSX expression */}
   }>);
 ) => {/* TODO: Fix JSX expression */}
     }));
->>>>>>> origin/main
   }
 }
 // Initialize SEO enhancements;

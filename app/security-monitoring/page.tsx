@@ -38,15 +38,10 @@ const SecurityMonitoringPage: React.FC = () => {,
       description: 'Detailed security reports and insights to help you understand and improve your security posture.',},
     {icon: Zap,
       title: 'Instant Response',
-<<<<<<< HEAD
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.',}}
-  ]
-=======
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'
+description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
   ];];];
->>>>>>> origin/main
 const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
@@ -59,18 +54,11 @@ const benefits = [
 
     'Expert security team support',
 
-<<<<<<< HEAD
-    'Customizable monitoring rules'
-  ]
-return(<>)
-      <Helmet />
-=======
-    'Customizable monitoring rules';
+'Customizable monitoring rules';
   ];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

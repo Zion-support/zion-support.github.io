@@ -30,15 +30,9 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
 /**;
  * Flatten a nested object;
  */;
-<<<<<<< HEAD
-export function flattenObject(ob,;)
-  j: Record<string, unknown>,;
-  prefix = '',;
-=======
 export function flattenObject(ob,
   j: Record<string, unknown>,
   prefix = '',
->>>>>>> origin/main
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
@@ -49,13 +43,8 @@ export function flattenObject(ob,
 /**;
  * Unflatten a flattened object;
  */;
-<<<<<<< HEAD
-export function unflattenObject(ob,;)
-  j: Record<string, unknown>,;
-=======
 export function unflattenObject(ob,
   j: Record<string, unknown>,
->>>>>>> origin/main
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
         }
@@ -92,13 +81,8 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
  */;
 export function groupBy<T>(arra,
   y: T[],
-<<<<<<< HEAD
-  ke,;
-  y: keyof T | ((ite),
-=======
-  ke,
+ke,
   y: keyof T | ((ite)
->>>>>>> origin/main
   m: T) => string | number),
 ): Record<string, T[]> {/* TODO: Fix JSX expression */,},
     {}as Record<string, T[]></string>
@@ -177,17 +161,10 @@ export function formatCurrency(amoun);
 /**;
  * Format date;
  */;
-<<<<<<< HEAD
-export function formatDate(dat,;)
-  e: Date | string | number,
-  option,;
-  s: Intl.DateTimeFormatOptions = {,},;
-=======
 export function formatDate(dat,
   e: Date | string | number,
   option,
   s: Intl.DateTimeFormatOptions = {},
->>>>>>> origin/main
   locale = 'en-US');
 ): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -205,11 +182,7 @@ export function formatRelativeTime(dat);
 /**;
  * Truncate string;
  */;
-<<<<<<< HEAD
-export function truncate(st,;)
-=======
 export function truncate(st,
->>>>>>> origin/main
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -236,14 +209,8 @@ export function camelCase(st);
  * Convert to snake case;
  */;
 export function snakeCase(st);
-<<<<<<< HEAD
-  r: string): string {/* TODO: Fix JSX expression */,}}}
-export default {/* TODO: Fix JSX expression */,}}}
-`;
-=======
-  r: string): string {/* TODO: Fix JSX expression */}
+r: string): string {/* TODO: Fix JSX expression */}
 }
 export default {/* TODO: Fix JSX expression */}
 }
 `;
->>>>>>> origin/main

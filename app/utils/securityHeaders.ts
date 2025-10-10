@@ -55,14 +55,10 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Secur
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 export function getSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>
-<<<<<<< HEAD
-): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;
-=======
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string> = {}
     'X-XSS-Protection': '1; mode=block',
->>>>>>> origin/main
     'X-DNS-Prefetch-Control': 'on'}
   }
   if (config.contentSecurityPolicy) {}headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
@@ -75,34 +71,17 @@ export function getSecurityHeaders();
   }
   if (config.referrerPolicy) {}headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-<<<<<<< HEAD
-  if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}}
-export const,;
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */,}}
-=======
-  if (config.permissionsPolicy) {}
+if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/main
 /**;
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-<<<<<<< HEAD
-): Record<string, string> {/* TODO: Fix JSX expression */,}const config = {...defaultSecurityHeaders, ...customConfig}const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */,}}
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */,}}
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}}
-=======
 ): Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const,
@@ -120,18 +99,12 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
   return headers;
 }
 /**;
  * Get security headers in Next.js format;
  */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-<<<<<<< HEAD
-): Array<{key: string, value: string ,}> {export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({}key,;
-=======
 ): Array<{ key: string, value: string }> {
     export function getNextSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>
@@ -140,7 +113,6 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}
     key,
->>>>>>> origin/main
     value}
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);

@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',
-=======
 export const generateSitemap = useCallback((...args) => {
     const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,
   }];];
 export const generateSitemap = useCallback((...args) => {}
   const baseUrl = 'https: //ziontechgroup.com',
->>>>>>> origin/main
   const staticPages = [
     '',
     '/services',
@@ -51,17 +46,12 @@ export const generateSitemap = useCallback((...args) => {}
   ];];];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-<<<<<<< HEAD
-  ${staticPages.map(page =>),;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}
-=======
-  ${
+${
     staticPages.map(page =>),
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   }
   ${staticPages.map(page =>)}
   <url>}
->>>>>>> origin/main
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
@@ -81,241 +71,137 @@ Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`,}
 }
-<<<<<<< HEAD
-export interface SitemapEntry {/* TODO: Fix JSX expression */,}}}
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}l: `${baseUrl,}/`,;
-      lastmo,;
-=======
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
   l: `${baseUrl}/`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'daily',
       priorit,
   y: 1.0,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/about`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/about`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'monthly',
       priorit,
   y: 0.8,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/services`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/services`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/ai-services`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/ai-services`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/it-services`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/it-services`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/quantum-computing`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/quantum-computing`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/autonomous-systems`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/autonomous-systems`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/micro-saas`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/micro-saas`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.8,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/enterprise`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/enterprise`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.9,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/contact`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/contact`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'monthly',
       priorit,
   y: 0.8,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/team`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/team`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'monthly',
       priorit,
   y: 0.7,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/case-studies`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/case-studies`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'weekly',
       priorit,
   y: 0.8,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/blog`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/blog`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'daily',
       priorit,
   y: 0.8,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/privacy`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/privacy`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'yearly',
       priorit,
   y: 0.3,
-<<<<<<< HEAD
-    },;
-    {/* TODO: Fix JSX expression */,}`;
-  l: `${baseUrl,}/terms`,;
-      lastmo,;
-=======
-    },
+},
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/terms`,
       lastmo,
->>>>>>> origin/main
   d: currentDate,
       changefre,
   q: 'yearly',
@@ -324,9 +210,5 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
     }
   ]
 }
-<<<<<<< HEAD
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`;
-=======
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 }`;
->>>>>>> origin/main

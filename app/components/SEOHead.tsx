@@ -20,14 +20,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 
   twitterCard = 'summary_large_image',
 
-<<<<<<< HEAD
-  structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
-=======
-  structuredData
+structuredData
   }
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {"@context": "https: //schema.org",
     "@type": "Organization",
@@ -57,17 +53,11 @@ return(<Helmet />)
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-<<<<<<< HEAD
-      <meta />
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
-=======
-      <meta>
+<meta>
       {/* Canonical URL */},
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
     {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
->>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

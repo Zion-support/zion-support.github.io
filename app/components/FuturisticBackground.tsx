@@ -26,35 +26,21 @@ const FuturisticBackground: React.FC = () => {,
       opacity: number;,
       color: string;,}> = []
 
-<<<<<<< HEAD
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
-
-    // Create particles;
-    for (let i = 0; i < 50; i++) {particles.push({)
-=======
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
+const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
     // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
->>>>>>> origin/main
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
-<<<<<<< HEAD
-        color: colors[Math.floor(Math.random() * colors.length)],})
-    }
-
-    const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
-=======
-        color: colors[Math.floor(Math.random() * colors.length)]
+color: colors[Math.floor(Math.random() * colors.length)]
         })
       }
     const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
->>>>>>> origin/main
 
       // Update and draw particles;
       particles.forEach((particle, index) => {

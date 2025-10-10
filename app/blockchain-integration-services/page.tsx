@@ -16,13 +16,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
       description: 'Intelligent blockchain solutions powered by advanced AI technology',},
     {icon: Globe,
       title: 'Multi-Chain Support',
-<<<<<<< HEAD
-      description: 'Support for multiple blockchain networks and protocols',}];
-=======
-      description: 'Support for multiple blockchain networks and protocols'
+description: 'Support for multiple blockchain networks and protocols'
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -31,22 +27,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-        <title>Blockchain Integration Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1>
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced blockchain integration solutions.</p>
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -56,7 +37,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>

@@ -10,15 +10,10 @@ const EnterprisePage: React.FC = () => {,
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-<<<<<<< HEAD
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']},
-    {icon: Cloud,
-=======
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'];
+benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'];
   },
     {
     icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']},
@@ -37,26 +32,17 @@ const EnterprisePage: React.FC = () => {,
     {icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-<<<<<<< HEAD
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}]
-=======
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   },
   ];];
->>>>>>> origin/main
 const solutions = [
     {title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-<<<<<<< HEAD
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']},
-    {title: 'Customer Relationship Management',
-=======
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'];
+benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'];
   },
     {
     title: 'Customer Relationship Management',
->>>>>>> origin/main
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']},
@@ -67,13 +53,9 @@ const solutions = [
     {title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-<<<<<<< HEAD
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}]
-=======
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
+benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
   ];
->>>>>>> origin/main
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -89,21 +71,13 @@ const benefits = [
     'Provide 24/7 support and monitoring';
   ];];];
 const stats = [
-<<<<<<< HEAD
-    {number: '500+', label: 'Enterprise Clients', icon: Building ,},
-    {number: '99.9%', label: 'Uptime Guarantee', icon: Shield ,},
-    {number: '50%', label: 'Cost Reduction', icon: TrendingUp ,},
-    {number: '24/7', label: 'Support Available', icon: Clock ,}]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-=======
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
+{ number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/main
       <SEOOptimizer>
       <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">

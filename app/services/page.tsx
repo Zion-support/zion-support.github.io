@@ -36,15 +36,10 @@ const ServicesPage: React.FC = () => {,
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-<<<<<<< HEAD
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']},
-    {icon: BarChart3,
-=======
-        benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
     },
     {
       icon: BarChart3,
->>>>>>> origin/main
       title: 'AI Data Analytics',
       description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling.',
       category: 'ai',
@@ -75,10 +70,7 @@ const ServicesPage: React.FC = () => {,
       features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection', 'Automated Alerts'],
       price: 'Starting at $799/month',
       marketPrice: '$1500-5000/month',
-<<<<<<< HEAD
-      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']},
-=======
-      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
+benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
     },
     {
       icon: FileText,
@@ -190,7 +182,6 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$150-600/month',
       benefits: ['Improved productivity', 'Reduced scheduling conflicts', 'Time optimization', 'Better resource utilization']
     },
->>>>>>> origin/main
     
     // IT Services;
     {icon: Cloud,
@@ -232,10 +223,7 @@ const ServicesPage: React.FC = () => {,
       features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management'],
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
-<<<<<<< HEAD
-      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']},
-=======
-      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
     },
     {
       icon: Code,
@@ -337,7 +325,6 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$2000-6000/month',
       benefits: ['Improved performance', 'Better user experience', 'Cost optimization', 'Scalable solutions']
     },
->>>>>>> origin/main
     
     // Micro SaaS;
     {icon: BarChart3,
@@ -355,31 +342,10 @@ const ServicesPage: React.FC = () => {,
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
       price: 'Starting at $149/month',
       marketPrice: '$300-800/month',
-<<<<<<< HEAD
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']},
-    {icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies for optimal performance.',
-      category: 'saas',
-      features: ['React/Next.js Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning', 'Security Implementation', 'Content Management'],
-      price: 'Starting at $5,000/project',
-      marketPrice: '$10000-30000/project',
-      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times']},
-    {icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with optimal user experience.',
-      category: 'saas',
-      features: ['iOS & Android Apps', 'Cross-platform Development', 'App Store Optimization', 'Push Notifications', 'Offline Functionality', 'Performance Optimization'],
-      price: 'Starting at $8,000/project',
-      marketPrice: '$15000-50000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']},
-    {icon: FileText,
-=======
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
+benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
     },
     {
       icon: FileText,
->>>>>>> origin/main
       title: 'Zion Invoice Genius',
       description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
       category: 'saas',
@@ -394,19 +360,7 @@ const ServicesPage: React.FC = () => {,
       features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
-<<<<<<< HEAD
-      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']},
-  ];
-  const categories = [
-    {id: 'all', name: 'All Services', count: services.length ,},
-    {id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length ,},
-    {id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length ,},
-    {id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length ,}]
-
-  const filteredServices = services.filter(service => {)
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
-      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
+benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     },
     {
       icon: Shield,
@@ -737,7 +691,6 @@ const ServicesPage: React.FC = () => {,
   ];
     const filteredServices = services.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
->>>>>>> origin/main
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;})

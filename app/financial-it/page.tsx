@@ -10,15 +10,10 @@ const FinancialITPage: React.FC = () => {,
       icon: DollarSign,
       title: 'SOX Compliance',
       description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
-<<<<<<< HEAD
-      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']},
-    {icon: Zap,
-=======
-      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails'];
+benefits: ['Automated controls', 'Compliance reporting', 'Audit trails'];
   },
     {
     icon: Zap,
->>>>>>> origin/main
       title: 'Financial Data Security',
       description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']},
@@ -37,13 +32,9 @@ const FinancialITPage: React.FC = () => {,
     {icon: BarChart,
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
-<<<<<<< HEAD
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']}]
-=======
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
+benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
   },
   ];];
->>>>>>> origin/main
 const services = [
     {icon: '🏦',
       title: 'Banking Solutions',
@@ -56,15 +47,10 @@ const services = [
       description: 'Advanced risk assessment and management tools',},
     {icon: '🔒',
       title: 'Security Services',
-<<<<<<< HEAD
-      description: 'Cybersecurity and data protection solutions',}}
-  ]
-=======
-      description: 'Cybersecurity and data protection solutions'
+description: 'Cybersecurity and data protection solutions'
   }
     }
   ];
->>>>>>> origin/main
 const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -75,18 +61,11 @@ const benefits = [
 
     'Fraud Prevention',
 
-<<<<<<< HEAD
-    'Advanced Analytics'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>)
-      <Helmet />
-=======
-    'Advanced Analytics';
+'Advanced Analytics';
   ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
->>>>>>> origin/main
         <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

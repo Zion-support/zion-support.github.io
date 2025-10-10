@@ -12,19 +12,7 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
-    const sendToAnalytics = (metric: PerformanceMetrics) => {
-      // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-        gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
-=======
-    if (typeof window === 'undefined') return;
+if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
       const shouldMonitor = process.env.NODE_ENV === 'development' ||
@@ -69,7 +57,6 @@ const PerformanceMonitor: React.FC = () => {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
       } catch (e) {;
         console.warn('Performance Observer not supported:', e);
->>>>>>> origin/main
       }
 
       // Log to console in development
@@ -147,10 +134,7 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-<<<<<<< HEAD
-  return null; // This component doesn't render anything
-=======
-  if (!isVisible || Object.keys(metrics).length === 0) {
+if (!isVisible || Object.keys(metrics).length === 0) {
     return null;
   }
 
@@ -222,7 +206,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
->>>>>>> origin/main
 };
 
 export default PerformanceMonitor;

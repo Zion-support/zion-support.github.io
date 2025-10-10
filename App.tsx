@@ -65,7 +65,6 @@ const App: React.FC = () => {
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
-<<<<<<< HEAD
                 <AccessibilityEnhancer
                   enableKeyboardNavigation={true}
                   enableScreenReaderSupport={true}
@@ -110,44 +109,6 @@ const App: React.FC = () => {
                     <Footer />
                   </div>
                 </AccessibilityEnhancer>
-=======
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/sitemap" element={<SitemapPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
->>>>>>> origin/main
               </PerformanceOptimizer>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>

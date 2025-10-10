@@ -16,16 +16,10 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(</div>)
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];];];
 return (
         </div>
->>>>>>> origin/main
       </section>
       {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">

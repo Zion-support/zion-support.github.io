@@ -13,15 +13,10 @@ const CareersPage: React.FC = () => {,
       type: 'Full-time',
       experience: '5+ years',
       description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-<<<<<<< HEAD
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']},
-    {title: 'Cloud Architect',
-=======
-        requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
+requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
     },
     {
       title: 'Cloud Architect',
->>>>>>> origin/main
       department: 'Cloud Services',
       location: 'New York, NY',
       type: 'Full-time',
@@ -34,13 +29,9 @@ const CareersPage: React.FC = () => {,
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-<<<<<<< HEAD
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']}];
-=======
-        requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
+requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
       }
     ];
->>>>>>> origin/main
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -62,19 +53,12 @@ const CareersPage: React.FC = () => {,
       description: 'We create solutions that make a real difference',},
     {icon: Award,
       title: 'Excellence',
-<<<<<<< HEAD
-      description: 'We strive for the highest quality in everything we do',}]
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-        description: 'We strive for the highest quality in everything we do'
+description: 'We strive for the highest quality in everything we do'
       }
     ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />

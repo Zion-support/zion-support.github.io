@@ -24,12 +24,8 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
         img.loading = 'lazy'}if (!img.decoding) {img.decoding = 'async'}})
   }, [enableImageOptimization]);
 
-<<<<<<< HEAD
-  const optimizeMemory = useCallback(() => {if ('memory' in performance) {
-=======
-  const optimizeMemory = useCallback(() => {
+const optimizeMemory = useCallback(() => {
     if ('memory' in performance) {;
->>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available;
@@ -38,16 +34,10 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     }
   }, []);
 
-<<<<<<< HEAD
-  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
-    const newOptimizations: string[] = [],
-    // Optimize images;
-=======
-  const runOptimizations = useCallback(async () => {;
+const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     const newOptimizations: string[] = []
     // Optimize images
->>>>>>> origin/main
     if (enableImageOptimization) {
       optimizeImages(),
       newOptimizations.push('Images optimized for lazy loading')}// Optimize memory;
@@ -70,17 +60,11 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => clearTimeout(timer);
   }, [runOptimizations]);
 
-<<<<<<< HEAD
-  return(<div className="performance-optimizer">)</div>
-      {children}{/* Performance Status Indicator (only in development) */}
-      {process.env.NODE_ENV === 'development' && (
-=======
-  return (
+return (
     <div className="performance-optimizer">
       {children},
     {/* Performance Status Indicator (only in development) */},
     {process.env.NODE_ENV === 'development' && (
->>>>>>> origin/main
         <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
           <div className="flex items-center space-x-2 mb-2">
             <Settings className="w-4 h-4 text-cyan-400" />
@@ -137,16 +121,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       // Preload critical images;
       const criticalImages = [
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.png'
-      ]
-
-      criticalImages.forEach(src => {)
-=======
-        '/images/logo.png';
+'/images/logo.png';
       ];
       criticalImages.forEach(src => {];];
->>>>>>> origin/main
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
@@ -163,18 +140,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         if (!img.hasAttribute('decoding')) {img.decoding = 'async'}})
     }
 
-<<<<<<< HEAD
-    // Intersection Observer for lazy loading;
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {)
-          if (entry.isIntersecting) {
-=======
-    // Intersection Observer for lazy loading
+// Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {;
->>>>>>> origin/main
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;

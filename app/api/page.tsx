@@ -132,22 +132,13 @@ const ApiPage: React.FC = () => {,
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High',}];
   const rateLimits = [
-<<<<<<< HEAD
-    {tier: 'Free', requests: '1,000/month', burst: '10/minute' ,},
-    {tier: 'Pro', requests: '50,000/month', burst: '100/minute' ,},
-    {tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute'}]
-
-  return(<>)
-      <Helmet />
-=======
-    { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
+{ tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />

@@ -2,17 +2,6 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */;
-<<<<<<< HEAD
-export const preloadCriticalResources = useCallback((...args) => {if (typeof window === 'undefined') return;
-  // Preload critical fonts;}export const preloadCriticalResources = useCallback((...args) => {}if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-  const fontPreloads = [
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-    'https: //fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap',
-  ],
-  fontPreloads.forEach(href => {)
-    )}fontPreloads.forEach(href => {)}const link = document.createElement('link');
-=======
 export const preloadCriticalResources = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
   // Preload critical fonts
@@ -29,7 +18,6 @@ export const preloadCriticalResources = useCallback((...args) => {}
   }
   fontPreloads.forEach(href => {)}];];
     const link = document.createElement('link');
->>>>>>> origin/main
     link.rel = 'preload';
     link.as = 'style',
     link.href = href;
@@ -41,41 +29,26 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}}
     '/images/hero-bg.webp',
     '/images/logo.webp',
     '/images/favicon.ico';
-<<<<<<< HEAD
-  ]
-  criticalImages.forEach(src => {)
-    )}criticalImages.forEach(src => {)}const link = document.createElement('link');
-=======
-  ];
+];
   criticalImages.forEach(src => {
     )
   }
   criticalImages.forEach(src => {)}];];
     const link = document.createElement('link');
->>>>>>> origin/main
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
     document.head.appendChild(link)}
   })
 }
-<<<<<<< HEAD
-export const preloadRoute = useCallback((...args) => {if (typeof window === 'undefined') return;
-=======
 export const preloadRoute = useCallback((...args) => {;
   if (typeof window === 'undefined') return;
->>>>>>> origin/main
   // Preload route-specific resources;
   const routeResources = {}export const preloadRoute = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-<<<<<<< HEAD
-  const routeResources = {}'/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;
-    '/services': ['/api/services', '/images/services-hero.webp'],;
-=======
-  const routeResources = {}
+const routeResources = {}
     '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
     '/services': ['/api/services', '/images/services-hero.webp'],
->>>>>>> origin/main
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
   }
   const resources = routeResources[route as keyof typeof routeResources]
@@ -86,23 +59,15 @@ export const preloadRoute = useCallback((...args) => {;
     })
   }
 }
-<<<<<<< HEAD
-export const optimizeImages = useCallback((...args) => {if (typeof window === 'undefined') return;
-=======
 export const optimizeImages = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
->>>>>>> origin/main
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]');
   images.forEach(img => {)}img.setAttribute('loading', 'lazy')}
   })
   // Add intersection observer for lazy loading;
-<<<<<<< HEAD
-  if ('IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries) => {
-=======
-  if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {;
->>>>>>> origin/main
       entries.forEach(entry => {);
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
@@ -136,12 +101,8 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */,}})
     lazyImages.forEach(img => imageObserver.observe(img));
   }
 }
-<<<<<<< HEAD
-export const optimizeThirdPartyScripts = useCallback((...args) => {if (typeof window === 'undefined') return;
-=======
 export const optimizeThirdPartyScripts = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
->>>>>>> origin/main
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]');
   scripts.forEach(script => {)}script.setAttribute('defer', '')}
@@ -168,9 +129,5 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}})
   } else {/* TODO: Fix JSX expression */,}}}
 }
-<<<<<<< HEAD
-const loadAnalytics = () => {/* TODO: Fix JSX expression */,}}
-=======
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/main

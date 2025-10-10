@@ -12,15 +12,10 @@ const IoTPage: React.FC = () => {,
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
       marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
-<<<<<<< HEAD
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']},
-    {title: 'Smart City Solutions',
-=======
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'];
+technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'];
   },
     {
     title: 'Smart City Solutions',
->>>>>>> origin/main
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
       price: 'Starting at $15,000/month',
@@ -118,14 +113,7 @@ const IoTPage: React.FC = () => {,
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
-  ]
-const categories = [...new Set(iotServices.map(service => service.category))]
-return(<>)
-      <Helmet />
-=======
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
+technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
   ];];
@@ -133,7 +121,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -209,15 +196,10 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Services by Category */}{
-    categories.map(category => ()}
-=======
-        {/* Services by Category */},
+{/* Services by Category */},
     {
     categories.map(category => (
   }
->>>>>>> origin/main
           <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -287,14 +269,9 @@ return (
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-        ))}
-{/* IoT Capabilities Showcase */} <section className="py-20 px-4">
-=======
-        ))},
+))},
     {/* IoT Capabilities Showcase */}
         <section className="py-20 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>

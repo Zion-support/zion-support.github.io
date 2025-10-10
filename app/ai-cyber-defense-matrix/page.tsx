@@ -13,15 +13,10 @@ const AICyberDefenseMatrix: React.FC = () => {,
     {icon: Shield,
       title: 'AI Threat Detection',
       description: 'Advanced AI algorithms for real-time threat detection and automated response',
-<<<<<<< HEAD
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response']},
-    {icon: Zap,
-=======
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'];
+benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'];
     },
     {
       icon: Zap,
->>>>>>> origin/main
       title: 'Zero-Trust Architecture',
       description: 'Comprehensive zero-trust security framework with continuous verification',
       benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation']},
@@ -32,14 +27,9 @@ const AICyberDefenseMatrix: React.FC = () => {,
     {icon: Target,
       title: 'Automated Incident Response',
       description: 'Intelligent incident response with automated containment and remediation',
-<<<<<<< HEAD
-      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']}];
-
-=======
-      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
+benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
     },
   ];];];
->>>>>>> origin/main
   const pricingPlans = [
     {name: 'Essential',
       price: '$499',
@@ -102,19 +92,12 @@ const AICyberDefenseMatrix: React.FC = () => {,
     {title: 'Critical Infrastructure',
       description: 'Industrial cyber defense for power grids and utilities',
       icon: Zap,
-<<<<<<< HEAD
-      results: '100% infrastructure protection',}];
-
-  return(<>)
-      <Helmet />
-=======
-      results: '100% infrastructure protection'
+results: '100% infrastructure protection'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
         <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />

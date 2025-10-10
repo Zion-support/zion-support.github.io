@@ -27,19 +27,13 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
   private offlineQueue: AnalyticsEvent[] = [],
-<<<<<<< HEAD
-  constructor() {,;
-    this.sessionId = this.generateSessionId(),;
-    this.setupOfflineHandling(),}constructor() {}this.sessionId = this.generateSessionId();
-=======
-  constructor() {
+constructor() {
     ,
     this.sessionId = this.generateSessionId(),
     this.setupOfflineHandling(),
   }
   constructor() {}
     this.sessionId = this.generateSessionId();
->>>>>>> origin/main
     this.setupOfflineHandling();
     this.setupPeriodicFlush();}
   }
@@ -59,12 +53,8 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
     this.isInitialized = true;
     this.userProperties = {}public initialize(config?: {userId?: string; userType?: string)}): void {}}if (this.isInitialized) return;
     this.isInitialized = true;
-<<<<<<< HEAD
-    this.userProperties = {}...this.userProperties,;
-=======
-    this.userProperties = {}
+this.userProperties = {}
       ...this.userProperties,
->>>>>>> origin/main
       sessionId: this.sessionId,
       ...config}
     }
@@ -83,15 +73,10 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
   }
   public setUserProperties(properties: UserProperties): void {,}
     ,
-<<<<<<< HEAD
-    this.userProperties = {,;
-      ...this.userProperties;}...properties}
-=======
-    this.userProperties = {,
+this.userProperties = {,
       ...this.userProperties
   }
       ...properties}
->>>>>>> origin/main
     }
   }
   public trackEvent(event: AnalyticsEvent): void {,}
@@ -99,15 +84,7 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
       ...event;
       metadata: {,
         ...event.metadata,
-<<<<<<< HEAD
-        sessionId: this.sessionId;,}public setUserProperties(properties: UserProperties): void {,}}this.userProperties = {}...this.userProperties,;
-      ...properties}
-    }
-  }
-  public trackEvent(event: AnalyticsEvent): void {,}}const enrichedEvent: AnalyticsEvent = {,}...event,;
-      metadata: {,}...event.metadata,;
-=======
-        sessionId: this.sessionId
+sessionId: this.sessionId
   }
   public setUserProperties(properties: UserProperties): void {}
     this.userProperties = {}
@@ -120,7 +97,6 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
       ...event,
       metadata: {}
         ...event.metadata,
->>>>>>> origin/main
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : '',}
@@ -171,14 +147,7 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
         pageTitle: pageTitle || document.title),}public trackPageView(pagePath: string, pageTitle?: string): void {}}this.trackEvent({)}category: 'Navigation',
       action: 'Page View',
       label: pagePath,
-<<<<<<< HEAD
-      metadata: {,}pageTitle: pageTitle || document.title,
-        referrer: document.referrer,}
-export interface AnalyticsEvent {/* TODO: Fix JSX expression */,}}}
-export interface UserProperties {/* TODO: Fix JSX expression */,}}}
-class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserProperties = {,}private,;
-=======
-      metadata: {}
+metadata: {}
         pageTitle: pageTitle || document.title,
         referrer: document.referrer}
 export interface AnalyticsEvent {/* TODO: Fix JSX expression */}
@@ -188,7 +157,6 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   userProperties: UserProperties = {}
   private,
->>>>>>> origin/main
   sessionId: string,
   private isInitialized = false;
   private batchSize = 10;
@@ -237,15 +205,10 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {this.trackEvent({);}
       category: 'User Interaction'),
-<<<<<<< HEAD
-      action),;
-      label),}value}
-=======
-      action),
+action),
       label),
   }
       value}
->>>>>>> origin/main
     })
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {this.trackEvent({);}
@@ -253,19 +216,13 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action: 'Error Occurred'),
       label: error.message),
       metadata: {,
-<<<<<<< HEAD
-        stack: error.stack),}public trackUserInteraction(action: string, label?: string, value?: number): void {}}this.trackEvent({)}category: 'User Interaction',
-      action,;
-      label,;
-=======
-        stack: error.stack),
+stack: error.stack),
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {}
     this.trackEvent({)}
       category: 'User Interaction',
       action,
       label,
->>>>>>> origin/main
       value}
     })
   }
@@ -288,14 +245,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       metadata: {,}public trackPerformance(metric: string, value: number, rating?: string): void {}}this.trackEvent({)}category: 'Performance',
       action: metric,
       value: Math.round(value),
-<<<<<<< HEAD
-      metadata: {,}rating}
-  public trackPerformance(metri,;)
-=======
-      metadata: {}
+metadata: {}
         rating}
   public trackPerformance(metri,
->>>>>>> origin/main
   c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */,}}}
     })
@@ -305,20 +257,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action: conversionType),
       value),}public trackConversion(conversionType: string, value?: number): void {}}this.trackEvent({)}category: 'Conversion',
       action: conversionType,
-<<<<<<< HEAD
-      value,;
-      metadata: {`,}conversionId: `conv-${Date.now(),}public trackConversion(conversionTyp);
-  e: string, value?: number): void {/* TODO: Fix JSX expression */,}}`;
-  d: `conv-${Date.now(),}`;
-      }
-    })
-  }
-  public trackCustomEvent(category: string;),
-    action: string,),;
-    label?: string),;
-    value?: number),;
-=======
-      value,
+value,
       metadata: {`}
         conversionId: `conv-${Date.now()}
   public trackConversion(conversionTyp);
@@ -331,7 +270,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,),
     label?: string),
     value?: number),
->>>>>>> origin/main
     metadata?: Record<string>
   ): void {this.trackEvent({);}
       category);
@@ -346,15 +284,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackCustomEvent();
     category: string,
     action: string,
-<<<<<<< HEAD
-    label?: string,;
-    value?: number,;
-    metadata?: Record<string, unknown>}): void {}}this.trackEvent({)}category,;
-      action,;
-      label,;
-      value,;
-=======
-    label?: string,
+label?: string,
     value?: number,
     metadata?: Record<string, unknown>
   }
@@ -364,7 +294,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action,
       label,
       value,
->>>>>>> origin/main
       metadata}
     })
   }
@@ -411,11 +340,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const analytics = new EnhancedAnalytics();
 export default analytics;
-<<<<<<< HEAD
-  public trackCustomEvent(categor,;)
-=======
-  public trackCustomEvent(categor,
->>>>>>> origin/main
+public trackCustomEvent(categor,
   y: string,
     actio,
   n: string,

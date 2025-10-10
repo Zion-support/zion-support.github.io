@@ -7,22 +7,13 @@ const TutorialsPage: React.FC = () => {,
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-<<<<<<< HEAD
-    { id: 'all', name: 'All Tutorials', icon: BookOpen ,},
-    {id: 'ai', name: 'AI Services', icon: Brain ,},
-    {id: 'it', name: 'IT Services', icon: Cloud ,},
-    {id: 'saas', name: 'Micro SaaS', icon: Zap ,},
-    {id: 'security', name: 'Security', icon: Shield ,},
-    {id: 'integration', name: 'Integration', icon: Code ,}];
-=======
-    { id: 'all', name: 'All Tutorials', icon: BookOpen },
+{ id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
   ];];];
->>>>>>> origin/main
   const tutorials = [
     {id: 1,
       title: 'Getting Started with AI Chat API',
@@ -42,18 +33,12 @@ const TutorialsPage: React.FC = () => {,
           'Get your API key from the dashboard',
           'Make your first API call',
           'Handle responses and errors',
-<<<<<<< HEAD
-          'Implement advanced features'
-        ]}},
-    {id: 2,
-=======
-          'Implement advanced features';
+'Implement advanced features';
         ];
       }
     },
     {
       id: 2,
->>>>>>> origin/main
       title: 'Building a Secure Cloud Infrastructure',
       description: 'Complete guide to setting up secure cloud infrastructure using our IT services.',
       category: 'it',
@@ -152,20 +137,12 @@ const TutorialsPage: React.FC = () => {,
           'Handle rate limiting and throttling',
           'Manage API versioning',
           'Monitor and debug integrations'
-<<<<<<< HEAD
-        ]}}
-  ]
-
-  const filteredTutorials = selectedCategory === 'all' 
-    ? tutorials;
-=======
-        ]
+]
       }
     }
   ];
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials ;
->>>>>>> origin/main
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);

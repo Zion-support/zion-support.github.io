@@ -14,14 +14,11 @@ function resolveMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
-    // Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    // Pattern: ...     content = content.replace(/[\s\S]*?    
     // Remove any remaining conflict markers
     content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(//g, '');
+    content = content.replace(/    
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n');
     

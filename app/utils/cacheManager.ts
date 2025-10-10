@@ -3,14 +3,9 @@
  * Cache Manager;
  * Provides in-memory and localStorage caching with TTL support;
  */;
-<<<<<<< HEAD
-export enum CacheStorage {}}Memory = 'memory',;
-  LocalStorage = 'localStorage',;
-=======
 export enum CacheStorage {}
   Memory = 'memory',
   LocalStorage = 'localStorage',
->>>>>>> origin/main
   SessionStorage = 'sessionStorage';
 }
 export interface CacheOptions {ttl?: number; // Time to live in milliseconds;}}export interface CacheOptions {}}ttl?: number; // Time to live in milliseconds;
@@ -55,18 +50,13 @@ constructor(config: CacheConfig = {,)}) {}this.config = {}storage: config.storag
 /**;
    * Set a value in the cache;
    */;
-<<<<<<< HEAD
-  set(key: string, value: T, ttl?: number): void {const entry: CacheEntry<T> = {,}
-      value;}set(key: string, value: T, ttl?: number): void {}}const entry: CacheEntry<T> = {,}value,;
-=======
-  set(key: string, value: T, ttl?: number): void {
+set(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
       value
   }
   set(key: string, value: T, ttl?: number): void {}
     const entry: CacheEntry<T> = {}
       value,
->>>>>>> origin/main
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL,
     }
@@ -156,15 +146,9 @@ this.stats.hits++;
    * Get cache entry;
    */;
   get<T>(ke);
-<<<<<<< HEAD
-  y: string): T | undefined {/* TODO: Fix JSX expression */,}}`;
-    performanceMonitoring.recordCustomMetric(`cache_get_${key)}`, 1, 'count');
-    let,;
-=======
-  y: string): T | undefined {/* TODO: Fix JSX expression */}`;
+y: string): T | undefined {/* TODO: Fix JSX expression */}`;
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
     let,
->>>>>>> origin/main
   entry: CacheEntry<T> | null = null,
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;)
       typeof window !== 'undefined' &&;
@@ -192,22 +176,13 @@ this.stats.hits++;
 /**;
    * Check if a key exists in the cache;
    */;
-<<<<<<< HEAD
-  has(key: string): boolean {,}}const entry = this.cache.get(key);
-,;
-    if (!entry) {,;
-      return false;}}
-// Check if entry has expired;
-    if (Date.now() - entry.timestamp > entry.ttl) {}if (!entry) {}return false;
-=======
-  has(key: string): boolean {}
+has(key: string): boolean {}
     const entry = this.cache.get(key);
 ,
     if (!entry) {
     ,
       return false
   }
->>>>>>> origin/main
     }
 // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}this.cache.delete(key);
@@ -222,17 +197,12 @@ return true;
   delete(key: string): boolean {,}}const deleted = this.cache.delete(key);
     if (deleted) {}this.stats.entries = this.cache.size;
 // Save to persistent storage if needed;
-<<<<<<< HEAD
-      if (this.config.storage !== CacheStorage.Memory) {,;
-      // Save to persistent storage if needed;}if (this.config.storage !== CacheStorage.Memory) {}this.saveToStorage();
-=======
-      if (this.config.storage !== CacheStorage.Memory) {
+if (this.config.storage !== CacheStorage.Memory) {
     ,
       // Save to persistent storage if needed
   }
       if (this.config.storage !== CacheStorage.Memory) {}
         this.saveToStorage();
->>>>>>> origin/main
    * Check if key exists and is not expired;
    */;
   has(ke);
@@ -312,15 +282,10 @@ return cleaned;
   y: string,
     f);
   n: () => T | Promise<T>,
-<<<<<<< HEAD
-    option,;
-  s: {ttl?: number ,}= {}): T | Promise<T> {/* TODO: Fix JSX expression */,}}
-=======
-    option,
+option,
   s: { ttl?: number } = {}
   ): T | Promise<T> {/* TODO: Fix JSX expression */}
     }
->>>>>>> origin/main
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`;
@@ -342,15 +307,10 @@ return cleaned;
   y: string,
     f);
   n: () => Promise<T> | T,
-<<<<<<< HEAD
-    option,;
-  s: {ttl?: number ,}= {}): Promise<T> {/* TODO: Fix JSX expression */,}}
-=======
-    option,
+option,
   s: { ttl?: number } = {}
   ): Promise<T> {/* TODO: Fix JSX expression */}
     }
->>>>>>> origin/main
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;`;
@@ -364,18 +324,12 @@ return cleaned;
   memoize<TArgs extends unknown[], TResult>(f,
   n: (...arg),
   s: TArgs) => TResult,
-<<<<<<< HEAD
-    option,;
-  s: {/* TODO: Fix JSX expression */,}s: TArgs) => string ,} = {}): (...arg);
-  s: TArgs) => TResult {/* TODO: Fix JSX expression */,}}const {keyGenerator, ...cacheOptions}}= options;
-=======
-    option,
+option,
   s: {/* TODO: Fix JSX expression */}
   s: TArgs) => string } = {}
   ): (...arg);
   s: TArgs) => TResult {/* TODO: Fix JSX expression */}
     const { keyGenerator, ...cacheOptions } = options;
->>>>>>> origin/main
     return (...arg);
   s: TArgs): TResult => {/* TODO: Fix JSX expression */,}`;
         : `memoize_${fn.name}_${JSON.stringify(args)}`;
@@ -441,13 +395,8 @@ switch (this.config.storage) {case CacheStorage.LocalStorage: return window.loca
   }
 }
 // Create singleton instances for different use cases;
-<<<<<<< HEAD
-export const memoryCache = new CacheManager({storage: CacheStorage.Memory ,)})
-export const localStorageCache = new CacheManager({)
-=======
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
 export const localStorageCache = new CacheManager({;
->>>>>>> origin/main
     );
   storage: CacheStorage.LocalStorage),
   defaultTTL: 30 * 60 * 1000 // 30 minutes;,

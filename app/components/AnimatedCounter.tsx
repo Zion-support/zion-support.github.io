@@ -17,11 +17,7 @@ interface AnimatedCounterProps {end: number,}
     let startTime: number;,
     let animationFrame: number;,
 
-<<<<<<< HEAD
-    const animate = (currentTime: number) => {,
-=======
-    const animate = (currentTime: number) => {;
->>>>>>> origin/main
+const animate = (currentTime: number) => {;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       

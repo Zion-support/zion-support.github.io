@@ -45,11 +45,7 @@ interface AccessibilitySettings {highContrast: boolean;,}
       high_contrast: prefersHighContrast;,})
   }, []);
 
-<<<<<<< HEAD
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {,
-=======
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;
->>>>>>> origin/main
+const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
     
     // High contrast mode;
@@ -62,14 +58,9 @@ interface AccessibilitySettings {highContrast: boolean;,}
     // Screen reader optimizations;
     if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')}else {root.classList.remove('screen-reader-optimized')}}}
 
-<<<<<<< HEAD
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {,
-    const updatedSettings = { ...settings, ...newSettings}setSettings(updatedSettings);
-=======
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {;
+const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {;
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
->>>>>>> origin/main
     applyAccessibilitySettings(updatedSettings);
     
     analytics?.track('accessibility_settings_changed', newSettings);
@@ -78,29 +69,17 @@ interface AccessibilitySettings {highContrast: boolean;,}
   // Keyboard navigation support;
   useEffect(() => {if (!enableKeyboardNavigation) return;
 
-<<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent) => {,
-      // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-=======
-    const handleKeyDown = (event: KeyboardEvent) => {
+const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
->>>>>>> origin/main
         if (skipLink) {
           skipLink.focus(),
           event.preventDefault()}}
 
-<<<<<<< HEAD
-      // Escape key to close modals/dropdowns;
-      if (event.key === 'Escape') {const activeElement = document.activeElement as HTMLElement;
-=======
-      // Escape key to close modals/dropdowns
+// Escape key to close modals/dropdowns
       if (event.key === 'Escape') {;
     const activeElement = document.activeElement as HTMLElement;
->>>>>>> origin/main
         if (activeElement && activeElement.blur) {
           activeElement.blur()}}
     }
@@ -112,22 +91,14 @@ interface AccessibilitySettings {highContrast: boolean;,}
   // Focus management;
   useEffect(() => {if (!enableFocusManagement) return;
 
-<<<<<<< HEAD
-    const handleFocusIn = (event: FocusEvent) => {,
-=======
-    const handleFocusIn = (event: FocusEvent) => {;
->>>>>>> origin/main
+const handleFocusIn = (event: FocusEvent) => {;
       const target = event.target as HTMLElement;
       
       // Ensure focus is visible;
       if (target && target.classList) {
         target.classList.add('focus-visible');}}
 
-<<<<<<< HEAD
-    const handleFocusOut = (event: FocusEvent) => {,
-=======
-    const handleFocusOut = (event: FocusEvent) => {;
->>>>>>> origin/main
+const handleFocusOut = (event: FocusEvent) => {;
       const target = event.target as HTMLElement;
       
       // Remove focus styling;
@@ -140,13 +111,8 @@ interface AccessibilitySettings {highContrast: boolean;,}
     return () => {document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut)}}, [enableFocusManagement]);
 
-<<<<<<< HEAD
-  // Screen reader announcements;
-  const announceToScreenReader = (message: string) => {,
-=======
-  // Screen reader announcements
+// Screen reader announcements
   const announceToScreenReader = (message: string) => {;
->>>>>>> origin/main
     if (!enableScreenReaderSupport) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');

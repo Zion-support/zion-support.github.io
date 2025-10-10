@@ -20,15 +20,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [fontSize, setFontSize] = useState(16);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Apply high contrast mode
-    if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
-=======
-    // Keyboard navigation enhancements
+// Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
@@ -39,7 +31,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             event.preventDefault();
           }
         }
->>>>>>> origin/main
 
     return () => {
       document.documentElement.classList.remove('high-contrast');
@@ -107,19 +98,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.textContent = 'Page content has been updated';
       document.body.appendChild(announcement);
       
-<<<<<<< HEAD
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-    };
-
-    // Listen for route changes (if using React Router)
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-          announcePageChange();
-=======
-      const trapFocus = (container: HTMLElement) => {;
+const trapFocus = (container: HTMLElement) => {;
         const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
@@ -138,7 +117,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               e.preventDefault();
             }
           }
->>>>>>> origin/main
         }
       });
     });
@@ -150,49 +128,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     if (!enableFocusManagement) return;
 
-<<<<<<< HEAD
-// Focus management for modals and dropdowns
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      const modal = target.closest('[role="dialog"], [role="menu"], [role="listbox"]');
-      
-      if (modal) {
-        const focusableElements = modal.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        
-        if (focusableElements.length > 0) {
-          const firstElement = focusableElements[0] as HTMLElement;
-          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-          
-          // Trap focus within modal
-          const handleTabKey = (e: KeyboardEvent) => {
-            if (e.key === 'Tab') {
-              if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                  lastElement.focus();
-                  e.preventDefault();
-                }
-              } else {
-                if (document.activeElement === lastElement) {
-                  firstElement.focus();
-                  e.preventDefault();
-                }
-              }
-            }
-          };
-          
-          modal.addEventListener('keydown', handleTabKey);
-          
-          // Cleanup when modal is closed
-          const cleanup = () => {
-            modal.removeEventListener('keydown', handleTabKey);
-            modal.removeEventListener('focusout', cleanup);
-          };
-          
-          modal.addEventListener('focusout', cleanup);
-=======
-      // Apply focus trap to modals and dropdowns
+// Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
@@ -245,7 +181,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');
->>>>>>> origin/main
         }
       }
     };

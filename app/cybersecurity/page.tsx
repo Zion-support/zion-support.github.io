@@ -15,15 +15,9 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-<Helmet />
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
 <Helmet>
->>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

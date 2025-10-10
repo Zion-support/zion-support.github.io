@@ -10,15 +10,10 @@ const AiAnalyticsPage: React.FC = () => {,
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']},
     {icon: TrendingUp,
@@ -36,14 +31,9 @@ const AiAnalyticsPage: React.FC = () => {,
     {icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-<<<<<<< HEAD
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']},
-  ];
-=======
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     },
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -69,18 +59,12 @@ const AiAnalyticsPage: React.FC = () => {,
       icon: '⚙️',},
     {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-<<<<<<< HEAD
-      icon: '🛡️',}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-      icon: '🛡️'
+icon: '🛡️'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
@@ -104,10 +88,7 @@ const AiAnalyticsPage: React.FC = () => {,
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      </main>
+</main>
     </>
   );
 }
@@ -121,7 +102,6 @@ const AiAnalyticsPage: React.FC = () => {,
 }
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>

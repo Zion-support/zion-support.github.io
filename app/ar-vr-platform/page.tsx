@@ -16,13 +16,9 @@ const ARVRPlatformPage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data',},
     {icon: Globe,
       title: 'Cross-Platform Support',
-<<<<<<< HEAD
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility',}];
-=======
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
+description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
@@ -31,18 +27,11 @@ const ARVRPlatformPage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>

@@ -51,12 +51,7 @@ export interface NavigationItem {label: string;,}
 export interface AnalyticsEvent {action: string;,}
   category: string;,
   label?: string,
-<<<<<<< HEAD
-  value?: number;}}
-export {}}
-=======
-  value?: number
+value?: number
   }
 }
 export {}
->>>>>>> origin/main

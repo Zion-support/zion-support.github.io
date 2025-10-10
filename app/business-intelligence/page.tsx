@@ -4,13 +4,9 @@ import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp}}from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => {,
   const features = [
-<<<<<<< HEAD
-    {}];
-=======
-    {
+{
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -19,18 +15,11 @@ const BusinessIntelligencePage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>

@@ -40,15 +40,7 @@ const initializePerformanceMonitoring = (;
     if ('PerformanceObserver' in window) {// Monitor Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-          if (entry.entryType === 'largest-contentful-paint') {) => {
-  return($3;)
-  )}trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
-          } else if (entry.entryType === 'first-input') {const fid = (entry as any).processingStart - entry.startTime;
-            trackEvent('web_vitals', 'FID', Math.round(fid))}} else if (entry.entryType === 'layout-shift') {if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value)}}
-=======
-          if (entry.entryType === 'largest-contentful-paint') {) => {;
+if (entry.entryType === 'largest-contentful-paint') {) => {;
   return (
     $3
   )
@@ -63,7 +55,6 @@ const initializePerformanceMonitoring = (;
               trackEvent('web_vitals', 'CLS', (entry as any).value)
   }
             }
->>>>>>> origin/main
           }
         }
       })
@@ -164,17 +155,12 @@ declare global {interface Window {}
 
 export default Analytics;
 // Analytics Provider for context;
-<<<<<<< HEAD
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
-=======
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
     <>
       <Analytics />
   },
     {children}
->>>>>>> origin/main
     </>
   );
 }

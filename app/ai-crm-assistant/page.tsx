@@ -10,15 +10,10 @@ const AiCrmAssistantPage: React.FC = () => {,
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -29,19 +24,12 @@ const AiCrmAssistantPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
-  ]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
         <meta name="keywords" content="AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM" />
       </Helmet>
@@ -65,10 +53,7 @@ const AiCrmAssistantPage: React.FC = () => {,
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      </main>
+</main>
     </>
   );
 }
@@ -82,7 +67,6 @@ const AiCrmAssistantPage: React.FC = () => {,
 }
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -175,22 +159,3 @@ const AiCrmAssistantPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiCrmAssistantPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

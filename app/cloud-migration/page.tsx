@@ -7,16 +7,11 @@ const CloudMigrationPage: React.FC = () => {,
     {
       icon: Shield,
       title: 'Secure Cloud Migration',
-<<<<<<< HEAD
-      description: 'Safe and secure migration of your applications and data to the cloud',},
-    {}];
-=======
-      description: 'Safe and secure migration of your applications and data to the cloud'
+description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',
@@ -25,22 +20,7 @@ const CloudMigrationPage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-        <title>Cloud Migration | Zion Tech Group</title>
-        <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Cloud Migration;</h1>
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced cloud migration solutions.</p>
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -50,7 +30,6 @@ const CloudMigrationPage: React.FC = () => {,
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions. 
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>

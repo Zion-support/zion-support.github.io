@@ -10,15 +10,10 @@ const EdgeComputingPage: React.FC = () => {,
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
-<<<<<<< HEAD
-      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']},
-    {icon: Globe,
-=======
-      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'];
+benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'];
   },
     {
     icon: Globe,
->>>>>>> origin/main
       title: 'Global Distribution',
       description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
       benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']},
@@ -37,13 +32,9 @@ const EdgeComputingPage: React.FC = () => {,
     {icon: Server,
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
-<<<<<<< HEAD
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']}]
-=======
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
+benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   },
   ];];
->>>>>>> origin/main
 const services = [
     {icon: '⚡',
       title: 'Edge Analytics',
@@ -56,15 +47,10 @@ const services = [
       description: 'Comprehensive security solutions for edge environments',},
     {icon: '📱',
       title: 'Mobile Edge',
-<<<<<<< HEAD
-      description: 'Mobile edge computing for 5G and mobile applications',}}
-  ]
-=======
-      description: 'Mobile edge computing for 5G and mobile applications'
+description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
   ];
->>>>>>> origin/main
 const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -95,20 +81,13 @@ const useCases = [
       icon: '🏥',},
     {title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-<<<<<<< HEAD
-      icon: '🎮',}}
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>)
-      <Helmet />
-=======
-      icon: '🎮'
+icon: '🎮'
   }
     }
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
->>>>>>> origin/main
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

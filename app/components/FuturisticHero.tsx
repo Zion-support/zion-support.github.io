@@ -16,15 +16,10 @@ const FuturisticHeroPage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
+description: 'Worldwide deployment and support for international businesses'
   }
     }
   ];];];
->>>>>>> origin/main
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -37,16 +32,10 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(<div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,)
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
 return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
->>>>>>> origin/main
             {benefits.map((benefit, index) => (
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />

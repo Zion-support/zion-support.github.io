@@ -3,11 +3,7 @@ export const generateId = (prefix: string = 'id'): string => {,}return `${prefix
 }
 export const createAriaLabel = (text: string, context?: string): string => {}return context ? `${text}, ${context}` : text;
 }
-<<<<<<< HEAD
-export const announceToScreenReader = (message: string): void => {,
-=======
 export const announceToScreenReader = (message: string): void => {;
->>>>>>> origin/main
     const announcement = document.createElement('div'),
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -21,13 +17,8 @@ export const focusElement = (element: HTMLElement | null): void => {,
     if (element) {
     element.focus()}}
 }
-<<<<<<< HEAD
-export const trapFocus = (container: HTMLElement): (() => void) => {,
-    const focusableElements = container.querySelectorAll(,)
-=======
 export const trapFocus = (container: HTMLElement): (() => void) => {;
     const focusableElements = container.querySelectorAll(,
->>>>>>> origin/main
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 const firstElement = focusableElements[0] as HTMLElement;
@@ -59,11 +50,7 @@ const ariaLabelledBy = element.getAttribute('aria-labelledby');
   if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {errors.push('Element with aria-labelledby references non-existent element')}}
 return errors;
 }
-<<<<<<< HEAD
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {,
-=======
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
->>>>>>> origin/main
     element.setAttribute('tabindex', '0');
 element.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -71,15 +58,10 @@ element.addEventListener('keydown', (e) => {
       element.click()}}
   })
 }
-<<<<<<< HEAD
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,
-    const skipLink = document.createElement('a')}skipLink.href = `#${targetId}`;
-=======
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
     const skipLink = document.createElement('a')
   }
   skipLink.href = `#${targetId}`;
->>>>>>> origin/main
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
 return skipLink,
@@ -89,11 +71,7 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)
     if (!rgb) return 0,
-<<<<<<< HEAD
-const [r, g, b] = rgb.map(Number).map(c => {)
-=======
 const [r, g, b] = rgb.map(Number).map(c => {;
->>>>>>> origin/main
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
 return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -103,12 +81,8 @@ const l1 = getLuminance(foreground);
 const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 return contrast >= 4.5; // WCAG AA standard;
 }
-<<<<<<< HEAD
-export const addFocusIndicators = (): void => {const style = document.createElement('style');
-=======
 export const addFocusIndicators = (): void => {;
     const style = document.createElement('style');
->>>>>>> origin/main
   style.textContent = `;
     *:focus {outline: 2px solid #3b82f6,}
       outline-offset: 2px,}}
@@ -133,12 +107,8 @@ export const addFocusIndicators = (): void => {;
   `;
 document.head.appendChild(style);
 }
-<<<<<<< HEAD
-export const initializeAccessibility = (): void => {addFocusIndicators();
-=======
 export const initializeAccessibility = (): void => {;
     addFocusIndicators();
->>>>>>> origin/main
 // Add skip link to main content;
   const mainContent = document.querySelector('main');
   if (mainContent && !mainContent.id) {

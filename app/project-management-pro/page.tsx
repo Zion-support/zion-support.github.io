@@ -39,15 +39,10 @@ const ProjectManagementProPage: React.FC = () => {,
       description: 'Comprehensive project analytics and reporting to track progress and performance.',},
     {icon: Zap,
       title: 'Automation',
-<<<<<<< HEAD
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',}}
-  ]
-=======
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
+description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
   }
     }
   ];];];
->>>>>>> origin/main
 const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
@@ -60,18 +55,11 @@ const benefits = [
 
     'Increase team productivity',
 
-<<<<<<< HEAD
-    'Streamline project workflows'
-  ]
-return(<>)
-      <Helmet />
-=======
-    'Streamline project workflows';
+'Streamline project workflows';
   ];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

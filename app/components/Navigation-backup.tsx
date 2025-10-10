@@ -28,28 +28,14 @@ const Navigation: React.FC = () => {,
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
-<<<<<<< HEAD
-  const closeAllMenus = () => {setServicesOpen(false);
-=======
-  const closeAllMenus = () => {;
+const closeAllMenus = () => {;
     setServicesOpen(false);
->>>>>>> origin/main
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false)}// Service data;
   const aiServices = [
-<<<<<<< HEAD
-    {name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' ,},
-    {name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' ,},
-    {name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' ,},
-    {name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' ,},
-    {name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' ,},
-    {name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' ,},
-    {name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' ,},
-    {name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' ,}];
-=======
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
+{ name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
     { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
@@ -58,7 +44,6 @@ const Navigation: React.FC = () => {,
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
   ];];];
->>>>>>> origin/main
   const itServices = [
     {name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' ,},
     {name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' ,},
@@ -67,27 +52,7 @@ const Navigation: React.FC = () => {,
     {name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' ,},
     {name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' ,}];
   const microSaasServices = [
-<<<<<<< HEAD
-    {name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' ,},
-    {name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' ,},
-    {name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' ,},
-    {name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' ,},
-    {name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' ,},
-    {name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' ,}];
-  const emergingTech = [
-    {name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' ,},
-    {name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' ,},
-    {name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' ,},
-    {name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' ,},
-    {name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' ,},
-    {name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' ,}]
-
-  return(<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${)
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-        <div className="flex items-center justify-between h-16">{/* Logo */</div>} <div className="flex-shrink-0">
-=======
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
+{ name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
     { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
@@ -110,7 +75,6 @@ const Navigation: React.FC = () => {,
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
->>>>>>> origin/main
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -282,12 +246,8 @@ const Navigation: React.FC = () => {,
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Navigation */}{isOpen && (
-=======
-        {/* Mobile Navigation */},
+{/* Mobile Navigation */},
     {isOpen && (
->>>>>>> origin/main
 
           <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20">,</div>
             <div className="pt-4 space-y-4">

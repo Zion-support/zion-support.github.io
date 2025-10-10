@@ -8,15 +8,10 @@ const BlockchainWeb3Page: React.FC = () => {,
       icon: Zap,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
-<<<<<<< HEAD
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
-    {icon: Shield,
-=======
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
+benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
   },
     {
     icon: Shield,
->>>>>>> origin/main
       title: 'Decentralized Security',
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
@@ -27,18 +22,12 @@ const BlockchainWeb3Page: React.FC = () => {,
     {icon: Globe,
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
-<<<<<<< HEAD
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
-return(<>)
-      <Helmet />
-=======
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
+benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
   },
   ];];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>

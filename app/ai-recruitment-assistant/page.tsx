@@ -22,18 +22,12 @@ const AIRecruitmentAssistantPage: React.FC = () => {,
       description: 'Comprehensive analytics on hiring metrics, candidate pipeline, and recruitment performance.'},
     {icon: Zap,
       title: 'Automated Screening',
-<<<<<<< HEAD
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
+description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
         <meta name="keywords" content="AI recruitment, hiring automation, candidate matching, resume screening, recruitment analytics, HR technology" />
@@ -67,10 +61,5 @@ const AIRecruitmentAssistantPage: React.FC = () => {,
   );
 };
 
-<<<<<<< HEAD
-export default AIRecruitmentAssistantPage;
-  </h1>
-=======
 export default AIRecruitmentAssistantPage
   </h1>
->>>>>>> origin/main

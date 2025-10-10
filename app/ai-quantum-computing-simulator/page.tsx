@@ -13,15 +13,10 @@ const AIQuantumComputingSimulator: React.FC = () => {,
     {icon: Cpu,
       title: 'Quantum Circuit Simulation',
       description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms',
-<<<<<<< HEAD
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support']},
-    {icon: Brain,
-=======
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
+benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
     },
     {
       icon: Brain,
->>>>>>> origin/main
       title: 'AI-Powered Optimization',
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
       benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction']},
@@ -32,14 +27,9 @@ const AIQuantumComputingSimulator: React.FC = () => {,
     {icon: Shield,
       title: 'Quantum Error Correction',
       description: 'Advanced error correction algorithms to simulate realistic quantum computing conditions',
-<<<<<<< HEAD
-      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']}];
-
-=======
-      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
+benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
     },
   ];];];
->>>>>>> origin/main
   const pricingPlans = [
     {name: 'Researcher',
       price: '$199',
@@ -102,19 +92,12 @@ const AIQuantumComputingSimulator: React.FC = () => {,
     {title: 'Quantum Chemistry',
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
-<<<<<<< HEAD
-      results: 'Accurate molecular modeling',}];
-
-  return(<>)
-      <Helmet />
-=======
-      results: 'Accurate molecular modeling'
+results: 'Accurate molecular modeling'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />

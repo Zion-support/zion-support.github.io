@@ -456,24 +456,7 @@ const itServices = [;
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',}}
-  ]
-const categories = [
-    {id: 'all', name: 'All IT Services', icon: Grid3X3 ,},
-    {id: 'infrastructure', name: 'Infrastructure', icon: Server ,},
-    {id: 'cloud', name: 'Cloud Services', icon: Cloud ,},
-    {id: 'security', name: 'Cybersecurity', icon: Shield ,},
-    {id: 'networking', name: 'Networking', icon: Network ,},
-    {id: 'database', name: 'Database', icon: Database ,},
-    {id: 'support', name: 'IT Support', icon: Headphones ,},
-    {id: 'development', name: 'Development', icon: Code ,},
-    {id: 'consulting', name: 'Consulting', icon: Briefcase ,},
-    {id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw ,},
-    {id: 'compliance', name: 'Compliance', icon: CheckSquare ,}]
-const filteredServices = itServices.filter(service => {)
-=======
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
+caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
   ];];];
@@ -491,7 +474,6 @@ const categories = [
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
 const filteredServices = itServices.filter(service => {;
->>>>>>> origin/main
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());

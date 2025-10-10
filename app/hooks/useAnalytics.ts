@@ -3,13 +3,7 @@ interface AnalyticsEvent {event_category: string,}
   event_label: string,
   value?: number;}}
 export const useAnalytics = (;
-<<<<<<< HEAD
-  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {,
-    ) => {
-  return($3;)
-  )}if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', eventName, parameters);
-=======
-  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
+const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
     ) => {;
   return (
     $3
@@ -17,7 +11,6 @@ export const useAnalytics = (;
   }
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters);
->>>>>>> origin/main
     }
   }, []);
 const trackPageView = useCallback((pagePath: string, pageTitle: string) => {,
@@ -29,16 +22,10 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {i
         value: value,}})
     }
   }, []);
-<<<<<<< HEAD
-return {trackEvent,;}
-    trackPageView,;
-    trackConversion,}}
-=======
 return {
     trackEvent,
     trackPageView,
     trackConversion,
   }
   }
->>>>>>> origin/main
 }

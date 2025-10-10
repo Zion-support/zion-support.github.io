@@ -38,15 +38,10 @@ const EmailMarketingAutomationPage: React.FC = () => {,
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.',},
     {icon: Zap,
       title: 'Smart Triggers',
-<<<<<<< HEAD
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
-  ]
-=======
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
+description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
   ];];];
->>>>>>> origin/main
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -59,18 +54,11 @@ const benefits = [
 
     'Generate more qualified leads',
 
-<<<<<<< HEAD
-    'Save time and resources'
-  ]
-return(<>)
-      <Helmet />
-=======
-    'Save time and resources';
+'Save time and resources';
   ];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

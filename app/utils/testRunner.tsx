@@ -236,18 +236,12 @@ export class TestRunner {private tests: Test[] = [],}
     return {total, passed, failed, skipped, duration}}}
 }
 
-<<<<<<< HEAD
-// Custom render function with providers;
-const AllTheProviders = ({children}: {children: React.ReactNode ,}) => {return(<BrowserRouter>)
-      {children} </BrowserRouter>
-=======
 // Custom render function with providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
   return (
     <BrowserRouter>
       {children}
     </BrowserRouter>;
->>>>>>> origin/main
   );
 }
 
@@ -727,14 +721,9 @@ if ('memory' in performance) {}const memory = (performance as {memory?: { usedJS
     const violations: string[] = [],
     // Check for missing alt text on images;
     const images = container.querySelectorAll('img'),
-<<<<<<< HEAD
-    images.forEach((img, index) => {// Basic accessibility checks;
-    const violations: string[] = [],
-=======
-    images.forEach((img, index) => {;
+images.forEach((img, index) => {;
     // Basic accessibility checks;
     const violations: string[] = []
->>>>>>> origin/main
     // Check for missing alt text on images,
     const images = container.querySelectorAll('img')}images.forEach((img, index) => {}if (!img.getAttribute('alt')) {`}violations.push(`Image ${index)}missing alt text`);
       }
@@ -1240,11 +1229,6 @@ if ('memory' in performance) {}const memory = (performance as {memory?: { usedJS
   }
 }
 // React hook for testing;
-<<<<<<< HEAD
-export const useTestRunner = useCallback((...args) => {const testRunner = TestRunner.getInstance();
-  const runTest = useCallback(async (;)
-// React hook for testing;}export const useTestRunner = useCallback((...args) => {}const testRunner = TestRunner.getInstance();
-=======
 export const useTestRunner = useCallback((...args) => {;
     const testRunner = TestRunner.getInstance();
   const runTest = useCallback(async (;
@@ -1252,7 +1236,6 @@ export const useTestRunner = useCallback((...args) => {;
   }
 export const useTestRunner = useCallback((...args) => {}
   const testRunner = TestRunner.getInstance();
->>>>>>> origin/main
   const runTest = useCallback(async ();
     component: ReactElement,
     testName: string,
@@ -1289,14 +1272,10 @@ export const useTestRunner = useCallback((...args) => {}
   }
 }
 // Test utilities;
-<<<<<<< HEAD
-export const testUtils = {// Create mock data</void>}createMockData: (type: string, count: number = 10) => {,}</void>
-=======
 export const testUtils = {
     // Create mock data</void>
   }
   createMockData: (type: string, count: number = 10) => {}</void>;
->>>>>>> origin/main
 // Test utilities;
 export const testUtils = {}// Create mock data;
   createMockData: (type: string, count: number = 10) => {,}const mockData: Array<{id: number; name: string; description: string; createdAt: string, updatedAt: string ,}> = []
@@ -1376,15 +1355,10 @@ export const testUtils = {}// Create mock data;
 export const useTestRunner = () => {/* TODO: Fix JSX expression */,}r: 'Unknown test type' ,}
     }
   }, [testRunner]);
-<<<<<<< HEAD
-  return {/* TODO: Fix JSX expression */,}}// Performance testing utilities;
-export const measurePerformance = (fn: () => void): PerformanceMetrics => {,
-=======
-  return {/* TODO: Fix JSX expression */}
+return {/* TODO: Fix JSX expression */}
 
 // Performance testing utilities
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
->>>>>>> origin/main
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
@@ -1434,8 +1408,4 @@ export const expect = (actual: unknown) => ({,
 
 // Export everything;
 export * from '@testing-library/react';
-<<<<<<< HEAD
-export {customRender as render}}
-=======
 export { customRender as render }
->>>>>>> origin/main

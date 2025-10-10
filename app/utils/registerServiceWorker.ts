@@ -56,14 +56,7 @@ export async function registerServiceWorker();
       installingWorker.addEventListener('statechange', () => {}if (installingWorker.state === 'installed') {}if (navigator.serviceWorker.controller) {}// New update available;
             if (config.onUpdate) {}config.onUpdate(registration);}
             }
-<<<<<<< HEAD
-          } else {}}// Content cached for offline use;
-            if (config.onSuccess) {}config.onSuccess(registration);}
-export async function registerServiceWorker(confi,;)
-  g: ServiceWorkerConfig = {,})
-): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */,}}
-=======
-          } else {}
+} else {}
             // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
@@ -71,7 +64,6 @@ export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||;)
       window.location.hostname === '[::1]' ||);

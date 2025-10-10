@@ -2,23 +2,6 @@
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
 
-<<<<<<< HEAD
-const PartnersPage: React.FC = () => {,
-  const partners = [
-import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
-
-interface Partner {id: string;,}
-  name: string;,
-  logo: string;,
-  description: string;,
-  category: string;,
-  website: string;,
-  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
-
-  const partners: Partner[] = [,
-=======
 const PartnersPage: React.FC = () => {
   const partners = [;
 import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
@@ -38,7 +21,6 @@ const PartnersPage: React.FC = () => {
 
   const partners: Partner[] = [
 
->>>>>>> origin/main
     {
       id: '1',
       name: 'Microsoft',
@@ -51,37 +33,8 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
-<<<<<<< HEAD
-  ];
-  const benefits = [
-    {title: 'Certified Expertise',
-      description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle;,},
-    {title: 'Priority Support',
-      description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle;,},
-    {title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle;,},
-    {title: 'Cost Optimization',
-      description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle;,}];
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
+];
 
-  return(<>)
-      <Helmet />
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
-      </Helmet>
-
-      <Navigation />
-      
-=======
-
-  ];
-
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -124,11 +77,7 @@ const PartnersPage: React.FC = () => {
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];];];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
-<<<<<<< HEAD
-  const filteredPartners = partners.filter(partner => {)
-=======
-  const filteredPartners = partners.filter(partner => {;
->>>>>>> origin/main
+const filteredPartners = partners.filter(partner => {;
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;
     return matchesCategory && matchesTier;});
@@ -238,13 +187,9 @@ const PartnersPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{partner.name.charAt(0)</span>}</span>
                   </div>
-<<<<<<< HEAD
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)}flex items-center gap-1`}>{getTierIcon(partner.tier)</div>}{partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-=======
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
+<div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
                     {getTierIcon(partner.tier)},
     {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
->>>>>>> origin/main
                   </div>
                 </div>
 
@@ -387,10 +332,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
   );
 };
 

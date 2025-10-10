@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-  private observers: PerformanceObserver[] = [],
-constructor() {this.initializeMetrics()}}
-private initializeMetrics(): void {if (typeof window === 'undefined' || !('performance' in window)) return;}
-=======
 private observers: PerformanceObserver[] = [],
 constructor() {
     this.initializeMetrics()
@@ -10,7 +5,6 @@ constructor() {
   }
 private initializeMetrics(): void {
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
 // Measure page load time;
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -40,17 +34,12 @@ try {const observer = new PerformanceObserver((list) => {}
       this.observers.push(observer);
     } catch (error) {console.warn('PerformanceObserver not supported:', error)}}
   }
-<<<<<<< HEAD
-private observeLCP(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
-try {const observer = new PerformanceObserver((list) => {}
-=======
-    }
+}
   }
 private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
       const observer = new PerformanceObserver((list) => {;
->>>>>>> origin/main
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime;}})
@@ -110,16 +99,10 @@ return result;
 }
 export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
-<<<<<<< HEAD
-  wait: number;,
-): T => {let timeout: NodeJS.Timeout;,
-return ((...args: Parameters<T>) => {,
-=======
-  wait: number
+wait: number
 ): T => {
     let timeout: NodeJS.Timeout;
 return ((...args: Parameters<T>) => {
->>>>>>> origin/main
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)}}) as T;
 }
@@ -138,24 +121,14 @@ export const lazyLoad = (callback: () => void): void => {,
     if ('requestIdleCallback' in window) {
     requestIdleCallback(callback)}} else {setTimeout(callback, 1)}}}
 }
-<<<<<<< HEAD
-export const preloadImage = (src: string): Promise<void> => {,
-    return new Promise((resolve, reject) => {
-=======
 export const preloadImage = (src: string): Promise<void> => {;
     return new Promise((resolve, reject) => {;
->>>>>>> origin/main
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;}})
 }
-<<<<<<< HEAD
-export const preloadImages = (srcs: string[]): Promise<void[]> => {,
-    return Promise.all(srcs.map(preloadImage))}}
-=======
 export const preloadImages = (srcs: string[]): Promise<void[]> => {;
     return Promise.all(srcs.map(preloadImage))
   }
 }
->>>>>>> origin/main

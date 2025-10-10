@@ -22,18 +22,12 @@ const EcommerceAnalyticsProPage: React.FC = () => {,
       description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
     {icon: Target,
       title: 'Conversion Tracking',
-<<<<<<< HEAD
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
+description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
@@ -67,10 +61,5 @@ const EcommerceAnalyticsProPage: React.FC = () => {,
   );
 };
 
-<<<<<<< HEAD
-export default EcommerceAnalyticsProPage;
-  </h1>
-=======
 export default EcommerceAnalyticsProPage
   </h1>
->>>>>>> origin/main

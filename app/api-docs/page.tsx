@@ -24,12 +24,8 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
   -H "Content-Type: application/json" \\,
   -d '{
     "text": "Your text to analyze",
-<<<<<<< HEAD
-    "features": ["sentiment", "entities", "key_phrases"]}'`
-=======
-    "features": ["sentiment", "entities", "key_phrases"];
+"features": ["sentiment", "entities", "key_phrases"];
   }'`
->>>>>>> origin/main
         },
         {name: 'Image Recognition',
           method: 'POST',
@@ -84,13 +80,9 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
     "output_format": "json"}'`
         }
   ]
-<<<<<<< HEAD
-  const filteredEndpoints = apiEndpoints.map(category => ({)
-=======
-    }
+}
   ];];
   const filteredEndpoints = apiEndpoints.map(category => ({
->>>>>>> origin/main
     ...category,
     endpoints: category.endpoints.filter(endpoint => ,)
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -105,17 +97,8 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
       />
       <Navigation />
       {/* Hero Section */}
-<<<<<<< HEAD
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
-=======
-
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
->>>>>>> origin/main
             Explore endpoints, authentication, and integration guides.
           </p>
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">,</button>
@@ -201,13 +184,8 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
                           ) : (
                             <>
                               <Copy className="w-4 h-4" />
-<<<<<<< HEAD
-                              Copy;
-                            </React.Fragment>
-=======
-                              Copy
+Copy
                             </>
->>>>>>> origin/main
                           )}
                         </button>
                       </div>

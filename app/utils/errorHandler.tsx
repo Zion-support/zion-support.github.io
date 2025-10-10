@@ -26,12 +26,8 @@ export enum ErrorSeverity {// Error severity levels;}}export enum ErrorSeverity 
   CRITICAL = 'CRITICAL';
 }
 // Error interface;
-<<<<<<< HEAD
-export interface AppError {id: string,,;}
-=======
 export interface AppError {
     id: string,,
->>>>>>> origin/main
     type: ErrorType,
   severity: ErrorSeverity,,
     message: string,
@@ -50,12 +46,8 @@ export interface AppError {
   retryCount?: number;
 }
 // Error handler configuration;
-<<<<<<< HEAD
-export interface ErrorHandlerConfig {enableLogging: boolean,,;}
-=======
 export interface ErrorHandlerConfig {
     enableLogging: boolean,,
->>>>>>> origin/main
     enableReporting: boolean,
   enableRetry: boolean,,
     maxRetries: number,
@@ -401,20 +393,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
     const notification = document.createElement('div');
     notification.className = 'error-notification';
     notification.style.cssText = `;
-<<<<<<< HEAD
-      position: fixed,,;
-    top: 20 px;,
-      right: 20 px,,;
-    background: ${this.getNotificationColor(error.severity),}color: white,,;
-    padding: 15 px;,
-=======
-      position: fixed,,
+position: fixed,,
     top: 20 px
       right: 20 px,,
     background: ${this.getNotificationColor(error.severity)}
       color: white,,
     padding: 15 px
->>>>>>> origin/main
       border-radius: 5 px,
       box-shadow: 0 2 px 10 px rgba(0,0,0,0.2);
       z-index: 10000,
@@ -519,17 +503,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
         return '#dc3545';
       case ErrorSeverity.HIGH: ;,
         return '#fd7 e14';
-<<<<<<< HEAD
-      case ErrorSeverity.MEDIUM: return '#ffc107',
-      case ErrorSeverity.LOW: return '#28a745',,;
-    default: case ErrorSeverity.LOW:,
-=======
-      case ErrorSeverity.MEDIUM:
+case ErrorSeverity.MEDIUM:
         return '#ffc107'
       case ErrorSeverity.LOW: return '#28a745',,
     default:  
       case ErrorSeverity.LOW:
->>>>>>> origin/main
         return '#28a745',
       default:,
         return '#6c757d';
@@ -636,16 +614,10 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
       (acc, error) => {}acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-<<<<<<< HEAD
-      {}as Record<ErrorType, number>);
-    const bySeverity = this.errors.reduce()
-      (acc, error) => {}{} as Record<ErrorType>
-=======
-      {} as Record<ErrorType, number>);
+{} as Record<ErrorType, number>);
     const bySeverity = this.errors.reduce(
       (acc, error) => {},
     {} as Record<ErrorType>;
->>>>>>> origin/main
             `);
 }
         }
@@ -821,13 +793,8 @@ export const useErrorHandler = () => {}const errorHandler = ErrorHandler.getInst
 export default ErrorHandler</string>
 </string>
 // React hook for error handling;
-<<<<<<< HEAD
-export const useErrorHandler = () => {/* TODO: Fix JSX expression */,},
-    [errorHandler]
-=======
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */},
     [errorHandler];
->>>>>>> origin/main
   );
   const handleNetworkError = useCallback((erro,)
   r: Error, ur);

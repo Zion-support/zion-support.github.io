@@ -28,14 +28,9 @@ export interface TrackedError {}}message: string;,
 class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private maxErrors = 100,
   private sessionId: string,
-<<<<<<< HEAD
-  constructor() {,;
-    this.sessionId = this.generateSessionId(),;
-=======
-  constructor() {
+constructor() {
     ,
     this.sessionId = this.generateSessionId(),
->>>>>>> origin/main
   private maxErrors = 100;
   private sessionId: string;,}constructor() {}this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();}
@@ -67,14 +62,9 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
         ...context;}public trackError(error: Error, context: ErrorContext = {,)}): void {}}if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {,}message: error.message,
       stack: error.stack,
-<<<<<<< HEAD
-      context: {,}...context,;
-        sessionId: this.sessionId,},
-=======
-      context: {}
+context: {}
         ...context,
         sessionId: this.sessionId},
->>>>>>> origin/main
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;,
       url: window.location.href,
@@ -126,12 +116,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
     return {total: this.errors.length;,}}this.errors.forEach(error => {)}const component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
-<<<<<<< HEAD
-    return {}}total: this.errors.length,
-      byComponent,;
-      recent: this.errors.slice(-10),}
-=======
-    return {
+return {
     total: this.errors.length
   }
     this.errors.forEach(error => {)}
@@ -142,7 +127,6 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       total: this.errors.length,
       byComponent,
       recent: this.errors.slice(-10)}
->>>>>>> origin/main
     }
   }
 }
@@ -161,17 +145,10 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
       })
     }
   }
-<<<<<<< HEAD
-  public trackError(erro,;)
-  r: Error, contex);
-  t: ErrorContext = {,}): void {/* TODO: Fix JSX expression */,}},
-      timestam,;
-=======
-  public trackError(erro,
+public trackError(erro,
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
       timestam,
->>>>>>> origin/main
   p: new Date().toISOString(),
       userAgen,
   t: navigator.userAgent,

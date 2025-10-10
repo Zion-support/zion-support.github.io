@@ -18,16 +18,10 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(</div>)
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
 return (
           </div>
->>>>>>> origin/main
         </div>
       </section>} <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>

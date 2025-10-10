@@ -16,13 +16,9 @@ const CompliancePage: React.FC = () => {,
       description: 'Get support for achieving and maintaining industry certifications',},
     {icon: Shield,
       title: 'Audit Readiness',
-<<<<<<< HEAD
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting',}];
-=======
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
+description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -31,18 +27,11 @@ const CompliancePage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-    'Proven track record of success';
+'Proven track record of success';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>Compliance | Zion Tech Group</title>
         <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />

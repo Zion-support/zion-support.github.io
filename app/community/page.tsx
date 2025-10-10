@@ -7,18 +7,11 @@ const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
   const communityStats = [
-<<<<<<< HEAD
-    { icon: Users, value: '5,000+', label: 'Active Members' ,},
-    {icon: MessageCircle, value: '50+', label: 'Discussions Daily' ,},
-    {icon: Calendar, value: '12', label: 'Events Monthly' ,},
-    {icon: Star, value: '4.9', label: 'Average Rating' ,}];
-=======
-    { icon: Users, value: '5,000+', label: 'Active Members' },
+{ icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
   ];];];
->>>>>>> origin/main
   const events = [
     {title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -54,13 +47,9 @@ const CommunityPage: React.FC = () => {,
     {name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-<<<<<<< HEAD
-      members: 3000;,}];
-=======
-      members: 3000
+members: 3000
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
     {icon: Users,
       title: 'Network with Peers',
@@ -73,19 +62,12 @@ const CommunityPage: React.FC = () => {,
       description: 'Access to workshops, webinars, and networking events'},
     {icon: Award,
       title: 'Recognition',
-<<<<<<< HEAD
-      description: 'Showcase your projects and get community recognition',}]
-
-  return(<>)
-      <Helmet />
-=======
-      description: 'Showcase your projects and get community recognition'
+description: 'Showcase your projects and get community recognition'
     }
   ];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
@@ -154,12 +136,8 @@ const CommunityPage: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Overview Tab */}{activeTab === 'overview' && (
-=======
-          {/* Overview Tab */},
+{/* Overview Tab */},
     {activeTab === 'overview' && (
->>>>>>> origin/main
             <div className="space-y-12">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
@@ -214,15 +192,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Events Tab */}{activeTab === 'events' && (
-=======
-          )},
+)},
     {/* Events Tab */},
     {activeTab === 'events' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
@@ -261,15 +233,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Forums Tab */}{activeTab === 'forums' && (
-=======
-          )},
+)},
     {/* Forums Tab */},
     {activeTab === 'forums' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
@@ -302,15 +268,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Benefits Tab */}{activeTab === 'benefits' && (
-=======
-          )},
+)},
     {/* Benefits Tab */},
     {activeTab === 'benefits' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
@@ -331,15 +291,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Join Community CTA */} <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
-=======
-          )},
+)},
     {/* Join Community CTA */}
           <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
->>>>>>> origin/main
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of developers and entrepreneurs who are already part of our vibrant community.</p>
               Start connecting, learning, and growing today.

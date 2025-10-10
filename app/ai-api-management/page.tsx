@@ -12,33 +12,7 @@ const AIApiManagementPage: React.FC = () => {,
     {
       title: 'Intelligent API Monitoring',
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',
-<<<<<<< HEAD
-      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts']},
-    {title: 'Smart Rate Limiting',
-      description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
-      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']},
-    {title: 'Automated Documentation',
-      description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
-      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']},
-  ];
-  const benefits = [
-
-    'Reduced API downtime by 95%',
-    '50% faster API response times',
-    'Automated security scanning',
-    'Real-time performance monitoring',
-    'Intelligent load balancing',
-    'Cost optimization insights'
-  ];
-  const stats = [
-    {icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' ,},
-    {icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' ,},
-    {icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' ,},
-    {icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' ,}]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
-      <Helmet />
-=======
-      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'];
+benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'];
     },
     {
       title: 'Smart Rate Limiting',
@@ -50,7 +24,6 @@ const AIApiManagementPage: React.FC = () => {,
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
->>>>>>> origin/main
         <title>AI API Management | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management solutions by Zion Tech Group. Intelligent monitoring, security, and optimization for your APIs." />
         <meta name="keywords" content="API management, AI solutions, API monitoring, rate limiting, API security, Zion Tech Group" />

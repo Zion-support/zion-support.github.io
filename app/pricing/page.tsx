@@ -1,13 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {CheckCircle, Star, ArrowRight, Zap}}from 'lucide-react';
-
-const PricingPage: React.FC = () => {,
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -108,23 +100,15 @@ const PricingPage: React.FC = () => {
     }
   };
 
->>>>>>> origin/main
   const plans = [
     {
       name: 'Starter',
       price: '$2,999',
       period: '/month',
-<<<<<<< HEAD
-      description: 'Perfect for small businesses getting started with AI',
-      features: [,
-        'Basic AI Integration',
-        'Cloud Infrastructure Setup',
-=======
-      description: 'Perfect for small businesses getting started with AI and IT',
+description: 'Perfect for small businesses getting started with AI and IT',
       features: [
         '2 AI Services Included',
         'Basic Cloud Infrastructure',
->>>>>>> origin/main
         'Email Support',
         'Monthly Reports',
         'Basic Analytics Dashboard',
@@ -135,15 +119,9 @@ const PricingPage: React.FC = () => {
       price: '$7,999',
       period: '/month',
       description: 'Ideal for growing companies with advanced needs',
-<<<<<<< HEAD
-      features: [,
-        'Advanced AI Solutions',
-        'Custom Development',
-=======
-      features: [
+features: [
         '5 AI Services Included',
         'Advanced IT Solutions',
->>>>>>> origin/main
         'Priority Support',
         'Weekly Reports',
         'Advanced Analytics',
@@ -156,14 +134,9 @@ const PricingPage: React.FC = () => {
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations',
-<<<<<<< HEAD
-      features: [,
-        'Custom AI Solutions',
-=======
-      features: [
+features: [
         'Unlimited AI Services',
         'Custom IT Solutions',
->>>>>>> origin/main
         'Dedicated Team',
         '24/7 Support',
         'Real-time Monitoring',
@@ -173,19 +146,12 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee',
         'Unlimited Users'
       ],
-<<<<<<< HEAD
-      popular: false;,}]
-
-  return(<>)
-      <Helmet />
-=======
-      popular: false
+popular: false
     }
   ];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />

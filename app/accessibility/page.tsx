@@ -8,15 +8,10 @@ const AccessibilityPage: React.FC = () => {,
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
-<<<<<<< HEAD
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']},
-    {icon: MousePointer,
-=======
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'];
+benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'];
     },
     {
       icon: MousePointer,
->>>>>>> origin/main
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']},
@@ -35,14 +30,9 @@ const AccessibilityPage: React.FC = () => {,
     {icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-<<<<<<< HEAD
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']},
-  ]
-=======
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
+benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     },
   ];];
->>>>>>> origin/main
 const standards = [
     {name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -55,19 +45,12 @@ const standards = [
       status: 'Fully Compliant',},
     {name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
-<<<<<<< HEAD
-      status: 'Fully Compliant',}]
-
-  return(<>)
-      <Helmet />
-=======
-      status: 'Fully Compliant'
+status: 'Fully Compliant'
     }
   ];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />

@@ -5,14 +5,10 @@ interface AnalyticsContextType {track: (event: string, parameters?: Record<strin
   page: (pageName: string, parameters?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;}const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 
-<<<<<<< HEAD
-export const useAnalytics = () => {const context = useContext(AnalyticsContext);
-=======
 const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {;
     const context = useContext(AnalyticsContext);
->>>>>>> origin/main
   if (!context) {
     console.warn('useAnalytics must be used within an AnalyticsProvider');
     return null;}return context;
