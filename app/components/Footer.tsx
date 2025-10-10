@@ -21,22 +21,24 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
-      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Quantum Task Optimizer', url: '/ai-quantum-task-optimizer', description: 'Quantum-powered optimization' },
+      { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: '3D immersive workspace' },
+      { name: 'AI Neural Memory Assistant', url: '/ai-neural-memory-assistant', description: 'AI memory enhancement' },
+      { name: 'AI Telepathic Interface Pro', url: '/ai-telepathic-interface', description: 'Mind-controlled computing' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
-      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI Holographic Content Studio', url: '/ai-holographic-content-studio', description: '3D holographic content' },
+      { name: 'AI Quantum Content Optimizer', url: '/ai-quantum-content-optimizer', description: 'Quantum content optimization' },
+      { name: 'AI Neural Story Architect', url: '/ai-neural-story-architect', description: 'AI story creation' },
+      { name: 'AI Telepathic Marketing Pro', url: '/ai-telepathic-marketing', description: 'Mind-reading marketing' }
     ],
     'Business & Finance': [
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
-      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI Quantum Financial Oracle', url: '/ai-quantum-financial-oracle', description: 'Quantum financial prediction' },
+      { name: 'AI Holographic Boardroom', url: '/ai-holographic-boardroom', description: '3D boardroom experience' },
+      { name: 'AI Neural Business Strategist', url: '/ai-neural-business-strategist', description: 'AI business strategy' },
+      { name: 'AI Telepathic Sales Pro', url: '/ai-telepathic-sales', description: 'Mind-reading sales' }
     ],
     'Customer Service': [
       { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
@@ -55,14 +57,17 @@ const Footer: React.FC = () => {
     ],
     'Creative': [
       { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-      { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-      { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
-      { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+      { name: 'AI Holographic Design Studio', url: '/ai-holographic-design-studio', description: '3D holographic design' },
+      { name: 'AI Quantum Art Generator', url: '/ai-quantum-art-generator', description: 'Quantum art creation' },
+      { name: 'AI Neural Music Composer', url: '/ai-neural-music-composer', description: 'Neural music composition' },
+      { name: 'AI Telepathic Creative Assistant', url: '/ai-telepathic-creative-assistant', description: 'Mind-controlled creativity' }
     ],
     'Health & Wellness': [
       { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+      { name: 'AI Quantum Health Optimizer', url: '/ai-quantum-health-optimizer', description: 'Quantum health optimization' },
+      { name: 'AI Holographic Medical Scanner', url: '/ai-holographic-medical-scanner', description: '3D medical scanning' },
+      { name: 'AI Neural Wellness Coach', url: '/ai-neural-wellness-coach', description: 'Neural wellness coaching' },
+      { name: 'AI Telepathic Therapy Pro', url: '/ai-telepathic-therapy', description: 'Mind-reading therapy' }
     ],
     'Sales': [
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
