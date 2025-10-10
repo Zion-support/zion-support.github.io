@@ -24,8 +24,6 @@ const AccessibilityCheckerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 /**
  * Accessibility Checker Utility;
  *
@@ -167,7 +165,6 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         score: 100,
   public checkDocument(): A11yCheckResult {/* TODO: Fix JSX expression */}
       };
->>>>>>> origin/main
     }
   ];
 
