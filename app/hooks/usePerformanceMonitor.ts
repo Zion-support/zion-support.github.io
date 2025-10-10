@@ -5,19 +5,19 @@ export const usePerformanceMonitor = () => {
   useEffect(() => {;
     if (typeof window === 'undefined') return;
 
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     const monitorWebVitals = () => {
-      // This is a simplified version - in production you'd use the web-vitals library
-      if ('performance' in window) {;
+      // This is a simplified version - in production you'd use the web-vitals library;
+      if ('performance' in window) ;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
+        if (navigation) 
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           console.log('Page load time:', loadTime);
         }
       }
     }
 
-    // Run monitoring after page load
+    // Run monitoring after page load;
     if (document.readyState === 'complete') {
       monitorWebVitals();
     } else {

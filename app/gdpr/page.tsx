@@ -23,25 +23,25 @@ const benefits = [
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
             <h2>
               Why Choose Our Page?,
-            </h2>
+            </h2></h2></h2>
             <p>
               Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+            </p></p></p>
           </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
+                <p className="text-gray-300">{feature.description}</p></p></p>
               </div>
             ))}
           </div>

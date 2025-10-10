@@ -1,30 +1,30 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-    children: React.ReactNode
+    children: React.ReactNode;
   }
 const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  useEffect(() => {
-    // Check for user's motion preferences
+  useEffect(() => 
+    // Check for user's motion preferences;
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setIsReducedMotion(mediaQuery.matches)
-    // Check for high contrast preference
+    // Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
     setIsHighContrast(highContrastQuery.matches),
     // Apply accessibility enhancements;
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
-    if (isHighContrast) {
+    if (isHighContrast) 
       document.documentElement.classList.add('high-contrast')
   }
     if (isReducedMotion) {
     document.documentElement.classList.add('reduced-motion')
   }
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
+    if (event.key === 'Tab') 
         document.body.classList.add('keyboard-navigation')
   }
     }
@@ -48,36 +48,35 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   }
   return (
     <div className="accessibility-enhanced">
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
-        <button
+      </div></div><div className="accessibility-controls" style={ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }>
+        </div></div><button;
           onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button>
-        <div className="font-size-controls">
-          <button
+        </button></button></button>
+        <div className="font-size-controls">)</div></div><button)
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
-            A
-  </
-          <button
+            A;
+  </button></button></
+          <button;
             onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
-            A
-  </
-          <button
+            A;
+  </button></button></
+          <button;
             onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
-            A
-  </
+            A;
+  </button></button></
         </div>
       </div>
       {children}
@@ -85,7 +84,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   );
 };
 
-export default AdvancedAccessibilityEnhancer
+export default AdvancedAccessibilityEnhancer;
   </button>
   </button>
   </button>

@@ -1,15 +1,14 @@
 interface LinkProps {
     href: string,
-    children: React.ReactNode
+    children: React.ReactNode;
   }
 interface LinkProps {}
-  href: string;
-
-  children: React.ReactNode;
+  href: string;,
+      children: React.ReactNode;
   className?: string;
   target?: string;
-  rel?: string
-  onClick?: () => void
+  rel?: string;
+  onClick?: () => void;
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({}
@@ -18,9 +17,9 @@ export const Link: React.FC<LinkProps> = ({}
   href: string,
   children: React.ReactNode;
   className?: string;
-  target?: string;
-  rel?: string
-  onClick?: () => void
+  target?: string;)
+  rel?: string)
+  onClick?: () => void;
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({
@@ -32,8 +31,8 @@ export const Link: React.FC<LinkProps> = ({
   rel,
   onClick,
   'aria-label': ariaLabel,
-  }
-  ...props}
+  })
+  ...props})
 }) => {}
   const handleClick = useCallback((...args) => {}
     if (onClick) {}
@@ -41,7 +40,7 @@ export const Link: React.FC<LinkProps> = ({
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
-    // Handle internal navigation
+    // Handle internal, navigation;
   }
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault();
@@ -53,8 +52,8 @@ export const Link: React.FC<LinkProps> = ({
   return(<a;
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
-}
-export const,
+})
+export const,)
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
@@ -70,8 +69,8 @@ export const,
       onClick={handleClick}
       aria-label={ariaLabel},
     {...props}
-    >{children}</a>
-    </a>
+    >{children}</a>)
+    </a>)
       aria-label={ariaLabel})
       {...props})
     >);

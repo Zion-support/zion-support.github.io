@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object
+  structuredData?: object;
   }
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -23,8 +23,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   twitterCard = 'summary_large_image',
 
-  structuredData
-  }
+  structuredData;)
+  })
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -35,7 +35,7 @@ const defaultStructuredData = {
     "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-    "address": {
+    "address": 
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -52,7 +52,7 @@ const defaultStructuredData = {
     "sameAs": [;
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
-    ],
+    }],
   }
 return (
     <Helmet>
@@ -64,7 +64,7 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta>
       {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -84,8 +84,8 @@ return (
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
 
-      {/* Structured Data */}
-      <script>
+      {/* Structured Data */})
+      <script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

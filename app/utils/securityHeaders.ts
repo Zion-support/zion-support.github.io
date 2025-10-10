@@ -7,7 +7,7 @@ export interface SecurityHeadersConfig {
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
-  referrerPolicy?: string
+  referrerPolicy?: string;
   }
   permissionsPolicy?: string;}
 }
@@ -27,8 +27,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy;
   contentSecurityPolicy: [,
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
+    "script-src 'self', 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
+    "style-src 'self', 'unsafe-inline'",
     "img-src 'self' data: https: blob:",
     "font-src 'self' data: ",
     "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
@@ -42,7 +42,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   xFrameOptions: 'DENY';
   // Prevent MIME type sniffing;
   xContentTypeOptions: 'nosniff'
-  // Referrer Policy
+  // Referrer Policy;
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy),
   permissionsPolicy: [,
@@ -124,8 +124,8 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 ): Array<{ key: string, value: string }> {}
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}
-    key,
-    value}
+    key,)
+    value})
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}

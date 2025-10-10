@@ -55,15 +55,15 @@ export const generateSitemap = useCallback((...args) => {}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+    <priority>${page === '' ? '1.0' : '0.8'}</p></p></priority>
   </url>`).join('')}
 </urlset>`;
   return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *;
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
+  return `User-agent: *;,
+      Allow: /,
+      Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance,
 Crawl-delay: 1,
 # Disallow admin and private areas;

@@ -7,20 +7,20 @@ interface StructuredDataProps {
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
-  type = 'Organization', 
-  data 
+  type = 'Organization', )
+  data )
 }) => {
   const getDefaultData = () => {
     switch (type) {
       case 'Organization':
-        return {
+        return 
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": {
+          "contactPoint": 
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
@@ -36,8 +36,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           },
           "sameAs": [
             "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
-          ],
+            "https: //linkedin.com/company/ziontechgroup"
+    }],
           "foundingDate": "2020",
           "numberOfEmployees": "50+",
           "areaServed": "Worldwide",
@@ -60,13 +60,13 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
           "description": "Advanced AI and IT solutions for modern businesses",
-          "publisher": {
+          "publisher": 
             "@type": "Organization",
             "name": "Zion Tech Group"
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "target": "https://ziontechgroup.com/search?q=search_term_string}",
             "query-input": "required name=search_term_string"
           }
         }
@@ -78,7 +78,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
-          "isPartOf": {
+          "isPartOf": 
             "@type": "WebSite",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com"
@@ -90,7 +90,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {
+              
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
@@ -106,7 +106,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "@type": "Service",
           "name": "AI and IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
-          "provider": {
+          "provider": 
             "@type": "Organization",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com"
@@ -136,7 +136,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "url": "https://ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
-          "address": {
+          "address": 
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
             "addressLocality": "Middletown",
@@ -153,7 +153,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "priceRange": "$$",
           "serviceArea": {
             "@type": "GeoCircle",
-            "geoMidpoint": {
+            "geoMidpoint": 
               "@type": "GeoCoordinates",
               "latitude": "39.4500",
               "longitude": "-75.7167"
@@ -170,11 +170,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({
   const structuredData = data || getDefaultData();
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
+    <script;
+      type="application/ld+json")
+      dangerouslySetInnerHTML={)
         __html: JSON.stringify(structuredData, null, 2)
-      }}
+      }
     />
   );
 };

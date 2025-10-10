@@ -3,19 +3,19 @@ interface UseIntersectionObserverOptions {
     threshold?: number | number[]
   root?: Element | null;
   rootMargin?: string;
-  freezeOnceVisible?: boolean
+  freezeOnceVisible?: boolean;
   }
 }
 interface UseIntersectionObserverReturn {
-    ref: React.RefObject<HTMLElement>
-  isIntersecting: boolean,
-  entry: IntersectionObserverEntry | undefined
+    ref: React.RefObject<HTMLElement>,
+      isIntersecting: boolean,
+  entry: IntersectionObserverEntry | undefined;
   }
 }
-export function useIntersectionObserver(;
-  options: UseIntersectionObserverOptions = {}
+export function useIntersectionObserver(;)
+  options: UseIntersectionObserverOptions = {})
 ): UseIntersectionObserverReturn {
-    const {
+    const;
     threshold = 0,
     root = null,
     rootMargin = '0%',
@@ -28,11 +28,11 @@ const [isIntersecting, setIsIntersecting] = useState(false);
 useEffect(() => {
     const element = ref.current;
     if (!element) return;
-const observer = new IntersectionObserver(;
-      ([entry]) => {
+const observer = new IntersectionObserver(;)
+      ([entry]) => 
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
-if (entry.isIntersecting && freezeOnceVisible) {
+if (entry.isIntersecting && freezeOnceVisible) 
           observer.disconnect()
   }
         },

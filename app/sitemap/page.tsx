@@ -1,172 +1,172 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Map, ArrowRight, Home, Users, Settings, Brain, Cloud, Code, FileText, Mail, Phone, Calendar, Shield, BarChart, Target, Globe, Database, Zap, Eye, Mic, Heart, DollarSign, Box, Cpu, Link, Server, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Package, Monitor, Search, Video, Headphones, Scale, Cookie } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Home, Users, Brain, Cloud, Shield, FileText, ArrowRight } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
+  const sitemapSections = [
     {
       title: 'Main Pages',
       icon: Home,
-      pages: [
+      links: [
+        { name: 'Home', url: '/' },
+        { name: 'About Us', url: '/about' },
+        { name: 'Services', url: '/services' },
+        { name: 'Contact', url: '/contact' },
+        { name: 'Blog', url: '/blog' },
+        { name: 'Careers', url: '/careers' }
+      ]
     },
     {
       title: 'AI Services',
       icon: Brain,
-      pages: [
+      links: [
+        { name: 'AI Solutions', url: '/ai-services' },
+        { name: 'AI Chatbots', url: '/ai-chatbot-builder' },
+        { name: 'AI Analytics', url: '/ai-analytics' },
+        { name: 'Computer Vision', url: '/ai-computer-vision' },
+        { name: 'Voice AI', url: '/ai-voice-solutions' },
+        { name: 'Document AI', url: '/ai-document-processing' }
+      ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
-      pages: [
-        { name: 'IT Services Overview', url: '/it-services', description: 'Complete IT infrastructure solutions' },
-        { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, and GCP solutions' },
-        { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
-        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
+      links: [
+        { name: 'Cloud Services', url: '/cloud-services' },
+        { name: 'Cybersecurity', url: '/cybersecurity' },
+        { name: 'Custom Development', url: '/custom-development' },
+        { name: 'DevOps', url: '/devops' },
+        { name: 'Data Analytics', url: '/data-analytics' },
+        { name: 'IT Consulting', url: '/it-consulting' }
+      ]
     },
     {
       title: 'Resources',
       icon: FileText,
-      pages: [
-        { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
-        { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+      links: [
+        { name: 'Tutorials', url: '/tutorials' },
+        { name: 'Case Studies', url: '/case-studies' },
+        { name: 'Pricing', url: '/pricing' },
+        { name: 'Demo', url: '/demo' },
+        { name: 'Support', url: '/support' },
+        { name: 'Consultation', url: '/consultation' }
+      ]
+    },
+    {
+      title: 'Legal',
+      icon: Shield,
+      links: [
+        { name: 'Privacy Policy', url: '/privacy' },
+        { name: 'Terms of Service', url: '/terms' },
+        { name: 'Cookie Policy', url: '/cookies' },
+        { name: 'GDPR', url: '/gdpr' }
+      ]
+    }
+  ];
 
   return (
     <>
       <Helmet>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all our pages, services, and resources organized by category." />
+        <title>Sitemap | Zion Tech Group - Website Navigation</title>
+        <meta name="description" content="Navigate our website easily with our comprehensive sitemap. Find all pages and services organized by category." />
+        <meta name="keywords" content="sitemap, website navigation, pages, services, AI solutions, IT services" />
       </Helmet>
-      
+
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Map className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Sitemap
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Navigate our website easily with this comprehensive sitemap. 
-                Find all our pages, services, and resources organized by category.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Find all our pages and services organized by category for easy navigation.
               </p>
             </div>
+          </div>
+        </section>
 
-            {/* Quick Links */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Quick Links</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {quickLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    className="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 group"
-                  >
-                    <link.icon className="w-6 h-6 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm text-white text-center group-hover:text-cyan-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Sitemap Sections */}
-            <div className="space-y-12">
-              {sitemapSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+        {/* Sitemap Sections */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sitemapSections.map((section, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                    <h2 className="text-xl font-semibold text-gray-900">
+                      {section.title}
+                    </h2>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {section.pages.map((page, pageIndex) => (
-                      <a
-                        key={pageIndex}
-                        href={page.url}
-                        className="block p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
-                      >
-                        <div className="flex items-start justify-between mb-2">
-                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                            {page.name}
-                          </h3>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
-                        </div>
-                        <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                          {page.description}
-                        </p>
-                      </a>
+                  <ul className="space-y-3">
+                    {section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a
+                          href={link.url}
+                          className="flex items-center text-gray-600 hover:text-cyan-600 transition-colors duration-300"
+                        >
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          {link.name}
+                        </a>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* Search Box */}
-            <div className="mt-16 text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Can't Find What You're Looking For?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Use our search functionality or contact us directly for assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search our website..."
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    />
-                  </div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                    Search
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact CTA */}
-            <div className="mt-12 text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Need Help Finding Something?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Our team is here to help you find exactly what you need. Contact us for personalized assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Call: (302) 464-0950
-                  </a>
-                </div>
+        {/* Search Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Use our search function to find specific pages or content on our website.
+            </p>
+            
+            <div className="max-w-md mx-auto">
+              <div className="flex">
+                <input
+                  type="text"
+                  placeholder="Search our website..."
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-r-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Search
+                </button>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Need Help Navigating?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Our team is here to help you find what you need. Contact us for assistance.
+            </p>
+            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+              Contact Us
+            </button>
+          </div>
+        </section>
       </main>
-      
+
       <Footer />
     </>
   );

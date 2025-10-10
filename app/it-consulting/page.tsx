@@ -71,7 +71,7 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-  Webcam as WebcamIcon, Speaker as SpeakerIcon
+  Webcam as WebcamIcon, Speaker as, SpeakerIcon;
   }
 } from 'lucide-react';
 const ITConsultingPage: React.FC = () => {
@@ -79,7 +79,7 @@ const ITConsultingPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 const itServices = [;
     // IT Infrastructure Services;
-    {
+    
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
@@ -100,7 +100,7 @@ const itServices = [;
 
         'Ongoing support and maintenance'
       ],
-      benefits: [,
+      benefits: [',
         'Scalable and reliable infrastructure',
 
         'Improved system performance',
@@ -109,8 +109,7 @@ const itServices = [;
 
         'Reduced downtime and outages',
 
-        'Future-proof technology stack'
-      ],
+        'Future-proof technology stack''],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
       setupTime: '2-8 weeks',
       freeConsultation: 'Yes',
@@ -140,7 +139,7 @@ const itServices = [;
 
         'Training and documentation'
       ],
-      benefits: [,
+      benefits: [',
         'Reduce IT costs by 30-50%',
 
         'Improve scalability and flexibility',
@@ -149,8 +148,7 @@ const itServices = [;
 
         'Better disaster recovery capabilities',
 
-        'Access to latest technologies'
-      ],
+        'Access to latest technologies''],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
       setupTime: '1-6 weeks',
       freeConsultation: 'Yes',
@@ -180,7 +178,7 @@ const itServices = [;
 
         'Incident response planning'
       ],
-      benefits: [,
+      benefits: [',
         'Protect against cyber threats',
 
         'Ensure regulatory compliance',
@@ -189,8 +187,7 @@ const itServices = [;
 
         'Improve incident response time',
 
-        'Maintain customer trust'
-      ],
+        'Maintain customer trust''],
       targetAudience: 'All businesses handling sensitive data',
       setupTime: '1-4 weeks',
       freeConsultation: 'Yes',
@@ -220,7 +217,7 @@ const itServices = [;
 
         'Performance tuning'
       ],
-      benefits: [,
+      benefits: [',
         'Improve network performance by 200%',
 
         'Reduce network downtime',
@@ -229,8 +226,7 @@ const itServices = [;
 
         'Enhance user experience',
 
-        'Future-proof network design'
-      ],
+        'Future-proof network design''],
       targetAudience: 'Businesses with complex networking needs',
       setupTime: '1-3 weeks',
       freeConsultation: 'Yes',
@@ -260,7 +256,7 @@ const itServices = [;
 
         'Maintenance and updates'
       ],
-      benefits: [,
+      benefits: [',
         'Improve database performance by 150%',
 
         'Ensure data integrity and security',
@@ -269,8 +265,7 @@ const itServices = [;
 
         'Optimize storage usage',
 
-        'Minimize downtime'
-      ],
+        'Minimize downtime''],
       targetAudience: 'Businesses with critical data requirements',
       setupTime: '1-2 weeks',
       freeConsultation: 'Yes',
@@ -300,7 +295,7 @@ const itServices = [;
 
         'Help desk services'
       ],
-      benefits: [,
+      benefits: [',
         'Reduce IT downtime by 80%',
 
         'Lower IT support costs',
@@ -309,8 +304,7 @@ const itServices = [;
 
         'Proactive issue resolution',
 
-        'Focus on core business activities'
-      ],
+        'Focus on core business activities''],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
       setupTime: '1 week',
       freeConsultation: 'Yes',
@@ -340,7 +334,7 @@ const itServices = [;
 
         'User training and documentation'
       ],
-      benefits: [,
+      benefits: [',
         'Streamline business processes',
 
         'Improve operational efficiency',
@@ -349,8 +343,7 @@ const itServices = [;
 
         'Reduce manual work',
 
-        'Scale with business growth'
-      ],
+        'Scale with business growth''],
       targetAudience: 'Businesses needing custom software solutions',
       setupTime: '4-16 weeks',
       freeConsultation: 'Yes',
@@ -380,7 +373,7 @@ const itServices = [;
 
         'Implementation guidance'
       ],
-      benefits: [,
+      benefits: [',
         'Align IT with business goals',
 
         'Optimize technology investments',
@@ -389,8 +382,7 @@ const itServices = [;
 
         'Accelerate digital transformation',
 
-        'Improve ROI on technology'
-      ],
+        'Improve ROI on technology''],
       targetAudience: 'Businesses planning technology initiatives',
       setupTime: '1-4 weeks',
       freeConsultation: 'Yes',
@@ -420,7 +412,7 @@ const itServices = [;
 
         'Regular testing and updates'
       ],
-      benefits: [,
+      benefits: [',
         'Minimize business disruption',
 
         'Ensure rapid recovery',
@@ -429,8 +421,7 @@ const itServices = [;
 
         'Maintain customer service',
 
-        'Comply with regulations'
-      ],
+        'Comply with regulations''],
       targetAudience: 'Businesses requiring high availability',
       setupTime: '2-6 weeks',
       freeConsultation: 'Yes',
@@ -460,7 +451,7 @@ const itServices = [;
 
         'Remediation planning'
       ],
-      benefits: [,
+      benefits: [',
         'Ensure regulatory compliance',
 
         'Reduce audit findings',
@@ -469,8 +460,7 @@ const itServices = [;
 
         'Avoid penalties and fines',
 
-        'Build customer trust'
-      ],
+        'Build customer trust''],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
       setupTime: '2-8 weeks',
       freeConsultation: 'Yes',
@@ -494,37 +484,37 @@ const categories = [
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
-const filteredServices = itServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const filteredServices = itServices.filter(service => {;)
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;)
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
   }
   })
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
-            Professional <span className="holographic-text">IT Services</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div></div></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center"></div></div></div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1></h1></h1>
+            Professional <span className="holographic-text">IT Services</span></span></span>
           </h1>
           <p>
             Comprehensive IT solutions designed to optimize your technology infrastructure,
             enhance security, and drive business growth. Expert consulting and implementation.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
-            <a>
-              <Phone>
-              Call (302) 464-0950
+          </p></p></p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div></div></div>
+            <a>)
+              <Phone>)
+              Call (302) 464-0950;
             </a>
             <a>
               <Mail>
@@ -536,18 +526,18 @@ return (
 
       {/* Search and Filter Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div></div></div>
             {/* Search */}</div>
-            <div className="flex-1"></div>
-              <div className="relative"></div>
+            <div className="flex-1"></div></div></div>
+              <div className="relative"></div></div></div>
                 <Search>
                 <input;
                   type="text";
@@ -561,7 +551,7 @@ return (
             </div>
 
             {/* Category Filter */}
-            <div className="lg: w-64"></div>
+            <div className="lg: w-64"></div></div></div>
               <select,
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -573,8 +563,8 @@ return (
   }
                   <option>
 
-                    {category.name}
-                  </option>
+                    {category.name})
+                  </option>)
                 ))}
 
               </select>
@@ -582,15 +572,15 @@ return (
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div className="flex flex-wrap gap-2 mb-8"></div></div></div>
             {
     categories.map((category) => (</div>
-              <button
-  }
-                key={category.id}
+              <button;
+  })
+                key={category.id})
                 onClick={() => setSelectedCategory(category.id)}
                 className={
-    `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+    `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $
                   selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white';
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
@@ -598,7 +588,7 @@ return (
                 }`}
               >;
                 {category.name}
-              </button>
+              </button></button></button>
             ))}
 
           </div>
@@ -606,85 +596,85 @@ return (
       </section>
       {/* Services Grid */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>
             {
     filteredServices.map((service) => (</div>
   }
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
-                <div className="flex items-start justify-between mb-4"></div>
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
+              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div></div></div>
+                <div className="flex items-start justify-between mb-4"></div></div></div>
+                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div></div></div>
                     <service />
-                  <div className="text-right"></div>
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
-                    <div className="text-sm text-gray-400">starting price</div>
+                  <div className="text-right"></div></div></div>
+                    <div className="text-2xl font-bold text-white">{service.price}</div></div></div>
+                    <div className="text-sm text-gray-400">starting price</div></div></div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div className="space-y-3 mb-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3></h3></h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p></p></p>
+                <div className="space-y-3 mb-6"></div></div></div>
                   <div />
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul>
-                      {
+                    </div></div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <ul>)
+                      {)
     service.features.slice(0, 4).map((feature, idx) => (
   }
                         <li>
                           <CheckCircle>
-                          <span>{feature}</span>
-                        </li>
+                          <span>{feature}</span></span></span>)
+                        </li>)
                       ))}
                     </ul>
                   </div>
                   <div />
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                    </div></div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul>
                       {
     service.benefits.slice(0, 2).map((benefit, idx) => (
   }
                         <li>
                           <TrendingUp>
-                          <span>{benefit}</span>
-                        </li>
+                          <span>{benefit}</span></span></span>)
+                        </li>)
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="space-y-2 mb-6 text-sm"></div>
-                  <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
+                <div className="space-y-2 mb-6 text-sm"></div></div></div>
+                  <div className="flex justify-between"></div></div></div>
+                    <span className="text-gray-400">Setup Time:</span></span></span>
+                    <span className="text-white">{service.setupTime}</span></span></span>
                   </div>
-                  <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Free Consultation:</span>
-                    <span className="text-green-400">{service.freeConsultation}</span>
+                  <div className="flex justify-between"></div></div></div>
+                    <span className="text-gray-400">Free Consultation:</span></span></span>
+                    <span className="text-green-400">{service.freeConsultation}</span></span></span>
                   </div>
-                  <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Target:</span>
-                    <span className="text-white">{service.targetAudience}</span>
+                  <div className="flex justify-between"></div></div></div>
+                    <span className="text-gray-400">Target:</span></span></span>
+                    <span className="text-white">{service.targetAudience}</span></span></span>
                   </div>
                 </div>
                 {
     service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
+                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div></div></div>
   }
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
+                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p></p></p>)
+                  </div>)
                 )}
-<div className="space-y-3"></div>
+<div className="space-y-3"></div></div></div>
                   <a>
-                    Get Free Consultation
+                    Get Free Consultation;
                   </a>
                   <a>
                     <Phone>
-                    Call for Quote
+                    Call for Quote;
                   </a>
                 </div>
               </div>
@@ -694,29 +684,29 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="max-w-4xl mx-auto text-center"></div></div></div>
           <h2>
             Ready to Optimize Your IT Infrastructure?,
-          </h2>
+          </h2></h2></h2>
           <p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
             All services include free consultations and ongoing support.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+          </p></p></p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
             <a>
               <Phone>
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
             <a>
               <Mail>
-              Get Custom IT Strategy
+              Get Custom IT Strategy;
             </a>
           </div>
         </div>

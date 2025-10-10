@@ -4,8 +4,8 @@
  */;
 export const securityHeaders = {;
     // Content Security Policy;
-  contentSecurityPolicy: {
-    directives: {
+  contentSecurityPolicy: ,
+      directives:  ,
       defaultSrc: ["'self'"],
       scriptSrc: [,
         "'self'",
@@ -51,7 +51,7 @@ export const corsConfig = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  maxAge: 86400, // 24 hours
+  maxAge: 86400, // 24, hours;
   }
 }
 /**;
@@ -61,8 +61,8 @@ export const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
-  cookie: {
-    secure: process.env['NODE_ENV'] === 'production',
+  cookie:  ,
+      secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,
@@ -107,12 +107,12 @@ export function validateUrl(url: string): boolean {
  * Generate secure token;
  */;
 export function generateSecureToken(length: number = 32): string {
-    if (typeof window !== 'undefined' && window.crypto) {
+    if (typeof window !== 'undefined' && window.crypto) 
     window.crypto.getRandomValues(array)
   }
   } else {
     // Fallback for non-browser environments;
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) 
       array[i] = Math.floor(Math.random() * 256)
   }
     }

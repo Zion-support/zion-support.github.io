@@ -7,7 +7,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -21,7 +21,7 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
-// AI Services
+// AI Services;
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -35,7 +35,7 @@ const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
-// Additional AI Services
+// Additional AI Services;
 const AiAnalyticsPage = lazy(() => import('./ai-analytics/page'));
 const AiChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
 const AiCrmPage = lazy(() => import('./ai-crm/page'));
@@ -51,14 +51,14 @@ const AiFinancialServicesPage = lazy(() => import('./ai-financial-services/page'
 const AiVoiceSolutionsPage = lazy(() => import('./ai-voice-solutions/page'));
 const AiHrSolutionsPage = lazy(() => import('./ai-hr-solutions/page'));
 
-// IT Services
+// IT Services;
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
-// Additional IT Services
+// Additional IT Services;
 const ApiDevelopmentPage = lazy(() => import('./api/page'));
 const DatabaseManagementPage = lazy(() => import('./database-management/page'));
 const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
@@ -74,31 +74,31 @@ const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/
 const DataAnalyticsBiPage = lazy(() => import('./data-analytics-bi/page'));
 const CustomSoftwarePage2 = lazy(() => import('./custom-software/page'));
 
-// Emerging Technologies
+// Emerging Technologies;
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 
-// Additional Emerging Technologies
+// Additional Emerging Technologies;
 const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
 const Ai3DGenerationPage = lazy(() => import('./ai-3d-generation/page'));
 const AiHolographicWorkspacePage = lazy(() => import('./ai-holographic-workspace/page'));
 const AiBlockchainSolutionsPage = lazy(() => import('./ai-blockchain-solutions/page'));
 const MachineLearningPage = lazy(() => import('./machine-learning/page'));
 const IotPage = lazy(() => import('./iot/page'));
-// Micro SaaS
+// Micro SaaS;
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 
-// Support Pages
+// Support Pages;
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
-// Additional Important Pages
+// Additional Important Pages;
 const FaqPage = lazy(() => import('./faq/page'));
 const DemoPage = lazy(() => import('./demo/page'));
 const PartnersPage = lazy(() => import('./partners/page'));
@@ -109,9 +109,9 @@ const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
-// Loading component
-const AppLoadingSpinner = () => (
-  <LoadingSpinner />
+// Loading component;
+const AppLoadingSpinner = () => ()
+  <LoadingSpinner />)
 );
 
 const App: React.FC = () => {
@@ -120,10 +120,10 @@ const App: React.FC = () => {
       <HelmetProvider>
         <BrowserRouter>
           <div className="App">
-            <PerformanceMonitor>
+            </div></div><PerformanceMonitor>
               <AccessibilityEnhancer />
             </PerformanceMonitor>
-            <Suspense fallback={<AppLoadingSpinner />}>
+            <Suspense fallback=<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
@@ -223,8 +223,8 @@ const App: React.FC = () => {
             </Suspense>
           </div>
         </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+      </HelmetProvider>)
+    </ErrorBoundary>)
   );
 };
 

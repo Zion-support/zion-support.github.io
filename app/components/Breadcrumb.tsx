@@ -16,11 +16,12 @@ const Breadcrumb: React.FC = () => {
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
   ];
-    pathSegments.forEach((segment, index) => {
+  
+  pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null })
-  })
+    breadcrumbItems.push({ name, path, icon: null });
+  });
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
@@ -33,14 +34,10 @@ const Breadcrumb: React.FC = () => {
               )}
               <a
                 href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`}
+                className="text-gray-300 hover:text-white transition-colors"
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
+                {item.icon && <item.icon className="w-4 h-4 inline mr-1" />}
+                {item.name}
               </a>
             </li>
           ))}

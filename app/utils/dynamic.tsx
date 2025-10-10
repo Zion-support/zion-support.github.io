@@ -1,7 +1,7 @@
 'use client';
 import React, { lazy, Suspense, ComponentType } from 'react';
 interface DynamicOptions {
-    loading?: () => React.ReactElement
+    loading?: () => React.ReactElement;
   }
 interface DynamicOptions {}
   loading?: () => React.ReactElement;
@@ -12,11 +12,11 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
 ): ComponentType<unknown>{
     const LazyComponent = lazy(importFunc)</unknown>
   }
-  return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
+  return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</div></div></Suspense>}>;
 ): ComponentType<unknown> {}
   const LazyComponent = lazy(importFunc);
-  return (props: unknown) => (}
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
+  return (props: unknown) => (})
+    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div></div></div>}>;
       <LazyComponent>
 'use client';
 import React, { lazy, Suspense, ComponentType } from 'react';
@@ -28,13 +28,13 @@ export function dynamic<T extends ComponentType<unknown>>(importFun);
   option,
   s: DynamicOptions = {}
 ): ComponentType<unknown> {/* TODO: Fix JSX expression */}
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
+    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div></div></div>}>;
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   );
 };
 
-export default dynamic
+export default dynamic;
   </unknown>
   </T>
   </Suspense>

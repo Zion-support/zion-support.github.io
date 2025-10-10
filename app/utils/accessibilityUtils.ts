@@ -12,36 +12,35 @@ export const announceToScreenReader = (message: string): void => {;
   announcement.className = 'sr-only';
   announcement.textContent = message;
 document.body.appendChild(announcement);
-setTimeout(() => {
+setTimeout(() => 
     document.body.removeChild(announcement)
   }
   }, 1000);
 }
 export const focusElement = (element: HTMLElement | null): void => {
-    if (element) {
+    if (element) 
     element.focus()
   }
   }
 }
 export const trapFocus = (container: HTMLElement): (() => void) => {;
-    const focusableElements = container.querySelectorAll(,
+    const focusableElements = container.querySelectorAll(,)
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleTabKey = (;
+const handleTabKey = (;)
     if (e.key === 'Tab') {
       if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();) => {
-  return (
-    $3
-  )
+        if (document.activeElement === firstElement) 
+          lastElement.focus();) => 
+  return ()
+    $3)
   }
           e.preventDefault();}
         }
       } else {
-    if (document.activeElement === lastElement) {
+    if (document.activeElement === lastElement) 
           firstElement.focus();
           e.preventDefault()
   }
@@ -58,7 +57,7 @@ return () => {
 export const validateAriaAttributes = (element: HTMLElement): string[] => {
     const errors: string[] = []
 // Check for required ARIA attributes,
-  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
+  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()
     errors.push('Button with role="button" must have aria-label or accessible text')
   }
   }
@@ -75,8 +74,8 @@ return errors;
 }
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
     element.setAttribute('tabindex', '0');
-element.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+element.addEventListener('keydown', (e) => 
+    if (e.key === 'Enter' || e.key === ', ') 
       e.preventDefault();
       element.click()
   }
@@ -93,11 +92,11 @@ return skipLink,
 }
 export const checkColorContrast = (foreground: string, background: string): boolean => {
     // Simple contrast ratio calculation (simplified)
-  const getLuminance = (color: string): number => {
+  const getLuminance = (color: string): number => 
     const rgb = color.match(/\d+/g)
     if (!rgb) return 0,
-const [r, g, b] = rgb.map(Number).map(c => {;
-      c = c / 255;
+const [r, g, b] = rgb.map(Number).map(c => ;)
+      c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
     })
@@ -111,7 +110,7 @@ return contrast >= 4.5; // WCAG AA standard;
 export const addFocusIndicators = (): void => {;
     const style = document.createElement('style');
   style.textContent = `;
-    *:focus {
+    *:focus;
       outline: 2px solid #3b82f6,
       outline-offset: 2px,
   }
@@ -128,8 +127,8 @@ export const addFocusIndicators = (): void => {;
       border: 0,
   }
     }
-.focus\\:not-sr-only: focus {
-    position: static,
+.focus\\:not-sr-only: focus {,
+      position: static,
       width: auto,
       height: auto,
       padding: 0.5rem 1rem,
@@ -146,7 +145,7 @@ export const initializeAccessibility = (): void => {;
     addFocusIndicators();
 // Add skip link to main content;
   const mainContent = document.querySelector('main');
-  if (mainContent && !mainContent.id) {
+  if (mainContent && !mainContent.id) 
     mainContent.id = 'main-content';
     const skipLink = createSkipLink('main-content');
     document.body.insertBefore(skipLink, document.body.firstChild)
