@@ -316,10 +316,851 @@
     box-shadow: none !important;
   }
   
+<<<<<<< HEAD
   .neon-glow-cyan,
   .neon-glow-purple,
   .neon-glow-pink {
     animation: none !important;
     text-shadow: none !important;
+=======
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+}
+
+/* Dark Theme Enhancements */
+.dark-theme {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+}
+
+/* Loading Animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%, 100% {
+    content: '...';
+  }
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 255, 255, 0.2),
+    0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.text-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: text-reveal 2s ease-in-out;
+}
+
+@keyframes text-reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Advanced Neon Effects */
+.neon-pulse {
+  animation: neon-pulse-advanced 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse-advanced {
+  0% {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor,
+      0 0 35px currentColor,
+      0 0 40px currentColor;
+  }
+  100% {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor,
+      0 0 18px currentColor,
+      0 0 22px currentColor;
+  }
+}
+
+/* Quantum Particle Effects */
+.quantum-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: quantum-float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes quantum-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+/* Holographic Card Enhancement */
+.holographic-card {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.05) 0%,
+    rgba(139, 92, 246, 0.05) 25%,
+    rgba(236, 72, 153, 0.05) 50%,
+    rgba(0, 255, 255, 0.05) 75%,
+    rgba(139, 92, 246, 0.05) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 6s ease infinite;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 255, 255, 0.1) 60deg,
+    transparent 120deg,
+    rgba(139, 92, 246, 0.1) 180deg,
+    transparent 240deg,
+    rgba(236, 72, 153, 0.1) 300deg,
+    transparent 360deg
+  );
+  animation: holographic-rotate 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holographic-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cyber Grid Enhanced */
+.cyber-grid-enhanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  animation: grid-move-enhanced 20s linear infinite;
+  position: relative;
+}
+
+.cyber-grid-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  animation: grid-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes grid-move-enhanced {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  }
+}
+
+@keyframes grid-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Neon Button Enhanced */
+.neon-button-enhanced {
+  background: transparent;
+  border: 2px solid transparent;
+  background-image: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+  background-size: 400% 400%;
+  background-clip: padding-box;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.neon-button-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.neon-button-enhanced:hover::before {
+  left: 100%;
+}
+
+.neon-button-enhanced:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(236, 72, 153, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Futuristic Card Enhanced */
+.futuristic-card-enhanced {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.futuristic-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #00ffff, 
+    #8b5cf6, 
+    #ec4899, 
+    #00ffff, 
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: scan-line-enhanced 3s linear infinite;
+}
+
+.futuristic-card-enhanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  animation: card-glow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.futuristic-card-enhanced:hover {
+  border-color: rgba(0, 255, 255, 0.6);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.2),
+    0 0 60px rgba(139, 92, 246, 0.1);
+  transform: translateY(-5px);
+}
+
+@keyframes scan-line-enhanced {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes card-glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Cyber Text Enhanced */
+.cyber-text-enhanced {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff, #8b5cf6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-gradient-enhanced 4s ease infinite;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(139, 92, 246, 0.3),
+    0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+@keyframes cyber-gradient-enhanced {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Quantum Field Effect */
+.quantum-field {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(0, 255, 255, 0.1) 30deg,
+      transparent 60deg,
+      rgba(139, 92, 246, 0.1) 90deg,
+      transparent 120deg,
+      rgba(236, 72, 153, 0.1) 150deg,
+      transparent 180deg,
+      rgba(0, 255, 255, 0.1) 210deg,
+      transparent 240deg,
+      rgba(139, 92, 246, 0.1) 270deg,
+      transparent 300deg,
+      rgba(236, 72, 153, 0.1) 330deg,
+      transparent 360deg
+    );
+  animation: quantum-field-rotate 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes quantum-field-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Advanced Holographic Effects */
+.holographic-advanced {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(0, 255, 255, 0.1) 75%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-advanced-shift 8s ease infinite;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-advanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 255, 255, 0.2) 60deg,
+    transparent 120deg,
+    rgba(139, 92, 246, 0.2) 180deg,
+    transparent 240deg,
+    rgba(236, 72, 153, 0.2) 300deg,
+    transparent 360deg
+  );
+  animation: holographic-advanced-rotate 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holographic-advanced-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes holographic-advanced-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Cyber Grid Advanced */
+.cyber-grid-advanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  animation: grid-move-advanced 25s linear infinite;
+  position: relative;
+}
+
+.cyber-grid-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: grid-pulse-advanced 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes grid-move-advanced {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px, 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  }
+}
+
+@keyframes grid-pulse-advanced {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Neon Button Ultra */
+.neon-button-ultra {
+  background: transparent;
+  border: 3px solid transparent;
+  background-image: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+  background-size: 400% 400%;
+  background-clip: padding-box;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: gradient-shift-ultra 4s ease infinite;
+}
+
+.neon-button-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.neon-button-ultra:hover::before {
+  left: 100%;
+}
+
+.neon-button-ultra:hover {
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(139, 92, 246, 0.4),
+    0 0 90px rgba(236, 72, 153, 0.3);
+  transform: translateY(-4px) scale(1.05);
+}
+
+@keyframes gradient-shift-ultra {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Futuristic Card Ultra */
+.futuristic-card-ultra {
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 24px;
+  backdrop-filter: blur(30px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.futuristic-card-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #00ffff, 
+    #8b5cf6, 
+    #ec4899, 
+    #00ffff, 
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: scan-line-ultra 4s linear infinite;
+}
+
+.futuristic-card-ultra::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: card-glow-ultra 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.futuristic-card-ultra:hover {
+  border-color: rgba(0, 255, 255, 0.8);
+  box-shadow: 
+    0 0 40px rgba(0, 255, 255, 0.3),
+    0 0 80px rgba(139, 92, 246, 0.2),
+    0 0 120px rgba(236, 72, 153, 0.1);
+  transform: translateY(-8px) scale(1.02);
+}
+
+@keyframes scan-line-ultra {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes card-glow-ultra {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Cyber Text Ultra */
+.cyber-text-ultra {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff, #8b5cf6, #ec4899);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-gradient-ultra 6s ease infinite;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(139, 92, 246, 0.4),
+    0 0 60px rgba(236, 72, 153, 0.3);
+}
+
+@keyframes cyber-gradient-ultra {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Quantum Field Ultra */
+.quantum-field-ultra {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field-ultra::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: 
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(0, 255, 255, 0.1) 30deg,
+      transparent 60deg,
+      rgba(139, 92, 246, 0.1) 90deg,
+      transparent 120deg,
+      rgba(236, 72, 153, 0.1) 150deg,
+      transparent 180deg,
+      rgba(0, 255, 255, 0.1) 210deg,
+      transparent 240deg,
+      rgba(139, 92, 246, 0.1) 270deg,
+      transparent 300deg,
+      rgba(236, 72, 153, 0.1) 330deg,
+      transparent 360deg
+    );
+  animation: quantum-field-ultra-rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes quantum-field-ultra-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .cyber-text-enhanced {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .futuristic-card-enhanced {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .holographic-card {
+    padding: 0.75rem;
+  }
+  
+  .neon-button-enhanced {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .quantum-particles::before {
+    animation-duration: 6s;
+  }
+  
+  .quantum-field::before {
+    animation-duration: 12s;
+  }
+  
+  .cyber-text-ultra {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .futuristic-card-ultra {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 12px 24px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-text-enhanced {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .futuristic-card-enhanced {
+    padding: 0.75rem;
+  }
+  
+  .holographic-card {
+    padding: 0.5rem;
+  }
+  
+  .neon-button-enhanced {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .quantum-particles::before {
+    animation-duration: 4s;
+  }
+  
+  .quantum-field::before {
+    animation-duration: 8s;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80f7
   }
 }
