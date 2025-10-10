@@ -16,11 +16,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Generation', href: '/ai-content-generation' },
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace Pro', href: '/ai-holographic-workspace-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
       ]
     },
@@ -52,12 +52,12 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
         { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
         { name: 'AI Content Studio', href: '/ai-content-studio' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
-        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
-        { name: 'AI Content Writer', href: '/ai-content-writer' },
-        { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI Quantum Financial Oracle Pro', href: '/ai-quantum-financial-oracle-pro' },
+        { name: 'AI 3D Generation Studio Pro', href: '/ai-3d-generation-studio-pro' },
+        { name: 'AI Mobile App Builder Pro', href: '/ai-mobile-app-builder-pro' },
+        { name: 'AI Neural Memory Assistant Pro', href: '/ai-neural-memory-assistant-pro' },
+        { name: 'AI Holographic Workspace Pro', href: '/ai-holographic-workspace-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' }
       ]
     },
     {
@@ -65,15 +65,15 @@ const Footer: React.FC = memo(() => {
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
-        { name: 'Smart Cities', href: '/smart-cities' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Innovation Labs', href: '/innovation-labs' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'AI Autonomous Systems Platform Pro', href: '/ai-autonomous-systems-platform-pro' },
+        { name: 'AI Blockchain Solutions Pro', href: '/ai-blockchain-solutions-pro' },
+        { name: 'AI Holographic Workspace Pro', href: '/ai-holographic-workspace-pro' },
+        { name: 'AI Energy Management System Pro', href: '/ai-energy-management-system-pro' },
+        { name: 'AI Music Composition Suite Pro', href: '/ai-music-composition-suite-pro' },
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
       ]
     }
   ];

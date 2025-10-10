@@ -692,10 +692,402 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+    },
+
+    // New Innovative Micro SAAS Services
+    { 
+      name: 'AI Quantum Financial Oracle Pro', 
+      href: '/ai-quantum-financial-oracle-pro', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$2,999/mo',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions, risk assessment, and portfolio optimization using quantum computing algorithms',
+      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals', 'Quantum Encryption', 'High-frequency Trading'],
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle-pro',
+      capabilities: ['300% faster calculations', '99.9% prediction accuracy', 'Quantum advantage', 'Real-time risk modeling']
+    },
+    { 
+      name: 'AI 3D Generation Studio Pro', 
+      href: '/ai-3d-generation-studio-pro', 
+      icon: Palette, 
+      category: 'Creative', 
+      price: '$299/mo',
+      description: 'AI-powered 3D model generation, animation, virtual environment creation, and AR/VR content development with photorealistic quality',
+      features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization', 'AR/VR Integration', 'Motion Capture'],
+      popular: true,
+      rating: 4.7,
+      users: '1,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-3d-generation-studio-pro',
+      capabilities: ['Photorealistic 3D models', 'Automated animation', 'AR/VR ready content', 'Professional quality output']
+    },
+    { 
+      name: 'AI Mobile App Builder Pro', 
+      href: '/ai-mobile-app-builder-pro', 
+      icon: Smartphone, 
+      category: 'Development', 
+      price: '$399/mo',
+      description: 'AI-powered mobile app development with automated coding, testing, deployment, and cross-platform compatibility',
+      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring', 'Push Notifications', 'Analytics Integration'],
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-mobile-app-builder-pro',
+      capabilities: ['Build apps in hours', 'Cross-platform compatibility', 'Auto app store submission', 'Real-time performance monitoring']
+    },
+    { 
+      name: 'AI Neural Memory Assistant Pro', 
+      href: '/ai-neural-memory-assistant-pro', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$199/mo',
+      description: 'Advanced AI system with persistent memory, contextual understanding, and personalized assistance that learns from every interaction',
+      features: ['Persistent Memory Storage', 'Contextual Understanding', 'Personalized Responses', 'Learning from Interactions', 'Multi-modal Memory', 'Emotional Intelligence', 'Long-term Relationship Building', 'Adaptive Personality'],
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant-pro',
+      capabilities: ['Personalized AI experience', 'Context-aware responses', 'Emotional intelligence', 'Long-term memory retention']
+    },
+    { 
+      name: 'AI Holographic Workspace Pro', 
+      href: '/ai-holographic-workspace-pro', 
+      icon: Globe, 
+      category: 'Immersive Tech', 
+      price: '$1,299/mo',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools, virtual reality integration, and spatial computing capabilities',
+      features: ['3D Holographic Interface', 'Virtual Collaboration', 'AI-Powered Gestures', 'Spatial Computing', 'Mixed Reality Integration', 'Real-time Translation', 'Virtual Whiteboarding', 'Immersive Presentations'],
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-workspace-pro',
+      capabilities: ['Immersive collaboration', '3D data visualization', 'Virtual presence', 'Next-gen workspace']
+    },
+    { 
+      name: 'AI Climate Solutions Pro', 
+      href: '/ai-climate-solutions-pro', 
+      icon: Globe, 
+      category: 'Climate Tech', 
+      price: '$499/mo',
+      description: 'AI-powered climate monitoring, carbon footprint tracking, environmental impact optimization, and sustainability planning',
+      features: ['Carbon Footprint Analysis', 'Climate Risk Assessment', 'Sustainability Optimization', 'Environmental Monitoring', 'Green Energy Management', 'Waste Reduction AI', 'Eco-friendly Recommendations', 'Climate Action Planning'],
+      popular: true,
+      rating: 4.9,
+      users: '800+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-climate-solutions-pro',
+      capabilities: ['50% carbon footprint reduction', 'Real-time environmental monitoring', 'Sustainability optimization', 'Climate risk mitigation']
+    },
+    { 
+      name: 'AI Drug Discovery Pro', 
+      href: '/ai-drug-discovery-pro', 
+      icon: Stethoscope, 
+      category: 'Healthcare', 
+      price: '$4,999/mo',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, molecular analysis, and personalized medicine development',
+      features: ['Molecular Analysis', 'Drug Target Identification', 'Compound Screening', 'Clinical Trial Optimization', 'Side Effect Prediction', 'Drug Interaction Analysis', 'Personalized Medicine', 'Regulatory Compliance'],
+      popular: false,
+      rating: 4.9,
+      users: '200+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-drug-discovery-pro',
+      capabilities: ['70% faster drug discovery', '90% accuracy in predictions', 'Personalized treatment plans', 'Reduced clinical trial costs']
+    },
+    { 
+      name: 'AI Fashion Design Studio Pro', 
+      href: '/ai-fashion-design-studio-pro', 
+      icon: Palette, 
+      category: 'Fashion Tech', 
+      price: '$299/mo',
+      description: 'AI-powered fashion design with trend analysis, virtual try-on, sustainable fashion recommendations, and automated manufacturing',
+      features: ['Trend Analysis', 'Virtual Try-On', 'Sustainable Fashion AI', 'Color Palette Generation', 'Pattern Recognition', 'Size Optimization', 'Fashion Forecasting', 'Eco-friendly Materials'],
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-fashion-design-studio-pro',
+      capabilities: ['Trend prediction accuracy', 'Virtual fitting technology', 'Sustainable design optimization', 'Personalized fashion recommendations']
+    },
+    { 
+      name: 'AI Music Composition Suite Pro', 
+      href: '/ai-music-composition-suite-pro', 
+      icon: Music, 
+      category: 'Creative', 
+      price: '$199/mo',
+      description: 'AI-powered music creation with composition, arrangement, production capabilities, and copyright-safe generation',
+      features: ['AI Composition', 'Genre Adaptation', 'Lyric Generation', 'Instrument Arrangement', 'Mood-based Creation', 'Collaborative Composition', 'Mastering & Mixing', 'Copyright Protection'],
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-music-composition-suite-pro',
+      capabilities: ['Professional-quality compositions', 'Multi-genre versatility', 'Collaborative AI creation', 'Copyright-safe generation']
+    },
+    { 
+      name: 'AI Energy Management System Pro', 
+      href: '/ai-energy-management-system-pro', 
+      icon: Zap, 
+      category: 'Energy Tech', 
+      price: '$799/mo',
+      description: 'Smart energy optimization with AI-powered grid management, renewable energy integration, and carbon footprint reduction',
+      features: ['Smart Grid Management', 'Renewable Energy Optimization', 'Demand Response', 'Energy Storage AI', 'Carbon Footprint Tracking', 'Predictive Maintenance', 'Cost Optimization', 'Grid Stability'],
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-energy-management-system-pro',
+      capabilities: ['30% energy cost reduction', 'Grid stability optimization', 'Renewable energy integration', 'Predictive energy management']
+    },
+    { 
+      name: 'AI Autonomous Systems Platform Pro', 
+      href: '/ai-autonomous-systems-platform-pro', 
+      icon: Settings, 
+      category: 'Autonomous Systems', 
+      price: '$1,999/mo',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making, fleet coordination, and safety monitoring',
+      features: ['Autonomous Vehicle AI', 'Drone Fleet Management', 'Real-time Decision Making', 'Path Optimization', 'Collision Avoidance', 'Weather Adaptation', 'Fleet Coordination', 'Safety Monitoring'],
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-autonomous-systems-platform-pro',
+      capabilities: ['99.9% safety record', 'Real-time autonomous decisions', 'Fleet optimization', 'Weather-adaptive navigation']
+    },
+    { 
+      name: 'AI Blockchain Solutions Pro', 
+      href: '/ai-blockchain-solutions-pro', 
+      icon: Shield, 
+      category: 'Blockchain AI', 
+      price: '$599/mo',
+      description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, crypto analytics, and quantum-safe security',
+      features: ['Smart Contract AI', 'DeFi Optimization', 'Crypto Analytics', 'Blockchain Security', 'Token Economics', 'Yield Farming AI', 'Risk Assessment', 'Regulatory Compliance'],
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-blockchain-solutions-pro',
+      capabilities: ['Automated DeFi strategies', 'Smart contract optimization', 'Crypto market analysis', 'Blockchain security enhancement']
+    },
+    { 
+      name: 'AI Space Technology Pro', 
+      href: '/ai-space-technology-pro', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$4,999/mo',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, space mission optimization, and orbital mechanics',
+      features: ['Satellite Management', 'Mission Planning', 'Space Weather Prediction', 'Orbital Mechanics', 'Space Debris Tracking', 'Communication Optimization', 'Navigation Systems', 'Space Mission Analytics'],
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-space-technology-pro',
+      capabilities: ['99.9% mission success rate', 'Real-time space monitoring', 'Advanced orbital calculations', 'Space debris mitigation']
+    },
+    { 
+      name: 'AI Agricultural Intelligence Pro', 
+      href: '/ai-agricultural-intelligence-pro', 
+      icon: Sprout, 
+      category: 'Agriculture', 
+      price: '$399/mo',
+      description: 'AI-powered smart farming solutions with crop monitoring, yield prediction, soil analysis, and automated irrigation systems',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Automated Irrigation', 'Pest Detection', 'Weather Integration', 'Precision Farming', 'Supply Chain Optimization'],
+      popular: true,
+      rating: 4.8,
+      users: '1,100+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro',
+      capabilities: ['30% increase in crop yield', '50% reduction in water usage', 'Real-time crop monitoring', 'Automated farming decisions']
+    },
+    { 
+      name: 'AI Supply Chain Optimization Pro', 
+      href: '/ai-supply-chain-optimization-pro', 
+      icon: Truck, 
+      category: 'Supply Chain', 
+      price: '$599/mo',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, logistics automation, and risk assessment',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Automation', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Assessment', 'Performance Analytics'],
+      popular: true,
+      rating: 4.7,
+      users: '900+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-supply-chain-optimization-pro',
+      capabilities: ['25% cost reduction', '40% inventory optimization', 'Real-time tracking', 'Predictive analytics']
+    },
+    { 
+      name: 'AI Energy Grid Management Pro', 
+      href: '/ai-energy-grid-management-pro', 
+      icon: Zap, 
+      category: 'Energy Tech', 
+      price: '$999/mo',
+      description: 'Smart energy grid management with AI-powered load balancing, renewable energy integration, and grid stability optimization',
+      features: ['Load Balancing', 'Renewable Integration', 'Grid Stability', 'Demand Response', 'Energy Storage', 'Predictive Maintenance', 'Cost Optimization', 'Environmental Impact'],
+      popular: false,
+      rating: 4.8,
+      users: '300+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-energy-grid-management-pro',
+      capabilities: ['40% grid efficiency improvement', '60% renewable energy integration', 'Real-time grid monitoring', 'Predictive maintenance']
+    },
+    { 
+      name: 'AI Financial Crime Detection Pro', 
+      href: '/ai-financial-crime-detection-pro', 
+      icon: Shield, 
+      category: 'Security', 
+      price: '$1,299/mo',
+      description: 'Advanced AI fraud detection with real-time monitoring, pattern recognition, and automated response for financial institutions',
+      features: ['Real-time Monitoring', 'Pattern Recognition', 'Automated Response', 'Risk Scoring', 'Transaction Analysis', 'Compliance Reporting', 'Machine Learning Models', 'Behavioral Analysis'],
+      popular: true,
+      rating: 4.9,
+      users: '1,600+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro',
+      capabilities: ['99.9% fraud detection accuracy', 'Real-time threat response', 'Automated compliance', 'Advanced pattern recognition']
+    },
+    { 
+      name: 'AI Legal Research Pro', 
+      href: '/ai-legal-research-pro', 
+      icon: Scale, 
+      category: 'Legal', 
+      price: '$349/mo',
+      description: 'AI-powered legal research platform with case law analysis, document review, and automated legal brief generation',
+      features: ['Case Law Analysis', 'Document Review', 'Legal Brief Generation', 'Precedent Research', 'Contract Analysis', 'Compliance Checking', 'Legal Writing Assistant', 'Research Automation'],
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-legal-research-pro',
+      capabilities: ['80% faster legal research', '95% accuracy in case analysis', 'Automated brief generation', 'Comprehensive legal database']
+    },
+    { 
+      name: 'AI Manufacturing Optimizer Pro', 
+      href: '/ai-manufacturing-optimizer-pro', 
+      icon: Settings, 
+      category: 'Manufacturing', 
+      price: '$799/mo',
+      description: 'AI-powered manufacturing optimization with predictive maintenance, quality control, and production efficiency enhancement',
+      features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Management', 'Defect Detection', 'Energy Optimization', 'Workforce Planning', 'Equipment Monitoring'],
+      popular: false,
+      rating: 4.7,
+      users: '800+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-manufacturing-optimizer-pro',
+      capabilities: ['25% production efficiency increase', '40% reduction in defects', 'Predictive maintenance', 'Real-time quality monitoring']
+    },
+    { 
+      name: 'AI Insurance Claims Processor Pro', 
+      href: '/ai-insurance-claims-processor-pro', 
+      icon: Shield, 
+      category: 'Insurance', 
+      price: '$599/mo',
+      description: 'AI-powered insurance claims processing with automated assessment, fraud detection, and intelligent document analysis',
+      features: ['Claims Assessment', 'Fraud Detection', 'Document Processing', 'Risk Analysis', 'Automated Payouts', 'Compliance Monitoring', 'Customer Communication', 'Settlement Optimization'],
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-insurance-claims-processor-pro',
+      capabilities: ['70% faster claims processing', '90% fraud detection accuracy', 'Automated document analysis', 'Real-time risk assessment']
+    },
+    { 
+      name: 'AI Quality Assurance Suite Pro', 
+      href: '/ai-quality-assurance-suite-pro', 
+      icon: CheckCircle, 
+      category: 'Testing', 
+      price: '$399/mo',
+      description: 'AI-powered quality assurance with automated testing, bug detection, performance optimization, and comprehensive test coverage',
+      features: ['Automated Testing', 'Bug Detection', 'Performance Testing', 'Security Testing', 'Load Testing', 'Test Case Generation', 'Regression Testing', 'API Testing'],
+      popular: true,
+      rating: 4.7,
+      users: '1,900+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-quality-assurance-suite-pro',
+      capabilities: ['90% test coverage automation', '60% faster testing cycles', 'Automated bug detection', 'Performance optimization']
+    },
+    { 
+      name: 'AI Education Platform Pro', 
+      href: '/ai-education-platform-pro', 
+      icon: BookOpen, 
+      category: 'Education', 
+      price: '$299/mo',
+      description: 'AI-powered educational platform with personalized learning, automated assessment, and adaptive curriculum development',
+      features: ['Personalized Learning', 'Automated Assessment', 'Progress Tracking', 'Content Generation', 'Student Analytics', 'Adaptive Curriculum', 'Learning Path Optimization', 'Engagement Analysis'],
+      popular: true,
+      rating: 4.8,
+      users: '2,500+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-education-platform-pro',
+      capabilities: ['40% improved learning outcomes', 'Personalized learning paths', 'Automated assessment', 'Real-time progress tracking']
+    },
+    { 
+      name: 'AI Fitness Coach Pro', 
+      href: '/ai-fitness-coach-pro', 
+      icon: Users, 
+      category: 'Health', 
+      price: '$99/mo',
+      description: 'AI-powered fitness coaching with personalized workout plans, nutrition guidance, and real-time form analysis',
+      features: ['Personalized Workouts', 'Nutrition Guidance', 'Progress Tracking', 'Form Analysis', 'Goal Setting', 'Community Features', 'Wearable Integration', 'Health Monitoring'],
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-fitness-coach-pro',
+      capabilities: ['Personalized fitness plans', 'Real-time form correction', 'Nutrition optimization', 'Progress tracking']
+    },
+    { 
+      name: 'AI Predictive Analytics Pro', 
+      href: '/ai-predictive-analytics-pro', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$499/mo',
+      description: 'Advanced predictive analytics with machine learning models, business intelligence, and forecasting capabilities',
+      features: ['Machine Learning Models', 'Business Intelligence', 'Trend Analysis', 'Forecasting', 'Data Visualization', 'Custom Dashboards', 'Real-time Analytics', 'Predictive Modeling'],
+      popular: true,
+      rating: 4.8,
+      users: '2,200+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-predictive-analytics-pro',
+      capabilities: ['95% prediction accuracy', 'Real-time analytics', 'Custom ML models', 'Business intelligence insights']
+    },
+    { 
+      name: 'AI Predictive Maintenance Pro', 
+      href: '/ai-predictive-maintenance-pro', 
+      icon: Settings, 
+      category: 'Industrial', 
+      price: '$699/mo',
+      description: 'AI-powered predictive maintenance for industrial equipment and machinery with failure prediction and optimization',
+      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics', 'Alert Systems', 'IoT Integration', 'Maintenance Planning'],
+      popular: false,
+      rating: 4.7,
+      users: '900+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-predictive-maintenance-pro',
+      capabilities: ['30% reduction in downtime', '25% cost savings', 'Predictive maintenance', 'Real-time monitoring']
+    },
+    { 
+      name: 'AI NLP Processing Suite Pro', 
+      href: '/ai-nlp-processing-suite-pro', 
+      icon: FileText, 
+      category: 'Language', 
+      price: '$299/mo',
+      description: 'Advanced natural language processing with sentiment analysis, language translation, and conversational AI capabilities',
+      features: ['Sentiment Analysis', 'Language Translation', 'Text Summarization', 'Entity Recognition', 'Language Generation', 'Conversation AI', 'Text Classification', 'Language Understanding'],
+      popular: true,
+      rating: 4.7,
+      users: '2,600+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-nlp-processing-suite-pro',
+      capabilities: ['95% language accuracy', 'Real-time translation', 'Sentiment analysis', 'Conversational AI']
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Climate Tech', 'Immersive Tech', 'Fashion Tech', 'Creative', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Space Tech', 'Agriculture', 'Supply Chain', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Industrial', 'Language'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 
   if (!isLoaded) {
@@ -736,11 +1128,11 @@ const MicroSAASPage: React.FC = () => {
 
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-              className={`futuristic-card hover-lift p-8 ${
+              className={`futuristic-card hover-lift p-4 sm:p-6 lg:p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
               }`}
             >
@@ -762,20 +1154,20 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {service.name}
               </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                <ul className="space-y-2">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Key Features:</h4>
+                <ul className="space-y-1 sm:space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-300">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -783,11 +1175,11 @@ const MicroSAASPage: React.FC = () => {
               </div>
 
               {service.capabilities && (
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Proven Results:</h4>
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Proven Results:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-cyan-300 text-sm">
+                      <li key={index} className="flex items-center text-cyan-300 text-xs sm:text-sm">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {capability}
                       </li>
@@ -796,18 +1188,18 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               )}
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   {service.category}
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6 text-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {service.users}
                 </div>
                 <div className="text-cyan-400 font-medium">
@@ -817,12 +1209,12 @@ const MicroSAASPage: React.FC = () => {
 
               <a
                 href={service.link || '#'}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
               </a>
             </div>
           ))}
@@ -830,29 +1222,29 @@ const MicroSAASPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-lg sm:text-xl text-purple-100 mb-6 sm:mb-8">
             Join 50,000+ businesses already using our AI-powered micro SaaS solutions. Start your free trial today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-8">
             <a
               href="https://ziontechgroup.com/contact"
-              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+              className="bg-white text-purple-600 py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 w-full sm:w-auto"
             >
               Start Your Free Trial
             </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+              className="border-2 border-white text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 w-full sm:w-auto"
             >
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="text-purple-100 text-xs sm:text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

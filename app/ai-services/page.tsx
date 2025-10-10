@@ -730,14 +730,430 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Financial Oracle Pro',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions, risk assessment, and portfolio optimization using quantum computing algorithms',
+      icon: Brain,
+      features: [
+        'Quantum Market Analysis',
+        'Ultra-fast Predictions',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Cryptocurrency Analysis',
+        'Real-time Trading Signals',
+        'Quantum Encryption',
+        'High-frequency Trading'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI 3D Generation Studio Pro',
+      description: 'AI-powered 3D model generation, animation, virtual environment creation, and AR/VR content development with photorealistic quality',
+      icon: FileText,
+      features: [
+        '3D Model Generation',
+        'Animation Creation',
+        'Virtual Environments',
+        'Texture Generation',
+        'Rigging Automation',
+        'Rendering Optimization',
+        'AR/VR Integration',
+        'Motion Capture'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,200+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Photorealistic 3D models',
+        'Automated animation',
+        'AR/VR ready content',
+        'Professional quality output'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Mobile App Builder Pro',
+      description: 'AI-powered mobile app development with automated coding, testing, deployment, and cross-platform compatibility',
+      icon: Smartphone,
+      features: [
+        'Auto Code Generation',
+        'UI/UX Design',
+        'Cross-platform Development',
+        'Automated Testing',
+        'App Store Optimization',
+        'Performance Monitoring',
+        'Push Notifications',
+        'Analytics Integration'
+      ],
+      category: 'Development AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Build apps in hours',
+        'Cross-platform compatibility',
+        'Auto app store submission',
+        'Real-time performance monitoring'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Holographic Workspace Pro',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools, virtual reality integration, and spatial computing capabilities',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'AI-powered smart farming solutions with crop monitoring, yield prediction, soil analysis, and automated irrigation systems',
+      icon: Globe,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Automated Irrigation',
+        'Pest Detection',
+        'Weather Integration',
+        'Precision Farming',
+        'Supply Chain Optimization'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,100+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '30% increase in crop yield',
+        '50% reduction in water usage',
+        'Real-time crop monitoring',
+        'Automated farming decisions'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, logistics automation, and risk assessment',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Logistics Automation',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      rating: 4.7,
+      users: '900+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '25% cost reduction',
+        '40% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid management with AI-powered load balancing, renewable energy integration, and grid stability optimization',
+      icon: Zap,
+      features: [
+        'Load Balancing',
+        'Renewable Integration',
+        'Grid Stability',
+        'Demand Response',
+        'Energy Storage',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Environmental Impact'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $999/mo',
+      capabilities: [
+        '40% grid efficiency improvement',
+        '60% renewable energy integration',
+        'Real-time grid monitoring',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced AI fraud detection with real-time monitoring, pattern recognition, and automated response for financial institutions',
+      icon: Shield,
+      features: [
+        'Real-time Monitoring',
+        'Pattern Recognition',
+        'Automated Response',
+        'Risk Scoring',
+        'Transaction Analysis',
+        'Compliance Reporting',
+        'Machine Learning Models',
+        'Behavioral Analysis'
+      ],
+      category: 'Security AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,600+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '99.9% fraud detection accuracy',
+        'Real-time threat response',
+        'Automated compliance',
+        'Advanced pattern recognition'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Legal Research Pro',
+      description: 'AI-powered legal research platform with case law analysis, document review, and automated legal brief generation',
+      icon: Scale,
+      features: [
+        'Case Law Analysis',
+        'Document Review',
+        'Legal Brief Generation',
+        'Precedent Research',
+        'Contract Analysis',
+        'Compliance Checking',
+        'Legal Writing Assistant',
+        'Research Automation'
+      ],
+      category: 'Legal AI',
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $349/mo',
+      capabilities: [
+        '80% faster legal research',
+        '95% accuracy in case analysis',
+        'Automated brief generation',
+        'Comprehensive legal database'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Manufacturing Optimizer Pro',
+      description: 'AI-powered manufacturing optimization with predictive maintenance, quality control, and production efficiency enhancement',
+      icon: Settings,
+      features: [
+        'Predictive Maintenance',
+        'Quality Control',
+        'Production Optimization',
+        'Supply Chain Management',
+        'Defect Detection',
+        'Energy Optimization',
+        'Workforce Planning',
+        'Equipment Monitoring'
+      ],
+      category: 'Manufacturing AI',
+      popular: false,
+      rating: 4.7,
+      users: '800+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '25% production efficiency increase',
+        '40% reduction in defects',
+        'Predictive maintenance',
+        'Real-time quality monitoring'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Insurance Claims Processor Pro',
+      description: 'AI-powered insurance claims processing with automated assessment, fraud detection, and intelligent document analysis',
+      icon: Shield,
+      features: [
+        'Claims Assessment',
+        'Fraud Detection',
+        'Document Processing',
+        'Risk Analysis',
+        'Automated Payouts',
+        'Compliance Monitoring',
+        'Customer Communication',
+        'Settlement Optimization'
+      ],
+      category: 'Insurance AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '70% faster claims processing',
+        '90% fraud detection accuracy',
+        'Automated document analysis',
+        'Real-time risk assessment'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Quality Assurance Suite Pro',
+      description: 'AI-powered quality assurance with automated testing, bug detection, performance optimization, and comprehensive test coverage',
+      icon: CheckCircle,
+      features: [
+        'Automated Testing',
+        'Bug Detection',
+        'Performance Testing',
+        'Security Testing',
+        'Load Testing',
+        'Test Case Generation',
+        'Regression Testing',
+        'API Testing'
+      ],
+      category: 'Testing AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,900+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '90% test coverage automation',
+        '60% faster testing cycles',
+        'Automated bug detection',
+        'Performance optimization'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Education Platform Pro',
+      description: 'AI-powered educational platform with personalized learning, automated assessment, and adaptive curriculum development',
+      icon: BookOpen,
+      features: [
+        'Personalized Learning',
+        'Automated Assessment',
+        'Progress Tracking',
+        'Content Generation',
+        'Student Analytics',
+        'Adaptive Curriculum',
+        'Learning Path Optimization',
+        'Engagement Analysis'
+      ],
+      category: 'Education AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,500+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        '40% improved learning outcomes',
+        'Personalized learning paths',
+        'Automated assessment',
+        'Real-time progress tracking'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Fitness Coach Pro',
+      description: 'AI-powered fitness coaching with personalized workout plans, nutrition guidance, and real-time form analysis',
+      icon: Users,
+      features: [
+        'Personalized Workouts',
+        'Nutrition Guidance',
+        'Progress Tracking',
+        'Form Analysis',
+        'Goal Setting',
+        'Community Features',
+        'Wearable Integration',
+        'Health Monitoring'
+      ],
+      category: 'Health AI',
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $99/mo',
+      capabilities: [
+        'Personalized fitness plans',
+        'Real-time form correction',
+        'Nutrition optimization',
+        'Progress tracking'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Predictive Analytics Pro',
+      description: 'Advanced predictive analytics with machine learning models, business intelligence, and forecasting capabilities',
+      icon: BarChart,
+      features: [
+        'Machine Learning Models',
+        'Business Intelligence',
+        'Trend Analysis',
+        'Forecasting',
+        'Data Visualization',
+        'Custom Dashboards',
+        'Real-time Analytics',
+        'Predictive Modeling'
+      ],
+      category: 'Analytics AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '95% prediction accuracy',
+        'Real-time analytics',
+        'Custom ML models',
+        'Business intelligence insights'
+      ]
     }
   ];
 
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
-=======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Quantum Finance', 'Space Tech', 'Cognitive AI', 'Development AI', 'Agricultural AI', 'Supply Chain AI', 'Energy AI', 'Security AI', 'Legal AI', 'Manufacturing AI', 'Insurance AI', 'Testing AI', 'Education AI', 'Health AI', 'Analytics AI'];
 
   if (!isLoaded) {
     return (
