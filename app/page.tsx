@@ -6,6 +6,20 @@ import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
 import PerformanceMonitor from './components/PerformanceMonitor';
+
+// ServiceCardSkeleton component
+const ServiceCardSkeleton = () => (
+  <div className="animate-pulse">
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+      <div className="w-12 h-12 bg-gray-400 rounded-lg mb-4"></div>
+      <div className="h-6 bg-gray-400 rounded mb-2"></div>
+      <div className="h-4 bg-gray-400 rounded mb-4"></div>
+      <div className="h-4 bg-gray-400 rounded mb-2"></div>
+      <div className="h-4 bg-gray-400 rounded mb-4"></div>
+      <div className="h-8 bg-gray-400 rounded"></div>
+    </div>
+  </div>
+);
 import { 
   Brain, 
   Zap, 
@@ -150,8 +164,8 @@ const HomePage: React.FC = () => {
       <SEOHead />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <Navigation />
-      
-      {/* Hero Section */}
+        
+        {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -283,17 +297,29 @@ const HomePage: React.FC = () => {
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
-=======
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">{service.price}</div>
-                  <a href={service.link} className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-all duration-300">
-                    Learn More →
-                  </a>
+
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-2xl font-bold text-white">
+                    {service.price}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {service.category}
+                  </div>
                 </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
               </div>
             ))}
           </div>
@@ -439,9 +465,10 @@ const HomePage: React.FC = () => {
                 </article>
               </Suspense>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* AI Services Section */}
+        {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
             <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               AI Services
@@ -883,60 +910,35 @@ const HomePage: React.FC = () => {
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     +1 (302) 464-0950
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-24cb
                 </div>
-
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {service.name}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-2xl font-bold text-white">
-                    {service.price}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    {service.category}
-                  </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📧</div>
+                  <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                    kleber@ziontechgroup.com
+                  </a>
                 </div>
-
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📍</div>
+                  <h3 className="text-lg font-bold text-white mb-2">Address</h3>
+                  <p className="text-cyan-400 font-medium">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </p>
+                </div>
+              </div>
+              <div className="text-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Get Free Consultation
                 </button>
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Join thousands of companies already using our AI solutions
-          </p>
-          <button className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300">
-            Start Your Free Trial
-          </button>
-        </div>
-      </section>
-
-<<<<<<< HEAD
         <Footer />
-        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
-=======
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-24cb
   );
 };
 
