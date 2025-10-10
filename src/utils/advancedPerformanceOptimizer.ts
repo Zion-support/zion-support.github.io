@@ -4,8 +4,7 @@
 export const advancedPerformanceOptimizer = {
   // Add utility functions here
   init: () => {
-    console.log('advancedPerformanceOptimizer initialized');
-  }
+    }
 };
 
 export default advancedPerformanceOptimizer;

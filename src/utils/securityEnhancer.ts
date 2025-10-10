@@ -4,8 +4,7 @@
 export const securityEnhancer = {
   // Add utility functions here
   init: () => {
-    console.log('securityEnhancer initialized');
-  }
+    }
 };
 
 export default securityEnhancer;

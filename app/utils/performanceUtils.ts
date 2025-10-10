@@ -244,8 +244,7 @@ export const measurePerformance = (name: string, fn: () => void): void => {
     const start = performance.now();
     fn();
     const end = performance.now();
-    // console.log(`${name} took ${end - start} milliseconds`);
-  } else {
+    // } else {
     fn();
   }
 };
@@ -310,8 +309,7 @@ export const optimizeBundleSize = () => {
   // Dynamic imports for heavy components
   const loadHeavyComponent = (componentName: string) => {
     return import(`../components/${componentName}`).catch(() => {
-      // console.warn(`Failed to load component: ${componentName}`);
-      return null;
+      // return null;
     });
   };
   
@@ -335,22 +333,14 @@ export const createLazyComponent = <T extends React.ComponentType<any>>(
 export const cleanupMemory = () => {
   if ('memory' in performance) {
     const memory = (performance as any).memory;
-    // console.log('Memory usage:', {
-      used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-      total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-      limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-    });
-  }
+    // }
 };
 
 export const scheduleCleanup = () => {
   // Schedule cleanup every 5 minutes
   setInterval(cleanupMemory, 5 * 60 * 1000);
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
 /**
  * Performance Utilities
  * Provides performance monitoring, optimization, and metrics collection

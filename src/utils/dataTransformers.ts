@@ -4,8 +4,7 @@
 export const dataTransformers = {
   // Add utility functions here
   init: () => {
-    console.log('dataTransformers initialized');
-  }
+    }
 };
 
 export default dataTransformers;

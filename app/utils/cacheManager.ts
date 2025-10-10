@@ -216,8 +216,7 @@ export class CacheManager<T = unknown> {
         storage.setItem('cache-manager', JSON.stringify(data));
       }
     } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
+      }
   }
 
   /**
@@ -237,8 +236,7 @@ export class CacheManager<T = unknown> {
         }
       }
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-    }
+      }
   }
 
   /**
@@ -253,8 +251,7 @@ export class CacheManager<T = unknown> {
         storage.removeItem('cache-manager');
       }
     } catch (error) {
-      console.warn('Failed to clear storage:', error);
-    }
+      }
   }
 
   /**

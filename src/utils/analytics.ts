@@ -4,8 +4,7 @@
 export const analytics = {
   // Add utility functions here
   init: () => {
-    console.log('analytics initialized');
-  }
+    }
 };
 
 export default analytics;

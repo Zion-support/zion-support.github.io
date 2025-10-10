@@ -4,8 +4,7 @@
 export const envValidator = {
   // Add utility functions here
   init: () => {
-    console.log('envValidator initialized');
-  }
+    }
 };
 
 export default envValidator;

@@ -29,14 +29,7 @@ import {
   Palette
 } from 'lucide-react';
 
-const MicroSAASPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const microSAASServices = [
+const microSAASServices = [
     // Productivity & Project Management
     { 
       name: 'AI Project Manager Pro', 
@@ -337,20 +330,8 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.6,
       users: '1,700+',
 <<<<<<< HEAD
+=======
       trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
-      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '30-day free trial'
     },
     { 
       name: 'AI 3D Generation Studio', 
@@ -489,11 +470,13 @@ const MicroSAASPage: React.FC = () => {
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+>>>>>>> cursor/analyze-improve-and-deploy-application-58b3
     },
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
 <<<<<<< HEAD
+=======
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',
@@ -692,11 +675,329 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+    },
+
+    // New Innovative Micro SAAS Services
+    { 
+      name: 'AI Quantum Analytics Pro', 
+      href: '/ai-quantum-analytics', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$1,299/mo',
+      description: 'Revolutionary quantum-powered analytics with ultra-fast data processing and predictive insights',
+      features: ['Quantum Data Processing', 'Ultra-fast Analytics', 'Predictive Modeling', 'Real-time Insights', 'Quantum Machine Learning', 'Advanced Visualization', 'API Integration', 'Custom Dashboards'],
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-analytics',
+      capabilities: ['1000x faster processing', '99.9% prediction accuracy', 'Real-time quantum insights', 'Unlimited data processing']
+    },
+    { 
+      name: 'AI Holographic Meeting Room', 
+      href: '/ai-holographic-meeting', 
+      icon: Video, 
+      category: 'Communication', 
+      price: '$599/mo',
+      description: 'Immersive 3D holographic meeting rooms with AI-powered collaboration tools and virtual presence',
+      features: ['3D Holographic Display', 'Virtual Presence', 'AI Meeting Assistant', 'Real-time Translation', 'Gesture Control', 'Spatial Audio', 'Recording & Playback', 'Multi-platform Access'],
+      popular: true,
+      rating: 4.8,
+      users: '320+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-meeting',
+      capabilities: ['Immersive 3D meetings', 'AI-powered collaboration', 'Real-time translation', 'Gesture-based control']
+    },
+    { 
+      name: 'AI Neural Memory Cloud', 
+      href: '/ai-neural-memory-cloud', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$399/mo',
+      description: 'Advanced AI memory system with persistent learning, contextual understanding, and knowledge retention',
+      features: ['Persistent Memory', 'Contextual Learning', 'Knowledge Graphs', 'Memory Search', 'Learning Analytics', 'Multi-modal Memory', 'API Integration', 'Custom Training'],
+      popular: true,
+      rating: 4.9,
+      users: '450+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-memory-cloud',
+      capabilities: ['Unlimited memory storage', 'Context-aware responses', 'Learning from interactions', 'Knowledge graph building']
+    },
+    { 
+      name: 'AI Space Mission Planner', 
+      href: '/ai-space-mission-planner', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$2,999/mo',
+      description: 'AI-powered space mission planning with orbital mechanics, trajectory optimization, and mission simulation',
+      features: ['Orbital Mechanics', 'Trajectory Optimization', 'Mission Simulation', 'Risk Assessment', 'Resource Planning', 'Launch Window Analysis', 'Satellite Management', 'Space Weather Integration'],
+      popular: false,
+      rating: 4.9,
+      users: '25+',
+      trial: '60-day free trial',
+      link: 'https://ziontechgroup.com/ai-space-mission-planner',
+      capabilities: ['99.9% mission success rate', 'Optimal trajectory planning', 'Real-time space monitoring', 'Advanced orbital calculations']
+    },
+    { 
+      name: 'AI Climate Prediction Engine', 
+      href: '/ai-climate-prediction', 
+      icon: Globe, 
+      category: 'Climate Tech', 
+      price: '$799/mo',
+      description: 'Advanced climate modeling and prediction with AI-powered environmental analysis and sustainability planning',
+      features: ['Climate Modeling', 'Weather Prediction', 'Environmental Analysis', 'Carbon Tracking', 'Sustainability Planning', 'Risk Assessment', 'Real-time Monitoring', 'Policy Recommendations'],
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-climate-prediction',
+      capabilities: ['95% prediction accuracy', 'Real-time climate monitoring', 'Carbon footprint optimization', 'Sustainability insights']
+    },
+    { 
+      name: 'AI Quantum Security Vault', 
+      href: '/ai-quantum-security-vault', 
+      icon: Shield, 
+      category: 'Security', 
+      price: '$1,499/mo',
+      description: 'Quantum-resistant security vault with unbreakable encryption and advanced threat protection',
+      features: ['Quantum Encryption', 'Zero-knowledge Architecture', 'Advanced Threat Detection', 'Biometric Authentication', 'Multi-factor Security', 'Audit Logging', 'Compliance Tools', 'API Security'],
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-security-vault',
+      capabilities: ['Unbreakable quantum encryption', 'Zero-knowledge security', 'Advanced threat protection', 'Compliance automation']
+    },
+    { 
+      name: 'AI Molecular Designer Pro', 
+      href: '/ai-molecular-designer', 
+      icon: FileText, 
+      category: 'Science', 
+      price: '$1,999/mo',
+      description: 'AI-powered molecular design and drug discovery with advanced chemistry modeling and simulation',
+      features: ['Molecular Modeling', 'Drug Design', 'Chemical Simulation', 'Property Prediction', 'Reaction Planning', 'Toxicity Analysis', 'Patent Search', 'Collaboration Tools'],
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-molecular-designer',
+      capabilities: ['90% accuracy in predictions', 'Faster drug discovery', 'Chemical property analysis', 'Patent-safe designs']
+    },
+    { 
+      name: 'AI Holographic Workspace Pro', 
+      href: '/ai-holographic-workspace', 
+      icon: Globe, 
+      category: 'Productivity', 
+      price: '$899/mo',
+      description: 'Immersive 3D workspace with AI-powered collaboration, virtual meetings, and spatial computing',
+      features: ['3D Workspace', 'Virtual Collaboration', 'Spatial Computing', 'AI Gestures', 'Mixed Reality', 'Real-time Translation', 'Virtual Whiteboarding', 'Immersive Presentations'],
+      popular: true,
+      rating: 4.7,
+      users: '200+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-workspace',
+      capabilities: ['Immersive 3D collaboration', 'Spatial computing', 'AI-powered gestures', 'Mixed reality integration']
+    },
+    { 
+      name: 'AI Quantum Financial Oracle', 
+      href: '/ai-quantum-financial-oracle', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$2,499/mo',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
+      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals', 'Quantum Computing', 'Advanced Analytics'],
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle',
+      capabilities: ['1000x faster calculations', '99.9% prediction accuracy', 'Quantum advantage', 'Real-time risk modeling']
+    },
+    { 
+      name: 'AI Neural Interface Pro', 
+      href: '/ai-neural-interface', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$1,799/mo',
+      description: 'Advanced neural interface with brain-computer interaction, thought-to-text, and cognitive enhancement',
+      features: ['Brain-Computer Interface', 'Thought-to-Text', 'Cognitive Enhancement', 'Neural Training', 'Mind Mapping', 'Memory Augmentation', 'Focus Optimization', 'Mental Health Monitoring'],
+      popular: false,
+      rating: 4.8,
+      users: '90+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-interface',
+      capabilities: ['Direct brain interaction', 'Thought-to-text conversion', 'Cognitive enhancement', 'Mental health insights']
+    },
+    { 
+      name: 'AI Quantum Computing Cloud', 
+      href: '/ai-quantum-computing-cloud', 
+      icon: Cpu, 
+      category: 'Computing', 
+      price: '$3,999/mo',
+      description: 'Access to quantum computing power with AI optimization and hybrid classical-quantum algorithms',
+      features: ['Quantum Computing Access', 'Hybrid Algorithms', 'AI Optimization', 'Quantum Simulation', 'Error Correction', 'Performance Monitoring', 'API Integration', 'Custom Development'],
+      popular: true,
+      rating: 4.9,
+      users: '60+',
+      trial: '60-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-computing-cloud',
+      capabilities: ['Quantum computing access', 'Hybrid algorithms', 'AI optimization', 'Quantum simulation']
+    },
+    { 
+      name: 'AI Autonomous Vehicle Fleet', 
+      href: '/ai-autonomous-vehicle-fleet', 
+      icon: Truck, 
+      category: 'Transportation', 
+      price: '$4,999/mo',
+      description: 'AI-powered autonomous vehicle fleet management with real-time coordination and safety monitoring',
+      features: ['Fleet Management', 'Autonomous Navigation', 'Real-time Coordination', 'Safety Monitoring', 'Route Optimization', 'Weather Adaptation', 'Maintenance Prediction', 'Performance Analytics'],
+      popular: false,
+      rating: 4.9,
+      users: '40+',
+      trial: '90-day free trial',
+      link: 'https://ziontechgroup.com/ai-autonomous-vehicle-fleet',
+      capabilities: ['99.9% safety record', 'Real-time fleet coordination', 'Weather-adaptive navigation', 'Predictive maintenance']
+    },
+    { 
+      name: 'AI Holographic Design Studio', 
+      href: '/ai-holographic-design-studio', 
+      icon: Palette, 
+      category: 'Design', 
+      price: '$699/mo',
+      description: 'Immersive 3D design studio with AI-powered creativity tools and holographic visualization',
+      features: ['3D Design Tools', 'Holographic Visualization', 'AI Creativity Assistant', 'Real-time Collaboration', 'Material Simulation', 'Lighting Analysis', 'Animation Tools', 'Export Options'],
+      popular: true,
+      rating: 4.8,
+      users: '180+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-design-studio',
+      capabilities: ['Immersive 3D design', 'Holographic visualization', 'AI creativity assistance', 'Real-time collaboration']
+    },
+    { 
+      name: 'AI Quantum Machine Learning', 
+      href: '/ai-quantum-machine-learning', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$1,899/mo',
+      description: 'Quantum-enhanced machine learning with exponential speedup and advanced pattern recognition',
+      features: ['Quantum ML Algorithms', 'Exponential Speedup', 'Pattern Recognition', 'Quantum Neural Networks', 'Optimization Problems', 'Feature Selection', 'Model Training', 'Performance Analytics'],
+      popular: true,
+      rating: 4.9,
+      users: '110+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-machine-learning',
+      capabilities: ['Exponential speedup', 'Advanced pattern recognition', 'Quantum neural networks', 'Optimization solutions']
+    },
+    { 
+      name: 'AI Space Debris Tracker', 
+      href: '/ai-space-debris-tracker', 
+      icon: Globe, 
+      category: 'Space Tech', 
+      price: '$1,199/mo',
+      description: 'AI-powered space debris tracking and collision avoidance with real-time monitoring and prediction',
+      features: ['Debris Tracking', 'Collision Prediction', 'Real-time Monitoring', 'Orbital Analysis', 'Risk Assessment', 'Alert System', 'Historical Data', 'API Integration'],
+      popular: false,
+      rating: 4.8,
+      users: '35+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-space-debris-tracker',
+      capabilities: ['Real-time debris tracking', 'Collision prediction', 'Risk assessment', 'Alert system']
+    },
+    { 
+      name: 'AI Quantum Cryptography Suite', 
+      href: '/ai-quantum-cryptography', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$2,199/mo',
+      description: 'Quantum-resistant cryptography with unbreakable encryption and secure communication protocols',
+      features: ['Quantum Encryption', 'Secure Communication', 'Key Distribution', 'Digital Signatures', 'Authentication', 'Compliance Tools', 'API Security', 'Audit Logging'],
+      popular: true,
+      rating: 4.9,
+      users: '85+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-cryptography',
+      capabilities: ['Unbreakable encryption', 'Secure communication', 'Quantum key distribution', 'Compliance automation']
+    },
+    { 
+      name: 'AI Neural Network Optimizer', 
+      href: '/ai-neural-network-optimizer', 
+      icon: Settings, 
+      category: 'AI Tools', 
+      price: '$599/mo',
+      description: 'Advanced neural network optimization with automated architecture search and performance tuning',
+      features: ['Architecture Search', 'Performance Tuning', 'Hyperparameter Optimization', 'Model Compression', 'Quantization', 'Pruning', 'Training Acceleration', 'Deployment Optimization'],
+      popular: true,
+      rating: 4.7,
+      users: '320+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-network-optimizer',
+      capabilities: ['Automated architecture search', 'Performance optimization', 'Model compression', 'Training acceleration']
+    },
+    { 
+      name: 'AI Holographic Data Visualization', 
+      href: '/ai-holographic-data-viz', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$799/mo',
+      description: 'Immersive 3D data visualization with AI-powered insights and interactive holographic displays',
+      features: ['3D Data Visualization', 'Holographic Display', 'AI Insights', 'Interactive Exploration', 'Real-time Updates', 'Custom Dashboards', 'Collaboration Tools', 'Export Options'],
+      popular: true,
+      rating: 4.8,
+      users: '220+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-data-viz',
+      capabilities: ['Immersive 3D visualization', 'Holographic data display', 'AI-powered insights', 'Interactive exploration']
+    },
+    { 
+      name: 'AI Quantum Optimization Engine', 
+      href: '/ai-quantum-optimization', 
+      icon: Zap, 
+      category: 'Optimization', 
+      price: '$1,599/mo',
+      description: 'Quantum-powered optimization engine for complex problems with exponential speedup and advanced algorithms',
+      features: ['Quantum Optimization', 'Complex Problem Solving', 'Exponential Speedup', 'Advanced Algorithms', 'Real-time Processing', 'API Integration', 'Custom Solutions', 'Performance Analytics'],
+      popular: true,
+      rating: 4.9,
+      users: '95+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-optimization',
+      capabilities: ['Exponential speedup', 'Complex problem solving', 'Quantum algorithms', 'Real-time optimization']
+    },
+    { 
+      name: 'AI Holographic Training Simulator', 
+      href: '/ai-holographic-training', 
+      icon: Users, 
+      category: 'Education', 
+      price: '$999/mo',
+      description: 'Immersive 3D training simulator with AI-powered personalized learning and virtual reality integration',
+      features: ['3D Training Environment', 'AI Personalization', 'Virtual Reality', 'Skill Assessment', 'Progress Tracking', 'Interactive Scenarios', 'Multi-user Support', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.8,
+      users: '160+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-training',
+      capabilities: ['Immersive 3D training', 'AI personalization', 'Virtual reality integration', 'Skill assessment']
+    },
+    { 
+      name: 'AI Quantum Neural Networks', 
+      href: '/ai-quantum-neural-networks', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$2,799/mo',
+      description: 'Quantum-enhanced neural networks with exponential computational power and advanced learning capabilities',
+      features: ['Quantum Neural Networks', 'Exponential Power', 'Advanced Learning', 'Pattern Recognition', 'Optimization', 'Training Acceleration', 'Model Deployment', 'Performance Monitoring'],
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-neural-networks',
+      capabilities: ['Exponential computational power', 'Advanced learning', 'Pattern recognition', 'Training acceleration']
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+>>>>>>> cursor/analyze-improve-and-deploy-application-58b3
 
   if (!isLoaded) {
     return (
@@ -707,26 +1008,26 @@ const MicroSAASPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 matrix-bg">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid-enhanced quantum-particles">
       {/* Header */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden quantum-field">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-enhanced neon-pulse">
               Micro SAAS Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Powerful AI-powered micro SaaS tools to streamline your business operations
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic px-6 py-3 rounded-lg">
+              <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-cyan-400 font-semibold">50+ AI Tools</span>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
+              <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-purple-400 font-semibold">50,000+ Users</span>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
+              <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Uptime</span>
               </div>
             </div>
@@ -734,48 +1035,71 @@ const MicroSAASPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                selectedCategory === category
+                  ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-              className={`futuristic-card hover-lift p-8 ${
+              className={`futuristic-card-enhanced hover-lift p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
               }`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-                  <service.icon className="h-8 w-8" />
-                </div>
-                <div className="flex items-center space-x-2">
-                  {service.popular && (
-                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  )}
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <service.icon className="h-8 w-8" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {service.name}
               </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                <ul className="space-y-2">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Key Features:</h4>
+                <ul className="space-y-1 sm:space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-300">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -783,11 +1107,11 @@ const MicroSAASPage: React.FC = () => {
               </div>
 
               {service.capabilities && (
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Proven Results:</h4>
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Proven Results:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-cyan-300 text-sm">
+                      <li key={index} className="flex items-center text-cyan-300 text-xs sm:text-sm">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {capability}
                       </li>
@@ -796,18 +1120,18 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               )}
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   {service.category}
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6 text-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {service.users}
                 </div>
                 <div className="text-cyan-400 font-medium">
@@ -817,42 +1141,79 @@ const MicroSAASPage: React.FC = () => {
 
               <a
                 href={service.link || '#'}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
               </a>
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-12">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Previous
+            </button>
+            
+            <div className="flex space-x-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    currentPage === page
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-lg sm:text-xl text-purple-100 mb-6 sm:mb-8">
             Join 50,000+ businesses already using our AI-powered micro SaaS solutions. Start your free trial today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-8">
             <a
               href="https://ziontechgroup.com/contact"
-              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+              className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Start Your Free Trial
             </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+              className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="text-purple-100 text-xs sm:text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

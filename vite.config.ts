@@ -79,14 +79,14 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - optimized splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -94,26 +94,38 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
             }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
+            if (id.includes('web-vitals') || id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
             }
             return 'vendor';
+          }
+          
+          // Page chunks - group by main sections
+          if (id.includes('/app/page.tsx')) {
+            return 'home';
+          }
+          if (id.includes('/app/ai-services/')) {
+            return 'ai-services';
+          }
+          if (id.includes('/app/micro-saas/')) {
+            return 'micro-saas';
+          }
+          if (id.includes('/app/')) {
+            return 'pages';
           }
           
           // Component chunks
           if (id.includes('/src/components/')) {
             return 'components';
-          }
-          
-          // Page chunks
-          if (id.includes('/app/')) {
-            return 'pages';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',

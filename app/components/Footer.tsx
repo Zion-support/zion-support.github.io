@@ -18,6 +18,20 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+
+
+<!-- Merged from origin/main -->
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+        { name: 'AI Customer Support', href: '/ai-customer-support' },
+        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+        { name: 'AI Fintech Platform', href: '/ai-fintech' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Quantum Security Suite', href: '/ai-quantum-security-suite' }
+
       ]
     },
     {
@@ -32,15 +46,38 @@ const Footer: React.FC = memo(() => {
         { name: '24/7 IT Support & Monitoring', href: '/it-support' },
         { name: 'Custom Software Development', href: '/custom-development' },
         { name: 'DevOps & CI/CD Implementation', href: '/devops-cicd' }
+
+
+<!-- Merged from origin/main -->
+        { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
+        { name: 'Enterprise Cybersecurity', href: '/cybersecurity' },
+        { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
+        { name: '24/7 IT Support', href: '/it-support' },
+        { name: 'Custom Development', href: '/custom-development' },
+        { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing' },
+        { name: 'Blockchain Integration', href: '/blockchain-integration' },
+        { name: 'AI API Management', href: '/ai-api-management' },
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }
+
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
         { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
         { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
+
+
+<!-- Merged from origin/main -->
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+
         { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
         { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
@@ -50,10 +87,22 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
         { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' }
+
+
+<!-- Merged from origin/main -->
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
+        { name: 'AI Content Writer', href: '/ai-content-writer' },
+        { name: 'AI Video Generator', href: '/ai-video-generator' },
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Neural Interface Pro', href: '/ai-neural-interface-pro' },
+        { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager' }
+
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Emerging Technologies',
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
@@ -64,6 +113,22 @@ const Footer: React.FC = memo(() => {
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
         { name: 'Robotics Solutions', href: '/robotics' }
+
+
+<!-- Merged from origin/main -->
+        { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Energy Management', href: '/ai-energy' },
+        { name: 'AI Music Composition', href: '/ai-music-composition' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Innovation Labs', href: '/innovation-labs' },
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
+
       ]
     }
   ];
@@ -74,7 +139,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -83,7 +150,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Knowledge Base', href: '/knowledge-base' },
+    { name: 'Community Forum', href: '/community' }
   ];
 
   const legalLinks = [
@@ -92,7 +161,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' }
   ];
 
   return (
@@ -101,11 +172,17 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
+      {/* Quantum Particles */}
+      <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
+      <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full quantum-particle" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
                 <Zap className="w-5 h-5 text-white" />
@@ -115,35 +192,37 @@ const Footer: React.FC = memo(() => {
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services.
+              autonomous systems, and digital transformation services. We help businesses 
+              achieve unprecedented levels of efficiency, innovation, and growth through 
+              cutting-edge technology and intelligent automation.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+              <div className="flex items-center space-x-3 text-gray-300 group">
+                <Phone className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">
                   +1 (302) 464-0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+              <div className="flex items-center space-x-3 text-gray-300 group">
+                <Mail className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+              <div className="flex items-start space-x-3 text-gray-300 group">
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
                 <div>
-                  <div>364 E Main St STE 1008</div>
+                  <div className="font-medium">364 E Main St STE 1008</div>
                   <div>Middletown, DE 19709</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Clock className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-3 text-gray-300 group">
+                <Clock className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <div>
-                  <div>Mon - Fri: 9:00 AM - 6:00 PM EST</div>
-                  <div>24/7 Emergency Support</div>
+                  <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM EST</div>
+                  <div className="text-sm text-cyan-400">24/7 Emergency Support</div>
                 </div>
               </div>
             </div>
@@ -190,8 +269,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
+          <div className="md:col-span-2 lg:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
               {/* Company */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>
@@ -249,17 +328,18 @@ const Footer: React.FC = memo(() => {
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-white font-semibold text-lg mb-4 neon-text">
+            <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">
               Stay Updated with Our Latest Innovations
             </h3>
             <p className="text-gray-300 mb-6">
-              Get the latest news about AI breakthroughs, technology updates, and industry insights.
+              Get the latest news about AI breakthroughs, quantum computing advances, 
+              technology updates, and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
               />
               <button className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Subscribe

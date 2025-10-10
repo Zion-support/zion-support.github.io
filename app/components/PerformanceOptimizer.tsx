@@ -41,8 +41,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
-      console.log('LCP measured', { lcp: vitals.lcp });
-    });
+      });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID - First Input Delay
@@ -50,8 +49,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.fid = entry.processingStart - entry.startTime;
-        console.log('FID measured', { fid: vitals.fid });
-      });
+        });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -64,8 +62,7 @@ export const PerformanceOptimizer: React.FC = () => {
         }
       }
       vitals.cls = clsValue;
-      console.log('CLS measured', { cls: vitals.cls });
-    });
+      });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // FCP - First Contentful Paint
@@ -73,8 +70,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.fcp = entry.startTime;
-        console.log('FCP measured', { fcp: vitals.fcp });
-      });
+        });
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -83,8 +79,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.ttfb = entry.responseStart - entry.requestStart;
-        console.log('TTFB measured', { ttfb: vitals.ttfb });
-      });
+        });
     });
     ttfbObserver.observe({ entryTypes: ['navigation'] });
 
@@ -138,11 +133,9 @@ export const PerformanceOptimizer: React.FC = () => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('Service Worker registered:', registration);
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        console.error('Service Worker registration failed:', error);
-      }
+        }
     }
   };
 

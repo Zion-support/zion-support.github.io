@@ -214,7 +214,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-
   useEffect(() => {
     // Track page performance
     if (typeof window !== 'undefined' && 'performance' in window) {
