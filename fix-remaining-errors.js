@@ -71,15 +71,15 @@ const fixRemainingErrors = () => {
       
       if (modified) {
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
+        // console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
         fixedCount++;
       }
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+      // console.error(`Error fixing ${filePath}:`, error.message);
     }
   }
   
-  console.log(`Fixed ${fixedCount} files!`);
+  // console.log(`Fixed ${fixedCount} files!`);
 };
 
 fixRemainingErrors();

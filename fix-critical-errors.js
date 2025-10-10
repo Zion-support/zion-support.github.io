@@ -14,7 +14,7 @@ function fixCriticalErrors(filePath) {
     
     // Fix merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
+      // console.log(`Fixing merge conflicts in: ${filePath}`);
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
       const lines = content.split('\n');
@@ -67,7 +67,7 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix specific patterns;
     if (filePath.includes('App.tsx')) {
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error); }');
+      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { // console.warn("Error:", error); }');
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
   r:", error); }');
@@ -80,7 +80,7 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(filePath, content, 'utf8');
     return modified;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -112,14 +112,14 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
-console.log('Fixing critical parsing errors...');
+// console.log('Fixing critical parsing errors...');
 
 const filesToFix = findFilesToFix(srcDir);`
-console.log(`Processing ${filesToFix.length} files`);
+// console.log(`Processing ${filesToFix.length} files`);
 
 let fixedCount = 0;
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`Fixed ${fixedCount} files`);"`
+// console.log(`Fixed ${fixedCount} files`);"`

@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // console.log('fast-front-promoter function triggered')}
+//     // // console.log('fast-front-promoter function triggered')}
     // Fast front promotion simulation;
     const result = {
       statusCode: 200;
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in fast-front-promoter: ') error;
+//   } catch (error) {// // console.error('Error in fast-front-promoter: ') error;
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'fast-front-promoter',' source: event.source || 'unknown', promotion: {' status: 'active', promotions: 0;
-        lastPromotion: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in fast-front-promoter: ') error;
+        lastPromotion: new Date().toISOString() } }) }; return result; } catch (error) {' // // console.error('Error in fast-front-promoter: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'fast-front-promoter' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

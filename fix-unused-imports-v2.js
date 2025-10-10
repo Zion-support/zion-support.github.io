@@ -61,7 +61,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       
       if (unusedVars.length === 0) return;
       `
-      console.log(`Fixing ${unusedVars.length} unused imports in ${filePath}`);
+      // console.log(`Fixing ${unusedVars.length} unused imports in ${filePath}`);
       
       // Remove unused imports from import statements;
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
@@ -100,7 +100,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       });
       
       if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-        console.log(`Fixed unused imports in ${filePath}`);
+        // console.log(`Fixed unused imports in ${filePath}`);
       }
       
     } catch (error) {
@@ -110,15 +110,15 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
 // Main execution;
-console.log('Starting to fix unused imports...');
+// console.log('Starting to fix unused imports...');
 
 const files = getAllFiles('./src');`
-console.log(`Found ${files.length} files to process`);
+// console.log(`Found ${files.length} files to process`);
 
 // Process files in batches to avoid overwhelming the system;
 const batchSize = 10;
@@ -129,7 +129,7 @@ for (let i = 0; i < files.length; i += batchSize) {
   });
 for (let i = 0; i < files.length; i += batchSize) {/* TODO: Fix JSX expression */}
   });`
-  console.log(`Processed batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(files.length / batchSize)}`);
+  // console.log(`Processed batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(files.length / batchSize)}`);
 }
 
-console.log('Finished fixing unused imports');"`
+// console.log('Finished fixing unused imports');"`

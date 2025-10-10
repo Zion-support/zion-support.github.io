@@ -16,7 +16,7 @@ function fixJsxFile(filePath) {
     if (newContent !== content) {
       content = newContent;
       modified = true;
-      console.log(`Fixed self-closing div tags in ${filePath}`);
+      // console.log(`Fixed self-closing div tags in ${filePath}`);
     }
     
     // Fix mismatched section/div tags
@@ -29,7 +29,7 @@ function fixJsxFile(filePath) {
     if (newContent2 !== content) {
       content = newContent2;
       modified = true;
-      console.log(`Fixed section/div mismatch in ${filePath}`);
+      // console.log(`Fixed section/div mismatch in ${filePath}`);
     }
     
     if (modified) {
@@ -38,7 +38,7 @@ function fixJsxFile(filePath) {
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -62,7 +62,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('🔧 Starting comprehensive JSX fixes...');
+// console.log('🔧 Starting comprehensive JSX fixes...');
 
 const tsxFiles = findTsxFiles('/workspace');
 let fixedCount = 0;
@@ -73,5 +73,5 @@ tsxFiles.forEach(file => {
   }
 });
 
-console.log(`✅ Fixed ${fixedCount} files`);
-console.log('🎉 Comprehensive JSX fixes completed!');
+// console.log(`✅ Fixed ${fixedCount} files`);
+// console.log('🎉 Comprehensive JSX fixes completed!');

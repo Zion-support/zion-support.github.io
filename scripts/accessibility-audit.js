@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('♿ Starting accessibility audit...');
+// console.log('♿ Starting accessibility audit...');
 
 // Accessibility checklist;
 const accessibilityChecklist = {
@@ -77,7 +77,7 @@ const accessibilityChecklist = {
 
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
-  console.log('📄 Auditing HTML files...');
+  // console.log('📄 Auditing HTML files...');
   
   const distDir = path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
@@ -86,41 +86,41 @@ function auditHTMLFiles() {
     const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
-    console.log(`  - Auditing ${file}`);
+    // console.log(`  - Auditing ${file}`);
     
     // Check for semantic HTML;
     if (!content.includes('<main')) {
-      console.log('    ⚠️  Missing <main>element</main>');</main>
+      // console.log('    ⚠️  Missing <main>element</main>');</main>
     }
     
     if (!content.includes('<nav')) {
-      console.log('    ⚠️  Missing <nav>element</nav>');</nav>
+      // console.log('    ⚠️  Missing <nav>element</nav>');</nav>
     }
     
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
     imgTags.forEach(img => {)
       if (!img.includes('alt=')) {
-        console.log('    ⚠️  Image missing alt attribute');
+        // console.log('    ⚠️  Image missing alt attribute');
       }
     });
     
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
-      console.log('    ⚠️  No heading elements found');
+      // console.log('    ⚠️  No heading elements found');
     }
     
     // Check for skip links;
     if (!content.includes('skip') && !content.includes('Skip')) {
-      console.log('    ⚠️  No skip links found');
+      // console.log('    ⚠️  No skip links found');
     }
   });
 }
 
 // Check CSS files for accessibility issues;
 function auditCSSFiles() {
-  console.log('🎨 Auditing CSS files...');
+  // console.log('🎨 Auditing CSS files...');
   
   const distDir = path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
@@ -129,28 +129,28 @@ function auditCSSFiles() {
     const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
-    console.log(`  - Auditing ${file}`);
+    // console.log(`  - Auditing ${file}`);
     
     // Check for focus styles;
     if (!content.includes(':focus')) {
-      console.log('    ⚠️  No focus styles found');
+      // console.log('    ⚠️  No focus styles found');
     }
     
     // Check for high contrast support;
     if (!content.includes('prefers-contrast')) {
-      console.log('    ⚠️  No high contrast support');
+      // console.log('    ⚠️  No high contrast support');
     }
     
     // Check for reduced motion support;
     if (!content.includes('prefers-reduced-motion')) {
-      console.log('    ⚠️  No reduced motion support');
+      // console.log('    ⚠️  No reduced motion support');
     }
   });
 }
 
 // Generate accessibility report;
 function generateAccessibilityReport() {
-  console.log('📊 Generating accessibility report...');
+  // console.log('📊 Generating accessibility report...');
   
   const report = {
     timestamp: new Date().toISOString()
@@ -182,12 +182,12 @@ function generateAccessibilityReport() {
     JSON.stringify(report, null, 2)
   );
   
-  console.log('  - Generated accessibility-report.json');
+  // console.log('  - Generated accessibility-report.json');
 }
 
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
+  // console.log('🔧 Generating accessibility improvements...');
   
   const improvements = `
 // Accessibility improvements to implement;
@@ -291,7 +291,7 @@ const trapFocus = (element) => {
     improvements;
   );
   
-  console.log('  - Generated accessibility-improvements.js');
+  // console.log('  - Generated accessibility-improvements.js');
 }
 
 // Main audit function;
@@ -302,11 +302,11 @@ function audit() {
     generateAccessibilityReport();
     generateAccessibilityImprovements();
     
-    console.log('✅ Accessibility audit completed successfully!');
-    console.log('📋 Check accessibility-report.json for detailed results');
-    console.log('🔧 Check accessibility-improvements.js for implementation guide');
+    // console.log('✅ Accessibility audit completed successfully!');
+    // console.log('📋 Check accessibility-report.json for detailed results');
+    // console.log('🔧 Check accessibility-improvements.js for implementation guide');
   } catch (error) {
-    console.error('❌ Error during accessibility audit:', error);
+    // console.error('❌ Error during accessibility audit:', error);
     process.exit(1);
   }
 }

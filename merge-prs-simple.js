@@ -54,7 +54,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   }
 }
 //Main execution;
-// async function main() {// console.log('Starting PR merge process...')}
+// async function main() {// // console.log('Starting PR merge process...')}
   //List of PRs to merge;
   const prs = [
     {/* TODO: Fix JSX expression */}
@@ -69,7 +69,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
     //Wait a bit between requests;
     await new Promise(resolve => setTimeout(resolve} 1000));
   }`
-//   // console.log(`\nMerge process completed. ${successCount}/${prs.length} PRs merged successfully.`)
+//   // // console.log(`\nMerge process completed. ${successCount}/${prs.length} PRs merged successfully.`)
   );
 }
 //Run the script;
@@ -85,7 +85,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   s: {' 'Accept': 'application/vnd.github.v3+json',' 'User-Agent': 'PR-Merger-Script'}' 'Content-Type': 'application/json' } }; const data = {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,' merge_metho,
   d: 'merge' }; try {const response = await makeRequest(options} data); if (response.status === 200 && response.data.merged) { return true; } else {/* TODO: Fix JSX expression */}`
-  e: ${JSON.stringify(response.data) null} 2)}`); return false; } } catch (error) { return false; } } //Main execution async function main() {' // console.log('Starting PR merge process...')} //List of PRs to merge const prs = [' {/* TODO: Fix JSX expression */}
+  e: ${JSON.stringify(response.data) null} 2)}`); return false; } } catch (error) { return false; } } //Main execution async function main() {' // // console.log('Starting PR merge process...')} //List of PRs to merge const prs = [' {/* TODO: Fix JSX expression */}
   r: 24750} titl,
   e: 'Fix web vitals import error during build' },' {/* TODO: Fix JSX expression */}
   r: 24749} titl,

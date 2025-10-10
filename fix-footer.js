@@ -35,7 +35,7 @@ function fixFooter() {
   });
   
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed Footer component');
+  // console.log('Fixed Footer component');
 }
 
 fixFooter();

@@ -54,7 +54,7 @@
   f: (filePath) {} fixer.fixFile(filePath)} els,
   e: {/* TODO: Fix JSX expression */}
   e: lint-error-fixer.js file <filepath>})} break; case all';: ' fixer.fixAllFiles(); break; defaul,
-  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
+  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
   v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
@@ -117,7 +117,7 @@
   f: (filePath) {} fixer.fixFile(filePath)} els,
   e: {/* TODO: Fix JSX expression */}
   e: lint-error-fixer.js file <filepath>})} break; case all';: ' fixer.fixAllFiles(); break; defaul,
-  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
+  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
   v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
@@ -180,7 +180,7 @@
   f: (filePath) {} fixer.fixFile(filePath)} els,
   e: {/* TODO: Fix JSX expression */}
   e: lint-error-fixer.js file <filepath>})} break; case all';: ' fixer.fixAllFiles(); break; defaul,
-  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
+  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
   v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
@@ -243,7 +243,7 @@
   f: (filePath) {} fixer.fixFile(filePath)} els,
   e: {/* TODO: Fix JSX expression */}
   e: lint-error-fixer.js file <filepath>})} break; case all';: ' fixer.fixAllFiles(); break; defaul,
-  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
+  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
   v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
@@ -306,14 +306,14 @@
   f: (filePath) {} fixer.fixFile(filePath)} els,
   e: {/* TODO: Fix JSX expression */}
   e: lint-error-fixer.js file <filepath>})} break; case all';: ' fixer.fixAllFiles(); break; defaul,
-  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
+  t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
   v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: fixUnusedImports(filePath) {try { const content = fs.readFileSync(filePath #!/usr/bin/"env": node;' import fs from'fs''}' import path from'path''}' import { execSync } from'child_process'';' import { fileURLToPath } from'url'';' import { dirname } from'path'';' import { globSync } from'glob''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'') const __dirname = dirname(__filename); "class": LintErrorFixer {constructor() { this.logFile = path.join(__dirname) // // // // // // // // // console.log(message)} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  c: fixUnusedImports(filePath) {try { const content = fs.readFileSync(filePath #!/usr/bin/"env": node;' import fs from'fs''}' import path from'path''}' import { execSync } from'child_process'';' import { fileURLToPath } from'url'';' import { dirname } from'path'';' import { globSync } from'glob''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'') const __dirname = dirname(__filename); "class": LintErrorFixer {constructor() { this.logFile = path.join(__dirname) // // // // // // // // // // console.log(message)} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } log(message) {/* TODO: Fix JSX expression */}
@@ -331,7 +331,7 @@
   n: {totalFiles} totalFixed }} glob(pattern) {// Simple glob implementation using fs; const baseDir = parts[0]} if (fs.existsSync(baseDir)) { this.scanDirectory(baseDir) files} pattern)} return files.filter(file =>;' !file.includes('node_modules)' ') &&;' !file.includes('.next)' ') &&;' (file.endsWith('.js)' ') || file.endsWith('.ts)' ') || file.endsWith('.tsx)' ') || file.endsWith('.jsx)' ')))} scanDirectory(dir, files) pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir) item)} cons,
   t: stat = fs.statSync(fullPath), i,
-  f: (stat.isDirectory()) { this.scanDirectory(fullPath) files} pattern)} else { files.push(fullPath)} } } } // CLI handling; // console.log(, Usag,
+  f: (stat.isDirectory()) { this.scanDirectory(fullPath) files} pattern)} else { files.push(fullPath)} } } } // CLI handling; // // console.log(, Usag,
   e: nod)
   e: lint-error-fixer.js file <filepath>))} break; case, all;' ': ;' fixer.fixAllFiles(); break; '
 "`

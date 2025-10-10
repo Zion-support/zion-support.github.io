@@ -134,7 +134,7 @@ const createPage = (route, title, description, category) => {
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
+  // console.log(`Created page: ${route}`);
 };
 
 // Page configurations;
@@ -289,7 +289,7 @@ const pageConfigs = {
 let createdCount = 0;
 const batchSize = 10;
 
-console.log(`Creating ${missingPages.length} missing pages...`);
+// console.log(`Creating ${missingPages.length} missing pages...`);
 
 for (const route of missingPages) {
   if (pageConfigs[route]) {
@@ -298,7 +298,7 @@ for (const route of missingPages) {
     createdCount++;
     
     if (createdCount % batchSize === 0) {
-      console.log(`Created ${createdCount} pages...`);
+      // console.log(`Created ${createdCount} pages...`);
     }
   } else {
     // Create a generic page for routes without specific configs;
@@ -311,5 +311,5 @@ for (const route of missingPages) {
   }
 }
 
-console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
-console.log('All navigation links should now work properly.');
+// console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
+// console.log('All navigation links should now work properly.');

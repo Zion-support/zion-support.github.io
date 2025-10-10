@@ -95,7 +95,7 @@ async function main() {/* TODO: Fix JSX expression */}
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
-        // console.log(`✅ Fixed: ${path.basename(filePath)}`);
+        // // console.log(`✅ Fixed: ${path.basename(filePath)}`);
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`);
         fixedCount++;

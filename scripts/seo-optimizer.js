@@ -11,7 +11,7 @@ class SEOOptimizer {
 
   // Check meta tags;
   async checkMetaTags() {
-    console.log('🏷️  Checking meta tags...');
+    // console.log('🏷️  Checking meta tags...');
     
     const htmlFiles = await glob('dist/**/*.html');
     
@@ -39,17 +39,17 @@ class SEOOptimizer {
         if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`);
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+        // console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
-    console.log(`   ✅ Checked ${htmlFiles.length} HTML files`);
+    // console.log(`   ✅ Checked ${htmlFiles.length} HTML files`);
     this.optimizations.push('Meta tags validation');
   }
 
   // Check heading structure;
   async checkHeadingStructure() {
-    console.log('📝 Checking heading structure...');
+    // console.log('📝 Checking heading structure...');
     
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
@@ -75,20 +75,20 @@ class SEOOptimizer {
         }
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+        // console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
+    // console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
     if (headingIssues > 0) {
-      console.log(`   ⚠️  Found ${headingIssues} heading structure issues`);
+      // console.log(`   ⚠️  Found ${headingIssues} heading structure issues`);
     }
     this.optimizations.push('Heading structure validation');
   }
 
   // Check alt attributes;
   async checkAltAttributes() {
-    console.log('🖼️  Checking alt attributes...');
+    // console.log('🖼️  Checking alt attributes...');
     
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
@@ -109,20 +109,20 @@ class SEOOptimizer {
         }
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+        // console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
+    // console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
     if (altIssues > 0) {
-      console.log(`   ⚠️  Found ${altIssues} missing alt attributes`);
+      // console.log(`   ⚠️  Found ${altIssues} missing alt attributes`);
     }
     this.optimizations.push('Alt attributes validation');
   }
 
   // Check internal links;
   async checkInternalLinks() {
-    console.log('🔗 Checking internal links...');
+    // console.log('🔗 Checking internal links...');
     
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
@@ -138,51 +138,51 @@ class SEOOptimizer {
         linkCount += internalLinks.length;
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+        // console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
     
-    console.log(`   ✅ Found ${linkCount} internal links`);
+    // console.log(`   ✅ Found ${linkCount} internal links`);
     this.optimizations.push('Internal links analysis');
   }
 
   // Generate SEO report;
   generateReport() {
-    console.log('\n📊 SEO Optimization Report');
-    console.log('');
-    console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
+    // console.log('\n📊 SEO Optimization Report');
+    // console.log('');
+    // console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
     this.optimizations.forEach((opt, index) => {
-      console.log(`   ${index + 1}. ${opt}`);
+      // console.log(`   ${index + 1}. ${opt}`);
     });
     
     if (this.issues.length > 0) {
-      console.log(`\n⚠️  Issues found: ${this.issues.length}`);
+      // console.log(`\n⚠️  Issues found: ${this.issues.length}`);
       this.issues.slice(0, 10).forEach((issue, index) => {
-        console.log(`   ${index + 1}. ${issue}`);
+        // console.log(`   ${index + 1}. ${issue}`);
       });
       if (this.issues.length > 10) {
-        console.log(`   ... and ${this.issues.length - 10} more issues`);
+        // console.log(`   ... and ${this.issues.length - 10} more issues`);
       }
     } else {
-      console.log('\n✅ No SEO issues found!');
+      // console.log('\n✅ No SEO issues found!');
     }
     
-    console.log('\n🚀 SEO Recommendations: ');
-    console.log('   1. Add structured data (JSON-LD)');
-    console.log('   2. Implement breadcrumb navigation');
-    console.log('   3. Add canonical URLs');
-    console.log('   4. Optimize page loading speed');
-    console.log('   5. Use descriptive URLs');
-    console.log('   6. Add sitemap.xml');
-    console.log('   7. Implement robots.txt');
-    console.log('   8. Use semantic HTML elements');
-    console.log('   9. Add social media meta tags');
-    console.log('   10. Implement schema markup');
+    // console.log('\n🚀 SEO Recommendations: ');
+    // console.log('   1. Add structured data (JSON-LD)');
+    // console.log('   2. Implement breadcrumb navigation');
+    // console.log('   3. Add canonical URLs');
+    // console.log('   4. Optimize page loading speed');
+    // console.log('   5. Use descriptive URLs');
+    // console.log('   6. Add sitemap.xml');
+    // console.log('   7. Implement robots.txt');
+    // console.log('   8. Use semantic HTML elements');
+    // console.log('   9. Add social media meta tags');
+    // console.log('   10. Implement schema markup');
   }
 
   // Run all optimizations;
   async run() {
-    console.log('🔍 Starting SEO optimization...\n');
+    // console.log('🔍 Starting SEO optimization...\n');
     
     try {
       await this.checkMetaTags();
@@ -191,9 +191,9 @@ class SEOOptimizer {
       await this.checkInternalLinks();
       this.generateReport();
       
-      console.log('\n✅ SEO optimization completed!');
+      // console.log('\n✅ SEO optimization completed!');
     } catch (error) {
-      console.error('❌ SEO optimization failed:', error.message);
+      // console.error('❌ SEO optimization failed:', error.message);
     }
   }
 }
@@ -208,25 +208,25 @@ export default SEOOptimizer;
 // SEO optimization script;
 function optimizeSEO() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🔍 Starting SEO optimization...');
+  // // console.log('🔍 Starting SEO optimization...');
   
   // 1. Generate sitemap;
-  // console.log('🗺️ Generating sitemap...');
+  // // console.log('🗺️ Generating sitemap...');
   generateSitemap();
   
   // 2. Optimize meta tags;
-  // console.log('🏷️ Optimizing meta tags...');
+  // // console.log('🏷️ Optimizing meta tags...');
   optimizeMetaTags();
   
   // 3. Generate robots.txt;
-  // console.log('🤖 Generating robots.txt...');
+  // // console.log('🤖 Generating robots.txt...');
   generateRobotsTxt();
   
   // 4. Generate structured data;
-  // console.log('📊 Generating structured data...');
+  // // console.log('📊 Generating structured data...');
   generateStructuredData();
   
-  // console.log('✅ SEO optimization completed!');
+  // // console.log('✅ SEO optimization completed!');
 }
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
@@ -299,7 +299,7 @@ ${/* TODO: Fix JSX expression */}
 </urlset>`;
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-  // console.log('  - Sitemap)
+  // // console.log('  - Sitemap)
   generated: public/sitemap.xml');
 }
 
@@ -313,7 +313,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
     JSON.stringify(metaOptimizations, null, 2)
   );
   
-  // console.log('  - Meta tags)
+  // // console.log('  - Meta tags)
   optimized: seo-optimizations.json');
 }
 
@@ -346,7 +346,7 @@ Allo,
   Allow: /it-services`;
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
-  // console.log('  - Robots.txt)
+  // // console.log('  - Robots.txt)
   generated: public/robots.txt');
 }
 
@@ -369,7 +369,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
     JSON.stringify(structuredData, null, 2)
   );
   
-  // console.log('  - Structured data)
+  // // console.log('  - Structured data)
   generated: public/structured-data.json');
 }
 

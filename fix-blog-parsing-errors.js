@@ -51,7 +51,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
   errors: ${path.relative(__dirname, filePath)}`);
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
@@ -61,4 +61,4 @@ blogFiles.forEach(file => {)
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
 });
 `
-console.log(`Processed ${blogFiles.length} blog files`);`
+// console.log(`Processed ${blogFiles.length} blog files`);`

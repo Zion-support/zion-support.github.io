@@ -299,7 +299,7 @@ async function analyzeRoute(route) {
   results.total++;
   
   try {
-    console.log(`Checking: ${url}`);
+    // console.log(`Checking: ${url}`);
     const response = await makeRequest(url);
     
     if (response.statusCode >= 200 && response.statusCode < 300) {
@@ -308,7 +308,7 @@ async function analyzeRoute(route) {
         url: url),
         statusCode: response.statusCode;
       });
-      console.log(`✅ ${route} - ${response.statusCode}`);
+      // console.log(`✅ ${route} - ${response.statusCode}`);
     } else {
       results.broken.push({)
         route: route;),
@@ -316,7 +316,7 @@ async function analyzeRoute(route) {
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
       });
-      console.log(`❌ ${route} - ${response.statusCode}`);
+      // console.log(`❌ ${route} - ${response.statusCode}`);
     }
   } catch (error) {
     results.errors.push({)
@@ -324,16 +324,16 @@ async function analyzeRoute(route) {
       url: url),
       error: error.message;
     });
-    console.log(`⚠️  ${route} - Error: ${error.message}`);
+    // console.log(`⚠️  ${route} - Error: ${error.message}`);
   }
 }
 
 // Main analysis function;
 async function analyzeAllRoutes() {
-  console.log('Starting comprehensive route analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Total routes to check: ${definedRoutes.length}`);
-  console.log('---');
+  // console.log('Starting comprehensive route analysis...');
+  // console.log(`Base URL: ${BASE_URL}`);
+  // console.log(`Total routes to check: ${definedRoutes.length}`);
+  // console.log('---');
 
   // Process routes in batches to avoid overwhelming the server;
   const batchSize = 10;
@@ -344,7 +344,7 @@ async function analyzeAllRoutes() {
     try {
       await Promise.all(promises);
     } catch (error) {
-      console.log(`Batch error: ${error.message}`);
+      // console.log(`Batch error: ${error.message}`);
     }
     
     // Small delay between batches;
@@ -372,27 +372,27 @@ async function analyzeAllRoutes() {
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
   
   // Generate summary;
-  console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
-  console.log(`Total Routes Checked: ${results.total}`);
-  console.log(`Working Routes: ${results.working.length}`);
-  console.log(`Broken Routes: ${results.broken.length}`);
-  console.log(`Error Routes: ${results.errors.length}`);
+  // console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
+  // console.log(`Total Routes Checked: ${results.total}`);
+  // console.log(`Working Routes: ${results.working.length}`);
+  // console.log(`Broken Routes: ${results.broken.length}`);
+  // console.log(`Error Routes: ${results.errors.length}`);
   
   if (results.broken.length > 0) {
-    console.log('\n=== BROKEN ROUTES ===');
+    // console.log('\n=== BROKEN ROUTES ===');
     results.broken.forEach(route => {)
-      console.log(`❌ ${route.route} - ${route.reason}`);
+      // console.log(`❌ ${route.route} - ${route.reason}`);
     });
   }
 
   if (results.errors.length > 0) {
-    console.log('\n=== ERROR ROUTES ===');
+    // console.log('\n=== ERROR ROUTES ===');
     results.errors.forEach(route => {)
-      console.log(`⚠️  ${route.route} - ${route.error}`);
+      // console.log(`⚠️  ${route.route} - ${route.error}`);
     });
   }
 
-  console.log('\nDetailed report saved to: route-analysis-report.json');
+  // console.log('\nDetailed report saved to: route-analysis-report.json');
 }
 
 // Run the analysis;

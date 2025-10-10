@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🔧 Comprehensive syntax fix for all files...');
+// console.log('🔧 Comprehensive syntax fix for all files...');
 
 // Comprehensive syntax fixes;
 const fixes = [
@@ -38,12 +38,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      // console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    // console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -78,7 +78,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const files = findFiles('./app');
 let fixedCount = 0;
 
-console.log(`Found ${files.length} files to process...`);
+// console.log(`Found ${files.length} files to process...`);
 
 files.forEach(file => {)
   if (fixFile(file)) {
@@ -86,4 +86,4 @@ files.forEach(file => {)
   }
 });
 
-console.log(`\n🎉 Comprehensive syntax fix complete! Modified ${fixedCount} files.`);
+// console.log(`\n🎉 Comprehensive syntax fix complete! Modified ${fixedCount} files.`);

@@ -271,7 +271,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 
 //Step 7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {,
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
+//   //   results.failed.forEach(branch => // // console.log(`  - ${branch}`));
 }
 
 // Step 8: Push changes;
@@ -291,7 +291,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 //Step,
   7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
+//   //   results.failed.forEach(branch => // // console.log(`  - ${branch}`));
 }
 
 // Step,

@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting comprehensive improvements...');
+// console.log('🚀 Starting comprehensive improvements...');
 
 // Add new scripts for better development experience;
 packageJson.scripts = {
@@ -275,41 +275,41 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 
 // 2. Run SEO enhancement;
 function runSEOEnhancement() {
-  console.log('🔍 Running SEO enhancement...');
+  // console.log('🔍 Running SEO enhancement...');
   try {
     execSync('node scripts/seo-enhancer.js', { stdio: 'inherit' });
-    console.log('✅ SEO enhancement completed');
+    // console.log('✅ SEO enhancement completed');
   } catch (error) {
-    console.error('❌ SEO enhancement failed:', error.message);
+    // console.error('❌ SEO enhancement failed:', error.message);
   }
 }
 
 // 3. Run accessibility enhancement;
 function runAccessibilityEnhancement() {
-  console.log('♿ Running accessibility enhancement...');
+  // console.log('♿ Running accessibility enhancement...');
   try {
     execSync('node scripts/accessibility-enhancer.js', { stdio: 'inherit' });
-    console.log('✅ Accessibility enhancement completed');
+    // console.log('✅ Accessibility enhancement completed');
   } catch (error) {
-    console.error('❌ Accessibility enhancement failed:', error.message);
+    // console.error('❌ Accessibility enhancement failed:', error.message);
   }
 }
 
 // 4. Run build;
 function runBuild() {
-  console.log('🏗️ Running build...');
+  // console.log('🏗️ Running build...');
   try {
     execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build completed');
+    // console.log('✅ Build completed');
   } catch (error) {
-    console.error('❌ Build failed:', error.message);
+    // console.error('❌ Build failed:', error.message);
     process.exit(1);
   }
 }
 
 // 5. Generate improvement report;
 function generateImprovementReport() {
-  console.log('📊 Generating improvement report...');
+  // console.log('📊 Generating improvement report...');
   
   const report = {
     timestamp: new Date().toISOString()
@@ -373,34 +373,34 @@ function generateImprovementReport() {
     path.join(__dirname, '../public/improvement-report.json'), 
     JSON.stringify(report, null, 2)
   );
-  console.log('✅ Improvement report generated');
+  // console.log('✅ Improvement report generated');
 }
 
 // 6. Run all improvements;
 async function runAllImprovements() {
   try {
-    console.log('🎯 Starting comprehensive improvements process...\n');
+    // console.log('🎯 Starting comprehensive improvements process...\n');
     
     runPerformanceOptimization();
-    console.log('');
+    // console.log('');
     
     runSEOEnhancement();
-    console.log('');
+    // console.log('');
     
     runAccessibilityEnhancement();
-    console.log('');
+    // console.log('');
     
     runBuild();
-    console.log('');
+    // console.log('');
     
     generateImprovementReport();
-    console.log('');
+    // console.log('');
     
-    console.log('🎉 All improvements completed successfully!');
-    console.log('📋 Check the improvement-report.json for details');
+    // console.log('🎉 All improvements completed successfully!');
+    // console.log('📋 Check the improvement-report.json for details');
     
   } catch (error) {
-    console.error('❌ Error during improvements:', error);
+    // console.error('❌ Error during improvements:', error);
     process.exit(1);
   }
 }
@@ -434,7 +434,7 @@ export const devWarn = (messag)
 export const measurePerformance = (nam,
   e: string, f)
   n: () => void) => {/* TODO: Fix JSX expression */}`
-//     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
+//     // // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
   } else {/* TODO: Fix JSX expression */}
   }
 };

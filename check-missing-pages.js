@@ -64,15 +64,15 @@ for (const link of allLinks) {
   }
 }
 
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log('\n=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(`- ${page}`));
+// console.log('=== MISSING PAGES ANALYSIS ===');
+// console.log(`Total links found: ${allLinks.length}`);
+// console.log(`Existing pages: ${existingPages.length}`);
+// console.log(`Missing pages: ${missingPages.length}`);
+// console.log('\n=== MISSING PAGES ===');
+missingPages.forEach(page => // console.log(`- ${page}`));
 
-console.log('\n=== EXISTING PAGES ===');
-existingPages.sort().forEach(page => console.log(`✓ ${page}`));
+// console.log('\n=== EXISTING PAGES ===');
+existingPages.sort().forEach(page => // console.log(`✓ ${page}`));
 
 // Write missing pages to a file;
 fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
@@ -84,19 +84,19 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   existingPagesList: existingPages;
 }, null, 2));
 
-console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Results saved to missing-pages.json');
+// console.log('\n=== ANALYSIS COMPLETE ===');
+// console.log('Results saved to missing-pages.json');
 // Find missing pages;
 const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
 });
 
-console.log('Missing)
+// console.log('Missing)
   pages:');
-missingPages.forEach(page => console.log(`- ${page}`));
+missingPages.forEach(page => // console.log(`- ${page}`));
 `
-console.log(`\nTotal missing)`
+// console.log(`\nTotal missing)`
   pages: ${missingPages.length}`);`
-console.log(`Total)`
+// console.log(`Total)`
   routes: ${routes.length}`);`
-console.log(`Total existing)`
+// console.log(`Total existing)`
   pages: ${existingPages.length}`);"`

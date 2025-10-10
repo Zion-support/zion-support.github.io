@@ -106,19 +106,19 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   const content = createPageComponent(pageName);
   
   fs.writeFileSync(fullPath, content, 'utf8');`
-  console.log(`Restore)`
+  // console.log(`Restore)`
   d: ${pagePath}`);
 }
 
 // Main execution;
-console.log('Starting page restoration...');
+// console.log('Starting page restoration...');
 
 let restoredCount = 0;
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error restoring ${pageFile}:`, error.message);
+    // console.error(`Error restoring ${pageFile}:`, error.message);
   }
 }
 `
-console.log(`Restored ${restoredCount} page files`);
-console.log('Page restoration complete!');"`
+// console.log(`Restored ${restoredCount} page files`);
+// console.log('Page restoration complete!');"`

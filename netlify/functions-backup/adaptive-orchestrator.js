@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // console.log('adaptive-orchestrator function triggered')}
+//     // // console.log('adaptive-orchestrator function triggered')}
     // Adaptive orchestration logic simulation;
     const result = {
       statusCode: 200;
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in adaptive-orchestrator: ') error;
+//   } catch (error) {// // console.error('Error in adaptive-orchestrator: ') error;
       }
     return {
       statusCode: 500;
@@ -46,7 +46,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in adaptive-orchestrator: ') error;
+        timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) }; return result; } catch (error) {' // // console.error('Error in adaptive-orchestrator: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'adaptive-orchestrator' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

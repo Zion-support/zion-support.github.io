@@ -76,11 +76,11 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expre
 
 // Report results;
 // if (errors.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   errors.forEach((error) => // console.log(`   - ${error}`));
+//   //   errors.forEach((error) => // // console.log(`   - ${error}`));
 }
 
 if (warnings.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   warnings.forEach((warning) => // console.log(`   - ${warning}`));
+//   //   warnings.forEach((warning) => // // console.log(`   - ${warning}`));
 }
 
 if (errors.length === 0 && warnings.length === 0) {/* TODO: Fix JSX expression */}

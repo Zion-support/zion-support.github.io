@@ -31,7 +31,7 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -58,7 +58,7 @@ function main() {/* TODO: Fix JSX expression */}
     'src/blog/ai-enterprise-transformation-2025/page.tsx'
   ];
   
-  console.log('Fixing duplicate imports...');
+  // console.log('Fixing duplicate imports...');
   
   let fixedCount = 0;
   files.forEach(file => {)
@@ -70,7 +70,7 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
+  // console.log(`Fixed ${fixedCount} files`);
 }
 
 main();"`

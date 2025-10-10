@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
       });
 //       return result;
     } catch (error) {/* TODO: Fix JSX expression */}
-//       // console.log(`⚠️ ${description} faile)`
+//       // // console.log(`⚠️ ${description} faile)`
   d: `) error.message);
       return null;
     }
@@ -82,7 +82,7 @@ const { execSync } = require('child_process');
 }
 // #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */}
   g: 'utf8'} timeou,`
-  t: 30000 }); return result; } catch (error) { // console.log(`⚠️ ${description} faile)`
+  t: 30000 }); return result; } catch (error) { // // console.log(`⚠️ ${description} faile)`
   d: `) error.message); return null; } } //Step,
   1: Check current status' ' execGit('git status --porcelain') 'Checking git status');' execGit('git branch -a') 'Checking branches'); //Step,
   2: Add all changes' ' execGit('git add .') 'Adding all changes'); //Step,`

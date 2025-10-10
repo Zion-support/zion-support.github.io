@@ -68,7 +68,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   size: ${(totalSize / 1024).toFixed(2)} KB`
       });
       `
-//       // console.log(`✅ Bundle analysis completed. Total)`
+//       // // console.log(`✅ Bundle analysis completed. Total)`
   size: ${(totalSize / 1024).toFixed(2)} KB`);
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }

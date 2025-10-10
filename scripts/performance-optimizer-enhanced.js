@@ -120,18 +120,18 @@ function processFile(filePath) {
 
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`);
+      // console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`);
       optimizationsApplied += fileOptimizations;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    // console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
 
 async function main() {
-  console.log('🚀 Starting enhanced performance optimization...\n');
+  // console.log('🚀 Starting enhanced performance optimization...\n');
 
   // Get all files to process;
   const allFiles = [];
@@ -146,15 +146,15 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
+  // console.log(`📁 Found ${totalFiles} files to process\n`);
 
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Enhanced performance optimization completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Optimizations applied: ${optimizationsApplied}`);
+  // console.log(`\n🎉 Enhanced performance optimization completed!`);
+  // console.log(`📊 Statistics: `);
+  // console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
+  // console.log(`   - Optimizations applied: ${optimizationsApplied}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

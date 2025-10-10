@@ -76,7 +76,7 @@ safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
 //Process each PR;
 for (const pr of prs) {
-//   // console.log(
+//   // // console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
 

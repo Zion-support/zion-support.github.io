@@ -64,7 +64,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      // console.log(`Fixed: ${filePath}`);
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   d: ${filePath}`);
       return true;
@@ -72,7 +72,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -109,25 +109,25 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution;
-console.log('🔧 Fixing all remaining issues...');
+// console.log('🔧 Fixing all remaining issues...');
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 `
-console.log(`Found ${files.length} files to check`);
+// console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`✅ Fixed issues in ${fixedCount} files`);
+// console.log(`✅ Fixed issues in ${fixedCount} files`);
 
 // Run build to check if issues are resolved;
-console.log('\n🔍 Running build to check results...');
+// console.log('\n🔍 Running build to check results...');
 try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-  console.log('✅ Build successful!');
+  // console.log('✅ Build successful!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-console.log('\n🎉 Issue fixing complete!');`
+// console.log('\n🎉 Issue fixing complete!');`

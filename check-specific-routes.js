@@ -22,8 +22,8 @@ for (const route of missingPages) {
   }
 }
 
-console.log(`Found ${missingRoutes.length} routes missing from App.tsx: `);
-missingRoutes.forEach(route => console.log(`- ${route}`));
+// console.log(`Found ${missingRoutes.length} routes missing from App.tsx: `);
+missingRoutes.forEach(route => // console.log(`- ${route}`));
 
 // Generate import statements for missing routes;
 const generateImportStatement = (route) => {
@@ -38,11 +38,11 @@ const generateRouteStatement = (route) => {
 };
 
 if (missingRoutes.length > 0) {
-  console.log('\n=== IMPORT STATEMENTS ===');
-  missingRoutes.forEach(route => console.log(generateImportStatement(route)));
+  // console.log('\n=== IMPORT STATEMENTS ===');
+  missingRoutes.forEach(route => // console.log(generateImportStatement(route)));
   
-  console.log('\n=== ROUTE STATEMENTS ===');
-  missingRoutes.forEach(route => console.log(generateRouteStatement(route)));
+  // console.log('\n=== ROUTE STATEMENTS ===');
+  missingRoutes.forEach(route => // console.log(generateRouteStatement(route)));
 }
 
 // Write missing routes to a file;
@@ -51,4 +51,4 @@ fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
   importStatements: missingRoutes.map(generateImportStatement),
   routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2));
 
-console.log(`\n✅ Analysis complete. Results saved to missing-routes.json`);
+// console.log(`\n✅ Analysis complete. Results saved to missing-routes.json`);

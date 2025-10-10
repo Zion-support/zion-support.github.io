@@ -83,7 +83,7 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
   
   return false;
@@ -99,7 +99,7 @@ function fixParsingErrors(filePath) {
       // Add missing export statement;
       const newContent = content + '\n\nexport default BlogPost;';
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed parsing error in: ${filePath}`);
+      // console.log(`Fixed parsing error in: ${filePath}`);
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
       return true;
@@ -113,13 +113,13 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
     if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
       const newContent = content + '\n' + '}'.repeat(missingBraces);
       fs.writeFileSync(filePath, newContent, 'utf8');`
-      console.log(`Fixed missing braces)`
+      // console.log(`Fixed missing braces)`
   in: ${filePath}`);
       return true;
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
   
   return false;
@@ -166,7 +166,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
   
   return false;
@@ -196,7 +196,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 }
 
 // Main execution;
-console.log('Fixing all remaining issues in src directory...');
+// console.log('Fixing all remaining issues in src directory...');
 
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx']);
 
@@ -232,4 +232,4 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
   }
 });
 `
-console.log(`Fixed ${fixedCount} files`);`
+// console.log(`Fixed ${fixedCount} files`);`

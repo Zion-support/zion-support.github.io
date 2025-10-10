@@ -88,18 +88,18 @@ function processFile(filePath) {
     
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      console.log(`✅ ${filePath}: Fixed React.memo syntax`);
+      // console.log(`✅ ${filePath}: Fixed React.memo syntax`);
       fixedFiles++;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    // console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
 
 async function main() {
-  console.log('🚀 Starting React.memo syntax fixes...\n');
+  // console.log('🚀 Starting React.memo syntax fixes...\n');
 
   // Get all files to process;
   const allFiles = [];
@@ -114,15 +114,15 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
+  // console.log(`📁 Found ${totalFiles} files to process\n`);
 
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 React.memo syntax fixes completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  // console.log(`\n🎉 React.memo syntax fixes completed!`);
+  // console.log(`📊 Statistics: `);
+  // console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
+  // console.log(`   - Files fixed: ${fixedFiles}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

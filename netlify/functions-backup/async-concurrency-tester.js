@@ -234,7 +234,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })};
 
     return result;
-  } catch (error) {// console.error('❌ async-concurrency-tester failed: ') error;
+  } catch (error) {// // console.error('❌ async-concurrency-tester failed: ') error;
       }
     return {
       statusCode: 500;
@@ -264,7 +264,7 @@ exports.handler = async function(event, context) {try { const timestamp = new Da
         150)); previousResult = `waterfall-step-${i + 1}-using-${previousResult}`; waterfallResults.push(previousResult); } results.waterfall = {' type: 'waterfall', operations: waterfallResults, duration: Date.now() - waterfallStart}' status: 'completed' }; const totalDuration = Date.now() - startTime; // Calculate concurrency metrics const concurrencyMetrics = {totalDuration: totalDuration, sequentialDuration: results.sequential.duration, parallelDuration: results.parallel.duration, efficiencyGain: ((results.sequential.duration - results.parallel.duration) / results.sequential.duration * 100).toFixed(1;)} operationsPerSecond: (Object.keys(results).length / (totalDuration / 1000)).toFixed(2;)}; const result = {statusCode: 200, body: JSON.stringify({' message: 'Async concurrency tester completed successfully', timestamp: timestamp,' function: 'async-concurrency-tester',' status: 'success', concurrencyMetrics: concurrencyMetrics, testResults: results),
         summary: { totalTests: Object.keys(asyncTests).length,' successfulTests: Object.values(results).filter(r => r.status === 'completed' || r.status === 'succeeded' || r.status === 'timeout-prevented').length, totalDuration: totalDuration;
         averageTestDuration: (totalDuration / Object.keys(asyncTests).length).toFixed(0;)}, nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString() // 4 hours from now;
-      }) }; ' return result; } catch (error) {' // console.error('❌ async-concurrency-tester failed: ') error;
+      }) }; ' return result; } catch (error) {' // // console.error('❌ async-concurrency-tester failed: ') error;
       } return { statusCode: 500, body: JSON.stringify({' message: Async concurrency tester failed),
         error: error.message}' function: 'async-concurrency-tester';' status: 'error' }) }; } };'
 exports.handler = async function(event, context) {try { const timestamp = new Date().toISOString()} // Test different async operation patterns const asyncTests = {/* TODO: Fix JSX expression */}

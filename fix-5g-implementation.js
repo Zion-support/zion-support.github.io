@@ -29,4 +29,4 @@ content = content.replace(/\/><\/undefined>/g, '/>');
 content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
 
 fs.writeFileSync(filePath, content, 'utf8');
-console.log('Fixed 5 g-implementation/page.tsx');
+// console.log('Fixed 5 g-implementation/page.tsx');

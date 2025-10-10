@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🧹 Starting cleanup of unused imports and console statements...');
+// console.log('🧹 Starting cleanup of unused imports and console statements...');
 
 // Function to remove unused imports and console statements;
 function cleanupFile(filePath) {
@@ -55,12 +55,12 @@ function cleanupFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Cleaned: ${filePath}`);
+      // console.log(`✅ Cleaned: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`❌ Error cleaning ${filePath}:`, error.message);
+    // console.error(`❌ Error cleaning ${filePath}:`, error.message);
     return false;
   }
 }
@@ -96,7 +96,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const files = findFiles('./app');
 let cleanedCount = 0;
 
-console.log(`Found ${files.length} files to process...`);
+// console.log(`Found ${files.length} files to process...`);
 
 files.forEach(file => {)
   if (cleanupFile(file)) {
@@ -104,15 +104,15 @@ files.forEach(file => {)
   }
 });
 
-console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`);
+// console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`);
 
 // Run ESLint fix to clean up remaining issues;
-console.log('\n🔧 Running ESLint fix...');
+// console.log('\n🔧 Running ESLint fix...');
 try {
   execSync('npm run lint:fix', { stdio: 'inherit' });
-  console.log('✅ ESLint fix completed');
+  // console.log('✅ ESLint fix completed');
 } catch (error) {
-  console.log('⚠️ ESLint fix had some issues, but continuing...');
+  // console.log('⚠️ ESLint fix had some issues, but continuing...');
 }
 
-console.log('\n✨ Cleanup process completed successfully!');
+// console.log('\n✨ Cleanup process completed successfully!');

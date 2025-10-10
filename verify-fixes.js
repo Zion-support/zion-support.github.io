@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
   // Check for duplicate class definitions;
   //   //   //   // Check for syntax issues;
-  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
+  //   // // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
   if(classMatches &&
     classMatches.length === 1 &&

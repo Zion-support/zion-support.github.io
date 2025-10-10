@@ -54,20 +54,20 @@ for (const link of allLinks) {
   }
 }
 
-console.log('=== NAVIGATION LINKS ANALYSIS ===');
-console.log(`Total navigation links found: ${allLinks.length}`);
-console.log(`Existing pages in src: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+// console.log('=== NAVIGATION LINKS ANALYSIS ===');
+// console.log(`Total navigation links found: ${allLinks.length}`);
+// console.log(`Existing pages in src: ${existingPages.length}`);
+// console.log(`Missing pages: ${missingPages.length}`);
 
 if (missingPages.length > 0) {
-  console.log('\n=== MISSING PAGES ===');
-  missingPages.forEach(page => console.log(`- ${page}`));
+  // console.log('\n=== MISSING PAGES ===');
+  missingPages.forEach(page => // console.log(`- ${page}`));
 } else {
-  console.log('\n✅ All navigation links have corresponding pages!');
+  // console.log('\n✅ All navigation links have corresponding pages!');
 }
 
-console.log('\n=== NAVIGATION LINKS ===');
-allLinks.forEach(link => console.log(`✓ ${link}`));
+// console.log('\n=== NAVIGATION LINKS ===');
+allLinks.forEach(link => // console.log(`✓ ${link}`));
 
 // Write results to a file;
 fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
@@ -79,5 +79,5 @@ fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
   existingPagesList: existingPages;
 }, null, 2));
 
-console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Results saved to navigation-analysis.json');
+// console.log('\n=== ANALYSIS COMPLETE ===');
+// console.log('Results saved to navigation-analysis.json');

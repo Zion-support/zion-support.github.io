@@ -74,9 +74,9 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Cleaned: ${path.relative(__dirname, filePath)}`);
+      // console.log(`Cleaned: ${path.relative(__dirname, filePath)}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all page files;
 pageFiles.forEach(file => {)
@@ -87,11 +87,11 @@ pageFiles.forEach(file => {)
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}`
   d: ${path.relative(__dirname, filePath)}`);
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all page files;
 pageFiles.forEach(file => {/* TODO: Fix JSX expression */})`
-console.log(`Processed ${pageFiles.length} page files`);
+// console.log(`Processed ${pageFiles.length} page files`);
       const trimmedLine = line.trim();
       
       // Check if this is an import line;
@@ -129,7 +129,7 @@ console.log(`Processed ${pageFiles.length} page files`);
     const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed unused imports in: ${filePath}`);
+      // console.log(`Fixed unused imports in: ${filePath}`);
       if (trimmedLine.startsWith('import ')) {/* TODO: Fix JSX expression */}
         const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
         if (importMatch) {/* TODO: Fix JSX expression */}`
@@ -165,7 +165,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return results;
 
 // Main execution;
-console.log('Fixing all unused imports in src directory...');
+// console.log('Fixing all unused imports in src directory...');
 
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx']);
 
@@ -175,5 +175,5 @@ files.forEach(file => {)
     fixedCount++;
 
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}`
-console.log(`Fixed ${fixedCount} files`);
+// console.log(`Fixed ${fixedCount} files`);
 "`

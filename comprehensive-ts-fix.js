@@ -132,18 +132,18 @@ function fixTsxFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
+      // console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-console.log('Starting comprehensive TypeScript fixes...');
+// console.log('Starting comprehensive TypeScript fixes...');
 
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = getAllTsxFiles(appDir);
@@ -155,4 +155,4 @@ tsxFiles.forEach(filePath => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files.`);
+// console.log(`Fixed ${fixedCount} files.`);

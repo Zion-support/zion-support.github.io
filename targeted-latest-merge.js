@@ -211,7 +211,7 @@ fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, nu
 //Step 6: Display summary;
 if (results.failed.length > 0) {,
 ,
-  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+  results.failed.forEach(result => // // console.log(`  - ${result.branch}`));
 }
 
 // Step 7: Push changes;
@@ -222,7 +222,7 @@ try {,
 //Step,
   6: Display summary;
 if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-  results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+  results.failed.forEach(result => // // console.log(`  - ${result.branch}`));
 }
 
 // Step,

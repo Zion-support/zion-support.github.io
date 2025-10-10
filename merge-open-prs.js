@@ -176,7 +176,7 @@ for (const branch of openPRBranches) {/* TODO: Fix JSX expression */}
 //Generate report;
 // // // // // // // // // // if (results.failed.length > 0) {
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => // // console.log(`  - ${result.branch}`));
 }
 
 //Save report;

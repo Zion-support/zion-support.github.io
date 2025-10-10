@@ -1,354 +1,234 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+import { TrendingUp, Users, Award, Zap, CheckCircle, ArrowRight, Star, Globe, Shield, Brain } from 'lucide-react';
+
+interface Statistic {
+  id: string;
+  value: string;
+  label: string;
+  change: string;
+  trend: 'up' | 'down' | 'stable';
+  icon: React.ComponentType<any>;
+  color: string;
+}
+
+interface Achievement {
+  title: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  value: string;
+}
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
-    uptime: 0
-  });
+  const [animatedStats, setAnimatedStats] = useState<{ [key: string]: number }>({});
 
-  const targetCounters = {
-    clients: 10000,
-    projects: 5000,
-    satisfaction: 99,
-    years: 15,
-    countries: 50,
-    uptime: 99
-  };
-
-  const statistics = [
+  const statistics: Statistic[] = [
     {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-blue-400',
-      description: 'Businesses trust our solutions'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
+      id: 'projects',
+      value: '500+',
       label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400',
-      description: 'Successful implementations'
+      change: '+25%',
+      trend: 'up',
+      icon: CheckCircle,
+      color: 'text-green-500'
     },
     {
-      icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400',
-      description: 'Customer satisfaction rate'
+      id: 'clients',
+      value: '200+',
+      label: 'Happy Clients',
+      change: '+40%',
+      trend: 'up',
+      icon: Users,
+      color: 'text-blue-500'
     },
     {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400',
-      description: 'Industry expertise'
-    },
-    {
-      icon: Globe,
-      value: counters.countries,
-      label: 'Countries Served',
-      suffix: '+',
-      color: 'text-cyan-400',
-      description: 'Global presence'
-    },
-    {
-      icon: BarChart3,
-      value: counters.uptime,
+      id: 'uptime',
+      value: '99.9%',
       label: 'Uptime Guarantee',
-      suffix: '%',
-      color: 'text-red-400',
-      description: 'Service reliability'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
-    },
-    {
+      change: 'Stable',
+      trend: 'stable',
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
+      color: 'text-purple-500'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const achievements = [
+      id: 'performance',
+      value: '3x',
+      label: 'Performance Boost',
+      change: '+150%',
+      trend: 'up',
+      icon: Zap,
+      color: 'text-orange-500'
+    },
     {
+      id: 'satisfaction',
+      value: '98%',
+      label: 'Client Satisfaction',
+      change: '+5%',
+      trend: 'up',
       icon: Star,
-      title: 'Industry Recognition',
-      description: 'Awarded Best AI Solutions Provider 2024',
-      value: '25+'
+      color: 'text-yellow-500'
     },
     {
-      icon: Target,
-      title: 'Success Rate',
-      description: 'Projects delivered on time and within budget',
-      value: '98%'
-    },
-    {
-      icon: Rocket,
-      title: 'Growth Rate',
-      description: 'Year-over-year business growth',
-      value: '300%'
+      id: 'global',
+      value: '50+',
+      label: 'Countries Served',
+      change: '+10',
+      trend: 'up',
+      icon: Globe,
+      color: 'text-indigo-500'
     }
   ];
 
+  const achievements: Achievement[] = [
+    {
+      title: 'AI Innovation Award',
+      description: 'Recognized for breakthrough AI solutions',
+      icon: Brain,
+      value: '2024'
+    },
+    {
+      title: 'Security Excellence',
+      description: 'Zero security breaches in 5 years',
+      icon: Shield,
+      value: '5 Years'
+    },
+    {
+      title: 'Client Retention',
+      description: '95% of clients stay with us',
+      icon: Users,
+      value: '95%'
+    },
+    {
+      title: 'Performance Leader',
+      description: 'Fastest response times in industry',
+      icon: Zap,
+      value: '1st Place'
+    }
+  ];
+
+  // Animate numbers on mount
   useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
+    const animateNumbers = () => {
+      statistics.forEach((stat) => {
+        const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''));
+        if (!isNaN(numericValue)) {
+          let current = 0;
+          const increment = numericValue / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= numericValue) {
+              current = numericValue;
+              clearInterval(timer);
+            }
+            setAnimatedStats(prev => ({
+              ...prev,
+              [stat.id]: Math.floor(current)
+            }));
+          }, 30);
         }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
+      });
     };
+
+    const timer = setTimeout(animateNumbers, 500);
+    return () => clearTimeout(timer);
   }, []);
 
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return <TrendingUp className="h-4 w-4 text-green-500" />;
+      case 'down':
+        return <TrendingUp className="h-4 w-4 text-red-500 rotate-180" />;
+      default:
+        return <div className="h-4 w-4 bg-gray-400 rounded-full" />;
+    }
+  };
+
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Impact in Numbers
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            See how we've helped businesses transform and achieve their goals through innovative technology solutions.
           </p>
         </div>
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
-              <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                <stat.icon className="w-8 h-8" />
+          {statistics.map((stat) => (
+            <div key={stat.id} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center justify-between mb-4">
+                <div className={`p-3 rounded-lg bg-gray-100 ${stat.color}`}>
+                  <stat.icon className="h-6 w-6" />
+                </div>
+                <div className="flex items-center gap-2">
+                  {getTrendIcon(stat.trend)}
+                  <span className={`text-sm font-medium ${
+                    stat.trend === 'up' ? 'text-green-600' : 
+                    stat.trend === 'down' ? 'text-red-600' : 'text-gray-600'
+                  }`}>
+                    {stat.change}
+                  </span>
+                </div>
               </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value.toLocaleString()}{stat.suffix}
+              <div className="text-3xl font-bold text-gray-900 mb-2">
+                {stat.id in animatedStats ? 
+                  (stat.value.includes('%') ? `${animatedStats[stat.id]}%` : 
+                   stat.value.includes('x') ? `${animatedStats[stat.id]}x` :
+                   stat.value.includes('+') ? `${animatedStats[stat.id]}+` :
+                   stat.value) : 
+                  stat.value
+                }
               </div>
-              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
-              <div className="text-gray-400 text-sm">{stat.description}</div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Statistics Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our Impact in Numbers
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've helped businesses transform with our AI and IT solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-slate-900" />
-              </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value}{stat.suffix}
-              </div>
-              <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+              <div className="text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Features Section */}
-<<<<<<< HEAD
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive solutions deliver measurable results across all key business metrics.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
-                <div className="space-y-2">
-                  {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center text-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {stat}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Achievements Section */}
-        <div className="mb-16">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-12 text-white">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Recognition and awards that validate our commitment to excellence and innovation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <achievement.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
-                <div className="text-gray-400 text-sm">{achievement.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
+            <h3 className="text-3xl font-bold mb-4">Recognition & Achievements</h3>
+            <p className="text-xl text-blue-100">
+              Our commitment to excellence has been recognized by industry leaders and our clients.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-6 mb-4">
+                  <achievement.icon className="h-12 w-12 text-white mx-auto mb-4" />
+                  <div className="text-2xl font-bold mb-2">{achievement.value}</div>
+                  <h4 className="text-lg font-semibold mb-2">{achievement.title}</h4>
+                  <p className="text-blue-100 text-sm">{achievement.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Be part of our growing community of successful businesses. Start your transformation journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Get Started</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies
-              </button>
-            </div>
-=======
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Why Choose Our Solutions?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our solutions deliver unmatched performance, security, and scalability for modern businesses.
+        <div className="text-center mt-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Join Our Success Stories?
+          </h3>
+          <p className="text-lg text-gray-600 mb-8">
+            Let's work together to achieve similar results for your business.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-slate-900" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+              View Case Studies
+            </button>
           </div>
         </div>
       </div>

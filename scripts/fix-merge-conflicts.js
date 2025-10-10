@@ -42,13 +42,13 @@ const fixMergeConflicts = (filePath) => {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
+      // console.log(`Fixed merge conflicts in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 };
@@ -57,14 +57,14 @@ const fixMergeConflicts = (filePath) => {
 const srcDir = path.join(__dirname, '..', 'src');
 const appDir = path.join(__dirname, '..', 'app');
 
-console.log('Starting merge conflict resolution...');
+// console.log('Starting merge conflict resolution...');
 
 // Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
 const allFiles = [...srcFiles, ...appFiles];
 
-console.log(`Found ${allFiles.length} files to process`);
+// console.log(`Found ${allFiles.length} files to process`);
 
 let fixedCount = 0;
 for (const file of allFiles) {
@@ -73,5 +73,5 @@ for (const file of allFiles) {
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-console.log('Merge conflict resolution completed!');
+// console.log(`Fixed merge conflicts in ${fixedCount} files`);
+// console.log('Merge conflict resolution completed!');

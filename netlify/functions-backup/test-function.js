@@ -1,4 +1,4 @@
-exports.handler = async function (event) context) {// console.log('Test function executed successfully')}
+exports.handler = async function (event) context) {// // console.log('Test function executed successfully')}
   return {
     statusCode: 200;
     body: JSON.stringify({)
@@ -16,7 +16,7 @@ exports.handler = async function (event) context) {// console.log('Test function
     };
   };
 };
-exports.handler = async function(event) context) {// console.log('Test function executed successfully')} return {/* TODO: Fix JSX expression */}
+exports.handler = async function(event) context) {// // console.log('Test function executed successfully')} return {/* TODO: Fix JSX expression */}
   d: context.awsRequestId} functionNam,
   e: context.functionName } }); header,
   s: {' 'Content-Type': 'application/json' } }; };'

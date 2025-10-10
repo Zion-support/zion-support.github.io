@@ -33,14 +33,14 @@ function fixRemainingJsx() {
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1>');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
-    console.log('✅ Fixed remaining JSX issues in main page');
+    // console.log('✅ Fixed remaining JSX issues in main page');
     return true;
   } catch (error) {
-    console.error('Error fixing remaining JSX:', error.message);
+    // console.error('Error fixing remaining JSX:', error.message);
     return false;
   }
 }
 
-console.log('🔧 Fixing remaining JSX issues...');
+// console.log('🔧 Fixing remaining JSX issues...');
 fixRemainingJsx();
-console.log('🎉 Remaining JSX fixes completed!');
+// console.log('🎉 Remaining JSX fixes completed!');

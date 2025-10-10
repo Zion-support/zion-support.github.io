@@ -4,7 +4,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
 
-console.log('🔧 Resolving all merge conflicts...');
+// console.log('🔧 Resolving all merge conflicts...');
 
 function resolveConflicts(filePath) {
   try {
@@ -22,7 +22,7 @@ const conflictFiles = gitStatus;
   .map(line => line.substring(3).trim())
   .filter(file => file);
 
-console.log(`Found ${conflictFiles.length} files with conflicts`);
+// console.log(`Found ${conflictFiles.length} files with conflicts`);
 
 // Function to resolve conflicts in a file;
 function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
@@ -30,7 +30,7 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
       return false;
     }
 
-    console.log(`🔧 Resolving conflicts in ${filePath}...`);
+    // console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
     // Split by conflict markers and keep the incoming version (after )
     const lines = content.split('\n');
@@ -61,11 +61,11 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
     
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
-    console.log(`✅ Resolved conflicts in ${filePath}`);
+    // console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
   } catch (error) {
-    console.log(`❌ Error resolving ${filePath}: ${error.message}`);
+    // console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
   }
 }
@@ -75,12 +75,12 @@ try {
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
   
   if (!conflictFiles.trim()) {
-    console.log('✅ No merge conflicts found');
+    // console.log('✅ No merge conflicts found');
     process.exit(0);
   }
 
-  console.log('📋 Files with conflicts: ');
-  console.log(conflictFiles);
+  // console.log('📋 Files with conflicts: ');
+  // console.log(conflictFiles);
 
   const files = conflictFiles.trim().split('\n');
   let resolvedCount = 0;
@@ -94,11 +94,11 @@ try {
     // Check if file has conflict markers;
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-    console.log('📝 Added resolved files to git staging');
+    // console.log('📝 Added resolved files to git staging');
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 
-  console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`);
+  // console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`);
 
   // Add all resolved files;
   execSync('git add .', { stdio: 'inherit' });
@@ -106,10 +106,10 @@ try {
   // Commit the resolution;
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' });
 
-  console.log('✅ All conflicts resolved and committed!');
+  // console.log('✅ All conflicts resolved and committed!');
 
 } catch (error) {
-  console.error('❌ Error resolving conflicts:', error.message);
+  // console.error('❌ Error resolving conflicts:', error.message);
   process.exit(1);
 }
-console.log('🎉 Merge conflict resolution completed!');`
+// console.log('🎉 Merge conflict resolution completed!');`

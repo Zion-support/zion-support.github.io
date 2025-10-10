@@ -162,8 +162,8 @@ function checkUrl(url) {
 }
 
 async function auditWebsite() {
-  console.log('🔍 Starting comprehensive website audit...\n');
-  console.log(`Testing ${routes.length} routes on ${baseUrl}\n`);
+  // console.log('🔍 Starting comprehensive website audit...\n');
+  // console.log(`Testing ${routes.length} routes on ${baseUrl}\n`);
 
   for (let i = 0; i < routes.length; i++) {
     const route = routes[i];
@@ -175,77 +175,77 @@ async function auditWebsite() {
     
     if (result.error) {
       results.errors.push({ url: fullUrl, error: result.error });
-      console.log(`❌ ERROR: ${result.error}`);
+      // console.log(`❌ ERROR: ${result.error}`);
     } else if (result.status >= 200 && result.status < 300) {
       results.working.push({ url: fullUrl, status: result.status });
-      console.log(`✅ ${result.status}`);
+      // console.log(`✅ ${result.status}`);
     } else if (result.status === 404) {
       results.missing.push({ url: fullUrl, status: result.status });
-      console.log(`❌ 404 - Missing`);
+      // console.log(`❌ 404 - Missing`);
     } else {
       results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
-      console.log(`❌ ${result.status} - ${result.statusText}`);
+      // console.log(`❌ ${result.status} - ${result.statusText}`);
     }
     
     // Small delay to avoid overwhelming the server;
     await new Promise(resolve => setTimeout(resolve, 100));
   }
 
-  console.log('\n' + '='.repeat(60));
-  console.log('📊 AUDIT RESULTS SUMMARY');
-  console.log('='.repeat(60));
+  // console.log('\n' + '='.repeat(60));
+  // console.log('📊 AUDIT RESULTS SUMMARY');
+  // console.log('='.repeat(60));
   
-  console.log(`\n✅ Working URLs: ${results.working.length}`);
+  // console.log(`\n✅ Working URLs: ${results.working.length}`);
   results.working.forEach(item => {)
-    console.log(`   ${item.url} (${item.status})`);
+    // console.log(`   ${item.url} (${item.status})`);
   });
 
-  console.log(`\n❌ Broken URLs: ${results.broken.length}`);
+  // console.log(`\n❌ Broken URLs: ${results.broken.length}`);
   results.broken.forEach(item => {)
-    console.log(`   ${item.url} (${item.status} - ${item.statusText})`);
+    // console.log(`   ${item.url} (${item.status} - ${item.statusText})`);
   });
 
-  console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`);
+  // console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`);
   results.missing.forEach(item => {)
-    console.log(`   ${item.url}`);
+    // console.log(`   ${item.url}`);
   });
 
-  console.log(`\n⚠️  Errors: ${results.errors.length}`);
+  // console.log(`\n⚠️  Errors: ${results.errors.length}`);
   results.errors.forEach(item => {)
-    console.log(`   ${item.url} - ${item.error}`);
+    // console.log(`   ${item.url} - ${item.error}`);
   });
 
-  console.log('\n' + '='.repeat(60));
-  console.log('📋 RECOMMENDATIONS');
-  console.log('='.repeat(60));
+  // console.log('\n' + '='.repeat(60));
+  // console.log('📋 RECOMMENDATIONS');
+  // console.log('='.repeat(60));
   
   if (results.missing.length > 0) {
-    console.log('\n🔧 Missing pages that need to be created: ');
+    // console.log('\n🔧 Missing pages that need to be created: ');
     results.missing.forEach(item => {),
       const route = item.url.replace(baseUrl, '');
-      console.log(`   - Create page component for: ${route}`);
+      // console.log(`   - Create page component for: ${route}`);
     });
   }
 
   if (results.broken.length > 0) {
-    console.log('\n🔧 Broken pages that need to be fixed: ');
+    // console.log('\n🔧 Broken pages that need to be fixed: ');
     results.broken.forEach(item => {),
-      console.log(`   - Fix: ${item.url} (${item.status})`);
+      // console.log(`   - Fix: ${item.url} (${item.status})`);
     });
   }
 
   if (results.errors.length > 0) {
-    console.log('\n🔧 Pages with connection errors: ');
+    // console.log('\n🔧 Pages with connection errors: ');
     results.errors.forEach(item => {),
-      console.log(`   - Check: ${item.url} - ${item.error}`);
+      // console.log(`   - Check: ${item.url} - ${item.error}`);
     });
   }
 
-  console.log('\n✨ Audit completed!');
+  // console.log('\n✨ Audit completed!');
   
   // Save results to file;
   fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2));
-  console.log('\n📄 Results saved to audit-results.json');
+  // console.log('\n📄 Results saved to audit-results.json');
 }
 
 auditWebsite().catch(console.error);

@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // console.log('ai-trends-radar-runner function triggered')}
+//     // // console.log('ai-trends-radar-runner function triggered')}
     // AI trends radar simulation;
     const result = {
       statusCode: 200;
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in ai-trends-radar-runner: ') error;
+//   } catch (error) {// // console.error('Error in ai-trends-radar-runner: ') error;
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'ai-trends-radar-runner',' source: event.source || 'unknown', trends: {' status: 'scanning', patterns: 0;
-        lastScan: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in ai-trends-radar-runner: ') error;
+        lastScan: new Date().toISOString() } }) }; return result; } catch (error) {' // // console.error('Error in ai-trends-radar-runner: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'ai-trends-radar-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

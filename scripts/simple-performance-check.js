@@ -66,7 +66,7 @@ try {/* TODO: Fix JSX expression */}
   );
   
   if (foundHeavyDeps.length > 0) {
-    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
+    // // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
   } else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
@@ -129,4 +129,4 @@ fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 
 
 
-report.improvements.forEach(improvement => // console.log(`  ${improvement}`));"`
+report.improvements.forEach(improvement => // // console.log(`  ${improvement}`));"`

@@ -5451,7 +5451,7 @@
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
@@ -10989,7 +10989,7 @@
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,

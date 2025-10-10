@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // console.log('license-compliance-auditor function triggered')}
+//     // // console.log('license-compliance-auditor function triggered')}
     // License compliance auditing simulation;
     const result = {
       statusCode: 200;
@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in license-compliance-auditor: ') error;
+//   } catch (error) {// // console.error('Error in license-compliance-auditor: ') error;
       }
     return {
       statusCode: 500;
@@ -48,7 +48,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'license-compliance-auditor',' source: event.source || 'unknown', audit: {' status: 'active', licenses: 0, compliance: 100;
-        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in license-compliance-auditor: ') error;
+        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // // console.error('Error in license-compliance-auditor: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'license-compliance-auditor' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

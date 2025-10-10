@@ -18,20 +18,20 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix merge conflict markers;
-    if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
+    if (content.includes('      // console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
+      // console.log(`✓ Fixed ${filePath}`);
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
+    // console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
 
 // Main execution;
-console.log('🔧 Fixing blog files...\n');
+// console.log('🔧 Fixing blog files...\n');
 
 const blogFiles = [
   'src/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
@@ -58,4 +58,4 @@ for (const file of blogFiles) {/* TODO: Fix JSX expression */}
   }
 }
 
-console.log('\n✅ Blog files fixed!');`
+// console.log('\n✅ Blog files fixed!');`

@@ -13,11 +13,11 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed array semicolons)`
+    // console.log(`Fixed array semicolons)`
   in: ${filePath}`);
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -40,7 +40,7 @@ function main() {/* TODO: Fix JSX expression */}
     'src/test-page.tsx'
   ];
   
-  console.log('Fixing array semicolons...');
+  // console.log('Fixing array semicolons...');
   
   let fixedCount = 0;
   files.forEach(file => {)
@@ -52,7 +52,7 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
+  // console.log(`Fixed ${fixedCount} files`);
 }
 
 main();`

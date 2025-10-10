@@ -14,7 +14,7 @@ exports.handler = async function (event, context) {try {
         fixedLinks: 3}
       })};
 //     return result;
-//   } catch (error) {// console.error('❌ external-link-check failed: ') error;
+//   } catch (error) {// // console.error('❌ external-link-check failed: ') error;
       }
     return {
       statusCode: 500;
@@ -38,7 +38,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 };
         brokenLinks: 3;
         fixedLinks: 3;
-      }) }; ' return result; } catch (error) {' // console.error('❌ external-link-check failed: ') error;
+      }) }; ' return result; } catch (error) {' // // console.error('❌ external-link-check failed: ') error;
       } return { statusCode: 500, body: JSON.stringify({' error: 'External link check function failed'} message: error.message),
         timestamp: new Date().toISOString() }) }; } };'
         brokenLink,

@@ -142,19 +142,19 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      // console.log(`Fixed: ${filePath}`);
       return true;
     if (modified) {/* TODO: Fix JSX expression */}
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-console.log('Starting TypeScript error fixes...');
+// console.log('Starting TypeScript error fixes...');
 
 let fixedCount = 0;
 filesToFix.forEach(filePath => {
@@ -168,7 +168,7 @@ async function main() {
       fixedCount++;
     }
   } else {
-    console.log(`File not found: ${filePath}`);
+    // console.log(`File not found: ${filePath}`);
   }
 });
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -181,4 +181,4 @@ async function main() {/* TODO: Fix JSX expression */}
     })
   });
 
-console.log(`Fixed ${fixedCount} files.`);
+// console.log(`Fixed ${fixedCount} files.`);

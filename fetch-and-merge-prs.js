@@ -93,14 +93,14 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
 //Main function;
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
-//     // console.log('🔍 Fetching open pull requests...')}
+//     // // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs;
 //     //     if (prs.length === 0) {return}
     }
     //Display PRs;
-//     // console.log('\n📝 Open Pull Requests: '),
+//     // // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
-//     // console.log('\n📝 Open Pull)
+//     // // console.log('\n📝 Open Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 //       //       //       //       });
@@ -116,7 +116,7 @@ async function main() {/* TODO: Fix JSX expression */}
     }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {
-//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
+//       // // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {),
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
@@ -124,7 +124,7 @@ async function main() {/* TODO: Fix JSX expression */}
     }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
-//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
+//       // // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
   conflicts: `),
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
 //         });

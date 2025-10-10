@@ -249,7 +249,7 @@ fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2));
 
 //Step 7: Display summary;
 // // // // // // // // // // // // if (results.failed.length > 0) {,
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
+//   //   results.failed.forEach(branch => // // console.log(`  - ${branch}`));
 }
 
 // Step 8: Push changes;
@@ -259,7 +259,7 @@ fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2));
 //Step,
   7: Display summary;
 // // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
+//   //   results.failed.forEach(branch => // // console.log(`  - ${branch}`));
 }
 
 // Step,

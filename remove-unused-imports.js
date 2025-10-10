@@ -113,18 +113,18 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     } catch (error) {
       // If ESLint fails, try a simpler approach;
     } catch (error) {/* TODO: Fix JSX expression */}`
-      console.log(`ESLint failed for ${filePath}, trying simple approach...`);
+      // console.log(`ESLint failed for ${filePath}, trying simple approach...`);
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
   
   return false;
 }
 
 // Main execution;
-console.log('Removing unused imports...');
+// console.log('Removing unused imports...');
 
 const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
   .filter(file => )
@@ -144,5 +144,5 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });
 `
-console.log(`Fixed ${fixedCount} files`);
+// console.log(`Fixed ${fixedCount} files`);
 }"`

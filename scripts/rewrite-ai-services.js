@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 
-console.log('🔧 Rewriting ai-services page to fix all syntax errors...');
+// console.log('🔧 Rewriting ai-services page to fix all syntax errors...');
 
 const content = `'use client';
 import React from 'react';
@@ -199,4 +199,4 @@ const AIServicesPage: React.FC = () => {
 export default AIServicesPage;`;
 
 fs.writeFileSync('./app/ai-services/page.tsx', content);
-console.log('✅ Rewritten ai-services page successfully');
+// console.log('✅ Rewritten ai-services page successfully');

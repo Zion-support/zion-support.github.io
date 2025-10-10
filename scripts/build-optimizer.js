@@ -18,7 +18,7 @@ class BuildOptimizer {
   }
 
   async optimize() {
-    console.log('🚀 Starting build optimization...');
+    // console.log('🚀 Starting build optimization...');
     
     try {
       await this.analyzeBundle();
@@ -31,16 +31,16 @@ class BuildOptimizer {
       await this.optimizeManifest();
       await this.generateServiceWorker();
       
-      console.log('✅ Build optimization completed successfully!');
+      // console.log('✅ Build optimization completed successfully!');
       this.printSummary();
     } catch (error) {
-      console.error('❌ Build optimization failed:', error.message);
+      // console.error('❌ Build optimization failed:', error.message);
       process.exit(1);
     }
   }
 
   async analyzeBundle() {
-    console.log('📊 Analyzing bundle...');
+    // console.log('📊 Analyzing bundle...');
     
     if (!fs.existsSync(this.distPath)) {
       throw new Error('Dist folder not found. Please run build first.');
@@ -65,16 +65,16 @@ class BuildOptimizer {
     });
 
     if (largeFiles.length > 0) {
-      console.log('⚠️  Large files detected: ');
+      // console.log('⚠️  Large files detected: ');
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file);
-        console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
+        // console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
       });
     }
   }
 
   async optimizeImages() {
-    console.log('🖼️  Optimizing images...');
+    // console.log('🖼️  Optimizing images...');
     
     const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
     const images = this.getFilesRecursively(this.distPath).filter(file => )
@@ -110,7 +110,7 @@ class BuildOptimizer {
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...');
+    // console.log('🎨 Optimizing CSS...');
     
     const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
       file.endsWith('.css')
@@ -139,7 +139,7 @@ class BuildOptimizer {
   }
 
   async optimizeJS() {
-    console.log('⚡ Optimizing JavaScript...');
+    // console.log('⚡ Optimizing JavaScript...');
     
     const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.js')
@@ -167,7 +167,7 @@ class BuildOptimizer {
   }
 
   async addSecurityHeaders() {
-    console.log('🔒 Adding security headers...');
+    // console.log('🔒 Adding security headers...');
     
     const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.html')
@@ -201,7 +201,7 @@ class BuildOptimizer {
   }
 
   async generateSitemap() {
-    console.log('🗺️  Generating sitemap...');
+    // console.log('🗺️  Generating sitemap...');
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
@@ -246,7 +246,7 @@ class BuildOptimizer {
   }
 
   async generateRobotsTxt() {
-    console.log('🤖 Generating robots.txt...');
+    // console.log('🤖 Generating robots.txt...');
     
     const robotsTxt = `User-agent: *
 Allow: /
@@ -269,7 +269,7 @@ Disallow: /private/`;
   }
 
   async optimizeManifest() {
-    console.log('📱 Optimizing manifest...');
+    // console.log('📱 Optimizing manifest...');
     
     const manifestPath = path.join(this.distPath, 'manifest.json');
     
@@ -294,7 +294,7 @@ Disallow: /private/`;
   }
 
   async generateServiceWorker() {
-    console.log('⚙️  Generating service worker...');
+    // console.log('⚙️  Generating service worker...');
     
     // Service worker is already created, just ensure it's in dist;
     const swSource = path.join(process.cwd(), 'public', 'sw.js');
@@ -334,16 +334,16 @@ Disallow: /private/`;
   }
 
   printSummary() {
-    console.log('\n📋 Optimization Summary: ');
-    console.log('===');
+    // console.log('\n📋 Optimization Summary: ');
+    // console.log('===');
     
     this.optimizations.forEach(opt => {)
       const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
-      console.log(`${status} ${opt.name}: ${opt.details}`);
+      // console.log(`${status} ${opt.name}: ${opt.details}`);
     });
     
-    console.log('\n🎉 Build optimization completed successfully!');
+    // console.log('\n🎉 Build optimization completed successfully!');
   }
 }
 

@@ -46,6 +46,6 @@ performanceReport.recommendations.push('Consider using a CDN for static assets')
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 
-console.log('Performance Report Generated: ');
-console.log(`Build Size: ${performanceReport.buildSize} KB`);
-console.log(`Recommendations: ${performanceReport.recommendations.length}`);
+// console.log('Performance Report Generated: ');
+// console.log(`Build Size: ${performanceReport.buildSize} KB`);
+// console.log(`Recommendations: ${performanceReport.recommendations.length}`);

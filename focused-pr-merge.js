@@ -238,7 +238,7 @@ for (const branch of branchesToMerge) {/* TODO: Fix JSX expression */}
 //Step,
   5: Generate report;
 // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+//   //   results.failed.forEach(result => // // console.log(`  - ${result.branch}`));
 }
 
 //Save report;
