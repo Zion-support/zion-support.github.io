@@ -42,8 +42,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         '@type': 'PostalAddress',
         addressCountry: 'US'
       },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       sameAs: [
         'https://www.linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
@@ -57,7 +55,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateBreadcrumbStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
     const breadcrumbData = {
-=======
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
@@ -84,7 +81,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableSchemaMarkup || !seoData.breadcrumbData) return null;
 
     return {
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -108,11 +104,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
     if (!enableSchemaMarkup) return null;
     const faqData = {
-=======
     if (!enableSchemaMarkup || !seoData.faqData) return null;
 
     return {
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -124,10 +118,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
           }
-=======
             text: 'Zion Tech Group offers advanced AI solutions, quantum computing, and autonomous systems for enterprise clients.',
           },
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
         },
         {
           '@type': 'Question',
@@ -159,7 +151,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Update canonical URL
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-=======
             text: 'You can contact us through our website, email, or phone for consultation and support.',
           },
         },
@@ -191,7 +182,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     } else {
       const newCanonicalLink = document.createElement('link');
@@ -211,11 +201,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   };
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-=======
 
   const trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
@@ -237,7 +225,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
-=======
 
   const trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -254,7 +241,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -297,9 +283,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="rating" content="general" />
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
       <meta name="theme-color" content="#4F46E5" />
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
       {/* Structured Data */}
       {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
@@ -308,18 +292,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
       {enableSchemaMarkup && _breadcrumbData && (
-=======
       {enableSchemaMarkup && breadcrumbData && (
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
         <script type="application/ld+json">
           {JSON.stringify(_breadcrumbData)}
         </script>
       )}
 <<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
       {enableSchemaMarkup && _faqData && (
-=======
       {enableSchemaMarkup && faqData && (
->>>>>>> cursor/fix-errors-and-merge-to-main-4927:app/components/AdvancedSEOOptimizer.tsx
         <script type="application/ld+json">
           {JSON.stringify(_faqData)}
         </script>
