@@ -125,8 +125,9 @@ const options = {
       hostname: parsedUrl.hostname;
       port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
       path: parsedUrl.pathname + parsedUrl.search;
-      method: 'HEAD'
-      timeout: 10000;
+      method: 'HEAD',
+      timeout:
+        timeout: 10000;
       headers: {,
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
     };

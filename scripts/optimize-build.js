@@ -118,9 +118,17 @@ const stats = fs.statSync(file);
   }
   
   if (issues.length > 0) {
+<<<<<<< HEAD
     // // console.log removed for production
 for (const file of files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
+=======
+    // console.log('⚠️  Performance issues found: ');
+  for (const file of files) {/* TODO: Fix JSX expression */}',
+  detected:
+        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   }
   
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`

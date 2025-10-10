@@ -142,8 +142,8 @@ export const,
         'Custom algorithms',
         'Compliance tools'],
       popular: true;
-      icon: ''
-      color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
+      icon: '',
+      color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
       market_position: unknown;
@@ -151,7 +151,7 @@ export const,
       target_audience: unknown;
         'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers',
       trial_days: 30;
-      setup_time: '15 - 20 days'
+      setup_time: '15 - 20 days',
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
@@ -191,19 +191,29 @@ export const,
         'Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'],
       roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
       competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
+<<<<<<< HEAD
       market_size: '$45B supply chain management market'
       growth_rate: '28% annual growth';
 variant: 'logistics'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$45B supply chain management market',
+      growth_rate: '28% annual growth',
+      variant: 'logistics',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
-      launch_date: '2025 - 01 - 26'
-      customers: 156;
+      launch_date: '2025 - 01 - 26',
+      customers:
+        customers: 156;
       rating: 4 && 4.8;
       reviews: 98},
       id: 'quantum - logistics - optimization - platform',
@@ -272,8 +282,8 @@ varian,
         'Custom models',
         'Performance analytics'],
       popular: false;
-      icon: ''
-      color: 'from - purple - 600 via - violet - 600 to - indigo - 600'
+      icon: '',
+      color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
       market_position: unknown;
@@ -281,7 +291,7 @@ varian,
       target_audience: unknown;
         'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies',
       trial_days: 45;
-      setup_time: '20 - 30 days'
+      setup_time: '20 - 30 days',
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
@@ -324,23 +334,33 @@ varian,
       competitor,
   s: [,
         'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti'],
+<<<<<<< HEAD
       market_size: '$8B quantum computing market'
       growth_rate: '65% annual growth';
 variant: 'quantum - logistics'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$8B quantum computing market',
+      growth_rate: '65% annual growth',
+      variant: 'quantum - logistics',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',
-      launch_date: '2025 - 02 - 02'
-      customers: 34;
+      launch_date: '2025 - 02 - 02',
+      customers:
+        customers: 34;
       rating: 4 && 4.9;
       reviews: 23},
         'Real-time tracking',
-      id: 'iot - fleet - management - platform'
+      id: 'iot - fleet - management - platform',
       name: 'IoT Fleet Management Platform',
       tagline: 'Comprehensive IoT - based fleet monitoring and management',
       price: '$799',
@@ -403,8 +423,8 @@ varian,
         'Custom dashboards',
         'Compliance tools'],
       popular: true;
-      icon: ''
-      color: 'from - green - 600 via - emerald - 600 to - teal - 600'
+      icon: '',
+      color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / iot - fleet - management - platform',
       market_position: unknown;
@@ -412,7 +432,7 @@ varian,
       target_audience: unknown;
         'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies',
       trial_days: 21;
-      setup_time: '10 - 15 days'
+      setup_time: '10 - 15 days',
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
@@ -455,23 +475,33 @@ varian,
       competitor,
   s: [,
         'Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
+<<<<<<< HEAD
       market_size: '$30B fleet management market'
       growth_rate: '32% annual growth';
 variant: 'iot - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$30B fleet management market',
+      growth_rate: '32% annual growth',
+      variant: 'iot - futuristic',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
-      launch_date: '2025 - 02 - 07'
-      customers: 234;
+      launch_date: '2025 - 02 - 07',
+      customers:
+        customers: 234;
       rating: 4 && 4.7;
       reviews: 145},
         'End-to-end traceability',
-      id: 'blockchain - supply - chain - transparency'
+      id: 'blockchain - supply - chain - transparency',
       name: 'Blockchain Supply Chain Transparency Platform',
       tagline: 'End - to - end supply chain transparency with blockchain',
       price: '$899',
@@ -534,8 +564,8 @@ varian,
         'Audit trails',
         'Performance monitoring'],
       popular: false;
-      icon: ''
-      color: 'from - indigo - 600 via - purple - 600 to - pink - 600'
+      icon: '',
+      color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
       market_position: unknown;
@@ -543,7 +573,7 @@ varian,
       target_audience: unknown;
         'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands',
       trial_days: 30;
-      setup_time: '15 - 20 days'
+      setup_time: '15 - 20 days',
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
@@ -586,19 +616,29 @@ varian,
       competitor,
   s: [,
         'IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
+<<<<<<< HEAD
       market_size: '$22B blockchain supply chain market'
       growth_rate: '45% annual growth';
 variant: 'blockchain - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$22B blockchain supply chain market',
+      growth_rate: '45% annual growth',
+      variant: 'blockchain - futuristic',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',
-      launch_date: '2025 - 02 - 12'
-      customers: 89;
+      launch_date: '2025 - 02 - 12',
+      customers:
+        customers: 89;
       rating: 4 && 4.6;
       reviews: 56;
       market_siz,
@@ -642,8 +682,8 @@ varian,
         'Custom workflows',
         'Compliance tools'],
       popular: true;
-      icon: ''
-      color: 'from - orange - 600 via - amber - 600 to - yellow - 600'
+      icon: '',
+      color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
       market_position: unknown;
@@ -651,7 +691,7 @@ varian,
       target_audience: unknown;
         'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
       trial_days: 21;
-      setup_time: '10 - 15 days'
+      setup_time: '10 - 15 days',
       category: 'Logistics & Supply Chain',
       real_service: true;
       technology: [,
@@ -694,11 +734,20 @@ varian,
       competitor,
   s: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
+<<<<<<< HEAD
       market_size: '$28B warehouse automation market'
       growth_rate: '38% annual growth';
 variant: 'ai - supply - chain - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$28B warehouse automation market',
+      growth_rate: '38% annual growth',
+      variant: 'ai - supply - chain - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -765,7 +814,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       id: 'ai-powered-warehouse-automation',
       name: 'AI-Powered Warehouse Automation Platform',
       tagline: 'Intelligent warehouse automation and optimization',
-      price: '$1,099'
+      price: '$1,099',
       period: '/month',
       description:,
       launchDat,
@@ -832,15 +881,15 @@ export const,
         'Compliance tools'
       ]
       popular: true;
-      icon: ''
-      color: 'from-orange-600 via-amber-600 to-yellow-600'
-      textColor: 'text-orange-400'
+      icon: '',
+      color: 'from-orange-600 via-amber-600 to-yellow-600',
+      textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-powered-warehouse-automation',
       marketPosition: 'Leading AI warehouse automation platform with intelligent optimization',
       targetAudience:,
         'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
       trialDays: 21;
-      setupTime: '10-15 days'
+      setupTime: '10-15 days',
       category: 'Logistics & Supply Chain',
       realService: true;
       technology: [,
@@ -884,16 +933,22 @@ export const,
       competitors: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
       ]
+<<<<<<< HEAD
       marketSize: '$28 B warehouse automation market'
       growthRate: '38% annual growth';
 variant: 'ai-supply-chain-enterprise',
+=======
+      marketSize: '$28 B warehouse automation market',
+      growthRate: '38% annual growth',
+      variant: 'ai-supply-chain-enterprise',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'}
       realImplementation: true;
-      implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-      launchDate: '2025-02-18'
+      implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
       customers: 178;
       rating: 4.8;
       reviews: 112;
@@ -979,16 +1034,21 @@ varian,
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth',;
 variant: 'logistics',
     contactInfo: unknown;
+<<<<<<< HEAD
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth';
 variant: 'ai-supply-chain-enterprise'
+=======
+    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth',
+    variant: 'ai-supply-chain-enterprise',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.'
-    launchDate: '2025-02-02'
+    implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',
+    launchDate: '2025-02-02',
     customers: 34;
     rating: 4.9;
     reviews: 23;
@@ -1064,8 +1124,8 @@ varian,
       'Compliance tools'
     ],
     popular: true;
-    icon: ''
-    color: 'from-green-600 via-emerald-600 to-teal-600'
+    icon: '',
+    color: 'from-green-600 via-emerald-600 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/iot-fleet-management-platform',
     marketPosition: 'Leading IoT fleet management platform with comprehensive monitoring',
@@ -1079,17 +1139,26 @@ varian,
     useCases: ['Fleet monitoring, Predictive maintenance, Route optimization, Driver management, Cost optimization'],
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.',
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
+<<<<<<< HEAD
     marketSize: '$30B fleet management market'
     growthRate: '32% annual growth';
 variant: 'iot-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$30B fleet management market',
+    growthRate: '32% annual growth',
+    variant: 'iot-futuristic',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.'
-    launchDate: '2025-02-07'
+    implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
+    launchDate: '2025-02-07',
     customers: 234;
     rating: 4.7;
     reviews: 145;
@@ -1182,8 +1251,8 @@ varian,
       'Performance monitoring'
     ],
     popular: false;
-    icon: ''
-    color: 'from-indigo-600 via-purple-600 to-pink-600'
+    icon: '',
+    color: 'from-indigo-600 via-purple-600 to-pink-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
     marketPosition: 'Leading blockchain supply chain platform with comprehensive transparency',
@@ -1197,17 +1266,26 @@ varian,
     useCases: ['Supply chain traceability, Quality assurance, Compliance, Sustainability, Risk management'],
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.',
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
+<<<<<<< HEAD
     marketSize: '$22B blockchain supply chain market'
     growthRate: '45% annual growth';
 variant: 'blockchain-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$22B blockchain supply chain market',
+    growthRate: '45% annual growth',
+    variant: 'blockchain-futuristic',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.'
-    launchDate: '2025-02-12'
+    implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',
+    launchDate: '2025-02-12',
     customers: 89;
     rating: 4.6;
     reviews: 56;
@@ -1300,8 +1378,8 @@ varian,
       'Compliance tools'
     ],
     popular: true;
-    icon: ''
-    color: 'from-orange-600 via-amber-600 to-yellow-600'
+    icon: '',
+    color: 'from-orange-600 via-amber-600 to-yellow-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-warehouse-automation',
     marketPosition: 'Leading AI warehouse automation platform with intelligent optimization',
@@ -1315,17 +1393,26 @@ varian,
     useCases: ['Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'],
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
+<<<<<<< HEAD
     marketSize: '$28B warehouse automation market'
     growthRate: '38% annual growth';
 variant: 'ai-manufacturing-enterprise'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
+=======
+    marketSize: '$28B warehouse automation market',
+    growthRate: '38% annual growth',
+    variant: 'ai-manufacturing-enterprise',
+    contactInfo:
+        contactInfo: unknown;
+      mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-    launchDate: '2025-02-18'
+    implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+    launchDate: '2025-02-18',
     customers: 178;
     rating: 4.8;
     reviews: 112;

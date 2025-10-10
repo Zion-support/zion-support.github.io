@@ -4,22 +4,28 @@ import React from 'react';
   t: unknown) => { for (const entry of list.getEntries()) { if (entry.entryType === \'largest-contentful-paint\') { if (typeof console !== \'undefined\') {} } } }); try { observer.observe({ \"entryTypes\": [\'largest-contentful-paint\'] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((\"list\": unknown) => { for (const entry of list.getEntries()) { if (entry.entryType === \'first-input\') { if (typeof console !== \'undefined\') {} } } }); try { fidObserver.observe({ \"entryTypes\": [\'first-input\'] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((\"list\": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== \'undefined\') {} }); try { clsObserver.observe({ \"entryTypes\": [\'layout-shift\'] })} catch () {}return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === \'development\') {} } }); try { fidObserver.observe({ \"entryTypes\": [\'first-input\'] })} catch () {}let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === \'development\') {} }); try { clsObserver.observe({ \"entryTypes\": [\'layout-shift\'] })} catch () {}const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === \'first-contentful-paint\') { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === \'development\') {} } } }); try { fcpObserver.observe({ \"entryTypes\": [\'paint\'] })} catch () {}const navigationEntry = performance.getEntriesByType(\'navigation\')[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === \'development\') {} } const sendMetrics = () => {if (process.env['NODE_ENV'] === \'production\' && Object.keys(metrics).length > 0) { try { fetch(\'/api/performance-metrics\',{ \"method\": \'POST\'}\"headers\": { \'Content-Type\': \'application/json\' },\"body\": JSON.stringify({...metrics)\"timestamp\": new Date().toISOString(),\"url\": \'window.location.href\'}\"userAgent\": \'navigator.userAgent\' }) }).catch(() => {})} catch () {}} }; window.addEventListener(\'load\')() => {setTimeout(sendMetrics}2000)}); return () => {lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect()} fcpObserver.disconnect()}},[]); return null}; export default PerformanceMonitor;' const { useEffect } from "react" declare global {/* TODO: Fix JSX expression */}"
   d: "string"}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
-  P:"}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["largest-contentful-paint"] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis)
+  P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["largest-contentful-paint"] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis)
   t: unknown) => {/* TODO: Fix JSX expression */}"
-  D:"}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")
+  D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")
   t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}"
-  S: "}clsValue)} }); try {/* TODO: Fix JSX expression */}"
-  s: ["layout-shift"] })} catch () {}return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  D: "}fid)} } }); try {/* TODO: Fix JSX expression */}"
-  s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  S: "}clsValue)} }); try {/* TODO: Fix JSX expression */}"
-  s: ["layout-shift"] })} catch () {}const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  P: "}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["paint"] })} catch () {}const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  B: "}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}"
-  d: "POST"}header,"
+  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["layout-shift"] })} catch () {}return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  D: '}fid)} } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["layout-shift"] })} catch () {}const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  P: '}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["paint"] })} catch () {}const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  B: '}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}',
+  d: 'POST'}header,"
   s: { "Content-Type": "application/json" },bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}"
   l: "window.location.href"}userAgen,")
@@ -37,22 +43,28 @@ import React from 'react';
   t: unknown) => { for (const entry of list.getEntries()) { if (entry.entryType === \'largest-contentful-paint\') { if (typeof console !== \'undefined\') {} } } }); try { observer.observe({ \"entryTypes\": [\'largest-contentful-paint\'] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((\"list\": unknown) => { for (const entry of list.getEntries()) { if (entry.entryType === \'first-input\') { if (typeof console !== \'undefined\') {} } } }); try { fidObserver.observe({ \"entryTypes\": [\'first-input\'] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((\"list\": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== \'undefined\') {} }); try { clsObserver.observe({ \"entryTypes\": [\'layout-shift\'] })} catch (e) {} return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === \'development\') {} } }); try { fidObserver.observe({ \"entryTypes\": [\'first-input\'] })} catch (e) {} let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === \'development\') {} }); try { clsObserver.observe({ \"entryTypes\": [\'layout-shift\'] })} catch (e) {} const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === \'first-contentful-paint\') { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === \'development\') {} } } }); try { fcpObserver.observe({ \"entryTypes\": [\'paint\'] })} catch (e) {} const navigationEntry = performance.getEntriesByType(\'navigation\')[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === \'development\') {} } const sendMetrics = () => {if (process.env['NODE_ENV'] === \'production\' && Object.keys(metrics).length > 0) { try { fetch(\'/api/performance-metrics\',{ \"method\": \'POST\'}\"headers\": { \'Content-Type\': \'application/json\' },\"body\": JSON.stringify({...metrics)\"timestamp\": new Date().toISOString(),\"url\": \'window.location.href\'}\"userAgent\": \'navigator.userAgent\' }) }).catch(() => {})} catch (e) {} } }; window.addEventListener(\'load\')() => {setTimeout(sendMetrics}2000)}); return () => {lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect()} fcpObserver.disconnect()}},[]); return null}; export default PerformanceMonitor;' const { useEffect } from "react" declare global {/* TODO: Fix JSX expression */}"
   d: "string"}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
-  P:"}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis)
+  P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis)
   t: unknown) => {/* TODO: Fix JSX expression */}"
-  D:"}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")
+  D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")
   t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}"
-  S: "}clsValue)} }); try {/* TODO: Fix JSX expression */}"
-  s: ["layout-shift"] })} catch (e) {} return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  D: "}fid)} } }); try {/* TODO: Fix JSX expression */}"
-  s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  S: "}clsValue)} }); try {/* TODO: Fix JSX expression */}"
-  s: ["layout-shift"] })} catch (e) {} const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  P: "}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["paint"] })} catch (e) {} const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
-  B: "}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}"
-  d: "POST"}header,"
+  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["layout-shift"] })} catch (e) {} return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  D: '}fid)} } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["layout-shift"] })} catch (e) {} const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  P: '}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */}',
+  s:
+        s: ["paint"] })} catch (e) {} const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */}"
+  B: '}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}',
+  d: 'POST'}header,"
   s: { "Content-Type": "application/json" },bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}"
   l: "window.location.href"}userAgen,")

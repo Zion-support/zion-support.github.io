@@ -3,10 +3,18 @@ import https from 'https';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
+<<<<<<< HEAD
   return new Promise((resolve, reject) => {;
 const options = {
       hostname: 'api.github.com'
       port: 443;
+=======
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      port:
+        port: 443;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       path: endpoint;
       method: method;
       headers: {,

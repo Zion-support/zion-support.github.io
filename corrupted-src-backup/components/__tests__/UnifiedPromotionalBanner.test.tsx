@@ -110,7 +110,7 @@ return (
     it('handles, empty, featured items, arra, y', () => {
           title: 'I, t, e, m , 1',
           category: 'Catego, r, y , 1',
-      li, n, k: '/it, e, m-, 1'
+      li, n, k: '/it, e, m-, 1',
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
           li, n, k: '/t, e, s, t'

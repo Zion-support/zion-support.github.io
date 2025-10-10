@@ -8,8 +8,14 @@ exports.handler = async function (event, context) {
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
         message: 'Todo scanner runner executed successfully')
+<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'todo-scanner-runner'
+=======
+        timestamp: new Date().toISOString()
+        function: 'todo-scanner-runner',
+        source:
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         scanning: {,
           status: 'active',

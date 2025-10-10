@@ -13,8 +13,9 @@ export const microSAASServices = [
     originalPrice: '$149/month',
     features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
     benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
-    link: '/ai-project-manager'
-    popular: true,
+    link: '/ai-project-manager',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.9;
     users: '10,000+',
@@ -27,8 +28,9 @@ export const microSAASServices = [
     originalPrice: '$119/month',
     features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
     benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
-    link: '/ai-meeting-assistant'
-    popular: true,
+    link: '/ai-meeting-assistant',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.8;
     users: '20,000+',
@@ -41,8 +43,9 @@ export const microSAASServices = [
     originalPrice: '$129/month',
     features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
     benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
-    link: '/ai-document-intelligence'
-    popular: true,
+    link: '/ai-document-intelligence',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.7;
     users: '15,000+',
@@ -55,8 +58,9 @@ export const microSAASServices = [
     originalPrice: '$79/month',
     features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
     benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
-    link: '/ai-personal-assistant'
-    popular: true,
+    link: '/ai-personal-assistant',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.9;
     users: '45,000+',
@@ -69,8 +73,9 @@ export const microSAASServices = [
     originalPrice: '$149/month',
     features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
     benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],
-    link: '/ai-team-collaboration'
-    popular: true,
+    link: '/ai-team-collaboration',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.8;
     users: '25,000+',
@@ -83,8 +88,9 @@ export const microSAASServices = [
     originalPrice: '$79/month',
     features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
     benefits: ['60% productivity boost', 'Never miss deadlines', 'Better focus', 'Achieve more goals'],
-    link: '/ai-task-manager'
-    popular: true,
+    link: '/ai-task-manager',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.8;
     users: '25,000+',
@@ -97,8 +103,9 @@ export const microSAASServices = [
     originalPrice: '$119/month',
     features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],
     benefits: ['20+ hours saved weekly', '99.9% accuracy', 'Easy setup', 'Scalable automation'],
-    link: '/ai-workflow-automation'
-    popular: true,
+    link: '/ai-workflow-automation',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.7;
     users: '15,000+',
@@ -111,8 +118,9 @@ export const microSAASServices = [
     originalPrice: '$59/month',
     features: ['Smart scheduling', 'Calendar integration', 'Conflict resolution', 'Time zone handling', 'Meeting analytics', 'Auto-reminders', 'Room booking', 'Catering coordination'],
     benefits: ['50% scheduling time saved', 'Zero double bookings', 'Better time utilization', 'Reduced no-shows'],
-    link: '/ai-meeting-scheduler'
-    popular: true,
+    link: '/ai-meeting-scheduler',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.8;
     users: '30,000+',
@@ -125,8 +133,9 @@ export const microSAASServices = [
     originalPrice: '$49/month',
     features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Idle detection', 'Detailed reports', 'Screenshot monitoring', 'App usage tracking'],
     benefits: ['Accurate time tracking', 'Better productivity', 'Fair billing', 'Team optimization'],
-    link: '/ai-time-tracker'
-    popular: true,
+    link: '/ai-time-tracker',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.6;
     users: '50,000+',
@@ -140,8 +149,9 @@ export const microSAASServices = [
     originalPrice: '$129/month',
     features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content calendar', 'Plagiarism check', 'Tone adjustment', 'Keyword research', 'Content templates'],
     benefits: ['10x content output', 'SEO ready', 'Brand consistent', 'Time savings'],
-    link: '/ai-content-writer'
-    popular: true,
+    link: '/ai-content-writer',
+    popular:
+        popular: true,
     category: 'Content',
     rating: 4.9;
     users: '40,000+',
@@ -154,8 +164,9 @@ export const microSAASServices = [
     originalPrice: '$199/month',
     features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],
     benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],
-    link: '/ai-video-creator'
-    popular: true,
+    link: '/ai-video-creator',
+    popular:
+        popular: true,
     category: 'Content',
     rating: 4.8;
     users: '30,000+',
@@ -168,8 +179,9 @@ export const microSAASServices = [
     originalPrice: '$119/month',
     features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],
     benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],
-    link: '/ai-podcast-studio'
-    popular: true,
+    link: '/ai-podcast-studio',
+    popular:
+        popular: true,
     category: 'Content',
     rating: 4.7;
     users: '18,000+',
@@ -182,8 +194,9 @@ export const microSAASServices = [
     originalPrice: '$99/month',
     features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],
     benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],
-    link: '/ai-graphic-design'
-    popular: true,
+    link: '/ai-graphic-design',
+    popular:
+        popular: true,
     category: 'Content',
     rating: 4.8;
     users: '35,000+',
@@ -196,8 +209,9 @@ export const microSAASServices = [
     originalPrice: '$129/month',
     features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
     benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],
-    link: '/ai-website-builder'
-    popular: true,
+    link: '/ai-website-builder',
+    popular:
+        popular: true,
     category: 'Content',
     rating: 4.9;
     users: '50,000+',
@@ -210,8 +224,9 @@ export const microSAASServices = [
     originalPrice: '$99/month',
     features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],
     benefits: ['300% audience growth', 'Consistent posting', 'Better engagement', 'Time savings'],
-    link: '/ai-social-media-manager'
-    popular: true,
+    link: '/ai-social-media-manager',
+    popular:
+        popular: true,
     category: 'Marketing',
     rating: 4.7;
     users: '35,000+',
@@ -224,8 +239,9 @@ export const microSAASServices = [
     originalPrice: '$89/month',
     features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],
     benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],
-    link: '/ai-email-marketing'
-    popular: true,
+    link: '/ai-email-marketing',
+    popular:
+        popular: true,
     category: 'Marketing',
     rating: 4.8;
     users: '28,000+',
@@ -238,8 +254,9 @@ export const microSAASServices = [
     originalPrice: '$119/month',
     features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],
     benefits: ['200% traffic increase', 'Higher rankings', 'Better visibility', 'Competitive advantage'],
-    link: '/ai-seo-optimizer'
-    popular: true,
+    link: '/ai-seo-optimizer',
+    popular:
+        popular: true,
     category: 'Marketing',
     rating: 4.9;
     users: '22,000+',
@@ -252,8 +269,9 @@ export const microSAASServices = [
     originalPrice: '$149/month',
     features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],
     benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],
-    link: '/ai-lead-generation'
-    popular: true,
+    link: '/ai-lead-generation',
+    popular:
+        popular: true,
     category: 'Marketing',
     rating: 4.8;
     users: '18,000+',
@@ -268,10 +286,12 @@ export const aiServices = [
     originalPrice: '$2,000/month',
     features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'Model Versioning'],
     benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],
-    link: '/machine-learning'
-    popular: true,
-    category: 'AI Development'
-    rating: 4.9;
+    link: '/machine-learning',
+    popular:
+        popular: true,
+    category: 'AI Development',
+    rating:
+        rating: 4.9;
     users: '500+',
     freeTrial: '30 days'},
   {
@@ -282,10 +302,12 @@ export const aiServices = [
     originalPrice: '$3,000/month',
     features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Security Monitoring', 'Incident Response', 'Vulnerability Assessment', 'Compliance Reporting', '24/7 Monitoring'],
     benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],
-    link: '/ai-cybersecurity'
-    popular: true,
-    category: 'Security'
-    rating: 4.8;
+    link: '/ai-cybersecurity',
+    popular:
+        popular: true,
+    category: 'Security',
+    rating:
+        rating: 4.8;
     users: '300+',
     freeTrial: '30 days'},
   {
@@ -296,10 +318,12 @@ export const aiServices = [
     originalPrice: '$5,000/month',
     features: ['Diagnostic Assistance', 'Patient Monitoring', 'Treatment Optimization', 'Medical Imaging', 'Drug Discovery', 'Clinical Trials', 'Patient Records', 'Telemedicine'],
     benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],
-    link: '/ai-healthcare'
-    popular: true,
-    category: 'Healthcare'
-    rating: 4.9;
+    link: '/ai-healthcare',
+    popular:
+        popular: true,
+    category: 'Healthcare',
+    rating:
+        rating: 4.9;
     users: '200+',
     freeTrial: '30 days'},
   {
@@ -310,10 +334,12 @@ export const aiServices = [
     originalPrice: '$2,500/month',
     features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Trading', 'Market Analysis', 'Tax Optimization', 'Retirement Planning', 'Insurance Analysis', 'Real-time Alerts'],
     benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],
-    link: '/ai-financial-advisor'
-    popular: true,
-    category: 'Finance'
-    rating: 4.7;
+    link: '/ai-financial-advisor',
+    popular:
+        popular: true,
+    category: 'Finance',
+    rating:
+        rating: 4.7;
     users: '400+',
     freeTrial: '30 days'},
   {
@@ -324,10 +350,12 @@ export const aiServices = [
     originalPrice: '$3,500/month',
     features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Management', 'Sustainability Tracking'],
     benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],
-    link: '/ai-supply-chain'
-    popular: true,
-    category: 'Logistics'
-    rating: 4.8;
+    link: '/ai-supply-chain',
+    popular:
+        popular: true,
+    category: 'Logistics',
+    rating:
+        rating: 4.8;
     users: '250+',
     freeTrial: '30 days'},
   {
@@ -338,10 +366,12 @@ export const aiServices = [
     originalPrice: '$2,800/month',
     features: ['Contract Analysis', 'Case Research', 'Document Automation', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Due Diligence', 'Litigation Support'],
     benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],
-    link: '/ai-legal-assistant'
-    popular: true,
-    category: 'Legal'
-    rating: 4.6;
+    link: '/ai-legal-assistant',
+    popular:
+        popular: true,
+    category: 'Legal',
+    rating:
+        rating: 4.6;
     users: '150+',
     freeTrial: '30 days'},
   {
@@ -352,10 +382,12 @@ export const aiServices = [
     originalPrice: '$4,200/month',
     features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring', 'Performance Analytics', 'IoT Integration'],
     benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],
-    link: '/ai-manufacturing'
-    popular: true,
-    category: 'Manufacturing'
-    rating: 4.9;
+    link: '/ai-manufacturing',
+    popular:
+        popular: true,
+    category: 'Manufacturing',
+    rating:
+        rating: 4.9;
     users: '180+',
     freeTrial: '30 days'},
   {
@@ -366,10 +398,12 @@ export const aiServices = [
     originalPrice: '$1,800/month',
     features: ['Adaptive Learning', 'Student Analytics', 'Automated Assessment', 'Content Generation', 'Progress Tracking', 'Parent Communication', 'Teacher Tools', 'Accessibility Features'],
     benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],
-    link: '/ai-education'
-    popular: true,
-    category: 'Education'
-    rating: 4.7;
+    link: '/ai-education',
+    popular:
+        popular: true,
+    category: 'Education',
+    rating:
+        rating: 4.7;
     users: '600+',
     freeTrial: '30 days'}
 ]
@@ -382,10 +416,12 @@ export const itServices = [
     originalPrice: '$3,000/month',
     features: ['Zero Downtime Migration', 'Performance Optimization', 'Security Hardening', 'Cost Optimization', 'Disaster Recovery', 'Monitoring Setup', 'Training', '24/7 Support'],
     benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],
-    link: '/cloud-migration'
-    popular: true,
-    category: 'Cloud Services'
-    rating: 4.8;
+    link: '/cloud-migration',
+    popular:
+        popular: true,
+    category: 'Cloud Services',
+    rating:
+        rating: 4.8;
     users: '600+',
     freeTrial: '30 days'},
   {
@@ -396,10 +432,12 @@ export const itServices = [
     originalPrice: '$7,500/month',
     features: ['High Availability Setup', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery', 'Security Hardening', 'Performance Monitoring', 'Backup Solutions', '24/7 Support'],
     benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],
-    link: '/enterprise-infrastructure'
-    popular: true,
-    category: 'Infrastructure'
-    rating: 4.9;
+    link: '/enterprise-infrastructure',
+    popular:
+        popular: true,
+    category: 'Infrastructure',
+    rating:
+        rating: 4.9;
     users: '100+',
     freeTrial: '30 days'},
   {
@@ -410,10 +448,12 @@ export const itServices = [
     originalPrice: '$3,500/month',
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],
     benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],
-    link: '/devops-automation'
-    popular: true,
-    category: 'DevOps'
-    rating: 4.8;
+    link: '/devops-automation',
+    popular:
+        popular: true,
+    category: 'DevOps',
+    rating:
+        rating: 4.8;
     users: '400+',
     freeTrial: '30 days'},
   {
@@ -424,10 +464,12 @@ export const itServices = [
     originalPrice: '$2,500/month',
     features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Security Hardening', 'Monitoring', 'Query Optimization', 'Index Management', 'Capacity Planning'],
     benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],
-    link: '/database-management'
-    popular: true,
-    category: 'Database'
-    rating: 4.7;
+    link: '/database-management',
+    popular:
+        popular: true,
+    category: 'Database',
+    rating:
+        rating: 4.7;
     users: '350+',
     freeTrial: '30 days'},
   {
@@ -438,10 +480,12 @@ export const itServices = [
     originalPrice: '$2,200/month',
     features: ['Next-Gen Firewalls', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Access Control', 'Compliance Reporting', '24/7 Monitoring'],
     benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],
-    link: '/network-security'
-    popular: true,
-    category: 'Security'
-    rating: 4.9;
+    link: '/network-security',
+    popular:
+        popular: true,
+    category: 'Security',
+    rating:
+        rating: 4.9;
     users: '500+',
     freeTrial: '30 days'},
   {
@@ -452,10 +496,12 @@ export const itServices = [
     originalPrice: '$4,500/month',
     features: ['Digital Transformation', 'Technology Roadmaps', 'Implementation Planning', 'Vendor Management', 'Cost Optimization', 'Risk Assessment', 'Compliance Planning', 'Change Management'],
     benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
-    link: '/it-consulting'
-    popular: true,
-    category: 'Consulting'
-    rating: 4.8;
+    link: '/it-consulting',
+    popular:
+        popular: true,
+    category: 'Consulting',
+    rating:
+        rating: 4.8;
     users: '200+',
     freeTrial: '30 days'}
 ]
@@ -468,10 +514,12 @@ export const specializedServices = [
     originalPrice: '$7,500/month',
     features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development', 'Quantum Simulation', 'Cryptography', 'Machine Learning', 'Consulting', 'Training'],
     benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],
-    link: '/quantum-computing'
-    popular: true,
-    category: 'Quantum'
-    rating: 4.9;
+    link: '/quantum-computing',
+    popular:
+        popular: true,
+    category: 'Quantum',
+    rating:
+        rating: 4.9;
     users: '50+',
     freeTrial: '60 days'},
   {
@@ -482,10 +530,12 @@ export const specializedServices = [
     originalPrice: '$6,000/month',
     features: ['Robotics Development', 'Drone Technology', 'Self-Driving Systems', 'Sensor Integration', 'AI Integration', 'Safety Systems', 'Testing', 'Deployment'],
     benefits: ['Cutting-edge technology', 'Automation solutions', 'Safety first', 'Innovation leadership'],
-    link: '/autonomous-systems'
-    popular: true,
-    category: 'Autonomous'
-    rating: 4.8;
+    link: '/autonomous-systems',
+    popular:
+        popular: true,
+    category: 'Autonomous',
+    rating:
+        rating: 4.8;
     users: '100+',
     freeTrial: '30 days'},
   {
@@ -496,10 +546,12 @@ export const specializedServices = [
     originalPrice: '$3,500/month',
     features: ['Smart Contracts', 'DeFi Development', 'NFT Solutions', 'Web3 Integration', 'Token Development', 'Security Audits', 'Consulting', 'Training'],
     benefits: ['Decentralized solutions', 'Security & transparency', 'Future-ready technology', 'Innovation leadership'],
-    link: '/blockchain'
-    popular: true,
-    category: 'Blockchain'
-    rating: 4.7;
+    link: '/blockchain',
+    popular:
+        popular: true,
+    category: 'Blockchain',
+    rating:
+        rating: 4.7;
     users: '300+',
     freeTrial: '30 days'},
   {
@@ -510,10 +562,12 @@ export const specializedServices = [
     originalPrice: '$2,500/month',
     features: ['IoT Development', 'Edge Computing', 'Sensor Networks', 'Real-time Processing', 'Data Analytics', 'Security', 'Integration', 'Monitoring'],
     benefits: ['Connected solutions', 'Real-time insights', 'Edge efficiency', 'Scalable architecture'],
-    link: '/iot-edge'
-    popular: true,
-    category: 'IoT'
-    rating: 4.8;
+    link: '/iot-edge',
+    popular:
+        popular: true,
+    category: 'IoT',
+    rating:
+        rating: 4.8;
     users: '400+',
     freeTrial: '30 days'}
 ]

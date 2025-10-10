@@ -111,21 +111,23 @@ import React from 'react';
     integrations: [,
       'CRM systems, Chat platforms, Video conferencing, Social media, Mobile apps, Web applications'
     ]
-    support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.'
-    compliance: [
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
+    support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.',
+    compliance:
+        compliance: [
+    icon: '',
+    color: 'from - purple - 500 to - pink - 600',
     popular: true;
-    launch_date: '2024 - 02 - 15'
-    customers: 850;
+    launch_date: '2024 - 02 - 15',
+    customers:
+        customers: 850;
     rating: 4 && 4.9;
     reviews: 180;
     market_size: '$35B emotional AI market',
     growth_rate: '45% annually'},
       'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators'],
     realImplementation: true;
-    implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.'
-    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
+    implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.',
     useCases: [;
       'Therapeutic applications'
     ]
@@ -181,12 +183,14 @@ import React from 'react';
     tagline: 'Quantum computing meets artificial intelligence',
     description: unknown;
       'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.',
-    category: 'Quantum & AI'
-    price: unknown;
+    category: 'Quantum & AI',
+    price:
+        price: unknown;
       monthly: 499;
       yearly: 4990;
-      currency: 'USD'
-      trial_days: 7;
+      currency: 'USD',
+      trial_days:
+        trial_days: 7;
       setup_time: '4 hours',
       enterprise: 1999;
       'Machine learning acceleration'
@@ -290,12 +294,14 @@ import React from 'react';
     support: unknown;
       'Dedicated quantum physicist, 24 / 7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
-    link: 'https://ziontechgroup.com / quantum - ai - fusion - platform'
-    icon: ''
-    color: 'from - cyan - 500 to - blue - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 20'
-    customers: 420;
+    link: 'https://ziontechgroup.com / quantum - ai - fusion - platform',
+    icon: '',
+    color: 'from - cyan - 500 to - blue - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 20',
+    customers:
+        customers: 420;
     rating: 4 && 4.9;
     reviews: 95;
     market_size: '$8.5B quantum computing market',
@@ -334,8 +340,8 @@ import React from 'react';
   k: [,
       'Advanced AI/ML, Evolutionary algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Kubernetes'],
     realImplementation: true;
-    implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.'
-    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
+    implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.',
+    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -369,12 +375,14 @@ import React from 'react';
     tagline: 'Self - managing AI systems that evolve and adapt',
     description: unknown;
       'Revolutionary AI platform that creates, manages, and evolves autonomous AI systems that can learn, adapt, and optimize themselves without human intervention.',
-    category: 'AI & Consciousness'
-    price: unknown;
+    category: 'AI & Consciousness',
+    price:
+        price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
-      trial_days: 14;
+      currency: 'USD',
+      trial_days:
+        trial_days: 14;
       setup_time: '6 hours',
       enterprise: 1599;
     lin,
@@ -473,12 +481,14 @@ import React from 'react';
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry - specific regulations'],
-    link: 'https://ziontechgroup.com / ai - autonomous - ecosystem - manager'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
-    popular: true;
-    launch_date: '2024 - 03 - 01'
-    customers: 680;
+    link: 'https://ziontechgroup.com / ai - autonomous - ecosystem - manager',
+    icon: '',
+    color: 'from - green - 500 to - emerald - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 03 - 01',
+    customers:
+        customers: 680;
     rating: 4 && 4.8;
     reviews: 150;
     market_size: '$25B autonomous AI market',
@@ -512,8 +522,8 @@ import React from 'react';
   k: [,
       'Multiple AI models, Multimodal processing, React, Node && Node.js, PostgreSQL, Redis, AWS, GPU optimization'],
     realImplementation: true;
-    implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.'
-    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
+    implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.',
+    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -540,12 +550,14 @@ import React from 'react';
     tagline: 'Seamlessly integrate text, image, audio, and video AI',
     description: unknown;
       'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, context - aware intelligence and automation.',
-    category: 'AI & Consciousness'
-    price: unknown;
+    category: 'AI & Consciousness',
+    price:
+        price: unknown;
       monthly: 249;
       yearly: 2490;
-      currency: 'USD'
-      trial_days: 21;
+      currency: 'USD',
+      trial_days:
+        trial_days: 21;
       setup_time: '3 hours',
       enterprise: 999;
       'Creative assistance'
@@ -650,20 +662,22 @@ import React from 'react';
     support: unknown;
       '24 / 7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
-    link: 'https://ziontechgroup.com / multimodal - ai - orchestrator'
-    icon: ''
-    color: 'from - indigo - 500 to - purple - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 10'
-    customers: 1200;
+    link: 'https://ziontechgroup.com / multimodal - ai - orchestrator',
+    icon: '',
+    color: 'from - indigo - 500 to - purple - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 10',
+    customers:
+        customers: 1200;
     rating: 4 && 4.7;
     reviews: 280;
     market_size: '$42B multimodal AI market',
     growth_rate: '32% annually'},
       'AI ethics algorithms, Bias detection, React, Node && Node.js, PostgreSQL, Redis, AWS, Compliance tools'],
     realImplementation: true;
-    implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.'
-    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
+    implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.',
+    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.',
     useCases: [;
     suppor,
   t: unknown,
@@ -718,12 +732,14 @@ import React from 'react';
     complianc,
   e: [,
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
-    popular: true;
-    launchDate: '2024-01-15'
-    customers: 950;
+    link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-15',
+    customers:
+        customers: 950;
     rating: 4.6;
     reviews: 220;
     marketSize: '$15B AI governance market',
@@ -762,32 +778,37 @@ import React from 'react';
     techStack: ['Advanced AI models, Computer Vision, NLP, React, Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
     implementationDetails: 'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.',
-    roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
-    useCases: [;
+    roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.',
+    useCases:
+        useCases: [;
       'Customer service automationMental health monitoringEducational personalizationGaming experience enhancementMarketing campaign optimizationTherapeutic applications'],
     integrations: ['CRM systems, Chat platforms, Video conferencing, Social media, Mobile apps, Web applications'],
     support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, HIPAA (for healthcare)'],
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform'
+    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
     icon: '';
-    color: 'from-purple-500 to-pink-600'
-    popular: true;
-    launchDate: '2024-02-15'
-    customers: 850;
+    color: 'from-purple-500 to-pink-600',
+    popular:
+        popular: true;
+    launchDate: '2024-02-15',
+    customers:
+        customers: 850;
     rating: 4.9;
     reviews: 180;
     marketSize: '$35B emotional AI market',
     growthRate: '45% annually'},
-    id: 'quantum-ai-fusion-platform'
-    name: 'Quantum AI Fusion Platform'
-    tagline: 'Quantum computing meets artificial intelligence'
-  description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.'
-    category: 'Quantum & AI'
-    price: unknown;
+    id: 'quantum-ai-fusion-platform',
+    name: 'Quantum AI Fusion Platform',
+    tagline: 'Quantum computing meets artificial intelligence',
+  description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.',
+    category: 'Quantum & AI',
+    price:
+        price: unknown;
       monthly: 179;
       yearly: 1790;
-      currency: 'USD'
-      trial_days: 30;
+      currency: 'USD',
+      trial_days:
+        trial_days: 30;
       setup_time: '2 hours',
       enterprise: 699;
     targetAudienc,
@@ -931,12 +952,14 @@ import React from 'react';
     complianc,
   e: [,
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com / ai - ethics - governance - platform'
-    icon: ''
-    color: 'from - yellow - 500 to - orange - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 15'
-    customers: 950;
+    link: 'https://ziontechgroup.com / ai - ethics - governance - platform',
+    icon: '',
+    color: 'from - yellow - 500 to - orange - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 15',
+    customers:
+        customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
     market_size: '$15B AI governance market',
@@ -964,17 +987,21 @@ import React from 'react';
 ];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement'
     ];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
-    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
+    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
+    compliance:
+        compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
-    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
-    link: 'https://ziontechgroup.com / ai - ethics - governance - platform'
+    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
+    compliance:
+        compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
+    link: 'https://ziontechgroup.com / ai - ethics - governance - platform',
     icon: '';
-    color: 'from - yellow - 500 to - orange - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 15'
-    customers: 950;
+    color: 'from - yellow - 500 to - orange - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 15',
+    customers:
+        customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
     market_size: '$15B AI governance market',
@@ -1108,18 +1135,21 @@ import React from 'react';
     techStack: ['Quantum algorithms, AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum simulators'],
     realImplementation: true;
     implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
-    useCases: [;
+    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.',
+    useCases:
+        useCases: [;
       'Drug discoveryFinancial modelingSupply chain optimizationClimate modelingCryptographyMachine learning acceleration'],
     integrations: ['Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'],
     support: 'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
-    link: 'https://ziontechgroup.com/quantum-ai-fusion-platform'
+    link: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
     icon: '';
-    color: 'from-cyan-500 to-blue-600'
-    popular: true;
-    launchDate: '2024-01-20'
-    customers: 420;
+    color: 'from-cyan-500 to-blue-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-20',
+    customers:
+        customers: 420;
     rating: 4.9;
     reviews: 95;
     marketSize: '$8.5B quantum computing market',
@@ -1128,12 +1158,14 @@ import React from 'react';
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Self-managing AI systems that evolve and adapt',
     description: 'Revolutionary AI platform that creates, manages, and evolves autonomous AI systems that can learn, adapt, and optimize themselves without human intervention.',
-    category: 'AI & Consciousness'
-    price: unknown;
+    category: 'AI & Consciousness',
+    price:
+        price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
-      trialDays: 14;
+      currency: 'USD',
+      trialDays:
+        trialDays: 14;
       setupTime: '6 hours',
       enterprise: 1599;
     targetAudienc,
@@ -1225,18 +1257,21 @@ import React from 'react';
     techStack: ['Advanced AI/ML, Evolutionary algorithms, React, Node.js, PostgreSQL, Redis, AWS, Kubernetes'],
     realImplementation: true;
     implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.',
-    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
-    useCases: [;
+    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.',
+    useCases:
+        useCases: [;
       'AI system managementAutomated optimizationContinuous learningResource managementPerformance monitoringSystem evolution'],
     integrations: ['AI/ML platforms, Cloud services, Monitoring tools, Business applications, Data sources'],
     support: '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry-specific regulations'],
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager'
+    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager',
     icon: '';
-    color: 'from-green-500 to-emerald-600'
-    popular: true;
-    launchDate: '2024-03-01'
-    customers: 680;
+    color: 'from-green-500 to-emerald-600',
+    popular:
+        popular: true;
+    launchDate: '2024-03-01',
+    customers:
+        customers: 680;
     rating: 4.8;
     reviews: 150;
     marketSize: '$25B autonomous AI market',
@@ -1245,12 +1280,14 @@ import React from 'react';
     name: 'Multimodal AI Orchestrator',
     tagline: 'Seamlessly integrate text, image, audio, and video AI',
     description: 'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, context-aware intelligence and automation.',
-    category: 'AI & Consciousness'
-    price: unknown;
+    category: 'AI & Consciousness',
+    price:
+        price: unknown;
       monthly: 249;
       yearly: 2490;
-      currency: 'USD'
-      trialDays: 21;
+      currency: 'USD',
+      trialDays:
+        trialDays: 21;
       setupTime: '3 hours',
       enterprise: 999;
     targetAudienc,
@@ -1342,18 +1379,21 @@ import React from 'react';
     techStack: ['Multiple AI models, Multimodal processing, React, Node.js, PostgreSQL, Redis, AWS, GPU optimization'],
     realImplementation: true;
     implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.',
-    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
-    useCases: [;
+    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.',
+    useCases:
+        useCases: [;
       'Content analysisMedia processingCustomer interactionResearch automationQuality controlCreative assistance'],
     integrations: ['AI platforms, Content management systems, Media platforms, Business applications, Mobile apps'],
     support: '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
-    link: 'https://ziontechgroup.com/multimodal-ai-orchestrator'
+    link: 'https://ziontechgroup.com/multimodal-ai-orchestrator',
     icon: '';
-    color: 'from-indigo-500 to-purple-600'
-    popular: true;
-    launchDate: '2024-02-10'
-    customers: 1200;
+    color: 'from-indigo-500 to-purple-600',
+    popular:
+        popular: true;
+    launchDate: '2024-02-10',
+    customers:
+        customers: 1200;
     rating: 4.7;
     reviews: 280;
     marketSize: '$42B multimodal AI market',
@@ -1362,12 +1402,14 @@ import React from 'react';
     name: 'AI Ethics & Governance Platform',
     tagline: 'Ensure responsible and ethical AI development',
     description: 'Comprehensive platform that helps organizations develop, deploy, and monitor AI systems with built-in ethical considerations, bias detection, and governance controls.',
-    category: 'AI & Consciousness'
-    price: unknown;
+    category: 'AI & Consciousness',
+    price:
+        price: unknown;
       monthly: 179;
       yearly: 1790;
-      currency: 'USD'
-      trialDays: 30;
+      currency: 'USD',
+      trialDays:
+        trialDays: 30;
       setupTime: '2 hours',
       enterprise: 699;
     targetAudienc,
@@ -1459,18 +1501,21 @@ import React from 'react';
     techStack: ['AI ethics algorithms, Bias detection, React, Node.js, PostgreSQL, Redis, AWS, Compliance tools'],
     realImplementation: true;
     implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.',
-    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
-    useCases: [;
+    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.',
+    useCases:
+        useCases: [;
       'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'],
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],
     support: '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
+    link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
     icon: '';
-    color: 'from-yellow-500 to-orange-600'
-    popular: true;
-    launchDate: '2024-01-15'
-    customers: 950;
+    color: 'from-yellow-500 to-orange-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-15',
+    customers:
+        customers: 950;
     rating: 4.6;
     reviews: 220;
     marketSize: '$15B AI governance market',

@@ -128,8 +128,9 @@ const asyncTests = {/* TODO: Fix JSX expression */}
           // Final attempt failed}
       }
     }
-    results.retry = {type: 'retry'
-      attempts: retryAttempts;
+    results.retry = {type: 'retry',
+      attempts:
+        attempts: retryAttempts;
       success: retrySuccess;
       duration: Date.now() - retryStart;
       status: retrySuccess ? 'succeeded' : 'failed-after-retries'}

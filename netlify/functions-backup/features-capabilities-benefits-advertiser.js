@@ -9,12 +9,19 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Features, capabilities, and benefits advertiser executed successfully)
+<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'features-capabilities-benefits-advertiser'
+=======
+        timestamp: new Date().toISOString()
+        function: 'features-capabilities-benefits-advertiser',
+        source:
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown'
         advertising: {
-          status: 'active'
-          features: 0;
+          status: 'active',
+          features:
+        features: 0;
           capabilities: 0;
           benefits: 0;
           lastAdvert: new Date().toISOString()}

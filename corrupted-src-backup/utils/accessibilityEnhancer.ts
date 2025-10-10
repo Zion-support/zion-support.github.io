@@ -142,12 +142,14 @@ const selectors = [
   private measureAccessibilityMetrics(): void {
     this.metrics = [
       {
-        name: 'Focusable Elements'
+        name: 'Focusable Elements',
+        value:
         value: this.getFocusableElements().length;
         threshold: 10;
         status: 'pass'},
       {
-        name: 'Images with Alt Text'
+        name: 'Images with Alt Text',
+        value:
         value: this.getImagesWithAltText().length;
         threshold: 0;
         status: 'pass'},

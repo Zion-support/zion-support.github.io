@@ -63,14 +63,14 @@ export const,
       'Future capabilities',
       'Advanced features',
       'Expert insights'],
-    link: '/services / 2028 - emerging - tech - service'
-    category: 'Emerging Tech Services 2028'
+    link: '/services / 2028 - emerging - tech - service',
+    category: 'Emerging Tech Services 2028',
     real_implementation: true;
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
-    id: "2028-emerging-tech-service"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: '+1 302 464 0950',
+    id: '2028-emerging-tech-service',
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
@@ -82,8 +82,8 @@ export const,
       "Advanced features",
       "Expert insights"
     ],
-    link: "/services/2028-emerging-tech-service"
-    category: "Emerging Tech Services 2028"
+    link: '/services/2028-emerging-tech-service',
+    category: 'Emerging Tech Services 2028',
     realImplementation: true;
     contactInfo: unknown;
       email: "kleber@ziontechgroup.com",
@@ -104,8 +104,8 @@ export const,
 }
 export const emergingTech2028 Services: EmergingTechService2028[] = [,
     id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2028", price: "$299/month"
-    description: "Advanced platform showcasing emerging technology services and innovations for 2028."
+    tagline: "Emerging tech services for 2028", price: '$299/month',
+    description: 'Advanced platform showcasing emerging technology services and innovations for 2028.',
     features: [;
       "Emerging tech services"
       "Innovation platform"
@@ -237,8 +237,8 @@ export const,
   }
 ];
 ;
-    id: "2028-emerging-tech-service"
-    name: "2028 Emerging Tech Service Platform",
+    id: '2028-emerging-tech-service',
+    name: '2028 Emerging Tech Service Platform',
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
@@ -249,12 +249,12 @@ export const,
       "Advanced features",
       "Expert insights"
     ],
-    link: "/services/2028-emerging-tech-service"
-    category: "Emerging Tech Services 2028"
+    link: '/services/2028-emerging-tech-service',
+    category: 'Emerging Tech Services 2028',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

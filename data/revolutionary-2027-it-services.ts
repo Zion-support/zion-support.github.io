@@ -79,8 +79,8 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
 }
 export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2027", price: "$349/month"
-    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027."
+    tagline: "Revolutionary IT for 2027", price: '$349/month',
+    description: 'Revolutionary IT platform that transforms how businesses manage technology in 2027.',
     features: [;
       "Revolutionary IT"
       "Transformative technology"
@@ -170,8 +170,8 @@ export const,
   }
 ];
 ;
-    id: "2027-revolutionary-it"
-    name: "2027 Revolutionary IT Platform",
+    id: '2027-revolutionary-it',
+    name: '2027 Revolutionary IT Platform',
     tagline: "Revolutionary IT for 2027",
     price: "$349/month",
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
@@ -182,12 +182,12 @@ export const,
       "Innovation platform",
       "Future-ready solutions"
     ],
-    link: "/services/2027-revolutionary-it"
-    category: "Revolutionary 2027 IT"
+    link: '/services/2027-revolutionary-it',
+    category: 'Revolutionary 2027 IT',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

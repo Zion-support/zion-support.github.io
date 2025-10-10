@@ -30,8 +30,9 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.',
-    category: 'Cloud Management'
-    pricing: unknown;
+    category: 'Cloud Management',
+    pricing:
+        pricing: unknown;
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,999/month',
@@ -169,20 +170,23 @@ export const,
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible, REST APIs'],
     support: '24/7 support, cloud consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX, PCI DSS'],
-    link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform'
-    icon: ''
-    color: 'from-blue-500 to-cyan-600'
-    popular: true;
-    launchDate: '2024-12-01'
-    customers: 110;
+    link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform',
+    icon: '',
+    color: 'from-blue-500 to-cyan-600',
+    popular:
+        popular: true;
+    launchDate: '2024-12-01',
+    customers:
+        customers: 110;
     rating: 4.8;
     reviews: 167},
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
     description: 'Comprehensive DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes for maximum efficiency and reliability.',
-    category: 'DevOps Automation'
-    pricing: unknown;
+    category: 'DevOps Automation',
+    pricing:
+        pricing: unknown;
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$2,499/month',
@@ -299,12 +303,14 @@ export const,
     integrations: ['Git, Kubernetes, Docker, AWS, Azure, GCP, Monitoring tools, REST APIs'],
     support: '24/7 support, DevOps consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
-    link: 'https://ziontechgroup.com/intelligent-devops-automation-suite'
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
-    popular: true;
-    launchDate: '2024-12-01'
-    customers: 95;
+    link: 'https://ziontechgroup.com/intelligent-devops-automation-suite',
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
+    popular:
+        popular: true;
+    launchDate: '2024-12-01',
+    customers:
+        customers: 95;
     rating: 4.7;
     reviews: 145},
     id: 'enterprise-kubernetes-management-platform',
@@ -429,20 +435,23 @@ export const,
     integrations: ['Kubernetes, Docker, Helm, Monitoring tools, Security tools, REST APIs'],
     support: '24/7 support, Kubernetes consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
-    link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform'
-    icon: ''
-    color: 'from-purple-500 to-indigo-600'
-    popular: true;
-    launchDate: '2024-11-15'
-    customers: 75;
+    link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform',
+    icon: '',
+    color: 'from-purple-500 to-indigo-600',
+    popular:
+        popular: true;
+    launchDate: '2024-11-15',
+    customers:
+        customers: 75;
     rating: 4.8;
     reviews: 112},
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
     description: 'Advanced infrastructure monitoring platform that uses AI to predict issues, optimize performance, and provide real-time insights into your entire technology stack.',
-    category: 'Infrastructure Monitoring'
-    pricing: unknown;
+    category: 'Infrastructure Monitoring',
+    pricing:
+        pricing: unknown;
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,499/month',
@@ -559,12 +568,14 @@ export const,
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Databases, Monitoring tools, REST APIs'],
     support: '24/7 support, monitoring consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
-    link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring'
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
-    popular: true;
-    launchDate: '2024-12-01'
-    customers: 160;
+    link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring',
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
+    popular:
+        popular: true;
+    launchDate: '2024-12-01',
+    customers:
+        customers: 160;
     rating: 4.8;
     reviews: 234},
     id: 'cloud-security-posture-management',
@@ -689,12 +700,14 @@ export const,
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Security tools, SIEM systems, REST APIs'],
     support: '24/7 security support, compliance consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, NIST, GDPR, HIPAA, SOX, PCI DSS'],
-    link: 'https://ziontechgroup.com/cloud-security-posture-management'
-    icon: ''
-    color: 'from-red-500 to-pink-600'
-    popular: true;
-    launchDate: '2024-11-01'
-    customers: 85;
+    link: 'https://ziontechgroup.com/cloud-security-posture-management',
+    icon: '',
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: true;
+    launchDate: '2024-11-01',
+    customers:
+        customers: 85;
     rating: 4.9;
     reviews: 123;
     integration,

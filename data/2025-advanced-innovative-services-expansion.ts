@@ -221,11 +221,11 @@ const contact =
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   // Advanced AI & Machine Learning Services;
     ]
-    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy'
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy',
     id: 'ai-autonomous-devops-orchestrator',
     name: 'AI Autonomous DevOps Orchestrator',
     tagline: 'Self-healing DevOps with intelligent automation and predictive maintenance',
-    price: '$1,299'
+    price: '$1,299',
     period: '/month',
     description:,
 export const,
@@ -260,9 +260,10 @@ export const,
     ]
     popular: true;
     marketPosition: 'Next-generation DevOps platform with autonomous operations and AI-driven optimization',
-    targetAudience: 'DevOps engineers, Platform teams, Engineering managers'
-    trialDays: 21;
-    setupTime: '1-2 weeks'
+    targetAudience: 'DevOps engineers, Platform teams, Engineering managers',
+    trialDays:
+        trialDays: 21;
+    setupTime: '1-2 weeks',
     category: 'AI & Machine Learning',
     realService: true;
     technology: [,
@@ -292,10 +293,18 @@ export const,
     ]
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+<<<<<<< HEAD
     marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY';
 variant: 'ai-autonomous-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$8 B+ DevOps tools market',
+    growthRate: '25% YoY',
+    variant: 'ai-autonomous-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: capabilities: [
     ro,
@@ -325,7 +334,7 @@ varian,
     id: 'quantum-financial-modeling-platform',
     name: 'Quantum Financial Modeling Platform',
     tagline: 'Quantum-powered financial modeling for unprecedented accuracy and speed',
-    price: '$4,999'
+    price: '$4,999',
     period: '/month',
     description:,
       'Revolutionary financial modeling platform leveraging quantum computing to solve complex financial problems, optimize portfolios, and predict market movements with unprecedented accuracy.'
@@ -334,7 +343,7 @@ varian,
     targetAudience:,
       'Investment banks, Hedge funds, Asset managers, Financial analysts'
     trialDays: 14;
-    setupTime: '3-4 weeks'
+    setupTime: '3-4 weeks',
     category: 'Quantum Computing & AI',
     realService: true;
     technology: [,
@@ -385,10 +394,18 @@ varian,
     ]
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
     competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+<<<<<<< HEAD
     marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY';
 variant: 'quantum-finance-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$12 B+ financial modeling market',
+    growthRate: '35% YoY',
+    variant: 'quantum-finance-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -427,14 +444,15 @@ varian,
     id: 'ai-powered-threat-hunting-platform',
     name: 'AI-Powered Threat Hunting Platform',
     tagline: 'Proactive threat detection with autonomous hunting and response',
-    price: '$2,199'
+    price: '$2,199',
     period: '/month',
     description:,
       'Advanced cybersecurity platform that combines artificial intelligence with autonomous threat hunting to proactively identify, analyze, and respond to cyber threats before they impact your organization.'
     features: [,
     marketPosition: 'Next-generation cybersecurity platform with autonomous threat hunting capabilities',
-    targetAudience: 'CISOs, Security teams, SOC analysts, IT managers'
-    trialDays: 30;
+    targetAudience: 'CISOs, Security teams, SOC analysts, IT managers',
+    trialDays:
+        trialDays: 30;
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true;
@@ -484,10 +502,18 @@ varian,
     ]
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+<<<<<<< HEAD
     marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY';
 variant: 'ai-cybersecurity-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$20 B+ cybersecurity market',
+    growthRate: '40% YoY',
+    variant: 'ai-cybersecurity-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -523,7 +549,7 @@ varian,
       'Predictive modeling'],
     marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'}
   // Edge Computing & IoT Services;
-    id: 'edge-ai-inference-platform'
+    id: 'edge-ai-inference-platform',
     name: 'Edge AI Inference Platform',
     tagline: 'Deploy AI models at the edge for real-time inference and decision making',
     price: '$899',
@@ -545,10 +571,18 @@ varian,
     ]
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+<<<<<<< HEAD
     marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY';
 variant: 'ai-edge-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$15 B+ edge computing market',
+    growthRate: '45% YoY',
+    variant: 'ai-edge-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
       'Predictive modeling'
@@ -628,7 +662,7 @@ varian,
     id: 'satellite-ai-mission-control',
     name: 'Satellite AI Mission Control',
     tagline: 'AI-powered satellite operations and mission optimization',
-    price: '$5,999'
+    price: '$5,999',
     period: '/month',
     description:,
       'Revolutionary satellite mission control platform that uses artificial intelligence to optimize satellite operations, predict maintenance needs, and maximize mission success rates.'
@@ -636,7 +670,7 @@ varian,
     targetAudience:,
       'Satellite operators, Space agencies, Aerospace companies, Research institutions'
     trialDays: 14;
-    setupTime: '4-6 weeks'
+    setupTime: '4-6 weeks',
     category: 'Space Technology & Innovation',
     realService: true;
     technology: [,
@@ -685,10 +719,18 @@ varian,
     ]
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
     competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+<<<<<<< HEAD
     marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY';
 variant: 'ai-space-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$8 B+ satellite operations market',
+    growthRate: '30% YoY',
+    variant: 'ai-space-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -727,7 +769,7 @@ varian,
     id: 'brain-computer-interface-development-kit',
     name: 'Brain-Computer Interface Development Kit',
     tagline: 'Complete BCI development platform for next-generation neural interfaces',
-    price: '$3,499'
+    price: '$3,499',
     period: '/month',
     description:,
       'Comprehensive brain-computer interface development platform that provides all the tools, hardware, and software needed to build, test, and deploy neural interfaces for various applications.'
@@ -736,7 +778,7 @@ varian,
     targetAudience:,
       'BCI researchers, Medical device companies, Gaming companies, Accessibility developers'
     trialDays: 30;
-    setupTime: '6-8 weeks'
+    setupTime: '6-8 weeks',
     category: 'Neural Technology & BCI',
     realService: true;
     technology: [,
@@ -787,10 +829,18 @@ varian,
     ]
     roi: 'Accelerate BCI development by 5x and reduce development costs by 60%',
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+<<<<<<< HEAD
     marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY';
 variant: 'neural-advanced'
     contactInfo: contact;
+=======
+    marketSize: '$3 B+ BCI market',
+    growthRate: '50% YoY',
+    variant: 'neural-advanced',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -829,7 +879,7 @@ varian,
     id: 'real-time-streaming-analytics-platform',
     name: 'Real-Time Streaming Analytics Platform',
     tagline: 'Process and analyze data streams in real-time for instant insights',
-    price: '$1,599'
+    price: '$1,599',
     period: '/month',
     description:,
       'High-performance streaming analytics platform that processes and analyzes data streams in real-time, enabling instant insights and decision making for time-sensitive applications.'
@@ -838,7 +888,7 @@ varian,
     targetAudience:,
       'Data engineers, Analytics teams, Product managers, Operations teams'
     trialDays: 21;
-    setupTime: '1-2 weeks'
+    setupTime: '1-2 weeks',
     category: 'AI & Analytics',
     realService: true;
     technology: [,
@@ -889,10 +939,18 @@ varian,
     ]
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
     competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+<<<<<<< HEAD
     marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY';
 variant: 'ai-analytics-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$18 B+ streaming analytics market',
+    growthRate: '30% YoY',
+    variant: 'ai-analytics-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -931,7 +989,7 @@ varian,
     id: 'enterprise-blockchain-orchestration-platform',
     name: 'Enterprise Blockchain Orchestration Platform',
     tagline: 'Simplify enterprise blockchain deployment and management',
-    price: '$2,799'
+    price: '$2,799',
     period: '/month',
     description:,
       'Comprehensive enterprise blockchain platform that simplifies the deployment, management, and operation of blockchain networks for enterprise applications and DeFi solutions.'
@@ -990,10 +1048,18 @@ varian,
     ]
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
     competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+<<<<<<< HEAD
     marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY';
 variant: 'blockchain-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$22 B+ enterprise blockchain market',
+    growthRate: '40% YoY',
+    variant: 'blockchain-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -1032,7 +1098,7 @@ varian,
     id: 'ai-powered-medical-imaging-analysis',
     name: 'AI-Powered Medical Imaging Analysis',
     tagline: 'Advanced AI for medical image analysis and diagnosis support',
-    price: '$3,999'
+    price: '$3,999',
     period: '/month',
     description: 'Revolutionary medical imaging analysis platform that uses advanced artificial intelligence to assist healthcare professionals in diagnosing diseases and conditions from medical images.',
     features: [,
@@ -1040,7 +1106,7 @@ varian,
     targetAudience:,
       'Hospitals, Medical imaging centers, Radiologists, Healthcare AI teams'
     trialDays: 30;
-    setupTime: '4-6 weeks'
+    setupTime: '4-6 weeks',
     category: 'Healthcare AI',
     realService: true;
     technology: [,
@@ -1090,10 +1156,18 @@ varian,
     ]
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+<<<<<<< HEAD
     marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY';
 variant: 'ai-healthcare-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$35 B+ medical imaging market',
+    growthRate: '45% YoY',
+    variant: 'ai-healthcare-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -1132,7 +1206,7 @@ varian,
     id: 'ai-climate-prediction-platform',
     name: 'AI Climate Prediction Platform',
     tagline: 'Advanced AI for climate modeling and environmental prediction',
-    price: '$2,499'
+    price: '$2,499',
     period: '/month',
     description:,
       'Cutting-edge climate prediction platform that uses artificial intelligence and machine learning to model climate patterns, predict environmental changes, and support sustainability initiatives.'
@@ -1141,7 +1215,7 @@ varian,
     targetAudience:,
       'Environmental agencies, Research institutions, Energy companies, Sustainability consultants'
     trialDays: 30;
-    setupTime: '3-4 weeks'
+    setupTime: '3-4 weeks',
     category: 'Climate & Sustainability',
     realService: true;
     technology: [,
@@ -1192,10 +1266,18 @@ varian,
     ]
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+<<<<<<< HEAD
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY';
 variant: 'ai-climate-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$12 B+ climate technology market',
+    growthRate: '35% YoY',
+    variant: 'ai-climate-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: benefits: [;
     ro,
@@ -2040,8 +2122,9 @@ variant: 'blockchain-enterprise', contactInfo: contact;
     id: 'ai-powered-medical-imaging-analysis', name: 'AI-Powered Medical Imaging Analysis',
     tagline: 'Advanced AI for medical image analysis and diagnosis support',
     price: '$3,999',
-    period: '/month', description: 'Revolutionary medical imaging analysis platform that uses advanced artificial intelligence to assist healthcare professionals in diagnosing diseases and conditions from medical images.'
-    features: [;
+    period: '/month', description: 'Revolutionary medical imaging analysis platform that uses advanced artificial intelligence to assist healthcare professionals in diagnosing diseases and conditions from medical images.',
+    features:
+        features: [;
       'AI-powered image analysis and diagnosisSupport for multiple imaging modalitiesReal-time analysis and reportingIntegration with PACS systemsAutomated report generationQuality assurance and validationCompliance with medical regulationsPerformance tracking and optimization',
       'Custom model training capabilitiesExpert consultation and support'],
     popular: true, icon: '',
@@ -2668,15 +2751,15 @@ varian,
       'Expert consultation and support'
     ]
     popular: false;
-    icon: ''
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-400'
+    icon: '',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-climate-prediction',
     marketPosition: 'Leading AI-powered climate prediction platform for environmental sustainability',
     targetAudience:,
       'Environmental agencies, Research institutions, Energy companies, Sustainability consultants'
     trialDays: 30;
-    setupTime: '3-4 weeks'
+    setupTime: '3-4 weeks',
     category: 'Climate & Sustainability',
     realService: true;
     technology: [,
@@ -2718,13 +2801,21 @@ varian,
     ]
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+<<<<<<< HEAD
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY';
 variant: 'ai-climate-enterprise'
     contactInfo: contact;
+=======
+    marketSize: '$12 B+ climate technology market',
+    growthRate: '35% YoY',
+    variant: 'ai-climate-enterprise',
+    contactInfo:
+        contactInfo: contact;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
-    implementationDetails: 'Research-grade platform with environmental compliance and expert support'
-    launchDate: '2025-02-15'
+    implementationDetails: 'Research-grade platform with environmental compliance and expert support',
+    launchDate: '2025-02-15',
     customers: 23;
     rating: 4.7;
     reviews: 17;

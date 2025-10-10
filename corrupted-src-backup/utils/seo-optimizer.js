@@ -9,15 +9,15 @@ constructor() {
       siteName: 'Zion Tech Group',
       siteDescription:,
         'Advanced AI and IT Solutions - Leading technology company providing cutting-edge AI, machine learning, and IT consulting services.',
-      siteUrl: 'https://ziontechgroup.com'
+      siteUrl: 'https://ziontechgroup.com',
       defaultImage: '/images/og-image.jpg',
       twitterHandle: '@ZionTechGroup',
       structuredData: {,
         organization: {,
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'Zion Tech Group'
-          url: 'https://ziontechgroup.com'
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
           logo: 'https://ziontechgroup.com/images/logo.png',
           description: 'Advanced AI and IT Solutions',
           address: {,
@@ -315,8 +315,9 @@ Disallo,`
     return {
       '@context': 'https: //schema.org',
       '@type': 'WebSite',
-      name: 'Zion Tech Group'
-      url: this.seoConfig.siteUrl;
+      name: 'Zion Tech Group',
+      url:
+        url: this.seoConfig.siteUrl;
       description: this.seoConfig.siteDescription;
       potentialAction: {,
         '@type': 'SearchAction',
@@ -338,8 +339,8 @@ Disallo,`
     return {
       '@context': 'https: //schema.org',
       '@type': 'Service',
-      name: 'AI and IT Solutions'
-      description: 'Comprehensive AI and IT consulting services'
+      name: 'AI and IT Solutions',
+      description: 'Comprehensive AI and IT consulting services',
       provider: this.seoConfig.structuredData.organization;
       serviceType: 'Technology Consulting',
       areaServed: 'Worldwide'}}

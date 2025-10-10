@@ -18,7 +18,7 @@ return (
       style={{
         backgroundColor,
         color: textColor;
-        padding: '2rem'
+        padding: '2rem',
         borderRadius: '0.5rem')
         margin: '1rem 0')
         display: 'flex')

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -16,17 +19,24 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
     fps: number;
+<<<<<<< HEAD
   [key: string]: number}
 ;
 const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
 
+=======
+  [key: string]: number;
+}
+const,
+  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -35,6 +45,7 @@ const,
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
+<<<<<<< HEAD
       
       // Measure render time;
 const renderStart = performance.now();
@@ -49,37 +60,67 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
 let fps = 0;
       if ('requestAnimationFrame' in window) {;
 let lastTime = performance.now();
+=======
+      // Measure render time
+      const renderStart = performance.now();
+      const renderTime = performance.now() - renderStart;
+      // Measure memory usage
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        memoryUsage = memory?.usedJSHeapSize || 0;
+      }
+      // Measure FPS (simplified)
+      let fps = 0;
+      if ('requestAnimationFrame' in window) {
+        let lastTime = performance.now();
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         let frameCount = 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
+<<<<<<< HEAD
             lastTime = currentTime}
           requestAnimationFrame(measureFPS)};
         requestAnimationFrame(measureFPS)}
       
+=======
+            lastTime = currentTime;
+          }
+          requestAnimationFrame(measureFPS);
+        };
+        requestAnimationFrame(measureFPS);
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
         fps
+<<<<<<< HEAD
+=======
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  p: entry.startTime }));
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       });
     });
-
     try {/* TODO: Fix JSX expression */}
   s: ['paint'] });
       return () => observer.disconnect()} catch (error) {/* TODO: Fix JSX expression */}
     }
   }, []);
-
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [metrics, onMetricsUpdate]);
+<<<<<<< HEAD
 
   return null};
 
+=======
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 export default PerformanceDashboard;
-
-
-

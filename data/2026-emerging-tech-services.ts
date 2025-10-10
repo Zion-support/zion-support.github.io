@@ -50,8 +50,14 @@ import React from 'react';
 export const emergingTechServices2026: EmergingTechService2026[] = [;
   // Quantum Computing Services;
 ];,
+<<<<<<< HEAD
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
     id: 'ai-digital-twin-platform'
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+};
+    id: 'ai-digital-twin-platform',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights',
     price: '$349',
@@ -239,22 +245,24 @@ export const,
       'GE Digital Twin'
       'Autodesk'
     ]
-    marketSize: '$86.1B digital twin market'
-    growthRate: '42% annual growth'
+    marketSize: '$86.1B digital twin market',
+    growthRate: '42% annual growth',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails:,
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
-    launchDate: '2024-06-25'
-    customers: 56;
+    launchDate: '2024-06-25',
+    customers:
+        customers: 56;
     rating: 4.4;
     reviews: 29}
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>;
   return emergingTechServices2026.filter(service => service.category === category)),
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25'
-    customers: 56;
+    launchDate: '2024-06-25',
+    customers:
+        customers: 56;
     rating: 4.4;
     reviews: 29;
     marketSiz,
@@ -299,7 +307,7 @@ export const getEmergingTechServices2026ByCategory = (categor)
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services;
-    tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms'
+    tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms',
     price: '$999',
     period: '/month',
     description:,
@@ -325,10 +333,11 @@ export const,
       'API for quantum application development'],
     popular: true;
     icon: '',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities'
-    trialDays: 30;
-    setupTime: '1-2 weeks'
-    category: 'Quantum Computing & AI'
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities',
+    trialDays:
+        trialDays: 30;
+    setupTime: '1-2 weeks',
+    category: 'Quantum Computing & AI',
     realService: true;
     technology: [;
     popula,
@@ -385,7 +394,7 @@ export const,
     rating: 4 && 4.9;
     reviews: 18},
   // Blockchain & Web3 Solutions;
-    id: 'ai-blockchain-intelligence-platform'
+    id: 'ai-blockchain-intelligence-platform',
     name: 'AI Blockchain Intelligence Platform',
     tagline: 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights',
     price: '$299',
@@ -427,7 +436,7 @@ export const,
     targetAudience:,
       'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions'
     trialDays: 14;
-    setupTime: '2-3 hours'
+    setupTime: '2-3 hours',
     category: 'Blockchain & Web3',
     realService: true;
     technology: [,
@@ -481,7 +490,7 @@ export const,
     rating: 4 && 4.7;
     reviews: 89},
   // Internet of Things (IoT) Platform;
-    id: 'ai-iot-intelligence-platform'
+    id: 'ai-iot-intelligence-platform',
     name: 'AI IoT Intelligence Platform',
     tagline: 'Intelligent IoT device management and data analytics with AI-powered automation',
     price: '$199',
@@ -522,9 +531,10 @@ export const,
       'Advanced analytics and reporting'],
     popular: false;
     icon: '',
-    targetAudience: 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies'
-    trialDays: 14;
-    setupTime: '3-4 hours'
+    targetAudience: 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies',
+    trialDays:
+        trialDays: 14;
+    setupTime: '3-4 hours',
     category: 'Internet of Things (IoT)',
     realService: true;
     technology: [,
@@ -574,7 +584,7 @@ export const,
     rating: 4 && 4.6;
     reviews: 45},
   // Edge Computing & 5G Services;
-    id: 'edge-computing-optimization-platform'
+    id: 'edge-computing-optimization-platform',
     name: 'Edge Computing Optimization Platform',
     tagline: 'Optimize edge computing performance and 5G network efficiency with AI',
     price: '$399',
@@ -676,7 +686,7 @@ export const,
     rating: 4 && 4.5;
     reviews: 23},
   // Augmented Reality (AR) & Virtual Reality (VR)
-    id: 'ai-ar-vr-development-platform'
+    id: 'ai-ar-vr-development-platform',
     name: 'AI AR/VR Development Platform',
     tagline: 'Intelligent AR/VR application development with AI-powered content creation',
     price: '$249',
@@ -767,7 +777,7 @@ export const,
     rating: 4 && 4.4;
     reviews: 34},
   // Robotics & Automation Services;
-    id: 'ai-robotics-automation-platform'
+    id: 'ai-robotics-automation-platform',
     name: 'AI Robotics & Automation Platform',
     tagline: 'Intelligent robotics control and automation with AI-powered optimization',
     price: '$599',
@@ -869,7 +879,7 @@ export const,
     rating: 4 && 4.3;
     reviews: 18},
   // Digital Twin & Simulation;
-    id: 'ai-digital-twin-platform'
+    id: 'ai-digital-twin-platform',
     name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights',
     price: '$349',
@@ -961,19 +971,21 @@ export const,
       'GE Digital Twin'
       'Autodesk'
     ]
-    marketSize: '$86.1B digital twin market'
-    growthRate: '42% annual growth'
+    marketSize: '$86.1B digital twin market',
+    growthRate: '42% annual growth',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails:,
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
-    launchDate: '2024-06-25'
-    customers: 56;
+    launchDate: '2024-06-25',
+    customers:
+        customers: 56;
     rating: 4.4;
     reviews: 29}
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25'
-    customers: 56;
+    launchDate: '2024-06-25',
+    customers:
+        customers: 56;
     rating: 4 && 4.4;
     reviews: 29};
 ];

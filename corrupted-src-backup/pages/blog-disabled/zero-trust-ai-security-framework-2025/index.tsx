@@ -296,8 +296,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <TrendingUp className="w-5 h-5 mr-2" />
   conten,"
   t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta,"
-  name: "keywords,"
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link,"
+  name: 'keywords,',
+  content: 'AI security, zero trust, model security, ML security, AI governance, enterprise security', /><link,"
   rel: "canonical;"
   href=",
   http,

@@ -4,7 +4,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     tagline: 'Next-generation quantum cloud computing',
     description:,
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
+    price: '$6,999',
     period: 'month'
       'Quantum computing resources'
       'Quantum-classical hybrid computing'
@@ -16,8 +16,9 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
-    benefits: [}
+    marketPrice: '$8,000-15,000/month',
+    benefits:
+        benefits: [}
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Access to quantum computing power'
@@ -62,8 +63,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'DevOps & AI',
     icon: '',
-    marketPrice: '$4,000-7,000/month'
-    benefits: [;
+    marketPrice: '$4,000-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -115,8 +117,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Security',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -168,8 +171,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Edge Computing',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
-    benefits: [;
+    marketPrice: '$5,000-8,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -221,8 +225,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Database',
     icon: '',
-    marketPrice: '$6,000-10,000/month'
-    benefits: [;
+    marketPrice: '$6,000-10,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -274,8 +279,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Network Security',
     icon: '',
-    marketPrice: '$3,500-6,000/month'
-    benefits: [;
+    marketPrice: '$3,500-6,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -327,8 +333,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Quantum Internet',
     icon: '',
-    marketPrice: '$10,000-20,000/month'
-    benefits: [;
+    marketPrice: '$10,000-20,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -380,8 +387,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Infrastructure Monitoring',
     icon: '',
-    marketPrice: '$3,000-5,000/month'
-    benefits: [;
+    marketPrice: '$3,000-5,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -433,8 +441,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Storage',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -486,8 +495,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Disaster Recovery',
     icon: '',
-    marketPrice: '$4,500-7,000/month'
-    benefits: [;
+    marketPrice: '$4,500-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -514,8 +524,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
-    benefits: [;
+    marketPrice: '$8,000-15,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -547,7 +558,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     tagline: 'Next-generation quantum cloud computing',
     description:,
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
+    price: '$6,999',
     period: 'month'
       'Quantum computing resources'
       'Quantum-classical hybrid computing'
@@ -559,8 +570,9 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
-    benefits: [}
+    marketPrice: '$8,000-15,000/month',
+    benefits:
+        benefits: [}
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Access to quantum computing power'
@@ -605,8 +617,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'DevOps & AI',
     icon: '',
-    marketPrice: '$4,000-7,000/month'
-    benefits: [;
+    marketPrice: '$4,000-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -658,8 +671,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Security',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -711,8 +725,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Edge Computing',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
-    benefits: [;
+    marketPrice: '$5,000-8,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -764,8 +779,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Database',
     icon: '',
-    marketPrice: '$6,000-10,000/month'
-    benefits: [;
+    marketPrice: '$6,000-10,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -817,8 +833,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Network Security',
     icon: '',
-    marketPrice: '$3,500-6,000/month'
-    benefits: [;
+    marketPrice: '$3,500-6,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -870,8 +887,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Quantum Internet',
     icon: '',
-    marketPrice: '$10,000-20,000/month'
-    benefits: [;
+    marketPrice: '$10,000-20,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -923,8 +941,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Infrastructure Monitoring',
     icon: '',
-    marketPrice: '$3,000-5,000/month'
-    benefits: [;
+    marketPrice: '$3,000-5,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -976,8 +995,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Quantum Storage',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -1029,8 +1049,9 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Disaster Recovery',
     icon: '',
-    marketPrice: '$4,500-7,000/month'
-    benefits: [;
+    marketPrice: '$4,500-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -1047,7 +1068,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Reduced recovery time'
     ]
     useCases: [
-export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - platform'
+export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next - generation quantum cloud computing',
     description: unknown;

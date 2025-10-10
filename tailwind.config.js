@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         neon: {
-          cyan: '#00ffff'
+          cyan: '#00ffff',
           purple: '#8b5cf6',
           pink: '#ec4899',
           green: '#10 b981',
@@ -165,6 +165,7 @@ const newUtilities = {
           backgroundSize: '20 px 20 px'},
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
+<<<<<<< HEAD
           border: 'none'
           color: 'white'
           padding: '12px 24px'
@@ -172,6 +173,15 @@ const newUtilities = {
           fontWeight: '600'
           textTransform: 'uppercase',;
 letterSpacing: '1 px',
+=======
+          border: 'none',
+          color: 'white',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          fontWeight: '600',
+          textTransform: 'uppercase',
+          letterSpacing: '1 px',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
           position: 'relative',
           overflow: 'hidden',
           transition: 'all 0.3 s ease'},
@@ -195,7 +205,7 @@ letterSpacing: '1 px',
           backgroundSize: '200% 100%',
           animation: 'loading 1.5 s infinite'},
         '.sr-only': {
-          position: 'absolute'
+          position: 'absolute',
           width: '1px',
           height: '1px',
           padding: '0',
@@ -205,9 +215,9 @@ letterSpacing: '1 px',
           whiteSpace: 'nowrap',
           border: '0'},
         '.sr-only: focus': {
-          position: 'static'
-          width: 'auto'
-          height: 'auto'
+          position: 'static',
+          width: 'auto',
+          height: 'auto',
           padding: 'inherit',
           margin: 'inherit',
           overflow: 'visible',

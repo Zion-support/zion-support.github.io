@@ -153,7 +153,7 @@ export const,
       target_audience: unknown;
         'Marketing agencies, Content creators, E - commerce businesses, SaaS companies, Media companies, Educational institutions',
       trial_days: 14;
-      setup_time: '4 - 6 weeks'
+      setup_time: '4 - 6 weeks',
       category: 'Content Marketing',
       real_service: true;
       technology: [,
@@ -214,19 +214,29 @@ export const,
   s: [,
         'Basic content generation tools',
         'Traditional CMS platforms'],
+<<<<<<< HEAD
       market_size: '$50B+ market'
       growth_rate: '250%+ annual growth';
 variant: 'saas - content'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$50B+ market',
+      growth_rate: '250%+ annual growth',
+      variant: 'saas - content',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI content platform with strategy optimization, multi - channel management, and comprehensive performance analytics.',
-      launch_date: '2025 - 01 - 01'
-      customers: 150;
+      launch_date: '2025 - 01 - 01',
+      customers:
+        customers: 150;
       rating: 4 && 4.9;
       reviews: 89},
         'AI-powered lead scoring',
@@ -305,7 +315,7 @@ varian,
       target_audience: unknown;
         'Sales teams, Marketing departments, Customer service teams, E - commerce businesses, B2B companies, SaaS companies',
       trial_days: 21;
-      setup_time: '6 - 8 weeks'
+      setup_time: '6 - 8 weeks',
       category: 'Customer Relationship Management',
       real_service: true;
       technology: [,
@@ -362,19 +372,29 @@ varian,
         'Customer service'],
       roi: 'Sales teams report 400%+ ROI through improved lead quality and conversion rates.',
       competitors: ['Basic CRM platforms', 'Traditional sales tools'],
+<<<<<<< HEAD
       market_size: '$80B+ market'
       growth_rate: '300%+ annual growth';
 variant: 'saas - crm'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$80B+ market',
+      growth_rate: '300%+ annual growth',
+      variant: 'saas - crm',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI - powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.',
-      launch_date: '2025 - 01 - 15'
-      customers: 200;
+      launch_date: '2025 - 01 - 15',
+      customers:
+        customers: 200;
       rating: 4 && 4.9;
       reviews: 125;
       ro,
@@ -448,8 +468,8 @@ varian,
         'Reporting and dashboards',
         'Scalable architecture'],
       popular: true;
-      icon: ''
-      color: 'from - purple - 500 to - indigo - 600'
+      icon: '',
+      color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / decision - engine - platform',
       market_position: unknown;
@@ -457,7 +477,7 @@ varian,
       target_audience: unknown;
         'Large enterprises, Financial institutions, Healthcare organizations, Manufacturing companies, Retail businesses, Government agencies',
       trial_days: 30;
-      setup_time: '8 - 12 weeks'
+      setup_time: '8 - 12 weeks',
       category: 'Business Intelligence',
       real_service: true;
       technology: [,
@@ -512,19 +532,29 @@ varian,
         'Financial analysis'],
       roi: 'Enterprises report 500%+ ROI through improved decision - making and operational efficiency.',
       competitors: ['Basic analytics tools', 'Traditional BI platforms'],
+<<<<<<< HEAD
       market_size: '$100B+ market'
       growth_rate: '350%+ annual growth';
 variant: 'saas - intelligence'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$100B+ market',
+      growth_rate: '350%+ annual growth',
+      variant: 'saas - intelligence',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI decision engine platform with automated decision - making, predictive modeling, and comprehensive business intelligence.',
-      launch_date: '2025 - 01 - 20'
-      customers: 120;
+      launch_date: '2025 - 01 - 20',
+      customers:
+        customers: 120;
       rating: 4 && 4.9;
       reviews: 78},
     // E - commerce Optimization Platform;
@@ -605,7 +635,7 @@ varian,
       target_audience: unknown;
         'E - commerce businesses, Online retailers, DTC brands, Marketplaces, B2B e - commerce, Subscription businesses',
       trial_days: 14;
-      setup_time: '4 - 6 weeks'
+      setup_time: '4 - 6 weeks',
       category: 'E - commerce',
       real_service: true;
       technology: [,
@@ -666,19 +696,29 @@ varian,
   s: [,
         'Basic e - commerce tools',
         'Traditional analytics platforms'],
+<<<<<<< HEAD
       market_size: '$60B+ market'
       growth_rate: '280%+ annual growth';
 variant: 'saas - ecommerce'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$60B+ market',
+      growth_rate: '280%+ annual growth',
+      variant: 'saas - ecommerce',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI e - commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.',
-      launch_date: '2025 - 02 - 01'
-      customers: 180;
+      launch_date: '2025 - 02 - 01',
+      customers:
+        customers: 180;
       rating: 4 && 4.8;
       reviews: 95},
     // HR Automation Platform;
@@ -757,7 +797,7 @@ varian,
       target_audience: unknown;
         'HR departments, Recruitment agencies, Large enterprisestups, Remote companies, Consulting firms',
       trial_days: 21;
-      setup_time: '6 - 8 weeks'
+      setup_time: '6 - 8 weeks',
       category: 'Human Resources',
       real_service: true;
       technology: [,
@@ -813,19 +853,29 @@ varian,
         'Talent optimization'],
       roi: 'HR departments report 300%+ ROI through improved efficiency and better talent management.',
       competitors: ['Basic HR platforms', 'Traditional recruitment tools'],
+<<<<<<< HEAD
       market_size: '$40B+ market'
       growth_rate: '250%+ annual growth';
 variant: 'saas - hr'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$40B+ market',
+      growth_rate: '250%+ annual growth',
+      variant: 'saas - hr',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI - powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.',
-      launch_date: '2025 - 02 - 15'
-      customers: 95;
+      launch_date: '2025 - 02 - 15',
+      customers:
+        customers: 95;
       rating: 4 && 4.8;
       reviews: 58},
     // Financial Analytics Platform;
@@ -898,8 +948,8 @@ varian,
         'Integration capabilities',
         'Custom dashboards'],
       popular: true;
-      icon: ''
-      color: 'from - yellow - 500 to - amber - 600'
+      icon: '',
+      color: 'from - yellow - 500 to - amber - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / financial - analytics - platform',
       market_position: unknown;
@@ -907,7 +957,7 @@ varian,
       target_audience: unknown;
         'Financial institutions, Accounting firms, Large enterprises, Investment companies, Consulting firms, Government agencies',
       trial_days: 30;
-      setup_time: '8 - 12 weeks'
+      setup_time: '8 - 12 weeks',
       category: 'Financial Technology',
       real_service: true;
       technology: [,
@@ -962,19 +1012,29 @@ varian,
         'Strategic planning'],
       roi: 'Financial institutions report 450%+ ROI through improved analysis and risk management.',
       competitors: ['Basic financial tools', 'Traditional analytics platforms'],
+<<<<<<< HEAD
       market_size: '$90B+ market'
       growth_rate: '320%+ annual growth';
 variant: 'saas - financial'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$90B+ market',
+      growth_rate: '320%+ annual growth',
+      variant: 'saas - financial',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.',
-      launch_date: '2025 - 02 - 10'
-      customers: 85;
+      launch_date: '2025 - 02 - 10',
+      customers:
+        customers: 85;
       rating: 4 && 4.9;
       reviews: 52},
     // Supply Chain Intelligence Platform;
@@ -1047,8 +1107,8 @@ varian,
         'Real - time tracking',
         'Integration capabilities'],
       popular: false;
-      icon: ''
-      color: 'from - gray - 500 to - slate - 600'
+      icon: '',
+      color: 'from - gray - 500 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / supply - chain - intelligence',
       market_position: unknown;
@@ -1056,7 +1116,7 @@ varian,
       target_audience: unknown;
         'Manufacturing companies, Retail businesses, Logistics companies, E - commerce businesses, Distribution centers, Government agencies',
       trial_days: 21;
-      setup_time: '10 - 14 weeks'
+      setup_time: '10 - 14 weeks',
       category: 'Supply Chain Management',
       real_service: true;
       technology: [,
@@ -1116,19 +1176,29 @@ varian,
   s: [,
         'Basic supply chain tools',
         'Traditional inventory management'],
+<<<<<<< HEAD
       market_size: '$70B+ market'
       growth_rate: '300%+ annual growth';
 variant: 'saas - supply - chain'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$70B+ market',
+      growth_rate: '300%+ annual growth',
+      variant: 'saas - supply - chain',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.',
-      launch_date: '2025 - 03 - 01'
-      customers: 65;
+      launch_date: '2025 - 03 - 01',
+      customers:
+        customers: 65;
       rating: 4 && 4.8;
       reviews: 38},
     // Marketing Automation Platform;
@@ -1207,7 +1277,7 @@ varian,
       target_audience: unknown;
         'Marketing agencies, E - commerce businesses, SaaS companies, B2B companiestups, Large enterprises',
       trial_days: 14;
-      setup_time: '4 - 6 weeks'
+      setup_time: '4 - 6 weeks',
       category: 'Marketing Automation',
       real_service: true;
       technology: [,
@@ -1267,19 +1337,29 @@ varian,
   s: [,
         'Basic marketing tools',
         'Traditional automation platforms'],
+<<<<<<< HEAD
       market_size: '$55B+ market'
       growth_rate: '280%+ annual growth';
 variant: 'saas - marketing'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$55B+ market',
+      growth_rate: '280%+ annual growth',
+      variant: 'saas - marketing',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.',
-      launch_date: '2025 - 02 - 20'
-      customers: 140;
+      launch_date: '2025 - 02 - 20',
+      customers:
+        customers: 140;
       rating: 4 && 4.9;
       reviews: 82},
       id: 'project - management - intelligence',
@@ -1356,7 +1436,7 @@ varian,
       target_audience: unknown;
         'Project managers, Construction companies, Software development teams, Consulting firms, Government agencies, Large enterprises',
       trial_days: 21;
-      setup_time: '6 - 8 weeks'
+      setup_time: '6 - 8 weeks',
       category: 'Project Management',
       real_service: true;
       technology: [,
@@ -1416,19 +1496,29 @@ varian,
   s: [,
         'Basic project management tools',
         'Traditional planning platforms'],
+<<<<<<< HEAD
       market_size: '$45B+ market'
       growth_rate: '250%+ annual growth';
 variant: 'saas - project'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$45B+ market',
+      growth_rate: '250%+ annual growth',
+      variant: 'saas - project',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
-      launch_date: '2025 - 03 - 05'
-      customers: 75;
+      launch_date: '2025 - 03 - 05',
+      customers:
+        customers: 75;
       rating: 4 && 4.8;
       reviews: 45};
   ];    features: [,
@@ -1560,23 +1650,33 @@ export const,
         'Team collaboration'
         'Budget optimization'
       ]
-      roi: 'Project teams report 350%+ ROI through improved project success rates and efficiency.'
-      competitors: [
+      roi: 'Project teams report 350%+ ROI through improved project success rates and efficiency.',
+      competitors:
+        competitors: [
         'Basic project management tools'
         'Traditional planning platforms'
       ]
+<<<<<<< HEAD
       marketSize: '$45 B+ market'
       growthRate: '250%+ annual growth';
 variant: 'saas-project'
       contactInfo: mobile: '+1 302 464 0950'
+=======
+      marketSize: '$45 B+ market',
+      growthRate: '250%+ annual growth',
+      variant: 'saas-project',
+      contactInfo:
+        contactInfo: mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
-      launchDate: '2025-03-05'
-      customers: 75;
+      launchDate: '2025-03-05',
+      customers:
+        customers: 75;
       rating: 4.8;
       reviews: 45}  ];    features: [;
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management',
@@ -1590,8 +1690,9 @@ variant: 'saas-project'
     technology: ['AI/MLNatural Language ProcessingContent ManagementSEO ToolsPythonReactNode.js'], integrations: ['WordPressShopifyHubSpotMailchimpSocial media platformsAnalytics tools'],
     useCases: ['Content marketingSEO optimizationSocial media managementE-commerce contentBrand storytellingContent strategy'], roi: 'Businesses report 300%+ ROI through improved content performance and engagement.',
     competitors: ['Basic content generation toolsTraditional CMS platforms'], marketSize: '$50B+ market',
-    growthRate: '250%+ annual growth', variant: 'saas-content'
-    contactInfo: unknown;
+    growthRate: '250%+ annual growth', variant: 'saas-content',
+    contactInfo:
+        contactInfo: unknown;
   ];    features: [;
       'AI project planning_resource optimization_risk assessment_performance tracking_automated reporting_team collaboration_timeline optimization_budget management',
       'Integration capabilities_custom dashboards'],

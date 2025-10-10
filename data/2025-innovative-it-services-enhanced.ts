@@ -105,16 +105,17 @@ import React from 'react';
     real_implementation: true;
     implementation_details: unknown;
       'Cloud - based blockchain platform with multi - chain support and enterprise features.',
-    launch_date: '2024 - 09 - 01'
-    customers: 123;
+    launch_date: '2024 - 09 - 01',
+    customers:
+        customers: 123;
     rating: 4 && 4.8;
     reviews: 52}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     real_implementation: true;
-    implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.'
-    launch_date: '2024 - 09 - 01'
+    implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.',
+    launch_date: '2024 - 09 - 01',
     customers: 123;
     rating: 4 && 4.8;
     reviews: 52;
@@ -296,8 +297,9 @@ variant: 'ai-devops-enterprise',
     id: 'quantum-networking', name: 'Quantum Networking Platform',
     tagline: 'Unbreakable communication with quantum networking technology',
     price: '$2,499',
-    period: '/month', description: 'Revolutionary quantum networking platform that provides unbreakable communication channels using quantum entanglement and quantum key distribution. Perfect for organizations requiring absolute security.'
-    features: [;
+    period: '/month', description: 'Revolutionary quantum networking platform that provides unbreakable communication channels using quantum entanglement and quantum key distribution. Perfect for organizations requiring absolute security.',
+    features:
+        features: [;
       'Quantum key distributionQuantum entanglement networksUnbreakable encryptionGlobal quantum networkReal-time quantum communicationSecurity monitoringPerformance analyticsIntegration APIs',
       'Compliance reporting24/7 quantum support'],
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
@@ -3487,14 +3489,14 @@ export const,
 ];
 ;
     rating: 4.8;
-];      mobile: '+1 302 464 0950'
+];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     reviews: 52;
     realImplementation: true;
-    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.'
-    launchDate: '2024-09-01'
+    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
+    launchDate: '2024-09-01',
     customers: 123;
 export interface InnovativeITService2025 {;
   id: string;

@@ -48,7 +48,7 @@ export type ExpandedService2027 =
   status: 'active' | 'beta' | 'coming-soon'}
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
-    id: 'quantum-threat-hunter'
+    id: 'quantum-threat-hunter',
     name: 'Quantum Threat Hunter',
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
@@ -197,10 +197,12 @@ export const,
       'Critical infrastructure operators'
     ],
     pricing: unknown;
-      model: 'Tiered Subscription'
-      basePrice: 2500;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Tiered Subscription',
+      basePrice:
+        basePrice: 2500;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 2500;
         professional: 5000;
         enterprise: 10000;
@@ -213,11 +215,12 @@ export const,
     setupTime: '2-4 weeks',
     integrations: ['SIEM systems', 'EDR platforms', 'Cloud providers', 'Security tools'],
     technology: ['Quantum Computing', 'AI/ML', 'Behavioral Analytics', 'Zero Trust'],
-    innovationLevel: 'Revolutionary'
-    marketSize: '$4.2 billion by 2027'
-    growthRate: '280% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Revolutionary',
+    marketSize: '$4.2 billion by 2027',
+    growthRate: '280% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -227,12 +230,13 @@ export const,
       compliance: ['SOC 2 Type II', 'ISO 27001', 'FedRAMP', 'GDPR'],
       apiEndpoints: 200;
       scalability: 'Unlimited'},
-    support: '24/7 Security Operations Center'
-    rating: 4.9;
+    support: '24/7 Security Operations Center',
+    rating:
+        rating: 4.9;
     reviews: 342;
     launchDate: '2027-01-15',
     status: 'active'},
-    id: 'ai-compliance-automator'
+    id: 'ai-compliance-automator',
     name: 'AI Compliance Automator',
     category: 'Cybersecurity',
     subcategory: 'Compliance Automation',
@@ -365,10 +369,12 @@ export const,
       'Risk management teams'
     ],
     pricing: unknown;
-      model: 'Per-User + Base'
-      basePrice: 1500;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-User + Base',
+      basePrice:
+        basePrice: 1500;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 1500;
         professional: 3000;
         enterprise: 6000;
@@ -381,11 +387,12 @@ export const,
     setupTime: '1-2 weeks',
     integrations: ['GRC platforms', 'Security tools', 'HR systems', 'Cloud providers'],
     technology: ['AI/ML', 'Automation', 'Compliance Frameworks', 'Risk Management'],
-    innovationLevel: 'Advanced'
-    marketSize: '$3.8 billion by 2027'
-    growthRate: '220% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$3.8 billion by 2027',
+    growthRate: '220% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -395,15 +402,16 @@ export const,
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA'],
       apiEndpoints: 150;
       scalability: 'Enterprise-grade'},
-    support: 'Business hours + emergency support'
-    rating: 4.8;
+    support: 'Business hours + emergency support',
+    rating:
+        rating: 4.8;
     reviews: 189;
     launchDate: '2027-02-01',
     status: 'active'}
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
-    id: 'predictive-insights-engine'
+    id: 'predictive-insights-engine',
     name: 'Predictive Insights Engine',
     category: 'Data Analytics',
     subcategory: 'Predictive Analytics',
@@ -540,10 +548,12 @@ export const,
       'Consulting firms'
     ],
     pricing: unknown;
-      model: 'Usage-based + Base'
-      basePrice: 1800;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Usage-based + Base',
+      basePrice:
+        basePrice: 1800;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 1800;
         professional: 3500;
         enterprise: 7000;
@@ -556,11 +566,12 @@ export const,
     setupTime: '2-3 weeks',
     integrations: ['Data warehouses', 'CRM systems', 'ERP platforms', 'Cloud services'],
     technology: ['Machine Learning', 'Big Data', 'Data Visualization', 'Predictive Modeling'],
-    innovationLevel: 'Advanced'
-    marketSize: '$5.6 billion by 2027'
-    growthRate: '240% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$5.6 billion by 2027',
+    growthRate: '240% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -570,12 +581,13 @@ export const,
       compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001'],
       apiEndpoints: 180;
       scalability: 'Unlimited data processing'},
-    support: 'Business hours + 24/7 emergency'
-    rating: 4.7;
+    support: 'Business hours + 24/7 emergency',
+    rating:
+        rating: 4.7;
     reviews: 267;
     launchDate: '2027-01-20',
     status: 'active'},
-    id: 'real-time-data-streaming'
+    id: 'real-time-data-streaming',
     name: 'Real-Time Data Streaming Platform',
     category: 'Data Analytics',
     subcategory: 'Real-Time Processing',
@@ -708,10 +720,12 @@ export const,
       'Telecommunications'
     ],
     pricing: unknown;
-      model: 'Per-Stream + Processing'
-      basePrice: 2200;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-Stream + Processing',
+      basePrice:
+        basePrice: 2200;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 2200;
         professional: 4500;
         enterprise: 9000;
@@ -724,11 +738,12 @@ export const,
     setupTime: '3-5 weeks',
     integrations: ['Message queues', 'Data warehouses', 'Cloud platforms', 'Streaming services'],
     technology: ['Stream Processing', 'Real-Time Analytics', 'Event Streaming', 'Big Data'],
-    innovationLevel: 'Advanced'
-    marketSize: '$4.8 billion by 2027'
-    growthRate: '260% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$4.8 billion by 2027',
+    growthRate: '260% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/real-time-data-streaming',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -738,15 +753,16 @@ export const,
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'Industry standards'],
       apiEndpoints: 250;
       scalability: 'Millions of events per second'},
-    support: '24/7 technical support'
-    rating: 4.8;
+    support: '24/7 technical support',
+    rating:
+        rating: 4.8;
     reviews: 198;
     launchDate: '2027-02-15',
     status: 'active'}
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
-    id: 'multi-cloud-orchestrator'
+    id: 'multi-cloud-orchestrator',
     name: 'Multi-Cloud Orchestrator',
     category: 'Cloud & DevOps',
     subcategory: 'Multi-Cloud Management',
@@ -883,10 +899,12 @@ export const,
       'E-commerce platforms'
     ],
     pricing: unknown;
-      model: 'Percentage of Cloud Spend'
-      basePrice: 2000;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Percentage of Cloud Spend',
+      basePrice:
+        basePrice: 2000;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 2000;
         professional: 4000;
         enterprise: 8000;
@@ -899,11 +917,12 @@ export const,
     setupTime: '4-6 weeks',
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'CI/CD tools'],
     technology: ['Multi-Cloud', 'DevOps', 'Automation', 'Orchestration', 'Monitoring'],
-    innovationLevel: 'Advanced'
-    marketSize: '$6.2 billion by 2027'
-    growthRate: '280% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$6.2 billion by 2027',
+    growthRate: '280% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -913,8 +932,9 @@ export const,
       compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Industry standards'],
       apiEndpoints: 300;
       scalability: 'Unlimited cloud resources'},
-    support: '24/7 cloud operations support'
-    rating: 4.9;
+    support: '24/7 cloud operations support',
+    rating:
+        rating: 4.9;
     reviews: 312;
     launchDate: '2027-01-10',
     status: 'active',
@@ -1045,10 +1065,12 @@ export const,
       'Release managers'
     ],
     pricing: unknown;
-      model: 'Per-Developer + Base'
-      basePrice: 1200;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-Developer + Base',
+      basePrice:
+        basePrice: 1200;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 1200;
         professional: 2500;
         enterprise: 5000;
@@ -1061,11 +1083,12 @@ export const,
     setupTime: '2-3 weeks',
     integrations: ['Git platforms', 'CI/CD tools', 'Cloud providers', 'Monitoring tools'],
     technology: ['AI/ML', 'DevOps', 'Automation', 'CI/CD', 'Monitoring'],
-    innovationLevel: 'Advanced'
-    marketSize: '$5.4 billion by 2027'
-    growthRate: '250% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$5.4 billion by 2027',
+    growthRate: '250% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-powered-devops-automation',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1075,8 +1098,9 @@ export const,
       compliance: ['SOC 2', 'ISO 27001', 'DevSecOps standards'],
       apiEndpoints: 200;
       scalability: 'Unlimited developers and projects'},
-    support: 'Business hours + emergency support'
-    rating: 4.7;
+    support: 'Business hours + emergency support',
+    rating:
+        rating: 4.7;
     reviews: 245;
     launchDate: '2027-02-05',
     status: 'active'}
@@ -1220,10 +1244,12 @@ export const,
       'Mining operations'
     ],
     pricing: unknown;
-      model: 'Per-Smartphone + Data Processing'
-      basePrice: 2800;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-Smartphone + Data Processing',
+      basePrice:
+        basePrice: 2800;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 2800;
         professional: 5500;
         enterprise: 11000;
@@ -1236,11 +1262,12 @@ export const,
     setupTime: '6-8 weeks',
     integrations: ['PLC systems', 'SCADA systems', 'ERP platforms', 'Cloud services'],
     technology: ['IoT', 'Edge Computing', 'AI/ML', 'Predictive Analytics', 'Industrial Protocols'],
-    innovationLevel: 'Advanced'
-    marketSize: '$7.8 billion by 2027'
-    growthRate: '320% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$7.8 billion by 2027',
+    growthRate: '320% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1250,8 +1277,9 @@ export const,
       compliance: ['ISO 27001', 'IEC 62443', 'Industry 4.0 standards'],
       apiEndpoints: 400;
       scalability: 'Unlimited devices and data'},
-    support: '24/7 industrial support'
-    rating: 4.8;
+    support: '24/7 industrial support',
+    rating:
+        rating: 4.8;
     reviews: 178;
     launchDate: '2027-01-25',
     status: 'active',
@@ -1382,10 +1410,12 @@ export const,
       'Public safety agencies'
     ],
     pricing: unknown;
-      model: 'City Size + Services'
-      basePrice: 5000;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'City Size + Services',
+      basePrice:
+        basePrice: 5000;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 5000;
         professional: 10000;
         enterprise: 20000;
@@ -1398,11 +1428,12 @@ export const,
     setupTime: '8-12 weeks',
     integrations: ['City systems', 'IoT sensors', 'Traffic systems', 'Utility networks'],
     technology: ['IoT', 'Edge Computing', 'AI/ML', 'Big Data', 'Urban Analytics'],
-    innovationLevel: 'Advanced'
-    marketSize: '$8.9 billion by 2027'
-    growthRate: '280% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$8.9 billion by 2027',
+    growthRate: '280% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/smart-city-operations',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1412,15 +1443,16 @@ export const,
       compliance: ['Government standards', 'Data protection', 'Urban regulations'],
       apiEndpoints: 500;
       scalability: 'City-wide deployment'},
-    support: '24/7 city operations support'
-    rating: 4.9;
+    support: '24/7 city operations support',
+    rating:
+        rating: 4.9;
     reviews: 156;
     launchDate: '2027-02-10',
     status: 'active'}
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
-    id: 'quantum-financial-modeling'
+    id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling Platform',
     category: 'Financial Technology',
     subcategory: 'Quantum Finance',
@@ -1557,10 +1589,12 @@ export const,
       'Financial advisors'
     ],
     pricing: unknown;
-      model: 'Usage-based + Base'
-      basePrice: 8000;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Usage-based + Base',
+      basePrice:
+        basePrice: 8000;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 8000;
         professional: 15000;
         enterprise: 30000;
@@ -1573,11 +1607,12 @@ export const,
     setupTime: '8-12 weeks',
     integrations: ['Trading platforms', 'Market data feeds', 'Risk systems', 'Compliance tools'],
     technology: ['Quantum Computing', 'Financial Modeling', 'AI/ML', 'Risk Analytics'],
-    innovationLevel: 'Revolutionary'
-    marketSize: '$12.5 billion by 2027'
-    growthRate: '350% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Revolutionary',
+    marketSize: '$12.5 billion by 2027',
+    growthRate: '350% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1587,8 +1622,9 @@ export const,
       compliance: ['SOX', 'Basel III', 'MiFID II', 'Financial regulations'],
       apiEndpoints: 600;
       scalability: 'Unlimited financial calculations'},
-    support: '24/7 financial support'
-    rating: 4.9;
+    support: '24/7 financial support',
+    rating:
+        rating: 4.9;
     reviews: 89;
     launchDate: '2027-01-05',
     status: 'active',
@@ -1719,10 +1755,12 @@ export const,
       'Global users'
     ],
     pricing: unknown;
-      model: 'Transaction Fees + Governance'
-      basePrice: 0;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Transaction Fees + Governance',
+      basePrice:
+        basePrice: 0;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 0;
         professional: 0;
         enterprise: 0;
@@ -1735,11 +1773,12 @@ export const,
     setupTime: 'Immediate',
     integrations: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Other blockchains'],
     technology: ['Blockchain', 'Smart Contracts', 'DeFi Protocols', 'Web3'],
-    innovationLevel: 'Advanced'
-    marketSize: '$15.2 billion by 2027'
-    growthRate: '400% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$15.2 billion by 2027',
+    growthRate: '400% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/defi-protocol',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1749,15 +1788,16 @@ export const,
       compliance: ['DeFi standards', 'Smart contract best practices'],
       apiEndpoints: 300;
       scalability: 'Layer 2 solutions'},
-    support: 'Community + Developer support'
-    rating: 4.6;
+    support: 'Community + Developer support',
+    rating:
+        rating: 4.6;
     reviews: 423;
     launchDate: '2027-01-01',
     status: 'active'}
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
-    id: 'ai-diagnostic-assistant'
+    id: 'ai-diagnostic-assistant',
     name: 'AI Diagnostic Assistant',
     category: 'Healthcare Technology',
     subcategory: 'AI Diagnostics',
@@ -1894,10 +1934,12 @@ export const,
       'Medical device companies'
     ],
     pricing: unknown;
-      model: 'Per-Provider + Usage'
-      basePrice: 3500;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-Provider + Usage',
+      basePrice:
+        basePrice: 3500;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 3500;
         professional: 7000;
         enterprise: 14000;
@@ -1910,11 +1952,12 @@ export const,
     setupTime: '6-8 weeks',
     integrations: ['EHR systems', 'PACS systems', 'Lab systems', 'Medical devices'],
     technology: ['AI/ML', 'Computer Vision', 'Natural Language Processing', 'Medical AI'],
-    innovationLevel: 'Advanced'
-    marketSize: '$18.7 billion by 2027'
-    growthRate: '320% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$18.7 billion by 2027',
+    growthRate: '320% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -1924,8 +1967,9 @@ export const,
       compliance: ['HIPAA', 'FDA', 'CE Mark', 'Medical standards'],
       apiEndpoints: 250;
       scalability: 'Enterprise healthcare'},
-    support: '24/7 medical support'
-    rating: 4.8;
+    support: '24/7 medical support',
+    rating:
+        rating: 4.8;
     reviews: 134;
     launchDate: '2027-02-01',
     status: 'active',
@@ -2056,10 +2100,12 @@ export const,
       'Healthcare startups'
     ],
     pricing: unknown;
-      model: 'Per-Provider + Transaction'
-      basePrice: 2500;
-      currency: 'USD'
-      pricingTiers: unknown;
+      model: 'Per-Provider + Transaction',
+      basePrice:
+        basePrice: 2500;
+      currency: 'USD',
+      pricingTiers:
+        pricingTiers: unknown;
         starter: 2500;
         professional: 5000;
         enterprise: 10000;
@@ -2072,11 +2118,12 @@ export const,
     setupTime: '4-6 weeks',
     integrations: ['EHR systems', 'Insurance systems', 'Payment processors', 'Mobile platforms'],
     technology: ['Video Conferencing', 'AI/ML', 'Mobile Apps', 'Cloud Computing'],
-    innovationLevel: 'Advanced'
-    marketSize: '$22.4 billion by 2027'
-    growthRate: '380% annual growth'
-    contactInfo: unknown;
-      phone: '+1 302 464 0950'
+    innovationLevel: 'Advanced',
+    marketSize: '$22.4 billion by 2027',
+    growthRate: '380% annual growth',
+    contactInfo:
+        contactInfo: unknown;
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/telemedicine-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -2086,8 +2133,9 @@ export const,
       compliance: ['HIPAA', 'HITECH', 'State regulations', 'International standards'],
       apiEndpoints: 300;
       scalability: 'Unlimited providers and patients'},
-    support: '24/7 healthcare support'
-    rating: 4.7;
+    support: '24/7 healthcare support',
+    rating:
+        rating: 4.7;
     reviews: 289;
     launchDate: '2027-01-15',
     status: 'active',

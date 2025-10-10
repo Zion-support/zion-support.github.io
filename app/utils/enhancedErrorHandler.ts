@@ -11,32 +11,28 @@ interface ErrorContext {
   timestamp: string,
   component?: string;
   action?: string;
-  props?: Record<string></string>
-<<<<<<< HEAD
-  state?: Record<string></string>;});;);
-=======
-  state?: Record<string></string>;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  props?: Record<string, unknown>
+  state?: Record<string, unknown>;}
+}
 interface ErrorReport {
   id: string,
 interface ErrorContext {}
   userId?: string
   sessionId?: string
   url: string,
-    userAgent: string,
+    userAgent: string
   timestamp: string
   component?: string
   action?: string
-  props?: Record<string></str></stri>state</string>?: Record<string></string>;}</strin>});
+  props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string, unknown>;}</strin>
 }
 interface ErrorReport {}
-  id: string,
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+  id: string
+  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
   message: string,
   stack?: string;
   context: ErrorContext,
-  severity: 'low' | 'medium' | 'high' | 'critical',
+  severity: 'low' | 'medium' | 'high' | 'critical'
   category:
     | 'syntax'
     | 'runtime'
@@ -45,15 +41,11 @@ interface ErrorReport {}
     | 'performance',
     | 'unknown',
   tags: string[],
-  metadata: Record<string></string>
+  metadata: Record<string, unknown>
   resolved: boolean,
   resolvedAt?: string;
-<<<<<<< HEAD
-  resolvedBy?: string;});;);
-=======
-  resolvedBy?: string;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  resolvedBy?: string;}
+}
 interface ErrorHandlerConfig {
   enableConsoleLogging: boolean,
   enableRemoteReporting: boolean,
@@ -64,40 +56,32 @@ interface ErrorHandlerConfig {
   maxErrorsPerMinute: number,
   errorRetentionDays: number,
   remoteEndpoint?: string;
-<<<<<<< HEAD
-  apiKey?: string;});;);
-=======
-  apiKey?: string;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  apiKey?: string;}
+}
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
 interface ErrorHandlerConfig {}
-  enableConsoleLogging: boolean,
-  enableRemoteReporting: boolean,
-  enableErrorRecovery: boolean,
-  enableErrorCategorization: boolean,
-  enableErrorAggregation: boolean,
-  enablePerformanceImpact: boolean,
-  maxErrorsPerMinute: number,
+  enableConsoleLogging: boolean
+  enableRemoteReporting: boolean
+  enableErrorRecovery: boolean
+  enableErrorCategorization: boolean
+  enableErrorAggregation: boolean
+  enablePerformanceImpact: boolean
+  maxErrorsPerMinute: number
   errorRetentionDays: number
   remoteEndpoint?: string
-<<<<<<< HEAD
-  apiKey?: string;});;);
-=======
-  apiKey?: string;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  apiKey?: string;}
+}
 class EnhancedErrorHandler {}
   private config: ErrorHandlerConfig
   private errors: ErrorReport[] = []
-  private errorCounts: Map<string></string> = new Map()
-  private errorCategories: Map<string></string> = new Map()
+  private errorCounts: Map<string, number> = new Map()
+  private errorCategories: Map<string, number> = new Map()
   private lastErrorTime: number = 0;
   private errorRateLimit: number = 0;
   private isInitialized: boolean = false;}
-  constructor(config: Partial<ErrorHandlerConfig></ErrorHandlerConfig> = {}); {
+  constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = {
       enableConsoleLogging: true,
       enableRemoteReporting: false,
@@ -107,7 +91,7 @@ class EnhancedErrorHandler {}
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-  constructor(config: Partial<ErrorHandlerConfig></ErrorHandlerConfig> = {}); {}
+  constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = {}
       enableConsoleLogging: true,
       enableRemoteReporting: false,
@@ -117,31 +101,20 @@ class EnhancedErrorHandler {}
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-<<<<<<< HEAD
-      ...config});;);
-    this.initialize()
-interface ErrorContext {/* TODO: Fix JSX expression */});;);
-interface ErrorReport {/* TODO: Fix JSX expression */});;);
-interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});;);
-class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
-  g: Partial<ErrorHandlerConfig></ErrorHandlerConfig> = {}); {/* TODO: Fix JSX expression */});;);
-    this.initialize(););
-=======
-      ...config});]
+      ...config}
     }
     this.initialize()
-interface ErrorContext {/* TODO: Fix JSX expression */});]
-    }
-interface ErrorReport {/* TODO: Fix JSX expression */});]
-    }
-interface ErrorHandlerConfig {/* TODO: Fix JSX expression */});]
-    }
+interface ErrorContext {/* TODO: Fix JSX expression */}
+}
+interface ErrorReport {/* TODO: Fix JSX expression */}
+}
+interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
+}
 class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
-  g: Partial<ErrorHandlerConfig></ErrorHandlerConfig> = {}); {/* TODO: Fix JSX expression */});]
+  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
     };
-    this.initialize()]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    this.initialize();
+  }
   /**
    * Initialize the error handler;
    */
@@ -158,12 +131,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     this.setupErrorCleanup()
     this.isInitialized = true;
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
-  private initialize(): void {/* TODO: Fix JSX expression */});;);
-=======
-  private initialize(): void {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  private initialize(): void {/* TODO: Fix JSX expression */}
+      }
   }
   /**
    * Setup global error handlers;
@@ -172,36 +141,28 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('error', event => {
       this.handleError({
         type: 'javascript',
-  message: event.message}
-        stack: event.error?.stack}
-        filename: event.filename}
+        message:
+        message: event.message;)
+        stack: event.error?.stack;)
+        filename: event.filename;)
         lineno: event.lineno),
         colno: event.colno),
   private setupGlobalErrorHandlers(): void {}
-    window.addEventListener('error', event => {);
-      this.handleError({);
+    window.addEventListener('error', event => {)}
+      this.handleError({)}
         type: 'javascript',
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-<<<<<<< HEAD
-        error: event.error});;)
-});;)
-});
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */});;)
-});;)
-});;);
-=======
-        error: event.error});]
-    });]
+        error: event.error}
+      })
+    })
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
+      });
     });
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */});]
-    });]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  }
   /**
    * Setup unhandled promise rejection handler;
    */
@@ -210,43 +171,31 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       this.handleError({)
         type: 'promise'),
   private setupUnhandledRejectionHandler(): void {}
-    window.addEventListener('unhandledrejection', event => {);
-      this.handleError({);
+    window.addEventListener('unhandledrejection', event => {)}
+      this.handleError({)}
         type: 'promise',
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack;
-<<<<<<< HEAD
-        reason: event.reason});;)
-});;)
-});
-  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */});;)
-});;)
-});;);
-=======
-        reason: event.reason});]
-    });]
+        reason: event.reason}
+      })
+    })
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
+      });
     });
-  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */});]
-    });]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  }
   /**
    * Setup resource error handler;
    */
   private setupResourceErrorHandler(): void {
     window.addEventListener('error')
       event => {
-        if ($1) { const target = event.target as HTMLElement & {
+        if (event.target !== window) {
+          const target = event.target as HTMLElement & {
             src?: string;
-<<<<<<< HEAD
-            href?: string;});;);
-=======
-            href?: string;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+            href?: string;}
+          }
           this.handleError({)
-            type: 'resource'});
+            type: 'resource'})
             message: `Failed to load resource: ${target?.src || target?.href}`)
             element: event.target?.constructor.name),
             src: target?.src || target?.href;
@@ -257,108 +206,80 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         if (event.target !== window) {}
           const target = event.target as HTMLElement & {}
             src?: string
-<<<<<<< HEAD
-            href?: string;});;);
-=======
-            href?: string;});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-          this.handleError({);
+            href?: string;}
+          }
+          this.handleError({)}
             type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href});
-<<<<<<< HEAD
-});;);
+            src: target?.src || target?.href
+          })
+        }
       },
       true;
     )
-  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */});;);
-=======
-});]
-    }
-      },
-      true;
-    )
-  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
+          };
           this.handleError({/* TODO: Fix JSX expression */}
   resource: ${target?.src || target?.href}`,
             elemen,
   t: event.target?.constructor.name,
             sr,
-<<<<<<< HEAD
-  c: target?.src || target?.href});;)
-});;);
+  c: target?.src || target?.href;)
+          });
+        }
       },
       true;
-    ););
-=======
-  c: target?.src || target?.href});]
-    });]
-    }
-      },
-      true;
-    )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    );
+  }
   /**
    * Setup network error handler;
    */
   private setupNetworkErrorHandler(): void {
     // Monitor fetch requests;
-const originalFetch = window.fetch;
-    window.fetch = async (...args: Parameters<typeof></typeof>) => {,
-      try {,;
-const response = await originalFetch(...args),
+    const originalFetch = window.fetch;
+    window.fetch = async (...args: Parameters<typeof fetch>) => {,
+      try {,
+        const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
-            type: 'network',`});
+            type: 'network',`})
             message: `Network request failed: ${response.status} ${response.statusText}`)
             url: args[0] as string),
             status: response.status),
-            statusText: response.statusText});
-<<<<<<< HEAD
-});;);
-=======
-});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-        return response});
-} catch (error) {
+            statusText: response.statusText;
+          })
+        }
+        return response;
+      } catch (error) {
         this.handleError({)
-          type: 'network',`});
+          type: 'network',`})
           message: `Network request failed: ${error}`)
           url: args[0] as string),
           error: error instanceof Error ? error : new Error(String(error)),
   private setupNetworkErrorHandler(): void {}
-    // Monitor fetch requests;
-const originalFetch = window.fetch
-    window.fetch = async (...args: Parameters<typeof></typeof>) => {}
+    // Monitor fetch requests
+    const originalFetch = window.fetch
+    window.fetch = async (...args: Parameters<typeof fetch>) => {}
       try {}
         const response = await originalFetch(...args)
         if (!response.ok) {}
-          this.handleError({);
+          this.handleError({)}
             type: 'network',`}
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText});
-<<<<<<< HEAD
-});;);
-=======
-});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-        return response});
-} catch (error) {}
-        this.handleError({);
+            statusText: response.statusText
+          })
+        }
+        return response
+      } catch (error) {}
+        this.handleError({)}
           type: 'network',`}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))]
-    });
+          error: error instanceof Error ? error : new Error(String(error))
+        })
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
   failed: ${response.status} ${response.statusText}`,
             ur,
@@ -366,29 +287,21 @@ const originalFetch = window.fetch
             statu,
   s: response.status,
             statusTex,
-  t: response.statusText});
-<<<<<<< HEAD
-});;);
-=======
-});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-        return response});
-} catch (error) {/* TODO: Fix JSX expression */}`
+  t: response.statusText;
+          });
+        }
+        return response;
+      } catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error}`,
           ur,
   l: args[0] as string,
           erro,
-  r: error instanceof Error ? error : new Error(String(error))]
-    });;
-        throw error});
-}
-<<<<<<< HEAD
-    });;);
-=======
-    });]
+  r: error instanceof Error ? error : new Error(String(error))
+        });
+        throw error;
+      }
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  }
   /**
    * Setup performance error handler;
    */
@@ -396,66 +309,48 @@ const originalFetch = window.fetch
     if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
-      try {;
-const observer = new PerformanceObserver(list => {)
+      try {
+        const observer = new PerformanceObserver(list => {)
           list.getEntries().forEach(entry => {)
             if (entry.duration > 100) {
               // Tasks longer than 100ms;
               this.handleError({)
-                type: 'custom',`});
+                type: 'custom',`})
   private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return
     // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {}
       try {}
-        const observer = new PerformanceObserver(list => {);
-          list.getEntries().forEach(entry => {);
+        const observer = new PerformanceObserver(list => {)}
+          list.getEntries().forEach(entry => {)}
             if (entry.duration > 100) {}
               // Tasks longer than 100ms
-              this.handleError({);
+              this.handleError({)}
                 type: 'custom',`}
-                message: `Long task detected: ${entry.duration.toFixed(2);ms`,
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration;
-<<<<<<< HEAD
-                category: 'performance'});;);
-          });;)
-});
-        observer.observe({ type: 'longtask', buffered: true });;)
-} catch (error) {}
-=======
-                category: 'performance'});]
-    }
-          });]
-    });
-        observer.observe({ type: 'longtask', buffered: true });]
-    } catch (error) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+                category: 'performance'})
+            }
+          })
+        })
+        observer.observe({ type: 'longtask', buffered: true })
+      } catch (error) {}
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
-  detected: ${entry.duration.toFixed(2);ms`,
+  detected: ${entry.duration.toFixed(2)}ms`,
                 duratio,
   n: entry.duration,
                 categor,
-  y: 'performance'});
-<<<<<<< HEAD
-});;);
-          });;)
-});;
-        observer.observe({/* TODO: Fix JSX expression */});
-  d: true });;)
-} catch (error) {/* TODO: Fix JSX expression */});;);
-    });;);
-=======
-});]
+  y: 'performance'
+              });
+            }
+          });
+        });
+        observer.observe({/* TODO: Fix JSX expression */})
+  d: true });
+      } catch (error) {/* TODO: Fix JSX expression */}
+        }
     }
-          });]
-    });;
-        observer.observe({/* TODO: Fix JSX expression */});
-  d: true });]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  }
   /**
    * Setup error recovery mechanisms;
    */
@@ -468,9 +363,9 @@ const observer = new PerformanceObserver(list => {)
     // Auto-recovery for common errors
     setInterval(() => {}
       this.attemptErrorRecovery();}
-  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */});]
-    }, 30000); // Check every 30 seconds});
-}
+  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */}
+    }, 30000); // Check every 30 seconds;
+  }
   /**
    * Setup error cleanup;
    */
@@ -483,15 +378,15 @@ const observer = new PerformanceObserver(list => {)
     setInterval()
       () => {}
         this.cleanupOldErrors();}
-  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */});]
-    },
+  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */}
+      },
       24 * 60 * 60 * 1000;
-    ); // Daily cleanup});
-}
+    ); // Daily cleanup;
+  }
   /**
    * Handle error with comprehensive processing;
    */
-  private handleError(errorData: {);
+  private handleError(errorData: {)}
 // type: ErrorReport['type'];
 // message: string,
 // stack?: string;
@@ -501,12 +396,12 @@ const observer = new PerformanceObserver(list => {)
 // error?: Error;
 // reason?: unknown;
 // element?: string;
-// src?: string}
-// url?: string}
-// status?: number}
-// statusText?: string}
-// duration?: number},
-// category?: string}});: void {
+// src?: string;)
+// url?: string;)
+// status?: number;)
+// statusText?: string;)
+// duration?: number;),
+// category?: string;)}): void {
     // Rate limiting;
     if (!this.checkRateLimit()) {
 // src?: string;
@@ -514,29 +409,22 @@ const observer = new PerformanceObserver(list => {)
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string});
-});: void {}
+// category?: string;
+  }): void {}
     // Rate limiting
     if (!this.checkRateLimit()) {}
-      return}
+      return;}
   private handleError(errorDat,
-<<<<<<< HEAD
-  a: {/* TODO: Fix JSX expression */});;)
-});: void {/* TODO: Fix JSX expression */});;);
-const errorReport = this.createErrorReport(errorData)
-    this.processError(errorReport););
-=======
-  a: {/* TODO: Fix JSX expression */});]
-    });: void {/* TODO: Fix JSX expression */});]
+  a: {/* TODO: Fix JSX expression */})
+  }): void {/* TODO: Fix JSX expression */}
     }
     const errorReport = this.createErrorReport(errorData)
-    this.processError(errorReport)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    this.processError(errorReport)
+  }
   /**
    * Create comprehensive error report;
    */
-  private createErrorReport(errorData: {);
+  private createErrorReport(errorData: {)}
 // type: ErrorReport['type'];
 // message: string,
 // stack?: string;
@@ -546,26 +434,26 @@ const errorReport = this.createErrorReport(errorData)
 // error?: Error;
 // reason?: unknown;
 // element?: string;
-// src?: string}
-// url?: string}
-// status?: number}
-// statusText?: string}
-// duration?: number},
-// category?: string}});: ErrorReport {
+// src?: string;)
+// url?: string;)
+// status?: number;)
+// statusText?: string;)
+// duration?: number;),
+// category?: string;)}): ErrorReport {
 // src?: string;
 // url?: string;
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string});
-});: ErrorReport {}
-    const context = this.getErrorContext();
-const severity = this.determineSeverity(errorData);
-const category = this.categorizeError(errorData);
-const tags = this.generateTags(errorData)
+// category?: string;
+  }): ErrorReport {}
+    const context = this.getErrorContext()
+    const severity = this.determineSeverity(errorData)
+    const category = this.categorizeError(errorData)
+    const tags = this.generateTags(errorData)
     return {
-      id: this.generateErrorId(),
-  type: errorData.type;
+      id: this.generateErrorId()
+      type: errorData.type;
       message: errorData.message;
       stack: errorData.stack;
     return {}
@@ -577,13 +465,13 @@ const tags = this.generateTags(errorData)
       severity,
       category,
       tags,
-      metadata: {,
-  filename: errorData.filename;
+      metadata: {
+        filename: errorData.filename;
         lineno: errorData.lineno;
         colno: errorData.colno;
         element: errorData.element;
-        src: errorData['src'],
-  url: errorData.url;
+        src: errorData['src']
+        url: errorData.url;
         status: errorData.status;
         statusText: errorData.statusText;
       metadata: {}
@@ -595,18 +483,18 @@ const tags = this.generateTags(errorData)
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-        duration: errorData.duration});]
-    },
-      resolved: false,});
-}
+        duration: errorData.duration}
+      },
+      resolved: false,
+    }
   private createErrorReport(errorDat,
-  a: {/* TODO: Fix JSX expression */});]
-    });: ErrorReport {/* TODO: Fix JSX expression */});]
-    },
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport {/* TODO: Fix JSX expression */}
+      },
       resolve,
-  d: false,});
-}});
-}
+  d: false,
+    };
+  }
   /**
    * Process error report;
    */
@@ -617,26 +505,16 @@ const tags = this.generateTags(errorData)
     this.updateErrorCounts(errorReport),
     // Console logging;
     if (this.config.enableConsoleLogging) {,
-<<<<<<< HEAD
-      this.logError(errorReport);});;);
-    // Remote reporting;
-    if (this.config.enableRemoteReporting) {
-      this.reportToRemote(errorReport);});;);
-    // Error aggregation;
-    if (this.config.enableErrorAggregation) {
-      this.aggregateError(errorReport);});;);
-=======
-      this.logError(errorReport);});]
+      this.logError(errorReport);}
     }
     // Remote reporting;
     if (this.config.enableRemoteReporting) {
-      this.reportToRemote(errorReport);});]
+      this.reportToRemote(errorReport);}
     }
     // Error aggregation;
     if (this.config.enableErrorAggregation) {
-      this.aggregateError(errorReport);});]
+      this.aggregateError(errorReport);}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Performance impact;
     if (this.config.enablePerformanceImpact) {
   private processError(errorReport: ErrorReport): void {}
@@ -646,51 +524,31 @@ const tags = this.generateTags(errorData)
     this.updateErrorCounts(errorReport)
     // Console logging
     if (this.config.enableConsoleLogging) {}
-<<<<<<< HEAD
-      this.logError(errorReport);});;);
-    // Remote reporting
-    if (this.config.enableRemoteReporting) {}
-      this.reportToRemote(errorReport);});;);
-    // Error aggregation
-    if (this.config.enableErrorAggregation) {}
-      this.aggregateError(errorReport);});;);
-=======
-      this.logError(errorReport);});]
+      this.logError(errorReport);}
     }
     // Remote reporting
     if (this.config.enableRemoteReporting) {}
-      this.reportToRemote(errorReport);});]
+      this.reportToRemote(errorReport);}
     }
     // Error aggregation
     if (this.config.enableErrorAggregation) {}
-      this.aggregateError(errorReport);});]
+      this.aggregateError(errorReport);}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Performance impact
     if (this.config.enablePerformanceImpact) {}
-      this.assessPerformanceImpact(errorReport);
+      this.assessPerformanceImpact(errorReport);}
   private processError(errorRepor)
-<<<<<<< HEAD
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});;);
-    // Remote reporting;
-    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */});;);
-    // Error aggregation;
-    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */});;);
-    // Performance impact;
-    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */});;);
-=======
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});]
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
     }
     // Remote reporting;
-    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */});]
+    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */}
     }
     // Error aggregation;
-    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */});]
+    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */}
     }
     // Performance impact;
-    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */});]
+    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get error context;
@@ -705,277 +563,192 @@ const tags = this.generateTags(errorData)
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
-<<<<<<< HEAD
-      userId: this.getUserId();););
-  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */});;)
-}});
-=======
-      userId: this.getUserId();)]
+      userId: this.getUserId()}
     }
-  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */});]
-    }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-}
+  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */}
+    };
+  }
   /**
    * Determine error severity;
    */
-  private determineSeverity(errorData: {),
-  type: ErrorReport['type']),
-    message: string},
-    status?: number},
-    element?: string;});]
-    });: ErrorReport['severity'] {
+  private determineSeverity(errorData: {)
+    type: ErrorReport['type']),
+    message: string;),
+    status?: number;),
+    element?: string;}
+  }): ErrorReport['severity'] {
     if(errorData.type === 'network' &&)
       errorData.status &&)
-      errorData.status >= 500}
+      errorData.status >= 500;)
     ) {
-  private determineSeverity(errorData: {);
-    type: ErrorReport['type'],
-  message: string
+  private determineSeverity(errorData: {)}
+    type: ErrorReport['type']
+    message: string
     status?: number
-    element?: string;});]
-    });: ErrorReport['severity'] {}
+    element?: string;}
+  }): ErrorReport['severity'] {}
     if (
       errorData.type === 'network' &&
       errorData.status &&
       errorData.status >= 500
     ) {}
-<<<<<<< HEAD
-      return 'critical';});;);
-    if(errorData.type === 'javascript' &&)
-      errorData.message.includes('Cannot read property')
-    ) {}
-      return 'high';});;);
-    if (errorData.type === 'resource' && errorData.element === 'img') {}
-      return 'medium';});;);
-=======
-      return 'critical';});]
+      return 'critical';}
     }
     if(errorData.type === 'javascript' &&)
       errorData.message.includes('Cannot read property')
     ) {}
-      return 'high';});]
+      return 'high';}
     }
     if (errorData.type === 'resource' && errorData.element === 'img') {}
-      return 'medium';});]
+      return 'medium';}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if (errorData.type === 'promise') {}
-      return 'medium'}
+      return 'medium';}
   private determineSeverity(errorDat,
-<<<<<<< HEAD
-  a: {/* TODO: Fix JSX expression */});;)
-});: ErrorReport['severity'] {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'javascript' &&)
-      errorData.message.includes('Cannot read property')
-    ) {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */});;);
-=======
-  a: {/* TODO: Fix JSX expression */});]
-    });: ErrorReport['severity'] {/* TODO: Fix JSX expression */});]
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'javascript' &&)
       errorData.message.includes('Cannot read property')
-    ) {/* TODO: Fix JSX expression */});]
+    ) {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return 'low'});
-}
+    return 'low'
+  }
   /**
    * Categorize error;
    */
-  private categorizeError(errorData: {),
-  type: ErrorReport['type']),
-  private categorizeError(errorData: {);
-    type: ErrorReport['type'],
-  message: string;});]
-    });: ErrorReport['category'] {}
+  private categorizeError(errorData: {)
+    type: ErrorReport['type']),
+  private categorizeError(errorData: {)}
+    type: ErrorReport['type']
+    message: string;}
+  }): ErrorReport['category'] {}
     if (errorData.type === 'network') {}
-<<<<<<< HEAD
-      return 'network';});;);
-=======
-      return 'network';});]
+      return 'network';}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if (errorData.type === 'resource') {}
-      return 'performance'}
+      return 'performance';}
   private categorizeError(errorDat,
-<<<<<<< HEAD
-  a: {/* TODO: Fix JSX expression */});;)
-});: ErrorReport['category'] {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */});;);
-=======
-  a: {/* TODO: Fix JSX expression */});]
-    });: ErrorReport['category'] {/* TODO: Fix JSX expression */});]
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if ()
       errorData.message.includes('SecurityError') ||
       errorData.message.includes('CORS')
     ) {}
-<<<<<<< HEAD
-      return 'security';});;);
-    if (errorData.message.includes('SyntaxError')) {}
-      return 'syntax';});;);
-    if (errorData.type === 'promise') {}
-      return 'runtime';}
-    ) {/* TODO: Fix JSX expression */});;);
-    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */});;);
-=======
-      return 'security';});]
+      return 'security';}
     }
     if (errorData.message.includes('SyntaxError')) {}
-      return 'syntax';});]
+      return 'syntax';}
     }
     if (errorData.type === 'promise') {}
       return 'runtime';}
-    ) {/* TODO: Fix JSX expression */});]
+    ) {/* TODO: Fix JSX expression */}
     }
-    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */});]
+    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return 'unknown'});
-}
+    return 'unknown'
+  }
   /**
    * Generate error tags;
    */
   private generateTags(errorData: {),
-    filename?: string},
+    filename?: string;),
     type: ErrorReport['type']),
-<<<<<<< HEAD
-    duration?: number;});;)
-});: string[] {;
-const tags: string[] = [],
-=======
-    duration?: number;});]
-    });: string[] {
+    duration?: number;}
+  }): string[] {
     const tags: string[] = [],
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if (errorData.filename) {,
-  private generateTags(errorData: {);
+  private generateTags(errorData: {)}
     filename?: string
     type: ErrorReport['type']
-    duration?: number;});]
-    });: string[] {}
+    duration?: number;}
+  }): string[] {}
     const tags: string[] = []
     if (errorData.filename) {}
-<<<<<<< HEAD
-      tags.push('client-side');});;);
-    if (errorData.type === 'network') {}
-      tags.push('network');});;);
-    if (errorData.type === 'resource') {}
-      tags.push('resource');});;);
-=======
-      tags.push('client-side');});]
+      tags.push('client-side');}
     }
     if (errorData.type === 'network') {}
-      tags.push('network');});]
+      tags.push('network');}
     }
     if (errorData.type === 'resource') {}
-      tags.push('resource');});]
+      tags.push('resource');}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     if (errorData.duration && errorData.duration > 1000) {}
-      tags.push('slow');
+      tags.push('slow');}
   private generateTags(errorDat,
-<<<<<<< HEAD
-  a: {/* TODO: Fix JSX expression */});;)
-});: string[] {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'network') {/* TODO: Fix JSX expression */});;);
-    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */});;);
-    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */});;);
-=======
-  a: {/* TODO: Fix JSX expression */});]
-    });: string[] {/* TODO: Fix JSX expression */});]
+  a: {/* TODO: Fix JSX expression */})
+  }): string[] {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'network') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'network') {/* TODO: Fix JSX expression */}
     }
-    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */});]
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
     }
-    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */});]
+    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return tags});
-}
+    return tags;
+  }
   /**
    * Generate unique error ID;
    */
   private generateErrorId(): string {`}
-    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   private generateErrorId(): string {/* TODO: Fix JSX expression */}`
-    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
-}
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
   /**
    * Get session ID;
    */
   private getSessionId(): string {}
     let sessionId = sessionStorage.getItem('error_session_id')
     if (!sessionId) {`}
-      sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);`
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('error_session_id', sessionId)
   private getSessionId(): string {/* TODO: Fix JSX expression */}`
-      sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);`;
-<<<<<<< HEAD
-      sessionStorage.setItem('error_session_id', sessionId););
-=======
-      sessionStorage.setItem('error_session_id', sessionId)]
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('error_session_id', sessionId);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    return sessionId});
-}
+    return sessionId;
+  }
   /**
    * Get user ID;
    */
   private getUserId(): string | undefined {}
     return localStorage.getItem('user_id') || undefined;}
-<<<<<<< HEAD
-  private getUserId(): string | undefined {/* TODO: Fix JSX expression */});;);
-=======
-  private getUserId(): string | undefined {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}
+  }
   /**
    * Check rate limiting;
    */
   private checkRateLimit(): boolean {}
-    const now = Date.now();
-const timeDiff = now - this.lastErrorTime;
+    const now = Date.now()
+    const timeDiff = now - this.lastErrorTime;
     if (timeDiff < 60000) {
       // Within 1 minute;
-const timeDiff = now - this.lastErrorTime
+    const timeDiff = now - this.lastErrorTime
     if (timeDiff < 60000) {}
       // Within 1 minute
       this.errorRateLimit++
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {}
-<<<<<<< HEAD
-        return false;});;);
+        return false;}
+      }
     } else {}
       this.errorRateLimit = 1;}
-  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */});;);
-    } else {/* TODO: Fix JSX expression */});;);
-=======
-        return false;});]
+  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */}
+      }
+    } else {/* TODO: Fix JSX expression */}
     }
-    } else {}
-      this.errorRateLimit = 1;}
-  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */});]
-    }
-    } else {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.lastErrorTime = now;
-    return true});
-}
+    return true;
+  }
   /**
    * Update error counters;
    */
@@ -988,17 +761,13 @@ const timeDiff = now - this.lastErrorTime
       (this.errorCategories.get(errorReport.category) || 0) + 1
     )
   private updateErrorCounts(errorRepor)
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}`;
-const key = `${errorReport.type}_${errorReport.category}`;
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}`
+    const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category)
       (this.errorCategories.get(errorReport.category) || 0) + 1;
-<<<<<<< HEAD
-    ););
-=======
-    )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    );
+  }
   /**
    * Log error to console;
    */
@@ -1010,14 +779,10 @@ const key = `${errorReport.type}_${errorReport.category}`;
   private logError(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
   Report: ${errorReport.id}`);
-<<<<<<< HEAD
-    if (errorReport.stack) {/* TODO: Fix JSX expression */});;);
-=======
-    if (errorReport.stack) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-});
-}
+    if (errorReport.stack) {/* TODO: Fix JSX expression */}
+      }
+
+  }
   /**
    * Get severity emoji;
    */
@@ -1032,50 +797,40 @@ const key = `${errorReport.type}_${errorReport.category}`;
       case 'low':,
         return '🟢',
       default:,
-        return '❓'}
+        return '❓';}
   private getSeverityEmoji(severit)
-<<<<<<< HEAD
-  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});;);
-=======
-  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});]
+  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Report to remote service;
    */
-  private async reportToRemote(errorReport: ErrorReport): Promise<void></void> {,
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     if (!this.config.remoteEndpoint) return;
     try {,
       await fetch(this.config.remoteEndpoint, {)
         method: 'POST'),
         headers: {,
-  private async reportToRemote(errorReport: ErrorReport): Promise<void></void> {}
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {}
     if (!this.config.remoteEndpoint) return
     try {}
-      await fetch(this.config.remoteEndpoint, {);
+      await fetch(this.config.remoteEndpoint, {)}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json',`}
-          Authorization: `Bearer ${this.config.apiKey});]
-    });
-        body: JSON.stringify(errorReport);)]
+          Authorization: 'Bearer ${this.config.apiKey}
+        })
+        body: JSON.stringify(errorReport)})
     } catch (error) {}
   private async reportToRemote(errorRepor)
-  t: ErrorReport): Promise<void></void> {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.apiKey}`});
-},
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}',
+  n: 'Bearer ${this.config.apiKey}'
+        },
         bod,
-<<<<<<< HEAD
-  y: JSON.stringify(errorReport);)
-});;)
-} catch (error) {/* TODO: Fix JSX expression */});;);
-=======
-  y: JSON.stringify(errorReport)]
-    });]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  y: JSON.stringify(errorReport)
+      });
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
   }
   /**
    * Aggregate error data;
@@ -1084,12 +839,8 @@ const key = `${errorReport.type}_${errorReport.category}`;
   private aggregateError(errorReport: ErrorReport): void {}
     // This could be expanded to include more sophisticated aggregation}
   private aggregateError(errorRepor)
-<<<<<<< HEAD
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});;);
-=======
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});]
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Assess performance impact;
    */
@@ -1102,18 +853,14 @@ const key = `${errorReport.type}_${errorReport.category}`;
       errorReport.category === 'performance'
     ) {}
   private assessPerformanceImpact(errorRepor)
-<<<<<<< HEAD
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});;);
-=======
-  t: ErrorReport): void {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+      }
   }
   /**
    * Attempt error recovery;
    */
-  private attemptErrorRecovery(): void {;
-const recentErrors = this.errors.filter(error =>)
+  private attemptErrorRecovery(): void {
+    const recentErrors = this.errors.filter(error =>)
         !error.resolved &&)
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
   private attemptErrorRecovery(): void {}
@@ -1123,24 +870,15 @@ const recentErrors = this.errors.filter(error =>)
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
     )
     if (recentErrors.length > 5) {}
-<<<<<<< HEAD
-      if (process.env['NODE_ENV'] === 'development') {});;);
+      if (process.env['NODE_ENV'] === 'development') {}
+        }
       // Implement recovery strategies here;
       this.clearErrorState()
-  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */});;);
+  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */}
+        }
       // Implement recovery strategies here;
-      this.clearErrorState(););
-=======
-      if (process.env['NODE_ENV'] === 'development') {});]
+      this.clearErrorState();
     }
-      // Implement recovery strategies here;
-      this.clearErrorState()
-  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */});]
-    }
-      // Implement recovery strategies here;
-      this.clearErrorState()]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Clear error state;
@@ -1153,12 +891,8 @@ const recentErrors = this.errors.filter(error =>)
     this.errorCategories.clear()
     this.errorRateLimit = 0;
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
-  private clearErrorState(): void {/* TODO: Fix JSX expression */});;);
-=======
-  private clearErrorState(): void {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  private clearErrorState(): void {/* TODO: Fix JSX expression */}
+      }
   }
   /**
    * Clean up old errors;
@@ -1172,12 +906,8 @@ const recentErrors = this.errors.filter(error =>)
       error => new Date(error.context.timestamp) > cutoffDate
     )
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
-  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */});;);
-=======
-  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
+      }
   }
   /**
    * Get error statistics;
@@ -1185,40 +915,34 @@ const recentErrors = this.errors.filter(error =>)
   public getErrorStatistics(): {
     totalErrors: number,
   public getErrorStatistics(): {}
-    totalErrors: number,
-  errorsByType: Record<string></string>
-    errorsByCategory: Record<string></string>
-    errorsBySeverity: Record<string></string>
-    recentErrors: ErrorReport[];});]
-    } {}
-    const errorsByType: Record<string></string> = {}
-    const errorsByCategory: Record<string></string> = {}
-    const errorsBySeverity: Record<string></string> = {}
+    totalErrors: number
+    errorsByType: Record<string, number>
+    errorsByCategory: Record<string, number>
+    errorsBySeverity: Record<string, number>
+    recentErrors: ErrorReport[];}
+  } {}
+    const errorsByType: Record<string, number> = {}
+    const errorsByCategory: Record<string, number> = {}
+    const errorsBySeverity: Record<string, number> = {}
     this.errors.forEach(error => {)
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-    this.errors.forEach(error => {);
+    this.errors.forEach(error => {)}
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1;
       errorsBySeverity[error.severity] =
-        (errorsBySeverity[error.severity] || 0) + 1;});]
+        (errorsBySeverity[error.severity] || 0) + 1;}
+    })
+  public getErrorStatistics(): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+  errorsByType: Record<string, number> = {};
+    const,
+  errorsByCategory: Record<string, number> = {};
+    const,
+  errorsBySeverity: Record<string, number> = {};
+    this.errors.forEach(error => {/* TODO: Fix JSX expression */})
     });
-  public getErrorStatistics(): {/* TODO: Fix JSX expression */});]
-    } {/* TODO: Fix JSX expression */}
-  errorsByType: Record<string></string> = {};
-    const,
-  errorsByCategory: Record<string></string> = {};
-    const,
-  errorsBySeverity: Record<string></string> = {};
-<<<<<<< HEAD
-    this.errors.forEach(error => {/* TODO: Fix JSX expression */});;)
-});
-const recentErrors = this.errors;
-=======
-    this.errors.forEach(error => {/* TODO: Fix JSX expression */});]
-    });;
     const recentErrors = this.errors;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       .filter(error => !error.resolved)
       .sort()
         (a, b) =>
@@ -1233,16 +957,12 @@ const recentErrors = this.errors;
       errorsByType,
       errorsByCategory,
       errorsBySeverity,
-<<<<<<< HEAD
-      recentErrors});;);
-=======
-      recentErrors});]
+      recentErrors}
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       .slice(0, 10);
-    return {/* TODO: Fix JSX expression */});]
-    }});
-}
+    return {/* TODO: Fix JSX expression */}
+    };
+  }
   /**
    * Export error data;
    */
@@ -1255,63 +975,51 @@ const recentErrors = this.errors;
         errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config;
-        timestamp: new Date().toISOString();)]
-    },
+        timestamp: new Date().toISOString()}
+      },
       null,
       2;
     )
-  public exportErrorData(): string {/* TODO: Fix JSX expression */});]
-    },
+  public exportErrorData(): string {/* TODO: Fix JSX expression */}
+      },
       null,
       2;
-<<<<<<< HEAD
-    ););
-=======
-    )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    );
+  }
   /**
    * Manually report error;
    */
-  public reportError(message: string, context?: Partial<ErrorContext></ErrorContext>): string {;
-const errorReport = this.createErrorReport({)
+  public reportError(message: string, context?: Partial<ErrorContext>): string {
+    const errorReport = this.createErrorReport({)
       type: 'custom'),
       message),
-  public reportError(message: string, context?: Partial<ErrorContext></ErrorContext>): string {}
-    const errorReport = this.createErrorReport({);
+  public reportError(message: string, context?: Partial<ErrorContext>): string {}
+    const errorReport = this.createErrorReport({)}
       type: 'custom',
       message,
-      ...context});]
-    });
+      ...context}
+    })
     this.processError(errorReport)
   public reportError(messag)
-  e: string, context?: Partial<ErrorContext></ErrorContext>): string {/* TODO: Fix JSX expression */});]
-    });;
+  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */}
+    });
     this.processError(errorReport);
-    return errorReport.id});
+    return errorReport.id;
+  }
 }
-}
-// Export singleton instance
+// Export singleton instance;
 export const errorHandler = new EnhancedErrorHandler()
-// Export class for custom instances
+// Export class for custom instances;
 export {
 // Export class for custom instances
 export {}
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
-<<<<<<< HEAD
-  type ErrorHandlerConfig});;)
-export const errorHandler = new EnhancedErrorHandler();
-// Export class for custom instances
-export {/* TODO: Fix JSX expression */});;);
-=======
-  type ErrorHandlerConfig});]
-    }
+  type ErrorHandlerConfig}
+}
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
-export {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+export {/* TODO: Fix JSX expression */}
+};
 `
-}

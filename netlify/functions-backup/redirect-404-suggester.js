@@ -55,9 +55,16 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
   async function fetchSitemap() {const url = baseUrl + '/sitemap.xml';
 const _res = await fetch(url);
     if(!res.ok)
+<<<<<<< HEAD
         throw new Error('Failed to fetch sitemap: ' + res.status;),;
 const body = {/* TODO: Fix JSX expression */}`
   e: update 404 redirect suggestions (${new Date().toISOString()})`,
+=======
+        throw new Error('Failed to fetch sitemap: ' + res.status;),
+    const body = {/* TODO: Fix JSX expression */}',
+  e:
+        e: update 404 redirect suggestions (${new Date().toISOString()})`,
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       conten,
   t: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),

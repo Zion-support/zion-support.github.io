@@ -31,8 +31,8 @@
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions;
-    id: 'ai-legal-document-generator'
-    name: 'AI Legal Document Generator'
+    id: 'ai-legal-document-generator',
+    name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
     period: '/month',
@@ -124,14 +124,14 @@ export const,
       'Automated legal advice',
       '24/7 legal support'],
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-indigo-600'
+    icon: '',
+    color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-documents',
     marketPosition: 'Leading AI legal document platform with 99.7% accuracy rate',
     targetAudience: 'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents',
     trialDays: 14;
-    setupTime: '15 minutes'
+    setupTime: '15 minutes',
     category: 'Legal Technology',
     realService: true;
     technology: [,
@@ -182,15 +182,15 @@ export const,
       'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],
-    marketSize: '$2.1B legal tech market'
-    growthRate: '35% annual growth'
+    marketSize: '$2.1B legal tech market',
+    growthRate: '35% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}},
-    id: 'ai-customer-service-automation'
-    name: 'AI Customer Service Automation'
+    id: 'ai-customer-service-automation',
+    name: 'AI Customer Service Automation',
     tagline: '24/7 intelligent customer support with AI chatbots',
     price: '$149',
     period: '/month',
@@ -240,14 +240,14 @@ export const,
       'API integrations',
       'Real-time learning'],
     popular: true;
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience: 'E-commerce businesses, SaaS companies, customer support teams, retail chains',
     trialDays: 21;
-    setupTime: '2 hours'
+    setupTime: '2 hours',
     category: 'Customer Service & Support',
     realService: true;
     technology: [,
@@ -298,10 +298,10 @@ export const,
       'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],
-    marketSize: '$15.8B customer service software market'
-    growthRate: '28% annual growth'
+    marketSize: '$15.8B customer service software market',
+    growthRate: '28% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -349,14 +349,14 @@ export const,
       'Mobile optimization',
       'Performance analytics'],
     popular: true;
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-seo-optimizer',
     marketPosition: 'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience: 'Digital marketing agencies, e-commerce businesses, content creators, small businesses',
     trialDays: 14;
-    setupTime: '1 hour'
+    setupTime: '1 hour',
     category: 'Digital Marketing & SEO',
     realService: true;
     technology: [,
@@ -407,10 +407,10 @@ export const,
       'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],
-    marketSize: '$8.2B SEO tools market'
-    growthRate: '32% annual growth'
+    marketSize: '$8.2B SEO tools market',
+    growthRate: '32% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -458,14 +458,14 @@ export const,
       'Collaborative editing',
       'Export to multiple formats'],
     popular: true;
-    icon: ''
-    color: 'from-red-500 to-pink-600'
+    icon: '',
+    color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10 x faster workflow',
     targetAudience: 'Content creators, video marketers, social media managers, film students, small businesses',
     trialDays: 21;
-    setupTime: '30 minutes'
+    setupTime: '30 minutes',
     category: 'Creative & Media',
     realService: true;
     technology: [,
@@ -523,10 +523,10 @@ export const,
       'DaVinci Resolve',
       'Camtasia',
       'Filmora'],
-    marketSize: '$3.2B video editing software market'
-    growthRate: '45% annual growth'
+    marketSize: '$3.2B video editing software market',
+    growthRate: '45% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -570,14 +570,14 @@ export const,
       'API access',
       'Advanced security'],
     popular: true;
-    icon: ''
-    color: 'from-cyan-500 to-blue-600'
+    icon: '',
+    color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-data-analytics',
     marketPosition: 'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience: 'Data analysts, business intelligence teams, marketing agencies, e-commerce businesses',
     trialDays: 21;
-    setupTime: '4 hours'
+    setupTime: '4 hours',
     category: 'Data & Analytics',
     realService: true;
     technology: [,
@@ -629,10 +629,10 @@ export const,
       'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],
-    marketSize: '$23.4B business intelligence market'
-    growthRate: '38% annual growth'
+    marketSize: '$23.4B business intelligence market',
+    growthRate: '38% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -680,14 +680,14 @@ export const,
       'Integration with job boards',
       'Mobile app access'],
     popular: true;
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-recruitment',
     marketPosition: 'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience: 'HR professionals, recruitment agencies, small businesses, enterprise companies',
     trialDays: 14;
-    setupTime: '2 hours'
+    setupTime: '2 hours',
     category: 'Human Resources',
     realService: true;
     technology: [,
@@ -746,10 +746,10 @@ export const,
       'Greenhouse',
       'Lever',
       'SmartRecruiters'],
-    marketSize: '$2.8B recruitment software market'
-    growthRate: '42% annual growth'
+    marketSize: '$2.8B recruitment software market',
+    growthRate: '42% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -793,14 +793,14 @@ export const,
       'Real-time notifications',
       'Custom workflows'],
     popular: true;
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-sales-automation',
     marketPosition: 'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience: 'Sales teams, B2B companies, real estate agents, insurance agents, consultants',
     trialDays: 21;
-    setupTime: '3 hours'
+    setupTime: '3 hours',
     category: 'Sales & CRM',
     realService: true;
     technology: [,
@@ -859,10 +859,10 @@ export const,
       'Pipedrive',
       'Zoho CRM',
       'Freshsales'],
-    marketSize: '$18.6B CRM market'
-    growthRate: '33% annual growth'
+    marketSize: '$18.6B CRM market',
+    growthRate: '33% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -906,14 +906,14 @@ export const,
       'Real-time updates',
       'Export capabilities'],
     popular: true;
-    icon: ''
-    color: 'from-teal-500 to-green-600'
+    icon: '',
+    color: 'from-teal-500 to-green-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-market-research',
     marketPosition: 'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience: 'Market researchers, business strategists, startups, investment firms, consultants',
     trialDays: 14;
-    setupTime: '2 hours'
+    setupTime: '2 hours',
     category: 'Market Research',
     realService: true;
     technology: [,
@@ -970,10 +970,10 @@ export const,
       'Mintel',
       'Euromonitor',
       'Forrester'],
-    marketSize: '$1.9B market research market'
-    growthRate: '28% annual growth'
+    marketSize: '$1.9B market research market',
+    growthRate: '28% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -1017,14 +1017,14 @@ export const,
       'Data export',
       'Multi-chain support'],
     popular: true;
-    icon: ''
-    color: 'from-gray-500 to-slate-600'
+    icon: '',
+    color: 'from-gray-500 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-blockchain-analytics',
     marketPosition: 'Leading blockchain analytics with 99.9% transaction accuracy',
     targetAudience: 'Cryptocurrency traders, blockchain companies, financial institutions, regulators',
     trialDays: 21;
-    setupTime: '4 hours'
+    setupTime: '4 hours',
     category: 'Blockchain & Cryptocurrency',
     realService: true;
     technology: [,
@@ -1081,10 +1081,10 @@ export const,
       'CipherTrace',
       'Blockchain.com',
       'Etherscan'],
-    marketSize: '$1.2B blockchain analytics market'
-    growthRate: '65% annual growth'
+    marketSize: '$1.2B blockchain analytics market',
+    growthRate: '65% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -1128,14 +1128,14 @@ export const,
       'Detailed reporting',
       'API integration'],
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-cyan-600'
+    icon: '',
+    color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition: 'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience: 'DevOps teams, cloud architects, IT managers, startups, enterprise companies',
     trialDays: 21;
-    setupTime: '3 hours'
+    setupTime: '3 hours',
     category: 'Cloud & DevOps',
     realService: true;
     technology: [,
@@ -1193,10 +1193,10 @@ export const,
       'ParkMyCloud',
       'Cloudability',
       'AWS Cost Explorer'],
-    marketSize: '$4.8B cloud cost management market'
-    growthRate: '52% annual growth'
+    marketSize: '$4.8B cloud cost management market',
+    growthRate: '52% annual growth',
     contactInfo: unknown;
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
@@ -1242,20 +1242,23 @@ export const,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'],
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.',
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],
-    link: 'https://ziontechgroup.com/ai-health-coach'
-    icon: ''
-    color: 'from-red-500 to-pink-600'
-    popular: false;
-    launchDate: '2024-03-05'
-    customers: 1100;
+    link: 'https://ziontechgroup.com/ai-health-coach',
+    icon: '',
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2024-03-05',
+    customers:
+        customers: 1100;
     rating: 4.6;
     reviews: 134},
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Auto-triage and reply to routine emails with guardrails',
     description: 'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.',
-    category: 'Productivity & Automation'
-    price: unknown;
+    category: 'Productivity & Automation',
+    price:
+        price: unknown;
       monthly: 79;
       yearly: 790;
       currency: 'USD',
@@ -1351,20 +1354,23 @@ export const,
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
-    link: 'https://ziontechgroup.com/ai-email-responder'
-    icon: ''
-    color: 'from-cyan-600 to-blue-700'
-    popular: true;
-    launchDate: '2025-02-01'
-    customers: 180;
+    link: 'https://ziontechgroup.com/ai-email-responder',
+    icon: '',
+    color: 'from-cyan-600 to-blue-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-01',
+    customers:
+        customers: 180;
     rating: 4.7;
     reviews: 46},
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates',
     description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.',
-    category: 'Marketing & Research'
-    price: unknown;
+    category: 'Marketing & Research',
+    price:
+        price: unknown;
       monthly: 49;
       yearly: 490;
       currency: 'USD',
@@ -1437,20 +1443,23 @@ export const,
     integrations: ['HubSpot', 'Segment', 'Zapier'],
     support: 'Email support, templates library',
     compliance: ['GDPR', 'CCPA'],
-    link: 'https://ziontechgroup.com/mobile-surveys'
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
-    popular: false;
-    launchDate: '2024-12-10'
-    customers: 95;
+    link: 'https://ziontechgroup.com/mobile-surveys',
+    icon: '',
+    color: 'from-emerald-600 to-teal-700',
+    popular:
+        popular: false;
+    launchDate: '2024-12-10',
+    customers:
+        customers: 95;
     rating: 4.6;
     reviews: 22},
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
     description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
-    category: 'Operations'
-    price: unknown;
+    category: 'Operations',
+    price:
+        price: unknown;
       monthly: 39;
       yearly: 390;
       currency: 'USD',
@@ -1533,22 +1542,26 @@ export const,
     roi: 'Deliverables throughput +1525%.',
     useCases: ['Client delivery', 'Editorial calendar', 'Sprints'],
     integrations: ['Google Calendar', 'Slack', 'Linear'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/productivity-planner'
-    icon: ''
-    color: 'from-purple-600 to-pink-600'
-    popular: false;
-    launchDate: '2025-01-20'
-    customers: 60;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/productivity-planner',
+    icon: '',
+    color: 'from-purple-600 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2025-01-20',
+    customers:
+        customers: 60;
     rating: 4.5;
     reviews: 14},
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
     description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
-    category: 'Media & Events'
-    price: unknown;
+    category: 'Media & Events',
+    price:
+        price: unknown;
       monthly: 129;
       yearly: 1290;
       currency: 'USD',
@@ -1635,20 +1648,23 @@ export const,
     integrations: ['Stripe', 'Mailchimp', 'Zapier'],
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI'],
-    link: 'https://ziontechgroup.com/event-management'
-    icon: ''
-    color: 'from-indigo-600 to-blue-700'
-    popular: false;
-    launchDate: '2024-11-18'
-    customers: 70;
+    link: 'https://ziontechgroup.com/event-management',
+    icon: '',
+    color: 'from-indigo-600 to-blue-700',
+    popular:
+        popular: false;
+    launchDate: '2024-11-18',
+    customers:
+        customers: 70;
     rating: 4.6;
     reviews: 18},
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
     description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.',
-    category: 'Growth'
-    price: unknown;
+    category: 'Growth',
+    price:
+        price: unknown;
       monthly: 99;
       yearly: 990;
       currency: 'USD',
@@ -1733,22 +1749,26 @@ export const,
     roi: 'Affiliate channel +1030% revenue.',
     useCases: ['Influencer programs', 'Partner marketplaces'],
     integrations: ['Shopify', 'WooCommerce', 'Stripe'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/affiliate-tracking'
-    icon: ''
-    color: 'from-rose-600 to-red-700'
-    popular: false;
-    launchDate: '2024-10-12'
-    customers: 55;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/affiliate-tracking',
+    icon: '',
+    color: 'from-rose-600 to-red-700',
+    popular:
+        popular: false;
+    launchDate: '2024-10-12',
+    customers:
+        customers: 55;
     rating: 4.4;
     reviews: 12},
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
     tagline: 'Privacy-friendly analytics with actionable insights',
     description: 'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.',
-    category: 'Analytics'
-    price: unknown;
+    category: 'Analytics',
+    price:
+        price: unknown;
       monthly: 29;
       yearly: 290;
       currency: 'USD',
@@ -1833,22 +1853,26 @@ export const,
     roi: 'Improve conversion 515% via insights.',
     useCases: ['Landing pages', 'Campaign tracking'],
     integrations: ['Shopify', 'Webflow', 'Zapier'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/website-analytics'
-    icon: ''
-    color: 'from-sky-600 to-cyan-700'
-    popular: true;
-    launchDate: '2025-02-05'
-    customers: 140;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/website-analytics',
+    icon: '',
+    color: 'from-sky-600 to-cyan-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-05',
+    customers:
+        customers: 140;
     rating: 4.7;
     reviews: 28},
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
     description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.',
-    category: 'IT & Operations'
-    price: unknown;
+    category: 'IT & Operations',
+    price:
+        price: unknown;
       monthly: 59;
       yearly: 590;
       currency: 'USD',
@@ -1935,20 +1959,23 @@ export const,
     integrations: ['Okta', 'Google Workspace', 'Slack'],
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/it-helpdesk'
-    icon: ''
-    color: 'from-slate-600 to-gray-700'
-    popular: false;
-    launchDate: '2024-09-22'
-    customers: 120;
+    link: 'https://ziontechgroup.com/it-helpdesk',
+    icon: '',
+    color: 'from-slate-600 to-gray-700',
+    popular:
+        popular: false;
+    launchDate: '2024-09-22',
+    customers:
+        customers: 120;
     rating: 4.5;
     reviews: 31},
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
     tagline: 'Customer-friendly returns with labels and status tracking',
     description: 'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.',
-    category: 'Ecommerce'
-    price: unknown;
+    category: 'Ecommerce',
+    price:
+        price: unknown;
       monthly: 79;
       yearly: 790;
       currency: 'USD',
@@ -2033,15 +2060,19 @@ export const,
     roi: 'Reduce refund losses via exchanges.',
     useCases: ['Returns', 'Exchanges', 'Warranties'],
     integrations: ['Shopify', 'Shippo', 'EasyPost'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/return-manager'
-    icon: ''
-    color: 'from-amber-600 to-orange-700'
-    popular: false;
-    launchDate: '2024-08-30'
-    customers: 75;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/return-manager',
+    icon: '',
+    color: 'from-amber-600 to-orange-700',
+    popular:
+        popular: false;
+    launchDate: '2024-08-30',
+    customers:
+        customers: 75;
     rating: 4.4;
+<<<<<<< HEAD
     reviews: 19},
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -2049,6 +2080,17 @@ export const,
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
     price: unknown;
+=======
+    reviews: 19;
+  },
+    id: 'auto-email-followups',
+    name: 'Automated Email Followups',
+    tagline: 'Cadence sequences for leads with AI personalization',
+    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.',
+    category: 'Sales',
+    price:
+        price: unknown;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       monthly: 49;
       yearly: 490;
       currency: 'USD',
@@ -2135,20 +2177,23 @@ export const,
     integrations: ['HubSpot', 'Pipedrive', 'Gmail'],
     support: 'Email support',
     compliance: ['GDPR', 'CAN-SPAM'],
-    link: 'https://ziontechgroup.com/email-followups'
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
-    popular: false;
-    launchDate: '2025-01-25'
-    customers: 90;
+    link: 'https://ziontechgroup.com/email-followups',
+    icon: '',
+    color: 'from-blue-600 to-indigo-700',
+    popular:
+        popular: false;
+    launchDate: '2025-01-25',
+    customers:
+        customers: 90;
     rating: 4.5;
     reviews: 17},
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
     description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.',
-    category: 'Media & Content'
-    price: unknown;
+    category: 'Media & Content',
+    price:
+        price: unknown;
       monthly: 39;
       yearly: 390;
       currency: 'USD',
@@ -2233,22 +2278,26 @@ export const,
     roi: 'Cut post-production hours by 6080%.',
     useCases: ['Transcripts', 'Repurposing'],
     integrations: ['RSS', 'YouTube', 'Anchor'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/podcast-transcription'
-    icon: ''
-    color: 'from-fuchsia-600 to-violet-700'
-    popular: true;
-    launchDate: '2024-12-02'
-    customers: 210;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/podcast-transcription',
+    icon: '',
+    color: 'from-fuchsia-600 to-violet-700',
+    popular:
+        popular: true;
+    launchDate: '2024-12-02',
+    customers:
+        customers: 210;
     rating: 4.7;
     reviews: 52},
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description: 'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.',
-    category: 'AI & Data'
-    price: unknown;
+    category: 'AI & Data',
+    price:
+        price: unknown;
       monthly: 199;
       yearly: 1990;
       currency: 'USD',
@@ -2335,20 +2384,23 @@ export const,
     integrations: ['S3', 'GCS', 'Databricks'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio'
-    icon: ''
-    color: 'from-teal-600 to-emerald-700'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 35;
+    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio',
+    icon: '',
+    color: 'from-teal-600 to-emerald-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 35;
     rating: 4.8;
     reviews: 11},
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
     description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.',
-    category: 'AI & Platform'
-    price: unknown;
+    category: 'AI & Platform',
+    price:
+        price: unknown;
       monthly: 299;
       yearly: 2990;
       currency: 'USD',
@@ -2439,20 +2491,23 @@ export const,
     integrations: ['OpenAI', 'Anthropic', 'Azure'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway'
-    icon: ''
-    color: 'from-cyan-700 to-blue-800'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 42;
+    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway',
+    icon: '',
+    color: 'from-cyan-700 to-blue-800',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 42;
     rating: 4.8;
     reviews: 13},
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description: 'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.',
-    category: 'Data & Analytics'
-    price: unknown;
+    category: 'Data & Analytics',
+    price:
+        price: unknown;
       monthly: 249;
       yearly: 2490;
       currency: 'USD',
@@ -2531,22 +2586,26 @@ export const,
     roi: 'Deliver insights in days, not months.',
     useCases: ['Product analytics', 'Finance BI'],
     integrations: ['S3', 'BigQuery', 'Snowflake'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter'
-    icon: ''
-    color: 'from-stone-600 to-zinc-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 24;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter',
+    icon: '',
+    color: 'from-stone-600 to-zinc-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 24;
     rating: 4.6;
     reviews: 7},
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
-    category: 'Data & Platform'
-    price: unknown;
+    category: 'Data & Platform',
+    price:
+        price: unknown;
       monthly: 129;
       yearly: 1290;
       currency: 'USD',
@@ -2631,17 +2690,26 @@ export const,
     roi: 'Reduce data breakage incidents by 5070%.',
     useCases: ['Warehouse governance', 'Analytics contracts'],
     integrations: ['dbt', 'GitHub', 'BigQuery'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    link: 'https://ziontechgroup.com/services/data-contracts-hub'
-    icon: ''
-    color: 'from-lime-600 to-green-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 19;
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    link: 'https://ziontechgroup.com/services/data-contracts-hub',
+    icon: '',
+    color: 'from-lime-600 to-green-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 19;
     rating: 4.6;
+<<<<<<< HEAD
     reviews: 6}];
     id: 'ai-legal-document-generator'
+=======
+    reviews: 6;
+  }];
+    id: 'ai-legal-document-generator',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
@@ -2715,9 +2783,9 @@ export const,
       '24/7 legal support'
     ]
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-indigo-600'
-    textColor: 'text-blue-400'
+    icon: '',
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-documents',
     marketPosition: 'Leading AI legal document platform with 99.7% accuracy rate',
     targetAudience:,
@@ -2772,7 +2840,7 @@ export const,
       'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
-    marketSize: '$2.1B legal tech market'
+    marketSize: '$2.1B legal tech market',
     growthRate: '35% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2826,9 +2894,9 @@ export const,
       'Real-time learning'
     ]
     popular: true;
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
-    textColor: 'text-green-400'
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
+    textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience:,
@@ -2883,14 +2951,14 @@ export const,
       'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
-    marketSize: '$15.8B customer service software market'
+    marketSize: '$15.8B customer service software market',
     growthRate: '28% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-seo-optimizer-pro'
+    id: 'ai-seo-optimizer-pro',
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
     price: '$199',
@@ -2945,9 +3013,9 @@ export const,
       'Performance analytics'
     ]
     popular: true;
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
-    textColor: 'text-purple-400'
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
+    textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-seo-optimizer',
     marketPosition: 'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience:,
@@ -3002,14 +3070,14 @@ export const,
       'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
-    marketSize: '$8.2B SEO tools market'
+    marketSize: '$8.2B SEO tools market',
     growthRate: '32% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-video-editing-suite'
+    id: 'ai-video-editing-suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
     price: '$299',
@@ -3064,9 +3132,9 @@ export const,
       'Export to multiple formats'
     ]
     popular: true;
-    icon: ''
-    color: 'from-red-500 to-pink-600'
-    textColor: 'text-red-400'
+    icon: '',
+    color: 'from-red-500 to-pink-600',
+    textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
     targetAudience:,
@@ -3119,8 +3187,9 @@ export const,
       'Educational content'
       'Event highlights'
     ]
-    roi: '80% reduction in editing time'
-    competitors: [
+    roi: '80% reduction in editing time',
+    competitors:
+        competitors: [
     ro,
   i: '80% reduction in editing time'
     competitor,
@@ -3131,14 +3200,14 @@ export const,
       'Camtasia'
       'Filmora'
     ]
-    marketSize: '$3.2B video editing software market'
-    growthRate: '45% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$3.2B video editing software market',
+    growthRate: '45% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-data-analytics-platform'
+    id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
     price: '$399',
@@ -3187,9 +3256,9 @@ export const,
       'Advanced security'
     ]
     popular: true;
-    icon: ''
-    color: 'from-cyan-500 to-blue-600'
-    textColor: 'text-cyan-400'
+    icon: '',
+    color: 'from-cyan-500 to-blue-600',
+    textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-data-analytics',
     marketPosition: 'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience:,
@@ -3245,14 +3314,14 @@ export const,
       'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
-    marketSize: '$23.4B business intelligence market'
+    marketSize: '$23.4B business intelligence market',
     growthRate: '38% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-hr-recruitment-platform'
+    id: 'ai-hr-recruitment-platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI-powered recruitment automation',
     price: '$179',
@@ -3307,9 +3376,9 @@ export const,
       'Mobile app access'
     ]
     popular: true;
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
-    textColor: 'text-indigo-400'
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
+    textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-recruitment',
     marketPosition: 'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience:,
@@ -3363,8 +3432,9 @@ export const,
       'Interview coordination'
       'Hiring analytics'
     ]
-    roi: '50% reduction in time-to-hire'
-    competitors: [
+    roi: '50% reduction in time-to-hire',
+    competitors:
+        competitors: [
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
@@ -3375,14 +3445,14 @@ export const,
       'Lever'
       'SmartRecruiters'
     ]
-    marketSize: '$2.8B recruitment software market'
-    growthRate: '42% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$2.8B recruitment software market',
+    growthRate: '42% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-sales-automation-platform'
+    id: 'ai-sales-automation-platform',
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
     price: '$249',
@@ -3431,9 +3501,9 @@ export const,
       'Custom workflows'
     ]
     popular: true;
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
-    textColor: 'text-yellow-400'
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
+    textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-sales-automation',
     marketPosition: 'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience:,
@@ -3487,8 +3557,9 @@ export const,
       'Email campaigns'
       'Performance tracking'
     ]
-    roi: '35% increase in sales conversion rates'
-    competitors: [
+    roi: '35% increase in sales conversion rates',
+    competitors:
+        competitors: [
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
@@ -3499,14 +3570,14 @@ export const,
       'Zoho CRM'
       'Freshsales'
     ]
-    marketSize: '$18.6B CRM market'
-    growthRate: '33% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$18.6B CRM market',
+    growthRate: '33% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-market-research-platform'
+    id: 'ai-market-research-platform',
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI-powered research',
     price: '$159',
@@ -3555,9 +3626,9 @@ export const,
       'Export capabilities'
     ]
     popular: true;
-    icon: ''
-    color: 'from-teal-500 to-green-600'
-    textColor: 'text-teal-400'
+    icon: '',
+    color: 'from-teal-500 to-green-600',
+    textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-market-research',
     marketPosition: 'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience:,
@@ -3609,8 +3680,9 @@ export const,
       'Investment decisions'
       'Product development'
     ]
-    roi: '200% faster market insights generation'
-    competitors: [
+    roi: '200% faster market insights generation',
+    competitors:
+        competitors: [
     ro,
   i: '200% faster market insights generation'
     competitor,
@@ -3621,14 +3693,14 @@ export const,
       'Euromonitor'
       'Forrester'
     ]
-    marketSize: '$1.9B market research market'
-    growthRate: '28% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$1.9B market research market',
+    growthRate: '28% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-blockchain-analytics'
+    id: 'ai-blockchain-analytics',
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
     price: '$599',
@@ -3677,9 +3749,9 @@ export const,
       'Multi-chain support'
     ]
     popular: true;
-    icon: ''
-    color: 'from-gray-500 to-slate-600'
-    textColor: 'text-gray-400'
+    icon: '',
+    color: 'from-gray-500 to-slate-600',
+    textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-blockchain-analytics',
     marketPosition: 'Leading blockchain analytics with 99.9% transaction accuracy',
     targetAudience:,
@@ -3731,8 +3803,9 @@ export const,
       'Portfolio analysis'
       'Market research'
     ]
-    roi: '300% improvement in blockchain intelligence'
-    competitors: [
+    roi: '300% improvement in blockchain intelligence',
+    competitors:
+        competitors: [
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
@@ -3743,14 +3816,14 @@ export const,
       'Blockchain.com'
       'Etherscan'
     ]
-    marketSize: '$1.2B blockchain analytics market'
-    growthRate: '65% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$1.2B blockchain analytics market',
+    growthRate: '65% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-cloud-cost-optimizer'
+    id: 'ai-cloud-cost-optimizer',
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
     price: '$199',
@@ -3799,9 +3872,9 @@ export const,
       'API integration'
     ]
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-cyan-600'
-    textColor: 'text-blue-400'
+    icon: '',
+    color: 'from-blue-500 to-cyan-600',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition: 'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience:,
@@ -3854,8 +3927,9 @@ export const,
       'Budget management'
       'Performance optimization'
     ]
-    roi: '40% reduction in cloud costs'
-    competitors: [
+    roi: '40% reduction in cloud costs',
+    competitors:
+        competitors: [
     ro,
   i: '40% reduction in cloud costs'
     competitor,
@@ -3866,14 +3940,14 @@ export const,
       'Cloudability'
       'AWS Cost Explorer'
     ]
-    marketSize: '$4.8B cloud cost management market'
-    growthRate: '52% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$4.8B cloud cost management market',
+    growthRate: '52% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-database-performance-monitor'
+    id: 'ai-database-performance-monitor',
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI-powered monitoring',
     price: '$179',
@@ -3923,14 +3997,17 @@ export const,
       'API access',
       'Multi-database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal']
-    support: 'Dedicated health coach, community support, and 24/7 platform assistance.'
-    compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
-    link: 'https://ziontechgroup.com/ai-health-coach'
+    support: 'Dedicated health coach, community support, and 24/7 platform assistance.',
+    compliance:
+        compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
+    link: 'https://ziontechgroup.com/ai-health-coach',
     icon: '';
-    color: 'from-red-500 to-pink-600'
-    popular: false;
-    launchDate: '2024-03-05'
-    customers: 1100;
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2024-03-05',
+    customers:
+        customers: 1100;
     rating: 4.6;
     reviews: 134}
     id: 'ai-email-responder-pro',
@@ -3938,8 +4015,9 @@ export const,
     tagline: 'Auto-triage and reply to routine emails with guardrails',
     description:,
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.'
-    category: 'Productivity & Automation'
-    price: monthly: 79;
+    category: 'Productivity & Automation',
+    price:
+        price: monthly: 79;
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
@@ -3963,28 +4041,32 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.'
-    roi: 'Reduce support headcount needs by 0.20.5 FTE per 1 k tickets/mo.'
-    useCases: [,
+    roi: 'Reduce support headcount needs by 0.20.5 FTE per 1 k tickets/mo.',
+    useCases:
+        useCases: [,
       'Support autoreplies',
       'Sales follow-ups',
       'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack']
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II']
-    link: 'https://ziontechgroup.com/ai-email-responder'
+    link: 'https://ziontechgroup.com/ai-email-responder',
     icon: '';
-    color: 'from-cyan-600 to-blue-700'
-    popular: true;
-    launchDate: '2025-02-01'
-    customers: 180;
+    color: 'from-cyan-600 to-blue-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-01',
+    customers:
+        customers: 180;
     rating: 4.7;
     reviews: 46}
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
-    tagline: 'Adaptive, chat-style surveys with higher completion rates'
-    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.'
-    category: 'Marketing & Research'
-    price: monthly: 49;
+    tagline: 'Adaptive, chat-style surveys with higher completion rates',
+    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.',
+    category: 'Marketing & Research',
+    price:
+        price: monthly: 49;
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -4145,22 +4227,26 @@ export const,
     roi: 'Improves feedback volume 2050%.',
     useCases: ['NPS', 'Beta feedback', 'Lead qual']
     integrations: ['HubSpot', 'Segment', 'Zapier']
-    support: 'Email support, templates library'
-    compliance: ['GDPR', 'CCPA']
-    link: 'https://ziontechgroup.com/mobile-surveys'
+    support: 'Email support, templates library',
+    compliance:
+        compliance: ['GDPR', 'CCPA']
+    link: 'https://ziontechgroup.com/mobile-surveys',
     icon: '';
-    color: 'from-emerald-600 to-teal-700'
-    popular: false;
-    launchDate: '2024-12-10'
-    customers: 95;
+    color: 'from-emerald-600 to-teal-700',
+    popular:
+        popular: false;
+    launchDate: '2024-12-10',
+    customers:
+        customers: 95;
     rating: 4.6;
     reviews: 22}
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
-    tagline: 'Opinionated project boards, tailored to your industry'
-    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.'
-    category: 'Operations'
-    price: monthly: 39;
+    tagline: 'Opinionated project boards, tailored to your industry',
+    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
+    category: 'Operations',
+    price:
+        price: monthly: 39;
       yearly: 390;
       currency: 'USD',
       trialDays: 14;
@@ -4181,22 +4267,26 @@ export const,
     roi: 'Deliverables throughput +1525%.',
     useCases: ['Client delivery', 'Editorial calendar', 'Sprints']
     integrations: ['Google Calendar', 'Slack', 'Linear']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/productivity-planner'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/productivity-planner',
     icon: '';
-    color: 'from-purple-600 to-pink-600'
-    popular: false;
-    launchDate: '2025-01-20'
-    customers: 60;
+    color: 'from-purple-600 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2025-01-20',
+    customers:
+        customers: 60;
     rating: 4.5;
     reviews: 14}
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
-    tagline: 'Tickets, scheduling, engagement analytics in one place'
-    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.'
-    category: 'Media & Events'
-    price: monthly: 129;
+    tagline: 'Tickets, scheduling, engagement analytics in one place',
+    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
+    category: 'Media & Events',
+    price:
+        price: monthly: 129;
       yearly: 1290;
       currency: 'USD',
       trialDays: 7;
@@ -4212,26 +4302,29 @@ export const,
     competitors: ['Hopin', 'Eventbrite']
     techStack: ['Next.js', 'Stripe', 'Supabase']
     realImplementation: true;
-    implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.'
+    implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.',
     roi: 'Increase sponsorship revenue 1020%.',
     useCases: ['Webinars', 'Summits', 'Workshops']
     integrations: ['Stripe', 'Mailchimp', 'Zapier']
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI']
-    link: 'https://ziontechgroup.com/event-management'
+    link: 'https://ziontechgroup.com/event-management',
     icon: '';
-    color: 'from-indigo-600 to-blue-700'
-    popular: false;
-    launchDate: '2024-11-18'
-    customers: 70;
+    color: 'from-indigo-600 to-blue-700',
+    popular:
+        popular: false;
+    launchDate: '2024-11-18',
+    customers:
+        customers: 70;
     rating: 4.6;
     reviews: 18}
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
-    tagline: 'Links, attribution, commissions, payoutsno spreadsheet required'
-    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.'
-    category: 'Growth'
-    price: monthly: 99;
+    tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
+    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.',
+    category: 'Growth',
+    price:
+        price: monthly: 99;
       yearly: 990;
       currency: 'USD',
       trialDays: 14;
@@ -4247,18 +4340,21 @@ export const,
     competitors: ['PartnerStack', 'Impact']
     techStack: ['Next.js', 'PostgreSQL', 'Stripe']
     realImplementation: true;
-    implementationDetails: 'Link generation, tracking pixels, payout ledger.'
+    implementationDetails: 'Link generation, tracking pixels, payout ledger.',
     roi: 'Affiliate channel +1030% revenue.',
     useCases: ['Influencer programs', 'Partner marketplaces']
     integrations: ['Shopify', 'WooCommerce', 'Stripe']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/affiliate-tracking'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/affiliate-tracking',
     icon: '';
-    color: 'from-rose-600 to-red-700'
-    popular: false;
-    launchDate: '2024-10-12'
-    customers: 55;
+    color: 'from-rose-600 to-red-700',
+    popular:
+        popular: false;
+    launchDate: '2024-10-12',
+    customers:
+        customers: 55;
     rating: 4.4;
     reviews: 12}
     id: 'smb-website-analytics',
@@ -4266,8 +4362,9 @@ export const,
     tagline: 'Privacy-friendly analytics with actionable insights',
     description:,
       'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.'
-    category: 'Analytics'
-    price: monthly: 29;
+    category: 'Analytics',
+    price:
+        price: monthly: 29;
       yearly: 290;
       currency: 'USD',
       trialDays: 14;
@@ -4283,26 +4380,30 @@ export const,
     competitors: ['Plausible', 'Fathom']
     techStack: ['Next.js', 'Edge Analytics', 'PostgreSQL']
     realImplementation: true;
-    implementationDetails: 'Script tag, event API, insights jobs.'
+    implementationDetails: 'Script tag, event API, insights jobs.',
     roi: 'Improve conversion 515% via insights.',
     useCases: ['Landing pages', 'Campaign tracking']
     integrations: ['Shopify', 'Webflow', 'Zapier']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/website-analytics'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/website-analytics',
     icon: '';
-    color: 'from-sky-600 to-cyan-700'
-    popular: true;
-    launchDate: '2025-02-05'
-    customers: 140;
+    color: 'from-sky-600 to-cyan-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-05',
+    customers:
+        customers: 140;
     rating: 4.7;
     reviews: 28}
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
-    tagline: 'Tickets, SLA timers, knowledge base, portalready day one'
-    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.'
-    category: 'IT & Operations'
-    price: monthly: 59;
+    tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
+    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.',
+    category: 'IT & Operations',
+    price:
+        price: monthly: 59;
       yearly: 590;
       currency: 'USD',
       trialDays: 14;
@@ -4318,18 +4419,20 @@ export const,
     competitors: ['Zendesk', 'Freshservice']
     techStack: ['Next.js', 'PostgreSQL', 'Node.js']
     realImplementation: true;
-    implementationDetails: 'Inbound parser, workflow builder, KB CMS.'
+    implementationDetails: 'Inbound parser, workflow builder, KB CMS.',
     roi: 'Reduce ticket volume 1525% via KB.',
     useCases: ['IT requests', 'Access provisioning']
     integrations: ['Okta', 'Google Workspace', 'Slack']
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/it-helpdesk'
+    link: 'https://ziontechgroup.com/it-helpdesk',
     icon: '';
-    color: 'from-slate-600 to-gray-700'
-    popular: false;
-    launchDate: '2024-09-22'
-    customers: 120;
+    color: 'from-slate-600 to-gray-700',
+    popular:
+        popular: false;
+    launchDate: '2024-09-22',
+    customers:
+        customers: 120;
     rating: 4.5;
     reviews: 31}
     id: 'ecommerce-return-manager',
@@ -4337,8 +4440,9 @@ export const,
     tagline: 'Customer-friendly returns with labels and status tracking',
     description:,
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.'
-    category: 'Ecommerce'
-    price: monthly: 79;
+    category: 'Ecommerce',
+    price:
+        price: monthly: 79;
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
@@ -4359,15 +4463,19 @@ export const,
     roi: 'Reduce refund losses via exchanges.',
     useCases: ['Returns', 'Exchanges', 'Warranties']
     integrations: ['Shopify', 'Shippo', 'EasyPost']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/return-manager'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/return-manager',
     icon: '';
-    color: 'from-amber-600 to-orange-700'
-    popular: false;
-    launchDate: '2024-08-30'
-    customers: 75;
+    color: 'from-amber-600 to-orange-700',
+    popular:
+        popular: false;
+    launchDate: '2024-08-30',
+    customers:
+        customers: 75;
     rating: 4.4;
+<<<<<<< HEAD
     reviews: 19}
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -4375,6 +4483,17 @@ export const,
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
     price: monthly: 49;
+=======
+    reviews: 19;
+  }
+    id: 'auto-email-followups',
+    name: 'Automated Email Followups',
+    tagline: 'Cadence sequences for leads with AI personalization',
+    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.',
+    category: 'Sales',
+    price:
+        price: monthly: 49;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -4390,26 +4509,29 @@ export const,
     competitors: ['Lemlist', 'Mailshake']
     techStack: ['Next.js', 'PostgreSQL', 'OpenAI']
     realImplementation: true;
-    implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.'
+    implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.',
     roi: '+1020% conversion uplift.',
     useCases: ['Prospecting', 'Renewals']
     integrations: ['HubSpot', 'Pipedrive', 'Gmail']
     support: 'Email support',
     compliance: ['GDPR', 'CAN-SPAM']
-    link: 'https://ziontechgroup.com/email-followups'
+    link: 'https://ziontechgroup.com/email-followups',
     icon: '';
-    color: 'from-blue-600 to-indigo-700'
-    popular: false;
-    launchDate: '2025-01-25'
-    customers: 90;
+    color: 'from-blue-600 to-indigo-700',
+    popular:
+        popular: false;
+    launchDate: '2025-01-25',
+    customers:
+        customers: 90;
     rating: 4.5;
     reviews: 17}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
-    tagline: 'Accurate transcripts, show notes, and highlights'
-    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.'
-    category: 'Media & Content'
-    price: monthly: 39;
+    tagline: 'Accurate transcripts, show notes, and highlights',
+    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.',
+    category: 'Media & Content',
+    price:
+        price: monthly: 39;
       yearly: 390;
       currency: 'USD',
       trialDays: 7;
@@ -4425,18 +4547,21 @@ export const,
     competitors: ['Descript', 'Rev']
     techStack: ['Whisper', 'Next.js', 'S3']
     realImplementation: true;
-    implementationDetails: 'Batch jobs, cloud storage, editor UI.'
+    implementationDetails: 'Batch jobs, cloud storage, editor UI.',
     roi: 'Cut post-production hours by 6080%.',
     useCases: ['Transcripts', 'Repurposing']
     integrations: ['RSS', 'YouTube', 'Anchor']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/podcast-transcription'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/podcast-transcription',
     icon: '';
-    color: 'from-fuchsia-600 to-violet-700'
-    popular: true;
-    launchDate: '2024-12-02'
-    customers: 210;
+    color: 'from-fuchsia-600 to-violet-700',
+    popular:
+        popular: true;
+    launchDate: '2024-12-02',
+    customers:
+        customers: 210;
     rating: 4.7;
     reviews: 52}
     id: 'ai-knowledge-graph-studio',
@@ -4444,8 +4569,9 @@ export const,
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description:,
       'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.'
-    category: 'AI & Data'
-    price: monthly: 199;
+    category: 'AI & Data',
+    price:
+        price: monthly: 199;
       yearly: 1990;
       currency: 'USD',
       trialDays: 14;
@@ -4461,26 +4587,29 @@ export const,
     competitors: ['Neo4j', 'Memgraph']
     techStack: ['TypeScript', 'Neo4j', 'pgvector', 'OpenAI']
     realImplementation: true;
-    implementationDetails: 'ETL connectors, graph builder UI, API for queries.'
+    implementationDetails: 'ETL connectors, graph builder UI, API for queries.',
     roi: 'Reduce discovery time 3050%.',
     useCases: ['RAG graphs', 'Data lineage', 'Glossaries']
     integrations: ['S3', 'GCS', 'Databricks']
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio'
+    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio',
     icon: '';
-    color: 'from-teal-600 to-emerald-700'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 35;
+    color: 'from-teal-600 to-emerald-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 35;
     rating: 4.8;
     reviews: 11}
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
-    tagline: 'Policy, safety, metering and routing for GenAI apps'
-    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.'
-    category: 'AI & Platform'
-    price: monthly: 299;
+    tagline: 'Policy, safety, metering and routing for GenAI apps',
+    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.',
+    category: 'AI & Platform',
+    price:
+        price: monthly: 299;
       yearly: 2990;
       currency: 'USD',
       trialDays: 14;
@@ -4496,18 +4625,20 @@ export const,
   competitors: ['OpenRouter', 'EdenAI', 'Helicone']
     techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic']
     realImplementation: true;
-    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.'
+    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.',
     roi: 'Cut model costs by 2040%.',
     useCases: ['Central model access', 'Safety']
     integrations: ['OpenAI', 'Anthropic', 'Azure']
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway'
+    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway',
     icon: '';
-    color: 'from-cyan-700 to-blue-800'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 42;
+    color: 'from-cyan-700 to-blue-800',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 42;
     rating: 4.8;
     reviews: 13}
     id: 'serverless-lakehouse-starter',
@@ -4515,8 +4646,9 @@ export const,
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description:,
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.'
-    category: 'Data & Analytics'
-    price: monthly: 249;
+    category: 'Data & Analytics',
+    price:
+        price: monthly: 249;
       yearly: 2490;
       currency: 'USD',
       trialDays: 7;
@@ -4532,26 +4664,30 @@ export const,
     competitors: ['Airbyte', 'Fivetran (partial)']
     techStack: ['Terraform', 'dbt', 'ClickHouse/BigQuery']
     realImplementation: true;
-    implementationDetails: 'Templates, IaC modules, CI gates.'
-    roi: 'Deliver insights in days, not months.'
+    implementationDetails: 'Templates, IaC modules, CI gates.',
+    roi: 'Deliver insights in days, not months.',
     useCases: ['Product analytics', 'Finance BI']
     integrations: ['S3', 'BigQuery', 'Snowflake']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter',
     icon: '';
-    color: 'from-stone-600 to-zinc-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 24;
+    color: 'from-stone-600 to-zinc-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 24;
     rating: 4.6;
     reviews: 7}
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
-    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
-    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.'
-    category: 'Data & Platform'
-    price: monthly: 129;
+    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
+    category: 'Data & Platform',
+    price:
+        price: monthly: 129;
       yearly: 1290;
       currency: 'USD',
       trialDays: 14;
@@ -4567,18 +4703,21 @@ export const,
     competitors: ['OpenMetadata', 'Great Expectations']
     techStack: ['TypeScript', 'PostgreSQL', 'dbt']
     realImplementation: true;
-    implementationDetails: 'Contracts as code, PR checks, lineage view.'
+    implementationDetails: 'Contracts as code, PR checks, lineage view.',
     roi: 'Reduce data breakage incidents by 5070%.',
     useCases: ['Warehouse governance', 'Analytics contracts']
     integrations: ['dbt', 'GitHub', 'BigQuery']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/data-contracts-hub'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/services/data-contracts-hub',
     icon: '';
-    color: 'from-lime-600 to-green-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 19;
+    color: 'from-lime-600 to-green-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 19;
     rating: 4.6;
     reviews: 6}];
 // Helper functions;
@@ -4588,41 +4727,47 @@ export const getServicesByCategory = (category: string) =>}];
 export const getServicesByCategory = (category: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category),    id: 'data - contracts - hub',
     name: 'Data Contracts Hub',
-    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
-    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.'
+    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
     category: 'Data & Platform',
     price: {monthly: 129, yearly: 1290, currency: 'USD'} trial_days: 14; setup_time: '2 hours' }
     features: ['Schema registry_diff viewerCI gates_backfill helpers'];
     benefits: ['Fewer incidents_faster changes'];
     target_audience: ['Data platform_analytics engineers'];
-    market_position: 'Complements dbt and warehouse - native governance.'
-    competitors: ['OpenMetadataGreat Expectations'];
+    market_position: 'Complements dbt and warehouse - native governance.',
+    competitors:
+        competitors: ['OpenMetadataGreat Expectations'];
     tech_stack: ['TypeScriptPostgreSQLdbt'],
     real_implementation: true;
-    implementation_details: 'Contracts as code, PR checks, lineage view.'
-    roi: 'Reduce data breakage incidents by 5070%.'
+    implementation_details: 'Contracts as code, PR checks, lineage view.',
+    roi: 'Reduce data breakage incidents by 5070%.',
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com / services / data - contracts - hub'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com / services / data - contracts - hub',
     icon: '';
-    color: 'from - lime - 600 to - green - 700'
-    popular: false;
-    launch_date: '2025 - 02 - 08'
-    customers: 19;
+    color: 'from - lime - 600 to - green - 700',
+    popular:
+        popular: false;
+    launch_date: '2025 - 02 - 08',
+    customers:
+        customers: 19;
     rating: 4 && 4.6;
     reviews: 6}
 ];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
-marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
-competitors: ['TypeformSurveySparrowTally'];
+marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
+competitors:
+        competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
-implementationDetails: 'Template gallery, response store, analytics, export jobs.'
-    rating: 4.6;
+implementationDetails: 'Template gallery, response store, analytics, export jobs.',
+    rating:
+        rating: 4.6;
     reviews: 6;
     ]
     benefit,
@@ -5606,23 +5751,28 @@ implementationDetail,
 export const getServicesByCategory = (categor)
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
-market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
-competitors: ['TypeformSurveySparrowTally'];
+market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
+competitors:
+        competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
-implementation_details: 'Template gallery, response store, analytics, export jobs.'
+implementation_details: 'Template gallery, response store, analytics, export jobs.',
 roi: 'Improves feedback volume 2050%.',
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'],
-support: 'Email support, templates library'
-compliance: ['GDPRCCPA'];
-link: 'https://ziontechgroup.com / mobile - surveys'
+support: 'Email support, templates library',
+compliance:
+        compliance: ['GDPRCCPA'];
+link: 'https://ziontechgroup.com / mobile - surveys',
 icon: '';
-color: 'from - emerald - 600 to - teal - 700'
-popular: false;
-launch_date: '2024 - 12 - 10'
-customers: 95;
+color: 'from - emerald - 600 to - teal - 700',
+popular:
+        popular: false;
+launch_date: '2024 - 12 - 10',
+customers:
+        customers: 95;
 rating: 4 && 4.6;
+<<<<<<< HEAD
 reviews: 22};
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
@@ -5632,20 +5782,39 @@ implementationDetails: 'Template JSON schemas, rules engine, import/export.'
 reviews: 22}
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
+=======
+reviews: 22;
+};
+marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
+competitors:
+        competitors: ['AsanaClickUpNotion'];
+techStack: ['Next && Next.jsPrismaPostgreSQL'];
+realImplementation: true;
+implementationDetails: 'Template JSON schemas, rules engine, import/export.',
+reviews:
+        reviews: 22;
+}
+market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
+competitors:
+        competitors: ['AsanaClickUpNotion'];
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
-implementation_details: 'Template JSON schemas, rules engine, import / export.'
-roi: 'Deliverables throughput +1525%.'
+implementation_details: 'Template JSON schemas, rules engine, import / export.',
+roi: 'Deliverables throughput +1525%.',
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
-support: 'Email support'
-compliance: ['GDPR'];
-link: 'https://ziontechgroup.com / productivity - planner'
+support: 'Email support',
+compliance:
+        compliance: ['GDPR'];
+link: 'https://ziontechgroup.com / productivity - planner',
 icon: '';
-color: 'from - purple - 600 to - pink - 600'
-popular: false;
-launch_date: '2025 - 01 - 20'
-customers: 60;
+color: 'from - purple - 600 to - pink - 600',
+popular:
+        popular: false;
+launch_date: '2025 - 01 - 20',
+customers:
+        customers: 60;
 rating: 4 && 4.5;
 reviews: 14;
 market_positio,
@@ -7537,7 +7706,7 @@ export const serviceCategories = [
     icon: '',
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents',
     trial_days: 14;
-    setup_time: '15 minutes'
+    setup_time: '15 minutes',
     category: 'Legal Technology',
     real_service: true;
     technology: [,
@@ -7587,7 +7756,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - customer - service - automation'
+    id: 'ai - customer - service - automation',
     name: 'AI Customer Service Automation',
     tagline: '24 / 7 intelligent customer support with AI chatbots',
     price: '$149',
@@ -7619,7 +7788,7 @@ export const serviceCategories = [
       'API integrations',
       'Real - time learning'],
     popular: true;
-    icon: ''
+    icon: '',
     category: 'Customer Service & Support',
     real_service: true;
     technology: [,
@@ -7664,7 +7833,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - seo - optimizer - pro'
+    id: 'ai - seo - optimizer - pro',
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
     price: '$199',
@@ -7701,7 +7870,7 @@ export const serviceCategories = [
     target_audience: unknown;
       'Digital marketing agencies, e - commerce businesses, content creators, small businesses',
     trial_days: 14;
-    setup_time: '1 hour'
+    setup_time: '1 hour',
     category: 'Digital Marketing & SEO',
     real_service: true;
     technology: [,
@@ -7756,7 +7925,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - video - editing - suite'
+    id: 'ai - video - editing - suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
     price: '$299',
@@ -7791,7 +7960,7 @@ export const serviceCategories = [
     icon: '',
       'Content creators, video marketers, social media managers, film students, small businesses',
     trial_days: 21;
-    setup_time: '30 minutes'
+    setup_time: '30 minutes',
     category: 'Creative & Media',
     real_service: true;
     technology: [,
@@ -7848,7 +8017,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - data - analytics - platform'
+    id: 'ai - data - analytics - platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
     price: '$399',
@@ -7885,7 +8054,7 @@ export const serviceCategories = [
     target_audience: unknown;
       'Data analysts, business intelligence teams, marketing agencies, e - commerce businesses',
     trial_days: 21;
-    setup_time: '4 hours'
+    setup_time: '4 hours',
     category: 'Data & Analytics',
     real_service: true;
     technology: [,
@@ -7941,7 +8110,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - hr - recruitment - platform'
+    id: 'ai - hr - recruitment - platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI - powered recruitment automation',
     price: '$179',
@@ -7978,7 +8147,7 @@ export const serviceCategories = [
     target_audience: unknown;
       'HR professionals, recruitment agencies, small businesses, enterprise companies',
     trial_days: 14;
-    setup_time: '2 hours'
+    setup_time: '2 hours',
     category: 'Human Resources',
     real_service: true;
     technology: [,
@@ -8039,7 +8208,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - sales - automation - platform'
+    id: 'ai - sales - automation - platform',
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
     price: '$249',
@@ -8074,7 +8243,7 @@ export const serviceCategories = [
     icon: '',
       'Sales teams, B2B companies, real estate agents, insurance agents, consultants',
     trial_days: 21;
-    setup_time: '3 hours'
+    setup_time: '3 hours',
     category: 'Sales & CRM',
     real_service: true;
     technology: [,
@@ -8132,7 +8301,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - market - research - platform'
+    id: 'ai - market - research - platform',
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI - powered research',
     price: '$159',
@@ -8169,7 +8338,7 @@ export const serviceCategories = [
     target_audience: unknown;
       'Market researchers, business strategists, startups, investment firms, consultants',
     trial_days: 14;
-    setup_time: '2 hours'
+    setup_time: '2 hours',
     category: 'Market Research',
     real_service: true;
     technology: [,
@@ -8228,7 +8397,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - blockchain - analytics'
+    id: 'ai - blockchain - analytics',
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
     price: '$599',
@@ -8263,7 +8432,7 @@ export const serviceCategories = [
     icon: '',
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators',
     trial_days: 21;
-    setup_time: '4 hours'
+    setup_time: '4 hours',
     category: 'Blockchain & Cryptocurrency',
     real_service: true;
     technology: [,
@@ -8319,7 +8488,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - cloud - cost - optimizer'
+    id: 'ai - cloud - cost - optimizer',
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
     price: '$199',
@@ -8356,7 +8525,7 @@ export const serviceCategories = [
     target_audience: unknown;
       'DevOps teams, cloud architects, IT managers, startups, enterprise companies',
     trial_days: 21;
-    setup_time: '3 hours'
+    setup_time: '3 hours',
     category: 'Cloud & DevOps',
     real_service: true;
     technology: [,
@@ -8416,7 +8585,7 @@ export const serviceCategories = [
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}},
-    id: 'ai - database - performance - monitor'
+    id: 'ai - database - performance - monitor',
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI - powered monitoring',
     price: '$179',
@@ -8451,11 +8620,12 @@ export const serviceCategories = [
     support: unknown;
       'Dedicated health coach, community support, and 24 / 7 platform assistance.',
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],
-    icon: ''
-    color: 'from - red - 500 to - pink - 600'
+    icon: '',
+    color: 'from - red - 500 to - pink - 600',
     popular: false;
-    launch_date: '2024 - 03 - 05'
-    customers: 1100;
+    launch_date: '2024 - 03 - 05',
+    customers:
+        customers: 1100;
     rating: 4 && 4.6;
     reviews: 134},
     id: 'ai - email - responder - pro',
@@ -8463,8 +8633,9 @@ export const serviceCategories = [
     tagline: 'Auto - triage and reply to routine emails with guardrails',
     description: unknown;
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.',
-    category: 'Productivity & Automation'
-    price: unknown;
+    category: 'Productivity & Automation',
+    price:
+        price: unknown;
       monthly: 79;
       yearly: 790;
       currency: 'USD',
@@ -8546,11 +8717,12 @@ export const serviceCategories = [
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
-    icon: ''
-    color: 'from - cyan - 600 to - blue - 700'
+    icon: '',
+    color: 'from - cyan - 600 to - blue - 700',
     popular: true;
-    launch_date: '2025 - 02 - 01'
-    customers: 180;
+    launch_date: '2025 - 02 - 01',
+    customers:
+        customers: 180;
     rating: 4 && 4.7;
     reviews: 46},
     id: 'mobile - conversational - surveys',
@@ -8558,8 +8730,9 @@ export const serviceCategories = [
     tagline: 'Adaptive, chat - style surveys with higher completion rates',
     description: unknown;
       'Create mobile - first, conversational surveys that adapt based on answers. Real - time analytics and webhook exports.',
-    category: 'Marketing & Research'
-    price: unknown;
+    category: 'Marketing & Research',
+    price:
+        price: unknown;
       monthly: 49;
       yearly: 490;
       currency: 'USD',
@@ -8634,11 +8807,12 @@ export const serviceCategories = [
     integrations: ['HubSpot', 'Segment', 'Zapier'],
     support: 'Email support, templates library',
     compliance: ['GDPR', 'CCPA'],
-    icon: ''
-    color: 'from - emerald - 600 to - teal - 700'
+    icon: '',
+    color: 'from - emerald - 600 to - teal - 700',
     popular: false;
-    launch_date: '2024 - 12 - 10'
-    customers: 95;
+    launch_date: '2024 - 12 - 10',
+    customers:
+        customers: 95;
     rating: 4 && 4.6;
     reviews: 22},
     id: 'niche - productivity - planner',
@@ -8646,8 +8820,9 @@ export const serviceCategories = [
     tagline: 'Opinionated project boards, tailored to your industry',
     description: unknown;
       'Pre - built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
-    category: 'Operations'
-    price: unknown;
+    category: 'Operations',
+    price:
+        price: unknown;
       monthly: 39;
       yearly: 390;
       currency: 'USD',
@@ -8714,13 +8889,15 @@ export const serviceCategories = [
     roi: 'Deliverables throughput +1525%.',
     use_cases: ['Client delivery', 'Editorial calendar', 'Sprints'],
     integrations: ['Google Calendar', 'Slack', 'Linear'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - purple - 600 to - pink - 600'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - purple - 600 to - pink - 600',
     popular: false;
-    launch_date: '2025 - 01 - 20'
-    customers: 60;
+    launch_date: '2025 - 01 - 20',
+    customers:
+        customers: 60;
     rating: 4 && 4.5;
     reviews: 14},
     id: 'event - management - dashboard',
@@ -8728,8 +8905,9 @@ export const serviceCategories = [
     tagline: 'Tickets, scheduling, engagement analytics in one place',
     description: unknown;
       'Plan and manage events end - to - end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
-    category: 'Media & Events'
-    price: unknown;
+    category: 'Media & Events',
+    price:
+        price: unknown;
       monthly: 129;
       yearly: 1290;
       currency: 'USD',
@@ -8807,11 +8985,12 @@ export const serviceCategories = [
     integrations: ['Stripe', 'Mailchimp', 'Zapier'],
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI'],
-    icon: ''
-    color: 'from - indigo - 600 to - blue - 700'
+    icon: '',
+    color: 'from - indigo - 600 to - blue - 700',
     popular: false;
-    launch_date: '2024 - 11 - 18'
-    customers: 70;
+    launch_date: '2024 - 11 - 18',
+    customers:
+        customers: 70;
     rating: 4 && 4.6;
     reviews: 18},
     id: 'affiliate - tracking - suite',
@@ -8819,8 +8998,9 @@ export const serviceCategories = [
     tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
     description: unknown;
       'Manage affiliates with custom links, multi - touch attribution, fraud checks, and automated commission payouts.',
-    category: 'Growth'
-    price: unknown;
+    category: 'Growth',
+    price:
+        price: unknown;
       monthly: 99;
       yearly: 990;
       currency: 'USD',
@@ -8896,13 +9076,15 @@ export const serviceCategories = [
     roi: 'Affiliate channel +1030% revenue.',
     use_cases: ['Influencer programs', 'Partner marketplaces'],
     integrations: ['Shopify', 'WooCommerce', 'Stripe'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - rose - 600 to - red - 700'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - rose - 600 to - red - 700',
     popular: false;
-    launch_date: '2024 - 10 - 12'
-    customers: 55;
+    launch_date: '2024 - 10 - 12',
+    customers:
+        customers: 55;
     rating: 4 && 4.4;
     reviews: 12},
     id: 'smb - website - analytics',
@@ -8910,8 +9092,9 @@ export const serviceCategories = [
     tagline: 'Privacy - friendly analytics with actionable insights',
     description: unknown;
       'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.',
-    category: 'Analytics'
-    price: unknown;
+    category: 'Analytics',
+    price:
+        price: unknown;
       monthly: 29;
       yearly: 290;
       currency: 'USD',
@@ -8987,13 +9170,15 @@ export const serviceCategories = [
     roi: 'Improve conversion 515% via insights.',
     use_cases: ['Landing pages', 'Campaign tracking'],
     integrations: ['Shopify', 'Webflow', 'Zapier'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - sky - 600 to - cyan - 700'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - sky - 600 to - cyan - 700',
     popular: true;
-    launch_date: '2025 - 02 - 05'
-    customers: 140;
+    launch_date: '2025 - 02 - 05',
+    customers:
+        customers: 140;
     rating: 4 && 4.7;
     reviews: 28},
     id: 'it - helpdesk - lite',
@@ -9001,8 +9186,9 @@ export const serviceCategories = [
     tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
     description: unknown;
       'Streamlined helpdesk for MSPs and internal IT with email - to - ticket, SLA rules, automations, and a searchable KB.',
-    category: 'IT & Operations'
-    price: unknown;
+    category: 'IT & Operations',
+    price:
+        price: unknown;
       monthly: 59;
       yearly: 590;
       currency: 'USD',
@@ -9079,11 +9265,12 @@ export const serviceCategories = [
     integrations: ['Okta', 'Google Workspace', 'Slack'],
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2'],
-    icon: ''
-    color: 'from - slate - 600 to - gray - 700'
+    icon: '',
+    color: 'from - slate - 600 to - gray - 700',
     popular: false;
-    launch_date: '2024 - 09 - 22'
-    customers: 120;
+    launch_date: '2024 - 09 - 22',
+    customers:
+        customers: 120;
     rating: 4 && 4.5;
     reviews: 31},
     id: 'ecommerce - return - manager',
@@ -9091,8 +9278,9 @@ export const serviceCategories = [
     tagline: 'Customer - friendly returns with labels and status tracking',
     description: unknown;
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.',
-    category: 'Ecommerce'
-    price: unknown;
+    category: 'Ecommerce',
+    price:
+        price: unknown;
       monthly: 79;
       yearly: 790;
       currency: 'USD',
@@ -9171,13 +9359,15 @@ export const serviceCategories = [
     roi: 'Reduce refund losses via exchanges.',
     use_cases: ['Returns', 'Exchanges', 'Warranties'],
     integrations: ['Shopify', 'Shippo', 'EasyPost'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - amber - 600 to - orange - 700'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - amber - 600 to - orange - 700',
     popular: false;
-    launch_date: '2024 - 08 - 30'
-    customers: 75;
+    launch_date: '2024 - 08 - 30',
+    customers:
+        customers: 75;
     rating: 4 && 4.4;
     reviews: 19},
     id: 'auto - email - followups',
@@ -9185,8 +9375,9 @@ export const serviceCategories = [
     tagline: 'Cadence sequences for leads with AI personalization',
     description: unknown;
       'Consistent multi - touch follow - ups with AI - personalized snippets from CRM context and recent events.',
-    category: 'Sales'
-    price: unknown;
+    category: 'Sales',
+    price:
+        price: unknown;
       monthly: 49;
       yearly: 490;
       currency: 'USD',
@@ -9253,12 +9444,14 @@ export const serviceCategories = [
     roi: '+1020% conversion uplift.',
     use_cases: ['Prospecting', 'Renewals'],
     integrations: ['HubSpot', 'Pipedrive', 'Gmail'],
-    support: 'Email support'
-    icon: ''
-    color: 'from - blue - 600 to - indigo - 700'
-    popular: false;
-    launch_date: '2025 - 01 - 25'
-    customers: 90;
+    support: 'Email support',
+    icon: '',
+    color: 'from - blue - 600 to - indigo - 700',
+    popular:
+        popular: false;
+    launch_date: '2025 - 01 - 25',
+    customers:
+        customers: 90;
     rating: 4 && 4.5;
     reviews: 17},
     id: 'podcast - transcription - studio',
@@ -9266,8 +9459,9 @@ export const serviceCategories = [
     tagline: 'Accurate transcripts, show notes, and highlights',
     description: unknown;
       'Upload your episodes and receive transcripts, summaries, chapters, and social - ready highlights in minutes.',
-    category: 'Media & Content'
-    price: unknown;
+    category: 'Media & Content',
+    price:
+        price: unknown;
       monthly: 39;
       yearly: 390;
       currency: 'USD',
@@ -9337,11 +9531,12 @@ export const serviceCategories = [
     target_audience: ['Podcasters', 'Agencies'],
     market_position: 'Alternative to Descript transcripts with simpler pricing.',
     competitors: ['Descript', 'Rev'],
-    icon: ''
-    color: 'from - fuchsia - 600 to - violet - 700'
+    icon: '',
+    color: 'from - fuchsia - 600 to - violet - 700',
     popular: true;
-    launch_date: '2024 - 12 - 02'
-    customers: 210;
+    launch_date: '2024 - 12 - 02',
+    customers:
+        customers: 210;
     rating: 4 && 4.7;
     reviews: 52},
     id: 'ai - knowledge - graph - studio',
@@ -9349,8 +9544,9 @@ export const serviceCategories = [
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description: unknown;
       'Auto - extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.',
-    category: 'AI & Data'
-    price: unknown;
+    category: 'AI & Data',
+    price:
+        price: unknown;
       monthly: 199;
       yearly: 1990;
       currency: 'USD',
@@ -9420,11 +9616,12 @@ export const serviceCategories = [
     integrations: ['S3', 'GCS', 'Databricks'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    icon: ''
-    color: 'from - teal - 600 to - emerald - 700'
+    icon: '',
+    color: 'from - teal - 600 to - emerald - 700',
     popular: true;
-    launch_date: '2025 - 02 - 08'
-    customers: 35;
+    launch_date: '2025 - 02 - 08',
+    customers:
+        customers: 35;
     rating: 4 && 4.8;
     reviews: 11},
     id: 'llm - guarded - api - gateway',
@@ -9432,8 +9629,9 @@ export const serviceCategories = [
     tagline: 'Policy, safety, metering and routing for GenAI apps',
     description: unknown;
       'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi - provider routing.',
-    category: 'AI & Platform'
-    price: unknown;
+    category: 'AI & Platform',
+    price:
+        price: unknown;
       monthly: 299;
       yearly: 2990;
       currency: 'USD',
@@ -9520,11 +9718,12 @@ export const serviceCategories = [
     integrations: ['OpenAI', 'Anthropic', 'Azure'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    icon: ''
-    color: 'from - cyan - 700 to - blue - 800'
+    icon: '',
+    color: 'from - cyan - 700 to - blue - 800',
     popular: true;
-    launch_date: '2025 - 02 - 08'
-    customers: 42;
+    launch_date: '2025 - 02 - 08',
+    customers:
+        customers: 42;
     rating: 4 && 4.8;
     reviews: 13},
     id: 'serverless - lakehouse - starter',
@@ -9532,8 +9731,9 @@ export const serviceCategories = [
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description: unknown;
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.',
-    category: 'Data & Analytics'
-    price: unknown;
+    category: 'Data & Analytics',
+    price:
+        price: unknown;
       monthly: 249;
       yearly: 2490;
       currency: 'USD',
@@ -9604,13 +9804,15 @@ export const serviceCategories = [
     roi: 'Deliver insights in days, not months.',
     use_cases: ['Product analytics', 'Finance BI'],
     integrations: ['S3', 'BigQuery', 'Snowflake'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - stone - 600 to - zinc - 700'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - stone - 600 to - zinc - 700',
     popular: false;
-    launch_date: '2025 - 02 - 08'
-    customers: 24;
+    launch_date: '2025 - 02 - 08',
+    customers:
+        customers: 24;
     rating: 4 && 4.6;
     reviews: 7},
     id: 'data - contracts - hub',
@@ -9618,8 +9820,9 @@ export const serviceCategories = [
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
     description: unknown;
       'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
-    category: 'Data & Platform'
-    price: unknown;
+    category: 'Data & Platform',
+    price:
+        price: unknown;
       monthly: 129;
       yearly: 1290;
       currency: 'USD',
@@ -9702,13 +9905,15 @@ export const serviceCategories = [
     roi: 'Reduce data breakage incidents by 5070%.',
     use_cases: ['Warehouse governance', 'Analytics contracts'],
     integrations: ['dbt', 'GitHub', 'BigQuery'],
-    support: 'Email support'
-    compliance: ['GDPR']
-    icon: ''
-    color: 'from - lime - 600 to - green - 700'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR']
+    icon: '',
+    color: 'from - lime - 600 to - green - 700',
     popular: false;
-    launch_date: '2025 - 02 - 08'
-    customers: 19;
+    launch_date: '2025 - 02 - 08',
+    customers:
+        customers: 19;
     rating: 4 && 4.6;
     reviews: 6;
   id: string, name: string;
@@ -9730,7 +9935,7 @@ export const serviceCategories = [
     website: string}
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
-    id: 'ai-legal-document-generator'
+    id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
@@ -9851,9 +10056,9 @@ export const,
       '24/7 legal support'
     ]
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-indigo-600'
-    textColor: 'text-blue-400'
+    icon: '',
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-documents',
     marketPosition: 'Leading AI legal document platform with 99.7% accuracy rate',
     targetAudience:,
@@ -9908,7 +10113,7 @@ export const,
       'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
-    marketSize: '$2.1B legal tech market'
+    marketSize: '$2.1B legal tech market',
     growthRate: '35% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -9962,9 +10167,9 @@ export const,
       'Real-time learning'
     ]
     popular: true;
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
-    textColor: 'text-green-400'
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
+    textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience:,
@@ -10019,14 +10224,14 @@ export const,
       'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
-    marketSize: '$15.8B customer service software market'
+    marketSize: '$15.8B customer service software market',
     growthRate: '28% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-seo-optimizer-pro'
+    id: 'ai-seo-optimizer-pro',
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
     price: '$199',
@@ -10081,9 +10286,9 @@ export const,
       'Performance analytics'
     ]
     popular: true;
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
-    textColor: 'text-purple-400'
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
+    textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-seo-optimizer',
     marketPosition: 'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience:,
@@ -10138,14 +10343,14 @@ export const,
       'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
-    marketSize: '$8.2B SEO tools market'
+    marketSize: '$8.2B SEO tools market',
     growthRate: '32% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-video-editing-suite'
+    id: 'ai-video-editing-suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
     price: '$299',
@@ -10200,9 +10405,9 @@ export const,
       'Export to multiple formats'
     ]
     popular: true;
-    icon: ''
-    color: 'from-red-500 to-pink-600'
-    textColor: 'text-red-400'
+    icon: '',
+    color: 'from-red-500 to-pink-600',
+    textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
     targetAudience:,
@@ -10255,8 +10460,9 @@ export const,
       'Educational content'
       'Event highlights'
     ]
-    roi: '80% reduction in editing time'
-    competitors: [
+    roi: '80% reduction in editing time',
+    competitors:
+        competitors: [
     ro,
   i: '80% reduction in editing time'
     competitor,
@@ -10267,14 +10473,14 @@ export const,
       'Camtasia'
       'Filmora'
     ]
-    marketSize: '$3.2B video editing software market'
-    growthRate: '45% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$3.2B video editing software market',
+    growthRate: '45% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-data-analytics-platform'
+    id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
     price: '$399',
@@ -10323,9 +10529,9 @@ export const,
       'Advanced security'
     ]
     popular: true;
-    icon: ''
-    color: 'from-cyan-500 to-blue-600'
-    textColor: 'text-cyan-400'
+    icon: '',
+    color: 'from-cyan-500 to-blue-600',
+    textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-data-analytics',
     marketPosition: 'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience:,
@@ -10381,14 +10587,14 @@ export const,
       'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
-    marketSize: '$23.4B business intelligence market'
+    marketSize: '$23.4B business intelligence market',
     growthRate: '38% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-hr-recruitment-platform'
+    id: 'ai-hr-recruitment-platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI-powered recruitment automation',
     price: '$179',
@@ -10443,9 +10649,9 @@ export const,
       'Mobile app access'
     ]
     popular: true;
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
-    textColor: 'text-indigo-400'
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
+    textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-recruitment',
     marketPosition: 'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience:,
@@ -10499,8 +10705,9 @@ export const,
       'Interview coordination'
       'Hiring analytics'
     ]
-    roi: '50% reduction in time-to-hire'
-    competitors: [
+    roi: '50% reduction in time-to-hire',
+    competitors:
+        competitors: [
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
@@ -10511,14 +10718,14 @@ export const,
       'Lever'
       'SmartRecruiters'
     ]
-    marketSize: '$2.8B recruitment software market'
-    growthRate: '42% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$2.8B recruitment software market',
+    growthRate: '42% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-sales-automation-platform'
+    id: 'ai-sales-automation-platform',
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
     price: '$249',
@@ -10567,9 +10774,9 @@ export const,
       'Custom workflows'
     ]
     popular: true;
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
-    textColor: 'text-yellow-400'
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
+    textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-sales-automation',
     marketPosition: 'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience:,
@@ -10623,8 +10830,9 @@ export const,
       'Email campaigns'
       'Performance tracking'
     ]
-    roi: '35% increase in sales conversion rates'
-    competitors: [
+    roi: '35% increase in sales conversion rates',
+    competitors:
+        competitors: [
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
@@ -10635,14 +10843,14 @@ export const,
       'Zoho CRM'
       'Freshsales'
     ]
-    marketSize: '$18.6B CRM market'
-    growthRate: '33% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$18.6B CRM market',
+    growthRate: '33% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-market-research-platform'
+    id: 'ai-market-research-platform',
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI-powered research',
     price: '$159',
@@ -10691,9 +10899,9 @@ export const,
       'Export capabilities'
     ]
     popular: true;
-    icon: ''
-    color: 'from-teal-500 to-green-600'
-    textColor: 'text-teal-400'
+    icon: '',
+    color: 'from-teal-500 to-green-600',
+    textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-market-research',
     marketPosition: 'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience:,
@@ -10745,8 +10953,9 @@ export const,
       'Investment decisions'
       'Product development'
     ]
-    roi: '200% faster market insights generation'
-    competitors: [
+    roi: '200% faster market insights generation',
+    competitors:
+        competitors: [
     ro,
   i: '200% faster market insights generation'
     competitor,
@@ -10757,14 +10966,14 @@ export const,
       'Euromonitor'
       'Forrester'
     ]
-    marketSize: '$1.9B market research market'
-    growthRate: '28% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$1.9B market research market',
+    growthRate: '28% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-blockchain-analytics'
+    id: 'ai-blockchain-analytics',
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
     price: '$599',
@@ -10813,9 +11022,9 @@ export const,
       'Multi-chain support'
     ]
     popular: true;
-    icon: ''
-    color: 'from-gray-500 to-slate-600'
-    textColor: 'text-gray-400'
+    icon: '',
+    color: 'from-gray-500 to-slate-600',
+    textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-blockchain-analytics',
     marketPosition: 'Leading blockchain analytics with 99.9% transaction accuracy',
     targetAudience:,
@@ -10867,8 +11076,9 @@ export const,
       'Portfolio analysis'
       'Market research'
     ]
-    roi: '300% improvement in blockchain intelligence'
-    competitors: [
+    roi: '300% improvement in blockchain intelligence',
+    competitors:
+        competitors: [
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
@@ -10879,14 +11089,14 @@ export const,
       'Blockchain.com'
       'Etherscan'
     ]
-    marketSize: '$1.2B blockchain analytics market'
-    growthRate: '65% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$1.2B blockchain analytics market',
+    growthRate: '65% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-cloud-cost-optimizer'
+    id: 'ai-cloud-cost-optimizer',
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
     price: '$199',
@@ -10935,9 +11145,9 @@ export const,
       'API integration'
     ]
     popular: true;
-    icon: ''
-    color: 'from-blue-500 to-cyan-600'
-    textColor: 'text-blue-400'
+    icon: '',
+    color: 'from-blue-500 to-cyan-600',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition: 'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience:,
@@ -10990,8 +11200,9 @@ export const,
       'Budget management'
       'Performance optimization'
     ]
-    roi: '40% reduction in cloud costs'
-    competitors: [
+    roi: '40% reduction in cloud costs',
+    competitors:
+        competitors: [
     ro,
   i: '40% reduction in cloud costs'
     competitor,
@@ -11002,14 +11213,14 @@ export const,
       'Cloudability'
       'AWS Cost Explorer'
     ]
-    marketSize: '$4.8B cloud cost management market'
-    growthRate: '52% annual growth'
-    contactInfo: mobile: '+1 302 464 0950'
+    marketSize: '$4.8B cloud cost management market',
+    growthRate: '52% annual growth',
+    contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
   }
-    id: 'ai-database-performance-monitor'
+    id: 'ai-database-performance-monitor',
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI-powered monitoring',
     price: '$179',
@@ -11059,14 +11270,17 @@ export const,
       'API access',
       'Multi-database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal']
-    support: 'Dedicated health coach, community support, and 24/7 platform assistance.'
-    compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
-    link: 'https://ziontechgroup.com/ai-health-coach'
+    support: 'Dedicated health coach, community support, and 24/7 platform assistance.',
+    compliance:
+        compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
+    link: 'https://ziontechgroup.com/ai-health-coach',
     icon: '';
-    color: 'from-red-500 to-pink-600'
-    popular: false;
-    launchDate: '2024-03-05'
-    customers: 1100;
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2024-03-05',
+    customers:
+        customers: 1100;
     rating: 4.6;
     reviews: 134}
     id: 'ai-email-responder-pro',
@@ -11074,8 +11288,9 @@ export const,
     tagline: 'Auto-triage and reply to routine emails with guardrails',
     description:,
       'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.'
-    category: 'Productivity & Automation'
-    price: monthly: 79;
+    category: 'Productivity & Automation',
+    price:
+        price: monthly: 79;
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
@@ -11099,28 +11314,32 @@ export const,
     realImplementation: true;
     implementationDetails:,
       'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.'
-    roi: 'Reduce support headcount needs by 0.20.5 FTE per 1 k tickets/mo.'
-    useCases: [,
+    roi: 'Reduce support headcount needs by 0.20.5 FTE per 1 k tickets/mo.',
+    useCases:
+        useCases: [,
       'Support autoreplies',
       'Sales follow-ups',
       'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack']
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II']
-    link: 'https://ziontechgroup.com/ai-email-responder'
+    link: 'https://ziontechgroup.com/ai-email-responder',
     icon: '';
-    color: 'from-cyan-600 to-blue-700'
-    popular: true;
-    launchDate: '2025-02-01'
-    customers: 180;
+    color: 'from-cyan-600 to-blue-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-01',
+    customers:
+        customers: 180;
     rating: 4.7;
     reviews: 46}
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
-    tagline: 'Adaptive, chat-style surveys with higher completion rates'
-    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.'
-    category: 'Marketing & Research'
-    price: monthly: 49;
+    tagline: 'Adaptive, chat-style surveys with higher completion rates',
+    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.',
+    category: 'Marketing & Research',
+    price:
+        price: monthly: 49;
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -11281,22 +11500,26 @@ export const,
     roi: 'Improves feedback volume 2050%.',
     useCases: ['NPS', 'Beta feedback', 'Lead qual']
     integrations: ['HubSpot', 'Segment', 'Zapier']
-    support: 'Email support, templates library'
-    compliance: ['GDPR', 'CCPA']
-    link: 'https://ziontechgroup.com/mobile-surveys'
+    support: 'Email support, templates library',
+    compliance:
+        compliance: ['GDPR', 'CCPA']
+    link: 'https://ziontechgroup.com/mobile-surveys',
     icon: '';
-    color: 'from-emerald-600 to-teal-700'
-    popular: false;
-    launchDate: '2024-12-10'
-    customers: 95;
+    color: 'from-emerald-600 to-teal-700',
+    popular:
+        popular: false;
+    launchDate: '2024-12-10',
+    customers:
+        customers: 95;
     rating: 4.6;
     reviews: 22}
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
-    tagline: 'Opinionated project boards, tailored to your industry'
-    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.'
-    category: 'Operations'
-    price: monthly: 39;
+    tagline: 'Opinionated project boards, tailored to your industry',
+    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
+    category: 'Operations',
+    price:
+        price: monthly: 39;
       yearly: 390;
       currency: 'USD',
       trialDays: 14;
@@ -11317,22 +11540,26 @@ export const,
     roi: 'Deliverables throughput +1525%.',
     useCases: ['Client delivery', 'Editorial calendar', 'Sprints']
     integrations: ['Google Calendar', 'Slack', 'Linear']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/productivity-planner'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/productivity-planner',
     icon: '';
-    color: 'from-purple-600 to-pink-600'
-    popular: false;
-    launchDate: '2025-01-20'
-    customers: 60;
+    color: 'from-purple-600 to-pink-600',
+    popular:
+        popular: false;
+    launchDate: '2025-01-20',
+    customers:
+        customers: 60;
     rating: 4.5;
     reviews: 14}
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
-    tagline: 'Tickets, scheduling, engagement analytics in one place'
-    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.'
-    category: 'Media & Events'
-    price: monthly: 129;
+    tagline: 'Tickets, scheduling, engagement analytics in one place',
+    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
+    category: 'Media & Events',
+    price:
+        price: monthly: 129;
       yearly: 1290;
       currency: 'USD',
       trialDays: 7;
@@ -11348,26 +11575,29 @@ export const,
     competitors: ['Hopin', 'Eventbrite']
     techStack: ['Next.js', 'Stripe', 'Supabase']
     realImplementation: true;
-    implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.'
+    implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.',
     roi: 'Increase sponsorship revenue 1020%.',
     useCases: ['Webinars', 'Summits', 'Workshops']
     integrations: ['Stripe', 'Mailchimp', 'Zapier']
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI']
-    link: 'https://ziontechgroup.com/event-management'
+    link: 'https://ziontechgroup.com/event-management',
     icon: '';
-    color: 'from-indigo-600 to-blue-700'
-    popular: false;
-    launchDate: '2024-11-18'
-    customers: 70;
+    color: 'from-indigo-600 to-blue-700',
+    popular:
+        popular: false;
+    launchDate: '2024-11-18',
+    customers:
+        customers: 70;
     rating: 4.6;
     reviews: 18}
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
-    tagline: 'Links, attribution, commissions, payoutsno spreadsheet required'
-    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.'
-    category: 'Growth'
-    price: monthly: 99;
+    tagline: 'Links, attribution, commissions, payoutsno spreadsheet required',
+    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.',
+    category: 'Growth',
+    price:
+        price: monthly: 99;
       yearly: 990;
       currency: 'USD',
       trialDays: 14;
@@ -11383,18 +11613,21 @@ export const,
     competitors: ['PartnerStack', 'Impact']
     techStack: ['Next.js', 'PostgreSQL', 'Stripe']
     realImplementation: true;
-    implementationDetails: 'Link generation, tracking pixels, payout ledger.'
+    implementationDetails: 'Link generation, tracking pixels, payout ledger.',
     roi: 'Affiliate channel +1030% revenue.',
     useCases: ['Influencer programs', 'Partner marketplaces']
     integrations: ['Shopify', 'WooCommerce', 'Stripe']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/affiliate-tracking'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/affiliate-tracking',
     icon: '';
-    color: 'from-rose-600 to-red-700'
-    popular: false;
-    launchDate: '2024-10-12'
-    customers: 55;
+    color: 'from-rose-600 to-red-700',
+    popular:
+        popular: false;
+    launchDate: '2024-10-12',
+    customers:
+        customers: 55;
     rating: 4.4;
     reviews: 12}
     id: 'smb-website-analytics',
@@ -11402,8 +11635,9 @@ export const,
     tagline: 'Privacy-friendly analytics with actionable insights',
     description:,
       'Simple dashboards for traffic, engagement, and conversionsno cookies by default. Alerts for anomalies and goals.'
-    category: 'Analytics'
-    price: monthly: 29;
+    category: 'Analytics',
+    price:
+        price: monthly: 29;
       yearly: 290;
       currency: 'USD',
       trialDays: 14;
@@ -11419,26 +11653,30 @@ export const,
     competitors: ['Plausible', 'Fathom']
     techStack: ['Next.js', 'Edge Analytics', 'PostgreSQL']
     realImplementation: true;
-    implementationDetails: 'Script tag, event API, insights jobs.'
+    implementationDetails: 'Script tag, event API, insights jobs.',
     roi: 'Improve conversion 515% via insights.',
     useCases: ['Landing pages', 'Campaign tracking']
     integrations: ['Shopify', 'Webflow', 'Zapier']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/website-analytics'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/website-analytics',
     icon: '';
-    color: 'from-sky-600 to-cyan-700'
-    popular: true;
-    launchDate: '2025-02-05'
-    customers: 140;
+    color: 'from-sky-600 to-cyan-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-05',
+    customers:
+        customers: 140;
     rating: 4.7;
     reviews: 28}
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
-    tagline: 'Tickets, SLA timers, knowledge base, portalready day one'
-    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.'
-    category: 'IT & Operations'
-    price: monthly: 59;
+    tagline: 'Tickets, SLA timers, knowledge base, portalready day one',
+    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.',
+    category: 'IT & Operations',
+    price:
+        price: monthly: 59;
       yearly: 590;
       currency: 'USD',
       trialDays: 14;
@@ -11454,18 +11692,20 @@ export const,
     competitors: ['Zendesk', 'Freshservice']
     techStack: ['Next.js', 'PostgreSQL', 'Node.js']
     realImplementation: true;
-    implementationDetails: 'Inbound parser, workflow builder, KB CMS.'
+    implementationDetails: 'Inbound parser, workflow builder, KB CMS.',
     roi: 'Reduce ticket volume 1525% via KB.',
     useCases: ['IT requests', 'Access provisioning']
     integrations: ['Okta', 'Google Workspace', 'Slack']
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/it-helpdesk'
+    link: 'https://ziontechgroup.com/it-helpdesk',
     icon: '';
-    color: 'from-slate-600 to-gray-700'
-    popular: false;
-    launchDate: '2024-09-22'
-    customers: 120;
+    color: 'from-slate-600 to-gray-700',
+    popular:
+        popular: false;
+    launchDate: '2024-09-22',
+    customers:
+        customers: 120;
     rating: 4.5;
     reviews: 31}
     id: 'ecommerce-return-manager',
@@ -11473,8 +11713,9 @@ export const,
     tagline: 'Customer-friendly returns with labels and status tracking',
     description:,
       'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.'
-    category: 'Ecommerce'
-    price: monthly: 79;
+    category: 'Ecommerce',
+    price:
+        price: monthly: 79;
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
@@ -11495,15 +11736,19 @@ export const,
     roi: 'Reduce refund losses via exchanges.',
     useCases: ['Returns', 'Exchanges', 'Warranties']
     integrations: ['Shopify', 'Shippo', 'EasyPost']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/return-manager'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/return-manager',
     icon: '';
-    color: 'from-amber-600 to-orange-700'
-    popular: false;
-    launchDate: '2024-08-30'
-    customers: 75;
+    color: 'from-amber-600 to-orange-700',
+    popular:
+        popular: false;
+    launchDate: '2024-08-30',
+    customers:
+        customers: 75;
     rating: 4.4;
+<<<<<<< HEAD
     reviews: 19}
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -11511,6 +11756,17 @@ export const,
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
     price: monthly: 49;
+=======
+    reviews: 19;
+  }
+    id: 'auto-email-followups',
+    name: 'Automated Email Followups',
+    tagline: 'Cadence sequences for leads with AI personalization',
+    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.',
+    category: 'Sales',
+    price:
+        price: monthly: 49;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -11526,26 +11782,29 @@ export const,
     competitors: ['Lemlist', 'Mailshake']
     techStack: ['Next.js', 'PostgreSQL', 'OpenAI']
     realImplementation: true;
-    implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.'
+    implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.',
     roi: '+1020% conversion uplift.',
     useCases: ['Prospecting', 'Renewals']
     integrations: ['HubSpot', 'Pipedrive', 'Gmail']
     support: 'Email support',
     compliance: ['GDPR', 'CAN-SPAM']
-    link: 'https://ziontechgroup.com/email-followups'
+    link: 'https://ziontechgroup.com/email-followups',
     icon: '';
-    color: 'from-blue-600 to-indigo-700'
-    popular: false;
-    launchDate: '2025-01-25'
-    customers: 90;
+    color: 'from-blue-600 to-indigo-700',
+    popular:
+        popular: false;
+    launchDate: '2025-01-25',
+    customers:
+        customers: 90;
     rating: 4.5;
     reviews: 17}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
-    tagline: 'Accurate transcripts, show notes, and highlights'
-    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.'
-    category: 'Media & Content'
-    price: monthly: 39;
+    tagline: 'Accurate transcripts, show notes, and highlights',
+    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.',
+    category: 'Media & Content',
+    price:
+        price: monthly: 39;
       yearly: 390;
       currency: 'USD',
       trialDays: 7;
@@ -11561,18 +11820,21 @@ export const,
     competitors: ['Descript', 'Rev']
     techStack: ['Whisper', 'Next.js', 'S3']
     realImplementation: true;
-    implementationDetails: 'Batch jobs, cloud storage, editor UI.'
+    implementationDetails: 'Batch jobs, cloud storage, editor UI.',
     roi: 'Cut post-production hours by 6080%.',
     useCases: ['Transcripts', 'Repurposing']
     integrations: ['RSS', 'YouTube', 'Anchor']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/podcast-transcription'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/podcast-transcription',
     icon: '';
-    color: 'from-fuchsia-600 to-violet-700'
-    popular: true;
-    launchDate: '2024-12-02'
-    customers: 210;
+    color: 'from-fuchsia-600 to-violet-700',
+    popular:
+        popular: true;
+    launchDate: '2024-12-02',
+    customers:
+        customers: 210;
     rating: 4.7;
     reviews: 52}
     id: 'ai-knowledge-graph-studio',
@@ -11580,8 +11842,9 @@ export const,
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description:,
       'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.'
-    category: 'AI & Data'
-    price: monthly: 199;
+    category: 'AI & Data',
+    price:
+        price: monthly: 199;
       yearly: 1990;
       currency: 'USD',
       trialDays: 14;
@@ -11597,26 +11860,29 @@ export const,
     competitors: ['Neo4j', 'Memgraph']
     techStack: ['TypeScript', 'Neo4j', 'pgvector', 'OpenAI']
     realImplementation: true;
-    implementationDetails: 'ETL connectors, graph builder UI, API for queries.'
+    implementationDetails: 'ETL connectors, graph builder UI, API for queries.',
     roi: 'Reduce discovery time 3050%.',
     useCases: ['RAG graphs', 'Data lineage', 'Glossaries']
     integrations: ['S3', 'GCS', 'Databricks']
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio'
+    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio',
     icon: '';
-    color: 'from-teal-600 to-emerald-700'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 35;
+    color: 'from-teal-600 to-emerald-700',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 35;
     rating: 4.8;
     reviews: 11}
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
-    tagline: 'Policy, safety, metering and routing for GenAI apps'
-    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.'
-    category: 'AI & Platform'
-    price: monthly: 299;
+    tagline: 'Policy, safety, metering and routing for GenAI apps',
+    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.',
+    category: 'AI & Platform',
+    price:
+        price: monthly: 299;
       yearly: 2990;
       currency: 'USD',
       trialDays: 14;
@@ -11632,18 +11898,20 @@ export const,
   competitors: ['OpenRouter', 'EdenAI', 'Helicone']
     techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic']
     realImplementation: true;
-    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.'
+    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.',
     roi: 'Cut model costs by 2040%.',
     useCases: ['Central model access', 'Safety']
     integrations: ['OpenAI', 'Anthropic', 'Azure']
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway'
+    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway',
     icon: '';
-    color: 'from-cyan-700 to-blue-800'
-    popular: true;
-    launchDate: '2025-02-08'
-    customers: 42;
+    color: 'from-cyan-700 to-blue-800',
+    popular:
+        popular: true;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 42;
     rating: 4.8;
     reviews: 13}
     id: 'serverless-lakehouse-starter',
@@ -11651,8 +11919,9 @@ export const,
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description:,
       'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.'
-    category: 'Data & Analytics'
-    price: monthly: 249;
+    category: 'Data & Analytics',
+    price:
+        price: monthly: 249;
       yearly: 2490;
       currency: 'USD',
       trialDays: 7;
@@ -11668,26 +11937,30 @@ export const,
     competitors: ['Airbyte', 'Fivetran (partial)']
     techStack: ['Terraform', 'dbt', 'ClickHouse/BigQuery']
     realImplementation: true;
-    implementationDetails: 'Templates, IaC modules, CI gates.'
-    roi: 'Deliver insights in days, not months.'
+    implementationDetails: 'Templates, IaC modules, CI gates.',
+    roi: 'Deliver insights in days, not months.',
     useCases: ['Product analytics', 'Finance BI']
     integrations: ['S3', 'BigQuery', 'Snowflake']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter',
     icon: '';
-    color: 'from-stone-600 to-zinc-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 24;
+    color: 'from-stone-600 to-zinc-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 24;
     rating: 4.6;
     reviews: 7}
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
-    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes'
-    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.'
-    category: 'Data & Platform'
-    price: monthly: 129;
+    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
+    category: 'Data & Platform',
+    price:
+        price: monthly: 129;
       yearly: 1290;
       currency: 'USD',
       trialDays: 14;
@@ -11703,30 +11976,36 @@ export const,
     competitors: ['OpenMetadata', 'Great Expectations']
     techStack: ['TypeScript', 'PostgreSQL', 'dbt']
     realImplementation: true;
-    implementationDetails: 'Contracts as code, PR checks, lineage view.'
+    implementationDetails: 'Contracts as code, PR checks, lineage view.',
     roi: 'Reduce data breakage incidents by 5070%.',
     useCases: ['Warehouse governance', 'Analytics contracts']
     integrations: ['dbt', 'GitHub', 'BigQuery']
-    support: 'Email support'
-    compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/data-contracts-hub'
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/services/data-contracts-hub',
     icon: '';
-    color: 'from-lime-600 to-green-700'
-    popular: false;
-    launchDate: '2025-02-08'
-    customers: 19;
+    color: 'from-lime-600 to-green-700',
+    popular:
+        popular: false;
+    launchDate: '2025-02-08',
+    customers:
+        customers: 19;
     rating: 4.6;
     reviews: 6}];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
-    roi: 'Reduce data breakage incidents by 5070%.'
-    use_cases: ['Warehouse governance_analytics contracts'];
+    roi: 'Reduce data breakage incidents by 5070%.',
+    use_cases:
+        use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
-    support: 'Email support'
-    compliance: ['GDPR'];
+    support: 'Email support',
+    compliance:
+        compliance: ['GDPR'];
     icon: '';
-    color: 'from - lime - 600 to - green - 700'
-    popular: false;
+    color: 'from - lime - 600 to - green - 700',
+    popular:
+        popular: false;
     launch_date: '2025 - 02 - 08',
     customers: 19;
     reviews: 6}
@@ -11734,12 +12013,14 @@ export const getServicesByCategory = (category: string) =>;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
-marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
-competitors: ['TypeformSurveySparrowTally'];
+marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
+competitors:
+        competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
-implementationDetails: 'Template gallery, response store, analytics, export jobs.'
-    rating: 4.6;
+implementationDetails: 'Template gallery, response store, analytics, export jobs.',
+    rating:
+        rating: 4.6;
     reviews: 6;
     ]
     benefit,
@@ -12683,42 +12964,60 @@ implementationDetail,
 export const getServicesByCategory = (categor)
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
-market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
-competitors: ['TypeformSurveySparrowTally'];
+market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
+competitors:
+        competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
-implementation_details: 'Template gallery, response store, analytics, export jobs.'
+implementation_details: 'Template gallery, response store, analytics, export jobs.',
 roi: 'Improves feedback volume 2050%.',
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'],
-support: 'Email support, templates library'
-compliance: ['GDPRCCPA'];
+support: 'Email support, templates library',
+compliance:
+        compliance: ['GDPRCCPA'];
 icon: '';
-color: 'from - emerald - 600 to - teal - 700'
-popular: false;
-launch_date: '2024 - 12 - 10'
-customers: 95;
-marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
-competitors: ['AsanaClickUpNotion'];
+color: 'from - emerald - 600 to - teal - 700',
+popular:
+        popular: false;
+launch_date: '2024 - 12 - 10',
+customers:
+        customers: 95;
+marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
+competitors:
+        competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
+<<<<<<< HEAD
 implementationDetails: 'Template JSON schemas, rules engine, import/export.'
 reviews: 22}
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
+=======
+implementationDetails: 'Template JSON schemas, rules engine, import/export.',
+reviews:
+        reviews: 22;
+}
+market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
+competitors:
+        competitors: ['AsanaClickUpNotion'];
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
-implementation_details: 'Template JSON schemas, rules engine, import / export.'
-roi: 'Deliverables throughput +1525%.'
+implementation_details: 'Template JSON schemas, rules engine, import / export.',
+roi: 'Deliverables throughput +1525%.',
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
-support: 'Email support'
-compliance: ['GDPR'];
+support: 'Email support',
+compliance:
+        compliance: ['GDPR'];
 icon: '';
-color: 'from - purple - 600 to - pink - 600'
-popular: false;
-launch_date: '2025 - 01 - 20'
-customers: 60;
+color: 'from - purple - 600 to - pink - 600',
+popular:
+        popular: false;
+launch_date: '2025 - 01 - 20',
+customers:
+        customers: 60;
 market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
 competitor,

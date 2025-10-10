@@ -207,8 +207,8 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
   Real-Time AI Inference Optimization: Achieving Sub-50ms Latency at Scale;
   conten,"
   t: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.", /><meta,"
-  name: "keywords,"
-  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><link,"
+  name: 'keywords,',
+  content: 'AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI', /><link,"
   rel: "canonical;"
   href=",
   http,

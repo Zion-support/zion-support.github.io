@@ -209,8 +209,9 @@ const performanceScript = `#!/usr/bin/env node const fs = require('fs'); const p
   e: 0}timestam,
   p: new Date().toISOString() }} async measureBundleSize() {try { const buildDir = path.join(process.cwd()}'.next'); if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)} this.metrics.bundleSize = stats.size} } catch(error) {/* TODO: Fix JSX expression */}
   size: '}error)} } async measureMemoryUsage() {const usage = process.memoryUsage()} this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} generateReport() {/* TODO: Fix JSX expression */}
-  e: this.metrics.memoryUsage}recommendation,`
-  s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2));  `;
+  e: this.metrics.memoryUsage}recommendation,',
+  s:
+        s: [] }; if (this.metrics.bundleSize > 1000000) { report.recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { report.recommendations.push('Consider optimizing memory usage')} return report} } const monitor = new PerformanceMonitor(); monitor.measureBundleSize(); monitor.measureMemoryUsage(); const report = monitor.generateReport(); const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null)2));  `;
 //     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath) performanceScript);
     fs.chmodSync(scriptPath) '755');

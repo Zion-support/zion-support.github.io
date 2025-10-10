@@ -79,8 +79,8 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
 }
 export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
-    tagline: "Future-ready enterprise IT", price: "$399/month"
-    description: "Comprehensive enterprise IT solutions designed for 2026 and beyond."
+    tagline: "Future-ready enterprise IT", price: '$399/month',
+    description: 'Comprehensive enterprise IT solutions designed for 2026 and beyond.',
     features: [;
       "Enterprise architecture"
       "Future-ready solutions"
@@ -170,8 +170,8 @@ export const,
   }
 ];
 ;
-    id: "2026-enterprise-it"
-    name: "2026 Enterprise IT Solutions",
+    id: '2026-enterprise-it',
+    name: '2026 Enterprise IT Solutions',
     tagline: "Future-ready enterprise IT",
     price: "$399/month",
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
@@ -182,12 +182,12 @@ export const,
       "Advanced security",
       "24/7 support"
     ],
-    link: "/services/2026-enterprise-it"
-    category: "Enterprise IT 2026"
+    link: '/services/2026-enterprise-it',
+    category: 'Enterprise IT 2026',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

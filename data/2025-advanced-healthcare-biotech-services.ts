@@ -161,11 +161,20 @@ export const,
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
+<<<<<<< HEAD
       marketSize: '$45 && 45.8B AI drug discovery market'
       growthRate: '35% annual growth';
 variant: 'ai-drug-discovery-enterprise'
       contactInfo: unknown;
       color: 'from - green - 600 to - emerald - 600'
+=======
+      marketSize: '$45 && 45.8B AI drug discovery market',
+      growthRate: '35% annual growth',
+      variant: 'ai-drug-discovery-enterprise',
+      contactInfo:
+        contactInfo: unknown;
+      color: 'from - green - 600 to - emerald - 600',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
       market_position: unknown;
@@ -173,7 +182,7 @@ variant: 'ai-drug-discovery-enterprise'
       target_audience: unknown;
         'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
       trial_days: 30;
-      setup_time: '2 - 4 weeks'
+      setup_time: '2 - 4 weeks',
       category: 'AI Drug Discovery & Biotech',
       real_service: true;
       technology: [,
@@ -226,19 +235,29 @@ varian,
       competitor,
   s: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
+<<<<<<< HEAD
       market_size: '$45.8B AI drug discovery market'
       growth_rate: '35% annual growth';
 variant: 'ai - drug - discovery - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$45.8B AI drug discovery market',
+      growth_rate: '35% annual growth',
+      variant: 'ai - drug - discovery - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
-      launch_date: '2024 - 08 - 15'
-      customers: 23;
+      launch_date: '2024 - 08 - 15',
+      customers:
+        customers: 23;
       rating: 4 && 4.9;
       reviews: 12},
     // Precision Medicine & Genomics Platform;
@@ -322,11 +341,20 @@ varian,
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [,
         '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
+<<<<<<< HEAD
       marketSize: '$78 && 78.6B precision medicine market'
       growthRate: '28% annual growth';
 variant: 'precision-medicine-enterprise'
       contactInfo: unknown;
       color: 'from - blue - 600 to - indigo - 600'
+=======
+      marketSize: '$78 && 78.6B precision medicine market',
+      growthRate: '28% annual growth',
+      variant: 'precision-medicine-enterprise',
+      contactInfo:
+        contactInfo: unknown;
+      color: 'from - blue - 600 to - indigo - 600',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / precision - medicine - genomics',
       market_position: unknown;
@@ -334,7 +362,7 @@ variant: 'precision-medicine-enterprise'
       target_audience: unknown;
         'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
       trial_days: 21;
-      setup_time: '3 - 5 weeks'
+      setup_time: '3 - 5 weeks',
       category: 'Precision Medicine & Genomics',
       real_service: true;
       technology: [,
@@ -387,19 +415,29 @@ varian,
       competitor,
   s: [,
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
+<<<<<<< HEAD
       market_size: '$78.6B precision medicine market'
       growth_rate: '28% annual growth';
 variant: 'precision - medicine - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$78.6B precision medicine market',
+      growth_rate: '28% annual growth',
+      variant: 'precision - medicine - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
-      launch_date: '2024 - 09 - 20'
-      customers: 45;
+      launch_date: '2024 - 09 - 20',
+      customers:
+        customers: 45;
       rating: 4 && 4.8;
       reviews: 23;
       market_siz,
@@ -435,7 +473,7 @@ varian,
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT) Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
-      id: 'ai - medical - imaging - analysis'
+      id: 'ai - medical - imaging - analysis',
       name: 'AI - Powered Medical Imaging Analysis Platform',
       tagline: 'Advanced medical imaging analysis with AI and deep learning',
       price: '$899',
@@ -486,7 +524,7 @@ varian,
       target_audience: unknown;
         'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
       trial_days: 14;
-      setup_time: '2 - 3 weeks'
+      setup_time: '2 - 3 weeks',
       category: 'AI Medical Imaging & Diagnostics',
       real_service: true;
       technology: [,
@@ -525,24 +563,34 @@ varian,
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
+<<<<<<< HEAD
       market_size: '$32.1B AI medical imaging market'
       growth_rate: '42% annual growth';
 variant: 'ai - imaging - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$32.1B AI medical imaging market',
+      growth_rate: '42% annual growth',
+      variant: 'ai - imaging - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
-      launch_date: '2024 - 10 - 10'
-      customers: 67;
+      launch_date: '2024 - 10 - 10',
+      customers:
+        customers: 67;
       rating: 4 && 4.7;
       reviews: 34},
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
-      id: 'digital - health - telemedicine'
+      id: 'digital - health - telemedicine',
       name: 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
       price: '$399',
@@ -625,11 +673,20 @@ varian,
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
+<<<<<<< HEAD
       marketSize: '$185 && 185.6B digital health market'
       growthRate: '25% annual growth';
 variant: 'digital-health-enterprise'
       contactInfo: unknown;
       color: 'from - teal - 600 to - cyan - 600'
+=======
+      marketSize: '$185 && 185.6B digital health market',
+      growthRate: '25% annual growth',
+      variant: 'digital-health-enterprise',
+      contactInfo:
+        contactInfo: unknown;
+      color: 'from - teal - 600 to - cyan - 600',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / digital - health - telemedicine',
       market_position: unknown;
@@ -637,7 +694,7 @@ variant: 'digital-health-enterprise'
       target_audience: unknown;
         'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
       trial_days: 21;
-      setup_time: '1 - 2 weeks'
+      setup_time: '1 - 2 weeks',
       category: 'Digital Health & Telemedicine',
       real_service: true;
       technology: [,
@@ -686,19 +743,29 @@ varian,
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
+<<<<<<< HEAD
       market_size: '$185.6B digital health market'
       growth_rate: '25% annual growth';
 variant: 'digital - health - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$185.6B digital health market',
+      growth_rate: '25% annual growth',
+      variant: 'digital - health - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
-      launch_date: '2024 - 07 - 15'
-      customers: 156;
+      launch_date: '2024 - 07 - 15',
+      customers:
+        customers: 156;
       rating: 4 && 4.6;
       reviews: 78},
         'AI-powered trial design optimization',
@@ -786,11 +853,20 @@ varian,
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitors: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
+<<<<<<< HEAD
       marketSize: '$67 && 67.2B clinical trial market'
       growthRate: '18% annual growth';
 variant: 'clinical-trial-enterprise'
       contactInfo: unknown;
       color: 'from - orange - 600 to - red - 600'
+=======
+      marketSize: '$67 && 67.2B clinical trial market',
+      growthRate: '18% annual growth',
+      variant: 'clinical-trial-enterprise',
+      contactInfo:
+        contactInfo: unknown;
+      color: 'from - orange - 600 to - red - 600',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
       market_position: unknown;
@@ -798,7 +874,7 @@ variant: 'clinical-trial-enterprise'
       target_audience: unknown;
         'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
       trial_days: 30;
-      setup_time: '3 - 6 weeks'
+      setup_time: '3 - 6 weeks',
       category: 'Clinical Research & Trials',
       real_service: true;
       technology: [,
@@ -850,11 +926,20 @@ varian,
       competitor,
   s: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
+<<<<<<< HEAD
       market_size: '$67.2B clinical trial market'
       growth_rate: '18% annual growth';
 variant: 'clinical - trial - enterprise'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
+=======
+      market_size: '$67.2B clinical trial market',
+      growth_rate: '18% annual growth',
+      variant: 'clinical - trial - enterprise',
+      contact_info:
+        contact_info: unknown;
+        mobile: '+1 302 464 0950',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},

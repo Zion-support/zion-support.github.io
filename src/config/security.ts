@@ -33,9 +33,10 @@ export const _securityHeaders = {// TODO: Add content}
   c: ["'self'", 'dat,
   a:', 'http,
   s:', 'blo,
-  b:'],
-// connectSr,"
-  c: ["'self'", 'http,
+  b: '],
+// connectSr,',
+  c:
+        c: ["'self'", 'http,
   s://www.google-analytics.com', 'http,
   s://analytics.google.com'],
 // frameSr,"
