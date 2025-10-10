@@ -28,47 +28,51 @@ async function handler(req, res) {
     }
 
     // Process onsite request
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Send notification to your team
-    // 3. Send confirmation email to the customer
-    // 4. Schedule the onsite visit
-
-    const onsiteData = {
+    const requestData = {
+      id: 'onsite_' + Date.now(),
       name,
       email,
-      phone: phone || 'Not provided',
-      company: company || 'Not provided',
-      location: location || 'Not specified',
-      details: details || 'No additional details',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
+      phone,
+      company,
+      location,
+      details,
+      status: 'pending',
+      createdAt: new Date().toISOString()
     };
 
-    // Log the request (in production, save to database)
-    console.log('Onsite request received:', onsiteData);
+    // Save to file (in production, this would be saved to a database)
+    const dataDir = path.join(process.cwd(), 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    const filePath = path.join(dataDir, 'onsite-requests.json');
+    let requests = [];
+    
+    if (fs.existsSync(filePath)) {
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      requests = JSON.parse(fileContent);
+    }
+
+    requests.push(requestData);
+    fs.writeFileSync(filePath, JSON.stringify(requests, null, 2));
+
+    // Send confirmation email (in production, this would use a real email service)
+    // console.log('Onsite request received:', requestData);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
-      requestId: `onsite_${Date.now()}`,
-      data: onsiteData
+      requestId: requestData.id
     }));
-
-  } catch (error) {
-    console.error('Onsite request error:', error);
+  } catch {
+    // console.error('Error processing onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to submit onsite request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
-<<<<<<< HEAD
 
-module.exports = withSentry(handler);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
+export default withSentry(handler);

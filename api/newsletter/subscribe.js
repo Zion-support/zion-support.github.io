@@ -32,7 +32,7 @@ async function handler(req, res) {
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
-    console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+    // console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -43,7 +43,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 

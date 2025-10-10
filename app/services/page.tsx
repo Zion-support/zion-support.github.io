@@ -1,344 +1,339 @@
 'use client';
-<<<<<<< HEAD
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Shield, Cloud, Database } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Phone, Mail, MapPin, Clock, Star, Zap, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Brain, Shield, Cloud, Database, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
 
 const ServicesPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   const services = [
     {
-      id: 'ai-development',
-      category: 'ai',
+      id: 'ai-ml',
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge AI and machine learning solutions.',
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Custom Pricing'
+      features: [
+        'Custom AI model development',
+        'Machine learning pipeline automation',
+        'Natural language processing',
+        'Computer vision solutions',
+        'Predictive analytics',
+        'AI strategy consulting'
+      ],
+      benefits: [
+        'Automated decision making',
+        'Improved accuracy and efficiency',
+        'Reduced operational costs',
+        'Enhanced customer experience'
+      ],
+      price: 'Starting at $5,000',
+      duration: '2-6 months'
     },
     {
+      id: 'cloud-computing',
+      title: 'Cloud Computing',
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'From $2,000/month'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with enterprise-grade security solutions.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', '24/7 Monitoring'],
-      price: 'From $1,500/month'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Turn your data into actionable insights with advanced analytics platforms.',
-      features: ['Real-time Dashboards', 'Data Visualization', 'Business Intelligence', 'Custom Reports'],
-      price: 'From $3,000/month'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including machine learning, cloud infrastructure, cybersecurity, and data analytics. Custom solutions for your business." />
-        <meta name="keywords" content="AI services, IT consulting, cloud solutions, cybersecurity, data analytics, machine learning, custom development" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Our
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Services
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business 
-              and drive measurable results.
-            </p>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-cyan-400">
-                    {service.price}
-                  </div>
-                  <Link
-                    to="/consultation"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
-                  >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and create a custom solution that meets your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Schedule Free Consultation
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-=======
-      title: 'AI Development',
-      description: 'Custom AI solutions including machine learning models, natural language processing, and computer vision applications.',
-      features: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
-      price: 'From $5,000',
-      duration: '4-12 weeks'
-    },
-    {
-      id: 'cloud-solutions',
-      category: 'cloud',
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Comprehensive cloud migration, architecture design, and optimization services for AWS, Azure, and GCP.',
-      features: ['Cloud Migration', 'Architecture Design', 'DevOps', 'Security', 'Cost Optimization'],
-      price: 'From $3,000',
-      duration: '2-8 weeks'
-    },
-    {
-      id: 'web-development',
-      category: 'web',
-      icon: Code,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
-      features: ['React/Next.js', 'TypeScript', 'Responsive Design', 'SEO Optimization', 'Performance'],
-      price: 'From $2,000',
-      duration: '2-6 weeks'
-    },
-    {
-      id: 'mobile-development',
-      category: 'mobile',
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with modern frameworks.',
-      features: ['React Native', 'Flutter', 'Native iOS/Android', 'App Store Optimization', 'Push Notifications'],
-      price: 'From $4,000',
-      duration: '6-16 weeks'
-    },
-    {
-      id: 'data-analytics',
-      category: 'data',
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization solutions.',
-      features: ['Data Visualization', 'Business Intelligence', 'Predictive Analytics', 'Dashboard Design', 'Data Mining'],
-      price: 'From $3,500',
-      duration: '3-10 weeks'
+      features: [
+        'Cloud migration and optimization',
+        'Multi-cloud strategy implementation',
+        'Serverless architecture design',
+        'Container orchestration',
+        'Cloud security and compliance',
+        'Cost optimization strategies'
+      ],
+      benefits: [
+        'Improved scalability and flexibility',
+        'Reduced infrastructure costs',
+        'Enhanced security and compliance',
+        'Faster time to market'
+      ],
+      price: 'Starting at $3,000',
+      duration: '1-4 months'
     },
     {
       id: 'cybersecurity',
-      category: 'security',
-      icon: Shield,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions including vulnerability assessments, penetration testing, and security audits.',
-      features: ['Security Audits', 'Penetration Testing', 'Vulnerability Assessment', 'Security Training', 'Compliance'],
-      price: 'From $2,500',
-      duration: '1-4 weeks'
+      description: 'Protect your business with comprehensive cybersecurity solutions.',
+      icon: Shield,
+      features: [
+        'Security assessment and auditing',
+        'Threat detection and response',
+        'Identity and access management',
+        'Data encryption and protection',
+        'Compliance and regulatory support',
+        'Security training and awareness'
+      ],
+      benefits: [
+        'Enhanced data protection',
+        'Reduced security risks',
+        'Compliance with regulations',
+        'Peace of mind for stakeholders'
+      ],
+      price: 'Starting at $2,500',
+      duration: '1-3 months'
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Unlock insights from your data with advanced analytics and visualization.',
+      icon: Database,
+      features: [
+        'Data warehouse design and implementation',
+        'Real-time analytics dashboards',
+        'Business intelligence solutions',
+        'Data visualization and reporting',
+        'Data quality and governance',
+        'Advanced statistical analysis'
+      ],
+      benefits: [
+        'Data-driven decision making',
+        'Improved business insights',
+        'Enhanced operational efficiency',
+        'Competitive advantage'
+      ],
+      price: 'Starting at $4,000',
+      duration: '2-5 months'
+    },
+    {
+      id: 'iot-solutions',
+      title: 'IoT Solutions',
+      description: 'Connect and optimize your devices with Internet of Things solutions.',
+      icon: Zap,
+      features: [
+        'IoT device integration',
+        'Sensor data collection and analysis',
+        'Real-time monitoring systems',
+        'Predictive maintenance solutions',
+        'Edge computing implementation',
+        'IoT security and management'
+      ],
+      benefits: [
+        'Improved operational efficiency',
+        'Real-time monitoring and control',
+        'Predictive maintenance capabilities',
+        'Reduced downtime and costs'
+      ],
+      price: 'Starting at $6,000',
+      duration: '3-8 months'
+    },
+    {
+      id: 'custom-development',
+      title: 'Custom Development',
+      description: 'Tailored software solutions designed specifically for your business needs.',
+      icon: Brain,
+      features: [
+        'Custom web applications',
+        'Mobile app development',
+        'API development and integration',
+        'Legacy system modernization',
+        'Microservices architecture',
+        'Quality assurance and testing'
+      ],
+      benefits: [
+        'Perfect fit for your business',
+        'Scalable and maintainable solutions',
+        'Competitive advantage',
+        'Long-term cost savings'
+      ],
+      price: 'Starting at $8,000',
+      duration: '2-12 months'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe },
-    { id: 'ai', name: 'AI & ML', icon: Brain },
-    { id: 'cloud', name: 'Cloud', icon: Cloud },
-    { id: 'web', name: 'Web', icon: Code },
-    { id: 'mobile', name: 'Mobile', icon: Smartphone },
-    { id: 'data', name: 'Data', icon: BarChart },
-    { id: 'security', name: 'Security', icon: Shield }
+    { id: 'all', name: 'All Services' },
+    { id: 'ai-ml', name: 'AI & Machine Learning' },
+    { id: 'cloud-computing', name: 'Cloud Computing' },
+    { id: 'cybersecurity', name: 'Cybersecurity' },
+    { id: 'data-analytics', name: 'Data Analytics' },
+    { id: 'iot-solutions', name: 'IoT Solutions' },
+    { id: 'custom-development', name: 'Custom Development' }
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: Target },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Clock },
-    { number: '15+', label: 'Years Experience', icon: Award }
+  const process = [
+    {
+      step: '01',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your business needs, challenges, and goals to understand your requirements.'
+    },
+    {
+      step: '02',
+      title: 'Strategy & Planning',
+      description: 'We develop a comprehensive strategy and detailed project plan tailored to your objectives.'
+    },
+    {
+      step: '03',
+      title: 'Development & Implementation',
+      description: 'Our expert team builds and implements the solution using cutting-edge technologies.'
+    },
+    {
+      step: '04',
+      title: 'Testing & Optimization',
+      description: 'We thoroughly test the solution and optimize it for maximum performance and efficiency.'
+    },
+    {
+      step: '05',
+      title: 'Deployment & Support',
+      description: 'We deploy the solution and provide ongoing support and maintenance services.'
+    }
   ];
 
-  const contactInfo = {
-    phone: '(302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: 'Middletown, DE 19709'
-  };
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'Zion Tech Group transformed our operations with their AI solutions. The results exceeded our expectations.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      role: 'CEO',
+      content: 'Their cloud migration service was flawless. We saved 40% on infrastructure costs while improving performance.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'SecureBank Ltd',
+      role: 'CISO',
+      content: 'The cybersecurity implementation was comprehensive and effective. Our security posture improved dramatically.',
+      rating: 5
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="Our Services - Zion Tech Group"
-        description="Comprehensive AI, cloud, web, mobile, and data solutions. Expert development services for modern businesses."
-        keywords="AI development, cloud solutions, web development, mobile apps, data analytics, cybersecurity"
-      />
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and technology services to transform your business. From AI implementation to cloud computing and cybersecurity." />
+        <meta name="keywords" content="AI services, cloud computing, cybersecurity, data analytics, IoT solutions, custom development" />
+      </Helmet>
+      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Our
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Services
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to transform your business. 
-            From AI development to cloud solutions, we deliver excellence in every project.
-          </p>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8">
+              Comprehensive technology solutions for modern businesses
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              From AI and machine learning to cloud computing and cybersecurity, we provide end-to-end technology solutions that drive business growth and innovation.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-12 h-12 text-purple-400" />
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">What We Offer</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our comprehensive suite of services covers every aspect of modern technology implementation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div key={service.id} className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition-colors">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-blue-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <span>{service.price}</span>
+                  <span>{service.duration}</span>
+                </div>
+
+                <Link
+                  to={`/services/${service.id}`}
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-10 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-purple-500 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                <category.icon className="w-5 h-5 mr-2" />
-                {category.name}
-              </button>
-            ))}
+      {/* Process Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Process</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We follow a proven methodology to ensure successful project delivery and maximum value.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {process.map((step, index) => (
+                <div key={index} className="flex items-start gap-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">{step.step}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-gray-300">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our services.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-800 rounded-lg p-6">
                 <div className="flex items-center mb-4">
-                  <service.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="mb-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-400">Price</span>
-                    <span className="text-purple-400 font-semibold">{service.price}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-400">Duration</span>
-                    <span className="text-gray-300">{service.duration}</span>
-                  </div>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </ul>
-                <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                  Learn More
-                  <ArrowRight className="inline-block ml-2 w-4 h-4" />
-                </button>
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -346,29 +341,37 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss your requirements and create a solution that drives your business forward.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Portfolio
-            </button>
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can help you achieve your business goals and drive innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-colors"
+              >
+                Contact Us
+                <Phone className="ml-2 w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
   );
 };
 

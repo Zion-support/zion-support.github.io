@@ -33,7 +33,7 @@ async function handler(req, res) {
       status: 'success'
     };
 
-    console.log('Wallet action processed:', walletData);
+    // console.log('Wallet action processed:', walletData);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -44,7 +44,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Wallet action error:', error);
+    // console.error('Wallet action error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 

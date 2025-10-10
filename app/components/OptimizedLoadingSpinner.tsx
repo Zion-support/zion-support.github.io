@@ -121,7 +121,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     }, [size, variant, color, sizeClasses, colorClasses]);
 
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+    }, [baseClasses, fullScreenClasses, className]);
 
     return (
       <div className={containerClasses}>

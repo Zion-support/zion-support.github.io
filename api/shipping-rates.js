@@ -49,7 +49,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Shipping rates error:', error);
+    // console.error('Shipping rates error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
