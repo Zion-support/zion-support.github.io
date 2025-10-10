@@ -14,9 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
+        <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin="" />
+        <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
+        <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
         <link rel="manifest" href="/manifest.json" />

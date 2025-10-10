@@ -2,21 +2,21 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import './src/styles/futuristic.css';
+import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './src/components/LoadingStates';
-import ErrorBoundary from './src/components/ErrorBoundary';
-import SEOHead from './src/components/EnhancedSEOHead';
-import SkipLink from './src/components/SkipLink';
-import Breadcrumb from './src/components/Breadcrumb';
-import PerformanceOptimizer from './src/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './src/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './src/components/Analytics';
-import PerformanceMonitor from './src/components/PerformanceMonitor';
+import { PageLoader } from './app/components/LoadingStates';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import SEOHead from './app/components/EnhancedSEOHead';
+import SkipLink from './app/components/SkipLink';
+import Breadcrumb from './app/components/Breadcrumb';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
+import { AnalyticsProvider } from './app/components/Analytics';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Structured data for SEO
 const structuredData = {
