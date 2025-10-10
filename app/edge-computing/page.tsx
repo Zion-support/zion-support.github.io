@@ -3,189 +3,130 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
 
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
 <<<<<<< HEAD
-icon: Cpu,
-
-=======
-      icon: Cpu,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
       benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
-    },
-    {
-      icon: Zap,
-      title: 'Distributed Architecture',
-      description: 'Deploy computing resources closer to data sources for optimal performance and efficiency.',
-      benefits: ['Reduced bandwidth', 'Faster processing', 'Cost optimization']
-    },
-    {
-      icon: Clock,
-      title: '24/7 Availability',
-      description: 'Ensure continuous operation with edge nodes that work independently of central infrastructure.',
-      benefits: ['High availability', 'Fault tolerance', 'Resilient design']
-    },
-    {
-      icon: Users,
-<<<<<<< HEAD
-title: 'IoT Integration',
-      description: 'Seamlessly integrate with IoT devices and sensors for comprehensive edge solutions.',
-      benefits: ['IoT connectivity', 'Sensor integration', 'Device management']
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Optimization',
-      description: 'Optimize application performance with edge computing and intelligent caching.',
-      benefits: ['Performance boost', 'Intelligent caching', 'Bandwidth optimization']
-    }
-  ];
-
-  const benefits = [
-    'Reduce latency by up to 90%',
-    'Improve application performance by 80%',
-    'Cut bandwidth costs by 70%',
-    'Enhance data privacy and security',
-    'Enable real-time applications',
-    'Support offline functionality'
-  ];
-
-  const useCases = [
-    {
-      title: 'Smart Cities',
-      description: 'Power smart city infrastructure with edge computing',
-      icon: '🏙️'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Optimize manufacturing with edge-based monitoring',
-      icon: '🏭'
-    },
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Enable real-time decision making for autonomous systems',
-      icon: '🚗'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Support real-time medical monitoring and diagnostics',
-      icon: '🏥'
 =======
-      title: 'Scalable Infrastructure',
-      description: 'Easily scale your edge computing infrastructure as your needs grow.',
-      benefits: ['Auto-scaling', 'Flexible deployment', 'Resource optimization']
+      icon: Cpu,
+      title: 'Edge Processing',
+      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
+      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+    },
+    {
+      icon: Globe,
+      title: 'Global Distribution',
+      description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
+      benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']
     },
     {
       icon: Shield,
       title: 'Edge Security',
-description: 'Comprehensive security measures designed specifically for edge computing environments.',
-      benefits: ['Data protection', 'Secure communication', 'Compliance ready']
+      description: 'Advanced security measures designed specifically for edge computing environments.',
+      benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
     },
     {
-      icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Monitor edge performance with real-time analytics and optimization recommendations.',
-      benefits: ['Live monitoring', 'Performance insights', 'Proactive optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+<<<<<<< HEAD
+      icon: Users,
+=======
+      icon: Database,
+      title: 'Edge Storage',
+      description: 'Distributed storage solutions optimized for edge computing workloads.',
+      benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies']
+    },
+    {
+      icon: Wifi,
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
+      benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']
+    },
+    {
+      icon: Server,
+      title: 'Edge Analytics',
+      description: 'Advanced analytics and machine learning capabilities at the edge.',
+      benefits: ['Real-time analytics', 'ML inference', 'Predictive maintenance', 'Anomaly detection']
     }
+  ];
+
+  const applications = [
+    {
+      title: 'Autonomous Vehicles',
+      description: 'Real-time decision making for autonomous driving systems',
+      icon: '🚗'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Intelligent traffic management and urban monitoring',
+      icon: '🏙️'
+    },
+    {
+      title: 'Industrial IoT',
+      description: 'Manufacturing automation and predictive maintenance',
+      icon: '🏭'
+    },
+    {
+      title: 'Healthcare',
+      description: 'Real-time patient monitoring and medical diagnostics',
+      icon: '🏥'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+    }
+  ];
+
+  const benefits = [
+    'Ultra-low latency processing',
+    'Reduced bandwidth costs',
+    'Improved data privacy',
+    'Enhanced reliability',
+    'Real-time decision making',
+    'Scalable infrastructure'
   ];
 
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>Edge Computing - Zion Tech Group | Low-Latency Processing</title>
-        <meta name="description" content="Transform your applications with edge computing solutions. Reduce latency, improve performance, and enable real-time processing with Zion Tech Group's edge computing services." />
-        <meta name="keywords" content="edge computing, low latency, real-time processing, IoT, distributed computing, performance optimization" />
+        <title>Edge Computing Solutions | Zion Tech Group</title>
+        <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and IoT integration." />
+        <meta name="keywords" content="edge computing, IoT, real-time processing, low latency, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relative py-20 px-4 overflow-hidden">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
-      <Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 px-4 overflow-hidden">)
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Edge Computing<span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Bring computing power closer to your data sources with our advanced edge computing solutions.</p>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Edge Computing</h1><span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Bring computing power closer to your data sources with our advanced edge computing solutions.</p>
-            Achieve ultra-low latency, reduce bandwidth costs, and enable real-time processing at scale.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">Get Started Today</button>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo</button>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-            Edge Computing;</h1>
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+              Solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Bring computing power closer to your data and users with edge computing solutions. 
-            Reduce latency, improve performance, and enable real-time applications.
+            Bring computing power closer to your data and users with our advanced edge computing solutions. 
+            Achieve ultra-low latency, real-time processing, and seamless IoT integration.
           </p>
 <<<<<<< HEAD
+=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Edge Computing Demo
-=======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today;
+              Get Started
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
             </button>
 <<<<<<< HEAD
-<<<<<<< HEAD
-</div>
-=======
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4
-        </div>
-      </section>
-
-      {/* Features Section */}
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-=======
-          </div>
-        </div>,
-      </section>,
-,
-{/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
@@ -195,11 +136,22 @@ description: 'Comprehensive security measures designed specifically for edge com
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
+=======
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solution designed for modern applications and IoT deployments;
+              Comprehensive edge computing solution designed for modern applications and IoT deployments
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (</div>
@@ -207,32 +159,21 @@ description: 'Comprehensive security measures designed specifically for edge com
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,</div>
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
-                    </CheckCircle>
-                  ))}
-                </ul>
-</div>
-
 =======
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solutions for modern applications
-            </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -243,71 +184,45 @@ description: 'Comprehensive security measures designed specifically for edge com
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your applications with proven edge computing solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
+      {/* Applications Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Applications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Edge computing solutions for every industry and application
+              Discover how edge computing transforms industries and enables new possibilities
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+            {applications.map((app, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{app.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
+                <p className="text-gray-300">{app.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Edge Computing?
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of edge computing with our proven solutions and expertise.
+              Experience the benefits of processing data closer to where it's generated
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-
               </div>
             ))}
           </div>
@@ -315,62 +230,40 @@ description: 'Comprehensive security measures designed specifically for edge com
       </section>
 
       {/* CTA Section */}
-<section className="py-20 px-4">
 <<<<<<< HEAD
-
-        <div className="max-w-4xl mx-auto text-center">
-=======
-        <div className="max-w-4xl mx-auto text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+<section className="py-20 px-4">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?<p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2><p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading enterprises using edge computing to optimize their applications and reduce latency;
+            Transform your applications with ultra-low latency edge computing solutions
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
 =======
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Applications?</h2>
-          <p className="text-xl text-gray-100 mb-8">
-            Get started with edge computing today and experience the future of low-latency applications.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4
             </button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<Footer />
-
-=======
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4
     </div>
   );
-
 };
 
-<<<<<<< HEAD
 export default EdgeComputingPage;
-=======
-export default EdgeComputingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4

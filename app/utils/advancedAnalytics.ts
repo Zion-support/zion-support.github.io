@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client'
 
 interface UserEvent {
@@ -110,7 +108,6 @@ class AdvancedAnalytics {}
   static getInstance(): AdvancedAnalytics {}
     if (!AdvancedAnalytics.instance) {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -263,9 +260,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedAnalyticsPage;
-=======
     // Track user journey
     if (this.config.enableUserJourneyTracking) {}
       this.trackUserJourney()
@@ -766,4 +761,3 @@ export default AdvancedAnalyticsPage;
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;
 `
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

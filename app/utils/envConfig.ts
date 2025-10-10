@@ -149,7 +149,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
       });
-      console.groupEnd();
     }
   }
 }

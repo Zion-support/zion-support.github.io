@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -25,7 +24,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 /**
  * Advanced Accessibility Enhancement Utility;
  * Provides comprehensive accessibility improvements and monitoring;
@@ -182,7 +180,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   t: KeyboardEvent, isShif)
   t: boolean): void {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -197,7 +194,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -205,7 +201,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
       </Helmet>
-=======
   }
   /**
    * Handle arrow key navigation;
@@ -387,7 +382,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       // Add error states;
       if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {/* TODO: Fix JSX expression */}
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -455,7 +449,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -466,7 +459,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </section>
-=======
   }
   /**
    * Setup ARIA labels;
@@ -574,7 +566,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
           }
         }
 
-
   }
   /**
    * Setup navigation accessibility;
@@ -632,7 +623,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
             }
 
         }
-
 
     observer.observe(document.body, {)
       childList: true),
@@ -778,7 +768,6 @@ Accessibility Report:
 
   getReport(): string {/* TODO: Fix JSX expression */}
 }}"`
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

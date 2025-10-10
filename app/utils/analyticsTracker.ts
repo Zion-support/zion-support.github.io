@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AnalyticsTrackerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AnalyticsTrackerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface AnalyticsEvent {}
   action: string,
   category: string,
@@ -104,7 +102,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
     };
     if (this.isInitialized) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -193,7 +190,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -204,7 +200,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
           </div>
         </div>
       </section>
-=======
   /**
    * Track user interaction;
    */
@@ -218,7 +213,6 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
       action,
       category: 'user-interaction',
       label: element
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -247,9 +241,7 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
   );
 };
 
-<<<<<<< HEAD
 export default AnalyticsTrackerPage;
-=======
   /**
    * Track conversion;
    */
@@ -378,4 +370,3 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   }
 }
 export default analyticsTracker;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

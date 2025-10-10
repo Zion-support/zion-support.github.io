@@ -366,21 +366,15 @@ export class ConsoleSpy {}
     this.mock()
   }
   private mock(): void {
-    console.log = (...args: unknown[]) => {,
       this.logs.push(args.map(String).join(' '));}
     }
-    console.error = (...args: unknown[]) => {,
       this.errors.push(args.map(String).join(' '));}
     }
-    console.warn = (...args: unknown[]) => {,
   private mock(): void {}
-    console.log = (...args: unknown[]) => {}
       this.logs.push(args.map(String).join(' '));}
     }
-    console.error = (...args: unknown[]) => {}
       this.errors.push(args.map(String).join(' '));}
     }
-    console.warn = (...args: unknown[]) => {}
       this.warnings.push(args.map(String).join(' '));}
     }
   }
@@ -394,12 +388,7 @@ export class ConsoleSpy {}
     return [...this.warnings];}
   }
   restore(): void {
-    console.log = this.originalConsole.log;
-    console.error = this.originalConsole.error;
   restore(): void {}
-    console.log = this.originalConsole.log
-    console.error = this.originalConsole.error
-    console.warn = this.originalConsole.warn;}
   }
   clear(): void {}
     this.logs = []
@@ -424,10 +413,8 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   }
   private mock(): void {/* TODO: Fix JSX expression */}
     };
-    console.error = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
     };
-    console.warn = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
     };
   }

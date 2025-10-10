@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const ApiCachePage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const ApiCachePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface CacheEntry {
   data: any,
   timestamp: number,
@@ -53,7 +51,6 @@ class APICache {
     if (this.cache.size >= this.maxSize) {
       const oldestKey = this.cache.keys().next().value;
       this.cache.delete(oldestKey);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 

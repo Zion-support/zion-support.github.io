@@ -3,60 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-const GlobalErrorPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-=======
-export default function GlobalError({)
-  error)
-  reset)
-}: {
-  error: Error & { digest?: string };)
-    reset: () => void;
-}) {
-  return (
-    <html>
-      <body>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-          <div className="text-center"></div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2><button
-              onClick={() =>reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            ></button>
-              Try again</button>
-  return(<html>
-      <body>)
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">)</div>
-          <div className="text-center">)</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>)
-            <button;)
-              onClick={() => reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700"
-            >
-              Try again;
-import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -70,51 +16,6 @@ import { useEffect } from 'react';
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Global Error | Zion Tech Group</title>
-        <meta name="description" content="Professional Global Error services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="global-error, AI solutions, IT services, Zion Tech Group, global error" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Global Error
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced global error solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-=======
-    <html>
-      <body>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-          <div className="text-center"></div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
-            <button
-              onClick={() => reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

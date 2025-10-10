@@ -39,60 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-=======
-    <ErrorBoundary></ErrorBoundar>
-      <SEOHead 
-        title="AI Space Technology - Advanced Space Solutions | Zion Tech Group"
-        description="Revolutionary AI-powered space technology solutions for satellite management, space exploration, and orbital operations. Starting at $4,999/month."
-        keywords="AI space technology, satellite management, space exploration, orbital operations, space AI, satellite AI, space analytics"
-        canonical="https://ziontechgroup.com/ai-space-technology"
-      /></SEOHea>
-      <Navigation /></Navigatio>
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></mai>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-100 text-violet-800 text-sm font-medium mb-6"></div>
-                <Rocket className="w-4 h-4 mr-2" />
-                Space AI Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-                AI Space Technology</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
-                  Advanced Space Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Revolutionize space operations with AI-powered satellite management, orbital optimization, 
-                and space exploration technologies.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Request</a></<<a>Demo</a>
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-                </a>
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center px-8 py-4 border border-violet-400 text-violet-400 font-semibold rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Orbit className="mr-2 w-5 h-5" /></Orbit></<<<Orbit>Learn</Orbit></<<Orbit>More</Orbit>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -192,17 +138,6 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-    </div>
-=======
-        </section>
-      </main>
-
-      <Footer /></Footer>
-    </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

@@ -1,13 +1,6 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-=======
-    res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     return;
   }
 
@@ -35,17 +28,13 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Error report received',
-      timestamp: new Date().toISOString()
+      message: 'Error report received' 
     }));
 
   } catch (error) {
-    console.error('Error in error reporting handler:', error);
+    console.error('Error reporting error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to process error report',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Failed to process error report' }));
   }
 }
