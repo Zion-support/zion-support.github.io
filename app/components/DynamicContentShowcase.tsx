@@ -1,8 +1,17 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { Brain, Cloud, Shield, Zap, Star, CheckCircle } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
     {
+      id: 1,
+      title: 'AI-Powered Analytics',
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       id: 2,
@@ -16,22 +25,17 @@ import React, { useState, useEffect } from 'react';
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
+      color: 'from-purple-500 to-pink-600'
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      color: 'from-red-500 to-orange-600'
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -42,6 +46,7 @@ import React, { useState, useEffect } from 'react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -63,19 +68,19 @@ import React, { useState, useEffect } from 'react';
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
       rating: 5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
     }
-  ]
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [features.length]);
 
   return (
-    <div className="py-16 px-4">
+    <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -87,6 +92,23 @@ import React, { useState, useEffect } from 'react';
           </p>
         </div>
 
+        {/* Features Carousel */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">{features[currentFeature].title}</h3>
+              <p className="text-gray-300 mb-6">{features[currentFeature].description}</p>
+              <div className="flex space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentFeature(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentFeature ? 'bg-cyan-400' : 'bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Feature Visual */}
@@ -103,6 +125,11 @@ import React, { useState, useEffect } from 'react';
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span className="text-sm">{benefit}</span>
               </div>
             ))}
           </div>
@@ -122,27 +149,36 @@ import React, { useState, useEffect } from 'react';
               <Brain className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h4 className="text-lg font-bold text-white mb-2">AI Demo</h4>
               <p className="text-gray-300 text-sm mb-4">See AI in action with our interactive demos</p>
-              <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              <a
+                href="/contact"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+              >
                 Try Demo
-              </button>
+              </a>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <Cloud className="w-12 h-12 text-blue-400 mx-auto mb-4" />
               <h4 className="text-lg font-bold text-white mb-2">Cloud Trial</h4>
               <p className="text-gray-300 text-sm mb-4">Test our cloud solutions with a free trial</p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              <a
+                href="/contact"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+              >
                 Start Trial
-              </button>
+              </a>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
               <h4 className="text-lg font-bold text-white mb-2">Security Scan</h4>
               <p className="text-gray-300 text-sm mb-4">Get a free security assessment</p>
-              <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              <a
+                href="/contact"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+              >
                 Scan Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
