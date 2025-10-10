@@ -1008,6 +1008,448 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'quantum-computing-infrastructure',
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup and optimization for research and enterprise applications',
+      price: '$25,000/month',
+      marketPrice: '$50000-500000/month',
+      features: [
+        'Quantum hardware integration',
+        'Quantum algorithm development',
+        'Hybrid classical-quantum systems',
+        'Quantum error correction',
+        'Quantum networking',
+        'Quantum software development',
+        'Research collaboration',
+        'Quantum security implementation'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'edge-computing-infrastructure',
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing infrastructure for low-latency applications and IoT',
+      price: '$4,500/month',
+      marketPrice: '$9000-35000/month',
+      features: [
+        'Edge node deployment',
+        'Latency optimization',
+        'Distributed data processing',
+        'Edge AI model deployment',
+        'Real-time analytics',
+        'Edge security implementation',
+        'Network optimization',
+        'IoT integration'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Improved performance',
+        'Reduced bandwidth costs',
+        'Better user experience'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: '5g-network-implementation',
+      name: '5G Network Implementation',
+      description: '5G network design, implementation, and optimization for enterprise and IoT applications',
+      price: '$15,000/month',
+      marketPrice: '$30000-200000/month',
+      features: [
+        '5G network architecture design',
+        'Small cell deployment',
+        'Network slicing implementation',
+        'IoT connectivity optimization',
+        'Edge computing integration',
+        'Network performance monitoring',
+        'Security implementation',
+        'Compliance management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Massive IoT support',
+        'Low latency applications',
+        'Future-ready infrastructure'
+      ],
+      category: '5G Networks',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'ai-infrastructure-optimization',
+      name: 'AI Infrastructure Optimization',
+      description: 'Specialized infrastructure for AI workloads including GPU clusters and ML pipelines',
+      price: '$8,500/month',
+      marketPrice: '$17000-100000/month',
+      features: [
+        'GPU cluster setup and optimization',
+        'ML pipeline infrastructure',
+        'Model training environments',
+        'Inference optimization',
+        'Data pipeline automation',
+        'Model versioning systems',
+        'Performance monitoring',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Faster AI model training',
+        'Optimized inference performance',
+        'Reduced AI infrastructure costs',
+        'Scalable AI operations'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure Services',
+      description: 'Blockchain network setup, smart contract deployment, and DeFi infrastructure',
+      price: '$6,500/month',
+      marketPrice: '$13000-80000/month',
+      features: [
+        'Blockchain network deployment',
+        'Smart contract development',
+        'DeFi protocol implementation',
+        'NFT marketplace development',
+        'Cross-chain integration',
+        'Security auditing',
+        'Token economics design',
+        'Governance implementation'
+      ],
+      benefits: [
+        'Decentralized applications',
+        'Enhanced security',
+        'Transparent transactions',
+        'Innovation opportunities'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'cyber-physical-systems',
+      name: 'Cyber-Physical Systems Integration',
+      description: 'Integration of physical systems with digital infrastructure for smart manufacturing and IoT',
+      price: '$12,000/month',
+      marketPrice: '$25000-150000/month',
+      features: [
+        'IoT sensor integration',
+        'Real-time data processing',
+        'Control system optimization',
+        'Predictive maintenance',
+        'Digital twin implementation',
+        'Safety system integration',
+        'Performance monitoring',
+        'Remote management'
+      ],
+      benefits: [
+        'Improved operational efficiency',
+        'Predictive maintenance',
+        'Reduced downtime',
+        'Smart automation'
+      ],
+      category: 'Cyber-Physical Systems',
+      popular: false,
+      icon: Settings
+    },
+    {
+      id: 'zero-trust-architecture',
+      name: 'Zero Trust Security Architecture',
+      description: 'Implementation of zero trust security model with identity verification and micro-segmentation',
+      price: '$7,200/month',
+      marketPrice: '$15000-75000/month',
+      features: [
+        'Identity and access management',
+        'Micro-segmentation implementation',
+        'Continuous verification',
+        'Least privilege access',
+        'Multi-factor authentication',
+        'Network segmentation',
+        'Security monitoring',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Better compliance',
+        'Proactive threat protection'
+      ],
+      category: 'Security Architecture',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hyperconverged-infrastructure',
+      name: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Hyperconverged infrastructure solutions combining compute, storage, and networking',
+      price: '$5,800/month',
+      marketPrice: '$12000-60000/month',
+      features: [
+        'HCI platform deployment',
+        'Resource optimization',
+        'Automated management',
+        'Disaster recovery',
+        'Scaling capabilities',
+        'Performance monitoring',
+        'Cost optimization',
+        'Migration services'
+      ],
+      benefits: [
+        'Simplified infrastructure',
+        'Reduced complexity',
+        'Better resource utilization',
+        'Lower operational costs'
+      ],
+      category: 'Infrastructure',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'green-it-solutions',
+      name: 'Green IT Solutions',
+      description: 'Sustainable IT infrastructure and energy-efficient computing solutions',
+      price: '$3,800/month',
+      marketPrice: '$8000-40000/month',
+      features: [
+        'Energy-efficient hardware',
+        'Renewable energy integration',
+        'Carbon footprint monitoring',
+        'Green data center design',
+        'E-waste management',
+        'Sustainability reporting',
+        'Energy optimization',
+        'Environmental compliance'
+      ],
+      benefits: [
+        'Reduced environmental impact',
+        'Lower energy costs',
+        'Sustainability compliance',
+        'Corporate responsibility'
+      ],
+      category: 'Green IT',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'multi-cloud-management',
+      name: 'Multi-Cloud Management Platform',
+      description: 'Unified management platform for multiple cloud providers and hybrid environments',
+      price: '$4,200/month',
+      marketPrice: '$8500-45000/month',
+      features: [
+        'Multi-cloud orchestration',
+        'Cost optimization across clouds',
+        'Unified monitoring and management',
+        'Workload portability',
+        'Security policy enforcement',
+        'Compliance management',
+        'Disaster recovery planning',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Vendor lock-in avoidance',
+        'Cost optimization',
+        'Improved flexibility',
+        'Unified management'
+      ],
+      category: 'Cloud Management',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'aiops-implementation',
+      name: 'AIOps Implementation',
+      description: 'AI-powered IT operations with automated monitoring, incident response, and optimization',
+      price: '$6,800/month',
+      marketPrice: '$14000-70000/month',
+      features: [
+        'Intelligent monitoring',
+        'Automated incident response',
+        'Predictive analytics',
+        'Root cause analysis',
+        'Performance optimization',
+        'Capacity planning',
+        'Anomaly detection',
+        'Self-healing systems'
+      ],
+      benefits: [
+        'Reduced downtime',
+        'Faster incident resolution',
+        'Proactive problem prevention',
+        'Improved system reliability'
+      ],
+      category: 'AIOps',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for enterprise organizations',
+      price: '$15,000/month',
+      marketPrice: '$30000-200000/month',
+      features: [
+        'Digital strategy development',
+        'Technology roadmap planning',
+        'Process digitization',
+        'Change management',
+        'Legacy system modernization',
+        'Data strategy implementation',
+        'Customer experience optimization',
+        'Innovation acceleration'
+      ],
+      benefits: [
+        'Competitive advantage',
+        'Improved efficiency',
+        'Better customer experience',
+        'Future-ready organization'
+      ],
+      category: 'Digital Transformation',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture Implementation',
+      description: 'Design and implementation of microservices architecture for scalable applications',
+      price: '$8,200/month',
+      marketPrice: '$16000-80000/month',
+      features: [
+        'Microservices design',
+        'API gateway implementation',
+        'Service mesh configuration',
+        'Container orchestration',
+        'Service discovery',
+        'Load balancing',
+        'Monitoring and logging',
+        'DevOps integration'
+      ],
+      benefits: [
+        'Improved scalability',
+        'Better maintainability',
+        'Faster development cycles',
+        'Technology flexibility'
+      ],
+      category: 'Architecture',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'real-time-analytics-platform',
+      name: 'Real-Time Analytics Platform',
+      description: 'Real-time data processing and analytics platform for streaming data and instant insights',
+      price: '$7,500/month',
+      marketPrice: '$15000-90000/month',
+      features: [
+        'Stream processing engines',
+        'Real-time data ingestion',
+        'Complex event processing',
+        'Real-time dashboards',
+        'Machine learning integration',
+        'Data pipeline automation',
+        'Scalable architecture',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Instant insights',
+        'Real-time decision making',
+        'Competitive advantage',
+        'Better customer experience'
+      ],
+      category: 'Analytics Platform',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'api-ecosystem-management',
+      name: 'API Ecosystem Management',
+      description: 'Comprehensive API management platform with developer portal and ecosystem integration',
+      price: '$5,500/month',
+      marketPrice: '$11000-55000/month',
+      features: [
+        'API gateway management',
+        'Developer portal development',
+        'API lifecycle management',
+        'Rate limiting and throttling',
+        'API analytics and monitoring',
+        'Security implementation',
+        'Documentation automation',
+        'Ecosystem integration'
+      ],
+      benefits: [
+        'Faster API development',
+        'Better developer experience',
+        'Improved API security',
+        'Ecosystem growth'
+      ],
+      category: 'API Management',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'intelligent-automation',
+      name: 'Intelligent Process Automation',
+      description: 'AI-powered process automation with RPA, machine learning, and cognitive capabilities',
+      price: '$9,800/month',
+      marketPrice: '$20000-120000/month',
+      features: [
+        'RPA implementation',
+        'AI-powered decision making',
+        'Process mining and optimization',
+        'Cognitive document processing',
+        'Workflow automation',
+        'Exception handling',
+        'Performance monitoring',
+        'Continuous improvement'
+      ],
+      benefits: [
+        'Reduced manual work',
+        'Improved accuracy',
+        'Faster processing',
+        'Cost savings'
+      ],
+      category: 'Intelligent Automation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'cyber-resilience',
+      name: 'Cyber Resilience Framework',
+      description: 'Comprehensive cyber resilience strategy with incident response and business continuity',
+      price: '$11,500/month',
+      marketPrice: '$23000-150000/month',
+      features: [
+        'Threat modeling and assessment',
+        'Incident response planning',
+        'Business continuity planning',
+        'Cyber crisis management',
+        'Recovery testing',
+        'Security awareness training',
+        'Vulnerability management',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Faster recovery times',
+        'Reduced business impact',
+        'Regulatory compliance'
+      ],
+      category: 'Cyber Resilience',
+      popular: true,
+      icon: Shield
     }
   ]
 
@@ -1044,7 +1486,23 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: '5G Networks', name: '5G Networks', count: services.filter(s => s.category === '5G Networks').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Cyber-Physical Systems', name: 'Cyber-Physical Systems', count: services.filter(s => s.category === 'Cyber-Physical Systems').length },
+    { id: 'Security Architecture', name: 'Security Architecture', count: services.filter(s => s.category === 'Security Architecture').length },
+    { id: 'Infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'Infrastructure').length },
+    { id: 'Green IT', name: 'Green IT', count: services.filter(s => s.category === 'Green IT').length },
+    { id: 'Cloud Management', name: 'Cloud Management', count: services.filter(s => s.category === 'Cloud Management').length },
+    { id: 'AIOps', name: 'AIOps', count: services.filter(s => s.category === 'AIOps').length },
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: services.filter(s => s.category === 'Digital Transformation').length },
+    { id: 'Architecture', name: 'Architecture', count: services.filter(s => s.category === 'Architecture').length },
+    { id: 'Analytics Platform', name: 'Analytics Platform', count: services.filter(s => s.category === 'Analytics Platform').length },
+    { id: 'API Management', name: 'API Management', count: services.filter(s => s.category === 'API Management').length },
+    { id: 'Intelligent Automation', name: 'Intelligent Automation', count: services.filter(s => s.category === 'Intelligent Automation').length },
+    { id: 'Cyber Resilience', name: 'Cyber Resilience', count: services.filter(s => s.category === 'Cyber Resilience').length }
   ]
 
   const filteredServices = services.filter(service => 

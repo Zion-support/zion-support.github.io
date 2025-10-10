@@ -150,59 +150,43 @@ const Navigation: React.FC = () => {
   ]
 
   const microSaasServices = [
-<<<<<<< HEAD
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
-    { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' },
-    { name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration platform' },
-    { name: 'Zion Lead Magnet', href: '/zion-lead-magnet', icon: Target, description: 'Lead generation platform' },
-    { name: 'Zion Project Master', href: '/zion-project-master', icon: Calendar, description: 'Project management AI' },
-    { name: 'Zion Email Automation', href: '/zion-email-automation', icon: Mail, description: 'Email marketing AI' },
-    { name: 'Zion Inventory Smart', href: '/zion-inventory-smart', icon: Package, description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', href: '/zion-invoice-genius', icon: DollarSign, description: 'Invoice generation' },
-    { name: 'Zion Workflow Automation', href: '/zion-workflow-automation', icon: Settings, description: 'Process automation' },
-    { name: 'Zion Performance Monitor', href: '/zion-performance-monitor', icon: Monitor, description: 'Performance monitoring' },
-    { name: 'Zion Compliance Manager', href: '/zion-compliance-manager', icon: CheckSquare, description: 'Compliance management' },
-    { name: 'Zion Social Scheduler', href: '/zion-social-scheduler', icon: Globe, description: 'Social media management' },
-    { name: 'Zion AI Video Editor', href: '/zion-ai-video-editor', icon: Eye, description: 'AI video editing' },
-    { name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro', icon: Globe, description: 'Advanced translation' },
-    { name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer', icon: Code, description: 'Intelligent code review' },
-    { name: 'Zion Customer Insights Pro', href: '/zion-customer-insights', icon: Users, description: 'Customer analytics' },
-    { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant', icon: Mail, description: 'Smart email management' },
-    { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant', icon: Calendar, description: 'Meeting automation' },
-    { name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer', icon: Target, description: 'SEO optimization' },
-    { name: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner', icon: Database, description: 'Data cleaning & validation' },
-    { name: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer', icon: FileText, description: 'Contract analysis' },
-    { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder', icon: CheckSquare, description: 'Intelligent surveys' },
-    { name: 'Zion AI Accounting Assistant', href: '/zion-ai-accounting-assistant', icon: DollarSign, description: 'AI accounting' },
-    { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro', icon: Users, description: 'AI recruitment' },
-    { name: 'Zion AI Content Moderation', href: '/zion-ai-content-moderation', icon: Shield, description: 'Content moderation' },
-    { name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance', icon: Settings, description: 'Equipment maintenance' },
-    { name: 'Zion AI Energy Manager', href: '/zion-ai-energy-manager', icon: Zap, description: 'Energy optimization' },
-    { name: 'Zion AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer', icon: Box, description: 'Supply chain AI' },
-    { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' },
-    { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
-    { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
+    { name: 'Zion Analytics Pro', href: '/micro-saas', icon: BarChart, description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', href: '/micro-saas', icon: MessageCircle, description: 'AI customer support' },
+    { name: 'Zion Security Shield', href: '/micro-saas', icon: Shield, description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', href: '/micro-saas', icon: Cloud, description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', href: '/micro-saas', icon: FileText, description: 'AI content creation' },
+    { name: 'Zion CRM Intelligence', href: '/micro-saas', icon: Users, description: 'AI-enhanced CRM' },
+    { name: 'Zion Data Sync', href: '/micro-saas', icon: Database, description: 'Data integration platform' },
+    { name: 'Zion Lead Magnet', href: '/micro-saas', icon: Target, description: 'Lead generation platform' },
+    { name: 'Zion Project Master', href: '/micro-saas', icon: Calendar, description: 'Project management AI' },
+    { name: 'Zion Email Automation', href: '/micro-saas', icon: Mail, description: 'Email marketing AI' },
+    { name: 'Zion Inventory Smart', href: '/micro-saas', icon: Package, description: 'Inventory management' },
+    { name: 'Zion Invoice Genius', href: '/micro-saas', icon: DollarSign, description: 'Invoice generation' },
+    { name: 'Zion Workflow Automation', href: '/micro-saas', icon: Settings, description: 'Process automation' },
+    { name: 'Zion Performance Monitor', href: '/micro-saas', icon: Monitor, description: 'Performance monitoring' },
+    { name: 'Zion Compliance Manager', href: '/micro-saas', icon: CheckSquare, description: 'Compliance management' },
+    { name: 'Zion Social Scheduler', href: '/micro-saas', icon: Globe, description: 'Social media management' },
+    { name: 'Zion AI Video Editor', href: '/micro-saas', icon: Eye, description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', href: '/micro-saas', icon: Globe, description: 'Advanced translation' },
+    { name: 'Zion AI Code Reviewer', href: '/micro-saas', icon: Code, description: 'Intelligent code review' },
+    { name: 'Zion Customer Insights Pro', href: '/micro-saas', icon: Users, description: 'Customer analytics' },
+    { name: 'Zion AI Email Assistant', href: '/micro-saas', icon: Mail, description: 'Smart email management' },
+    { name: 'Zion AI Meeting Assistant', href: '/micro-saas', icon: Calendar, description: 'Meeting automation' },
+    { name: 'Zion AI SEO Optimizer', href: '/micro-saas', icon: Target, description: 'SEO optimization' },
+    { name: 'Zion AI Data Cleaner', href: '/micro-saas', icon: Database, description: 'Data cleaning & validation' },
+    { name: 'Zion AI Contract Analyzer', href: '/micro-saas', icon: FileText, description: 'Contract analysis' },
+    { name: 'Zion AI Survey Builder', href: '/micro-saas', icon: CheckSquare, description: 'Intelligent surveys' },
+    { name: 'Zion AI Accounting Assistant', href: '/micro-saas', icon: DollarSign, description: 'AI accounting' },
+    { name: 'Zion AI Recruitment Pro', href: '/micro-saas', icon: Users, description: 'AI recruitment' },
+    { name: 'Zion AI Content Moderation', href: '/micro-saas', icon: Shield, description: 'Content moderation' },
+    { name: 'Zion AI Predictive Maintenance', href: '/micro-saas', icon: Settings, description: 'Equipment maintenance' },
+    { name: 'Zion AI Energy Manager', href: '/micro-saas', icon: Zap, description: 'Energy optimization' },
+    { name: 'Zion AI Supply Chain Optimizer', href: '/micro-saas', icon: Box, description: 'Supply chain AI' },
+    { name: 'Zion AI Fraud Detector', href: '/micro-saas', icon: Shield, description: 'Fraud detection' },
+    { name: 'Zion AI Customer Service Pro', href: '/micro-saas', icon: MessageSquare, description: 'Advanced customer service' },
+    { name: 'Zion AI Marketing Automation', href: '/micro-saas', icon: Target, description: 'Marketing AI' },
+    { name: 'Zion AI Document AI', href: '/micro-saas', icon: FileText, description: 'Document processing' }
   ]
-=======
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
-    { name: 'Social Media AI', href: '/social-media-ai', icon: Globe, description: 'AI Social Management' },
-    { name: 'AI Project Management', href: '/ai-project-management', icon: Settings, description: 'Smart Project Tracking' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'Automated SEO Tools' },
-    { name: 'AI Sales CRM', href: '/ai-sales-crm', icon: TrendingUp, description: 'Intelligent CRM System' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Code, description: 'AI Design Tools' },
-    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database, description: 'Smart Inventory Tracking' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Users, description: 'Automated Invoicing' },
-    { name: 'AI Document Processor', href: '/ai-document-processor', icon: Zap, description: 'Document AI Processing' },
-    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
@@ -442,13 +426,11 @@ const Navigation: React.FC = () => {
             <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Tutorials
             </Link>
-<<<<<<< HEAD
             <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Demo
-=======
+            </Link>
             <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Careers
->>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -603,13 +585,11 @@ const Navigation: React.FC = () => {
               <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Tutorials
               </Link>
-<<<<<<< HEAD
               <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Demo
-=======
+              </Link>
               <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Careers
->>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact

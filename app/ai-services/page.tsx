@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,139 +1011,474 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
-      description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
     },
     {
-      title: 'AI-Powered Elderly Care',
-      description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Quantum machine learning algorithms',
+        'Complex optimization problems',
+        'Cryptographic security',
+        'Quantum neural networks',
+        'Hybrid classical-quantum computing',
+        'Quantum data processing',
+        'Advanced simulation capabilities',
+        'Quantum advantage optimization'
+      ],
+      benefits: [
+        'Exponential speed improvements',
+        'Solve previously intractable problems',
+        'Enhanced security',
+        'Future-proof technology'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      icon: Cpu
     },
     {
-      title: 'AI-Powered Accessibility Assistant',
-      description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
-      icon: '♿',
-      price: 'Starting at $1,800/month',
-      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
-      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
-      marketPrice: '$3,000-7,000/month',
-      category: 'Accessibility AI',
-      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
+      id: 'ai-neural-interfaces',
+      name: 'AI Neural Interface Technology',
+      description: 'Brain-computer interface AI for medical applications and assistive technology',
+      price: '$8,999/month',
+      marketPrice: '$20000-100000/month',
+      features: [
+        'Brain signal interpretation',
+        'Motor control assistance',
+        'Cognitive enhancement',
+        'Medical diagnosis support',
+        'Neural rehabilitation',
+        'Thought-to-text conversion',
+        'Prosthetic control',
+        'Research collaboration'
+      ],
+      benefits: [
+        'Restore mobility and communication',
+        'Medical breakthrough potential',
+        'Assistive technology advancement',
+        'Quality of life improvement'
+      ],
+      category: 'Neural AI',
+      popular: false,
+      icon: Brain
     },
     {
-      title: 'AI-Powered Environmental Monitoring',
-      description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
-      icon: '🌱',
-      price: 'Starting at $2,000/month',
-      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
-      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Environmental AI',
-      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
+      id: 'ai-space-optimization',
+      name: 'AI Space Mission Optimization',
+      description: 'AI-powered space mission planning and satellite constellation management',
+      price: '$12,999/month',
+      marketPrice: '$25000-150000/month',
+      features: [
+        'Mission trajectory optimization',
+        'Satellite constellation management',
+        'Space debris tracking',
+        'Resource allocation optimization',
+        'Launch window prediction',
+        'Orbital mechanics simulation',
+        'Space weather analysis',
+        'Mission risk assessment'
+      ],
+      benefits: [
+        'Optimize space missions',
+        'Reduce launch costs',
+        'Improve satellite efficiency',
+        'Space sustainability'
+      ],
+      category: 'Space AI',
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Wildlife Conservation',
-      description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
-      icon: '🦁',
-      price: 'Starting at $3,500/month',
-      features: ['Species identification', 'Behavior analysis', 'Population monitoring', 'Threat detection', 'Conservation planning'],
-      benefits: ['Protect wildlife', 'Monitor populations', 'Prevent poaching'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Conservation AI',
-      technologies: ['Computer Vision', 'Wildlife Detection', 'Custom Conservation Models', 'Satellite Data', 'IoT Sensors']
+      id: 'ai-climate-modeling',
+      name: 'AI Climate Change Modeling',
+      description: 'Advanced AI climate models for environmental prediction and policy optimization',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Climate pattern prediction',
+        'Carbon sequestration optimization',
+        'Renewable energy forecasting',
+        'Environmental impact assessment',
+        'Policy recommendation engine',
+        'Disaster prediction models',
+        'Ecosystem monitoring',
+        'Sustainability optimization'
+      ],
+      benefits: [
+        'Accurate climate predictions',
+        'Environmental policy support',
+        'Disaster prevention',
+        'Sustainable development'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Disaster Response',
-      description: 'Intelligent disaster prediction and response coordination with real-time monitoring.',
-      icon: '🚨',
-      price: 'Starting at $5,000/month',
-      features: ['Disaster prediction', 'Response coordination', 'Resource optimization', 'Evacuation planning', 'Damage assessment'],
-      benefits: ['Save lives', 'Reduce damage', 'Improve response time'],
-      marketPrice: '$8,000-20,000/month',
-      category: 'Emergency AI',
-      technologies: ['Disaster Prediction', 'Response Coordination', 'Custom Emergency Models', 'Satellite Data', 'IoT Sensors']
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Platform',
+      description: 'AI-powered pharmaceutical research and drug development acceleration',
+      price: '$7,999/month',
+      marketPrice: '$15000-80000/month',
+      features: [
+        'Molecular design optimization',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Side effect prediction',
+        'Drug repurposing analysis',
+        'Biomarker discovery',
+        'Personalized medicine',
+        'Regulatory compliance'
+      ],
+      benefits: [
+        'Faster drug development',
+        'Reduced research costs',
+        'Improved success rates',
+        'Personalized treatments'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Urban Planning',
-      description: 'Intelligent urban planning with traffic optimization and infrastructure analysis.',
-      icon: '🏙️',
-      price: 'Starting at $4,500/month',
-      features: ['Traffic optimization', 'Infrastructure analysis', 'Population modeling', 'Resource planning', 'Sustainability analysis'],
-      benefits: ['Improve city efficiency', 'Reduce traffic congestion', 'Optimize resource use'],
-      marketPrice: '$7,500-18,000/month',
-      category: 'Urban AI',
-      technologies: ['Traffic Analysis', 'Infrastructure Modeling', 'Custom Urban Models', 'Satellite Data', 'IoT Integration']
+      id: 'ai-robotic-surgery',
+      name: 'AI Robotic Surgery Assistant',
+      description: 'AI-enhanced robotic surgery with precision control and real-time guidance',
+      price: '$15,999/month',
+      marketPrice: '$30000-200000/month',
+      features: [
+        'Precision surgical control',
+        'Real-time image analysis',
+        'Surgical planning optimization',
+        'Risk assessment algorithms',
+        'Minimally invasive procedures',
+        'Surgeon training simulation',
+        'Patient outcome prediction',
+        'Regulatory compliance'
+      ],
+      benefits: [
+        'Improved surgical precision',
+        'Reduced complications',
+        'Faster recovery times',
+        'Better patient outcomes'
+      ],
+      category: 'Medical AI',
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Agriculture Optimization',
-      description: 'Intelligent agricultural optimization with crop monitoring and yield prediction.',
-      icon: '🌾',
-      price: 'Starting at $3,000/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
-      benefits: ['Increase crop yields', 'Reduce resource use', 'Improve sustainability'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Agriculture AI',
-      technologies: ['Satellite Imagery', 'IoT Sensors', 'Custom Agriculture Models', 'Drone Data', 'Weather APIs']
+      id: 'ai-autonomous-vehicles',
+      name: 'AI Autonomous Vehicle Systems',
+      description: 'Advanced AI for self-driving vehicles with safety and efficiency optimization',
+      price: '$9,999/month',
+      marketPrice: '$20000-100000/month',
+      features: [
+        'Real-time object detection',
+        'Path planning optimization',
+        'Traffic prediction',
+        'Safety monitoring systems',
+        'Weather adaptation',
+        'Fleet management',
+        'Predictive maintenance',
+        'Regulatory compliance'
+      ],
+      benefits: [
+        'Enhanced road safety',
+        'Reduced traffic congestion',
+        'Lower transportation costs',
+        'Improved accessibility'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      icon: Cpu
     },
     {
-      title: 'AI-Powered Water Management',
-      description: 'Intelligent water resource management with quality monitoring and distribution optimization.',
-      icon: '💧',
-      price: 'Starting at $2,800/month',
-      features: ['Water quality monitoring', 'Distribution optimization', 'Leak detection', 'Usage analysis', 'Treatment optimization'],
-      benefits: ['Improve water quality', 'Reduce waste', 'Optimize distribution'],
-      marketPrice: '$4,500-11,000/month',
-      category: 'Water AI',
-      technologies: ['Water Quality Sensors', 'Distribution Networks', 'Custom Water Models', 'IoT Integration', 'Analytics']
+      id: 'ai-cybersecurity-advanced',
+      name: 'AI Advanced Cybersecurity',
+      description: 'Next-generation AI cybersecurity with threat hunting and zero-trust architecture',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Zero-trust architecture',
+        'Advanced threat hunting',
+        'Behavioral analysis',
+        'Automated incident response',
+        'Quantum-resistant encryption',
+        'AI-powered vulnerability scanning',
+        'Threat intelligence integration',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Proactive threat detection',
+        'Reduced security incidents',
+        'Automated response',
+        'Future-proof security'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
     },
     {
-      title: 'AI-Powered Waste Management',
-      description: 'Intelligent waste management with collection optimization and recycling analysis.',
-      icon: '♻️',
-      price: 'Starting at $2,200/month',
-      features: ['Collection optimization', 'Recycling analysis', 'Waste sorting', 'Route planning', 'Sustainability tracking'],
-      benefits: ['Reduce waste', 'Improve recycling', 'Optimize collection'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Waste AI',
-      technologies: ['Waste Sensors', 'Route Optimization', 'Custom Waste Models', 'IoT Integration', 'Analytics']
+      id: 'ai-financial-trading',
+      name: 'AI Financial Trading Platform',
+      description: 'High-frequency AI trading with market prediction and risk management',
+      price: '$6,999/month',
+      marketPrice: '$15000-100000/month',
+      features: [
+        'Algorithmic trading strategies',
+        'Real-time market analysis',
+        'Risk management algorithms',
+        'Portfolio optimization',
+        'Market sentiment analysis',
+        'High-frequency trading',
+        'Regulatory compliance',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Improved trading performance',
+        'Risk reduction',
+        'Automated trading',
+        'Market advantage'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      icon: TrendingUp
     },
     {
-      title: 'AI-Powered Energy Grid Management',
-      description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
-      icon: '⚡',
-      price: 'Starting at $4,000/month',
-      features: ['Demand prediction', 'Grid optimization', 'Renewable integration', 'Load balancing', 'Outage prevention'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Prevent outages'],
-      marketPrice: '$6,500-16,000/month',
+      id: 'ai-3d-printing',
+      name: 'AI 3D Printing Optimization',
+      description: 'AI-powered 3D printing with material optimization and quality control',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Print optimization algorithms',
+        'Material usage optimization',
+        'Quality prediction models',
+        'Design optimization',
+        'Print failure prevention',
+        'Cost optimization',
+        'Custom material development',
+        'Production scaling'
+      ],
+      benefits: [
+        'Reduced material waste',
+        'Improved print quality',
+        'Faster production',
+        'Cost optimization'
+      ],
+      category: 'Manufacturing AI',
+      popular: false,
+      icon: Settings
+    },
+    {
+      id: 'ai-smart-cities',
+      name: 'AI Smart City Management',
+      description: 'Comprehensive AI platform for smart city infrastructure and citizen services',
+      price: '$19,999/month',
+      marketPrice: '$40000-300000/month',
+      features: [
+        'Traffic optimization',
+        'Energy management',
+        'Waste management optimization',
+        'Public safety monitoring',
+        'Citizen service automation',
+        'Infrastructure monitoring',
+        'Environmental monitoring',
+        'Emergency response'
+      ],
+      benefits: [
+        'Improved city efficiency',
+        'Better citizen services',
+        'Reduced costs',
+        'Sustainable development'
+      ],
+      category: 'Smart Cities',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'ai-augmented-reality',
+      name: 'AI Augmented Reality Platform',
+      description: 'AI-powered AR applications for industrial, educational, and consumer use',
+      price: '$3,499/month',
+      marketPrice: '$7000-30000/month',
+      features: [
+        'Real-time object recognition',
+        'Spatial mapping',
+        'Gesture recognition',
+        'Voice interaction',
+        'Multi-user collaboration',
+        'Content personalization',
+        'Performance optimization',
+        'Cross-platform deployment'
+      ],
+      benefits: [
+        'Enhanced user experiences',
+        'Improved productivity',
+        'Interactive learning',
+        'Remote collaboration'
+      ],
+      category: 'AR/VR AI',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-blockchain-smart-contracts',
+      name: 'AI Smart Contract Optimization',
+      description: 'AI-powered smart contract development and optimization for blockchain applications',
+      price: '$4,499/month',
+      marketPrice: '$9000-40000/month',
+      features: [
+        'Smart contract generation',
+        'Security vulnerability detection',
+        'Gas optimization',
+        'Automated testing',
+        'DeFi protocol optimization',
+        'NFT marketplace AI',
+        'Cross-chain integration',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Secure smart contracts',
+        'Reduced development time',
+        'Cost optimization',
+        'Enhanced security'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'ai-personalized-medicine',
+      name: 'AI Personalized Medicine',
+      description: 'AI-driven personalized treatment plans and genetic analysis for precision medicine',
+      price: '$5,499/month',
+      marketPrice: '$11000-60000/month',
+      features: [
+        'Genetic analysis',
+        'Treatment optimization',
+        'Drug interaction prediction',
+        'Disease risk assessment',
+        'Personalized dosing',
+        'Biomarker analysis',
+        'Clinical trial matching',
+        'Patient monitoring'
+      ],
+      benefits: [
+        'Personalized treatments',
+        'Improved outcomes',
+        'Reduced side effects',
+        'Precision medicine'
+      ],
+      category: 'Medical AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-mental-health',
+      name: 'AI Mental Health Platform',
+      description: 'AI-powered mental health assessment, therapy, and wellness monitoring',
+      price: '$1,999/month',
+      marketPrice: '$4000-20000/month',
+      features: [
+        'Mental health assessment',
+        'Therapy session optimization',
+        'Crisis intervention',
+        'Mood tracking',
+        'Personalized treatment plans',
+        'Virtual therapy sessions',
+        'Progress monitoring',
+        'Privacy protection'
+      ],
+      benefits: [
+        'Improved mental health access',
+        'Personalized care',
+        'Early intervention',
+        'Better outcomes'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-education-personalization',
+      name: 'AI Personalized Education',
+      description: 'AI-powered personalized learning platforms with adaptive curriculum and assessment',
+      price: '$2,499/month',
+      marketPrice: '$5000-25000/month',
+      features: [
+        'Adaptive learning paths',
+        'Personalized content delivery',
+        'Learning style optimization',
+        'Progress tracking',
+        'Skill gap analysis',
+        'Automated assessment',
+        'Teacher assistance tools',
+        'Parent engagement'
+      ],
+      benefits: [
+        'Improved learning outcomes',
+        'Personalized education',
+        'Teacher efficiency',
+        'Student engagement'
+      ],
+      category: 'Education AI',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-sustainable-energy',
+      name: 'AI Sustainable Energy Management',
+      description: 'AI-powered renewable energy optimization and smart grid management',
+      price: '$3,999/month',
+      marketPrice: '$8000-35000/month',
+      features: [
+        'Renewable energy forecasting',
+        'Grid optimization',
+        'Energy storage management',
+        'Demand response optimization',
+        'Carbon footprint tracking',
+        'Smart meter analytics',
+        'Microgrid management',
+        'Sustainability reporting'
+      ],
+      benefits: [
+        'Optimized energy usage',
+        'Reduced carbon footprint',
+        'Cost savings',
+        'Grid stability'
+      ],
       category: 'Energy AI',
-      technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
+      popular: true,
+      icon: Zap
     },
     {
-      title: 'AI-Powered Smart City Management',
-      description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
-      icon: '🏛️',
-      price: 'Starting at $8,000/month',
-      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
-      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
-      marketPrice: '$15,000-40,000/month',
-      category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence',
+      description: 'AI-powered precision agriculture with crop monitoring and yield optimization',
+      price: '$2,999/month',
+      marketPrice: '$6000-30000/month',
+      features: [
+        'Crop monitoring and analysis',
+        'Yield prediction models',
+        'Pest and disease detection',
+        'Irrigation optimization',
+        'Soil analysis',
+        'Weather integration',
+        'Farm equipment automation',
+        'Supply chain optimization'
+      ],
+      benefits: [
+        'Increased crop yields',
+        'Reduced resource usage',
+        'Sustainable farming',
+        'Cost optimization'
+      ],
+      category: 'Agriculture AI',
+      popular: true,
+      icon: Globe
     }
   ]
 
@@ -1176,7 +1510,24 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Quantum AI', name: 'Quantum AI', count: services.filter(s => s.category === 'Quantum AI').length },
+    { id: 'Neural AI', name: 'Neural AI', count: services.filter(s => s.category === 'Neural AI').length },
+    { id: 'Space AI', name: 'Space AI', count: services.filter(s => s.category === 'Space AI').length },
+    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
+    { id: 'Pharmaceutical AI', name: 'Pharmaceutical AI', count: services.filter(s => s.category === 'Pharmaceutical AI').length },
+    { id: 'Medical AI', name: 'Medical AI', count: services.filter(s => s.category === 'Medical AI').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Financial AI', name: 'Financial AI', count: services.filter(s => s.category === 'Financial AI').length },
+    { id: 'Manufacturing AI', name: 'Manufacturing AI', count: services.filter(s => s.category === 'Manufacturing AI').length },
+    { id: 'Smart Cities', name: 'Smart Cities', count: services.filter(s => s.category === 'Smart Cities').length },
+    { id: 'AR/VR AI', name: 'AR/VR AI', count: services.filter(s => s.category === 'AR/VR AI').length },
+    { id: 'Blockchain AI', name: 'Blockchain AI', count: services.filter(s => s.category === 'Blockchain AI').length },
+    { id: 'Healthcare AI', name: 'Healthcare AI', count: services.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Education AI', name: 'Education AI', count: services.filter(s => s.category === 'Education AI').length },
+    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length },
+    { id: 'Agriculture AI', name: 'Agriculture AI', count: services.filter(s => s.category === 'Agriculture AI').length }
   ]
 
   const filteredServices = services.filter(service => 

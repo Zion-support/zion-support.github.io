@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Heart, Box, Calendar, Target, Globe, Settings, Mic, TrendingUp, FileText, Brain } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
@@ -226,6 +226,215 @@ const MicroSaasPage: React.FC = () => {
       benefits: ['Faster contract review', 'Risk reduction', 'Compliance assurance', 'Time savings'],
       icon: Zap,
       category: 'Legal',
+      popular: false
+    },
+    {
+      title: 'Zion AI Climate Optimizer',
+      description: 'AI-powered carbon footprint tracking and sustainability optimization for businesses.',
+      features: ['Carbon Footprint Analysis', 'Sustainability Scoring', 'Green Energy Recommendations', 'Waste Reduction Planning', 'ESG Reporting', 'Climate Risk Assessment'],
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Reduce carbon footprint by 40%', 'Improve ESG scores', 'Compliance with regulations', 'Cost savings on energy'],
+      icon: Star,
+      category: 'Sustainability',
+      popular: true
+    },
+    {
+      title: 'Zion AI Mental Health Assistant',
+      description: 'AI-powered workplace mental health monitoring and wellness recommendations.',
+      features: ['Stress Level Monitoring', 'Mood Tracking', 'Wellness Recommendations', 'Crisis Intervention Alerts', 'Team Health Analytics', 'Privacy-First Design'],
+      price: '$89/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Improve employee wellbeing', 'Reduce workplace stress', 'Early intervention', 'Better team dynamics'],
+      icon: Heart,
+      category: 'Wellness',
+      popular: true
+    },
+    {
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain optimization with real-time risk assessment and cost optimization.',
+      features: ['Real-time Risk Monitoring', 'Cost Optimization', 'Supplier Performance Tracking', 'Demand Forecasting', 'Sustainability Metrics', 'Crisis Management'],
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Reduce supply chain costs by 25%', 'Improve resilience', 'Better supplier relationships', 'Risk mitigation'],
+      icon: Box,
+      category: 'Supply Chain',
+      popular: true
+    },
+    {
+      title: 'Zion AI Learning Platform',
+      description: 'Personalized AI learning platform with adaptive content and skill assessment.',
+      features: ['Adaptive Learning Paths', 'Skill Assessment', 'Personalized Content', 'Progress Tracking', 'Certification Management', 'Team Learning Analytics'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Improve learning outcomes', 'Personalized education', 'Track skill development', 'Team upskilling'],
+      icon: Clock,
+      category: 'Education',
+      popular: false
+    },
+    {
+      title: 'Zion AI Event Planner Pro',
+      description: 'AI-powered event planning and management with automated coordination and optimization.',
+      features: ['Event Planning Automation', 'Vendor Management', 'Budget Optimization', 'Guest Experience Tracking', 'Real-time Analytics', 'Mobile Event App'],
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Save 60% planning time', 'Better event experiences', 'Cost optimization', 'Automated coordination'],
+      icon: Calendar,
+      category: 'Events',
+      popular: false
+    },
+    {
+      title: 'Zion AI Real Estate Analyzer',
+      description: 'AI-powered real estate market analysis and investment opportunity identification.',
+      features: ['Market Analysis', 'Property Valuation', 'Investment Scoring', 'Neighborhood Insights', 'Rental Yield Prediction', 'Risk Assessment'],
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Better investment decisions', 'Market insights', 'Risk reduction', 'ROI optimization'],
+      icon: Target,
+      category: 'Real Estate',
+      popular: true
+    },
+    {
+      title: 'Zion AI Fitness Coach',
+      description: 'Personalized AI fitness coaching with workout optimization and health tracking.',
+      features: ['Personalized Workouts', 'Nutrition Planning', 'Progress Tracking', 'Injury Prevention', 'Goal Setting', 'Community Features'],
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Injury prevention', 'Better health outcomes'],
+      icon: Zap,
+      category: 'Fitness',
+      popular: true
+    },
+    {
+      title: 'Zion AI Travel Optimizer',
+      description: 'AI-powered travel planning with cost optimization and personalized recommendations.',
+      features: ['Smart Itinerary Planning', 'Cost Optimization', 'Real-time Updates', 'Local Recommendations', 'Weather Integration', 'Group Travel Coordination'],
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Save 30% on travel costs', 'Better travel experiences', 'Time optimization', 'Personalized recommendations'],
+      icon: Globe,
+      category: 'Travel',
+      popular: false
+    },
+    {
+      title: 'Zion AI Pet Care Assistant',
+      description: 'AI-powered pet health monitoring and care recommendations for pet owners.',
+      features: ['Health Monitoring', 'Vaccination Reminders', 'Diet Planning', 'Behavior Analysis', 'Vet Appointment Scheduling', 'Emergency Alerts'],
+      price: '$29/month',
+      marketPrice: '$60-150/month',
+      benefits: ['Better pet health', 'Preventive care', 'Cost savings', 'Peace of mind'],
+      icon: Heart,
+      category: 'Pet Care',
+      popular: false
+    },
+    {
+      title: 'Zion AI Home Automation',
+      description: 'Smart home automation with AI-powered energy optimization and security monitoring.',
+      features: ['Energy Optimization', 'Security Monitoring', 'Climate Control', 'Appliance Management', 'Voice Control', 'Predictive Maintenance'],
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Reduce energy costs by 35%', 'Enhanced security', 'Convenience', 'Smart living'],
+      icon: Settings,
+      category: 'Smart Home',
+      popular: true
+    },
+    {
+      title: 'Zion AI Language Learning',
+      description: 'AI-powered language learning with personalized curriculum and pronunciation coaching.',
+      features: ['Personalized Learning', 'Speech Recognition', 'Cultural Context', 'Progress Tracking', 'Conversation Practice', 'Multi-language Support'],
+      price: '$59/month',
+      marketPrice: '$120-350/month',
+      benefits: ['Faster language acquisition', 'Better pronunciation', 'Cultural understanding', 'Flexible learning'],
+      icon: Mic,
+      category: 'Language',
+      popular: false
+    },
+    {
+      title: 'Zion AI Investment Tracker',
+      description: 'AI-powered investment portfolio analysis and market prediction for individual investors.',
+      features: ['Portfolio Analysis', 'Market Predictions', 'Risk Assessment', 'Tax Optimization', 'Rebalancing Alerts', 'Performance Tracking'],
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Better investment returns', 'Risk management', 'Tax optimization', 'Informed decisions'],
+      icon: TrendingUp,
+      category: 'Finance',
+      popular: true
+    },
+    {
+      title: 'Zion AI Garden Planner',
+      description: 'AI-powered garden planning and plant care optimization for home gardeners.',
+      features: ['Garden Design', 'Plant Selection', 'Care Schedules', 'Pest Detection', 'Harvest Planning', 'Weather Integration'],
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Better garden yields', 'Plant health', 'Time savings', 'Gardening success'],
+      icon: Globe,
+      category: 'Gardening',
+      popular: false
+    },
+    {
+      title: 'Zion AI Sleep Optimizer',
+      description: 'AI-powered sleep analysis and optimization for better rest and productivity.',
+      features: ['Sleep Pattern Analysis', 'Environment Optimization', 'Sleep Coaching', 'Progress Tracking', 'Smart Alarms', 'Health Integration'],
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Better sleep quality', 'Improved productivity', 'Health insights', 'Energy optimization'],
+      icon: Clock,
+      category: 'Health',
+      popular: true
+    },
+    {
+      title: 'Zion AI Recipe Generator',
+      description: 'AI-powered recipe creation and meal planning with dietary restrictions and preferences.',
+      features: ['Personalized Recipes', 'Dietary Restrictions', 'Nutritional Analysis', 'Shopping Lists', 'Meal Planning', 'Cooking Instructions'],
+      price: '$29/month',
+      marketPrice: '$60-150/month',
+      benefits: ['Varied meal options', 'Nutritional balance', 'Time savings', 'Dietary compliance'],
+      icon: FileText,
+      category: 'Cooking',
+      popular: false
+    },
+    {
+      title: 'Zion AI Time Tracker Pro',
+      description: 'Advanced time tracking with AI-powered productivity analysis and optimization.',
+      features: ['Automatic Time Tracking', 'Productivity Analysis', 'Distraction Detection', 'Focus Sessions', 'Goal Setting', 'Team Analytics'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Increase productivity by 40%', 'Better time management', 'Focus improvement', 'Goal achievement'],
+      icon: Clock,
+      category: 'Productivity',
+      popular: true
+    },
+    {
+      title: 'Zion AI Habit Builder',
+      description: 'AI-powered habit formation and tracking with personalized motivation and rewards.',
+      features: ['Habit Tracking', 'Motivation System', 'Progress Analytics', 'Social Accountability', 'Reward System', 'Habit Stacking'],
+      price: '$19/month',
+      marketPrice: '$40-100/month',
+      benefits: ['Build lasting habits', 'Personal growth', 'Motivation boost', 'Goal achievement'],
+      icon: Target,
+      category: 'Personal Development',
+      popular: false
+    },
+    {
+      title: 'Zion AI Memory Palace',
+      description: 'AI-powered memory enhancement and learning optimization using advanced techniques.',
+      features: ['Memory Techniques', 'Spaced Repetition', 'Visual Learning', 'Progress Tracking', 'Custom Algorithms', 'Performance Analytics'],
+      price: '$69/month',
+      marketPrice: '$140-350/month',
+      benefits: ['Improve memory retention', 'Faster learning', 'Better recall', 'Cognitive enhancement'],
+      icon: Brain,
+      category: 'Learning',
+      popular: true
+    },
+    {
+      title: 'Zion AI Meditation Guide',
+      description: 'AI-powered meditation and mindfulness platform with personalized guidance.',
+      features: ['Personalized Sessions', 'Progress Tracking', 'Mood Integration', 'Guided Meditations', 'Biofeedback', 'Community Support'],
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Reduce stress', 'Improve focus', 'Better sleep', 'Mental clarity'],
+      icon: Heart,
+      category: 'Mindfulness',
       popular: false
     }
   ]

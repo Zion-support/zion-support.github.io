@@ -41,96 +41,75 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
-  const microSaasServices = [
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time BI & Analytics' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Platform' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated Email Campaigns' },
-    { name: 'Social Media AI', url: '/social-media-ai', description: 'AI Social Management' },
-    { name: 'AI Project Management', url: '/ai-project-management', description: 'Smart Project Tracking' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO Tools' },
-    { name: 'AI Sales CRM', url: '/ai-sales-crm', description: 'Intelligent CRM System' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
-  ];
 
   const itServices = [
-<<<<<<< HEAD
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
-    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
-    { name: 'API Development', url: '/api-development', description: 'API solutions' },
-    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
-    { name: 'Cloud-Native Development', url: '/cloud-native-development', description: 'Microservices & containers' },
-    { name: 'AI Integration Services', url: '/ai-integration-services', description: 'AI model integration' },
-    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Smart contracts & DeFi' },
-    { name: 'IoT Development', url: '/iot-development', description: 'Connected device solutions' },
-    { name: 'E-commerce Development', url: '/e-commerce-development', description: 'Online store platforms' },
-    { name: 'Advanced API Development', url: '/api-development-advanced', description: 'Enterprise-grade APIs' },
-    { name: 'Data Engineering', url: '/data-engineering', description: 'Data pipeline development' },
-    { name: 'Advanced Cybersecurity', url: '/cybersecurity-advanced', description: 'Threat hunting & response' },
-    { name: 'Cloud Migration', url: '/cloud-migration-advanced', description: 'Zero-downtime migration' },
-    { name: 'Advanced DevOps & SRE', url: '/devops-advanced', description: 'Site reliability engineering' },
-    { name: 'MLOps & AI Operations', url: '/machine-learning-ops', description: 'ML model deployment' },
-    { name: 'Enterprise Integration', url: '/enterprise-integration', description: 'System integration' },
-    { name: 'Performance Optimization', url: '/performance-optimization', description: 'App & infrastructure optimization' },
-    { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', description: 'Business continuity' },
-    { name: 'Compliance Automation', url: '/compliance-automation', description: 'Regulatory compliance' },
-    { name: 'Cloud Cost Optimization', url: '/cloud-cost-optimization', description: 'Cost reduction' },
-    { name: 'Security Automation', url: '/security-automation', description: 'Automated security' },
-    { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
-    { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
-    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
+    { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
+    { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
+    { name: 'Cybersecurity Solutions', url: '/it-services', description: 'Security solutions' },
+    { name: 'Web Development', url: '/it-services', description: 'Modern web apps' },
+    { name: 'Mobile Development', url: '/it-services', description: 'iOS & Android' },
+    { name: 'API Development', url: '/it-services', description: 'API solutions' },
+    { name: 'IT Support', url: '/it-services', description: '24/7 technical support' },
+    { name: 'Data Analytics & BI', url: '/it-services', description: 'Business intelligence' },
+    { name: 'Custom Software', url: '/it-services', description: 'Tailored solutions' },
+    { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
+    { name: 'Network Infrastructure', url: '/it-services', description: 'Network setup' },
+    { name: 'IT Asset Management', url: '/it-services', description: 'Asset lifecycle' },
+    { name: 'Cloud-Native Development', url: '/it-services', description: 'Microservices & containers' },
+    { name: 'AI Integration Services', url: '/it-services', description: 'AI model integration' },
+    { name: 'Blockchain Development', url: '/it-services', description: 'Smart contracts & DeFi' },
+    { name: 'IoT Development', url: '/it-services', description: 'Connected device solutions' },
+    { name: 'E-commerce Development', url: '/it-services', description: 'Online store platforms' },
+    { name: 'Advanced API Development', url: '/it-services', description: 'Enterprise-grade APIs' },
+    { name: 'Data Engineering', url: '/it-services', description: 'Data pipeline development' },
+    { name: 'Advanced Cybersecurity', url: '/it-services', description: 'Threat hunting & response' },
+    { name: 'Cloud Migration', url: '/it-services', description: 'Zero-downtime migration' },
+    { name: 'Advanced DevOps & SRE', url: '/it-services', description: 'Site reliability engineering' },
+    { name: 'MLOps & AI Operations', url: '/it-services', description: 'ML model deployment' },
+    { name: 'Enterprise Integration', url: '/it-services', description: 'System integration' },
+    { name: 'Performance Optimization', url: '/it-services', description: 'App & infrastructure optimization' },
+    { name: 'Disaster Recovery', url: '/it-services', description: 'Business continuity' },
+    { name: 'Compliance Automation', url: '/it-services', description: 'Regulatory compliance' },
+    { name: 'Cloud Cost Optimization', url: '/it-services', description: 'Cost reduction' },
+    { name: 'Security Automation', url: '/it-services', description: 'Automated security' },
+    { name: 'Data Visualization & BI', url: '/it-services', description: 'Advanced dashboards' },
+    { name: 'Workflow Automation', url: '/it-services', description: 'Process automation' },
+    { name: 'Cloud-Native Security', url: '/it-services', description: 'Container security' }
   ]
-=======
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice generation' },
-    { name: 'Zion Workflow Automation', url: '/zion-workflow-automation', description: 'Process automation' },
-    { name: 'Zion Social Scheduler', url: '/zion-social-scheduler', description: 'Social media management' },
-    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
-    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' },
-    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Intelligent code review' },
-    { name: 'Zion Customer Insights Pro', url: '/zion-customer-insights', description: 'Customer analytics' },
-    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'Smart email management' },
-    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', description: 'Meeting automation' },
-    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'SEO optimization' },
-    { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning & validation' },
-    { name: 'Zion AI Contract Analyzer', url: '/zion-ai-contract-analyzer', description: 'Contract analysis' },
-    { name: 'Zion AI Survey Builder', url: '/zion-ai-survey-builder', description: 'Intelligent surveys' },
-    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', description: 'AI accounting' },
-    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'AI recruitment' },
-    { name: 'Zion AI Content Moderation', url: '/zion-ai-content-moderation', description: 'Content moderation' },
-    { name: 'Zion AI Predictive Maintenance', url: '/zion-ai-predictive-maintenance', description: 'Equipment maintenance' },
-    { name: 'Zion AI Energy Manager', url: '/zion-ai-energy-manager', description: 'Energy optimization' },
-    { name: 'Zion AI Supply Chain Optimizer', url: '/zion-ai-supply-chain-optimizer', description: 'Supply chain AI' },
-    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
-    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
-    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
+    { name: 'Zion Analytics Pro', url: '/micro-saas', description: 'Business intelligence' },
+    { name: 'Zion Chat AI', url: '/micro-saas', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/micro-saas', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/micro-saas', description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/micro-saas', description: 'AI content creation' },
+    { name: 'Zion CRM Intelligence', url: '/micro-saas', description: 'AI-enhanced CRM' },
+    { name: 'Zion Lead Magnet', url: '/micro-saas', description: 'Lead generation' },
+    { name: 'Zion Project Master', url: '/micro-saas', description: 'Project management' },
+    { name: 'Zion Email Automation', url: '/micro-saas', description: 'Email marketing' },
+    { name: 'Zion Invoice Genius', url: '/micro-saas', description: 'Invoice generation' },
+    { name: 'Zion Workflow Automation', url: '/micro-saas', description: 'Process automation' },
+    { name: 'Zion Social Scheduler', url: '/micro-saas', description: 'Social media management' },
+    { name: 'Zion AI Video Editor', url: '/micro-saas', description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', url: '/micro-saas', description: 'Advanced translation' },
+    { name: 'Zion AI Code Reviewer', url: '/micro-saas', description: 'Intelligent code review' },
+    { name: 'Zion Customer Insights Pro', url: '/micro-saas', description: 'Customer analytics' },
+    { name: 'Zion AI Email Assistant', url: '/micro-saas', description: 'Smart email management' },
+    { name: 'Zion AI Meeting Assistant', url: '/micro-saas', description: 'Meeting automation' },
+    { name: 'Zion AI SEO Optimizer', url: '/micro-saas', description: 'SEO optimization' },
+    { name: 'Zion AI Data Cleaner', url: '/micro-saas', description: 'Data cleaning & validation' },
+    { name: 'Zion AI Contract Analyzer', url: '/micro-saas', description: 'Contract analysis' },
+    { name: 'Zion AI Survey Builder', url: '/micro-saas', description: 'Intelligent surveys' },
+    { name: 'Zion AI Accounting Assistant', url: '/micro-saas', description: 'AI accounting' },
+    { name: 'Zion AI Recruitment Pro', url: '/micro-saas', description: 'AI recruitment' },
+    { name: 'Zion AI Content Moderation', url: '/micro-saas', description: 'Content moderation' },
+    { name: 'Zion AI Predictive Maintenance', url: '/micro-saas', description: 'Equipment maintenance' },
+    { name: 'Zion AI Energy Manager', url: '/micro-saas', description: 'Energy optimization' },
+    { name: 'Zion AI Supply Chain Optimizer', url: '/micro-saas', description: 'Supply chain AI' },
+    { name: 'Zion AI Fraud Detector', url: '/micro-saas', description: 'Fraud detection' },
+    { name: 'Zion AI Customer Service Pro', url: '/micro-saas', description: 'Advanced customer service' },
+    { name: 'Zion AI Marketing Automation', url: '/micro-saas', description: 'Marketing AI' },
+    { name: 'Zion AI Document AI', url: '/micro-saas', description: 'Document processing' }
   ]
 
   const companyLinks = [
@@ -258,10 +237,10 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 mt-1.5 group-hover:scale-150 transition-transform"></div>
                     <div>
                       <div className="font-medium">{service.name}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
