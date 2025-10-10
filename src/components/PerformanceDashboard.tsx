@@ -1,99 +1,12 @@
+import React from 'react';
 
-
-'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
-
-}
-
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
-  });
-
-<<<<<<< HEAD
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
-      
-      // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage
-      let memoryUsage = 0;
-      if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      }
-      
-      // Measure FPS (simplified)
-      let fps = 0;
-      if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
-        let frameCount = 0;
-        const measureFPS = (currentTime: number) => {
-          frameCount++;
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-      }
-      
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
-      });
-    });
-
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }, []);
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
+const PerformanceDashboard: React.FC = () => {
+  return (
+    <div className="performance-dashboard">
+      <h2>Performance Dashboard</h2>
+      <p>Performance monitoring dashboard component.</p>
+    </div>
+  );
 };
 
 export default PerformanceDashboard;
-
-
-
