@@ -38,6 +38,16 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="text-sm font-medium">
+          🚀 Transform your business with our AI and IT solutions. 
+          <a href="/contact" className="underline hover:no-underline ml-1">
+            Get started today →
+          </a>
+        </p>
+=======
     <div className="bg-gradient-to-r from-cyan-600 to-purple-600 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -84,6 +94,7 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
+>>>>>>> origin/main
       </div>
     </div>
   );

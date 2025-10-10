@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 'use client'
 
 interface UserEvent {
@@ -108,6 +110,7 @@ class AdvancedAnalytics {}
   static getInstance(): AdvancedAnalytics {}
     if (!AdvancedAnalytics.instance) {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
+>>>>>>> origin/main
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -261,6 +264,8 @@ const AdvancedAnalyticsPage: React.FC = () => {
 };
 
 export default AdvancedAnalyticsPage;
+<<<<<<< HEAD
+=======
     // Track user journey
     if (this.config.enableUserJourneyTracking) {}
       this.trackUserJourney()
@@ -761,3 +766,4 @@ export default AdvancedAnalyticsPage;
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;
 `
+>>>>>>> origin/main
