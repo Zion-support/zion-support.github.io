@@ -1,25 +1,25 @@
 export interface RevOpsContent {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured: boolean;
-  content?: string;
-  author?: string;
-  valueProposition?: string;
-  highlights: string[];
+  id: string
+  title: string
+  description: string
+  category: string
+  date: string
+  readTime: string
+  tags: string[]
+  featured: boolean
+  content?: string
+  author?: string
+  valueProposition?: string
+  highlights: string[]
   metrics: {,
-    [key: string]: string;
+    [key: string]: string}
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
-  };
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
+  }
+  icon?: string
+  gradient?: string
+  breaking?: boolean
   cta?: {/* TODO: Fix JSX expression */}
-  };
+  }
 }
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
@@ -32,8 +32,8 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     readTime: '16 min',
     icon: '💰',
     gradient: 'from-emerald-600 to-teal-600',
-    featured: true;
-    breaking: true;
+    featured: true
+    breaking: true
     tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
     highlights: [,
       '127% ROI within first year',
@@ -46,10 +46,10 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       roi: '127%',
       forecastAccuracy: '89%',
       pipelineVelocity: '3.2 x',
-      revenue: '$127 M',
+      revenue: '$127 M',}
       efficiency: '85%'},
     cta: {,
-      text: 'Read the Complete RevOps Guide',
+      text: 'Read the Complete RevOps Guide',}
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {
     id: 'autonomous-revenue-operations-2025'
@@ -67,8 +67,8 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       'SaaS',
       'Revenue Operations',
       'Enterprise AI'],
-    featured: true;
-    breaking: true;
+    featured: true
+    breaking: true
     highlights: [,
       '$127M incremental annual revenue',
       '89% forecast accuracy (from 49%)',
@@ -83,20 +83,17 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       velocity: '3.2 x',
       roi: '704%',
 export const,
-  octoberNewestRevOpsContent: RevOpsContent[] = [
+  octoberNewestRevOpsContent: RevOpsContent[] = [}
   {/* TODO: Fix JSX expression */}
     },
     ct,
   a: {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
-
+    }}]
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
-
+}
 export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
-
+}
 export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
-};
+}

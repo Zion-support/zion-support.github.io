@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,
@@ -7,10 +7,10 @@ const SEO: React.FC<SEOProps> = ({,
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
-  url = 'https: //zion.app',
+  url = 'https: //zion.app',}
   type = 'website'}) => {
-  return(<Helmet>
-      <title>{title}</title>
+  return(<Helmet>}
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />)
@@ -26,7 +26,7 @@ const SEO: React.FC<SEOProps> = ({,
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta property="o,"
@@ -47,11 +47,8 @@ const,
   r:description" content={description} /></meta>"
       <meta name="twitte,"
   r:image" content={image} /></meta>"
-      <link rel="canonical" href={url} /></link>
-    </Helmet>
-  );
-};
+      <link rel="canonical" href={url} />
+  )
+}
 export default SEO;
 "
-  </SEOProps>
-  </SEOProps>

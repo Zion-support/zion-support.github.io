@@ -1,26 +1,26 @@
-// Enterprise case studies showcasing real-world AI implementations and results;
+// Enterprise case studies showcasing real-world AI implementations and results
 export interface EnterpriseCaseStudy {
-  id: string;
-  slug?: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string;
+  id: string
+  slug?: string
+  title: string
+  company: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string
   metrics: {
-    costSavings: string;
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
+    costSavings: string
+    efficiencyGain: string
+    roi: string
+    timeline: string}
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  };
+  }
   feature,
-  d: boolean;
+  d: boolean
   publishedA,
-  t: string;
+  t: string
   tag,
-  s: string[];
+  s: string[]
 }
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
@@ -36,9 +36,9 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     metrics: {,
       costSavings: '$50M annually',
       efficiencyGain: '300%',
-      roi: '450%',
+      roi: '450%',}
       timeline: '6 months'},
-    featured: true;
+    featured: true
     publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {
@@ -53,9 +53,9 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     metrics: {,
       costSavings: '$25M annually',
       efficiencyGain: '200%',
-      roi: '350%',
+      roi: '350%',}
       timeline: '4 months'},
-    featured: true;
+    featured: true
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
@@ -75,4 +75,4 @@ export const,
     publishedA,
   t: '2025-10-02',
     tag,
-  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}];
+  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}]

@@ -1,37 +1,82 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Find all tsx files in src directory
-const files = execSync('find src -name "*.tsx" -type f', { encoding: 'utf8' }).trim().split('\n');
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  let fixed = content;
+  
+  // Fix missing closing tags in JSX
+  fixed = fixed.replace(/(<div[^>]*>)\s*([^<]+)\s*$/gm, '$1$2</div>');
+  fixed = fixed.replace(/(<h[1-6][^>]*>)\s*([^<]+)\s*$/gm, '$1$2</h$1>');
+  fixed = fixed.replace(/(<p[^>]*>)\s*([^<]+)\s*$/gm, '$1$2</p>');
+  fixed = fixed.replace(/(<span[^>]*>)\s*([^<]+)\s*$/gm, '$1$2</span>');
+  
+  // Fix missing closing tags in map functions
+  fixed = fixed.replace(/(\s+)([^}]+)\s*\)\)\}/g, '$1$2</div>\n                        </Link>\n                      ))}');
+  
+  // Fix missing closing tags for service descriptions
+  fixed = fixed.replace(/(<div className="text-xs text-gray-400">[^<]+)\s*$/gm, '$1</div>');
+  fixed = fixed.replace(/(<div className="text-white font-medium">[^<]+)\s*$/gm, '$1</div>');
+  
+  // Fix missing closing tags for service names
+  fixed = fixed.replace(/(<div className="text-white font-medium">[^<]+)\s*$/gm, '$1</div>');
+  
+  // Fix missing closing tags for service descriptions
+  fixed = fixed.replace(/(<div className="text-xs text-gray-400">[^<]+)\s*$/gm, '$1</div>');
+  
+  // Fix missing closing tags for service containers
+  fixed = fixed.replace(/(<div[^>]*>)\s*([^<]+)\s*$/gm, '$1$2</div>');
+  
+  return fixed;
+}
 
-files.forEach(filePath => {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix duplicate divs and fragments
-      content = content.replace(
-        /return \(\s*<>\s*<div className="min-h-screen[^"]*">\s*<div className="min-h-screen[^"]*">/g,
-        'return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">'
-      );
-      
-      // Fix closing tags
-      content = content.replace(
-        /<\/div>\s*<\/>\s*\);\s*};/g,
-        '</div>\n  );\n};'
-      );
-      
-      // Fix any remaining fragment issues
-      content = content.replace(/<>\s*<div/g, '<div');
-      content = content.replace(/<\/div>\s*<\/>/g, '</div>');
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJSXStructure(content);
+    
+    if (content !== fixedContent) {
+      console.log(`Fixing JSX structure: ${filePath}`);
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('JSX structure fixed!');
+// Main function
+function main() {
+  const files = process.argv.slice(2);
+  
+  if (files.length === 0) {
+    console.log('Usage: node fix-jsx-structure.cjs <file1> <file2> ...');
+    process.exit(1);
+  }
+  
+  let processedCount = 0;
+  let errorCount = 0;
+  
+  files.forEach(file => {
+    if (processFile(file)) {
+      processedCount++;
+    } else {
+      errorCount++;
+    }
+  });
+  
+  console.log(`\nProcessed ${processedCount} files with JSX structure issues`);
+  console.log(`Errors: ${errorCount}`);
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixJSXStructure, processFile };

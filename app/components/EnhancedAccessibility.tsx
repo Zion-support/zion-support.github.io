@@ -16,7 +16,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-<<<<<<< HEAD
     };
     // Add skip links
     const addSkipLinks = () => {
@@ -68,12 +67,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const skipLink = document.querySelector('a[href="#main-content"]');
       if (skipLink) {
         skipLink.remove();
-=======
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       }
     };
 
@@ -158,9 +151,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
   return <React.Fragment>{children}</React.Fragment>;
 };
-<<<<<<< HEAD
 export default EnhancedAccessibility;
-=======
-
-export default EnhancedAccessibility;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

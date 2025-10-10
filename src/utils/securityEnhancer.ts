@@ -3,10 +3,10 @@
 
 
 interface SecurityConfig {enableCSP: boolean;}
-  enableHTTPS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableHTTPS: boolean
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  enableContentSecurityPolicy: boolean
 }
 
 class SecurityEnhancer {private config: SecurityConfig;}
@@ -21,7 +21,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
 
 
   private init(): void {// Initialize security enhancements;}
-    this.setupSecurityHeaders();
+    this.setupSecurityHeaders()
   }
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
@@ -29,7 +29,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
     this.setupXSSProtection()
     this.setupCSRFProtection()
     this.monitorSuspiciousActivity()
-    this.setupSecureHeaders()
+    this.setupSecureHeaders()}
   }
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
@@ -42,32 +42,32 @@ class SecurityEnhancer {private config: SecurityConfig;}
       "connect-src 'self' https://api.zion.app",
       "frame-ancestors 'none'",
       "base-uri 'self'",
-      "form-action 'self'"
+      "form-action 'self'";
     ].join('; ')
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp
-    document.head.appendChild(meta)
+    document.head.appendChild(meta)}
   }
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return
     const meta = document.createElement('meta')
-    meta.httpEquiv = 'X-XSS-Protection'
+    meta.httpEquiv = 'X-XSS-Protection';
     meta.content = '1; mode=block'
-    document.head.appendChild(meta)
+    document.head.appendChild(meta)}
   }
   private setupCSRFProtection(): void {
     if (!this.config.enableCSRFProtection) return
     // Generate CSRF token
-    const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
+    const token = this.generateCSRFToken();}
+    document.cookie = `csrf-token=${token} Secure; SameSite=Strict; HttpOnly`
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
   private generateCSRFToken(): string {
     const array = new Uint8Array(32)
     crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')}
   }
   private addCSRFTokenToForms(token: string): void {
     const forms = document.querySelectorAll('form')
@@ -76,24 +76,24 @@ class SecurityEnhancer {private config: SecurityConfig;}
       input.type = 'hidden'
       input.name = 'csrf-token'
       input.value = token
-      form.appendChild(input)
+      form.appendChild(input)}
     })
   }
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
     this.monitorConsoleAccess()
     this.monitorDOMManipulation()
-    this.monitorNetworkRequests()
+    this.monitorNetworkRequests()}
   }
   private monitorConsoleAccess(): void {
     const originalConsole = {
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
-    };
+      info: console.info.bind(console)}
+    }
     // Override console methods to detect debugging
-    Object.assign(console, originalConsole);
+    Object.assign(console, originalConsole)
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -103,7 +103,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
-                this.metrics.securityViolations++
+                this.metrics.securityViolations++}
                 }
             }
           })
@@ -112,7 +112,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true}
     })
     this.eventListeners.push(() => observer.disconnect())
   }
@@ -123,17 +123,14 @@ class SecurityEnhancer {private config: SecurityConfig;}
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
+        throw new Error('Request blocked: Origin not allowed')}
       }
       return originalFetch(input, init)
     }
   }
-
+;
   public cleanup(): void {// Cleanup security enhancements;}
   }
 }
 
 export default SecurityEnhancer;"
-
-
-

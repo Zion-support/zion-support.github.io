@@ -10,7 +10,7 @@ export const newArticles2025: NewArticle[] = [
     publishedAt: '2025-10-01',
     category: 'AI Automation',
     link: '/blog/ai-automation-2025',
-    readTime: '8 min read',
+    readTime: '8 min read',}
     tags: ['AI', 'Automation', 'Future of Work', '2025']},
   {
     id: 'quantum-computing-breakthrough'
@@ -23,8 +23,8 @@ export const newArticles2025: NewArticle[] = [
     readTime: '12 min read',
     tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Technology'],
 export const,
-  newArticles2025: NewArticle[] = [
+  newArticles2025: NewArticle[] = [}
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

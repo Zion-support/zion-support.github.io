@@ -1,12 +1,12 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+'use client'
+import React, { useState } from 'react'
 const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
     {
       id: 'ai',
@@ -14,7 +14,7 @@ const ResearchDevelopmentPage: React.FC = () => {
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
+      description:     ,}
 $4},
     {
       id: 'quantum',
@@ -22,7 +22,7 @@ $4},
       icon: Atom,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description:     ,
+      description:     ,}
 $4},
     {
       id: 'autonomous',
@@ -30,7 +30,7 @@ $4},
       icon: Rocket,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description:     ,
+      description:     ,}
 $4},
     {
       id: 'emerging',
@@ -38,9 +38,9 @@ $4},
       icon: Lightbulb,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
+      description:     ,}
 $4}
-  ];
+  ]
   const researchProjects = {
     ai: [
       {
@@ -56,7 +56,7 @@ $4}
           'Published 3 papers in top-tier conferences'
         ],
         icon: Brain,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Autonomous Business Intelligence',
@@ -71,7 +71,7 @@ $4},
           'Patent filed for core algorithms'
         ],
         icon: Target,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Neural Architecture Search for Enterprise',
@@ -86,7 +86,7 @@ $4},
           'Open-source framework released'
         ],
         icon: Microscope,
-        color:       ,
+        color:       ,}
 $4}
     ],
     quantum: [
@@ -103,7 +103,7 @@ $4}
           'Partnership with leading quantum hardware companies'
         ],
         icon: Atom,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Quantum Error Correction for Business Applications',
@@ -118,7 +118,7 @@ $4},
           'Industry collaboration established'
         ],
         icon: Zap,
-        color:       ,
+        color:       ,}
 $4}
     ],
     autonomous: [
@@ -135,7 +135,7 @@ $4}
           'Real-world deployment in 5 enterprises'
         ],
         icon: Rocket,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Multi-Agent Coordination Systems',
@@ -150,7 +150,7 @@ $4},
           'Published in Nature Communications'
         ],
         icon: Users,
-        color:       ,
+        color:       ,}
 $4}
     ],
     emerging: [
@@ -167,7 +167,7 @@ $4}
           'Industry partnerships established'
         ],
         icon: Lightbulb,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Edge AI for IoT Systems',
@@ -182,10 +182,10 @@ $4},
           'Commercial product launched'
         ],
         icon: Globe,
-        color:       ,
+        color:       ,}
 $4}
     ]
-  };
+  }
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
@@ -193,7 +193,7 @@ $4}
       journal: 'Nature Machine Intelligence',
       year: '2025',
       impact: 'High',
-      link:     ,
+      link:     ,}
 $4},
     {
       title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
@@ -201,7 +201,7 @@ $4},
       journal: 'Journal of Artificial Intelligence Research',
       year: '2025',
       impact: 'High',
-      link:     ,
+      link:     ,}
 $4},
     {
       title: 'Quantum Machine Learning for Financial Risk Assessment',
@@ -209,7 +209,7 @@ $4},
       journal: 'Quantum Information Processing',
       year: '2024',
       impact: 'Medium',
-      link:     ,
+      link:     ,}
 $4},
     {
       title: 'Multi-Agent Coordination in Distributed Systems',
@@ -217,31 +217,31 @@ $4},
       journal: 'Nature Communications',
       year: '2024',
       impact: 'High',
-      link:     ,
+      link:     ,}
 $4}
-  ];
+  ]
   const achievements = [
     {
       icon: Award,
       title: '50+ Research Papers',
-      description:     ,
+      description:     ,}
 $4},
     {
       icon: Users,
       title: '100+ Researchers',
-      description:     ,
+      description:     ,}
 $4},
     {
       icon: Target,
       title: '15+ Patents',
-      description:     ,
+      description:     ,}
 $4},
     {
       icon: Globe,
       title: 'Global Collaborations',
-      description:     ,
+      description:     ,}
 $4}
-  ];
+  ]
   return (
     <React.Fragment>
       <Navigation />
@@ -249,45 +249,39 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development;
-  </
+            <h1>Research & Development
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
-            </p>
-          </div>
           {/* Research Areas Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
-                <button
+                <button}
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
+                    activeTab === area.id}
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
                   <area.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span className="font-medium">{area.name}
               ))}
-            </div>
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
-    <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('ai');
+    <div>Coming Soon
+  )
+}
+  const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
   // TOD,
   O: Add items;
-];;
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'ai',
       nam,
@@ -303,7 +297,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'quantum',
       nam,
@@ -319,7 +313,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'autonomous',
       nam,
@@ -335,7 +329,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'emerging',
       nam,
@@ -349,17 +343,17 @@ $4}
       descriptio,
   n: 'Researching next-generation technologies'
     }
-  ];
+  ]
   const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -387,7 +381,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -415,7 +409,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -448,7 +442,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -476,7 +470,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -509,7 +503,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -537,7 +531,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -570,7 +564,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -598,7 +592,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -625,14 +619,14 @@ $4}
   r: 'text-blue-400'
       }
 //     ]
-  };
+  }
   const publications = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -649,7 +643,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -665,7 +659,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -681,7 +675,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -695,14 +689,14 @@ $4}
       lin,
   k: '#'
     }
-  ];
+  ]
   const achievements = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Award,
       titl,
@@ -712,7 +706,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Users,
       titl,
@@ -722,7 +716,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Target,
       titl,
@@ -732,7 +726,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Globe,
       titl,
@@ -740,34 +734,30 @@ $4}
       descriptio,
   n: 'Partnerships with leading universities and research institutions'
     }
-  ];
+  ]
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Research & Development;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          </div>
+  md:text-5xl font-bold text-white mb-6 neon-text">
+// Research & Development
+          <p>Coming Soon
           {/* Research Areas Tabs */}"
           <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => ()}
-          <button></button>
+          <button>
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content
+};
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -776,288 +766,216 @@ $4}
 //                 >
           "
           <area.icon className="w-5 h-5 mr-2" /></area>"
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span className="font-medium">{area.name}
               ))}
             </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 {researchAreas.find(area => area.id === activeTab)?.description}
-              </p>
-            </div>
-          </div>
           {/* Research Projects */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Current Research Projects;
-  </
+            <h2>Current Research Projects
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
+              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
-                    </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
-                  </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}
+                      <p className="text-gray-300 text-sm mb-4">{project.description}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Status</div>
+                      <div className="text-sm text-gray-400 mb-1">Status
                       <div className={`text-sm font-medium ${
                         project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
+                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'}
                       }`}>
                         {project.status}
-                      </div>
-                    </div>
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Timeline</div>
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
+                      <div className="text-sm text-gray-400 mb-1">Timeline
+                      <div className="text-sm text-white">{project.timeline}
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Team</div>
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
+                      <div className="text-sm text-gray-400 mb-1">Team
+                      <div className="text-sm text-white">{project.team}
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Funding</div>
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
+                      <div className="text-sm text-gray-400 mb-1">Funding
+                      <div className="text-sm text-white">{project.funding}
                   <div>
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
+                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:
                     <ul className="space-y-1">
-                      {project.outcomes.map((outcome, outcomeIndex) => (
+                      {project.outcomes.map((outcome, outcomeIndex) => (}
                         <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
           {/* Research Projects */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Current Research Projects;
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Current Research Projects
           </h2>"
             <div className="grid grid-cols-1,"
-  lg:grid-cols-2 gap-8"></div>
+  lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>
+                      <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>"
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm mb-4">{project.description}
                   </div>"
-                  <div className="grid grid-cols-2 gap-4 mb-4"></div>
+                  <div className="grid grid-cols-2 gap-4 mb-4">
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}></div>
+                      }`}>
                         {project.status}
-          </div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>"
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
+                      <div className="text-sm text-white">{project.timeline}
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Team</div>"
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
+                      <div className="text-sm text-white">{project.team}
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Funding</div>"
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
+                      <div className="text-sm text-white">{project.funding}
                   <div></div>"
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Outcomes:</div>"
-                    <ul className="space-y-1"></ul>
+                    <ul className="space-y-1">
                       {project.outcomes.map((outcome, outcomeIndex) => ()}"
           <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"></li>"
-                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">
                           {outcome}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
           {/* Publications */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Recent Publications;
-  </
+            <h2>Recent Publications
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {publications.map((pub, index) => (
+                {publications.map((pub, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}
+                    <div className="text-sm text-gray-300 mb-2">{pub.authors}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <span>{pub.journal}</span>
-                        <span>•</span>
-                        <span>{pub.year}</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>
-                          {pub.impact} Impact;
-  </
-                      </div>
+                        <span>{pub.journal}
+                        <span>•
+                        <span>{pub.year}
+                        <span>{pub.impact} Impact
                       <a
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
                         Read Paper →
-                      </a>
           {/* Publications */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Recent Publications;
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Recent Publications
           </h2>"
             <div className="max-w-4xl mx-auto"></div>"
-              <div className="space-y-6"></div>
+              <div className="space-y-6">
                 {publications.map((pub, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>"
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>"
                     <div className="flex items-center justify-between"></div>"
-                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
-                        <span>{pub.journal}</span>
-                        <span></span>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <span>{pub.journal}
+                        <span>
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
-                        }`}></span>
-                          {pub.impact} Impact;
-          </span>
-                      </div>
-                      <a></a>
+                        }`}>
+                          {pub.impact} Impact
+                      <a>
                         href={pub.link}"
                         className="text-cyan-400,"
   hover:text-cyan-300 text-sm font-medium"
 // >
-//                         Read Paper;
-          </a>
-                    </div>
-                  </div>
+//                         Read Paper
                 ))}
-              </div>
-            </div>
-          </div>
           {/* Achievements */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Research Achievements;
-  </
+            <h2>Research Achievements
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {achievements.map((achievement, index) => (
+              {achievements.map((achievement, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}
           {/* Achievements */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Research Achievements;
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Research Achievements
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => ()}"
           <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                    <achievement.icon className="w-8 h-8 text-cyan-400" /></achievement>
+                    <achievement.icon className="w-8 h-8 text-cyan-400" />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>"
-                  <p className="text-gray-300 text-sm">{achievement.description}</p>
-                </div>
+                  <p className="text-gray-300 text-sm">{achievement.description}
               ))}
-            </div>
-          </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Collaborate With Our Research Team;
-  </
+            <h2>Collaborate With Our Research Team
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
               universities, research institutions, and industry leaders.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                <BookOpen className="w-5 h-5 mr-2" />
-                Start Collaboration;
-  </
+                <BookOpen>Start Collaboration
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
-  </
+                <Phone>(302) 464-0950
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us;
-  </
+                <Mail>Email Us
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
-// Collaborate With Our Research Team;
+            <h2 className="text-2xl font-bold text-white mb-4">
+// Collaborate With Our Research Team
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-// Interested in collaborating on cutting-edge research? We welcome partnerships with;
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+// Interested in collaborating on cutting-edge research? We welcome partnerships with
               universities, research institutions, and industry leaders.
-          </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           "
-          <BookOpen className="w-5 h-5 mr-2" /></BookOpen>
-// Start Collaboration;
-          </a>
+          <BookOpen className="w-5 h-5 mr-2" />
+// Start Collaboration
               <a
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
-          <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
-          </a>
+          <Phone className="w-4 h-4 mr-2" />
+// (302) 464-0950
               <a
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
-          <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
-          </a>
-            </div>
-          </div>
-        </div>
-      </div>
+          <Mail className="w-4 h-4 mr-2" />
+// Email Us
       <Footer />
-    </React.Fragment>
-    </div>
-  );
-};
+  )
+}
 export default ResearchDevelopmentPage;
-  </a>
-  </a>
-  </a>

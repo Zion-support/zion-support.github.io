@@ -1,12 +1,12 @@
-import Analytics from './components/Analytics';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
-export default function RootLayout({
+import Analytics from './components/Analytics'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import Analytics from './components/Analytics'
+export default function RootLayout({}
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode}
 }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -31,7 +31,7 @@ export default function RootLayout({
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
-      areaServed: 'US',
+      areaServed: 'US',}
       availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -53,7 +53,7 @@ export default function RootLayout({
     postalCode: '19709',
     addressCountry: 'US',
     offers: [
-  // TODO: Add items]
+  // TODO: Add items]}
       {// TODO: Add content;}
 }
         '@type': 'Offer',
@@ -63,7 +63,7 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          billingIncrement:         ,
+          billingIncrement:         ,}
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
@@ -87,8 +87,8 @@ name$5: 'Digital Automation',
             description:             ,
 name$5: 'Cloud Infrastructure',
             description:       ,
-$4]
-  };
+$4]}
+  }
   return (
     <html lang='en'>
       <head>
@@ -159,22 +159,18 @@ $4]
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </head>
       <body className='antialiased'>
         <ErrorBoundary>
           <PerformanceMonitor />
           <Analytics />
           {children}
-        </ErrorBoundary>
-      </body>
-    </html>
   );
 export default RootLayout;
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
-        };
+        }
   itemOffered: {// TODO: Add content;}
 }
             '@type': 'Service',
@@ -182,4 +178,3 @@ export default RootLayout;
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
 export default SrcPage;
 }
-  </script>

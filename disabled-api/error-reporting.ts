@@ -1,7 +1,7 @@
 // import {NextApiRequest} NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   e: string} stack?: string} nam,
   e: string}; errorInf,
-  o: { componentStack?: string}; timestam,
+  o: { componentStack?: string} timestam,
   p: string; userAgen,
   t: string; ur,
   l: string; userId?: string, sessionId?: string} // In-memory storage for demo purposes // In production, you would use a proper database const,
@@ -42,7 +42,7 @@
   o: parseInt(match[3])} coln,
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
   o: 0} coln,
-  o: 0 }})} function isCriticalError(errorRepor)
+  o: 0 }})} function isCriticalError(errorRepor);
   t: ErrorReport): boolean {const criticalPatterns = [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
@@ -66,4 +66,4 @@
   e: errorReport.timestamp} shor)
   t: true } ] }] }) })} } catch (error) {/* TODO: Fix JSX expression */}
   alert: '} error)} } // Get error reports (for admin dashboard) export async function getErrorReports() { return errorReports}'
-`
+`;

@@ -9,9 +9,9 @@
   r: e.message }) } } statusCod,
   e: 200, bod,
   y: JSON && JSON.stringify({/* TODO: Fix JSX expression */}
-  k: true} page)
+  k: true} page);
   s: results && results.length }); }; } catch (e) {} return {/* TODO: Fix JSX expression */}
   e: 500} bod,
-  y: JSON && JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON && JSON.stringify({/* TODO: Fix JSX expression */});
   r: e && e.message }) }; ' const { upsertFile } = require('./_lib/github');' async function psi(_url, strategy = 'mobile') key) {/* TODO: Fix JSX expression */}
   s: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),' endpoint.searchParams.set('url') url);' endpoint.searchParams.set('strategy') strategy)}' if (key) endpoint.searchParams.set('key'} key); const resp = await fetch(endpoint.toString()); if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`); }; return resp.json() origin/cursor/automate-test-improve-and-merge-code-2533 } ' const baseUrl = process.env.URL |process.env.DEPLOY_URL |''' const key = process.env.PSI_API_KEY |'' }; '`

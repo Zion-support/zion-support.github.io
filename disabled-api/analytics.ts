@@ -29,4 +29,4 @@
   s: {' 'Content-Type': 'application/json' }) bod,
   y: JSON.stringify(event) })} } catch (error) {/* TODO: Fix JSX expression */}
   services: '} error)} } // Get analytics data (for admin dashboard) export async function getAnalyticsData() { return analyticsData}'
-`
+`;

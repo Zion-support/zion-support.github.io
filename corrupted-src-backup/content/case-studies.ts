@@ -1,14 +1,14 @@
 export type CaseStudy = {
-  id: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  technologies: string[];
-  duration: string;
-  imageUrl?: string;};
+  id: string
+  title: string
+  company: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  technologies: string[]
+  duration: string}
+  imageUrl?: string;}
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -34,7 +34,7 @@ export const caseStudies: CaseStudy[] = [
       'Azure ML',
       'Unity 3 D',
       'Kubernetes'],
-    duration: '18 months',
+    duration: '18 months',}
     imageUrl: '/images/case-studies/energy-digital-twin.jpg'},
   {
     id: 'fintech-ai-platform',
@@ -51,7 +51,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased client satisfaction scores by 40%',
       'Generated $2.3 M in additional revenue through better insights'],
     technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
-    duration: '12 weeks',
+    duration: '12 weeks',}
     imageUrl: '/images/case-studies/fintech-platform.jpg'},
   {
     id: 'healthcare-chatbot',
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
       'Improved patient satisfaction scores by 60%',
       'Freed up 15 hours daily for staff to focus on critical cases'],
     technologies: ['OpenAI GPT-4', 'Node.js', 'React', 'MongoDB', 'AWS Lambda'],
-    duration: '8 weeks',
+    duration: '8 weeks',}
     imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
   {
     id: 'ecommerce-optimization'
@@ -84,7 +84,7 @@ export const caseStudies: CaseStudy[] = [
       'Boosted average order value by 35%',
       'Generated $1.8 M in additional revenue in 6 months'],
     technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
-    duration: '10 weeks',
+    duration: '10 weeks',}
     imageUrl: '/images/case-studies/ecommerce-ai.jpg'},
   {
     id: 'manufacturing-iot',
@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
       'Saved $2.1 M annually in maintenance costs',
       'Increased production output by 18%'],
     technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
-    duration: '16 weeks',
+    duration: '16 weeks',}
     imageUrl: '/images/case-studies/manufacturing-iot.jpg'},
   {
     id: 'saas-analytics',
@@ -118,7 +118,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased MRR by $500 K through better retention',
       'Enabled 90% faster product decision-making'],
     technologies: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js', 'AWS'],
-    duration: '14 weeks',
+    duration: '14 weeks',}
     imageUrl: '/images/case-studies/saas-analytics.jpg'},
   {
     id: 'cybersecurity-automation',
@@ -135,7 +135,7 @@ export const caseStudies: CaseStudy[] = [
       'Achieved 100% compliance audit success rate',
       'Prevented $3.2 M in potential security breaches'],
     technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
-    duration: '20 weeks',
+    duration: '20 weeks',}
     imageUrl: '/images/case-studies/cybersecurity.jpg'},
   {
     id: 'telco-edge-observability'
@@ -151,7 +151,7 @@ export const caseStudies: CaseStudy[] = [
       'Decreased churn by 18% in 2 quarters',
       '$4.7 M annual SLA penalty savings'],
     technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
-    duration: '18 weeks',
+    duration: '18 weeks',}
     imageUrl: '/images/case-studies/telco-edge.jpg'},
   {
     id: 'enterprise-rag-rollout'
@@ -168,10 +168,9 @@ export const caseStudies: CaseStudy[] = [
       '$3.1 M/year support cost savings'],
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
-    imageUrl: '/images/case-studies/enterprise-rag.jpg',
+    imageUrl: '/images/case-studies/enterprise-rag.jpg',}
 export type CaseStudy = {/* TODO: Fix JSX expression */}
-};
-
+}
 export const,
   caseStudies: CaseStudy[] = [
   {/* TODO: Fix JSX expression */}
@@ -191,4 +190,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

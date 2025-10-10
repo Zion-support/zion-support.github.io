@@ -1,22 +1,22 @@
 
 
-// Sitemap generator utility;
+// Sitemap generator utility
 export interface SitemapUrl {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   lo,
-  c: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  c: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const baseUrl = 'http,
-  s://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
+  s://ziontechgroup.com'
+  const currentDate = new Date().toISOString().split('T')[0]
   const sitemap = `
           
           
@@ -32,8 +32,7 @@ export const _generateSitemap = (url)
 ${urls;}
   .map((url) => {// TODO: Add content;}
 }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
-
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
     return `  
           
           
@@ -43,10 +42,10 @@ ${urls;}
           
           
           
-          <url></url>
-    <loc>${fullUrl}</loc>
-    <lastmod>${url.lastmod || currentDate}</lastmod>
-    <changefreq>${url.changefreq || 'weekly'}</changefreq>
+          <url>
+    <loc>${fullUrl}
+    <lastmod>${url.lastmod || currentDate}
+    <changefreq>${url.changefreq || 'weekly'}
     <priority>${url.priority || 0.8}</priority>`
   </url>`
   }
@@ -55,22 +54,21 @@ ${urls;}
   .join('
 ')}
 
-</urlset>`;
-  return sitemap;
-};
+</urlset>`
+  return sitemap
+}
 // Define all the pages for the sitemap;
-
 export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
 
 }
-// Define all the pages for the sitemap;
+// Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
   // TOD,
   O: Add items]
-    // Main pages;
+    // Main pages
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -89,7 +87,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // AI Services;
+    // AI Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -134,7 +132,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // IT Services;
+    // IT Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -149,7 +147,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Micro SAAS;
+    // Micro SAAS
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -168,7 +166,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Specialized Solutions;
+    // Specialized Solutions
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
@@ -181,7 +179,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
-    // Legal pages;
+    // Legal pages
     {/* TODO: Fix JSX expression */}
   q: 'yearly' },
     {/* TODO: Fix JSX expression */}
@@ -196,3 +194,4 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
 
 
 
+;
