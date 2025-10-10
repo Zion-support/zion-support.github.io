@@ -15,14 +15,14 @@ export interface CoverageMetrics {
     branches: number
   functions: number,
     lines: number;}
-  renderTime: number;
-  memoryUsage: number;
+  renderTime: number,
+  memoryUsage: number,
   timestamp: string;}
 }
 export interface CoverageMetrics {
-  statements: number;
-  branches: number;
-  functions: number;
+  statements: number,
+  branches: number,
+  functions: number,
   lines: number;}
 }
 // Test configuration interface;
@@ -57,15 +57,15 @@ export interface TestConfig {}
   timeout?: number
   verbose?: boolean
   bail?: boolean
-  enableMocking: boolean;
-  enableCoverage: boolean;
-  enablePerformance: boolean;
-  enableAccessibility: boolean;
-  enableVisualRegression: boolean;
+  enableMocking: boolean,
+  enableCoverage: boolean,
+  enablePerformance: boolean,
+  enableAccessibility: boolean,
+  enableVisualRegression: boolean,
   mockDataPath?: string;
-  coverageThreshold: number;
-  performanceThreshold: number;
-  accessibilityThreshold: number;
+  coverageThreshold: number,
+  performanceThreshold: number,
+  accessibilityThreshold: number,
   timeout?: number;
   verbose?: boolean;
   bail?: boolean;
@@ -130,39 +130,39 @@ interface Test {</void>
   skip?: boolean
 // Default test configuration;
 export const defaultTestConfig: TestConfig = {
-  enableMocking: true;
-  enableCoverage: true;
-  enablePerformance: true;
-  enableAccessibility: true;
-  enableVisualRegression: false;
-  coverageThreshold: 80;
-  performanceThreshold: 100;
+  enableMocking: true,
+  enableCoverage: true,
+  enablePerformance: true,
+  enableAccessibility: true,
+  enableVisualRegression: false,
+  coverageThreshold: 80,
+  performanceThreshold: 100,
   accessibilityThreshold: 90}
 }
 interface TestResult {
-  name: string;
+  name: string,
   status: 'passed' | 'failed' | 'skipped' | 'pending'
-  duration: number;
+  duration: number,
   error?: Error;
   assertions: AssertionResult[],
   coverage?: CoverageResult;}
 }
 interface AssertionResult {
-  name: string;
+  name: string,
   status: 'passed' | 'failed',
   expected?: unknown;
   actual?: unknown;
   message?: string;}
 }
 interface CoverageResult {
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;
+  statements: number,
+  branches: number,
+  functions: number,
+  lines: number,
   uncovered: string[];}
 }
 interface TestSuite {
-  name: string;
+  name: string,
 interface CoverageResult {}
   statements: number
   branches: number
@@ -179,15 +179,15 @@ interface TestSuite {}
   afterEach: (() => void | Promise<void>)[];}
 }
 interface Test {
-  name: string;
+  name: string,
   fn: () => void | Promise<void>,
   timeout?: number;
   skip?: boolean;
   only?: boolean;}
 }
 export class TestRunner {
-  private static instance: TestRunner;
-  private config: TestConfig;
+  private static instance: TestRunner,
+  private config: TestConfig,
   private suites: TestSuite[] = []
   private currentSuite: TestSuite | null = null</void>
   private results: TestResult[] = []</void>
@@ -217,9 +217,9 @@ export class TestRunner {}
   private currentSuite: TestSuite | null = null;
   private results: TestResult[] = []
   private testResults: Array<{
-    name: string;
+    name: string,
     status: 'passed' | 'failed' | 'skipped',
-    duration: number;
+    duration: number,
     error?: string;}
   }> = []
   private isRunning: boolean = false;
@@ -229,13 +229,13 @@ export class TestRunner {}
   constructor(config: Partial<TestConfig> = {}) {}
     this.config = {}
       ...defaultTestConfig,
-      timeout: 5000;
-      retries: 0;
-      parallel: false;
-      verbose: false;
-      coverage: false;
-      watch: false;
-      bail: false;
+      timeout: 5000,
+      retries: 0,
+      parallel: false,
+      verbose: false,
+      coverage: false,
+      watch: false,
+      bail: false,
       reporter: 'console'
       outputDir: './test-results',
       includePattern: [,
@@ -406,7 +406,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }
   // Performance test;
   async runPerformanceTest(component: ReactElement),
-    testName: string;
+    testName: string,
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
   async runPerformanceTest()
     component: ReactElement,
@@ -843,7 +843,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    */
   private async runHook(
     hook: () => void | Promise<void>
-    hookName: string;
+    hookName: string,
   ): Promise<void> {,
     try {,
   private async runHook()
@@ -867,7 +867,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    */
   private async runWithTimeout()
     fn: () => void | Promise<void>,
-    timeout: number;
+    timeout: number,
   ): Promise<void> {,
     return new Promise((resolve, reject) => {
     timeout: number
@@ -893,7 +893,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private async runHook(hoo)
   k: () => void | Promise<void>,
     hookNam,
-  e: string;
+  e: string,
   ): Promise<void> {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
     }
@@ -904,7 +904,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private async runWithTimeout(f)
   n: () => void | Promise<void>,
     timeou,
-  t: number;
+  t: number,
   ): Promise<void> {/* TODO: Fix JSX expression */}`
         reject(new Error(`Test timed out after ${timeout}ms`));
       }, timeout);
@@ -999,14 +999,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 </head>
 <body>
     <h2 id="heading-test-results">Test Results</h2>
-    <div class="summary">
+    <div class="summary"></div>
         <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
     <div class="summary"></div>
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
           .map()</div>
     result => `}</div>
             <div class="test ${result.status}"></div>
@@ -1026,8 +1026,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           .map(result => `}
         ${this.results}
           .map()
-            result => `}
-            <div class="test ${result.status}">
+            result => `}</div>
+            <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
@@ -1050,7 +1050,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     testName: string
   // Accessibility test;
   async runAccessibilityTest(component: ReactElement),
-    testName: string;
+    testName: string,
   ): Promise<{ passed: boolean; violations: string[] }> {}
     const { container } = this.customRender(component)
     // Basic accessibility checks;
@@ -1141,7 +1141,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       this.testResults.push({`})
         name: `Component: ${testName}`)
         status: 'passed'),
-        duration: 0;
+        duration: 0,
       })
       return { passed: true }
     } catch (error) {}
@@ -1156,7 +1156,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         name: `Component: ${testName}`)
         status: 'failed'),
         duration: 0),
-        error: errorMessage;
+        error: errorMessage,
       })
       return { passed: false, error: errorMessage }
   private generateHtmlReport(): void {/* TODO: Fix JSX expression */}
@@ -1271,7 +1271,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         statu,
   s: 'passed',
         duratio,
-  n: 0;
+  n: 0,
       });
       return {/* TODO: Fix JSX expression */}
   d: true };
@@ -1282,7 +1282,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         duratio,
   n: 0,
         erro,
-  r: errorMessage;
+  r: errorMessage,
       });
       return {/* TODO: Fix JSX expression */}
   r: errorMessage };
@@ -1347,7 +1347,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       this.testResults.push({`})
         name: `Integration: ${testName}`)
         status: 'passed'),
-        duration: 0;
+        duration: 0,
       })
       return { passed: true }
     } catch (error) {}
@@ -1362,7 +1362,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         name: `Integration: ${testName}`)
         status: 'failed'),
         duration: 0),
-        error: errorMessage;
+        error: errorMessage,
       })
       return { passed: false, error: errorMessage }
     }
@@ -1373,7 +1373,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     testName: string
   // Visual regression test;
   async runVisualRegressionTest(component: ReactElement),
-    testName: string;
+    testName: string,
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic;
     // For now, we'll just return a placeholder}
@@ -1393,7 +1393,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     this.testResults.push({`})
       name: `Visual: ${testName}`)
       status: 'passed'),
-      duration: 0;
+      duration: 0,
     })
     return { passed: true }
   }
@@ -1436,9 +1436,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
     const coverage: CoverageMetrics = {
-      statements: 85;
-      branches: 80;
-      functions: 90;
+      statements: 85,
+      branches: 80,
+      functions: 90,
       lines: 85}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
@@ -1541,7 +1541,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         statu,
   s: 'passed',
         duratio,
-  n: 0;
+  n: 0,
       });
       return {/* TODO: Fix JSX expression */}
   d: true };
@@ -1552,7 +1552,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         duratio,
   n: 0,
         erro,
-  r: errorMessage;
+  r: errorMessage,
       });
       return {/* TODO: Fix JSX expression */}
   r: errorMessage };
@@ -1644,7 +1644,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const statistics = this.getTestStatistics()
     const results = this.getTestResults()
     return {
-      summary: statistics;
+      summary: statistics,
   // Clear test results
   clearTestResults() {}
     this.testResults = [];}
@@ -2252,7 +2252,7 @@ class Mock {/* TODO: Fix JSX expression */}
    * Create a mock class;
    */
   public static class<T extends new (...args: unknown[]) => unknown>(,
-    constructor: T;
+    constructor: T,
     overrides: Partial<InstanceType<T>> = {}
   ): MockFunction {</InstanceType>
     const mockFn = Mock.fn((...args) => {</InstanceType>
@@ -2275,8 +2275,8 @@ class Mock {/* TODO: Fix JSX expression */}
    * Create a spy;
    */
   public static spyOn<T extends object, K extends keyof T>(
-    object: T;
-    method: K;
+    object: T,
+    method: K,
   ): MockFunction {,
     const original = object[method],
     const mockFn = Mock.fn(),

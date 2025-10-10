@@ -14,7 +14,7 @@ interface LinkProps {}
 export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
-  href: string;
+  href: string,
   children: React.ReactNode;
   className?: string;
   target?: string;

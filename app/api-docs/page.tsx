@@ -115,6 +115,7 @@ export default function APIDocsPage() {
       />
       <Navigation />
       
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -142,6 +143,38 @@ export default function APIDocsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                API Documentation</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Complete API reference for integrating with our services.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Authentication</h2>
+                <p className="text-gray-700 mb-6">
+                  Learn how to authenticate with our APIs using API keys and OAuth.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Endpoints</h2>
+                <p className="text-gray-700 mb-6">
+                  Browse our complete list of API endpoints with examples.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">SDKs</h2>
+                <p className="text-gray-700 mb-6">
+                  Download our official SDKs for popular programming languages.
+                </p>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

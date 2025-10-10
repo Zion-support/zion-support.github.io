@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -26,6 +27,75 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+=======
+// Type definitions for Next.js compatibility in Vite
+export interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  authors?: Array<{ name: string; url?: string }> | string[];
+  creator?: string;
+  publisher?: string;
+  formatDetection?: {
+    email?: boolean;
+    address?: boolean;
+    telephone?: boolean;
+  };
+  metadataBase?: URL;
+  alternates?: {
+    canonical?: string;
+    languages?: Record<string, string>;
+  };
+  openGraph?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    siteName?: string;
+    images?: Array<{
+      url: string,
+      width?: number;
+      height?: number;
+      alt?: string;
+    }>;
+    locale?: string;
+    type?: string;
+    authors?: Array<{ name: string; url?: string }> | string[];
+    publishedTime?: string;
+  };
+  twitter?: {
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+    site?: string;
+    creator?: string;
+    title?: string;
+    description?: string;
+    images?: string[];
+  };
+  robots?: {
+    index?: boolean;
+    follow?: boolean;
+    googleBot?: {
+      index?: boolean;
+      follow?: boolean;
+      'max-video-preview'?: number;
+      'max-image-preview'?: 'none' | 'standard' | 'large';
+      'max-snippet'?: number;
+    };
+  };
+  verification?: {
+    google?: string;
+    yandex?: string;
+    yahoo?: string;
+    other?: Record<string, string>;
+  };
+}
+
+export interface MetadataRoute {
+  url: string,
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -38,6 +108,7 @@ const Next.dPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,6 +116,14 @@ const Next.dPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
+=======
+export interface MetadataRouteSitemap extends MetadataRoute {
+  url: string,
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

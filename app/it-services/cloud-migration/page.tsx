@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -68,6 +69,109 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
+=======
+const $1: React.FC = () => {
+  const [currentInfrastructure, setCurrentInfrastructure] = useState('');
+  const [targetCloud, setTargetCloud] = useState('');
+  const [migrationScope, setMigrationScope] = useState('');
+
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1><p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>
+            <div className="space-y-6"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+                <div></div>
+                  <label className="block text-white font-medium mb-2">Current Infrastructure<select
+                    value={currentInfrastructure}
+                    onChange={(e) =>setCurrentInfrastructure(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                  ></select>
+                    <option value="">Select current setup...</option><option value="on-premise">On-Premise</optio>
+                    <option value="hybrid">Hybrid Cloud</option><option value="other-cloud">Other Cloud Provider</option><option value="legacy">Legacy Systems</optio>
+                  </select>
+                </div>
+                <div></div>
+                  <label className="block text-white font-medium mb-2">Target Cloud<select
+                    value={targetCloud}
+                    onChange={(e) =>setTargetCloud(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                  ></select>
+                    <option value="">Select target...</option><option value="aws">Amazon Web Services</optio>
+                    <option value="azure">Microsoft Azure</option><option value="gcp">Google Cloud Platform</option><option value="multi-cloud">Multi-Cloud</optio>
+                  </select>
+                </div>
+                <div></div>
+                  <label className="block text-white font-medium mb-2">Migration Scope<select
+                    value={migrationScope}
+                    onChange={(e) =>setMigrationScope(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                  ></select>
+                    <option value="">Select scope...<option value="lift-shift">Lift & Shift</option>
+                    <option value="replatform">Replatform<option value="refactor">Refactor<option value="rearchitect">Rearchitect<button className="cyber-button w-full">Get Migration Plan</button>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+            Cloud Migration Services;</h1>
+          </h1>
+          <p className="text-xl text-gray-300 text-center mb-12">
+            Seamlessly migrate your infrastructure to the cloud with zero downtime;
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>)
+            <div className="space-y-6">)</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)</div>
+                <div>)</div>
+                  <label className="block text-white font-medium mb-2">Current Infrastructure</label>),
+                  <select;),
+                    value={currentInfrastructure}
+                    onChange={(e) => setCurrentInfrastructure(e.target.value)}
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                  >
+                    <option value="">Select current setup...</option>
+                    <option value="on-premise">On-Premise</option>
+                    <option value="hybrid">Hybrid Cloud</option>
+                    <option value="other-cloud">Other Cloud Provider</option>
+                    <option value="legacy">Legacy Systems</option>
+                  </select>,
+                </div>,
+                <div>,</div>
+                  <label className="block text-white font-medium mb-2">Target Cloud</label>,
+                  <select;
+                    value={targetCloud}
+                    onChange={(e) => setTargetCloud(e.target.value)}
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                  >
+                    <option value="">Select target...</option>
+                    <option value="aws">Amazon Web Services</option>
+                    <option value="azure">Microsoft Azure</option>
+                    <option value="gcp">Google Cloud Platform</option>
+                    <option value="multi-cloud">Multi-Cloud</option>
+                  </select>,
+                </div>,
+                <div>,</div>
+                  <label className="block text-white font-medium mb-2">Migration Scope</label>,
+                  <select;
+                    value={migrationScope}
+                    onChange={(e) => setMigrationScope(e.target.value)}
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                  >
+                    <option value="">Select scope...</option>
+                    <option value="lift-shift">Lift & Shift</option>
+                    <option value="replatform">Replatform</option>
+                    <option value="refactor">Refactor</option>
+                    <option value="rearchitect">Rearchitect</option>
+                  </select>
+                </div>
+              </div>
+              <button className="cyber-button w-full">
+                Get Migration Plan;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
             </div>
           </div>
@@ -95,7 +199,78 @@ const PagePage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+<<<<<<< HEAD
             ))}
+=======
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Disaster recovery</span>
+                </div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Global accessibility</span>
+                </div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Automated backups</span>
+                </div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Compliance support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Small Business<div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,</div>
+            <div className="cyber-card p-6 text-center">,</div>
+              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>,
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>Up to 10 servers<li>Basic migration</li>
+                <li>1-month support<li>Documentation</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$15,000</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>Up to 100 servers<li>Advanced migration</li>
+                <li>3-month support<li>Training included<li>24/7 monitoring</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Custom</h3><div className="text-3xl font-bold text-cyan-400 mb-4">Quote</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>Unlimited servers<li>Custom solution</li>
+                <li>6-month support<li>Dedicated team<li>SLA guarantee</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center"></div>
+            <a;
+              href="tel: +13024640950"
+          <div className="text-center"></div>
+            <a
+              href="tel:+13024640950"
+              className="cyber-button mr-4"
+            >📞 Call: (302) 464-0950<a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >Get Migration Quote</a>
+            >
+              📞 Call: (302) 464-0950;
+            </a>
+            <a;
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Get Migration Quote;
+            </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

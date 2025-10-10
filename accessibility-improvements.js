@@ -1,9 +1,10 @@
 
-// Accessibility improvements to implement;
-// 1. Add ARIA labels to interactive elements;
-<button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" /></input>
-<div id="email-help">Enter your email address</div>
+// Accessibility improvements to implement
+// 1. Add ARIA labels to interactive elements
+// Example JSX:
+// <button aria-label="Close dialog">×</button>
+// <input aria-describedby="email-help" type="email" />
+// <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
 const trapFocus = (element) => {
@@ -30,23 +31,26 @@ const trapFocus = (element) => {
   });
 };
 
-// 3. Add live regions for dynamic content;
-<div aria-live="polite" aria-atomic="true" className="sr-only">
-  {announcement}
-</div>
+// 3. Add live regions for dynamic content
+// Example JSX:
+// <div aria-live="polite" aria-atomic="true" className="sr-only">
+//   {announcement}
+// </div>
 
-// 4. Ensure proper heading hierarchy;
-<h1>Main Page Title</h1>
-  <h2>Section Title</h2>
-    <h3>Subsection Title</h3>
+// 4. Ensure proper heading hierarchy
+// Example JSX:
+// <h1>Main Page Title</h1>
+// <h2>Section Title</h2>
+// <h3>Subsection Title</h3>
 
-// 5. Add skip links;
-<a href="#main-content" className="skip-link">
-  Skip to main content;
-</a>
+// 5. Add skip links
+// Example JSX:
+// <a href="#main-content" className="skip-link">
+//   Skip to main content
+// </a>
 
 // 6. Use semantic HTML;
-<main>
+// <main>
   <nav aria-label="Main navigation">
     <ul>
       <li><a href="/">Home</a></li>
@@ -58,10 +62,10 @@ const trapFocus = (element) => {
       <h3>Article</h3> Title</h3>
     </article>
   </section>
-</main>
+// </main>
 
 // 7. Form accessibility;
-<form>
+// <form>
   <fieldset>
     <legend>Contact Information</legend>
     <label htmlFor="email">Email Address</label>
@@ -75,7 +79,7 @@ const trapFocus = (element) => {
       {emailError}
     </div>
   </fieldset>
-</form>
+// </form>
 
 // 8. Image accessibility;
 <img;

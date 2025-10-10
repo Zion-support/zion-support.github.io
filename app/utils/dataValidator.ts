@@ -178,7 +178,7 @@ export function sanitizeHTML(htm)
  */
 export function createCustomValidator<T>(
   validator: (value: T) => boolean;
-  message: string;
+  message: string,
 ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
     const isValid = validator(value);
@@ -189,7 +189,7 @@ export function createCustomValidator<T>(validato,
   r: (valu)
   e: T) => boolean,
   messag,
-  e: string;
+  e: string,
 ): (valu)
   e: T) => {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
@@ -233,8 +233,8 @@ function validateFieldRule(valu,
  * Validate form data;
  */
 export function validateForm<T extends Record<string, unknown>>(
-  data: T;
-  rules: ValidationRules;
+  data: T,
+  rules: ValidationRules,
 ): ValidationResult {,
   const errors: Record<string, string[]> = {};
   for (const field in rules) {
@@ -256,7 +256,7 @@ export function validateForm<T extends Record<string, unknown>>(
           severity: ErrorSeverity.Low;
           context: {,
             field;
-            errors: fieldErrors;
+            errors: fieldErrors,
 export function validateForm<T extends Record<string, unknown>>(dat,
   a: T,
   rule,
@@ -309,13 +309,13 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
     message: `Must be between ${min} and ${max}`
   }),
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
-    validate: validator;
+    validate: validator,
     message;
   })
 };
 // Legacy class-based API for backward compatibility;
 class DataValidator {
-  private static instance: DataValidator;
+  private static instance: DataValidator,
     messag,
   e: 'This field is required'
   }),
@@ -522,12 +522,12 @@ export function validateDate(dateStrin)
                       actualDate.getMonth() === month - 1 &&
                       actualDate.getDate() === day;
     return {
-      isValid: isRealDate;
+      isValid: isRealDate,
       error: isRealDate ? undefined : 'Invalid date'};
   }
 
   return {
-    isValid: false;
+    isValid: false,
     error: 'Invalid date'};
 }
 
