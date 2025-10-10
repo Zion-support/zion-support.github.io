@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,6 +57,42 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Solutions</h2>
+          <p className="text-xl text-gray-300">Discover our most popular and powerful solutions</p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 min-h-[400px]">
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                {React.createElement(slides[currentSlide].icon, { className: "w-10 h-10 text-white" })}
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {slides[currentSlide].title}
+              </h3>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                {slides[currentSlide].description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {slides[currentSlide].features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center mx-auto">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
 
@@ -86,6 +120,23 @@ const ContentCarousel: React.FC = () => {
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
               />
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mt-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">What You Get</h3>
+            <p className="text-xl text-gray-300">Comprehensive benefits with every solution</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300 text-sm">{benefit}</span>
+              </div>
             ))}
           </div>
         </div>

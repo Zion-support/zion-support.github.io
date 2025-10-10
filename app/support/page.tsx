@@ -1,13 +1,21 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, BookOpen, FileText, Video, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'general', name: 'General' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'implementation', name: 'Implementation' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +35,28 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'technical'
+    },
+    {
+      question: 'How do I access my account dashboard?',
+      answer: 'You can access your dashboard by logging in through our client portal. If you need help with login credentials, contact our support team.',
+      category: 'technical'
+    },
+    {
+      question: 'What are your billing terms?',
+      answer: 'We offer flexible billing options including monthly, quarterly, and annual plans. All plans include our standard support and maintenance.',
+      category: 'billing'
+    },
+    {
+      question: 'Can I upgrade or downgrade my plan?',
+      answer: 'Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the next billing cycle.',
+      category: 'billing'
     }
   ];
 
@@ -48,15 +73,47 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      availability: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
       contact: 'Available on website',
       availability: '24/7'
     }
   ];
+
+  const resources = [
+    {
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Comprehensive guides and API documentation',
+      link: '/docs'
+    },
+    {
+      icon: FileText,
+      title: 'Knowledge Base',
+      description: 'Searchable articles and troubleshooting guides',
+      link: '/knowledge-base'
+    },
+    {
+      icon: Video,
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides and training',
+      link: '/tutorials'
+    },
+    {
+      icon: Download,
+      title: 'Downloads',
+      description: 'Software, tools, and resources',
+      link: '/downloads'
+    }
+  ];
+
+  const filteredFaqs = faqs.filter(faq => 
+    selectedCategory === 'all' || faq.category === selectedCategory
+  );
 
   return (
     <>
@@ -102,7 +159,7 @@ const SupportPage: React.FC = () => {
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -125,6 +182,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Support Channels */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -150,6 +209,34 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Resources Section */}
+        <section className="py-16 px-4 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Support Resources</h2>
+              <p className="text-xl text-gray-300">Find everything you need to get the most out of our solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
+                  <a
+                    href={resource.link}
+                    className="text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300 inline-flex items-center"
+                  >
+                    Access Resource
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -158,7 +245,7 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300">Find answers to common questions</p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {filteredFaqs.map((faq, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
@@ -169,7 +256,7 @@ const SupportPage: React.FC = () => {
         </section>
 
         {/* Support Hours */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-slate-800/50">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
               <div className="text-center mb-8">

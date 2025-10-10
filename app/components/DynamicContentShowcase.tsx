@@ -71,13 +71,13 @@ const DynamicContentShowcase: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
+    <div className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
@@ -92,15 +92,13 @@ const DynamicContentShowcase: React.FC = () => {
             </button>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+        {/* Features Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Why Choose Our Solutions?
-            </h2>
+            </h3>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
             </p>
@@ -115,12 +113,56 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        {/* Testimonials Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h3>
+            <p className="text-xl text-gray-300">Real feedback from satisfied customers</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </blockquote>
+              <div className="text-white font-semibold text-lg">
+                {testimonials[currentIndex].name}
+              </div>
+              <div className="text-cyan-400">
+                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">What You Get</h3>
+            <p className="text-xl text-gray-300">Comprehensive benefits with every solution</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300 text-sm">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
+export default DynamicContentShowcase;
