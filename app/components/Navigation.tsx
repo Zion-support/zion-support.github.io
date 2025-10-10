@@ -72,7 +72,8 @@ import {
   Mail as MailIcon,
   MapPin as Location,
   Truck,
-  Smartphone
+  Smartphone,
+  ChefHat
 } from 'lucide-react';
 import Sidebar from './Sidebar';
 
@@ -109,17 +110,17 @@ const Navigation: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
-    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
-    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing', price: '$69/mo' },
-    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$59/mo' },
-    { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', price: '$79/mo' },
-    { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, category: 'Marketing', price: '$99/mo' },
-    { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', price: '$99/mo' },
-    { name: 'AI Code Review Assistant Pro', href: '/ai-code-generation', icon: Code, category: 'Development', price: '$89/mo' },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics', price: '$99/mo' },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative', price: '$149/mo' },
-    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: Target, category: 'Sales', price: '$149/mo' },
-    { name: 'AI Cybersecurity Shield Pro', href: '/ai-cybersecurity', icon: Shield, category: 'Security', price: '$199/mo' }
+    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$59/mo' },
+    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
+    { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor', icon: Shield, category: 'Security', price: '$199/mo' },
+    { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion', icon: Heart, category: 'Health', price: '$79/mo' },
+    { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller', icon: Home, category: 'IoT', price: '$99/mo' },
+    { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer', icon: TrendingUp, category: 'Finance', price: '$199/mo' },
+    { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor', icon: GraduationCap, category: 'Education', price: '$69/mo' },
+    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Activity, category: 'Health', price: '$59/mo' },
+    { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield', icon: Shield, category: 'Security', price: '$89/mo' },
+    { name: 'AI Recipe Generator Pro', href: '/ai-recipe-generator', icon: ChefHat, category: 'Lifestyle', price: '$39/mo' },
+    { name: 'AI Travel Planner Pro', href: '/ai-travel-planner', icon: Plane, category: 'Travel', price: '$79/mo' }
   ];
 
   const aiServices = [
