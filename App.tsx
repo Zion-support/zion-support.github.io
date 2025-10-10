@@ -26,6 +26,12 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
+const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'));
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'));
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
+const AIFraudDetectionPage = React.lazy(() => import('./app/ai-fraud-detection/page'));
+const AIPredictiveAnalyticsPage = React.lazy(() => import('./app/ai-predictive-analytics/page'));
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -142,6 +148,12 @@ const App: React.FC = memo(() => {
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                  <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                  <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                 </Routes>
               </Suspense>
             </main>

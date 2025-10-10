@@ -66,7 +66,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Code Assistant', path: '/ai-code-assistant' },
         { name: 'AI Social Media Scheduler', path: '/ai-social-media-scheduler' },
         { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor' },
-        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' }
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+        { name: 'AI Password Manager', path: '/ai-password-manager' },
+        { name: 'AI Fraud Detection', path: '/ai-fraud-detection' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' }
       ]
     },
     {
@@ -81,7 +86,8 @@ const Navigation: React.FC = () => {
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
         { name: 'DevOps', path: '/ai-workflow-automation' },
         { name: 'Database Services', path: '/ai-data-analytics' },
-        { name: 'Network Services', path: '/networking' }
+        { name: 'Network Services', path: '/networking' },
+        { name: 'Cloud Migration', path: '/cloud-migration' }
       ]
     },
     {
@@ -170,7 +176,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800 rounded-xl shadow-2xl border border-gray-700 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -195,7 +201,7 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                     <Link
                       to="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
@@ -253,7 +259,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4 max-h-96 overflow-y-auto">
             <div className="space-y-4">
               <Link
                 to="/"

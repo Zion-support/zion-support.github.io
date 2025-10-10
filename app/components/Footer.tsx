@@ -21,7 +21,12 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Code Assistant', href: '/ai-code-assistant' },
         { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler' },
         { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' }
+        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' },
+        { name: 'AI Project Manager', href: '/ai-project-manager' },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator' },
+        { name: 'AI Password Manager', href: '/ai-password-manager' },
+        { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+        { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics' }
       ]
     },
     {
@@ -32,7 +37,8 @@ const Footer: React.FC = memo(() => {
         { name: 'Cloud Services', href: '/cloud-services' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'DevOps', href: '/devops' },
-        { name: 'Database Services', href: '/database-services' }
+        { name: 'Database Services', href: '/database-services' },
+        { name: 'Cloud Migration', href: '/cloud-migration' }
       ]
     },
     {
