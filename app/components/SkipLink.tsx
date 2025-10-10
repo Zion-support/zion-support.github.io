@@ -11,12 +11,11 @@ const SkipLink: React.FC = () => {
       onClick={(e) => {
         e.preventDefault();
 
-        const mainContent = document.getElementById('main-content);;
+        const mainContent = document.getElementById('main-content');
 
         if (mainContent) {
           mainContent.focus();
-
-          mainContent.scrollIntoView({ behavior: 'smooth });
+          mainContent.scrollIntoView({ behavior: 'smooth' });
 
         }
 
