@@ -12,7 +12,7 @@ import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
 import Breadcrumb from './src/components/Breadcrumb';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './src/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
@@ -144,13 +144,13 @@ const App: React.FC = memo(() => {
                   </main>
                   <Footer />
                 </div>
-                </Router>
-                </AppWithPerformanceMonitoring>
-              </EnhancedAccessibility>
-            </AccessibilityEnhancer>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+              </Router>
+            </AppWithPerformanceMonitoring>
+          </EnhancedAccessibility>
+        </AccessibilityEnhancer>
+      </PerformanceOptimizer>
+    </AnalyticsProvider>
+  </HelmetProvider>
+</ErrorBoundary>
   );
 }
