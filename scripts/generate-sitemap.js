@@ -33,7 +33,7 @@ ${pages.map(page => `  <url>
 
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
-  console.log('Sitemap generated successfully');
+
 };
 
 generateSitemap();

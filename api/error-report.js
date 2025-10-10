@@ -32,7 +32,7 @@ export default function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Error reporting error:', error);
+
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to process error report' }));

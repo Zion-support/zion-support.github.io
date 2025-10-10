@@ -1,44 +1,7 @@
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
-interface ConsultationType {
-  id: string;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular: boolean;
-}
-
-const ConsultationPage: React.FC = () => {
-  const consultationServices = [
-    'AI Strategy & Implementation',
-    'Cloud Migration Planning',
-    'Cybersecurity Assessment',
-    'Digital Transformation',
-    'IT Infrastructure Review',
-    'Technology Roadmap Development'
-  ];
-
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: '1',
-      name: 'Discovery Call',
-      description: 'Initial consultation to understand your business needs and challenges',
-      duration: '30 minutes',
-      price: 'Free',
-      features: [
-<<<<<<< HEAD
-        'Business needs assessment',
+'Business needs assessment',
         'Technology audit',
         'Solution recommendations',
         'Next steps planning'
@@ -57,13 +20,11 @@ const ConsultationPage: React.FC = () => {
         'Implementation timeline',
         'Budget planning',
         'ROI analysis'
-=======
         'Current IT assessment',
         'Technology roadmap development',
         'Budget planning and optimization',
         'Risk analysis and mitigation',
         'Implementation timeline'
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
       ],
       popular: true
     },
@@ -74,13 +35,11 @@ const ConsultationPage: React.FC = () => {
       duration: '4-8 hours',
       price: '$1,200',
       features: [
-<<<<<<< HEAD
-        'Technical architecture review',
+'Technical architecture review',
         'Security assessment',
         'Performance optimization',
         'Integration planning',
         'Implementation strategy'
-=======
         'Cloud readiness assessment',
         'Migration strategy development',
         'Cost optimization analysis',
@@ -101,14 +60,12 @@ const ConsultationPage: React.FC = () => {
         'Penetration testing guidance',
         'Security policy development',
         'Incident response planning'
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
       ],
       popular: false
     }
   ];
 
-<<<<<<< HEAD
-  const [selectedType, setSelectedType] = useState<string>('1');
+const [selectedType, setSelectedType] = useState<string>('1');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -117,7 +74,6 @@ const ConsultationPage: React.FC = () => {
     service: '',
     message: ''
   });
-=======
   const experts = [
     {
       name: 'Dr. Sarah Chen',
@@ -141,13 +97,10 @@ const ConsultationPage: React.FC = () => {
       image: '/images/experts/alex-thompson.jpg'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
 
-<<<<<<< HEAD
-  const handleBooking = (typeId: string) => {
+const handleBooking = (typeId: string) => {
     setSelectedType(typeId);
-    console.log(`Booking consultation: ${typeId}`);
-=======
+
 import { Calendar, Clock, User, Mail, Phone, MessageCircle, CheckCircle, ArrowRight, Zap, Target, Users, Award } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -212,9 +165,6 @@ const ConsultationPage: React.FC = () => {
       features: ['Executive summary', 'Strategic recommendations', 'Risk assessment', 'ROI analysis']
     }
   ];
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -226,45 +176,30 @@ const ConsultationPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
   };
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
+<title>Consultation - Zion Tech Group | Expert IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
         <meta property="og:title" content="Consultation - Zion Tech Group" />
         <meta property="og:description" content="Expert IT consulting and strategy sessions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/consultation" />
-=======
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI strategy, cloud migration, cybersecurity, and digital transformation. Free discovery calls available." />
         <meta name="keywords" content="AI consultation, IT consulting, cloud migration, cybersecurity, digital transformation, technology strategy" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
             </p>
-=======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -289,7 +224,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 
         {/* Services Overview */}
         <section className="py-16 px-4">
@@ -306,8 +240,7 @@ const ConsultationPage: React.FC = () => {
                     <span className="text-white font-medium">{service}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-              </div>
+</div>
               <div className="flex items-center justify-center gap-4 text-white">
                 <Users className="w-8 h-8 text-purple-400" />
                 <div className="text-left">
@@ -320,7 +253,6 @@ const ConsultationPage: React.FC = () => {
                 <div className="text-left">
                   <div className="text-2xl font-bold">Proven Results</div>
                   <div className="text-gray-400">98% client satisfaction</div>
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Expert Consultation
@@ -348,7 +280,6 @@ const ConsultationPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 mb-3">{service.description}</p>
                   <p className="text-cyan-400 text-sm font-medium">{service.duration}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </div>
               ))}
             </div>
@@ -567,9 +498,7 @@ const ConsultationPage: React.FC = () => {
                 <p className="text-cyan-400 font-medium">Available on website</p>
                 <p className="text-gray-400 text-sm">24/7 support</p>
               </div>
-=======
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
             </div>
           </div>
         </section>
@@ -746,9 +675,7 @@ const ConsultationPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300">+1 (555) 123-4567</p>
               </div>
-<<<<<<< HEAD
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
@@ -764,7 +691,6 @@ const ConsultationPage: React.FC = () => {
                 </Link>
               </div>
             </div>
-=======
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -788,7 +714,6 @@ const ConsultationPage: React.FC = () => {
             >
               Contact Us
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
           </div>
         </div>
       </section>
@@ -796,8 +721,7 @@ const ConsultationPage: React.FC = () => {
       {/* Consultation Types */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
+<div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
             <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
           </div>
@@ -807,11 +731,9 @@ const ConsultationPage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="h-6 w-6 text-white" />
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300">consultation@ziontechgroup.com</p>
@@ -828,7 +750,6 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
     </>
-=======
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Consultation Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {consultationTypes.map((type) => (
@@ -933,7 +854,6 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
   );
 };
 

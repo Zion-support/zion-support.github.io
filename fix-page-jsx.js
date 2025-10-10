@@ -68,13 +68,13 @@ function fixPageJSX() {
     
     if (modified) {
       fs.writeFileSync('app/page.tsx', content, 'utf8');
-      console.log('Fixed app/page.tsx');
+
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error('Error fixing app/page.tsx:', error.message);
+
     return false;
   }
 }

@@ -23,15 +23,14 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
+
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
+
   }
 }
 
 // Main execution;
-console.log('🔧 Fixing blog files...\n');
 
 const blogFiles = [
   'src/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',

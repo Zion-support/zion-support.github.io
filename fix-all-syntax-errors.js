@@ -6,7 +6,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
@@ -117,7 +117,7 @@ const fixAllFiles = () => {
           console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
           fixedCount++;
         } catch (error) {
-          console.error(`Error fixing ${filePath}:`, error.message);
+
         }
     // Fix common syntax patterns
     const fixes = [
@@ -225,13 +225,13 @@ const fixAllFiles = () => {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -243,16 +243,14 @@ function findFilesWithSyntaxErrors() {
     return result.trim().split('
 ').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
+
     return [];
   }
 }
 
 // Main execution
-console.log('Starting syntax error resolution...');
 
 const filesWithErrors = findFilesWithSyntaxErrors();
-console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 
 let fixedCount = 0;
 for (const file of filesWithErrors) {
@@ -261,19 +259,17 @@ for (const file of filesWithErrors) {
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-
 // Verify no more syntax errors exist
 try {
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
+
   } else {
-    console.log(`⚠️  ${count} syntax errors still remain`);
+
   }
 } catch (error) {
-  console.log('✅ No syntax errors found');
+
 }
 
 

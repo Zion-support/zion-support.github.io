@@ -2,8 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Fixing function names with hyphens...');
-
 // Function to fix function names;
 function fixFunctionNames(filePath) {
   try {
@@ -40,13 +38,13 @@ function fixFunctionNames(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -88,8 +86,6 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const srcDir = path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
-console.log(`📁 Found ${files.length} files to check...`);
-
 let fixedCount = 0;
 let errorCount = 0;
 
@@ -99,18 +95,16 @@ for (const file of files) {
       fixedCount++;
     }
   } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
+
     errorCount++;
   }
 }
 
-console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+
+
 
 if (fixedCount > 0) {
-  console.log('\n🎉 Function names fixed successfully!');
+
 } else {
-  console.log('\n✨ No function names needed fixing.');
+
 }

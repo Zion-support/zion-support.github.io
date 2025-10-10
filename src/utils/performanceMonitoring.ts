@@ -18,7 +18,7 @@ const logger = {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      console.debug(`[${context}] ${message}`, data);
+
     }
   },
   inf,
@@ -27,7 +27,7 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.info(`[${context}] ${message}`, data);
+
   },
   war,
   n: (messag,
@@ -35,7 +35,7 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.warn(`[${context}] ${message}`, data);
+
   },
   erro,
   r: (messag,
@@ -43,7 +43,7 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.error(`[${context}] ${message}`, data);
+
   }
 };
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}

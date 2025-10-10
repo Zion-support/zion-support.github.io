@@ -47,7 +47,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
+
     }
   };
 
@@ -61,7 +61,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
+
     }
   };
 
@@ -74,7 +74,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
+
     }
   };
 

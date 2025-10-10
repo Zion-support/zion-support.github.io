@@ -8,7 +8,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
   
   // Also log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.error('Error reported:', error, context);
+
   }
 };
 

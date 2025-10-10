@@ -54,7 +54,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+
     }
 
     // Send error report in production
@@ -87,7 +87,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+
     }
   };
 

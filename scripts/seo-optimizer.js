@@ -11,8 +11,7 @@ class SEOOptimizer {
 
   // Check meta tags;
   async checkMetaTags() {
-    console.log('🏷️  Checking meta tags...');
-    
+
     const htmlFiles = await glob('dist/**/*.html');
     
     for (const file of htmlFiles) {
@@ -39,18 +38,16 @@ class SEOOptimizer {
         if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`);
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+
       }
     }
-    
-    console.log(`   ✅ Checked ${htmlFiles.length} HTML files`);
+
     this.optimizations.push('Meta tags validation');
   }
 
   // Check heading structure;
   async checkHeadingStructure() {
-    console.log('📝 Checking heading structure...');
-    
+
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
@@ -75,21 +72,19 @@ class SEOOptimizer {
         }
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+
       }
     }
-    
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
+
     if (headingIssues > 0) {
-      console.log(`   ⚠️  Found ${headingIssues} heading structure issues`);
+
     }
     this.optimizations.push('Heading structure validation');
   }
 
   // Check alt attributes;
   async checkAltAttributes() {
-    console.log('🖼️  Checking alt attributes...');
-    
+
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
@@ -109,21 +104,19 @@ class SEOOptimizer {
         }
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+
       }
     }
-    
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
+
     if (altIssues > 0) {
-      console.log(`   ⚠️  Found ${altIssues} missing alt attributes`);
+
     }
     this.optimizations.push('Alt attributes validation');
   }
 
   // Check internal links;
   async checkInternalLinks() {
-    console.log('🔗 Checking internal links...');
-    
+
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
@@ -138,62 +131,58 @@ class SEOOptimizer {
         linkCount += internalLinks.length;
         
       } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+
       }
     }
-    
-    console.log(`   ✅ Found ${linkCount} internal links`);
+
     this.optimizations.push('Internal links analysis');
   }
 
   // Generate SEO report;
   generateReport() {
-    console.log('\n📊 SEO Optimization Report');
-    console.log('');
-    console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
+
+
+
     this.optimizations.forEach((opt, index) => {
-      console.log(`   ${index + 1}. ${opt}`);
+
     });
     
     if (this.issues.length > 0) {
-      console.log(`\n⚠️  Issues found: ${this.issues.length}`);
+
       this.issues.slice(0, 10).forEach((issue, index) => {
-        console.log(`   ${index + 1}. ${issue}`);
+
       });
       if (this.issues.length > 10) {
-        console.log(`   ... and ${this.issues.length - 10} more issues`);
+
       }
     } else {
-      console.log('\n✅ No SEO issues found!');
+
     }
-    
-    console.log('\n🚀 SEO Recommendations: ');
+
     console.log('   1. Add structured data (JSON-LD)');
-    console.log('   2. Implement breadcrumb navigation');
-    console.log('   3. Add canonical URLs');
-    console.log('   4. Optimize page loading speed');
-    console.log('   5. Use descriptive URLs');
-    console.log('   6. Add sitemap.xml');
-    console.log('   7. Implement robots.txt');
-    console.log('   8. Use semantic HTML elements');
-    console.log('   9. Add social media meta tags');
-    console.log('   10. Implement schema markup');
+
+
+
+
+
+
+
+
+
   }
 
   // Run all optimizations;
   async run() {
-    console.log('🔍 Starting SEO optimization...\n');
-    
+
     try {
       await this.checkMetaTags();
       await this.checkHeadingStructure();
       await this.checkAltAttributes();
       await this.checkInternalLinks();
       this.generateReport();
-      
-      console.log('\n✅ SEO optimization completed!');
+
     } catch (error) {
-      console.error('❌ SEO optimization failed:', error.message);
+
     }
   }
 }

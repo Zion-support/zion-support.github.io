@@ -5,7 +5,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Function to fix duplicate function declarations;
 function fixDuplicateDeclarations(filePath) {
@@ -64,7 +64,7 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed duplicates in: ${filePath}`);
+
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   in: ${filePath}`);
       return true;
@@ -72,7 +72,7 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -109,24 +109,22 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution;
-console.log('🔍 Scanning for files with duplicate declarations...');
+
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 `
-console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`✅ Fixed duplicates in ${fixedCount} files`);
 
 // Run linting to check results;
-console.log('\n🔍 Running linting to check results...');
+
 try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-  console.log('✅ Linting passed!');
+
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 

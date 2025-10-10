@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Function to fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
@@ -146,7 +146,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     return modified;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -184,13 +184,11 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution;
-console.log('Starting lint issue fixes...');
 
 const srcDir = path.join(__dirname, 'src');
 const appDir = path.join(__dirname, 'app');
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 `
-console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
@@ -198,7 +196,6 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
   }
 }
 `
-console.log(`Processed ${processedCount} files`);
 
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];

@@ -58,7 +58,7 @@ function fixDataStructures(filePath) {
 
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed data structures in: ${filePath}`);
+
     return true;
   }
 
@@ -84,10 +84,8 @@ function getFilesWithErrors() {
 
 // Main function
 function main() {
-  console.log('🔧 Fixing data structure syntax errors...');
-  
+
   const files = getFilesWithErrors();
-  console.log(`Found ${files.length} files with errors`);
 
   let fixedCount = 0;
   files.forEach(file => {
@@ -96,15 +94,13 @@ function main() {
     }
   });
 
-  console.log(`✅ Fixed ${fixedCount} files`);
-  
   // Run type check again
-  console.log('\n🔍 Running type check...');
+
   try {
     execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('✅ All TypeScript errors fixed!');
+
   } catch (error) {
-    console.log('⚠️  Some errors remain, continuing...');
+
   }
 }
 

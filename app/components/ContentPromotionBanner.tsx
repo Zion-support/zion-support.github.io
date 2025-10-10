@@ -60,8 +60,7 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -148,7 +147,6 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
@@ -187,7 +185,6 @@ const ContentPromotionBanner: React.FC = () => {
               Get Started Today
               <ArrowRight className="w-5 h-5" />
             </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>

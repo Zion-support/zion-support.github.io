@@ -85,9 +85,8 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Cleaned: ${filePath}`);
+
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all files;
 filesToProcess.forEach(file => {)
@@ -95,7 +94,6 @@ filesToProcess.forEach(file => {)
   if (fs.existsSync(fullPath)) {
     cleanUnusedImports(fullPath);
 
-console.log('Unused imports cleanup completed!');
 import { execSync } from 'child_process';
 
 // Function to remove unused imports from a single file;
@@ -150,7 +148,7 @@ function removeUnusedImportsFromFile(filePath) {
     const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed unused imports in: ${filePath}`);
+
     componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`
       const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}
@@ -158,7 +156,6 @@ function removeUnusedImportsFromFile(filePath) {
     unusedVarPatterns.forEach(pattern => {/* TODO: Fix JSX expression */})`
   d: ${filePath}`);
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
 
 // Process all files;
 filesToProcess.forEach(file => {/* TODO: Fix JSX expression */}
@@ -220,7 +217,6 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return results;
 
 // Main execution;
-console.log('Fixing unused imports...');
 
 const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
   .filter(file => )
@@ -240,5 +236,5 @@ files.forEach(file => {)
     fixedCount++;
 
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}`
-console.log(`Fixed ${fixedCount} files`);
+
 "`

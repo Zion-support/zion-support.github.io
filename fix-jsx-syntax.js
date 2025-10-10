@@ -72,7 +72,7 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
     
@@ -85,8 +85,6 @@ function fixFile(filePath) {
 async function main() {
   // Get all TSX files in the app directory
   const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
-
-  console.log(`Found ${files.length} TSX files to check...`);
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {

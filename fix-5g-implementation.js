@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 const filePath = path.join(__dirname, 'app/5 g-implementation/page.tsx');
 
@@ -29,4 +29,3 @@ content = content.replace(/\/><\/undefined>/g, '/>');
 content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
 
 fs.writeFileSync(filePath, content, 'utf8');
-console.log('Fixed 5 g-implementation/page.tsx');

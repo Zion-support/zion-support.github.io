@@ -59,7 +59,7 @@ const PerformanceMonitor: React.FC = () => {
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+
       }
 
       return () => observer.disconnect();

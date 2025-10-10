@@ -98,7 +98,7 @@ function extractLinks(html, baseUrl) {
           element: anchor.outerHTML;
         });
       } catch (error) {
-        console.log(`Invalid URL: ${href}`);
+
       }
     }
   });
@@ -116,7 +116,7 @@ function extractLinks(html, baseUrl) {
           element: form.outerHTML;
         });
       } catch (error) {
-        console.log(`Invalid form action: ${action}`);
+
       }
     }
   });
@@ -182,7 +182,7 @@ async function analyzeUrl(url, depth = 0) {
       analysisResults.brokenLinks++;
     }
   } catch (error) {
-    console.log(`Error analyzing ${url}: ${error.message}`);
+
     brokenLinks.push({)
       url: url;)
       statusCode: 0),
@@ -199,10 +199,9 @@ async function analyzeUrl(url, depth = 0) {
 
 // Main analysis function;
 async function analyzeWebsite() {
-  console.log('Starting comprehensive website analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Max Depth: ${MAX_DEPTH}`);
-  console.log('---');
+
+
+
 
   try {
     // Start analysis from the homepage;
@@ -223,23 +222,22 @@ async function analyzeWebsite() {
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
     
     // Generate summary report;
-    console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`);
-    console.log(`Working Links: ${analysisResults.workingLinks}`);
-    console.log(`Broken Links: ${analysisResults.brokenLinks}`);
-    console.log(`Errors: ${analysisResults.errors.length}`);
-    
+
+
+
+
+
     if (brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
+
       brokenLinks.forEach(link => {)
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`);
       });
     }
 
     if (analysisResults.errors.length > 0) {
-      console.log('\n=== ERRORS ===');
+
       analysisResults.errors.forEach(error => {)
-        console.log(`⚠️  ${error.url}: ${error.error}`);
+
       });
     }
 
@@ -255,15 +253,14 @@ async function analyzeWebsite() {
     }
 
     if (recommendations.length > 0) {
-      console.log('\n=== RECOMMENDATIONS ===');
+
       recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec}`);
+
       });
     }
 
-    console.log('\nDetailed report saved to: website-analysis-report.json');
     } catch (error) {
-    console.error('Analysis failed:', error);
+
   }
 }
 
@@ -282,14 +279,14 @@ class WebsiteAnalyzer {
   }
 
   async analyze() {
-    console.log(`🔍 Starting comprehensive analysis of ${this.baseUrl}`);
+
     console.log('='.repeat(60));
     
     try {
       await this.crawlWebsite(this.baseUrl, 0);
       this.generateReport();
     } catch (error) {
-      console.error('❌ Analysis failed:', error.message);
+
     }
   }
 
@@ -328,7 +325,7 @@ class WebsiteAnalyzer {
         }
       }
     } catch (err) {
-      console.error(`❌ Error analyzing ${url}:`, err.message);
+
       this.brokenLinks.push({ url, error: err.message });
     }
   }
@@ -406,24 +403,22 @@ class WebsiteAnalyzer {
   }
 
   generateReport() {
-    console.log('\n📊 Analysis Report');
+
     console.log('='.repeat(60));
-    console.log(`📄 Pages analyzed: ${this.pages.size}`);
-    console.log(`🔗 Total links found: ${this.allLinks.size}`);
-    console.log(`❌ Broken links: ${this.brokenLinks.length}`);
-    
+
+
+
     if (this.brokenLinks.length > 0) {
-      console.log('\n❌ Broken Links:');
+
       this.brokenLinks.forEach(link => {
-        console.log(`  - ${link.url}: ${link.error}`);
+
       });
     }
-    
-    console.log(`\n📄 PAGES FOUND:`);
+
     this.pages.forEach((page, url) => {
-      console.log(`   • ${url}`);
-      console.log(`     Title: ${page.title}`);
-      console.log(`     Links: ${page.links.length}`);
+
+
+
     });
     
     // Save detailed report
@@ -442,7 +437,7 @@ class WebsiteAnalyzer {
     };
     
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('\n💾 Report saved to website-analysis-report.json');
+
   }
 }
 

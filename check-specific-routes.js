@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Read the current App.tsx;
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
@@ -22,7 +22,6 @@ for (const route of missingPages) {
   }
 }
 
-console.log(`Found ${missingRoutes.length} routes missing from App.tsx: `);
 missingRoutes.forEach(route => console.log(`- ${route}`));
 
 // Generate import statements for missing routes;
@@ -38,10 +37,9 @@ const generateRouteStatement = (route) => {
 };
 
 if (missingRoutes.length > 0) {
-  console.log('\n=== IMPORT STATEMENTS ===');
+
   missingRoutes.forEach(route => console.log(generateImportStatement(route)));
-  
-  console.log('\n=== ROUTE STATEMENTS ===');
+
   missingRoutes.forEach(route => console.log(generateRouteStatement(route)));
 }
 
@@ -50,5 +48,3 @@ fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
   missingRoutes: missingRoutes),
   importStatements: missingRoutes.map(generateImportStatement),
   routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2));
-
-console.log(`\n✅ Analysis complete. Results saved to missing-routes.json`);

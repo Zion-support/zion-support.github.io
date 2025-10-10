@@ -5,6 +5,18 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
+interface PricingPlan {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  buttonText: string;
+  buttonVariant: string;
+}
+
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -67,11 +79,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -153,7 +160,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -325,7 +331,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
       </div>
     </>
   );

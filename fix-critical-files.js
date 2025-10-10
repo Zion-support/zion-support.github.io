@@ -65,9 +65,9 @@ export default function RootLayout({
   for (const file of criticalFiles) {
     try {
       fs.writeFileSync(file.path, file.content, 'utf8');
-      console.log(`✓ Fixed: ${file.path}`);
+
     } catch (error) {
-      console.error(`Error fixing ${file.path}:`, error.message);
+
     }
   }
 }
@@ -101,17 +101,16 @@ function cleanProblematicFiles() {
         }
         
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✓ Cleaned: ${filePath}`);
+
       }
     } catch (error) {
-      console.error(`Error cleaning ${filePath}:`, error.message);
+
     }
   }
 }
 
 // Main execution
-console.log('🔧 Fixing critical files...');
+
 fixCriticalFiles();
-console.log('🧹 Cleaning problematic files...');
+
 cleanProblematicFiles();
-console.log('✅ Critical files fixed!');

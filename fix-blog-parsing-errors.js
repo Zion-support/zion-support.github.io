@@ -51,7 +51,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
   errors: ${path.relative(__dirname, filePath)}`);
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+
   }
 }
 

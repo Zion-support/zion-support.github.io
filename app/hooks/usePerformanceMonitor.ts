@@ -17,8 +17,6 @@ export const usePerformanceMonitor = () => {
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
         };
 
-        console.log('Performance Metrics:', metrics);
-
         // Send to analytics if available
         if ('gtag' in window) {
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
@@ -38,7 +36,7 @@ export const usePerformanceMonitor = () => {
       const slowResources = resources.filter(resource => resource.duration > 1000);
       
       if (slowResources.length > 0) {
-        console.warn('Slow loading resources:', slowResources);
+
       }
     };
 
@@ -53,7 +51,7 @@ export const usePerformanceMonitor = () => {
         };
 
         if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
+
         }
       }
     };

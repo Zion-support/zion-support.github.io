@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Get all TypeScript files in the app directory
 function getAllTsxFiles(dir) {
@@ -242,12 +242,10 @@ function fixJsxFile(filePath) {
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
-
-console.log('Starting final JSX fixes...');
 
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = getAllTsxFiles(appDir);
@@ -258,5 +256,3 @@ tsxFiles.forEach(filePath => {
     fixedCount++;
   }
 });
-
-console.log(`Fixed ${fixedCount} files.`);

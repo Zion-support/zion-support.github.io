@@ -1,90 +1,177 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
-import { glob } from 'glob';
 
-// Function to process a file;
-function processFile(filePath) {
+// Fix specific files with known issues
+const filesToFix = [
+  '/workspace/app/ai-analytics/page.tsx',
+  '/workspace/app/blog/page.tsx',
+  '/workspace/app/careers/page.tsx',
+  '/workspace/app/case-studies/page.tsx',
+  '/workspace/app/partners/page.tsx',
+  '/workspace/app/support/page.tsx',
+  '/workspace/app/micro-saas/page.tsx',
+  '/workspace/app/pricing/page.tsx'
+];
+
+function fixAiAnalyticsPage(content) {
+  // Fix the malformed object literal around line 33
+  return content.replace(
+    /benefits: \['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'\]\s*title: 'Real-Time Dashboards',/g,
+    "benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']\n    },\n    {\n      icon: Globe,\n      title: 'Real-Time Dashboards',"
+  );
+}
+
+function fixBlogPage(content) {
+  // Fix the malformed object around line 171
+  return content.replace(
+    /const displayPosts = searchQuery \? searchResults : blogPosts;\s*excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and driving innovation across industries\.',/g,
+    "const displayPosts = searchQuery ? searchResults : blogPosts;\n\n  const blogPosts = [\n    {\n      id: '1',\n      title: 'The Future of AI in Enterprise Solutions',\n      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and driving innovation across industries.',"
+  );
+}
+
+function fixCareersPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const CareersPage: React\.FC = \(\) => {/,
+    `interface JobPosition {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  description: string;
+  requirements: string[];
+  benefits?: string[];
+  posted?: string;
+  featured?: boolean;
+}
+
+const CareersPage: React.FC = () => {`
+  );
+}
+
+function fixCaseStudiesPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const CaseStudiesPage: React\.FC = \(\) => {/,
+    `interface CaseStudy {
+  id: string | number;
+  title: string;
+  client?: string;
+  company?: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  image: string;
+  duration?: string;
+  team?: string;
+}
+
+const CaseStudiesPage: React.FC = () => {`
+  );
+}
+
+function fixPartnersPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const PartnersPage: React\.FC = \(\) => {/,
+    `interface Partner {
+  id: string;
+  name: string;
+  logo: string;
+  description: string;
+  category: string;
+  website: string;
+  featured?: boolean;
+}
+
+const PartnersPage: React.FC = () => {`
+  );
+}
+
+function fixSupportPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const SupportPage: React\.FC = \(\) => {/,
+    `interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+}
+
+const SupportPage: React.FC = () => {`
+  );
+}
+
+function fixMicroSaasPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const MicroSaasPage: React\.FC = \(\) => {/,
+    `interface MicroSaasService {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+  category: string;
+  icon: any;
+}
+
+const MicroSaasPage: React.FC = () => {`
+  );
+}
+
+function fixPricingPage(content) {
+  // Fix missing interface definition
+  return content.replace(
+    /const PricingPage: React\.FC = \(\) => {/,
+    `interface PricingPlan {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  buttonText: string;
+  buttonVariant: string;
+}
+
+const PricingPage: React.FC = () => {`
+  );
+}
+
+const fixers = {
+  '/workspace/app/ai-analytics/page.tsx': fixAiAnalyticsPage,
+  '/workspace/app/blog/page.tsx': fixBlogPage,
+  '/workspace/app/careers/page.tsx': fixCareersPage,
+  '/workspace/app/case-studies/page.tsx': fixCaseStudiesPage,
+  '/workspace/app/partners/page.tsx': fixPartnersPage,
+  '/workspace/app/support/page.tsx': fixSupportPage,
+  '/workspace/app/micro-saas/page.tsx': fixMicroSaasPage,
+  '/workspace/app/pricing/page.tsx': fixPricingPage
+};
+
+function fixFile(filePath) {
   try {
-    // Fix malformed closing tags;
-    if (content.includes('</div>}')) {
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/<\/div>\}/g, '}');
-      modified = true;
-    }
 
-    // Fix malformed closing tags with semicolons;
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
-      modified = true;
-    }
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixer = fixers[filePath];
+    if (fixer) {
+      const fixed = fixer(content);
+      fs.writeFileSync(filePath, fixed);
 
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
-      modified = true;
-    }
+    } else {
 
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
-      modified = true;
     }
+  } catch (error) {
 
-    // Fix malformed object properties;
-    if (content.includes('const config = {')) {
-      // Look for lines that might be missing colons;
-      for (let i = 0; i < lines.length; i++) {
-        // Fix lines that look like property assignments but are missing colons;
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
-          line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
-            '$1: $2,'
-          );
-          modified = true;
-        }
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed object properties;
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
-        })
-        newLines.push(line);
-      }
-      if (modified) {/* TODO: Fix JSX expression */}
-      }
-    }
-
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
-
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Main execution;
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {)
-    if (processFile(file)) {
-      fixedCount++;
-    }
-async function main() {/* TODO: Fix JSX expression */}
-}
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  });
-
-}
-
-main().catch(console.error);
+// Fix all files
+filesToFix.forEach(fixFile);

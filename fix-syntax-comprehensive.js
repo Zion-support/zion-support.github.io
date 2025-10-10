@@ -133,19 +133,18 @@ function fixSyntaxErrors(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 // Main execution
-console.log('Starting comprehensive syntax error resolution...');
 
 let fixedCount = 0;
 for (const file of filesToFix) {
@@ -153,5 +152,3 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);

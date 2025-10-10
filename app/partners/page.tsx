@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
@@ -15,10 +11,18 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
-=======
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+
+interface Partner {
+  id: string;
+  name: string;
+  logo: string;
+  description: string;
+  category: string;
+  website: string;
+  featured?: boolean;
+}
 
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
@@ -27,51 +31,35 @@ const PartnersPage: React.FC = () => {
       logo: '/images/partners/microsoft.png',
       description: 'Strategic partnership for Azure cloud solutions and AI services',
       category: 'Cloud & AI',
-<<<<<<< HEAD
-      website: 'https://microsoft.com',
+website: 'https://microsoft.com',
       tier: 'strategic'
-=======
       website: 'https://microsoft.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     },
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
-<<<<<<< HEAD
-      website: 'https://aws.amazon.com',
-      tier: 'strategic'
-<<<<<<< HEAD
-=======
-      website: 'https://aws.amazon.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+website: 'https://aws.amazon.com'
     },
     {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
-<<<<<<< HEAD
-      description: 'Advanced AI and machine learning platform with global reach',
+description: 'Advanced AI and machine learning platform with global reach',
       category: 'Cloud & AI',
       website: 'https://cloud.google.com',
       tier: 'strategic'
-=======
       description: 'Advanced AI and machine learning capabilities with Google Cloud Platform',
       category: 'AI & ML',
       website: 'https://cloud.google.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     },
     {
       name: 'IBM',
       logo: '/images/partners/ibm.png',
-<<<<<<< HEAD
-      description: 'Enterprise AI solutions and hybrid cloud platform',
+description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
       website: 'https://ibm.com',
       tier: 'preferred'
-=======
       description: 'Enterprise AI solutions and quantum computing expertise',
       category: 'Enterprise AI',
       website: 'https://ibm.com'
@@ -82,17 +70,12 @@ const PartnersPage: React.FC = () => {
       description: 'GPU acceleration and AI computing solutions',
       category: 'Hardware & AI',
       website: 'https://nvidia.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     },
     {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: 'Customer relationship management and business automation',
-=======
+description: 'Customer relationship management and business automation',
       description: 'Customer relationship management and business automation platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       category: 'CRM & Automation',
       website: 'https://salesforce.com',
       tier: 'preferred'
@@ -104,7 +87,6 @@ const PartnersPage: React.FC = () => {
       category: 'Analytics & Security',
       website: 'https://splunk.com',
       tier: 'certified'
-=======
       description: 'CRM integration and AI-powered customer solutions',
       category: 'CRM & AI',
       website: 'https://salesforce.com'
@@ -142,7 +124,6 @@ const PartnersPage: React.FC = () => {
       icon: Users,
       title: 'Community Partners',
       description: 'Open source and community-driven partnership initiatives'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     }
   ];
 
@@ -187,12 +168,9 @@ const PartnersPage: React.FC = () => {
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+<title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
-=======
         <title>Partners - Zion Tech Group | Strategic Partnerships & Alliances</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
         <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, channel partners, Microsoft, AWS, Google Cloud" />
@@ -200,15 +178,13 @@ const PartnersPage: React.FC = () => {
         <meta property="og:description" content="Strategic partnerships and alliances with leading technology companies" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/partners" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
@@ -250,7 +226,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Our Partners
@@ -275,7 +250,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
                   <p className="text-gray-300 text-sm">{type.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </div>
               ))}
             </div>
@@ -285,8 +259,7 @@ const PartnersPage: React.FC = () => {
         {/* Partners Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
+<div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with the world's leading technology companies to deliver comprehensive solutions.
@@ -324,7 +297,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                 );
               })}
-=======
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Strategic Partners</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
@@ -360,7 +332,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                 </div>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </section>
@@ -368,8 +339,7 @@ const PartnersPage: React.FC = () => {
         {/* Partnership Benefits */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
+<div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our strategic partnerships provide significant advantages for your business.
@@ -381,14 +351,12 @@ const PartnersPage: React.FC = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-=======
             <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Partnership Benefits</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -397,8 +365,7 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Become a Partner CTA */}
+{/* Become a Partner CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
@@ -416,7 +383,6 @@ const PartnersPage: React.FC = () => {
                   View Partnership Program
                 </button>
               </div>
-=======
         {/* Become a Partner */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -469,14 +435,12 @@ const PartnersPage: React.FC = () => {
                 Learn More
                 <Zap className="w-4 h-4" />
               </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </section>
       </div>
       </div>
     </>
-=======
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
@@ -577,7 +541,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
   );
 };
 

@@ -111,18 +111,17 @@ function processFile(filePath) {
     
     if (result.removedCount > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      console.log(`✅ ${filePath}: Removed ${result.removedCount} unused imports`);
+
       removedImports += result.removedCount;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+
   }
 }
 
 async function main() {
-  console.log('🚀 Starting unused import removal...\n');
 
   // Get all files to process;
   const allFiles = [];
@@ -137,15 +136,12 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Unused import removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Unused imports removed: ${removedImports}`);
+
+
+
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

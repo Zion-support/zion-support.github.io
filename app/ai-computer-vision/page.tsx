@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiComputerVisionPage: React.FC = () => {
@@ -32,7 +30,6 @@ const AiComputerVisionPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -55,14 +52,11 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
+'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -74,12 +68,9 @@ const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>Ai Computer Vision - Zion Tech Group</title>
+<title>Ai Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai computer vision solution for modern businesses." />
         <meta name="keywords" content="AI ai computer vision, artificial intelligence, ai computer vision, AI solutions, intelligent automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
@@ -87,9 +78,7 @@ const PagePage: React.FC = () => {
       
       <Navigation />
 
-<<<<<<< HEAD
-=======
-      <Navigation />
+<Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -191,7 +180,6 @@ const PagePage: React.FC = () => {
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -247,11 +235,8 @@ const PagePage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-        </section>
+</section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
       </section>
 
@@ -301,8 +286,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AiComputerVisionPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default PagePage;

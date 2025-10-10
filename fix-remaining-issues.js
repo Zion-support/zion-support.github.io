@@ -87,15 +87,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
+
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
+
   }
 }
 
 // Main execution;
-console.log('🔧 Fixing remaining issues...\n');
 
 const filesToFix = [
   'src/App.tsx',
@@ -109,5 +108,4 @@ for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 
-console.log('\n✅ Fixes complete!');
 }}}}}}}}`

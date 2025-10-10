@@ -103,18 +103,17 @@ async function main() {/* TODO: Fix JSX expression */}
 
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
+
       removedStatements += fileRemovedCount;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+
   }
 }
 
 async function main() {
-  console.log('🚀 Starting console statement removal...\n');
 
   // Get all files to process;
   const allFiles = [];
@@ -129,15 +128,12 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
+
+
+
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

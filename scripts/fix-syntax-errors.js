@@ -108,18 +108,17 @@ function processFile(filePath) {
     
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      console.log(`✅ ${filePath}: Fixed syntax errors`);
+
       fixedFiles++;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+
   }
 }
 
 async function main() {
-  console.log('🚀 Starting syntax error fixes...\n');
 
   // Get all files to process;
   const allFiles = [];
@@ -134,15 +133,12 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Syntax error fixes completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+
+
+
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

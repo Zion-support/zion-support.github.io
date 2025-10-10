@@ -9,9 +9,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-console.log('♿ Starting accessibility enhancements...');
 
 // Create accessibility improvements for the main HTML file
 const indexPath = path.join(__dirname, '../dist/index.html');
@@ -251,15 +249,14 @@ if (fs.existsSync(indexPath)) {
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`);
   
   fs.writeFileSync(indexPath, indexContent);
-  console.log('✅ Enhanced accessibility features');
+
 }
 
 // Create accessibility statement
 const accessibilityStatement = `# Accessibility Statement
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
-  console.log('📊 Generating accessibility report...');
-  
+
   const accessibilityReport = {
     timestamp: new Date().toISOString()
     version: "1.0.0"
@@ -325,13 +322,12 @@ function generateAccessibilityReport() {
     path.join(__dirname, '../public/accessibility-report.json'), 
     JSON.stringify(accessibilityReport, null, 2)
   );
-  console.log('✅ Accessibility report generated');
+
 }
 
 // 2. Generate accessibility checklist;
 function generateAccessibilityChecklist() {
-  console.log('✅ Generating accessibility checklist...');
-  
+
   const checklist = {
     title: "Zion Tech Group Accessibility Checklist"
     version: "1.0.0"
@@ -389,13 +385,12 @@ function generateAccessibilityChecklist() {
     path.join(__dirname, '../public/accessibility-checklist.json'), 
     JSON.stringify(checklist, null, 2)
   );
-  console.log('✅ Accessibility checklist generated');
+
 }
 
 // 3. Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
-  
+
   const improvements = [
     {
       id: "skip-links",
@@ -433,13 +428,12 @@ function generateAccessibilityImprovements() {
     path.join(__dirname, '../public/accessibility-improvements.json'), 
     JSON.stringify(improvements, null, 2)
   );
-  console.log('✅ Accessibility improvements generated');
+
 }
 
 // 4. Generate accessibility testing guide;
 function generateAccessibilityTestingGuide() {
-  console.log('🧪 Generating accessibility testing guide...');
-  
+
   const testingGuide = {
     title: "Accessibility Testing Guide"
     version: "1.0.0"
@@ -492,10 +486,9 @@ async function runAccessibilityEnhancements() {
     generateAccessibilityChecklist();
     generateAccessibilityImprovements();
     generateAccessibilityTestingGuide();
-    
-    console.log('🎉 Accessibility enhancement completed successfully!');
+
   } catch (error) {
-    console.error('❌ Error during accessibility enhancement:', error);
+
     process.exit(1);
   }
 }
@@ -538,6 +531,3 @@ If you have any questions or concerns about our accessibility efforts, please co
 `;
 
 fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md'), accessibilityStatement);
-console.log('✅ Created accessibility statement');
-
-console.log('♿ Accessibility enhancements completed!');

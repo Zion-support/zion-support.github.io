@@ -184,8 +184,7 @@ $4});
     this.setupReactErrorBoundary();
   }
   private handleError(error: Error, type: string): void {
-    console.error(`${type}:`, error);
-    
+
     // Store error
     this.errorBoundaries.set(type, error);
     
@@ -320,8 +319,7 @@ $4});
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
-    
+
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data);
@@ -389,10 +387,10 @@ $4});
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+
           });
       });
     }
@@ -417,7 +415,7 @@ $4});
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
+
         }
         deferredPrompt = null;
         installButton.remove();
@@ -471,10 +469,10 @@ $4});
       userVisibleOnly: true,
       applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
+
       // Send subscription to server
     }).catch((error) => {
-      console.log('Push subscription failed:', error);
+
     });
   }
   private setupDarkMode(): void {
@@ -686,7 +684,7 @@ class UserExperienceEnhancer {private config: UXConfig;}
 
   private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {}
       // Add loading state management;
-      console.log('Loading states enabled');
+
     }
   }
 

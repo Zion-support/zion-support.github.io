@@ -9,14 +9,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-console.log('🔍 Starting SEO enhancement...');
 
 // 1. Generate structured data;
 function generateStructuredData() {
-  console.log('📊 Generating structured data...');
-  
+
   const structuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -74,13 +71,12 @@ function generateStructuredData() {
     path.join(__dirname, '../public/structured-data.json'), 
     JSON.stringify(structuredData, null, 2)
   );
-  console.log('✅ Structured data generated');
+
 }
 
 // 2. Generate meta tags;
 function generateMetaTags() {
-  console.log('🏷️ Generating meta tags...');
-  
+
   const metaTags = {
     title: "Zion Tech Group - Advanced AI and IT Solutions",
     description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
@@ -121,20 +117,19 @@ function generateMetaTags() {
     path.join(__dirname, '../public/meta-tags.json'), 
     JSON.stringify(metaTags, null, 2)
   );
-  console.log('✅ Meta tags generated');
+
 }
 
 // 3. Generate Open Graph images;
 function generateOpenGraphImages() {
-  console.log('🖼️ Generating Open Graph images...');
+
   // This would typically use a library like canvas or sharp;
-  console.log('✅ Open Graph images generated');
+
 }
 
 // 4. Generate FAQ schema;
 function generateFAQSchema() {
-  console.log('❓ Generating FAQ schema...');
-  
+
   const faqSchema = {
     "@context": "https: //schema.org",
     "@type": "FAQPage",
@@ -178,13 +173,12 @@ function generateFAQSchema() {
     path.join(__dirname, '../public/faq-schema.json'), 
     JSON.stringify(faqSchema, null, 2)
   );
-  console.log('✅ FAQ schema generated');
+
 }
 
 // 5. Generate breadcrumb schema;
 function generateBreadcrumbSchema() {
-  console.log('🍞 Generating breadcrumb schema...');
-  
+
   const breadcrumbSchema = {
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
@@ -211,13 +205,12 @@ function generateBreadcrumbSchema() {
     path.join(__dirname, '../public/breadcrumb-schema.json'), 
     JSON.stringify(breadcrumbSchema, null, 2)
   );
-  console.log('✅ Breadcrumb schema generated');
+
 }
 
 // 6. Generate local business schema;
 function generateLocalBusinessSchema() {
-  console.log('🏢 Generating local business schema...');
-  
+
   const localBusinessSchema = {
     "@context": "https: //schema.org",
     "@type": "LocalBusiness",
@@ -251,7 +244,7 @@ function generateLocalBusinessSchema() {
     path.join(__dirname, '../public/local-business-schema.json'), 
     JSON.stringify(localBusinessSchema, null, 2)
   );
-  console.log('✅ Local business schema generated');
+
 }
 
 // Run all SEO enhancements;
@@ -263,10 +256,9 @@ async function runSEOEnhancements() {
     generateFAQSchema();
     generateBreadcrumbSchema();
     generateLocalBusinessSchema();
-    
-    console.log('🎉 SEO enhancement completed successfully!');
+
   } catch (error) {
-    console.error('❌ Error during SEO enhancement:', error);
+
     process.exit(1);
   }
 }

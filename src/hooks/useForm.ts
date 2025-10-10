@@ -155,7 +155,7 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       try {
         await onSubmit(values);
       } catch (error) {
-        console.error('Form submission error:', error);
+
       } finally {
         setIsSubmitting(false);
 [values, validateAllFields]

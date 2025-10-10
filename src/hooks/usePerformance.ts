@@ -18,7 +18,7 @@ export const usePerformance = () => {
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
-        console.log('Running performance optimizations...');
+
       });
     }
   }, []);

@@ -2,8 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Completely fixing all files with proper React components...');
-
 // Function to create a proper React component;
 function createProperComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
@@ -66,7 +64,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
 export const ${fileName} = {
   // Add utility functions here;
   init: () => {,
-    console.log('${fileName} initialized');
+
   }
 };
 
@@ -95,10 +93,10 @@ function fixFile(filePath) {
   try {
     const content = createProperComponent(filePath);
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed: ${filePath}`);
+
     return true;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -140,8 +138,6 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const srcDir = path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
-console.log(`📁 Found ${files.length} files to fix...`);
-
 let fixedCount = 0;
 let errorCount = 0;
 
@@ -151,18 +147,16 @@ for (const file of files) {
       fixedCount++;
     }
   } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
+
     errorCount++;
   }
 }
 
-console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+
+
 
 if (fixedCount > 0) {
-  console.log('\n🎉 All files fixed successfully!');
+
 } else {
-  console.log('\n✨ No files needed fixing.');
+
 }

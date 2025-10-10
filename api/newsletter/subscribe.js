@@ -43,7 +43,7 @@ async function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 

@@ -39,12 +39,12 @@ function cleanMergeConflicts(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned: ${filePath}`);
+
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -77,16 +77,15 @@ function cleanDirectory(dirPath) {
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+
   }
   
   return cleanedCount;
 }
 
 // Main execution
-console.log('Starting merge conflict cleanup...');
+
 const cleanedCount = cleanDirectory('/workspace');
-console.log(`Cleaned ${cleanedCount} files`);
 
 // Also clean specific problematic files
 const criticalFiles = [
@@ -97,13 +96,10 @@ const criticalFiles = [
   '/workspace/tailwind.config.ts'
 ];
 
-console.log('Cleaning critical files...');
 for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
+
     }
   }
 }
-
-console.log('Merge conflict cleanup completed!');

@@ -1,11 +1,8 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
 
 import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -85,10 +82,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+
           }
         });
       });

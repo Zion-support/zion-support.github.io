@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Find all TypeScript and JavaScript files;
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
@@ -46,7 +46,7 @@ const removeConsoleLogs = (filePath) => {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned console statements from: ${filePath}`);
+
 // Files to exclude from console.log removal;
 const excludePatterns = [
   '**/node_modules/**',
@@ -70,8 +70,6 @@ const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */
 
 let totalRemoved = 0;
 let filesProcessed = 0;
-
-console.log('🧹 Removing console.log statements from production code...\n');
 
 for (const file of files) {/* TODO: Fix JSX expression */}
       .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {})')
@@ -100,7 +98,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     
     filesProcessed++;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`❌ Error processing ${file}:`, error.message);
+
 `
 console.log(`\n🎉 Console log cleanup complete!`);`
 console.log(`📊 Files)`
@@ -112,7 +110,7 @@ console.log(`\n💡 Not)`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 };
@@ -121,14 +119,10 @@ console.log(`\n💡 Not)`
 const srcDir = path.join(__dirname, '..', 'src');
 const appDir = path.join(__dirname, '..', 'app');
 
-console.log('Starting console.log removal...');
-
 // Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
 const allFiles = [...srcFiles, ...appFiles];
-
-console.log(`Found ${allFiles.length} files to process`);
 
 let cleanedCount = 0;
 for (const file of allFiles) {
@@ -137,8 +131,7 @@ for (const file of allFiles) {
   }
 }
 
-console.log(`Cleaned console statements from ${cleanedCount} files`);
-console.log('Console.log removal completed!');
+
 // Function to process all TypeScript and JavaScript files;
 async function processFiles() {/* TODO: Fix JSX expression */}
 }

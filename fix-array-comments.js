@@ -34,4 +34,3 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
 
 const fixedContent = lines.join('\n');
 fs.writeFileSync(filePath, fixedContent, 'utf8');
-console.log('Fixed array comments in micro-saas file');

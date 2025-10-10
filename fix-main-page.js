@@ -28,14 +28,12 @@ function fixMainPage() {
     content = content.replace(/<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
-    console.log('✅ Fixed main page.tsx file');
+
     return true;
   } catch (error) {
-    console.error('Error fixing main page:', error.message);
+
     return false;
   }
 }
 
-console.log('🔧 Fixing main page.tsx...');
 fixMainPage();
-console.log('🎉 Main page fixes completed!');

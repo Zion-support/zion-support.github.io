@@ -141,7 +141,7 @@ function sendToAnalytics(metric: Metric): void {
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric);
+
   }
 
   // Send to analytics;

@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiCrmAssistantPage: React.FC = () => {
@@ -32,7 +30,6 @@ const AiCrmAssistantPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AICrmAssistantPage: React.FC = () => {
@@ -55,14 +52,11 @@ const AICrmAssistantPage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
+'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Increase sales by 30%',
     'Improve customer satisfaction',
     'Reduce manual work by 60%',
@@ -74,12 +68,9 @@ const AICrmAssistantPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>Ai Crm Assistant - Zion Tech Group</title>
+<title>Ai Crm Assistant - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai crm assistant solution for modern businesses." />
         <meta name="keywords" content="AI ai crm assistant, artificial intelligence, ai crm assistant, AI solutions, intelligent automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         <title>AI CRM Assistant | Zion Tech Group</title>
         <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />
@@ -87,9 +78,7 @@ const AICrmAssistantPage: React.FC = () => {
       
       <Navigation />
 
-<<<<<<< HEAD
-=======
-      <Navigation />
+<Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -191,7 +180,6 @@ const AICrmAssistantPage: React.FC = () => {
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -248,11 +236,8 @@ const AICrmAssistantPage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-        </section>
+</section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
       </section>
 
@@ -302,8 +287,5 @@ const AICrmAssistantPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AiCrmAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default AICrmAssistantPage;

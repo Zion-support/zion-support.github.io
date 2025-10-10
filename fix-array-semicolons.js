@@ -17,7 +17,7 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -39,9 +39,7 @@ function main() {/* TODO: Fix JSX expression */}
     'src/system-status/page.tsx',
     'src/test-page.tsx'
   ];
-  
-  console.log('Fixing array semicolons...');
-  
+
   let fixedCount = 0;
   files.forEach(file => {)
     if (fs.existsSync(file)) {
@@ -52,7 +50,7 @@ function main() {/* TODO: Fix JSX expression */}
     })
   });
   `
-  console.log(`Fixed ${fixedCount} files`);
+
 }
 
 main();`

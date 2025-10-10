@@ -51,13 +51,13 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -81,8 +81,6 @@ async function main() {
   
   // Remove duplicates
   allFiles = [...new Set(allFiles)];
-  
-  console.log(`Found ${allFiles.length} files to check...`);
 
   let fixedCount = 0;
   for (const file of allFiles) {
@@ -91,7 +89,6 @@ async function main() {
     }
   }
 
-  console.log(`Fixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

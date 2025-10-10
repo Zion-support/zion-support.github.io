@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Function to fix lint warnings in a file;
 function fixLintWarnings(filePath) {
@@ -70,7 +70,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -102,10 +102,8 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
-console.log('Fixing lint warnings...');
 
 const filesToFix = findFilesToFix(srcDir);`
-console.log(`Processing ${filesToFix.length} files`);
 
 let fixedCount = 0;
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}

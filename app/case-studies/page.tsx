@@ -2,8 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
 interface CaseStudy {
@@ -18,42 +16,42 @@ interface CaseStudy {
   duration: string;
   team: string;
 }
-=======
 import { ArrowRight, ExternalLink, Building2, Users, TrendingUp, Shield, Zap } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
 import { ArrowRight, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
+
+interface CaseStudy {
+  id: string | number;
+  title: string;
+  client?: string;
+  company?: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  image: string;
+  duration?: string;
+  team?: string;
+}
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-<<<<<<< HEAD
-      id: '1',
-      title: 'AI-Powered Customer Service Transformation',
-      client: 'TechCorp Solutions',
-      industry: 'Technology',
-<<<<<<< HEAD
-      challenge: 'High customer service costs and long response times affecting customer satisfaction.',
+challenge: 'High customer service costs and long response times affecting customer satisfaction.',
       solution: 'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
-=======
       id: 1,
       title: 'AI-Powered E-commerce Transformation',
       company: 'TechRetail Inc.',
       industry: 'E-commerce',
       challenge: 'Low conversion rates and poor customer experience',
       solution: 'Implemented AI-powered recommendation engine and chatbot',
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
       results: [
         '40% increase in conversion rates',
         '60% reduction in customer service queries',
         '35% increase in average order value'
       ],
-<<<<<<< HEAD
-      image: '/images/case-studies/ai-customer-service.jpg',
+image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
       team: '8 specialists'
-=======
       image: '/images/case-studies/ai-customer-service.jpg',
       challenge: 'High customer service costs and long response times',
       solution: 'Implemented AI chatbot and automated ticketing system',
@@ -64,34 +62,25 @@ const CaseStudiesPage: React.FC = () => {
       ],
       duration: '3 months',
       team: '5 specialists'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
       image: '/images/case-studies/ecommerce-ai.jpg'
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
     },
     {
       id: 2,
       title: 'Cloud Migration for Financial Services',
       company: 'FinanceFlow Ltd.',
       industry: 'Financial Services',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
+challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
-=======
       challenge: 'Legacy systems causing performance issues and security concerns',
       solution: 'Complete cloud migration with enhanced security measures',
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
       results: [
         '50% improvement in system performance',
         '99.9% uptime achieved',
         '30% reduction in operational costs'
       ],
-<<<<<<< HEAD
-      image: '/images/case-studies/cloud-migration.jpg',
+image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
       team: '12 specialists'
-=======
       image: '/images/case-studies/cloud-migration.jpg',
       challenge: 'Legacy systems causing performance issues and security concerns',
       solution: 'Complete cloud migration with enhanced security protocols',
@@ -102,15 +91,13 @@ const CaseStudiesPage: React.FC = () => {
       ],
       duration: '6 months',
       team: '8 specialists'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     },
     {
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
-<<<<<<< HEAD
-      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
+challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
       solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
       results: [
         '100% HIPAA compliance achieved',
@@ -160,14 +147,12 @@ const CaseStudiesPage: React.FC = () => {
       id: '6',
       title: 'Blockchain Integration for Supply Chain',
       client: 'GlobalLogistics',
-=======
       image: '/images/case-studies/cloud-finance.jpg'
     },
     {
       id: 3,
       title: 'Blockchain Supply Chain Optimization',
       company: 'GlobalLogistics Corp.',
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
       industry: 'Logistics',
       challenge: 'Lack of transparency and traceability in supply chain',
       solution: 'Blockchain-based tracking and verification system',
@@ -176,11 +161,9 @@ const CaseStudiesPage: React.FC = () => {
         '45% reduction in fraud cases',
         '25% improvement in delivery times'
       ],
-<<<<<<< HEAD
-      image: '/images/case-studies/blockchain-supply-chain.jpg',
+image: '/images/case-studies/blockchain-supply-chain.jpg',
       duration: '7 months',
       team: '11 specialists'
-=======
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
       challenge: 'Increasing cyber threats targeting patient data',
       solution: 'Comprehensive security audit and implementation of advanced protection',
@@ -239,25 +222,19 @@ const CaseStudiesPage: React.FC = () => {
       ],
       duration: '8 months',
       team: '10 specialists'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
       image: '/images/case-studies/blockchain-logistics.jpg'
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
     }
   ];
 
   const stats = [
-<<<<<<< HEAD
-    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
+{ label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
-=======
     { icon: Building2, label: 'Projects Completed', value: '150+' },
     { icon: Users, label: 'Happy Clients', value: '200+' },
     { icon: TrendingUp, label: 'Success Rate', value: '98%' },
     { icon: Shield, label: 'Security Score', value: '100%' }
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   ];
 
   return (
@@ -274,25 +251,13 @@ const CaseStudiesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
-<<<<<<< HEAD
-=======
-        <section className="relative py-20 px-4">
+<section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Case Studies
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Explore our successful projects and see how we've helped businesses transform with AI and IT solutions.
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Success Stories
@@ -300,9 +265,7 @@ const CaseStudiesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </p>
-=======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -316,7 +279,6 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover how we've helped businesses transform with our AI and IT solutions.
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -327,7 +289,6 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-400">{stat.label}</div>
-=======
             </p>
           </div>
         </section>
@@ -340,73 +301,18 @@ const CaseStudiesPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
                   </div>
-<<<<<<< HEAD
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+<div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
-=======
                 ))}
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Case Studies Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
-                    <div className="text-6xl">📊</div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
-                      {study.industry}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                  <p className="text-gray-300 mb-4"><strong>Client:</strong> {study.company}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2">Challenge:</h4>
-                    <p className="text-gray-300 text-sm">{study.challenge}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2">Solution:</h4>
-                    <p className="text-gray-300 text-sm">{study.solution}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2">Results:</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-<<<<<<< HEAD
-                  </button>
-=======
+</button>
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -418,18 +324,14 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
                   </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
@@ -438,7 +340,6 @@ const CaseStudiesPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how we can help transform your business with our AI and IT solutions.
-=======
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -514,13 +415,11 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-gray-300 text-lg mb-8">
                 Let us help you achieve similar results with our proven AI and IT solutions. 
                 Contact us today for a free consultation.
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-<<<<<<< HEAD
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
@@ -530,7 +429,6 @@ const CaseStudiesPage: React.FC = () => {
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   Explore Our Services
-=======
                   className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-3 px-8 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2"
                 >
                   Start Your Project
@@ -542,7 +440,6 @@ const CaseStudiesPage: React.FC = () => {
                 >
                   Explore Services
                   <ExternalLink className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </Link>
               </div>
             </div>

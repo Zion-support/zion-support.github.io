@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
@@ -69,11 +69,10 @@ const fixComponentNames = () => {
         fixedCount++;
       }
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+
     }
   }
-  
-  console.log(`Fixed ${fixedCount} files!`);
+
 };
 
 fixComponentNames();

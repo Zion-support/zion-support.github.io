@@ -111,14 +111,13 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution;
-console.log('Starting page restoration...');
 
 let restoredCount = 0;
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error restoring ${pageFile}:`, error.message);
+
   }
 }
 `
-console.log(`Restored ${restoredCount} page files`);
+
 console.log('Page restoration complete!');"`
