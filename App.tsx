@@ -81,7 +81,8 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
-<<<<<<< HEAD
+
+// AI Services Pages
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
 const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
@@ -92,16 +93,23 @@ const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-suppl
 const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
 
-<<<<<<< HEAD
-=======
 // New Micro SAAS Services
 const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
 const AICodeSecurityAuditorPage = React.lazy(() => import('./app/ai-code-security-auditor/page'));
 const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-health-companion/page'));
 const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
 const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
+const AISustainabilityTrackerPage = React.lazy(() => import('./app/ai-sustainability-tracker/page'));
+const AIPersonalTrainerPage = React.lazy(() => import('./app/ai-personal-trainer/page'));
+const AILanguageTutorPage = React.lazy(() => import('./app/ai-language-tutor/page'));
+const AIHomeInspectorPage = React.lazy(() => import('./app/ai-home-inspector/page'));
+const AINutritionPlannerPage = React.lazy(() => import('./app/ai-nutrition-planner/page'));
+const AISleepOptimizerPage = React.lazy(() => import('./app/ai-sleep-optimizer/page'));
+const AIMemoryPalacePage = React.lazy(() => import('./app/ai-memory-palace/page'));
+const AIHabitTrackerPage = React.lazy(() => import('./app/ai-habit-tracker/page'));
+const AIGoalSetterPage = React.lazy(() => import('./app/ai-goal-setter/page'));
+const AITimeBlockerPage = React.lazy(() => import('./app/ai-time-blocker/page'));
 
->>>>>>> origin/main
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -130,10 +138,6 @@ const HealthPage = React.lazy(() => import('./app/health/page'));
 const SecurityPage = React.lazy(() => import('./app/security/page'));
 const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
-const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
-const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
-=======
->>>>>>> origin/main
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
@@ -164,24 +168,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <Route path="/" element={
-                        <div className="w-full">
-                          <UnifiedContentPromotion />
-                          <InteractiveAIROICalculator />
-                          <ContentShowcase />
-                          <InteractiveContentShowcase2026 />
-                        </div>
-                      } />
-                      
-                      {/* Main Pages */}
-=======
                       <Route path="/" element={<HomePage />} />
->>>>>>> origin/main
-=======
-<Route path="/" element={<HomePage />} />
->>>>>>> origin/main
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -201,49 +188,13 @@ const App: React.FC = memo(() => {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
-<<<<<<< HEAD
+                      <Route path="/services" element={<ServicesPage />} />
                       <Route path="/health" element={<HealthPage />} />
                       <Route path="/security" element={<SecurityPage />} />
                       <Route path="/compliance" element={<CompliancePage />} />
                       <Route path="/gdpr" element={<GDPRPage />} />
 
-                      {/* Service Category Pages */}
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-
                       {/* AI Services Pages */}
-                      <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
-                      <Route path="/ai-agricultural-intelligence-pro" element={<AIAgriculturalIntelligenceProPage />} />
-                      <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
-                      <Route path="/ai-api-management" element={<AIAPIManagementPage />} />
-                      <Route path="/ai-autonomous-systems" element={<AIAutonomousSystemsPage />} />
-                      <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
-                      <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
-                      <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
-                      <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                      <Route path="/ai-content-studio" element={<AIContentStudioPage />} />
-                      <Route path="/ai-content-writer" element={<AIContentWriterPage />} />
-                      <Route path="/ai-crm-assistant" element={<AICRMAssistantPage />} />
-                      <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-                      <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-                      <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                      <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
-                      <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
-                      <Route path="/ai-energy" element={<AIEnergyPage />} />
-                      <Route path="/ai-energy-grid-management-pro" element={<AIEnergyGridManagementProPage />} />
-                      <Route path="/ai-fashion-design" element={<AIFashionDesignPage />} />
-                      <Route path="/ai-financial-advisor" element={<AIFinancialAdvisorPage />} />
-                      <Route path="/ai-financial-crime-detection-pro" element={<AIFinancialCrimeDetectionProPage />} />
-                      <Route path="/ai-fintech" element={<AIFintechPage />} />
-                      <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                      <Route path="/ai-holographic-workspace" element={<AIHolographicWorkspacePage />} />
-                      <Route path="/ai-infrastructure-monitoring" element={<AIInfrastructureMonitoringPage />} />
-                      <Route path="/ai-logo-designer" element={<AILogoDesignerPage />} />
-                      <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
-                      <Route path="/ai-mobile-app-builder" element={<AIMobileAppBuilderPage />} />
-                      <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} />
-                      <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistantPage />} />
                       <Route path="/ai-ops" element={<AIOpsPage />} />
                       <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
                       <Route path="/ai-quantum-computing" element={<AIQuantumComputingPage />} />
@@ -255,16 +206,23 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
 
-<<<<<<< HEAD
-=======
                       {/* New Micro SAAS Services */}
                       <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
                       <Route path="/ai-code-security-auditor" element={<AICodeSecurityAuditorPage />} />
                       <Route path="/ai-mental-health-companion" element={<AIMentalHealthCompanionPage />} />
                       <Route path="/ai-smart-home-controller" element={<AISmartHomeControllerPage />} />
                       <Route path="/ai-investment-optimizer" element={<AIInvestmentOptimizerPage />} />
+                      <Route path="/ai-sustainability-tracker" element={<AISustainabilityTrackerPage />} />
+                      <Route path="/ai-personal-trainer" element={<AIPersonalTrainerPage />} />
+                      <Route path="/ai-language-tutor" element={<AILanguageTutorPage />} />
+                      <Route path="/ai-home-inspector" element={<AIHomeInspectorPage />} />
+                      <Route path="/ai-nutrition-planner" element={<AINutritionPlannerPage />} />
+                      <Route path="/ai-sleep-optimizer" element={<AISleepOptimizerPage />} />
+                      <Route path="/ai-memory-palace" element={<AIMemoryPalacePage />} />
+                      <Route path="/ai-habit-tracker" element={<AIHabitTrackerPage />} />
+                      <Route path="/ai-goal-setter" element={<AIGoalSetterPage />} />
+                      <Route path="/ai-time-blocker" element={<AITimeBlockerPage />} />
 
->>>>>>> origin/main
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
@@ -294,9 +252,6 @@ const App: React.FC = memo(() => {
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-=======
-<Route path="/services" element={<ServicesPage />} />
->>>>>>> origin/main
                     </Routes>
                   </Suspense>
                   </main>
