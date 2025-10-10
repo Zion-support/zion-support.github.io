@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, details } = req.body || {};
+    const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
