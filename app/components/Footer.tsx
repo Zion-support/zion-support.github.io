@@ -1,9 +1,11 @@
-'use client';
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+'use client'
+import React, { memo } from 'react'
+import Link from 'next/link'
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
+
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
+  
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -21,7 +23,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
-  ];
+  ]
+  
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
@@ -37,7 +40,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile applications' },
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
-  ];
+  ]
+  
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -55,7 +59,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
-  ];
+  ]
+  
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics & Automation', url: '/robotics', description: 'Intelligent robotics' },
@@ -66,7 +71,8 @@ const Footer: React.FC = memo(() => {
     { name: '5G Implementation', url: '/5g-implementation', description: '5G solutions' },
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
     { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
-  ];
+  ]
+  
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -75,7 +81,8 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
-  ];
+  ]
+  
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -83,14 +90,16 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
-  ];
+  ]
+  
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
     emergency: '24/7 Emergency Support Available'
-  };
+  }
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -99,14 +108,15 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
-              AI Services;
-  </
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {service.name}
                   </Link>
                 </li>
@@ -114,24 +124,27 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All AI Services →
                 </Link>
               </li>
             </ul>
           </div>
+
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
-              IT Services;
-  </
+              IT Services
+            </h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {service.name}
                   </Link>
                 </li>
@@ -139,24 +152,27 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All IT Services →
                 </Link>
               </li>
             </ul>
           </div>
+
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS;
-  </
+              Micro SAAS
+            </h3>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {service.name}
                   </Link>
                 </li>
@@ -164,59 +180,67 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All Micro SAAS →
                 </Link>
               </li>
             </ul>
           </div>
+
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech;
-  </
+              Emerging Tech
+            </h3>
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
-              Company;
-  </
+              Company
+            </h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+            
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+            
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
@@ -224,55 +248,54 @@ const Footer: React.FC = memo(() => {
                   {contactInfo.phone}
                 </a>
               </div>
+              
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2 text-cyan-400" />
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
                   {contactInfo.email}
                 </a>
               </div>
+              
               <div className="flex items-start text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
                 <span className="leading-relaxed">{contactInfo.address}</span>
               </div>
+              
               <div className="flex items-center text-sm text-gray-300">
                 <Clock className="w-4 h-4 mr-2 text-cyan-400" />
                 <span>{contactInfo.hours}</span>
               </div>
+              
               <div className="text-xs text-cyan-400 font-medium">
                 {contactInfo.emergency}
               </div>
             </div>
           </div>
         </div>
+        
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
+            
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
+                Privacy Policy
+              </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
+                Terms of Service
+              </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
+                Cookie Policy
+              </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-});
-Footer.displayName = 'Footer';
-export default Footer;
-  </a>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
+  )
+})
+
+Footer.displayName = 'Footer'
+export default Footer

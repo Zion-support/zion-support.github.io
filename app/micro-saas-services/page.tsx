@@ -1,5 +1,5 @@
-// Real Micro SAAS Services for Zion Tech Group;
-// Comprehensive list of innovative, real-world micro SAAS solutions;
+// Real Micro SAAS Services for Zion Tech Group
+// Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
   id: string,
   title: string,
@@ -7,9 +7,9 @@ export interface MicroSaasService {
   shortDescription: string,
   icon: string,
   price: string,
-  originalPrice?: string;
-  features: string[];
-  benefits: string[];
+  originalPrice?: string
+  features: string[]
+  benefits: string[]
   link: string,
   popular: boolean,
   category: string,
@@ -17,29 +17,29 @@ export interface MicroSaasService {
   users: string,
   freeTrial: string,
   marketPrice: string,
-  capabilities: string[];
-  useCases: string[];
-  integrations: string[];
+  capabilities: string[]
+  useCases: string[]
+  integrations: string[]
   apiAvailable: boolean,
   mobileApp: boolean,
   whiteLabel: boolean,
   support: string,
   setupTime: string,
   technicalSpecs: {
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
-    cloudProviders: string[];
-  };
+    languages: string[]
+    frameworks: string[]
+    databases: string[]
+    cloudProviders: string[]
+  }
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[];
-  };
+    features: string[]
+  }
 }
 export const microSaasServices: MicroSaasService[] = [
-  // AI-Powered Productivity Tools;
+  // AI-Powered Productivity Tools
   {,
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
@@ -69,7 +69,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-project-manager'
     popular: true,
     category: 'Productivity',
-    rating: 4.9;
+    rating: 4.9
     users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
@@ -141,7 +141,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-task-manager'
     popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
@@ -183,7 +183,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
     }
   },
-  // AI Content & Marketing Tools;
+  // AI Content & Marketing Tools
   {
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
@@ -213,7 +213,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-content-writer'
     popular: true,
     category: 'Content & Marketing',
-    rating: 4.7;
+    rating: 4.7
     users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
@@ -284,7 +284,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-social-media-manager'
     popular: true,
     category: 'Content & Marketing',
-    rating: 4.6;
+    rating: 4.6
     users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
@@ -327,7 +327,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
     }
   },
-  // AI Business & Finance Tools;
+  // AI Business & Finance Tools
   {
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
@@ -357,7 +357,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-crm'
     popular: true,
     category: 'Business & Finance',
-    rating: 4.8;
+    rating: 4.8
     users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
@@ -429,7 +429,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-financial-analyzer'
     popular: true,
     category: 'Business & Finance',
-    rating: 4.9;
+    rating: 4.9
     users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
@@ -472,7 +472,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
     }
   },
-  // AI Customer Service Tools;
+  // AI Customer Service Tools
   {
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
@@ -502,7 +502,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-customer-support-bot'
     popular: true,
     category: 'Customer Service',
-    rating: 4.7;
+    rating: 4.7
     users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
@@ -545,7 +545,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
     }
   },
-  // AI Development Tools;
+  // AI Development Tools
   {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
@@ -575,7 +575,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-code-generation'
     popular: true,
     category: 'Development',
-    rating: 4.8;
+    rating: 4.8
     users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
@@ -618,7 +618,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
     }
   },
-  // AI Healthcare Tools;
+  // AI Healthcare Tools
   {
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
@@ -648,7 +648,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-healthcare'
     popular: true,
     category: 'Healthcare',
-    rating: 4.9;
+    rating: 4.9
     users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
@@ -691,7 +691,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
     }
   },
-  // AI E-commerce Tools;
+  // AI E-commerce Tools
   {
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
@@ -721,7 +721,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-ecommerce-solutions'
     popular: true,
     category: 'E-commerce',
-    rating: 4.7;
+    rating: 4.7
     users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
@@ -764,7 +764,7 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
     }
   },
-  // AI Education Tools;
+  // AI Education Tools
   {
     id: 'ai-education-platform',
     title: 'AI Education Platform',
@@ -794,7 +794,7 @@ export const microSaasServices: MicroSaasService[] = [
     link: '/ai-education'
     popular: true,
     category: 'Education',
-    rating: 4.8;
+    rating: 4.8
     users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
@@ -837,8 +837,8 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
     }
   }
-];
-// Service categories for filtering and organization;
+]
+// Service categories for filtering and organization
 export const serviceCategories = [
   'All',
   'Productivity',
@@ -852,8 +852,8 @@ export const serviceCategories = [
   'AI & ML',
   'Analytics',
   'Automation'
-];
-// Pricing tiers for comparison;
+]
+// Pricing tiers for comparison
 export const pricingTiers = {
   starter: {,
     name: 'Starter',
@@ -870,12 +870,12 @@ export const pricingTiers = {
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
   }
-};
-// Contact information;
+}
+// Contact information
 export const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time)'};
+  timezone: 'EST (Eastern Standard Time)'}

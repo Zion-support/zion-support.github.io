@@ -1,103 +1,102 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableOptimizations?: boolean;
+  children: React.ReactNode
+  enableOptimizations?: boolean
 }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   children,
   enableOptimizations = true
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false);
+}) =>{
+  const [isOptimized, setIsOptimized] = useState(false)
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
     totalSavings: 0
-  });
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const images = document.querySelectorAll('img');
-    let optimizedCount = 0;
-    images.forEach((img) => {
+  })
+  const optimizeImages = useCallback(() =>{
+    if (typeof window === 'undefined') return
+    const images = document.querySelectorAll('img')
+    let optimizedCount = 0
+    images.forEach((img) =>{
       // Add lazy loading if not already present
       if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-        optimizedCount++;
+        img.setAttribute('loading', 'lazy')
+        optimizedCount++
       }
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-        optimizedCount++;
+        img.setAttribute('decoding', 'async')
+        optimizedCount++
       }
-    });
-    return optimizedCount;
-  }, []);
-  const optimizeScripts = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const scripts = document.querySelectorAll('script[src]');
-    let optimizedCount = 0;
-    scripts.forEach((script) => {
+    })
+    return optimizedCount
+  }, [])
+  const optimizeScripts = useCallback(() =>{
+    if (typeof window === 'undefined') return
+    const scripts = document.querySelectorAll('script[src]')
+    let optimizedCount = 0
+    scripts.forEach((script) =>{
       // Add defer attribute if not already present
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-        script.setAttribute('defer', '');
-        optimizedCount++;
+        script.setAttribute('defer', '')
+        optimizedCount++
       }
-    });
-    return optimizedCount;
-  }, []);
-  const optimizeCSS = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-    let optimizedCount = 0;
-    stylesheets.forEach((link) => {
+    })
+    return optimizedCount
+  }, [])
+  const optimizeCSS = useCallback(() =>{
+    if (typeof window === 'undefined') return
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
+    let optimizedCount = 0
+    stylesheets.forEach((link) =>{
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
-        link.setAttribute('media', 'print');
-        link.setAttribute('onload', "this.media='all'");
-        optimizedCount++;
+        link.setAttribute('media', 'print')
+        link.setAttribute('onload', "this.media='all'")
+        optimizedCount++
       }
-    });
-    return optimizedCount;
-  }, []);
-  const runOptimizations = useCallback(() => {
-    if (!enableOptimizations) return;
-    const imagesOptimized = optimizeImages();
-    const scriptsOptimized = optimizeScripts();
-    const cssOptimized = optimizeCSS();
+    })
+    return optimizedCount
+  }, [])
+  const runOptimizations = useCallback(() =>{
+    if (!enableOptimizations) return
+    const imagesOptimized = optimizeImages()
+    const scriptsOptimized = optimizeScripts()
+    const cssOptimized = optimizeCSS()
     setOptimizationMetrics({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    });
-    setIsOptimized(true);
-  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
-  useEffect(() => {
+    })
+    setIsOptimized(true)
+  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
+  useEffect(() =>{
     // Run optimizations after component mount
-    const timer = setTimeout(runOptimizations, 100);
-    return () => clearTimeout(timer);
-  }, [runOptimizations]);
+    const timer = setTimeout(runOptimizations, 100)
+    return () =>clearTimeout(timer)
+  }, [runOptimizations])
   // Add performance monitoring
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
+  useEffect(() =>{
+    if (typeof window === 'undefined') return
+    const observer = new PerformanceObserver((list) =>{
+      const entries = list.getEntries()
+      entries.forEach((entry) =>{
         if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-            console.warn('Page load time exceeded 1 second');
+          const navEntry = entry as PerformanceNavigationTiming
+          if (navEntry.loadEventEnd - navEntry.loadEventStart&gt;1000) {
+            console.warn('Page load time exceeded 1 second')
           }
         }
-      });
-    });
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    return () => observer.disconnect();
-  }, []);
+      })
+    })
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+    return () =>observer.disconnect()
+  }, [])
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
+    <div className="performance-optimized" data-optimized={isOptimized}>{children}
       {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
           position: 'fixed',
@@ -110,14 +109,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000
         }}>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
-        </div>
-      )}
-    </div>
-  );
-};
-export default AdvancedPerformanceOptimizer;
-  </PerformanceOptimizerProps>
+          <div&gt;Images: {optimizationMetrics.imagesOptimized}</div&gt; <div&gt;Scripts: {optimizationMetrics.scriptsOptimized}</div&gt; <div&gt;CSS: {optimizationMetrics.cssOptimized}</div&gt; <div&gt;Total: {optimizationMetrics.totalSavings}</div&gt; </div>)}
+    </div>)
+}
+export default AdvancedPerformanceOptimizer></PerformanceOptimizerProps>

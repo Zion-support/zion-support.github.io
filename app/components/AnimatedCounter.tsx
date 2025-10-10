@@ -1,47 +1,44 @@
-'use client';
-import React from 'react';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React from 'react'
+import React, { useState, useEffect } from 'react'
 interface AnimatedCounterProps {
   end: number,
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;
+  duration?: number
+  prefix?: string
+  suffix?: string
+  className?: string
 }
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps>= ({
   end,
   duration = 2000,
   prefix = '',
   suffix = '',
   className = ''
-}) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
+}) =>{
+  const [count, setCount] = useState(0)
+  useEffect(() =>{
     let startTime: number,
     let animationFrame: number,
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+    const animate = (currentTime: number) =>{
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
       // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-      setCount(currentCount);
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      const currentCount = Math.floor(easeOutQuart * end)
+      setCount(currentCount)
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate)
       }
-    };
-    animationFrame = requestAnimationFrame(animate);
-    return () => {
+    }
+    animationFrame = requestAnimationFrame(animate)
+    return () =>{
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(animationFrame)
       }
-    };
-  }, [end, duration]);
+    }
+  }, [end, duration])
   return (
-    <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
-  );
-};
-export default AnimatedCounter;
-  </AnimatedCounterProps>
+    <span className={className}>{prefix}{count.toLocaleString()}{suffix}
+    </span>)
+}
+export default AnimatedCounter></AnimatedCounterProps>

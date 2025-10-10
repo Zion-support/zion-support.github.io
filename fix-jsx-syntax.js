@@ -1,132 +1,82 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-//Function to fix JSX syntax errors;
+// Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-
-  //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-,
-  //Fix malformed JSX elements that are self-closing but shouldn't be;
-  //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues;
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues;
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects;
-  fixed = fixed.replace(
-function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
+  // Fix common JSX syntax issues
+  let fixed = content;
+  
+  // Fix semicolons in JSX closing tags
+  fixed = fixed.replace(/;\s*<\/\s*([^>]+)>/g, '></$1>');
+  
+  // Fix semicolons in JSX self-closing tags
+  fixed = fixed.replace(/;\s*\/>/g, ' />');
+  
+  // Fix semicolons in JSX opening tags
+  fixed = fixed.replace(/;\s*>/g, '>');
+  
+  // Fix malformed closing tags like "  </" to proper closing tags
+  fixed = fixed.replace(/\s+<\/\s*$/gm, '');
+  
+  // Fix incomplete JSX elements that end with just ";"
+  fixed = fixed.replace(/;\s*$/gm, '');
+  
+  // Fix React.Fragment closing issues
+  fixed = fixed.replace(/<\/React\.Fragment>\s*\)\s*$/gm, '</React.Fragment>');
+  
+  // Fix incomplete JSX expressions
+  fixed = fixed.replace(/{\s*;\s*}/g, '{}');
+  
   return fixed;
 }
 
-//Function to process a single file;
+// Function to process a single file
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXSyntax(content);
+    
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
-  }
-];
-
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-//Main function;
-async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
-
-  console.log(`Found ${files.length} TSX files to check...`);
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
-        '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
-}
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-
-    for (const file of files) {/* TODO: Fix JSX expression */}
+// Main function
+function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.jsx'
+  ];
+  
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    console.log(`Processing ${files.length} files matching ${pattern}...`);
+    
+    files.forEach(file => {
+      if (processFile(file)) {
+        totalFixed++;
       }
-    }
+    });
   });
+  
+  console.log(`\nTotal files fixed: ${totalFixed}`);
+}
 
-  //   }
-
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+// Run if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
 
 export { fixJSXSyntax, processFile };
-
-}"`

@@ -1,25 +1,25 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react'
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  date: string
+  readTime: string
+  category: string
+  tags: string[]
+  image: string
+  featured: boolean
 }
-const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+const BlogPage: React.FC = () =>{
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
   const blogPosts: BlogPost[] = [
     {
       id: '1',
@@ -73,30 +73,28 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-apps.jpg',
       featured: false
     }
-  ];
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
-  useEffect(() => {
-    let filtered = blogPosts;
+  ]
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development']
+  useEffect(() =>{
+    let filtered = blogPosts
     if (searchTerm) {
-      filtered = filtered.filter(post =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      filtered = filtered.filter(post =>post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+        post.tags.some(tag =>tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
     }
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post =>post.category === selectedCategory)
     }
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredPosts(filtered)
+  }, [searchTerm, selectedCategory])
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
-const BlogPage: React.FC = () => {
+      <Helmet&gt;import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react'
+const BlogPage: React.FC = () =>{
   const blogPosts = [
     {
       id: 1,
@@ -134,89 +132,47 @@ const BlogPage: React.FC = () => {
       category: 'Micro SaaS',
       readTime: '7 min read'
     }
-  ];
-  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
+  ]
+  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights']
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Blog | Zion Tech Group - AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
+    <React.Fragment&gt; <Helmet&gt; <title&gt;Blog | Zion Tech Group - AI & IT Insights</title&gt; <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </Helmet&gt; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Updates;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Tech Insights & Updates></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
+              </p&gt; </div&gt; <div className="flex flex-wrap justify-center gap-4 mb-12">{categories.map((category) =>(
                 <button
                   key={category}
-                  className="px-6 py-3 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
-                  {category}
-                </button>
-              ))}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+                  className="px-6 py-3 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">{category}
+                </button>))}
+            </div&gt; <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{blogPosts.map((post) =>(
                 <article
                   key={post.id}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="aspect-video bg-gray-700 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
-                  </div>
-                  <div className="p-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div&gt; </div&gt; <div className="p-6">
                     <div className="flex items-center gap-4 mb-3 text-sm text-gray-400">
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 mb-4">
+                        <Calendar className="w-4 h-4" />{new Date(post.date).toLocaleDateString()}
+                      </span&gt; <span className="flex items-center gap-1">
+                        <User className="w-4 h-4" />{post.author}
+                      </span&gt; </div&gt; <div className="flex items-center gap-2 mb-4">
                       <Tag className="w-4 h-4 text-cyan-400" />
-                      <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
-                      <span className="text-gray-400 text-sm">•</span>
-                      <span className="text-gray-400 text-sm">{post.readTime}</span>
-                    </div>
-                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <Link
+                      <span className="text-cyan-400 text-sm font-medium">{post.category}</span&gt; <span className="text-gray-400 text-sm">•</span&gt; <span className="text-gray-400 text-sm">{post.readTime}</span&gt; </div&gt; <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{post.title}
+                    </h2&gt; <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}
+                    </p&gt; <Link
                       to={`/blog/${post.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                      Read More
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </article>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
+                    </Link&gt; </div&gt; </article&gt; <title&gt;Blog - Zion Tech Group</title&gt; <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      </Helmet&gt; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
-            </p>
-            {/* Search Bar */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Tech Insights & News></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
+            </p>{/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -224,32 +180,24 @@ const BlogPage: React.FC = () => {
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) =>setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
-              </div>
-            </div>
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {categories.map((category) => (
+              </div&gt; </div>{/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) =>(
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() =>setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? 'bg-purple-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category === 'all' ? 'All Posts' : category}
-                </button>
-              ))}
-            </div>
-{/* Blog Posts */}
+                  }`}>{category === 'all' ? 'All Posts' : category}
+                </button>))}
+            </div>{/* Blog Posts */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPosts.map((post) =>(
                 <article
                   key={post.id}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 group">
@@ -259,76 +207,34 @@ const BlogPage: React.FC = () => {
                       alt={post.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                  </div>
-                  <div className="p-6">
+                  </div&gt; <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
-                        {post.category}
-                      </span>
-                      {post.featured && (
-                        <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">
-                          Featured;
-  </
-                      )}
-                    </div>
-                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">{post.category}
+                      </span>{post.featured && (
+                        <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Featured></)}
+                    </div&gt; <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">{post.title}
+                    </h2&gt; <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}
+                    </p&gt; <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                       <div className="flex items-center gap-1">
                         <User className="w-4 h-4" />
-                        <span>{post.author}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
+                        <span>{post.author}</span&gt; </div&gt; <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
+                        <span>{post.date}</span&gt; </div&gt; <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {post.tags.map((tag) => (
+                        <span>{post.readTime}</span&gt; </div&gt; </div&gt; <div className="flex flex-wrap gap-1 mb-4">{post.tags.map((tag) =>(
                         <span
                           key={tag}
-                          className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                    <Link
+                          className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">#{tag}
+                        </span>))}
+                    </div&gt; <Link
                       to={`/blog/${post.id}`}
-                      className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
-                      Read More
+                      className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">Read More
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-            {filteredPosts.length === 0 && (
+                    </Link&gt; </div&gt; </article>))}
+            </div>{filteredPosts.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-export default BlogPage;
-  </span>
-  </section>
-  </h1>
-  </section>
-  </div>
-  </h1>
-  </div>
-  </section>
-  </div>
-  </div>
+                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p&gt; </div>)}
+          </div>)}
+      </div&gt; </div>)
+}
+export default BlogPage></span&gt; </section&gt; </h1&gt; </section&gt; </div&gt; </h1&gt; </div&gt; </section&gt; </div&gt; </div>

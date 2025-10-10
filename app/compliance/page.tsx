@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
-const CompliancePage: React.FC = () => {
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
+const CompliancePage: React.FC = () =>{
   const features = [
     {
       icon: FileCheck,
@@ -24,7 +24,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];
+  ]
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -34,72 +34,32 @@ const CompliancePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Compliance | Zion Tech Group</title>
-        <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      <Helmet&gt; <title&gt;Compliance | Zion Tech Group</title&gt; <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
+      </Helmet&gt; <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Compliance;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ensure your business meets all regulatory and compliance requirements. 
+          <h1 className="text-5xl font-bold text-white mb-6">Compliance></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ensure your business meets all regulatory and compliance requirements. 
             Powered by advanced AI technology and industry expertise.
-          </p>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our compliance solutions deliver unmatched performance, security, and scalability.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          </p&gt; <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our compliance solutions deliver unmatched performance, security, and scalability.
+          </p&gt; </div&gt; <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) =>(
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Compliance Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3&gt; <p className="text-gray-300">{feature.description}</p&gt; </div>))}
+        </div&gt; <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Compliance Solutions?
+          </h2&gt; <div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) =>(
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your compliance needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <span className="text-gray-300">{benefit}</span&gt; </div>))}
+          </div&gt; </div&gt; <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?
+          </h2&gt; <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your compliance needs and get a customized solution.
+          </p&gt; <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us;
-  </
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default CompliancePage;
-  </button>
-  </button>
-  </h1>
+              <Phone className="mr-2 h-5 w-5" />Call Now></button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />Email Us><//div&gt; </div&gt; </div&gt; </div>)
+}
+export default CompliancePage></button&gt; </button&gt; </h1>
