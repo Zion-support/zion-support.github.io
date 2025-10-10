@@ -5,8 +5,8 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -21,44 +21,6 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     cssMinify: true,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('react-router-dom')) {
-              return 'vendor-router';
-            }
-            return 'vendor';
-          }
-          // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
-            return 'pages-ai';
-          }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
-            return 'pages-it';
-          }
-          if (id.includes('/src/blog/')) {
-            return 'pages-blog';
-          }
-          if (id.includes('/src/')) {
-            return 'pages-other';
-          }
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
     terserOptions: {
       compress: {
         drop_console: true,

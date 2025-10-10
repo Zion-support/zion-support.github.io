@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './globals.css';
-import { performanceOptimizations } from './utils/performanceOptimizations';
+import { measureWebVitals } from './utils/performanceMonitor';
 
-// Initialize performance optimizations immediately
+// Initialize performance monitoring
 if (typeof window !== 'undefined') {
-  performanceOptimizations.init();
+  measureWebVitals();
 }
 
 // Register service worker
