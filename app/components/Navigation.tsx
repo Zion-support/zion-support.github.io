@@ -2,7 +2,7 @@
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Mic, Package, Dumbbell } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -55,7 +55,12 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
     { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
-    { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' }
+    { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Mic, description: 'Voice AI' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: BarChart, description: 'Predictive AI' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Package, description: 'Supply Chain AI' },
+    { name: 'AI Personal Trainer', href: '/ai-personal-trainer', icon: Dumbbell, description: 'Fitness AI' },
+    { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor', icon: Shield, description: 'Security AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },

@@ -22,7 +22,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice AI solutions' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Predictive analytics' },
+    { name: 'AI Supply Chain Optimizer', url: '/ai-supply-chain-optimizer', description: 'Supply chain AI' },
+    { name: 'AI Personal Trainer', url: '/ai-personal-trainer', description: 'Fitness AI' },
+    { name: 'AI Cybersecurity Monitor', url: '/ai-cybersecurity-monitor', description: 'Security AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },

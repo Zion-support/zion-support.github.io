@@ -1,62 +1,62 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Phone, MessageSquare, Headphones, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Star, Users, Clock, DollarSign } from 'lucide-react';
+import { Dumbbell, Heart, Target, Zap, Shield, Globe, CheckCircle, ArrowRight, Star, Users, Clock, DollarSign, Database, PieChart, LineChart, TrendingUp, Activity, Award } from 'lucide-react';
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AIPersonalTrainerPage: React.FC = () => {
   const features = [
-    'Natural Language Processing',
-    'Multi-language Support (50+ languages)',
-    'Real-time Voice Recognition',
-    'Custom Voice Training',
-    'Integration with 500+ Apps',
-    '24/7 Availability',
-    'Advanced Analytics',
-    'Custom Commands & Workflows'
+    'Personalized Workout Plans',
+    'Real-time Form Analysis',
+    'Nutrition Tracking',
+    'Progress Monitoring',
+    'Virtual Coaching',
+    'Injury Prevention',
+    'Goal Setting & Tracking',
+    'Social Challenges'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Basic',
+      price: '$19',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for beginners',
       features: [
-        'Up to 1,000 voice interactions/month',
-        'Basic voice commands',
-        'Email integration',
-        'Basic analytics',
-        'Email support'
+        'Basic workout plans',
+        'Progress tracking',
+        'Nutrition guidance',
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$299',
+      name: 'Pro',
+      price: '$39',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for fitness enthusiasts',
       features: [
-        'Up to 10,000 voice interactions/month',
-        'Advanced AI capabilities',
-        'CRM & Calendar integration',
-        'Custom voice training',
-        'Advanced analytics',
-        'Priority support'
+        'AI-powered personalization',
+        'Real-time form analysis',
+        'Advanced nutrition tracking',
+        'Virtual coaching sessions',
+        'Priority support',
+        'Wearable device integration'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$799',
+      name: 'Elite',
+      price: '$79',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For serious athletes',
       features: [
-        'Unlimited voice interactions',
-        'Custom AI model training',
-        'Full API access',
-        'White-label solution',
-        'Custom integrations',
-        'Dedicated support team'
+        'Custom AI training programs',
+        '1-on-1 virtual coaching',
+        'Advanced analytics',
+        'Injury prevention AI',
+        'Dedicated support',
+        'White-label solution'
       ],
       popular: false
     }
@@ -64,33 +64,60 @@ const AIVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      icon: Phone,
-      title: 'Customer Service',
-      description: 'Handle customer inquiries 24/7 with intelligent voice responses and seamless handoff to human agents when needed.'
+      icon: Dumbbell,
+      title: 'Strength Training',
+      description: 'AI-powered strength training programs that adapt to your progress and optimize your workouts for maximum results.'
     },
     {
-      icon: MessageSquare,
-      title: 'Sales Support',
-      description: 'Qualify leads, schedule appointments, and provide product information through natural voice conversations.'
+      icon: Heart,
+      title: 'Cardio Optimization',
+      description: 'Intelligent cardio programs that adjust intensity based on your heart rate, fitness level, and goals.'
     },
     {
-      icon: Headphones,
-      title: 'Call Center Automation',
-      description: 'Reduce call center costs by 60% with AI-powered call routing and automated responses.'
+      icon: Target,
+      title: 'Weight Loss',
+      description: 'Personalized weight loss programs combining exercise, nutrition, and lifestyle changes for sustainable results.'
     },
     {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Automate routine tasks through voice commands, from data entry to report generation.'
+      icon: Award,
+      title: 'Muscle Building',
+      description: 'Advanced muscle building programs with progressive overload and recovery optimization for maximum gains.'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: 'Better Results',
+      description: 'Users see 3x faster progress with AI-optimized training programs.',
+      value: '3x'
+    },
+    {
+      icon: Clock,
+      title: 'Time Efficient',
+      description: 'Optimized workouts that deliver maximum results in minimum time.',
+      value: '50%'
+    },
+    {
+      icon: Shield,
+      title: 'Injury Prevention',
+      description: 'AI-powered form analysis reduces injury risk by 80%.',
+      value: '80%'
+    },
+    {
+      icon: Users,
+      title: 'Personalization',
+      description: '100% personalized programs based on your unique body and goals.',
+      value: '100%'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
-        <meta name="description" content="Revolutionary AI voice assistant with natural language processing, multi-language support, and seamless integration. Transform customer service and business operations." />
-        <meta name="keywords" content="AI voice assistant, voice recognition, natural language processing, customer service automation, voice AI, Zion Tech Group" />
+        <title>AI Personal Trainer - Zion Tech Group | Intelligent Fitness Solutions</title>
+        <meta name="description" content="Revolutionary AI personal trainer with personalized workout plans, real-time form analysis, and virtual coaching. Achieve your fitness goals 3x faster with intelligent training." />
+        <meta name="keywords" content="AI personal trainer, fitness AI, workout optimization, virtual coaching, fitness technology, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -100,22 +127,22 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Mic className="w-4 h-4" />
-              <span>AI Voice Technology</span>
+              <Dumbbell className="w-4 h-4" />
+              <span>AI Fitness Technology</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Assistant
+              AI Personal Trainer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionary voice AI that understands, responds, and automates your business processes through natural conversation. 
-              Transform customer service and boost productivity with intelligent voice technology.
+              Your personal AI fitness coach that creates personalized workout plans, analyzes your form in real-time, 
+              and adapts to your progress. Achieve your fitness goals 3x faster with intelligent training.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                Watch Demo
+                View Demo
               </button>
             </div>
           </div>
@@ -126,10 +153,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Voice AI Capabilities
+                Intelligent Fitness Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI voice assistant combines cutting-edge natural language processing with advanced automation to deliver seamless voice experiences.
+                Our AI personal trainer combines advanced machine learning with fitness expertise to deliver personalized training experiences.
               </p>
             </div>
             
@@ -137,7 +164,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Mic className="w-6 h-6 text-white" />
+                    <Activity className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
@@ -151,10 +178,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transform Your Business Operations
+                Personalized Training for Every Goal
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI voice assistant can revolutionize different aspects of your business.
+                Whether you want to build muscle, lose weight, or improve endurance, our AI adapts to your specific needs.
               </p>
             </div>
             
@@ -172,15 +199,42 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing */}
+        {/* Benefits */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Plan
+                Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your business needs.
+                Our AI personal trainer delivers measurable improvements in fitness outcomes and user satisfaction.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.value}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Choose Your Fitness Plan
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Flexible pricing options designed to support your fitness journey at every level.
               </p>
             </div>
             
@@ -224,38 +278,14 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
-                <div className="text-gray-300">Cost Reduction</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300">Availability</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Transform Your Fitness?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI voice technology.
+              Start your free trial today and experience the power of AI-driven personal training.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -272,4 +302,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AIVoiceAssistantPage;
+export default AIPersonalTrainerPage;

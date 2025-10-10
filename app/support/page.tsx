@@ -1,149 +1,209 @@
 'use client';
 import React from 'react';
-'use client';
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Phone, Mail, MessageSquare, Clock, CheckCircle, ArrowRight, Star, Users, Headphones, BookOpen } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-
-  const faqs = [
-    {
-      question: 'How do I get started with your AI solutions?',
-      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'general'
-    },
-    {
-      question: 'What support do you provide after implementation?',
-      answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly.',
-      category: 'support'
-    },
-    {
-      question: 'How long does implementation typically take?',
-      answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months.',
-      category: 'implementation'
-    },
-    {
-      question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
-    },
-    {
-      question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
-    }
-  ];
-
   const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
-      description: 'Call us for immediate assistance',
-      contact: '+1-302-464-0950',
-      availability: '24/7'
+      description: 'Speak directly with our technical experts',
+      contact: '+1 (302) 464-0950',
+      availability: '24/7 Emergency Support',
+      responseTime: 'Immediate',
+      tier: 'All Plans'
     },
     {
       icon: Mail,
       title: 'Email Support',
-      description: 'Get detailed responses to your questions',
+      description: 'Get detailed responses to your technical questions',
       contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      availability: 'Mon-Fri: 9AM-6PM EST',
+      responseTime: 'Within 2 hours',
+      tier: 'All Plans'
     },
     {
-      icon: MessageCircle,
+      icon: MessageSquare,
       title: 'Live Chat',
+      description: 'Real-time chat with our support team',
       contact: 'Available on website',
-      availability: '24/7'
+      availability: 'Mon-Fri: 9AM-6PM EST',
+      responseTime: 'Within 5 minutes',
+      tier: 'Professional+'
+    },
+    {
+      icon: Headphones,
+      title: 'Priority Support',
+      description: 'Dedicated support for enterprise clients',
+      contact: 'priority@ziontechgroup.com',
+      availability: '24/7',
+      responseTime: 'Within 15 minutes',
+      tier: 'Enterprise'
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'What are your support hours?',
+      answer: 'We provide 24/7 emergency support for all clients. Regular support is available Monday-Friday, 9AM-6PM EST. Enterprise clients have dedicated 24/7 support.'
+    },
+    {
+      question: 'How quickly do you respond to support requests?',
+      answer: 'Response times vary by plan: Emergency support (immediate), Email support (within 2 hours), Live chat (within 5 minutes), and Priority support (within 15 minutes).'
+    },
+    {
+      question: 'What types of issues can you help with?',
+      answer: 'We provide comprehensive support for all our AI and IT services including technical issues, implementation guidance, troubleshooting, optimization, and best practices.'
+    },
+    {
+      question: 'Do you offer training for your services?',
+      answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, webinars, and hands-on workshops for all our services.'
+    },
+    {
+      question: 'Is there a cost for support?',
+      answer: 'Support is included with all our service plans. Emergency support is available to all clients, while additional support features vary by plan tier.'
+    },
+    {
+      question: 'How do I escalate a support issue?',
+      answer: 'You can escalate issues through your account manager, by calling our priority support line, or by emailing priority@ziontechgroup.com for immediate attention.'
+    }
+  ];
+
+  const resources = [
+    {
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Comprehensive guides and API documentation',
+      link: '/docs',
+      type: 'Documentation'
+    },
+    {
+      icon: Users,
+      title: 'Community Forum',
+      description: 'Connect with other users and get community support',
+      link: '/community',
+      type: 'Community'
+    },
+    {
+      icon: Star,
+      title: 'Best Practices',
+      description: 'Learn best practices and optimization tips',
+      link: '/best-practices',
+      type: 'Guides'
+    },
+    {
+      icon: MessageSquare,
+      title: 'Status Page',
+      description: 'Check system status and uptime information',
+      link: '/status',
+      type: 'Status'
+    }
+  ];
+
+  const supportTiers = [
+    {
+      name: 'Basic Support',
+      description: 'Essential support for all clients',
+      features: [
+        'Email support',
+        'Phone support',
+        'Documentation access',
+        'Community forum',
+        'Response within 2 hours'
+      ],
+      price: 'Included'
+    },
+    {
+      name: 'Professional Support',
+      description: 'Enhanced support for growing businesses',
+      features: [
+        'Everything in Basic',
+        'Live chat support',
+        'Priority email support',
+        'Video call support',
+        'Response within 1 hour',
+        'Extended support hours'
+      ],
+      price: 'Included with Professional plans'
+    },
+    {
+      name: 'Enterprise Support',
+      description: 'Dedicated support for large organizations',
+      features: [
+        'Everything in Professional',
+        'Dedicated account manager',
+        '24/7 phone support',
+        'On-site support available',
+        'Response within 15 minutes',
+        'Custom SLA agreements',
+        'White-glove service'
+      ],
+      price: 'Included with Enterprise plans'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Support - Zion Tech Group | Technical Support & Help</title>
-        <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
-        <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
+        <title>Support - Zion Tech Group | 24/7 Technical Support</title>
+        <meta name="description" content="Get 24/7 technical support for all Zion Tech Group services. Multiple support channels available including phone, email, and live chat." />
+        <meta name="keywords" content="technical support, customer service, help desk, AI support, IT support, Zion Tech Group" />
       </Helmet>
-      
-      <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Technical
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Support
-              </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Support Center
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get expert help and support for your AI and IT solutions. 
-              Our team is here to ensure your success.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get the help you need with 24/7 technical support, comprehensive documentation, and expert guidance.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Support
+              </button>
+              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+                View Documentation
+              </button>
+            </div>
           </div>
         </section>
 
-        {/* Search Section */}
+        {/* Support Channels */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">How can we help you?</h2>
-              <p className="text-xl text-gray-300">Search our knowledge base or contact our support team</p>
-            </div>
-            <div className="max-w-2xl mx-auto mb-16">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, guides, and solutions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Get in Touch
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Choose your preferred way to contact our support team
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Support</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4">{channel.description}</p>
-                  <p className="text-cyan-400 font-medium">{channel.contact}</p>
-                  <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{channel.description}</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">Response Time:</span>
+                      <span className="text-cyan-400 font-medium">{channel.responseTime}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">Availability:</span>
+                      <span className="text-cyan-400 font-medium">{channel.availability}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">Tier:</span>
+                      <span className="text-cyan-400 font-medium">{channel.tier}</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-600">
+                    <p className="text-cyan-400 font-medium">{channel.contact}</p>
+                    <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -151,7 +211,7 @@ const SupportPage: React.FC = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
@@ -159,41 +219,92 @@ const SupportPage: React.FC = () => {
             </div>
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Support Hours */}
+        {/* Resources Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
-                <p className="text-xl text-gray-300">We're here when you need us</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Emergency Support</h3>
-                  <p className="text-gray-300">24/7 for critical issues</p>
-                  <p className="text-gray-300">Emergency support included</p>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Support Resources</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {resources.map((resource, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{resource.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{resource.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-400 text-sm font-medium">{resource.type}</span>
+                    <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
+                      <span>Access</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Support Tiers */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Support Tiers</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {supportTiers.map((tier, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{tier.description}</p>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{tier.price}</div>
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                      Learn More
+                    </button>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need Immediate Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our support team is ready to help you succeed. Contact us now for immediate assistance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Call Now: (302) 464-0950
+              </a>
+              <a href="mailto:support@ziontechgroup.com" className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+                Email Support
+              </a>
             </div>
           </div>
         </section>
       </div>
-      
-      <Footer />
     </>
   );
 };

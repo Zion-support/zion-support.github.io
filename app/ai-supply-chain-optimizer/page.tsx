@@ -1,62 +1,62 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Phone, MessageSquare, Headphones, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Star, Users, Clock, DollarSign } from 'lucide-react';
+import { Truck, Package, BarChart3, Brain, Target, Zap, Shield, Globe, CheckCircle, ArrowRight, Star, Users, Clock, DollarSign, Database, PieChart, LineChart, TrendingUp } from 'lucide-react';
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AISupplyChainOptimizerPage: React.FC = () => {
   const features = [
-    'Natural Language Processing',
-    'Multi-language Support (50+ languages)',
-    'Real-time Voice Recognition',
-    'Custom Voice Training',
-    'Integration with 500+ Apps',
-    '24/7 Availability',
-    'Advanced Analytics',
-    'Custom Commands & Workflows'
+    'Demand Forecasting',
+    'Inventory Optimization',
+    'Route Optimization',
+    'Supplier Risk Assessment',
+    'Real-time Tracking',
+    'Cost Reduction Analysis',
+    'Sustainability Metrics',
+    'Automated Alerts'
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$299',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 voice interactions/month',
-        'Basic voice commands',
-        'Email integration',
-        'Basic analytics',
-        'Email support'
+        'Up to 100 SKUs',
+        'Basic demand forecasting',
+        'Inventory alerts',
+        'Email support',
+        'Standard reporting'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$799',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 voice interactions/month',
-        'Advanced AI capabilities',
-        'CRM & Calendar integration',
-        'Custom voice training',
-        'Advanced analytics',
-        'Priority support'
+        'Up to 1,000 SKUs',
+        'Advanced AI optimization',
+        'Multi-location support',
+        'API integration',
+        'Priority support',
+        'Custom dashboards'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited voice interactions',
-        'Custom AI model training',
-        'Full API access',
+        'Unlimited SKUs',
+        'Custom AI models',
+        'Global supply chain',
+        'Dedicated support',
         'White-label solution',
-        'Custom integrations',
-        'Dedicated support team'
+        'On-premise deployment'
       ],
       popular: false
     }
@@ -64,33 +64,60 @@ const AIVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      icon: Phone,
-      title: 'Customer Service',
-      description: 'Handle customer inquiries 24/7 with intelligent voice responses and seamless handoff to human agents when needed.'
+      icon: Package,
+      title: 'Inventory Management',
+      description: 'Optimize stock levels, reduce carrying costs, and prevent stockouts with AI-powered inventory forecasting and demand planning.'
     },
     {
-      icon: MessageSquare,
-      title: 'Sales Support',
-      description: 'Qualify leads, schedule appointments, and provide product information through natural voice conversations.'
+      icon: Truck,
+      title: 'Logistics Optimization',
+      description: 'Minimize transportation costs and delivery times with intelligent route optimization and carrier selection algorithms.'
     },
     {
-      icon: Headphones,
-      title: 'Call Center Automation',
-      description: 'Reduce call center costs by 60% with AI-powered call routing and automated responses.'
+      icon: Target,
+      title: 'Supplier Management',
+      description: 'Assess supplier risks, optimize vendor relationships, and ensure supply chain resilience with predictive analytics.'
     },
     {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Automate routine tasks through voice commands, from data entry to report generation.'
+      icon: TrendingUp,
+      title: 'Cost Reduction',
+      description: 'Identify cost-saving opportunities across your supply chain with AI-driven analysis and optimization recommendations.'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: DollarSign,
+      title: 'Reduce Costs',
+      description: 'Average 25% reduction in supply chain costs through optimized inventory and logistics.',
+      value: '25%'
+    },
+    {
+      icon: Clock,
+      title: 'Improve Efficiency',
+      description: 'Streamline operations with automated processes and real-time optimization.',
+      value: '40%'
+    },
+    {
+      icon: Shield,
+      title: 'Minimize Risks',
+      description: 'Proactive risk management with predictive analytics and early warning systems.',
+      value: '60%'
+    },
+    {
+      icon: Globe,
+      title: 'Enhance Visibility',
+      description: 'Complete supply chain visibility with real-time tracking and monitoring.',
+      value: '100%'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
-        <meta name="description" content="Revolutionary AI voice assistant with natural language processing, multi-language support, and seamless integration. Transform customer service and business operations." />
-        <meta name="keywords" content="AI voice assistant, voice recognition, natural language processing, customer service automation, voice AI, Zion Tech Group" />
+        <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Logistics Solutions</title>
+        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and minimize risks with intelligent logistics and inventory management." />
+        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -100,22 +127,22 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Mic className="w-4 h-4" />
-              <span>AI Voice Technology</span>
+              <Truck className="w-4 h-4" />
+              <span>Supply Chain AI</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Assistant
+              AI Supply Chain Optimizer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionary voice AI that understands, responds, and automates your business processes through natural conversation. 
-              Transform customer service and boost productivity with intelligent voice technology.
+              Transform your supply chain with AI-powered optimization. Reduce costs by 25%, improve efficiency by 40%, 
+              and minimize risks with intelligent logistics and inventory management solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                Watch Demo
+                View Demo
               </button>
             </div>
           </div>
@@ -126,10 +153,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Voice AI Capabilities
+                Intelligent Supply Chain Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI voice assistant combines cutting-edge natural language processing with advanced automation to deliver seamless voice experiences.
+                Our AI-powered platform provides comprehensive supply chain optimization with advanced analytics and automation.
               </p>
             </div>
             
@@ -137,7 +164,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Mic className="w-6 h-6 text-white" />
+                    <Brain className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
@@ -151,10 +178,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transform Your Business Operations
+                Optimize Every Aspect of Your Supply Chain
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI voice assistant can revolutionize different aspects of your business.
+                From inventory management to logistics optimization, our AI solutions cover every aspect of your supply chain.
               </p>
             </div>
             
@@ -172,15 +199,42 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing */}
+        {/* Benefits */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Plan
+                Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your business needs.
+                Our AI supply chain optimizer delivers measurable improvements across all key metrics.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.value}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Choose Your Optimization Plan
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Flexible pricing options designed to scale with your supply chain complexity and business needs.
               </p>
             </div>
             
@@ -224,38 +278,14 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
-                <div className="text-gray-300">Cost Reduction</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300">Availability</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI voice technology.
+              Start your free trial today and experience the power of AI-driven supply chain optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -272,4 +302,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AIVoiceAssistantPage;
+export default AISupplyChainOptimizerPage;

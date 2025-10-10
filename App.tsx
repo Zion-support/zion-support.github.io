@@ -35,6 +35,11 @@ const FAQPage = React.lazy(() => import('./app/faq/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIPredictiveAnalyticsPage = React.lazy(() => import('./app/ai-predictive-analytics/page'));
+const AISupplyChainOptimizerPage = React.lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+const AIPersonalTrainerPage = React.lazy(() => import('./app/ai-personal-trainer/page'));
+const AICybersecurityMonitorPage = React.lazy(() => import('./app/ai-cybersecurity-monitor/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -76,6 +81,11 @@ const App: React.FC = () => {
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                            <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
+                            <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                            <Route path="/ai-personal-trainer" element={<AIPersonalTrainerPage />} />
+                            <Route path="/ai-cybersecurity-monitor" element={<AICybersecurityMonitorPage />} />
                           </Routes>
                         </Suspense>
                       </main>
