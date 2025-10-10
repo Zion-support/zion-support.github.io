@@ -1,4 +1,18 @@
 'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Clock, Users, Phone, Mail, MapPin, Calendar, ArrowRight } from 'lucide-react';
+
+const ConsultationPage: React.FC = () => {
+  const [selectedType, setSelectedType] = useState('ai-strategy');
+
+  const consultationTypes = [
+    {
+      id: 'ai-strategy',
+      name: 'AI Strategy Consultation',
+      description: 'Comprehensive AI readiness assessment and strategic planning',
+      duration: '2-3 weeks',
+      price: '$5,000',
       features: [
         'AI readiness assessment',
         'Technology roadmap development',
@@ -40,81 +54,31 @@
         'Success metrics definition'
       ],
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     }
   ];
+
   const process = [
     {
       step: '1',
+      title: 'Discovery & Assessment',
+      description: 'We analyze your current state and identify opportunities for improvement.',
+      icon: Users
     },
     {
       step: '2',
       title: 'Strategy Development',
+      description: 'Create a comprehensive strategy tailored to your business goals.',
+      icon: CheckCircle
     },
     {
       step: '3',
       title: 'Implementation Plan',
+      description: 'Develop a detailed roadmap with timelines and milestones.',
+      icon: Calendar
     },
     {
       step: '4',
       title: 'Ongoing Support',
-    }
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>Consultation Services | Zion Tech Group</title>
-        <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
-        <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert Consultation Services
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="border-t border-white/10 pt-6">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {service.duration}
-                      </span>
-                    </div>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                      Get Started
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-              </div>
-            </div>
-
       description: 'Provide continuous guidance and support throughout implementation.',
       icon: Clock
     }
@@ -245,15 +209,10 @@
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Book Now
                 </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
             </div>
           </div>
         </section>
-    </>
-  );
-};
-
       )}
 
       {/* Process Section */}
@@ -295,7 +254,7 @@
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
+              <p className="text-gray-300">+1 (302) 464-0950</p>
               <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
             </div>
 
@@ -313,8 +272,8 @@
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">San Francisco, CA</p>
-              <p className="text-sm text-gray-400">By Appointment</p>
+              <p className="text-gray-300">364 E Main St STE 1008</p>
+              <p className="text-sm text-gray-400">Middletown, DE 19709</p>
             </div>
           </div>
         </div>
@@ -347,4 +306,3 @@
 };
 
 export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
