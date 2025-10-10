@@ -51,7 +51,6 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-      category: 'AI Automation & Workflow',
       ],
       category: 'AI Automation & Workflow',
       icon: Zap,
@@ -290,7 +289,7 @@ const AIServicesPage: React.FC = () => {
           link: 'https://ziontechgroup.com/ai-quantum-computing',
           popular: false
         }
-      ]
+      ],
       icon: Target,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
@@ -300,7 +299,18 @@ const AIServicesPage: React.FC = () => {
       name: 'AI Document Processing',
       description: 'Intelligent document processing and data extraction with OCR and NLP',
       price: '$799/month',
-      ]
+      icon: FileText,
+      features: [
+        'OCR Processing',
+        'Data Extraction',
+        'Document Classification',
+        'Automated Workflows'
+      ],
+      category: 'AI Document Processing',
+      popular: false,
+      rating: 4.7,
+      users: '1,800+',
+      color: 'from-green-500 to-emerald-600'
     },
     {
       id: 2,
@@ -358,8 +368,6 @@ const AIServicesPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}
             >
-              )}
-              
               <div className="p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
                   <service.icon className={`h-8 w-8 ${service.color}`} />
@@ -416,12 +424,14 @@ const AIServicesPage: React.FC = () => {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Capabilities:</h4>
                 <ul className="space-y-1">
-                  {service.capabilities.map((capability, index) => (
+                  {service.capabilities?.map((capability, index) => (
                     <li key={index} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {capability}
                     </li>
                   ))}
+                </ul>
+              </div>
 
               {/* Features */}
               <div className="mb-6">

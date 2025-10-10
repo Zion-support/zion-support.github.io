@@ -19,9 +19,9 @@ const preloadComponents = useCallback((...args) => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
-    }, 100)
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
   }
 }
 // Loading skeleton component
@@ -42,12 +42,10 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);}
-  }, [])
-  // Analytics tracking for phone clicks - optimized
+    return () => clearTimeout(timer);
+  }, []);
   
-    }
-  }, [])
+  // Analytics tracking for phone clicks - optimized
   return (
     <>
       <SEOOptimizer

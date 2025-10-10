@@ -74,6 +74,13 @@ const HomePage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
+  const services = [
+    {
+      title: 'AI Smart Calendar Pro',
+      description: 'Revolutionary calendar management with AI-powered scheduling, conflict resolution, and intelligent meeting optimization. Used by Fortune 500 companies.',
+      icon: '📅',
+      price: '$99/month',
+      originalPrice: '$149/month',
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
@@ -87,6 +94,13 @@ const HomePage: React.FC = () => {
       icon: '🎤',
       price: '$149/month',
       originalPrice: '$199/month',
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Content Creation',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -933,6 +947,8 @@ const HomePage: React.FC = () => {
         </section>
       </main>
       
+      <Footer />
+    </div>
   );
 };
 
