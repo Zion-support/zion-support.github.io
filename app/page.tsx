@@ -1,9 +1,7 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect, useCallback, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-=======
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -98,14 +96,22 @@ const HomePage: React.FC = () => {
       title: 'AI Smart Calendar Pro',
       description: 'Advanced calendar AI that learns your work patterns, optimizes meetings, and prevents burnout. Integrates with 50+ calendar apps.',
       icon: '📅',
+<<<<<<< HEAD
       price: '$89/month',
       originalPrice: '$129/month',
       features: ['Pattern learning AI', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
       benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
+=======
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['Smart scheduling', 'Pattern learning', 'Conflict resolution', 'Time blocking', 'Meeting optimization', 'Work-life balance', 'Integration support', 'Mobile sync'],
+      benefits: ['50% time saved', '90% fewer conflicts', 'Perfect work-life balance', '25% more productive'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
+<<<<<<< HEAD
       users: '35,000+',
       freeTrial: '21 days',
       realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
@@ -197,728 +203,18 @@ const HomePage: React.FC = () => {
       popular: true,
       category: 'Productivity',
       rating: 4.9,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       users: '5,000+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Telepathic Interface Pro',
-      description: 'Mind-controlled computing interface using advanced EEG and neural pattern recognition. Control your digital workspace with thoughts.',
-      icon: '🔮',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['EEG integration', 'Neural pattern recognition', 'Thought commands', 'Mental shortcuts', 'Focus enhancement', 'Brain training', 'Privacy protection', 'Medical grade'],
-      benefits: ['Hands-free control', 'Mental efficiency', 'Accessibility', 'Cutting-edge tech'],
-      link: '/ai-telepathic-interface',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.7,
-      users: '800+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Task Manager Pro',
-      description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
-      icon: '✅',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
-      benefits: ['60% productivity boost', 'Never miss deadlines', 'Better focus', 'Achieve more goals'],
-      link: '/ai-task-manager',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Workflow Automation Pro',
-      description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
-      icon: '⚡',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],
-      benefits: ['20+ hours saved weekly', '99.9% accuracy', 'Easy setup', 'Scalable automation'],
-      link: '/ai-workflow-automation',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.7,
-      users: '15,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Meeting Scheduler Pro',
-      description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',
-      icon: '📅',
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['Smart scheduling', 'Calendar integration', 'Conflict resolution', 'Time zone handling', 'Meeting analytics', 'Auto-reminders', 'Room booking', 'Catering coordination'],
-      benefits: ['50% scheduling time saved', 'Zero double bookings', 'Better time utilization', 'Reduced no-shows'],
-      link: '/ai-meeting-scheduler',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.8,
-      users: '30,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Time Tracker Pro',
-      description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',
-      icon: '⏱️',
-      price: '$34/month',
-      originalPrice: '$49/month',
-      features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Idle detection', 'Detailed reports', 'Screenshot monitoring', 'App usage tracking'],
-      benefits: ['Accurate time tracking', 'Better productivity', 'Fair billing', 'Team optimization'],
-      link: '/ai-time-tracker',
-      popular: true,
-      category: 'Productivity',
-      rating: 4.6,
-      users: '50,000+',
-      freeTrial: '14 days'
-    },
-    // Content & Marketing Tools
-    {
-      title: 'AI Content Writer Pro',
-      description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10x more content.',
-      icon: '✍️',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content calendar', 'Plagiarism check', 'Tone adjustment', 'Keyword research', 'Content templates'],
-      benefits: ['10x content output', 'SEO ready', 'Brand consistent', 'Time savings'],
-      link: '/ai-content-writer',
-      popular: true,
-      category: 'Content',
-      rating: 4.9,
-      users: '40,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Holographic Content Studio',
-      description: 'Create immersive 3D holographic content with AI-powered design, spatial storytelling, and interactive experiences. The future of content creation.',
-      icon: '🎭',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['3D holographic creation', 'Spatial storytelling', 'Interactive experiences', 'AR/VR integration', 'Gesture-based editing', 'Real-time collaboration', 'Haptic feedback', 'Spatial audio'],
-      benefits: ['Immersive content', 'Next-gen storytelling', 'Interactive experiences', 'Future-ready'],
-      link: '/ai-holographic-content-studio',
-      popular: true,
-      category: 'Content',
-      rating: 4.8,
-      users: '1,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Content Optimizer',
-      description: 'Revolutionary content optimization using quantum algorithms to analyze millions of content variations and find the perfect combination for maximum engagement.',
-      icon: '⚡',
-      price: '$249/month',
-      originalPrice: '$349/month',
-      features: ['Quantum content analysis', 'Multi-dimensional optimization', 'Engagement prediction', 'A/B testing automation', 'Viral potential scoring', 'Audience targeting', 'Content clustering', 'Performance forecasting'],
-      benefits: ['Maximum engagement', 'Viral content', 'Perfect targeting', 'Quantum precision'],
-      link: '/ai-quantum-content-optimizer',
-      popular: true,
-      category: 'Content',
-      rating: 4.9,
-      users: '3,200+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Neural Story Architect',
-      description: 'Advanced AI that creates compelling narratives by analyzing human psychology, cultural patterns, and emotional triggers. Craft stories that resonate deeply.',
-      icon: '📚',
-      price: '$179/month',
-      originalPrice: '$249/month',
-      features: ['Psychology analysis', 'Cultural pattern recognition', 'Emotional trigger mapping', 'Narrative structure optimization', 'Character development', 'Plot generation', 'Audience resonance', 'Story arc prediction'],
-      benefits: ['Compelling narratives', 'Deep resonance', 'Cultural awareness', 'Emotional impact'],
-      link: '/ai-neural-story-architect',
-      popular: true,
-      category: 'Content',
-      rating: 4.8,
-      users: '2,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Telepathic Marketing Pro',
-      description: 'Mind-reading marketing that analyzes subconscious consumer patterns and creates campaigns that speak directly to the target audience\'s deepest desires.',
-      icon: '🎯',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Subconscious analysis', 'Desire mapping', 'Emotional targeting', 'Neuromarketing insights', 'Behavioral prediction', 'Campaign optimization', 'ROI maximization', 'Consumer psychology'],
-      benefits: ['Deep targeting', 'Higher conversion', 'Emotional connection', 'Subconscious appeal'],
-      link: '/ai-telepathic-marketing',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.9,
-      users: '1,800+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Social Media Manager Pro',
-      description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
-      icon: '📱',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],
-      benefits: ['300% audience growth', 'Consistent posting', 'Better engagement', 'Time savings'],
-      link: '/ai-social-media-manager',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.7,
-      users: '35,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Email Marketing Suite',
-      description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
-      icon: '📧',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],
-      benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],
-      link: '/ai-email-marketing',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.8,
-      users: '28,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
-      icon: '🔍',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],
-      benefits: ['200% traffic increase', 'Higher rankings', 'Better visibility', 'Competitive advantage'],
-      link: '/ai-seo-optimizer',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.9,
-      users: '22,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Lead Generation Pro',
-      description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5x more qualified leads.',
-      icon: '🎯',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],
-      benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],
-      link: '/ai-lead-generation',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.8,
-      users: '18,000+',
-      freeTrial: '7 days'
-    },
-    // Business & Finance Tools
-    {
-      title: 'AI CRM Intelligence Pro',
-      description: 'Smart CRM with AI-powered insights, sales forecasting, and customer behavior analysis. Increase sales by 40%.',
-      icon: '👥',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['AI insights', 'Sales forecasting', 'Customer analytics', 'Pipeline management', 'Automation rules', 'Integration hub', 'Mobile app', 'Custom fields'],
-      benefits: ['40% sales increase', 'Better customer insights', 'Automated workflows', 'Data-driven decisions'],
-      link: '/ai-crm',
-      popular: true,
-      category: 'Business',
-      rating: 4.7,
-      users: '32,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Financial Oracle',
-      description: 'Revolutionary financial prediction system using quantum computing to analyze market patterns and predict economic trends with 99.7% accuracy.',
-      icon: '🔮',
-      price: '$499/month',
-      originalPrice: '$799/month',
-      features: ['Quantum market analysis', 'Economic trend prediction', 'Risk assessment', 'Portfolio optimization', 'Crisis prediction', 'Market timing', 'Global economic modeling', 'Real-time adaptation'],
-      benefits: ['99.7% accuracy', 'Crisis prevention', 'Optimal timing', 'Quantum precision'],
-      link: '/ai-quantum-financial-oracle',
-      popular: true,
-      category: 'Finance',
-      rating: 4.9,
-      users: '1,200+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Holographic Boardroom',
-      description: 'Immersive 3D boardroom experience with holographic data visualization, spatial analytics, and telepathic decision-making interfaces.',
-      icon: '🏢',
-      price: '$599/month',
-      originalPrice: '$899/month',
-      features: ['3D holographic displays', 'Spatial data visualization', 'Telepathic interfaces', 'Real-time collaboration', 'Gesture controls', 'AR/VR integration', 'Haptic feedback', 'Neural decision support'],
-      benefits: ['Immersive meetings', 'Better decisions', 'Spatial understanding', 'Next-gen collaboration'],
-      link: '/ai-holographic-boardroom',
-      popular: true,
-      category: 'Business',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Neural Business Strategist',
-      description: 'Advanced AI that analyzes market patterns, competitor behavior, and business ecosystems to provide strategic insights and recommendations.',
-      icon: '🧠',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Market pattern analysis', 'Competitor intelligence', 'Ecosystem mapping', 'Strategic recommendations', 'Scenario planning', 'Risk assessment', 'Opportunity identification', 'Trend prediction'],
-      benefits: ['Strategic advantage', 'Market insights', 'Competitive edge', 'Future planning'],
-      link: '/ai-neural-business-strategist',
-      popular: true,
-      category: 'Business',
-      rating: 4.8,
-      users: '2,100+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Telepathic Sales Pro',
-      description: 'Mind-reading sales system that analyzes customer thoughts, emotions, and buying signals to close deals with unprecedented success rates.',
-      icon: '💼',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Thought analysis', 'Emotion detection', 'Buying signal recognition', 'Sales coaching', 'Objection prediction', 'Closing optimization', 'Customer psychology', 'Success rate tracking'],
-      benefits: ['Higher close rates', 'Customer insight', 'Sales mastery', 'Psychological advantage'],
-      link: '/ai-telepathic-sales',
-      popular: true,
-      category: 'Sales',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Financial Analyzer Pro',
-      description: 'Advanced financial analysis with AI-powered insights, forecasting, and investment recommendations. Make smarter financial decisions.',
-      icon: '💰',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Financial forecasting', 'Investment analysis', 'Risk assessment', 'Portfolio optimization', 'Tax planning', 'Expense tracking', 'Budget management', 'Report generation'],
-      benefits: ['Smarter investments', 'Better financial planning', 'Risk reduction', 'Tax optimization'],
-      link: '/ai-financial-analyzer',
-      popular: true,
-      category: 'Finance',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Invoice Generator Pro',
-      description: 'Automated invoice creation with AI-powered pricing, tax calculations, and payment tracking. Save 90% of billing time.',
-      icon: '🧾',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['Auto-invoice generation', 'Smart pricing suggestions', 'Tax calculations', 'Payment tracking', 'Client management', 'Multi-currency support', 'Recurring billing', 'Payment reminders'],
-      benefits: ['90% time savings', 'Zero calculation errors', 'Faster payments', 'Professional invoices'],
-      link: '/ai-invoice-generator',
-      popular: true,
-      category: 'Finance',
-      rating: 4.9,
-      users: '45,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Expense Tracker Pro',
-      description: 'Smart expense tracking with receipt scanning, automated categorization, and tax preparation. Perfect for businesses and freelancers.',
-      icon: '💳',
-      price: '$29/month',
-      originalPrice: '$49/month',
-      features: ['Receipt scanning', 'Auto-categorization', 'Tax preparation', 'Spending insights', 'Budget alerts', 'Multi-currency support', 'Team expense management', 'Integration with accounting software'],
-      benefits: ['95% automation', 'Tax-ready reports', 'Better spending control', 'Time savings'],
-      link: '/ai-expense-tracker',
-      popular: true,
-      category: 'Finance',
-      rating: 4.7,
-      users: '60,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Stock Portfolio Manager',
-      description: 'Intelligent portfolio management with AI-powered investment recommendations and risk assessment. Beat the market by 15%.',
-      icon: '📈',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Portfolio analysis', 'AI recommendations', 'Risk assessment', 'Performance tracking', 'Market insights', 'Tax optimization', 'Rebalancing alerts', 'News sentiment analysis'],
-      benefits: ['15% better returns', 'Risk management', 'Informed decisions', 'Tax savings'],
-      link: '/ai-stock-portfolio-manager',
-      popular: true,
-      category: 'Finance',
-      rating: 4.8,
-      users: '20,000+',
-      freeTrial: '14 days'
-    },
-    // Customer Service & Support
-    {
-      title: 'AI Customer Support Bot Pro',
-      description: 'Advanced AI chatbot with natural language processing, multi-language support, and seamless human handoff. Reduce support costs by 70%.',
-      icon: '🤖',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['Natural language processing', 'Multi-language support', 'Human handoff', 'Knowledge base integration', 'Analytics dashboard', 'Custom branding', 'API access', 'Live chat integration'],
-      benefits: ['70% cost reduction', '24/7 availability', 'Instant responses', 'Customer satisfaction'],
-      link: '/ai-customer-support-bot',
-      popular: true,
-      category: 'Support',
-      rating: 4.9,
-      users: '35,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Chatbot Builder Pro',
-      description: 'No-code chatbot creation with drag-and-drop interface and AI training. Build professional chatbots in minutes.',
-      icon: '💬',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: ['Drag-and-drop builder', 'AI training', 'Multi-platform deployment', 'Analytics tracking', 'Custom integrations', 'Voice support', 'Mobile app', 'White-label options'],
-      benefits: ['No coding required', 'Quick deployment', 'Professional results', 'Easy maintenance'],
-      link: '/ai-chatbot-builder',
-      popular: true,
-      category: 'Support',
-      rating: 4.7,
-      users: '28,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Email Assistant Pro',
-      description: 'Smart email management with AI-powered responses, scheduling, and priority handling. Manage 10x more emails efficiently.',
-      icon: '📧',
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['AI email responses', 'Smart scheduling', 'Priority handling', 'Email templates', 'Follow-up automation', 'Spam filtering', 'Email analytics', 'Calendar integration'],
-      benefits: ['10x email efficiency', 'Better responses', 'Time savings', 'Professional communication'],
-      link: '/ai-email-assistant',
-      popular: true,
-      category: 'Support',
-      rating: 4.6,
-      users: '40,000+',
-      freeTrial: '7 days'
-    },
-    // Development & Technical Tools
-    {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Automated code review with AI-powered analysis, security scanning, and performance optimization. Catch bugs before they happen.',
-      icon: '💻',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['Automated code review', 'Security scanning', 'Performance analysis', 'Bug detection', 'Code suggestions', 'Style checking', 'Documentation generation', 'Team collaboration'],
-      benefits: ['Catch bugs early', 'Better code quality', 'Security compliance', 'Team learning'],
-      link: '/ai-code-generation',
-      popular: true,
-      category: 'Development',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Mobile App Builder Pro',
-      description: 'No-code mobile app development with AI-powered design and functionality. Build professional apps 10x faster.',
-      icon: '📱',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: ['No-code development', 'AI design suggestions', 'Cross-platform support', 'App store deployment', 'Analytics integration', 'Push notifications', 'User authentication', 'Database management'],
-      benefits: ['10x faster development', 'No coding required', 'Professional results', 'Easy maintenance'],
-      link: '/ai-mobile-app-development',
-      popular: true,
-      category: 'Development',
-      rating: 4.7,
-      users: '15,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Cybersecurity Shield Pro',
-      description: 'Advanced AI-powered security monitoring with threat detection, vulnerability scanning, and incident response. Protect your business 24/7.',
-      icon: '🛡️',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security analytics', 'Real-time alerts', 'Penetration testing', 'Security training'],
-      benefits: ['24/7 protection', 'Proactive security', 'Compliance ready', 'Peace of mind'],
-      link: '/ai-cybersecurity',
-      popular: true,
-      category: 'Security',
-      rating: 4.9,
-      users: '12,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Document Processor Pro',
-      description: 'Intelligent document processing with OCR, data extraction, and automated workflows. Process documents 50x faster.',
-      icon: '📄',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['OCR text extraction', 'Data extraction', 'Document classification', 'Workflow automation', 'Batch processing', 'API integration', 'Cloud storage', 'Search functionality'],
-      benefits: ['50x faster processing', 'Accurate extraction', 'Automated workflows', 'Cost savings'],
-      link: '/ai-document-processing',
-      popular: true,
-      category: 'Development',
-      rating: 4.8,
-      users: '30,000+',
-      freeTrial: '14 days'
-    },
-    // Analytics & Data Tools
-    {
-      title: 'AI Data Analytics Pro',
-      description: 'Advanced data analytics with AI-powered insights, predictive modeling, and automated reporting. Make data-driven decisions.',
-      icon: '📊',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['AI insights', 'Predictive modeling', 'Automated reporting', 'Data visualization', 'Custom dashboards', 'Real-time analytics', 'Data integration', 'Machine learning'],
-      benefits: ['Better insights', 'Predictive power', 'Automated reports', 'Data-driven decisions'],
-      link: '/ai-data-analytics',
-      popular: true,
-      category: 'Analytics',
-      rating: 4.8,
-      users: '22,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Data Visualization Pro',
-      description: 'Interactive data visualization with AI-powered chart recommendations and automated insights. Present data like a pro.',
-      icon: '📈',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: ['Interactive charts', 'AI recommendations', 'Automated insights', 'Custom dashboards', 'Real-time updates', 'Export options', 'Collaboration tools', 'Mobile responsive'],
-      benefits: ['Professional presentations', 'Better insights', 'Easy sharing', 'Mobile access'],
-      link: '/ai-data-visualization',
-      popular: true,
-      category: 'Analytics',
-      rating: 4.7,
-      users: '18,000+',
-      freeTrial: '7 days'
-    },
-    // Creative & Media Tools
-    {
-      title: 'AI Video Generator Pro',
-      description: 'Professional video creation with AI-powered editing, effects, and automated production. Create videos 20x faster.',
-      icon: '🎬',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: ['AI video editing', 'Auto effects', 'Voice synthesis', 'Music generation', 'Text-to-video', 'Templates library', 'HD export', 'Cloud rendering'],
-      benefits: ['20x faster creation', 'Professional quality', 'No editing skills needed', 'Cost effective'],
-      link: '/ai-video-generation',
-      popular: true,
-      category: 'Creative',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Holographic Design Studio',
-      description: 'Create stunning 3D holographic designs with spatial computing, gesture-based editing, and immersive visualization. The future of design.',
-      icon: '🎨',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['3D holographic design', 'Spatial computing', 'Gesture-based editing', 'Immersive visualization', 'AR/VR integration', 'Haptic feedback', 'Real-time collaboration', 'Spatial audio'],
-      benefits: ['Immersive design', 'Spatial creativity', 'Next-gen interface', 'Future-ready'],
-      link: '/ai-holographic-design-studio',
-      popular: true,
-      category: 'Creative',
-      rating: 4.9,
-      users: '1,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Art Generator',
-      description: 'Revolutionary art creation using quantum algorithms to generate infinite unique artworks, exploring dimensions beyond human imagination.',
-      icon: '🌌',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Quantum art generation', 'Infinite variations', 'Multi-dimensional art', 'Quantum aesthetics', 'Pattern generation', 'Color theory mastery', 'Style fusion', 'Unlimited creativity'],
-      benefits: ['Infinite creativity', 'Unique artworks', 'Quantum beauty', 'Beyond imagination'],
-      link: '/ai-quantum-art-generator',
-      popular: true,
-      category: 'Creative',
-      rating: 4.8,
-      users: '2,500+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Neural Music Composer',
-      description: 'Advanced AI that creates music by analyzing neural patterns, emotions, and cultural influences to compose deeply resonant musical experiences.',
-      icon: '🎵',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Neural pattern analysis', 'Emotional composition', 'Cultural influence integration', 'Genre fusion', 'Mood matching', 'Instrument selection', 'Harmony generation', 'Rhythm optimization'],
-      benefits: ['Emotional resonance', 'Cultural depth', 'Perfect mood matching', 'Neural creativity'],
-      link: '/ai-neural-music-composer',
-      popular: true,
-      category: 'Creative',
-      rating: 4.9,
-      users: '3,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Telepathic Creative Assistant',
-      description: 'Mind-controlled creative tool that translates your thoughts, emotions, and visions directly into digital art, music, and content.',
-      icon: '🔮',
-      price: '$499/month',
-      originalPrice: '$699/month',
-      features: ['Thought-to-art translation', 'Emotion visualization', 'Vision capture', 'Mind-controlled editing', 'Creative flow enhancement', 'Inspiration generation', 'Mental shortcut creation', 'Subconscious creativity'],
-      benefits: ['Direct thought translation', 'Unlimited creativity', 'Mental efficiency', 'Pure expression'],
-      link: '/ai-telepathic-creative-assistant',
-      popular: true,
-      category: 'Creative',
-      rating: 4.7,
-      users: '1,200+',
       freeTrial: '7 days'
     },
     {
       title: 'AI Voice Cloning Studio Pro',
-      description: 'Realistic voice synthesis with AI-powered voice cloning and text-to-speech. Create professional voiceovers in minutes.',
+      description: 'Professional voice cloning and synthesis platform for content creators, marketers, and businesses. Create natural-sounding voiceovers in minutes.',
       icon: '🎤',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Voice cloning', 'Text-to-speech', 'Multiple languages', 'Emotion control', 'Voice training', 'Batch processing', 'API access', 'High-quality output'],
-      benefits: ['Realistic voices', 'Quick production', 'Multiple languages', 'Professional quality'],
-      link: '/ai-voice-cloning',
-      popular: true,
-      category: 'Creative',
-      rating: 4.9,
-      users: '20,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Music Composer Pro',
-      description: 'AI-powered music composition with genre recognition, mood matching, and professional production. Create original music instantly.',
-      icon: '🎵',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['AI composition', 'Genre recognition', 'Mood matching', 'Instrument selection', 'Tempo control', 'Export options', 'Royalty-free', 'Custom training'],
-      benefits: ['Original music', 'Quick creation', 'Professional quality', 'Royalty-free'],
-      link: '/ai-music-composition',
-      popular: true,
-      category: 'Creative',
-      rating: 4.7,
-      users: '15,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Fashion Design Studio Pro',
-      description: 'AI-powered fashion design with trend analysis, color matching, and automated pattern generation. Design like a professional.',
-      icon: '👗',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation', 'Size optimization', 'Fabric suggestions', '3D visualization', 'Export options'],
-      benefits: ['Professional designs', 'Trend awareness', 'Quick creation', 'Cost effective'],
-      link: '/ai-fashion-design',
-      popular: true,
-      category: 'Creative',
-      rating: 4.6,
-      users: '12,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI 3D Generation Studio Pro',
-      description: 'Advanced 3D content creation with AI-powered modeling, texturing, and animation. Create stunning 3D content without expertise.',
-      icon: '🎨',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['AI 3D modeling', 'Auto texturing', 'Animation tools', 'Lighting optimization', 'Rendering engine', 'Asset library', 'VR/AR support', 'Export formats'],
-      benefits: ['No 3D expertise needed', 'Professional results', 'Quick creation', 'Multiple formats'],
-      link: '/ai-3d-generation',
-      popular: true,
-      category: 'Creative',
-      rating: 4.8,
-      users: '8,000+',
-      freeTrial: '7 days'
-    },
-    // Health & Wellness Tools
-    {
-      title: 'AI Healthcare Assistant Pro',
-      description: 'Advanced healthcare AI with symptom analysis, medication reminders, and health monitoring. Your personal health companion.',
-      icon: '🏥',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['Symptom analysis', 'Medication reminders', 'Health tracking', 'Appointment scheduling', 'Medical records', 'Emergency alerts', 'Doctor integration', 'Privacy protection'],
-      benefits: ['Better health monitoring', 'Medication compliance', 'Early detection', 'Peace of mind'],
-      link: '/ai-healthcare',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '35,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Health Optimizer',
-      description: 'Revolutionary health optimization using quantum computing to analyze molecular patterns and optimize your body\'s quantum field for perfect health.',
-      icon: '⚛️',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Quantum molecular analysis', 'Quantum field optimization', 'Cellular regeneration', 'Energy balance', 'Quantum healing', 'Molecular repair', 'Quantum nutrition', 'Biofield enhancement'],
-      benefits: ['Perfect health', 'Quantum healing', 'Molecular optimization', 'Energy balance'],
-      link: '/ai-quantum-health-optimizer',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Holographic Medical Scanner',
-      description: 'Advanced 3D holographic medical scanning that provides real-time health visualization, diagnosis, and treatment recommendations.',
-      icon: '🔬',
-      price: '$599/month',
-      originalPrice: '$899/month',
-      features: ['3D holographic scanning', 'Real-time health visualization', 'AI diagnosis', 'Treatment recommendations', 'Organ mapping', 'Disease detection', 'Health monitoring', 'Medical imaging'],
-      benefits: ['Complete health picture', 'Early detection', 'Visual diagnosis', 'Comprehensive monitoring'],
-      link: '/ai-holographic-medical-scanner',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Neural Wellness Coach',
-      description: 'Advanced AI that analyzes your neural patterns, stress levels, and emotional state to provide personalized wellness recommendations and mental health support.',
-      icon: '🧠',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Neural pattern analysis', 'Stress monitoring', 'Emotional state tracking', 'Mental health support', 'Wellness recommendations', 'Meditation guidance', 'Sleep optimization', 'Cognitive enhancement'],
-      benefits: ['Mental wellness', 'Stress reduction', 'Emotional balance', 'Cognitive enhancement'],
-      link: '/ai-neural-wellness-coach',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '2,800+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Telepathic Therapy Pro',
-      description: 'Mind-reading therapy system that analyzes your thoughts, emotions, and mental patterns to provide personalized therapeutic interventions and mental health support.',
-      icon: '🔮',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Thought analysis', 'Emotion detection', 'Mental pattern recognition', 'Therapeutic interventions', 'Crisis prevention', 'Mental health monitoring', 'Personalized therapy', 'Privacy protection'],
-      benefits: ['Personalized therapy', 'Mental health support', 'Crisis prevention', 'Emotional healing'],
-      link: '/ai-telepathic-therapy',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '1,200+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Fitness Coach Pro',
-      description: 'Personalized fitness coaching with AI-powered workout plans, nutrition guidance, and progress tracking. Achieve your fitness goals.',
-      icon: '💪',
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['Personalized workouts', 'Nutrition guidance', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features', 'Wearable integration', 'Video tutorials'],
-      benefits: ['Personalized approach', 'Better results', 'Motivation boost', 'Expert guidance'],
-      link: '/ai-fitness-coach',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '50,000+',
-      freeTrial: '7 days'
-    },
-    // Sales & Business Tools
-    {
-      title: 'AI Sales Automation Pro',
-      description: 'Intelligent sales automation with AI-powered lead scoring, follow-up sequences, and conversion optimization. Increase sales by 60%.',
-      icon: '💼',
       price: '$149/month',
       originalPrice: '$199/month',
+<<<<<<< HEAD
       features: ['Lead scoring', 'Follow-up automation', 'Email sequences', 'CRM integration', 'Sales forecasting', 'Performance analytics', 'A/B testing', 'Team collaboration'],
       benefits: ['60% sales increase', 'Automated follow-ups', 'Better lead quality', 'Higher conversion'],
       link: '/ai-sales-automation',
@@ -2060,795 +1356,16 @@ const HomePage: React.FC = () => {
       originalPrice: '$129/month',
       features: ['Voice cloning', 'Text-to-speech', 'Voice conversion', 'Emotion control', 'Multi-language support', 'High-quality audio', 'API integration', 'Custom voices'],
       benefits: ['Professional quality', 'Time savings', 'Accessibility', 'Creative freedom'],
+=======
+      features: ['Voice cloning', 'Text-to-speech', 'Emotion control', 'Multiple languages', 'Real-time processing', 'API integration', 'Custom voices', 'Batch processing'],
+      benefits: ['95% voice accuracy', '80% cost reduction', '10x faster production', 'Unlimited usage'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       link: '/ai-voice-cloning-studio',
-      popular: true,
-      category: 'Audio AI',
-      rating: 4.7,
-      users: '12,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Intelligent code review with AI-powered suggestions, security analysis, and performance optimization. Improve code quality automatically.',
-      icon: '👨‍💻',
-      price: '$89/month',
-      originalPrice: '$139/month',
-      features: ['Automated code review', 'Security analysis', 'Performance optimization', 'Best practices', 'Bug detection', 'Code suggestions', 'Team collaboration', 'Integration support'],
-      benefits: ['Better code quality', 'Faster reviews', 'Security assurance', 'Team learning'],
-      link: '/ai-code-review-assistant',
-      popular: true,
-      category: 'Development',
-      rating: 4.8,
-      users: '18,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Data Privacy Manager Pro',
-      description: 'Comprehensive data privacy compliance with GDPR, CCPA, and other regulations. Automated privacy impact assessments and consent management.',
-      icon: '🛡️',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['GDPR compliance', 'CCPA compliance', 'Consent management', 'Data mapping', 'Privacy impact assessments', 'Breach detection', 'Audit trails', 'Legal updates'],
-      benefits: ['Full compliance', 'Risk reduction', 'Legal protection', 'Automated processes'],
-      link: '/ai-data-privacy-manager',
-      popular: true,
-      category: 'Privacy & Compliance',
-      rating: 4.9,
-      users: '7,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI API Gateway Pro',
-      description: 'Intelligent API management with AI-powered traffic optimization, security, and analytics. Scale your APIs with confidence.',
-      icon: '🌐',
-      price: '$129/month',
-      originalPrice: '$199/month',
-      features: ['API management', 'Traffic optimization', 'Security monitoring', 'Rate limiting', 'Analytics dashboard', 'Load balancing', 'Version control', 'Documentation'],
-      benefits: ['Better performance', 'Enhanced security', 'Cost optimization', 'Easy management'],
-      link: '/ai-api-gateway',
-      popular: true,
-      category: 'API Management',
-      rating: 4.7,
-      users: '9,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Email Security Pro',
-      description: 'Advanced email security with AI-powered threat detection, phishing prevention, and spam filtering. Protect your business communications.',
-      icon: '📧',
-      price: '$59/month',
-      originalPrice: '$99/month',
-      features: ['Threat detection', 'Phishing prevention', 'Spam filtering', 'Malware scanning', 'Email encryption', 'Compliance monitoring', 'User training', 'Incident response'],
-      benefits: ['99.9% threat detection', 'Reduced risk', 'Compliance ready', 'User protection'],
-      link: '/ai-email-security',
-      popular: true,
-      category: 'Email Security',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Social Media Scheduler Pro',
-      description: 'Intelligent social media management with AI-powered content optimization, optimal posting times, and engagement analytics.',
-      icon: '📱',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['Content scheduling', 'Optimal timing', 'Engagement analytics', 'Hashtag optimization', 'Multi-platform support', 'Content suggestions', 'Performance tracking', 'Team collaboration'],
-      benefits: ['Better engagement', 'Time savings', 'Data-driven decisions', 'Consistent posting'],
-      link: '/ai-social-media-scheduler',
-      popular: true,
-      category: 'Social Media',
-      rating: 4.6,
-      users: '35,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Password Manager Pro',
-      description: 'Advanced password management with AI-powered security analysis, breach monitoring, and secure sharing. Enterprise-grade security.',
-      icon: '🔐',
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Secure sharing', 'Multi-device sync', '2FA integration', 'Team management', 'Compliance reporting'],
-      benefits: ['Enhanced security', 'Easy management', 'Breach protection', 'Team collaboration'],
-      link: '/ai-password-manager',
-      popular: true,
-      category: 'Security',
-      rating: 4.8,
-      users: '40,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Invoice Generator Pro',
-      description: 'Automated invoice generation with AI-powered data extraction, payment tracking, and financial analytics. Streamline your billing process.',
-      icon: '🧾',
-      price: '$29/month',
-      originalPrice: '$49/month',
-      features: ['Auto invoice generation', 'Data extraction', 'Payment tracking', 'Financial analytics', 'Multi-currency support', 'Tax calculations', 'Client management', 'Reporting'],
-      benefits: ['Time savings', 'Accuracy', 'Better cash flow', 'Professional invoices'],
-      link: '/ai-invoice-generator',
-      popular: true,
-      category: 'Finance',
-      rating: 4.7,
-      users: '28,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Quantum Computing Simulator Pro',
-      description: 'Advanced quantum computing simulation and algorithm development platform. Explore quantum algorithms without expensive hardware.',
-      icon: '⚛️',
-      price: '$299/month',
-      originalPrice: '$499/month',
-      features: ['Quantum circuit simulator', 'Algorithm development', 'Quantum machine learning', 'Error correction', 'Performance optimization', 'Cloud quantum access', 'Educational modules', 'Research tools'],
-      benefits: ['No hardware needed', 'Advanced algorithms', 'Research capabilities', 'Cost effective'],
-      link: '/ai-quantum-simulator',
-      popular: true,
-      category: 'Quantum Computing',
-      rating: 4.8,
-      users: '2,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Space Analytics Pro',
-      description: 'Satellite data analysis and space industry intelligence with AI-powered insights for space missions and Earth observation.',
-      icon: '🛰️',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Satellite data processing', 'Earth observation analytics', 'Space weather monitoring', 'Mission planning', 'Orbital mechanics', 'Space debris tracking', 'Climate monitoring', 'Agricultural insights'],
-      benefits: ['Space industry insights', 'Environmental monitoring', 'Mission optimization', 'Data-driven decisions'],
-      link: '/ai-space-analytics',
-      popular: true,
-      category: 'Space Technology',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Metaverse Builder Pro',
-      description: 'Create immersive virtual worlds and metaverse experiences with AI-powered 3D environments and avatar generation.',
-      icon: '🥽',
-      price: '$249/month',
-      originalPrice: '$399/month',
-      features: ['3D world generation', 'Avatar creation', 'Virtual event hosting', 'NFT integration', 'Blockchain connectivity', 'VR/AR support', 'Social features', 'Monetization tools'],
-      benefits: ['Immersive experiences', 'Easy creation', 'Monetization ready', 'Future-proof'],
-      link: '/ai-metaverse-builder',
-      popular: true,
-      category: 'Metaverse',
-      rating: 4.7,
-      users: '8,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Edge Computing Manager Pro',
-      description: 'Intelligent edge computing orchestration with AI-powered resource optimization and real-time processing capabilities.',
-      icon: '⚡',
-      price: '$179/month',
-      originalPrice: '$279/month',
-      features: ['Edge resource optimization', 'Real-time processing', 'IoT device management', 'Latency optimization', 'Bandwidth management', 'Security monitoring', 'Auto-scaling', 'Performance analytics'],
-      benefits: ['Reduced latency', 'Better performance', 'Cost optimization', 'Scalable infrastructure'],
-      link: '/ai-edge-computing',
-      popular: true,
-      category: 'Edge Computing',
-      rating: 4.8,
-      users: '3,500+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Digital Twin Creator Pro',
-      description: 'Create digital twins of physical assets with AI-powered simulation, monitoring, and predictive maintenance capabilities.',
-      icon: '🔄',
-      price: '$329/month',
-      originalPrice: '$499/month',
-      features: ['3D asset modeling', 'Real-time monitoring', 'Predictive analytics', 'Simulation engine', 'IoT integration', 'Performance optimization', 'Maintenance scheduling', 'Data visualization'],
-      benefits: ['Better asset management', 'Predictive maintenance', 'Cost reduction', 'Performance optimization'],
-      link: '/ai-digital-twin',
-      popular: true,
-      category: 'Digital Twin',
-      rating: 4.9,
-      users: '2,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Blockchain Analytics Pro',
-      description: 'Advanced blockchain data analysis with AI-powered insights for DeFi, NFT markets, and cryptocurrency trading.',
-      icon: '⛓️',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Blockchain data analysis', 'DeFi analytics', 'NFT market insights', 'Trading signals', 'Risk assessment', 'Smart contract analysis', 'Token tracking', 'Market prediction'],
-      benefits: ['Better trading decisions', 'Risk mitigation', 'Market insights', 'Profit optimization'],
-      link: '/ai-blockchain-analytics',
-      popular: true,
-      category: 'Blockchain',
-      rating: 4.8,
-      users: '4,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Autonomous Vehicle Simulator Pro',
-      description: 'Advanced autonomous vehicle simulation and testing platform with AI-powered scenario generation and safety validation.',
-      icon: '🚗',
-      price: '$499/month',
-      originalPrice: '$799/month',
-      features: ['Vehicle simulation', 'Scenario generation', 'Safety testing', 'Performance optimization', 'Traffic modeling', 'Weather simulation', 'Sensor simulation', 'Regulatory compliance'],
-      benefits: ['Safe testing environment', 'Cost effective', 'Faster development', 'Regulatory ready'],
-      link: '/ai-autonomous-vehicle-sim',
-      popular: true,
-      category: 'Autonomous Vehicles',
-      rating: 4.9,
-      users: '1,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Neural Interface Pro',
-      description: 'Brain-computer interface development platform with AI-powered neural signal processing and mind-controlled applications.',
-      icon: '🧠',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Neural signal processing', 'BCI development', 'Mind control apps', 'Medical applications', 'Research tools', 'Real-time analysis', 'Safety monitoring', 'API integration'],
-      benefits: ['Revolutionary technology', 'Medical applications', 'Research capabilities', 'Future innovation'],
-      link: '/ai-neural-interface',
-      popular: true,
-      category: 'Neural Interface',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Synthetic Biology Designer Pro',
-      description: 'AI-powered synthetic biology platform for designing biological systems, genetic circuits, and bio-manufacturing processes.',
-      icon: '🧬',
-      price: '$599/month',
-      originalPrice: '$999/month',
-      features: ['Genetic circuit design', 'Protein engineering', 'Bio-manufacturing', 'Drug discovery', 'Synthetic biology', 'Lab automation', 'Safety protocols', 'Regulatory compliance'],
-      benefits: ['Revolutionary biology', 'Drug discovery', 'Sustainable manufacturing', 'Medical breakthroughs'],
-      link: '/ai-synthetic-biology',
-      popular: true,
-      category: 'Synthetic Biology',
-      rating: 4.9,
-      users: '500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Augmented Reality Studio Pro',
-      description: 'Create immersive AR experiences with AI-powered object recognition, spatial mapping, and interactive content generation.',
-      icon: '📱',
-      price: '$179/month',
-      originalPrice: '$279/month',
-      features: ['AR content creation', 'Object recognition', 'Spatial mapping', 'Interactive elements', 'Multi-platform support', 'Real-time rendering', 'Cloud processing', 'Analytics dashboard'],
-      benefits: ['Immersive AR experiences', 'Easy development', 'Cross-platform', 'Engaging content'],
-      link: '/ai-ar-studio',
-      popular: true,
-      category: 'Augmented Reality',
-      rating: 4.7,
-      users: '6,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Smart City Manager Pro',
-      description: 'Intelligent smart city management with AI-powered traffic optimization, energy management, and citizen services automation.',
-      icon: '🏙️',
-      price: '$2,999/month',
-      originalPrice: '$4,999/month',
-      features: ['Traffic optimization', 'Energy management', 'Citizen services', 'IoT integration', 'Predictive analytics', 'Emergency response', 'Resource optimization', 'Sustainability tracking'],
-      benefits: ['Efficient city management', 'Better citizen services', 'Cost reduction', 'Sustainability goals'],
-      link: '/ai-smart-city-manager',
-      popular: true,
-      category: 'Smart Cities',
-      rating: 4.9,
-      users: '50+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Precision Agriculture Pro',
-      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and automated agricultural management.',
-      icon: '🌾',
-      price: '$149/month',
-      originalPrice: '$229/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Irrigation control', 'Harvest optimization', 'Sustainability tracking'],
-      benefits: ['Higher yields', 'Resource optimization', 'Sustainable farming', 'Cost reduction'],
-      link: '/ai-precision-agriculture',
-      popular: true,
-      category: 'Agriculture',
-      rating: 4.8,
-      users: '3,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Ocean Intelligence Pro',
-      description: 'Marine ecosystem monitoring and ocean data analysis with AI-powered insights for conservation and sustainable ocean management.',
-      icon: '🌊',
-      price: '$279/month',
-      originalPrice: '$429/month',
-      features: ['Marine monitoring', 'Ecosystem analysis', 'Pollution tracking', 'Species identification', 'Climate impact', 'Conservation planning', 'Data visualization', 'Research tools'],
-      benefits: ['Ocean conservation', 'Ecosystem protection', 'Research insights', 'Sustainable management'],
-      link: '/ai-ocean-intelligence',
-      popular: true,
-      category: 'Marine Science',
-      rating: 4.9,
-      users: '1,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Energy Grid Optimizer Pro',
-      description: 'Intelligent energy grid management with AI-powered load balancing, renewable energy integration, and smart grid optimization.',
-      icon: '⚡',
-      price: '$1,999/month',
-      originalPrice: '$2,999/month',
-      features: ['Load balancing', 'Renewable integration', 'Grid optimization', 'Demand forecasting', 'Energy storage', 'Fault detection', 'Maintenance scheduling', 'Cost optimization'],
-      benefits: ['Grid efficiency', 'Renewable integration', 'Cost reduction', 'Reliability improvement'],
-      link: '/ai-energy-grid-optimizer',
-      popular: true,
-      category: 'Energy',
-      rating: 4.8,
-      users: '200+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Mental Health Companion Pro',
-      description: 'AI-powered mental health support with mood tracking, therapy assistance, and personalized wellness recommendations.',
-      icon: '🧘',
-      price: '$79/month',
-      originalPrice: '$129/month',
-      features: ['Mood tracking', 'Therapy assistance', 'Wellness recommendations', 'Crisis support', 'Progress monitoring', 'Professional integration', 'Privacy protection', '24/7 support'],
-      benefits: ['Better mental health', 'Personalized support', 'Crisis prevention', 'Professional guidance'],
-      link: '/ai-mental-health-companion',
-      popular: true,
-      category: 'Mental Health',
-      rating: 4.9,
-      users: '15,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Personal Finance Optimizer Pro',
-      description: 'Intelligent personal finance management with AI-powered budgeting, investment optimization, and financial goal tracking.',
-      icon: '💰',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['Smart budgeting', 'Investment optimization', 'Goal tracking', 'Expense categorization', 'Bill management', 'Tax optimization', 'Retirement planning', 'Financial insights'],
-      benefits: ['Better financial health', 'Investment growth', 'Goal achievement', 'Cost savings'],
-      link: '/ai-personal-finance-optimizer',
-      popular: true,
-      category: 'Personal Finance',
-      rating: 4.8,
-      users: '25,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Home Automation Pro',
-      description: 'Smart home management with AI-powered automation, energy optimization, and intelligent device control.',
-      icon: '🏠',
-      price: '$89/month',
-      originalPrice: '$139/month',
-      features: ['Device automation', 'Energy optimization', 'Security monitoring', 'Voice control', 'Predictive maintenance', 'Usage analytics', 'Remote control', 'Integration hub'],
-      benefits: ['Convenience', 'Energy savings', 'Security', 'Cost reduction'],
-      link: '/ai-home-automation',
-      popular: true,
-      category: 'Smart Home',
-      rating: 4.7,
-      users: '12,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Language Translation Pro',
-      description: 'Advanced AI-powered translation with real-time voice translation, document processing, and cultural context understanding.',
-      icon: '🌐',
-      price: '$69/month',
-      originalPrice: '$109/month',
-      features: ['Real-time translation', 'Voice translation', 'Document processing', 'Cultural context', 'Multi-language support', 'Offline capability', 'API integration', 'Custom models'],
-      benefits: ['Accurate translation', 'Cultural understanding', 'Real-time communication', 'Global connectivity'],
-      link: '/ai-language-translation-pro',
-      popular: true,
-      category: 'Translation',
-      rating: 4.9,
-      users: '40,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Cybersecurity Threat Hunter Pro',
-      description: 'Advanced threat hunting with AI-powered security analysis, incident response, and proactive threat detection.',
-      icon: '🛡️',
-      price: '$299/month',
-      originalPrice: '$449/month',
-      features: ['Threat hunting', 'Incident response', 'Security analysis', 'Threat intelligence', 'Behavioral analysis', 'Forensic tools', 'Compliance reporting', '24/7 monitoring'],
-      benefits: ['Proactive security', 'Faster response', 'Better protection', 'Compliance ready'],
-      link: '/ai-cybersecurity-threat-hunter',
-      popular: true,
-      category: 'Cybersecurity',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Machine Learning Pro',
-      description: 'Quantum-enhanced machine learning with quantum algorithms for optimization, pattern recognition, and advanced AI capabilities.',
-      icon: '⚛️',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Quantum algorithms', 'Quantum optimization', 'Pattern recognition', 'Quantum neural networks', 'Hybrid classical-quantum', 'Performance optimization', 'Research tools', 'Cloud access'],
-      benefits: ['Quantum advantage', 'Advanced algorithms', 'Research capabilities', 'Future technology'],
-      link: '/ai-quantum-machine-learning',
-      popular: true,
-      category: 'Quantum AI',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '14 days'
-    },
-    // New Innovative Micro SAAS Services
-    {
-      title: 'AI Voice Cloning Studio Pro',
-      description: 'Create perfect voice clones for content creation, accessibility, and multilingual communication. Used by top YouTubers and podcasters.',
-      icon: '🎤',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: ['High-quality voice cloning', 'Emotion control', 'Language translation', 'Real-time synthesis', 'Voice library', 'Custom training', 'API integration', 'Commercial license'],
-      benefits: ['Professional voice quality', 'Multilingual content', 'Accessibility solutions', 'Time savings'],
-      link: '/ai-voice-cloning-studio',
-      popular: true,
+      popular: false,
       category: 'Creative',
-      rating: 4.9,
-      users: '12,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Code Security Auditor Pro',
-      description: 'Advanced AI-powered code security analysis that detects vulnerabilities, enforces best practices, and prevents security breaches.',
-      icon: '🔒',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Vulnerability detection', 'Code quality analysis', 'Security scanning', 'Compliance checking', 'Real-time monitoring', 'Custom rules', 'Team collaboration', 'CI/CD integration'],
-      benefits: ['99.9% vulnerability detection', 'Reduced security risks', 'Compliance assurance', 'Developer education'],
-      link: '/ai-code-security-auditor',
-      popular: true,
-      category: 'Security',
-      rating: 4.8,
-      users: '8,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Mental Health Companion Pro',
-      description: 'AI-powered mental health support with mood tracking, stress analysis, and personalized wellness recommendations. HIPAA compliant.',
-      icon: '🧘',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Meditation guides', 'Sleep optimization', 'Habit tracking', 'Professional insights', 'Emergency support'],
-      benefits: ['Better mental health', 'Stress reduction', 'Improved sleep', 'Wellness insights'],
-      link: '/ai-mental-health-companion',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '35,000+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Smart Home Controller Pro',
-      description: 'Intelligent home automation that learns your habits and optimizes energy usage, security, and comfort automatically.',
-      icon: '🏠',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['Habit learning', 'Energy optimization', 'Security monitoring', 'Climate control', 'Lighting automation', 'Voice control', 'Mobile app', 'Integration hub'],
-      benefits: ['30% energy savings', 'Enhanced security', 'Perfect comfort', 'Convenience'],
-      link: '/ai-smart-home-controller',
-      popular: true,
-      category: 'IoT',
-      rating: 4.7,
-      users: '18,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Investment Portfolio Optimizer Pro',
-      description: 'Advanced AI that analyzes market trends, manages your portfolio, and provides real-time investment recommendations.',
-      icon: '📈',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Portfolio analysis', 'Market prediction', 'Risk assessment', 'Auto-rebalancing', 'Tax optimization', 'Real-time alerts', 'Performance tracking', 'Expert insights'],
-      benefits: ['Higher returns', 'Risk reduction', 'Tax savings', 'Peace of mind'],
-      link: '/ai-investment-optimizer',
-      popular: true,
-      category: 'Finance',
-      rating: 4.8,
-      users: '15,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Language Learning Tutor Pro',
-      description: 'Personalized language learning with AI-powered conversation practice, pronunciation analysis, and adaptive curriculum.',
-      icon: '🌍',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: ['Conversation practice', 'Pronunciation analysis', 'Adaptive learning', 'Cultural insights', 'Progress tracking', 'Voice recognition', 'Multi-language support', 'Offline mode'],
-      benefits: ['Faster learning', 'Better pronunciation', 'Cultural understanding', 'Flexible schedule'],
-      link: '/ai-language-tutor',
-      popular: true,
-      category: 'Education',
-      rating: 4.9,
-      users: '45,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Fitness Coach Pro',
-      description: 'Personal AI fitness trainer that creates custom workout plans, tracks progress, and provides real-time form correction.',
-      icon: '💪',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['Custom workouts', 'Form analysis', 'Progress tracking', 'Nutrition guidance', 'Injury prevention', 'Goal setting', 'Community features', 'Wearable integration'],
-      benefits: ['Better results', 'Injury prevention', 'Motivation', 'Personalized approach'],
-      link: '/ai-fitness-coach',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '28,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Email Security Shield Pro',
-      description: 'Advanced email protection against phishing, malware, and spam with AI-powered threat detection and response.',
-      icon: '🛡️',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: ['Phishing detection', 'Malware scanning', 'Spam filtering', 'Threat intelligence', 'Real-time protection', 'Admin dashboard', 'Compliance reporting', 'API integration'],
-      benefits: ['99.9% threat detection', 'Reduced security risks', 'Compliance assurance', 'Peace of mind'],
-      link: '/ai-email-security-shield',
-      popular: true,
-      category: 'Security',
-      rating: 4.9,
-      users: '22,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Recipe Generator Pro',
-      description: 'Smart recipe creation based on available ingredients, dietary restrictions, and nutritional goals. Perfect for meal planning.',
-      icon: '👨‍🍳',
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['Ingredient-based recipes', 'Dietary restrictions', 'Nutritional analysis', 'Meal planning', 'Shopping lists', 'Cooking timers', 'Photo recognition', 'Community sharing'],
-      benefits: ['Waste reduction', 'Healthy eating', 'Time savings', 'Variety'],
-      link: '/ai-recipe-generator',
-      popular: true,
-      category: 'Lifestyle',
-      rating: 4.7,
-      users: '65,000+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Travel Planner Pro',
-      description: 'Intelligent travel planning with personalized itineraries, real-time updates, and smart recommendations based on your preferences.',
-      icon: '✈️',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Personalized itineraries', 'Real-time updates', 'Budget optimization', 'Weather integration', 'Local insights', 'Booking management', 'Emergency support', 'Group planning'],
-      benefits: ['Perfect trips', 'Cost savings', 'Stress-free travel', 'Local experiences'],
-      link: '/ai-travel-planner',
-      popular: true,
-      category: 'Travel',
-      rating: 4.8,
-      users: '32,000+',
-      freeTrial: '14 days'
-    }
-  ];
-
-  const aiServices = [
-    {
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
-      icon: Brain,
-      price: '$1,500/month',
-      originalPrice: '$2,000/month',
-      features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'Model Versioning'],
-      benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],
-      link: '/machine-learning',
-      popular: true,
-      category: 'AI Development',
-      rating: 4.9,
-      users: '500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Customer Service Automation',
-      description: 'Intelligent customer service automation with sentiment analysis and smart routing. Reduce support costs by 60%.',
-      icon: MessageSquare,
-      price: '$1,200/month',
-      originalPrice: '$1,800/month',
-      features: ['Sentiment Analysis', 'Smart Routing', 'Auto-Response', 'Escalation Management', 'Performance Analytics', 'Multi-language Support', 'Voice Integration', 'Knowledge Base'],
-      benefits: ['60% cost reduction', '24/7 availability', 'Better customer satisfaction', 'Faster resolution'],
-      link: '/ai-customer-service',
-      popular: true,
-      category: 'Customer Service',
-      rating: 4.8,
-      users: '1,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Supply Chain Optimization',
-      description: 'Intelligent supply chain management with demand forecasting and logistics optimization. Optimize costs by 35%.',
-      icon: Truck,
-      price: '$1,800/month',
-      originalPrice: '$2,500/month',
-      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization', 'Real-time Tracking', 'Sustainability Metrics'],
-      benefits: ['35% cost reduction', 'Better inventory management', 'Reduced waste', 'Improved efficiency'],
-      link: '/ai-supply-chain',
-      popular: true,
-      category: 'Supply Chain',
-      rating: 4.7,
-      users: '800+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Fraud Detection System',
-      description: 'Advanced fraud prevention with real-time monitoring and pattern recognition. Stop 99.9% of fraudulent transactions.',
-      icon: Shield,
-      price: '$2,200/month',
-      originalPrice: '$3,000/month',
-      features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System', 'Threat Intelligence', 'Compliance Monitoring', 'Machine Learning Models', 'API Integration'],
-      benefits: ['99.9% fraud prevention', 'Real-time protection', 'Reduced false positives', 'Compliance ready'],
-      link: '/ai-fraud-detection',
-      popular: true,
-      category: 'Security',
-      rating: 4.9,
-      users: '600+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Predictive Maintenance',
-      description: 'Intelligent equipment monitoring with predictive maintenance and failure prevention. Reduce downtime by 50%.',
-      icon: Settings,
-      price: '$1,600/month',
-      originalPrice: '$2,200/month',
-      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Performance Analytics', 'Alert System', 'Cost Optimization', 'IoT Integration', 'Historical Analysis'],
-      benefits: ['50% less downtime', 'Predictive maintenance', 'Cost savings', 'Extended equipment life'],
-      link: '/ai-predictive-maintenance',
-      popular: true,
-      category: 'Manufacturing',
-      rating: 4.8,
-      users: '400+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Business Intelligence',
-      description: 'Advanced business intelligence with AI-powered insights, forecasting, and automated reporting. Make data-driven decisions.',
-      icon: BarChart,
-      price: '$1,300/month',
-      originalPrice: '$1,800/month',
-      features: ['AI Insights', 'Predictive Analytics', 'Automated Reporting', 'Data Visualization', 'Custom Dashboards', 'Real-time Analytics', 'Data Integration', 'Natural Language Queries'],
-      benefits: ['Better insights', 'Automated reports', 'Data-driven decisions', 'Competitive advantage'],
-      link: '/ai-business-intelligence',
-      popular: true,
-      category: 'Analytics',
-      rating: 4.8,
-      users: '900+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Healthcare Solutions',
-      description: 'Advanced healthcare AI with medical imaging analysis, drug discovery, and patient monitoring. Improve patient outcomes.',
-      icon: Stethoscope,
-      price: '$2,500/month',
-      originalPrice: '$3,500/month',
-      features: ['Medical Imaging Analysis', 'Drug Discovery', 'Patient Monitoring', 'Diagnostic Assistance', 'Treatment Planning', 'Clinical Trials', 'Data Security', 'HIPAA Compliance'],
-      benefits: ['Better diagnoses', 'Faster drug discovery', 'Improved patient care', 'Cost reduction'],
-      link: '/ai-healthcare',
-      popular: true,
-      category: 'Healthcare',
-      rating: 4.9,
-      users: '300+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Financial Services',
-      description: 'Comprehensive financial AI solutions with risk assessment, algorithmic trading, and fraud prevention. Optimize financial operations.',
-      icon: CreditCard,
-      price: '$1,900/month',
-      originalPrice: '$2,600/month',
-      features: ['Risk Assessment', 'Algorithmic Trading', 'Fraud Prevention', 'Credit Scoring', 'Portfolio Management', 'Regulatory Compliance', 'Real-time Analysis', 'API Integration'],
-      benefits: ['Better risk management', 'Improved trading performance', 'Fraud prevention', 'Regulatory compliance'],
-      link: '/ai-financial-services',
-      popular: true,
-      category: 'Finance',
-      rating: 4.8,
-      users: '700+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Natural Language Processing',
-      description: 'Advanced NLP solutions with text analysis, language translation, and conversational AI. Process and understand human language.',
-      icon: MessageSquare,
-      price: '$1,100/month',
-      originalPrice: '$1,500/month',
-      features: ['Text Analysis', 'Language Translation', 'Sentiment Analysis', 'Named Entity Recognition', 'Text Summarization', 'Question Answering', 'Language Models', 'API Access'],
-      benefits: ['Better text understanding', 'Multi-language support', 'Automated processing', 'Improved communication'],
-      link: '/ai-nlp',
-      popular: true,
-      category: 'AI Development',
-      rating: 4.7,
-      users: '1,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Computer Vision',
-      description: 'Advanced computer vision solutions with image recognition, object detection, and visual analysis. See and understand images like humans.',
-      icon: Eye,
-      price: '$1,400/month',
-      originalPrice: '$1,900/month',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'OCR', 'Video Analysis', 'Quality Inspection', 'Real-time Processing', 'Edge Deployment'],
-      benefits: ['Accurate image analysis', 'Real-time processing', 'Quality improvement', 'Automated inspection'],
-      link: '/computer-vision',
-      popular: true,
-      category: 'AI Development',
-      rating: 4.8,
-      users: '1,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Predictive Analytics Platform',
-      description: 'Enterprise-grade predictive analytics with machine learning models for forecasting, trend analysis, and business intelligence.',
-      icon: BarChart,
-      price: '$1,800/month',
-      originalPrice: '$2,500/month',
-      features: ['Predictive Modeling', 'Time Series Analysis', 'Anomaly Detection', 'Forecasting', 'Risk Assessment', 'Custom Algorithms', 'Real-time Processing', 'API Integration'],
-      benefits: ['Data-driven decisions', 'Predictive insights', 'Risk mitigation', 'Competitive advantage'],
-      link: '/ai-predictive-analytics',
-      popular: true,
-      category: 'Analytics',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Conversational Intelligence',
-      description: 'Advanced conversational AI with natural language understanding, context awareness, and multi-modal interactions.',
-      icon: MessageSquare,
-      price: '$1,200/month',
-      originalPrice: '$1,800/month',
-      features: ['Natural Language Understanding', 'Context Awareness', 'Multi-modal Interaction', 'Sentiment Analysis', 'Intent Recognition', 'Conversation Management', 'Voice Integration', 'API Access'],
-      benefits: ['Better conversations', 'Context understanding', 'Multi-modal support', 'Enhanced user experience'],
-      link: '/ai-conversational-intelligence',
-      popular: true,
-      category: 'AI Development',
-      rating: 4.8,
-      users: '2,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Recommendation Engine Pro',
-      description: 'Sophisticated recommendation systems with collaborative filtering, content-based filtering, and hybrid approaches for personalized experiences.',
-      icon: Target,
-      price: '$1,100/month',
-      originalPrice: '$1,600/month',
-      features: ['Collaborative Filtering', 'Content-based Filtering', 'Hybrid Approaches', 'Real-time Recommendations', 'A/B Testing', 'Performance Analytics', 'Scalable Architecture', 'API Integration'],
-      benefits: ['Personalized experiences', 'Higher engagement', 'Increased conversions', 'Better user satisfaction'],
-      link: '/ai-recommendation-engine',
-      popular: true,
-      category: 'AI Development',
-      rating: 4.7,
-      users: '3,000+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Anomaly Detection System',
-      description: 'Advanced anomaly detection with unsupervised learning, real-time monitoring, and automated alerting for security and quality assurance.',
-      icon: Shield,
-      price: '$1,300/month',
-      originalPrice: '$1,900/month',
-      features: ['Unsupervised Learning', 'Real-time Monitoring', 'Automated Alerting', 'Pattern Recognition', 'Statistical Analysis', 'Custom Thresholds', 'Integration APIs', 'Dashboard Analytics'],
-      benefits: ['Early threat detection', 'Quality assurance', 'Automated monitoring', 'Risk reduction'],
-      link: '/ai-anomaly-detection',
-      popular: true,
-      category: 'Security',
-      rating: 4.8,
-      users: '1,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Time Series Forecasting',
-      description: 'Specialized time series analysis with seasonal decomposition, trend analysis, and forecasting for business and scientific applications.',
-      icon: TrendingUp,
-      price: '$1,000/month',
-      originalPrice: '$1,400/month',
-      features: ['Seasonal Decomposition', 'Trend Analysis', 'Forecasting Models', 'ARIMA/SARIMA', 'Exponential Smoothing', 'Prophet Integration', 'Custom Models', 'Real-time Updates'],
-      benefits: ['Accurate forecasting', 'Trend identification', 'Seasonal insights', 'Business planning'],
-      link: '/ai-time-series-forecasting',
-      popular: true,
-      category: 'Analytics',
       rating: 4.7,
       users: '2,500+',
+<<<<<<< HEAD
       freeTrial: '14 days'
     },
     {
@@ -4466,37 +2983,163 @@ const HomePage: React.FC = () => {
 export default function HomePage() {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
+=======
+      freeTrial: '3 days'
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
       <Navigation />
       
       <main className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">
+        {/* Hero Section */}
+        <section className="text-center py-20">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8">
             Advanced AI and IT Solutions
           </p>
+          <p className="text-lg text-gray-300 mb-12 max-w-4xl mx-auto">
+            Transform your business with cutting-edge AI technology, quantum computing, and digital transformation services. 
+            We deliver enterprise-grade solutions that drive innovation and growth.
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-xl font-semibold mb-2">AI Solutions</h2>
-              <p className="text-gray-600">Cutting-edge artificial intelligence services</p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="tel:+13024640950"
+              onClick={handlePhoneClick}
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Call: (302) 464-0950
+            </a>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our AI-Powered Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI and IT services designed to accelerate your digital transformation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSAASServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                    {service.originalPrice && (
+                      <span className="text-lg text-gray-500 line-through">{service.originalPrice}</span>
+                    )}
+                  </div>
+                  {service.popular && (
+                    <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                      Popular
+                    </span>
+                  )}
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <span className="text-green-500 mr-2">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <span className="text-blue-500 mr-2">→</span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+                  <span>⭐ {service.rating}</span>
+                  <span>{service.users} users</span>
+                  <span>{service.freeTrial} free trial</span>
+                </div>
+
+                <a
+                  href={service.link}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg text-center font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 block"
+                >
+                  Learn More
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-20 bg-slate-800/30 rounded-lg">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to discuss your AI and IT needs
+            </p>
             
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-xl font-semibold mb-2">IT Services</h2>
-              <p className="text-gray-600">Comprehensive IT infrastructure solutions</p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-xl font-semibold mb-2">Cloud Solutions</h2>
-              <p className="text-gray-600">Scalable cloud computing services</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl mb-2">📞</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <a 
+                  href="tel:+13024640950" 
+                  onClick={handlePhoneClick}
+                  className="text-cyan-400 hover:text-cyan-300"
+                >
+                  {contactInfo.phone}
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-2xl mb-2">✉️</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <a 
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-cyan-400 hover:text-cyan-300"
+                >
+                  {contactInfo.email}
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-2xl mb-2">📍</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-cyan-400">{contactInfo.address}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       
 <<<<<<< HEAD
@@ -4991,4 +3634,6 @@ export default function HomePage() {
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
   );
-}
+};
+
+export default HomePage;

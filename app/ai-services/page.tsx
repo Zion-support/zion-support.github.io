@@ -116,6 +116,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'Predictive customer behavior'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       ]
@@ -124,8 +125,10 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
 >>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
       category: 'AI Automation & Workflow',
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
       ],
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
+      category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
@@ -1035,6 +1038,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
           {aiServices.map((service) => (
             <div key={service.id} className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
               {/* Service Header */}
+<<<<<<< HEAD
               <div className="flex items-start justify-between mb-4">
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                   {service.icon}
@@ -1066,6 +1070,8 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
 >>>>>>> cursor/fix-errors-and-merge-to-main-e12a
               )}
               
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
               <div className="p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
                   <service.icon className={`h-8 w-8 ${service.color}`} />
@@ -1095,6 +1101,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-a74d
 =======
                   </div>
@@ -1110,6 +1117,8 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                       <span className="ml-1 text-sm font-medium">4.8</span>
                     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e12a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
                   </div>
                 </div>
               </div>
@@ -1131,6 +1140,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {capability}
                     </li>
+<<<<<<< HEAD
                   ))}
                 </ul>
               </div>
@@ -1185,6 +1195,8 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                         </a>
                       </div>
                     </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-04a7
                   ))}
 <<<<<<< HEAD
                 </div>
