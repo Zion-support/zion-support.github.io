@@ -246,7 +246,10 @@ export const setupLandmarkNavigation = (): void => {
     subtree: true
   });
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-55ba
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring
