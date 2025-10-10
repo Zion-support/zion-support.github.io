@@ -24,12 +24,9 @@ const preloadComponents = useCallback(() => {
       import('./components/ContentCarousel');
     }, 100);
   }
-<<<<<<< HEAD
-}
 
-=======
 }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -83,33 +80,8 @@ const HomePage: React.FC = React.memo((props) => {
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
-          }
-        }
-      }}
-=======
-          }
-        }
-        }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-66cb
+
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
@@ -1640,18 +1612,10 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+
+
   );
 };
 
 export default HomePage;
-=======
-    </>
-  );
-};
-export default HomePage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+

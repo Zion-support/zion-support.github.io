@@ -1,100 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
 /**
  * Advanced Caching System
  * High-performance caching with LRU eviction and TTL support
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface CacheEntry<T = any> {
-  value: T;
-  expiry: number;
-  accessCount: number;
-  lastAccessed: number;
-  size: number;
-}
 
-export interface CacheOptions {
-  maxSize: number;
-  defaultTTL: number;
-  enableLRU: boolean;
-  enableCompression: boolean;
-  enablePersistence: boolean;
-}
-
-export interface CacheStats {
-  hits: number;
-  misses: number;
-  evictions: number;
-  size: number;
-  maxSize: number;
-  hitRate: number;
-  memoryUsage: number;
-}
-
-class AdvancedCache<T = any> {
-  private cache = new Map<string, CacheEntry<T>>();
-  private accessOrder: string[] = [];
-  private stats = {
-    hits: 0,
-    misses: 0,
-    evictions: 0,
-  };
-  private options: CacheOptions;
-
-  constructor(options: Partial<CacheOptions> = {}) {
-    this.options = {
-      maxSize: 1000,
-      defaultTTL: 300000, // 5 minutes
-      enableLRU: true,
-      enableCompression: false,
-      enablePersistence: false,
-      ...options,
-    };
-
-    if (this.options.enablePersistence) {
-=======
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
   storage?: 'memory' | 'localStorage' | 'sessionStorage'
-=======
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
   maxSize?: number; // Maximum number of entries
 }
 
 export interface CacheEntry<T> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  value: T
-  expiry: number
-  hits: number
-  lastAccessed: number
-}
 
-class AdvancedCache<T = unknown> {
-  private cache: Map<string, CacheEntry<T>> = new Map()
-  private accessOrder: string[] = []
-  private options: Required<CacheOptions>
-  private storageKey = 'advanced-cache'
-=======
   value: T;
   expiry: number;
   hits: number;
@@ -102,75 +25,15 @@ class AdvancedCache<T = unknown> {
 }
 
 class AdvancedCache<T = unknown> {
-=======
-  value: T;
-  expiry: number;
-  hits: number;
-  lastAccessed: number;
-}
 
-class AdvancedCache<T = unknown> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private accessOrder: string[] = [];
-  private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-
-  constructor(options: CacheOptions = {}) {
-    this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
-      storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100
-    };
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-      this.loadFromStorage();
-    }
-<<<<<<< HEAD
-=======
-    
-    // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {
-      this.loadFromStorage();
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-    
-=======
-
-    // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {
-      this.loadFromStorage();
-    }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     // Setup periodic cleanup
     this.setupCleanup();
   }
 
   private setupCleanup(): void {
-<<<<<<< HEAD
-    if (typeof window !== 'undefined') {
-      // Clean expired entries every minute
-      setInterval(() => {
-        this.cleanExpired();
-      }, 60 * 1000);
-    }
-  }
 
-  private loadFromStorage(): void {
-    if (typeof window === 'undefined') return;
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
     try {
       const storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
@@ -180,9 +43,7 @@ class AdvancedCache<T = unknown> {
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     // Clean up expired entries every minute
     setInterval(() => {
       this.cleanup();
@@ -197,7 +58,7 @@ class AdvancedCache<T = unknown> {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed.cache || []);
         this.accessOrder = parsed.accessOrder || [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+
       }
     } catch (error) {
       console.warn('Failed to load cache from storage:', error);
@@ -205,11 +66,7 @@ class AdvancedCache<T = unknown> {
   }
 
   private saveToStorage(): void {
-<<<<<<< HEAD
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
-    
-    try {
-=======
+
       console.warn('Failed to load cache from storage:', error);
     }
   }
@@ -218,7 +75,7 @@ class AdvancedCache<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache),
@@ -226,42 +83,18 @@ class AdvancedCache<T = unknown> {
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
-<<<<<<< HEAD
-      }
-=======
+
       console.warn('Failed to save cache to storage:', error);
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-      console.warn('Failed to load cache from storage:', error);
-    }
-  }
 
-  private saveToStorage(): void {
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
 
-    try {
-      const storage = this.getStorage();
-      if (storage) {
-        const data = {
-          cache: Object.fromEntries(this.cache),
-          accessOrder: this.accessOrder
-        };
-        storage.setItem(this.storageKey, JSON.stringify(data));
-      }
-    } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   }
 
   private getStorage(): Storage | null {
     if (typeof window === 'undefined') return null;
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
+
     switch (this.options.storage) {
       case 'localStorage':
         return window.localStorage;
@@ -273,9 +106,7 @@ class AdvancedCache<T = unknown> {
   }
 
   private cleanExpired(): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     try {
       const storage = this.options.storage === 'localStorage' ? localStorage : sessionStorage;
       const data = {
@@ -289,41 +120,20 @@ class AdvancedCache<T = unknown> {
   }
 
   private cleanup(): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-    const now = Date.now();
-    const expiredKeys: string[] = [];
-    
-    for (const [key, entry] of this.cache.entries()) {
-<<<<<<< HEAD
-      if (entry.expiry <= now) {
-=======
-      if (entry.expiry < now) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-        expiredKeys.push(key);
-      }
-    }
-=======
-    const now = Date.now();
-    const expiredKeys: string[] = [];
-    
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.expiry < now) {
-        expiredKeys.push(key);
-      }
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-    
-=======
-    const now = Date.now();
-    const expiredKeys: string[] = [];
 
+    const now = Date.now();
+    const expiredKeys: string[] = [];
+    
     for (const [key, entry] of this.cache.entries()) {
+
       if (entry.expiry < now) {
+
         expiredKeys.push(key);
       }
     }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+    
+
     expiredKeys.forEach(key => {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
@@ -331,42 +141,17 @@ class AdvancedCache<T = unknown> {
         this.accessOrder.splice(index, 1);
       }
     });
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (expiredKeys.length > 0) {
-      this.saveToStorage();
-    }
-    
-    // Update access statistics
-    entry.hits++;
-    entry.lastAccessed = now;
-    this.updateAccessOrder(key);
-    
-    return entry.value;
-=======
+
     if (expiredKeys.length > 0 && this.options.storage !== 'memory') {
       this.saveToStorage();
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
 
-    if (expiredKeys.length > 0) {
-      this.saveToStorage();
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
   }
 
   private evictLRU(): void {
     if (this.accessOrder.length === 0) return;
-<<<<<<< HEAD
-    
-    const lruKey = this.accessOrder[0];
-    this.cache.delete(lruKey);
-    this.accessOrder.shift();
-<<<<<<< HEAD
-=======
+
     // Enforce max size using LRU
     while (this.cache.size > this.options.maxSize) {
       const oldestKey = this.accessOrder.shift();
@@ -378,55 +163,24 @@ class AdvancedCache<T = unknown> {
     if (this.options.storage !== 'memory') {
       this.saveToStorage();
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
+
   }
 
   private updateAccessOrder(key: string): void {
-=======
 
-    const keyToRemove = this.accessOrder[0];
-    this.cache.delete(keyToRemove);
-    this.accessOrder.shift();
-  }
-
-  private updateAccessOrder(key: string): void {
-    // Remove from current position
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     const index = this.accessOrder.indexOf(key);
     if (index > -1) {
       this.accessOrder.splice(index, 1);
     }
-<<<<<<< HEAD
-    this.accessOrder.push(key);
-  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  set(key: string, value: T, customTTL?: number): void {
-    const now = Date.now();
-    const ttl = customTTL || this.options.ttl;
-    
-    // Remove existing entry if it exists
-=======
   set(key: string, value: T, customTtl?: number): void {
     const ttl = customTtl || this.options.ttl;
     const expiry = Date.now() + ttl;
     
     // Remove if already exists
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-    // Add to end (most recently used)
-    this.accessOrder.push(key);
-  }
 
-  set(key: string, value: T, customTtl?: number): void {
-    const now = Date.now();
-    const ttl = customTtl || this.options.ttl;
 
-    // Remove existing entry if it exists
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     if (this.cache.has(key)) {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
@@ -434,18 +188,14 @@ class AdvancedCache<T = unknown> {
         this.accessOrder.splice(index, 1);
       }
     }
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
+
     // Check if we need to evict entries
     while (this.cache.size >= this.options.maxSize) {
       this.evictLRU();
     }
-<<<<<<< HEAD
-=======
+
   }
 
   /**
@@ -455,7 +205,7 @@ class AdvancedCache<T = unknown> {
     const now = Date.now();
     const expiry = now + (ttl || this.options.defaultTTL);
     const size = this.calculateSize(value);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
     
     const entry: CacheEntry<T> = {
       value,
@@ -477,29 +227,14 @@ class AdvancedCache<T = unknown> {
     this.updateAccessOrder(key);
 
     if (this.options.enablePersistence) {
-=======
-  set(key: string, value: T, ttl?: number): void {
-    const now = Date.now();
-    const expiry = now + (ttl || this.options.ttl);
-    
-=======
 
-    // Add new entry
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     this.cache.set(key, {
       value,
       expiry: now + ttl,
       hits: 0,
       lastAccessed: now
     });
-<<<<<<< HEAD
-    
-    this.updateAccessOrder(key);
-    this.cleanup();
-    
-    if (this.options.storage !== 'memory') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
+
     // Check if we need to evict
     if (this.cache.size >= this.options.maxSize) {
       this.evictLRU();
@@ -516,45 +251,16 @@ class AdvancedCache<T = unknown> {
     this.updateAccessOrder(key);
     
     if (this.options.storage !== 'memory') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
       this.saveToStorage();
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /**
-   * Get a value from the cache
-   */
-  get(key: string): T | undefined {
-    const entry = this.cache.get(key);
-    if (!entry) {
-      this.stats.misses++;
-      return undefined;
-    }
 
-    const now = Date.now();
-    if (entry.expiry <= now) {
-      this.remove(key);
-      this.stats.misses++;
-      return undefined;
-    }
-
-    // Update access information
-    entry.accessCount++;
-    entry.lastAccessed = now;
-    this.updateAccessOrder(key);
-    this.stats.hits++;
-
-    return entry.value;
-  }
-
-<<<<<<< HEAD
-=======
   /**
    * Check if a key exists in the cache
    */
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
   has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
@@ -611,55 +317,14 @@ class AdvancedCache<T = unknown> {
   /**
    * Get all keys in the cache
    */
-=======
-  get(key: string): T | null {
-    const entry = this.cache.get(key);
-    if (!entry) {
-      return null;
-    }
-    
-    const now = Date.now();
-    if (entry.expiry < now) {
-=======
-  get(key: string): T | null {
-    const entry = this.cache.get(key);
-    
-    if (!entry) {
-      return null;
-    }
-    
-    // Check if expired
-    if (entry.expiry < Date.now()) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
 
-    this.updateAccessOrder(key);
-    this.saveToStorage();
-  }
 
-  get(key: string): T | null {
-    const entry = this.cache.get(key);
-    if (!entry) return null;
-
-    const now = Date.now();
-    if (entry.expiry < now) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
       if (index > -1) {
         this.accessOrder.splice(index, 1);
       }
-<<<<<<< HEAD
-      return null;
-    }
-    
-    // Update access info
-    entry.hits++;
-<<<<<<< HEAD
-    entry.lastAccessed = now;
-    this.updateAccessOrder(key);
-    
-=======
+
     entry.lastAccessed = Date.now();
     this.updateAccessOrder(key);
     
@@ -667,14 +332,12 @@ class AdvancedCache<T = unknown> {
       this.saveToStorage();
     }
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
     return entry.value;
   }
 
   has(key: string): boolean {
-<<<<<<< HEAD
-    return this.get(key) !== null;
-=======
+
     const entry = this.cache.get(key);
     
     if (!entry) {
@@ -692,7 +355,7 @@ class AdvancedCache<T = unknown> {
     }
     
     return true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
   }
 
   delete(key: string): boolean {
@@ -702,10 +365,9 @@ class AdvancedCache<T = unknown> {
       if (index > -1) {
         this.accessOrder.splice(index, 1);
       }
-<<<<<<< HEAD
-=======
+
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
       if (this.options.storage !== 'memory') {
         this.saveToStorage();
       }
@@ -716,19 +378,12 @@ class AdvancedCache<T = unknown> {
   clear(): void {
     this.cache.clear();
     this.accessOrder = [];
-<<<<<<< HEAD
-    if (this.options.storage !== 'memory') {
-      const storage = this.options.storage === 'localStorage' ? localStorage : sessionStorage;
-      storage.removeItem(this.storageKey);
-=======
+
     
     if (this.options.storage !== 'memory') {
       this.saveToStorage();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-      this.saveToStorage();
-      return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
+
     }
 
     // Update access statistics
@@ -740,8 +395,7 @@ class AdvancedCache<T = unknown> {
     return entry.value;
   }
 
-<<<<<<< HEAD
-=======
+
   has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
@@ -778,115 +432,26 @@ class AdvancedCache<T = unknown> {
     this.saveToStorage();
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
   size(): number {
     return this.cache.size;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
+
+
   keys(): string[] {
     return Array.from(this.cache.keys());
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-  values(): T[] {
-    return Array.from(this.cache.values()).map(entry => entry.value);
-  }
 
-  entries(): Array<[string, T]> {
-    return Array.from(this.cache.entries()).map(([key, entry]) => [key, entry.value]);
-  }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-  getStats(): {
-    size: number;
-    maxSize: number;
-    hitRate: number;
-<<<<<<< HEAD
-    oldestEntry: number;
-    newestEntry: number;
-  } {
-    const entries = Array.from(this.cache.values());
-    const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
-    const hitRate = entries.length > 0 ? totalHits / entries.length : 0;
-    
-    const timestamps = entries.map(entry => entry.lastAccessed);
-    const oldestEntry = timestamps.length > 0 ? Math.min(...timestamps) : 0;
-    const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
-    
-    return {
-      size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate,
-      oldestEntry,
-      newestEntry
-<<<<<<< HEAD
-=======
-  stats(): { hits: number; misses: number; hitRate: number; size: number } {
-    let totalHits = 0;
-    for (const entry of this.cache.values()) {
-      totalHits += entry.hits;
-    }
-    const size = this.cache.size;
-    const hitRate = size > 0 ? totalHits / (totalHits + size) : 0;
-    
-    return {
-      hits: totalHits,
-      misses: size,
-      hitRate,
-      size
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-    totalHits: number;
-    averageHits: number;
-  } {
-    const entries = Array.from(this.cache.values());
-    const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
-    const averageHits = entries.length > 0 ? totalHits / entries.length : 0;
 
-    return {
-      size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate: totalHits > 0 ? totalHits / (totalHits + this.cache.size) : 0,
-      totalHits,
-      averageHits
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     };
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Create singleton instances for different use cases
-export const memoryCache = new AdvancedCache({ storage: 'memory' });
-<<<<<<< HEAD
-export const localStorageCache = new AdvancedCache({ 
-  storage: 'localStorage',
-  ttl: 30 * 60 * 1000, // 30 minutes
-  maxSize: 50
-});
-export const sessionStorageCache = new AdvancedCache({ 
-  storage: 'sessionStorage',
-  ttl: 10 * 60 * 1000, // 10 minutes
-  maxSize: 25
-=======
+
   /**
    * Get all values in the cache
    */
@@ -1029,40 +594,10 @@ export const sessionCache = new AdvancedCache({
   enableLRU: true,
   enableCompression: false,
   enablePersistence: false,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
 });
-=======
-export const localStorageCache = new AdvancedCache({ storage: 'localStorage' });
-export const sessionStorageCache = new AdvancedCache({ storage: 'sessionStorage' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
-// Create singleton instances for common use cases
-export const memoryCache = new AdvancedCache({ storage: 'memory' });
-export const localStorageCache = new AdvancedCache({ storage: 'localStorage' });
-export const sessionStorageCache = new AdvancedCache({ storage: 'sessionStorage' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
+
 
 export default AdvancedCache;
-=======
-// Create default cache instance
-export const defaultCache = new AdvancedCache();
 
-// Export the class for custom instances
-export { AdvancedCache };
-
-// Convenience functions
-export const cache = {
-  set: <T>(key: string, value: T, ttl?: number) => defaultCache.set(key, value, ttl),
-  get: <T>(key: string): T | null => defaultCache.get(key) as T | null,
-  has: (key: string) => defaultCache.has(key),
-  delete: (key: string) => defaultCache.delete(key),
-  clear: () => defaultCache.clear(),
-  size: () => defaultCache.size(),
-  keys: () => defaultCache.keys(),
-  values: () => defaultCache.values(),
-  entries: () => defaultCache.entries(),
-  stats: () => defaultCache.getStats()
-};
-
-export default cache;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa

@@ -29,10 +29,6 @@
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "npm run clean",
-<<<<<<< HEAD
-=======
-    "postbuild": "node scripts/generate-sitemap.js && echo \"Build completed successfully\"",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/performance-optimizer.cjs",
@@ -102,7 +98,7 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "postbuild": "npm run generate:sitemap && node scripts/performance-optimizer.js && echo \"Build completed successfully\""
   },
   "dependencies": {
@@ -120,19 +116,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "react-helmet-async": "^2.0.5",
-=======
-    "react-helmet-async": "^1.3.0",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
-=======
-    "react-helmet-async": "^2.0.5",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
-=======
-    "react-helmet-async": "^2.0.0",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
     "react-lazy-load-image-component": "^1.6.3",
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.9.4",

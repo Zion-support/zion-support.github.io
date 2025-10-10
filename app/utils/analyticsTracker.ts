@@ -1,31 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-'use client';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
 /**
  * Analytics Tracker
  * Comprehensive analytics tracking for user interactions and performance
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface AnalyticsEvent {
-  action: string;
-  category: string;
-=======
+
 export interface AnalyticsEvent {
   name: string;
   category: string;
   action: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
   label?: string;
   value?: number;
   customParameters?: Record<string, any>;
@@ -62,19 +50,11 @@ class AnalyticsTracker {
     this.initialize();
   }
 
-<<<<<<< HEAD
-  /**
-   * Track a page view
-   */
-  trackPageView(path: string): void {
-    const event = () => {
-      // Add your analytics implementation here
-    };
-=======
+
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
 
   private initialize(): void {
     if (typeof window === 'undefined') return;
@@ -205,104 +185,14 @@ class AnalyticsTracker {
     }
   }
 
-=======
-interface AnalyticsEvent {
-  category: string
-  action: string
-  label?: string
-  value?: number
-  nonInteraction?: boolean
-}
 
-interface PerformanceMetrics {
-  metric: string
-  value: number
-  rating?: 'good' | 'needs-improvement' | 'poor'
-}
 
-interface ErrorReport {
-  message: string
-  stack?: string
-  componentStack?: string
-  severity: 'low' | 'medium' | 'high' | 'critical'
-}
-
-class AnalyticsTracker {
-  private isInitialized = false
-  private queue: Array<() => void> = []
-=======
-interface AnalyticsEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  nonInteraction?: boolean;
-}
-
-interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
-}
-
-interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-}
-
-class AnalyticsTracker {
-  private isInitialized = false;
-  private queue: Array<() => void> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-interface AnalyticsEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  nonInteraction?: boolean;
-}
-
-interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
-}
-
-interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-}
-
-class AnalyticsTracker {
-  private isInitialized = false;
-  private queue: Array<() => void> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (typeof window === 'undefined') return
-    
-    this.isInitialized = true
-    
-    // Process queued events
-    this.queue.forEach(fn => fn())
-    this.queue = []
-    
-    // Track initial page view
-    this.trackPageView(window.location.pathname)
-  }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
     if (typeof window === 'undefined') return;
     
     this.isInitialized = true;
@@ -315,38 +205,12 @@ class AnalyticsTracker {
     this.trackPageView(window.location.pathname);
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-    if (typeof window === 'undefined') return;
 
-    this.isInitialized = true;
 
-    // Process queued events
-    this.queue.forEach(fn => fn());
-    this.queue = [];
-
-    // Track initial page view
-    this.trackPageView(window.location.pathname);
-  }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   /**
    * Track a custom event
    */
-<<<<<<< HEAD
-  trackEvent(event: AnalyticsEvent): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const trackFn = () => {
-      // Add your analytics implementation here
-    };
 
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
   public trackEvent(event: AnalyticsEvent): void {
     if (!this.isInitialized) {
       this.eventQueue.push(event);
@@ -368,77 +232,23 @@ class AnalyticsTracker {
       this.sendToAnalytics(event);
     } catch (error) {
       console.error('Failed to track event:', error);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
-    if (typeof window === 'undefined') return
 
-    const track = () => {
-      // Send to analytics service
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      // Send to analytics service (replace with your preferred service)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
       if (typeof gtag !== 'undefined') {
         gtag('event', event.action, {
-=======
-    if (typeof window === 'undefined') return;
 
-    const track = () => {
-      // Google Analytics 4
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', event.action, {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
           event_category: event.category,
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
-<<<<<<< HEAD
-<<<<<<< HEAD
-        })
-=======
+
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+
       }
       
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-        console.log('Analytics Event:', event)
-      }
-    }
 
-    if (this.isInitialized) {
-      track()
-    } else {
-      this.queue.push(track)
-    }
-  }
-
-  /**
-   * Track page views
-   */
-  trackPageView(path: string): void {
-    if (typeof window === 'undefined') return
-
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('config', 'GA_MEASUREMENT_ID', {
-          page_path: path
-        })
-      }
-    }
-
-    if (this.isInitialized) {
-      track()
-    } else {
-      this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-    }
-  }
-
-=======
         console.log('Analytics Event:', event);
       }
     };
@@ -450,182 +260,25 @@ class AnalyticsTracker {
     }
   }
 
-=======
-        });
-      }
 
-      // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event);
-      }
-    };
-
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
-    }
-  }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-  /**
-   * Track page view
-   */
-  trackPageView(path: string, title?: string): void {
-    if (typeof window === 'undefined') return;
-<<<<<<< HEAD
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-
-    const track = () => {
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-          page_path: path,
-          page_title: title || document.title
-        });
-      }
-<<<<<<< HEAD
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Page View:', { path, title: title || document.title });
-      }
-    };
-    
-=======
-    };
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
-    }
-  }
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-  /**
-   * Track performance metrics
-   */
-<<<<<<< HEAD
-  trackPerformance(metrics: PerformanceMetrics): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const trackFn = () => {
-      // Add your performance tracking implementation here
-    };
-
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
-    if (typeof window === 'undefined') return
-
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'timing_complete', {
-          name: metrics.metric,
-          value: Math.round(metrics.value),
-          event_category: 'Performance'
-        })
-      }
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'timing_complete', {
-          name: metrics.metric,
-          value: Math.round(metrics.value),
-          event_category: 'Performance'
-        });
-      }
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metric:', metrics);
-      }
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-    if (typeof window === 'undefined') return;
-
-    const track = () => {
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'timing_complete', {
-          name: metrics.metric,
-          value: Math.round(metrics.value),
-          event_category: 'Performance'
-        });
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metric:', metrics);
-      }
-    };
-
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
 
     if (this.isInitialized) {
       track()
     } else {
       this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+
     }
-=======
-  public trackPerformance(metrics: PerformanceMetrics): void {
-    this.trackEvent({
-      name: 'performance_metrics',
-      category: 'performance',
-      action: 'measure',
-      customParameters: metrics,
-    });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
   }
 
   /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-   * Track an error
-=======
-   * Track error
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-   * Track error
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
-   */
-<<<<<<< HEAD
-  trackError(error: ErrorReport): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const trackFn = () => {
-      // Add your error tracking implementation here
-    };
 
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
+   * Track error
+
+
+   */
+
     if (typeof window === 'undefined') return
 
     const track = () => {
@@ -641,58 +294,19 @@ class AnalyticsTracker {
       track()
     } else {
       this.queue.push(track)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'exception', {
-          description: error.message,
-          fatal: error.severity === 'critical' || error.severity === 'high'
-        });
-      }
-      
-      // Always log errors to console
-      console.error('Analytics Error:', error);
-    };
-    
-=======
-    if (typeof window === 'undefined') return;
 
-    const track = () => {
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: error.severity === 'critical' || error.severity === 'high',
-          event_category: 'Error'
-        });
-      }
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.error('Analytics Error:', error);
-      }
-    };
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
+
     }
   }
 
   /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-   * Track user interaction
-=======
+
   public trackError(error: any): void {
     this.trackEvent({
       name: 'error',
@@ -710,7 +324,7 @@ class AnalyticsTracker {
 
   /**
    * Track page view
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
    */
   public trackPageView(page: string, title?: string): void {
     this.trackEvent({
@@ -751,30 +365,14 @@ class AnalyticsTracker {
       category: 'user',
       action: 'update',
       customParameters: properties,
-=======
-   * Track user engagement
-   */
-  trackEngagement(action: string, element?: string): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action,
-      label: element
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+
     });
   }
 
   /**
    * Track conversion
    */
-<<<<<<< HEAD
-  public trackConversion(conversionId: string, value?: number, currency?: string): void {
-    this.trackEvent({
-<<<<<<< HEAD
-      action: 'conversion',
-      category: conversionType,
-      value
-    });
-=======
+
       name: 'conversion',
       category: 'conversion',
       action: 'completed',
@@ -809,7 +407,7 @@ class AnalyticsTracker {
     } catch (error) {
       console.error('Failed to send analytics data:', error);
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+
   }
 
   /**
@@ -821,313 +419,16 @@ class AnalyticsTracker {
       if (event) {
         this.trackEvent(event);
       }
-=======
-  trackConversion(action: string, value?: number): void {
-    this.trackEvent({
-      category: 'Conversion',
-      action,
-      value
-    });
-  }
 
-  /**
-   * Track search
-   */
-  trackSearch(searchTerm: string, resultsCount?: number): void {
-    this.trackEvent({
-      category: 'Search',
-      action: 'search',
-      label: searchTerm,
-      value: resultsCount
-    });
-  }
-
-  /**
-   * Track social interaction
-   */
-  trackSocial(network: string, action: string, target?: string): void {
-    this.trackEvent({
-      category: 'Social',
-      action: `${network}_${action}`,
-      label: target
-    });
-  }
-
-  /**
-   * Track e-commerce transaction
-   */
-  trackTransaction(transactionId: string, value: number, currency = 'USD'): void {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'purchase', {
-        transaction_id: transactionId,
-        value,
-        currency
-      });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
   }
 
   /**
-<<<<<<< HEAD
-   * Get current session ID
-   */
-  public getSessionId(): string {
-    return this.sessionId;
-  }
 
-  /**
-   * Get current user ID
-   */
-  public getUserId(): string | undefined {
-    return this.userId;
-  }
-}
-
-<<<<<<< HEAD
-// Create singleton instance
-export const analyticsTracker = new AnalyticsTracker();
-
-export default AnalyticsTracker;
-=======
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
-=======
-   * Track user engagement
-   */
-  trackEngagement(action: string, value?: number): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action,
-      value
-    })
-  }
 
-  /**
-   * Track business events
-   */
-  trackBusinessEvent(event: string, value?: number, label?: string): void {
-    this.trackEvent({
-      category: 'Business',
-      action: event,
-      label,
-      value
-    })
-  }
-}
 
-// Create singleton instance
-export const analyticsTracker = new AnalyticsTracker()
 
-// Initialize on client side
-if (typeof window !== 'undefined') {
-  analyticsTracker.initialize()
-}
 
-export default AnalyticsTracker
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
-=======
-   * Track user engagement
-   */
-  trackEngagement(action: string, element?: string): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action,
-      label: element
-    });
-  }
-
-  /**
-   * Track conversion
-   */
-  trackConversion(conversionId: string, value?: number): void {
-    this.trackEvent({
-      category: 'Conversion',
-      action: 'conversion',
-      label: conversionId,
-      value
-    });
-  }
-
-  /**
-   * Track search
-   */
-  trackSearch(searchTerm: string, resultsCount?: number): void {
-    this.trackEvent({
-      category: 'Search',
-      action: 'search',
-      label: searchTerm,
-      value: resultsCount
-    });
-  }
-
-  /**
-   * Track social interaction
-   */
-  trackSocial(network: string, action: string, target?: string): void {
-    this.trackEvent({
-      category: 'Social',
-      action: `${network}_${action}`,
-      label: target
-    });
-  }
-
-  /**
-   * Track e-commerce transaction
-   */
-  trackTransaction(transactionId: string, value: number, currency = 'USD'): void {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'purchase', {
-        transaction_id: transactionId,
-        value: value,
-        currency: currency
-      });
-    }
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Transaction:', { transactionId, value, currency });
-    }
-  }
-
-  /**
-   * Track scroll depth
-   */
-  trackScrollDepth(depth: number): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action: 'scroll',
-      label: `${depth}%`,
-      value: depth
-    });
-  }
-
-  /**
-   * Track time on page
-   */
-  trackTimeOnPage(timeInSeconds: number): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action: 'time_on_page',
-      value: timeInSeconds
-    });
-  }
-
-  /**
-   * Track form submission
-   */
-  trackFormSubmission(formName: string, success: boolean): void {
-    this.trackEvent({
-      category: 'Form',
-      action: success ? 'submit_success' : 'submit_error',
-      label: formName
-    });
-  }
-
-  /**
-   * Track file download
-   */
-  trackDownload(fileName: string, fileType?: string): void {
-    this.trackEvent({
-      category: 'Download',
-      action: 'download',
-      label: fileName,
-      value: fileType ? 1 : undefined
-    });
-  }
-
-  /**
-   * Track video interaction
-   */
-  trackVideo(action: string, videoTitle: string, progress?: number): void {
-    this.trackEvent({
-      category: 'Video',
-      action,
-      label: videoTitle,
-      value: progress
-    });
-  }
-
-  /**
-   * Track outbound link click
-   */
-  trackOutboundLink(url: string): void {
-    this.trackEvent({
-      category: 'Outbound',
-      action: 'click',
-      label: url
-    });
-  }
-
-  /**
-   * Set user properties
-   */
-  setUserProperties(properties: Record<string, any>): void {
-    if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        custom_map: properties
-      });
-    }
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log('User Properties:', properties);
-    }
-  }
-
-  /**
-   * Set user ID
-   */
-  setUserId(userId: string): void {
-    if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        user_id: userId
-      });
-    }
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log('User ID:', userId);
-    }
-  }
-}
-
-// Create singleton instance
-export const analytics = new AnalyticsTracker();
-
-// Auto-initialize in browser
-if (typeof window !== 'undefined') {
-  analytics.initialize();
-}
-
-export default analytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
-=======
-   * Track custom dimension
-   */
-  trackCustomDimension(dimension: string, value: string): void {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        custom_map: {
-          [dimension]: value
-        }
-      });
-    }
-  }
-}
-
-// Create singleton instance
-export const analyticsTracker = new AnalyticsTracker();
-
-// Export convenience functions
-export const trackEvent = (event: AnalyticsEvent) => analyticsTracker.trackEvent(event);
-export const trackPageView = (path: string, title?: string) => analyticsTracker.trackPageView(path, title);
-export const trackPerformance = (metrics: PerformanceMetrics) => analyticsTracker.trackPerformance(metrics);
-export const trackError = (error: ErrorReport) => analyticsTracker.trackError(error);
-export const trackEngagement = (action: string, element?: string) => analyticsTracker.trackEngagement(action, element);
-export const trackConversion = (action: string, value?: number) => analyticsTracker.trackConversion(action, value);
-export const trackSearch = (searchTerm: string, resultsCount?: number) => analyticsTracker.trackSearch(searchTerm, resultsCount);
-export const trackSocial = (network: string, action: string, target?: string) => analyticsTracker.trackSocial(network, action, target);
-export const trackTransaction = (transactionId: string, value: number, currency?: string) => analyticsTracker.trackTransaction(transactionId, value, currency);
-export const trackCustomDimension = (dimension: string, value: string) => analyticsTracker.trackCustomDimension(dimension, value);
-
-export default analyticsTracker;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa

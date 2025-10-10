@@ -18,11 +18,9 @@ const preloadComponents = useCallback(() => {
       import('./components/ContentCarousel');
     }, 100);
   }
-<<<<<<< HEAD
 
-=======
 }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">

@@ -73,7 +73,7 @@ const missingPages = allPaths.filter(path => {
 const duplicatePaths = allPaths.filter((path, index) => allPaths.indexOf(path) !== index);
 
 console.log('🔍 MISSING PAGES ANALYSIS');
-console.log('========================');
+console.log('===');
 console.log(`Total paths found: ${allPaths.length}`);
 console.log(`Existing pages: ${existingPages.size}`);
 console.log(`Missing pages: ${missingPages.length}`);

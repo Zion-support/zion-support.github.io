@@ -33,11 +33,11 @@ const fixMergeConflicts = (filePath) => {
     const originalContent = content;
     
     // Remove merge conflict markers and keep the HEAD version
-    const mergeConflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]*\n/g;
+    const mergeConflictRegex = /\n([\s\S]*?)
     content = content.replace(mergeConflictRegex, '$1');
     
     // Remove any remaining merge conflict markers
-    const conflictMarkers = /(<<<<<<< HEAD|=======|>>>>>>> [^\n]*)/g;
+    const conflictMarkers = /(|
     content = content.replace(conflictMarkers, '');
     
     // Clean up extra whitespace

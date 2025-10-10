@@ -342,7 +342,7 @@ Disallow: /private/`;
 
   printSummary() {
     console.log('\n📋 Optimization Summary:');
-    console.log('========================');
+    console.log('===');
     
     this.optimizations.forEach(opt => {
       const status = opt.status === 'completed' ? '✅' : 

@@ -81,21 +81,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-<<<<<<< HEAD
-          // Vendor chunks - optimized splitting
-=======
+
           // Vendor chunks
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-<<<<<<< HEAD
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+
+
             if (id.includes('framer-motion')) {
               return 'vendor-animations';
             }
@@ -105,30 +99,7 @@ export default defineConfig({
             if (id.includes('recharts')) {
               return 'vendor-charts';
             }
-<<<<<<< HEAD
-            if (id.includes('web-vitals') || id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            return 'vendor';
-          }
-          
-          // Page chunks - group by main sections
-          if (id.includes('/app/page.tsx')) {
-            return 'home';
-          }
-          if (id.includes('/app/ai-services/')) {
-            return 'ai-services';
-          }
-          if (id.includes('/app/micro-saas/')) {
-            return 'micro-saas';
-          }
-          if (id.includes('/app/')) {
-            return 'pages';
-          }
-          
-          // Component chunks
-          if (id.includes('/src/components/')) {
-=======
+
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
@@ -140,7 +111,7 @@ export default defineConfig({
           }
           // Component chunks
           if (id.includes('/components/')) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+
             return 'components';
           }
         },

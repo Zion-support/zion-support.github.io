@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
+
 import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
+
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/logo.png',
-        '/og-image.png'
-      ];
-=======
+
   const location = useLocation();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
+
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
@@ -34,14 +24,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
     document.head.appendChild(criticalCSS);
 
-<<<<<<< HEAD
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-=======
+
     // Preload critical fonts
     const fontPreload = document.createElement('link');
     fontPreload.rel = 'preload';
@@ -73,7 +56,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
+
         }
       });
     }, {
@@ -117,23 +100,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       ticking = false;
     };
 
-<<<<<<< HEAD
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        script.setAttribute('defer', '');
-      });
-    };
 
-    preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalScripts();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-=======
     const requestTick = () => {
       if (!ticking) {
         requestAnimationFrame(updateScrollPosition);
@@ -260,7 +227,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       cleanupPrefetch();
       cleanupAnimations();
       cleanupMemory();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
+
     };
   }, [
     preloadCriticalResources,
@@ -272,12 +239,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     optimizeMemory
   ]);
 
-<<<<<<< HEAD
-  return <>{children}</>;
-};
 
-export default PerformanceOptimizer;
-=======
   // Re-optimize on route change
   useEffect(() => {
     // Re-run image optimization on route change
@@ -296,4 +258,4 @@ export default PerformanceOptimizer;
 };
 
 export default PerformanceOptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
+

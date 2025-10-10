@@ -160,7 +160,7 @@ git status
 cat <conflicted-file>
 
 # 3. Edit files to resolve conflicts
-# Remove markers: <<<<<<, =======, >>>>>>>
+# Remove markers: <<<<<<, , >>>>>>>
 # Keep desired changes
 
 # 4. Stage resolved files

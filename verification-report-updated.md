@@ -17,7 +17,7 @@ The `tsconfig.json` file contained merge conflicts that have been successfully r
 ### Changes Made
 
 ```diff
-- Removed all git merge conflict markers (<<<<<<< HEAD, =======, >>>>>>>)
+- Removed all git merge conflict markers (, , >>>>>>>)
 - Consolidated the exclude patterns to use the more comprehensive `/**/*` syntax
 - Removed the conflicting references section that was causing issues
 - File is now valid JSON with proper syntax

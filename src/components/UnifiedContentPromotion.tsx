@@ -88,71 +88,18 @@ export default function UnifiedContentPromotion({
   const featuredServices = [
     {
       title: "AI Drug Discovery Pro",
-<<<<<<< HEAD
-      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and clinical trial optimization",
-      price: "$4,500/mo",
-      features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Side Effect Prediction"],
-=======
+
       description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug design",
       price: "$7,500/mo",
       features: ["Molecular Design", "Virtual Screening", "ADMET Prediction", "Clinical Optimization"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+
       icon: Brain,
       category: "Healthcare AI",
       link: "/ai-drug-discovery-pro",
       benefits: "10x faster drug discovery, 95% accuracy in predictions, reduced clinical trial costs"
     },
     {
-<<<<<<< HEAD
-      title: "AI Climate Solutions Pro",
-      description: "Combat climate change with intelligent environmental monitoring, carbon tracking, and sustainability optimization",
-      price: "$3,200/mo",
-      features: ["Carbon Footprint Analysis", "Weather Prediction", "Sustainability Planning", "Green Energy Management"],
-      icon: Globe,
-      category: "Environmental AI",
-      link: "/ai-climate-solutions-pro",
-      benefits: "50% carbon footprint reduction, real-time environmental monitoring, sustainability optimization"
-    },
-    {
-      title: "AI Space Technology Pro",
-      description: "Revolutionary space exploration and satellite management with AI-powered mission planning and orbital mechanics",
-      price: "$5,500/mo",
-      features: ["Satellite Operations", "Space Mission Planning", "Astronomical Data Analysis", "Space Weather Prediction"],
-      icon: Rocket,
-      category: "Space Technology",
-      link: "/ai-space-technology-pro",
-      benefits: "Advanced space mission planning, real-time satellite monitoring, orbital optimization algorithms"
-    },
-    {
-      title: "AI Financial Crime Detection Pro",
-      description: "Advanced financial security with real-time fraud detection, money laundering prevention, and regulatory compliance",
-      price: "$2,800/mo",
-      features: ["Real-time Fraud Detection", "Money Laundering Prevention", "Transaction Analysis", "Compliance Monitoring"],
-      icon: Shield,
-      category: "Financial Security",
-      link: "/ai-financial-crime-detection-pro",
-      benefits: "99.7% fraud detection accuracy, real-time transaction monitoring, automated compliance reporting"
-    },
-    {
-      title: "AI Supply Chain Optimization Pro",
-      description: "Intelligent supply chain management with demand forecasting, logistics optimization, and risk mitigation",
-      price: "$3,200/mo",
-      features: ["Demand Forecasting", "Inventory Optimization", "Logistics Automation", "Risk Assessment"],
-      icon: Truck,
-      category: "Supply Chain AI",
-      link: "/ai-supply-chain-optimization-pro",
-      benefits: "30% cost reduction, 25% inventory optimization, real-time supply chain visibility"
-    },
-    {
-      title: "AI Energy Grid Management Pro",
-      description: "Smart energy grid optimization with renewable energy integration, demand response, and carbon footprint tracking",
-      price: "$4,200/mo",
-      features: ["Grid Optimization", "Renewable Energy Integration", "Demand Response", "Carbon Tracking"],
-      icon: Zap,
-      category: "Energy AI",
-      link: "/ai-energy-grid-management-pro",
-      benefits: "40% energy efficiency improvement, real-time grid optimization, renewable energy integration"
-=======
+
       title: "AI Voice Cloning Studio Pro",
       description: "Create perfect voice clones with AI-powered technology for content and applications",
       price: "$149/mo",
@@ -178,44 +125,16 @@ export default function UnifiedContentPromotion({
       icon: Activity,
       category: "IT Infrastructure",
       link: "/ai-infrastructure-monitoring-pro"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+
     }
   ];
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
-<<<<<<< HEAD
-      {/* Futuristic Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Cyber Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300FFFF" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        {/* Animated Circuit Lines */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent animate-pulse delay-1000"></div>
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/30 to-transparent animate-pulse delay-2000"></div>
-        </div>
-        
-        {/* Floating Quantum Particles */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-pulse neon-glow"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-1000 neon-glow"></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl animate-pulse delay-2000 neon-glow"></div>
-        <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/20 rounded-full blur-xl animate-pulse delay-3000 neon-glow"></div>
-        
-        {/* Additional Floating Elements */}
-        <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 rounded-full blur-lg animate-bounce delay-500"></div>
-        <div className="absolute top-2/3 right-1/4 w-12 h-12 bg-gradient-to-r from-pink-400/10 to-blue-400/10 rounded-full blur-lg animate-bounce delay-1500"></div>
-        
-        {/* Scanning Lines Effect */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-ping"></div>
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent animate-ping delay-1000"></div>
-        </div>
-=======
+
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-matrix">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         {/* Enhanced Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl quantum-float"></div>
@@ -229,24 +148,18 @@ export default function UnifiedContentPromotion({
         {/* Quantum Ripples */}
         <div className="absolute top-1/4 left-1/4 w-40 h-40 quantum-ripple"></div>
         <div className="absolute bottom-1/4 right-1/4 w-60 h-60 quantum-ripple" style={{ animationDelay: '1s' }}></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+
       </div>
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="text-center mb-16" role="region" aria-label="Hero content">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text cyber-text">
-=======
+
             <h1 className="text-6xl md:text-8xl font-bold mb-6 cyber-text-ultra neon-text-advanced">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+
               {currentSlideData.title}
-=======
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
-              Zion Tech Group - {currentSlideData.title}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
+
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light neon-pulse">
               {currentSlideData.subtitle}
@@ -318,13 +231,10 @@ export default function UnifiedContentPromotion({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-<<<<<<< HEAD
-              <div key={index} className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-=======
+
               <div key={index} className="group relative cyber-card-ultra p-6 hover:scale-105 transition-all duration-300">
                 <div className="absolute inset-0 holographic-shimmer rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+
                 
                 {service.popular && (
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full neon-glow">
