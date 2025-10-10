@@ -1,12 +1,14 @@
 'use client';
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, CheckCircle, Terminal, GitBranch, Bug, FileText, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Code, CheckCircle, Terminal, GitBranch, Bug, FileText, ArrowRight, Zap, Brain, Shield, Users, Star, Phone, Mail, MapPin } from 'lucide-react';
 
-const AICodeAssistant: React.FC = memo(() => {
+const AICodeAssistantPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setIsLoaded(true);
   }, []);
 
@@ -14,201 +16,228 @@ const AICodeAssistant: React.FC = memo(() => {
     {
       icon: Code,
       title: 'Intelligent Code Generation',
-      description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions',
-      color: 'text-purple-400'
+      description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions.',
+      benefits: ['Natural language to code', 'Code completion', 'Smart suggestions', 'Multi-language support']
     },
     {
       icon: Bug,
       title: 'Smart Debugging',
-      description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality',
-      color: 'text-blue-400'
+      description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality.',
+      benefits: ['Bug detection', 'Auto-fix suggestions', 'Code optimization', 'Quality analysis']
     },
     {
       icon: Terminal,
-      title: 'Code Review Assistant',
-      description: 'Get instant code reviews with suggestions for improvements, best practices, and security',
-      color: 'text-green-400'
+      title: 'Multi-Language Support',
+      description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more.',
+      benefits: ['50+ languages', 'Syntax highlighting', 'Language-specific features', 'Cross-platform support']
     },
     {
       icon: GitBranch,
       title: 'Version Control Integration',
-      description: 'Seamlessly integrate with Git workflows for automated code analysis and suggestions',
-      color: 'text-orange-400'
+      description: 'Seamlessly integrate with Git, GitHub, and other version control systems.',
+      benefits: ['Git integration', 'GitHub support', 'Branch management', 'Commit assistance']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Learning',
+      description: 'Learn from your coding patterns and provide personalized suggestions and improvements.',
+      benefits: ['Pattern learning', 'Personalized suggestions', 'Code style adaptation', 'Continuous improvement']
+    },
+    {
+      icon: Shield,
+      title: 'Security Analysis',
+      description: 'Automatically scan code for security vulnerabilities and suggest secure coding practices.',
+      benefits: ['Vulnerability scanning', 'Security recommendations', 'Best practices', 'Compliance checking']
     }
   ];
 
   const benefits = [
-    'Reduce development time by up to 50%',
-    'Improve code quality and maintainability',
-    'Automated bug detection and fixing',
-    'Real-time code suggestions and optimization',
-    'Support for 20+ programming languages',
-    'Integration with popular IDEs and editors',
-    'AI-powered code documentation generation',
-    'Automated testing and validation'
+    'Increase coding speed by 70%',
+    'Reduce bugs by 80%',
+    'Improve code quality by 90%',
+    'Lower development time by 60%',
+    'Enable faster learning',
+    'Automate repetitive tasks',
+    'Scale development teams',
+    'Enhance code security'
   ];
 
   const useCases = [
     {
-      title: 'Web Development',
-      description: 'Generate React, Vue, Angular components and full-stack applications',
-      icon: Code
+      title: 'Software Development',
+      description: 'Accelerate software development with AI-powered coding assistance',
+      icon: '💻'
     },
     {
-      title: 'Mobile Development',
-      description: 'Create iOS and Android apps with AI-assisted development',
-      icon: Terminal
+      title: 'Code Review',
+      description: 'Automate code reviews and improve code quality with AI analysis',
+      icon: '🔍'
     },
     {
-      title: 'Data Science',
-      description: 'Generate Python scripts for data analysis and machine learning',
-      icon: Brain
+      title: 'Learning & Training',
+      description: 'Learn new programming languages and concepts with AI guidance',
+      icon: '📚'
     },
     {
-      title: 'DevOps & Automation',
-      description: 'Create deployment scripts and infrastructure as code',
-      icon: GitBranch
+      title: 'Legacy Code Migration',
+      description: 'Modernize legacy codebases with AI-powered refactoring tools',
+      icon: '🔄'
+    },
+    {
+      title: 'API Development',
+      description: 'Build and document APIs faster with AI-generated code and documentation',
+      icon: '🔌'
+    },
+    {
+      title: 'Testing & QA',
+      description: 'Generate comprehensive test cases and improve testing coverage',
+      icon: '🧪'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Code Assistant | Zion Tech Group</title>
-        <meta name="description" content="AI-powered code assistant for intelligent code generation, debugging, and optimization. Boost your development productivity with advanced AI tools." />
-        <meta name="keywords" content="AI code assistant, code generation, debugging, code review, programming, development tools, AI coding" />
+        <title>AI Code Assistant - Zion Tech Group</title>
+        <meta name="description" content="Boost your coding productivity with our AI Code Assistant. Intelligent code generation, debugging, and optimization for faster, better software development." />
+        <meta name="keywords" content="AI code assistant, code generation, debugging, programming, software development, code optimization, AI coding" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-8">
+              <Code className="w-10 h-10 text-white" />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AI Code Assistant
-              </span>
-              <br />
-              <span className="text-white">Intelligent Development</span>
+              AI Code Assistant
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your coding experience with our AI-powered code assistant. 
-              Generate code, debug issues, and optimize performance with intelligent automation.
+              Boost your coding productivity with our AI Code Assistant. Intelligent code generation, 
+              debugging, and optimization for faster, better software development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                Start Coding
+                <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI code assistant provides intelligent tools to enhance your development workflow.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Code Assistant Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Code Assistant combines cutting-edge technology with developer expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-indigo-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-assisted development for faster, better coding.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Use Cases
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI code assistant can transform your development process across different domains.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
-                  <useCase.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Code with AI?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your AI code assistant needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Applications & Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                From individual developers to enterprise teams, our AI Code Assistant serves diverse needs
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our AI Code Assistant?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Experience the future of software development with our revolutionary AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Boost Your Coding?
+              </h2>
+              <p className="text-xl text-indigo-100 mb-8">
+                Join thousands of developers who are already using our AI Code Assistant
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  Get Started Now
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
-});
+};
 
-AICodeAssistant.displayName = 'AICodeAssistant';
-
-export default AICodeAssistant;
+export default AICodeAssistantPage;
