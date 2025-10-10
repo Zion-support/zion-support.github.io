@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
-import { useEffect, useState } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -12,7 +8,6 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -20,84 +15,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   });
-  const { trackEvent } = useAnalytics();
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-<<<<<<< HEAD
-    };
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-=======
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      }
-=======
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -122,7 +41,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       applyAccessibilitySettings({ ...settings, reducedMotion: e.matches });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -144,9 +62,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -249,25 +164,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     `;
     document.head.appendChild(style);
-
-    // Track focus events for analytics
-    document.addEventListener('focusin', (e) => {
-      trackEvent('focus_event', {
-        category: 'accessibility',
-        label: (e.target as HTMLElement).tagName
-      });
-    });
   };
 
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
-    
-    trackEvent('accessibility_setting_changed', {
-      category: 'accessibility',
-      label: Object.keys(newSettings)[0]
-    });
   };
 
   // Provide accessibility context
@@ -281,11 +183,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [settings]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 };
-<<<<<<< HEAD
-export default EnhancedAccessibility;
-=======
 
 export default EnhancedAccessibility;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
