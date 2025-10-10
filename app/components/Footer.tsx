@@ -7,7 +7,6 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
@@ -23,7 +22,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
     { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
-=======
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
