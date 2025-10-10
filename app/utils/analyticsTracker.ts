@@ -1,188 +1,142 @@
-'use client';
+'use client'
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 interface AnalyticsEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  nonInteraction?: boolean;
+  category: string
+  action: string
+  label?: string
+  value?: number
+  nonInteraction?: boolean;}
 }
 interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
+  metric: string
+  value: number
+  rating?: 'good' | 'needs-improvement' | 'poor';}
 }
 interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: string
+  stack?: string
+  componentStack?: string
+  severity: 'low' | 'medium' | 'high' | 'critical';}
 }
 class AnalyticsTracker {
-  private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private isInitialized = false
+  private queue: Array<() => void> = []
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-    if (typeof window === 'undefined') return;
-    this.isInitialized = true;
+    if (typeof window === 'undefined') return
+    this.isInitialized = true
     // Process queued events
-    this.queue.forEach(fn => fn());
-    this.queue = [];
+    this.queue.forEach(fn => fn())
+    this.queue = []
     // Track initial page view
-    this.trackPageView(window.location.pathname);
+    this.trackPageView(window.location.pathname);}
   }
   /**
    * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', event.action, {
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          non_interaction: event.nonInteraction
-        });
+    if (typeof window === 'undefined') return
       }
       // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {}
         }
-    };
+    }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
   /**
    * Track page views
    */
   trackPageView(path: string): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
-          page_path: path,
-          page_title: document.title,
-          page_location: window.location.href
-        });
+    if (typeof window === 'undefined') return
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {}
         }
-    };
+    }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
   /**
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', 'performance', {
-          event_category: 'Web Vitals',
-          event_label: metrics.metric,
-          value: Math.round(metrics.value),
-          metric_rating: metrics.rating
-        });
+    if (typeof window === 'undefined') return
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {}
         }
-    };
+    }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
   /**
    * Track errors
    */
   trackError(error: ErrorReport): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: error.severity === 'critical',
-          error_severity: error.severity
-        });
+    if (typeof window === 'undefined') return
       }
       // Always log errors to console
-      console.error('[Analytics Error]', error);
-    };
+      }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
   /**
    * Track user timing
    */
   trackTiming(category: string, variable: string, value: number, label?: string): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', 'timing_complete', {
-          name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label
-        });
+    if (typeof window === 'undefined') return
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {}
         }
-    };
+    }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
   /**
    * Track conversions
    */
   trackConversion(conversionId: string, value?: number): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
-      if (window.gtag) {
-        window.gtag('event', 'conversion', {
-          send_to: conversionId,
-          value: value,
-          currency: 'USD'
-        });
+    if (typeof window === 'undefined') return
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {}
         }
-    };
+    }
     if (this.isInitialized) {
-      track();
+      track();}
     } else {
-      this.queue.push(track);
+      this.queue.push(track);}
     }
   }
 }
 // Export singleton instance
-export const analyticsTracker = new AnalyticsTracker();
+export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
   if (document.readyState === 'complete') {
-    analyticsTracker.initialize();
+    analyticsTracker.initialize();}
   } else {
     window.addEventListener('load', () => {
-      analyticsTracker.initialize();
-    });
+      analyticsTracker.initialize();}
+    })
   }
 }
-export default analyticsTracker;
+export default analyticsTracker

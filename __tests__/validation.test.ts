@@ -253,7 +253,7 @@ describe('Composite Validation', () => {
 
     const result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
-    expect(result.error).toContain('at least 10');
+    expect(result.error).toContain('between 10 and 20');
   });
 });
 

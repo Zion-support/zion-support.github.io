@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {try {
         function: 'content_freshness_score_runner'}
       });
     };
-//   } catch (error) {console.error('❌ content_freshness_score_runner function failed: ') error
+//   } catch (error) {// console.error('❌ content_freshness_score_runner function failed: ') error
       }
     return {
       statusCode: 500,

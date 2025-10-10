@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'license_compliance_auditor'}
       });
     };
-//   } catch (error) {console.error('❌ license_compliance_auditor function failed: ') error
+//   } catch (error) {// console.error('❌ license_compliance_auditor function failed: ') error
       }
     return {
       statusCode: 500,

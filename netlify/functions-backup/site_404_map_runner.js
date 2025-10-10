@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'site_404_map_runner'}
       });
     };
-//   } catch (error) {console.error('❌ site_404_map_runner function failed: ') error
+//   } catch (error) {// console.error('❌ site_404_map_runner function failed: ') error
       }
     return {
       statusCode: 500,

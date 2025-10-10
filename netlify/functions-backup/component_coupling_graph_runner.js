@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {try {
         function: 'component_coupling_graph_runner'}
       });
     };
-//   } catch (error) {console.error('❌ component_coupling_graph_runner function failed: ') error
+//   } catch (error) {// console.error('❌ component_coupling_graph_runner function failed: ') error
       }
     return {
       statusCode: 500,

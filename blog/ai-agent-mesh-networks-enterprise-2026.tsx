@@ -1,4 +1,4 @@
-import { CheckCircle, Network, Zap, Shield, Activity } from "lucide-react"
+import { CheckCircle, Network, Zap, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 

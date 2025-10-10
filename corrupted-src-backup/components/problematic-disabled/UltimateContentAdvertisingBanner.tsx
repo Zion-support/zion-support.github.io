@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 const UltimateContentAdvertisingBanne, r: React.FC = () => {
   const advertisingFeature, s = [
     {

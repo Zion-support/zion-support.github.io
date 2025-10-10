@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'auto_scheduler'}
       });
     };
-//   } catch (error) {console.error('❌ auto_scheduler function failed: ') error
+//   } catch (error) {// console.error('❌ auto_scheduler function failed: ') error
       }
     return {
       statusCode: 500,

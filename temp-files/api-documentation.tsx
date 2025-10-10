@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const ApiDocumentation: React.FC = () => {
   return (
@@ -53,9 +53,9 @@ const createContent = async () => {
         'Content-Type': 'application/json'
       }
     })
-//     console.log('Content created:', response.data)
+//     // console.log('Content created:', response.data)
   } catch (error) {
-//     console.error('Error:', error.response?.data || error.message)
+//     // console.error('Error:', error.response?.data || error.message)
   }
 }`}
               </pre>

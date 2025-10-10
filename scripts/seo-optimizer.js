@@ -7,25 +7,25 @@ const __dirname = path.dirname(__filename);
 
 // SEO optimization script
 function optimizeSEO() {
-  console.log('🔍 Starting SEO optimization...');
+  // console.log('🔍 Starting SEO optimization...');
   
   // 1. Generate sitemap
-  console.log('🗺️ Generating sitemap...');
+  // console.log('🗺️ Generating sitemap...');
   generateSitemap();
   
   // 2. Optimize meta tags
-  console.log('🏷️ Optimizing meta tags...');
+  // console.log('🏷️ Optimizing meta tags...');
   optimizeMetaTags();
   
   // 3. Generate robots.txt
-  console.log('🤖 Generating robots.txt...');
+  // console.log('🤖 Generating robots.txt...');
   generateRobotsTxt();
   
   // 4. Generate structured data
-  console.log('📊 Generating structured data...');
+  // console.log('📊 Generating structured data...');
   generateStructuredData();
   
-  console.log('✅ SEO optimization completed!');
+  // console.log('✅ SEO optimization completed!');
 }
 
 function generateSitemap() {
@@ -96,7 +96,7 @@ ${pages.map(page => `  <url>
 </urlset>`;
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-  console.log('  - Sitemap generated: public/sitemap.xml');
+  // console.log('  - Sitemap generated: public/sitemap.xml');
 }
 
 function optimizeMetaTags() {
@@ -116,7 +116,7 @@ function optimizeMetaTags() {
     JSON.stringify(metaOptimizations, null, 2)
   );
   
-  console.log('  - Meta tags optimized: seo-optimizations.json');
+  // console.log('  - Meta tags optimized: seo-optimizations.json');
 }
 
 function generateRobotsTxt() {
@@ -140,7 +140,7 @@ Allow: /ai-services
 Allow: /it-services`;
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
-  console.log('  - Robots.txt generated: public/robots.txt');
+  // console.log('  - Robots.txt generated: public/robots.txt');
 }
 
 function generateStructuredData() {
@@ -189,7 +189,7 @@ function generateStructuredData() {
     JSON.stringify(structuredData, null, 2)
   );
   
-  console.log('  - Structured data generated: public/structured-data.json');
+  // console.log('  - Structured data generated: public/structured-data.json');
 }
 
 // Run SEO optimization

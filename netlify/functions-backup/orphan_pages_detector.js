@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'orphan_pages_detector'}
       });
     };
-//   } catch (error) {console.error('❌ orphan_pages_detector function failed: ') error
+//   } catch (error) {// console.error('❌ orphan_pages_detector function failed: ') error
       }
     return {
       statusCode: 500,

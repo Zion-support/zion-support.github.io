@@ -87,14 +87,14 @@ async function main() {const results = []}
   //Generate comprehensive report
   const _report = generateReport(results);
   //Display summary
-//   //   //   //   //   //   //   if (report.summary.successRate === 100) {//     //     //     //     //     console.log('✅ Type checking passed')}
-//   } else {console.log('\n⚠️  Some improvements need attention: ')}
+//   //   //   //   //   //   //   if (report.summary.successRate === 100) {//     //     //     //     //     // console.log('✅ Type checking passed')}
+//   } else {// console.log('\n⚠️  Some improvements need attention: ')}
     results
       .filter(r => !r.success)
       .forEach(r => {
 //         });
   }
-//   console.log('\n📈 RECOMMENDATIONS: '),
+//   // console.log('\n📈 RECOMMENDATIONS: '),
   report.recommendations.forEach((rec) index) => {
 //     });
 //   //Exit with appropriate code

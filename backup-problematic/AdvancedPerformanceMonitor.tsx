@@ -51,7 +51,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  observers.push(lcpObserver);
  } catch (error) {
  // eslint-disable-next-line no-console
- console.warn('LCP observer not supported:', error);origin/
+ // console.warn('LCP observer not supported:', error);origin/
  }
  }
 
@@ -78,7 +78,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  observers.push(fidObserver);
  } catch (error) {
  // eslint-disable-next-line no-console
- console.warn('FID observer not supported:', error);origin/
+ // console.warn('FID observer not supported:', error);origin/
  }
  }
 
@@ -106,7 +106,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  observers.push(clsObserver);
  } catch (error) {
  // eslint-disable-next-line no-console
- console.warn('CLS observer not supported:', error);origin/
+ // console.warn('CLS observer not supported:', error);origin/
  }
  }
 
@@ -131,7 +131,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  }));
  } catch (error) {
  // eslint-disable-next-line no-console
- console.warn('Performance measurement failed:', error);origin/
+ // console.warn('Performance measurement failed:', error);origin/
  }
 
  // Cleanup observers
@@ -141,7 +141,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  observer.disconnect();
  } catch (error) {
  // eslint-disable-next-line no-console
- console.warn('Error disconnecting observer:', error);origin/
+ // console.warn('Error disconnecting observer:', error);origin/
  }
  });
  };
@@ -158,7 +158,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  if (slowResources.length > 0) {
  
  // eslint-disable-next-line no-console
- console.warn(
+ // console.warn(
  'Slow resources detected:',
  slowResources.map((r: PerformanceResourceTiming) => ({
  name: r.name,

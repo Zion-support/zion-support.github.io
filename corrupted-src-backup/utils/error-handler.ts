@@ -245,7 +245,7 @@ class ErrorHandler {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorReport)
-    // }).catch(err => console.error('Failed to send error report:', err));
+    // }).catch(err => // console.error('Failed to send error report:', err));
   }
 
   private cleanupOldErrors(): void {

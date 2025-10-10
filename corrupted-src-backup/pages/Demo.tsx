@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Calendar,
-  Clock,
-  Mail,
-  Phone,
-  CheckCircle,
-  Star,
-  Play,
-} from 'lucide-react';
+import { Calendar, Clock, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';;
 
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({

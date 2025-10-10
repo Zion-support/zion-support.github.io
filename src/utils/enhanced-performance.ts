@@ -3,7 +3,25 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+// import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+
+// Define PerformanceMetrics interface locally since the import path is incorrect
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+  lazyLoading: boolean;
+  firstContentfulPaint?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+  ttfb?: number;
+  memory?: number;
+}
 /**
  * Performance Observer Wrapper
  */
@@ -173,7 +191,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-//       console.error('Performance measurement failed:', error);
+//       // console.error('Performance measurement failed:', error);
       return 0;
     }
   }
@@ -248,9 +266,7 @@ export class PerformanceMonitor {
   }
 }
 
-// ============================================================================
 // Types
-// ============================================================================
 
 import type { 
   PerformanceReport, 
@@ -260,9 +276,7 @@ import type {
   LayoutShift 
 } from '../types/app.types';
 
-// ============================================================================
 // Utility Functions
-// ============================================================================
 
 /**
  * Measure function execution time
@@ -276,7 +290,7 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     const result = fn(...args);
     const end = performance.now();
     
-    console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
+    // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;

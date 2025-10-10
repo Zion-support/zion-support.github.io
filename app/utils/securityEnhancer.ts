@@ -1,28 +1,28 @@
-'use client';
+'use client'
 import React from 'react'
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
  */
 interface SecurityConfig {
-  enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
+  enableCSP: boolean
+  enableHSTS: boolean
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  enableContentSecurityPolicy: boolean
+  allowedOrigins: string[]
+  trustedDomains: string[];}
 }
 interface SecurityMetrics {
-  blockedRequests: number;
-  suspiciousActivity: number;
-  securityViolations: number;
-  lastScanTime: number;
+  blockedRequests: number
+  suspiciousActivity: number
+  securityViolations: number
+  lastScanTime: number;}
 }
 class SecurityEnhancer {
-  private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private eventListeners: Array<() => void> = [];
+  private config: SecurityConfig
+  private metrics: SecurityMetrics
+  private eventListeners: Array<() => void> = [];}
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
@@ -32,13 +32,13 @@ class SecurityEnhancer {
       enableContentSecurityPolicy: true,
       allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
       trustedDomains: ['zion.app', 'www.zion.app'],
-      ...config
-    };
+      ...config}
+    }
     this.metrics = {
       blockedRequests: 0,
       suspiciousActivity: 0,
       securityViolations: 0,
-      lastScanTime: Date.now()
+      lastScanTime: Date.now()}
     }
     this.initializeSecurity()
   }
@@ -48,7 +48,7 @@ class SecurityEnhancer {
     this.setupXSSProtection()
     this.setupCSRFProtection()
     this.monitorSuspiciousActivity()
-    this.setupSecureHeaders()
+    this.setupSecureHeaders()}
   }
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
@@ -66,27 +66,27 @@ class SecurityEnhancer {
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp
-    document.head.appendChild(meta)
+    document.head.appendChild(meta)}
   }
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return
     const meta = document.createElement('meta')
     meta.httpEquiv = 'X-XSS-Protection'
     meta.content = '1; mode=block'
-    document.head.appendChild(meta)
+    document.head.appendChild(meta)}
   }
   private setupCSRFProtection(): void {
     if (!this.config.enableCSRFProtection) return
     // Generate CSRF token
-    const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
+    const token = this.generateCSRFToken()}
+    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
   private generateCSRFToken(): string {
     const array = new Uint8Array(32)
     crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')}
   }
   private addCSRFTokenToForms(token: string): void {
     const forms = document.querySelectorAll('form')
@@ -95,24 +95,24 @@ class SecurityEnhancer {
       input.type = 'hidden'
       input.name = 'csrf-token'
       input.value = token
-      form.appendChild(input)
+      form.appendChild(input)}
     })
   }
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
     this.monitorConsoleAccess()
     this.monitorDOMManipulation()
-    this.monitorNetworkRequests()
+    this.monitorNetworkRequests()}
   }
-  private monitorConsoleAccess(): void {
+  private monitorConsoleAccess(): void {}
     const originalConsole = { ...console }
     // Override console methods to detect debugging
-    ['log', 'warn', 'error', 'info'].forEach(method => {
+    ['log', 'warn', 'error', 'info'].forEach(method => {}
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
+        this.metrics.suspiciousActivity++
+        originalConsole[method](...args);}
       }
-    });
+    })
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -122,7 +122,7 @@ class SecurityEnhancer {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
-                this.metrics.securityViolations++
+                this.metrics.securityViolations++}
                 }
             }
           })
@@ -131,7 +131,7 @@ class SecurityEnhancer {
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true}
     })
     this.eventListeners.push(() => observer.disconnect())
   }
@@ -142,7 +142,7 @@ class SecurityEnhancer {
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
+        throw new Error('Request blocked: Origin not allowed')}
       }
       return originalFetch(input, init)
     }
@@ -152,14 +152,14 @@ class SecurityEnhancer {
       const urlObj = new URL(url)
       return this.config.allowedOrigins.some(origin => 
         urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
-      )
+      )}
     } catch {
-      return false
+      return false}
     }
   }
   private setupSecureHeaders(): void {
     // These would typically be set by the server, but we can add meta tags
-    const headers = [
+    const headers = [}
       { name: 'X-Frame-Options', content: 'DENY' },
       { name: 'X-Content-Type-Options', content: 'nosniff' },
       { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
@@ -169,7 +169,7 @@ class SecurityEnhancer {
       const meta = document.createElement('meta')
       meta.httpEquiv = header.name
       meta.content = header.content
-      document.head.appendChild(meta)
+      document.head.appendChild(meta)}
     })
   }
   public sanitizeInput(input: string): string {
@@ -177,7 +177,7 @@ class SecurityEnhancer {
       .replace(/[<>]/g, '') // Remove potential HTML tags
       .replace(/javascript:/gi, '') // Remove javascript: protocol,
       .replace(/on\w+=/gi, '') // Remove event handlers
-      .trim()
+      .trim()}
   }
   public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
     switch (type) {
@@ -186,9 +186,9 @@ class SecurityEnhancer {
       case 'url':
         try {
           new URL(input)
-          return true
+          return true}
         } catch {
-          return false
+          return false}
         }
       case 'text':
         return input.length > 0 && input.length < 1000
@@ -197,10 +197,10 @@ class SecurityEnhancer {
     }
   }
   public generateSecurePassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 as any@#$%^&*'
     let password = ''
     for (let i = 0; i < length; i++) {
-      password += charset.charAt(Math.floor(Math.random() * charset.length))
+      password += charset.charAt(Math.floor(Math.random() * charset.length))}
     }
     return password
   }
@@ -209,16 +209,16 @@ class SecurityEnhancer {
       .then(hash => {
         return Array.from(new Uint8Array(hash))
           .map(b => b.toString(16).padStart(2, '0'))
-          .join('')
+          .join('')}
       })
   }
-  public getMetrics(): SecurityMetrics {
+  public getMetrics(): SecurityMetrics {}
     return { ...this.metrics }
   }
   public generateSecurityReport(): string {
     const metrics = this.getMetrics()
-    return `
-Security Report:
+    return 
+Security Report:}
 - Blocked Requests: ${metrics.blockedRequests}
 - Suspicious Activity: ${metrics.suspiciousActivity}
 - Security Violations: ${metrics.securityViolations}
@@ -227,7 +227,7 @@ Security Report:
   }
   public cleanup(): void {
     this.eventListeners.forEach(cleanup => cleanup())
-    this.eventListeners = []
+    this.eventListeners = []}
   }
 }
 // Export singleton instance

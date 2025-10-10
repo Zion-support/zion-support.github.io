@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'ai_trends_radar_runner'}
       });
     };
-//   } catch (error) {console.error('❌ ai_trends_radar_runner function failed: ') error
+//   } catch (error) {// console.error('❌ ai_trends_radar_runner function failed: ') error
       }
     return {
       statusCode: 500,

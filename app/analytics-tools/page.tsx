@@ -1,218 +1,207 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import SEOOptimizer from '../../components/SEOOptimizer';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
+
 const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
-    {
-      title: 'AI Business Intelligence',
-      price: '$399/month',
-      description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
-      icon: '📊',
-      category: 'Business Intelligence'
-    },
-    {
-      title: 'AI Web Analytics',
-      price: '$299/month',
-      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
-      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
-      icon: '🌐',
-      category: 'Web Analytics'
-    },
-    {
-      title: 'AI Marketing Analytics',
-      price: '$249/month',
-      description: 'Marketing performance analytics with AI-powered optimization recommendations.',
-      features: ['Campaign tracking', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights'],
-      icon: '📈',
-      category: 'Marketing Analytics'
-    },
-    {
-      title: 'AI Sales Analytics',
-      price: '$199/month',
-      description: 'Sales performance analytics with AI-powered forecasting and optimization.',
-      features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
-      icon: '💰',
-      category: 'Sales Analytics'
-    },
-    {
-      title: 'AI Customer Analytics',
-      price: '$179/month',
-      description: 'Customer behavior analytics with AI-powered insights and personalization.',
-      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights'],
-      icon: '👥',
-      category: 'Customer Analytics'
-    },
-    {
-      title: 'AI Financial Analytics',
-      price: '$349/month',
-      description: 'Financial performance analytics with AI-powered insights and risk assessment.',
-      features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
-      icon: '💳',
-      category: 'Financial Analytics'
-    }
-  ];
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Data-Driven Decisions',
-      description: 'Make informed decisions with comprehensive analytics and AI insights'
-    },
-    {
-      icon: Target,
-      title: 'Predictive Insights',
-      description: 'Anticipate trends and opportunities with AI-powered predictions'
-    },
-    {
-      icon: BarChart,
-      title: 'Real-Time Monitoring',
-      description: 'Track performance in real-time with live dashboards and alerts'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered',
-      description: 'Leverage advanced AI algorithms for deeper insights and automation'
-    }
-  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
-          </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Analytics Tools</div>
+      <SEOOptimizer
+        title="Analytics Tools - Zion Tech Group"
+        description="Advanced analytics tools and platforms for data-driven business insights."
+        keywords={["analytics tools","data visualization","business analytics","predictive analytics","data insights"]}
+        canonicalUrl="https://ziontechgroup.com/analytics-tools"
+      />
+      
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <BarChart3 className="w-10 h-10 text-white" />
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Accuracy</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div>
-              <div className="text-gray-300">Monitoring</div>
-            </div>
-          </div>
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Analytics Tools
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced analytics tools and platforms for data-driven business insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
-              </div>
+                +1 302 464 0950
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Analytics Tools Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsTools.map((tool, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{tool.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
-                    {tool.category}
-                  </div>
-                </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-                  >
-                    Get Started
-                  </a>
-                </div>
-              </div>
-            ))}
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Powerful capabilities designed to transform your business
+            </p>
           </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Analytics Tools?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Data Visualization</h3>
+              <p className="text-gray-300">Advanced data visualization capabilities powered by AI</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Predictive Analytics</h3>
+              <p className="text-gray-300">Advanced predictive analytics capabilities powered by AI</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Real-time Dashboards</h3>
+              <p className="text-gray-300">Advanced real-time dashboards capabilities powered by AI</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Custom Reports</h3>
+              <p className="text-gray-300">Advanced custom reports capabilities powered by AI</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Data Integration</h3>
+              <p className="text-gray-300">Advanced data integration capabilities powered by AI</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Machine Learning</h3>
+              <p className="text-gray-300">Advanced machine learning capabilities powered by AI</p>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI analytics tools today and transform your data into actionable insights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
-            </a>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Analytics Tools?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Proven results and measurable impact for your business
+            </p>
           </div>
-        </div>
-      </section>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Better Insights</h3>
+              <p className="text-gray-300">Measurable improvement in your business metrics</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions</h3>
+              <p className="text-gray-300">Measurable improvement in your business metrics</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Competitive Advantage</h3>
+              <p className="text-gray-300">Measurable improvement in your business metrics</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Improved Performance</h3>
+              <p className="text-gray-300">Measurable improvement in your business metrics</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Pricing
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Transparent pricing with no hidden fees
+            </p>
+          </div>
+          
+          <div className="max-w-md mx-auto">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Analytics Tools</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-4">$1,500/month</div>
+              <p className="text-gray-300 mb-6">per month</p>
+              <a
+                href="/contact"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Contact our experts to discuss your specific needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20">
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
+              <p className="text-gray-300 mb-4">Speak directly with our experts</p>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
+                +1 302 464 0950
+              </a>
+            </div>
+            
+            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+              <p className="text-gray-300 mb-4">Send us your requirements</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
+              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 mb-4">Our headquarters location</p>
+              <p className="text-pink-400 text-sm">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
+
 export default AnalyticsToolsPage;

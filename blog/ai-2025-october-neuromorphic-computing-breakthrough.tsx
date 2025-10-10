@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { Cpu, Zap, Brain, TrendingUp, CheckCircle, Sparkles, ArrowRight, Target, BarChart } from "lucide-react"
+import { Cpu, Zap, Brain, TrendingUp, CheckCircle, Sparkles, Target, BarChart } from "lucide-react";
 
 const NeuromorphicComputing = () => {
   return (<div>
