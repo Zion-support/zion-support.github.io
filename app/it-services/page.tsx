@@ -1008,6 +1008,500 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'ai-infrastructure',
+      name: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment',
+      price: '$4,500/month',
+      marketPrice: '$9000-30000/month',
+      features: [
+        'AI/ML infrastructure design',
+        'Model training pipelines',
+        'Model deployment automation',
+        'A/B testing for ML models',
+        'Model monitoring and alerting',
+        'Data pipeline automation',
+        'GPU cluster management',
+        'Custom AI workflows'
+      ],
+      benefits: [
+        'Accelerate AI development',
+        'Automated ML operations',
+        'Scalable AI infrastructure',
+        'Better model performance'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      price: '$3,800/month',
+      marketPrice: '$7500-25000/month',
+      features: [
+        'Zero trust network design',
+        'Identity verification systems',
+        'Micro-segmentation',
+        'Continuous monitoring',
+        'Policy enforcement automation',
+        'Threat detection and response',
+        'Compliance management',
+        'Security analytics'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated security policies',
+        'Better threat protection'
+      ],
+      category: 'Security Architecture',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'edge-computing-platform',
+      name: 'Edge Computing Platform',
+      description: 'Edge computing infrastructure and application deployment platform',
+      price: '$2,800/month',
+      marketPrice: '$5500-18000/month',
+      features: [
+        'Edge infrastructure setup',
+        'Application deployment automation',
+        'Edge data processing',
+        'Latency optimization',
+        'Edge security implementation',
+        'Monitoring and management',
+        'Multi-location deployment',
+        'Custom edge applications'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve application performance',
+        'Enable real-time processing',
+        'Better user experience'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'quantum-ready-infrastructure',
+      name: 'Quantum-Ready Infrastructure',
+      description: 'Infrastructure preparation for quantum computing and hybrid quantum-classical systems',
+      price: '$5,999/month',
+      marketPrice: '$12000-40000/month',
+      features: [
+        'Quantum computing integration',
+        'Hybrid system architecture',
+        'Quantum algorithm optimization',
+        'Quantum security implementation',
+        'Classical-quantum interfaces',
+        'Quantum network setup',
+        'Performance monitoring',
+        'Custom quantum applications'
+      ],
+      benefits: [
+        'Future-proof infrastructure',
+        'Quantum computing capabilities',
+        'Advanced optimization',
+        'Cutting-edge technology'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: '5g-network-implementation',
+      name: '5G Network Implementation',
+      description: 'Complete 5G network design, implementation, and optimization services',
+      price: '$6,500/month',
+      marketPrice: '$13000-50000/month',
+      features: [
+        '5G network architecture design',
+        'Core network implementation',
+        'Radio access network setup',
+        'Network slicing configuration',
+        'Performance optimization',
+        'Security implementation',
+        'Monitoring and management',
+        'Custom 5G applications'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency communications',
+        'Massive IoT support',
+        'Enhanced mobile experiences'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'digital-twin-platform',
+      name: 'Digital Twin Platform',
+      description: 'Digital twin creation and management platform for physical assets and processes',
+      price: '$3,200/month',
+      marketPrice: '$6500-20000/month',
+      features: [
+        'Digital twin creation',
+        'Real-time data integration',
+        'Simulation and modeling',
+        'Predictive analytics',
+        'IoT sensor integration',
+        '3D visualization',
+        'Performance monitoring',
+        'Custom twin applications'
+      ],
+      benefits: [
+        'Optimize physical assets',
+        'Predict maintenance needs',
+        'Improve operational efficiency',
+        'Better decision making'
+      ],
+      category: 'Digital Twins',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'hyperconverged-infrastructure',
+      name: 'Hyperconverged Infrastructure',
+      description: 'Hyperconverged infrastructure design and implementation for simplified IT management',
+      price: '$2,500/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'HCI architecture design',
+        'Storage virtualization',
+        'Compute virtualization',
+        'Network virtualization',
+        'Management automation',
+        'Backup and recovery',
+        'Performance optimization',
+        'Scalability planning'
+      ],
+      benefits: [
+        'Simplified infrastructure management',
+        'Reduced operational costs',
+        'Improved scalability',
+        'Better resource utilization'
+      ],
+      category: 'Infrastructure',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      description: 'Microservices architecture design and implementation for scalable applications',
+      price: '$3,600/month',
+      marketPrice: '$7000-22000/month',
+      features: [
+        'Microservices design',
+        'Service mesh implementation',
+        'API gateway setup',
+        'Container orchestration',
+        'Service discovery',
+        'Load balancing',
+        'Monitoring and logging',
+        'DevOps integration'
+      ],
+      benefits: [
+        'Scalable application architecture',
+        'Independent service deployment',
+        'Better fault tolerance',
+        'Improved development velocity'
+      ],
+      category: 'Architecture',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'serverless-computing',
+      name: 'Serverless Computing Platform',
+      description: 'Serverless computing platform setup and optimization for event-driven applications',
+      price: '$1,800/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Serverless architecture design',
+        'Function-as-a-Service setup',
+        'Event-driven automation',
+        'Auto-scaling configuration',
+        'Cost optimization',
+        'Monitoring and debugging',
+        'Security implementation',
+        'Custom serverless applications'
+      ],
+      benefits: [
+        'Reduce operational overhead',
+        'Pay-per-use pricing',
+        'Automatic scaling',
+        'Faster development cycles'
+      ],
+      category: 'Serverless',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'multi-cloud-management',
+      name: 'Multi-Cloud Management',
+      description: 'Multi-cloud strategy and management platform for optimal cloud utilization',
+      price: '$4,200/month',
+      marketPrice: '$8500-25000/month',
+      features: [
+        'Multi-cloud strategy design',
+        'Cloud cost optimization',
+        'Workload placement optimization',
+        'Cloud migration planning',
+        'Disaster recovery across clouds',
+        'Security and compliance',
+        'Performance monitoring',
+        'Custom cloud workflows'
+      ],
+      benefits: [
+        'Optimize cloud costs',
+        'Avoid vendor lock-in',
+        'Improve reliability',
+        'Better performance'
+      ],
+      category: 'Cloud Management',
+      popular: true,
+      icon: Cloud
+    },
+    {
+      id: 'api-first-architecture',
+      name: 'API-First Architecture',
+      description: 'API-first architecture design and implementation for modern applications',
+      price: '$2,200/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'API strategy development',
+        'RESTful API design',
+        'GraphQL implementation',
+        'API documentation',
+        'API testing and validation',
+        'Rate limiting and security',
+        'API monitoring',
+        'Developer portal creation'
+      ],
+      benefits: [
+        'Better application integration',
+        'Improved developer experience',
+        'Faster development cycles',
+        'Enhanced scalability'
+      ],
+      category: 'API Development',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'observability-platform',
+      name: 'Observability Platform',
+      description: 'Comprehensive observability platform for monitoring, logging, and tracing',
+      price: '$2,800/month',
+      marketPrice: '$5500-18000/month',
+      features: [
+        'Application performance monitoring',
+        'Distributed tracing',
+        'Centralized logging',
+        'Real-time alerting',
+        'Custom dashboards',
+        'Anomaly detection',
+        'Root cause analysis',
+        'Integration with tools'
+      ],
+      benefits: [
+        'Better system visibility',
+        'Faster issue resolution',
+        'Proactive monitoring',
+        'Improved reliability'
+      ],
+      category: 'Monitoring',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'data-mesh-architecture',
+      name: 'Data Mesh Architecture',
+      description: 'Data mesh architecture implementation for decentralized data management',
+      price: '$3,800/month',
+      marketPrice: '$7500-25000/month',
+      features: [
+        'Data mesh design',
+        'Domain-driven data architecture',
+        'Data product development',
+        'Self-serve data platform',
+        'Data governance',
+        'Data quality management',
+        'Federated data management',
+        'Custom data workflows'
+      ],
+      benefits: [
+        'Decentralized data ownership',
+        'Better data accessibility',
+        'Improved data quality',
+        'Faster data delivery'
+      ],
+      category: 'Data Architecture',
+      popular: false,
+      icon: Database
+    },
+    {
+      id: 'event-driven-architecture',
+      name: 'Event-Driven Architecture',
+      description: 'Event-driven architecture design and implementation for real-time applications',
+      price: '$2,600/month',
+      marketPrice: '$5000-18000/month',
+      features: [
+        'Event architecture design',
+        'Event streaming setup',
+        'Message broker configuration',
+        'Event sourcing implementation',
+        'CQRS pattern implementation',
+        'Event processing pipelines',
+        'Monitoring and debugging',
+        'Custom event workflows'
+      ],
+      benefits: [
+        'Real-time data processing',
+        'Better system decoupling',
+        'Improved scalability',
+        'Enhanced responsiveness'
+      ],
+      category: 'Event Architecture',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'chaos-engineering',
+      name: 'Chaos Engineering Platform',
+      description: 'Chaos engineering platform for testing system resilience and reliability',
+      price: '$1,900/month',
+      marketPrice: '$3800-12000/month',
+      features: [
+        'Chaos experiment design',
+        'Automated chaos testing',
+        'Failure injection',
+        'Resilience monitoring',
+        'Recovery testing',
+        'Performance impact analysis',
+        'Custom chaos scenarios',
+        'Integration with CI/CD'
+      ],
+      benefits: [
+        'Improve system resilience',
+        'Identify weaknesses early',
+        'Better disaster preparedness',
+        'Enhanced reliability'
+      ],
+      category: 'Reliability Engineering',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'gitops-platform',
+      name: 'GitOps Platform',
+      description: 'GitOps platform for declarative infrastructure and application management',
+      price: '$2,100/month',
+      marketPrice: '$4200-15000/month',
+      features: [
+        'GitOps workflow setup',
+        'Infrastructure as Code',
+        'Automated deployments',
+        'Configuration management',
+        'Rollback capabilities',
+        'Multi-environment support',
+        'Security and compliance',
+        'Custom GitOps workflows'
+      ],
+      benefits: [
+        'Automated deployments',
+        'Better version control',
+        'Improved reliability',
+        'Faster delivery cycles'
+      ],
+      category: 'DevOps',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'service-mesh-platform',
+      name: 'Service Mesh Platform',
+      description: 'Service mesh platform for microservices communication and management',
+      price: '$2,400/month',
+      marketPrice: '$4800-16000/month',
+      features: [
+        'Service mesh implementation',
+        'Traffic management',
+        'Security policies',
+        'Observability integration',
+        'Load balancing',
+        'Circuit breaking',
+        'Canary deployments',
+        'Custom service policies'
+      ],
+      benefits: [
+        'Enhanced microservices communication',
+        'Better security',
+        'Improved observability',
+        'Simplified service management'
+      ],
+      category: 'Service Mesh',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'low-code-platform',
+      name: 'Low-Code Development Platform',
+      description: 'Low-code platform for rapid application development and deployment',
+      price: '$1,600/month',
+      marketPrice: '$3200-10000/month',
+      features: [
+        'Visual application builder',
+        'Drag-and-drop interface',
+        'Pre-built components',
+        'Database integration',
+        'API integration',
+        'Workflow automation',
+        'User management',
+        'Custom application deployment'
+      ],
+      benefits: [
+        'Faster application development',
+        'Reduced development costs',
+        'Business user empowerment',
+        'Rapid prototyping'
+      ],
+      category: 'Low-Code',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'headless-cms-platform',
+      name: 'Headless CMS Platform',
+      description: 'Headless CMS platform for content management and delivery across multiple channels',
+      price: '$1,200/month',
+      marketPrice: '$2400-8000/month',
+      features: [
+        'Content management system',
+        'API-first architecture',
+        'Multi-channel publishing',
+        'Content versioning',
+        'Workflow management',
+        'Media management',
+        'Developer tools',
+        'Custom content types'
+      ],
+      benefits: [
+        'Flexible content delivery',
+        'Better developer experience',
+        'Multi-channel publishing',
+        'Improved content management'
+      ],
+      category: 'Content Management',
+      popular: true,
+      icon: FileText
     }
   ];
 
@@ -1044,7 +1538,24 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Security Architecture', name: 'Security Architecture', count: services.filter(s => s.category === 'Security Architecture').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
+    { id: 'Digital Twins', name: 'Digital Twins', count: services.filter(s => s.category === 'Digital Twins').length },
+    { id: 'Infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'Infrastructure').length },
+    { id: 'Architecture', name: 'Architecture', count: services.filter(s => s.category === 'Architecture').length },
+    { id: 'Serverless', name: 'Serverless', count: services.filter(s => s.category === 'Serverless').length },
+    { id: 'Cloud Management', name: 'Cloud Management', count: services.filter(s => s.category === 'Cloud Management').length },
+    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
+    { id: 'Data Architecture', name: 'Data Architecture', count: services.filter(s => s.category === 'Data Architecture').length },
+    { id: 'Event Architecture', name: 'Event Architecture', count: services.filter(s => s.category === 'Event Architecture').length },
+    { id: 'Reliability Engineering', name: 'Reliability Engineering', count: services.filter(s => s.category === 'Reliability Engineering').length },
+    { id: 'Service Mesh', name: 'Service Mesh', count: services.filter(s => s.category === 'Service Mesh').length },
+    { id: 'Low-Code', name: 'Low-Code', count: services.filter(s => s.category === 'Low-Code').length },
+    { id: 'Content Management', name: 'Content Management', count: services.filter(s => s.category === 'Content Management').length }
   ];
 
   const filteredServices = services.filter(service => 

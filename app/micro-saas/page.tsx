@@ -1072,6 +1072,708 @@ const MicroSaasPage: React.FC = () => {
       category: 'Document Processing',
       popular: true,
       users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-sales-forecasting',
+      name: 'Zion AI Sales Forecasting',
+      description: 'Intelligent sales forecasting platform with predictive analytics and trend analysis',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered sales predictions',
+        'Trend analysis and seasonality detection',
+        'Pipeline forecasting and conversion rates',
+        'Territory and quota planning',
+        'Real-time sales performance tracking',
+        'Integration with CRM systems',
+        'Custom forecasting models',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Improve sales accuracy by 85%',
+        'Better resource planning',
+        'Predictive insights',
+        'Data-driven decisions'
+      ],
+      category: 'Sales Analytics',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-customer-lifetime-value',
+      name: 'Zion AI Customer Lifetime Value',
+      description: 'Advanced CLV prediction and customer segmentation platform with AI insights',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'AI-powered CLV prediction',
+        'Customer segmentation and profiling',
+        'Churn risk assessment',
+        'Retention strategy recommendations',
+        'Cohort analysis and trends',
+        'Integration with marketing tools',
+        'Custom segmentation models',
+        'Real-time customer insights'
+      ],
+      benefits: [
+        'Increase CLV by 40%',
+        'Better customer targeting',
+        'Reduce churn rates',
+        'Optimize marketing spend'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-price-optimization',
+      name: 'Zion AI Price Optimization',
+      description: 'Dynamic pricing optimization platform with AI-powered pricing strategies',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Dynamic pricing algorithms',
+        'Competitor price monitoring',
+        'Demand elasticity analysis',
+        'A/B testing for pricing strategies',
+        'Real-time price adjustments',
+        'Integration with e-commerce platforms',
+        'Custom pricing rules',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Increase revenue by 25%',
+        'Optimize profit margins',
+        'Competitive pricing advantage',
+        'Automated price management'
+      ],
+      category: 'Pricing Intelligence',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-inventory-optimization',
+      name: 'Zion AI Inventory Optimization',
+      description: 'Smart inventory management with demand forecasting and automated reordering',
+      price: '$349/month',
+      marketPrice: '$700-2000/month',
+      features: [
+        'AI-powered demand forecasting',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Dead stock identification',
+        'Integration with ERP systems',
+        'Custom optimization algorithms',
+        'Real-time inventory insights'
+      ],
+      benefits: [
+        'Reduce inventory costs by 35%',
+        'Prevent stockouts and overstock',
+        'Optimize supplier relationships',
+        'Improve cash flow'
+      ],
+      category: 'Inventory Management',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-employee-productivity',
+      name: 'Zion AI Employee Productivity',
+      description: 'AI-powered employee productivity tracking and optimization platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Productivity analytics and insights',
+        'Task prioritization recommendations',
+        'Time tracking and analysis',
+        'Workload balancing',
+        'Performance benchmarking',
+        'Integration with productivity tools',
+        'Custom productivity metrics',
+        'Team collaboration insights'
+      ],
+      benefits: [
+        'Increase productivity by 30%',
+        'Better task management',
+        'Optimize team performance',
+        'Data-driven insights'
+      ],
+      category: 'Productivity',
+      popular: true,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-social-media-monitoring',
+      name: 'Zion AI Social Media Monitoring',
+      description: 'Advanced social media monitoring and sentiment analysis platform',
+      price: '$149/month',
+      marketPrice: '$300-900/month',
+      features: [
+        'Real-time social media monitoring',
+        'Sentiment analysis and emotion detection',
+        'Brand mention tracking',
+        'Competitor analysis',
+        'Crisis detection and alerts',
+        'Multi-platform support',
+        'Custom monitoring rules',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Monitor brand reputation 24/7',
+        'Detect crises early',
+        'Understand customer sentiment',
+        'Competitive intelligence'
+      ],
+      category: 'Social Media',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-email-optimization',
+      name: 'Zion AI Email Optimization',
+      description: 'AI-powered email optimization platform with send time and content optimization',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'Optimal send time prediction',
+        'Subject line optimization',
+        'Content personalization',
+        'A/B testing automation',
+        'Deliverability optimization',
+        'Integration with email platforms',
+        'Custom optimization rules',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Increase open rates by 60%',
+        'Improve deliverability',
+        'Automated optimization',
+        'Better email performance'
+      ],
+      category: 'Email Marketing',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-customer-feedback-analysis',
+      name: 'Zion AI Customer Feedback Analysis',
+      description: 'Intelligent customer feedback analysis with sentiment tracking and insights',
+      price: '$129/month',
+      marketPrice: '$250-750/month',
+      features: [
+        'Automated feedback analysis',
+        'Sentiment and emotion detection',
+        'Topic modeling and categorization',
+        'Trend analysis and insights',
+        'Integration with feedback platforms',
+        'Custom analysis rules',
+        'Real-time feedback monitoring',
+        'Actionable insights generation'
+      ],
+      benefits: [
+        'Understand customer needs better',
+        'Improve product development',
+        'Enhance customer satisfaction',
+        'Data-driven improvements'
+      ],
+      category: 'Customer Experience',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-workforce-planning',
+      name: 'Zion AI Workforce Planning',
+      description: 'AI-powered workforce planning and talent management platform',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Workforce demand forecasting',
+        'Skills gap analysis',
+        'Talent acquisition optimization',
+        'Succession planning',
+        'Retention risk assessment',
+        'Integration with HR systems',
+        'Custom planning models',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Optimize workforce planning',
+        'Reduce hiring costs',
+        'Improve retention rates',
+        'Better talent management'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-financial-planning',
+      name: 'Zion AI Financial Planning',
+      description: 'Intelligent financial planning and budgeting platform with AI insights',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered budget forecasting',
+        'Financial goal tracking',
+        'Expense categorization and analysis',
+        'Investment recommendations',
+        'Risk assessment and management',
+        'Integration with financial systems',
+        'Custom financial models',
+        'Real-time financial insights'
+      ],
+      benefits: [
+        'Improve financial planning',
+        'Better budget management',
+        'Optimize investments',
+        'Reduce financial risks'
+      ],
+      category: 'Financial Planning',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-supply-chain-visibility',
+      name: 'Zion AI Supply Chain Visibility',
+      description: 'Real-time supply chain monitoring and risk management platform',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Real-time supply chain tracking',
+        'Risk assessment and alerts',
+        'Supplier performance monitoring',
+        'Demand and supply forecasting',
+        'Disruption prediction',
+        'Integration with supply chain systems',
+        'Custom monitoring rules',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Improve supply chain visibility',
+        'Reduce supply chain risks',
+        'Optimize supplier relationships',
+        'Better demand planning'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-content-personalization',
+      name: 'Zion AI Content Personalization',
+      description: 'AI-powered content personalization platform for websites and applications',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Real-time content personalization',
+        'User behavior analysis',
+        'A/B testing automation',
+        'Dynamic content recommendations',
+        'Multi-channel personalization',
+        'Integration with CMS platforms',
+        'Custom personalization rules',
+        'Advanced analytics and insights'
+      ],
+      benefits: [
+        'Increase engagement by 200%',
+        'Improve conversion rates',
+        'Personalized user experience',
+        'Automated content optimization'
+      ],
+      category: 'Content Management',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-customer-journey-mapping',
+      name: 'Zion AI Customer Journey Mapping',
+      description: 'Intelligent customer journey mapping and optimization platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Automated journey mapping',
+        'Touchpoint analysis',
+        'Conversion optimization',
+        'Customer experience scoring',
+        'Journey analytics and insights',
+        'Integration with analytics tools',
+        'Custom journey models',
+        'Real-time journey monitoring'
+      ],
+      benefits: [
+        'Understand customer journeys',
+        'Optimize touchpoints',
+        'Improve conversion rates',
+        'Better customer experience'
+      ],
+      category: 'Customer Experience',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-competitor-analysis',
+      name: 'Zion AI Competitor Analysis',
+      description: 'AI-powered competitor analysis and market intelligence platform',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'Automated competitor monitoring',
+        'Price comparison and analysis',
+        'Product feature tracking',
+        'Marketing campaign analysis',
+        'Market share insights',
+        'Integration with business tools',
+        'Custom analysis rules',
+        'Real-time competitive intelligence'
+      ],
+      benefits: [
+        'Stay ahead of competitors',
+        'Identify market opportunities',
+        'Optimize pricing strategies',
+        'Better market positioning'
+      ],
+      category: 'Market Intelligence',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-customer-support-analytics',
+      name: 'Zion AI Customer Support Analytics',
+      description: 'Advanced customer support analytics and optimization platform',
+      price: '$149/month',
+      marketPrice: '$300-900/month',
+      features: [
+        'Support ticket analysis',
+        'Agent performance tracking',
+        'Customer satisfaction scoring',
+        'Response time optimization',
+        'Knowledge base insights',
+        'Integration with support systems',
+        'Custom analytics rules',
+        'Real-time support monitoring'
+      ],
+      benefits: [
+        'Improve support efficiency',
+        'Better agent performance',
+        'Higher customer satisfaction',
+        'Optimize support processes'
+      ],
+      category: 'Customer Service',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-business-intelligence',
+      name: 'Zion AI Business Intelligence',
+      description: 'Comprehensive business intelligence platform with AI-powered insights',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'AI-powered data analysis',
+        'Automated report generation',
+        'Predictive analytics',
+        'Custom dashboard creation',
+        'Data visualization tools',
+        'Integration with business systems',
+        'Custom analytics models',
+        'Real-time business insights'
+      ],
+      benefits: [
+        'Data-driven decision making',
+        'Automated reporting',
+        'Better business insights',
+        'Competitive advantage'
+      ],
+      category: 'Business Intelligence',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-risk-management',
+      name: 'Zion AI Risk Management',
+      description: 'AI-powered risk assessment and management platform',
+      price: '$349/month',
+      marketPrice: '$700-2000/month',
+      features: [
+        'Automated risk assessment',
+        'Risk scoring and prioritization',
+        'Compliance monitoring',
+        'Incident prediction',
+        'Risk mitigation recommendations',
+        'Integration with business systems',
+        'Custom risk models',
+        'Real-time risk monitoring'
+      ],
+      benefits: [
+        'Proactive risk management',
+        'Reduce business risks',
+        'Compliance assurance',
+        'Better risk insights'
+      ],
+      category: 'Risk Management',
+      popular: false,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-customer-segmentation',
+      name: 'Zion AI Customer Segmentation',
+      description: 'Advanced customer segmentation and targeting platform with AI insights',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered customer segmentation',
+        'Behavioral analysis',
+        'Predictive modeling',
+        'Targeting optimization',
+        'Segmentation analytics',
+        'Integration with marketing tools',
+        'Custom segmentation rules',
+        'Real-time segmentation updates'
+      ],
+      benefits: [
+        'Better customer targeting',
+        'Improve marketing ROI',
+        'Personalized campaigns',
+        'Data-driven segmentation'
+      ],
+      category: 'Marketing',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-operational-efficiency',
+      name: 'Zion AI Operational Efficiency',
+      description: 'AI-powered operational efficiency optimization platform',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'Process optimization analysis',
+        'Efficiency metrics tracking',
+        'Bottleneck identification',
+        'Resource utilization optimization',
+        'Performance benchmarking',
+        'Integration with operational systems',
+        'Custom efficiency models',
+        'Real-time efficiency monitoring'
+      ],
+      benefits: [
+        'Improve operational efficiency',
+        'Reduce operational costs',
+        'Optimize resource utilization',
+        'Better process insights'
+      ],
+      category: 'Operations',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-customer-retention',
+      name: 'Zion AI Customer Retention',
+      description: 'Intelligent customer retention platform with churn prediction and retention strategies',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Churn prediction algorithms',
+        'Retention strategy recommendations',
+        'Customer health scoring',
+        'Engagement optimization',
+        'Loyalty program management',
+        'Integration with CRM systems',
+        'Custom retention models',
+        'Real-time retention monitoring'
+      ],
+      benefits: [
+        'Reduce customer churn by 40%',
+        'Improve customer retention',
+        'Optimize retention strategies',
+        'Better customer insights'
+      ],
+      category: 'Customer Retention',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-market-research',
+      name: 'Zion AI Market Research',
+      description: 'AI-powered market research and trend analysis platform',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'Automated market research',
+        'Trend analysis and forecasting',
+        'Consumer behavior insights',
+        'Market opportunity identification',
+        'Competitive landscape analysis',
+        'Integration with research tools',
+        'Custom research models',
+        'Real-time market insights'
+      ],
+      benefits: [
+        'Better market understanding',
+        'Identify opportunities',
+        'Competitive advantage',
+        'Data-driven market insights'
+      ],
+      category: 'Market Research',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-customer-loyalty',
+      name: 'Zion AI Customer Loyalty',
+      description: 'AI-powered customer loyalty and rewards management platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Loyalty program management',
+        'Reward optimization',
+        'Customer engagement tracking',
+        'Personalized offers',
+        'Gamification elements',
+        'Integration with e-commerce platforms',
+        'Custom loyalty rules',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Increase customer loyalty',
+        'Improve retention rates',
+        'Boost customer engagement',
+        'Optimize reward programs'
+      ],
+      category: 'Customer Loyalty',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-business-process-automation',
+      name: 'Zion AI Business Process Automation',
+      description: 'Intelligent business process automation with AI-powered decision making',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Process discovery and mapping',
+        'Automated workflow creation',
+        'AI-powered decision making',
+        'Exception handling',
+        'Process optimization',
+        'Integration with business systems',
+        'Custom automation rules',
+        'Real-time process monitoring'
+      ],
+      benefits: [
+        'Automate business processes',
+        'Reduce manual work',
+        'Improve process efficiency',
+        'Better process insights'
+      ],
+      category: 'Process Automation',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-customer-insights-pro',
+      name: 'Zion AI Customer Insights Pro',
+      description: 'Advanced customer insights platform with behavioral analysis and predictions',
+      price: '$349/month',
+      marketPrice: '$700-2000/month',
+      features: [
+        'Advanced behavioral analysis',
+        'Customer journey insights',
+        'Predictive customer modeling',
+        'Segmentation and profiling',
+        'Engagement optimization',
+        'Integration with customer systems',
+        'Custom insight models',
+        'Real-time customer intelligence'
+      ],
+      benefits: [
+        'Deep customer understanding',
+        'Predict customer behavior',
+        'Optimize customer experience',
+        'Data-driven customer strategies'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-financial-forecasting',
+      name: 'Zion AI Financial Forecasting',
+      description: 'AI-powered financial forecasting and planning platform',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered financial forecasting',
+        'Budget planning and optimization',
+        'Cash flow prediction',
+        'Investment analysis',
+        'Risk assessment',
+        'Integration with financial systems',
+        'Custom forecasting models',
+        'Real-time financial insights'
+      ],
+      benefits: [
+        'Improve financial planning',
+        'Better budget accuracy',
+        'Optimize investments',
+        'Reduce financial risks'
+      ],
+      category: 'Financial Planning',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-customer-success',
+      name: 'Zion AI Customer Success',
+      description: 'AI-powered customer success management and optimization platform',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Customer health scoring',
+        'Success milestone tracking',
+        'Churn risk prediction',
+        'Engagement optimization',
+        'Success playbook automation',
+        'Integration with CRM systems',
+        'Custom success models',
+        'Real-time success monitoring'
+      ],
+      benefits: [
+        'Improve customer success rates',
+        'Reduce churn',
+        'Optimize customer journeys',
+        'Better success insights'
+      ],
+      category: 'Customer Success',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-business-metrics',
+      name: 'Zion AI Business Metrics',
+      description: 'Comprehensive business metrics tracking and optimization platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'KPI tracking and monitoring',
+        'Performance benchmarking',
+        'Goal setting and tracking',
+        'Automated reporting',
+        'Trend analysis',
+        'Integration with business systems',
+        'Custom metrics creation',
+        'Real-time performance insights'
+      ],
+      benefits: [
+        'Track business performance',
+        'Optimize key metrics',
+        'Automated reporting',
+        'Better business insights'
+      ],
+      category: 'Business Metrics',
+      popular: true,
+      users: 'Up to 25 users'
     }
   ];
 
@@ -1114,7 +1816,22 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Security & Fraud', name: 'Security & Fraud', count: products.filter(p => p.category === 'Security & Fraud').length },
     { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
     { id: 'Marketing Automation', name: 'Marketing Automation', count: products.filter(p => p.category === 'Marketing Automation').length },
-    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length }
+    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length },
+    { id: 'Sales Analytics', name: 'Sales Analytics', count: products.filter(p => p.category === 'Sales Analytics').length },
+    { id: 'Pricing Intelligence', name: 'Pricing Intelligence', count: products.filter(p => p.category === 'Pricing Intelligence').length },
+    { id: 'Inventory Management', name: 'Inventory Management', count: products.filter(p => p.category === 'Inventory Management').length },
+    { id: 'Productivity', name: 'Productivity', count: products.filter(p => p.category === 'Productivity').length },
+    { id: 'Financial Planning', name: 'Financial Planning', count: products.filter(p => p.category === 'Financial Planning').length },
+    { id: 'Market Intelligence', name: 'Market Intelligence', count: products.filter(p => p.category === 'Market Intelligence').length },
+    { id: 'Business Intelligence', name: 'Business Intelligence', count: products.filter(p => p.category === 'Business Intelligence').length },
+    { id: 'Risk Management', name: 'Risk Management', count: products.filter(p => p.category === 'Risk Management').length },
+    { id: 'Operations', name: 'Operations', count: products.filter(p => p.category === 'Operations').length },
+    { id: 'Customer Retention', name: 'Customer Retention', count: products.filter(p => p.category === 'Customer Retention').length },
+    { id: 'Market Research', name: 'Market Research', count: products.filter(p => p.category === 'Market Research').length },
+    { id: 'Customer Loyalty', name: 'Customer Loyalty', count: products.filter(p => p.category === 'Customer Loyalty').length },
+    { id: 'Process Automation', name: 'Process Automation', count: products.filter(p => p.category === 'Process Automation').length },
+    { id: 'Customer Success', name: 'Customer Success', count: products.filter(p => p.category === 'Customer Success').length },
+    { id: 'Business Metrics', name: 'Business Metrics', count: products.filter(p => p.category === 'Business Metrics').length }
   ];
 
   return (
