@@ -12,7 +12,13 @@ const Footer: React.FC = memo(() => {
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
     { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
-    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
+    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' },
+    { name: 'AI Healthcare Solutions', url: '/ai-services', description: 'Medical AI applications' },
+    { name: 'AI Financial Services', url: '/ai-services', description: 'Fintech AI solutions' },
+    { name: 'AI HR & Talent Management', url: '/ai-services', description: 'HR automation' },
+    { name: 'AI Supply Chain Optimization', url: '/ai-services', description: 'Supply chain AI' },
+    { name: 'AI Cybersecurity Suite', url: '/ai-services', description: 'Security AI' },
+    { name: 'AI Edge Computing', url: '/ai-services', description: 'Distributed AI processing' }
   ];
 
   const itServices = [
@@ -21,16 +27,28 @@ const Footer: React.FC = memo(() => {
     { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
-    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
+    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
+    { name: 'Mobile App Development', url: '/it-services', description: 'iOS & Android apps' },
+    { name: 'Web Development', url: '/it-services', description: 'Modern web applications' },
+    { name: 'IT Infrastructure Management', url: '/it-services', description: 'Infrastructure setup' },
+    { name: 'API Development', url: '/it-services', description: 'Custom API solutions' },
+    { name: 'IT Support & Helpdesk', url: '/it-services', description: 'Technical support' },
+    { name: 'Software Licensing', url: '/it-services', description: 'License management' }
   ];
 
   const microSaasServices = [
-    { name: 'Business Intelligence', url: '/micro-saas', description: 'Analytics dashboard' },
-    { name: 'AI Customer Support', url: '/micro-saas', description: 'Chatbot solutions' },
-    { name: 'Email Marketing', url: '/micro-saas', description: 'Marketing automation' },
-    { name: 'Project Management', url: '/micro-saas', description: 'Team collaboration' },
-    { name: 'Lead Generation', url: '/micro-saas', description: 'Sales automation' },
-    { name: 'Financial Analytics', url: '/micro-saas', description: 'Financial management' }
+    { name: 'Zion Analytics Pro', url: '/micro-saas', description: 'Business intelligence' },
+    { name: 'Zion Chat AI', url: '/micro-saas', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/micro-saas', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/micro-saas', description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/micro-saas', description: 'AI content creation' },
+    { name: 'Zion CRM Pro', url: '/micro-saas', description: 'AI-enhanced CRM' },
+    { name: 'Zion Workflow Engine', url: '/micro-saas', description: 'Process automation' },
+    { name: 'Zion Finance AI', url: '/micro-saas', description: 'Financial management' },
+    { name: 'Zion Project Manager', url: '/micro-saas', description: 'AI project management' },
+    { name: 'Zion Email Marketing Pro', url: '/micro-saas', description: 'Email automation' },
+    { name: 'Zion Lead Gen AI', url: '/micro-saas', description: 'Lead generation' },
+    { name: 'Zion Data Sync', url: '/micro-saas', description: 'Data integration' }
   ];
 
   const companyLinks = [

@@ -517,6 +517,254 @@ body {
   }
 }
 
+/* Advanced Cyber Scan Lines */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: cyberScan 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes cyberScan {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: var(--gradient-holographic);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographicShift 4s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Matrix Code Rain Effect */
+.matrix-code-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-code-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(transparent 50%, rgba(0, 255, 0, 0.02) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(0, 255, 0, 0.01) 50%);
+  background-size: 100% 4px, 2px 100%;
+  animation: matrixCodeRain 15s linear infinite;
+}
+
+@keyframes matrixCodeRain {
+  0% { transform: translateY(-100%) translateX(0); }
+  100% { transform: translateY(100vh) translateX(0); }
+}
+
+/* Quantum Energy Field */
+.quantum-energy-field {
+  position: relative;
+}
+
+.quantum-energy-field::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: quantumEnergyPulse 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes quantumEnergyPulse {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1) rotate(0deg);
+  }
+  25% { 
+    opacity: 0.6; 
+    transform: scale(1.1) rotate(90deg);
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: scale(1.2) rotate(180deg);
+  }
+  75% { 
+    opacity: 0.7; 
+    transform: scale(1.1) rotate(270deg);
+  }
+}
+
+/* Cyber Glitch Text */
+.cyber-text {
+  position: relative;
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: cyberGlitch 2s ease-in-out infinite;
+}
+
+.cyber-text::before,
+.cyber-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  overflow: hidden;
+}
+
+.cyber-text::before {
+  animation: cyberGlitch1 2s ease-in-out infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.cyber-text::after {
+  animation: cyberGlitch2 2s ease-in-out infinite;
+  color: #00ff00;
+  z-index: -2;
+}
+
+@keyframes cyberGlitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes cyberGlitch1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+}
+
+@keyframes cyberGlitch2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(1px, -1px); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+/* Advanced Neon Glow */
+.neon-glow {
+  box-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan),
+    0 0 35px var(--neon-cyan),
+    0 0 40px var(--neon-cyan);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { 
+    box-shadow: 
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      0 0 20px var(--neon-cyan),
+      0 0 35px var(--neon-cyan),
+      0 0 40px var(--neon-cyan);
+  }
+  100% { 
+    box-shadow: 
+      0 0 2px var(--neon-cyan),
+      0 0 5px var(--neon-cyan),
+      0 0 8px var(--neon-cyan),
+      0 0 12px var(--neon-cyan),
+      0 0 18px var(--neon-cyan),
+      0 0 22px var(--neon-cyan);
+  }
+}
+
+/* Cyber Grid Animation */
+.cyber-grid-animated {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: cyberGridMove 20s linear infinite;
+}
+
+@keyframes cyberGridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 20px; }
+}
+
+/* Quantum Tunnel Effect */
+.quantum-tunnel {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-tunnel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at center, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%);
+  animation: quantumTunnel 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes quantumTunnel {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
 /* Enhanced Loading Animation */
 .loading-dots-enhanced {
   display: inline-block;
@@ -558,6 +806,110 @@ body {
       0 0 6px var(--neon-cyan),
       0 0 9px var(--neon-cyan),
       0 0 12px var(--neon-cyan);
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .cyber-card-enhanced {
+    padding: 2.5rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 1.25rem 3rem;
+    font-size: 1rem;
+  }
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 640px) {
+  .cyber-card-enhanced {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .holographic-text {
+    font-size: 2.5rem;
+  }
+  
+  .neon-text-enhanced {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cyber-card-enhanced {
+    padding: 1.75rem;
+  }
+  
+  .cyber-button-enhanced {
+    padding: 1rem 2.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-card-enhanced {
+    border-width: 0.5px;
+  }
+  
+  .neon-text-enhanced {
+    text-shadow: 
+      0 0 2px var(--neon-cyan),
+      0 0 4px var(--neon-cyan),
+      0 0 6px var(--neon-cyan),
+      0 0 8px var(--neon-cyan),
+      0 0 12px var(--neon-cyan),
+      0 0 16px var(--neon-cyan);
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .cyber-card-enhanced {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(6, 182, 212, 0.4);
+  }
+  
+  .holographic-text {
+    background: var(--gradient-holographic);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Print styles */
+@media print {
+  .cyber-card-enhanced,
+  .holographic-card-enhanced,
+  .quantum-energy-field,
+  .cyber-scan-line,
+  .matrix-rain,
+  .neural-network-bg {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .neon-text-enhanced,
+  .holographic-text,
+  .cyber-text {
+    color: black !important;
+    text-shadow: none !important;
+    background: none !important;
+    -webkit-text-fill-color: black !important;
   }
 }
 
