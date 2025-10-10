@@ -25,6 +25,10 @@
   src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQDBWGbfyE.woff2') format('woff2');
 }
 
+<<<<<<< HEAD
+=======
+/* Import Futuristic Styles */
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
 @import './styles/futuristic.css';
 
 @tailwind base;

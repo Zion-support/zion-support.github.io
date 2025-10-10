@@ -10,6 +10,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 =======
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { ErrorBoundary } from 'react-error-boundary';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 import Navigation from './app/components/Navigation';
@@ -25,6 +26,10 @@ import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 =======
+=======
+import Navigation from './app/components/EnhancedNavigation';
+import Footer from './app/components/EnhancedFooter';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
 import LoadingSpinner from './src/components/LoadingSpinner';
 <<<<<<< HEAD
 import PerformanceMonitor from './src/components/PerformanceMonitor';
