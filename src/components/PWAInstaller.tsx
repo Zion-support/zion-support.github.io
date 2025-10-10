@@ -66,11 +66,11 @@ const PWAInstaller: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+      </div><div className="flex items-start space-x-3">
+        </div><div className="flex-shrink-0">
+          </div><div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
             📱
-          </div>
+          </div></div>
         </div>
         
         <div className="flex-1 min-w-0">
@@ -79,7 +79,7 @@ const PWAInstaller: React.FC = () => {
             Install Zion Tech Group app for a better experience with offline access and faster loading.
           </p>
           
-          <div className="flex space-x-2">
+          </div><div className="flex space-x-2">
             <button
               onClick={handleInstallClick}
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
@@ -93,7 +93,7 @@ const PWAInstaller: React.FC = () => {
             >
               Maybe later
             </button>
-          </div>
+          </div></div>
         </div>
         
         <button

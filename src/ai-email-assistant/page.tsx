@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 
@@ -39,7 +39,7 @@ import Footer from '../components/Footer';
 // >
 //               Get Free Demo;
           </a>
-          </div>
+          </section></main></div></div>
         </section>
         {/* Features Section */}"
         <section className="mb-16"></section>"
@@ -48,9 +48,9 @@ import Footer from '../components/Footer';
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+  lg:grid-cols-3 gap-8"></div></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
               <p className="text-gray-300"></p>
 // AI-powered email responses that understand context and tone, automatically generating;
@@ -66,8 +66,8 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
               <p className="text-gray-300"></p>
 // Automatically schedule meetings, set reminders, and manage your calendar based on;
@@ -83,8 +83,8 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
               <p className="text-gray-300"></p>
 // AI analyzes email importance and urgency, automatically organizing your inbox;
@@ -100,8 +100,8 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
               <p className="text-gray-300"></p>
                 Automated follow-up sequences for sales, customer service, and project management;
@@ -117,8 +117,8 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
               <p className="text-gray-300"></p>
 // Track email performance, response times, and engagement metrics with detailed;
@@ -134,8 +134,8 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
               <p className="text-gray-300"></p>
 // Bank-level encryption and security protocols ensure your email data remains;
@@ -159,10 +159,10 @@ import Footer from '../components/Footer';
 // Pricing Plans;
           </h2>"
           <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
-            <div className="cyber-card hologram-card p-8 text-center"></div>"
+  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div></div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 1,000 emails/month</li>
                 <li> Basic AI responses</li>
@@ -174,10 +174,10 @@ import Footer from '../components/Footer';
 // Get Started;
           </a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
-              <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
+            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div></div>"
+              <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 10,000 emails/month</li>
                 <li> Advanced AI responses</li>
@@ -190,9 +190,9 @@ import Footer from '../components/Footer';
 // Get Started;
           </a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center"></div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Unlimited emails</li>
                 <li> Custom AI training</li>
@@ -250,7 +250,7 @@ import Footer from '../components/Footer';
 // >
 //                Email Us;
           </a>
-          </div>
+          </div></div>
         </section>
       </main>
       <Footer /></Footer>

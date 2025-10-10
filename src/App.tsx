@@ -140,7 +140,7 @@ const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./
 const MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
-  </div>
+  </div></div>
 );
 
 const App: React.FC = () => {

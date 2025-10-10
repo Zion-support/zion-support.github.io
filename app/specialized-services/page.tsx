@@ -6,10 +6,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-            </div>
-          </div>
-        </div>
-      </section>
+            
+          
+        
+      
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-          </div>
+          
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -33,9 +33,9 @@ const PagePage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          
+        
+      
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -47,7 +47,7 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-          </div>
+          
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -56,9 +56,9 @@ const PagePage: React.FC = () => {
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          
+        
+      
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -79,11 +79,11 @@ const PagePage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+            
+          
+        
+      
+    
   );
 };
 

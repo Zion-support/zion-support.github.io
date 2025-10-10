@@ -85,13 +85,13 @@ $4});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
+      </div><div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
-      </div>
+      </div></div>
   );
 
 export default ContactPage;
@@ -171,10 +171,10 @@ export default ContactPage;
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="max-w-2xl mx-auto text-center p-8">
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        </div><div className="max-w-2xl mx-auto text-center p-8">
+          </div><div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
-          </div>
+          </div></div>
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
           <p className="text-xl text-gray-300 mb-6">
             Your message has been sent successfully. Our team will get back to you within 24 hours.
@@ -183,19 +183,19 @@ export default ContactPage;
             <p className="text-gray-400">
               <strong>What happens next?</strong>
             </p>
-            <div className="space-y-2 text-left max-w-md mx-auto">
-              <div className="flex items-center space-x-3">
+            </div><div className="space-y-2 text-left max-w-md mx-auto">
+              </div><div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">We'll review your requirements</span>
-              </div>
+              </div></div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">Schedule a consultation call</span>
-              </div>
+              </div></div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">Provide a detailed proposal</span>
-              </div>
+              </div></div>
             </div>
           </div>
           <div className="mt-8">
@@ -206,7 +206,7 @@ export default ContactPage;
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home
             </a>
-          </div>
+          </div></div>
         </div>
       </div>
     );
@@ -215,10 +215,10 @@ export default ContactPage;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+      </div><section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section></div></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          </div><div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Get In Touch
             </h1>
@@ -226,15 +226,15 @@ export default ContactPage;
               Ready to transform your business with AI? Let's discuss your project and explore 
               how we can help you achieve your goals.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+            </div><div className="flex flex-wrap justify-center gap-6">
+              </div><div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">{contactInfo.phone}</span>
-              </div>
+              </div></div>
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">{contactInfo.email}</span>
-              </div>
+              </div></div>
             </div>
           </div>
         </div>
@@ -243,13 +243,13 @@ export default ContactPage;
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-slate-800/50 rounded-lg p-8">
+            </div><div className="bg-slate-800/50 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                </div><div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  </div><div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -262,7 +262,7 @@ export default ContactPage;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="Your full name"
                     />
-                  </div>
+                  </section></div></div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -276,11 +276,11 @@ export default ContactPage;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="your@email.com"
                     />
-                  </div>
+                  </div></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  </div><div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
@@ -292,7 +292,7 @@ export default ContactPage;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="Your company name"
                     />
-                  </div>
+                  </div></div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -305,11 +305,11 @@ export default ContactPage;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="+1 (555) 123-4567"
                     />
-                  </div>
+                  </div></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  </div><div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
@@ -324,7 +324,7 @@ export default ContactPage;
                         <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
-                  </div>
+                  </div></div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Budget Range
@@ -340,7 +340,7 @@ export default ContactPage;
                         <option key={index} value={range}>{range}</option>
                       ))}
                     </select>
-                  </div>
+                  </div></div>
                 </div>
 
                 <div>
@@ -358,7 +358,7 @@ export default ContactPage;
                       <option key={index} value={timeline}>{timeline}</option>
                     ))}
                   </select>
-                </div>
+                </div></div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -373,7 +373,7 @@ export default ContactPage;
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
-                </div>
+                </div></div>
 
                 <button
                   type="submit"
@@ -382,12 +382,12 @@ export default ContactPage;
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      </><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
                       Sending...
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5 mr-2" />
+                      </><Send className="w-5 h-5 mr-2" />
                       Send Message
                     </>
                   )}
@@ -397,35 +397,35 @@ export default ContactPage;
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div>
+              </div><div>
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
+                </div><div className="space-y-6">
+                  </div><div className="flex items-start space-x-4">
                     <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-medium">{contactInfo.phone}</div>
-                      <div className="text-gray-400 text-sm">Call us anytime</div>
+                    </div><div>
+                      </div><div className="text-white font-medium">{contactInfo.phone}</div></div>
+                      <div className="text-gray-400 text-sm">Call us anytime</div></div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-medium">{contactInfo.email}</div>
-                      <div className="text-gray-400 text-sm">Email us</div>
+                    </div><div>
+                      </div><div className="text-white font-medium">{contactInfo.email}</div></div>
+                      <div className="text-gray-400 text-sm">Email us</div></div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-medium">Middletown, DE</div>
-                      <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+                    </div><div>
+                      </div><div className="text-white font-medium">Middletown, DE</div></div>
+                      <div className="text-gray-400 text-sm">{contactInfo.address}</div></div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Clock className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-medium">{contactInfo.hours}</div>
-                      <div className="text-gray-400 text-sm">Business hours</div>
+                    </div><div>
+                      </div><div className="text-white font-medium">{contactInfo.hours}</div></div>
+                      <div className="text-gray-400 text-sm">Business hours</div></div>
                     </div>
                   </div>
                 </div>
@@ -433,29 +433,29 @@ export default ContactPage;
 
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
+                </div><div className="space-y-3">
+                  </div><div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">300% Average ROI</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">99.9% Uptime Guarantee</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">24/7 Support</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">Enterprise Security</span>
-                  </div>
+                  </div></div>
                 </div>
               </div>
 
               <div className="bg-slate-800/50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
-                <div className="space-y-3">
+                </div><div className="space-y-3">
                   <a
                     href="/consultation"
                     className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center"
@@ -470,7 +470,7 @@ export default ContactPage;
                     <MessageSquare className="w-5 h-5 inline mr-2" />
                     Request Demo
                   </a>
-                </div>
+                </div></div>
               </div>
             </div>
           </div>
@@ -480,36 +480,36 @@ export default ContactPage;
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Global Offices
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               We're here to serve you wherever you are in the world
             </p>
-          </div>
+          </section></div></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offices.map((office, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
+              </div><div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-center space-x-2">
+                </div><div className="space-y-3">
+                  </div><div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-4 h-4 text-cyan-400" />
                     <span className="text-gray-300 text-sm">{office.address}</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="w-4 h-4 text-purple-400" />
                     <span className="text-gray-300 text-sm">{office.phone}</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="w-4 h-4 text-green-400" />
                     <span className="text-gray-300 text-sm">{office.email}</span>
-                  </div>
+                  </div></div>
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="w-4 h-4 text-yellow-400" />
                     <span className="text-gray-300 text-sm">{office.hours}</span>
-                  </div>
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
+                  </div></div>
+                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div></div>
                 </div>
               </div>
             ))}
@@ -520,21 +520,21 @@ export default ContactPage;
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Common questions about our services and process
             </p>
-          </div>
+          </section></div></div>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+            </div><div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                </div><div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>
+                </div></div>
               ))}
             </div>
           </div>

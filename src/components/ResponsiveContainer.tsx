@@ -78,7 +78,7 @@ const,
           
           
           
-          <div className={className}>{children}</div>;
+          <div className={className}>{children}</div></div>;
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -92,7 +92,7 @@ const,
     <div className="responsivecontainer">
 
       {/* Component content */}
-    </div>)
+    </div></div>)
   );
 };
 // Hook for responsive values;

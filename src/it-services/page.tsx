@@ -372,7 +372,7 @@ const ITServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -397,7 +397,7 @@ const ITServicesPage: React.FC = () => {
             >
               (302) 464-0950
             </a>
-          </div>
+          </section></main></div></div>
         </section>
 
         {/* Main Services Grid */}
@@ -405,10 +405,10 @@ const ITServicesPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-cyan-400 mb-4">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" })}
-                </div>
+              </div><div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                </div><div className="text-cyan-400 mb-4">
+                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" }
+                </section></div></div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                 <div className="mb-4">
@@ -421,7 +421,7 @@ const ITServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div></div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
@@ -432,19 +432,19 @@ const ITServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div></div>
                 <div className="mb-4">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  </div><div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div></div>
                 </div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-1">
+                  </div><div className="flex flex-wrap gap-1">
                     {service.technologies.slice(0, 4).map((tech, idx) => (
                       <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  </div></div>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
@@ -456,7 +456,7 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>
+                  </div><div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div></div>
                   <a
                     href="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
@@ -474,13 +474,13 @@ const ITServicesPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
-                <div className="flex items-center mb-3">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" })}
+              </div><div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
+                </div><div className="flex items-center mb-3">
+                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" }
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
-                </div>
+                </section></div></div>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
-                <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
+                <div className="text-cyan-400 font-bold text-sm">{service.price}</div></div>
               </div>
             ))}
           </div>
@@ -490,9 +490,9 @@ const ITServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+            </div><div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
+              </div><div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</section></div></div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -516,7 +516,7 @@ const ITServicesPage: React.FC = () => {
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
+              </div><div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div></div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -544,7 +544,7 @@ const ITServicesPage: React.FC = () => {
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
+              </div><div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div></div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -580,7 +580,7 @@ const ITServicesPage: React.FC = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -593,7 +593,7 @@ const ITServicesPage: React.FC = () => {
               >
                 (302) 464-0950
               </a>
-            </div>
+            </section></div></div>
           </div>
           </section>
         </main>

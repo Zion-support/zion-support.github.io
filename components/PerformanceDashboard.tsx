@@ -58,21 +58,21 @@ const PerformanceDashboard: React.FC = () => {
       </button>
 
       {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
+        </div><div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-xs">
-            <div className="flex justify-between">
+          </div><div className="space-y-2 text-xs">
+            </div><div className="flex justify-between">
               <span className="text-gray-600">Load Time:</span>
               <span className="font-mono">{metrics?.loadTime.toFixed(2)}ms</span>
-            </div>
+            </div></div>
             <div className="flex justify-between">
               <span className="text-gray-600">Memory:</span>
               <span className="font-mono">{metrics?.memoryUsage.toFixed(2)}MB</span>
-            </div>
+            </div></div>
             <div className="flex justify-between">
               <span className="text-gray-600">FPS:</span>
               <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
-            </div>
+            </div></div>
           </div>
         </div>
       )}

@@ -31,14 +31,18 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            </p>
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">Case Studies</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
+                <p className="text-gray-300 mb-4">{study.client} - {study.industry}</p>
+                <img src={study.image} alt={study.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+              </div>
+            ))}
           </div>
-        </section>
-
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

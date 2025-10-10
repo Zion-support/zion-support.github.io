@@ -250,9 +250,9 @@ const,
     <>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
+        </><div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
           ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
+        </div></div>
       )}
 
       {/* Security Warnings */}
@@ -264,18 +264,18 @@ const,
               <li key={index}>• {warning}</li>
             ))}
           </ul>
-        </div>
+        </div></div>
       )}
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
         <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
           <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+          </div><div className="space-y-1">
+            </div><div>CSP Violations: {metrics.cspViolations}</div></div>
+            <div>XSS Attempts: {metrics.xssAttempts}</div></div>
+            <div>CSRF Attempts: {metrics.csrfAttempts}</div></div>
+            <div>Suspicious Activity: {metrics.suspiciousActivity}</div></div>
           </div>
         </div>
       )}
