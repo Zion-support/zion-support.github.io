@@ -550,13 +550,13 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-          {/* New AI Services Grid */}
+          {/* Advanced AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -569,7 +569,7 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -582,7 +582,7 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -595,7 +595,7 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -608,7 +608,7 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -621,7 +621,7 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -630,6 +630,84 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
                   <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Business Intelligence</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced AI-powered business intelligence with predictive analytics, automated insights, and strategic recommendations.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $399/month</div>
+                  <a href="/ai-business-intelligence" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Content Generation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Create high-quality content with AI-powered writing, image generation, and video production tools.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $179/month</div>
+                  <a href="/ai-content-generation" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Cybersecurity</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced AI-powered cybersecurity with threat detection, automated response, and security monitoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">Starting at $299/month</div>
+                  <a href="/ai-cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Mobile Development</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Build intelligent mobile apps with AI integration, automated testing, and smart user experiences.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">Starting at $1,299/month</div>
+                  <a href="/ai-mobile-development" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏥</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Healthcare Solutions</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Medical AI solutions with diagnostic assistance, treatment recommendations, and patient monitoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">Starting at $1,999/month</div>
+                  <a href="/ai-healthcare" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Financial Services</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered financial services with fraud detection, risk assessment, and automated trading.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">Starting at $1,499/month</div>
+                  <a href="/ai-fintech" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -696,47 +774,86 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-          {/* IT Services Grid */}
+          {/* Additional IT Services */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
+              Additional IT Services
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Web Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Streamline development workflows with automated testing, deployment, and monitoring solutions.
+                  Modern web applications with responsive design, SEO optimization, and performance monitoring.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                  <div className="text-lg font-bold text-orange-400 mb-2">$1,199/month</div>
+                  <a href="/web-development" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Native and cross-platform mobile applications with AI integration and modern UX design.
+                  RESTful and GraphQL APIs with documentation, testing, and monitoring for seamless integration.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
-                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                  <div className="text-lg font-bold text-emerald-400 mb-2">$899/month</div>
+                  <a href="/api-development" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Data Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Database design, optimization, migration, and management with AI-powered performance tuning.
+                  Business intelligence solutions with data warehousing, ETL processes, and interactive dashboards.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>
-                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$1,499/month</div>
+                  <a href="/data-analytics" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Process Automation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  RPA and workflow automation to streamline business processes and reduce manual work.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-violet-400 mb-2">$699/month</div>
+                  <a href="/process-automation" className="text-violet-400 hover:text-violet-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Complete IT infrastructure setup with servers, networking, and security implementation.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">$1,899/month</div>
+                  <a href="/it-infrastructure" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛡️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Security Monitoring</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  24/7 security monitoring with threat detection, incident response, and compliance reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-400 mb-2">$1,299/month</div>
+                  <a href="/security-monitoring" className="text-red-400 hover:text-red-300 font-medium text-sm">
                     Learn More →
                   </a>
                 </div>
@@ -744,25 +861,26 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Micro SAAS Solutions Section */}
+          {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications with real market pricing.
           </p>
-          {/* Productivity Tools */}
+          
+          {/* Productivity & Business Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Productivity & Business Tools
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
+                  Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates and GPT-4 integration.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
@@ -771,11 +889,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Real-time business analytics with AI insights, automated reports, and predictive forecasting.
+                  Real-time business analytics with AI insights, automated reports, and predictive forecasting for data-driven decisions.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
@@ -784,11 +902,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Intelligent scheduling with calendar optimization, meeting coordination, and time management.
+                  Intelligent scheduling with calendar optimization, meeting coordination, and time management across multiple platforms.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
@@ -797,11 +915,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered expense management with receipt scanning, categorization, and budget insights.
+                  AI-powered expense management with receipt scanning, categorization, and budget insights with tax preparation.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>
@@ -810,11 +928,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Advanced task management with AI prioritization, team collaboration, and progress tracking.
+                  Advanced task management with AI prioritization, team collaboration, and progress tracking with time estimation.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
@@ -823,11 +941,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.
+                  Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation with email integration.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>
@@ -836,11 +954,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
+                  AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing with analytics.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
@@ -849,11 +967,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-driven social media management with content creation, scheduling, and performance analytics.
+                  AI-driven social media management with content creation, scheduling, and performance analytics across all platforms.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>
@@ -862,19 +980,37 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-            </div>
-          </div>
-          {/* Marketing & Sales Tools */}
-          <div className="mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📋</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Project Manager AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent project management with AI resource allocation, risk assessment, and automated reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-teal-400 mb-2">$69/month</div>
+                  <a href="/project-manager-ai" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Invoice Generator Pro</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Automated invoice creation with AI pricing suggestions, payment tracking, and financial reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-emerald-400 mb-2">$35/month</div>
+                  <a href="/invoice-generator-pro" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Create stunning graphics, logos, and marketing materials with AI-powered design tools.
+                  Create stunning graphics, logos, and marketing materials with AI-powered design tools and templates.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
@@ -883,11 +1019,11 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Build high-converting landing pages with AI optimization and A/B testing capabilities.
+                  Build high-converting landing pages with AI optimization, A/B testing, and conversion tracking.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
@@ -896,15 +1032,24 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
+            </div>
+          </div>
+
+          {/* Marketing & Sales Tools */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Marketing & Sales Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered SEO analysis and optimization with keyword research and content suggestions.
+                  AI-powered SEO analysis and optimization with keyword research, content suggestions, and ranking tracking.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
-                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                  <a href="/seo-optimizer-pro" className="text-green-400 hover:text-green-300 font-medium text-sm">
                     Try Free →
                   </a>
                 </div>
@@ -913,7 +1058,7 @@ const HomePage: React.FC = () => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.
+                  Automated ad campaign management with AI optimization across Google, Facebook, LinkedIn, and TikTok.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>
@@ -922,8 +1067,61 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Lead Generation AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered lead generation with automated prospecting, email sequences, and lead scoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$99/month</div>
+                  <a href="/lead-generation-ai" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Marketing Suite</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Complete email marketing platform with AI content generation, automation, and advanced analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">$89/month</div>
+                  <a href="/email-marketing-suite" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Analytics Dashboard</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Comprehensive analytics dashboard with AI insights, custom reports, and real-time data visualization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
+                  <a href="/analytics-dashboard" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Content Creator AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered content creation for blogs, social media, and marketing materials with brand consistency.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$65/month</div>
+                  <a href="/content-creator-ai" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
+
           {/* Developer Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
@@ -932,26 +1130,26 @@ const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  AI-powered code completion, debugging, and optimization for multiple programming languages.
+                  AI-powered code completion, debugging, and optimization for multiple programming languages with GitHub integration.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
-                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                  <a href="/code-assistant-pro" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
                     Try Free →
                   </a>
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Create and manage APIs with AI assistance, documentation generation, and testing tools.
+                  Create and manage APIs with AI assistance, documentation generation, testing tools, and monitoring.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
-                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                  <a href="/api-builder-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
                     Try Free →
                   </a>
                 </div>
@@ -971,13 +1169,126 @@ const HomePage: React.FC = () => {
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Automatically generate technical documentation, API docs, and user guides from code.
+                  Automatically generate technical documentation, API docs, and user guides from code with AI enhancement.
                 </p>
                 <div className="text-center">
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
-                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                  <a href="/doc-generator-pro" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Security Scanner</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered security vulnerability scanner with automated fixes and compliance reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-orange-400 mb-2">$75/month</div>
+                  <a href="/security-scanner" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Performance Monitor</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time application performance monitoring with AI-powered optimization suggestions and alerts.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$45/month</div>
+                  <a href="/performance-monitor" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          {/* Industry-Specific Tools */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Industry-Specific Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏥</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Medical Records AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered medical records management with automated data extraction and HIPAA compliance.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-400 mb-2">$199/month</div>
+                  <a href="/medical-records-ai" className="text-red-400 hover:text-red-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Accounting Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered accounting automation with bookkeeping, tax preparation, and financial reporting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$89/month</div>
+                  <a href="/accounting-assistant" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏠</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Property Management AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">$129/month</div>
+                  <a href="/property-management-ai" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚖️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Legal Document AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered legal document analysis, contract review, and compliance monitoring with risk assessment.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$149/month</div>
+                  <a href="/legal-document-ai" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Learning Platform AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered online learning platform with personalized content, progress tracking, and automated assessments.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">$79/month</div>
+                  <a href="/learning-platform-ai" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏭</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Supply Chain Optimizer</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered supply chain optimization with demand forecasting, inventory management, and logistics planning.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-teal-400 mb-2">$199/month</div>
+                  <a href="/supply-chain-optimizer" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
                     Try Free →
                   </a>
                 </div>
