@@ -1,13 +1,19 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, ArrowRight, Zap } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'general', name: 'General' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'implementation', name: 'Implementation' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +33,18 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'technical'
+    },
+    {
+      question: 'How do I contact emergency support?',
+      answer: 'For critical issues, call our emergency hotline at +1-302-464-0950 or email emergency@ziontechgroup.com. We respond within 15 minutes.',
+      category: 'technical'
     }
   ];
 
@@ -48,15 +61,20 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      availability: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
       contact: 'Available on website',
       availability: '24/7'
     }
   ];
+
+  const filteredFaqs = faqs.filter(faq => 
+    selectedCategory === 'all' || faq.category === selectedCategory
+  );
 
   return (
     <>
@@ -65,8 +83,6 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
       </Helmet>
-      
-      <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -102,7 +118,7 @@ const SupportPage: React.FC = () => {
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
@@ -114,8 +130,8 @@ const SupportPage: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      ? 'bg-cyan-400 text-white'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
                   {category.name}
@@ -125,6 +141,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Channels */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -136,8 +154,8 @@ const SupportPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
@@ -158,8 +176,8 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300">Find answers to common questions</p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              {filteredFaqs.map((faq, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
@@ -171,7 +189,7 @@ const SupportPage: React.FC = () => {
         {/* Support Hours */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
                 <p className="text-xl text-gray-300">We're here when you need us</p>
@@ -191,9 +209,37 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Still Need Help?
+              </h2>
+              <p className="text-gray-300 mb-8">
+                Can't find what you're looking for? Our expert team is ready to help you with any questions or issues.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white py-3 px-8 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </a>
+                <a
+                  href="mailto:support@ziontechgroup.com"
+                  className="border border-cyan-400 text-cyan-400 py-3 px-8 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 inline-flex items-center justify-center"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email Support
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      
-      <Footer />
     </>
   );
 };

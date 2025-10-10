@@ -115,11 +115,90 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-300">
+              Real feedback from businesses that have transformed with our solutions
+            </p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </blockquote>
+              <div className="text-white">
+                <div className="font-semibold">{testimonials[currentIndex].name}</div>
+                <div className="text-cyan-400">
+                  {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the advantages that make our solutions the preferred choice for businesses worldwide
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white py-3 px-8 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center">
+                <Zap className="w-5 h-5 mr-2" />
+                Start Your Journey
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 py-3 px-8 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 inline-flex items-center justify-center">
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
