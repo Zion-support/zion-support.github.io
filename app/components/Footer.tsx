@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -120,7 +120,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
-      
+
       {/* Quantum Particles */}
       <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
@@ -137,10 +137,10 @@ const Footer: React.FC = memo(() => {
               </div>
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
             </div>
-            
+
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services. Transforming businesses 
+              Leading provider of AI-powered enterprise solutions, quantum computing,
+              autonomous systems, and digital transformation services. Transforming businesses
               with cutting-edge technology and innovative solutions.
             </p>
 
@@ -201,7 +201,7 @@ const Footer: React.FC = memo(() => {
                   <ul className="space-y-2">
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
-                        <Link 
+                        <Link
                           to={service.href}
                           className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                         >
@@ -224,7 +224,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {companyLinks.map((link, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -241,7 +241,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {supportLinks.map((link, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -258,7 +258,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {legalLinks.map((link, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -279,7 +279,7 @@ const Footer: React.FC = memo(() => {
               Stay Updated with Our Latest Innovations
             </h3>
             <p className="text-gray-300 mb-6">
-              Get the latest news about AI breakthroughs, quantum computing advances, 
+              Get the latest news about AI breakthroughs, quantum computing advances,
               technology updates, and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -304,7 +304,7 @@ const Footer: React.FC = memo(() => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -324,7 +324,6 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
-});
 
 Footer.displayName = 'Footer';
 

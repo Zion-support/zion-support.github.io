@@ -71,9 +71,9 @@ const SecurityEnhancer: React.FC = () => {
             if (input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement) {
               input.value = sanitizeInput(input.value);
             }
-          });
-        });
-      });
+
+
+
     };
 
     // Add rate limiting for form submissions
@@ -86,7 +86,7 @@ const SecurityEnhancer: React.FC = () => {
         const form = event.target as HTMLFormElement;
         const formId = form.id || form.className || 'default';
         const now = Date.now();
-        
+
         // Clean old entries
         for (const [key, timestamp] of formSubmissions.entries()) {
           if (now - timestamp > RATE_LIMIT_WINDOW) {
@@ -106,7 +106,7 @@ const SecurityEnhancer: React.FC = () => {
 
         // Record submission
         formSubmissions.set(formId, now);
-      });
+
     };
 
     // Add CSRF protection
@@ -120,7 +120,7 @@ const SecurityEnhancer: React.FC = () => {
           csrfToken.value = generateCSRFToken();
           form.appendChild(csrfToken);
         }
-      });
+
     };
 
     // Generate CSRF token
@@ -142,9 +142,9 @@ const SecurityEnhancer: React.FC = () => {
     // Add secure cookie handling
     const addSecureCookieHandling = () => {
       // Override document.cookie to ensure secure cookies
-      const originalCookie = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') || 
+      const originalCookie = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') ||
                            Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
-      
+
       if (originalCookie) {
         Object.defineProperty(document, 'cookie', {
           get: originalCookie.get,
@@ -160,7 +160,7 @@ const SecurityEnhancer: React.FC = () => {
             }
             originalCookie.set?.call(this, value);
           }
-        });
+
       }
     };
 
@@ -174,7 +174,7 @@ const SecurityEnhancer: React.FC = () => {
             event_category: 'Security',
             event_label: event,
             value: 1
-          });
+
         }
       };
 
@@ -187,17 +187,16 @@ const SecurityEnhancer: React.FC = () => {
         if (suspiciousActivity > SUSPICIOUS_THRESHOLD) {
           logSecurityEvent('High Click Rate', { count: suspiciousActivity });
         }
-      });
 
       // Monitor for form tampering
       document.addEventListener('input', (event) => {
         const target = event.target as HTMLInputElement;
         if (target.type === 'hidden' && target.name === '_csrf') {
-          logSecurityEvent('CSRF Token Tampering', { 
-            form: target.closest('form')?.id || 'unknown' 
-          });
+          logSecurityEvent('CSRF Token Tampering', {
+            form: target.closest('form')?.id || 'unknown'
+
         }
-      });
+
     };
 
     // Initialize security enhancements
@@ -223,13 +222,13 @@ const SecurityEnhancer: React.FC = () => {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
-      
+
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
         logger.warn('Suspicious network request blocked', { url });
         throw new Error('Suspicious network request blocked');
       }
-      
+
       return originalFetch.apply(window, args);
     };
 
@@ -266,7 +265,7 @@ const SecurityEnhancer: React.FC = () => {
     }
 
     setSecurityWarnings(warnings);
-    
+
     if (warnings.length > 0) {
       logger.warn('Security warnings detected', { warnings });
     }
@@ -276,15 +275,15 @@ const SecurityEnhancer: React.FC = () => {
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
     const windowStart = now - windowMs;
-    
+
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
-    
+
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
       return false;
     }
-    
+
     requests.push(now);
     localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
     return true;
@@ -307,7 +306,7 @@ const SecurityEnhancer: React.FC = () => {
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data });
-    
+
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
       return;
@@ -319,7 +318,7 @@ const SecurityEnhancer: React.FC = () => {
         event_category: 'Security',
         event_label: event,
         custom_map: data,
-      });
+
     }
   }, [rateLimit]);
 

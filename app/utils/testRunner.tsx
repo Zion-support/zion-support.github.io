@@ -441,10 +441,13 @@ export class TestRunner {
    * Generate HTML report
    */
   private generateHtmlReport(): void {
-    const html = 
+    const html =
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
     <title>Test Results | Zion Tech Group - AI & IT Solutions</title>
     <style>}
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -475,7 +478,7 @@ export class TestRunner {
                 <p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
-        
+
           )
           .join('')}
     </div>
@@ -577,7 +580,7 @@ export class TestRunner {
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>
-        
+
           )
           .join('')}
     </testsuite>

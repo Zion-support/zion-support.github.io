@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, Database, Zap, Shield, Users, ArrowRight, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, Database, Zap, Shield, Users } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
@@ -127,7 +127,7 @@ const AIDataVisualizationPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -138,7 +138,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Transform data into actionable insights
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Create stunning, interactive data visualizations with AI-powered insights, 
+              Create stunning, interactive data visualizations with AI-powered insights,
               predictive analytics, and automated discovery of key trends and patterns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -249,7 +249,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Ready to Visualize Your Data?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get started with our AI data visualization platform today. Contact us for a free demo 
+              Get started with our AI data visualization platform today. Contact us for a free demo
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -268,7 +268,7 @@ const AIDataVisualizationPage: React.FC = () => {
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>

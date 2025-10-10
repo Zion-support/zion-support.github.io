@@ -5,9 +5,9 @@ interface SystemMonitorProps {
   children?: React.ReactNode;
 }
 
-export default function SystemMonitor({ 
-  className = '', 
-  children 
+export default function SystemMonitor({
+  className = '',
+  children
 }: SystemMonitorProps) {
   return (
     <div className={`systemmonitor ${className}`}>

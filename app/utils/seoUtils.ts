@@ -15,7 +15,7 @@ export interface SEOData {
 }
 
 export const generateMetaTags = (data: SEOData): string => {
-  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
+  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.webp', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
   return `
     <title>${title}</title>
@@ -24,7 +24,7 @@ export const generateMetaTags = (data: SEOData): string => {
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href="${canonicalUrl}" />
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="${ogType}" />
     <meta property="og:title" content="${title}" />
@@ -32,7 +32,7 @@ export const generateMetaTags = (data: SEOData): string => {
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:image" content="${ogImage}" />
     <meta property="og:site_name" content="Zion Tech Group" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="${twitterCard}" />
     <meta name="twitter:title" content="${title}" />
@@ -57,7 +57,7 @@ export const generateOrganizationSchema = () => {
   return generateStructuredData('Organization', {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    logo: 'https://ziontechgroup.com/logo.webp',
     description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -81,7 +81,7 @@ export const generateOrganizationSchema = () => {
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
     ]
-  });
+
 };
 
 export const generateServiceSchema = (serviceName: string, description: string) => {
@@ -103,7 +103,7 @@ export const generateServiceSchema = (serviceName: string, description: string) 
         billingIncrement: 'P1M'
       }
     }
-  });
+
 };
 
 export const generateBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => {
@@ -114,7 +114,7 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
       name: item.name,
       item: item.url
     }))
-  });
+
 };
 
 export const generateFAQSchema = (faqs: Array<{ question: string; answer: string }>) => {
@@ -127,7 +127,7 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
         text: faq.answer
       }
     }))
-  });
+
 };
 
 export const generateArticleSchema = (article: {
@@ -150,13 +150,13 @@ export const generateArticleSchema = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'
+        url: 'https://ziontechgroup.com/logo.webp'
       }
     },
     datePublished: article.datePublished,
     dateModified: article.dateModified,
-    image: article.image || 'https://ziontechgroup.com/og-image.jpg'
-  });
+    image: article.image || 'https://ziontechgroup.com/og-image.webp'
+
 };
 
 export const generateLocalBusinessSchema = () => {
@@ -180,7 +180,7 @@ export const generateLocalBusinessSchema = () => {
     },
     openingHours: 'Mo-Fr 09:00-18:00',
     priceRange: '$$$'
-  });
+
 };
 
 export const generateWebSiteSchema = () => {
@@ -193,7 +193,7 @@ export const generateWebSiteSchema = () => {
       target: 'https://ziontechgroup.com/search?q={search_term_string}',
       'query-input': 'required name=search_term_string'
     }
-  });
+
 };
 
 export const generateSitemap = (pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) => {
@@ -228,10 +228,10 @@ Disallow: /static/`;
 
 export const optimizeTitle = (title: string, maxLength: number = 60): string => {
   if (title.length <= maxLength) return title;
-  
+
   const words = title.split(' ');
   let optimizedTitle = '';
-  
+
   for (const word of words) {
     if ((optimizedTitle + ' ' + word).length <= maxLength - 3) {
       optimizedTitle += (optimizedTitle ? ' ' : '') + word;
@@ -239,13 +239,13 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
       break;
     }
   }
-  
+
   return optimizedTitle + '...';
 };
 
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) return description;
-  
+
   return description.substring(0, maxLength - 3) + '...';
 };
 
@@ -254,12 +254,11 @@ export const generateKeywords = (content: string, maxKeywords: number = 10): str
     .replace(/[^\w\s]/g, '')
     .split(/\s+/)
     .filter(word => word.length > 3);
-  
+
   const wordCount: Record<string, number> = {};
   words.forEach(word => {
     wordCount[word] = (wordCount[word] || 0) + 1;
-  });
-  
+
   return Object.entries(wordCount)
     .sort(([, a], [, b]) => b - a)
     .slice(0, maxKeywords)
@@ -268,27 +267,27 @@ export const generateKeywords = (content: string, maxKeywords: number = 10): str
 
 export const validateSEO = (data: SEOData): { isValid: boolean; errors: string[] } => {
   const errors: string[] = [];
-  
+
   if (!data.title || data.title.length === 0) {
     errors.push('Title is required');
   } else if (data.title.length > 60) {
     errors.push('Title should be 60 characters or less');
   }
-  
+
   if (!data.description || data.description.length === 0) {
     errors.push('Description is required');
   } else if (data.description.length > 160) {
     errors.push('Description should be 160 characters or less');
   }
-  
+
   if (!data.keywords || data.keywords.length === 0) {
     errors.push('Keywords are required');
   }
-  
+
   if (!data.canonicalUrl || data.canonicalUrl.length === 0) {
     errors.push('Canonical URL is required');
   }
-  
+
   return {
     isValid: errors.length === 0,
     errors
@@ -298,11 +297,11 @@ export const validateSEO = (data: SEOData): { isValid: boolean; errors: string[]
 export const createSEOMeta = (data: SEOData): void => {
   // Update title
   document.title = data.title;
-  
+
   // Update meta description
   updateMetaTag('description', data.description);
   updateMetaTag('keywords', data.keywords.join(', '));
-  
+
   // Update Open Graph tags
   updateMetaTag('og:title', data.title, 'property');
   updateMetaTag('og:description', data.description, 'property');
@@ -310,17 +309,17 @@ export const createSEOMeta = (data: SEOData): void => {
   if (data.ogImage) {
     updateMetaTag('og:image', data.ogImage, 'property');
   }
-  
+
   // Update Twitter tags
   updateMetaTag('twitter:title', data.title, 'name');
   updateMetaTag('twitter:description', data.description, 'name');
   if (data.ogImage) {
     updateMetaTag('twitter:image', data.ogImage, 'name');
   }
-  
+
   // Update canonical URL
   updateCanonicalUrl(data.canonicalUrl);
-  
+
   // Add structured data
   if (data.structuredData) {
     addStructuredData(data.structuredData);
@@ -352,13 +351,13 @@ const addStructuredData = (data: unknown): void => {
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
   script.id = 'structured-data';
-  
+
   // Remove existing structured data
   const existing = document.getElementById('structured-data');
   if (existing) {
     existing.remove();
   }
-  
+
   document.head.appendChild(script);
 };
 

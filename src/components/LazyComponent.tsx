@@ -5,9 +5,9 @@ interface LazyComponentProps {
   children?: React.ReactNode;
 }
 
-export default function LazyComponent({ 
-  className = '', 
-  children 
+export default function LazyComponent({
+  className = '',
+  children
 }: LazyComponentProps) {
   return (
     <div className={`lazycomponent ${className}`}>

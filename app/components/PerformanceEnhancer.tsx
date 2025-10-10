@@ -53,7 +53,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     ttfb: 600
   }
 }) => {
-  
+
   // Performance metrics storage
   const performanceMetrics = useMemo(() => ({
     webVitals: {} as Record<string, any>,
@@ -90,7 +90,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         value: 1,
         custom_parameter_1: error.message,
         custom_parameter_2: error.stack
-      });
+
     }
 
     // Send to custom endpoint
@@ -124,7 +124,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             non_interaction: true,
             custom_parameter_1: metric.delta,
             custom_parameter_2: metric.id
-          });
+
         }
 
         // Send to custom endpoint
@@ -139,7 +139,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             url: window.location.href,
             userAgent: navigator.userAgent,
             performanceMetrics: performanceMetrics
-          });
 
           navigator.sendBeacon('/api/analytics/performance', data);
         }
@@ -192,7 +191,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         performanceMetrics.resourceTiming = resources;
 
         // Analyze resource performance
-        const slowResources = resources.filter(resource => 
+        const slowResources = resources.filter(resource =>
           resource.duration > 1000 || resource.transferSize > 1000000
         );
 
@@ -294,14 +293,12 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           if (entry.duration > 50) {
             reportError(new Error(`Long task detected: ${entry.duration}ms`), 'LongTaskMonitoring');
           }
-        });
 
         if (enableConsoleLogging) {
           }
       } catch (error) {
         reportError(error, 'LongTaskMonitoring');
       }
-    });
 
     observer.observe({ entryTypes: ['longtask'] });
 
@@ -322,14 +319,12 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           if (entry.value > 0.1) {
             reportError(new Error(`Significant layout shift detected: ${entry.value}`), 'LayoutShiftMonitoring');
           }
-        });
 
         if (enableConsoleLogging) {
           }
       } catch (error) {
         reportError(error, 'LayoutShiftMonitoring');
       }
-    });
 
     observer.observe({ entryTypes: ['layout-shift'] });
 
@@ -385,7 +380,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             event_label: 'Summary',
             value: 1,
             custom_parameter_1: JSON.stringify(summary)
-          });
+
         }
 
         if (enableConsoleLogging) {

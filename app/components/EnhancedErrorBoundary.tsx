@@ -1,5 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { RefreshCw, Home, AlertTriangle } from 'lucide-react';
+import { RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -43,7 +42,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
 
     // Log error to external service
     if (this.props.onError) {

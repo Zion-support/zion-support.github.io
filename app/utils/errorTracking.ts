@@ -119,7 +119,7 @@ class ErrorTrackingService {
       this.errors.set(errorId, existingError)
     } else {
       this.errors.set(errorId, trackedError)
-      
+
       // Clean up old errors if we exceed the limit
       if (this.errors.size > this.maxStoredErrors) {
         const oldestError = Array.from(this.errors.values())

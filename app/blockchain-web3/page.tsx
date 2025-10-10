@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, Shield, Zap, Globe, CheckCircle, ArrowRight, Star, Users, Database, Lock, Cpu, BarChart, Settings, Smartphone, Code, DollarSign } from 'lucide-react';
+import { Shield, Globe, CheckCircle, ArrowRight, Star, Users, Database, Lock, Code, DollarSign } from 'lucide-react';
 
 const BlockchainWeb3Page: React.FC = () => {
   const services = [
@@ -131,7 +131,7 @@ const BlockchainWeb3Page: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Blockchain</span> & Web3 Development
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Build the future of decentralized applications with our expert blockchain development team. 
+                Build the future of decentralized applications with our expert blockchain development team.
                 Smart contracts, DeFi platforms, NFT marketplaces, and enterprise blockchain solutions.
               </p>
               <div className="flex flex-wrap justify-center gap-8 mt-12">
@@ -253,7 +253,7 @@ const BlockchainWeb3Page: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Build on Blockchain?</h2>
             <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-              Let our blockchain experts help you build the next generation of decentralized applications. 
+              Let our blockchain experts help you build the next generation of decentralized applications.
               From concept to deployment, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -5,9 +5,9 @@ interface UltimateBusinessIntelligence2025BannerProps {
   children?: React.ReactNode;
 }
 
-export default function UltimateBusinessIntelligence2025Banner({ 
-  className = '', 
-  children 
+export default function UltimateBusinessIntelligence2025Banner({
+  className = '',
+  children
 }: UltimateBusinessIntelligence2025BannerProps) {
   return (
     <div className={`ultimatebusinessintelligence2025banner ${className}`}>

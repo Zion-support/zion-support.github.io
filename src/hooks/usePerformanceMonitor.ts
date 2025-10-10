@@ -6,17 +6,17 @@ export const usePerformanceMonitor = () => {
     const monitorWebVitals = async () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
+
         const logMetric = (metric: any, type: string) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log(`${type}:`, metric);
+
           }
           // Send to analytics service in production
           if (process.env.NODE_ENV === 'production') {
             // Send to analytics service
           }
         };
-        
+
         getCLS((metric) => logMetric(metric, 'CLS'));
         getFID((metric) => logMetric(metric, 'FID'));
         getFCP((metric) => logMetric(metric, 'FCP'));
@@ -24,7 +24,7 @@ export const usePerformanceMonitor = () => {
         getTTFB((metric) => logMetric(metric, 'TTFB'));
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vitals not available:', error);
+
         }
       }
     };
@@ -36,15 +36,10 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', {
-                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-              });
+
             }
           }
         }
-      });
 
       observer.observe({ entryTypes: ['navigation', 'resource'] });
 
@@ -56,11 +51,10 @@ export const usePerformanceMonitor = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         if (process.env.NODE_ENV === 'development') {
-          console.log('Memory usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+           + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-          });
+
         }
       }
     };

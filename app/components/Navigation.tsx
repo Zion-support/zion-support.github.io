@@ -2,19 +2,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchModal from '../../src/components/SearchModal';
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
+import {
+  ChevronDown,
+  Phone,
+  Mail,
+  MapPin,
+  Menu,
+  X,
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  Users,
   Zap,
   Star,
   TrendingUp,
@@ -132,10 +132,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
 
-
-
-
-
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
@@ -174,7 +170,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research', icon: '💊', popular: false },
         { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
 
-
       ]
     },
     {
@@ -184,7 +179,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-
 
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
@@ -254,8 +248,8 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-2 text-2xl font-bold group"
             onClick={closeAllMenus}
           >
@@ -276,50 +270,50 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
             >
               Home
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               About
             </Link>
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Services
             </Link>
-            <Link 
-              to="/micro-saas" 
+            <Link
+              to="/micro-saas"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Micro SAAS
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               AI Services
             </Link>
-            <Link 
-              to="/it-services" 
+            <Link
+              to="/it-services"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               IT Services
             </Link>
-            <Link 
-              to="/case-studies" 
+            <Link
+              to="/case-studies"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
-            <Link 
-              to="/pricing" 
+            <Link
+              to="/pricing"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
@@ -339,7 +333,6 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
 
             </Link>
 
-
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -351,7 +344,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
@@ -399,7 +392,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
             >
               <Search className="w-5 h-5" />
             </button>
-            
+
             <Link
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -407,7 +400,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
             >
               Contact
             </Link>
-            
+
             {/* CTA Button */}
             <Link
               to="/contact"
@@ -441,44 +434,44 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               >
                 Home
               </Link>
-              
-              <Link 
-                to="/about" 
+
+              <Link
+                to="/about"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
                 Services
               </Link>
-              <Link 
-                to="/micro-saas" 
+              <Link
+                to="/micro-saas"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
                 Micro SAAS
               </Link>
-              <Link 
-                to="/ai-services" 
+              <Link
+                to="/ai-services"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
                 AI Services
               </Link>
-              <Link 
-                to="/it-services" 
+              <Link
+                to="/it-services"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
                 IT Services
               </Link>
-              <Link 
-                to="/pricing" 
+              <Link
+                to="/pricing"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
@@ -584,7 +577,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               >
                 Contact
               </Link>
-              
+
               {/* Mobile CTA */}
               <Link
                 to="/contact"
@@ -598,7 +591,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
         )}
       </div>
     </nav>
-    
+
     {/* Search Modal */}
     <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>

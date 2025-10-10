@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Wifi, Shield, Zap, CheckCircle, ArrowRight, Star, Database, Globe, Settings, Smartphone, BarChart, Clock, Users, Lock, HardDrive } from 'lucide-react';
+import { Cpu, Wifi, Shield, Zap, CheckCircle, ArrowRight, Star, Database, Globe, Settings, Smartphone, BarChart, Clock, Users } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
   const services = [
@@ -138,7 +138,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">IoT & Edge Computing</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with intelligent IoT solutions and edge computing. 
+                Transform your business with intelligent IoT solutions and edge computing.
                 Real-time processing, AI at the edge, and smart device management for the connected world.
               </p>
               <div className="flex flex-wrap justify-center gap-8 mt-12">
@@ -240,7 +240,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-green-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -279,7 +279,7 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="bg-gradient-to-r from-green-600 to-cyan-600 rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Build Your IoT Ecosystem?</h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Let our IoT and edge computing experts help you build intelligent, connected solutions. 
+              Let our IoT and edge computing experts help you build intelligent, connected solutions.
               From concept to deployment, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

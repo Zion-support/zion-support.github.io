@@ -1,15 +1,15 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
+import {
+  Brain,
+  Zap,
+  Target,
+  BarChart,
+  Shield,
+  Users,
+  Globe,
+  Lock,
+  Settings,
   FileText,
   CheckCircle,
   ArrowRight,
@@ -595,9 +595,7 @@ const AIServicesPage: React.FC = () => {
     {
       id: 11,
 
-
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
-
 
       name: 'AI Quantum Financial Oracle',
       description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
@@ -756,7 +754,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
-      
+
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
@@ -777,7 +775,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
@@ -845,7 +843,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             >
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>

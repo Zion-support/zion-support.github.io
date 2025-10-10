@@ -16,16 +16,16 @@ const OfflinePage: React.FC = () => {
         <div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <WifiOff className="w-12 h-12 text-white" />
         </div>
-        
+
         <h1 className="text-4xl font-bold text-white mb-4">
           You're Offline
         </h1>
-        
+
         <p className="text-gray-300 mb-8 leading-relaxed">
-          It looks like you've lost your internet connection. Don't worry, 
+          It looks like you've lost your internet connection. Don't worry,
           some features of our website are still available offline.
         </p>
-        
+
         <div className="space-y-4">
           <button
             onClick={handleRefresh}
@@ -34,7 +34,7 @@ const OfflinePage: React.FC = () => {
             <RefreshCw className="w-5 h-5 mr-2" />
             Try Again
           </button>
-          
+
           <button
             onClick={handleGoHome}
             className="w-full bg-slate-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-slate-700 transition-colors flex items-center justify-center"
@@ -43,12 +43,12 @@ const OfflinePage: React.FC = () => {
             Go to Homepage
           </button>
         </div>
-        
+
         <div className="mt-8 pt-6 border-t border-gray-700">
           <h3 className="text-lg font-semibold text-white mb-4">
             Need Help?
           </h3>
-          
+
           <div className="space-y-3">
             <div className="flex items-center justify-center space-x-3 text-gray-300">
               <Phone className="w-4 h-4 text-cyan-400" />
@@ -56,7 +56,7 @@ const OfflinePage: React.FC = () => {
                 +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="flex items-center justify-center space-x-3 text-gray-300">
               <Mail className="w-4 h-4 text-cyan-400" />
               <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
@@ -65,10 +65,10 @@ const OfflinePage: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-6 text-sm text-gray-400">
           <p>
-            This page is cached for offline viewing. 
+            This page is cached for offline viewing.
             Some features may not be available without an internet connection.
           </p>
         </div>

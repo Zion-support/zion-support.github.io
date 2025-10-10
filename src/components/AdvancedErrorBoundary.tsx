@@ -5,9 +5,9 @@ interface AdvancedErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-export default function AdvancedErrorBoundary({ 
-  className = '', 
-  children 
+export default function AdvancedErrorBoundary({
+  className = '',
+  children
 }: AdvancedErrorBoundaryProps) {
   return (
     <div className={`advancederrorboundary ${className}`}>

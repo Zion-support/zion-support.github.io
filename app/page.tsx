@@ -1,26 +1,18 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail } from 'lucide-react';
 import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
 import Navigation from './components/Navigation';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
+import {
+  Brain,
+  Zap,
+  Target,
+  BarChart,
+  Shield,
+  Users,
+  Globe,
+  Settings,
   FileText,
   CheckCircle,
   ArrowRight,
@@ -32,10 +24,91 @@ import {
   Cloud,
   Smartphone,
   TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
+  Heart,
+  Scale,
+  Package,
+  ShoppingCart,
+  Music,
+  Eye,
+  Activity,
+  Factory,
+  GraduationCap,
+  Palette,
+  Calculator,
+  Database,
+  Video
 } from 'lucide-react';
+
+// Type definitions
+interface AIService {
+  name: string;
+  description: string;
+  price: string;
+  features: string[];
+  category: string;
+  enterprise: boolean;
+  icon: any;
+  link: string;
+}
+
+interface ITService {
+  name: string;
+  description: string;
+  price: string;
+  features: string[];
+  category: string;
+  icon: any;
+  link: string;
+}
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechCorp Solutions",
+    content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction.",
+    avatar: "SJ"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO",
+    company: "InnovateLabs",
+    content: "The AI-powered analytics dashboard provided insights we never had before. Our decision-making process is now data-driven and incredibly accurate.",
+    avatar: "MC"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Operations Director",
+    company: "Global Manufacturing Inc",
+    content: "Their automation solutions streamlined our entire supply chain. We've reduced manual errors by 95% and improved delivery times significantly.",
+    avatar: "ER"
+  }
+];
+
+// Stats data
+const stats = [
+  {
+    number: "500+",
+    label: "Projects Completed",
+    icon: Award
+  },
+  {
+    number: "99.9%",
+    label: "Uptime Guarantee",
+    icon: Shield
+  },
+  {
+    number: "24/7",
+    label: "Support Available",
+    icon: Clock
+  },
+  {
+    number: "50+",
+    label: "Expert Team Members",
+    icon: Users
+  }
+];
 
 // Service data
 const microSAASServices = [
@@ -531,26 +604,16 @@ const itServices: ITService[] = [
   }
 ];
 
-// Loading skeleton component
-const ServiceCardSkeleton = () => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
-  </div>
-);
-
 const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI-Powered Enterprise Solutions
@@ -558,7 +621,7 @@ const HomePage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
-          
+
 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
@@ -598,7 +661,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
           </div>
-          
+
           {/* Micro SAAS Services */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
@@ -609,7 +672,7 @@ const HomePage: React.FC = () => {
                     <div className="text-4xl mb-4">🤖</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
+
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -618,7 +681,7 @@ const HomePage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
@@ -641,7 +704,7 @@ const HomePage: React.FC = () => {
                     <div className="text-4xl mb-4">🚀</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
+
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -650,7 +713,7 @@ const HomePage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
                       <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
@@ -673,7 +736,7 @@ const HomePage: React.FC = () => {
                     <div className="text-4xl mb-4">⚡</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
+
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -682,7 +745,7 @@ const HomePage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
                       <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
@@ -693,7 +756,6 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
 
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSAASServices.map((service, index) => (
               <div
@@ -709,14 +771,14 @@ const HomePage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                  
+
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -725,7 +787,7 @@ const HomePage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                     <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
@@ -750,7 +812,7 @@ const HomePage: React.FC = () => {
               Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div
@@ -767,14 +829,14 @@ const HomePage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
+
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -783,7 +845,7 @@ const HomePage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="text-center">
                     <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
                     <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
@@ -808,11 +870,11 @@ const HomePage: React.FC = () => {
               Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {itServices.map((service, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
                 onClick={() => window.open(service.link, '_blank')}
               >
@@ -822,7 +884,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
-                  
+
                   <div className="space-y-2 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -831,7 +893,7 @@ const HomePage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="text-center">
                     <div className="text-lg font-bold text-white mb-2">{service.price}</div>
                     <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
@@ -856,7 +918,7 @@ const HomePage: React.FC = () => {
               Hear from our satisfied clients who have transformed their businesses with our AI solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -915,7 +977,7 @@ const HomePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <div className="text-2xl mb-2">📞</div>
@@ -924,7 +986,7 @@ const HomePage: React.FC = () => {
                 +1 (302) 464-0950
               </a>
             </div>
-            
+
             <div className="text-center">
               <div className="text-2xl mb-2">✉️</div>
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
@@ -932,7 +994,7 @@ const HomePage: React.FC = () => {
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="text-center">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>
@@ -942,7 +1004,7 @@ const HomePage: React.FC = () => {
 
             </div>
           </div>
-          
+
           <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
             Get Free Consultation
           </button>

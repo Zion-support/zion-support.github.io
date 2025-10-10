@@ -105,9 +105,9 @@ const AIPasswordManagerPage: React.FC = () => {
         <meta name="description" content="Secure your digital life with our AI-powered password manager. Military-grade encryption, automatic generation, and intelligent security monitoring." />
         <meta name="keywords" content="password manager, AI security, password protection, digital security, encryption" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -121,7 +121,7 @@ const AIPasswordManagerPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Secure your digital life with our AI-powered password manager. Military-grade encryption, 
+              Secure your digital life with our AI-powered password manager. Military-grade encryption,
               intelligent threat detection, and seamless user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -229,8 +229,8 @@ const AIPasswordManagerPage: React.FC = () => {
                       ))}
                     </ul>
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700' 
+                      plan.popular
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>
                       Get Started
@@ -267,7 +267,7 @@ const AIPasswordManagerPage: React.FC = () => {
           </section>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

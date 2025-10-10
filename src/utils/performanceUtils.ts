@@ -4,11 +4,11 @@ export const measurePerformance = (name: string, fn: () => void) => {
   fn();
   const end = performance.now();
   const duration = end - start;
-  
+
   if (process.env.NODE_ENV === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    }ms`);
   }
-  
+
   return duration;
 };
 
@@ -17,11 +17,11 @@ export const measureAsyncPerformance = async (name: string, fn: () => Promise<an
   const result = await fn();
   const end = performance.now();
   const duration = end - start;
-  
+
   if (process.env.NODE_ENV === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    }ms`);
   }
-  
+
   return { result, duration };
 };
 
@@ -29,10 +29,9 @@ export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       callback(list.getEntries());
-    });
-    
+
     observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
-    
+
     return observer;
   }
   return null;
@@ -43,17 +42,17 @@ export const measureWebVitals = () => {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       const sendToAnalytics = (metric: any) => {
         if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vital:', metric);
+
         }
         // Send to analytics in production
       };
-      
+
       getCLS(sendToAnalytics);
       getFID(sendToAnalytics);
       getFCP(sendToAnalytics);
       getLCP(sendToAnalytics);
       getTTFB(sendToAnalytics);
-    });
+
   }
 };
 
@@ -67,12 +66,12 @@ export const preloadResource = (href: string, as: string) => {
 
 export const preloadCriticalResources = () => {
   const criticalResources = [
-    { href: '/images/hero-bg.jpg', as: 'image' },
-    { href: '/images/logo.png', as: 'image' },
+    { href: '/images/hero-bg.webp', as: 'image' },
+    { href: '/images/logo.webp', as: 'image' },
     { href: '/fonts/inter.woff2', as: 'font' }
   ];
-  
+
   criticalResources.forEach(resource => {
     preloadResource(resource.href, resource.as);
-  });
+
 };

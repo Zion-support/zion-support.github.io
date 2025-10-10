@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Calculator, 
-  TrendingUp, 
-  DollarSign, 
-  Clock, 
-  Users, 
-  BarChart3, 
+import {
+  Calculator,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Users,
+  BarChart3,
   Target,
   Zap,
   CheckCircle,
@@ -40,9 +40,9 @@ interface ROICalculation {
   revenueIncrease: number;
 }
 
-export default function InteractiveAIROICalculator({ 
-  className = '', 
-  children 
+export default function InteractiveAIROICalculator({
+  className = '',
+  children
 }: InteractiveAIROICalculatorProps) {
   const [inputs, setInputs] = useState<CalculationInputs>({
     currentRevenue: 1000000,
@@ -52,7 +52,6 @@ export default function InteractiveAIROICalculator({
     industry: 'technology',
     aiImplementationCost: 150000,
     timeToImplement: 6
-  });
 
   const [calculation, setCalculation] = useState<ROICalculation | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
@@ -69,23 +68,23 @@ export default function InteractiveAIROICalculator({
 
   const calculateROI = () => {
     setIsCalculating(true);
-    
+
     setTimeout(() => {
       const industryMultiplier = industries.find(i => i.value === inputs.industry)?.multiplier || 1.0;
-      
+
       const currentProfit = inputs.currentRevenue - inputs.currentCosts;
-      
+
       // AI impact calculations based on industry and company size
       const efficiencyGains = Math.min(0.9, 0.3 + (inputs.employees / 1000) * 0.2) * industryMultiplier;
       const costSavings = inputs.currentCosts * efficiencyGains * 0.6; // 60% of efficiency gains translate to cost savings
       const revenueIncrease = inputs.currentRevenue * efficiencyGains * 0.4; // 40% of efficiency gains translate to revenue increase
-      
+
       const projectedProfit = currentProfit + costSavings + revenueIncrease;
       const profitIncrease = projectedProfit - currentProfit;
-      
+
       const roi = ((profitIncrease - inputs.aiImplementationCost) / inputs.aiImplementationCost) * 100;
       const paybackPeriod = inputs.aiImplementationCost / (profitIncrease / 12);
-      
+
       setCalculation({
         currentProfit,
         projectedProfit,
@@ -95,8 +94,7 @@ export default function InteractiveAIROICalculator({
         efficiencyGains: efficiencyGains * 100,
         costSavings,
         revenueIncrease
-      });
-      
+
       setIsCalculating(false);
       setShowResults(true);
     }, 1500);
@@ -118,7 +116,7 @@ export default function InteractiveAIROICalculator({
       industry: 'technology',
       aiImplementationCost: 150000,
       timeToImplement: 6
-    });
+
     setCalculation(null);
     setShowResults(false);
   };
@@ -282,7 +280,7 @@ export default function InteractiveAIROICalculator({
                       </>
                     )}
                   </button>
-                  
+
                   <button
                     onClick={resetCalculator}
                     className="px-6 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
@@ -328,7 +326,7 @@ export default function InteractiveAIROICalculator({
                       </div>
                       <div className="text-sm text-gray-400">Annual Profit Increase</div>
                     </div>
-                    
+
                     <div className="bg-white/5 rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-blue-400 mb-1">
                         {calculation.efficiencyGains.toFixed(1)}%
@@ -340,7 +338,7 @@ export default function InteractiveAIROICalculator({
                   {/* Breakdown */}
                   <div className="space-y-4">
                     <h4 className="text-lg font-semibold text-white mb-3">Impact Breakdown</h4>
-                    
+
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-300">Cost Savings</span>
@@ -348,14 +346,14 @@ export default function InteractiveAIROICalculator({
                           +${(calculation.costSavings / 1000).toFixed(0)}K
                         </span>
                       </div>
-                      
+
                       <div className="flex justify-between items-center">
                         <span className="text-gray-300">Revenue Increase</span>
                         <span className="text-blue-400 font-semibold">
                           +${(calculation.revenueIncrease / 1000).toFixed(0)}K
                         </span>
                       </div>
-                      
+
                       <div className="flex justify-between items-center">
                         <span className="text-gray-300">Implementation Cost</span>
                         <span className="text-red-400 font-semibold">
@@ -372,7 +370,7 @@ export default function InteractiveAIROICalculator({
                       Recommendation
                     </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      {calculation.roi > 100 
+                      {calculation.roi > 100
                         ? "Excellent investment opportunity! This AI implementation shows strong potential for significant returns."
                         : calculation.roi > 50
                         ? "Good investment with solid returns. Consider implementing in phases to manage risk."

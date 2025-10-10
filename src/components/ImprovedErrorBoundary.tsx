@@ -81,7 +81,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             componentStack: errorInfo.componentStack
           }
         }
-      });
+
     }
   }
   componentDidUpdate(prevProps: Props): void {
@@ -107,7 +107,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+
   };
   handleReload = (): void => {
   // TODO: Add content

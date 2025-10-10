@@ -33,13 +33,13 @@ class AnalyticsTracker {
    */
   initialize(): void {
     if (typeof window === 'undefined') return;
-    
+
     this.isInitialized = true;
-    
+
     // Process queued events
     this.queue.forEach(fn => fn());
     this.queue = [];
-    
+
     // Track initial page view
     this.trackPageView(window.location.pathname);
   }
@@ -112,7 +112,7 @@ class AnalyticsTracker {
       action,
       category: 'user-interaction',
       label: element
-    });
+
   }
 
   /**
@@ -123,7 +123,7 @@ class AnalyticsTracker {
       action: 'conversion',
       category: conversionType,
       value
-    });
+
   }
 
   /**
@@ -134,7 +134,7 @@ class AnalyticsTracker {
       category: 'Outbound',
       action: 'click',
       label: linkText || url
-    });
+
   }
 
   /**
@@ -146,7 +146,7 @@ class AnalyticsTracker {
       action: 'search',
       label: query,
       value: resultsCount
-    });
+
   }
 
   /**
@@ -158,7 +158,7 @@ class AnalyticsTracker {
       action,
       label: videoId,
       value: progress
-    });
+
   }
 
   /**
@@ -169,7 +169,7 @@ class AnalyticsTracker {
       category: 'Download',
       action: 'download',
       label: `${fileName}.${fileType}`
-    });
+
   }
 
   /**
