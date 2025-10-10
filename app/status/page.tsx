@@ -155,7 +155,7 @@ export default function StatusPage() {
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
-  </
+  
           </div>
           <p className="text-gray-400 text-sm">
             Last updated: {lastUpdated.toLocaleString()}
@@ -282,12 +282,12 @@ export default function StatusPage() {
             Subscribe to status updates or contact our support team for more details.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+            <button
               Subscribe to Updates
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+  </button>
+            <button
               Contact Support
-  </
+  </button>
           </div>
         </div>
       </section>

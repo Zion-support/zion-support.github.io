@@ -1,97 +1,84 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common JSX syntax errors
+// Function to fix JSX closing tag errors
 function fixJsxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix 1: Add missing closing tags for common patterns
-    // Look for unclosed div, section, main tags
-    const unclosedTagPatterns = [
-      { open: '<div', close: '</div>' },
-      { open: '<section', close: '</section>' },
-      { open: '<main', close: '</main>' },
-      { open: '<article', close: '</article>' },
-      { open: '<header', close: '</header>' },
-      { open: '<footer', close: '</footer>' },
-      { open: '<nav', close: '</nav>' }
+    let modified = false;
+
+    // Fix incomplete closing tags like "  </" to proper closing tags
+    const patterns = [
+      // Fix h1, h2, h3, etc.
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix button tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix p tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix span tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix section tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix main tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      // Fix React.Fragment tags
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' }
     ];
-    
-    // Fix 2: Fix JSX fragments - ensure proper opening and closing
-    content = content.replace(/<>/g, '<React.Fragment>');
-    content = content.replace(/<\/>/g, '</React.Fragment>');
-    
-    // Fix 3: Fix common syntax errors
-    // Fix missing commas in object literals
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix missing semicolons in JSX expressions
-    content = content.replace(/(\w+)\s*\n\s*<\/\w+>/g, '$1;\n  </');
-    
-    // Fix 4: Ensure proper JSX structure
-    // Add missing React import if needed
-    if (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect')) {
-      if (!content.includes("import React")) {
-        content = "import React from 'react';\n" + content;
+
+    // More specific patterns for common JSX issues
+    const specificPatterns = [
+      // Fix incomplete h1 closing tags
+      { pattern: /<h1[^>]*>([^<]*)<\/\s*$/gm, replacement: '<h1$1</h1>' },
+      // Fix incomplete h2 closing tags
+      { pattern: /<h2[^>]*>([^<]*)<\/\s*$/gm, replacement: '<h2$1</h2>' },
+      // Fix incomplete button closing tags
+      { pattern: /<button[^>]*>([^<]*)<\/\s*$/gm, replacement: '<button$1</button>' },
+      // Fix incomplete p closing tags
+      { pattern: /<p[^>]*>([^<]*)<\/\s*$/gm, replacement: '<p$1</p>' },
+      // Fix incomplete span closing tags
+      { pattern: /<span[^>]*>([^<]*)<\/\s*$/gm, replacement: '<span$1</span>' },
+      // Fix incomplete section closing tags
+      { pattern: /<section[^>]*>([^<]*)<\/\s*$/gm, replacement: '<section$1</section>' },
+      // Fix incomplete main closing tags
+      { pattern: /<main[^>]*>([^<]*)<\/\s*$/gm, replacement: '<main$1</main>' },
+      // Fix incomplete React.Fragment closing tags
+      { pattern: /<React\.Fragment[^>]*>([^<]*)<\/\s*$/gm, replacement: '<React.Fragment$1</React.Fragment>' }
+    ];
+
+    // Apply specific patterns
+    for (const { pattern, replacement } of specificPatterns) {
+      const newContent = content.replace(pattern, replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
-    
-    // Fix 5: Fix malformed JSX attributes
-    content = content.replace(/className=\s*{([^}]+)}\s*>/g, 'className={$1}>');
-    content = content.replace(/className=\s*"([^"]+)"\s*>/g, 'className="$1">');
-    
-    // Fix 6: Fix unclosed JSX elements by adding proper closing tags
-    // This is a more complex fix that requires parsing the structure
-    const lines = content.split('\n');
-    const fixedLines = [];
-    const tagStack = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      fixedLines.push(line);
-      
-      // Check for opening tags
-      const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
-      if (openTagMatch && !line.includes('/>')) {
-        const tagName = openTagMatch[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          tagStack.push(tagName);
-        }
-      }
-      
-      // Check for closing tags
-      const closeTagMatch = line.match(/<\/(\w+)>/);
-      if (closeTagMatch) {
-        const tagName = closeTagMatch[1];
-        const lastIndex = tagStack.lastIndexOf(tagName);
-        if (lastIndex !== -1) {
-          tagStack.splice(lastIndex, 1);
-        }
+
+    // Fix common incomplete closing tags
+    const incompleteClosingTags = [
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' },
+      { pattern: /(\s+)<\/\s*$/gm, replacement: '$1' }
+    ];
+
+    for (const { pattern, replacement } of incompleteClosingTags) {
+      const newContent = content.replace(pattern, replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
-    
-    // Add missing closing tags at the end
-    while (tagStack.length > 0) {
-      const tag = tagStack.pop();
-      fixedLines.push(`  </${tag}>`);
-    }
-    
-    content = fixedLines.join('\n');
-    
-    // Fix 7: Clean up extra whitespace and empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    
-    if (content !== originalContent) {
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Fixed JSX errors in ${filePath}`);
+      console.log(`Fixed JSX errors in: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -99,36 +86,42 @@ function fixJsxErrors(filePath) {
   }
 }
 
-// Function to find all files with JSX errors
-function findFilesWithJsxErrors() {
-  try {
-    const { execSync } = require('child_process');
-    const result = execSync('find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules', { 
-      encoding: 'utf8',
-      cwd: process.cwd()
-    });
-    return result.trim().split('\n').filter(line => line.trim());
-  } catch (error) {
-    return [];
+// Function to find all TypeScript/TSX files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
   }
+  
+  return files;
 }
 
 // Main execution
-console.log('🔧 Starting JSX error fixes...\n');
+const appDir = path.join(__dirname, 'app');
+const apiDir = path.join(__dirname, 'api');
 
-const filesToFix = findFilesWithJsxErrors();
-console.log(`Found ${filesToFix.length} JSX files to check:\n`);
+console.log('Starting JSX error fixes...');
+
+// Find all TSX/TS files
+const tsxFiles = [
+  ...findTsxFiles(appDir),
+  ...findTsxFiles(apiDir)
+];
 
 let fixedCount = 0;
-let totalFiles = filesToFix.length;
-
-filesToFix.forEach((filePath, index) => {
-  console.log(`[${index + 1}/${totalFiles}] Processing ${filePath}`);
-  
-  if (fixJsxErrors(filePath)) {
+for (const file of tsxFiles) {
+  if (fixJsxErrors(file)) {
     fixedCount++;
   }
-});
+}
 
-console.log(`\n✅ JSX fixes complete!`);
-console.log(`📊 Fixed errors in ${fixedCount} out of ${totalFiles} files`);
+console.log(`Fixed JSX errors in ${fixedCount} files.`);

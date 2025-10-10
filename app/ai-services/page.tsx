@@ -248,20 +248,20 @@ const AIServicesPagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1
               AI Services;
-  </
+  </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence solutions. 
               From chatbots to computer vision, we deliver AI that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button
                 Get Started;
-  </
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+              <button
                 View Demo;
-  </
+  </button>
             </div>
           </div>
         </section>
@@ -269,12 +269,12 @@ const AIServicesPagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2
                 Key Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+  </h2>
+              <p
                 Advanced AI technology that drives results;
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -378,9 +378,9 @@ const AIServicesPagePage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Services?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p
                 Proven results that drive business growth and efficiency;
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -418,12 +418,12 @@ const AIServicesPagePage: React.FC = () => {
                 Contact our AI experts to discuss your requirements and get a customized solution that drives real results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button
                   Contact Us
-  </
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+                <button
                   Learn More;
-  </
+  </button>
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

@@ -610,9 +610,9 @@ const ServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1
               Our Services
-  </
+  </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business 
               and drive growth.
@@ -677,9 +677,9 @@ const ServicesPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
-              <span className="text-gray-300">
+              <span
                 {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
-  </
+  </span>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service, index) => (
@@ -687,7 +687,7 @@ const ServicesPage: React.FC = () => {
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Popular
-  </
+  
                   )}
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
@@ -715,7 +715,7 @@ const ServicesPage: React.FC = () => {
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
-  </
+  
                       )}
                     </ul>
                   </div>
@@ -728,9 +728,9 @@ const ServicesPage: React.FC = () => {
                       Get Quote
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                    <button
                       Learn More;
-  </
+  </button>
                   </div>
                 </div>
               ))}
@@ -738,12 +738,11 @@ const ServicesPage: React.FC = () => {
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
-                <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                <button setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
                   Previous
-  </
+  </button>
                 <div className="flex space-x-2">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                     <button
@@ -759,12 +758,11 @@ const ServicesPage: React.FC = () => {
                     </button>
                   ))}
                 </div>
-                <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                <button setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
                   Next
-  </
+  </button>
               </div>
             )}
           </div>
@@ -779,12 +777,12 @@ const ServicesPage: React.FC = () => {
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button
                 Get Free Consultation;
-  </
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+  </button>
+              <button
                 View Portfolio;
-  </
+  </button>
             </div>
           </div>
         </section>

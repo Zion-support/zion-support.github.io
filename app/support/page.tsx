@@ -170,9 +170,9 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1
               Support Center
-  </
+  </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get help and support for our AI and IT solutions. We're here to help you succeed.
             </p>
@@ -223,9 +223,9 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2
                 Contact Support
-  </
+  </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose your preferred way to get in touch with our support team.
               </p>
@@ -318,25 +318,25 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button
                   View Docs
-  </
+  </button>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                 <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button
                   Join Community
-  </
+  </button>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                 <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button
                   Check Status
-  </
+  </button>
               </div>
             </div>
           </div>
@@ -362,11 +362,11 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Phone className="w-5 h-5" />
                   Call Support
-  </
+  
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
                   Email Support
-  </
+  
               </div>
             </div>
           </div>

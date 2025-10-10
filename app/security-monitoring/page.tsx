@@ -66,9 +66,9 @@ const SecurityMonitoringPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1
                 Security Monitoring Services
-  </
+  </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Protect your business with our advanced 24/7 security monitoring solutions. 
                 Real-time threat detection, instant alerts, and expert response to keep your data safe.
@@ -77,11 +77,11 @@ const SecurityMonitoringPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Shield className="mr-2 h-5 w-5" />
                   Get Protected Now
-  </
+  
                 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
-  </
+  
               </div>
             </div>
           </div>
@@ -114,9 +114,9 @@ const SecurityMonitoringPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2
                 Key Benefits
-  </
+  </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our advanced monitoring services.
               </p>
@@ -145,11 +145,11 @@ const SecurityMonitoringPage: React.FC = () => {
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
-  </
+  
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
-  </
+  
               </div>
             </div>
           </div>

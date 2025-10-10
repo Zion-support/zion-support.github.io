@@ -125,9 +125,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1
             Join Our Team
-  </
+  </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Work on cutting-edge AI and IT solutions that transform businesses worldwide.
           </p>
@@ -268,9 +268,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                  <button
                     Apply Now
-  </
+  </button>
                 </div>
 <p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
@@ -306,12 +306,12 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Zap className="w-5 h-5" />
                   Send Resume
-  </
+  
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   Contact Us
-  </
+  
               </div>
             </div>
           </div>

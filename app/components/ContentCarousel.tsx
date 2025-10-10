@@ -71,9 +71,9 @@ const ContentCarousel: React.FC = () => {
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2
             Discover Our Solutions
-  </
+  </h2>
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
           </p>
@@ -153,11 +153,11 @@ const ContentCarousel: React.FC = () => {
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
                     Get Started
-  </
+  
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
-  </
+  
                 </div>
               </div>
               {/* Visual Element */}

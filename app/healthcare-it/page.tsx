@@ -55,9 +55,9 @@ import SEOOptimizer from '../components/SEOOptimizer';
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Healthcare
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <span
               IT Solutions
-  </
+  </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
@@ -65,9 +65,9 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </p>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button
               Learn More
-  </
+  </button>
 </div>
         </div>
       </section>
@@ -114,9 +114,9 @@ import SEOOptimizer from '../components/SEOOptimizer';
       {/* CTA Section */}
 <section className="py-20 px-4">
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
+            <button
               View Case Studies
-  </
+  </button>
           </div>
         </div>
       </section>

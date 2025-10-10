@@ -33,9 +33,9 @@ const SitemapPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Sitemap</h1>
           </h1>
-          <p className="text-xl text-gray-600">
+          <p
             Navigate through all pages on our website
-  </
+  </p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,12 +70,12 @@ const SitemapPage: React.FC = () => {
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
               Contact Us
-  </
+  
             <a 
               href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
               Call Us: (302) 464-0950
-  </
+  
           </div>
         </div>
       </div>

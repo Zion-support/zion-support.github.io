@@ -30,14 +30,17 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]return (
+  ];
+
+  return (
     <React.Fragment>
       <Helmet>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
@@ -51,19 +54,19 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1
               Ai Analytics Dashboard
-  </
+  </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai analytics dashboard solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button
                 Get Started
-  </
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+              <button
                 View Demo
-  </
+  </button>
             </div>
           </div>
         </section>
@@ -71,12 +74,12 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2
                 Key Features
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+  </h2>
+              <p
                 Advanced AI technology that drives results
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -108,9 +111,9 @@ const AiAnalyticsDashboardPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p
                 Proven results that drive business growth and efficiency
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -135,12 +138,12 @@ const AiAnalyticsDashboardPage: React.FC = () => {
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button
                   Contact Us
-  </
-                <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+                <button
                   Learn More
-  </
+  </button>
               </div>
             </div>
           </div>
@@ -148,13 +151,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       </div>
       <Footer />
     </React.Fragment>
-  )}
-export default AiAnalyticsDashboardPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+  );
+};
+
+export default AiAnalyticsDashboardPage;

@@ -91,9 +91,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             />
           </svg>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
+        <h2
           Oops! Something went wrong
-  </
+  </h2>
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
         </p>;
@@ -102,15 +102,12 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         )}
         <div className="mt-6 flex gap-4"></div>
           <button
-            onClick={resetError}
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             Try Again
-  </
-          <button
-            onClick={() => (window.location.href = '/')}
+  </button>
+          <button (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
             Go Home
-  </
+  </button>
         </div>
       </div>
     </div>
@@ -143,11 +140,9 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           Unable to connect to the server. Please check your internet connection and try again.;
         </p>;
         <div className="mt-6"></div>;
-          <button;
-            onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+          <button
             Retry Connection
-  </
+  </button>
         </div>
       </div>
     </div>
@@ -166,16 +161,14 @@ function NotFoundFallback(): JSX.Element {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6 flex gap-4 justify-center"></div>
-          <button
-            onClick={() => (window.location.href = '/')}
+          <button (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             Go Home
-  </
-          <button
-            onClick={() => window.history.back()}
+  </button>
+          <button window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
             Go Back
-  </
+  </button>
         </div>
       </div>
     </div>

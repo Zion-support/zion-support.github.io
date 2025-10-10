@@ -53,9 +53,9 @@ import Navigation from '../components/Navigation'import Footer from '../componen
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span
               Touch
-  </
+  </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business? Let's discuss your project and explore 
@@ -136,7 +136,7 @@ import Navigation from '../components/Navigation'import Footer from '../componen
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company Name
-  </
+  
                     <input
                       type="text"
                       id="company"
@@ -149,7 +149,7 @@ import Navigation from '../components/Navigation'import Footer from '../componen
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
-  </
+  
                     <input
                       type="tel"
                       id="phone"
@@ -163,7 +163,7 @@ import Navigation from '../components/Navigation'import Footer from '../componen
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
-  </
+  
                   <select
                     id="service"
                     name="service"

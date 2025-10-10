@@ -77,9 +77,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
+                <button
                   View Demo
-  </
+  </button>
               </div>
             </div>
           </div>
@@ -89,9 +89,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p
                 Everything you need to make data-driven decisions with confidence
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (</div>
@@ -111,9 +111,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p
                 Built for scale and reliability
-  </
+  </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => (</div>
@@ -133,9 +133,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p
                 Experience the difference with our AI-powered analytics platform
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6">
@@ -182,9 +182,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
+                <button
                   Schedule Demo
-  </
+  </button>
               </div>
             </div>
           </div>

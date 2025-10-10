@@ -40,9 +40,9 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
       </Helmet>
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1
             Blockchain Solutions
-  </
+  </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge blockchain technology and decentralized solutions. 
             Powered by advanced AI and industry expertise.
@@ -80,9 +80,9 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Blockchain Services?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -121,12 +121,12 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2
                   {category} Services
-  </
-                <p className="text-xl text-gray-600">
+  </h2>
+                <p
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
-  </
+  </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
@@ -143,7 +143,7 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates
-  </
+  
                       </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -177,9 +177,9 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button
                         Get Blockchain Quote
-  </
+  </button>
                     </div>
                   ))}
               </div>
@@ -190,12 +190,12 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2
                 Our Blockchain Capabilities
-  </
-              <p className="text-xl text-gray-600">
+  </h2>
+              <p
                 Comprehensive blockchain technologies and methodologies for modern business applications
-  </
+  </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -237,20 +237,20 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform with Blockchain?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
-  </
+  </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950
-  </
+  
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 ✉️ kleber@ziontechgroup.com
-  </
+  
             </div>
             <div className="mt-8 text-sm text-blue-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

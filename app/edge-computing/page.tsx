@@ -119,9 +119,9 @@ const EdgeComputingPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span
               Solutions
-  </
+  </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our advanced edge computing solutions.
@@ -132,9 +132,9 @@ const EdgeComputingPage: React.FC = () => {
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button
               View Demo
-  </
+  </button>
           </div>
         </div>
       </section>
@@ -143,9 +143,9 @@ const EdgeComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Advanced edge computing capabilities designed for modern applications and IoT solutions
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -173,9 +173,9 @@ const EdgeComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Comprehensive edge computing solutions for all your business needs
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
@@ -193,9 +193,9 @@ const EdgeComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Edge computing solutions for various industries and applications
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
@@ -213,9 +213,9 @@ const EdgeComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Experience the benefits of edge computing with our proven solutions
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
@@ -233,16 +233,16 @@ const EdgeComputingPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p
             Transform your applications with ultra-low latency edge computing solutions
-  </
+  </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button
               Start Free Trial
-  </
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+            <button
               Contact Sales
-  </
+  </button>
           </div>
         </div>
       </section>

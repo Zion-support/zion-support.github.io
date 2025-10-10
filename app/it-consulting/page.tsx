@@ -438,13 +438,13 @@ const ITConsultingPage: React.FC = () => {
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5 inline mr-2" />
               Call (302) 464-0950
-  </
+  
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5 inline mr-2" />
               Get IT Consultation
-  </
+  
           </div>
         </div>
       </section>
@@ -564,13 +564,13 @@ const ITConsultingPage: React.FC = () => {
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Get Free Consultation
-  </
+  
                   <a
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
                     Call for Quote
-  </
+  
                 </div>
               </div>
             ))}
@@ -593,13 +593,13 @@ const ITConsultingPage: React.FC = () => {
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5" />
               Call (302) 464-0950
-  </
+  
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5" />
               Get Custom IT Strategy
-  </
+  
           </div>
         </div>
       </section>

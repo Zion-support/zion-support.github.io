@@ -29,9 +29,9 @@ const SocialMediaManagerPage: React.FC = () => {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
+              <button
                 View Demo
-  </
+  </button>
             </div>
           </div>
         </section>

@@ -149,12 +149,12 @@ export default function DocsPage() {
             Can't find what you're looking for? Our support team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+            <button
               Contact Support
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+  </button>
+            <button
               Join Community
-  </
+  </button>
           </div>
         </div>
       </section>

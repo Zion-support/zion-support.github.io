@@ -39,19 +39,19 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1
                 AI Content Generation
-  </
+  </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                <button
                   Get Started
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+  </button>
+                <button
                   Learn More
-  </
+  </button>
               </div>
             </div>
           </div>
@@ -60,9 +60,9 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2
                 Powerful AI Features
-  </
+  </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
               </p>
@@ -97,9 +97,9 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button
               Start Your Free Trial
-  </
+  </button>
           </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -127,9 +127,9 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Experience the benefits of our proven solutions
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
@@ -147,16 +147,16 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p
             Transform your business with our page solutions today
-  </
+  </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button
               Start Free Trial
-  </
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+            <button
               Contact Sales
-  </
+  </button>
           </div>
         </div>
       </section>

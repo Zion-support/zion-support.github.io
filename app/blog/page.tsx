@@ -175,9 +175,9 @@ const BlogPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1
                 Tech Insights & Updates
-  </
+  </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
               </p>
@@ -248,9 +248,9 @@ const BlogPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1
               Tech Insights & News
-  </
+  </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
         <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
@@ -317,9 +317,9 @@ const BlogPage: React.FC = () => {
                         {post.category}
                       </span>
                       {post.featured && (
-                        <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">
+                        <span
                           Featured
-  </
+  </span>
                       )}
                     </div>
                     <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">

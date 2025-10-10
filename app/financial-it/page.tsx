@@ -87,9 +87,9 @@ const FinancialITPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Financial Services
-            <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span
               IT Solutions
-  </
+  </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.
@@ -100,9 +100,9 @@ const FinancialITPage: React.FC = () => {
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button
               Schedule Demo
-  </
+  </button>
           </div>
         </div>
       </section>
@@ -111,9 +111,9 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p
               Comprehensive IT solutions designed specifically for financial services industry
-  </
+  </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -140,9 +140,9 @@ const FinancialITPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2
               Financial Services
-  </
+  </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             </p>
@@ -185,16 +185,16 @@ const FinancialITPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p
             Join leading financial institutions using our specialized IT solutions for compliance and security
-  </
+  </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button
               Start Free Trial
-  </
-            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+  </button>
+            <button
               Contact Sales
-  </
+  </button>
           </div>
         </div>
       </section>

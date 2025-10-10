@@ -123,7 +123,7 @@ const HomePage: React.FC = memo(() => {;
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content;
-  </
+  
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>;
         <ContentPromotionBanner />;
@@ -146,9 +146,9 @@ const HomePage: React.FC = memo(() => {;
             >
               Zion Tech Group</h1>
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
+            <p
               Advanced AI and IT Solutions
-  </
+  </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
@@ -185,23 +185,23 @@ const HomePage: React.FC = memo(() => {;
                 aria-label="Call us at (302) 464-0950"
             >
               📞 Call: (302) 464-0950
-  </
+  
             <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
               Get Free Consultation
-  </
+  
           </div>
         </div>
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2
             Our Services
-  </
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+  </h2>
+          <p
             Comprehensive AI and IT solutions designed to transform your business operations;
-  </
+  </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>;
             <Suspense fallback={<ServiceCardSkeleton />}>;
@@ -302,7 +302,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Micro SAAS Solutions
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -565,7 +565,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
@@ -768,7 +768,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
@@ -932,7 +932,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Emerging Technologies
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
@@ -992,7 +992,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services & Infrastructure
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
@@ -1038,9 +1038,9 @@ const HomePage: React.FC = memo(() => {;
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2
             Micro SAAS Solutions
-  </
+  </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
@@ -1048,7 +1048,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Productivity & Business Tools
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
@@ -1160,7 +1160,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Marketing & Sales Tools
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
@@ -1220,7 +1220,7 @@ const HomePage: React.FC = memo(() => {;
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Developer Tools
-  </
+  
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
@@ -1313,7 +1313,7 @@ const HomePage: React.FC = memo(() => {;
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
                         +1 (302) 464-0950
-  </
+  
                     </div>
                   </div>
                   <div className="flex items-center space-x-4"></div>
@@ -1324,7 +1324,7 @@ const HomePage: React.FC = memo(() => {;
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
                         kleber@ziontechgroup.com
-  </
+  
                     </div>
                   </div>
                   <div className="flex items-center space-x-4"></div>
@@ -1336,7 +1336,7 @@ const HomePage: React.FC = memo(() => {;
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br />
                         Middletown, DE 19709
-  </
+  
                     </div>
                   </div>
                   <div className="flex items-center space-x-4"></div>
@@ -1348,7 +1348,7 @@ const HomePage: React.FC = memo(() => {;
                       <p className="text-white font-semibold">
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                         24/7 Emergency Support Available
-  </
+  
                     </div>
                   </div>
                 </div>
@@ -1360,7 +1360,7 @@ const HomePage: React.FC = memo(() => {;
                   <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name
-  </
+  
                     <input
                       type="text"
                       id="name"
@@ -1373,7 +1373,7 @@ const HomePage: React.FC = memo(() => {;
                   <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address
-  </
+  
                     <input
                       type="email"
                       id="email"
@@ -1386,7 +1386,7 @@ const HomePage: React.FC = memo(() => {;
                   <div></div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
-  </
+  
                     <input
                       type="tel"
                       id="phone"
@@ -1398,7 +1398,7 @@ const HomePage: React.FC = memo(() => {;
                   <div></div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
-  </
+  
                     <select
                       id="service"
                       name="service"
@@ -1414,7 +1414,7 @@ const HomePage: React.FC = memo(() => {;
                   <div></div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message
-  </
+  
                     <textarea
                       id="message"
                       name="message"
@@ -1424,10 +1424,8 @@ const HomePage: React.FC = memo(() => {;
                     ></textarea>
                   </div>
                   <button
-                    type="submit"
-                    className="w-full cyber-button text-center py-4">
                     Send Message
-  </
+  </button>
                 </form>
               </div>
             </div>

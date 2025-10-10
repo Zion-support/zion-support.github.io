@@ -73,11 +73,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <p className="text-xl text-blue-100 mb-8">
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
-          <button
-            onClick={() => setIsSubscribed(false)}
+          <button setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email;
-  </
+  </button>
         </div>
       </div>
     );
@@ -110,7 +109,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address;
-  </
+  
                 <input
                   type="email"
                   value={email}

@@ -42,9 +42,9 @@ import { Helmet  } from 'react-helmet-async'import { BarChart, TrendingUp, Users
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1
                 E-commerce Analytics Pro
-  </
+  </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>

@@ -160,9 +160,9 @@ const ConsultationPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1
                 Expert IT Consultation
-  </
+  </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get personalized guidance from our experts to transform your business with cutting-edge AI and IT solutions.
               </p>
@@ -193,9 +193,9 @@ const ConsultationPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                  <button
                     Schedule Consultation
-  </
+  </button>
                 </div>
               ))}
             </div>
@@ -294,7 +294,7 @@ const ConsultationPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-  </
+  
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -314,8 +314,7 @@ const ConsultationPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button
-                    onClick={() => handleBooking(type.id)}
+                  <button handleBooking(type.id)}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       type.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
@@ -323,7 +322,7 @@ const ConsultationPage: React.FC = () => {
                     }`}
                   >
                     Book Consultation
-  </
+  </button>
                 </div>
               ))}
             </div>
@@ -403,7 +402,7 @@ const ConsultationPage: React.FC = () => {
                   to="/services"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   View All Services
-  </
+  
               </div>
             </div>
           </div>
@@ -473,11 +472,11 @@ const ConsultationPage: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Calendar className="mr-2 h-5 w-5" />
               Schedule Consultation
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
               Contact Us
-  </
+  
           </div>
         </div>
       </section>

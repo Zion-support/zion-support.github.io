@@ -47,27 +47,24 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         <div className="font-size-controls">
-          <button
-            onClick={() => changeFontSize('small')}
+          <button changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
-  </
-          <button
-            onClick={() => changeFontSize('medium')}
+  </button>
+          <button changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
-  </
-          <button
-            onClick={() => changeFontSize('large')}
+  </button>
+          <button changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
             A
-  </
+  </button>
         </div>
       </div>
       {children}

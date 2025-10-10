@@ -113,7 +113,7 @@ interface FormStatus {
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company
-  </
+  
               <input
                 type="text"
                 id="company"
@@ -127,7 +127,7 @@ interface FormStatus {
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                 Phone Number
-  </
+  
               <input
                 type="tel"
                 id="phone"
@@ -142,7 +142,7 @@ interface FormStatus {
           <div>
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
               Service Interest
-  </
+  
             <select
               id="service"
               name="service"

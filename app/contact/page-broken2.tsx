@@ -104,9 +104,9 @@ phone: '',
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Get in
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span
                 {' '}Touch
-  </
+  </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss your project and explore 
@@ -170,7 +170,7 @@ phone: '',
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company
-  </
+  
                     <div className="relative">
                       <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
@@ -186,7 +186,7 @@ phone: '',
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
-  </
+  
                     <div className="relative">
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
@@ -203,7 +203,7 @@ phone: '',
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
-  </
+  
                   <div className="relative">
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <select
