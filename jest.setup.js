@@ -7,26 +7,27 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./app/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
+// Note: These files don't exist in the current project structure
+// jest.mock('./app/utils/logger.ts', () => ({
+//   logger: {
+//     debug: jest.fn(),
+//     info: jest.fn(),
+//     warn: jest.fn(),
+//     error: jest.fn(),
+//     log: jest.fn(),
+//   },
+// }));
 
-jest.mock('./app/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
+// jest.mock('./app/utils/analytics.ts', () => ({
+//   trackEvent: jest.fn(),
+//   trackPageView: jest.fn(),
+//   initAnalytics: jest.fn(),
+// }));
 
-jest.mock('./app/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
+// jest.mock('./app/utils/errorTracking.ts', () => ({
+//   reportError: jest.fn(),
+//   initErrorReporting: jest.fn(),
+// }));
 
 // usePerformance hook doesn't exist, so no mock needed
 
