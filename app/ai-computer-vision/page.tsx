@@ -163,8 +163,7 @@ const AiComputerVisionPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
+<Footer />
     </React.Fragment>
   ),
 };
@@ -180,5 +179,3 @@ export default AiComputerVisionPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

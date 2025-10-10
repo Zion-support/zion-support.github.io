@@ -159,8 +159,7 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
+<Footer />
     </React.Fragment>
   ),
 };
@@ -176,5 +175,3 @@ export default AiContentStudioPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

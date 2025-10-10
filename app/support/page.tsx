@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState('');
+const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
     {
@@ -26,8 +25,6 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   const supportChannels = [
     {
       title: 'Email Support',

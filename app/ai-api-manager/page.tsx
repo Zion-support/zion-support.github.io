@@ -21,8 +21,7 @@ const AIApiManagerPage: React.FC = () => {
     },
     {
 
-<<<<<<< HEAD
-      title: 'Security & Compliance',
+title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     },
@@ -41,8 +40,6 @@ const AIApiManagerPage: React.FC = () => {
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
   ]
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

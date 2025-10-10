@@ -3,8 +3,7 @@
 const MicroSaasPage: React.FC = () => {
   const products = [
     {
-<<<<<<< HEAD
-      title: 'Zion Analytics Pro',
+title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
       price: '$89/month',
@@ -246,59 +245,6 @@ const MicroSaasPage: React.FC = () => {
       icon: Shield
     }
   ]
-=======
-    },
-    {
-      id: '2',
-      icon: MessageSquare,
-      title: 'ZionChat AI',
-      description: 'Enterprise-grade AI customer support platform with multilingual capabilities',
-      features: [
-        'Advanced AI chatbot with 95% accuracy rate',
-        'Live chat integration with human handoff',
-        'Multi-language support (50+ languages)',
-        'Sentiment analysis and emotion detection',
-        'Ticket management and escalation system',
-        'Knowledge base integration',
-        'Voice and video chat support',
-        'CRM integration (Salesforce, HubSpot, etc.)',
-        'Custom AI model training',
-        'Advanced analytics and reporting'
-      ],
-      price: '$79/month',
-      originalPrice: '$149/month',
-      users: 'Up to 25 users',
-      popular: false,
-      category: 'Communication',
-      link: 'https://ziontechgroup.com/chat-ai',
-      marketPrice: '$200-500/month',
-      savings: '60% off market rate'
-    },
-    {
-      id: '3',
-      icon: Shield,
-  const benefits = [
-    'Quick setup and deployment (under 5 minutes)',
-    'Scalable pricing plans with no hidden fees',
-    '24/7 customer support and technical assistance',
-    'Regular feature updates and improvements',
-    'Enterprise-grade security and compliance',
-    'Easy integration with existing systems',
-    'White-label solutions available',
-    'Free trial and money-back guarantee',
-    'Comprehensive documentation and training',
-    'Dedicated account management'
-  ];
-
-  const stats = [
-    { icon: <Users className="w-8 h-8 text-cyan-400" />, value: '50K+', label: 'Active Users' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-400" />, value: '99.9%', label: 'Uptime SLA' },
-    { icon: <Shield className="w-8 h-8 text-purple-400" />, value: '100%', label: 'Secure & Compliant' },
-    { icon: <Zap className="w-8 h-8 text-orange-400" />, value: '2min', label: 'Setup Time' },
-    { icon: <Award className="w-8 h-8 text-yellow-400" />, value: '4.9/5', label: 'Customer Rating' },
-    { icon: <Rocket className="w-8 h-8 text-pink-400" />, value: '10x', label: 'Faster Deployment' }
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -484,8 +430,7 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300">Our most popular micro SaaS solutions</p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {microSaasTools.map((tool, index) => (
                 <div key={index} className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 group ${
                   tool.popular ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/20' : 'border-white/10 hover:border-cyan-400/30'
@@ -549,37 +494,6 @@ const MicroSaasPage: React.FC = () => {
                       Try Now
                     </button>
                   </div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularProducts.map((product) => (
-                <div key={product.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                      <product.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Star className="w-5 h-5 text-yellow-400" />
-                      <span className="text-yellow-400 text-sm font-medium">Popular</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
-                  <p className="text-gray-300 mb-4">{product.description}</p>
-                  <div className="text-3xl font-bold text-white mb-6">{product.price}</div>
-
-                  <ul className="space-y-3 mb-6">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                    Try Free Trial
-                  </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
 >>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 </div>
               ))}

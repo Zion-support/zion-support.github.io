@@ -163,8 +163,7 @@ const AiCrmAssistantPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
+<Footer />
     </React.Fragment>
   ),
 };
@@ -180,5 +179,3 @@ export default AiCrmAssistantPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

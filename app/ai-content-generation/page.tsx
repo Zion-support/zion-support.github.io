@@ -164,8 +164,7 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
+<Footer />
     </React.Fragment>
   ),
 };
@@ -181,5 +180,3 @@ export default AiContentGenerationPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
