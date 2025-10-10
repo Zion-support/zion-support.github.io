@@ -1,58 +1,44 @@
 'use client';
 import React from 'react';
+import { ArrowRight, Star, CheckCircle, Zap, Shield, Brain } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const stats = [
+    { label: 'Happy Clients', value: '500+' },
+    { label: 'Projects Completed', value: '1000+' },
+    { label: 'Years Experience', value: '10+' },
+    { label: 'Team Members', value: '50+' }
+  ];
+
+  const features = [
     {
-<<<<<<< HEAD
+      icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap
+      description: 'Cutting-edge artificial intelligence for your business needs'
     },
     {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Optimized performance and real-time processing'
+    },
+    {
+      icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield
-    },
-    {
-      title: 'Proven Results',
-      description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users
+      description: 'Bank-level security and compliance standards'
     }
   ];
-  const benefits = [
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
+    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Transform Your Business with AI
-          </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Discover how our AI-powered solutions can revolutionize your operations and drive growth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-white" />
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                {stat.value}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-purple-100 text-sm">{feature.description}</p>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+              <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -71,24 +57,23 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Schedule a free consultation with our AI experts and discover how we can transform your business.
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of satisfied customers who trust Zion Tech Group for their technology needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
-              Schedule Free Consultation
-              <ArrowRight className="w-4 h-4" />
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
+              Get Started Today
+              <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
-              Download Case Study
+            <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              Learn More
             </button>
           </div>
         </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       </div>
     </div>
   );

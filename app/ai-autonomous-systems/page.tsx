@@ -167,21 +167,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
       <Footer />
     </div>
   ),
-<<<<<<< HEAD
-};
 
-export default PagePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
 }
 export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+

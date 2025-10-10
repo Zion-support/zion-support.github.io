@@ -8,106 +8,114 @@ const ContentStatistics: React.FC = () => {
     projects: 0,
     satisfaction: 0,
     years: 0
-  })
+  });
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
     years: 10
-  }
+  };
 
   const statistics = [
     {
       icon: Users,
-      value: counters.clients,
       label: 'Happy Clients',
+      value: counters.clients,
       suffix: '+',
-      color: 'text-cyan-400'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400'
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: TrendingUp,
+      label: 'Projects Completed',
+      value: counters.projects,
+      suffix: '+',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Award,
+      label: 'Satisfaction Rate',
       value: counters.satisfaction,
-      label: 'Client Satisfaction',
       suffix: '%',
-      color: 'text-green-400'
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Clock,
-      value: counters.years,
       label: 'Years Experience',
+      value: counters.years,
       suffix: '+',
-      color: 'text-yellow-400'
+      color: 'from-orange-500 to-red-500'
     }
   ];
-  const achievements = [
-    {
-      icon: Brain,
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Serving clients across 50+ countries'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response'
-    }
-  ]
 
   useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters]
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
-      
-      return setInterval(() => {
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev]
-          if (current < target) {
-            return {
-              ...prev,
-              [key]: Math.min(current + increment, target)
-            }
-          }
-          return prev;
-        })
-      }, 16);
-    })
+    const animateCounters = () => {
+      const duration = 2000;
+      const steps = 60;
+      const stepDuration = duration / steps;
 
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    }
-=======
+      let currentStep = 0;
+      const timer = setInterval(() => {
+        currentStep++;
+        const progress = currentStep / steps;
+        
+        setCounters({
+          clients: Math.floor(targetCounters.clients * progress),
+          projects: Math.floor(targetCounters.projects * progress),
+          satisfaction: Math.floor(targetCounters.satisfaction * progress),
+          years: Math.floor(targetCounters.years * progress)
+        });
+
+        if (currentStep >= steps) {
+          clearInterval(timer);
+          setCounters(targetCounters);
+        }
+      }, stepDuration);
     };
 
-    // Start animations with slight delays
-    Object.keys(targetCounters).forEach((key, index) => {
-      setTimeout(() => {
-        animateCounter(key as keyof typeof targetCounters);
-      }, index * 100);
-    });
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+    const timer = setTimeout(animateCounters, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
+    <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Delivering exceptional results and measurable value to our clients worldwide.
           </p>
         </div>
 
-        {/* Statistics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map((stat, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-lg flex items-center justify-center mb-4`}>
+                <stat.icon className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
         </div>
 
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-white/90 mb-6">
+              Let us help you achieve similar results with our proven technology solutions.
+            </p>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 mx-auto">
+              Get Started Today
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

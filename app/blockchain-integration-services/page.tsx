@@ -40,16 +40,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       <Helmet>
         <title>Blockchain Integration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-<meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Integration Services
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
             Powered by cutting-edge AI technology and industry expertise.

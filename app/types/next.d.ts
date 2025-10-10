@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 
-=======
 const NextPage: React.FC = () => {
   const features = [
     {
@@ -283,4 +281,4 @@ declare module 'next' {
 }
 
 export {}
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
+

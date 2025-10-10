@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -127,6 +123,5 @@
 }
 
 export default AccessibilityCheckerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
+
