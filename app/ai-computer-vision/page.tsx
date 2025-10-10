@@ -3,136 +3,162 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Eye, Camera, Image, Zap, Shield, ArrowRight, Brain, Target, Users, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AIComputerVisionPage: React.FC = () => {
+const AiComputerVisionPage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
-      title: 'Object Detection',
-      description: 'Advanced object detection and recognition using state-of-the-art computer vision algorithms.',
-      benefits: ['Real-time detection', 'Multi-class recognition', 'High accuracy', 'Custom training']
-    },
-    {
-      icon: Camera,
-      title: 'Image Analysis',
-      description: 'Comprehensive image analysis including classification, segmentation, and feature extraction.',
-      benefits: ['Image classification', 'Semantic segmentation', 'Feature extraction', 'Quality assessment']
-    },
-    {
       icon: Brain,
-      title: 'Deep Learning Models',
-      description: 'Custom deep learning models trained on your specific data for optimal performance.',
-      benefits: ['Custom models', 'Transfer learning', 'Model optimization', 'Continuous learning']
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: 'Real-time Processing',
-      description: 'Process images and videos in real-time with optimized algorithms and hardware acceleration.',
-      benefits: ['Real-time processing', 'Hardware acceleration', 'Low latency', 'High throughput']
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Secure computer vision solutions with privacy protection and data encryption.',
-      benefits: ['Data encryption', 'Privacy protection', 'Secure processing', 'Compliance ready']
-    },
-    {
-      icon: Zap,
-      title: 'Edge Computing',
-      description: 'Deploy computer vision models on edge devices for offline processing and reduced latency.',
-      benefits: ['Edge deployment', 'Offline processing', 'Reduced latency', 'Cost optimization']
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
   const benefits = [
-    'Improve accuracy by 95%',
-    'Reduce processing time by 80%',
-    'Lower operational costs by 60%',
-    'Enable real-time insights',
-    'Automate visual tasks',
-    'Scale across devices',
-    'Enhance user experience',
-    'Enable new applications'
-  ];
-
-  const useCases = [
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Computer vision for self-driving cars and advanced driver assistance systems',
-      icon: '🚗'
-    },
-    {
-      title: 'Medical Imaging',
-      description: 'AI-powered medical image analysis for diagnosis and treatment planning',
-      icon: '🏥'
-    },
-    {
-      title: 'Quality Control',
-      description: 'Automated quality inspection and defect detection in manufacturing',
-      icon: '🏭'
-    },
-    {
-      title: 'Security & Surveillance',
-      description: 'Intelligent surveillance systems with facial recognition and behavior analysis',
-      icon: '🔒'
-    },
-    {
-      title: 'Retail Analytics',
-      description: 'Customer behavior analysis and inventory management in retail',
-      icon: '🛒'
-    },
-    {
-      title: 'Agriculture',
-      description: 'Crop monitoring, disease detection, and yield prediction in agriculture',
-      icon: '🌾'
-    }
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Computer Vision - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our AI Computer Vision solutions. Advanced object detection, image analysis, and real-time processing for better insights." />
-        <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
+        <title>Ai Computer Vision - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai computer vision solution for modern businesses." />
+        <meta name="keywords" content="AI ai computer vision, artificial intelligence, ai computer vision, AI solutions, intelligent automation" />
       </Helmet>
 
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
-              <Eye className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Computer Vision
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Computer Vision
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our AI Computer Vision solutions. Advanced object detection, 
-              image analysis, and real-time processing for better insights.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai computer vision solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
-                Start Building
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
               </button>
-              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
+              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
             </div>
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
         </section>
-      </main>
-
+      </div>
       <Footer />
     </>
   );
 };
 
-export default AIComputerVisionPage;
+export default AiComputerVisionPage;
