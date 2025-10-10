@@ -108,18 +108,63 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="cyber-card hologram-card p-6">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 neon-text">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            Key Benefits
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="cyber-card hologram-card p-6 text-center">
+                <div className="text-3xl mb-4">✨</div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {benefit}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            What Our Clients Say
+          </h2>
+          <div className="cyber-card hologram-card p-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-lg text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </p>
+              <div className="text-cyan-400 font-semibold text-lg">
+                {testimonials[currentIndex].name}
+              </div>
+              <div className="text-gray-400">
+                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

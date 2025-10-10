@@ -94,12 +94,13 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 neural-network-bg"></div>
+      <div className="relative container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
@@ -125,8 +126,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
@@ -152,8 +153,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
@@ -179,8 +180,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Emerging Technologies */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Zap className="w-5 h-5 mr-2" />
               Emerging Tech
             </h3>
@@ -198,8 +199,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Users className="w-5 h-5 mr-2" />
               Company
             </h3>

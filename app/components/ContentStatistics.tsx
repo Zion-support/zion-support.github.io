@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-'use client';
+
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -113,6 +112,63 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+    <div className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Statistics Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            See how we've helped businesses transform with our AI and IT solutions
+          </p>
+        </div>
+
+        {/* Statistics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="cyber-card hologram-card p-6 text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className={`text-4xl font-bold mb-2 ${stat.color} neon-text`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Features Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">
+            Why Choose Our Solutions?
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="quantum-card p-6 text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="cyber-card hologram-card p-8">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
+            Key Benefits
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
