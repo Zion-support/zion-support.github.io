@@ -81,7 +81,7 @@ const services = [
     'Consulting',
 
     'Other';
-  ];];];
+  ];];
 const contactInfo = [
     {
     icon: Phone,

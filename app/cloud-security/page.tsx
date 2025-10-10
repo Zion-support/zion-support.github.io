@@ -6,7 +6,7 @@ const CloudSecurityPage: React.FC = () => {
   const features = [
     {
     }
-  ];];];
+  ];];
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',

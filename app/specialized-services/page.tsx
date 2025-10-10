@@ -100,7 +100,7 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   ),
-};];];
+};];
 export default PagePage;
 
 import Navigation from '../components/Navigation';
@@ -128,7 +128,7 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ];];];
+  ];];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',

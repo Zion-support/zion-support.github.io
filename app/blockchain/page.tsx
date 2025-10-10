@@ -24,7 +24,7 @@ const BlockchainPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
-  ];];];
+  ];];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',

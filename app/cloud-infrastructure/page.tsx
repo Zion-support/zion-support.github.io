@@ -6,7 +6,7 @@ const CloudInfrastructurePage: React.FC = () => {
   const features = [
     {
     }
-  ];];];
+  ];];
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',

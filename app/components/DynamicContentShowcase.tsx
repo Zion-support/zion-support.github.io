@@ -48,7 +48,7 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Globe,
       color: 'from-teal-500 to-cyan-600'
     }
-  ];];];
+  ];];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -84,7 +84,7 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-  useEffect(() => {];];
+  useEffect(() => {];
     const timer = setInterval(() => {;
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);

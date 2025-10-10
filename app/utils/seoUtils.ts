@@ -112,7 +112,7 @@ ogTags.forEach(tag => {
     })
   }
 private updateTwitterTags(): void {
-    if (typeof document === 'undefined') return;];];
+    if (typeof document === 'undefined') return;];
 const twitterTags = [},
     { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },

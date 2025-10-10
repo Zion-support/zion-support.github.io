@@ -92,7 +92,7 @@ export default function APIDocsPage() {
         }
   ]
     }
-  ];];
+  ];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 

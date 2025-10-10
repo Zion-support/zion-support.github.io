@@ -38,7 +38,7 @@ const BusinessAppsPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international business applications'
     }
-  ];];];
+  ];];
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',

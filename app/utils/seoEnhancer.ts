@@ -47,7 +47,7 @@ export const generateMetaTags = (data: {}
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
-// Generate meta tags;];];
+// Generate meta tags;];
 export const generateMetaTags = (dat,
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -261,7 +261,7 @@ export class SEOEnhancer {}
   updateStructuredData(data: Record<string, unknown>) {
     // Update structured data
   }
-  updateStructuredData(data: Record<string, unknown>) {}];];
+  updateStructuredData(data: Record<string, unknown>) {}];
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

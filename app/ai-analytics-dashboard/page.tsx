@@ -11,27 +11,34 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-Time Analytics',
       description: 'Get instant insights with real-time data visualization and monitoring.',
+
       benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring'];
     },
     {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Leverage artificial intelligence to uncover hidden patterns and trends.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Smart recommendations', 'Automated insights']
+
+      benefits: ['Predictive analytics', 'Anomaly detection', 'Smart recommendations', 'Automated insights'],
+
     },
     {
       icon: PieChart,
       title: 'Advanced Visualizations',
       description: 'Create stunning charts and graphs to present your data effectively.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Export capabilities', 'Responsive design']
+
+      benefits: ['Interactive charts', 'Custom visualizations', 'Export capabilities', 'Responsive design'],
+
     },
     {
       icon: Activity,
       title: 'Performance Tracking',
       description: 'Monitor key performance indicators and track business metrics.',
-      benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis']
+
+      benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis'],
+
     },
-  ];];];
+  ];];
   const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',

@@ -11,47 +11,61 @@ const AiChatbotBuilderPage: React.FC = () => {
       icon: Brain,
       title: 'No-Code Builder',
       description: 'Create sophisticated chatbots without any coding knowledge.',
+
       benefits: ['Drag-and-drop interface', 'Visual workflow builder', 'Pre-built templates', 'Easy customization'];
     },
     {
       icon: MessageCircle,
       title: 'Multi-Channel Support',
       description: 'Deploy your chatbot across multiple platforms and channels.',
-      benefits: ['Website integration', 'Social media bots', 'Mobile apps', 'API integration']
+
+      benefits: ['Website integration', 'Social media bots', 'Mobile apps', 'API integration'],
+
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance and optimize your chatbot with detailed analytics.',
-      benefits: ['Conversation analytics', 'User engagement metrics', 'Performance insights', 'A/B testing']
+
+      benefits: ['Conversation analytics', 'User engagement metrics', 'Performance insights', 'A/B testing'],
+
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Built with enterprise-grade security and compliance features.',
-      benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting']
+
+      benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting'],
+
     },
-  ];];];
+  ];];
   const useCases = [
     {
       title: 'Customer Support',
       description: 'Provide 24/7 customer support with intelligent responses.',
+
       benefits: ['Instant responses', 'Reduced support costs', 'Improved satisfaction', 'Scalable support'];
     },
     {
       title: 'Lead Generation',
       description: 'Capture and qualify leads automatically.',
-      benefits: ['Qualified leads', 'Higher conversion rates', 'Automated follow-up', 'Lead scoring']
+
+      benefits: ['Qualified leads', 'Higher conversion rates', 'Automated follow-up', 'Lead scoring'],
+
     },
     {
       title: 'E-commerce Assistant',
       description: 'Help customers find products and complete purchases.',
-      benefits: ['Product recommendations', 'Order assistance', 'Inventory queries', 'Checkout support']
+
+      benefits: ['Product recommendations', 'Order assistance', 'Inventory queries', 'Checkout support'],
+
     },
     {
       title: 'Internal Support',
       description: 'Streamline internal processes and employee support.',
-      benefits: ['HR assistance', 'IT support', 'Process automation', 'Knowledge base']
+
+      benefits: ['HR assistance', 'IT support', 'Process automation', 'Knowledge base'],
+
     },
   ];
 

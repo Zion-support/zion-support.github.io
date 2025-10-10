@@ -1009,7 +1009,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     }
-  ];];];
+    ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
@@ -1046,7 +1046,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
   const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory;
+    selectedCategory === 'all' || service.category === selectedCategory
   );
 
   return (

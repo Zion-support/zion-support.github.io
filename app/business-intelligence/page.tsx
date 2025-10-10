@@ -6,7 +6,7 @@ const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
     }
-  ];];];
+  ];];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

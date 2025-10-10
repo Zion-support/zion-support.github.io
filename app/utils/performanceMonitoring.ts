@@ -678,7 +678,7 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
 }
 export const getPerformanceScore = (): number => {}
   const metrics = getMetrics();
-  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];];];
+  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];];
   const webVitals = webVitalNames;
     .map(name => metrics[name]);
     .filter(Boolean);

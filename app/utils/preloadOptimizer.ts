@@ -16,7 +16,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
   fontPreloads.forEach(href => {
     )
   }
-  fontPreloads.forEach(href => {)}];];
+  fontPreloads.forEach(href => {)}];
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style',
@@ -34,7 +34,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   criticalImages.forEach(src => {
     )
   }
-  criticalImages.forEach(src => {)}];];
+  criticalImages.forEach(src => {)}];
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';

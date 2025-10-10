@@ -24,7 +24,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ];];];
+  ];];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',

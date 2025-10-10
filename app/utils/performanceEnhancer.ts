@@ -266,7 +266,7 @@ export const preloadCriticalResources = () => {}
   const criticalResources = [
     '/fonts/inter-var.woff2',
     '/css/critical.css'];
-  criticalResources.forEach((resource) => {}];];
+  criticalResources.forEach((resource) => {}];
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;

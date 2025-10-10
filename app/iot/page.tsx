@@ -136,7 +136,7 @@ const IoTPage: React.FC = () => {
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
-  ];];
+  ];
 const categories = [...new Set(iotServices.map(service => service.category))];
 return (
     <>

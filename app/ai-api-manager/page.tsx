@@ -12,14 +12,17 @@ const AIApiManagerPage: React.FC = () => {
     {
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
+
       benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'];
     },
     {
       title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
-      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
+
+      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics'],
+
     },
-    {];];
+    {];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

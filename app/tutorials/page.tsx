@@ -13,7 +13,7 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ];];];
+    ];
   const tutorials = [
     {
       id: 1,
@@ -32,11 +32,11 @@ const TutorialsPage: React.FC = () => {
         steps: [
           'Set up your development environment',
           'Get your API key from the dashboard',
-          'Make your first API call',
-          'Handle responses and errors',
-          'Implement advanced features';
-        ];
-      }
+            'Make your first API call',
+            'Handle responses and errors',
+            'Implement advanced features'
+          ]
+        }
     },
     {
       id: 2,
@@ -155,7 +155,7 @@ const TutorialsPage: React.FC = () => {
     }
   ];
   const filteredTutorials = selectedCategory === 'all' 
-    ? tutorials ;
+    ? tutorials 
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);

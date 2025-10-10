@@ -46,7 +46,7 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ];];];
+  ];];
   const achievements = [
     {
       icon: Brain,

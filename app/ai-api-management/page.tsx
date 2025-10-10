@@ -12,14 +12,17 @@ const AIApiManagementPage: React.FC = () => {
     {
       title: 'Intelligent API Monitoring',
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',
+
       benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'];
     },
     {
       title: 'Smart Rate Limiting',
       description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
-      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
+
+      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling'],
+
     },
-    {];];
+    {];
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

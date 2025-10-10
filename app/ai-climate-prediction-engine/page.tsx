@@ -15,27 +15,34 @@ const AIClimatePredictionEngine: React.FC = () => {
       icon: Globe,
       title: 'Global Climate Modeling',
       description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
+
       benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'];
     },
     {
       icon: BarChart,
       title: 'Extreme Weather Prediction',
       description: 'AI-powered prediction of extreme weather events and natural disasters',
-      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment']
+
+      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment'],
+
     },
     {
       icon: Brain,
       title: 'Machine Learning Algorithms',
       description: 'Advanced ML algorithms trained on decades of climate data for accurate predictions',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy']
+
+      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy'],
+
     },
     {
       icon: Shield,
       title: 'Climate Risk Assessment',
       description: 'Comprehensive climate risk assessment for businesses and governments',
-      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']
+
+      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations'],
+
     },
-  ];];];
+  ];];
   const pricingPlans = [
     {
       name: 'Basic',
@@ -114,7 +121,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       icon: Target,
       results: 'Enhanced urban resilience'
     }
-  ];];];
+  ];];
   return (
     <>
       <Helmet>

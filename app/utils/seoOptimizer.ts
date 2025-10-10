@@ -215,7 +215,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }];];
+    }];
     return directives.join(', ');
   }
   /**;

@@ -24,7 +24,7 @@ const AnalyticsToolsPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Worldwide deployment and support for international business analytics'
     }
-  ];];];
+  ];];
   const benefits = [
     'Advanced AI-powered data analysis',
     'Real-time processing and insights',

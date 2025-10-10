@@ -80,5 +80,5 @@ const LayoutPage: React.FC = () => {
       </section>
     </div>
 ;
-};];];
+};];
 export default LayoutPage;

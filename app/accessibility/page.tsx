@@ -8,39 +8,50 @@ const AccessibilityPage: React.FC = () => {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
+
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'];
     },
     {
       icon: MousePointer,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
-      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
+
+      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls'],
+
     },
     {
       icon: Volume2,
       title: 'Audio Accessibility',
       description: 'Audio alternatives and visual indicators for users with hearing impairments.',
-      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
+
+      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support'],
+
     },
     {
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
-      benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
+
+      benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications'],
+
     },
     {
       icon: Users,
       title: 'Inclusive Design',
       description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
-      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
+
+      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces'],
+
     },
     {
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
+
+      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'],
+
     },
-  ];];
+  ];
 const standards = [
     {
       name: 'WCAG 2.1 AA',

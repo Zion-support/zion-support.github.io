@@ -52,7 +52,7 @@ const PenetrationTestingPage: React.FC = () => {
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   }
     }
-  ];];];
+  ];];
 const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',

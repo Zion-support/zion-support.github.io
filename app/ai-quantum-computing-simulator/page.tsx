@@ -15,27 +15,34 @@ const AIQuantumComputingSimulator: React.FC = () => {
       icon: Cpu,
       title: 'Quantum Circuit Simulation',
       description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms',
+
       benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
     },
     {
       icon: Brain,
       title: 'AI-Powered Optimization',
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
-      benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction']
+
+      benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction'],
+
     },
     {
       icon: BarChart,
       title: 'Quantum State Visualization',
       description: 'Interactive 3D visualization of quantum states, entanglement, and superposition effects',
-      benefits: ['3D quantum state visualization', 'Entanglement analysis', 'Superposition mapping']
+
+      benefits: ['3D quantum state visualization', 'Entanglement analysis', 'Superposition mapping'],
+
     },
     {
       icon: Shield,
       title: 'Quantum Error Correction',
       description: 'Advanced error correction algorithms to simulate realistic quantum computing conditions',
-      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
+
+      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis'],
+
     },
-  ];];];
+  ];];
   const pricingPlans = [
     {
       name: 'Researcher',
@@ -114,7 +121,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       icon: Zap,
       results: 'Accurate molecular modeling'
     }
-  ];];];
+  ];];
   return (
     <>
       <Helmet>
