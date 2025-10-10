@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Shield, Zap, Settings, Lock, Globe, ArrowRight, Code, Database, Cloud, Activity } from 'lucide-react';
+import { CheckCircle, Shield, Zap, Settings, Lock, Globe, ArrowRight, Code, Database, Cloud, Activity, Building, Smartphone } from 'lucide-react';
 
 const AIAPIManagerPage: React.FC = () => {
   const features = [
@@ -58,34 +58,24 @@ const AIAPIManagerPage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Microservices Architecture',
-      description: 'Manage and orchestrate microservices APIs',
-      icon: '🔧'
+      title: 'Enterprise APIs',
+      description: 'Manage complex enterprise API ecosystems with advanced security and monitoring',
+      icon: Building
+    },
+    {
+      title: 'Microservices',
+      description: 'Orchestrate microservices with intelligent API gateway and service mesh',
+      icon: Code
     },
     {
       title: 'Third-party Integration',
-      description: 'Securely integrate with external APIs',
-      icon: '🔗'
+      description: 'Securely integrate with third-party APIs and manage external dependencies',
+      icon: Globe
     },
     {
-      title: 'Mobile App Backend',
-      description: 'Power mobile applications with robust APIs',
-      icon: '📱'
-    },
-    {
-      title: 'Web Application APIs',
-      description: 'Build scalable web application backends',
-      icon: '🌐'
-    },
-    {
-      title: 'IoT Device Management',
-      description: 'Connect and manage IoT devices via APIs',
-      icon: '📡'
-    },
-    {
-      title: 'Data Integration',
-      description: 'Integrate data from multiple sources',
-      icon: '📊'
+      title: 'Mobile APIs',
+      description: 'Optimize APIs for mobile applications with caching and performance tuning',
+      icon: Smartphone
     }
   ];
 
@@ -124,6 +114,49 @@ const AIAPIManagerPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Perfect for Every Use Case
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From enterprise APIs to microservices, our platform adapts to your needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Optimize Your APIs?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start managing your APIs more efficiently with our AI-powered platform today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started Free
+                </button>
+                <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Schedule Demo
+                </button>
               </div>
             </div>
           </div>
