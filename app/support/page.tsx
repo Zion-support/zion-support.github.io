@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
@@ -6,20 +8,22 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
     {
       question: 'How do I get started with your AI solutions?',
-      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.'
+      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.',
+      category: 'general'
     },
     {
       question: 'What support do you provide after implementation?',
-      answer: 'We provide 24/7 technical support, regular maintenance, and ongoing optimization to ensure your systems run smoothly.'
+      answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly.',
+      category: 'support'
     },
     {
       question: 'How long does implementation typically take?',
-      answer: 'Implementation time varies based on project complexity, but most projects are completed within 4-12 weeks.'
+      answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months.',
+      category: 'implementation'
     },
     {
       question: 'Do you offer training for our team?',
@@ -35,7 +39,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
+      description: 'Call us for immediate assistance',
       contact: '+1-302-464-0950',
       availability: '24/7'
     },
@@ -44,12 +48,11 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
-      availability: '24/7'
+      hours: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
-      description: 'Instant help through our website chat',
       contact: 'Available on website',
       availability: '24/7'
     }
@@ -103,15 +106,33 @@ const SupportPage: React.FC = () => {
                 />
               </div>
             </div>
+            
+            <div className="flex flex-wrap justify-center gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Contact Support */}
-        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
-              <p className="text-xl text-gray-300">Get in touch with our support team</p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Get in Touch
+              </h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Choose your preferred way to contact our support team
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (

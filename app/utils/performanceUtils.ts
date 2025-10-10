@@ -1,22 +1,3 @@
-// Performance utilities for the application
-
-export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-}
-
-export class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-  };
-
   private observers: PerformanceObserver[] = [];
 
   constructor() {
@@ -66,6 +47,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
     }
   }
 
@@ -81,6 +63,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
+      console.warn('LCP observer not supported:', error);
     }
   }
 
@@ -96,6 +79,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
+      console.warn('FID observer not supported:', error);
     }
   }
 
@@ -115,6 +99,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
+      console.warn('CLS observer not supported:', error);
     }
   }
 
@@ -170,6 +155,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const end = performance.now();
     
     if (name) {
+      console.log(`${name} took ${end - start} milliseconds`);
     }
     
     return result;

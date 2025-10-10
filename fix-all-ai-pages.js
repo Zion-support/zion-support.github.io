@@ -1,11 +1,61 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Get all AI page files
+function getAllAIPages() {
+  const appDir = path.join(__dirname, 'app');
+  const files = [];
+  
+  function scanDir(dir) {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      
+      if (item.isDirectory() && item.name.startsWith('ai-')) {
+        const pageFile = path.join(fullPath, 'page.tsx');
+        if (fs.existsSync(pageFile)) {
+          files.push({
+            path: pageFile,
+            name: item.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, ''),
+            title: item.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+            color: getColorForPage(item.name)
+          });
+        }
+      } else if (item.isDirectory()) {
+        scanDir(fullPath);
+      }
+    }
+  }
+  
+  scanDir(appDir);
+  return files;
+}
+
+function getColorForPage(pageName) {
+  const colors = ['purple', 'blue', 'green', 'red', 'yellow', 'indigo', 'pink', 'teal', 'orange', 'cyan', 'emerald', 'sky', 'violet', 'amber'];
+  const hash = pageName.split('').reduce((a, b) => {
+    a = ((a << 5) - a) + b.charCodeAt(0);
+    return a & a;
+  }, 0);
+  return colors[Math.abs(hash) % colors.length];
+}
+
+// Template for AI pages
+const createAIPageTemplate = (pageName, title, description, keywords, color) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiCustomerSupportPage: React.FC = () => {
+const ${pageName}: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -44,29 +94,29 @@ const AiCustomerSupportPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai customer support solution for modern businesses." />
-        <meta name="keywords" content="AI ai customer support, artificial intelligence, ai customer support, AI solutions, intelligent automation" />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
 
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-${color}-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Customer Support
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai customer support solution for modern businesses.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-${color}-500 to-blue-600 hover:from-${color}-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-${color}-400 text-${color}-400 hover:bg-${color}-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
             </div>
@@ -88,7 +138,7 @@ const AiCustomerSupportPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-${color}-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -145,10 +195,10 @@ const AiCustomerSupportPage: React.FC = () => {
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-${color}-500 to-blue-600 hover:from-${color}-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-${color}-400 text-${color}-400 hover:bg-${color}-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -161,4 +211,34 @@ const AiCustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportPage;
+export default ${pageName};`;
+
+function fixAllAIPages() {
+  const files = getAllAIPages();
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    try {
+      const description = `Advanced AI-powered ${file.title.toLowerCase()} solution for modern businesses.`;
+      const keywords = `AI ${file.title.toLowerCase()}, artificial intelligence, ${file.title.toLowerCase()}, AI solutions, intelligent automation`;
+      
+      const newContent = createAIPageTemplate(
+        file.name + 'Page',
+        file.title,
+        description,
+        keywords,
+        file.color
+      );
+      
+      fs.writeFileSync(file.path, newContent, 'utf8');
+      console.log(`Fixed: ${file.path}`);
+      fixedCount++;
+    } catch (error) {
+      console.error(`Error processing ${file.path}:`, error.message);
+    }
+  }
+  
+  console.log(`Fixed ${fixedCount} AI pages`);
+}
+
+fixAllAIPages();
