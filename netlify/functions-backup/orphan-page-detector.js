@@ -1,6 +1,6 @@
 // netlify/functions/orphan-page-detector.js;
-exports.handler = async function () {
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {}"
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/orphan-page-detector.cjs'} {/* TODO: Fix JSX expression */})
   o: 'inherit' });
@@ -11,7 +11,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'orphan-page-detector' })}} catch (e) {return {
+        task: 'orphan-page-detector' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),

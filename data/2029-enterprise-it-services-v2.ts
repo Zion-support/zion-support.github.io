@@ -81,7 +81,7 @@ export const,
       'Enhance security posture'
       'Optimize resource utilization'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Enterprise DevOps transformation'
@@ -123,7 +123,7 @@ export const,
     name: 'Quantum Cloud Infrastructure',
     description:,
       'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.'
-    category: [
+    category: []
       'Cloud Computing'
       'Quantum Computing',
       'Infrastructure',
@@ -233,7 +233,7 @@ export const,
       'Competitive advantage'
       'Long-term investment value'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Scientific computing'
@@ -258,7 +258,7 @@ export const,
       'Quantum Security'
       'Hybrid Computing'
     ]
-    integration: [
+    integration: []
       'Existing cloud platforms'
       'Quantum applications',
       'Enterprise systems'],
@@ -286,7 +286,7 @@ export const,
     name: 'AI-Powered Enterprise Security',
     description:,
       'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.'
-    category: [
+    category: []
       'Cybersecurity'
       'AI',
       'Enterprise Security',
@@ -386,7 +386,7 @@ export const,
       'Enhance compliance posture'
       'Reduce security team workload'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Enterprise security operations'
@@ -397,7 +397,7 @@ export const,
       'Risk assessment'],
     marketSize: '$38.7B by 2029',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance']
-    technology: [
+    technology: []
       'AI/ML',
       'Machine Learning',
       'Behavioral Analysis',
@@ -430,7 +430,7 @@ export const,
     name: 'Autonomous IT Operations Center',
     description:,
       'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.'
-    category: [
+    category: []
       'IT Operations'
       'Automation',
       'Infrastructure',
@@ -543,7 +543,7 @@ export const,
       'Enhance user experience'
       'Optimize resource utilization'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Enterprise IT operations'

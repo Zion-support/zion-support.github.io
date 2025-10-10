@@ -1,13 +1,13 @@
 // netlify/functions/ai-changelog-scheduler.js;
-exports.config = { schedule: '0 3 * * *' };
-exports.handler = async function () {;
+exports.config="{ schedule: '0 3 * * *' };"
+exports.handler="async function () {;"
 const { execSync } = require('child_process');
   try {execSync('node automation/ai-changelog-generator.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config="{/* TODO: Fix JSX expression */}"
   e: '0 3 * * *' };
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {/* TODO: Fix JSX expression */}
   l: true}
@@ -19,7 +19,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'ai-changelog-scheduler' })}} catch (e) {return {
+        task: 'ai-changelog-scheduler' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
@@ -32,7 +32,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         task: 'ai-changelog-scheduler' }) }} catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
         error: String(e;)}) }} };'
-// netlify/functions/ai-changelog-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
+// netlify/functions/ai-changelog-scheduler.js exports.config="{/* TODO: Fix JSX expression */}"
   e: '0 3 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;"

@@ -1,34 +1,28 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const PartnersPage: React.FC = () => {;
-const partnerTypes = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+const partnerTypes="[]"
+import Navigation from '../components;
+import Footer from '../components;
+const PartnersPage: React.FC = () => {}
+  const partnerTypes="[]"
+    {}
       titl,
     e: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500
-      partners: [
+      bgColor: 'bg-blue-500;
+      partners: []
         { nam,
     e: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
-        { name: 'Google Cloud', description: 'AI
+        { name: 'Google Cloud', description: 'AI;
         { nam,
     e: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
         { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
@@ -39,7 +33,7 @@ const PartnersPage: React.FC = () => {
       description: 'Specialized solution providers that complement our offerings',
       icon: Handshake,
       color: 'text-green-400',
-      bgColor: 'bg-green-500
+      bgColor: 'bg-green-500;
         { nam,
     e: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
         { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
@@ -51,7 +45,7 @@ const PartnersPage: React.FC = () => {
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500
+      bgColor: 'bg-purple-500;
         { nam,
     e: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
         { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
@@ -62,7 +56,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 ;
-const benefits = [
+const benefits="[]"
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -74,20 +68,17 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
-<<<<<<< HEAD
       description: 'Rigorous partner certification and quality standards';
-const partnershipTiers = [
+const partnershipTiers="[]"
       name: 'Strategic Partners',
-=======
       description: 'Rigorous partner certification and quality standards'
 
-  const partnershipTiers = [
+  const partnershipTiers="[]"
       nam,
     e: 'Strategic Partners',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
-      benefits: [
+      benefits: []
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
         'Priority support and resources',
@@ -115,20 +106,16 @@ namename: 'Channel Partners',
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-<<<<<<< HEAD
       bgColor: 'bg-orange-500/10';
-const partnerTypes = [];
+const partnerTypes="[];"
   return (
     {// TODO: Add content}
 
 };
-=======
-      bgColor: 'bg-orange-500
-
-  const partnerTypes = [];
+      bgColor: 'bg-orange-500;
+  const partnerTypes="[];"
   return ({/)
 )};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   titl,
   e: 'Technology Partners',
       descriptio,
@@ -138,9 +125,9 @@ const partnerTypes = [];
       colo,
   r: 'text-blue-400',
       bgColo,
-  r: 'bg-blue-500
+  r: 'bg-blue-500;
       partner,
-  s: [
+  s: []
   /
   O: Add items];
         {/* TODO: Fix JSX expression *
@@ -172,7 +159,7 @@ const partnerTypes = [];
       colo,
   r: 'text-green-400',
       bgColo,
-  r: 'bg-green-500
+  r: 'bg-green-500;
         {/* TODO: Fix JSX expression *
   ,
     o: '☁️' },
@@ -200,7 +187,7 @@ const partnerTypes = [];
       colo,
   r: 'text-purple-400',
       bgColo,
-  r: 'bg-purple-500
+  r: 'bg-purple-500;
 {/* TODO: Fix JSX expression *
   ,
     o: '💾' },
@@ -221,216 +208,194 @@ const partnerTypes = [];
     o: '📋' }
     }
   ];
-  const benefits = [
-
+  const benefits="[]"
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',;
-const PagePage: React.FC = () => {
-<<<<<<< HEAD
+const PagePage: React.FC = () => {}
 return (
 
   return (
-    <React.Fragment>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+    <React.Fragment></React>
+      <Navigation /></Navigation>
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className=""container mx-auto px-4 py-16 pt-24"></div>"
 );
 }
           {/* Header */}
-=======
   return (<>
-      
-        <div className="container mx-auto px-4 py-16 pt-24">
+        <div className=""container mx-auto px-4 py-16 pt-24"></div>"
           {/* Header *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <div className="text-center mb-16">
-            <h1 className="text-4xl m,
+          <div className=""text-center mb-16"></div>"
+            <h1 className=""text-4xl m,"></h1>"
     d:text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners
+              Our Partners;
             <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We work with industry-leading technology partners to deliver comprehensive solutions 
+            <p className=""text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
+              We work with industry-leading technology partners to deliver comprehensive solutions;
               that drive innovation and business success.
             <
           <
 
           {/* Partner Types *
-          <div className="mb-16">)
-            {partnerTypes.map((type, index) => (<div key={index} className="mb-12">
-                <div className="flex items-center mb-8">
-                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
-                    <type.icon className={`w-6 h-6 ${type.color}`} 
-                  <div>
-                    <h2 className="text-2xl font-bold text-white neon-text">{type.title}<
-                    <p className="text-gray-300">{type.description}<
-                
-                <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className=""mb-16">)"
+            {partnerTypes.map((type, index) => (<div key={index} className=""mb-12"></div>"
+                <div className=""flex items-center mb-8"></div>"
+                  <div className="{`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>"
+                    <type .icon className="{`w-6 h-6 ${type.color}`}></type>"
+                  <div></div>
+                    <h2 className=""text-2xl font-bold text-white neon-text">{type.title}<"
+                    <p className=""text-gray-300">{type.description}<"
+                <div className=""grid grid-cols-1 md: grid-cols-2 l,"></div>"
     g:grid-cols-3 gap-6">)
-                  {type.partners.map((partner), partnerIndex) => (<div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
-                      <div className="text-3xl mb-3">{partner.logo}<
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}<
-                      <p className="text-gray-300 text-sm">{partner.description}<)
+                  {type.partners.map((partner), partnerIndex) => (<div key={partnerIndex} className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400"></div>"
+                      <div className=""text-3xl mb-3">{partner.logo}<"
+                      <h3 className=""text-lg font-semibold text-white mb-2">{partner.name}<"
+                      <p className=""text-gray-300 text-sm">{partner.description}<)"
                   ))}
 
           {/* Partnership Benefits *
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className=""text-3xl font-bold text-white text-center mb-12 neon-text"></h2>"
               Why Partner With Us?
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className=""grid grid-cols-1 md: grid-cols-2 l,"></div>"
     g:grid-cols-4 gap-6">
-              {benefits.map((benefit), index) => (<div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500
-                    <benefit.icon className="w-8 h-8 text-cyan-400" 
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
-                  <p className="text-gray-300 text-sm">{benefit.description}<
-
+              {benefits.map((benefit), index) => (<div key={index} className=""text-center"></div>"
+                  <div className=""w-16 h-16 bg-cyan-500"></div>"
+                    <benefit .icon className=""w-8 h-8 text-cyan-400"></benefit>"
+                  <h3 className=""text-lg font-semibold text-white mb-2">{benefit.title}<"
+                  <p className=""text-gray-300 text-sm">{benefit.description}<"
           {/* Partnership Tiers *
-              Partnership Tiers
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">)
-              {partnershipTiers.map((tier), index) => (<div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700
-                  <div className="text-center mb-6">
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}<
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}<
-                    <p className="text-gray-300 text-sm">{tier.description}<
-                  <ul className="space-y-3">)
-                    {tier.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" 
-                        <span className="text-gray-300 text-sm">{benefit}<
+              Partnership Tiers;
+            <div className=""grid grid-cols-1 md: grid-cols-3 gap-8">)"
+              {partnershipTiers.map((tier), index) => (<div key={index} className="{`${tier.bgColor} rounded-lg p-6 border border-gray-700></div>"
+                  <div className=""text-center mb-6"></div>"
+                    <div className="{`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}<"
+                    <h3 className=""text-xl font-semibold text-white mb-2">{tier.name}<"
+                    <p className=""text-gray-300 text-sm">{tier.description}<"
+                  <ul className=""space-y-3">)"
+                    {tier.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className=""flex items-start"></li>"
+                        <CheckCircle className=""w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"></CheckCircle>"
+                        <span className=""text-gray-300 text-sm">{benefit}<"
                       <
                   <
 
           {/* Become a Partner CTA *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Become Our Partner
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <div className=""bg-gradient-to-r from-indigo-900/50 to-purple-900"></div>"
+            <h2 className=""text-2xl font-bold text-white mb-4"></h2>"
+              Become Our Partner;
+            <p className=""text-gray-300 mb-6 max-w-2xl mx-auto"></p>"
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
               Let's build the future together.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
-                href="
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
-                <Handshake className="w-5 h-5 mr-2" 
-                Become a Partner
+            <div className=""flex flex-col sm: flex-row gap-4 justify-center items-center"></div>"
+              <a href="""></a>"
+                className=""cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">"
+                <Handshake className=""w-5 h-5 mr-2"></Handshake>"
+                Become a Partner;
               <
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2")
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
+                href=""tel:+13024640950""
+                className=""border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
+                <Phone className=""w-4 h-4 mr-2")></Phone>"
+                (302) 464-0950;
+                href=""mailto:kleber@ziontechgroup.com""
+                className=""border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,""
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" 
-                Email Us
-<<<<<<< HEAD
-      <Footer />
+                <Mail className=""w-4 h-4 mr-2"></Mail>"
+                Email Us;
+      <Footer /></Footer>
     </React.Fragment>
-=======
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
+      <Footer <></Footer>
           {/* Header *
-          <div className="text-center mb-16"><
-            <h1 className="text-4xl,"
+          <div className=""text-center mb-16"><"
+            <h1 className=""text-4xl,"></h1>"
   md: text-5xl font-bold text-white mb-6 neon-text"><
 /
           <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"><
+            <p className=""text-xl text-gray-300 max-w-3xl mx-auto mb-8"><"
 /
 /
 
           <
           <
           {/* Partner Types *
-          <div className="mb-16"><
+          <div className=""mb-16"><"
             {partnerTypes.map((type), index) => ()}"
-          <div key={index} className="mb-12"><
-                <div className="flex items-center mb-8"><
-                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}><
-                    <type.icon className={`w-6 h-6 ${type.color}`} /><
+          <div key={index} className=""mb-12"><"
+                <div className=""flex items-center mb-8"><"
+                  <div className="{`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}><"
+                    <type.icon className="{`w-6 h-6 ${type.color}`} /><"
                   <div><
-                    <h2 className="text-2xl font-bold text-white neon-text">{type.title}<
-                    <p className="text-gray-300">{type.description}<
-                <div className="grid grid-cols-1,
+                    <h2 className=""text-2xl font-bold text-white neon-text">{type.title}<"
+                    <p className=""text-gray-300">{type.description}<"
+                <div className=""grid grid-cols-1,"></div>"
   md:grid-cols-2,"
   lg: grid-cols-3 gap-6"><
                   {type.partners.map((partner), partnerIndex) => ()}"
-          <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
+          <div key={partnerIndex} className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700"></div>"
   hover:border-cyan-400/50 transition-all duration-300"><
-                      <div className="text-3xl mb-3">{partner.logo}<
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}<
-                      <p className="text-gray-300 text-sm">{partner.description}<
+                      <div className=""text-3xl mb-3">{partner.logo}<"
+                      <h3 className=""text-lg font-semibold text-white mb-2">{partner.name}<"
+                      <p className=""text-gray-300 text-sm">{partner.description}<"
                   ))}
           {/* Partnership Benefits *
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
+            <h2 className=""text-3xl font-bold text-white text-center mb-12 neon-text"><"
 /
 
           <
-            <div className="grid grid-cols-1,
+            <div className=""grid grid-cols-1,"></div>"
   md:grid-cols-2,"
   lg: grid-cols-4 gap-6"><
               {benefits.map((benefit), index) => ()}"
-          <div key={index} className="text-center"><
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /><
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
-                  <p className="text-gray-300 text-sm">{benefit.description}<
+          <div key={index} className=""text-center"><"
+                  <div className=""w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><"
+                    <benefit.icon className=""w-8 h-8 text-cyan-400" /><"
+                  <h3 className=""text-lg font-semibold text-white mb-2">{benefit.title}<"
+                  <p className=""text-gray-300 text-sm">{benefit.description}<"
 {/* Partnership Tiers *
               Partnership Tiers;"
-            <div className="grid grid-cols-1,"
+            <div className=""grid grid-cols-1,"></div>"
   md: grid-cols-3 gap-8"><
               {partnershipTiers.map((tier), index) => ()}`
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}><
-                  <div className="text-center mb-6"><
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}<
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}<
-                    <p className="text-gray-300 text-sm">{tier.description}<
-                  <ul className="space-y-3"><
+          <div key={index} className="{`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}><"
+                  <div className=""text-center mb-6"><"
+                    <div className="{`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}<"
+                    <h3 className=""text-xl font-semibold text-white mb-2">{tier.name}<"
+                    <p className=""text-gray-300 text-sm">{tier.description}<"
+                  <ul className=""space-y-3"><"
                     {tier.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="flex items-start"><
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" /><
-                        <span className="text-gray-300 text-sm">{benefit}<
+          <li key={benefitIndex} className=""flex items-start"><"
+                        <CheckCircle className=""w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" /><"
+                        <span className=""text-gray-300 text-sm">{benefit}<"
                       <
                   <
 {/* Become a Partner CTA *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"><
-            <h2 className="text-2xl font-bold text-white mb-4"><
+          <div className=""bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"><"
+            <h2 className=""text-2xl font-bold text-white mb-4"><"
               Become Our Partner;"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"><
+            <p className=""text-gray-300 mb-6 max-w-2xl mx-auto"><"
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
 
               Let's build the future together.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
-                href="
-
+            <div className=""flex flex-col sm: flex-row gap-4 justify-center items-center"></div>"
+              <a href="""></a>"
 /
 
           "
-          <Handshake className="w-5 h-5 mr-2" /><
+          <Handshake className=""w-5 h-5 mr-2" /><"
 /
 
           <
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-<Phone className="w-4 h-4 mr-2" 
+                href="tel:+13024640950" className=""border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
+<Phone className=""w-4 h-4 mr-2"></Phone>"
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
+                href="mailto:kleber@ziontechgroup.com" className=""border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,""
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" 
+                <Mail className=""w-4 h-4 mr-2"></Mail>"
                 Email Us;
-      <Footer 
-
-<<<<<<< HEAD
+      <Footer></Footer>
     </div>
   )};
-=======
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default PartnersPage;
-

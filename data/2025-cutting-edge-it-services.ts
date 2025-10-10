@@ -1,6 +1,6 @@
 
-export const cuttingEdgeITServices2025 = [
-export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-platform',
+export const cuttingEdgeITServices2025="[]"
+export const cuttingEdgeITServices2025="[{id: 'quantum-cloud-infrastructure-platform',"
     name: 'Quantum Cloud Infrastructure Platform',
     description:,
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
@@ -19,7 +19,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
         price: 399}
         period: 'month',
         features: [}
-export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
+export const cuttingEdgeITServices2025="[{/* TODO: Fix JSX expression */}"
   e: 399}
         perio,
   d: 'month'
@@ -33,7 +33,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       professional: price: 999;
         period: 'month',
         features:
-        features: [
+        features: []
       professiona,
   l: pric,
   e: 999;
@@ -48,7 +48,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       enterprise: price: 2499;
         period: 'month',
         features:
-        features: [
+        features: []
       enterpris,
   e: pric,
   e: 2499;
@@ -63,7 +63,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     category: 'Quantum IT',
     tags:
-        tags: [
+        tags: []
     categor,
   y: 'Quantum IT'
     tag,
@@ -104,7 +104,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Research computing platforms'
       'Enterprise cloud migration'
     ]
-    integrations: [
+    integrations: []
     integration,
   s: [,
       'AWS'
@@ -148,7 +148,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         price: 299;
         period: 'month',
         features:
-        features: [
+        features: []
     pricin,
   g: starte,
   r: unknown;
@@ -164,7 +164,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       professional: price: 799;
         period: 'month',
         features:
-        features: [
+        features: []
       professiona,
   l: pric,
   e: 799;
@@ -179,7 +179,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       enterprise: price: 1999;
         period: 'month',
         features:
-        features: [
+        features: []
       enterpris,
   e: pric,
   e: 1999;
@@ -194,7 +194,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     category: 'Edge Computing',
     tags:
-        tags: [
+        tags: []
     categor,
   y: 'Edge Computing'
     tag,
@@ -243,7 +243,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'AI Frameworks'
       'Cloud Platforms'
     ]
-    compliance: [
+    compliance: []
     complianc,
   e: [,
       'IoT Security Standards'
@@ -276,7 +276,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         price: 499;
         period: 'month',
         features:
-        features: [
+        features: []
     pricin,
   g: starte,
   r: unknown;
@@ -292,7 +292,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       professional: price: 1299;
         period: 'month',
         features:
-        features: [
+        features: []
       professiona,
   l: pric,
   e: 1299;
@@ -307,7 +307,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       enterprise: price: 2999;
         period: 'month',
         features:
-        features: [
+        features: []
       enterpris,
   e: pric,
   e: 2999;
@@ -322,7 +322,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     category: 'Cybersecurity',
     tags:
-        tags: [
+        tags: []
     categor,
   y: 'Cybersecurity'
     tag,
@@ -363,7 +363,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Healthcare data protection'
       'Remote workforce security'
     ]
-    integrations: [
+    integrations: []
     integration,
   s: [,
       'Active Directory'
@@ -407,7 +407,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         price: 599;
         period: 'month',
         features:
-        features: [
+        features: []
     pricin,
   g: starte,
   r: unknown;
@@ -423,7 +423,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       professional: price: 1499;
         period: 'month',
         features:
-        features: [
+        features: []
       professiona,
   l: pric,
   e: 1499;
@@ -438,7 +438,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       enterprise: price: 3499;
         period: 'month',
         features:
-        features: [
+        features: []
       enterpris,
   e: pric,
   e: 3499;
@@ -453,7 +453,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     }
     category: 'Blockchain',
     tags:
-        tags: [
+        tags: []
     categor,
   y: 'Blockchain'
     tag,
@@ -502,7 +502,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Supply Chain Tools'
       'Legacy Systems'
     ]
-    compliance: [
+    compliance: []
     complianc,
   e: [,
       'Blockchain Standards'
@@ -535,7 +535,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         price: 399;
         period: 'month',
         features:
-        features: [
+        features: []
     pricin,
   g: starte,
   r: unknown;
@@ -551,7 +551,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       professional: price: 999;
         period: 'month',
         features:
-        features: [
+        features: []
       professiona,
   l: pric,
   e: 999;
@@ -566,7 +566,7 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       enterprise: price: 2499;
         period: 'month',
         features:
-        features: [
+        features: []
       enterpris,
   e: pric,
   e: 2499;
@@ -625,13 +625,13 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
       'Azure'
       'Google Cloud'
     ]
-    compliance: [
+    compliance: []
     complianc,
   e: [,
       'DevOps Best Practices'
       'Security Standards',
       'Quality Assurance Protocols']}
-export const cuttingEdgeITServices2025 = [];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+export const cuttingEdgeITServices2025="[];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'"
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [,
@@ -692,12 +692,12 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-export const cuttingEdgeITServices2025 = [,
+export const cuttingEdgeITServices2025="[,"
   {,
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform',,
   description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
-    features: [
+    features: []
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
       'Quantum-enhanced data processingAutomated infrastructure management'
     ];
@@ -719,7 +719,7 @@ export const cuttingEdgeITServices2025 = [,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-export const cuttingEdgeITServices2025 = [
+export const cuttingEdgeITServices2025="[]"
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
@@ -747,7 +747,7 @@ export const cuttingEdgeITServices2025 = [
     marketSize: '$22.1 B';
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions';
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
-    useCases: [
+    useCases: []
     categor,
   y: 'Quantum IT';
     tag,
@@ -779,7 +779,7 @@ export const cuttingEdgeITServices2025 = [
     id: 'edge-computing-orchestration-platform';
     name: 'Edge Computing Orchestration Platform',,
   description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.';
-    features: [
+    features: []
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment';
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
     ];
@@ -815,7 +815,7 @@ export const cuttingEdgeITServices2025 = [
     marketSize: '$18.7 B';
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers';
     competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization';
-    useCases: [
+    useCases: []
     categor,
   y: 'Edge Computing';
     tag,
@@ -847,7 +847,7 @@ export const cuttingEdgeITServices2025 = [
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform',,
   description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.';
-    features: [
+    features: []
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment';
       'Automated security responsesComprehensive audit logging'
     ];
@@ -883,7 +883,7 @@ export const cuttingEdgeITServices2025 = [
     marketSize: '$31.2 B';
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions';
     competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
-    useCases: [
+    useCases: []
     categor,
   y: 'Cybersecurity';
     tag,
@@ -915,7 +915,7 @@ export const cuttingEdgeITServices2025 = [
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform',,
   description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.';
-    features: [
+    features: []
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing';
       'Multi-party workflow automationComprehensive reporting and analytics'
     ];
@@ -951,7 +951,7 @@ export const cuttingEdgeITServices2025 = [
     marketSize: '$19.9 B';
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies';
     competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
-    useCases: [
+    useCases: []
     categor,
   y: 'Blockchain';
     tag,
@@ -983,7 +983,7 @@ export const cuttingEdgeITServices2025 = [
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform',,
   description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.';
-    features: [
+    features: []
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization';
       'Automated security scanningComprehensive analytics and reporting'
     ];
@@ -1019,7 +1019,7 @@ export const cuttingEdgeITServices2025 = [
     marketSize: '$25.6 B';
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies';
     competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
-    useCases: [
+    useCases: []
     categor,
   y: 'DevOps';
     tag,
@@ -1057,7 +1057,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];
 ;
-export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = [ i,
+export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025="[ i,"
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,
   n:' 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'' 'Quantum-enhanced security protocols'' 'Distributed quantum computing nodes'' 'Real-time infrastructure optimization'' 'Quantum-resistant encryption'' 'Advanced load balancing algorithms'' 'Predictive scaling capabilities'' 'Multi-cloud quantum orchestration'' 'Real-time performance monitoring'' 'Quantum-enhanced data processing'' 'Automated infrastructure management' ] pricin,
@@ -1206,7 +1206,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ' 'AI-powered DevOps automation, predictive monitoring, intelligent incident response' useCase,
   s: [' 'Software development automation'' 'Continuous deployment pipelines'' 'Performance monitoring and optimization'' 'Incident response automation'' 'Quality assurance automation' ] integration,
   s: [' 'GitHub'' 'GitLab'' 'Jenkins'' 'Docker'' 'Kubernetes'' 'AWS'' 'Azure'' 'Google Cloud' ] complianc,
-  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = [ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,
+  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025="[ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,"
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',' descriptio,
   n: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.', feature,
@@ -1221,7 +1221,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] ,' complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] };' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation' ];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025 = [; {/* TODO: Fix JSX expression */}
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025="[; {/* TODO: Fix JSX expression */}"
   d: 'month'}' feature,
   s: ['Basic quantum infrastructureStandard security protocolsEmail support']} }; professiona,
   l: {/* TODO: Fix JSX expression */}

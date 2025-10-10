@@ -1,5 +1,5 @@
   return new Promise((resolve, reject) => {;
-const options = {
+const options="{}"
       hostname: 'api.github.com'
       path: path;
       method: 'GET'

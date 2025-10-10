@@ -14,10 +14,10 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Lazy load components for better performance;
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy()
+// const InteractiveContentShowcase2026="lazy()"
 // () => import('./components/InteractiveContentShowcase2026')
 // );
-// const InteractiveAIROICalculator = lazy()
+// const InteractiveAIROICalculator="lazy()"
 // () => import('./components/InteractiveAIROICalculator')
 // );
 

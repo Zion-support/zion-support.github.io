@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export interface BiotechAIService {id: string;
   name: string;
   tagline: string;
@@ -1538,7 +1536,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research databases'
       'Regulatory platforms'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Gene editing'
@@ -1594,7 +1592,7 @@ varian,
       'Research platforms'
       'Analytical tools'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Therapeutic proteins'
@@ -1650,7 +1648,7 @@ varian,
       'Analytical tools'
       'Healthcare systems'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Trial optimization'
@@ -1706,7 +1704,7 @@ varian,
       'Analytical tools'
       'Data sources'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Disease diagnosis'
@@ -1762,7 +1760,7 @@ varian,
       'Laboratory systems'
       'Clinical platforms'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Treatment optimization'
@@ -1818,7 +1816,7 @@ varian,
       'Analytical tools'
       'Market data'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'New indications'
@@ -1874,7 +1872,7 @@ varian,
       'Cloud platforms'
       'Data sources'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Genomic analysis'
@@ -1930,7 +1928,7 @@ varian,
       'Automation systems'
       'Monitoring tools'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Process optimization'
@@ -2036,14 +2034,14 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   reviews: number}
 ;
 export const biotechAIServices: BiotechAIService[] = [;
-  {
+  {}
     id: 'ai-drug-discovery-platform';
     name: 'AI Drug Discovery Platform';
     tagline: 'Accelerate drug development with AI-powered discovery';
     price: '$3,999';
     period: '/month',,
   description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.';
-    features: [
+    features: []
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard';
       'API for research integrationMulti-omics data analysis'
     ];
@@ -2750,10 +2748,8 @@ export interface BiotechAIService,
   s: 90, ratin,
   g: 4.9, review,
   s: 45} ]} ; '
-=======
     market_size: '$50B genetic engineering market'
     growth_rate: '300% annual growth';
 variant: 'biotech - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

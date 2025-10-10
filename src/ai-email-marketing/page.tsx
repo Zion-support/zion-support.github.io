@@ -2,12 +2,12 @@
 import React from 'react';
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 ;
-const AiEmailMarketingPage: React.FC = () => {
+const AiEmailMarketingPage: React.FC = () => {}
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 ;
 const AIEmailMarketingPage: React.FC = () => {;
-const _features = [
-    {
+const _features="[]"
+    {}
       ico,
     n: Mail,
       title: 'AI Content Generation',
@@ -26,19 +26,19 @@ icon$5: Users,
       title: 'Behavioral Triggers',
       description:       ,
 icon$5: TrendingUp,
-      title: 'A
+      title: 'A;
       descriptio,
     n:     ,
 $4}
   ];
 ;
-const benefits = [
+const benefits="[]"
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
     'Save 15+ hours per week';
-const emailTypes = [
+const emailTypes="[]"
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
     { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
@@ -46,33 +46,33 @@ const emailTypes = [
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
 ;
-const pricing = [
+const pricing="[]"
       name: 'Starter',
       price: '$29',
       period: '
       descriptio,
     n: 'Perfect for small businesses',
-      features: [
+      features: []
         '1,000 subscribers',
-        '10,000 emails
+        '10,000 emails;
         'Basic AI features',
         'Email templates',
         'Basic analytics',
         'Email support'
       ],
-      popular: false
+      popular: false;
       nam,
     e: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
         '10,000 subscribers',
-        '100,000 emails
+        '100,000 emails;
         'Advanced AI features',
         'Custom templates',
         'Advanced analytics',
         'Priority support',
-        'A
-      popular: true
+        'A;
+      popular: true;
       nam,
     e: 'Enterprise',
       price: '$199',
@@ -86,38 +86,32 @@ const pricing = [
         'Advanced automation'
 
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components
-import Footer from '../components
-
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
+import Navigation from '../components;
+import Footer from '../components;
+  return (<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <title>AI Email Marketing | Zion Tech Group<
-        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." 
+        <meta name="description" content=""Advanced AI email marketing solutions by Zion Tech Group."></meta>"
       <
 
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing<
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+        <div className=""text-center"></div>"
+          <h1 className=""text-5xl font-bold text-white mb-6">AI Email Marketing<"
+          <p className=""text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
             Coming Soon - Advanced AI email marketing solutions that will transform your business.
           <
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+          <div className=""flex flex-col sm: flex-row gap-4 justify-center"></div>"
+            <button className=""bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>"
+              Contact Us;
             <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,
+            <button className=""border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,"></button>"
     r:text-slate-900 transition-colors">
-              Learn More
+              Learn More;
           <
       
-<<<<<<< HEAD
-      <Footer />
+      <Footer /></Footer>
   )};
-=======
-      <Footer)
+      <Footer )></Footer>
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default $1;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Mail as EmailIcon, Send, BarChart3 } from 'lucide-react';

@@ -5,10 +5,10 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Define the replacements;
-const replacements = [
+const replacements="[]"
   // Next.js imports to React Router;
   { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },
-  {
+  {}
     from: "import { useRouter } from 'next/router';",
     to: "import { useNavigate, useLocation } from 'react-router-dom';",
   {/* TODO: Fix JSX expression */}
@@ -42,15 +42,15 @@ const replacements = [
   o: "import { Helmet } from 'react-helmet-async';"},
 
   // Next.js specific patterns;
-  { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },
-  { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },
+  { from: 'export const metadata: Metadata="{', to: '// Metadata moved to Helmet component' },"
+  { from: 'export const metadata="{', to: '// Metadata moved to Helmet component' },"
   { from: "'use client';", to: '' },
   { from: "'use server';", to: '' },
 
   // Router usage patterns;
-  {
-    from: 'const router = useRouter();',
-    to: 'const navigate = useNavigate();\n  const location = useLocation();'},
+  {}
+    from: 'const router="useRouter();',"
+    to: 'const navigate = useNavigate();\n  const location="useLocation();'},"
   { from: 'router.push(', to: 'navigate(' })
   { from: 'router.replace(', to: 'navigate(' })
   { from: 'router.back()', to: 'navigate(-1)' },
@@ -58,12 +58,11 @@ const replacements = [
   { from: 'router.query', to: 'new URLSearchParams(location.search)' },
 
   // Link patterns;
-  { from: 'href=', to: 'to=', context: 'Link' },
-  { from: '<Link href=', to: '<Link to=' },
-
+  { from: 'href=', to: 'to="', context: 'Link' },"
+  { from: '<Link href=', to: '<Link to="' },'></Link>"
   // Dynamic import patterns;
   { from: 'dynamic(() => import(', to: 'lazy(() => import(' })
-  { from: 'loading: () => <', to: 'fallback={<' },
+  { from: 'loading: () => <', to: 'fallback="{<' },"
   {/* TODO: Fix JSX expression */}
   o: '// Metadata moved to Helmet component' },
   {/* TODO: Fix JSX expression */}
@@ -91,16 +90,15 @@ const replacements = [
   {/* TODO: Fix JSX expression */}
   t: 'Link' },
   {/* TODO: Fix JSX expression */}
-  o: '<Link to=' },
-
+  o: '<Link to="' },'></Link>"
   // Dynamic import patterns;
   {/* TODO: Fix JSX expression */}
   o: 'lazy(() => import(' },
   {/* TODO: Fix JSX expression */}
-  o: 'fallback={<' })
+  o: 'fallback="{<' })"
   // Image patterns (replace with regular img or custom component)
   {/* TODO: Fix JSX expression */}
-  o: '<img' },
+  o: '<img ' },></img>
   {/* TODO: Fix JSX expression */}
   t: 'Image' },
   {/* TODO: Fix JSX expression */}
@@ -117,47 +115,47 @@ const replacements = [
   o: '' }];
 
 // Function to process a single file;
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     // Apply replacements;
-    replacements.forEach(({ from, to, context }) => {
-      if (context) {
+    replacements.forEach(({ from, to, context }) => {}
+      if (context) {}
         // Context-specific replacement;
-        const regex = new RegExp(;
+        const regex="new RegExp(;"
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     replacements.forEach(({ from, to, context }) => {/* TODO: Fix JSX expression */}
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
           'g'
         );
         if (regex.test(content)) {/* TODO: Fix JSX expression */}`
-          content = content.replace(regex, `$1${to}`);
-          modified = true}
-      } else {
+          content="content.replace(regex, `$1${to}`);"
+          modified="true}"
+      } else {}
         // Simple replacement;
-        if (content.includes(from)) {
-          content = content.replace(
+        if (content.includes(from)) {}
+          content="content.replace("
       } else {/* TODO: Fix JSX expression */}
             new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
             to;
           );
-          modified = true}
+          modified="true}"
       }
     });
 
     // Additional cleanup;
-    content = content;
+    content="content;"
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
+      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match="> {)"
         // Merge consecutive imports from same module;)
-        lines.forEach(line => {)
+        lines.forEach(line="> {)"
           if (match) {;
 const [, importsStr, module] = match;
             if (!imports[module]) imports[module] = [];
             imports[module].push(importsStr)}
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
+      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match="> {/* TODO: Fix JSX expression */}"
           })
         });
 
@@ -174,11 +172,10 @@ const [, importsStr, module] = match;
 }
 
 // Main execution;
-async function main() {
-
+async function main() {}
   // Find all TypeScript/JavaScript files in app directory;
   for (const pattern of patterns) {;
-const files = await glob(pattern, {)
+const files="await glob(pattern, {)"
       cwd: process.cwd(),
       ignore: [,
         '**/node_modules/**',
@@ -190,9 +187,9 @@ const files = await glob(pattern, {)
         '**/*temp*/**',
         '**/*.broken/**']});
 
-    files.forEach(file => {)
+    files.forEach(file="> {)"
       totalFiles++;)
-      if (processFile(file)) {
+      if (processFile(file)) {}
         fixedFiles++}
 async function main() {/* TODO: Fix JSX expression */}
 }
@@ -200,14 +197,11 @@ async function main() {/* TODO: Fix JSX expression */}
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     });
 
-    files.forEach(file => {/* TODO: Fix JSX expression */}
+    files.forEach(file="> {/* TODO: Fix JSX expression */}"
       })
     })}
 
-
-
-
-  if (fixedFiles > 0) {} else {
+  if (fixedFiles > 0) {} else {}
   if (fixedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }

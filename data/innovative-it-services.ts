@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export interface InnovativeITService {id: string;
   name: string;
   tagline: string;
@@ -1332,7 +1330,7 @@ varian,
     ]
     roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
     competitor,
@@ -1433,14 +1431,14 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   reviews: number}
 ;
 export const innovativeITServices: InnovativeITService[] = [;
-  {
+  {}
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform';
     tagline: 'Next-generation cybersecurity with zero trust architecture';
     price: '$599';
     period: '/month',,
   description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.';
-    features: [
+    features: []
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management';
       'Compliance reportingReal-time monitoring'
     ];
@@ -1951,10 +1949,8 @@ export interface InnovativeITService,
   s: 2500, ratin,
   g: 4.7, review,
   s: 1250} ]} ; '
-=======
     market_size: '$45B cybersecurity market'
     growth_rate: '110% annual growth';
 variant: 'cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

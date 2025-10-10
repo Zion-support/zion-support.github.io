@@ -1,4 +1,4 @@
-export interface RevOpsContent {
+export interface RevOpsContent {}
   id: string;
   title: string;
   description: string;
@@ -21,8 +21,8 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   cta?: {/* TODO: Fix JSX expression */}
   }}
 
-export const octoberNewestRevOpsContent: RevOpsContent[] = [
-  {
+export const octoberNewestRevOpsContent: RevOpsContent[] = []
+  {}
     id: 'ai-revops-automation-2025',
     title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
     description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
@@ -41,7 +41,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '$127 M incremental revenue (Fortune 500 case study)',
       '85% reduction in manual RevOps tasks',
       '4.7 x faster response times'],
-    metrics: {
+    metrics: {}
       roi: '127%',
       forecastAccuracy: '89%',
       pipelineVelocity: '3.2 x',
@@ -50,7 +50,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     cta: {,
       text: 'Read the Complete RevOps Guide',
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
-  {
+  {}
     id: 'autonomous-revenue-operations-2025',
     title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
     description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
@@ -75,14 +75,14 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '3.2 x pipeline velocity improvement',
       '12-month transformation timeline',
       '704% three-year ROI'],
-    metrics: {
+    metrics: {}
       revenue: '$127 M',
       accuracy: '89%',
       winRate: '+42%',
       velocity: '3.2 x',
       roi: '704%',
 export const,
-  octoberNewestRevOpsContent: RevOpsContent[] = [
+  octoberNewestRevOpsContent: RevOpsContent[] = []
   {/* TODO: Fix JSX expression */}
     },
     ct,

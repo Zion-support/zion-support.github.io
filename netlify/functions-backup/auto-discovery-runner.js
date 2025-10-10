@@ -1,8 +1,8 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // // console.log removed for production
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+//     // // console.log removed for production;
 }
     // Auto-discovery simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'auto-discovery-runner',
           status: 'scanning',
           itemsFound: 0;
           lastScan: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result="{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
@@ -24,9 +24,9 @@ function: 'auto-discovery-runner',
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// // console.error removed for production
+//   } catch (error) {// // console.error removed for production;
 error}
-    return {
+    return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function: 'auto-discovery-runner'}
       })}}
 };
         timestamp: new Date().toISOString(),' function: 'auto-discovery-runner',' source: event.source || 'unknown', discovery: {' status: 'scanning', itemsFound: 0;
-        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production;
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-discovery-runner' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,

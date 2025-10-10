@@ -1,6 +1,6 @@
-exports.handler = async function (event, context) {
-  try {
-    return {
+exports.handler="async function (event, context) {}"
+  try {}
+    return {}
       statusCode: 200;
       body: JSON.stringify({)
         message: 'Test function working correctly')
@@ -9,14 +9,13 @@ exports.handler = async function (event, context) {
         context: {,
           awsRequestId: context.awsRequestId;
           functionName: context.functionName;
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
         }
       }),
       header,
   s: {'Content-Type': 'application/json'}
-    }} catch (error) {
-
-    return {
+    }} catch (error) {}
+    return {}
       statusCode: 500;
       body: JSON.stringify({)
         error: 'Test function failed'),

@@ -1,37 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function BlogPost(): React.JSX.Element {
-<<<<<<< HEAD
-  return(<React.Fragment>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
-        <Helmet>
+export default function BlogPost(): React.JSX.Element {}
+  return(<React.Fragment></React>
+      <Header /></Header>
+      <div className=""min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>"
+        <Helmet></Helmet>
           <title>Edge 2025 Oct 02 Private Experiments V4 - Zion Tech Group</title>
-=======
   return(<>
-      <Header 
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"><
-        
+      <Header></Header>
+      <div className=""min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"><"
           <title>Edge 2025 Oct 02 Private Experiments V4 - Zion Tech Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <meta;
-            name="description"
-            content="Edge 2025 Oct 02 Private Experiments V4 - Latest insights from Zion Tech Group"
+          <meta ;></meta>
+            name=""description""
+            content=""Edge 2025 Oct 02 Private Experiments V4 - Latest insights from Zion Tech Group""
           /><
         <
 
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
+        <div className=""max-w-4xl mx-auto px-4 py-20"></div>"
+          <div className=""mb-12"></div>"
+            <h1 className=""text-4xl md: text-5xl font-bold mb-6 leading-tight"></h1>"
               Edge 2025 Oct 02 Private Experiments V4;
-        <div className="max-w-4xl mx-auto px-4 py-20"><
-          <div className="mb-12"><
-            <h1 className="text-4xl m,
+        <div className=""max-w-4xl mx-auto px-4 py-20"><"
+          <div className=""mb-12"><"
+            <h1 className=""text-4xl m,"></h1>"
     d:text-5xl font-bold mb-6 leading-tight">
-              Edge 2025 Oct 02 Private Experiments V4
+              Edge 2025 Oct 02 Private Experiments V4;
             <
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"><
+            <div className=""flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"><"
               <span>By Zion Tech Group Team<
               <span>•<
               <span>2025-10-03<
@@ -40,10 +35,10 @@ export default function BlogPost(): React.JSX.Element {
             <
           <
 
-          <div className="prose prose-lg prose-invert max-w-none"><
-            <div className="text-gray-200 leading-relaxed"><
+          <div className=""prose prose-lg prose-invert max-w-none"><"
+            <div className=""text-gray-200 leading-relaxed"><"
               <h2>Introduction<
-              <p>
+              <p></p>
                 This is a placeholder blog post. The content for "Edge 2025 Oct 02 Private;
                 Experiments V4" will be added here.
               <
@@ -55,78 +50,71 @@ export default function BlogPost(): React.JSX.Element {
               <
 
               <h2>Conclusion<
-              <p>
+              <p></p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
                 ex ea commodo consequat.
               <
             <
           <
 
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">)
+          <div className=""mt-16 pt-8 border-t border-white border-opacity-20"></div>"
+            <div className=""flex flex-col sm: flex-row justify-between items-center gap-6">)"
               <div>)
-                <h3 className="text-xl font-bold mb-2">Share this article<
-                <div className="flex gap-4">)
-                  <a;),
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20"><
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"><
+                <h3 className=""text-xl font-bold mb-2">Share this article<"
+                <div className=""flex gap-4">)"
+                  <a ;),></a>
+          <div className=""mt-16 pt-8 border-t border-white border-opacity-20"><"
+            <div className=""flex flex-col sm: flex-row justify-between items-center gap-6"><"
               <div><
-                <h3 className="text-xl font-bold mb-2">Share this article<
-                <div className="flex gap-4"><
-                  <a
-                    href = { `https://twitter.com/intent
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+                <h3 className=""text-xl font-bold mb-2">Share this article<"
+                <div className=""flex gap-4"><"
+                  <a href="{ `https://twitter.com/intent></a>"
+                    target=""_blank""
+                    rel=""noopener noreferrer""
+                    className=""bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">"
                     Twitter;
                   <
-                  <a;
-                    href={`https://www.linkedin.com/sharing/share-offsite
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                  <a ;></a>
+                    href="{`https://www.linkedin.com/sharing/share-offsite;"
+                    target=""_blank""
+                    rel=""noopener noreferrer""
+                    className=""bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors""
 export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression *
   ,
-    s://twitter.com/intent
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+    s://twitter.com/intent;
+                    target=""_blank"""
+                    rel=""noopener noreferrer"""
+                    className=""bg-white bg-opacity-20,""
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter;
                   <
                   <a><
-                    href={/* TODO: Fix JSX expression *
+                    href="{/* TODO: Fix JSX expression *"
   ,
-    s://www.linkedin.com/sharing/share-offsite
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+    s://www.linkedin.com/sharing/share-offsite;
+                    target=""_blank"""
+                    rel=""noopener noreferrer"""
+                    className=""bg-white bg-opacity-20,""
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     LinkedIn;
                   <
                 <
               <
-              <a;
-                href="
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hove,
+              <a ;></a>
+                href=""""
+                className=""bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hove,""
     r:bg-gray-100 transition-colors"
               <a><
-                href="
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-100 transition-colors"
-              >
+                href=""""
+                className=""bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,""
+  hover:bg-gray-100 transition-colors">
                 Back to Blog;
-<<<<<<< HEAD
               </a>
             </div>
           </div>
         </div>
       </div>,
     </React.Fragment>)}
-=======
               <
             <
           <
@@ -134,5 +122,4 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
       <
     <
  };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 "`

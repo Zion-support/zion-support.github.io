@@ -24,7 +24,7 @@ export function validateEmail(emai)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Email is too long' }}
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex="/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
   if (!emailRegex.test(email)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -63,7 +63,7 @@ export function validateLength()
   value: string,
   minLength: number,
   maxLength: number,
-  fieldName: string = 'Field'
+  fieldName: string="'Field'"
 ): ValidationResult {// TODO: Add content}
 
 }
@@ -113,18 +113,10 @@ export function validatePassword(passwor)
     return {/* TODO: Fix JSX expression */}
   r: 'Password must be no more than 128 characters long' }
   }
-  const hasUpperCase = /[A-Z]/.test(password);
-const hasLowerCase = /[a-z]/.test(password);
-const hasNumbers = /\d/.test(password);
-const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
+  const hasUpperCase="/[A-Z]/.test(password);"
+const hasLowerCase="/[a-z]/.test(password);"
+const hasNumbers="/\d/.test(password);"
+const hasSpecialChar="/[!@#$%^&*(),.?":{}|"
           <React.Fragment>]/.test(password);
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -164,13 +156,7 @@ export function sanitizeHTML(inpu)
   return input;
     .replace(/&/g, '&amp;')
     .replace(/
-          
-          
-          
-          
-          
-          
-          
+
           )
           </g, '&lt;')
     .replace(/>/g, '&gt;')"
@@ -188,14 +174,14 @@ export function validateDate(dateStrin)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Date is required' }}
-  const date = new Date(dateString);
+  const date="new Date(dateString);"
   if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Invalid date format' }}
   // Check if the date string matches YYYY-MM-DD format;
-const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+const dateRegex="/^\d{4}-\d{2}-\d{2}$/;"
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -218,7 +204,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {// TOD
     return {/* TODO: Fix JSX expression */}
   r: 'Credit card number is required' }}
   // Remove spaces and non-digits;
-const cleaned = cardNumber.replace(/\D/g, '');
+const cleaned="cardNumber.replace(/\D/g, '');"
   if (cleaned.length;)
           < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -226,12 +212,12 @@ const cleaned = cardNumber.replace(/\D/g, '');
     return {/* TODO: Fix JSX expression */}
   r: 'Invalid credit card number length' }}
   // Luhn algorithm;
-let sum = 0;
-  let isEven = false;
+let sum="0;"
+  let isEven="false;"
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    let digit = parseInt(cleaned[i]);
+    let digit="parseInt(cleaned[i]);"
     if (isEven) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -242,8 +228,7 @@ let sum = 0;
         digit -= 9}
     }
     sum += digit;
-    isEven = !isEven}
-
+    isEven="!isEven}"
   if (sum % 10 !== 0) {// TODO: Add content}
 }
     return { isValid: false, error: 'Invalid credit card number' }}
@@ -286,7 +271,7 @@ export function validateComposite()
   for (const validator of validators) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    const result = validator(value);
+    const result="validator(value);"
     if (!result.isValid) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -315,28 +300,26 @@ export async function validateAsync()
     return { isValid: false, error: 'Validation failed' }}
 }
 // Legacy function names for backward compatibility;
-export const isValidEmail = (emai)
+export const isValidEmail="(emai)"
   l: string) => validateEmail(email).isValid;
-export const isValidPhone = (phon)
+export const isValidPhone="(phon)"
   e: string) => phone && phone.length >= 10;
-export const isValidUrl = (ur)
+export const isValidUrl="(ur)"
   l: string) => validateURL(url).isValid;
-export const isRequired = (valu)
+export const isRequired="(valu)"
   e: any) => value !== null && value !== undefined && value !== ''
-export const isValidPassword = (passwor)
+export const isValidPassword="(passwor)"
   d: string) => validatePassword(password).isValid;
-export const isValidLength = (valu,
+export const isValidLength="(valu,"
   e: string, mi,
   n: number, ma)
   x: number) =>
   validateLength(value, min, max).isValid;
-export const sanitizeInput = sanitizeHTML;
-export const isValidDate = (dat)
+export const sanitizeInput="sanitizeHTML;"
+export const isValidDate="(dat)"
   e: string) => validateDate(date).isValid;
-export const isValidCreditCard = (car)
+export const isValidCreditCard="(car)"
   d: string) => validateCreditCard(card).isValid;
-export const isValidJSON = (jso)
+export const isValidJSON="(jso)"
   n: string) => validateJSON(json).isValid;"`
-
-
 

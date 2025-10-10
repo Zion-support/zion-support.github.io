@@ -1,12 +1,12 @@
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
+const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {}
 return (
 ;
-const, storie, s = [
-    {
+const, storie, s="[]"
+    {}
       comp, a, n;
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
-      ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>
+      ic, o, n: <TrendingUp, className=""w-8 h-8" /></TrendingUp>resu</TrendingUp>"
 );
 }, l, t: "3, 0, 0% Revenue, Growt, h"
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
@@ -17,10 +17,10 @@ const, storie, s = [
       ]
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
-    {
+    {}
       compa, n, y: "Global, Manufacturing, Inc"
       indust, r, y: "Manufacturi, n, g"
-      ic, o, n: <Target, className="w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n"
+      ic, o, n: <Target, className=""w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n""
       descripti, o, n: "AI, predictive, maintenance transformed, operation, s, eliminating, unplanned, downtime and, reducing, costs."
       metri, c, s: [,
         "$2M, annual, savings"
@@ -29,10 +29,10 @@ const, storie, s = [
       ]
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
-    {
+    {}
       company: 'FinanceFirst Bank',
       industry: 'Financial Services',
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className=""w-8 h-8" />,"
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [,
@@ -42,76 +42,74 @@ const, storie, s = [
       ],
       color: "from-purple-500 to-pink-500",
         </div>,
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
+        <div className=""grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,"
           {stories.map((story, index) => (
-            <div;
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
+            <div ;></div>
+key="{index}"
+              className=""bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300","
             >,
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
+              <div className="{`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
       color: "from-purple-500 to-pink-500"
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+        <div className=""grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12"></div>"
           {stories.map((story, index) => (</div>
-            <div
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
+            <div key="{index}></div>"
+              className=""bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300""
             ></div>
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
-                <div className="flex items-center gap-3 mb-4">
+              <div className="{`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
+                <div className=""flex items-center gap-3 mb-4"></div>"
                   {story.icon}</div>
                   <div></div>
-                    <h3 className="font-bold text-xl">{story.company}</h3>;
+                    <h3 className=""font-bold text-xl">{story.company}</h3>;"
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden,"
-  hover:scale-105 transition-all duration-300"
-            >
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
-                <div className="flex items-center gap-3 mb-4"></div>
+key="{index}"
+              className=""bg-white rounded-2xl shadow-xl overflow-hidden,""
+  hover:scale-105 transition-all duration-300">
+              <div className="{`bg-gradient-to-r ${story.color} text-white p-6`}></div>""
+                <div className=""flex items-center gap-3 mb-4"></div>"
                   {story.icon}
                   <div></div>"
-                    <h3 className="font-bold text-xl">{story.company}</h3>"
-                    <p className="text-sm opacity-90">{story.industry}</p>
+                    <h3 className=""font-bold text-xl">{story.company}</h3>""
+                    <p className=""text-sm opacity-90">{story.industry}</p>"
                   </div>
                 </div>"
-                <div className="text-3xl font-bold">{story.result}</div>
+                <div className=""text-3xl font-bold">{story.result}</div>"
               </div>
-              <div className="p-6"></div>
-                <p className="text-gray-600 mb-6">{story.description}</p>
-                <div className="space-y-2 mb-6">
+              <div className=""p-6"></div>"
+                <p className=""text-gray-600 mb-6">{story.description}</p>"
+                <div className=""space-y-2 mb-6"></div>"
                   {story.metrics.map((metric, idx) => (</div>
-                    <div key={idx} className="flex items-center gap-2"></div>
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-700">{metric}</span>
+                    <div key={idx} className=""flex items-center gap-2"></div>"
+                      <div className=""w-2 h-2 bg-green-500 rounded-full"></div>"
+                      <span className=""text-sm text-gray-700">{metric}</span>"
                     </div>
                   Read Full Story;
-                  <Link className="w-4 h-4" />
+                  <Link className=""w-4 h-4" /></Link>"
                 </Link>
               </div>
             </div>
             View All Success Stories;
-            <Link className="w-6 h-6" />
+            <Link className=""w-6 h-6" /></Link>"
               </div>"
-              <div className="p-6"></div>"
-                <p className="text-gray-600 mb-6">{story.description}</p>"
-                <div className="space-y-2 mb-6"></div>
+              <div className=""p-6"></div>""
+                <p className=""text-gray-600 mb-6">{story.description}</p>""
+                <div className=""space-y-2 mb-6"></div>"
                   {/* TODO: Fix JSX expression */}"
-                    <div key={idx} className="flex items-center gap-2"></div>"
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>"
-                      <span className="text-sm text-gray-700">{metric}</span>
+                    <div key={idx} className=""flex items-center gap-2"></div>""
+                      <div className=""w-2 h-2 bg-green-500 rounded-full"></div>""
+                      <span className=""text-sm text-gray-700">{metric}</span>"
                     </div>
                   Read Full Story;"
-                  <Link className="w-4 h-4" /></Link>
+                  <Link className=""w-4 h-4" /></Link>"
                 </Link>
               </div>
             </div>
             View All Success Stories;"
-            <Link className="w-6 h-6" /></Link>
+            <Link className=""w-6 h-6" /></Link>"
           </Link>
         </div>
       </div>

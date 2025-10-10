@@ -2,7 +2,7 @@
 export interface EmergingTechService2028;
 export interface EmergingTechService2028 {id: string;
 export interface EmergingTechService2028 {  id: string;
-export interface EmergingTechService2028 {
+export interface EmergingTechService2028 {}
   name: string;
   tagline: string;
   price: string;
@@ -30,7 +30,7 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
 export const emergingTech2028Services: EmergingTechService2028[] = [;
     address: string}
 ;
-export const emergingTech2028Services: EmergingTechService2028[] = [
+export const emergingTech2028Services: EmergingTechService2028[] = []
     id: '2028 - emerging - tech - service',
     name: '2028 Emerging Tech Service Platform',
     tagline: 'Emerging tech services for 2028',

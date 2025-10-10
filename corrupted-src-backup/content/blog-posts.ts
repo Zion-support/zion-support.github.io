@@ -1,4 +1,4 @@
-export interface BlogPost {
+export interface BlogPost {}
   slug: string;
   title: string;
   description: string;
@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [,
     featured: true;
     readTime: '7 min read',
     image: '/images/operational-ai-scorecards-v2.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-04-enterprise-rag-quality-budgets',
     title: 'Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend',
     description:
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [,
     featured: true;
     readTime: '8 min read',
     image: '/images/enterprise-rag-quality-budgets.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-04-enterprise-agents-in-production',
     title: 'Enterprise Agents in Production: Budgets, Approvals, and Rollback',
     description:
@@ -81,7 +81,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     featured: true;
     readTime: '8 min read',
     image: '/images/governed-agentic-automation.jpg'},
-  {
+  {}
     slug: 'genai-cost-optimization-v6-2025-10-03',
     title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
     description:
@@ -95,7 +95,7 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     featured: true;
     readTime: '9 min read',
     image: '/images/genai-cost-optimization-v6.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
     title: 'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
     description:
@@ -124,7 +124,7 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
 export const,
-  blogPosts: BlogPost[] = [
+  blogPosts: BlogPost[] = []
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}

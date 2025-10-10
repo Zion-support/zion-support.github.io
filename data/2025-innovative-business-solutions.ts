@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -356,7 +354,7 @@ varian,
       'Analytics tools'
       'Business applications'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Lead scoring'
@@ -504,7 +502,7 @@ varian,
       'Knowledge base systems'
       'Social media platforms'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Customer support automation'
@@ -652,7 +650,7 @@ varian,
       'Performance management tools'
       'Learning platforms'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Recruitment automation'
@@ -800,7 +798,7 @@ varian,
       'Trading platforms'
       'Risk management tools'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Financial analysis'
@@ -948,7 +946,7 @@ varian,
       'Resource management systems'
       'Communication tools'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Project planning'
@@ -1148,7 +1146,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Analytics tools'
       'Business applications'
     ]
-    useCases: [
+    useCases: []
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -1213,7 +1211,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Knowledge base systems'
       'Social media platforms'
     ]
-    useCases: [
+    useCases: []
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -1278,7 +1276,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Performance management tools'
       'Learning platforms'
     ]
-    useCases: [
+    useCases: []
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -1343,7 +1341,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Trading platforms'
       'Risk management tools'
     ]
-    useCases: [
+    useCases: []
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -1416,14 +1414,14 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
   // AI Business Intelligence Suite;
-  {
+  {}
     id: 'ai-business-intelligence-suite';
     name: 'AI Business Intelligence Suite';
     tagline: 'Intelligent business insights and analytics';
     price: '$3,200';
     period: '/month',,
   description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.';
-    features: [
+    features: []
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems';
       'Advanced analytics and reportingCustom business intelligence workflows'
     ];
@@ -1918,8 +1916,6 @@ i,
   s: 38, ratin,
   g: 4.7, review,
   s: 26} ]; '
-=======
     marketSize: '$5.2 B sales intelligence market'
     growthRate: '30% annual growth';
 variant: 'ai-sales',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

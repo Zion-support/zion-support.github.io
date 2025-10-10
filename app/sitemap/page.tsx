@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 ;
-const SitemapPage: React.FC = () => {const pages = [
+const SitemapPage: React.FC = () => {const pages="[]"
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -27,61 +26,55 @@ const SitemapPage: React.FC = () => {const pages = [
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
-
   return (
-    <div>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
+    <div></div>
+      <div></div>
+        <div></div>
+          <h1 className=""text-4xl font-bold text-gray-900 mb-4"></h1>"
             Sitemap</h1>
           </h1>
-          <p className="text-xl text-gray-600"></p>
-            Navigate through all pages on our website
+          <p className=""text-xl text-gray-600"></p>"
+            Navigate through all pages on our website;
           </p>
         </div>
-
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div></div>
+          <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>"
             {pages.map((page, index) => (</div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
-                  <a 
-                    href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+              <div></div>
+                <h3 className=""text-lg font-semibold text-gray-900 mb-2"></h3>"
+                  <a href="{page.path}></a>"
+                    className=""text-blue-600 hover:text-blue-700 transition-colors""
                   ></a>
                     {page.title}
                   </a>
                 </h3>
-                <p className="text-sm text-gray-600 mb-2"></p>
+                <p className=""text-sm text-gray-600 mb-2"></p>"
                   {page.description}
                 </p>
-                <p className="text-xs text-gray-500"></p>
+                <p className=""text-xs text-gray-500"></p>"
                   {page.path}
                 </p>
               </div>
             ));
           </div>
         </div>
-
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
+        <div></div>
+          <h2 className=""text-2xl font-bold text-gray-900 mb-4"></h2>"
             Need Help Finding Something?
           </h2>
-          <p className="text-gray-600 mb-6"></p>
+          <p className=""text-gray-600 mb-6"></p>"
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
-          <div>
-            <a 
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+          <div></div>
+            <a href=""/contact"></a>"
+              className=""bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center""
             ></a>
-              Contact Us
+              Contact Us;
             </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
+            <a href=""tel:+13024640950"></a>"
+              className=""border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center""
             ></a>
-              Call Us: (302) 464-0950
+              Call Us: (302) 464-0950;
             </a>
           </div>
         </div>
@@ -90,6 +83,4 @@ const SitemapPage: React.FC = () => {const pages = [
 )]
     };
 export default SitemapPage;
-=======
   );)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

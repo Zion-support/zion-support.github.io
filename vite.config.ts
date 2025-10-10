@@ -2,10 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-export default defineConfig({
+export default defineConfig({}
   plugins: [react()],
-  resolve: {
-    alias: {
+  resolve: {}
+    alias: {}
       '@': resolve(__dirname, './app'),
       '@/components': resolve(__dirname, './app/components'),
       '@/pages': resolve(__dirname, './app'),
@@ -17,7 +17,7 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-  build: {
+  build: {}
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
@@ -26,76 +26,76 @@ export default defineConfig({
     cssTarget: 'chrome80',
     reportCompressedSize: true,
     chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
+    rollupOptions: {}
+      output: {}
+        manualChunks: (id) => {}
+          // Vendor chunks;
+          if (id.includes('node_modules')) {}
+            if (id.includes('react') || id.includes('react-dom')) {}
               return 'vendor-react'}
-            if (id.includes('react-router')) {
+            if (id.includes('react-router')) {}
               return 'vendor-router'}
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {}
               return 'vendor-ui'}
-            if (id.includes('recharts')) {
+            if (id.includes('recharts')) {}
               return 'vendor-charts'}
-            if (id.includes('web-vitals')) {
+            if (id.includes('web-vitals')) {}
               return 'vendor-analytics'}
             return 'vendor-misc'}
-          // App chunks
-          if (id.includes('/app/ai-')) {
+          // App chunks;
+          if (id.includes('/app/ai-')) {}
             return 'ai-services'}
-          if (id.includes('/app/it-')) {
+          if (id.includes('/app/it-')) {}
             return 'it-services'}
-          if (id.includes('/app/components/')) {
+          if (id.includes('/app/components/')) {}
             return 'components'}
           return 'app'},
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {;
-const ext = assetInfo.name?.split('.').pop();
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
+const ext="assetInfo.name?.split('.').pop();"
+          if (/\.(css)$/i.test(assetInfo.name || '')) {}
             return `assets/css/[name]-[hash].${ext}`}
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {}
             return `assets/images/[name]-[hash].${ext}`}
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {}
             return `assets/fonts/[name]-[hash].${ext}`}
           return `assets/[name]-[hash].${ext}`}
       }
     },
-    terserOptions: {
-      compress: {
+    terserOptions: {}
+      compress: {}
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2},
-      mangle: {
+      mangle: {}
         safari10: true,
-        properties: {
+        properties: {}
           regex: /^_/
         }
       },
-      format: {
+      format: {}
         comments: false,
-        ascii_only: true
+        ascii_only: true;
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096},
-  server: {
+  server: {}
     port: 3000,
-    host: true
+    host: true;
   },
-  preview: {
+  preview: {}
     port: 4173,
-    host: true
+    host: true;
   },
-  optimizeDeps: {
+  optimizeDeps: {}
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
   },
-  css: {
-    devSourcemap: true
+  css: {}
+    devSourcemap: true;
   }
 });

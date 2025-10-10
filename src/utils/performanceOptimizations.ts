@@ -2,15 +2,7 @@
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const _debounce = 
-          
-          
-          
-          
-          
-          
-          
-          
+export const _debounce=""
           <T extends (...args: any[]) => any>(),
     func: T,
   wait: number): ((...args: Parameters;
@@ -20,16 +12,8 @@ export const _debounce =
   return (...args: Parameters;
           <T>) => {// TODO: Add content}
 }
-// Throttle utility for performance
-export const throttle = 
-          
-          
-          
-          
-          
-          
-          
-          
+// Throttle utility for performance;
+export const throttle=""
           <T extends (...args: any[]) => any>(),
     func: T,
   limit: number): ((...args: Parameters;
@@ -47,19 +31,18 @@ export const throttle =
   O: Add content}
 }
       func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit)}
+      inThrottle="true;"
+      setTimeout(() => (inThrottle="false), limit)}"
   }
 }
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = ()
-
+export const useIntersectionObserver="()"
   callback: (entries: IntersectionObserverEntry[]) => void,
-  _options: IntersectionObserverInit = {}
+  _options: IntersectionObserverInit="{}"
 ) => {// TODO: Add content}
 
 }
-  const observer = useMemo()
+  const observer="useMemo()"
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {/* TODO: Fix JSX expression */}
@@ -74,8 +57,7 @@ export const useIntersectionObserver = ()
         : null,
 //     [callback, options]
   );
-const observe = useCallback()
-
+const observe="useCallback()"
     (element: Element | null) => {// TODO: Add content}
 
 }
@@ -102,7 +84,7 @@ const observe = useCallback()
     return () => disconnect()}, [disconnect]);
   return { observe, disconnect }};
 // Image lazy loading hook;
-export const useLazyImage = (sr)
+export const useLazyImage="(sr)"
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -120,7 +102,7 @@ export const useLazyImage = (sr)
           if (entry.isIntersecting && !isLoaded && !isError) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-            const img = new Image();
+            const img="new Image();"
             img.onload = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -130,7 +112,7 @@ export const useLazyImage = (sr)
   O: Add content}
 }
               setIsError(true)};
-            img.src = src}
+            img.src="src}"
         }
   )
       },
@@ -158,10 +140,10 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     const updateMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+      const paint="performance.getEntriesByType('paint');"
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+      const lcp="performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
       setMetrics({/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -183,15 +165,15 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getCLS((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
   s: metric.value })));
-        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getFID((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
   d: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getFCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
   p: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getLCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
   p: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getTTFB((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
   b: metric.value })))})}
     return () => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -216,7 +198,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const memory = (performance as any).memory;
+      const memory="(performance as any).memory;"
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -231,20 +213,20 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   t: memory.jsHeapSizeLimit;)
         })}
     };
-    const interval = setInterval(updateMemoryInfo, 5000);
+    const interval="setInterval(updateMemoryInfo, 5000);"
     return () => clearInterval(interval)}, []);
   return memoryInfo};
 // Resource preloading utility;
-export const preloadResource = (hre,
+export const preloadResource="(hre,"
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
   if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
+  const link="document.createElement('link');"
+  link.rel="'preload';"
+  link.href="href;"
+  link.as="as;"
   document.head.appendChild(link)};
 // Critical resource preloading;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
@@ -278,14 +260,14 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     const calculateBundleSize = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const resources = performance.getEntriesByType('resource');
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
+      const resources="performance.getEntriesByType('resource');"
+      let jsSize="0;"
+      let cssSize="0;"
+      let imageSize="0;"
       resources.forEach((resource) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        const size="(resource as PerformanceResourceTiming).transferSize || 0;"
         totalSize += size;
         if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -329,6 +311,4 @@ export default {/* TODO: Fix JSX expression */}
 //   preloadResource,
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring};
-
-
 

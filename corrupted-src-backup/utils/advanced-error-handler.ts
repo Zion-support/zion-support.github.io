@@ -1,9 +1,9 @@
-const errorHandler = {
+const errorHandler="{}"
   setReportingEnabled: (enabled: boolean) => {,
     //     },
 
   handleError: (error: unknown) => {,;
-const errorHandler = {/* TODO: Fix JSX expression */}
+const errorHandler="{/* TODO: Fix JSX expression */}"
     //     },
 
   handleErro,

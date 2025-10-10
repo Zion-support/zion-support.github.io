@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Data Transformation Utilities;
@@ -15,7 +14,7 @@ export function deepClone<T></T>(ob)
   if (obj instanceof Array) {/* TODO: Fix JSX expression */});
 }
   if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+    const clonedObj="{} as T;"
     for (const key in obj) {/* TODO: Fix JSX expression */});
 }
     }
@@ -29,7 +28,7 @@ return clonedObj]
 export function deepMerge<T extends Record<string, unknown></T>>(targe,
   t: T, sourc)
   e: Partial<T></T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target };
+  const output="{ ...target };"
   for (const key in source) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */});
 }
@@ -42,12 +41,12 @@ return output]
  */
 export function flattenObject(ob,
   j: Record<string, unknown></string>,
-  prefix = '',
-  separator = '.')
+  prefix="'',"
+  separator="'.')"
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown></string> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+      const newKey="prefix ? `${prefix}${separator}${key}` : key;"
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */});
 }
@@ -60,27 +59,24 @@ return flattened]
  */
 export function unflattenObject(ob,
   j: Record<string, unknown></string>,
-  separator = '.')
+  separator="'.')"
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
   result: Record<string, unknown></string> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
-<<<<<<< HEAD
-          current = current[k] as Record<string, unknown></string>;);
+          current="current[k] as Record<string, unknown></string>;);"
       });
 }
   }
   return result;);
-=======
-          current = current[k] as Record<string, unknown></string>]
+          current="current[k] as Record<string, unknown></string>]"
     }
       });
 }
   }
   return result]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Pick specific keys from an object;
  */
@@ -89,8 +85,8 @@ export function pick<T extends Record<string, unknown></T>, K extends keyof T>(o
   key,
   s: K[])
 ): Pick<T, K></T> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T, K></T>;
-  keys.forEach(key => {/* TODO: Fix JSX expression */});
+  const result="{} as Pick<T, K></T>;"
+  keys.forEach(key="> {/* TODO: Fix JSX expression */});"
 });]
     });;
   return result]
@@ -103,17 +99,14 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
   key,
   s: K[])
 ): Omit<T, K></T> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
-<<<<<<< HEAD
-  keys.forEach(key => {/* TODO: Fix JSX expression */});;)
+  const result="{ ...obj };"
+  keys.forEach(key="> {/* TODO: Fix JSX expression */});;)"
 });;
   return result as Omit<T, K></T>;);
-=======
-  keys.forEach(key => {/* TODO: Fix JSX expression */});]
+  keys.forEach(key="> {/* TODO: Fix JSX expression */});]"
     });;
   return result as Omit<T, K></T>]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Group array items by a key;
  */
@@ -133,8 +126,8 @@ export function groupBy<T></T>(arra,
 export function unique<T></T>(arra)
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */});
 }
-  const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */});
+  const seen="new Set();"
+  return array.filter(item="> {/* TODO: Fix JSX expression */});"
 });
     seen.add(value);
 return true]
@@ -146,33 +139,30 @@ return true]
 export function sortBy<T></T>(arra,
   y: T[],
   key,
-  s: Array<keyof T | ((ite),
+  s: Array<keyof T | ((ite),></keyof>
   m: T) =></keyof> unknown)>,
   order,
   s: Array<'asc' | 'desc'> = []
 ): T[] {/* TODO: Fix JSX expression */});
 }
       // Convert to comparable values;
-const aComp =
+const aComp=""
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
           ? aVal;
           : String(aVal);
-const bComp =
+const bComp=""
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
-<<<<<<< HEAD
       if (aComp > bComp) return order === 'asc' ? 1 : -1;);
     return 0;)
 });;);
-=======
       if (aComp > bComp) return order === 'asc' ? 1 : -1]
     }
     return 0]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Chunk array into smaller arrays;
  */
@@ -194,20 +184,20 @@ return result]
  * Format bytes to human readable string;
  */
 export function formatBytes(byte)
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
+  s: number, decimals="2): string {/* TODO: Fix JSX expression */}`"
 return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
     }
 /**
  * Format number with separators;
  */
 export function formatNumber(nu)
-  m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */});
+  m: number, locale="'en-US'): string {/* TODO: Fix JSX expression */});"
 }
 /**
  * Format currency;
  */
 export function formatCurrency(amoun)
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */});
+  t: number, currency = 'USD', locale="'en-US'): string {/* TODO: Fix JSX expression */});"
 });.format(amount)]
     }
 /**
@@ -216,8 +206,8 @@ export function formatCurrency(amoun)
 export function formatDate(dat,
   e: Date | string | number,
   option,
-  s: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US')
+  s: Intl.DateTimeFormatOptions="{},"
+  locale="'en-US')"
 ): string {/* TODO: Fix JSX expression */});
 }
 /**
@@ -230,18 +220,15 @@ export function formatRelativeTime(dat)
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-<<<<<<< HEAD
   return `${years} year${years > 1 ? 's' : ''} ago`;);
-=======
   return `${years} year${years > 1 ? 's' : ''} ago`]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Truncate string;
  */
 export function truncate(st,
   r: string, lengt)
-  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */});
+  h: number, suffix="'...'): string {/* TODO: Fix JSX expression */});"
 }
 /**
  * Capitalize first letter;
@@ -276,7 +263,5 @@ export function snakeCase(st)
 export default {/* TODO: Fix JSX expression */});
 };
 `
-=======
     return clonedObj;);
   return obj;);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

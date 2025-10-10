@@ -1,4 +1,4 @@
-export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025',
+export const revolutionaryITInfrastructure2025Services="[{name: 'Revolutionary Cloud Infrastructure 2025',"
     path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
     icon: 'Cloud',
@@ -20,7 +20,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
     icon: 'Code',
     category: 'DevOps',
     features: [,
-export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expression */}
+export const revolutionaryITInfrastructure2025Services="[{/* TODO: Fix JSX expression */}"
   l: '$599/month'}
       enterpris,
   e: 'Custom'
@@ -58,18 +58,17 @@ export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expr
     }
   }
 ];
-export const revolutionaryITCategories2025 = [
+export const revolutionaryITCategories2025="[]"
   'Cloud Infrastructure',
   'DevOps Automation',
   'Security & Compliance',
   'Performance Optimization'
 ];
-export const revolutionaryITStats2025 =
-  totalServices: 2;
+export const revolutionaryITStats2025="totalServices: 2;"
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
-export const revolutionaryITStats2025 = {};
+export const revolutionaryITStats2025="{};"
   totalService,
   s: 2,
   categorie,
@@ -78,7 +77,7 @@ export const revolutionaryITStats2025 = {};
   g: 4.8,
   activeUser,
   s: 1800};
-export const revolutionaryITInfrastructure2025Services = [ nam,
+export const revolutionaryITInfrastructure2025Services="[ nam,"
   e: 'Revolutionary Cloud Infrastructure 2025',' pat,
   h: '/services/revolutionary-cloud-infrastructure-2025',' descriptio,
   n: 'Next-generation cloud infrastructure and management',' ico,
@@ -98,7 +97,7 @@ export const revolutionaryITInfrastructure2025Services = [ nam,
   g: ' starte,
   r: '$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalService,
+  e: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025="totalService,"
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.8, activeUser,

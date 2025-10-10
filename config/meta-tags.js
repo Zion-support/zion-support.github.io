@@ -1,12 +1,12 @@
 // Meta tags configuration;
-export const metaTags = {
+export const metaTags="{}"
   title: 'Bolt.new Zion App - Advanced Web Development Solutions',
   description: 'Professional web development services with cutting-edge technology and innovative solutions.',
   keywords: 'web development, react, nextjs, typescript, full-stack development',
   author: 'Zion Tech Group',
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: 'width=device-width, initial-scale="1',"
   robots: 'index, follow',
-  og: {
+  og: {}
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
     type: 'website',
@@ -17,7 +17,7 @@ export const metaTags = {
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
     image: 'https://bolt.new.zion.app/og-image.jpg',
-export const metaTags = {/* TODO: Fix JSX expression */}
+export const metaTags="{/* TODO: Fix JSX expression */}"
   },
   twitte,
   r: {/* TODO: Fix JSX expression */}

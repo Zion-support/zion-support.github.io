@@ -3,7 +3,7 @@
  * Implements comprehensive security headers for production deployment;
  */
 
-export const securityHeaders = [
+export const securityHeaders="[]"
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
@@ -18,7 +18,7 @@ export const securityHeaders = [
   },
   {/* TODO: Fix JSX expression */}
   },
-  {
+  {}
     key: 'Content-Security-Policy',
     value: [,
       "default-src 'self'",

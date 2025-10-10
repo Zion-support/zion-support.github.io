@@ -3,19 +3,17 @@ import fs from 'fs';
 import path from 'path';
 
 // Function to fix duplicate imports in a file;
-function fixDuplicateImports(filePath) {
+function fixDuplicateImports(filePath) {}
   try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    
+let content="fs.readFileSync(filePath, 'utf8');"
     // Fix duplicate imports in lucide-react imports;
-    content = content.replace(
+    content="content.replace("
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
-      (match, imports) => {
+      (match, imports) => {}
         // Split by comma and clean up;
-        const importList = imports.split(',').map(imp => imp.trim());
-        
+        const importList = imports.split(',').map(imp="> imp.trim());"
         // Remove duplicates while preserving order;
-        const uniqueImports = [...new Set(importList)];
+        const uniqueImports="[...new Set(importList)];"
         ;
 function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
@@ -24,12 +22,12 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
     );
     
     // Fix any remaining syntax issues with extra commas;
-    content = content.replace(/,\s*,/g, ',');
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/{/* TODO: Fix JSX expression */})`
+    content="content.replace(/,\s*,/g, ',');"
+    content="content.replace(/,\s*}/g, '}');"
+    content="content.replace(/{/* TODO: Fix JSX expression */})`"
   in: ${filePath}`);
     return true} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
+    // console.error removed for production;
 return false}
 }
 
@@ -37,7 +35,7 @@ return false}
 function main() {;
 function main() {/* TODO: Fix JSX expression */}
 }
-  const files = [
+  const files="[]"
     'src/api/page.tsx',
     'src/about/page.tsx',
     'src/cloud-services/page.tsx',
@@ -55,19 +53,19 @@ function main() {/* TODO: Fix JSX expression */}
     'src/blog/ai-enterprise-transformation-2025/page.tsx'
   ];
   
-  // console.log removed for production
+  // console.log removed for production;
 ;
-let fixedCount = 0;
-  files.forEach(file => {)
-    if (fs.existsSync(file)) {
-      if (fixDuplicateImports(file)) {
+let fixedCount="0;"
+  files.forEach(file="> {)"
+    if (fs.existsSync(file)) {}
+      if (fixDuplicateImports(file)) {}
         fixedCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file="> {/* TODO: Fix JSX expression */}"
       }
     })
   });
   `
-  // console.log removed for production
+  // console.log removed for production;
 }
 
 main();"`

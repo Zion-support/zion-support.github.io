@@ -1,6 +1,6 @@
 
-export type InnovativeMicroSaas =
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas=""
+export type InnovativeMicroSaas="{;"
   id: string;
   name: string;
   description: string;
@@ -16,7 +16,7 @@ export type InnovativeMicroSaas = {;
     | 'Customer Support',
   pricing: { starter: string} professional?: string} enterprise?: string }
   features: string[];
-export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
   r: string} professional?: string} enterprise?: string }
   feature,
   s: string[];
@@ -610,11 +610,11 @@ export const,
   s://ziontechgroup.com / services / candidate - screening - copilot',
   real_servic,
   e: true}
-export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
 	}
 ];
 ;
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas="{;"
 	id: string;
 	name: string,,
   description: string;
@@ -628,7 +628,7 @@ export type InnovativeMicroSaas = {;
 		| 'Financial Technology',
 		| 'Human Resources',
 		| 'Supply Chain Management',
-export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
 		| 'Customer Support'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -692,7 +692,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		realService: true}
 ];
 ;
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas="{;"
 	id: string;
 	name: string,,
   description: string;
@@ -803,7 +803,7 @@ export const,
   e: true}
 ];
 ;
-export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
 		| 'Customer Support'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -866,8 +866,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot';
 		realService: true}
 ];
-export type InnovativeMicroSaas =
-  id: string;
+export type InnovativeMicroSaas="id: string;"
   name: string;
   description: string;
   tagline?: string;,
@@ -968,8 +967,7 @@ export const,
 		realServic,
   e: true}
 ];
-export type InnovativeMicroSaas =
-  i,
+export type InnovativeMicroSaas="i,"
   d: string,
   nam,
   e: string,
@@ -1342,7 +1340,7 @@ export const,
   e: true}
 ];
 ;
-export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+export type InnovativeMicroSaas = export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
   r: string} professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string; realService?: boolean; rating?: number; launchDate?: string} export const,
@@ -1541,7 +1539,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiring_bias reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
-  e: true} export type InnovativeMicroSaas = {} ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+  e: true} export type InnovativeMicroSaas = {} ]; export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
   y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,
@@ -1589,7 +1587,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiringBias reduction'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot'; realServic,
-  e: true} ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+  e: true} ]; export type InnovativeMicroSaas="{/* TODO: Fix JSX expression */}"
   y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,
@@ -1637,7 +1635,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiringBias reduction'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot'; realServic,
-  e: true} ]; export type InnovativeMicroSaas = i,
+  e: true} ]; export type InnovativeMicroSaas="i,"
   d: string, nam,
   e: string, descriptio,
   n: string; tagline?: string; categor,

@@ -11,7 +11,7 @@ interface GtagEvent {// TODO: Add content}
   value?: number;
   [ke,
   y: string]: unknown}
-type GtagCommand = 'config' | 'set' | 'event' | 'js';
+type GtagCommand="'config' | 'set' | 'event' | 'js';"
 interface Window {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -19,11 +19,8 @@ interface Window {/* TODO: Fix JSX expression */}
 
   command: GtagCommand,
     targetId: string | Date,
-config?: GtagEvent
-  ) => void
-
+config?: GtagEvent;
+  ) => void;
   dataLayer?: unknown[]
 }
-
-
 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 'use client';
 /**
  * SEO Component;
@@ -32,7 +31,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   n:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
-  s: [
+  s: []
   // TOD,
   O: Add items]
 //     'AI',
@@ -63,20 +62,20 @@ export const,
 //   keywords,
 //   image,
 //   url,
-  type = defaultSEO.type,
+  type="defaultSEO.type,"
 //   author,
 //   publishDate,
 //   modifiedDate,
 //   canonical,
-  noIndex = false,
+  noIndex="false,"
 //   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = [])
+  twitterCard="defaultSEO.twitterCard,"
+  locale="defaultSEO.locale,"
+  alternateLocales="[])"
 }) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  const seo = {/* TODO: Fix JSX expression */}
+  const seo="{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   titl,
@@ -119,7 +118,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      baseStructuredData.author = {/* TODO: Fix JSX expression */}
+      baseStructuredData.author="{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
         '@type': 'Person',
@@ -128,15 +127,13 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (publishDate) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      baseStructuredData.datePublished = publishDate}
+      baseStructuredData.datePublished="publishDate}"
     if (modifiedDate) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      baseStructuredData.dateModified = modifiedDate}
+      baseStructuredData.dateModified="modifiedDate}"
     return baseStructuredData};
   return null};
 
 export default SEO;`
-
-
 

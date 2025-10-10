@@ -1,46 +1,44 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Function to optimize images;
 function optimizeImages() {;
 function optimizeImages() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 // This would typically use sharp or imagemin;
   // For now, we'll just log the process;
-  // // console.log removed for production
+  // // console.log removed for production;
 }
 
 // Function to optimize CSS;
 function optimizeCSS() {;
 function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 // This would typically use postcss and purgecss;
   // For now, we'll just log the process;
-  // // console.log removed for production
+  // // console.log removed for production;
 }
 
 // Function to optimize JavaScript bundles;
 function optimizeJS() {;
 function optimizeJS() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 // This would typically use webpack-bundle-analyzer or similar;
   // For now, we'll just log the process;
-  // // console.log removed for production
+  // // console.log removed for production;
 }
 
 // Function to generate sitemap;
 function generateSitemap() {;
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 ;
-const pages = [
+const pages="[]"
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -57,12 +55,12 @@ const pages = [
   q: 'weekly' }
   ];
 ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>"
+<urlset xmlns=""http: //www.sitemaps.org/schemas/sitemap/0.9">,"
+${pages.map(page="> `  <url>),"
     <loc>https://ziontechgroup.com${page.url}</loc>;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="htt,"
+const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>""
+<urlset xmlns=""htt,"></urlset>"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page.url}</loc>
@@ -71,18 +69,17 @@ ${/* TODO: Fix JSX expression */}
     <priority>${page.priority}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
-
   fs.writeFileSync('public/sitemap.xml', sitemap);
-  // // console.log removed for production
+  // // console.log removed for production;
 }
 
 // Function to generate robots.txt;
 function generateRobots() {;
 function generateRobots() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 `;
-const robots = `User-agen,
+const robots="`User-agen,"
   t: *
 Allo,
   w: /
@@ -97,28 +94,26 @@ Sitema,
 # Crawl-delay for better server performance;
 Crawl-dela,`
   y: 1`;
-
   fs.writeFileSync('public/robots.txt', robots);
-  // // console.log removed for production
+  // // console.log removed for production;
 }
 
 // Function to check for performance issues;
-async function checkPerformance() {
+async function checkPerformance() {}
 async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 ;
-const issues = [];
-  
+const issues="[];"
   // Check for large files;
-  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
+  const files="await glob('app/**/*.{ts,tsx,js,jsx}');"
   for (const file of files) {;
-const stats = fs.statSync(file);
+const stats="fs.statSync(file);"
     if (stats.size > 100000) { // 100KB;
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
   }
   
-  if (issues.length > 0) {
+  if (issues.length > 0) {}
 // console.log('⚠️  Performance issues found: ');
   for (const file of files) {/* TODO: Fix JSX expression */}',
   detected:
@@ -127,21 +122,21 @@ const stats = fs.statSync(file);
   }
   
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`
-    issues.forEach(issue => // // console.log removed for production
+    issues.forEach(issue="> // // console.log removed for production;"
 )} else {/* TODO: Fix JSX expression */}
   }
 }
 
 // Main optimization function;
-async function optimize() {
-  // // console.log removed for production
-try {
+async function optimize() {}
+  // // console.log removed for production;
+try {}
     // Create public directory if it doesn't exist;
-    if (!fs.existsSync('public')) {
+    if (!fs.existsSync('public')) {}
       fs.mkdirSync('public');
 async function optimize() {/* TODO: Fix JSX expression */}
 }
-  // // console.log removed for production
+  // // console.log removed for production;
 try {/* TODO: Fix JSX expression */}
     }
     
@@ -151,18 +146,17 @@ try {/* TODO: Fix JSX expression */}
     optimizeJS();
     generateSitemap();
     generateRobots();
-    
-    // // console.log removed for production
-// // console.log removed for production
-// // console.log removed for production
+    // // console.log removed for production;
+// // console.log removed for production;
+// // console.log removed for production;
 Summary:');
-    // // console.log removed for production
-// // console.log removed for production
-// // console.log removed for production
-// // console.log removed for production
-// // console.log removed for production
-} catch (error) {
-    // // console.error removed for production
+    // // console.log removed for production;
+// // console.log removed for production;
+// // console.log removed for production;
+// // console.log removed for production;
+// // console.log removed for production;
+} catch (error) {}
+    // // console.error removed for production;
 process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
@@ -170,8 +164,6 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 // Run optimization;
 optimize();
 optimize();"`
-=======
-    // // console.log removed for production
+    // // console.log removed for production;
 for (const file of files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

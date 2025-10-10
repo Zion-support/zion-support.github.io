@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
-
-
-interface OptimizedLoadingSpinnerProps {
+interface OptimizedLoadingSpinnerProps {}
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
@@ -13,128 +10,112 @@ interface OptimizedLoadingSpinnerProps {
 fullScreen?: boolean]
     }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
-  ({
-    size = 'md',;
-variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-<<<<<<< HEAD
-    fullScreen = false,;)
+  ({}
+    size="'md',;"
+variant="'spinner',"
+    text="'Loading...',"
+    className="'',"
+    color="'blue',"
+    fullScreen="false,;)"
 }); => {;
-const sizeClasses = useMemo(
-=======
-    fullScreen = false,]
-    }); => {
-    const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-      () => ({
+const sizeClasses="useMemo("
+    fullScreen="false]"
+    }); => {}
+    const sizeClasses="useMemo("
+      () => ({}
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
-        xl: 'h-16 w-16',]
+        xl: 'h-16 w-16']
     });,
       []
     );
 ;
-const textSizeClasses = useMemo(
-      () => ({
+const textSizeClasses="useMemo("
+      () => ({}
         xs: 'text-xs',
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
-        xl: 'text-xl',]
+        xl: 'text-xl']
     });,
       []
     );
 ;
-const colorClasses = useMemo(
-      () => ({
+const colorClasses="useMemo("
+      () => ({}
         blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',]
+        purple: 'border-purple-600 bg-purple-600']
     });,
       []
     );
 ;
-const renderSpinner = useMemo(() => {
+const renderSpinner = useMemo(() => {}
 return (
-switch (variant) {
+switch (variant) {}
         case 'dots':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
-              {[0, 1, 2].map(i => (</div>
-                <div
-                  key={i}
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+            <div className='flex space-x-1' role='status' aria-label="'Loading'></div>"
+              {[0, 1, 2].map(i="> (</div>"
+                <div key="{i}></div>"
+                  className="{`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}"
+                  style="{{ animationDelay: `${i * 0.1}s` }}"
                 />
               ));</div>
           );
-
         case 'pulse':
           return (
-            <div
-              className={`${baseClasses} rounded-full animate-pulse`}
-              role='status'
-              aria-label='Loading'
+            <div className="{`${baseClasses} rounded-full animate-pulse`}></div>"
+              role="'status'"
+              aria-label="'Loading'"
             />
           );
-
         case 'skeleton':
           return (</div>
-            <div>
-              <div>
-              <div>
-              <div>
+            <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
           );
-
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
-              {[0, 1, 2, 3].map(i => (</div>
-                <div
-                  key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{
+            <div className='flex space-x-1' role='status' aria-label="'Loading'></div>"
+              {[0, 1, 2, 3].map(i="> (</div>"
+                <div key="{i}></div>"
+                  className="{`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}"
+                  style="{{}"
                     height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,]
+                    animationDelay: `${i * 0.1}s`]
     }}
                 />
               ));</div>
           );
-
         case 'spinner':
         default:
           return (
-            <div
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status'
-              aria-label='Loading'
+            <div className="{`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}></div>"
+              role="'status'"
+              aria-label="'Loading'"
             />
-<<<<<<< HEAD
           ););
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
 }, [fullScreen, className]);
-=======
           )]
     }
     }, [size, variant, color, sizeClasses, colorClasses]);
-
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
     }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-
     return (</div>
-      <div>
-        <div className='text-center'></div>
+      <div></div>
+        <div className="'text-center'></div>"
           {renderSpinner}
           {text && (</div>
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>
+            <p className="{`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>"
               {text}
             </p>
           );
@@ -142,10 +123,7 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 )]
     }
 );
-
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'"
 export default OptimizedLoadingSpinner;
 }
-=======
   fullScreen?: boolean;);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

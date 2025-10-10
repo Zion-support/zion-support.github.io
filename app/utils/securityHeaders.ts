@@ -1,9 +1,6 @@
-    'magnetometer=()'].join(', '););
-<<<<<<< HEAD
-=======
-    'magnetometer=()'].join(', ')]
+    'magnetometer="()'].join(', '););"
+    'magnetometer="()'].join(', ')]"
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get security headers as key-value pairs;
  */
@@ -11,9 +8,9 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string></string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config="{ ...defaultSecurityHeaders, ...customConfig }"
   const headers: Record<string, string></string> = {}
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1; mode="block',"
     'X-DNS-Prefetch-Control': 'on'});
 }
   if (config.contentSecurityPolicy) {}
@@ -36,14 +33,14 @@ export function getSecurityHeaders()
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */});
 }
 export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */});
+  defaultSecurityHeaders: SecurityHeadersConfig="{/* TODO: Fix JSX expression */});"
 };
 /**
  * Get security headers as key-value pairs;
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Record<string, string></string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const config="{ ...defaultSecurityHeaders, ...customConfig };"
   const,
   headers: Record<string, string></string> = {/* TODO: Fix JSX expression */});
 };
@@ -65,11 +62,11 @@ return headers]
  * Get security headers in Next.js format;
  */
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Array<{ key: string; value: string }> {
+): Array<{ key: string; value: string }> {}
 export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {}
-  const headers = getSecurityHeaders(customConfig)
+  const headers="getSecurityHeaders(customConfig)"
   return Object.entries(headers).map(([key, value]) => ({}
     key,
     value});
@@ -80,5 +77,3 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 });)]
     }
 export default defaultSecurityHeaders;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

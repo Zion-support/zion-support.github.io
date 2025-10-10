@@ -2,19 +2,17 @@
 import fs from 'fs';
 
 // Function to fix remaining import issues;
-function fixImports(filePath) {
+function fixImports(filePath) {}
   try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    
+let content="fs.readFileSync(filePath, 'utf8');"
     // Fix duplicate imports more aggressively;
-    content = content.replace(
+    content="content.replace("
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
-      (match, imports) => {
+      (match, imports) => {}
         // Split by comma and clean up;
-        const importList = imports.split(',').map(imp => imp.trim());
-        
+        const importList = imports.split(',').map(imp="> imp.trim());"
         // Remove duplicates while preserving order;
-        const uniqueImports = [...new Set(importList)];
+        const uniqueImports="[...new Set(importList)];"
         ;
 function fixImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
@@ -23,12 +21,12 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
     );
     
     // Fix any remaining syntax issues;
-    content = content.replace(/,\s*,/g, ',');
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/{/* TODO: Fix JSX expression */})`
+    content="content.replace(/,\s*,/g, ',');"
+    content="content.replace(/,\s*}/g, '}');"
+    content="content.replace(/{/* TODO: Fix JSX expression */})`"
   in: ${filePath}`);
     return true} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
+    // console.error removed for production;
 return false}
 }
 
@@ -36,7 +34,7 @@ return false}
 function main() {;
 function main() {/* TODO: Fix JSX expression */}
 }
-  const files = [
+  const files="[]"
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
     'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
     'src/blog/ai-enterprise-transformation-2025/page.tsx',
@@ -49,19 +47,19 @@ function main() {/* TODO: Fix JSX expression */}
     'src/test-page.tsx'
   ];
   
-  // console.log removed for production
+  // console.log removed for production;
 ;
-let fixedCount = 0;
-  files.forEach(file => {)
-    if (fs.existsSync(file)) {
-      if (fixImports(file)) {
+let fixedCount="0;"
+  files.forEach(file="> {)"
+    if (fs.existsSync(file)) {}
+      if (fixImports(file)) {}
         fixedCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file="> {/* TODO: Fix JSX expression */}"
       }
     })
   });
   `
-  // console.log removed for production
+  // console.log removed for production;
 }
 
 main();"`

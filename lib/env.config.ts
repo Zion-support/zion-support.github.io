@@ -3,7 +3,7 @@
  * Centralizes all environment variables with validation and type safety;
  */
 
-interface EnvConfig {
+interface EnvConfig {}
   // App Configuration;
   NODE_ENV: 'development' | 'production' | 'test';
   APP_URL: string;
@@ -28,12 +28,12 @@ interface EnvConfig {
   BUILD_ID?: string;
   VERSION?: string}
 
-class EnvironmentConfig {
+class EnvironmentConfig {}
   private static instance: EnvironmentConfig;
   private config: EnvConfig;
 
   private constructor() {,
-    this.config = this.loadConfig();
+    this.config="this.loadConfig();"
     this.validate();
 interface EnvConfig {/* TODO: Fix JSX expression */}
 }
@@ -45,8 +45,8 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
     return EnvironmentConfig.instance}
 
-  private getEnvVar(key: string, defaultValue?: string): string {
-    if (typeof process !== 'undefined' && process.env) {
+  private getEnvVar(key: string, defaultValue?: string): string {}
+    if (typeof process !== 'undefined' && process.env) {}
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
@@ -55,16 +55,16 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   private getBooleanEnvVar(ke,
   y: string, defaultValu)
-  e: boolean = false): boolean {/* TODO: Fix JSX expression */}
+  e: boolean="false): boolean {/* TODO: Fix JSX expression */}"
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {,;
-const _value = this.getEnvVar(key);
-    //     const parsed = parseInt(value, 10);
+const _value="this.getEnvVar(key);"
+    //     const parsed="parseInt(value, 10);"
     return isNaN(parsed) ? defaultValue : parsed}
 
-  private loadConfig(): EnvConfig {
-    return {
+  private loadConfig(): EnvConfig {}
+    return {}
       // App Configuration;
       NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
       APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
@@ -92,11 +92,11 @@ const _value = this.getEnvVar(key);
 const errors: string[] = [];
 ,
     // Validate NODE_ENV;
-    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
+    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {}
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)}
 
     // Validate URLs;
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {}
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
   private getNumberEnvVar(ke,
   y: string, defaultValu)
@@ -117,12 +117,12 @@ const errors: string[] = [];
   API_BASE_URL: ${this.config.API_BASE_URL}`)}
 
     // Validate timeout;
-    if (this.config.API_TIMEOUT < 0) {
+    if (this.config.API_TIMEOUT < 0) {}
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)}
 
-    if (errors.length > 0) {
+    if (errors.length > 0) {}
       //       // In production, we might want to throw, but in development just warn;
-      if (this.config.NODE_ENV === 'production') {
+      if (this.config.NODE_ENV === 'production') {}
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
   positive: ${this.config.API_TIMEOUT}`)}
@@ -135,7 +135,7 @@ const errors: string[] = [];
   private isValidUrl(url: string): boolean {,
     try {,
       new URL(url);
-      return true} catch {
+      return true} catch {}
       return false;
   private isValidUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
@@ -156,7 +156,7 @@ const errors: string[] = [];
   }
 
   // Convenience getters;
-  public getAppUrl(): string {
+  public getAppUrl(): string {}
     return this.config.APP_URL;
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
   }
@@ -178,8 +178,7 @@ const errors: string[] = [];
 }
 
 // Export singleton instance;
-export const env = EnvironmentConfig.getInstance();
-
+export const env="EnvironmentConfig.getInstance();"
 // Export typed config;
 export type { EnvConfig };
 

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -42,12 +40,11 @@ import React from 'react';
   marketAdvantage: string;
   capabilities: string[],
   market_advantage: string}
-const contact =
-  mobile: '+1 302 464 0950',
+const contact="mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'};
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = []
   // AI & Machine Learning Services;
     id: 'ai - content - generation - platform',
     name: 'AI Content Generation Platform',
@@ -57,7 +54,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketPosition: 'Leading AI content generation platform with enterprise features'
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
-  {
+  {}
     id: 'ai-content-generation-platform',
     name: 'AI Content Generation Platform',
     tagline: 'Create high - quality content at scale with AI',
@@ -624,7 +621,7 @@ export interface ComprehensiveInnovativeService {;
   capabilities: string[];
   marketAdvantage: string}
 ;
-// const contact = {;
+// const contact="{;"
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -711,8 +708,7 @@ export interface ComprehensiveInnovativeService {;
   s: string[],
   market_advantag,
   e: string}
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -1581,7 +1577,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -1590,14 +1586,14 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
-  {
+  {}
     id: 'ai-content-generation-platform';
     name: 'AI Content Generation Platform';
     tagline: 'Create high-quality content at scale with AI';
     price: '$299';
     period: '/month';
     description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more.';
-    features: [
+    features: []
       'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics';
       'Collaboration toolsAPI integration'
     ];
@@ -1720,7 +1716,7 @@ i,
   s: string[], marketAdvantag,
   e: string,
   capabilities: string[], market_advantag,
-  e: string} const contact = mobil,
+  e: string} const contact="mobil,"
   e: '+1 302 464 0950' ' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -2121,7 +2117,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */}
+  e: string} ; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2141,9 +2137,7 @@ i,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
   e: string} ; export default comprehensiveInnovativeServices; '
-=======
     marketSize: '$8 B+ content marketing market'
     growthRate: '180% YoY';
 variant: 'ai-futuristic'
     contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

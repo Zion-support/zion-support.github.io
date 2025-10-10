@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type ZionEmergingTechService2029 =
-  id: string;
+export type ZionEmergingTechService2029="id: string;"
   name: string;
   tagline: string;
   price: string;
@@ -45,7 +43,7 @@ export type ZionEmergingTechService2029 =
     enterprise: number;
     currency: string;
     period: string}}
-export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
+export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = []
   // 1. Space Technology & Satellite Management Platform;
     id: 'space-technology-satellite-management',
     name: 'Space Technology & Satellite Management Platform',
@@ -1722,30 +1720,30 @@ varian,
     }
   }
 ];
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular)};
+  return zionEmergingTechServices2029.filter(service="> service.popular)};"
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
-  return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
+  return zionEmergingTechServices2029.filter(service => //     const starterPrice="service.pricing.starter;)"
     return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
-  return zionEmergingTechServices2029.filter(service =>),
-    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
-export const getServicesByPriceRange = (minPric)
+  return zionEmergingTechServices2029.filter(service=">),"
+    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())),"
+export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) =>;
-  return zionEmergingTechServices2029.filter(service =>
-//     const starterPrice = service.pricing.starter;)
+  return zionEmergingTechServices2029.filter(service=">"
+//     const starterPrice="service.pricing.starter;)"
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   })};
-export const getServicesByTechnology = (technolog)
+export const getServicesByTechnology="(technolog)"
   y: string) =>;
-  return zionEmergingTechServices2029.filter(service =>)
-    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
+  return zionEmergingTechServices2029.filter(service=">)"
+    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase()))"
   )};
-export type ZionEmergingTechService2029 = i,
+export type ZionEmergingTechService2029="i,"
   d: string; nam,
   e: string; taglin,
   e: string; pric,
@@ -2261,15 +2259,13 @@ export type ZionEmergingTechService2029 = i,
   l: 8299, enterpris,
   e: 20999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)}; export const getServicesByPriceRange = (minPric)
+  d: 'month' } } ]; export const getServicesByCategory="(categor)"
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)}; export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
-=======
+  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology="(technolog)"
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())) )};'"
     marketSize: '$469.8B space economy'
     growthRate: '8.5% annual growth';
 variant: 'space-tech-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 /**
  * Production-ready logger that removes console statements in production;
  */
 
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';
-
+type LogLevel="'debug' | 'info' | 'warn' | 'error';"
 interface LogEntry {}
   level: LogLevel,
   message: string,
@@ -16,23 +14,21 @@ interface LogEntry {}
 class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
-
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {;
-const entry: LogEntry = {,
+const entry: LogEntry="{,"
       level;
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
+    const entry: LogEntry="{}"
       level,
       message,
       data,
       timestamp: new Date().toISOString(),
       context});
 };
-
     // Only log in development;
-    if (this.isDevelopment) {
-      switch (level) {
-    // Only log in development
+    if (this.isDevelopment) {}
+      switch (level) {}
+    // Only log in development;
     if (this.isDevelopment) {}
       switch (level) {}
         case 'debug':
@@ -47,8 +43,8 @@ const entry: LogEntry = {,
     }
 
     // In production, send critical errors to monitoring service;
-    if (this.isProduction && level === 'error') {
-    // In production, send critical errors to monitoring service
+    if (this.isProduction && level === 'error') {}
+    // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {}
 this.sendToMonitoring(entry)]
     }
@@ -64,7 +60,7 @@ this.sendToMonitoring(entry)]
         event_category: 'Error',
 ,
   private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service
+    // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {);
         error_message: entry.message,
@@ -91,8 +87,6 @@ this.log('debug', message, data, context)]
     }
 }
 
-export const logger = new ProductionLogger()
+export const logger="new ProductionLogger()"
 export default logger;
-=======
       this.sendToMonitoring(entry););
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

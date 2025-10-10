@@ -1,8 +1,8 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // // console.log removed for production
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+//     // // console.log removed for production;
 }
     // Sitemap running simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'sitemap_runner',
           status: 'active',
           pages: 0;
           lastGenerated: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result="{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
@@ -24,9 +24,9 @@ function: 'sitemap_runner',
   d: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// // console.error removed for production
+//   } catch (error) {// // console.error removed for production;
 error}
-    return {
+    return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function: 'sitemap_runner'}
       })}}
 };
         timestamp: new Date().toISOString(),' function: 'sitemap_runner',' source: event.source || 'unknown', sitemap: {' status: 'active', pages: 0;
-        lastGenerated: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+        lastGenerated: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production;
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'sitemap_runner' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,

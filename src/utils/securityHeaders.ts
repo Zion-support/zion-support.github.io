@@ -14,12 +14,12 @@ export interface SecurityHeadersConfig {// TODO: Add content}
   referrerPolicy?: string;
   permissionsPolicy?: string}
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+  _defaultSecurityHeaders: SecurityHeadersConfig="{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
   // Content Security Policy,
   contentSecurityPolic,
-  y: [
+  y: []
   // TOD,
   O: Add items]
 //     "default-src 'self'","
@@ -42,7 +42,7 @@ export const,
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
-  y: 'max-age=63072000; includeSubDomains; preload',
+  y: 'max-age="63072000; includeSubDomains; preload',"
   // Prevent clickjacking,
   xFrameOption,
   s: 'DENY',
@@ -54,18 +54,18 @@ export const,
   y: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolic,
-  y: [
+  y: []
   // TOD,
   O: Add items]
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'interest-cohort=()',
-    'accelerometer=()',
-    'gyroscope=()',
-    'magnetometer=()',
+    'camera="()',"
+    'microphone="()',"
+    'geolocation="()',"
+    'payment="()',"
+    'usb="()',"
+    'interest-cohort="()',"
+    'accelerometer="()',"
+    'gyroscope="()',"
+    'magnetometer="()',"
 //   ].join(', ')
 }
 /**
@@ -74,10 +74,10 @@ export const,
 export function getSecurityHeaders()
   customConfig?: Partial;
 
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content}
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1; mode="block',"
     'X-DNS-Prefetch-Control': 'on'
   };
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
@@ -112,11 +112,11 @@ export function getSecurityHeaders()
 export function getNextSecurityHeaders()
   customConfig?: Partial;
 
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {// TODO: Add content}
 
 }
-  const headers = getSecurityHeaders(customConfig);
+  const headers="getSecurityHeaders(customConfig);"
   return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -124,6 +124,4 @@ export function getNextSecurityHeaders()
 //     value;)
   }))}
 export default defaultSecurityHeaders;"
-
-
 

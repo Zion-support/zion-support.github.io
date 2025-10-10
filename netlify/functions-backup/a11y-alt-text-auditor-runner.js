@@ -1,4 +1,4 @@
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/a11y-alt-text-auditor.cjs || true', {)
       stdio: inherit),
@@ -13,7 +13,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'a11y-alt-text-auditor-runner' })}} catch (e) {return {
+        task: 'a11y-alt-text-auditor-runner' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),

@@ -1,15 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
-import Navigation from '../components
-import Footer from '../components
+import Navigation from '../components;
+import Footer from '../components;
 import React from 'react';
 ;
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {}
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
-
 export default function ContactPage() {;
-const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -17,65 +16,56 @@ const [formData, setFormData] = useState({
     service: '',
     message:   ,)
 $4});
-<<<<<<< HEAD
 ;
 const [isSubmitted, setIsSubmitted] = useState(false);
 ;
-const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     message: '',
     budget: '',
     timeline: ''
   });
 ;
 const [isSubmitting, setIsSubmitting] = useState(false);
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     messag,
     e: '',
     budget: '',
     timeline: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev="> ({}"
       ...prev,
-      [name]: value
+      [name]: value;
     }))};
 ;
-const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
-<<<<<<< HEAD
-    // Here you would typically send the form data to your backend
-    // // console.log removed for production
+    // Here you would typically send the form data to your backend;
+    // // console.log removed for production;
 setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-=======
+    // Reset form after 3 seconds;
+    setTimeout(() => {}
     /
     /
     setIsSubmitted(true);
     /
-    setTimeout (() => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    setTimeout (() => {}
       setIsSubmitted(false);
       setFormData({}, 3000);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
-    
     /
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve="> setTimeout(resolve, 2000));"
     setIsSubmitted(true);
     setIsSubmitting(false)};
 ;
-const contactInfo = {
+const contactInfo="{}"
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -83,35 +73,34 @@ const contactInfo = {
     i: 9AM-6PM EST'
   };
 ;
-const services = [
+const services="[]"
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
     'Cloud Migration',
     'Cybersecurity',
-    'DevOps & CI
+    'DevOps & CI;
     'Database Management',
     'Mobile App Development',
     'Custom Development',
     'Other'
   ];
 ;
-const achievements = [
+const achievements="[]"
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Contact<
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions<
-        <a href="
-          Contact Us
+  return (<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+      <div className=""text-center"></div>"
+        <h1 className=""text-4xl font-bold text-white mb-4">Contact<"
+        <p className=""text-gray-300 mb-8">Coming Soon - Advanced contact solutions<"
+        <a href="""></a>"
+          Contact Us;
         <
       <)
   );
-
 export default ContactPage;
     'Quantum Computing',
     'Cybersecurity',
@@ -122,7 +111,7 @@ export default ContactPage;
     'Other'
   ];
 ;
-const budgetRanges = [
+const budgetRanges="[]"
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -131,7 +120,7 @@ const budgetRanges = [
     'Not sure'
   ];
 ;
-const timelines = [
+const timelines="[]"
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -140,8 +129,8 @@ const timelines = [
     'Just exploring'
   ];
 ;
-const offices = [
-    {
+const offices="[]"
+    {}
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
       phone: '+1 (302) 464-0950',
@@ -150,7 +139,7 @@ const offices = [
     i: 9AM-6PM EST',
       timezone: 'Eastern Time'
     },
-    {
+    {}
       city: 'San Francisco, CA',
       address: '123 Tech Street, San Francisco, CA 94105',
       phone: '+1 (415) 555-0123',
@@ -159,7 +148,7 @@ const offices = [
     i: 9AM-6PM PST',
       timezone: 'Pacific Time'
     },
-    {
+    {}
       city: 'London, UK',
       address: '456 Innovation Lane, London EC1A 4HD',
       phone: '+44 20 7946 0958',
@@ -170,62 +159,58 @@ const offices = [
     }
   ];
 ;
-const faqs = [
-    {
+const faqs="[]"
+    {}
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
     },
-    {
+    {}
       question: 'Do you offer ongoing support?',
-      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24
+      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24;
     },
-    {
+    {}
       question: 'What industries do you serve?',
       answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
     },
-    {
+    {}
       question: 'Do you work with small businesses?',
       answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
     }
   ];
-
-  if (isSubmitted) {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="max-w-2xl mx-auto text-center p-8">
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-10 h-10 text-white" 
+  if (isSubmitted) {}
+    return (<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+        <div className=""max-w-2xl mx-auto text-center p-8"></div>"
+          <div className=""w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
+            <CheckCircle className=""w-10 h-10 text-white"></CheckCircle>"
           <
-          <h1 className="text-3xl font-bold text-white mb-4">Thank You!<
-          <p className="text-xl text-gray-300 mb-6">
+          <h1 className=""text-3xl font-bold text-white mb-4">Thank You!<"
+          <p className=""text-xl text-gray-300 mb-6"></p>"
             Your message has been sent successfully. Our team will get back to you within 24 hours.
           <
-          <div className="space-y-4">
-            <p className="text-gray-400">
+          <div className=""space-y-4"></div>"
+            <p className=""text-gray-400"></p>"
               <strong>What happens next?<
             <
-            <div className="space-y-2 text-left max-w-md mx-auto">
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                <span className="text-gray-300">We'll review your requirements<
+            <div className=""space-y-2 text-left max-w-md mx-auto"></div>"
+              <div className=""flex items-center space-x-3"></div>"
+                <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                <span className=""text-gray-300">We'll review your requirements<"
               <
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                <span className="text-gray-300">Schedule a consultation call<
+              <div className=""flex items-center space-x-3"></div>"
+                <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                <span className=""text-gray-300">Schedule a consultation call<"
               <
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                <span className="text-gray-300">Provide a detailed proposal<
+              <div className=""flex items-center space-x-3"></div>"
+                <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                <span className=""text-gray-300">Provide a detailed proposal<"
               <
             <
           <
-          <div className="mt-8">
-            <a
-              href="
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
-            >
-<<<<<<< HEAD
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Back to Home
+          <div className=""mt-8"></div>"
+            <a href="""></a>"
+              className=""bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">"
+              <ArrowRight className=""w-5 h-5 mr-2" /></ArrowRight>"
+              Back to Home;
             </a>
           </div>
         </div>
@@ -233,32 +218,30 @@ const faqs = [
     )}
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       {/* Hero Section */}
-=======
               
       {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Get In Touch
+      <section className=""relative py-20 lg:py-32 overflow-hidden"></section>"
+        <div className=""absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><"
+        <div className=""container mx-auto px-4 relative z-10"></div>"
+          <div className=""max-w-4xl mx-auto text-center"></div>"
+            <h1 className=""text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse"></h1>"
+              Get In Touch;
             <
-            <p className="text-xl l,
+            <p className=""text-xl l,"></p>"
     g:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI? Let's discuss your project and explore 
+              Ready to transform your business with AI? Let's discuss your project and explore;
               how we can help you achieve your goals.
             <
-            <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center space-x-3 bg-slate-800
-                <Phone className="w-5 h-5 text-cyan-400" 
-                <span className="text-white font-medium">{contactInfo.phone}<
+            <div className=""flex flex-wrap justify-center gap-6"></div>"
+              <div className=""flex items-center space-x-3 bg-slate-800"></div>"
+                <Phone className=""w-5 h-5 text-cyan-400"></Phone>"
+                <span className=""text-white font-medium">{contactInfo.phone}<"
               <
-              <div className="flex items-center space-x-3 bg-slate-800
-                <Mail className="w-5 h-5 text-purple-400" 
-                <span className="text-white font-medium">{contactInfo.email}<
+              <div className=""flex items-center space-x-3 bg-slate-800"></div>"
+                <Mail className=""w-5 h-5 text-purple-400"></Mail>"
+                <span className=""text-white font-medium">{contactInfo.email}<"
               <
             <
           <
@@ -266,267 +249,232 @@ const faqs = [
       <
 
       {/* Contact Form & Info *
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className=""py-20"></section>"
+        <div className=""container mx-auto px-4"></div>"
+          <div className=""grid grid-cols-1 lg:grid-cols-2 gap-12"></div>"
             {/* Contact Form *
-            <div className="bg-slate-800
-              <h2 className="text-2xl font-bold text-white mb-6">Send us a message<
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+            <div className=""bg-slate-800"></div>"
+              <h2 className=""text-2xl font-bold text-white mb-6">Send us a message<"
+              <form onSubmit={handleSubmit} className=""space-y-6"></form>"
+                <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       Full Name *
                     <
-                    <input
-                      type="text"
-                      name="name"
-                      value = { formData.name };
-                      onChange = { handleInputChange };
-
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
+                    <input type=""text"></input>"
+                      name=""name""
+                      value="{ formData.name };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors"
-                      placeholder="Your full name"
-                    
+                      placeholder=""Your full name""
                   <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       Email Address *
                     <
-                    <input
-                      type="email"
-                      name="email"
-                      value = { formData.email };
-                      onChange = { handleInputChange };
-
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="your@email.com"
-                    
+                    <input type=""email"></input>"
+                      name=""email""
+                      value="{ formData.email };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors""
+                      placeholder=""your@email.com""
                   <
                 <
 
-                <div className="grid grid-cols-1 m,
+                <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                     <
-                    <input
-                      type="text"
-                      name="company"
-                      value = { formData.company };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
+                    <input type=""text"></input>"
+                      name=""company""
+                      value="{ formData.company };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors"
-                      placeholder="Your company name"
-                    
+                      placeholder=""Your company name""
                   <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                      Phone Number;
                     <
-                    <input
-                      type="tel"
-                      name="phone"
-                      value = { formData.phone };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors")
-                      placeholder="+1 (555) 123-4567"
-                    
+                    <input type=""tel"></input>"
+                      name=""phone""
+                      value="{ formData.phone };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors")"
+                      placeholder=""+1 (555) 123-4567""
                   <
                 <
 
-                <div className="grid grid-cols-1 m,
+                <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                      Service Interest;
                     <
-                    <select
-                      name="service"
-                      value = { formData.service };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors"
-                    >
-                      <option value="">Select a service<
-                      {services.map((service), index) => (<option key={index} value={service}>{service}<)
+                    <select name=""service"></select>"
+                      value="{ formData.service };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
+    s:border-cyan-400 transition-colors">
+                      <option value=""">Select a service<"
+                      {services.map((service), index) => (<option key={index} value="{service}>{service}<)"
                       ))}
                     <
                   <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                      Budget Range;
                     <
-                    <select
-                      name="budget"
-                      value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors"
-                    >
-                      <option value="">Select budget range<
-                      {budgetRanges.map((range), index) => (<option key={index} value={range}>{range}<)
+                    <select name=""budget"></select>"
+                      value="{ formData.budget };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
+    s:border-cyan-400 transition-colors">
+                      <option value=""">Select budget range<"
+                      {budgetRanges.map((range), index) => (<option key={index} value="{range}>{range}<)"
                       ))}
                     <
                   <
                 <
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-
+                <div></div>
+                  <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                   <
-                  <select
-                    name="timeline"
-                    value = { formData.timeline };
-                    onChange = { handleInputChange };
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors"
-                  >
-                    <option value="">Select timeline<
-                    {timelines.map((timeline), index) => (<option key={index} value={timeline}>{timeline}<)
+                  <select name=""timeline"></select>"
+                    value="{ formData.timeline };"
+                    onChange="{ handleInputChange };"
+                    className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
+    s:border-cyan-400 transition-colors">
+                    <option value=""">Select timeline<"
+                    {timelines.map((timeline), index) => (<option key={index} value="{timeline}>{timeline}<)"
                     ))}
                   <
                 <
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>
+                  <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                     Message *
                   <
-                  <textarea
-                    name="message"
-                    value = { formData.message };
-                    onChange = { handleInputChange };
-
-                    rows = { 5 };
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
+                  <textarea name=""message"></textarea>"
+                    value="{ formData.message };"
+                    onChange="{ handleInputChange };"
+                    rows="{ 5 };"
+                    className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors resize-none"
-                    placeholder="Tell us about your project, goals, and any specific requirements..."
-                  
+                    placeholder=""Tell us about your project, goals, and any specific requirements...""
                 <
 
-                <button
-                  type="submit"
-                  disabled = { isSubmitting };
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,
-    d:cursor-not-allowed flex items-center justify-center"
-                >
-<<<<<<< HEAD
+                <button type=""submit"></button>"
+                  disabled="{ isSubmitting };"
+                  className=""w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,""
+    d:cursor-not-allowed flex items-center justify-center">
                   {isSubmitting ? (
-                    <React.Fragment>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    <React.Fragment></React>
+                      <div className=""animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>"
                       Sending...
                     </React.Fragment>
                   ) : (
-                    <React.Fragment>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                    <React.Fragment></React>
+                      <Send className=""w-5 h-5 mr-2" /></Send>"
+                      Send Message;
                     </React.Fragment>
                   )}
                 </button>
               </form>
             </div>
-
             {/* Contact Information */}
-            <div className="space-y-8">
-=======
+            <div className=""space-y-8"></div>"
                   {isSubmitting ? (<>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
+                      <div className=""animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><"
                       Sending...
                     <)
                   ) : (<>
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Information<
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    
-                      <div className="text-white font-medium">{contactInfo.phone}<
-                      <div className="text-gray-400 text-sm">Call us anytime<
+              <div></div>
+                <h2 className=""text-2xl font-bold text-white mb-6">Contact Information<"
+                <div className=""space-y-6"></div>"
+                  <div className=""flex items-start space-x-4"></div>"
+                      <div className=""text-white font-medium">{contactInfo.phone}<"
+                      <div className=""text-gray-400 text-sm">Call us anytime<"
                     <
                   <
-                  <div className="flex items-start space-x-4">
-                    
-                      <div className="text-white font-medium">{contactInfo.email}<
-                      <div className="text-gray-400 text-sm">Email us<
+                  <div className=""flex items-start space-x-4"></div>"
+                      <div className=""text-white font-medium">{contactInfo.email}<"
+                      <div className=""text-gray-400 text-sm">Email us<"
                     <
                   <
-                  <div className="flex items-start space-x-4">
-                    
-                      <div className="text-white font-medium">Middletown, DE<
-                      <div className="text-gray-400 text-sm">{contactInfo.address}<
+                  <div className=""flex items-start space-x-4"></div>"
+                      <div className=""text-white font-medium">Middletown, DE<"
+                      <div className=""text-gray-400 text-sm">{contactInfo.address}<"
                     <
                   <
-                  <div className="flex items-start space-x-4">
-                    
-                      <div className="text-white font-medium">{contactInfo.hours}<
-                      <div className="text-gray-400 text-sm">Business hours<
+                  <div className=""flex items-start space-x-4"></div>"
+                      <div className=""text-white font-medium">{contactInfo.hours}<"
+                      <div className=""text-gray-400 text-sm">Business hours<"
                     <
                   <
                 <
               <
 
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?<
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                    <span className="text-gray-300">300% Average ROI<
+              <div className=""bg-gradient-to-r from-cyan-500/20 to-purple-600"></div>"
+                <h3 className=""text-xl font-bold text-white mb-4">Why Choose Us?<"
+                <div className=""space-y-3"></div>"
+                  <div className=""flex items-center space-x-3"></div>"
+                    <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                    <span className=""text-gray-300">300% Average ROI<"
                   <
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                    <span className="text-gray-300">99.9% Uptime Guarantee<
+                  <div className=""flex items-center space-x-3"></div>"
+                    <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                    <span className=""text-gray-300">99.9% Uptime Guarantee<"
                   <
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                    <span className="text-gray-300">24/7 Support<
+                  <div className=""flex items-center space-x-3"></div>"
+                    <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                    <span className=""text-gray-300">24/7 Support<"
                   <
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                    <span className="text-gray-300">Enterprise Security<
+                  <div className=""flex items-center space-x-3"></div>"
+                    <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
+                    <span className=""text-gray-300">Enterprise Security<"
                   <
                 <
               <
 
-              <div className="bg-slate-800
-                <h3 className="text-xl font-bold text-white mb-4">Quick Actions<
-                <div className="space-y-3">
-                  <a
-                    href="
-                    className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover: bg-cyan-600 transition-colors text-center"
-                  >
-
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Global Offices
+              <div className=""bg-slate-800"></div>"
+                <h3 className=""text-xl font-bold text-white mb-4">Quick Actions<"
+                <div className=""space-y-3"></div>"
+                  <a href="""></a>"
+                    className=""block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover: bg-cyan-600 transition-colors text-center">"
+          <div className=""text-center mb-16"></div>"
+            <h2 className=""text-3xl lg:text-4xl font-bold text-white mb-4"></h2>"
+              Our Global Offices;
             <
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We're here to serve you wherever you are in the world
+            <p className=""text-lg text-gray-300 max-w-3xl mx-auto"></p>"
+              We're here to serve you wherever you are in the world;
             <
           <
-          <div className="grid grid-cols-1 m,
+          <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-3 gap-8">
-            {offices.map((office), index) => (<div key={index} className="bg-slate-800
-                <h3 className="text-xl font-bold text-white mb-4">{office.city}<
-                <div className="space-y-3">
-                  <div className="flex items-center justify-center space-x-2">
-                    <MapPin className="w-4 h-4 text-cyan-400" 
-                    <span className="text-gray-300 text-sm">{office.address}<
+            {offices.map((office), index) => (<div key={index} className=""bg-slate-800"></div>"
+                <h3 className=""text-xl font-bold text-white mb-4">{office.city}<"
+                <div className=""space-y-3"></div>"
+                  <div className=""flex items-center justify-center space-x-2"></div>"
+                    <MapPin className=""w-4 h-4 text-cyan-400"></MapPin>"
+                    <span className=""text-gray-300 text-sm">{office.address}<"
                   <
-                  <div className="flex items-center justify-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" 
-                    <span className="text-gray-300 text-sm">{office.phone}<
+                  <div className=""flex items-center justify-center space-x-2"></div>"
+                    <Phone className=""w-4 h-4 text-purple-400"></Phone>"
+                    <span className=""text-gray-300 text-sm">{office.phone}<"
                   <
-                  <div className="flex items-center justify-center space-x-2">
-                    <Mail className="w-4 h-4 text-green-400" 
-                    <span className="text-gray-300 text-sm">{office.email}<
+                  <div className=""flex items-center justify-center space-x-2"></div>"
+                    <Mail className=""w-4 h-4 text-green-400"></Mail>"
+                    <span className=""text-gray-300 text-sm">{office.email}<"
                   <
-                  <div className="flex items-center justify-center space-x-2">
-                    <Clock className="w-4 h-4 text-yellow-400" 
-                    <span className="text-gray-300 text-sm">{office.hours}<
+                  <div className=""flex items-center justify-center space-x-2"></div>"
+                    <Clock className=""w-4 h-4 text-yellow-400"></Clock>"
+                    <span className=""text-gray-300 text-sm">{office.hours}<"
                   <
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}<
+                  <div className=""text-cyan-400 text-sm font-medium">{office.timezone}<"
                 <
               <)
             ))}
@@ -535,31 +483,29 @@ const faqs = [
       <
 
       {/* FAQ Section *
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
+      <section className=""py-20"></section>"
+        <div className=""container mx-auto px-4"></div>"
+          <div className=""text-center mb-16"></div>"
+            <h2 className=""text-3xl lg: text-4xl font-bold text-white mb-4"></h2>"
+              Frequently Asked Questions;
             <
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Common questions about our services and process
+            <p className=""text-lg text-gray-300 max-w-3xl mx-auto"></p>"
+              Common questions about our services and process;
             <
           <
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq), index) => (<div key={index} className="bg-slate-800
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<
-                  <p className="text-gray-300">{faq.answer}<
+          <div className=""max-w-4xl mx-auto"></div>"
+            <div className=""space-y-6"></div>"
+              {faqs.map((faq), index) => (<div key={index} className=""bg-slate-800"></div>"
+                  <h3 className=""text-xl font-bold text-white mb-3">{faq.question}<"
+                  <p className=""text-gray-300">{faq.answer}<"
                 <)
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
-=======
             <
           <
         <
@@ -567,4 +513,3 @@ const faqs = [
     <
   );
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

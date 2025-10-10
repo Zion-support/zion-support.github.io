@@ -16,7 +16,7 @@ export interface ExtraService {id: string;
 export const extraServices: ExtraService[] = [;
     address: string}
 ;
-export const extra_services: ExtraService[] = [
+export const extra_services: ExtraService[] = []
     id: 'cloud - migration - expert',
     name: 'Cloud Migration Expert',
     tagline: 'Seamless cloud migration and optimization',

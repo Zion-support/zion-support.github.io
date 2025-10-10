@@ -9,8 +9,7 @@ interface State {/* TODO: Fix JSX expression */}
 export class AdvancedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false }}
-
+    this.state="{ hasError: false }}"
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }}
 
@@ -29,7 +28,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
 
     // Log error to monitoring service;
     //     // Send to error tracking service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'exception', {)
         description: error.toString(),
         fatal: false;
@@ -37,17 +36,17 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
       })}
   }
 
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return(this.props.fallback || ()
-          <div className="error-boundary">)
+          <div className=""error-boundary">)"
             <h2>Something went wrong.</h2>)
-            <details style={{ whiteSpace: 'pre-wrap' }}>)
+            <details style="{{ whiteSpace: 'pre-wrap' }}>)"
       return (
         this.props.fallback || (
-          <div className="error-boundary"></div>
+          <div className=""error-boundary"></div>"
             <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
+            <details style="{{ whiteSpace: 'pre-wrap' }}></details>"
   render() {/* TODO: Fix JSX expression */}
   e: 'pre-wrap' }}></details>
               {this.state.error && this.state.error.toString()}

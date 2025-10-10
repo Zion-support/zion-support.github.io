@@ -11,8 +11,7 @@ interface State {/* TODO: Fix JSX expression */}
 class ErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false }}
-
+    this.state="{ hasError: false }}"
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true;
@@ -25,22 +24,22 @@ constructor(props: Props) {,
     this.reportError(error, errorInfo);
     
     // Call custom error handler if provided;
-    if (this.props.onError) {
+    if (this.props.onError) {}
       this.props.onError(error, errorInfo)}
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {}
 return (
 ,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'exception', {)
         description: error.message;)
         fatal: false)
         custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack;
-class ErrorBoundary extends Component<Props, State>
+class ErrorBoundary extends Component<Props, State></Props>
 );
 } {/* TODO: Fix JSX expression */}
   r: false }}
@@ -56,7 +55,7 @@ class ErrorBoundary extends Component<Props, State>
     }
   }
 
-  private reportError = (erro,
+  private reportError="(erro,"
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
@@ -69,78 +68,74 @@ class ErrorBoundary extends Component<Props, State>
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   };
 
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
-          <div className="text-center p-8 max-w-md"></div>
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
+        <div className=""min-h-screen flex items-center justify-center bg-gray-900"></div>"
+          <div className=""text-center p-8 max-w-md"></div>"
+            <AlertTriangle className=""w-16 h-16 text-red-500 mx-auto mb-4" /></AlertTriangle>"
+            <h1 className=""text-2xl font-bold text-white mb-4">Something went wrong</h1>"
+            <p className=""text-gray-300 mb-6"></p>"
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 :src/components/ErrorBoundary.tsx;
             {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
+              <p className=""text-gray-400 mb-4 text-sm"></p>"
                 Error ID: {this.state.errorId}
               </p>
             )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button
-                onClick={this.handleRetry}
-                className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
+            <div className=""flex flex-col sm: flex-row gap-4 justify-center">,"
+              <button ;></button>
+            <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button onClick="{this.handleRetry}></button>"
+                className=""bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">"
+                <RefreshCw className=""w-4 h-4" /></RefreshCw>"
                 Try Again;
               </button>,
-              <button;
-                onClick={this.handleGoHome}
-                className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-4 h-4" />
+              <button ;></button>
+                onClick="{this.handleGoHome}"
+                className=""bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">"
+                <Home className=""w-4 h-4" /></Home>"
                 Go Home;
               </button>,
             </div>,
-            <button;
+            <button ;></button>
               onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover: text-white text-sm underline",
-            <button;
+              className=""mt-4 text-gray-400 hover: text-white text-sm underline","
+            <button ;></button>
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className=""bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded""
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
               </p>
             )}
-            <div className="flex flex-col,"
+            <div className=""flex flex-col,"></div>"
   sm:flex-row gap-4 justify-center"></div>
               <button></button>
-                onClick={this.handleRetry}"
-                className="bg-blue-600,"
+                onClick="{this.handleRetry}""
+                className=""bg-blue-600,""
   hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
-                <RefreshCw className="w-4 h-4" /></RefreshCw>
+                <RefreshCw className=""w-4 h-4" /></RefreshCw>"
                 Try Again;
               </button>
               <button></button>
-                onClick={this.handleGoHome}"
-                className="bg-gray-600,"
+                onClick="{this.handleGoHome}""
+                className=""bg-gray-600,""
   hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
-                <Home className="w-4 h-4" /></Home>
+                <Home className=""w-4 h-4" /></Home>"
                 Go Home;
               </button>
             </div>
             <button></button>
               onClick={() => window.location.reload()}"
-              className="mt-4 text-gray-400,"
+              className=""mt-4 text-gray-400,""
   hover:text-white text-sm underline"
             <button></button>
               onClick={() => window.location.reload()}"
-              className="bg-blue-600,"
-  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
+              className=""bg-blue-600,""
+  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Or refresh the page;
             </button>
           </div>,

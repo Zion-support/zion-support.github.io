@@ -2,7 +2,7 @@
 export interface InnovativeMicroSaas2029;
 export interface InnovativeMicroSaas2029 {id: string;
 export interface InnovativeMicroSaas2029 {  id: string;
-export interface InnovativeMicroSaas2029 {
+export interface InnovativeMicroSaas2029 {}
   name: string;
   tagline: string;
   price: string;
@@ -30,7 +30,7 @@ export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
     address: string}
 ;
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
+export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = []
     id: '2029 - innovative - micro - saas',
     name: '2029 Innovative Micro SAAS Platform',
     tagline: 'Innovative micro SAAS for 2029',

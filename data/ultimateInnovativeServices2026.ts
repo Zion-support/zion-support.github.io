@@ -62,7 +62,7 @@ export const,
       "Climate modeling and prediction""
       "Cryptographic security analysis"
     ]
-    targetAudience: [
+    targetAudience: []
       "Financial institutions"
       "Research organizations"
       "Government agencies"
@@ -180,7 +180,7 @@ export const,
       "Neuromorphic sensors""
       "Advanced pattern recognition"
     ]
-    targetAudience: [
+    targetAudience: []
       "Research institutions"
       "Technology companies"
       "Healthcare organizations"
@@ -272,7 +272,7 @@ export const,
       "Environmental remediation""
       "Biofuel production"
     ]
-    targetAudience: [
+    targetAudience: []
       "Pharmaceutical companies"
       "Biotechnology firms"
       "Agricultural companies"
@@ -381,7 +381,7 @@ export const,
       "Space weather monitoring""
       "Autonomous space stations"
     ]
-    targetAudience: [
+    targetAudience: []
       "Space agencies"
       "Satellite companies"
       "Space exploration firms"
@@ -473,7 +473,7 @@ export const,
       "Lightweight composites""
       "Quantum materials"
     ]
-    targetAudience: [
+    targetAudience: []
       "Electronics companies"
       "Energy companies"
       "Aerospace firms"
@@ -565,7 +565,7 @@ export const,
       "Research applications""
       "Human augmentation"
     ]
-    targetAudience: [
+    targetAudience: []
       "Healthcare organizations"
       "Research institutions"
       "Gaming companies"
@@ -657,7 +657,7 @@ export const,
       "Transportation optimization""
       "Smart city management"
     ]
-    targetAudience: [
+    targetAudience: []
       "Manufacturing companies"
       "Infrastructure operators"
       "Energy companies"
@@ -766,7 +766,7 @@ export const,
       "Design and prototyping""
       "Virtual tourism"
     ]
-    targetAudience: [
+    targetAudience: []
       "Educational institutions"
       "Entertainment companies"
       "Training organizations"
@@ -858,7 +858,7 @@ export const,
       "Industrial automation""
       "Edge computing networks"
     ]
-    targetAudience: [
+    targetAudience: []
       "IoT companies"
       "Automotive manufacturers"
       "Smart city operators"
@@ -950,7 +950,7 @@ export const,
       "Privacy-sensitive applications""
       "Distributed AI training"
     ]
-    targetAudience: [
+    targetAudience: []
       "Healthcare organizations"
       "Financial institutions"
       "Research institutions"
@@ -1042,7 +1042,7 @@ export const,
       "Green building design""
       "Environmental monitoring"
     ]
-    targetAudience: [
+    targetAudience: []
       "Energy companies"
       "Manufacturing firms"
       "Construction companies"

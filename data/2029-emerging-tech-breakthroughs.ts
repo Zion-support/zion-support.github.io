@@ -43,7 +43,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   }
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =;
-  [
+  []
       i,
   d: '2029-emerging-tech-breakthrough'
       nam,
@@ -75,7 +75,7 @@ export const,
     email: string;
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'}}];    features: [
+        address: '364 E Main St STE 1008 Middletown DE 19709'}}];    features: []
   id: string;
   name: string;
   tagline: string;
@@ -91,7 +91,7 @@ export const,
     address: string}
   }
 }
-export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
+export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = []
     id: '2029-emerging-tech-breakthrough',
     name: '2029 Emerging Tech Breakthrough Platform',
     tagline: "Emerging tech breakthroughs for 2029",
@@ -196,7 +196,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   };
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
-  [
+  []
       id: '2029-emerging-tech-breakthrough',
       name: '2029 Emerging Tech Breakthrough Platform',
       tagline: 'Emerging tech breakthroughs for 2029',
@@ -205,7 +205,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       features: [,
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
-  [
+  []
       i,
   d: '2029-emerging-tech-breakthrough',
       nam,
@@ -230,7 +230,7 @@ export const,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}};
-  ];    features: [
+  ];    features: []
       "Emerging tech breakthroughs"
       "Innovation platform"
       "Future capabilities"
@@ -280,7 +280,7 @@ export const,
   }
 }
 export interface EmergingTechBreakthrough2029 {;
-export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
+export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = []
     id: '2029-emerging-tech-breakthrough',
     name: '2029 Emerging Tech Breakthrough Platform',
     tagline: "Emerging tech breakthroughs for 2029",

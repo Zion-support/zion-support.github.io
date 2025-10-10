@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -277,7 +275,7 @@ varian,
     category: 'Developer Tools',
     category: 'Developer Tools',
     useCases:
-        useCases: [
+        useCases: []
       'Landing page surveys'
       'In-product polls'
       'Exit intent feedback'],
@@ -1167,8 +1165,7 @@ market_size: 'BI $30B+',
     rating: 4 && 4.4;
     reviews: 16};
 ];
-const contact =
-	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+const contact="mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
     popula,
@@ -1225,8 +1222,7 @@ varian,
     review,
   s: 16};
 ];
-const contact =
-	mobil,
+const contact="mobil,"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
 	addres,
@@ -2096,7 +2092,7 @@ roi: 'Improve visibility and accountability.',
   reviews: 16}
 		rating: 4.4;
 		reviews: 16;
-// const contact = {;
+// const contact="{;"
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -3613,7 +3609,7 @@ varian,
   g: 4.4;
 		review,
   s: 16,
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -3638,7 +3634,7 @@ export const,
 		price: '$149';
 		period: '/month';
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
-		features: [
+		features: []
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
 		popular: true;
@@ -3675,7 +3671,7 @@ export const,
 		price: '$129';
 		period: '/month';
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
-		features: [
+		features: []
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
 		popular: false;
@@ -3712,7 +3708,7 @@ export const,
 		price: '$89';
 		period: '/month';
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
-		features: [
+		features: []
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		];
 		popular: true;
@@ -3768,7 +3764,7 @@ export const,
 		price: '$129';
 		period: '/month';
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
-		features: [
+		features: []
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
 		popular: true;
@@ -3824,7 +3820,7 @@ export const,
 		price: '$69';
 		period: '/month';
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
-		features: [
+		features: []
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
 		popular: false;
@@ -3856,7 +3852,7 @@ export const,
 	}
 ];
 ;
-// const contact = {;
+// const contact="{;"
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -3868,7 +3864,7 @@ export const,
 	}
 ];
 ;
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -3893,7 +3889,7 @@ export const,
 		price: '$149';
 		period: '/month';
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
-		features: [
+		features: []
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
 		popular: true;
@@ -3930,7 +3926,7 @@ export const,
 		price: '$129';
 		period: '/month';
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
-		features: [
+		features: []
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
 		popular: false;
@@ -3967,7 +3963,7 @@ export const,
 		price: '$89';
 		period: '/month';
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
-		features: [
+		features: []
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		];
 		popular: true;
@@ -4023,7 +4019,7 @@ export const,
 		price: '$129';
 		period: '/month';
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
-		features: [
+		features: []
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
 		popular: true;
@@ -4079,7 +4075,7 @@ export const,
 		price: '$69';
 		period: '/month';
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
-		features: [
+		features: []
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
 		popular: false;
@@ -4469,7 +4465,7 @@ export const,
   e: '2029 - 10 - 20', customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16}; ]; const contact = ' mobil,
+  s: 16}; ]; const contact="' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -5231,7 +5227,7 @@ export const,
   g: 4.4, review,
   s: 16} ratin,
   g: 4.4,
-  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -5258,7 +5254,7 @@ export const,
   g: 4.3} review,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -5286,9 +5282,7 @@ export const,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; '
-=======
     market_size: 'Helpdesk software $20B+'
     growth_rate: '25% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

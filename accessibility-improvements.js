@@ -1,95 +1,86 @@
-// Accessibility improvements to implement
-// 1. Add ARIA labels to interactive elements
+// Accessibility improvements to implement;
+// 1. Add ARIA labels to interactive elements;
 // Example JSX:
-// <button aria-label="Close dialog">×</button>
-// <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address</div>
-
+// <button aria-label=""Close dialog">×</button>"
+// <input aria-describedby="email-help" type=""email" /></input>"
+// <div id=""email-help">Enter your email address</div>"
 // 2. Implement focus management;
 const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+const focusableElements="element.querySelectorAll("
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
   );
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
-  element.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
+  const firstElement="focusableElements[0];"
+  const lastElement="focusableElements[focusableElements.length - 1];"
+  element.addEventListener('keydown', (e) => {}
+    if (e.key === 'Tab') {}
+      if (e.shiftKey) {}
+        if (document.activeElement === firstElement) {}
           lastElement.focus();
           e.preventDefault()}
-      } else {
-        if (document.activeElement === lastElement) {
+      } else {}
+        if (document.activeElement === lastElement) {}
           firstElement.focus();
           e.preventDefault()}
       }
     }
   })};
 
-// 3. Add live regions for dynamic content
+// 3. Add live regions for dynamic content;
 // Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
+// <div aria-live="polite" aria-atomic="true" className=""sr-only"></div>"
 //   {announcement}
 // </div>
-
-// 4. Ensure proper heading hierarchy
+// 4. Ensure proper heading hierarchy;
 // Example JSX:
 // <h1>Main Page Title</h1>
 // <h2>Section Title</h2>
 // <h3>Subsection Title</h3>
-
-// 5. Add skip links
+// 5. Add skip links;
 // Example JSX:
-// <a href="#main-content" className="skip-link">
-//   Skip to main content
+// <a href="#main-content" className=""skip-link"></a>"
+//   Skip to main content;
 // </a>
-
-// 6. Use semantic HTML
+// 6. Use semantic HTML;
 // Example JSX:
-// <main>
-//   <nav aria-label="Main navigation">
-//     <ul>
-//       <li><a href="/">Home</a></li>
+// <main></main>
+//   <nav aria-label=""Main navigation"></nav>"
+//     <ul></ul>
+//       <li><a href=""/">Home</a></li>"
 //     </ul>
 //   </nav>
-//   <section>
+//   <section></section>
 //     <h2>Section Title</h2>
-//     <article>
+//     <article></article>
 //       <h3>Article Title</h3>
 //     </article>
 //   </section>
 // </main>
-
-// 7. Form accessibility
+// 7. Form accessibility;
 // Example JSX:
-// <form>
-//   <fieldset>
+// <form></form>
+//   <fieldset></fieldset>
 //     <legend>Contact Information</legend>
-//     <label htmlFor="email">Email:</label>
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:</label>
-//     <input id="phone" type="tel" />
+//     <label htmlFor=""email">Email:</label>"
+//     <input id="email" type=""email" required /></input>"
+//     <label htmlFor=""phone">Phone:</label>"
+//     <input id="phone" type=""tel" /></input>"
 //   </fieldset>
 // </form>
-
-// 8. Color contrast and visual indicators
+// 8. Color contrast and visual indicators;
 // Example CSS:
-// .focus-visible:focus {
+// .focus-visible:focus {}
 //   outline: 2px solid #0066cc;
 //   outline-offset: 2px;
 // }
 
-// 9. Keyboard navigation
+// 9. Keyboard navigation;
 // Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
+// <div role="button" tabIndex={0} onKeyDown="{handleKeyDown}></div>"
+//   Clickable div;
 // </div>
-
-// 10. Screen reader announcements
+// 10. Screen reader announcements;
 // Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
+// <div aria-live="assertive" aria-atomic=""true"></div>"
 //   {errorMessage}
 // </div>
-
 export { trapFocus };

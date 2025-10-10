@@ -1,7 +1,5 @@
-// SeoEnhancer utility
-// This file contains utility functions and configurations
-
-
+// SeoEnhancer utility;
+// This file contains utility functions and configurations;
 interface SEOConfig {title: string}
   description: string;
   keywords: string[];
@@ -20,7 +18,7 @@ interface SEOConfig {title: string}
 class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig}
   constructor(confi)
-  g: SEOConfig) {this.config = config}
+  g: SEOConfig) {this.config="config}"
     this.init()}
 
   private init(): void {// Initialize SEO enhancements}
@@ -28,11 +26,10 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   private updateMetaTags(): void {if (typeof document !== 'undefined') {}
       // Update title;
-      document.title = this.config.title;
-      
+      document.title="this.config.title;"
       // Update meta description;
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {metaDescription = document.createElement('meta')}
+      let metaDescription = document.querySelector('meta[name=""description"]');"
+      if (!metaDescription) {metaDescription="document.createElement('meta')}"
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription)}
       metaDescription.setAttribute('content', this.config.description)
@@ -41,12 +38,10 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   public updateConfig(newConfi)
   g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...newConfig }
+    this.config="{ ...this.config, ...newConfig }"
     this.updateMetaTags()
   }
 }
 
 export default SEOEnhancer;"
-
-
 

@@ -1,7 +1,5 @@
-// PerformanceEnhancer utility
-// This file contains utility functions and configurations
-
-
+// PerformanceEnhancer utility;
+// This file contains utility functions and configurations;
 interface PerformanceMetrics {lcp: number}
   fid: number;
   cls: number;
@@ -19,10 +17,9 @@ interface OptimizationConfig {enableImageOptimization: boolean}
   enableCaching: boolean}
 
 class PerformanceEnhancer {private config: OptimizationConfig}
-  private metrics: PerformanceMetrics | null = null;
+  private metrics: PerformanceMetrics | null="null;"
 ;
-constructor(config: OptimizationConfig) {this.config = config}
-
+constructor(config: OptimizationConfig) {this.config="config}"
     this.init()}
 
   private init(): void {// Initialize performance monitoring}
@@ -30,13 +27,12 @@ constructor(config: OptimizationConfig) {this.config = config}
 
   private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
       try {const observer = new PerformanceObserver((list) => {}
-          const entries = list.getEntries();
+          const entries="list.getEntries();"
           entries.forEach((entry) => {// Process performance entries}
-            // console.log removed for production
+            // console.log removed for production;
 entry:', entry.name, entry.duration)})});
-        
 
-        observer.observe({ entryTypes: ['measure', 'navigation'] })} catch (error) {// console.warn removed for production
+        observer.observe({ entryTypes: ['measure', 'navigation'] })} catch (error) {// console.warn removed for production;
 }
 
       }
@@ -51,6 +47,4 @@ entry:', entry.name, entry.duration)})});
 }
 
 export default PerformanceEnhancer;
-
-
 

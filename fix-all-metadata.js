@@ -3,7 +3,7 @@ import React from 'react';
 import fs from 'fs';
 
 // List of files that still have metadata issues;
-const filesToFix = [
+const filesToFix="[]"
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
   '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
@@ -16,17 +16,17 @@ const filesToFix = [
   '/workspace/app/terms/page.tsx'];
 
 // // Function to process a single file;
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     // Extract metadata information before removing it;
-    if (metadataMatch) {
-      try {
-        if (titleMatch) metadata.title = titleMatch[1];
-        if (descMatch) metadata.description = descMatch[1];
-        if (typeMatch) metadata.type = typeMatch[1];
-        if (urlMatch) metadata.url = urlMatch[1]} catch (e) {
+    if (metadataMatch) {}
+      try {}
+        if (titleMatch) metadata.title="titleMatch[1];"
+        if (descMatch) metadata.description="descMatch[1];"
+        if (typeMatch) metadata.type="typeMatch[1];"
+        if (urlMatch) metadata.url="urlMatch[1]} catch (e) {}"
         // If parsing fails, use defaults;
-        metadata = {
+        metadata="{}"
           title: 'Zion Tech Group',
           description: 'Advanced AI and IT Solutions',;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -35,18 +35,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Remove the entire metadata export;
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-
+    content = content.replace(/export const metadata="\{[\s\S]*?\};/g, '');"
     // Remove any remaining broken metadata lines;
-    for (let i = 0; i < lines.length; i++) {
-
+    for (let i="0; i < lines.length; i++) {}"
       // Skip broken metadata lines;
       if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>')) {,
-        skipUntilSemicolon = true;
+        skipUntilSemicolon="true;"
         continue}
 
       if(skipUntilSemicolon &&)
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
+    for (let i="0; i < lines.length; i++) {/* TODO: Fix JSX expression */}"
       }
 
       if (skipUntilSemicolon &&)
@@ -62,43 +60,41 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
     }
 
-    content = filteredLines.join('\n');
-
+    content="filteredLines.join('\n');"
     // Clean up extra empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
+    content="content.replace(/\n\s*\n\s*\n/g, '\n\n');"
     // Fix function declarations;
-    content = content.replace(
+    content="content.replace("
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
     );
 
     // Add proper export at the end if missing;
     if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
+      //       const componentName="content.match(/const (\w+): React\.FC/)?.[1];,"
       if (componentName) {,
-    content = content.replace()
+    content="content.replace()"
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-        modified = true}
+        content="content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);"
+        modified="true}"
     }
 
     // Update Helmet with extracted metadata;
-    if (metadata.title || metadata.description) {
-      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
+    if (metadata.title || metadata.description) {}
+      //       const helmetMatch="content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);"
       if (helmetMatch) {;
-const newHelmet = `<Helmet>
+const newHelmet="`<Helmet></Helmet>"
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
         <title>${metadata.title || 'Zion Tech Group'}</title>
-        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
+        <meta name="description" content=""${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>"
         ${/* TODO: Fix JSX expression */}"`
-  g:type" content="${metadata.type}" />` : ''}
+  g:type" content=""${metadata.type}" />` : ''}"
         ${/* TODO: Fix JSX expression */}"`
-  g:url" content="${metadata.url}" />` : ''}`
+  g:url" content=""${metadata.url}" />` : ''}`"
       </Helmet>`;
 
-        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
-        modified = true}
+        content="content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);"
+        modified="true}"
     }
 
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
@@ -109,10 +105,10 @@ const newHelmet = `<Helmet>
 }
 
 // Process all files;
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
+filesToFix.forEach(file="> {)"
+  if (processFile(file)) {}
     fixedCount++}
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file="> {/* TODO: Fix JSX expression */}"
   })
 });
 

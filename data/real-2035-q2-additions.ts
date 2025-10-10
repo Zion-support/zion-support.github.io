@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       'Intent classification + prioritization'
       'On-brand response drafting'
@@ -4021,7 +4020,7 @@ reviews: 5;
     period: '/month',
     description: unknown;
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    features: [
+    features: []
     id: 'api - breaking - change - watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -4682,8 +4681,7 @@ roi: 'Close the loop on action items',
     customers: 24;
     rating: 4 && 4.6;
     reviews: 6}];
-const contact =
-	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+const contact="mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
     popula,
@@ -4739,8 +4737,7 @@ varian,
   g: 4 && 4.6,
     review,
   s: 6}];
-const contact =
-	mobil,
+const contact="mobil,"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
 	addres,
@@ -6832,7 +6829,7 @@ roi: 'Close the loop on action items',
   reviews: 6}
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact="{;"
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -6845,7 +6842,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$39';
 		period: '/month';
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
-		features: [
+		features: []
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
 		popular: true;
@@ -6882,7 +6879,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$19';
 		period: '/month';
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
-		features: [
+		features: []
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
 		popular: false;
@@ -6919,7 +6916,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$12';
 		period: '/month';
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
-		features: [
+		features: []
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
 		popular: false;
@@ -6956,7 +6953,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$49';
 		period: '/month';
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
-		features: [
+		features: []
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
 		popular: true;
@@ -10742,7 +10739,7 @@ varian,
   g: 4.6;
 		review,
   s: 6,
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -10892,7 +10889,7 @@ export const,
 	}
 ];
 ;
-// const contact = {;
+// const contact="{;"
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -10905,7 +10902,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$39';
 		period: '/month';
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
-		features: [
+		features: []
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
 		popular: true;
@@ -10942,7 +10939,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$19';
 		period: '/month';
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
-		features: [
+		features: []
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
 		popular: false;
@@ -10979,7 +10976,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$12';
 		period: '/month';
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
-		features: [
+		features: []
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
 		popular: false;
@@ -11016,7 +11013,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		price: '$49';
 		period: '/month';
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
-		features: [
+		features: []
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
 		popular: true;
@@ -11045,7 +11042,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 31;
 		rating: 4.7}
 		reviews: 11}
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -12686,7 +12683,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 24, ratin,
   g: 4 && 4.6, review,
-  s: 6}]; const contact = ' mobil,
+  s: 6}]; const contact="' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -14598,7 +14595,7 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -14659,7 +14656,7 @@ export const,
   g: 4.5} review,
   s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -14721,9 +14718,7 @@ export const,
   s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; '
-=======
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

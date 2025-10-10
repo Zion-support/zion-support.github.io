@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export interface NextGenerationAIService;
 export interface NextGenerationAIService {;
@@ -147,7 +146,7 @@ export interface NextGenerationAIService {}
   customers: number;
   rating: number;
   reviews: number}
-export const nextGenerationAIServices: NextGenerationAIService[] = [
+export const nextGenerationAIServices: NextGenerationAIService[] = []
   // Advanced AI Agents & Autonomous Systems;
     id: 'ai-autonomous-business-agent',
     name: 'AI Autonomous Business Agent',
@@ -1922,10 +1921,8 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   s: 220, ratin,
   g: 4.7, review,
   s: 125 } ];'
-=======
     marketSize: '$50B autonomous systems market'
     growthRate: '400% annual growth';
 variant: 'ai-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

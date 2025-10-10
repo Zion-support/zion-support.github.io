@@ -46,8 +46,7 @@ export interface AppConfig {// TODO: Add content}
 };
   enableCSP: boolean;,
     enableHSTS: boolean;,
-    enableXSSProtection: boolean
-
+    enableXSSProtection: boolean;
 }
     nam,
   e: 'Zion Tech Group',
@@ -74,18 +73,18 @@ export interface AppConfig {// TODO: Add content}
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group'
 export function getConfig;
-          <T = unknown>(keyPat)
-  h: string): T {const keys = keyPath.split('.')}
-  const __keys = keyPath.split('.');
+          <T="unknown>(keyPat)"
+  h: string): T {const keys="keyPath.split('.')}"
+  const __keys="keyPath.split('.');"
   let,
-  value: unknown = config;
+  value: unknown="config;"
   for (const key of keys) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      value = (value as Record;)
+      value="(value as Record;)"
           <string, unknown>)[key]} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -113,6 +112,4 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';
 export default config;
-
-
 

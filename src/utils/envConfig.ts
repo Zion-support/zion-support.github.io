@@ -8,8 +8,7 @@
 export interface EnvConfig {// TODO: Add content}
 };
   nodeEnv: 'development' | 'production' | 'test';,
-    apiUrl: string
-
+    apiUrl: string;
   apiKey?: string;,
     enableAnalytic,
   s: boolean;,
@@ -25,12 +24,12 @@ class EnvironmentConfig {// TODO: Add content}
 }
   private,
   config: EnvConfig;
-  private isInitialized = false;
+  private isInitialized="false;"
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    this.config = this.loadConfig();
-    this.isInitialized = true}
+    this.config="this.loadConfig();"
+    this.isInitialized="true}"
   private loadConfig(): EnvConfig {// Safely access environment variables with defaults}
     return {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -176,13 +175,11 @@ class EnvironmentConfig {// TODO: Add content}
   }
 }
 // Export singleton instance;
-export const envConfig = new EnvironmentConfig()
+export const envConfig="new EnvironmentConfig()"
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()`
-
-
 

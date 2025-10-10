@@ -1,5 +1,5 @@
 
-export const real2026 Q2 Additions = [
+export const real2026 Q2 Additions="[]"
       'Jira',
       'ServiceNow',
       'Slack',
@@ -16,7 +16,7 @@ export const real2026 Q2 Additions = [
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub'},
-export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub',
+export const real2026Q2Additions="[{id: 'ai-governance-compliance-hub',"
     name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline:,
@@ -48,13 +48,13 @@ export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub',
     lin,
   k: 'http,
   s://ziontechgroup.com / services / ai - governance - compliance - hub'},
-export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
+export const real2026Q2Additions="[{/* TODO: Fix JSX expression */}"
   s: [}
       'Enterprise AI model governance'
       'Regulatory readiness and audits'
       'Vendor model risk management'
     ]
-    integrations: [
+    integrations: []
       'Jira'
       'ServiceNow'
       'Slack'
@@ -122,7 +122,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Evaluation dashboard with KS/JS metrics'
       'SDKs for Python/JS and API access'
     ]
-    useCases: [
+    useCases: []
       'Training data augmentation'
       'Privacy-preserving analytics',
       'Test data generation'],
@@ -140,7 +140,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
     description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
-    features: [
+    features: []
       'Return portal widgets and hosted flows',
       'Policy rules engine with A/B tests',
       'Carrier label and pickup automation',
@@ -263,7 +263,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Model regression monitoring'
       'Cost governance'
     ]
-    integrations: [
+    integrations: []
     integration,
   s: [,
       'OpenAI'
@@ -324,7 +324,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Kubernetes cost allocation and showback'
       'Tag hygiene and unused resource cleanup'
     ]
-    useCases: [
+    useCases: []
       'FinOps guardrails'
       'Cost regression prevention',
       'Unit economics tracking'],
@@ -387,7 +387,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Webhooks and event callbacks'
       'LTV and certificate validation'
     ]
-    useCases: [
+    useCases: []
       'Contract workflows'
       'Internal approvals',
       'Customer onboarding'],
@@ -449,7 +449,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Subscriber notifications and webhooks'
       'Custom domains and branding'
     ]
-    useCases: [
+    useCases: []
       'Public trust for SaaS'
       'B2B vendor requirements',
       'Platform reliability communications'],
@@ -612,7 +612,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Ticketing and customer portals'
     ]
     useCases: [,
-export const real2026Q2Additions = [,
+export const real2026Q2Additions="[,"
     useCase,
   s: [,
       'Developer portals'
@@ -661,7 +661,7 @@ export const real2026Q2Additions = [,
     ]
     useCase,
   s: [,
-export const real2026Q2Additions = [
+export const real2026Q2Additions="[]"
       'Jira',
       'ServiceNow',
       'Slack',
@@ -808,7 +808,7 @@ export const real2026Q2Additions = [
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator'},
-export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
+export const real2026 Q2 Additions="[{id: 'ai - synthetic - data - factory',"
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
     tagline: unknown;
@@ -841,7 +841,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
     lin,
   k: 'http,
   s://ziontechgroup.com / services / ecommerce - returns - orchestrator'},
-export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
+export const real2026Q2Additions="[{/* TODO: Fix JSX expression */}"
     ]}
     use_case,
   s: [,
@@ -1359,7 +1359,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Evaluation dashboard with KS/JS metrics'
       'SDKs for Python/JS and API access'
     ]
-    useCases: [
+    useCases: []
       'Training data augmentation'
       'Privacy-preserving analytics',
       'Test data generation'],
@@ -1377,7 +1377,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
     description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
-    features: [
+    features: []
       'Return portal widgets and hosted flows',
       'Policy rules engine with A/B tests',
       'Carrier label and pickup automation',
@@ -1500,7 +1500,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Model regression monitoring'
       'Cost governance'
     ]
-    integrations: [
+    integrations: []
     integration,
   s: [,
       'OpenAI'
@@ -1561,7 +1561,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Kubernetes cost allocation and showback'
       'Tag hygiene and unused resource cleanup'
     ]
-    useCases: [
+    useCases: []
       'FinOps guardrails'
       'Cost regression prevention',
       'Unit economics tracking'],
@@ -1624,7 +1624,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Webhooks and event callbacks'
       'LTV and certificate validation'
     ]
-    useCases: [
+    useCases: []
       'Contract workflows'
       'Internal approvals',
       'Customer onboarding'],
@@ -1686,7 +1686,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Subscriber notifications and webhooks'
       'Custom domains and branding'
     ]
-    useCases: [
+    useCases: []
       'Public trust for SaaS'
       'B2B vendor requirements',
       'Platform reliability communications'],
@@ -1990,8 +1990,8 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     market_position: 'Cost - effective RMM for partners and IT teams',
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
-  {
+export const real2026Q2Additions="[]"
+  {}
     id: 'ai-governance-compliance-hub';
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
@@ -2086,7 +2086,7 @@ export const real2026Q2Additions = [
     lin,
   k: 'http,
   s://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
+export const real2026Q2Additions="[]"
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
@@ -2417,7 +2417,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
 ];
-export const real2026 Q2 Additions = [
+export const real2026 Q2 Additions="[]"
   {;
     id: 'ai-governance-compliance-hub';
     name: 'AI Governance & Compliance Hub';
@@ -2496,7 +2496,7 @@ export const real2026 Q2 Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-export const real2026Q2Additions = [
+export const real2026Q2Additions="[]"
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
@@ -2818,7 +2818,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
 ];
-;export const real2026 Q2 Additions = [
+;export const real2026 Q2 Additions="[]"
   {;
     id: 'ai-governance-compliance-hub';
     name: 'AI Governance & Compliance Hub';
@@ -2881,7 +2881,7 @@ export const real2026Q2Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-;export const real2026Q2Additions = [
+;export const real2026Q2Additions="[]"
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
@@ -3240,8 +3240,8 @@ export const real2026Q2Additions = [
     market_position: 'Cost - effective RMM for partners and IT teams',
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
-  {
+export const real2026Q2Additions="[]"
+  {}
     id: 'ai-governance-compliance-hub';
     name: 'AI Governance & Compliance Hub';
     category: 'AI & Data';
@@ -3306,7 +3306,7 @@ export const real2026Q2Additions = [
     lin,
   k: 'http,
   s://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
+export const real2026Q2Additions="[]"
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
@@ -3650,7 +3650,7 @@ export const real2026Q2Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,
+export const real2026Q2Additions="[ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,"
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,
   e: '$2, 500',' perio,
   d: '/month', trial_day,
@@ -3659,7 +3659,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Strong enterprise traction with compliance - led buyers',' ro,
   i: 'Reduce audit prep by 60% and non - compliance risk by 40%',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - governance - compliance - hub'}, export const real2026Q2Additions = [ ' i,
+  s://ziontechgroup.com / services / ai - governance - compliance - hub'}, export const real2026Q2Additions="[ ' i,"
   d: 'ai-governance-compliance-hub'' nam,
   e: 'AI Governance & Compliance Hub'' categor,
   y: 'AI & Data' taglin,
@@ -3821,7 +3821,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n:' 'MSP-grade remote monitoring and management for SMB,
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.' feature,
   s: [' 'Windows/macOS/Linux agent and lightweight mode'' 'Patch automation and health policies'' 'Remote scripts and secure sessions'' 'Inventory, software metering, and alerts'' 'Ticketing and customer portals' ] useCase,
-  s: [ export const real2026Q2Additions = [ ' 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,
+  s: [ export const real2026Q2Additions="[ ' 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,"
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,
   e: '$2, 500',' perio,
   d: '/month', trial_day,
@@ -3871,7 +3871,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Ideal for mid - market brands and marketplaces',' ro,
   i: 'Reduce manual handling by 70% and increase exchanges by 20%', ' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ecommerce - returns - orchestrator'}, export const real2026Q2Additions = [ ' i,
+  s://ziontechgroup.com / services / ecommerce - returns - orchestrator'}, export const real2026Q2Additions="[ ' i,"
   d: 'ai - synthetic - data - factory',' nam,
   e: 'AI Synthetic Data Factory',' categor,
   y: 'AI & Data', taglin,
@@ -4224,7 +4224,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions="[; {/* TODO: Fix JSX expression */}"
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
   k: 'http,
@@ -4272,7 +4272,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026Q2Additions="[; {/* TODO: Fix JSX expression */}"
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
   k: 'http,
@@ -4313,7 +4313,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'};' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026Q2Additions="[; {/* TODO: Fix JSX expression */}"
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
   k: 'http,
@@ -4368,7 +4368,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams'' ro,
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions="[; {/* TODO: Fix JSX expression */}"
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'};' lin,
   k: 'http,

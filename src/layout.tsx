@@ -1,7 +1,5 @@
 import Analytics from './components/Analytics';
 
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -9,10 +7,10 @@ import Footer from '../components/Footer';
 
 import Analytics from './components/Analytics';
 
-export default function RootLayout({
-  children}: {
+export default function RootLayout({}
+  children}: {}
   children: React.ReactNode}) {;
-const structuredData = {
+const structuredData="{}"
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -22,7 +20,7 @@ const structuredData = {
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
-    services: [
+    services: []
       'AI Solutions',
       'Quantum Computing',
       'Autonomous Systems',
@@ -31,32 +29,32 @@ const structuredData = {
       'Automation',
       'Business Intelligence'
     ],
-    contactPoint: {
+    contactPoint: {}
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en'},
-    sameAs: [
+    sameAs: []
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    address: {
+    address: {}
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US',
-    offers: [
+    offers: []
       {;
-const address = {
+const address="{}"
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
     addressRegion: 'DE',
     postalCode: '19709',
     addressCountry: 'US',
-    offers: [
+    offers: []
   // TODO: Add items]
       {// TODO: Add content}
 }
@@ -65,26 +63,26 @@ const address = {
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
-        priceSpecification: {
+        priceSpecification: {}
           '@type': 'PriceSpecification',
           billingIncrement:         ,
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-    serviceArea: {
+    serviceArea: {}
       '@type': 'GeoCircle',
-      geoMidpoint: {
+      geoMidpoint: {}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
 geoRadiusgeoRadius: '1000000',
     hasOfferCatalog:
-        hasOfferCatalog: {
+        hasOfferCatalog: {}
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
-      itemListElement: [
-          itemOffered: {
+      itemListElement: []
+          itemOffered: {}
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description:             ,
@@ -95,80 +93,79 @@ name$5: 'Cloud Infrastructure',
 $4]
   };
   return (
-    <html lang='en'>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <html lang="'en'></html>"
+      <head></head>
+        <meta charSet=""UTF-8" /></meta>"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit="cover" /></meta>"
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="description" content=""Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." /></meta>"
+        <meta name="keywords" content=""AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" /></meta>"
+        <meta name="theme-color" content=""#4f46e5" /></meta>"
+        <meta name="color-scheme" content=""dark light" /></meta>"
+        <meta name="author" content=""Zion Tech Group" /></meta>"
+        <meta name="robots" content=""index, follow" /></meta>"
+        <meta name="googlebot" content=""index, follow" /></meta>"
         {/* Favicons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-        <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#4f46e5' />
+        <link rel='icon' href="'/favicon.ico' /></link>"
+        <link rel='apple-touch-icon' sizes='180x180' href="'/apple-touch-icon.png' /></link>"
+        <link rel='icon' type='image/png' sizes='32x32' href="'/favicon-32x32.png' /></link>"
+        <link rel='icon' type='image/png' sizes='16x16' href="'/favicon-16x16.png' /></link>"
+        <link rel='manifest' href="'/site.webmanifest' /></link>"
+        <meta name='theme-color' content="'#4f46e5' /></meta>"
         {/* Enhanced SEO meta tags */}
-        <meta name='publisher' content='Zion Tech Group' />
-        <meta name='copyright' content='Zion Tech Group' />
-        <meta name='language' content='en' />
-        <meta name='revisit-after' content='3 days' />
-        <meta name='distribution' content='global' />
-        <meta name='rating' content='general' />
-        <meta name='format-detection' content='telephone=yes' />
-        <meta name='mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-        <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-        <meta name='application-name' content='Zion Tech Group' />
-        <meta name='msapplication-TileColor' content='#4f46e5' />
-        <meta name='msapplication-config' content='/browserconfig.xml' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
-        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        <meta name='publisher' content="'Zion Tech Group' /></meta>"
+        <meta name='copyright' content="'Zion Tech Group' /></meta>"
+        <meta name='language' content="'en' /></meta>"
+        <meta name='revisit-after' content="'3 days' /></meta>"
+        <meta name='distribution' content="'global' /></meta>"
+        <meta name='rating' content="'general' /></meta>"
+        <meta name='format-detection' content='telephone="yes' /></meta>"
+        <meta name='mobile-web-app-capable' content="'yes' /></meta>"
+        <meta name='apple-mobile-web-app-capable' content="'yes' /></meta>"
+        <meta name='apple-mobile-web-app-status-bar-style' content="'default' /></meta>"
+        <meta name='apple-mobile-web-app-title' content="'Zion Tech Group' /></meta>"
+        <meta name='application-name' content="'Zion Tech Group' /></meta>"
+        <meta name='msapplication-TileColor' content="'#4f46e5' /></meta>"
+        <meta name='msapplication-config' content="'/browserconfig.xml' /></meta>"
+        <link rel='canonical' href="'https://ziontechgroup.com' /></link>"
+        <link rel='alternate' hrefLang='en' href="'https://ziontechgroup.com' /></link>"
         {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href=""https://fonts.googleapis.com" /></link>"
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""anonymous" /></link>"
+        <link rel="dns-prefetch" href=""https://www.googletagmanager.com" /></link>"
+        <link rel="dns-prefetch" href=""https://www.google-analytics.com" /></link>"
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:type" content=""website" /></meta>"
+        <meta property="og:url" content=""https://ziontechgroup.com" /></meta>"
+        <meta property="og:title" content=""Zion Tech Group - Advanced AI and IT Solutions" /></meta>"
+        <meta property="og:description" content=""Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." /></meta>"
+        <meta property="og:image" content=""https://ziontechgroup.com/og-image.jpg" /></meta>"
+        <meta property="og:image:width" content=""1200" /></meta>"
+        <meta property="og:image:height" content=""630" /></meta>"
+        <meta property="og:site_name" content=""Zion Tech Group" /></meta>"
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
+        <meta name="twitter:card" content=""summary_large_image" /></meta>"
+        <meta name="twitter:url" content=""https://ziontechgroup.com" /></meta>"
+        <meta name="twitter:title" content=""Zion Tech Group - Advanced AI and IT Solutions" /></meta>"
+        <meta name="twitter:description" content=""Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." /></meta>"
+        <meta name="twitter:image" content=""https://ziontechgroup.com/og-image.jpg" /></meta>"
+        <meta name="twitter:site" content=""@ziontechgroup" /></meta>"
+        <meta name="twitter:creator" content=""@ziontechgroup" /></meta>"
         {/* Enhanced Twitter Card tags */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
-        <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
-        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
-        <meta name='twitter:site' content='@ziontechgroup' />
-        <meta name='twitter:creator' content='@ziontechgroup' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <meta name='twitter:card' content="'summary_large_image' /></meta>"
+        <meta name='twitter:title' content="'Zion Tech Group - AI & Technology Solutions' /></meta>"
+        <meta name='twitter:description' content="'Transform your business with cutting-edge AI solutions and digital transformation services.' /></meta>"
+        <meta name='twitter:image' content="'https://ziontechgroup.com/og-image.jpg' /></meta>"
+        <meta name='twitter:site' content="'@ziontechgroup' /></meta>"
+        <meta name='twitter:creator' content="'@ziontechgroup' /></meta>"
+        <script type="'application/ld+json'></script>"
+          dangerouslySetInnerHTML="{{ __html: JSON.stringify(structuredData) }}"
         />
       </head>
-      <body className='antialiased'>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <Analytics />
+      <body className="'antialiased'></body>"
+        <ErrorBoundary></ErrorBoundary>
+          <PerformanceMonitor /></PerformanceMonitor>
+          <Analytics /></Analytics>
           {children}
         </ErrorBoundary>
       </body>
@@ -186,7 +183,5 @@ export default RootLayout;
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-
-
 
 export default SrcPage}

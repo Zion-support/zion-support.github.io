@@ -1,7 +1,7 @@
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
+// Mock Next.js router;
+jest.mock('next/router', () => ({}
+  useRouter() {}
+    return {}
       route: '/',
       pathname: '/',
       query: {},
@@ -12,49 +12,49 @@ jest.mock('next/router', () => ({
       back: jest.fn(),
       prefetch: jest.fn(),
       beforePopState: jest.fn(),
-      events: {
+      events: {}
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn()}}}}));
 
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
+// Mock files that use import.meta.env;
+jest.mock('./src/utils/logger.ts', () => ({}
+  logger: {}
     debug: jest.fn(),
     info: jest.fn(),
     warn: jest.fn(),
     error: jest.fn()}}));
 
-// Mock analytics
-jest.mock('./src/utils/analytics.ts', () => ({
+// Mock analytics;
+jest.mock('./src/utils/analytics.ts', () => ({}
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn()}));
 
-// Mock error tracking
-jest.mock('./src/utils/errorTracking.ts', () => ({
+// Mock error tracking;
+jest.mock('./src/utils/errorTracking.ts', () => ({}
   reportError: jest.fn(),
   initErrorReporting: jest.fn()}));
 
-// Mock performance hook
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
+// Mock performance hook;
+jest.mock('./src/hooks/usePerformance.ts', () => ({}
+  usePerformance: jest.fn(() => ({}
     metrics: {},
     optimize: jest.fn()}))}));
 
-// Mock Vite environment
-Object.defineProperty(import.meta, 'env', {
-  value: {
+// Mock Vite environment;
+Object.defineProperty(import.meta, 'env', {}
+  value: {}
     VITE_APP_TITLE: 'Test App',
     VITE_APP_VERSION: '1.0.0',
     DEV: false,
     PROD: true},
   writable: true});
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+// Mock window.matchMedia;
+Object.defineProperty(window, 'matchMedia', {}
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation(query="> ({}"
     matches: false,
     media: query,
     onchange: null,
@@ -64,14 +64,14 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()}))});
 
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+// Mock IntersectionObserver;
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({}
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()}));
 
-// Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
+// Mock ResizeObserver;
+global.ResizeObserver = jest.fn().mockImplementation(() => ({}
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()}));

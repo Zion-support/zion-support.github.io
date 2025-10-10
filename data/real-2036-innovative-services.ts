@@ -1,9 +1,7 @@
-export type Real2036InnovativeService =
-  id: string, name: string;
+export type Real2036InnovativeService="id: string, name: string;"
   tagline: string, description: string;
   category: string, price: string;
-export type Real2036InnovativeService =
-  id: string;
+export type Real2036InnovativeService="id: string;"
   name: string;
   tagline: string;
   description: string;
@@ -20,8 +18,7 @@ export type Real2036InnovativeService =
   categor,
   y: string, pric,
   e: string,
-export type Real2036InnovativeService =
-  i,
+export type Real2036InnovativeService="i,"
   d: string;
   nam,
   e: string;
@@ -1167,7 +1164,7 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService="{;"
     features: [,
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -1235,7 +1232,7 @@ export type Real2036 InnovativeService = {;
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
+export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
     ]}
   },
   // Autonomous DevOps Platform;
@@ -1301,7 +1298,7 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService="{;"
   id: string;
   name: string;
   tagline: string;
@@ -1335,13 +1332,13 @@ export type Real2036 InnovativeService = {;
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
+export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
   useCases?: string[]}
 };
 export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [;
   // AI-Powered Business Intelligence;
-  {
+  {}
     id: 'ai-business-intelligence-platform-pro';
     name: 'AI Business Intelligence Platform Pro';
     tagline: 'Transform raw data into actionable business insights with AI';
@@ -1349,7 +1346,7 @@ export const,
     category: 'AI & Data';
     price: '$299';
     period: '/month';
-    features: [
+    features: []
       'AI-powered data pattern recognitionPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time data visualizationMulti-source data integrationCustom dashboard builderMobile-responsive interface'
     ];
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-platform-pro';
@@ -1370,7 +1367,7 @@ export const,
     category: 'Quantum Technology';
     price: '$1,999';
     period: '/month';
-    features: [
+    features: []
       'Quantum key distribution (QKD)End-to-end quantum encryptionMulti-party secure communicationQuantum-resistant algorithmsReal-time key generationCompliance certifications24/7 quantum network monitoringCustom deployment options'
     ];
     link: 'https://ziontechgroup.com/services/quantum-secure-communication-enterprise';
@@ -1391,7 +1388,7 @@ export const,
     category: 'IT Infrastructure';
     price: '$799';
     period: '/month';
-    features: [
+    features: []
       'AI-powered incident detectionAutomated problem resolutionSelf-healing infrastructurePredictive maintenanceIntelligent scalingZero-downtime deploymentsPerformance optimizationComprehensive monitoring'
     ];
     link: 'https://ziontechgroup.com/services/autonomous-devops-platform-enterprise';
@@ -1412,7 +1409,7 @@ export const,
     category: 'Space Technology';
     price: '$1,499';
     period: '/month';
-    features: [
+    features: []
       'Satellite performance analyticsOrbital mechanics calculationsSpace weather monitoringMission optimization algorithmsReal-time telemetry analysisPredictive maintenance3D visualization toolsCustom reporting engine'
     ];
     link: 'https://ziontechgroup.com/services/space-technology-analytics-platform';
@@ -1433,7 +1430,7 @@ export const,
     category: 'Cybersecurity';
     price: '$899';
     period: '/month';
-    features: [
+    features: []
       'AI-powered threat detectionBehavioral analysisAutomated incident responseThreat intelligence feedsVulnerability assessmentCompliance reporting24/7 monitoringCustom security policies'
     ];
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-suite-enterprise';
@@ -1454,7 +1451,7 @@ export const,
     category: 'Quantum Technology';
     price: '$2,499';
     period: '/month';
-    features: [
+    features: []
       'Quantum algorithm optimizationHybrid quantum-classical MLQuantum neural networksAdvanced optimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance benchmarkingExpert consultation'
     ];
     link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform';
@@ -1475,7 +1472,7 @@ export const,
     category: 'Edge Computing';
     price: '$599';
     period: '/month';
-    features: [
+    features: []
       'Intelligent workload distributionReal-time optimizationMulti-edge coordinationLatency optimizationResource managementSecurity enforcementMonitoring and analyticsCustom edge policies'
     ];
     link: 'https://ziontechgroup.com/services/edge-computing-orchestration-enterprise';
@@ -1496,7 +1493,7 @@ export const,
     category: 'AI & Data';
     price: '$399';
     period: '/month';
-    features: [
+    features: []
       'AI-powered personalizationOmnichannel experience managementPredictive customer behaviorAutomated customer serviceSentiment analysisCustomer journey mappingA/B testing automationPerformance analytics'
     ];
     link: 'https://ziontechgroup.com/services/ai-customer-experience-platform';
@@ -1517,7 +1514,7 @@ export const,
     category: 'Blockchain';
     price: '$1,199';
     period: '/month';
-    features: [
+    features: []
       'Multi-chain supportSmart contract developmentDeployment automationSecurity auditingPerformance monitoringScalability solutionsCompliance toolsDeveloper APIs'
     ];
     link: 'https://ziontechgroup.com/services/blockchain-infrastructure-enterprise';
@@ -1538,7 +1535,7 @@ export const,
     category: 'Manufacturing';
     price: '$1,799';
     period: '/month';
-    features: [
+    features: []
       'AI-powered quality controlPredictive maintenanceAutonomous roboticsProduction optimizationReal-time monitoringSupply chain integrationCustom workflowsPerformance analytics'
     ];
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform';
@@ -1559,7 +1556,7 @@ export const,
     category: 'Quantum Technology';
     price: '$1,399';
     period: '/month';
-    features: [
+    features: []
       'Quantum encryption protocolsQuantum-resistant algorithmsReal-time threat detectionMulti-layer protectionPerformance optimizationCompliance certifications24/7 monitoringCustom security policies'
     ];
     link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway';
@@ -1580,7 +1577,7 @@ export const,
     category: 'Healthcare AI';
     price: '$2,999';
     period: '/month';
-    features: [
+    features: []
       'AI-powered image analysisSymptom assessmentTreatment recommendationsPatient data integrationCompliance managementReal-time monitoringCustom AI modelsExpert consultation'
     ];
     link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-platform';
@@ -1601,7 +1598,7 @@ export const,
     category: 'Space Technology';
     price: '$3,999';
     period: '/month';
-    features: [
+    features: []
       'Resource mapping algorithmsMining operation managementRobotic control systemsResource processingLogistics optimizationSafety monitoringEnvironmental impact assessmentCustom mining strategies'
     ];
     link: 'https://ziontechgroup.com/services/space-resource-mining-platform';
@@ -1622,7 +1619,7 @@ export const,
     category: 'Quantum Technology';
     price: '$4,999';
     period: '/month';
-    features: [
+    features: []
       'Quantum market analysisHigh-frequency tradingRisk managementPortfolio optimizationReal-time executionCompliance monitoringCustom algorithmsPerformance analytics'
     ];
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform';
@@ -1643,7 +1640,7 @@ export const,
     category: 'AI & Data';
     price: '$699';
     period: '/month';
-    features: [
+    features: []
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
@@ -1744,13 +1741,13 @@ export const,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
   }
 ];
-export type Real2036InnovativeService = i,
+export type Real2036InnovativeService="i,"
   d: string, nam,
   e: string, taglin,
   e: string, descriptio,
   n: string, categor,
   y: string, pric,
-  e: string, export type Real2036InnovativeService = i,
+  e: string, export type Real2036InnovativeService="i,"
   d: string; nam,
   e: string; taglin,
   e: string; descriptio,
@@ -2070,7 +2067,7 @@ export type Real2036InnovativeService = i,
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
   s: [,' 'Government communications',' 'Financial transactions',' 'Healthcare data sharing',' 'Military operations']} }, // Autonomous DevOps Platform; ' i,
   d: 'autonomous - devops - platform - enterprise',' nam,
   e: 'Autonomous DevOps Platform Enterprise',' taglin,
@@ -2097,7 +2094,7 @@ export type Real2036InnovativeService = i,
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
   k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]}; export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,

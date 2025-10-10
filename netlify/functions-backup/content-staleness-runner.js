@@ -1,6 +1,6 @@
 // netlify/functions/content-staleness-runner.js;
-exports.handler = async function () {
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {}"
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {/* TODO: Fix JSX expression */}
   o: 'inherit'}
@@ -12,7 +12,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'content-staleness-runner' })}} catch (e) {return {
+        task: 'content-staleness-runner' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),

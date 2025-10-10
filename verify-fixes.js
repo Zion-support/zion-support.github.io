@@ -3,14 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// const __filename = fileURLToPath(import.meta.url);
-// // __dirname removed
-// try {
-  //   const appTsxPath = path.join(__dirname, 'App.tsx');
-
+// const __filename="fileURLToPath(import.meta.url);"
+// // __dirname removed;
+// try {}
+  //   const appTsxPath="path.join(__dirname, 'App.tsx');"
   // Check for duplicate class definitions;
   //   //   //   // Check for syntax issues;
-  //   // // console.log removed for production
+  //   // // console.log removed for production;
 ' : 'NOT FOUND (GOOD)');
 
   if(classMatches &&
@@ -20,8 +19,8 @@ import { fileURLToPath } from 'url';
     interfacePropsMatches &&)
     interfacePropsMatches.length === 1 &&)
     !hasDoubleClosing;)
-  ) {
-    //     process.exit(0)} else {
+  ) {}
+    //     process.exit(0)} else {}
     //     process.exit(1);
 // try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

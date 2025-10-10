@@ -34,7 +34,7 @@
   customers: number;
   rating: number;
   reviews: number}
-export const revolutionary2025Services: Revolutionary2025Service[] = [
+export const revolutionary2025Services: Revolutionary2025Service[] = []
   //  AI Consciousness & Emotional Intelligence Services;
     id: 'ai-consciousness-evolution-platform',
     name: 'AI Consciousness Evolution Platform',

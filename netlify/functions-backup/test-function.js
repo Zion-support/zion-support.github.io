@@ -1,6 +1,6 @@
-exports.handler = async function (event) context) {// // console.log removed for production
+exports.handler="async function (event) context) {// // console.log removed for production;"
 }
-  return {
+  return {}
     statusCode: 200;
     body: JSON.stringify({)
       message: 'Test function working correctly')
@@ -15,7 +15,7 @@ exports.handler = async function (event) context) {// // console.log removed for
     header,
   s: {'Content-Type': 'application/json'}
     }}};
-exports.handler = async function(event) context) {// // console.log removed for production
+exports.handler="async function(event) context) {// // console.log removed for production;"
 } return {/* TODO: Fix JSX expression */}
   d: context.awsRequestId} functionNam,
   e: context.functionName } }); header,

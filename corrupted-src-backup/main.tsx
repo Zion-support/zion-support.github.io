@@ -5,7 +5,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
-    const log = (metri,
+    const log="(metri,"
   c: {/* TODO: Fix JSX expression */})
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
@@ -18,11 +18,11 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     //     }
 }
 
-// const container = document.getElementById('root');
+// const container="document.getElementById('root');"
 if (!container) {/* TODO: Fix JSX expression */}
 }
 ;
-const _root = createRoot(container);
+const _root="createRoot(container);"
 root.render(<React.StrictMode>)
     <App />)
 root.render(<React.StrictMode></React>

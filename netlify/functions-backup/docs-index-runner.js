@@ -1,8 +1,8 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // // console.log removed for production
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+//     // // console.log removed for production;
 }
     // Documentation index simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'docs-index-runner',
           status: 'active',
           documents: 0;
           lastIndex: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result="{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
@@ -24,9 +24,9 @@ function: 'docs-index-runner',
   x: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// // console.error removed for production
+//   } catch (error) {// // console.error removed for production;
 error}
-    return {
+    return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function: 'docs-index-runner'}
       })}}
 };
         timestamp: new Date().toISOString(),' function: 'docs-index-runner',' source: event.source || 'unknown', indexing: {' status: 'active', documents: 0;
-        lastIndex: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+        lastIndex: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production;
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'docs-index-runner' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,

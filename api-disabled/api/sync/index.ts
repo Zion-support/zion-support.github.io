@@ -1,17 +1,16 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-const _state = readState();
+const _state="readState();"
 ,
   if (req.method === 'GET') {,
-    //     const scope = state.config.scope;
-    const _scopedEvents = filterEventsByScope(state.events, scope);
-
+    //     const scope="state.config.scope;"
+    const _scopedEvents="filterEventsByScope(state.events, scope);"
     return res.status(200).json({)
       status: 'ok')
       instanceId: state.config.instanceId;)
       config: state.config;)
       lastSyncedAt: state.lastSyncedAt)
-      counts: {
+      counts: {}
         totalEvents: scopedEvents.length)
         proposals: scopedEvents.filter(e => e.type === 'proposal').length;
         tokenTransfers: scopedEvents.filter(e => e.type === 'token_transfer').length;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface NewestContent2025BannerProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -11,5 +10,4 @@ const,
   )};
 
 export default NewestContent2025Banner;
-
 

@@ -41,8 +41,7 @@ import React from 'react';
   capabilities: string[];
   market_advantage: string;
 ;
-const contact =
-  mobile: '+1 302 464 0950',
+const contact="mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
@@ -133,8 +132,7 @@ const contact =
   market_advantag,
   e: string;
 ,;
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -270,7 +268,7 @@ variant: 'ai-futuristic', contactInfo: contact;
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-const contact = {,
+const contact="{,"
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -314,7 +312,7 @@ varian,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-const contact = {/* TODO: Fix JSX expression */}
+const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -323,7 +321,7 @@ const contact = {/* TODO: Fix JSX expression */}
 export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [;
   // AR/VR & Metaverse Services;
-  {
+  {}
     id: 'ar-vr-metaverse-platform';
     name: 'AR/VR Metaverse Platform';
     tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development';
@@ -371,7 +369,7 @@ export const,
     price: '$699';
     period: '/month';
     description: 'Revolutionary platform that optimizes 5G/6G networks using AI, provides real-time monitoring, and ensures optimal performance for next-generation connectivity.';
-    features: [
+    features: []
       'AI-powered network optimization algorithmsReal-time 5G/6G performance monitoringNetwork slicing and resource allocationQuality of Service (QoS) managementPredictive maintenance and fault detectionMulti-vendor network managementSecurity and threat detectionEnergy efficiency optimization';
       'Network capacity planningIntegration with major telecom equipment'
     ];
@@ -412,7 +410,7 @@ export const,
     price: '$899';
     period: '/month';
     description: 'Advanced AI platform that accelerates drug discovery, provides genetic analysis, and enables breakthrough research in biotechnology and life sciences.';
-    features: [
+    features: []
       'AI-powered drug discovery and designGenetic sequence analysis and interpretationProtein structure prediction and modelingClinical trial optimizationBiomarker discovery and validationDrug repurposing algorithmsReal-time research collaboration toolsIntegration with major lab equipment';
       'Regulatory compliance monitoringPatent analysis and intellectual property management'
     ];
@@ -453,7 +451,7 @@ export const,
     price: '$549';
     period: '/month';
     description: 'Revolutionary platform that optimizes renewable energy systems, manages smart grids, and maximizes energy efficiency using advanced AI algorithms.';
-    features: [
+    features: []
       'AI-powered energy production optimizationSmart grid management and monitoringPredictive maintenance for energy systemsEnergy storage optimizationWeather-based energy forecastingDemand response managementCarbon footprint tracking and reductionIntegration with renewable energy systems';
       'Real-time energy analyticsMulti-energy source management'
     ];
@@ -494,7 +492,7 @@ export const,
     price: '$299';
     period: '/month';
     description: 'Advanced edge computing platform that brings AI capabilities to the edge, enabling real-time processing, low-latency applications, and intelligent IoT devices.';
-    features: [
+    features: []
       'Edge AI model deployment and managementReal-time data processing and analyticsLow-latency inference capabilitiesEdge device orchestrationDistributed AI trainingEdge security and privacyMulti-cloud edge managementIoT device integration';
       'Real-time monitoring and alertsCustom edge AI applications'
     ];
@@ -535,7 +533,7 @@ export const,
     price: '$1,199';
     period: '/month';
     description: 'Advanced quantum internet platform that enables ultra-secure communication, quantum networking, and quantum key distribution for next-generation internet infrastructure.';
-    features: [
+    features: []
       'Quantum key distribution (QKD)Quantum internet protocolsUltra-secure communication channelsQuantum network managementQuantum repeater technologyQuantum memory systemsMulti-node quantum networksQuantum internet security';
       'Integration with classical networksQuantum internet applications'
     ];
@@ -576,7 +574,7 @@ export const,
     price: '$799';
     period: '/month';
     description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
-    features: [
+    features: []
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
     ];
@@ -854,7 +852,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; market_advantag,
-  e: string, const contact = mobil,
+  e: string, const contact="mobil,"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};' ]; descriptio,
@@ -920,7 +918,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

@@ -1,4 +1,4 @@
-// import type {NextApiRequest} NextApiResponse } from "next" import {readJsonFile} writeJsonFile } from "../../../utils/db" import type { Job } from "../../../utils/types" import { rateLimit } from "../../../utils/rateLimit" import {getRequestUserEmail} isAdminEmail } from "../../../utils/auth" const FILE = "jobs && jobs.json" export default function handler(re)
+// import type {NextApiRequest} NextApiResponse } from "next" import {readJsonFile} writeJsonFile } from "../../../utils/db" import type { Job } from "../../../utils/types" import { rateLimit } from "../../../utils/rateLimit" import {getRequestUserEmail} isAdminEmail } from "../../../utils/auth" const FILE=""jobs && jobs.json" export default function handler(re)"
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   s: NextApiResponse) {} if (!rateLimit(req) res)) return; const { id } = req && req.query; const jobs = readJsonFile<Job[]>(FILE) []); if (idx === -1) {} } } catch (error) {/* TODO: Fix JSX expression */}"

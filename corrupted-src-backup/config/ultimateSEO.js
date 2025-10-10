@@ -1,11 +1,11 @@
-module.exports = {
+module.exports="{}"
   metaTags: {,
-    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
+    viewport: 'width=device-width, initial-scale=1, viewport-fit="cover',"
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1',
     canonical:
         canonical: true;
     alternate: true;
-    ogTags: {
+    ogTags: {}
       type: 'website',
       locale: 'en_US',
       site_name: 'Zion Tech Group',
@@ -21,8 +21,8 @@ module.exports = {
       'msapplication-TileColor': '#000000',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'black-translucent'}},
-  structuredData: {
-    organization: {
+  structuredData: {}
+    organization: {}
       '@type': 'Organization'
       name: 'Zion Tech Group',
       url: 'https://zion.app',
@@ -36,28 +36,28 @@ module.exports = {
         'https://twitter.com/ZionTechGroup',
         'https: //linkedin.com/company/zion-tech-group',
         'https: //github.com/Zion-Holdings']},
-    website: {
+    website: {}
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://zion.app',
       potentialAction: {,
         '@type': 'SearchAction',
-        target: 'https://zion.app/search?q={search_term_string}',
-        'query-input': 'required name=search_term_string'}},
+        target: 'https://zion.app/search?q="{search_term_string}',"
+        'query-input': 'required name="search_term_string'}},"
     breadcrumbs: true;
     services: true;
     faq: true;
     reviews: true;
     events: true},
-  sitemapOptimization: {
+  sitemapOptimization: {}
     dynamic: true;
-    priority: {
+    priority: {}
       home: 1;
       services: 0.9;
       about: 0.8;
       contact: 0.7;
       blog: 0.6;
-module.exports = {/* TODO: Fix JSX expression */}
+module.exports="{/* TODO: Fix JSX expression */}"
     },
     twitterCard,
   s: {/* TODO: Fix JSX expression */}
@@ -69,7 +69,7 @@ module.exports = {/* TODO: Fix JSX expression */}
   a: {/* TODO: Fix JSX expression */}
       },
       sameA,
-  s: [
+  s: []
         'http,
   s://twitter.com/ZionTechGroup',
         'http,
@@ -78,8 +78,8 @@ module.exports = {/* TODO: Fix JSX expression */}
   s://github.com/Zion-Holdings']},
     websit,
   e: {/* TODO: Fix JSX expression */}
-  s://zion.app/search?q={search_term_string}',
-        'query-input': 'required name=search_term_string'}},
+  s://zion.app/search?q="{search_term_string}',"
+        'query-input': 'required name="search_term_string'}},"
     breadcrumb,
   s: true,
     service,

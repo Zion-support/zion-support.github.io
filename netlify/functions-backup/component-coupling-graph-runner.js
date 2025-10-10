@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // // console.log removed for production
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+//     // // console.log removed for production;
 }
     // Component coupling graph simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -19,7 +18,7 @@ timestamp: new Date().toISOString()
           components: 0;
           relationships: 0;
           lastGenerated: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result="{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
@@ -27,9 +26,9 @@ timestamp: new Date().toISOString()
   d: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// // console.error removed for production
+//   } catch (error) {// // console.error removed for production;
 error}
-    return {
+    return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -49,7 +48,7 @@ function: 'component-coupling-graph-runner'}
       })}}
 };
         timestamp: new Date().toISOString(),' function: 'component-coupling-graph-runner',' source: event.source || 'unknown', graph: {' status: 'generating', components: 0, relationships: 0;
-        lastGenerated: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+        lastGenerated: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production;
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'component-coupling-graph-runner' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,
@@ -63,7 +62,5 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   r: 'Internal server error'} messag)
   e: error.message)' functio,
   n: 'component-coupling-graph-runner' }) }} };'
-=======
         timestamp: new Date().toISOString();
 function: 'component-coupling-graph-runner'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

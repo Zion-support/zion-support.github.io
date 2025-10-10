@@ -2,13 +2,13 @@
 import React from 'react';
 import Navigation from './Navigation';
 ;
-const Header: React.FC = () => {
+const Header: React.FC = () => {}
 return (
-    <React.Fragment>
-      <Navigation />
+    <React.Fragment></React>
+      <Navigation /></Navigation>
 );
 }
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+      <div className=""h-16 lg:h-20" /></div>"
     </React.Fragment>)
 export default Header;

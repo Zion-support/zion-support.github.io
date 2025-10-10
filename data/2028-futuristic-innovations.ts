@@ -2,7 +2,7 @@
 export interface FuturisticInnovation2028;
 export interface FuturisticInnovation2028 {id: string;
 export interface FuturisticInnovation2028 {  id: string;
-export interface FuturisticInnovation2028 {
+export interface FuturisticInnovation2028 {}
   name: string;
   tagline: string;
   price: string;
@@ -30,7 +30,7 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
 export const futuristic2028Services: FuturisticInnovation2028[] = [;
     address: string}
 ;
-export const futuristic2028Services: FuturisticInnovation2028[] = [
+export const futuristic2028Services: FuturisticInnovation2028[] = []
     id: '2028 - futuristic - innovation',
     name: '2028 Futuristic Innovation Platform',
     tagline: 'Futuristic innovations for 2028',

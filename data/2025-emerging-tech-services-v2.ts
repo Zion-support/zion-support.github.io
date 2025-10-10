@@ -113,7 +113,7 @@ import React from 'react';
     ]
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
     compliance:
-        compliance: [
+        compliance: []
     icon: '',
     color: 'from - purple - 500 to - pink - 600',
     popular: true;
@@ -1550,7 +1550,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   tagline: string;
   description: string;
   category: string;
-  price: {
+  price: {}
     monthly: number;
     yearly: number;
     currency: string;
@@ -1583,13 +1583,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   growthRate: string}
 ;
 export const emergingTechServicesV2: EmergingTechService[] = [;
-  {
+  {}
     id: 'space-mining-platform';
     name: 'Space Mining Platform';
     tagline: 'Revolutionary asteroid mining and space resource extraction';
     description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.';
     category: 'Space & Emerging Tech';
-    price: {
+    price: {}
       monthly: 999;
       yearly: 9990;
       currency: 'USD';
@@ -1597,11 +1597,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '24 hours'}
       enterprise: 4999}
     };
-    features: [
+    features: []
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'
     ];
-    benefits: [
+    benefits: []
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ];
     targetAudience: [,
@@ -1633,7 +1633,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Quantum computing meets biological systems';
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.';
     category: 'Quantum & Emerging Tech';
-    price: {
+    price: {}
       monthly: 599;
       yearly: 5990;
       currency: 'USD';
@@ -1641,11 +1641,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '8 hours'}
       enterprise: 2499}
     };
-    features: [
+    features: []
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
       'Custom biological modelsAPI for research'
     ];
-    benefits: [
+    benefits: []
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
     ];
     targetAudience: [,
@@ -1677,7 +1677,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Direct neural interface for human-computer interaction';
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.';
     category: 'Emerging Tech';
-    price: {
+    price: {}
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
@@ -1685,11 +1685,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '6 hours'}
       enterprise: 1599}
     };
-    features: [
+    features: []
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';
       'Custom neural modelsAPI for developers'
     ];
-    benefits: [
+    benefits: []
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
     ];
     targetAudience: [,
@@ -1721,7 +1721,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Quantum-enhanced energy optimization and fusion simulation';
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.';
     category: 'Quantum & Emerging Tech';
-    price: {
+    price: {}
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
@@ -1729,11 +1729,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '6 hours'}
       enterprise: 1999}
     };
-    features: [
+    features: []
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';
       'Custom energy modelsAPI for energy systems'
     ];
-    benefits: [
+    benefits: []
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
     ];
     targetAudience: [,
@@ -1765,7 +1765,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Advanced AI for self-driving vehicles and transportation';
     description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.';
     category: 'Emerging Tech';
-    price: {
+    price: {}
       monthly: 799;
       yearly: 7990;
       currency: 'USD';
@@ -1773,11 +1773,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '12 hours'}
       enterprise: 2999}
     };
-    features: [
+    features: []
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';
       'Custom AI modelsAPI for vehicles'
     ];
-    benefits: [
+    benefits: []
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
     ];
     targetAudience: [,
@@ -1809,7 +1809,7 @@ export interface EmergingTechService {;
   tagline: string;
   description: string;
   category: string;
-  price: {
+  price: {}
     monthly: number;
     yearly: number;
     currency: string;
@@ -2276,13 +2276,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   }
 ];
 export const emergingTechServicesV2: EmergingTechService[] = [;
-  {
+  {}
     id: 'space-mining-platform';
     name: 'Space Mining Platform';
     tagline: 'Revolutionary asteroid mining and space resource extraction';
     description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.';
     category: 'Space & Emerging Tech';
-    price: {
+    price: {}
       monthly: 999;
       yearly: 9990;
       currency: 'USD';
@@ -2290,11 +2290,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '24 hours'}
       enterprise: 4999}
     };
-    features: [
+    features: []
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'
     ];
-    benefits: [
+    benefits: []
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ];
     targetAudience: [,
@@ -2326,7 +2326,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Quantum computing meets biological systems';
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.';
     category: 'Quantum & Emerging Tech';
-    price: {
+    price: {}
       monthly: 599;
       yearly: 5990;
       currency: 'USD';
@@ -2334,11 +2334,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '8 hours'}
       enterprise: 2499}
     };
-    features: [
+    features: []
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
       'Custom biological modelsAPI for research'
     ];
-    benefits: [
+    benefits: []
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
     ];
     targetAudience: [,
@@ -2370,7 +2370,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Direct neural interface for human-computer interaction';
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.';
     category: 'Emerging Tech';
-    price: {
+    price: {}
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
@@ -2378,11 +2378,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '6 hours'}
       enterprise: 1599}
     };
-    features: [
+    features: []
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';
       'Custom neural modelsAPI for developers'
     ];
-    benefits: [
+    benefits: []
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
     ];
     targetAudience: [,
@@ -2414,7 +2414,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Quantum-enhanced energy optimization and fusion simulation';
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.';
     category: 'Quantum & Emerging Tech';
-    price: {
+    price: {}
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
@@ -2422,11 +2422,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '6 hours'}
       enterprise: 1999}
     };
-    features: [
+    features: []
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';
       'Custom energy modelsAPI for energy systems'
     ];
-    benefits: [
+    benefits: []
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
     ];
     targetAudience: [,
@@ -2458,7 +2458,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Advanced AI for self-driving vehicles and transportation';
     description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.';
     category: 'Emerging Tech';
-    price: {
+    price: {}
       monthly: 799;
       yearly: 7990;
       currency: 'USD';
@@ -2466,11 +2466,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setupTime: '12 hours'}
       enterprise: 2999}
     };
-    features: [
+    features: []
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';
       'Custom AI modelsAPI for vehicles'
     ];
-    benefits: [
+    benefits: []
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
     ];
     targetAudience: [,

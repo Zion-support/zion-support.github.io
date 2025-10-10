@@ -1,32 +1,27 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const AutonomousSystemsPage: React.FC = () => {
-<<<<<<< HEAD
+const AutonomousSystemsPage: React.FC = () => {}
 return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
+        <meta name="description" content=""Advanced autonomous systems solutions for modern businesses." /></meta>"
       </Helmet>
-=======
-  return (<div>
+  return (<div></div>
         <title>Autonomous Systems - Zion Tech Group<
-        <meta name="description" content="Advanced autonomous systems solutions for modern businesses." 
+        <meta name="description" content=""Advanced autonomous systems solutions for modern businesses."></meta>"
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Autonomous <span className="text-cyan-400">Systems<
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className=""container mx-auto px-4 py-16"></div>"
+          <div className=""text-center mb-16"></div>"
+            <h1 className=""text-5xl font-bold text-white mb-6"></h1>"
+              Autonomous <span className=""text-cyan-400">Systems<"
             <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=""text-xl text-gray-300 max-w-3xl mx-auto"></p>"
               Advanced autonomous systems solutions for modern businesses.
-<<<<<<< HEAD
             </p>
           </div>
         </div>
@@ -34,7 +29,6 @@ return (
     </React.Fragment>
 );
 })
-=======
             <
           <
         <
@@ -42,6 +36,4 @@ return (
     <)
   );
 };
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AutonomousSystemsPage;

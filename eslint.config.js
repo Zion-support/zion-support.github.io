@@ -5,10 +5,10 @@ import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
-export default [
-  // Global ignores
-  {
-    ignores: [
+export default []
+  // Global ignores;
+  {}
+    ignores: []
       'admin-api-disabled/**',
       'ai-customer-support-disabled/**',
       'ai-data-visualization-disabled/**',
@@ -51,49 +51,49 @@ export default [
       'chunk-*.js'
     ]
   },
-  // Base JavaScript configuration
-  {
+  // Base JavaScript configuration;
+  {}
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
+      parserOptions: {}
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
+        ecmaFeatures: {}
+          jsx: true;
         }
       }
     },
-    rules: {
+    rules: {}
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn'
     }
   },
-  // TypeScript configuration
-  {
+  // TypeScript configuration;
+  {}
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
-      parserOptions: {
+      parserOptions: {}
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
+        ecmaFeatures: {}
+          jsx: true;
         }
       }
     },
-    plugins: {
+    plugins: {}
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh;
     },
-    rules: {
+    rules: {}
       ...tseslint.configs.recommended.rules,
 ...reactHooks.configs.recommended.rules,
 
-      'react-refresh/only-export-components': [
+      'react-refresh/only-export-components': []
         'warn',
         { allowConstantExport: true }
       ],

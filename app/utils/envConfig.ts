@@ -13,26 +13,25 @@ export interface EnvConfig {}
   sentryDsn?: string;
   gaTrackingId?: string}
 }
-class EnvironmentConfig {
-  private config: EnvConfig,
-  private isInitialized = false;
-  constructor() {,
-    this.config = this.loadConfig(),
-    this.isInitialized = true}
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
-    return {
 class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false;
-constructor() {}
-    this.config = this.loadConfig()
-    this.isInitialized = true}
+  private config: EnvConfig,
+  private isInitialized="false;"
+  constructor() {,
+    this.config="this.loadConfig(),"
+    this.isInitialized="true}"
   }
   private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults
-
+    // Safely access environment variables with defaults;
+    return {}
+class EnvironmentConfig {}
+  private config: EnvConfig;
+  private isInitialized="false;"
+constructor() {}
+    this.config="this.loadConfig()"
+    this.isInitialized="true}"
+  }
+  private loadConfig(): EnvConfig {}
+    // Safely access environment variables with defaults;
     return {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
@@ -100,10 +99,10 @@ const missing: string[] = [],
         missing.push(varName);
       }
     }
-    return {
+    return {}
       valid: missing.length === 0;
   public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
+    valid: boolean;
     missing: string[]}
   } {}
     const missing: string[] = []
@@ -146,16 +145,16 @@ const missing: string[] = [],
       });
   }
 }
-// Export singleton instance
-export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions
+// Export singleton instance;
+export const envConfig="new EnvironmentConfig()"
+// Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()
-export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions
+export const envConfig="new EnvironmentConfig();"
+// Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()

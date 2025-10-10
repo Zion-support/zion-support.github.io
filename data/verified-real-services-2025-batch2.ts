@@ -17,7 +17,7 @@ export interface VerifiedRealService2025Batch2 {id: string;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
     address: string}
 ;
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = []
     id: 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
     tagline: 'Automated testing and quality control',

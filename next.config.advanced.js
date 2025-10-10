@@ -1,39 +1,38 @@
 /** @type {import('next').NextConfig} */;
-const nextConfig = {
+const nextConfig="{}"
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  experimental: {
+  experimental: {}
     optimizeCss: true,
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion']},
-  compiler: {
+  compiler: {}
     removeConsole: process.env.NODE_ENV === 'production'},
-  images: {
+  images: {}
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
-  async headers() {
-    return [
-      {
+  async headers() {}
+    return []
+      {}
         source: '/(.*)',
-        headers: [
-          {
+        headers: []
+          {}
             key: 'X-Frame-Options',
             value: 'DENY'},
-          {
+          {}
             key: 'X-Content-Type-Options',
             value: 'nosniff'},
-          {
+          {}
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'}]},
-      {
+      {}
         source: '/api/(.*)',
-        headers: [
-          {
+        headers: []
+          {}
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600'}]}]}};
-
-module.exports = nextConfig;
+            value: 'public, max-age=3600, s-maxage="3600'}]}]}};"
+module.exports="nextConfig;"

@@ -1,16 +1,15 @@
 import React from 'react';
 
-interface SkipLinkProps {
+interface SkipLinkProps {}
   to: string;
   children: React.ReactNode}
 ;
-const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
+const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {}
 return (
 </SkipLinkProps>return</SkipLinkProps> (
-    <a
-      href={to}
-      className="skip-link"
-      style={{
+    <a href="{to}></a>"
+      className=""skip-link""
+      style="{{}"
         position: 'absolute',
         top: '-40 px',
         left: '6 px',
@@ -26,11 +25,10 @@ return (
       }}
       onFocus={(e) =>
 );
-} {
-        e.currentTarget.style.top = '6 px'}}
-      onBlur={(e) => {
-        e.currentTarget.style.top = '-40 px'}}
-    >
+} {}
+        e.currentTarget.style.top="'6 px'}}"
+      onBlur={(e) => {}
+        e.currentTarget.style.top="'-40 px'}}>"
       {children}
     </a>
   )};

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
   id: string;
   name: string;
@@ -38,7 +37,7 @@ import React from 'react';
   rating: number;
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
-  [
+  []
     // AI-Powered Autonomous Business Process Orchestrator;
       id: 'ai-autonomous-business-orchestrator',
       name: 'AI Autonomous Business Process Orchestrator',
@@ -121,7 +120,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   s: number;
 export const,
   innovative2025AIAutomationServices: InnovativeAIAutomationService[] =,
-  [
+  []
     // AI-Powered Autonomous Business Process Orchestrator,
   id: 'ai-autonomous-business-orchestrator'
       nam,
@@ -359,7 +358,7 @@ marketSize: '$18 B customer intelligence market',
       period: '/month',
       description:,
         'Revolutionary AI platform that autonomously generates, tests, and deploys production-ready code based on natural language requirements. Includes automated testing, security scanning, and deployment.'
-      features: [
+      features: []
         'Natural language to code generation',
         'Automated code testing & validation',
         'Security vulnerability scanning',
@@ -812,7 +811,7 @@ variant: 'ai-healthcare',
   rating: number;
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
-  [
+  []
     // AI-Powered Autonomous Business Process Orchestrator;
       id: 'ai-autonomous-business-orchestrator',
       name: 'AI Autonomous Business Process Orchestrator',
@@ -962,7 +961,7 @@ varian,
   s: number;
 export const,
   innovative2025AIAutomationServices: InnovativeAIAutomationService[] =,
-  [
+  []
     // AI-Powered Autonomous Business Process Orchestrator,
   id: 'ai-autonomous-business-orchestrator'
       nam,
@@ -1200,7 +1199,7 @@ marketSize: '$18 B customer intelligence market',
       period: '/month',
       description:,
         'Revolutionary AI platform that autonomously generates, tests, and deploys production-ready code based on natural language requirements. Includes automated testing, security scanning, and deployment.'
-      features: [
+      features: []
         'Natural language to code generation',
         'Automated code testing & validation',
         'Security vulnerability scanning',
@@ -2233,8 +2232,6 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   s: 35,
   rating: 4.9,
   reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
-=======
       marketSize: '$25 B business process automation market'
       growthRate: '300% annual growth';
 variant: 'ai-automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

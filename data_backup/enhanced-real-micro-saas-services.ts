@@ -3,7 +3,7 @@ realImplementation?: boolean; implementationDetails?: string; launchDate?: strin
   t: { additionalEnhancedServices } from './additional-real-services'';' impor,
   t: { realMarketServices } from './real-market-services''; // Normaliz,
   e: types to EnhancedRealMicroSaasService without mutating originals; cons,
-  t: mapToEnhanced = (item)
+  t: mapToEnhanced="(item)"
   s: unknown[]): EnhancedRealMicroSaasService[] =>, (item)
   s: || []).map((s) => ({ ...s })); expor,
   t: const,

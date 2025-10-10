@@ -18,7 +18,7 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
   const { trackError } = useAnalytics();
-  const reportError = useCallback()
+  const reportError="useCallback()"
     (erro)
   r: Error, context?: string) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -30,35 +30,33 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     // Global error handler;
-const handleError = (even)
+const handleError="(even)"
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const errorEvent = event as {/* TODO: Fix JSX expression */}
+      const errorEvent="event as {/* TODO: Fix JSX expression */}"
   e: string; error?: Error };
-      const error = new Error(errorEvent.message);
-      error.stack = errorEvent.error?.stack;
+      const error="new Error(errorEvent.message);"
+      error.stack="errorEvent.error?.stack;"
       reportError(error, 'global_error')};
     // Unhandled promise rejection handler;
-const handleUnhandledRejection = (even)
+const handleUnhandledRejection="(even)"
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const rejectionEvent = event as {/* TODO: Fix JSX expression */}
+      const rejectionEvent="event as {/* TODO: Fix JSX expression */}"
   n: unknown };
-      const error =
-//         rejectionEvent.reason instanceof Error;
+      const error="//         rejectionEvent.reason instanceof Error;"
 //           ? rejectionEvent.reason;
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection')};
     // React error boundary handler (if available);
-const handleReactError = (erro,
+const handleReactError="(erro,"
   r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const componentStack =
-        (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
+      const componentStack="(errorInfo as { componentStack?: string })?.componentStack || 'unknown';"
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`)};
     // Add event listeners;
@@ -69,7 +67,7 @@ const handleReactError = (erro,
       window as Window & {/* TODO: Fix JSX expression */}
   o: unknown) => void}
       }
-    ).__REACT_ERROR_HANDLER__ = handleReactError;
+    ).__REACT_ERROR_HANDLER__="handleReactError;"
     // Cleanup;
     return () => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -82,6 +80,4 @@ const handleReactError = (erro,
 }
 //     reportError}};
 export default useErrorMonitoring;
-
-
 

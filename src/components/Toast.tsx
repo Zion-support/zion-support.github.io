@@ -1,8 +1,7 @@
 import React from 'react';
 
-
 'use client';
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type ToastType="'success' | 'error' | 'warning' | 'info';"
 export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -19,8 +18,8 @@ const,
   O: Add content}
 }
 //   message,
-  type = 'success',
-  duration = 3000,
+  type="'success',"
+  duration="3000,"
 //   onClose,
 //   show;)
 }) => {/* TODO: Fix JSX expression */}
@@ -78,20 +77,12 @@ const,
   )
     
           <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert""
-      aria-live="polite"
-// >
-      
-          
-          
-          
-          
-          
-          
-          
+className="{`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}"
+      role=""alert"""
+      aria-live=""polite""
+//>
           "
-          <span className="text-xl font-bold">{getIcon()}</span>
+          <span className=""text-xl font-bold">{getIcon()}</span>"
       <span>{message}</span>
       <button></button>
         onClick={() => {}
@@ -99,25 +90,15 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
   O: Add content}
           setIsVisible(false);
           if (onClose) onClose()}}"
-        className="ml-4,"
+        className=""ml-4,""
   hover:opacity-80 transition-opacity""
-        aria-label="Close notification"
-//       >
+        aria-label=""Close notification""
+//>
 //
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           </button>
     </div>
   )};
 
 export default Toast;"`
-
-
 

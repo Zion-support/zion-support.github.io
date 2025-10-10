@@ -1,33 +1,29 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-  {const contact =,
+  {const contact=","
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup && ziontechgroup.com'};
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,;
-const contact =,
+const contact=","
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
-const contact =
-  mobile: '+1 302 464 0950',
+const contact="mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
-  {const contact =
-	mobile: '+1 302 464 0950'
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact =,
+  {const contact="mobile: '+1 302 464 0950'"
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = []
+  {const contact=","
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup && ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = []
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -51,8 +47,7 @@ export const,
 };
 export const,
   newlyAddedServices: EnhancedRealMicroSaasService[] = [,;
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -61,8 +56,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'};
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup.com'
@@ -17922,7 +17916,7 @@ reviews: 2;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = []
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -23687,12 +23681,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com' }; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact = ' mobil,
+  newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact="' mobil,'"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com'}; const contact = ' mobil,
+  s://ziontechgroup.com'}; const contact="' mobil,'"
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
@@ -31519,8 +31513,6 @@ export const,
   g: 4.6, review,
   s: 2}]; review,
   s: 2 } ]; '
-=======
     market_size: '$40 B GenAI apps'
     growth_rate: '45% CAGR';
 variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

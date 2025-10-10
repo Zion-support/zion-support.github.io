@@ -1,8 +1,7 @@
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
 
-  export type LucideIcon = ComponentType<LucideProps>;
-
+  export type LucideIcon="ComponentType<LucideProps>;"
   export const,
   Calendar: LucideIcon;
   export const,

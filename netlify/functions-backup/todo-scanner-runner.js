@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-exports.handler = async function (event, context) {
-  try {
+exports.handler="async function (event, context) {}"
+  try {}
     //     // Todo scanning simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -17,8 +16,8 @@ timestamp: new Date().toISOString()
           status: 'active',
           todosFound: 0;
           lastScan: new Date().toISOString()}})};
-    return result} catch (error) {
-    //     return {
+    return result} catch (error) {}
+    //     return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -27,7 +26,7 @@ timestamp: new Date().toISOString()
         error: 'Internal server error')
         message: error.message),;
 function: 'todo-scanner-runner'),
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
@@ -39,7 +38,5 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })}}
 };
-=======
         timestamp: new Date().toISOString();
 function: 'todo-scanner-runner'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

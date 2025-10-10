@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */
-export default {
+export default {}
   content: [,
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        neon: {
+  theme: {}
+    extend: {}
+      colors: {}
+        neon: {}
           cyan: '#00ffff',
           purple: '#8b5cf6',
           pink: '#ec4899',
@@ -50,63 +49,63 @@ export default {
         'loading': 'loading 1.5s infinite'},
       keyframes: {,
         'neon-glow': {,
-          '0%, 100%': {
+          '0%, 100%': {}
             textShadow: '0 0 5 px currentColor, 0 0 10 px currentColor, 0 0 15 px currentColor'},
-          '50%': {
+          '50%': {}
             textShadow: '0 0 10 px currentColor, 0 0 20 px currentColor, 0 0 30 px currentColor'}},
-        'neon-pulse': {
-          '0%, 100%': {
+        'neon-pulse': {}
+          '0%, 100%': {}
             boxShadow: '0 0 5 px currentColor, 0 0 10 px currentColor, 0 0 15 px currentColor'},
-          '50%': {
+          '50%': {}
             boxShadow: '0 0 10 px currentColor, 0 0 20 px currentColor, 0 0 30 px currentColor'}},
-        'matrix-rain': {
-          '0%': {
+        'matrix-rain': {}
+          '0%': {}
             transform: 'translateY(-100 vh)',
             opacity: '0'},
-          '10%': {
+          '10%': {}
             opacity: '1'},
-          '90%': {
+          '90%': {}
             opacity: '1'},
-          '100%': {
+          '100%': {}
             transform: 'translateY(100 vh)',
             opacity: '0'}},
-        'hologram-flicker': {
-          '0%, 100%': {
+        'hologram-flicker': {}
+          '0%, 100%': {}
             opacity: '1',
             transform: 'scale(1)'},
-          '50%': {
+          '50%': {}
             opacity: '0.8',
             transform: 'scale(1.02)'}},
-        'data-stream': {
-          '0%': {
+        'data-stream': {}
+          '0%': {}
             transform: 'translateX(-100%)'},
-          '100%': {
+          '100%': {}
             transform: 'translateX(100 vw)'}},
-        'fadeIn': {
+        'fadeIn': {}
           from: {,
             opacity: '0',
             transform: 'translateY(20 px)'},
           to: {,
             opacity: '1',
             transform: 'translateY(0)'}},
-        'slideIn': {
+        'slideIn': {}
           from: {,
             opacity: '0',
             transform: 'translateX(-20 px)'},
           to: {,
             opacity: '1',
             transform: 'translateX(0)'}},
-        'scaleIn': {
+        'scaleIn': {}
           from: {,
             opacity: '0',
             transform: 'scale(0.9)'},
           to: {,
             opacity: '1',
             transform: 'scale(1)'}},
-        'loading': {
-          '0%': {
+        'loading': {}
+          '0%': {}
             backgroundPosition: '200% 0'},
-          '100%': {
+          '100%': {}
             backgroundPosition: '-200% 0'}}},
       backgroundImage: {,
         'cyber-grid': `,
@@ -141,30 +140,30 @@ export default {
         '100': '100'}}},
   plugins: [,;
 function({ addUtilities }) {;
-const newUtilities = {
-        '.neon-text': {
+const newUtilities="{}"
+        '.neon-text': {}
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},
-        '.neon-border': {
+        '.neon-border': {}
           border: '2 px solid var(--neon-cyan)',
           boxShadow: '0 0 10 px var(--neon-cyan), inset 0 0 10 px var(--neon-cyan)',
           animation: 'neon-pulse 2 s ease-in-out infinite alternate'},
-        '.hologram-card': {
+        '.hologram-card': {}
           background: 'linear-gradient(135 deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
           border: '1 px solid rgba(139, 92, 246, 0.3)',
           backdropFilter: 'blur(10 px)',
           animation: 'hologram-flicker 3 s ease-in-out infinite'},
-        '.glass-morphism': {
+        '.glass-morphism': {}
           background: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10 px)',
           border: '1 px solid rgba(255, 255, 255, 0.2)'},
-        '.cyber-grid': {
+        '.cyber-grid': {}
           backgroundImage: `,
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '20 px 20 px'},
-        '.cyber-button': {
+        '.cyber-button': {}
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
 border: 'none',
           color: 'white',
@@ -179,7 +178,7 @@ border: 'none',
         '.cyber-button: hover': {,
           transform: 'translateY(-2px)',
           boxShadow: '0 10px 20px rgba(0, 255, 255, 0.3)'},
-        '.cyber-card': {
+        '.cyber-card': {}
           background: 'linear-gradient(135 deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%)',
           border: '1 px solid rgba(0, 255, 255, 0.3)',
           borderRadius: '12 px',
@@ -191,11 +190,11 @@ border: 'none',
           transform: 'translateY(-5px)',
           borderColor: 'var(--neon-cyan)',
           boxShadow: '0 20 px 40 px rgba(0, 255, 255, 0.2)'},
-        '.loading-skeleton': {
+        '.loading-skeleton': {}
           background: 'linear-gradient(90 deg, #f0 f0 f0 25%, #e0 e0 e0 50%, #f0 f0 f0 75%)',
           backgroundSize: '200% 100%',
           animation: 'loading 1.5 s infinite'},
-        '.sr-only': {
+        '.sr-only': {}
           position: 'absolute',
           width: '1px',
           height: '1px',
@@ -205,7 +204,7 @@ border: 'none',
           clip: 'rect(0, 0, 0, 0)',
           whiteSpace: 'nowrap',
           border: '0'},
-        '.sr-only: focus': {
+        '.sr-only: focus': {}
           position: 'static',
           width: 'auto',
           height: 'auto',
@@ -217,7 +216,6 @@ border: 'none',
       addUtilities(newUtilities)
     }
   ]}
-=======
           border: 'none'
           color: 'white'
           padding: '12px 24px'
@@ -225,4 +223,3 @@ border: 'none',
           fontWeight: '600'
           textTransform: 'uppercase',;
 letterSpacing: '1 px',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,12 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs="require('fs');"
+const path="require('path');"
 // Generate sitemap for the website;
-const generateSitemap = () => {
+const generateSitemap = () => {}
 return (
 ;
-const baseUrl = 'https://ziontechgroup.com';
-  const pages = [
+const baseUrl="'https://ziontechgroup.com';"
+  const pages="[]"
     '',
     '/about',
     '/services',
@@ -23,10 +22,10 @@ const baseUrl = 'https://ziontechgroup.com';
     '/micro-saas'
   ];
 ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>
+const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>"
+<urlset xmlns=""http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>"
+${pages.map(page="> `  <url></url>"
+    <loc></loc>
 );
 }${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
@@ -35,9 +34,9 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 ;
-const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const sitemapPath="path.join(__dirname, '..', 'public', 'sitemap.xml');"
   fs.writeFileSync(sitemapPath, sitemap);
-  // console.log removed for production
+  // console.log removed for production;
 };
 
 generateSitemap();

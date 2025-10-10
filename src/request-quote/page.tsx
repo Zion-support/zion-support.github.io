@@ -1,14 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-
 import { Link } from 'react-router-dom';
-import Navigation from '../components
-import Footer from '../components
-
+import Navigation from '../components;
+import Footer from '../components;
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {;
-const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -20,15 +18,12 @@ const [formData, setFormData] = useState({
     description: '',
     requirements:   ,)
 $4});
-<<<<<<< HEAD
 ;
 const [isSubmitting, setIsSubmitting] = useState(false);
-=======
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
-const _serviceTypes = [
+const _serviceTypes="[]"
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -40,14 +35,14 @@ const _serviceTypes = [
     'Other'
   ];
 ;
-const projectSizes = [
+const projectSizes="[]"
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
 ;
-const timelines = [
+const timelines="[]"
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -56,7 +51,7 @@ const timelines = [
     'Flexible'
   ];
 ;
-const budgetRanges = [
+const budgetRanges="[]"
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -67,331 +62,288 @@ const budgetRanges = [
 ;
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev="> ({}"
       ...prev,
-      [name]: value
+      [name]: value;
     }))};
 ;
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
-    
     /
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise(resolve="> setTimeout(resolve, 2000));"
     setIsSubmitting(false);
     setIsSubmitted(true)};
 ;
-const benefits = [
-    {
+const benefits="[]"
+    {}
       icon: Calculator,
       title: 'Free Quote',
       description:     ,
 $4},
-    {
+    {}
       icon: Clock,
       title: 'Quick Response',
       description:     ,
 $4},
-    {
+    {}
       icon: CheckCircle,
       title: 'Transparent Pricing',
       description:     ,
 $4},
-    {
+    {}
       icon: Star,
       title: 'Expert Consultation',
       description:     ,
 $4}
   ];
 ;
-const whyChooseUs = [
-    {
+const whyChooseUs="[]"
+    {}
       icon: Users,
       title: '50+ Successful Projects',
       description:     ,
 $4},
-    {
+    {}
       icon: Award,
       title: '300% Average ROI',
       description:     ,
 $4},
-    {
+    {}
       icon: Clock,
-      title: '24
+      title: '24;
       descriptio,
     n:     ,
 $4},
-    {
+    {}
       icon: Star,
       title: '99.9% Uptime',
       description:     ,
 $4}
   ];
-
-  if (isSubmitted) {
-<<<<<<< HEAD
+  if (isSubmitted) {}
     return (
-      <React.Fragment>
-        <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
+      <React.Fragment></React>
+        <Navigation /></Navigation>
+        <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
     return (<>
-        
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-500
-                
+          <div className=""container mx-auto px-4 py-16 pt-24"></div>"
+            <div className=""max-w-2xl mx-auto text-center"></div>"
+              <div className=""w-20 h-20 bg-green-500"></div>"
                 Quote Request Submitted!
               <
-              <p className="text-xl text-gray-300 mb-8">
-                Thank you for your interest in our services. We've received your quote request 
+              <p className=""text-xl text-gray-300 mb-8"></p>"
+                Thank you for your interest in our services. We've received your quote request;
                 and will get back to you within 24 hours with a detailed proposal.
               <
-              <div className="bg-slate-800
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?<
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<
-                    <span className="text-gray-300">Our team will review your requirements<
+              <div className=""bg-slate-800"></div>"
+                <h3 className=""text-lg font-semibold text-white mb-4">What happens next?<"
+                <div className=""space-y-3 text-left"></div>"
+                  <div className=""flex items-center"></div>"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<"
+                    <span className=""text-gray-300">Our team will review your requirements<"
                   <
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal<
+                  <div className=""flex items-center"></div>"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<"
+                    <span className=""text-gray-300">We'll prepare a detailed quote and proposal<"
                   <
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<
-                    <span className="text-gray-300">Schedule a call to discuss your project<
+                  <div className=""flex items-center"></div>"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<"
+                    <span className=""text-gray-300">Schedule a call to discuss your project<"
                   <
                 <
               <
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                >
-<<<<<<< HEAD
-                  <Phone className="w-5 h-5 mr-2" />
-                  Contact Us
+              <div className=""flex flex-col sm: flex-row gap-4 justify-center"></div>"
+                <a href="""></a>"
+                  className=""cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">"
+                  <Phone className=""w-5 h-5 mr-2" /></Phone>"
+                  Contact Us;
                 </a>
-                <a
-                  href="/"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                >
-                  <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home
+                <a href=""/"></a>"
+                  className=""border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">"
+                  <ArrowRight className=""w-4 h-4 mr-2" /></ArrowRight>"
+                  Back to Home;
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer /></Footer>
       </React.Fragment>
     )}
 
   return (
-    <React.Fragment>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="container mx-auto px-4 py-16 pt-24">
+    <React.Fragment></React>
+      <Navigation /></Navigation>
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className=""container mx-auto px-4 py-16 pt-24"></div>"
           {/* Header *
-          <div className="text-center mb-16">
-            <h1 className="text-4xl m,
+          <div className=""text-center mb-16"></div>"
+            <h1 className=""text-4xl m,"></h1>"
     d:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote
+              Request a Quote;
             <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className=""text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
             <
           <
 
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-12">
+          <div className=""grid grid-cols-1 lg: grid-cols-3 gap-12"></div>"
             {/* Quote Form *
-            <div className="l,
+            <div className=""l,"></div>"
     g:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details<
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <div className=""bg-slate-800/50 rounded-lg p-8 border border-gray-700"></div>"
+                <h2 className=""text-2xl font-bold text-white mb-6">Project Details<"
+                <form onSubmit={handleSubmit} className=""space-y-6"></form>"
                   {/* Personal Information *
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                         Full Name *
                       <
-                      <input
-                        type="text"
-                        name="name"
-                        value = { formData.name };
-                        onChange = { handleInputChange };
-
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your full name"
-                      
+                      <input type=""text"></input>"
+                        name=""name""
+                        value="{ formData.name };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
+                        placeholder=""Enter your full name""
                     <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                         Email Address *
                       <
-                      <input
-                        type="email"
-                        name="email"
-                        value = { formData.email };
-                        onChange = { handleInputChange };
-
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
-                        placeholder="Enter your email"
-                      
+                      <input type=""email"></input>"
+                        name=""email""
+                        value="{ formData.email };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400""
+                        placeholder=""Enter your email""
                     <
                   <
 
-                  <div className="grid grid-cols-1 m,
+                  <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                        Company Name;
                       <
-                      <input
-                        type="text"
-                        name="company"
-                        value = { formData.company };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your company name"
-                      
+                      <input type=""text"></input>"
+                        name=""company""
+                        value="{ formData.company };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
+                        placeholder=""Enter your company name""
                     <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                        Phone Number;
                       <
-                      <input
-                        type="tel"
-                        name="phone"
-                        value = { formData.phone };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your phone number"
-                      
+                      <input type=""tel"></input>"
+                        name=""phone""
+                        value="{ formData.phone };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
+                        placeholder=""Enter your phone number""
                     <
                   <
 
                   {/* Project Information *
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       Service Type *
                     <
-                    <select
-                      name="serviceType"
-                      value = { formData.serviceType };
-                      onChange = { handleInputChange };
-
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                    >
-                      <option value="">Select a service type<)
-                      {serviceTypes.map((type), index) => (<option key={index} value={type}>{type}<)
+                    <select name=""serviceType"></select>"
+                      value="{ formData.serviceType };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400>
+                      <option value=""">Select a service type<)"
+                      {serviceTypes.map((type), index) => (<option key={index} value="{type}>{type}<)"
                       ))}
                     <
                   <
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size
+                  <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                        Project Size;
                       <
-                      <select
-                        name="projectSize"
-                        value = { formData.projectSize };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      >
-                        <option value="">Select project size<
-                        {projectSizes.map((size), index) => (<option key={index} value={size}>{size}<)
+                      <select name=""projectSize"></select>"
+                        value="{ formData.projectSize };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400>
+                        <option value=""">Select project size<"
+                        {projectSizes.map((size), index) => (<option key={index} value="{size}>{size}<)"
                         ))}
                       <
                     <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       <
-                      <select
-                        name="timeline"
-                        value = { formData.timeline };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      >
-                        <option value="">Select timeline<
-                        {timelines.map((timeline), index) => (<option key={index} value={timeline}>{timeline}<)
+                      <select name=""timeline"></select>"
+                        value="{ formData.timeline };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400>
+                        <option value=""">Select timeline<"
+                        {timelines.map((timeline), index) => (<option key={index} value="{timeline}>{timeline}<)"
                         ))}
                       <
                     <
                   <
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                      Budget Range;
                     <
-                    <select
-                      name="budget"
-                      value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                    >
-                      <option value="">Select budget range<
-                      {budgetRanges.map((range), index) => (<option key={index} value={range}>{range}<)
+                    <select name=""budget"></select>"
+                      value="{ formData.budget };"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400>
+                      <option value=""">Select budget range<"
+                      {budgetRanges.map((range), index) => (<option key={index} value="{range}>{range}<)"
                       ))}
                     <
                   <
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       Project Description *
                     <
-                    <textarea
-                      name="description"
-                      value = { formData.description };
-                      onChange = { handleInputChange };
-
-                      rows = { 4 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Describe your project requirements and goals..."
-                    
+                    <textarea name=""description"></textarea>"
+                      value="{ formData.description };"
+                      onChange="{ handleInputChange };"
+                      rows="{ 4 };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
+                      placeholder=""Describe your project requirements and goals...""
                   <
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements
+                  <div></div>
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
+                      Specific Requirements;
                     <
-                    <textarea
-                      name="requirements"
-                      value = { formData.requirements };
-                      onChange = { handleInputChange };
-                      rows = { 3 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
-                    
+                    <textarea name=""requirements"></textarea>"
+                      value="{ formData.requirements };"
+                      onChange="{ handleInputChange };"
+                      rows="{ 3 };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
+                      placeholder=""Any specific technical requirements, integrations, or constraints...""
                   <
 
-                  <button
-                    type="submit"
-                    disabled = { isSubmitting };
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
-    d:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (<div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
+                  <button type=""submit"></button>"
+                    disabled="{ isSubmitting };"
+                    className=""w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
+    d:cursor-not-allowed">
+                    {isSubmitting ? (<div className=""flex items-center justify-center"></div>"
+                        <div className=""animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><"
                         Submitting...
                       <)
                     ) : ('Request Quote')
@@ -402,18 +354,18 @@ $4}
             <
 
             {/* Sidebar *
-            <div className="space-y-8">
+            <div className=""space-y-8"></div>"
               {/* Benefits *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?<
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-cyan-500
-                        <benefit.icon className="w-4 h-4 text-cyan-400" 
+              <div className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700"></div>"
+                <h3 className=""text-xl font-bold text-white mb-6">Why Request a Quote?<"
+                <div className=""space-y-4"></div>"
+                  {benefits.map((benefit, index) => (<div key={index} className=""flex items-start"></div>"
+                      <div className=""w-8 h-8 bg-cyan-500"></div>"
+                        <benefit .icon className=""w-4 h-4 text-cyan-400"></benefit>"
                       <
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}<
-                        <p className="text-xs text-gray-300">{benefit.description}<
+                      <div></div>
+                        <h4 className=""text-sm font-semibold text-white mb-1">{benefit.title}<"
+                        <p className=""text-xs text-gray-300">{benefit.description}<"
                       <
                     <)
                   ))}
@@ -421,16 +373,16 @@ $4}
               <
 
               {/* Why Choose Us *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?<
-                <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => (<div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-500
-                        <item.icon className="w-4 h-4 text-purple-400" 
+              <div className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700"></div>"
+                <h3 className=""text-xl font-bold text-white mb-6">Why Choose Us?<"
+                <div className=""space-y-4"></div>"
+                  {whyChooseUs.map((item, index) => (<div key={index} className=""flex items-start"></div>"
+                      <div className=""w-8 h-8 bg-purple-500"></div>"
+                        <item .icon className=""w-4 h-4 text-purple-400"></item>"
                       <
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}<
-                        <p className="text-xs text-gray-300">{item.description}<
+                      <div></div>
+                        <h4 className=""text-sm font-semibold text-white mb-1">{item.title}<"
+                        <p className=""text-xs text-gray-300">{item.description}<"
                       <
                     <)
                   ))}
@@ -438,48 +390,39 @@ $4}
               <
 
               {/* Contact Info *
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?<
-                <p className="text-gray-300 text-sm mb-4">
+              <div className=""bg-gradient-to-r from-indigo-900/50 to-purple-900"></div>"
+                <h3 className=""text-xl font-bold text-white mb-4">Need Immediate Help?<"
+                <p className=""text-gray-300 text-sm mb-4"></p>"
                   For urgent inquiries or immediate assistance, contact us directly.
                 <
-                <div className="space-y-3">
-                  <a
-                    href="tel: +13024640950"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Phone className="w-4 h-4 mr-2" 
-                    <span className="text-sm">(302) 464-0950<
+                <div className=""space-y-3"></div>"
+                  <a href=""tel: +13024640950"></a>"
+                    className=""flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">"
+                    <Phone className=""w-4 h-4 mr-2"></Phone>"
+                    <span className=""text-sm">(302) 464-0950<"
                   <
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Mail className="w-4 h-4 mr-2" 
-                    <span className="text-sm">kleber@ziontechgroup.com<
+                  <a href=""mailto:kleber@ziontechgroup.com"></a>"
+                    className=""flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">"
+                    <Mail className=""w-4 h-4 mr-2"></Mail>"
+                    <span className=""text-sm">kleber@ziontechgroup.com<"
                   <
-                  <a
-                    href="
-                    className="flex items-center text-cyan-400 hove,
-    r:text-cyan-300 transition-colors"
-                  >
-                    <MessageSquare className="w-4 h-4 mr-2" 
-                    <span className="text-sm">Contact Form<
+                  <a href="""></a>"
+                    className=""flex items-center text-cyan-400 hove,""
+    r:text-cyan-300 transition-colors">
+                    <MessageSquare className=""w-4 h-4 mr-2"></MessageSquare>"
+                    <span className=""text-sm">Contact Form<"
                   <
                 <
     <div>Coming Soon<
 
-<<<<<<< HEAD
   )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
   );
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   nam,
   e: '',
@@ -504,7 +447,7 @@ $4}
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
+  const _serviceTypes="[]"
   /
   O: Add items;
 ];;
@@ -518,7 +461,7 @@ $4}
 /
 /
   ];
-  const projectSizes = [
+  const projectSizes="[]"
   /
   O: Add items;
 ];;
@@ -527,18 +470,7 @@ $4}
 /
 /
   ];
-  const timelines = [
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-  ];
-  const budgetRanges = [
+  const timelines="[]"
   /
   O: Add items;
 ];;
@@ -549,57 +481,59 @@ $4}
 /
 /
   ];
-  const handleInputChange = (e: React.ChangeEvent;)
-<<<<<<< HEAD
+  const budgetRanges="[]"
+  /
+  O: Add items;
+];;
+/
+/
+/
+/
+/
+/
+  ];
+  const handleInputChange="(e: React.ChangeEvent;)"
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
+    setFormData(prev="> ({/* TODO: Fix JSX expression */}"
   O: Add content}
-=======
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 }
     const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression *
+    setFormData(prev="> ({/* TODO: Fix JSX expression *"
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 /
       [name]: value;)
-<<<<<<< HEAD
     }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     e.preventDefault();
     setIsSubmitting(true);
     /
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve="> setTimeout(resolve, 2000));"
     setIsSubmitting(false);
     setIsSubmitted(true)};
-  const benefits = [
+  const benefits="[]"
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Calculator,
@@ -608,14 +542,11 @@ $4}
       descriptio,
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Clock,
@@ -624,14 +555,11 @@ $4}
       descriptio,
   n: 'We respond to all quote requests within 4 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: CheckCircle,
@@ -640,14 +568,11 @@ $4}
       descriptio,
   n: 'Clear, detailed pricing with no hidden fees'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -657,18 +582,15 @@ $4}
   n: 'Free consultation with our technology experts'
     }
   ];
-  const whyChooseUs = [
+  const whyChooseUs="[]"
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Users,
@@ -677,14 +599,11 @@ $4}
       descriptio,
   n: 'Proven track record of delivering results'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Award,
@@ -693,30 +612,24 @@ $4}
       descriptio,
   n: 'Our clients see significant returns on investment'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Clock,
       titl,
-  e: '24
+  e: '24;
       descriptio,
   n: 'Round-the-clock support for all our clients'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -726,124 +639,97 @@ $4}
   n: 'Reliable, high-performance solutions'
     }
   ];
-<<<<<<< HEAD
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
   if (isSubmitted) {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     return (<div>Coming Soon<)
   )
       
-<<<<<<< HEAD
-          <React.Fragment>
+          <React.Fragment></React>
         <Navigation /></Navigation>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-          <div className="container mx-auto px-4 py-16 pt-24"></div>"
-            <div className="max-w-2xl mx-auto text-center"></div>"
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
-                <CheckCircle className="w-10 h-10 text-green-400" /></CheckCircle>
+        <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+          <div className=""container mx-auto px-4 py-16 pt-24"></div>""
+            <div className=""max-w-2xl mx-auto text-center"></div>""
+              <div className=""w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>""
+                <CheckCircle className=""w-10 h-10 text-green-400" /></CheckCircle>"
               </div>"
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
+              <h1 className=""text-4xl font-bold text-white mb-6 neon-text"></h1>"
 // Quote Request Submitted!
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h1>"
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p className=""text-xl text-gray-300 mb-8"></p>"
                 Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>"
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
-                <div className="space-y-3 text-left"></div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>"
-                    <span className="text-gray-300">Our team will review your requirements</span>
+              <div className=""bg-slate-800/50 rounded-lg p-6 mb-8"></div>""
+                <h3 className=""text-lg font-semibold text-white mb-4">What happens next?</h3>""
+                <div className=""space-y-3 text-left"></div>""
+                  <div className=""flex items-center"></div>""
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>""
+                    <span className=""text-gray-300">Our team will review your requirements</span>"
                   </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>"
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
+                  <div className=""flex items-center"></div>""
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>""
+                    <span className=""text-gray-300">We'll prepare a detailed quote and proposal</span>"
                   </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
-                    <span className="text-gray-300">Schedule a call to discuss your project</span>
+                  <div className=""flex items-center"></div>""
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>""
+                    <span className=""text-gray-300">Schedule a call to discuss your project</span>"
                   </div>
                 </div>
-=======
           <>
         <Navigation /><
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-          <div className="container mx-auto px-4 py-16 pt-24"><
-            <div className="max-w-2xl mx-auto text-center"><
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><
-                <CheckCircle className="w-10 h-10 text-green-400" /><
+        <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><"
+          <div className=""container mx-auto px-4 py-16 pt-24"><"
+            <div className=""max-w-2xl mx-auto text-center"><"
+              <div className=""w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><"
+                <CheckCircle className=""w-10 h-10 text-green-400" /><"
               <
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"><
+              <h1 className=""text-4xl font-bold text-white mb-6 neon-text"><"
 /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
           <
-              <p className="text-xl text-gray-300 mb-8"><
+              <p className=""text-xl text-gray-300 mb-8"><"
                 Thank you for your interest in our services. We've received your quote request;
 /
 
           <
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"><
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?<
-                <div className="space-y-3 text-left"><
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<
-                    <span className="text-gray-300">Our team will review your requirements<
+              <div className=""bg-slate-800/50 rounded-lg p-6 mb-8"><"
+                <h3 className=""text-lg font-semibold text-white mb-4">What happens next?<"
+                <div className=""space-y-3 text-left"><"
+                  <div className=""flex items-center"><"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<"
+                    <span className=""text-gray-300">Our team will review your requirements<"
                   <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal<
+                  <div className=""flex items-center"><"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<"
+                    <span className=""text-gray-300">We'll prepare a detailed quote and proposal<"
                   <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<
-                    <span className="text-gray-300">Schedule a call to discuss your project<
+                  <div className=""flex items-center"><"
+                    <div className=""w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<"
+                    <span className=""text-gray-300">Schedule a call to discuss your project<"
                   <
                 <
 
               <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="
-
+              <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <a href="""></a>"
 /
 
           "
-          <Phone className="w-5 h-5 mr-2" /><
+          <Phone className=""w-5 h-5 mr-2" /><"
 /
           <
 
-                <a
-                  href="
-
+                <a href="""></a>"
 /
 
           "
-<<<<<<< HEAD
-          <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
+          <ArrowRight className=""w-4 h-4 mr-2" /></ArrowRight>"
 // Back to Home;
           </a>
               </div>
@@ -851,7 +737,7 @@ $4}
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
@@ -859,14 +745,13 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <React.Fragment>
+          <React.Fragment></React>
       <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+        <div className=""container mx-auto px-4 py-16 pt-24"></div>"
           {/* Header */}"
-          <div className="text-center mb-16"></div>"
-=======
-          <ArrowRight className="w-4 h-4 mr-2" /><
+          <div className=""text-center mb-16"></div>""
+          <ArrowRight className=""w-4 h-4 mr-2" /><"
 /
           <
               <
@@ -874,8 +759,7 @@ $4}
           <
         <
       <
-      <Footer 
-    <
+      <Footer <></Footer>
         <Footer /><
       <
     );
@@ -885,226 +769,203 @@ $4}
     
           <>
       <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><"
+        <div className=""container mx-auto px-4 py-16 pt-24"><"
           {/* Header *
-          <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            <h1 className="text-4xl,"
+          <div className=""text-center mb-16"><"
+            <h1 className=""text-4xl,"></h1>"
   md: text-5xl font-bold text-white mb-6 neon-text"><
 /
 
           <
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
+          <p className=""text-xl text-cyan-400 mb-8 font-medium"></p>"
+            Coming Soon;
           <
           <
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className=""grid grid-cols-1 lg:grid-cols-3 gap-12"></div>"
             {/* Quote Form *
-            <div className="l,
+            <div className=""l,"></div>"
     g:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details<
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <div className=""bg-slate-800/50 rounded-lg p-8 border border-gray-700"></div>"
+                <h2 className=""text-2xl font-bold text-white mb-6">Project Details<"
+                <form onSubmit={handleSubmit} className=""space-y-6"></form>"
                   {/* Personal Information *
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-
+                  <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
 /
 
           <
 
-                      <input
-type="text" name="name"
-                        value = { formData.name };
-                        onChange = { handleInputChange };
+                      <input type="text" name=""name"></input>"
+                        value="{ formData.name };"
+                        onChange="{ handleInputChange };"
 /
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 //                       
 
           <
                     <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
 
           <
 
-                      <input
-type="email" name="email"
-                        value = { formData.email };
-                        onChange = { handleInputChange };
+                      <input type="email" name=""email"></input>"
+                        value="{ formData.email };"
+                        onChange="{ handleInputChange };"
 /
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 //                       
 
           <
                   <
-                  <div className="grid grid-cols-1,"
+                  <div className=""grid grid-cols-1,"></div>"
   md:grid-cols-2 gap-6"><
                     <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
           <
 
-                      <input
-type="text" name="company"
-                        value = { formData.company };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                      <input type="text" name=""company"></input>"
+                        value="{ formData.company };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 // 
 
           <
                     <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
           <
 
-                      <input
-type="tel" name="phone"
-                        value = { formData.phone };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                      <input type="tel" name=""phone"></input>"
+                        value="{ formData.phone };"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 // 
 
           <
                   <
                   {/* Project Information *
                   <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
 
           <
 
-                    <select
-                      name="serviceType" value = { formData.serviceType };
-                      onChange = { handleInputChange };
+                    <select name="serviceType" value="{ formData.serviceType };></select>"
+                      onChange="{ handleInputChange };"
 /
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 /
 
           "
-          <option value="">Select a service type<
+          <option value=""">Select a service type<"
                       {serviceTypes.map((type), index) => ()}
-          <option key={index} value={type}>{type}<
+          <option key={index} value="{type}>{type}<"
                       ))}
                     <
                   <
-                  <div className="grid grid-cols-1,"
+                  <div className=""grid grid-cols-1,"></div>"
   md:grid-cols-2 gap-6"><
                     <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
           <
 
-                      <select
-                        name="projectSize" value = { formData.projectSize };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                      <select name="projectSize" value="{ formData.projectSize };></select>"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 /
 
           "
-          <option value="">Select project size<
+          <option value=""">Select project size<"
                         {projectSizes.map((size), index) => ()}
-          <option key={index} value={size}>{size}<
+          <option key={index} value="{size}>{size}<"
                         ))}
                       <
                     <
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <div></div>
+                      <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
 /
           <
-                      <select
-                        name="timeline" value = { formData.timeline };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                      <select name="timeline" value="{ formData.timeline };></select>"
+                        onChange="{ handleInputChange };"
+                        className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 /
 
           "
-          <option value="">Select timeline<
+          <option value=""">Select timeline<"
                         {timelines.map((timeline), index) => ()}
-          <option key={index} value={timeline}>{timeline}<
+          <option key={index} value="{timeline}>{timeline}<"
                         ))}
                       <
                     <
                   <
                   <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
           <
 
-                    <select
-                      name="budget" value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                    <select name="budget" value="{ formData.budget };></select>"
+                      onChange="{ handleInputChange };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 /
 
           "
-          <option value="">Select budget range<
+          <option value=""">Select budget range<"
                       {budgetRanges.map((range), index) => ()}
-          <option key={index} value={range}>{range}<
+          <option key={index} value="{range}>{range}<"
                       ))}
                     <
                   <
                   <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
 
           <
 
-                    <textarea
-                      name="description" value = { formData.description };
-                      onChange = { handleInputChange };
+                    <textarea name="description" value="{ formData.description };></textarea>"
+                      onChange="{ handleInputChange };"
 /
-                      rows = { 4 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                      rows="{ 4 };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 //                     
 
           <
                   <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
+                    <label className=""block text-sm font-medium text-gray-300 mb-2"><"
 /
           <
 
-                    <textarea
-                      name="requirements" value = { formData.requirements };
-                      onChange = { handleInputChange };
-                      rows = { 3 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-
+                    <textarea name="requirements" value="{ formData.requirements };></textarea>"
+                      onChange="{ handleInputChange };"
+                      rows="{ 3 };"
+                      className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
+    s:ring-cyan-400;
 // 
 
           <
 
-                  <button
-type="submit" disabled = { isSubmitting };
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
+                  <button type="submit" disabled="{ isSubmitting };></button>"
+                    className=""w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
     d:cursor-not-allowed"
 
 /
                     {isSubmitting ? ()}"
-          <div className="flex items-center justify-center"><
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
+          <div className=""flex items-center justify-center"><"
+                        <div className=""animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><"
 /
 
           <
@@ -1117,61 +978,56 @@ type="submit" disabled = { isSubmitting };
               <
             <
             {/* Sidebar *
-            <div className="space-y-8"><
+            <div className=""space-y-8"><"
               {/* Benefits *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?<
-                <div className="space-y-4"><
+              <div className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><"
+                <h3 className=""text-xl font-bold text-white mb-6">Why Request a Quote?<"
+                <div className=""space-y-4"><"
                   {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-start"><
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><
-                        <benefit.icon className="w-4 h-4 text-cyan-400" /><
+          <div key={index} className=""flex items-start"><"
+                      <div className=""w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><"
+                        <benefit.icon className=""w-4 h-4 text-cyan-400" /><"
                       <
                       <div><
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}<
-                        <p className="text-xs text-gray-300">{benefit.description}<
+                        <h4 className=""text-sm font-semibold text-white mb-1">{benefit.title}<"
+                        <p className=""text-xs text-gray-300">{benefit.description}<"
                       <
                     <
                   ))}
                 <
               <
               {/* Why Choose Us *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?<
-                <div className="space-y-4"><
+              <div className=""bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><"
+                <h3 className=""text-xl font-bold text-white mb-6">Why Choose Us?<"
+                <div className=""space-y-4"><"
                   {whyChooseUs.map((item, index) => ()}"
-          <div key={index} className="flex items-start"><
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><
-                        <item.icon className="w-4 h-4 text-purple-400" /><
+          <div key={index} className=""flex items-start"><"
+                      <div className=""w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><"
+                        <item.icon className=""w-4 h-4 text-purple-400" /><"
                       <
                       <div><
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}<
-                        <p className="text-xs text-gray-300">{item.description}<
+                        <h4 className=""text-sm font-semibold text-white mb-1">{item.title}<"
+                        <p className=""text-xs text-gray-300">{item.description}<"
                       <
                     <
                   ))}
                 <
               <
               {/* Contact Info *
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"><
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?<
-                <p className="text-gray-300 text-sm mb-4"><
+              <div className=""bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"><"
+                <h3 className=""text-xl font-bold text-white mb-4">Need Immediate Help?<"
+                <p className=""text-gray-300 text-sm mb-4"><"
 /
 
           <
         <
       <
 
-<<<<<<< HEAD
     </div>
   )};
-=======
       <Footer /><
 
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default RequestQuotePage;
-

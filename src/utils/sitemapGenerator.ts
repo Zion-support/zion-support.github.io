@@ -9,39 +9,22 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number}
-export const _generateSitemap = (url)
-  s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
+export const _generateSitemap="(url)"
+  s: SitemapUrl[]): string="> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
-  const baseUrl = 'http,
+  const baseUrl="'http,'"
   s://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-  const sitemap = `
-          
-          
-          
-          
-          
-          
-          
-          
-
-          <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+  const currentDate="new Date().toISOString().split('T')[0];"
+  const sitemap="`"
+          <?xml version="1.0" encoding=""UTF-8"?>"
+<urlset xmlns=""http:// www.sitemaps.org/schemas/sitemap/0.9"></urlset>"
 ${urls}
   .map((url) => {// TODO: Add content}
 }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
-
+    const fullUrl="url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;"
     return `  
-          
-          
-          
-          
-          
-          
-          
-          
+
           <url></url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
@@ -64,8 +47,8 @@ export const getAllPages = (): SitemapUrl[] => {// TODO: Add content}
 // Define all the pages for the sitemap;
 export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
-  const currentDate = new Date().toISOString().split('T')[0]
-  return [
+  const currentDate="new Date().toISOString().split('T')[0]"
+  return []
   // TOD,
   O: Add items]
     // Main pages;
@@ -191,6 +174,4 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   q: 'yearly' }]
 }"`
-
-
 

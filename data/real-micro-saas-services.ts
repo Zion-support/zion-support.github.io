@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -30,7 +29,7 @@
     email: string;
     address: string}
 }
-export const realMicroSaasServices: RealMicroSaasService[] = [
+export const realMicroSaasServices: RealMicroSaasService[] = []
   // AI-Powered Business Solutions;
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
@@ -2816,7 +2815,7 @@ reviews: 6;
       'LawPay'
       'QuickBooks'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Contract generation'
@@ -2927,7 +2926,7 @@ reviews: 6;
       'Microsoft Teams'
       'Shopify'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Customer support'
@@ -3046,7 +3045,7 @@ reviews: 6;
       'WooCommerce'
       'HubSpot'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Website optimization'
@@ -3175,7 +3174,7 @@ reviews: 6;
     ]
     roi: '80% reduction in editing time',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '80% reduction in editing time'
     competitor,
@@ -3290,7 +3289,7 @@ reviews: 6;
       'AWS'
       'Google Cloud'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Business intelligence'
@@ -3420,7 +3419,7 @@ reviews: 6;
     ]
     roi: '50% reduction in time-to-hire',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
@@ -3545,7 +3544,7 @@ reviews: 6;
     ]
     roi: '35% increase in sales conversion rates',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
@@ -3668,7 +3667,7 @@ reviews: 6;
     ]
     roi: '200% faster market insights generation',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '200% faster market insights generation'
     competitor,
@@ -3791,7 +3790,7 @@ reviews: 6;
     ]
     roi: '300% improvement in blockchain intelligence',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
@@ -3915,7 +3914,7 @@ reviews: 6;
     ]
     roi: '40% reduction in cloud costs',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '40% reduction in cloud costs'
     competitor,
@@ -3940,7 +3939,7 @@ reviews: 6;
     period: '/month',
     description:,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
-    features: [
+    features: []
     marketSiz,
   e: '$4.8B cloud cost management market'
     growthRat,
@@ -4008,7 +4007,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '15 minutes'}
-    features: [
+    features: []
       'Inbox labeling and prioritization',
       'On-brand response templates',
       'Sentiment and urgency detection',
@@ -4237,7 +4236,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
@@ -4277,7 +4276,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Ticketing & check-in',
       'Session builder',
       'Email campaigns',
@@ -4315,7 +4314,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour'}
-    features: [
+    features: []
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
@@ -4355,7 +4354,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
@@ -4394,7 +4393,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours'}
-    features: [
+    features: []
       'Email-to-ticket',
       'SLA timers',
       'Macros/automations',
@@ -4433,7 +4432,7 @@ reviews: 6;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour'}
-    features: [
+    features: []
       'Self-service portal',
       'Label generation',
       'Return reasons analytics',
@@ -4474,7 +4473,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '20 minutes'}
-    features: [
+    features: []
       'Sequences',
       'Rules & triggers',
       'Open/click tracking',
@@ -4512,7 +4511,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Speaker diarization',
       'Timecodes',
       'Chapters',
@@ -4552,7 +4551,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Entity/relation extraction',
       'Schema editor',
       'Vector + graph search',
@@ -4590,7 +4589,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Provider adapters',
       'Policy engine',
       'PII redaction',
@@ -4629,7 +4628,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Event collector',
       'Connector library',
       'dbt models',
@@ -4668,7 +4667,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours'}
-    features: [
+    features: []
       'Schema registry',
       'Diff viewer',
       'CI gates',
@@ -5638,11 +5637,11 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     review,
   s: 6}];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>}];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category),    i,
   d: 'data - contracts - hub'
@@ -5704,7 +5703,7 @@ export const getServicesByCategory = (categor)
   s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPositio,
@@ -5724,7 +5723,7 @@ implementationDetail,
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
@@ -5867,7 +5866,7 @@ ratin,
   g: 4 && 4.5;
 review,
   s: 14};
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -5926,15 +5925,15 @@ export const serviceCategories = [
   return realMicroSaasServices.filter(service => service.category === category)
 };
 export const getServicesByPriceRange = (min: number) max: number) =>,
-  return realMicroSaasServices.filter(service =>)
-export const getServicesByPriceRange = (mi)
+  return realMicroSaasServices.filter(service=">)"
+export const getServicesByPriceRange="(mi)"
   n: number) ma,
   x: number) =>,
-  return realMicroSaasServices.filter(service =>);
-const _price = parseFloat(service.price.replace('$') '').replace(; ''));
+  return realMicroSaasServices.filter(service=">);"
+const _price="parseFloat(service.price.replace('$') '').replace(; ''));"
     return price >= min && (max === Infinity || price <= max)})
 };
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'
   i,
@@ -6009,14 +6008,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export const,
   realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
-  {
+  {}
     id: 'ai-legal-document-generator';
     name: 'AI Legal Document Generator';
     tagline: 'Generate legally compliant documents in seconds with AI';
     price: '$89';
     period: '/month';
     description: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.';
-    features: [
+    features: []
       '500+ legal document templatesAI-powered compliance checkingReal-time legal updatesMulti-jurisdiction supportElectronic signature integrationDocument version controlLegal research integrationClient portal access';
       'Automated legal advice24/7 legal support'
     ];
@@ -6051,7 +6050,7 @@ export const,
     price: '$149';
     period: '/month';
     description: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.';
-    features: [
+    features: []
       'Multi-language support (50+ languages)Natural conversation flowSentiment analysisAutomatic ticket routingKnowledge base integrationVoice and text supportAnalytics dashboardCustom branding';
       'API integrationsReal-time learning'
     ];
@@ -6086,7 +6085,7 @@ export const,
     price: '$199';
     period: '/month';
     description: 'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website window.window.window.performance. Uses AI to identify opportunities and implement best practices automatically.';
-    features: [
+    features: []
       'AI-powered keyword researchAutomatic on-page optimizationCompetitor analysisContent optimization suggestionsTechnical SEO auditsRanking trackingBacklink monitoringLocal SEO optimization';
       'Mobile optimizationPerformance analytics'
     ];
@@ -6121,7 +6120,7 @@ export const,
     price: '$299';
     period: '/month';
     description: 'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.';
-    features: [
+    features: []
       'AI-powered scene detectionAutomatic color correctionSmart audio enhancementBackground removalText-to-speech generationAuto-captioningVideo templates libraryCloud rendering';
       'Collaborative editingExport to multiple formats'
     ];
@@ -6156,7 +6155,7 @@ export const,
     price: '$399';
     period: '/month';
     description: 'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.';
-    features: [
+    features: []
       'AI-powered data discoveryAutomated pattern recognitionPredictive analyticsReal-time data processingInteractive dashboardsData visualizationCustom reportingData integration tools';
       'API accessAdvanced security'
     ];
@@ -6191,7 +6190,7 @@ export const,
     price: '$179';
     period: '/month';
     description: 'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.';
-    features: [
+    features: []
       'AI candidate matchingAutomated resume screeningSkill assessment toolsInterview schedulingBackground verificationDiversity analyticsCandidate trackingPerformance analytics';
       'Integration with job boardsMobile app access'
     ];
@@ -6226,7 +6225,7 @@ export const,
     price: '$249';
     period: '/month';
     description: 'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.';
-    features: [
+    features: []
       'AI lead scoringSales forecastingPipeline managementEmail automationMeeting schedulingPerformance analyticsCRM integrationMobile sales app';
       'Real-time notificationsCustom workflows'
     ];
@@ -6261,7 +6260,7 @@ export const,
     price: '$159';
     period: '/month';
     description: 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.';
-    features: [
+    features: []
       'AI market analysisCompetitor monitoringTrend predictionCustomer sentiment analysisMarket size estimationCustom reportsData visualizationAPI access';
       'Real-time updatesExport capabilities'
     ];
@@ -6296,7 +6295,7 @@ export const,
     price: '$599';
     period: '/month';
     description: 'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.';
-    features: [
+    features: []
       'Real-time transaction monitoringAI pattern recognitionRisk assessmentCompliance reportingPortfolio trackingMarket analysisAPI integrationCustom alerts';
       'Data exportMulti-chain support'
     ];
@@ -6331,7 +6330,7 @@ export const,
     price: '$199';
     period: '/month';
     description: 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.';
-    features: [
+    features: []
       'AI cost analysisAutomated optimizationMulti-cloud supportReal-time monitoringCost forecastingResource recommendationsAutomated scalingBudget alerts';
       'Detailed reportingAPI integration'
     ];
@@ -6366,7 +6365,7 @@ export const,
     price: '$179';
     period: '/month';
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
-    features: [
+    features: []
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
       'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
@@ -6546,7 +6545,7 @@ export const,
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-    benefits: [
+    benefits: []
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
     targetAudience: ['Support teamsSales opsFoundersAgencies'];
@@ -7615,21 +7614,21 @@ export const,
   s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
-  return realMicroSaasServices.filter(service => {),
-export const getServicesByPriceRange = (mi)
+  return realMicroSaasServices.filter(service="> {),"
+export const getServicesByPriceRange="(mi)"
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
-    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price="parseFloat(service.price.replace('$') '').replace(} ''));"
     return price >= min && (max === Infinity || price <= max)})};
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
-  return realMicroSaasServices.filter(service => service.popular)}
+  return realMicroSaasServices.filter(service="> service.popular)}"
 };
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
@@ -9898,7 +9897,7 @@ export const serviceCategories = [
     address: string;
     website: string}
 }
-export const realMicroSaasServices: RealMicroSaasService[] = [
+export const realMicroSaasServices: RealMicroSaasService[] = []
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -10067,7 +10066,7 @@ export const,
       'LawPay'
       'QuickBooks'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Contract generation'
@@ -10178,7 +10177,7 @@ export const,
       'Microsoft Teams'
       'Shopify'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Customer support'
@@ -10297,7 +10296,7 @@ export const,
       'WooCommerce'
       'HubSpot'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Website optimization'
@@ -10426,7 +10425,7 @@ export const,
     ]
     roi: '80% reduction in editing time',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '80% reduction in editing time'
     competitor,
@@ -10541,7 +10540,7 @@ export const,
       'AWS'
       'Google Cloud'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Business intelligence'
@@ -10671,7 +10670,7 @@ export const,
     ]
     roi: '50% reduction in time-to-hire',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
@@ -10796,7 +10795,7 @@ export const,
     ]
     roi: '35% increase in sales conversion rates',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
@@ -10919,7 +10918,7 @@ export const,
     ]
     roi: '200% faster market insights generation',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '200% faster market insights generation'
     competitor,
@@ -11042,7 +11041,7 @@ export const,
     ]
     roi: '300% improvement in blockchain intelligence',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
@@ -11166,7 +11165,7 @@ export const,
     ]
     roi: '40% reduction in cloud costs',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '40% reduction in cloud costs'
     competitor,
@@ -11191,7 +11190,7 @@ export const,
     period: '/month',
     description:,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
-    features: [
+    features: []
     marketSiz,
   e: '$4.8B cloud cost management market'
     growthRat,
@@ -11259,7 +11258,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '15 minutes'}
-    features: [
+    features: []
       'Inbox labeling and prioritization',
       'On-brand response templates',
       'Sentiment and urgency detection',
@@ -11488,7 +11487,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
@@ -11528,7 +11527,7 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Ticketing & check-in',
       'Session builder',
       'Email campaigns',
@@ -11566,7 +11565,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour'}
-    features: [
+    features: []
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
@@ -11606,7 +11605,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
@@ -11645,7 +11644,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours'}
-    features: [
+    features: []
       'Email-to-ticket',
       'SLA timers',
       'Macros/automations',
@@ -11684,7 +11683,7 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour'}
-    features: [
+    features: []
       'Self-service portal',
       'Label generation',
       'Return reasons analytics',
@@ -11725,7 +11724,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '20 minutes'}
-    features: [
+    features: []
       'Sequences',
       'Rules & triggers',
       'Open/click tracking',
@@ -11763,7 +11762,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '5 minutes'}
-    features: [
+    features: []
       'Speaker diarization',
       'Timecodes',
       'Chapters',
@@ -11803,7 +11802,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Entity/relation extraction',
       'Schema editor',
       'Vector + graph search',
@@ -11841,7 +11840,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Provider adapters',
       'Policy engine',
       'PII redaction',
@@ -11880,7 +11879,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day'}
-    features: [
+    features: []
       'Event collector',
       'Connector library',
       'dbt models',
@@ -11919,7 +11918,7 @@ reviews: 19;
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours'}
-    features: [
+    features: []
       'Schema registry',
       'Diff viewer',
       'CI gates',
@@ -12869,7 +12868,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     review,
   s: 6}];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>;
     ro,
   i: 'Reduce data breakage incidents by 5070%.'
@@ -12895,7 +12894,7 @@ export const getServicesByCategory = (categor)
   s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPositio,
@@ -12915,7 +12914,7 @@ implementationDetail,
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
@@ -13037,7 +13036,7 @@ launch_dat,
   e: '2025 - 01 - 20'
 customer,
   s: 60;
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -13071,7 +13070,7 @@ reviews: 14;
 review,
   s: 14}
 ;
-export const service_categories = [
+export const service_categories="[]"
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -13115,14 +13114,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export interface RealMicroSaasService {;
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
-  {
+  {}
     id: 'ai-legal-document-generator';
     name: 'AI Legal Document Generator';
     tagline: 'Generate legally compliant documents in seconds with AI';
     price: '$89';
     period: '/month';
     description: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.';
-    features: [
+    features: []
       '500+ legal document templatesAI-powered compliance checkingReal-time legal updatesMulti-jurisdiction supportElectronic signature integrationDocument version controlLegal research integrationClient portal access';
       'Automated legal advice24/7 legal support'
     ];
@@ -13157,7 +13156,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$149';
     period: '/month';
     description: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.';
-    features: [
+    features: []
       'Multi-language support (50+ languages)Natural conversation flowSentiment analysisAutomatic ticket routingKnowledge base integrationVoice and text supportAnalytics dashboardCustom branding';
       'API integrationsReal-time learning'
     ];
@@ -13192,7 +13191,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$199';
     period: '/month';
     description: 'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website window.window.window.performance. Uses AI to identify opportunities and implement best practices automatically.';
-    features: [
+    features: []
       'AI-powered keyword researchAutomatic on-page optimizationCompetitor analysisContent optimization suggestionsTechnical SEO auditsRanking trackingBacklink monitoringLocal SEO optimization';
       'Mobile optimizationPerformance analytics'
     ];
@@ -13227,7 +13226,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$299';
     period: '/month';
     description: 'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.';
-    features: [
+    features: []
       'AI-powered scene detectionAutomatic color correctionSmart audio enhancementBackground removalText-to-speech generationAuto-captioningVideo templates libraryCloud rendering';
       'Collaborative editingExport to multiple formats'
     ];
@@ -13262,7 +13261,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$399';
     period: '/month';
     description: 'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.';
-    features: [
+    features: []
       'AI-powered data discoveryAutomated pattern recognitionPredictive analyticsReal-time data processingInteractive dashboardsData visualizationCustom reportingData integration tools';
       'API accessAdvanced security'
     ];
@@ -13297,7 +13296,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$179';
     period: '/month';
     description: 'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.';
-    features: [
+    features: []
       'AI candidate matchingAutomated resume screeningSkill assessment toolsInterview schedulingBackground verificationDiversity analyticsCandidate trackingPerformance analytics';
       'Integration with job boardsMobile app access'
     ];
@@ -13332,7 +13331,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$249';
     period: '/month';
     description: 'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.';
-    features: [
+    features: []
       'AI lead scoringSales forecastingPipeline managementEmail automationMeeting schedulingPerformance analyticsCRM integrationMobile sales app';
       'Real-time notificationsCustom workflows'
     ];
@@ -13367,7 +13366,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$159';
     period: '/month';
     description: 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.';
-    features: [
+    features: []
       'AI market analysisCompetitor monitoringTrend predictionCustomer sentiment analysisMarket size estimationCustom reportsData visualizationAPI access';
       'Real-time updatesExport capabilities'
     ];
@@ -13402,7 +13401,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$599';
     period: '/month';
     description: 'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.';
-    features: [
+    features: []
       'Real-time transaction monitoringAI pattern recognitionRisk assessmentCompliance reportingPortfolio trackingMarket analysisAPI integrationCustom alerts';
       'Data exportMulti-chain support'
     ];
@@ -13437,7 +13436,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$199';
     period: '/month';
     description: 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.';
-    features: [
+    features: []
       'AI cost analysisAutomated optimizationMulti-cloud supportReal-time monitoringCost forecastingResource recommendationsAutomated scalingBudget alerts';
       'Detailed reportingAPI integration'
     ];
@@ -13472,7 +13471,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$179';
     period: '/month';
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
-    features: [
+    features: []
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
       'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
@@ -13652,7 +13651,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-    benefits: [
+    benefits: []
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
     targetAudience: ['Support teamsSales opsFoundersAgencies'];
@@ -14721,21 +14720,21 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
-  return realMicroSaasServices.filter(service => {),
-export const getServicesByPriceRange = (mi)
+  return realMicroSaasServices.filter(service="> {),"
+export const getServicesByPriceRange="(mi)"
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
-    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price="parseFloat(service.price.replace('$') '').replace(} ''));"
     return price >= min && (max === Infinity || price <= max)})};
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
-  return realMicroSaasServices.filter(service => service.popular)}
+  return realMicroSaasServices.filter(service="> service.popular)}"
 };
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
@@ -14753,14 +14752,14 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export interface RealMicroSaasService {;
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
-  {
+  {}
     id: 'ai-legal-document-generator';
     name: 'AI Legal Document Generator';
     tagline: 'Generate legally compliant documents in seconds with AI';
     price: '$89';
     period: '/month';
     description: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.';
-    features: [
+    features: []
       '500+ legal document templatesAI-powered compliance checkingReal-time legal updatesMulti-jurisdiction supportElectronic signature integrationDocument version controlLegal research integrationClient portal access';
       'Automated legal advice24/7 legal support'
     ];
@@ -14795,7 +14794,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$149';
     period: '/month';
     description: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.';
-    features: [
+    features: []
       'Multi-language support (50+ languages)Natural conversation flowSentiment analysisAutomatic ticket routingKnowledge base integrationVoice and text supportAnalytics dashboardCustom branding';
       'API integrationsReal-time learning'
     ];
@@ -14830,7 +14829,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$199';
     period: '/month';
     description: 'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website window.window.window.performance. Uses AI to identify opportunities and implement best practices automatically.';
-    features: [
+    features: []
       'AI-powered keyword researchAutomatic on-page optimizationCompetitor analysisContent optimization suggestionsTechnical SEO auditsRanking trackingBacklink monitoringLocal SEO optimization';
       'Mobile optimizationPerformance analytics'
     ];
@@ -14865,7 +14864,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$299';
     period: '/month';
     description: 'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.';
-    features: [
+    features: []
       'AI-powered scene detectionAutomatic color correctionSmart audio enhancementBackground removalText-to-speech generationAuto-captioningVideo templates libraryCloud rendering';
       'Collaborative editingExport to multiple formats'
     ];
@@ -14900,7 +14899,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$399';
     period: '/month';
     description: 'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.';
-    features: [
+    features: []
       'AI-powered data discoveryAutomated pattern recognitionPredictive analyticsReal-time data processingInteractive dashboardsData visualizationCustom reportingData integration tools';
       'API accessAdvanced security'
     ];
@@ -14935,7 +14934,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$179';
     period: '/month';
     description: 'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.';
-    features: [
+    features: []
       'AI candidate matchingAutomated resume screeningSkill assessment toolsInterview schedulingBackground verificationDiversity analyticsCandidate trackingPerformance analytics';
       'Integration with job boardsMobile app access'
     ];
@@ -14970,7 +14969,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$249';
     period: '/month';
     description: 'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.';
-    features: [
+    features: []
       'AI lead scoringSales forecastingPipeline managementEmail automationMeeting schedulingPerformance analyticsCRM integrationMobile sales app';
       'Real-time notificationsCustom workflows'
     ];
@@ -15005,7 +15004,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$159';
     period: '/month';
     description: 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.';
-    features: [
+    features: []
       'AI market analysisCompetitor monitoringTrend predictionCustomer sentiment analysisMarket size estimationCustom reportsData visualizationAPI access';
       'Real-time updatesExport capabilities'
     ];
@@ -15040,7 +15039,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$599';
     period: '/month';
     description: 'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.';
-    features: [
+    features: []
       'Real-time transaction monitoringAI pattern recognitionRisk assessmentCompliance reportingPortfolio trackingMarket analysisAPI integrationCustom alerts';
       'Data exportMulti-chain support'
     ];
@@ -15075,7 +15074,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$199';
     period: '/month';
     description: 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.';
-    features: [
+    features: []
       'AI cost analysisAutomated optimizationMulti-cloud supportReal-time monitoringCost forecastingResource recommendationsAutomated scalingBudget alerts';
       'Detailed reportingAPI integration'
     ];
@@ -15110,7 +15109,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: '$179';
     period: '/month';
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
-    features: [
+    features: []
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
       'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
@@ -15290,7 +15289,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-    benefits: [
+    benefits: []
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
     targetAudience: ['Support teamsSales opsFoundersAgencies'];
@@ -16359,21 +16358,21 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor)
+export const getServicesByCategory="(categor)"
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
-  return realMicroSaasServices.filter(service => {),
-export const getServicesByPriceRange = (mi)
+  return realMicroSaasServices.filter(service="> {),"
+export const getServicesByPriceRange="(mi)"
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
-    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price="parseFloat(service.price.replace('$') '').replace(} ''));"
     return price >= min && (max === Infinity || price <= max)})};
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
-  return realMicroSaasServices.filter(service => service.popular)}
+  return realMicroSaasServices.filter(service="> service.popular)}"
 };
-export const serviceCategories = [
+export const serviceCategories="[]"
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
@@ -18018,8 +18017,8 @@ i,
   e: '2025-02-08' customer,
   s: 19,
   rating: 4.6,
-  reviews: 6 }]; // Helper functions export const getServicesByCategory = (categor)
-  y: string) => }]; // Helper functions; export const getServicesByCategory = (categor)
+  reviews: 6 }]; // Helper functions export const getServicesByCategory="(categor)"
+  y: string) => }]; // Helper functions; export const getServicesByCategory="(categor)"
   y: string) =>: unknown ' return realMicroSaasServices.filter (service => service.category === category), i,
   d: 'data - contracts - hub'' nam,
   e: 'Data Contracts Hub'' taglin,
@@ -18051,7 +18050,7 @@ i,
   e: '2025 - 02 - 08' customer,
   s: 19, ratin,
   g: 4 && 4.6, review,
-  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor)
+  s: 6 } ]; // Helper functions export const getServicesByCategory="(categor)"
   y: string) => return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);' marketPositio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' techStac,
@@ -18059,7 +18058,7 @@ i,
   n: true,' implementationDetail,
   s: 'Template gallery, response store, analytics, export jobs.' ratin,
   g: 4.6, review,
-  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
+  s: 6} ]; // Helper functions; export const getServicesByCategory="(categor)"
   y: string) =>: unknown return realMicroSaasServices.filter (service => service.category === category);' market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' tech_stac,
@@ -18104,9 +18103,9 @@ i,
   e: '2025 - 01 - 20' customer,
   s: 60; ratin,
   g: 4 && 4.5, review,
-  s: 14 }; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT';' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) };' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }; export const getServicesByPriceRange = (mi)
+  s: 14 }; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT';' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) };' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }; export const getServicesByPriceRange="(mi)"
   n: number) ma,
-  x: number) => return realMicroSaasServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(; '')); return price >= min && (max === Infinity || price <= max) }) }; export const serviceCategories = [' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' i,
+  x: number) => return realMicroSaasServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(; '')); return price >= min && (max === Infinity || price <= max) }) }; export const serviceCategories="[' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' i,"
   d: string; nam,
   e: string; taglin,
   e: string; pric,
@@ -18545,10 +18544,10 @@ i,
   e: '2025-02-08'; customer,
   s: 19; ratin,
   g: 4.6; review,
-  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  s: 6} ]; // Helper functions; export const getServicesByCategory="(categor)"
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange="(mi)"
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ]; websit,
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories="[;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ]; websit,"
   e: string}' nam,
   e: 'AI Legal Document Generator',' taglin,
   e: 'Generate legally compliant documents in seconds with AI',' pric,
@@ -20025,7 +20024,7 @@ i,
   e: '2025-02-08' customer,
   s: 19,
   rating: 4.6,
-  reviews: 6 }]; // Helper functions export const getServicesByCategory = (categor)
+  reviews: 6 }]; // Helper functions export const getServicesByCategory="(categor)"
   y: string) => ' ro,
   i: 'Reduce data breakage incidents by 50–70%.'' use_case,
   s: ['Warehouse governance_analytics contracts'];' integration,
@@ -20037,7 +20036,7 @@ i,
   r: false;' launch_dat,
   e: '2025 - 02 - 08' customer,
   s: 19, review,
-  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor)
+  s: 6 } ]; // Helper functions export const getServicesByCategory="(categor)"
   y: string) => return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);' marketPositio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' techStac,
@@ -20045,7 +20044,7 @@ i,
   n: true,' implementationDetail,
   s: 'Template gallery, response store, analytics, export jobs.' ratin,
   g: 4.6, review,
-  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
+  s: 6} ]; // Helper functions; export const getServicesByCategory="(categor)"
   y: string) =>: unknown return realMicroSaasServices.filter (service => service.category === category);' market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' tech_stac,
@@ -20082,8 +20081,8 @@ i,
   r: 'from - purple - 600 to - pink - 600' popula,
   r: false;' launch_dat,
   e: '2025 - 01 - 20' customer,
-  s: 60; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' review,
-  s: 14} ; export const service_categories = [;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  s: 60; export const serviceCategories="[' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' review,"
+  s: 14} ; export const service_categories="[;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}"
   s: string} websit,
   e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
@@ -20493,10 +20492,10 @@ i,
   e: '2025-02-08'; customer,
   s: 19; ratin,
   g: 4.6; review,
-  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  s: 6} ]; // Helper functions; export const getServicesByCategory="(categor)"
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange="(mi)"
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories="[;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}"
   s: string} websit,
   e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
@@ -20906,11 +20905,10 @@ i,
   e: '2025-02-08'; customer,
   s: 19; ratin,
   g: 4.6; review,
-  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
+  s: 6} ]; // Helper functions; export const getServicesByCategory="(categor)"
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange="(mi)"
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; '
-=======
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max)})}; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories="[;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; '"
     reviews: 19},
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -20918,4 +20916,3 @@ i,
     description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
     category: 'Sales'
     price: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

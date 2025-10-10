@@ -15,7 +15,7 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */}
   customers: number;
   rating: number;
   reviews: number}
-export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
+export const zionInnovativeServices2025: ZionInnovativeService2025[] = []
   // AI-Powered Quantum Edge Computing;
     id: 'quantum-edge-ai-platform',
     name: 'Quantum Edge AI Platform',

@@ -1,13 +1,10 @@
-export type EnterpriseITSolution =
-    starte,
+export type EnterpriseITSolution="starte,"
   r: string, // e.g. "$2, 999 / mo"
-export type EnterpriseITSolution =
-    starte,"
+export type EnterpriseITSolution="starte,""
   r: string, // e.g. "$2, 999 / mo"
-export type EnterpriseITSolution =
-export type EnterpriseITSolution = {;
-export type EnterpriseITSolution =
-  id: string;
+export type EnterpriseITSolution=""
+export type EnterpriseITSolution="{;"
+export type EnterpriseITSolution="id: string;"
   name: string;
   tagline?: string;
   description: string;
@@ -19,7 +16,7 @@ export type EnterpriseITSolution =
     | 'Cybersecurity',
   pricing: unknown}
     starter: string, // e.g. "$2} 999 / mo"
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
+export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
   g: unknown}
     starte,"
   r: string, // e.g. "$2} 999 / mo"
@@ -747,7 +744,7 @@ export const,
   n: string;
 	tagline?: string;
 	description: string;
-export type EnterpriseITSolution =,
+export type EnterpriseITSolution=","
 	id: string;
 	name: string;
 	tagline?: string,
@@ -764,8 +761,7 @@ export type EnterpriseITSolution =,
 		starter: string, // e && e.g. "$2,999/mo"
 	descriptio,
   n: string,
-export type EnterpriseITSolution =
-	i,
+export type EnterpriseITSolution="i,"
   d: string,
 	nam,
   e: string,
@@ -1641,7 +1637,7 @@ export const,
 ];
 },
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-	{
+	{}
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
 		id: 'zero-trust-network-architecture',
@@ -1728,7 +1724,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService:
         realService: true;
-export type EnterpriseITSolution = {
+export type EnterpriseITSolution="{}"
 	id: string;
 	name: string;
 	tagline?: string;,
@@ -1917,7 +1913,7 @@ export const,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
   e: true;
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
+export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}"
@@ -1934,7 +1930,7 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
 	rating?: number;
 	launchDate?: string};
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-	{
+	{}
 		id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
 		tagline: 'Identity-first perimeterless security for modern enterprises';
@@ -2162,9 +2158,9 @@ export const,
 		realServic,
   e: true}
 ];
-export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
+export type EnterpriseITSolution="starte,""
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution="starte,""
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
   g: starte,"
   r: string, // e.g. "$2} 999 / mo" professional?: string; enterprise?: string}; categor,
@@ -2429,7 +2425,7 @@ export type EnterpriseITSolution = starte,"
   d: string, nam,
   e: string, tagline?: string; descriptio,
   n: string; tagline?: string; descriptio,
-  n: string, export type EnterpriseITSolution = i,
+  n: string, export type EnterpriseITSolution="i,"
   d: string, nam,
   e: string, tagline?: string, descriptio,
   n: string, ' categor,
@@ -2846,7 +2842,7 @@ export type EnterpriseITSolution = starte,"
   s: ['Audit readinessInsider risk reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
+  e: true export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'} pricin,
   g: {/* TODO: Fix JSX expression */}"
   r: string, // e.g. "$2,999/mo" professional?: string}; enterprise?: string}; feature,

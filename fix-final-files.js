@@ -3,10 +3,10 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// // __dirname removed
+// const __filename="fileURLToPath(import.meta.url);"
+// // __dirname removed;
 //Files that need to be fixed;
-const filesToFix = [
+const filesToFix="[]"
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
   'src/content/blog-posts.ts',
@@ -27,47 +27,47 @@ const filesToFix = [
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }
-const ${componentName}: React.FC<${componentName}Props> = ({ 
-  className = '', 
-  children}) => {
+const ${componentName}: React.FC<${componentName}Props> = ({}
+  className="'',"
+  children}) => {}
 return (
 
   return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+    <div className="{\`${componentName.toLowerCase()}-component \${className}\`}></div>"
 );
 }</div>
       {children || (
-        <div className="p-4 text-center text-gray-600">;
+        <div className=""p-4 text-center text-gray-600">;"
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
+    <div className="{\`${componentName.toLowerCase()}-component \${className}\`}></div>"
       {/* TODO: Fix JSX expression */}
-          <h3 className="text-lg font-semibold mb-2">${componentName}</h3>
+          <h3 className=""text-lg font-semibold mb-2">${componentName}</h3>"
           <p>Component</p> placeholder - implementation needed</p>
         </div>
       )}
     </div>
   )};
 export default ${componentName};`
-`} else if (isTs) {
+`} else if (isTs) {}
     return `//${componentName} - TypeScript definitions and utilities;
-export interface ${componentName}Config {
+export interface ${componentName}Config {}
   //Configuration properties}
-export const default${componentName}Config: ${componentName}Config = {
+export const default${componentName}Config: ${componentName}Config="{}"
   //Default configuration};
-export default {
+export default {}
   default${componentName}Config} else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
 }
 export const default${componentName}Confi,
-  g: ${componentName}Config = {/* TODO: Fix JSX expression */}
+  g: ${componentName}Config="{/* TODO: Fix JSX expression */}"
 };
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config};`
-`} else {
+`} else {}
     return `//${componentName} - JavaScript module;
-export const ${componentName} = {
+export const ${componentName} = {}
   //Module implementation} else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {/* TODO: Fix JSX expression */}

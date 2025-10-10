@@ -4,44 +4,43 @@ interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
-  size = 'md',
-  className = '',
-  color = 'blue',
-  text}) => {
+  size="'md',"
+  className="'',"
+  color="'blue',"
+  text}) => {}
 return (
 ;
-const sizeClasses = {
+const sizeClasses="{}"
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
 export const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps>
+  LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps>
 );
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   };
 ;
-const colorClasses = {/* TODO: Fix JSX expression */}
+const colorClasses="{/* TODO: Fix JSX expression */}"
   };
 
-  return(<div className={`flex items-center justify-center ${className}`}>
-      <div;)
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})
+  return(<div className="{`flex items-center justify-center ${className}`}></div>"
+      <div ;)></div>
+        className="{`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})"
       ></div>)
-      {text && <span className="ml-2 text-sm text-gray-600">{text}</span>})
+      {text && <span className=""ml-2 text-sm text-gray-600">{text}</span>})"
     </div>)
   return (
-    <div className={`flex items-center justify-center ${className}`}></div>
-      <div
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
+    <div className="{`flex items-center justify-center ${className}`}></div>"
+      <div className="{`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}></div>"
       ></div>
-      {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
+      {text && <span className=""ml-2 text-sm text-gray-600">{text}</span>}"
     </div>
-  return (<div className={`flex items-center justify-center ${className}`}></div>
+  return (<div className="{`flex items-center justify-center ${className}`}></div>"
       <div></div>`
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
+        className="{`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}"
       ></div>
-      {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
+      {text && <span className=""ml-2 text-sm text-gray-600">{text}</span>}"
     </div>)
   )};
 

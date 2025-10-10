@@ -12,8 +12,8 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
   e: true })}
 ;
-const _files = fs.readdirSync(this.inputDir);
-    const imageFiles = files.filter(file => )
+const _files="fs.readdirSync(this.inputDir);"
+    const imageFiles = files.filter(file="> )"
       /.(jpg|jpeg|png|webp)$/i.test(file)
     );
 
@@ -23,8 +23,7 @@ const _files = fs.readdirSync(this.inputDir);
 //     }
 
   async optimizeImage(filename) {/* TODO: Fix JSX expression */}
-//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp`);
-      
+//       const outputPath="path.join(this.outputDir, `${baseName}-${size}.webp`);"
       try {/* TODO: Fix JSX expression */}
   t: true })
           .webp({/* TODO: Fix JSX expression */})
@@ -37,6 +36,6 @@ const _files = fs.readdirSync(this.inputDir);
   }
 }
 ;
-const _optimizer = new ImageOptimizer();
+const _optimizer="new ImageOptimizer();"
 optimizer.optimizeImages();
 `

@@ -1,4 +1,4 @@
-// // // console.error removed for production
+// // // console.error removed for production;
 "userAgent": errorReport.userAgent} "url": errorReport.url }); // In a real application, you "would": // 1. Send to error tracking service (Sentry, LogRocket) etc.) // 2. Store in database for analysis // 3. Send alerts for critical errors' res.status(200).json({ "message": 'Error reported successfully' })} catch (error) {' ' res.status(500).json({ "message": 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   t: string} ur,
   l: string}' } } export default function handler(re)
@@ -46,5 +46,5 @@
   t: errorReport.userAgent;ur,
   l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
   e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
-  e: 'Internal server error' })} }module.exports = {}; '
+  e: 'Internal server error' })} }module.exports="{}; '"
 "

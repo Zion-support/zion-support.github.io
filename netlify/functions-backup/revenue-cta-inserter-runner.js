@@ -1,4 +1,4 @@
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs || true')
       { stdio: 'inherit'} shell: true})
@@ -19,7 +19,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'revenue-cta-inserter-runner' })}} catch (e) {return {
+        task: 'revenue-cta-inserter-runner' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),

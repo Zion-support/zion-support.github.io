@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Shield,
   Search,
   AlertTriangle,
@@ -21,35 +21,33 @@ import {
   TrendingUp,
   Settings,
   Database,
-  Target,
-
-} from 'lucide-react';
+  Target} from 'lucide-react';
 ;
-const PenetrationTestingPage: React.FC = () => {const features = [
-    {
+const PenetrationTestingPage: React.FC = () => {const features="[]"
+    {}
       ico,
     n: Search,
       title: 'Comprehensive Vulnerability Assessment',
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
     },
-    {
+    {}
       icon: Target,
       title: 'Simulated Attack Scenarios',
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
     },
-    {
+    {}
       icon: BarChart,
       title: 'Detailed Security Reports',
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
     },
-    {
+    {}
       icon: Zap,
       title: 'Expert Security Analysis',
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
     }
   ];
 ;
-const benefits = [
+const benefits="[]"
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',
@@ -59,127 +57,114 @@ const benefits = [
     'Expert analysis and reporting',
     'Ongoing security improvement guidance'
   ];
-
-<<<<<<< HEAD
   return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
-        <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" />
+        <meta name="description" content=""Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." /></meta>"
+        <meta name="keywords" content=""penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" /></meta>"
       </Helmet>
-=======
-  return (<div>
+  return (<div></div>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment<
-        <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." 
-        <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" 
+        <meta name="description" content=""Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis."></meta>"
+        <meta name="keywords" content=""penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group"></meta>"
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         {/* Hero Section *
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-                Penetration Testing Services
+        <section className=""pt-20 pb-16 px-4"></section>"
+          <div className=""max-w-7xl mx-auto"></div>"
+            <div className=""text-center mb-16"></div>"
+              <h1 className=""text-5xl md: text-6xl font-bold text-white mb-6"></h1>"
+                Penetration Testing Services;
               <
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className=""text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
                 Identify and fix security vulnerabilities before attackers exploit them. 
                 Our expert penetration testing services help secure your systems and protect your business.
               <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Penetration Testing Approach
+              <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <button className=""bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"></button>"
+          <div className=""max-w-7xl mx-auto"></div>"
+            <div className=""text-center mb-16"></div>"
+              <h2 className=""text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
+                Our Penetration Testing Approach;
               <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=""text-xl text-gray-300 max-w-3xl mx-auto"></p>"
                 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.
               <
             <
 
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className=""grid grid-cols-1 md:grid-cols-2 l,"></div>"
     g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-<<<<<<< HEAD
-                    <feature.icon className="h-6 w-6 text-white" />
+              {features.map((feature, index) => (<div key={index} className=""bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white"></div>"
+                  <div className=""flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>"
+                    <feature.icon className=""h-6 w-6 text-white" /></feature>"
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className=""text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className=""text-gray-300">{feature.description}</p>"
                 </div>
               ))
             </div>
           </div>
         </section>
-=======
-                    <feature.icon className="h-6 w-6 text-white" 
+                    <feature .icon className=""h-6 w-6 text-white"></feature>"
                   <
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
-                  <p className="text-gray-300">{feature.description}<
+                  <h3 className=""text-xl font-semibold text-white mb-3">{feature.title}<"
+                  <p className=""text-gray-300">{feature.description}<"
                 <)
               ))}
             <
           <
         <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* Benefits Section *
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
+        <section className=""py-20 px-4 sm: px-6 lg:px-8 bg-white"></section>"
+          <div className=""max-w-7xl mx-auto"></div>"
+            <div className=""text-center mb-16"></div>"
+              <h2 className=""text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
+                Key Benefits;
               <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=""text-xl text-gray-300 max-w-3xl mx-auto"></p>"
                 Strengthen your security defenses with our comprehensive penetration testing services.
               <
             <
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className=""flex items-start space-x-3"></div>"
+                  <CheckCircle className=""h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></CheckCircle>"
+                  <p className=""text-gray-300 text-lg">{benefit}</p>"
                 </div>
               ))
             </div>
           </div>
         </section>
-=======
-            <div className="grid grid-cols-1 m,
+            <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6">
-              {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" 
-                  <p className="text-gray-300 text-lg">{benefit}<
+              {benefits.map((benefit), index) => (<div key={index} className=""flex items-start space-x-3"></div>"
+                  <CheckCircle className=""h-6 w-6 text-purple-400 mt-1 flex-shrink-0"></CheckCircle>"
+                  <p className=""text-gray-300 text-lg">{benefit}<"
                 <)
               ))}
             <
           <
         <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* CTA Section *
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className=""py-20 px-4 sm: px-6 lg:px-8"></section>"
+          <div className=""max-w-4xl mx-auto text-center"></div>"
+            <div className=""bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>"
+              <h2 className=""text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
                 Ready to Test Your Security?
               <
-              <p className="text-xl text-purple-100 mb-8">
+              <p className=""text-xl text-purple-100 mb-8"></p>"
                 Contact our security experts to schedule a comprehensive penetration test for your systems.
               <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
+              <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <button className=""bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,"></button>"
     r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  
-                  <Mail className="mr-2 h-5 w-5" 
-                  Email Us
-<<<<<<< HEAD
+                  <Mail className=""mr-2 h-5 w-5"></Mail>"
+                  Email Us;
                 </button>
               </div>
             </div>
@@ -187,7 +172,6 @@ const benefits = [
         </section>
       </div>
     </React.Fragment>)
-=======
                 <
               <
             <
@@ -197,6 +181,4 @@ const benefits = [
     <
   );
 };
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default PenetrationTestingPage;

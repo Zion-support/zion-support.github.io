@@ -4,7 +4,7 @@ import fs from 'fs';
 const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx');
 
 // Navigation links from the Navigation component;
-const navigationLinks = [
+const navigationLinks="[]"
   // Main navigation;
   '/about', '/blog', '/case-studies', '/pricing', '/contact', '/services', '/specialized-services',
   
@@ -39,17 +39,15 @@ const navigationLinks = [
 ];
 
 // Convert to page names (remove leading slash);
-const navigationPages = navigationLinks.map(link => link.substring(1));
-
+const navigationPages = navigationLinks.map(link="> link.substring(1));"
 // Find missing pages;
-const missingPages = navigationPages.filter(page => !existingPages.includes(page));
-
-// console.log removed for production
-missingPages.forEach(page => // console.log removed for production
+const missingPages = navigationPages.filter(page="> !existingPages.includes(page));"
+// console.log removed for production;
+missingPages.forEach(page="> // console.log removed for production;"
 );
 
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
+// console.log removed for production;
+// console.log removed for production;
+// console.log removed for production;
 // Write missing pages to file;
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));

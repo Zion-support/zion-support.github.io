@@ -5,18 +5,18 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
 
-const App: React.FC = () => {
+const App: React.FC = () => {}
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
+    <HelmetProvider></HelmetProvider>
+      <Router></Router>
+        <div className=""min-h-screen bg-white"></div>"
+          <Navigation /></Navigation>
+          <main></main>
+            <Routes></Routes>
+              <Route path="/" element="{<HomePage />} />"
             </Routes>
           </main>
-          <Footer />
+          <Footer /></Footer>
         </div>
       </Router>
     </HelmetProvider>

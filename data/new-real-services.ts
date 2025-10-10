@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -5348,12 +5346,12 @@ reviews: 4;
   s: [;
 ];
 ]
-// const contact = {;
+// const contact="{;"
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com'],
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -5373,7 +5371,7 @@ export const,
     price: '$129';
     period: '/month',,
   description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.';
-    features: [
+    features: []
       'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analyticsSPF/DKIM/DMARC checksInbox rotation support'
     ];
     popular: false;
@@ -5410,7 +5408,7 @@ export const,
     price: '$399';
     period: '/month',,
   description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.';
-    features: [
+    features: []
       'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reportsSOC2/ISO 27001 export'
     ];
     popular: true;
@@ -5447,7 +5445,7 @@ export const,
     price: '$99';
     period: '/month',,
   description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.';
-    features: [
+    features: []
       'Freshness and volume checksSchema drift detectionSLA and SLO trackingIncident routing to Slack/Teams'
     ];
     popular: false;
@@ -5484,7 +5482,7 @@ export const,
     price: '$149';
     period: '/month',,
   description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.';
-    features: [
+    features: []
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
     ];
     popular: true;
@@ -5521,7 +5519,7 @@ export const,
     price: '$129';
     period: '/month',,
   description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.';
-    features: [
+    features: []
       'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
     ];
     popular: false;
@@ -5558,7 +5556,7 @@ export const,
     price: '$99';
     period: '/month',,
   description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.';
-    features: [
+    features: []
       'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
     ];
     popular: true;
@@ -5595,7 +5593,7 @@ export const,
     price: '$249';
     period: '/month',,
   description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';
-    features: [
+    features: []
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
     ];
     popular: true;
@@ -5632,7 +5630,7 @@ export const,
     price: '$179';
     period: '/month',,
   description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
-    features: [
+    features: []
       'Field-level encryptionTokenization APIsConsent enforcementAudit trail and reporting'
     ];
     popular: false;
@@ -5669,7 +5667,7 @@ export const,
     price: '$159';
     period: '/month',,
   description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.';
-    features: [
+    features: []
       'Graph-based anomaly detectionExplainability reportsRisk scoring APIWorkflow actions and webhooks'
     ];
     popular: false;
@@ -5706,7 +5704,7 @@ export const,
     price: '$199';
     period: '/month',,
   description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.';
-    features: [
+    features: []
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
     ];
     popular: true;
@@ -5743,7 +5741,7 @@ export const,
     price: '$79';
     period: '/month',,
   description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';
-    features: [
+    features: []
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
     ];
     popular: true;
@@ -5780,7 +5778,7 @@ export const,
     price: '$99';
     period: '/month',,
   description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.';
-    features: [
+    features: []
       'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'
     ];
     popular: false;
@@ -5817,7 +5815,7 @@ export const,
     price: '$59';
     period: '/month',,
   description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';
-    features: [
+    features: []
       'DLQ and retry policiesInspector and redactionSignature verificationFan-out and transformations'
     ];
     popular: true;
@@ -5854,7 +5852,7 @@ export const,
     price: '$49';
     period: '/month',,
   description: 'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.';
-    features: [
+    features: []
       'Serverless scaleTemplate galleryBrand-safe fontsWebhook on completion'
     ];
     popular: true;
@@ -5891,7 +5889,7 @@ export const,
     price: '$99';
     period: '/month',,
   description: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.';
-    features: [
+    features: []
       'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
     ];
     popular: false;
@@ -5928,7 +5926,7 @@ export const,
     price: '$149';
     period: '/month',,
   description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.';
-    features: [
+    features: []
       'SAML and OIDCSCIM and JIT provisioningBranding and mappingCustomer sandbox'
     ];
     popular: true;
@@ -5965,7 +5963,7 @@ export const,
     price: '$129';
     period: '/month',,
   description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';
-    features: [
+    features: []
       'Network scans and SNMPSoftware inventoryChange trackingCMDB integrations'
     ];
     popular: false;
@@ -6002,7 +6000,7 @@ export const,
     price: '$129';
     period: '/month',,
   description: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.';
-    features: [
+    features: []
       'Questionnaire templatesEvidence collection portalContinuous monitoringRisk scoring'
     ];
     popular: true;
@@ -7826,7 +7824,7 @@ export const,
   e: '$59'' perio,
   d: '/month' descriptio,
   n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7870,10 +7868,8 @@ export const,
   s: 2} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 3} } ]; '
-=======
     roi: 'Cut LLM cost 2045% while improving reliability'
     competitors: ['LangfuseArizeWeights & Biases'];
     marketSize: '$5 B+ AI Ops and Observability'
     growthRate: 'Rapid growth with LLM adoption';
 variant: 'quantum-holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

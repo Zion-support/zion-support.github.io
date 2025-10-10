@@ -1,6 +1,6 @@
 // netlify/functions/orphan-asset-report-runner.js;
-exports.handler = async function () {
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {}"
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/orphan-asset-scanner.cjs'} {/* TODO: Fix JSX expression */})
   o: 'inherit' });
@@ -11,7 +11,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'orphan-asset-report-runner' })}} catch (e) {return {
+        task: 'orphan-asset-report-runner' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),

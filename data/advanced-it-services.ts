@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -30,7 +29,7 @@
     mobile: string;
     email: string;
     address: string;
-export const advancedITServices: AdvancedITService[] = [
+export const advancedITServices: AdvancedITService[] = []
     id: 'quantum-cloud-platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next-generation quantum computing in the cloud',
@@ -270,7 +269,7 @@ varian,
   review,
   s: number;
 ;
-export const advancedITServices: AdvancedITService[] = [
+export const advancedITServices: AdvancedITService[] = []
     id: 'quantum - cloud - platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next - generation quantum computing in the cloud',
@@ -787,7 +786,7 @@ varian,
     ]
     roi: '600% ROI within 12 months through cost savings and performance improvements',
     competitors:
-        competitors: [
+        competitors: []
     ro,
   i: '600% ROI within 12 months through cost savings and performance improvements'
     competitor,
@@ -1716,14 +1715,14 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   reviews: number}
 ;
 export const advancedITServices: AdvancedITService[] = [;
-  {
+  {}
     id: 'quantum-cloud-platform';
     name: 'Quantum Cloud Platform';
     tagline: 'Next-generation quantum computing in the cloud';
     price: '$9,999';
     period: '/month';
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.';
-    features: [
+    features: []
       'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboard';
       'API for integration24/7 quantum support'
     ];
@@ -1764,7 +1763,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$1,999';
     period: '/month';
     description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.';
-    features: [
+    features: []
       'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gateway';
       'Integration tools24/7 support'
     ];
@@ -1805,7 +1804,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$3,999';
     period: '/month';
     description: 'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.';
-    features: [
+    features: []
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIs';
       'Security dashboard24/7 security support'
     ];
@@ -1846,7 +1845,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$2,499';
     period: '/month';
     description: 'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.';
-    features: [
+    features: []
       'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIs';
       'Mobile applications24/7 support'
     ];
@@ -1887,7 +1886,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$4,999';
     period: '/month';
     description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.';
-    features: [
+    features: []
       'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
       'Mobile applications24/7 support'
     ];
@@ -1928,7 +1927,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$15,999';
     period: '/month';
     description: 'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.';
-    features: [
+    features: []
       'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs';
       '24/7 supportQuantum support team'
     ];
@@ -1969,7 +1968,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$2,999';
     period: '/month';
     description: 'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.';
-    features: [
+    features: []
       'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIs';
       'Security dashboard24/7 security support'
     ];
@@ -2010,7 +2009,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$3,499';
     period: '/month';
     description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.';
-    features: [
+    features: []
       'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
       'Mobile applications24/7 support'
     ];
@@ -2051,7 +2050,7 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$5,999';
     period: '/month';
     description: 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and window.window.window.performance.';
-    features: [
+    features: []
       'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIs';
       'Migration dashboard24/7 support'
     ];
@@ -2922,10 +2921,8 @@ i,
   s: 89; ratin,
   g: 4.8; review,
   s: 45} export interface AdvancedITService {} ]; '
-=======
     marketSize: '$500M quantum computing market'
     growthRate: '500% annual growth';
 variant: 'quantum-cloud'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

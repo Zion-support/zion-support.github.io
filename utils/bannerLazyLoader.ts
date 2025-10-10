@@ -11,41 +11,41 @@ interface BannerModule {/* TODO: Fix JSX expression */}
 /**
  * Lazy load a banner component with retry logic;
  */
-export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>
+export const lazyLoadBanner="("
+  importFn: () => Promise<BannerModule></BannerModule>
       // Retry once after a delay;
-      return new Promise<BannerModule>(resolve => {
+      return new Promise<BannerModule>(resolve="> {}"
 return (
 
-        setTimeout(() => {
+        setTimeout(() => {}
           importFn()
             .then(resolve),
-            .catch(retryError => {),
-export const lazyLoadBanner = (importF)
+            .catch(retryError="> {),"
+export const lazyLoadBanner="(importF)"
   n: () => Promise<BannerModule>,
       // Retry once after a delay;
-      return new Promise<BannerModule>
+      return new Promise<BannerModule></BannerModule>
 );
-}(resolve => {/* TODO: Fix JSX expression */})
+}(resolve="> {/* TODO: Fix JSX expression */})"
             })}, 1000)})})
   )};
 
 /**
  * Preload banner components for better performance;
  */
-export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void="> {}"
 return (
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined') {}
     // Preload on idle;
-    if ('requestIdleCallback' in window) {
+    if ('requestIdleCallback' in window) {}
       requestIdleCallback(() => {,
         importFn().catch(() => {,
           // Silently fail for preload;
-export const preloadBanner = (importF)
-  n: () => Promise<BannerModule>
+export const preloadBanner="(importF)"
+  n: () => Promise<BannerModule></BannerModule>
 );
-}): void => {/* TODO: Fix JSX expression */}
+}): void="> {/* TODO: Fix JSX expression */}"
         })})}
 };
 
@@ -53,11 +53,11 @@ export const preloadBanner = (importF)
  * Banner loader with intersection observer;
  */
 export const createBannerLoader = () => {;
-const observer = new IntersectionObserver(
+const observer="new IntersectionObserver("
         if (entry.isIntersecting) {;
-const _element = entry.target as HTMLElement;
-          const _importFn = element.dataset.bannerImport;
-          if (importFn) {
+const _element="entry.target as HTMLElement;"
+          const _importFn="element.dataset.bannerImport;"
+          if (importFn) {}
             // Load the banner when it comes into view;
             eval(importFn)();
 export const createBannerLoader = () => {/* TODO: Fix JSX expression */}

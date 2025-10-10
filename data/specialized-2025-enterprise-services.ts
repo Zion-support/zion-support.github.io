@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -42,8 +40,7 @@ import React from 'react';
   capabilities: string[];
   market_advantage: string;
 ;
-const contact =
-  mobile: '+1 302 464 0950',
+const contact="mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
@@ -161,8 +158,7 @@ export interface SpecializedEnterpriseService {id: string, name: string;
   market_advantag,
   e: string;
 ,;
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -214,8 +210,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   s: string[],
   marketAdvantag,
   e: string}
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
@@ -2206,7 +2201,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   capabilities: string[];
   marketAdvantage: string}
 ;
-// const contact = {;
+// const contact="{;"
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -2230,7 +2225,7 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact = {/* TODO: Fix JSX expression */}
+// const contact="{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -2239,14 +2234,14 @@ export interface SpecializedEnterpriseService {/* TODO: Fix JSX expression */}
 export const,
   specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   // Advanced AI & Consciousness Services;
-  {
+  {}
     id: 'ai-consciousness-research-platform';
     name: 'AI Consciousness Research Platform';
     tagline: 'Advanced AI consciousness simulation and research';
     price: '$5,999';
     period: '/month';
     description: 'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.';
-    features: [
+    features: []
       'Consciousness simulation engineCognitive architecture modelingEmotional intelligence algorithmsSelf-awareness developmentMemory and learning systemsSocial interaction modelingResearch analytics toolsCollaborative research platform';
       'API for research integrationExpert consultation services'
     ];
@@ -2293,7 +2288,7 @@ export const,
     price: '$4,499';
     period: '/month';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
-    features: [
+    features: []
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
     ];
@@ -2344,7 +2339,7 @@ export const,
     price: '$2,999';
     period: '/month';
     description: 'Advanced cryptography platform that implements post-quantum cryptographic algorithms, ensuring data security against future quantum computing threats.';
-    features: [
+    features: []
       'Post-quantum cryptographic algorithmsLattice-based cryptographyHash-based signaturesCode-based cryptographyMultivariate cryptographyQuantum key distributionHybrid encryption systemsMigration tools and services';
       'Compliance and certificationExpert security consulting'
     ];
@@ -2395,7 +2390,7 @@ export const,
     price: '$6,999';
     period: '/month';
     description: 'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.';
-    features: [
+    features: []
       'Autonomous satellite operationsConstellation optimizationAI-powered mission planningReal-time data processingOrbital mechanics optimizationCollision avoidance systemsPayload managementGround station coordination';
       'Mission analytics dashboardExpert space consulting'
     ];
@@ -2446,7 +2441,7 @@ export const,
     price: '$7,999';
     period: '/month';
     description: 'Cutting-edge brain-computer interface platform that enables direct communication between the human brain and computers for research and medical applications.';
-    features: [
+    features: []
       'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical rehabilitation supportResearch and development toolsReal-time neural monitoringCustom interface developmentSafety and compliance tools';
       'Expert neural consultationClinical trial support'
     ];
@@ -2497,7 +2492,7 @@ export const,
     price: '$1,599';
     period: '/month';
     description: 'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.';
-    features: [
+    features: []
       'Autonomous device managementSelf-healing networksAI-powered optimizationPredictive maintenanceSecurity automationScalable deploymentReal-time monitoringData analytics and insights';
       'Custom IoT applicationsExpert IoT consultation'
     ];
@@ -2548,7 +2543,7 @@ export const,
     price: '$2,199';
     period: '/month';
     description: 'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.';
-    features: [
+    features: []
       'Advanced ML algorithmsPredictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modelingReal-time predictionsCustom model development';
       'Performance analyticsExpert data consultation'
     ];
@@ -2637,7 +2632,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; market_advantag,
-  e: string, const contact = mobil,
+  e: string, const contact="mobil,"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -2697,7 +2692,7 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string } const contact = ' mobil,
+  e: string } const contact="' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}; export const,
@@ -3241,7 +3236,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */}
+  e: string} ; const contact="{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3268,11 +3263,9 @@ i,
   s: [,' '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development' ]} capabilitie,
   s: [,' 'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling' ]};' marketAdvantag,
   e: 'Advanced predictive analytics platform with custom ML model development' } ]; export default specializedEnterpriseServices; export default specializedEnterpriseServices; '
-=======
     roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
     competitors: ['No direct competitors in consciousness simulation'];
     marketSize: 'Emerging research market'
     growthRate: 'Projected 500% annual growth';
 variant: 'ai-futuristic'
     contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

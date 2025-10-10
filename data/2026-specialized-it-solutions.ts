@@ -59,8 +59,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
   rating: number;
   reviews: number;
 ;
-const contact =
-  mobile: '+1 302 464 0950',
+const contact="mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
@@ -211,8 +210,7 @@ export const,
   review,
   s: number;
 ,;
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -304,8 +302,7 @@ const contact =
   g: number,
   review,
   s: number}
-const contact =
-  mobil,
+const contact="mobil,"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
@@ -1343,7 +1340,7 @@ export const,
       'Hyper-V'
       'Docker'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Backup automation'
@@ -1411,27 +1408,27 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>;
     review,
   s: 33};
 ];
-export const getSpecializedITSolutions2026ByCategory = (categor)
+export const getSpecializedITSolutions2026ByCategory="(categor)"
   y: string) =>;
   return specializedITSolutions2026.filter(solution => solution.category === category)
   )}
 export const getPopularSpecializedITSolutions2026 = () =>
 };
 export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
-  return specializedITSolutions2026.filter(solution => solution.popular)}
+  return specializedITSolutions2026.filter(solution="> solution.popular)}"
 }
 ];
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)};
-export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number)
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution="> solution && solution.popular)};"
+export const getSpecializedITSolutions2026ByPriceRange="(minPrice: number)"
   maxPrice: number)) =>,
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
-export const getSpecializedITSolutions2026ByPriceRange = (minPric)
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution=">)"
+export const getSpecializedITSolutions2026ByPriceRange="(minPric)"
   e: number)
   maxPric,
   e: number)
 ) =>
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>);
-const _price = parseInt(solution && solution.price.replace('$') ''));
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution=">);"
+const _price="parseInt(solution && solution.price.replace('$') ''));"
     return price >= minPrice && price <= maxPrice})
 };    return price >= minPrice && price <= maxPrice})
 }
@@ -2094,42 +2091,42 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     review,
   s: 33}
 ];
-export const getSpecializedITSolutions2026ByCategory = (categor)
+export const getSpecializedITSolutions2026ByCategory="(categor)"
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
 };
 export const getPopularSpecializedITSolutions2026 = () =>
-  return specializedITSolutions2026.filter(solution => solution.popular)
+  return specializedITSolutions2026.filter(solution="> solution.popular)"
 };
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
-  return specializedITSolutions2026.filter(solution =>)
-export const getSpecializedITSolutions2026ByPriceRange = (minPric)
+  return specializedITSolutions2026.filter(solution=">)"
+export const getSpecializedITSolutions2026ByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) =>,
-  return specializedITSolutions2026.filter(solution =>);
-const _price = parseInt(solution.price.replace('$') ''));
+  return specializedITSolutions2026.filter(solution=">);"
+const _price="parseInt(solution.price.replace('$') ''));"
     return price >= minPrice && price <= maxPrice})
 };
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter()
-export const getSpecializedITSolutions2026ByCategory = (categor)
+export const getSpecializedITSolutions2026ByCategory="(categor)"
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
     solution => solution.category === category)}
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular)}
+  return specializedITSolutions2026.filter (solution="> solution.popular)}"
 ;
-export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
+export const getSpecializedITSolutions2026ByPriceRange="(min_price: number)"
   max_price: number) =>: unknown;
-  return specializedITSolutions2026.filter(solution =>),
-export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  return specializedITSolutions2026.filter(solution=">),"
+export const getSpecializedITSolutions2026ByPriceRange="(min_pric)"
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return specializedITSolutions2026.filter (solution =>);
-const _price = parse_int (solution.price.replace ('$') ''));
+  return specializedITSolutions2026.filter (solution=">);"
+const _price="parse_int (solution.price.replace ('$') ''));"
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
@@ -2140,7 +2137,7 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown;
   return specializedITSolutions2026.filter()
-export const getSpecializedITSolutions2026ByCategory = (categor)
+export const getSpecializedITSolutions2026ByCategory="(categor)"
   y: string) =>: unknown;
   return specializedITSolutions2026.filter ()
     solution => solution.category === category)}
@@ -2169,17 +2166,17 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: number}
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular)}
+  return specializedITSolutions2026.filter (solution="> solution.popular)}"
 ;
-export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
+export const getSpecializedITSolutions2026ByPriceRange="(min_price: number)"
   max_price: number) =>: unknown;
-  return specializedITSolutions2026.filter(solution =>),
-export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  return specializedITSolutions2026.filter(solution=">),"
+export const getSpecializedITSolutions2026ByPriceRange="(min_pric)"
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return specializedITSolutions2026.filter (solution =>);
-const _price = parse_int (solution.price.replace ('$') ''));
+  return specializedITSolutions2026.filter (solution=">);"
+const _price="parse_int (solution.price.replace ('$') ''));"
     return price >= min_price && price <= max_price})}    return price >= min_price && price <= max_price})}
 ;
 export interface SpecializedITSolution2026};
@@ -2240,7 +2237,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number, const contact = mobil,
+  s: number, const contact="mobil,"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -2296,7 +2293,7 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } const contact = ' mobil,
+  s: number } const contact="' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',' websit,
@@ -2578,8 +2575,8 @@ i,
   e: '2024-05-25', customer,
   s: 67, ratin,
   g: 4.4, review,
-  s: 33}; ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => }; export const getPopularSpecializedITSolutions2026 = () => {; return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)}; export const getSpecializedITSolutions2026ByPriceRange = (minPric,
+  s: 33}; ]; export const getSpecializedITSolutions2026ByCategory="(categor)"
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) )} export const getPopularSpecializedITSolutions2026 = () => }; export const getPopularSpecializedITSolutions2026 = () => {; return specializedITSolutions2026.filter(solution => solution.popular)} } ]; return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)}; export const getSpecializedITSolutions2026ByPriceRange="(minPric,"
   e: number)
   maxPrice: number ) => return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => ' const price = parseInt(solution && solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice}) }; return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'cloud-infrastructure-automation', nam,
@@ -2853,14 +2850,14 @@ i,
   e: '2024-05-25', customer,
   s: 67, ratin,
   g: 4.4, review,
-  s: 33 } ]; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) }; export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) }; export const getSpecializedITSolutions2026ByPriceRange = (minPric)
+  s: 33 } ]; export const getSpecializedITSolutions2026ByCategory="(categor)"
+  y: string) => return specializedITSolutions2026.filter(solution => solution.category === category) }; export const getPopularSpecializedITSolutions2026 = () => return specializedITSolutions2026.filter(solution => solution.popular) }; export const getSpecializedITSolutions2026ByPriceRange="(minPric)"
   e: number) maxPric,
-  e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)} ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory="(categor)"
+  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)} ; export const getSpecializedITSolutions2026ByPriceRange="(min_pric)"
   e: number) max_pric,
   e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
-  e: string} } }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
+  e: string} } }) }; export const getSpecializedITSolutions2026ByCategory="(categor)"
   y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category)} export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
@@ -2869,6 +2866,6 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)} ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
+  s: number} ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular)} ; export const getSpecializedITSolutions2026ByPriceRange="(min_pric)"
   e: number) max_pric,
   e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price})} return price >= min_price && price <= max_price})} ; export interface SpecializedITSolution2026 }; '

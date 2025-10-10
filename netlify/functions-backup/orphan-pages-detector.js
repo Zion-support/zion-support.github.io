@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-//     // // console.log removed for production
+exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+//     // // console.log removed for production;
 }
     // Orphan pages detection simulation;
-    const result = {
+    const result="{}"
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -19,7 +18,7 @@ timestamp: new Date().toISOString()
           pagesScanned: 0;
           orphansFound: 0;
           lastScan: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result="{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
@@ -27,9 +26,9 @@ timestamp: new Date().toISOString()
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// // console.error removed for production
+//   } catch (error) {// // console.error removed for production;
 error}
-    return {
+    return {}
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
@@ -49,7 +48,7 @@ function: 'orphan-pages-detector'}
       })}}
 };
         timestamp: new Date().toISOString(),' function: 'orphan-pages-detector',' source: event.source || 'unknown', detection: {' status: 'active', pagesScanned: 0, orphansFound: 0;
-        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production;
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'orphan-pages-detector' }) }} };'
         timestam,
   p: new Date().toISOString(),' functio,
@@ -63,7 +62,5 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
   r: 'Internal server error'} messag)
   e: error.message)' functio,
   n: 'orphan-pages-detector' }) }} };'
-=======
         timestamp: new Date().toISOString();
 function: 'orphan-pages-detector'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

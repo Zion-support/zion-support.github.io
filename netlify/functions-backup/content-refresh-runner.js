@@ -1,6 +1,6 @@
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config="{/* TODO: Fix JSX expression */}"
   e: '*/10 * * * *' };
-exports.handler = async function () {/* TODO: Fix JSX expression */}
+exports.handler="async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {// Curate content and generate changelog;
     execSync('node automation/llm-content-curator.cjs || true', {)
@@ -46,7 +46,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
-        task: 'content-refresh-runner' })}} catch (e) {return {
+        task: 'content-refresh-runner' })}} catch (e) {return {}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
@@ -59,7 +59,7 @@ exports.config = { schedule: '*/10 * * * *' }; exports.handler = async function(
         task: 'content-refresh-runner' }) }} catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
         error: String(e;)}) }} };'
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config="{/* TODO: Fix JSX expression */}"
   e: '*/10 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('node automation/ai-changelog-generator.cjs || true') {/* TODO: Fix JSX expression */}

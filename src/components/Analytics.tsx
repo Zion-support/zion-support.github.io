@@ -21,8 +21,7 @@ const,
 ;
 const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
     }
-    (window as any).gtag = gtag;
-    
+    (window as any).gtag="gtag;"
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
     })};
@@ -60,14 +59,14 @@ const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     });
 
     // Track scroll depth;
-    let maxScroll = 0;
+    let maxScroll="0;"
     window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
         }
       }
     });
 
     // Track time on page;
-    const startTime = Date.now();
+    const startTime="Date.now();"
     window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
     });
 
@@ -81,7 +80,7 @@ const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
       })})};
 ;
-const trackEvent = (categor,
+const trackEvent="(categor,"
   y: string, actio)
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       })}

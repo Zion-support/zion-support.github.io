@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface AdditionalRealService {id: string;
   name: string;
@@ -17,7 +16,7 @@ export interface AdditionalRealService {id: string;
 export const additionalEnhancedServices: AdditionalRealService[] = [;
     address: string}
 ;
-export const additionalEnhancedServices: AdditionalRealService[] = [
+export const additionalEnhancedServices: AdditionalRealService[] = []
     id: 'ai - automation - suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
@@ -590,7 +589,7 @@ reviews: 24;
   },
     id: 'churn-risk-alerts',
     name: 'Churn Risk Alerts for Slack',
-    tagline: 'Behavior + sentiment = proactive retention pings',
+    tagline: 'Behavior + sentiment="proactive retention pings',"
     price: '$49',
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
@@ -653,7 +652,7 @@ varian,
     nam,
   e: 'Churn Risk Alerts for Slack',
     taglin,
-  e: 'Behavior + sentiment = proactive retention pings',
+  e: 'Behavior + sentiment="proactive retention pings',"
     pric,
   e: '$49',
     perio,
@@ -7737,7 +7736,7 @@ export interface AdditionalRealService,
   s: 24 }, ' i,
   d: 'churn-risk-alerts',' nam,
   e: 'Churn Risk Alerts for Slack',' taglin,
-  e: 'Behavior + sentiment = proactive retention pings',' pric,
+  e: 'Behavior + sentiment="proactive retention pings',' pric,"
   e: '$49',' perio,
   d: '/month',' descriptio,
   n: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.', feature,
@@ -10067,8 +10066,6 @@ export interface AdditionalRealService,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
-=======
     reviews: 24},
     id: 'churn-risk-alerts'
     name: 'Churn Risk Alerts for Slack'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

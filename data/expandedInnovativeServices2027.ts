@@ -1,7 +1,6 @@
 // Expanded Innovative Services 2027 - Zion Tech Group;
 // Additional Micro SAAS, IT Infrastructure, and AI Services;
-export type ExpandedService2027 =
-  id: string;
+export type ExpandedService2027="id: string;"
   name: string;
   category: string;
   subcategory: string;
@@ -47,7 +46,7 @@ export type ExpandedService2027 =
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
-export const advancedCybersecurityServices: ExpandedService2027[] = [
+export const advancedCybersecurityServices: ExpandedService2027[] = []
     id: 'quantum-threat-hunter',
     name: 'Quantum Threat Hunter',
     category: 'Cybersecurity',
@@ -410,7 +409,7 @@ export const,
     status: 'active'}
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
-export const advancedDataAnalyticsServices: ExpandedService2027[] = [
+export const advancedDataAnalyticsServices: ExpandedService2027[] = []
     id: 'predictive-insights-engine',
     name: 'Predictive Insights Engine',
     category: 'Data Analytics',
@@ -761,7 +760,7 @@ export const,
     status: 'active'}
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
-export const advancedCloudDevOpsServices: ExpandedService2027[] = [
+export const advancedCloudDevOpsServices: ExpandedService2027[] = []
     id: 'multi-cloud-orchestrator',
     name: 'Multi-Cloud Orchestrator',
     category: 'Cloud & DevOps',
@@ -1451,7 +1450,7 @@ export const,
     status: 'active'}
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
-export const advancedFinTechServices: ExpandedService2027[] = [
+export const advancedFinTechServices: ExpandedService2027[] = []
     id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling Platform',
     category: 'Financial Technology',
@@ -1796,7 +1795,7 @@ export const,
     status: 'active'}
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
-export const advancedHealthcareServices: ExpandedService2027[] = [
+export const advancedHealthcareServices: ExpandedService2027[] = []
     id: 'ai-diagnostic-assistant',
     name: 'AI Diagnostic Assistant',
     category: 'Healthcare Technology',
@@ -2219,7 +2218,7 @@ export const,
   }
 ];
 // Export all expanded services;
-export const ALL_EXPANDED_SERVICES_2027 = [
+export const ALL_EXPANDED_SERVICES_2027="[]"
   ...advancedCybersecurityServices,
   ...advancedDataAnalyticsServices,
   ...advancedCloudDevOpsServices,
@@ -2228,7 +2227,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [
   ...advancedHealthcareServices;
 ];
 // Service categories for filtering;
-export const EXPANDED_SERVICE_CATEGORIES = [
+export const EXPANDED_SERVICE_CATEGORIES="[]"
   'All',
   'Cybersecurity',
   'Data Analytics',
@@ -2240,7 +2239,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 // Helper function to get services by category;
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>;
   if (category === 'All'),
-export const getExpandedServicesByCategory = (categor)
+export const getExpandedServicesByCategory="(categor)"
   y: string): ExpandedService2027[] =>;
   if (category === 'All')
     return ALL_EXPANDED_SERVICES_2027}
@@ -2250,21 +2249,21 @@ export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedS
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
 // Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>;
-export const getExpandedServicesBySubcategory = (subcategor)
+export const getExpandedServicesBySubcategory="(subcategor)"
   y: string): ExpandedService2027[] =>;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
 // Helper function to search services;
-export const searchExpandedServices = (quer)
+export const searchExpandedServices="(quer)"
   y: string): ExpandedService2027[] =>;
-//   const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_2027.filter(service =>)
+//   const lowercaseQuery="query.toLowerCase();"
+  return ALL_EXPANDED_SERVICES_2027.filter(service=">)"
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||,
     service.subcategory.toLowerCase().includes(lowercaseQuery))};
-// Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027 = i,
+// Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027="i,"
   d: string; nam,
   e: string; categor,
   y: string; subcategor,
@@ -2867,7 +2866,7 @@ export const searchExpandedServices = (quer)
   g: 4.7, review,
   s: 289,' launchDat,
   e: '2027-01-15',' statu,
-  s: 'active' } ]; // Export all expanded services export const ALL_EXPANDED_SERVICES_2027 = [ ...advancedCybersecurityServices, ...advancedDataAnalyticsServices, ...advancedCloudDevOpsServices, ...advancedIoTServices, ...advancedFinTechServices, ...advancedHealthcareServices ]; // Service categories for filtering export const EXPANDED_SERVICE_CATEGORIES = [' 'All',' 'Cybersecurity',' 'Data Analytics',' 'Cloud & DevOps',' 'IoT & Edge Computing',' 'Financial Technology',' 'Healthcare Technology' ]; // Helper function to get services by category export const getExpandedServicesByCategory = (categor)
-  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027} return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)}; // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
-  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)}; // Helper function to search services export const searchExpandedServices = (quer)
-  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) )};'
+  s: 'active' } ]; // Export all expanded services export const ALL_EXPANDED_SERVICES_2027 = [ ...advancedCybersecurityServices, ...advancedDataAnalyticsServices, ...advancedCloudDevOpsServices, ...advancedIoTServices, ...advancedFinTechServices, ...advancedHealthcareServices ]; // Service categories for filtering export const EXPANDED_SERVICE_CATEGORIES = [' 'All',' 'Cybersecurity',' 'Data Analytics',' 'Cloud & DevOps',' 'IoT & Edge Computing',' 'Financial Technology',' 'Healthcare Technology' ]; // Helper function to get services by category export const getExpandedServicesByCategory="(categor)"
+  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027} return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)}; // Helper function to get services by subcategory export const getExpandedServicesBySubcategory="(subcategor)"
+  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)}; // Helper function to search services export const searchExpandedServices="(quer)"
+  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service="> service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) )};'"

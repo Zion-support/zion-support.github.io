@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -107,7 +106,7 @@
   s: number;
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
-  [
+  []
       id: 'ai - powered - supply - chain - optimization',
       name: 'AI - Powered Supply Chain Optimization',
       tagline: 'Intelligent supply chain planning and optimization',
@@ -116,7 +115,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       description: unknown;
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =,
-  [
+  []
       i,
   d: 'ai - powered - supply - chain - optimization',
       nam,
@@ -1419,14 +1418,14 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   reviews: number}
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
-  {
+  {}
     id: 'ai-powered-supply-chain-optimization';
     name: 'AI-Powered Supply Chain Optimization';
     tagline: 'Intelligent supply chain planning and optimization';
     price: '$1,299';
     period: '/month';
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.';
-    features: [
+    features: []
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
     ];
@@ -1467,7 +1466,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     price: '$2,999';
     period: '/month',,
   description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.';
-    features: [
+    features: []
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access';
       'Custom modelsPerformance analytics'
     ];
@@ -1508,7 +1507,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     price: '$799';
     period: '/month',,
   description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.';
-    features: [
+    features: []
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access';
       'Custom dashboardsCompliance tools'
     ];
@@ -1549,7 +1548,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     price: '$899';
     period: '/month',,
   description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.';
-    features: [
+    features: []
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics';
       'Audit trailsPerformance monitoring'
     ];
@@ -1590,7 +1589,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     price: '$1,099';
     period: '/month',,
   description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.';
-    features: [
+    features: []
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access';
       'Custom workflowsCompliance tools'
     ];
@@ -2296,10 +2295,8 @@ i,
   s: 178; ratin,
   g: 4.8; review,
   s: 112} ]; '
-=======
       market_size: '$45B supply chain management market'
       growth_rate: '28% annual growth';
 variant: 'logistics'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -2,17 +2,17 @@
 import React from 'react';
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {
-  src: string,
-    alt: string
 interface ImageProps {}
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+  src: string,
+    alt: string;
+interface ImageProps {}
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   src: string,
   alt: string,
   width?: number;
@@ -28,7 +28,7 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-export const Image: React.FC<ImageProps>= ({
+export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
   src,
 export const Image: React.FC<ImageProps> = ({,
@@ -37,11 +37,11 @@ export const Image: React.FC<ImageProps> = ({,
   width,
   height,
   className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
+  priority="false,"
+  quality="75,"
+  placeholder="'empty',"
   blurDataURL,
-  fill = false,
+  fill="false,"
   sizes,
   style,
   onLoad,
@@ -58,14 +58,14 @@ export const Image: React.FC<ImageProps> = ({,
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties="{}"
     ...style;
-    ...(fill && {
+    ...(fill && {}
       position: 'absolute',
       top:
         top: 0,
       left: 0,
-  const imageStyle: React.CSSProperties = {}
+  const imageStyle: React.CSSProperties="{}"
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -80,9 +80,9 @@ export const Image: React.FC<ImageProps> = ({,
     return (</ImageProps>
   if (hasError) {}
     return (
-      <div}
-  if (hasError) {
-    return(<div}
+      <div }></div>
+  if (hasError) {}
+    return(<div }></div>
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
@@ -94,42 +94,42 @@ export const,
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError]);
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+  imageStyle: React.CSSProperties="{/* TODO: Fix JSX expression */}"
     })
   };
   if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
+        className="{`bg-gray-200 flex items-center justify-center ${className}`}"
+        style="{imageStyle}"
         {...props})
       >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+        <span className="text-gray-500 text-sm"><span className=""sr-only">Screen reader: </span>Failed to load image</span>)"
       </div>)
     ),
         {...props}
       ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+        <span className="text-gray-500 text-sm"></span><span className=""sr-only">Screen reader: </span>Failed to load image</span>"
       </div>
     )
   }
-  return(<img;
+  return(<img ;></img>
   return (<img></img>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
+      src="{src}"
+      alt="{alt}"
+      width="{width}"
+      height="{height}"
+      className="{className}"
+      style="{imageStyle}"
+      sizes="{sizes}"
+      loading="{priority ? 'eager' : 'lazy'}"
+      onLoad="{handleLoad}"
+      onError="{handleError}"
       {...props}
     >)</img>
 }</img>
 export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
+      loading="{priority ? 'eager' : 'lazy'})"
+      onLoad="{handleLoad})"
+      onError="{handleError})"
       {...props})
     />)
   )

@@ -6,12 +6,12 @@ import { useEffect, useCallback } from 'react';
 export const _usePerformanceMonitoring = () => {// TODO: Add content}
 
 }
-  const reportWebVitals = useCallback((metri)
+  const reportWebVitals="useCallback((metri)"
   c: any) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    const body = JSON.stringify(metric);
-    const url = '/api/analytics';
+    const body="JSON.stringify(metric);"
+    const url="'/api/analytics';"
     if (navigator.sendBeacon) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -51,6 +51,4 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   }, [reportWebVitals])
   return { reportWebVitals }
 }
-
-
 

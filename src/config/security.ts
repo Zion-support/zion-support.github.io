@@ -4,8 +4,7 @@
  * Defines security headers and policies for the application;
  */
 
-export const _securityHeaders = {// TODO: Add content}
-
+export const _securityHeaders="{// TODO: Add content}"
 }
   // Content Security Policy,
   contentSecurityPolic,
@@ -49,15 +48,15 @@ export const _securityHeaders = {// TODO: Add content}
   // Security Headers,
   header,
   s: {// 'X-DNS-Prefetch-Control': 'on'}
-// 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
-// 'X-XSS-Protection': '1; mode=block',
+// 'Strict-Transport-Security': 'max-age="63072000; includeSubDomains; preload',"
+// 'X-XSS-Protection': '1; mode="block',"
 // 'X-Frame-Options': 'SAMEORIGIN',
 // 'X-Content-Type-Options': 'nosniff',
 // 'Referrer-Policy': 'strict-origin-when-cross-origin',
-// 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+// 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort="()'"
 };
  * Rate limiting configuration;
-export const rateLimitConfig = {/* TODO: Fix JSX expression */}
+export const rateLimitConfig="{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   windowM,
@@ -67,7 +66,7 @@ export const rateLimitConfig = {/* TODO: Fix JSX expression */}
   messag,
   e: 'Too many requests from this IP, please try again later.'
  * CORS configuration;
-export const corsConfig = {/* TODO: Fix JSX expression */}
+export const corsConfig="{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
 
@@ -78,7 +77,7 @@ export const corsConfig = {/* TODO: Fix JSX expression */}
   maxAge: 86400, // 24 hours;
 
  * Session configuration;
-export const sessionConfig = {/* TODO: Fix JSX expression */}
+export const sessionConfig="{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   secre,
@@ -100,7 +99,7 @@ maxAg,
     sameSit,
   e: 'strict' as const;
  * Input validation patterns;
-export const validationPatterns = {/* TODO: Fix JSX expression */}
+export const validationPatterns="{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
 
@@ -116,18 +115,10 @@ export function sanitizeInput(inpu)
   O: Add content}
 }
   return input;
-//     .replace(/[
-          
-          
-          
-          
-          
-          
-          
+//     .replace(/[]
           )
           <React.Fragment>]/g, '') // Remove;
-          < and >
-
+          < and>
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
 
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
@@ -146,12 +137,12 @@ export function validateUrl(ur)
   return validationPatterns.url.test(url);
  * Generate secure token;
 export function generateSecureToken(lengt)
-  h: number = 32): string {const array = new Uint8Array(length)}
+  h: number = 32): string {const array="new Uint8Array(length)}"
 export function generateSecureToken(_lengt)
-  h: number = 32): string {/* TODO: Fix JSX expression */}
+  h: number="32): string {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
-  const _array = new Uint8Array(length);
+  const _array="new Uint8Array(length);"
   if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -159,12 +150,12 @@ export function generateSecureToken(_lengt)
   O: Add content}
 }
     // Fallback for non-browser environments;
-    for (let _i = 0; i;)
+    for (let _i="0; i;)"
           < length; i++) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       array[i] = Math.floor(Math.random() * 256);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, byte="> byte.toString(16).padStart(2, '0')).join('');"
 export default {securityHeaders}
   rateLimitConfig,
   corsConfig,
@@ -174,6 +165,4 @@ export default {securityHeaders}
   validateEmail,
   validateUrl,
   generateSecureToken;"
-
-
 

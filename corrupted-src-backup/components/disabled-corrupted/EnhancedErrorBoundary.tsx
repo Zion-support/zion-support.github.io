@@ -7,33 +7,33 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryCount = 0;
-  private maxRetries = 3;
+class EnhancedErrorBoundary extends Component<Props, State> {}
+  private retryCount="0;"
+  private maxRetries="3;"
 ;
-constructor(props: Props) {
+constructor(props: Props) {}
     super(props);
-    this.state = {
+    this.state="{}"
       hasError: false;
       error: null;
       errorInfo: null;
       errorId: null}}
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State> {}
     // Update state so the next render will show the fallback UI;
     return {,
       hasError: true;
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     // Log error details;
 //     this.setState({),
       error),
       errorInfo)});
 
     // Call custom error handler if provided;
-    if (this.props.onError) {
+    if (this.props.onError) {}
       this.props.onError(error, errorInfo);
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
     }}
@@ -55,7 +55,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     this.reportError(error, errorInfo)}
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {;
-const errorReport = {
+const errorReport="{}"
       errorId: this.state.errorId;
       message: error.message;
       stack: error.stack;
@@ -66,13 +66,13 @@ const errorReport = {
       retryCount: this.retryCount};
 
     // Send to error reporting service;
-    if (typeof window !== 'undefined' && 'fetch' in window) {
+    if (typeof window !== 'undefined' && 'fetch' in window) {}
       fetch('/api/errors', {)
         method: 'POST')
         headers: {)
           'Content-Type': 'application/json')})
         body: JSON.stringify(errorReport),
-  private reportError = (erro,
+  private reportError="(erro,"
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
     };
@@ -86,12 +86,12 @@ const errorReport = {
 
     // Store in localStorage for debugging;
     try {;
-const existingErrors = JSON.parse(
+const existingErrors="JSON.parse("
         localStorage.getItem('errorLogs') || '[]'
       );
       existingErrors.push(errorReport);
       // Keep only last 10 errors;
-      if (existingErrors.length > 10) {
+      if (existingErrors.length > 10) {}
         existingErrors.splice(0, existingErrors.length - 10);
     try {/* TODO: Fix JSX expression */}
       }
@@ -99,10 +99,10 @@ const existingErrors = JSON.parse(
 //       }
   };
 
-  private handleRetry = () => {
+  private handleRetry = () => {}
 return (
 
-    if (this.retryCount < this.maxRetries) {
+    if (this.retryCount < this.maxRetries) {}
       this.retryCount++;
       this.setState({)
         hasError: false;)
@@ -119,7 +119,7 @@ return (
   };
 
   private handleReportBug = () => {;
-const errorDetails = {
+const errorDetails="{}"
       errorId: this.state.errorId;
       message: this.state.error?.message;
       stack: this.state.error?.stack;
@@ -128,72 +128,70 @@ const errorDetails = {
       url: window.location.href};
 
     // Create a mailto link with error details;
-//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+//     const subject="`Bug Report - Error ID: ${this.state.errorId}`;"
+//     const body="`Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;"
+//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body="${encodeURIComponent(body)}`;"
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
     };
 
     // Create a mailto link with error details;`
-//     const subject = `Bug Report - Error,`
+//     const subject="`Bug Report - Error,`"
   ID: ${this.state.errorId}`;`
-//     const body = `Error,`
+//     const body="`Error,`"
   Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
-//     const mailtoLink = `mailt,`
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+//     const mailtoLink="`mailt,`"
+  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body="${encodeURIComponent(body)}`;"
     window.open(mailtoLink)};
 
-  override render() {
-    if (this.state.hasError) {
+  override render() {}
+    if (this.state.hasError) {}
       // Custom fallback UI;
-      if (this.props.fallback) {
+      if (this.props.fallback) {}
         return this.props.fallback}
 
       // Default error UI;
-      return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
-          <div className='max-w-md w-full space-y-8'>
-            <div className='text-center'>)
-              <div className='mx-auto h-12 w-12 text-red-500'>)
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>)
-                  <path;)
-                    strokeLinecap='round'),
-                    strokeLinejoin='round'),
-      // Default error UI
+      return(<div className="'min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'></div>"
+          <div className="'max-w-md w-full space-y-8'></div>"
+            <div className="'text-center'>)"
+              <div className="'mx-auto h-12 w-12 text-red-500'>)"
+                <svg fill='none' stroke='currentColor' viewBox="'0 0 24 24'>)"
+                  <path ;)></path>
+                    strokeLinecap="'round'),"
+                    strokeLinejoin="'round'),"
+      // Default error UI;
       return (
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>
-          <div className='max-w-md w-full space-y-8'></div>
-            <div className='text-center'></div>
-              <div className='mx-auto h-12 w-12 text-red-500'></div>
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path
-  override render() {/* TODO: Fix JSX expression */}
+        <div className="'min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>"
+          <div className="'max-w-md w-full space-y-8'></div>"
+            <div className="'text-center'></div>"
+              <div className="'mx-auto h-12 w-12 text-red-500'></div>"
+                <svg fill='none' stroke='currentColor' viewBox="'0 0 24 24'></svg>"
+                  <path override render() {/* TODO: Fix JSX expression */}></path>
       }
 
       // Default error UI;
-      return (<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
+      return (<div className="'min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,'></div>"
   sm:px-6,
   lg:px-8'></div>
-          <div className='max-w-md w-full space-y-8'></div>
-            <div className='text-center'></div>
-              <div className='mx-auto h-12 w-12 text-red-500'></div>
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
+          <div className="'max-w-md w-full space-y-8'></div>"
+            <div className="'text-center'></div>"
+              <div className="'mx-auto h-12 w-12 text-red-500'></div>"
+                <svg fill='none' stroke='currentColor' viewBox="'0 0 24 24'></svg>"
                   <path></path>
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z'
+                    strokeLinecap="'round'"
+                    strokeLinejoin="'round'"
+                    strokeWidth="{2}"
+                    d="'M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z'"
                   /></p>
                 </svg>
               </div>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
+              <h2 className="'mt-6 text-3xl font-extrabold text-gray-900'></h2>"
                 Oops! Something went wrong;
               </h2>
-              <p className='mt-2 text-sm text-gray-600'>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
+              <p className="'mt-2 text-sm text-gray-600'></p>"
+              <h2 className="'mt-6 text-3xl font-extrabold text-gray-900'></h2>"
                 Oops! Something went wrong;
               </h2>
-              <p className='mt-2 text-sm text-gray-600'></p>
+              <p className="'mt-2 text-sm text-gray-600'></p>"
                 We're sorry, but something unexpected happened. Our team has;
                 been notified.
               </p>
@@ -202,99 +200,89 @@ const errorDetails = {
                 </p>)
               )}
             </div>
-
-            <div className='space-y-4'></div>
-              <div className='flex space-x-4'>
+            <div className="'space-y-4'></div>"
+              <div className="'flex space-x-4'></div>"
                 {this.retryCount < this.maxRetries && (
-                  <button;
+                  <button ;></button>
                 {this.retryCount</div> < this.maxRetries && (
-                  <button
-                    onClick={this.handleRetry}
-                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+                  <button onClick="{this.handleRetry}></button>"
+                    className="'group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',"
                   >,
                     Try Again({this.maxRetries - this.retryCount} attempts;)
                     left)
                   </button>
                 )}
-                <button;
-                  onClick={this.handleReload}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-              <div className='flex space-x-4'></div>
+                <button ;></button>
+                  onClick="{this.handleReload}"
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'"
+              <div className="'flex space-x-4'></div>"
                 {/* TODO: Fix JSX expression */}
-                    onClick={this.handleRetry}
-                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600,
+                    onClick="{this.handleRetry}"
+                    className="'group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600,'"
   hover:bg-indigo-700,
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
-                  >
+  focus:ring-indigo-500'>
                     Try Again ({this.maxRetries - this.retryCount} attempts;)
                     left)
                   </button>
                 )}
                 <button></button>
-                  onClick={this.handleReload}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  onClick="{this.handleReload}"
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,'"
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
+  focus:ring-indigo-500'>
                   Reload Page;
                 </button>
               </div>
 ,
-              <div className='flex space-x-4'>,
-                <button;
-
-              <div className='flex space-x-4'></div>
-                <button
-                  onClick={this.handleReportBug}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
+              <div className="'flex space-x-4'>,"
+                <button ;></button>
+              <div className="'flex space-x-4'></div>"
+                <button onClick="{this.handleReportBug}></button>"
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>"
                   Report Bug;
                 </button>,
-                <button;
+                <button ;></button>
                   onClick={() => window.history.back()}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'"
                 <button></button>
-                  onClick={this.handleReportBug}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  onClick="{this.handleReportBug}"
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,'"
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
+  focus:ring-indigo-500'>
                   Report Bug;
                 </button>
                 <button></button>
                   onClick={() => window.history.back()}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  className="'group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,'"
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
+  focus:ring-indigo-500'>
                   Go Back;
                 </button>
               </div>
             </div>
-
             {this.props.showDetails && this.state.error && (
-              <details className='mt-8'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
+              <details className="'mt-8'></details>"
+                <summary className="'cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'></summary>"
                   Technical Details;
                 </summary>,
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
-                  Technical Details
+                <div className="'mt-2 p-4 bg-gray-100 rounded-md'>,"
+                  <pre className="'text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,"
+                  Technical Details;
                 </summary>
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
+                <div className="'mt-2 p-4 bg-gray-100 rounded-md'></div>"
+                  <pre className="'text-xs text-gray-600 whitespace-pre-wrap overflow-auto'></pre>"
             {/* TODO: Fix JSX expression */}
                     {this.state.error.message}
                     {'\n\n'}

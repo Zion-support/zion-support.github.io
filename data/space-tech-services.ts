@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export interface SpaceTechService {id: string;
   name: string;
   tagline: string;
@@ -37,7 +35,7 @@ export interface SpaceTechService {id: string;
     setupTime: '2 weeks',
     category: 'Space Technology',
     realService: true;
-    technology: [
+    technology: []
     id: 'space - mission - management - platform',
     name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
@@ -1677,7 +1675,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Telecom systems'
       'Monitoring tools'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Constellation management'
@@ -1733,7 +1731,7 @@ varian,
       'Insurance platforms'
       'Research databases'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Debris monitoring'
@@ -1789,7 +1787,7 @@ varian,
       'Telecom systems'
       'Aviation systems'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Weather forecasting'
@@ -1845,7 +1843,7 @@ varian,
       'Mission control'
       'Satellite networks'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Launch coordination'
@@ -1901,7 +1899,7 @@ varian,
       'Monitoring tools'
       'Control systems'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Network management'
@@ -1957,7 +1955,7 @@ varian,
       'Media systems'
       'Government databases'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Research analysis'
@@ -2013,7 +2011,7 @@ varian,
       'Financial systems'
       'Compliance platforms'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Asset trading'
@@ -2069,7 +2067,7 @@ varian,
       'Career platforms'
       'Social networks'
     ]
-    useCases: [
+    useCases: []
     useCase,
   s: [,
       'Space education'
@@ -2175,14 +2173,14 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   reviews: number}
 ;
 export const spaceTechServices: SpaceTechService[] = [;
-  {
+  {}
     id: 'space-mission-management-platform';
     name: 'Space Mission Management Platform';
     tagline: 'Complete space mission planning and execution platform';
     price: '$5,999';
     period: '/month',,
   description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.';
-    features: [
+    features: []
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
       'Regulatory compliance toolsMulti-satellite operations'
     ];
@@ -2924,10 +2922,8 @@ export interface SpaceTechService,
   s: 500, ratin,
   g: 4.9, review,
   s: 250} ]} ; '
-=======
     market_size: '$469B space economy'
     growth_rate: '400% annual growth';
 variant: 'space - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

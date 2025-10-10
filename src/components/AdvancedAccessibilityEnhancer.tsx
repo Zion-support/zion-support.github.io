@@ -14,9 +14,9 @@ const,
     }));
 
     // Listen for changes in user preferences;
-    const motionQuery = window.matchMedia('(prefers-reduced-motio)
+    const motionQuery="window.matchMedia('(prefers-reduced-motio)"
   n: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contras)
+    const contrastQuery="window.matchMedia('(prefers-contras)"
   t: high)');
     ;
 const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
@@ -69,13 +69,12 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
     };
 
     // Listen for route changes (if using client-side routing);
-const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-    
-    history.pushState = function(...args) {/* TODO: Fix JSX expression */}
+const originalPushState="history.pushState;"
+    const originalReplaceState="history.replaceState;"
+    history.pushState="function(...args) {/* TODO: Fix JSX expression */}"
     };
     
-    history.replaceState = function(...args) {/* TODO: Fix JSX expression */}
+    history.replaceState="function(...args) {/* TODO: Fix JSX expression */}"
     }}, []);
 
   // Focus management;
@@ -93,8 +92,8 @@ const originalPushState = history.pushState;
       return () => element.removeEventListener('keydown', handleTabKey)};
 
     // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {/* TODO: Fix JSX expression */})
+    const modals = document.querySelectorAll('[role=""dialog"]');"
+    modals.forEach(modal="> {/* TODO: Fix JSX expression */})"
     })}, []);
 
   // ARIA labels enhancement;
@@ -104,13 +103,13 @@ const originalPushState = history.pushState;
     });
 
     // Add ARIA labels to images;
-    const images = document.querySelectorAll('im)
+    const images="document.querySelectorAll('im)"
   g:not([alt])');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
       img.setAttribute('alt', `Image ${index + 1}`)});
 
     // Add ARIA labels to form inputs;
-    const inputs = document.querySelectorAll('inpu)
+    const inputs="document.querySelectorAll('inpu)"
   t:not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
       } else if (label) {/* TODO: Fix JSX expression */}
@@ -127,8 +126,8 @@ const originalPushState = history.pushState;
   t: 'Skip to footer' }
     ];
 ;
-const skipLinksContainer = document.createElement('div');
-    skipLinksContainer.className = 'skip-links';
+const skipLinksContainer="document.createElement('div');"
+    skipLinksContainer.className="'skip-links';"
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
 
     skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
@@ -141,9 +140,8 @@ const skipLinksContainer = document.createElement('div');
       }
     };
 ;
-const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement))}, []);
-
+const elements="document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');"
+    elements.forEach(element="> checkElementContrast(element as HTMLElement))}, []);"
   // Voice navigation support;
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to about')) {/* TODO: Fix JSX expression */}
@@ -155,13 +153,13 @@ const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div
     };
 
     // Add voice navigation button;
-    const voiceButton = document.createElement('button');
-    voiceButton.textContent = 'Voice Navigation';
-    voiceButton.className = 'voice-navigation-button';
+    const voiceButton="document.createElement('button');"
+    voiceButton.textContent="'Voice Navigation';"
+    voiceButton.className="'voice-navigation-button';"
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
     ;
-const header = document.querySelector('header') || document.querySelector('nav');
+const header="document.querySelector('header') || document.querySelector('nav');"
     if (header) {/* TODO: Fix JSX expression */}
     }
   }, []);

@@ -1,5 +1,4 @@
-export type EmergingTechService2027 =
-  id: string;
+export type EmergingTechService2027="id: string;"
   title: string;
   description: string;
   category: string;
@@ -36,7 +35,7 @@ export type EmergingTechService2027 =
     email: string;
     website: string;
     address: string}}
-export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
+export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = []
   // Quantum Internet Infrastructure;
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure",
@@ -199,7 +198,7 @@ export const,
     link: 'https://ziontechgroup.com/quantum-internet',
     badge: 'Breakthrough',
     icon: "",
-    image: "https://images.unsplash.com/photo-1558494949-ef010 cbdcc31?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1558494949-ef010 cbdcc31?auto=format&fit=crop&w=800&h="500","
     innovationLevel: "Breakthrough",
     marketSize: "$2.1 B by 2027",
     competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
@@ -240,7 +239,7 @@ export const,
     imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+        s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h="500","
     innovationLeve,"
   l: "Breakthrough",
     marketSiz,"
@@ -348,7 +347,7 @@ export const,
     link: 'https://ziontechgroup.com/space-quantum-computing',
     badge: 'Revolutionary',
     icon: "",
-    image: "https://images.unsplash.com/photo-1446776811953-b23 d0 bd8431 d?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1446776811953-b23 d0 bd8431 d?auto=format&fit=crop&w=800&h="500","
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 B by 2027",
     competitors["NASA", "SpaceX", "Blue Origin"],
@@ -389,7 +388,7 @@ export const,
     imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto=format&fit=crop&w=800&h=500",
+        s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto=format&fit=crop&w=800&h="500","
     innovationLeve,"
   l: "Revolutionary",
     marketSiz,"
@@ -497,7 +496,7 @@ export const,
     link: 'https://ziontechgroup.com/biocomputing',
     badge: 'Breakthrough',
     icon: "",
-    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h="500","
     innovationLevel: "Breakthrough",
     marketSize: "$3.2 B by 2027",
     competitors["Microsoft Research", "IBM Research", "Google Research"],
@@ -538,7 +537,7 @@ export const,
     imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500","
     innovationLeve,"
   l: "Breakthrough",
     marketSiz,"
@@ -646,7 +645,7 @@ export const,
     link: 'https://ziontechgroup.com/neuromorphic-computing',
     badge: 'Advanced',
     icon: "",
-    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h="500","
     innovationLevel: "Advanced",
     marketSize: "$2.8 B by 2027",
     competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"],
@@ -687,7 +686,7 @@ export const,
     imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500","
     innovationLeve,"
   l: "Advanced",
     marketSiz,"
@@ -795,7 +794,7 @@ export const,
     link: 'https://ziontechgroup.com/fusion-energy-computing',
     badge: 'Revolutionary',
     icon: "",
-    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h="500","
     innovationLevel: "Revolutionary",
     marketSize: "$4.5 B by 2027",
     competitors["ITER", "Commonwealth Fusion", "General Fusion"],
@@ -823,7 +822,7 @@ export const,
     imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500","
     innovationLeve,"
   l: "Revolutionary",
     marketSiz,"
@@ -858,7 +857,7 @@ export const,
     }
   }
 ];
-export type EmergingTechService2027 = i,
+export type EmergingTechService2027="i,"
   d: string; titl,
   e: string; descriptio,
   n: string; categor,
@@ -915,7 +914,7 @@ export type EmergingTechService2027 = i,
   n: "🌐", imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+        s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h="500", innovationLeve,""
   l: "Breakthrough", marketSiz,"
   e: "$2.1B by 2027", competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"], technicalSpec,
   s: performanc,"
@@ -949,7 +948,7 @@ export type EmergingTechService2027 = i,
   n: "🚀", imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+        s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto=format&fit=crop&w=800&h="500", innovationLeve,""
   l: "Revolutionary", marketSiz,"
   e: "$1.8B by 2027", competitors["NASA", "SpaceX", "Blue Origin"], technicalSpec,
   s: performanc,"
@@ -983,7 +982,7 @@ export type EmergingTechService2027 = i,
   n: "🧬", imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500", innovationLeve,""
   l: "Breakthrough", marketSiz,"
   e: "$3.2B by 2027", competitors["Microsoft Research", "IBM Research", "Google Research"], technicalSpec,
   s: performanc,"
@@ -1017,7 +1016,7 @@ export type EmergingTechService2027 = i,
   n: "🧠", imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500", innovationLeve,""
   l: "Advanced", marketSiz,"
   e: "$2.8B by 2027", competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"], technicalSpec,
   s: performanc,"
@@ -1051,7 +1050,7 @@ export type EmergingTechService2027 = i,
   n: "⚡", imag,"
   e: 'http,',
   s:
-        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+        s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h="500", innovationLeve,""
   l: "Revolutionary", marketSiz,"
   e: "$4.5B by 2027", competitors["ITER", "Commonwealth Fusion", "General Fusion"], technicalSpec,
   s: performanc,"

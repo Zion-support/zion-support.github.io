@@ -1,18 +1,18 @@
 // Advanced analytics and monitoring;
-export const analyticsUtils = {
+export const analyticsUtils="{}"
   // Performance monitoring;
-  measurePerformance: () => {
+  measurePerformance: () => {}
     if (typeof window !== 'undefined' && 'performance' in window) {;
-const _navigation = performance.getEntriesByType('navigation')[0];
-      const _paint = performance.getEntriesByType('paint');
+const _navigation="performance.getEntriesByType('navigation')[0];"
+      const _paint="performance.getEntriesByType('paint');"
 ;
-const metrics = {
+const metrics="{}"
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-export const analyticsUtils = {/* TODO: Fix JSX expression */}
+export const analyticsUtils="{/* TODO: Fix JSX expression */}"
       };
 
       return metrics}
@@ -20,7 +20,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
 
   // Error tracking;
   trackError: (error, context = {}) => {;
-const errorData = {
+const errorData="{}"
       message: error.message;
       stack: error.stack;
       url: window.location.href;
@@ -37,7 +37,7 @@ const errorData = {
 
   // User behavior tracking;
   trackUserInteraction: (action, element, metadata = {}) => {;
-const interactionData = {
+const interactionData="{}"
       action,
       element: element.tagName?.toLowerCase() || 'unknown'
       id: element.id || null;
@@ -54,7 +54,7 @@ const interactionData = {
   // Core Web Vitals;
   measureCoreWebVitals: () => {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         //           getCLS(console.log);
         //           getFID(console.log);
         //           getFCP(console.log);
