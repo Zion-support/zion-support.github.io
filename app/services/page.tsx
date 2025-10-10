@@ -22,19 +22,25 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes with cutting-edge machine learning and deep learning technologies.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Custom AI Models'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      benefits: ['300% ROI improvement', '95% process automation', '50% cost reduction', '24/7 AI monitoring'],
+      marketPrice: '$2,000-$5,000/month',
+      link: 'https://ziontechgroup.com/ai-services'
     },
     {
       icon: Brain,
       title: 'AI Marketing Automation',
-      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
-      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
+      description: 'Revolutionary AI-powered marketing automation with personalized campaigns, intelligent optimization, and advanced customer journey mapping.',
+      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel', 'Customer Journey Mapping'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      benefits: ['250% increase in conversion rates', '60% reduction in marketing costs', '40% improvement in customer engagement'],
+      marketPrice: '$500-$1,200/month',
+      link: 'https://ziontechgroup.com/ai-marketing'
     },
     {
       icon: Brain,
@@ -441,17 +447,40 @@ const ServicesPage: React.FC = () => {
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    {service.marketPrice && (
+                      <div className="text-sm text-gray-400 mb-1">Market rate: {service.marketPrice}</div>
+                    )}
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
                   
+                  {service.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-green-400 mb-3">Proven Benefits:</h4>
+                      <ul className="space-y-1">
+                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                    <a
+                      href={service.link || '/contact'}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"
+                    >
                       Get Quote
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                    </a>
+                    <a
+                      href={service.link || '/contact'}
+                      className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
+                    >
                       Learn More
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}

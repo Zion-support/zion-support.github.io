@@ -145,8 +145,28 @@ const HomePage: React.FC = () => {
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+              Transform your business with our cutting-edge technology and achieve unprecedented growth. Serving clients worldwide with 24/7 support.
             </p>
+            
+            {/* Key Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
+                <div className="text-sm text-gray-300">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">$50M+</div>
+                <div className="text-sm text-gray-300">Client Savings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-sm text-gray-300">Process Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-sm text-gray-300">Support Available</div>
+              </div>
+            </div>
             
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
