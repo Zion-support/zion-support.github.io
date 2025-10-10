@@ -23,13 +23,13 @@ export default function NotFoundPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+      <div className="container mx-auto px-4 py-20"></div>
         <div className="max-w-4xl mx-auto text-center">
-          {/* 404 Error */}
-          <div className="mb-8">
+          {/* 404 Error */}</div>
+          <div className="mb-8"></div>
             <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-4">
-              404
+              404</h1>
             </h1>
             <h2 className="text-4xl font-bold text-white mb-4">
               Page Not Found
@@ -41,8 +41,8 @@ export default function NotFoundPage() {
           </div>
 
           {/* Search Bar */}
-          <div className="mb-12">
-            <div className="max-w-md mx-auto relative">
+          <div className="mb-12"></div>
+            <div className="max-w-md mx-auto relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -53,10 +53,10 @@ export default function NotFoundPage() {
           </div>
 
           {/* Quick Links */}
-          <div className="mb-12">
+          <div className="mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (</div>
                 <a
                   key={index}
                   href={link.href}
@@ -70,10 +70,10 @@ export default function NotFoundPage() {
           </div>
 
           {/* Popular Services */}
-          <div className="mb-12">
+          <div className="mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-6">Popular Services</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {popularServices.map((service, index) => (
+              {popularServices.map((service, index) => (</div>
                 <a
                   key={index}
                   href={service.href}
@@ -87,12 +87,12 @@ export default function NotFoundPage() {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-lg p-8 mb-8">
+          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-lg p-8 mb-8"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Need Help?</h3>
             <p className="text-gray-300 mb-6">
               Our team is here to help you find what you're looking for.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
@@ -111,7 +111,7 @@ export default function NotFoundPage() {
           </div>
 
           {/* Back to Home */}
-          <div>
+          <div></div>
             <a
               href="/"
               className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"

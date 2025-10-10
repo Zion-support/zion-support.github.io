@@ -1,19 +1,33 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
-      title: 'Ultra-Low Latency',
-      description: 'Sub-millisecond latency for real-time applications and critical communications'
+      title: '5G Network Design',
+      description: 'Complete 5G network design and implementation with optimal coverage and performance.',
+      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
     },
     {
       icon: Zap,
-      title: 'High-Speed Connectivity',
-      description: 'Multi-gigabit speeds for seamless data transfer and streaming'
+      title: 'Ultra-Low Latency',
+      description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
+      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
+    },
+    {
+      icon: Clock,
+      title: '24/7 Network Monitoring',
+      description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
+      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
+    },
+    {
+      icon: Users,
+      title: 'Scalable Infrastructure',
+      description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
+      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
     },
     {
       icon: Shield,
@@ -21,83 +35,32 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced encryption and security protocols for enterprise-grade protection'
     },
     {
-      icon: Globe,
-      title: 'Massive IoT Support',
-      description: 'Support for millions of connected devices with efficient resource management'
-    }
-  ];
-
-  const benefits = [
-    'Reduce latency by 90% compared to 4G',
-    'Increase network capacity by 100x',
-    'Support for 1 million devices per square kilometer',
-    'Energy efficiency improvements of 90%',
-    'Real-time edge computing capabilities',
-    'Enhanced mobile broadband experience'
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$2,999/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Basic 5G coverage',
-        'Up to 100 connected devices',
-        'Standard security protocols',
-        'Email support',
-        'Basic monitoring'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$7,999/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Advanced 5G coverage',
-        'Up to 1,000 connected devices',
-        'Enhanced security protocols',
-        'Priority support',
-        'Advanced monitoring',
-        'Edge computing support',
-        'Custom configurations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$19,999/month',
-      description: 'For large organizations',
-      features: [
-        'Complete 5G coverage',
-        'Unlimited connected devices',
-        'Enterprise security protocols',
-        'Dedicated support',
-        'Full monitoring suite',
-        'Advanced edge computing',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
+      icon: BarChart,
+      title: 'Performance Analytics',
+      description: 'Advanced analytics and reporting for 5G network performance and optimization.',
+      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+    <>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            5G Network
+            5G Network</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Implementation
             </span>
@@ -106,12 +69,19 @@ const FiveGImplementationPage: React.FC = () => {
             Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
             and advanced features for modern applications and IoT ecosystems.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Get Started
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-              Learn More
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
             </button>
           </div>
         </div>
@@ -119,8 +89,8 @@ const FiveGImplementationPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
+        <div className="container mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Advanced 5G Features
             </h2>
@@ -130,9 +100,9 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -145,8 +115,8 @@ const FiveGImplementationPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
+        <div className="container mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our 5G Implementation?
             </h2>
@@ -155,27 +125,27 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
-            <div className="bg-gradient-to-br from-purple-500/10 to-blue-600/10 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-purple-500/10 to-blue-600/10 rounded-2xl p-8"></div>
               <h3 className="text-2xl font-bold text-white mb-6">Advanced Technology</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
                   <Wifi className="w-5 h-5 text-purple-400" />
                   <span className="text-gray-300">Network Slicing</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3"></div>
                   <Zap className="w-5 h-5 text-blue-400" />
                   <span className="text-gray-300">Edge Computing</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3"></div>
                   <Shield className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300">Advanced Security</span>
                 </div>
@@ -187,8 +157,8 @@ const FiveGImplementationPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
+        <div className="container mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -198,16 +168,16 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((plan, index) => (</div>
               <div key={index} className={`bg-white rounded-2xl shadow-2xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-4">{plan.description}</p>
                   <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
@@ -238,14 +208,14 @@ const FiveGImplementationPage: React.FC = () => {
 
       {/* Contact Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Implement 5G?
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
             Contact us today to discuss your 5G implementation needs and get a customized solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
@@ -261,7 +231,8 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

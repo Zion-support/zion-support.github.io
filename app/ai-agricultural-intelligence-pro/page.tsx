@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Leaf, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
@@ -9,85 +10,92 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
       icon: Leaf,
-      title: 'Crop Monitoring',
+title: 'Crop Monitoring',
       description: 'Advanced AI-powered crop monitoring and health assessment using satellite imagery and IoT sensors.',
       benefits: ['Real-time crop health', 'Disease detection', 'Yield prediction']
+
     },
     {
       icon: Zap,
-      title: 'Precision Agriculture',
-      description: 'Optimize farming operations with precision agriculture techniques and AI-driven insights.',
-      benefits: ['Resource optimization', 'Smart irrigation', 'Fertilizer management']
-    },
-    {
-      icon: Clock,
-      title: 'Weather Prediction',
-      description: 'Accurate weather forecasting and climate analysis for better farming decisions.',
-      benefits: ['Weather alerts', 'Climate analysis', 'Seasonal planning']
+      title: 'Automated Irrigation',
+      description: 'Smart irrigation systems that optimize water usage based on soil and weather data.',
+      benefits: ['Water conservation', 'Cost reduction', 'Improved yields', 'Environmental sustainability']
     },
     {
       icon: Shield,
       title: 'Pest Management',
-      description: 'Intelligent pest detection and management using computer vision and machine learning.',
-      benefits: ['Early pest detection', 'Automated treatment', 'Reduced pesticide use']
+      description: 'AI-driven pest detection and management solutions for sustainable farming.',
+      benefits: ['Pest identification', 'Treatment recommendations', 'Chemical reduction', 'Organic alternatives']
+    },
+    {
+      icon: Clock,
+      title: 'Real-time Monitoring',
+      description: '24/7 monitoring of farm conditions with instant alerts and recommendations.',
+      benefits: ['Continuous monitoring', 'Instant alerts', 'Mobile access', 'Historical data']
     },
     {
       icon: Users,
-      title: 'Farm Management',
-      description: 'Comprehensive farm management system with AI-powered recommendations and analytics.',
-      benefits: ['Farm planning', 'Resource tracking', 'Performance analytics']
-    },
-    {
-      icon: BarChart,
-      title: 'Yield Optimization',
-      description: 'Maximize crop yields through AI-driven optimization and predictive analytics.',
-      benefits: ['Yield prediction', 'Optimization algorithms', 'ROI analysis']
+      title: 'Expert Support',
+      description: 'Access to agricultural experts and AI specialists for guidance and support.',
+      benefits: ['Expert consultation', 'Training programs', 'Technical support', 'Best practices']
     }
   ];
 
   const benefits = [
-    'Increase crop yields by 30%',
+    'Increase crop yields by up to 30%',
     'Reduce water usage by 40%',
     'Minimize pesticide use by 50%',
-    'Improve farm efficiency',
-    'Enable data-driven decisions',
-    'Support sustainable farming'
+    'Lower operational costs by 25%',
+    'Improve soil health and sustainability',
+    'Enable data-driven decision making',
+    'Scale operations efficiently',
+    'Reduce environmental impact'
   ];
 
   const useCases = [
     {
-      title: 'Crop Monitoring',
-      description: 'Monitor crop health and growth with AI-powered analysis',
+      title: 'Precision Agriculture',
+      description: 'Optimize farming practices with data-driven insights',
       icon: '🌱'
     },
     {
-      title: 'Precision Irrigation',
-      description: 'Optimize water usage with smart irrigation systems',
+      title: 'Crop Health Monitoring',
+      description: 'Monitor crop health and detect issues early',
+      icon: '🔍'
+    },
+    {
+      title: 'Weather Prediction',
+      description: 'Predict weather patterns for better planning',
+      icon: '🌤️'
+    },
+    {
+      title: 'Yield Optimization',
+      description: 'Maximize crop yields through AI recommendations',
+      icon: '📈'
+    },
+    {
+      title: 'Resource Management',
+      description: 'Optimize water, fertilizer, and pesticide usage',
       icon: '💧'
     },
     {
-      title: 'Pest Control',
-      description: 'Detect and manage pests with intelligent systems',
-      icon: '🐛'
-    },
-    {
-      title: 'Yield Prediction',
-      description: 'Predict crop yields with advanced analytics',
+      title: 'Market Analysis',
+      description: 'Analyze market trends and pricing for better decisions',
       icon: '📊'
-    }
+}
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming</title>
+<title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming</title>
         <meta name="description" content="Transform agriculture with AI-powered intelligence solutions. Crop monitoring, precision farming, and smart agriculture technology for modern farmers." />
         <meta name="keywords" content="AI agriculture, smart farming, precision agriculture, crop monitoring, agricultural intelligence, farming technology" />
+
       </Helmet>
-      
+
       <Navigation />
-      
-      {/* Hero Section */}
+{/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -95,6 +103,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             AI Agricultural
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+
               Intelligence Pro
             </span>
           </h1>
@@ -109,6 +118,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
+
           </div>
         </div>
       </section>
@@ -213,13 +223,88 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
+
             </button>
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
+=======
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
+
+const AIAgriculturalIntelligenceProPage: React.FC = () => {
+  const features = [
+    'Crop monitoring and yield prediction',
+    'Soil analysis and nutrient optimization',
+    'Pest and disease detection',
+    'Weather pattern analysis',
+    'Automated irrigation systems',
+    'Livestock health monitoring',
+    'Supply chain optimization',
+    'Market price forecasting',
+    'Sustainability tracking',
+    'Real-time farm management'
+  ];
+
+  const benefits = [
+    'Increased crop yields by up to 30%',
+    'Reduced water usage by 25%',
+    'Early pest detection and prevention',
+    'Optimized fertilizer application',
+    'Improved resource efficiency',
+    'Enhanced decision making'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional AI agricultural intelligence services powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="ai agricultural intelligence pro, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Agricultural Intelligence Pro</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AI agricultural intelligence services powered by advanced AI and cutting-edge technology.
+            </p>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12"></div>
+              <h2 className="text-2xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h2>
+              <div className="grid md:grid-cols-3 gap-6 text-left"></div>
+                <div className="bg-cyan-500/20 rounded-lg p-6"></div>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Advanced AI</h3>
+                  <p className="text-gray-300">Cutting-edge artificial intelligence solutions</p>
+                </div>
+                <div className="bg-purple-500/20 rounded-lg p-6"></div>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-2">Expert Team</h3>
+                  <p className="text-gray-300">Experienced professionals with proven track record</p>
+                </div>
+                <div className="bg-pink-500/20 rounded-lg p-6"></div>
+                  <h3 className="text-lg font-semibold text-pink-400 mb-2">24/7 Support</h3>
+                  <p className="text-gray-300">Round-the-clock technical support and monitoring</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4"></div>
+              <a
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+    </>
   );
 };
 

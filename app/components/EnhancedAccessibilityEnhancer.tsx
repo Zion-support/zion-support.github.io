@@ -1,168 +1,155 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface EnhancedAccessibilityEnhancerProps {}
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableAriaLabels?: boolean;
-  enableReducedMotion?: boolean;
-  enableSkipLinks?: boolean;
-  enableColorContrast?: boolean;
-  enableFontScaling?: boolean;
-}
-
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({}
-  enableKeyboardNavigation = true,
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({,
-  enableKeyboardNavigation = true;
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-  enableAriaLabels = true,
-  enableReducedMotion = true,
-  enableSkipLinks = true,
-  enableColorContrast = true,
-  enableFontScaling = true}) => {
-  // Keyboard navigation enhancement;
-  const enhanceKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined' || !enableKeyboardNavigation) return;
-
-    // Add keyboard event listeners;
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {}) => {}
-  // Keyboard navigation enhancement
-  const enhanceKeyboardNavigation = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableKeyboardNavigation) return;
-
-    // Add keyboard event listeners
-    const handleKeyDown = (event: KeyboardEvent) => {}
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {}
-          skipLink.focus();
-        }
-      }
-
-      // Close modals with Escape;
-      if (event.key === 'Escape') {
-      // Close modals with Escape
-      if (event.key === 'Escape') {}
-        const modals = document.querySelectorAll('[role="dialog"]');
-        modals.forEach((modal) => {}
-          if (modal.getAttribute('aria-hidden') === 'false') {}
-            const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-            if (closeButton) {}
-              closeButton.click();
-            }
-          }
-        }
-      }
-
-      // Navigate dropdowns with arrow keys;
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      // Navigate dropdowns with arrow keys
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {}
-        const dropdown = event.target as HTMLElement;
-        if (dropdown.getAttribute('aria-expanded') === 'true') {}
-          event.preventDefault();
-          const items = dropdown.querySelectorAll('[role="menuitem"]');
-          const currentIndex = Array.from(items).indexOf(document.activeElement as Element);
-
-          if (event.key === 'ArrowDown') {}
-            const nextIndex = (currentIndex + 1) % items.length;
-            (items[nextIndex] as HTMLElement).focus();
-          } else {}
-            const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-            (items[prevIndex] as HTMLElement).focus();
-          }
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation]);
-
-  // Screen reader enhancements;
-  const enhanceScreenReader = useCallback(() => {
-  // Screen reader enhancements
-  const enhanceScreenReader = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableScreenReader) return;
-
-    // Add live region for dynamic content;
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes;
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
-    // Announce page changes
-    const announcePageChange = (message: string) => {}
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {}
-        liveRegion.textContent = message;
-      }
-    };
-
-    // Add to window for global access;
-    (window as any).announcePageChange = announcePageChange;
-
-    // Add ARIA landmarks;
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {}
-      main.setAttribute('role', 'main');
+const EnhancedAccessibilityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
+  ];
 
-    const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {}
-      nav.setAttribute('role', 'navigation');
-    }
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
 
-    const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {}
-      footer.setAttribute('role', 'contentinfo');
-    }
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="EnhancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group, enhancedaccessibilityenhancer" />
+      </Helmet>
 
-    // Add heading hierarchy;
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    headings.forEach((heading, index) => {}
-      if (!heading.id) {}
-        heading.id = `heading-${index}`;
-      }
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                EnhancedAccessibilityEnhancer
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced enhancedaccessibilityenhancer solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  }, [enableScreenReader]);
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our EnhancedAccessibilityEnhancer?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
 
-  // High contrast mode;
-  const enhanceHighContrast = useCallback(() => {
-  // High contrast mode
-  const enhanceHighContrast = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableHighContrast) return;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    // Detect system high contrast preference;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our enhancedaccessibilityenhancer solutions for your business.
+            </p>
+          </div>
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
-      if (e.matches) {,
-    const handleContrastChange = (e: MediaQueryListEvent) => {}
-      if (e.matches) {}
-        document.body.classList.add('high-contrast');
-      } else {}
-        document.body.classList.remove('high-contrast');
-      }
-    };
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your enhancedaccessibilityenhancer needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+=======
     prefersHighContrast.addEventListener('change', handleContrastChange);
 
     // Initial check;
@@ -351,7 +338,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       position: absolute;,
     top: -40 px;
       left: 6 px;
-      z-index: 1000;
+      z-index: 1000,
     `;,
 ,
     skipLinks.forEach(({ href, text }) => {
@@ -369,7 +356,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     background: #000;
         color: #fff;,
     padding: 8 px;
-        text-decoration: none;
+        text-decoration: none,
         z-index: 1000;,
     transition: top 0.3 s;
       `;
@@ -432,14 +419,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       html {}
-        font-size: 16px;
+        font-size: 16px,
       }
 
       @media (prefers-font-size: large) {,
         html {,
       @media (prefers-font-size: large) {}
         html {}
-          font-size: 18px;
+          font-size: 18px,
         }
       }
 
@@ -447,7 +434,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         html {,
       @media (prefers-font-size: x-large) {}
         html {}
-          font-size: 20px;
+          font-size: 20px,
         }
       }
 
@@ -489,5 +476,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     enhanceFontScaling]);
 
   return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
-</<<<EnhancedAccessibilityEnhancerProps>export</EnhancedAccessibilityEnhancerProps></<<EnhancedAccessibilityEnhancerProps>default</EnhancedAccessibilityEnhancerProps> EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>
+
+export default EnhancedAccessibilityEnhancerPage;

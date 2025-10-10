@@ -1,8 +1,26 @@
 'use client';
-import React, { useState, useCallback, memo } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
 
+<<<<<<< HEAD
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Page services powered by advanced AI and cutting-edge technology.
+          </p>
+          <div className="space-y-4">
+=======
 const AIExpenseTracker: React.FC = memo(() => {,
 const AIExpenseTracker: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,28 +31,28 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Receipt;
+      icon: Receipt,
     {}
       icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
       color: 'text-purple-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'AI Categorization',
       description: 'Intelligently categorize expenses and learn from your spending patterns over time',
       color: 'text-blue-400'},
     {
-      icon: BarChart;
+      icon: BarChart,
     {}
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Get detailed insights into your spending habits with beautiful charts and reports',
       color: 'text-green-400'},
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Budget Management',
@@ -59,7 +77,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '1 user account'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Business'
@@ -78,7 +96,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '5 user accounts'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -97,7 +115,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         'Unlimited users'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -105,22 +123,22 @@ const AIExpenseTracker: React.FC = memo(() => {}
     {}
       title: 'Personal Finance',
       description: 'Track personal expenses and build better financial habits',
-      icon: Receipt;
+      icon: Receipt,
       result: '30% savings'},
     {}
       title: 'Business Expenses',
       description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart;
+      icon: BarChart,
       result: '50% faster'},
     {}
       title: 'Tax Preparation',
       description: 'Organize receipts and expenses for easy tax filing',
-      icon: Target;
+      icon: Target,
       result: '90% easier'},
     {}
       title: 'Team Management',
       description: 'Track team expenses and enforce spending policies',
-      icon: Users;
+      icon: Users,
       result: '100% control'}
   ];
 
@@ -132,7 +150,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Expense Tracker - Smart Financial Management | Zion Tech Group</title>
@@ -153,15 +171,15 @@ const AIExpenseTracker: React.FC = memo(() => {}
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
-        {/* Hero Section */}
+        {/* Hero Section */}</div>
         <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
             <Receipt className="w-4 h-4" />
             <span>AI-Powered Finance</span>
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Expense Tracker;
+            AI Expense Tracker;</h1>
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -169,17 +187,17 @@ const AIExpenseTracker: React.FC = memo(() => {}
             Save time, reduce errors, and gain valuable insights into your spending habits.
           </p>
 
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            ><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950<a
               href="/contact"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-            >Start Tracking</a>
+              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
+<<<<<<< HEAD
+              Get Started Today
+=======
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950;
             </a>
@@ -195,13 +213,13 @@ const AIExpenseTracker: React.FC = memo(() => {}
         {/* Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-              </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+              </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading performance</div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (}
-              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+            {benefits.map((benefit, index) => (}</div>
+              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
                 <div className="text-gray-400 text-sm">Industry-leading performance</div>
@@ -216,18 +234,18 @@ const AIExpenseTracker: React.FC = memo(() => {}
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
+            {features.map((feature, index) => (}</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-start space-x-4">,
-                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-start space-x-4">,</div>
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
@@ -246,19 +264,19 @@ const AIExpenseTracker: React.FC = memo(() => {}
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (}
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
+            {useCases.map((useCase, index) => (}</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-center justify-between mb-4">,
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-center justify-between mb-4">,</div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
@@ -277,20 +295,20 @@ const AIExpenseTracker: React.FC = memo(() => {}
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
-                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (}
+            {pricingPlans.map((plan, index) => (}</div>
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (}</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</div>
                     </div>
                   </div>
                 )}
@@ -299,7 +317,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
@@ -338,7 +356,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 10,000+ users already saving time and money with our AI Expense Tracker.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
             <a
@@ -361,14 +379,13 @@ const AIExpenseTracker: React.FC = memo(() => {}
       >
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </a>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
-});
+};
 
-AIExpenseTracker.displayName = 'AIExpenseTracker';
-,
-export default AIExpenseTracker;
+export default PagePage;

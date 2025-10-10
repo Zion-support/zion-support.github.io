@@ -1,16 +1,37 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+=======
 const BusinessIntelligencePage: React.FC = () => {
   const features = [,
     {,
       title: 'Real-Time Analytics Dashboard',
       description: 'Live business intelligence dashboards with real-time data visualization and interactive reporting.',
-      icon: BarChart;
+      icon: BarChart,
       price: 'Starting at $2,800/month',
       features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
@@ -21,7 +42,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Predictive Analytics & Forecasting',
       description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
       benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
@@ -32,7 +53,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Data Warehouse Design & Implementation',
       description: 'Comprehensive data warehouse solutions for centralized data storage and analytics.',
-      icon: Database;
+      icon: Database,
       price: 'Starting at $4,200/month',
       features: ['Data modeling', 'ETL processes', 'Data quality management', 'Schema design', 'Performance optimization'],
       benefits: ['Centralize all business data', 'Improve data quality', 'Enable advanced analytics'],
@@ -43,7 +64,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Intelligent BI systems that automatically identify patterns and generate insights.',
-      icon: Brain;
+      icon: Brain,
       price: 'Starting at $4,500/month',
       features: ['Automated insights', 'Anomaly detection', 'Natural language queries', 'Pattern recognition', 'Smart recommendations'],
       benefits: ['Discover hidden patterns', 'Reduce analysis time by 80%', 'Make data-driven decisions'],
@@ -138,79 +159,101 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   const benefits = [
-    'Transform raw data into actionable insights',
-    'Make data-driven decisions with confidence',
-    'Identify new business opportunities',
-    'Improve operational efficiency',
-    'Reduce costs through better resource allocation',
-    'Enhance customer experience',
-    'Predict future trends and patterns',
-    'Comply with regulatory requirements'
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
+<<<<<<< HEAD
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
   const processSteps = [
     {
       step: '01',
       title: 'Data Assessment',
       description: 'Analyze your current data landscape and identify opportunities',
-      icon: Database;
+      icon: Database,
     },
     {
       step: '02',
       title: 'Strategy Development',
       description: 'Create a comprehensive BI strategy tailored to your needs',
-      icon: Target;
+      icon: Target,
     },
     {
       step: '03',
       title: 'Implementation',
       description: 'Build and deploy your BI solution with best practices',
-      icon: Zap;
+      icon: Zap,
     },
     {
       step: '04',
       title: 'Optimization',
       description: 'Continuously improve and optimize your BI capabilities',
-      icon: TrendingUp;
+      icon: TrendingUp,
     }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
-        <title>Business Intelligence Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
-            Make informed decisions with our comprehensive BI solutions.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Free Consultation<a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">Call (302) 464-0950</a>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-      <Navigation />
       {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+=======
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Business Intelligence Services;
+              Business Intelligence Services;</h1>
             </h1>
           </div>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into strategic insights that drive business growth.
             Make informed decisions with our comprehensive BI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">)
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">)</div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">)
               Get Free Consultation;)
             </a>)
@@ -226,9 +269,9 @@ const BusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
@@ -247,8 +290,8 @@ const BusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases<div className="grid md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases</h2>
           <div className="grid md: grid-cols-3 gap-8">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card p-6">
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
                 <div className="text-4xl mb-4">{useCase.icon}<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}<ul className="text-sm text-gray-400 space-y-1">{useCase.examples.map((example, idx) => (<li key={idx}>• {example}</li>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases</h2><div className="grid md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</section>
@@ -265,16 +308,16 @@ const BusinessIntelligencePage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((plan, index) => (</section><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans</h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {benefits.map((plan, index) => (
+            {benefits.map((plan, index) => (</div>
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -305,7 +348,7 @@ const BusinessIntelligencePage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-          <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Data?
@@ -313,7 +356,7 @@ const BusinessIntelligencePage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of businesses who have unlocked the power of their data with our BI solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a;
           <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
@@ -332,7 +375,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">
+            <div className="mt-8 text-sm text-purple-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
@@ -340,8 +383,8 @@ const BusinessIntelligencePage: React.FC = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Services<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive business intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our BI Services;
@@ -352,9 +395,9 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-            {biServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <div className="flex items-center mb-4">
+            {biServices.map((service, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
@@ -371,7 +414,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features: </h4>,
@@ -384,7 +427,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits: </h4>,
@@ -397,7 +440,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-white mb-3">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, idx) => (<span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">{tech}</span>
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-white mb-3">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, idx) => (</div><span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">{tech}</span>
@@ -408,7 +451,7 @@ const BusinessIntelligencePage: React.FC = () => {
               </div>
                   <h4 className="text-lg font-semibold text-white mb-3">Technologies: </h4>,
                   <div className="flex flex-wrap gap-2">,
-                    {service.technologies.map((tech, idx) => (
+                    {service.technologies.map((tech, idx) => (</div>
                       <span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">
                         {tech}
                       </span>
@@ -420,27 +463,47 @@ const BusinessIntelligencePage: React.FC = () => {
                   Get Started;
                 </button>,
               </div>))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+=======
+      {/* Process Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our BI Process;
+              Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology to deliver successful business intelligence solutions.
+              Our page solutions deliver unmatched performance, security, and scalability.
             </p>
+<<<<<<< HEAD
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            {processSteps.map((step, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}<p className="text-gray-300">{step.description}</p>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto"></section>
@@ -449,6 +512,7 @@ const BusinessIntelligencePage: React.FC = () => {
               <div key={index} className="text-center"></div>
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3><p className="text-gray-300">{step.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -456,22 +520,39 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+=======
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our BI Services?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our BI Services?
+              Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+=======
               Experience the power of data-driven decision making with our expert BI solutions.,
             </p>,
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
@@ -480,6 +561,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
                 <p className="text-white font-medium">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -487,11 +569,32 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+=======
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
             <p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a;
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center"></section>
@@ -520,12 +623,12 @@ const BusinessIntelligencePage: React.FC = () => {
               <Mail className="w-5 h-5 mr-2" />
               Email Us;
             </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
-
-      <Footer />,
-    </div>);
+    </div>
+  );
 };
 
-export default BusinessIntelligencePage;
+export default PagePage;

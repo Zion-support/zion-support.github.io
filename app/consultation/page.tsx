@@ -1,24 +1,103 @@
 'use client';
-
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, Clock, CheckCircle, ArrowRight, Users, Zap, Shield, BarChart } from 'lucide-react';
+import { Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Brain, Cloud, Zap, Globe, Settings, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const ConsultationPage: React.FC = () => {
+export default function ConsultationPage() {
+  const [selectedService, setSelectedService] = useState('ai-services');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    industry: '',
-    projectType: '',
+    service: '',
+budget: '',
     timeline: '',
-    budget: '',
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const services = [
+    {
+      id: 'ai-services',
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence',
+      icon: Brain,
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      id: 'cloud-services',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for your business',
+      icon: Cloud,
+      features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Auto-scaling']
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Turn your data into actionable business insights',
+      icon: Database,
+      features: ['Data Visualization', 'Business Intelligence', 'ETL Processes', 'Real-time Analytics']
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      description: 'Protect your business with comprehensive security solutions',
+      icon: Shield,
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', '24/7 Monitoring']
+    }
+  ];
+
+  const consultationTypes = [
+    {
+      title: 'Free Initial Consultation',
+      duration: '30 minutes',
+      price: 'Free',
+      description: 'Get started with a free consultation to discuss your needs',
+      features: ['Needs Assessment', 'Solution Overview', 'Next Steps Planning'],
+      icon: Calendar
+    },
+    {
+      title: 'Technical Deep Dive',
+      duration: '60 minutes',
+      price: '$200',
+      description: 'Detailed technical consultation with our experts',
+      features: ['Technical Analysis', 'Architecture Review', 'Implementation Plan'],
+      icon: Settings
+    },
+    {
+      title: 'Strategic Planning Session',
+      duration: '90 minutes',
+      price: '$500',
+      description: 'Comprehensive strategic planning for your digital transformation',
+      features: ['Strategic Assessment', 'Roadmap Development', 'Resource Planning'],
+      icon: Globe
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: 'Expert Guidance',
+      description: 'Get advice from industry experts with 15+ years experience'
+    },
+    {
+      icon: Users,
+      title: 'Personalized Solutions',
+      description: 'Tailored recommendations based on your specific needs'
+    },
+    {
+      icon: Clock,
+      title: 'Quick Turnaround',
+      description: 'Get actionable insights in just one session'
+    },
+    {
+      icon: Star,
+      title: 'Proven Results',
+      description: 'Our clients see 300% average ROI improvement'
+    }
+  ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -28,18 +107,13 @@ const ConsultationPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    // Handle form submission
+    console.log('Form submitted:', formData);
   };
 
-  const consultationTypes = [
+const consultationTypes = [
     {
       icon: Zap,
       title: 'AI Strategy Consultation',
@@ -60,6 +134,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Review your current technology stack and recommend optimizations',
       duration: '2-4 hours',
       price: 'Free'
+
     }
   ];
 
@@ -70,17 +145,19 @@ const ConsultationPage: React.FC = () => {
     'Expert insights and advice',
     'Detailed project roadmap',
     'Transparent pricing'
+
   ];
 
   return (
     <>
       <Helmet>
-        <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
-        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized recommendations and a custom roadmap for your business transformation." />
-        <meta name="keywords" content="free consultation, AI strategy, technology audit, security assessment, expert advice, business transformation" />
+        <title>Free Consultation - Zion Tech Group | Expert AI & IT Advice</title>
+        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized advice on how to transform your business with technology." />
+        <meta name="keywords" content="free consultation, AI consultation, IT consultation, business transformation, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
@@ -136,10 +213,14 @@ const ConsultationPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
 
-            {/* Consultation Form */}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+{/* Consultation Form */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               
@@ -147,199 +228,49 @@ const ConsultationPage: React.FC = () => {
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
+
                   <p className="text-gray-300 mb-6">
-                    Thank you for your interest. We'll contact you within 24 hours to schedule your free consultation.
+                    Schedule your free consultation and let's discuss how we can help transform your business.
                   </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                  >
-                    Schedule Another
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                    Schedule Free Consultation
+                    <ArrowRight className="inline-block ml-2 w-4 h-4" />
                   </button>
+
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your company"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Industry
-                    </label>
-                    <select
-                      name="industry"
-                      value={formData.industry}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    >
-                      <option value="">Select your industry</option>
-                      <option value="technology">Technology</option>
-                      <option value="healthcare">Healthcare</option>
-                      <option value="finance">Finance</option>
-                      <option value="manufacturing">Manufacturing</option>
-                      <option value="retail">Retail</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Type
-                    </label>
-                    <select
-                      name="projectType"
-                      value={formData.projectType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    >
-                      <option value="">Select project type</option>
-                      <option value="ai-strategy">AI Strategy</option>
-                      <option value="security-assessment">Security Assessment</option>
-                      <option value="technology-audit">Technology Audit</option>
-                      <option value="custom-development">Custom Development</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline
-                      </label>
-                      <select
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      >
-                        <option value="">Select timeline</option>
-                        <option value="asap">ASAP</option>
-                        <option value="1-month">Within 1 month</option>
-                        <option value="3-months">Within 3 months</option>
-                        <option value="6-months">Within 6 months</option>
-                        <option value="flexible">Flexible</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Budget Range
-                      </label>
-                      <select
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      >
-                        <option value="">Select budget range</option>
-                        <option value="under-10k">Under $10,000</option>
-                        <option value="10k-50k">$10,000 - $50,000</option>
-                        <option value="50k-100k">$50,000 - $100,000</option>
-                        <option value="100k-plus">$100,000+</option>
-                        <option value="discuss">Let's discuss</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Additional Information
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
-                      placeholder="Tell us about your project goals, challenges, or any specific requirements..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Scheduling...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Calendar className="w-5 h-5" />
-                        <span>Schedule Free Consultation</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Free Consultation</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Get expert advice on how AI and IT solutions can transform your business.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">What to Expect</h2>
+                <p className="text-gray-700 mb-6">
+                  Our 30-minute consultation will help you understand how our services can benefit your business.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Schedule Your Call</h2>
+                <p className="text-gray-700 mb-6">
+                  Contact us at (302) 464-0950 or email info@ziontechgroup.com to schedule your free consultation.
+                </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
+              </div>
             </div>
           </div>
-        </div>
+</div>
       </div>
     </>
-  );
-};
 
-export default ConsultationPage;
+  );
+}

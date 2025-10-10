@@ -1,14 +1,52 @@
 'use client';
-
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Rocket, Satellite, Globe, Zap, Target, Users, Shield, Lock, Settings, FileText, Brain, Activity, Orbit } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const AISpaceTechnologyPage: React.FC = () => {
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+=======
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Space Technology - Advanced Space Solutions | Zion Tech Group"
@@ -27,7 +65,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <Rocket className="w-4 h-4 mr-2" />
                 Space AI Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Space Technology</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
                   Advanced Space Solutions
@@ -54,395 +92,118 @@ const AISpaceTechnologyPage: React.FC = () => {
             </div>
           </div>
         </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Revolutionary Space AI Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Advanced AI technology for the next generation of space operations
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-xl border border-violet-100"></div>
-                <div className="w-12 h-12 bg-violet-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Satellite className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Satellite Management</h>
-                <p className="text-gray-600 mb-4">
-                  AI-powered satellite operations with autonomous orbit control and mission planning.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Autonomous</CheckCircle></<<CheckCircle>control</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Mission</CheckCircle></<<CheckCircle>optimization</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100"></div>
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Orbit className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Orbital Mechanics</h>
-                <p className="text-gray-600 mb-4">
-                  Advanced orbital calculations and trajectory optimization using AI algorithms.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Trajectory</CheckCircle></<<CheckCircle>optimization</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Collision</CheckCircle></<<CheckCircle>avoidance</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100"></div>
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Earth Observation</h>
-                <p className="text-gray-600 mb-4">
-                  AI-powered analysis of satellite imagery for environmental monitoring and research.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Image</CheckCircle></<<CheckCircle>analysis</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Environmental</CheckCircle></<<CheckCircle>monitoring</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100"></div>
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Communication</h>
-                <p className="text-gray-600 mb-4">
-                  Intelligent space communication systems with adaptive signal processing.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Signal</CheckCircle></<<CheckCircle>optimization</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Interference</CheckCircle></<<CheckCircle>mitigation</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100"></div>
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Debris Tracking</h>
-                <p className="text-gray-600 mb-4">
-                  AI-powered space debris monitoring and collision prediction systems.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Debris</CheckCircle></<<CheckCircle>tracking</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Collision</CheckCircle></<<CheckCircle>prediction</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100"></div>
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mission Planning</h>
-                <p className="text-gray-600 mb-4">
-                  Intelligent mission planning and resource optimization for space operations.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Resource</CheckCircle></<<CheckCircle>optimization</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Risk</CheckCircle></<<CheckCircle>assessment</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Applications Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Space Technology Applications
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Transform space operations across multiple industries
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12"></div>
-              <div className="space-y-8"></div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-violet-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Satellite className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Commercial Satellites</h3>
-                    <p className="text-gray-600">Optimize commercial satellite operations with AI-powered management and maintenance systems.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Earth Observation</h3>
-                    <p className="text-gray-600">Advanced satellite imagery analysis for agriculture, climate monitoring, and disaster response.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Space Exploration</h3>
-                    <p className="text-gray-600">AI-powered mission planning and autonomous navigation for deep space exploration.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-8"></div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Space Communication</h3>
-                    <p className="text-gray-600">Intelligent communication networks for space-based internet and global connectivity.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Space Security</h3>
-                    <p className="text-gray-600">Advanced space situational awareness and threat detection systems.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Activity className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Space Analytics</h3>
-                    <p className="text-gray-600">Comprehensive space data analysis and predictive modeling for space operations.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Space Technology Pricing
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Advanced space solutions for organizations of all sizes
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8"></div>
-              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Research</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$4,999</span>
-                    <span className="text-gray-600">/month</span>
-                  </div>
-                  <p className="text-gray-600 mb-8">For academic and research institutions</p>
-                </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Basic satellite management</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Orbital calculations</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Email support</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Research data access</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Research Plan"
-                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl border-2 border-violet-500 relative"></div>
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-violet-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Commercial</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$12,999</span>
-                    <span className="text-gray-600">/month</span>
-                  </div>
-                  <p className="text-gray-600 mb-8">For commercial space companies</p>
-                </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Advanced satellite management</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Mission planning AI</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">24/7 support</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">API access</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Custom integrations</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Commercial Plan"
-                  className="w-full bg-violet-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-violet-700 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Government</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">Custom</span>
-                    <span className="text-gray-600">pricing</span>
-                  </div>
-                  <p className="text-gray-600 mb-8">For government agencies and defense</p>
-                </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Full space technology suite</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Custom AI models</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Dedicated support team</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">On-premise deployment</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Security clearance</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Government Plan"
-                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
-                  Contact Sales
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-violet-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Launch Your Space Operations
-            </h2>
-            <p className="text-xl text-violet-100 mb-8">
-              Join the space revolution with AI-powered technology solutions
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a 
-                href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Inquiry"
-                className="inline-flex items-center px-8 py-4 bg-white text-violet-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              ></a></<<<a>Request</a></<<a>Demo</a>
-                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-              </a>
-              <a 
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300"
-              ></a>
-                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Info */}
-        <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <div className="grid md:grid-cols-3 gap-8 text-white"></div>
-              <div className="flex items-center justify-center"></div>
-                <Phone className="w-5 h-5 mr-2" />
-                <span>+1 302 464 0950</span>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="flex items-center justify-center"></div>
-                <Mail className="w-5 h-5 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-              <div className="flex items-center justify-center"></div>
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
             </div>
           </div>
+<<<<<<< HEAD
+        </div>
+      </section>
+    </div>
+=======
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 
-export default AISpaceTechnologyPage;
+export default PagePage;

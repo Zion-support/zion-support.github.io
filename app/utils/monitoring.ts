@@ -14,12 +14,12 @@ export interface PerformanceMetrics {
   inp?: number;
 }
 export interface ErrorReport {
-  message: string;
+  message: string,
   stack?: string;
   component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  timestamp: number,
+  userAgent: string,
+  url: string,
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}

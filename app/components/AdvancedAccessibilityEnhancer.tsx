@@ -1,6 +1,31 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
+const AdvancedAccessibilityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+=======
 interface AdvancedAccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -47,7 +72,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false;)
     fontSize: 'normal'),
     screenReader: false),
-    keyboardNavigation: false;
+    keyboardNavigation: false,
   });
 
   // Detect user preferences;
@@ -73,7 +98,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     setAccessibilitySettings(prev => ({)
       ...prev),
       reducedMotion: prefersReducedMotion),
-      highContrast: prefersHighContrast;
+      highContrast: prefersHighContrast,
     }));
 
     // Listen for changes in user preferences;
@@ -118,386 +143,131 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       root.classList.add('high-contrast');
     } else {}
       root.classList.remove('high-contrast');
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
+  ];
 
-    // Apply reduced motion;
-    if (accessibilitySettings.reducedMotion) {
-    // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {}
-      root.classList.add('reduced-motion');
-    } else {}
-      root.classList.remove('reduced-motion');
-    }
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
 
-    // Apply font scaling;
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
-  }, [accessibilitySettings]);
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AdvancedAccessibilityEnhancer | Zion Tech Group</title>
+        <meta name="description" content="Professional AdvancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="AdvancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group, advancedaccessibilityenhancer" />
+      </Helmet>
 
-  // Keyboard navigation enhancement;
-  const setupKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return;
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AdvancedAccessibilityEnhancer
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced advancedaccessibilityenhancer solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
-        if (skipLink) {,
-  // Keyboard navigation enhancement
-  const setupKeyboardNavigation = useCallback(() => {}
-    if (typeof window === 'undefined') return;
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AdvancedAccessibilityEnhancer?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our advancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
 
-    const handleKeyDown = (event: KeyboardEvent) => {}
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
-        if (skipLink) {}
-          skipLink.focus();
-          event.preventDefault();
-        }
-      }
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      // Escape key to close modals/dropdowns;
-      if (event.key === 'Escape') {
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {}
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {}
-          activeElement.click();
-        }
-      }
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our advancedaccessibilityenhancer solutions for your business.
+            </p>
+          </div>
 
-      // Arrow keys for menu navigation;
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      // Arrow keys for menu navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {}
-        const menu = document.querySelector('[role="menu"]') as HTMLElement;
-        if (menu && menu.contains(event.target as Node)) {}
-          event.preventDefault();
-          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
-          const currentIndex = menuItems.indexOf(event.target as HTMLElement);
-          const nextIndex = event.key === 'ArrowDown'
-            ? (currentIndex + 1) % menuItems.length;
-            : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
-          menuItems[nextIndex]?.focus();
-        }
-      }
-    };
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Screen reader enhancements;
-  const setupScreenReaderSupport = useCallback(() => {
-  // Screen reader enhancements
-  const setupScreenReaderSupport = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    // Add live region for dynamic content updates;
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes;
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
-    // Announce page changes
-    const announcePageChange = (message: string) => {}
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {}
-        liveRegion.textContent = message;
-      }
-    };
-
-    // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-
-    history.pushState = function(...args) {}
-      originalPushState.apply(history, args);
-      announcePageChange('Page changed');
-    };
-
-    history.replaceState = function(...args) {}
-      originalReplaceState.apply(history, args);
-      announcePageChange('Page updated');
-    };
-  }, []);
-
-  // Focus management;
-  const setupFocusManagement = useCallback(() => {
-  // Focus management
-  const setupFocusManagement = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    // Trap focus in modals
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
-    // Trap focus in modals;
-    const trapFocus = (element: HTMLElement) => {,
-      const focusableElements = element.querySelectorAll()
-    const trapFocus = (element: HTMLElement) => {}
-      const focusableElements = element.querySelectorAll()
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      ) as NodeListOf<HTMLElement>;
-
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-
-      const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {,
-          if (e.shiftKey) {,
-            if (document.activeElement === firstElement) {,
-      const handleTabKey = (e: KeyboardEvent) => {}
-        if (e.key === 'Tab') {}
-          if (e.shiftKey) {}
-            if (document.activeElement === firstElement) {}
-              lastElement.focus();
-              e.preventDefault();
-            }
-          } else {}
-            if (document.activeElement === lastElement) {}
-              firstElement.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      };
-
-      element.addEventListener('keydown', handleTabKey);
-      firstElement?.focus();
-
-      return () => element.removeEventListener('keydown', handleTabKey);
-    };
-
-    // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {)
-    const cleanup = trapFocus(modal as HTMLElement);
-    modals.forEach(modal => {)}
-      const cleanup = trapFocus(modal as HTMLElement);
-      // Store cleanup function for later use
-      const cleanup = trapFocus(modal as HTMLElement);
-      // Store cleanup function for later use;
-      (modal as any).__focusTrapCleanup = cleanup;
-
-  }, []);
-
-  // ARIA labels enhancement;
-  const enhanceARIALabels = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Add missing ARIA labels to interactive elements;
-    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button, index) => {
-  // ARIA labels enhancement
-  const enhanceARIALabels = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    // Add missing ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button, index) => {}
-      const text = button.textContent?.trim();
-      if (text && text.length > 0) {}
-        button.setAttribute('aria-label', text);
-      } else {}
-        button.setAttribute('aria-label', `Button ${index + 1}`);
-      }
-
-    // Add ARIA labels to images;
-    const images = document.querySelectorAll('img: not([alt])');
-    images.forEach((img, index) => {
-      img.setAttribute('alt', `Image ${index + 1}`);
-
-    // Add ARIA labels to form inputs;
-    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
-    inputs.forEach((input, index) => {
-    // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach((img, index) => {}
-      img.setAttribute('alt', `Image ${index + 1}`);
-
-    // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach((input, index) => {}
-      const placeholder = input.getAttribute('placeholder');
-      const label = input.getAttribute('name');
-      if (placeholder) {}
-        input.setAttribute('aria-label', placeholder);
-      } else if (label) {}
-        input.setAttribute('aria-label', label);
-      } else {}
-        input.setAttribute('aria-label', `Input ${index + 1}`);
-      }
-
-  }, []);
-
-  // Skip links;
-  const addSkipLinks = useCallback(() => {
-  // Skip links
-  const addSkipLinks = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ];
-
-    const skipLinksContainer = document.createElement('div');
-    skipLinksContainer.className = 'skip-links';
-    skipLinksContainer.setAttribute('aria-label', 'Skip links');
-
-    skipLinks.forEach(({ href, text }) => {}
-      const link = document.createElement('a');
-      link.href = href;
-      link.textContent = text;
-      link.className = 'skip-link';
-      link.setAttribute('data-skip-link', 'true');
-      skipLinksContainer.appendChild(link);
-
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
-  }, []);
-
-  // Color contrast checking;
-  const checkColorContrast = useCallback(() => {
-  // Color contrast checking
-  const checkColorContrast = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    const checkElementContrast = (element: HTMLElement) => {}
-      const styles = window.getComputedStyle(element);
-      const backgroundColor = styles.backgroundColor;
-      const color = styles.color;
-
-      // Simple contrast check (this would need a more sophisticated implementation),
-      if (backgroundColor && color) {,
-        // Add visual indicator for low contrast elements;
-      // Simple contrast check (this would need a more sophisticated implementation)
-      if (backgroundColor && color) {}
-        // Add visual indicator for low contrast elements
-        element.setAttribute('data-contrast-checked', 'true');
-      }
-    };
-
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement));
-  }, []);
-
-  // Voice navigation support;
-  const setupVoiceNavigation = useCallback(() => {
-  // Voice navigation support
-  const setupVoiceNavigation = useCallback(() => {}
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return;
-
-    const recognition = new (window as any).webkitSpeechRecognition();
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-
-    recognition.onresult = (event: any) => {}
-      const command = event.results[0][0].transcript.toLowerCase();
-
-      // Voice commands;
-      if (command.includes('go to home')) {,
-      // Voice commands
-      if (command.includes('go to home')) {}
-        window.location.href = '/';
-      } else if (command.includes('go to about')) {}
-        window.location.href = '/about';
-      } else if (command.includes('go to contact')) {}
-        window.location.href = '/contact';
-      } else if (command.includes('go to services')) {}
-        window.location.href = '/services';
-      } else if (command.includes('call phone')) {
-        window.location.href = 'tel: +13024640950';
-      } else if (command.includes('send email')) {
-        window.location.href = 'mailto: kleber@ziontechgroup.com';
-      } else if (command.includes('call phone')) {}
-        window.location.href = 'tel:+13024640950';
-      } else if (command.includes('send email')) {}
-        window.location.href = 'mailto:kleber@ziontechgroup.com';
-      }
-    };
-
-    // Add voice navigation button;
-    const voiceButton = document.createElement('button');
-    voiceButton.textContent = 'Voice Navigation';
-    voiceButton.className = 'voice-navigation-button';
-    voiceButton.setAttribute('aria-label', 'Start voice navigation');
-    voiceButton.onclick = () => recognition.start();
-
-    const header = document.querySelector('header') || document.querySelector('nav');
-    if (header) {}
-      header.appendChild(voiceButton);
-    }
-  }, []);
-
-  // Initialize all accessibility features;
-  useEffect(() => {
-    if (enableKeyboardNavigation) {
-  // Initialize all accessibility features
-  useEffect(() => {}
-    if (enableKeyboardNavigation) {}
-      setupKeyboardNavigation();
-    }
-    if (enableScreenReader) {}
-      setupScreenReaderSupport();
-    }
-    if (enableFocusManagement) {}
-      setupFocusManagement();
-    }
-    if (enableARIALabels) {}
-      enhanceARIALabels();
-    }
-    if (enableSkipLinks) {}
-      addSkipLinks();
-    }
-    if (enableColorContrast) {}
-      checkColorContrast();
-    }
-    if (enableVoiceNavigation) {}
-      setupVoiceNavigation();
-    }
-  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
-
-  return null;
-interface AdvancedAccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Advanced accessibility enhancements
-    const enhanceAccessibility = () => {
-      // Add high contrast mode toggle
-      const contrastToggle = document.createElement('button');
-      contrastToggle.textContent = 'Toggle High Contrast';
-      contrastToggle.className = 'sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md z-50';
-      contrastToggle.onclick = () => {
-        document.body.classList.toggle('high-contrast');
-      };
-      document.body.appendChild(contrastToggle);
-
-      // Add font size controls
-      const fontSizeControls = document.createElement('div');
-      fontSizeControls.className = 'sr-only focus:not-sr-only fixed top-16 right-4 bg-gray-800 text-white p-2 rounded-md z-50';
-      fontSizeControls.innerHTML = `
-        <button onclick="document.body.style.fontSize='0.875rem'">A-</button>
-        <button onclick="document.body.style.fontSize='1rem'">A</button>
-        <button onclick="document.body.style.fontSize='1.125rem'">A+</button>
-      `;
-      document.body.appendChild(fontSizeControls);
-    };
-
-    enhanceAccessibility();
-  }, []);
-
-  return <>{children}</>;
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your advancedaccessibilityenhancer needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
-</<<<HTMLElement>export</HTMLElement></<<HTMLElement>default</HTMLElement> AdvancedAccessibilityEnhancer;</HTMLElement>
+
+export default AdvancedAccessibilityEnhancerPage;

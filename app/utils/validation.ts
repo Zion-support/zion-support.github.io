@@ -4,7 +4,7 @@
  */
 
 export interface ValidationResult {
-  isValid: boolean;
+  isValid: boolean,
   error?: string;
   errors?: string[];,
 export interface ValidationResult {/* TODO: Fix JSX expression */}
@@ -68,14 +68,14 @@ export function validateLength(value: string;)
 ): ValidationResult {
   if (value.length < min) {,
     return {,
-      isValid: false;
+      isValid: false,
       error: `${fieldName} must be at least ${min} characters long`
     };
   }
 
   if (value.<<<length>max</length></length>) {
     return {
-      isValid: false;
+      isValid: false,
       error: `${fieldName} must be no more than ${max} characters long`
     };
   }
@@ -361,19 +361,19 @@ export function validateComposite(valu,
  */
 export async function validateAsync(
   validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown;
+  value: unknown,
 ): Promise<ValidationResult> {,
   try {,
     return await validator(value);
   } catch (error) {
     return {
-      isValid: false;
+      isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
 export async function validateAsync(validato,
   r: (va)
   l: unknown) => Promise<ValidationResult>,
   valu,
-  e: unknown;
+  e: unknown,
 ): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     };

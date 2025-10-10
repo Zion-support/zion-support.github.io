@@ -1,33 +1,53 @@
 'use client';
 import React from 'react';
-import { Users, Phone, Mail, Calendar, BarChart, Target, CheckCircle, ArrowRight, Phone as PhoneIcon, Mail as MailIcon, Star, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const CRMLitePage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Users;
+<<<<<<< HEAD
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+=======
+      icon: Users,
       title: 'Contact Management',
       description: 'Organize and manage all your customer contacts in one place'},
     {
-      icon: Phone;
+      icon: Phone,
       title: 'Communication Tracking',
       description: 'Track all interactions with customers across multiple channels'},
     {
-      icon: Calendar;
+      icon: Calendar,
       title: 'Task Management',
       description: 'Schedule and track follow-ups, meetings, and important tasks'
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Sales Analytics',
       description: 'Monitor sales performance with detailed reports and insights'},
     {
-      icon: Target;
+      icon: Target,
       title: 'Lead Management',
       description: 'Track leads from initial contact to conversion'},
     {
-      icon: Mail;
+      icon: Mail,
       title: 'Email Integration',
       description: 'Sync with your email for seamless communication tracking'}
   ];
@@ -45,7 +65,7 @@ const CRMLitePage: React.FC = () => {
         'Mobile app access',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -60,7 +80,7 @@ const CRMLitePage: React.FC = () => {
         'Priority support',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -75,48 +95,74 @@ const CRMLitePage: React.FC = () => {
         'Dedicated support',
         'Custom integrations'
       ],
-      popular: false;
+      popular: false,
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   const benefits = [
-    {
-      title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup wizard',
-      metric: '5 min setup'},
-    {
-      title: 'Mobile Ready',
-      description: 'Access your CRM anywhere with our mobile app',
-      metric: '100% mobile'},
-    {
-      title: 'Affordable',
-      description: 'Powerful CRM features at a fraction of the cost',
-      metric: '80% savings'},
-    {
-      title: 'No Training Required',
-      description: 'Intuitive interface that anyone can use immediately',
-      metric: 'Zero learning curve'}
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             CRM</h1> <span className="text-cyan-400">Lite</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">The perfect CRM solution for small and medium businesses. Simple, powerful, and affordable customer relationship management</p>
             that helps you grow your business without the complexity.</p>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+      {/* Hero Section */}</div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             CRM <span className="text-cyan-400">Lite</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             The perfect CRM solution for small and medium businesses. Simple, powerful, and affordable customer relationship management;
             that helps you grow your business without the complexity.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
@@ -131,9 +177,31 @@ const CRMLitePage: React.FC = () => {
             ></Lin>
               <BarChart className="w-5 h-5 mr-2" >Try Demo</BarChar>
             </BarChart>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
+      </section>
 
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+=======
         {/* Features Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -159,27 +227,40 @@ const CRMLitePage: React.FC = () => {
         </div>,
 ,
         {/* Features Section */}
-        <div className="mb-16">
+        <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">)
             Essential <span className="text-cyan-400">Features</span>)
           </h2>)
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (</div>
               <div;
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
-              >,
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
+              >,</div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,</div>
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
+<<<<<<< HEAD
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+=======
         {/* Pricing Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -187,7 +268,7 @@ const CRMLitePage: React.FC = () => {
             Simple <span className="text-cyan-400">Pricing</span>
           </h2>
           <div className="grid md: grid-cols-3 gap-8">,
-            {plans.map((plan, index) => (
+            {plans.map((plan, index) => (</div>
               <div;
             Simple</h2> <span className="text-cyan-400">Pricing</span><div className="grid md:grid-cols-3 gap-8">{plans.map((plan, index) => (</div><div
                 key={index}
@@ -197,7 +278,7 @@ const CRMLitePage: React.FC = () => {
                     : 'border-gray-600 hover:border-cyan-400/50'}
                 } transition-all duration-300`}
               >{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center"></span>
@@ -233,9 +314,16 @@ const CRMLitePage: React.FC = () => {
                 </Link>
               </div>
             ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
-        </div>
 
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+=======
         {/* Benefits Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -243,9 +331,9 @@ const CRMLitePage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
           </h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
             Why Choose</h2> <span className="text-cyan-400">CRM Lite</span>?
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center"></div>
@@ -253,28 +341,57 @@ const CRMLitePage: React.FC = () => {
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p><div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
+      </section>
 
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+=======
         {/* Dashboard Preview */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Clean & <span className="text-cyan-400">Intuitive</span> Interface;
           </h2>
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-lg p-6">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600"></div>
+            <div className="grid md:grid-cols-3 gap-8"></div>
+              <div className="bg-white/5 rounded-lg p-6"></div>
                 <h3 className="text-lg font-semibold text-white mb-4">Dashboard Overview</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
+                <div className="space-y-3"></div>
+                  <div className="flex justify-between text-sm"></div>
                     <span className="text-gray-300">Total Contacts<span className="text-cyan-400">1,247</span>
-            <div className="grid md: grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-lg p-6">,
+            <div className="grid md: grid-cols-3 gap-8"></div>
+              <div className="bg-white/5 rounded-lg p-6">,</div>
                 <h3 className="text-lg font-semibold text-white mb-4">Dashboard Overview</h3>,
-                <div className="space-y-3">,
-                  <div className="flex justify-between text-sm">,
+                <div className="space-y-3">,</div>
+                  <div className="flex justify-between text-sm">,</div>
                     <span className="text-gray-300">Total Contacts</span>,
                     <span className="text-cyan-400">1,247</span>
             Clean &</h2> <span className="text-cyan-400">Intuitive</span> Interface
@@ -304,7 +421,7 @@ const CRMLitePage: React.FC = () => {
               </div>
               <div className="bg-white/5 rounded-lg p-6"></div>
                 <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                 <div className="space-y-2"></div>
                   <button className="w-full bg-cyan-400 text-white py-2 px-4 rounded text-sm">Add Contact<button className="w-full bg-white/10 text-white py-2 px-4 rounded text-sm">Schedule Meeting<button className="w-full bg-white/10 text-white py-2 px-4 rounded text-sm">Send Email</button>
                   <button className="w-full bg-cyan-400 text-white py-2 px-4 rounded text-sm">
@@ -327,14 +444,14 @@ const CRMLitePage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Seamless</h2> <span className="text-cyan-400">Integrations</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="p-4 bg-white/10 rounded-lg mb-4">
+          <div className="grid md:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="p-4 bg-white/10 rounded-lg mb-4"></div>
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />
               <h3 className="text-lg font-semibold text-white">Email<p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
-          <div className="grid md: grid-cols-4 gap-8">
-            <div className="text-center">,
-              <div className="p-4 bg-white/10 rounded-lg mb-4">,
+          <div className="grid md: grid-cols-4 gap-8"></div>
+            <div className="text-center">,</div>
+              <div className="p-4 bg-white/10 rounded-lg mb-4">,</div>
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />,
               </div>,
               <h3 className="text-lg font-semibold text-white">Email</h3>,
@@ -364,7 +481,7 @@ const CRMLitePage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Start Managing Your Customers Better Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using CRM Lite to streamline their customer relationships and grow their sales.</p>
           <h2 className="text-3xl font-bold text-white mb-4">
             Start Managing Your Customers Better Today;
@@ -372,7 +489,7 @@ const CRMLitePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using CRM Lite to streamline their customer relationships and grow their sales.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link;
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Start Managing Your Customers Better Today</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using CRM Lite to streamline their customer relationships and grow their sales.</p>
@@ -404,6 +521,7 @@ const CRMLitePage: React.FC = () => {
         </div>
       </div>,
     </div>);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
-export default CRMLitePage;
+export default PagePage;

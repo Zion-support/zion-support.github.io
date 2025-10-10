@@ -1,4 +1,9 @@
 'use client';
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
 import React, { useState, useEffect } from 'react';
 import {
   Mic, 
@@ -36,7 +41,7 @@ import {
   Signal;
 } from 'lucide-react';
 
-const AIVoiceAssistantPage: React.FC = () => {,
+const $1: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -46,35 +51,41 @@ const AIVoiceAssistantPage: React.FC = () => {,
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
+<<<<<<< HEAD
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+=======
       title: 'Natural Language Processing',
       description: 'Advanced NLP with 99.5% accuracy in understanding context and intent',
       stats: '99.5% accuracy'},
     {
-      icon: Languages;
+      icon: Languages,
       title: 'Multi-Language Support',
       description: 'Support for 50+ languages with real-time translation capabilities',
       stats: '50+ languages'},
     {
-      icon: Headphones;
+      icon: Headphones,
       title: 'Custom Voice Training',
       description: 'Train the AI with your voice patterns and speaking style',
       stats: 'Custom voices'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Real-Time Processing',
       description: 'Ultra-low latency voice processing for natural conversations',
       stats: '<100ms latency'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Privacy & Security',
       description: 'End-to-end encryption with local processing options',
       stats: 'Bank-level security'},
     {
-      icon: Globe;
+      icon: Globe,
       title: 'Cloud & Edge Computing',
       description: 'Hybrid processing for optimal performance and privacy',
       stats: 'Hybrid processing'}
@@ -91,42 +102,68 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Manage calendar events',
         'Take voice notes'
       ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     },
     {
-      category: 'Communication',
-      items: [,
-        'Make phone calls',
-        'Send text messages',
-        'Video conference calls',
-        'Voice-to-text transcription',
-        'Real-time translation',
-        'Voice mail management'
-      ]
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-      category: 'Information',
-      items: [,
-        'Answer questions',
-        'Provide weather updates',
-        'News and updates',
-        'Web search results',
-        'Calculate and convert',
-        'Look up contacts'
-      ]
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
-      category: 'Entertainment',
-      items: [,
-        'Play music and podcasts',
-        'Tell jokes and stories',
-        'Play games',
-        'Read audiobooks',
-        'Control smart devices',
-        'Stream content'
-      ]
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
+<<<<<<< HEAD
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+=======
   const pricingPlans = [
     {
       name: 'Personal'
@@ -141,7 +178,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Email support',
         'Mobile app access'
       ],
-      popular: false;
+      popular: false,
       cta: 'Start Free Trial'},
     {
       name: 'Professional'
@@ -157,7 +194,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'API access',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
       cta: 'Start Free Trial'},
     {
       name: 'Enterprise'
@@ -173,7 +210,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Advanced analytics',
         'White-label options'
       ],
-      popular: false;
+      popular: false,
       cta: 'Contact Sales'}
   ];
 
@@ -183,21 +220,21 @@ const AIVoiceAssistantPage: React.FC = () => {,
       role: 'Product Manager',
       company: 'TechCorp',
       content: 'The AI Voice Assistant has revolutionized how I manage my daily tasks. The natural conversation flow is incredible.',
-      rating: 5;
+      rating: 5,
       avatar: 'SC'},
     {
       name: 'Michael Rodriguez'
       role: 'CEO',
       company: 'StartupXYZ',
       content: 'We use it for our international team meetings. The real-time translation feature is a game-changer.',
-      rating: 5;
+      rating: 5,
       avatar: 'MR'},
     {
       name: 'Emily Johnson'
       role: 'Executive Assistant',
       company: 'Global Inc',
       content: 'Scheduling and managing my executive\'s calendar has never been easier. The AI understands context perfectly.',
-      rating: 5;
+      rating: 5,
       avatar: 'EJ'}
   ];
 
@@ -207,19 +244,19 @@ const AIVoiceAssistantPage: React.FC = () => {,
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} >{/* Floating Particles */}</div>
       </div><div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}><div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}><div className="relative z-10">{/* Header */}</div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">)
-      {/* Animated Background */})
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] animate-pulse" />
+      {/* Animated Background */})</div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] animate-pulse" /></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      {/* Floating Particles */}
+      {/* Floating Particles */}</div>
       <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
       <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative z-10">
-        {/* Header */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-4 py-2 mb-6 border border-cyan-400/30">
+        {/* Header */}</div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-4 py-2 mb-6 border border-cyan-400/30"></div>
               <Bot className="w-5 h-5 text-cyan-400" />
               <span className="text-cyan-400 font-medium">AI Voice Assistant Pro<h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Voice Assistant Pro<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Advanced AI-powered voice assistant with natural language processing, 
       </div><div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div><div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div><div className="relative z-10">{/* Header */}</div>
@@ -234,7 +271,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
             </div>
             
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Voice Assistant Pro;
+              AI Voice Assistant Pro;</h1>
             </h1>
             ,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,
@@ -244,9 +281,9 @@ const AIVoiceAssistantPage: React.FC = () => {,
             </p>
 
             {/* Interactive Demo */}
-            <div className="max-w-2xl mx-auto mb-12">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-                <div className="flex items-center justify-center space-x-4 mb-6">
+            <div className="max-w-2xl mx-auto mb-12"></div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"></div>
+                <div className="flex items-center justify-center space-x-4 mb-6"></div>
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${}
                     isListening ? 'bg-red-500 animate-pulse' : 'bg-cyan-500'}
             <div className="max-w-2xl mx-auto mb-12"></div>
@@ -254,7 +291,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
                 <div className="flex items-center justify-center space-x-4 mb-6"></div>
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
                     isListening ? 'bg-red-500 animate-pulse' : 'bg-cyan-500'
-                  }`}>
+                  }`}></div>
                     {isListening ?</div> <MicOff className="w-8 h-8 text-white" >: <Mic className="w-8 h-8 text-white" >}</Mic>
                   </Mic>
                   <div className="text-center"></div>
@@ -262,7 +299,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
                   </div>
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-3"></div>
                 <div className="space-y-3"></div>
                   <button 
                     onClick={() =>setIsListening(!isListening)}</button></<<<butto>className</butto></butto>="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -275,7 +312,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
                     {isListening ? 'Stop Listening' : 'Start Listening'}
                   </button>
                   
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-2"></div>
                     <button className="flex-1 bg-slate-700 hover: bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors">
                   <div className="flex space-x-2"></div>
                     <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors">
@@ -293,7 +330,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
             </div>,
 ,
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">Start Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -309,7 +346,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -323,9 +360,9 @@ const AIVoiceAssistantPage: React.FC = () => {,
 ,
           {/* Features Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/40 transition-all duration-300 group">,
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/40 transition-all duration-300 group">,</div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,</div>
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
                 <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
@@ -335,15 +372,15 @@ const AIVoiceAssistantPage: React.FC = () => {,
           </div>
 
           {/* Capabilities */}
-          <div className="mb-20">
+          <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Powerful Capabilities<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{capabilities.map((category, index) => (</div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               Powerful Capabilities;
             </h2>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {capabilities.map((category, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+              {capabilities.map((category, index) => (</div>
+                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"></div>
                   <h3 className="text-xl font-semibold mb-4 text-purple-400">{category.category}<ul className="space-y-2">{category.items.map((item, itemIndex) => (</ul>
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Powerful Capabilities</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{capabilities.map((category, index) => (</div>
@@ -361,7 +398,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
           </div>
 
           {/* Pricing */}
-          <div className="mb-20">
+          <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
@@ -374,14 +411,14 @@ const AIVoiceAssistantPage: React.FC = () => {,
             </h2>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (</div>
                 <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover: scale-105 ${}
                   plan.popular ? 'border-cyan-400 shadow-lg shadow-cyan-400/25' : 'border-gray-600'}
                 }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (</div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular;</div>
                       </div>
                     </div>
                   )}
@@ -412,17 +449,17 @@ const AIVoiceAssistantPage: React.FC = () => {,
           </div>
 
           {/* Testimonials */}
-          <div className="mb-20">
+          <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">What Our Users Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               What Our Users Say;
             </h2>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+              {testimonials.map((testimonial, index) => (</div>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
                   <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
           <div className="mb-20"></div>
             <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">What Our Users Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
@@ -443,7 +480,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
           <div className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-400/30"></div>
             <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Voice Experience?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of users who have revolutionized their productivity with AI Voice Assistant Pro.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -451,7 +488,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"></butto>
                 <Phone className="w-5 h-5 mr-2" >Contact Sales</Phon>
               </Phone>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
                 Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -459,12 +496,87 @@ const AIVoiceAssistantPage: React.FC = () => {,
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
                 Contact Sales;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
             </div>
           </div>
         </div>
-      </div>,
-    </div>);
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
-export default AIVoiceAssistantPage;
+export default PagePage;

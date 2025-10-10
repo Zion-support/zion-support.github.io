@@ -1,12 +1,14 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Settings, Navigation } from 'lucide-react';
 
 const RoboticsPage: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer;
         title="Robotics Solutions - Zion Tech Group",
         description="Advanced robotics solutions with AI-powered automation and intelligent systems.",
@@ -34,12 +36,12 @@ const RoboticsPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Robotics Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced robotics solutions with AI-powered automation and intelligent systems.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Robotics Solutions;
+              Robotics Solutions;</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced robotics solutions with AI-powered automation and intelligent systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Robotics Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced robotics solutions with AI-powered automation and intelligent systems.</p>
             </p>
@@ -66,7 +68,7 @@ const RoboticsPage: React.FC = () => {
 ,
         {/* Features Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
@@ -76,8 +78,8 @@ const RoboticsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
@@ -114,7 +116,7 @@ const RoboticsPage: React.FC = () => {
 ,
         {/* Benefits Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Robotics Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our Robotics Solutions?
@@ -124,8 +126,8 @@ const RoboticsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Robotics Solutions?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
@@ -154,7 +156,7 @@ const RoboticsPage: React.FC = () => {
 ,
         {/* Pricing Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
@@ -176,8 +178,8 @@ const RoboticsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          <div className="max-w-md mx-auto">,</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
               <h3 className="text-2xl font-bold text-white mb-4">Robotics Solutions</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$2,500/month</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -193,7 +195,7 @@ const RoboticsPage: React.FC = () => {
 ),
         {/* Contact Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -246,104 +248,87 @@ const RoboticsPage: React.FC = () => {
       <Footer />,
     </div>,
 import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 import { Helmet } from 'react-helmet-async';
-import { Bot, Cpu, Eye, Brain, Shield, Zap, CheckCircle, ArrowRight, Settings, Target, Wrench, Activity } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const RoboticsPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: "Intelligent Robotics",
-      description: "AI-powered robots that can learn, adapt, and perform complex tasks autonomously",
-      benefits: ["Machine learning integration", "Adaptive behavior", "Autonomous operation"]
-    },
-    {
-      icon: Eye,
-      title: "Computer Vision",
-      description: "Advanced visual perception for object recognition, navigation, and interaction",
-      benefits: ["Object detection", "Spatial awareness", "Real-time processing"]
-    },
-    {
       icon: Brain,
-      title: "AI Integration",
-      description: "Deep learning algorithms for decision-making and problem-solving",
-      benefits: ["Neural networks", "Pattern recognition", "Predictive analytics"]
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
-      title: "Safety Systems",
-      description: "Comprehensive safety protocols and fail-safe mechanisms for human-robot interaction",
-      benefits: ["Collision avoidance", "Emergency stops", "Safety monitoring"]
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Industrial Automation",
-      description: "Robotic systems for manufacturing, assembly, and quality control",
-      icon: Settings,
-      useCases: ["Assembly line automation", "Quality inspection", "Material handling"]
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
-      title: "Service Robotics",
-      description: "Robots for customer service, hospitality, and healthcare assistance",
-      icon: Activity,
-      useCases: ["Customer service", "Healthcare assistance", "Cleaning services"]
-    },
-    {
-      title: "Autonomous Vehicles",
-      description: "Self-driving cars, drones, and autonomous mobile robots",
-      icon: Target,
-      useCases: ["Autonomous navigation", "Delivery systems", "Surveillance"]
-    },
-    {
-      title: "Research & Development",
-      description: "Advanced robotics for research, exploration, and innovation",
-      icon: Wrench,
-      useCases: ["Space exploration", "Underwater research", "Laboratory automation"]
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    "Increased productivity and efficiency",
-    "Reduced human error and risk",
-    "24/7 operation capability",
-    "Consistent quality and precision",
-    "Cost reduction over time",
-    "Enhanced safety in hazardous environments"
-  ];
-
-  const technologies = [
-    "ROS (Robot Operating System)",
-    "OpenCV Computer Vision",
-    "TensorFlow AI/ML",
-    "Gazebo Simulation",
-    "MoveIt Motion Planning",
-    "PCL Point Cloud Library"
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-        <title>Robotics Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced robotics solutions powered by AI and machine learning. Industrial automation, service robots, and autonomous systems for modern businesses." />
-        <meta name="keywords" content="robotics, AI robots, automation, industrial robots, service robots, autonomous systems" />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-      
-      <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+=======
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Robotics <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your operations with intelligent robotics powered by AI and machine learning. From industrial automation to service robots, we build the future of intelligent machines.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -356,14 +341,25 @@ const RoboticsPage: React.FC = () => {
             >
               Learn More
             </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+=======
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Features</span>
             </h2>
@@ -373,9 +369,9 @@ const RoboticsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
+                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors"></div>
                   <feature.icon className="w-12 h-12" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -396,20 +392,30 @@ const RoboticsPage: React.FC = () => {
 
       {/* Applications Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Application <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Areas</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our robotics solutions are designed for diverse industries and applications, from manufacturing to healthcare.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((app, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
+<<<<<<< HEAD
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+=======
+            {applications.map((app, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
+                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors"></div>
                   <app.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
@@ -430,8 +436,8 @@ const RoboticsPage: React.FC = () => {
 
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Supported <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Technologies</span>
             </h2>
@@ -441,12 +447,13 @@ const RoboticsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 text-center group">
-                <div className="text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors">
+            {technologies.map((tech, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 text-center group"></div>
+                <div className="text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors"></div>
                   <Bot className="w-8 h-8 mx-auto" />
                 </div>
                 <h3 className="text-sm font-semibold text-white">{tech}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -455,9 +462,26 @@ const RoboticsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+=======
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+            <div></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Robotics</span>?
               </h2>
@@ -473,9 +497,9 @@ const RoboticsPage: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8"></div>
+              <div className="text-center"></div>
+                <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
                   <Bot className="w-16 h-16 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
@@ -489,22 +513,43 @@ const RoboticsPage: React.FC = () => {
                   Get Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+=======
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Implement Robotics Solutions?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our robotics experts to discuss how intelligent automation can transform your business operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -519,13 +564,12 @@ const RoboticsPage: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Get Quote
             </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
 
-export default RoboticsPage;
+export default PagePage;

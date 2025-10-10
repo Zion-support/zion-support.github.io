@@ -1,5 +1,43 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+=======
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -24,7 +62,7 @@ import {}
   MapPin;
 } from 'lucide-react';
 
-const TrainingPage: React.FC = () => {,
+const $1: React.FC = () => {
 const TrainingPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -38,14 +76,14 @@ const TrainingPage: React.FC = () => {}
 
   const courses = [
     {
-      id: 1;
+      id: 1,
       title: 'AI Fundamentals for Business Leaders'
       description: 'Learn the basics of AI and how it can transform your business operations'
       category: 'ai-fundamentals'
       duration: '4 hours'
       level: 'Beginner'
       rating: 4.8;
-      students: 1250;
+      students: 1250,
       price: 'Free'
       instructor: 'Dr. Sarah Chen'
     {}
@@ -60,18 +98,18 @@ const TrainingPage: React.FC = () => {}
       price: 'Free',
       instructor: 'Dr. Sarah Chen',
       thumbnail: '🧠',
-      modules: 8;
-      certificate: true;
+      modules: 8,
+      certificate: true,
     },
     {
-      id: 2;
+      id: 2,
       title: 'Implementing AI Workflow Automation'
       description: 'Step-by-step guide to implementing AI automation in your organization'
       category: 'implementation'
       duration: '6 hours'
       level: 'Intermediate'
       rating: 4.9;
-      students: 890;
+      students: 890,
       price: '$199'
       instructor: 'Mike Rodriguez'
     {}
@@ -86,18 +124,18 @@ const TrainingPage: React.FC = () => {}
       price: '$199',
       instructor: 'Mike Rodriguez',
       thumbnail: '⚡',
-      modules: 12;
-      certificate: true;
+      modules: 12,
+      certificate: true,
     },
     {
-      id: 3;
+      id: 3,
       title: 'Advanced AI Analytics and Machine Learning'
       description: 'Deep dive into advanced analytics and ML techniques for enterprise'
       category: 'advanced'
       duration: '10 hours'
       level: 'Advanced'
       rating: 4.7;
-      students: 456;
+      students: 456,
       price: '$399'
       instructor: 'Dr. James Liu'
     {}
@@ -112,18 +150,18 @@ const TrainingPage: React.FC = () => {}
       price: '$399',
       instructor: 'Dr. James Liu',
       thumbnail: '📊',
-      modules: 15;
-      certificate: true;
+      modules: 15,
+      certificate: true,
     },
     {
-      id: 4;
+      id: 4,
       title: 'AI Security and Compliance'
       description: 'Learn about AI security best practices and regulatory compliance'
       category: 'certification'
       duration: '5 hours'
       level: 'Intermediate'
       rating: 4.6;
-      students: 678;
+      students: 678,
       price: '$299'
       instructor: 'Lisa Wang'
     {}
@@ -138,18 +176,18 @@ const TrainingPage: React.FC = () => {}
       price: '$299',
       instructor: 'Lisa Wang',
       thumbnail: '🛡️',
-      modules: 10;
-      certificate: true;
+      modules: 10,
+      certificate: true,
     },
     {
-      id: 5;
+      id: 5,
       title: 'AI Content Generation Masterclass'
       description: 'Master the art of AI-powered content creation and optimization'
       category: 'implementation'
       duration: '7 hours'
       level: 'Intermediate'
       rating: 4.8;
-      students: 734;
+      students: 734,
       price: '$249'
       instructor: 'Emily Watson'
     {}
@@ -164,18 +202,18 @@ const TrainingPage: React.FC = () => {}
       price: '$249',
       instructor: 'Emily Watson',
       thumbnail: '✍️',
-      modules: 14;
-      certificate: true;
+      modules: 14,
+      certificate: true,
     },
     {
-      id: 6;
+      id: 6,
       title: 'Quantum Computing for AI Applications'
       description: 'Explore the intersection of quantum computing and artificial intelligence'
       category: 'advanced'
       duration: '8 hours'
       level: 'Advanced'
       rating: 4.5;
-      students: 234;
+      students: 234,
       price: '$499'
       instructor: 'Dr. Alex Quantum'
     {}
@@ -190,8 +228,8 @@ const TrainingPage: React.FC = () => {}
       price: '$499',
       instructor: 'Dr. Alex Quantum',
       thumbnail: '⚛️',
-      modules: 16;
-      certificate: true;
+      modules: 16,
+      certificate: true,
     }
   ];
 
@@ -202,7 +240,7 @@ const TrainingPage: React.FC = () => {}
       time: '9:00 AM - 5:00 PM EST',
       location: 'Virtual',
       instructor: 'Dr. Sarah Chen',
-      spots: 25;
+      spots: 25,
       price: '$299'},
     {}
       title: 'AI Security Certification Bootcamp',
@@ -210,7 +248,7 @@ const TrainingPage: React.FC = () => {}
       time: '9:00 AM - 5:00 PM EST',
       location: 'New York, NY',
       instructor: 'Lisa Wang',
-      spots: 15;
+      spots: 15,
       price: '$1,299'
     },
     {}
@@ -219,29 +257,69 @@ const TrainingPage: React.FC = () => {}
       time: '10:00 AM - 4:00 PM EST',
       location: 'Virtual',
       instructor: 'Dr. James Liu',
-      spots: 30;
+      spots: 30,
       price: '$199'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
-
-  const stats = [
-    { label: 'Courses Available', value: '50+', icon: BookOpen },
-    { label: 'Students Trained', value: '5,000+', icon: Users },
-    { label: 'Certifications Issued', value: '2,500+', icon: Award },
-    { label: 'Average Rating', value: '4.8/5', icon: Star }
-  ];
-
-  const filteredCourses = selectedCategory === 'all'
-    ? courses;
-    : courses.filter(course => course.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
 
       {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+=======
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
@@ -250,7 +328,7 @@ const TrainingPage: React.FC = () => {}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Training & Education;
+            Training & Education;</h1>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Master AI technologies with our comprehensive training programs and certifications;
@@ -270,47 +348,72 @@ const TrainingPage: React.FC = () => {}
 ,
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
-            {stats.map((stat, index) => (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {stats.map((stat, index) => (</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (}
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            {stats.map((stat, index) => (}</div>
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <stat.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
-                <div className="text-3 xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+=======
       {/* Categories Filter */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Course Categories;
+              Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive range of AI training programs;
+              Experience the power of our page solutions for your business.
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+=======
           <div className="flex flex-wrap justify-center gap-4 mb-12">,
-            {categories.map((category) => (,
+            {categories.map((category) => (,</div>
               <button;
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
             {categories.map((category) => (</div>
             {categories.map((category) => (}
               <button
@@ -334,31 +437,31 @@ const TrainingPage: React.FC = () => {}
 
           {/* Courses Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {filteredCourses.map((course) => (,
-              <div key={course.id} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
-                <div className="text-center mb-4">,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredCourses.map((course) => (,</div>
+              <div key={course.id} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,</div>
+                <div className="text-center mb-4">,</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredCourses.map((course) => (</div>
               <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="text-center mb-4"></div>
             {filteredCourses.map((course) => (}
-              <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-center mb-4">
+              <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="text-center mb-4"></div>
                   <div className="text-6xl mb-4">{course.thumbnail}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{course.description}</p>
                 </div>
 
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-between text-sm">
+                <div className="space-y-3 mb-6"></div>
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Instructor: </span>,
                     <span className="text-white">{course.instructor}</span>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Duration: </span>,
                     <span className="text-white">{course.duration}</span>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Level: </span>,
                     <span className={`px-2 py-1 rounded text-xs ${,
                       course.level === 'Beginner' ? 'bg-green-500/20 text-green-400' :,
@@ -383,17 +486,17 @@ const TrainingPage: React.FC = () => {}
                       {course.level}
                     </span>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Modules: </span>,
                     <span className="text-white">{course.modules}</span>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Students: </span>,
                     <span className="text-white">{course.students}</span>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Rating: </span>,
-                    <div className="flex items-center space-x-1">,
+                    <div className="flex items-center space-x-1">,</div>
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />,
                   <div className="flex items-center justify-between text-sm"></div>
                     <span className="text-gray-400">Modules:</span>
@@ -417,7 +520,7 @@ const TrainingPage: React.FC = () => {}
                   {course.certificate && (
                     <div className="flex items-center space-x-1 text-green-400"></div>
                   {course.certificate && (}
-                    <div className="flex items-center space-x-1 text-green-400">
+                    <div className="flex items-center space-x-1 text-green-400"></div>
                       <Certificate className="w-4 h-4" />
                       <span className="text-xs">Certificate</span>
                     </div>
@@ -434,34 +537,50 @@ const TrainingPage: React.FC = () => {}
 
       {/* Upcoming Events */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Upcoming Training Events;
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our live training sessions and workshops;
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+=======
           </div>,
 ,
           <div className="space-y-6">,
-            {upcomingEvents.map((event, index) => (
-              <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
-                <div className="flex items-start justify-between">,
-                  <div className="flex-1">,
+            {upcomingEvents.map((event, index) => (</div>
+              <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,</div>
+                <div className="flex items-start justify-between">,</div>
+                  <div className="flex-1">,</div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             {upcomingEvents.map((event, index) => (</div>
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                 <div className="flex items-start justify-between"></div>
                   <div className="flex-1"></div>
             {upcomingEvents.map((event, index) => (}
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="flex items-start justify-between"></div>
+                  <div className="flex-1"></div>
                     <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
                     <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4"></div>
                       <div className="flex items-center space-x-1"></div>
@@ -495,9 +614,10 @@ const TrainingPage: React.FC = () => {}
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };
 
-export default TrainingPage;
+export default PagePage;
