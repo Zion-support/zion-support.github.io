@@ -15,34 +15,41 @@ export const useAnalytics = () => {
   return context;
 };
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Initialize analytics
-    const initAnalytics = () => {
-      // Google Analytics initialization would go here
-      console.log('Analytics initialized');
+    // Initialize Google Analytics
+    const initGA = () => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
     };
 
-    initAnalytics();
+    initGA();
   }, []);
 
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Event tracked:', eventName, properties);
-    // Send to analytics service
+  const trackEvent = (eventName: string, properties: Record<string, any> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, properties);
+    }
+    console.log('Analytics Event:', eventName, properties);
   };
 
   const trackPageView = (pageName: string) => {
-    console.log('Page view tracked:', pageName);
-    // Send to analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+    console.log('Page View:', pageName);
   };
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
-    trackPageView
+    trackPageView,
   };
 
   return (
@@ -51,3 +58,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
+
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}

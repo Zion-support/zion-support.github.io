@@ -1,30 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI-Powered Enterprise Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
+const SEOHead: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -61,133 +45,49 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <html lang="en" />
+      <title>Zion Tech Group - AI-Powered Enterprise Solutions | Quantum Computing & Digital Transformation</title>
+      <meta name="description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our advanced AI and IT solutions." />
+      <meta name="keywords" content="AI solutions, machine learning, quantum computing, digital transformation, IT services, cybersecurity, cloud computing, automation, enterprise software" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com/" />
+      <meta property="og:title" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+      <meta property="og:description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      <meta property="twitter:site" content="@ziontechgroup" />
+      <meta property="twitter:url" content="https://ziontechgroup.com/" />
+      <meta property="twitter:title" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+      <meta property="twitter:description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+      <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Theme Color */}
-      <meta name="theme-color" content="#0f172a" />
+      {/* Additional SEO */}
+      <link rel="canonical" href="https://ziontechgroup.com/" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
       
-      {/* Additional SEO Scripts */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com/",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        })}
-      </script>
-      
-      {/* Performance Hints */}
+      {/* Performance hints */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Performance Optimizations */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-tooltip" content="AI-Powered Enterprise Solutions" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
-      <meta name="target" content="all" />
-      <meta name="HandheldFriendly" content="true" />
-      <meta name="MobileOptimized" content="width" />
-      
-      {/* Enhanced SEO Meta Tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
-      <meta name="pinterest-site-verification" content="your-pinterest-verification-code" />
-      
-      {/* Rich Snippets */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      
-      {/* Enhanced Open Graph */}
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
-      <meta property="og:updated_time" content={new Date().toISOString()} />
-      
-      {/* Enhanced Twitter Cards */}
-      <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
-      <meta name="twitter:domain" content="ziontechgroup.com" />
-      <meta name="twitter:url" content={url} />
-      
-      {/* Additional Performance Hints */}
-      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Theme Color Variations */}
-      <meta name="theme-color" content="#00ffff" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
->>>>>>> cursor/analyze-improve-and-deploy-application-fdcc
     </Helmet>
   );
 };
 
-export default EnhancedSEOHead;
+export default SEOHead;

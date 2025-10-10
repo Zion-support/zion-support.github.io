@@ -1,15 +1,11 @@
 import React from 'react';
 
-interface PageLoaderProps {
-  message?: string;
-}
-
-export const PageLoader: React.FC<PageLoaderProps> = ({ message = "Loading..." }) => {
+const Loading: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="text-center">
         <div className="cyber-loader mx-auto mb-4"></div>
-        <p className="text-cyan-400 text-lg font-semibold">{message}</p>
+        <p className="text-cyan-400 text-lg font-semibold">Loading...</p>
         <div className="mt-4 flex space-x-2 justify-center">
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
@@ -20,17 +16,4 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ message = "Loading..." }
   );
 };
 
-export const ServiceCardSkeleton: React.FC = () => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
-  </div>
-);
-
-export const LoadingSpinner: React.FC = () => (
-  <div className="cyber-loader"></div>
-);
-
-export default PageLoader;
+export default Loading;
