@@ -1,626 +1,464 @@
 'use client';
-import React, { useState } from 'react';
-import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Cloud, 
+  Shield, 
+  Database, 
+  Server, 
+  Network, 
+  Smartphone, 
+  Monitor, 
+  Code, 
+  Lock, 
+  BarChart, 
+  Users, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock,
+  Brain,
+  Target,
+  TrendingUp,
+  Award,
+  Sparkles,
+  Globe,
+  Settings,
+  HardDrive,
+  Wifi,
+  Cpu
+} from 'lucide-react';
 
-export default function ITServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+const ITServicesPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const itServices = [
     {
-      category: 'Cloud Infrastructure & Migration',
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure Solutions',
+      description: 'Comprehensive cloud migration, management, and optimization services for scalable, secure, and cost-effective infrastructure.',
+      features: [
+        'AWS, Azure, GCP expertise',
+        'Cloud migration strategy',
+        'Cost optimization',
+        'Security hardening',
+        '24/7 monitoring',
+        'Disaster recovery'
+      ],
+      pricing: {
+        consultation: { price: 150, period: 'hour', features: ['Initial assessment', 'Strategy planning', 'Cost analysis'] },
+        migration: { price: 5000, period: 'project', features: ['Full migration', 'Testing', 'Go-live support'] },
+        managed: { price: 2000, period: 'month', features: ['24/7 monitoring', 'Maintenance', 'Support'] }
+      },
       icon: Cloud,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {
-          name: 'Cloud Migration & Setup',
-          description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized performance',
-          features: ['Multi-cloud Strategy', 'Hybrid Cloud Solutions', 'Cost Optimization', 'Security Implementation', 'Performance Tuning'],
-          pricing: 'Starting at $10,000',
-          trial: 'Free consultation',
-          timeline: '2-8 weeks',
-          link: 'https://ziontechgroup.com/cloud-migration',
-          popular: true
-        },
-        {
-          name: 'IT Infrastructure Design',
-          description: 'Scalable and secure infrastructure architecture tailored to your business needs',
-          features: ['Network Design', 'Server Configuration', 'Load Balancing', 'Disaster Recovery', 'Scalability Planning'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/it-infrastructure',
-          popular: true
-        },
-        {
-          name: 'Database Management & Optimization',
-          description: 'Comprehensive database administration with performance tuning and security hardening',
-          features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Monitoring', 'Scalability'],
-          pricing: 'Starting at $5,000/month',
-          trial: 'Free health check',
-          timeline: 'Ongoing',
-          link: 'https://ziontechgroup.com/database-management',
-          popular: false
-        },
-        {
-          name: 'Cloud Cost Optimization',
-          description: 'Reduce cloud costs by up to 40% with intelligent resource management and optimization',
-          features: ['Cost Analysis', 'Resource Optimization', 'Auto-scaling', 'Reserved Instances', 'Cost Monitoring'],
-          pricing: 'Starting at $3,000',
-          trial: 'Free audit',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/cloud-optimization',
-          popular: false
-        }
-      ]
+      color: 'from-blue-500 to-cyan-600',
+      popular: true
     },
     {
-      category: 'Cybersecurity & Compliance',
+      id: 'cybersecurity',
+      name: 'Cybersecurity Services',
+      description: 'Advanced security solutions to protect your business from evolving cyber threats with comprehensive monitoring and response.',
+      features: [
+        'Security assessment',
+        'Penetration testing',
+        'Vulnerability scanning',
+        'Incident response',
+        'Security training',
+        'Compliance support'
+      ],
+      pricing: {
+        assessment: { price: 3000, period: 'project', features: ['Security audit', 'Risk analysis', 'Recommendations'] },
+        monitoring: { price: 1500, period: 'month', features: ['24/7 monitoring', 'Threat detection', 'Response'] },
+        managed: { price: 2500, period: 'month', features: ['Full security suite', 'Training', 'Compliance'] }
+      },
       icon: Shield,
-      color: 'text-red-400',
-      bgColor: 'bg-red-500/10',
-      services: [
-        {
-          name: 'Enterprise Cybersecurity Suite',
-          description: 'Comprehensive security solutions with 24/7 monitoring and threat detection',
-          features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing'],
-          pricing: 'Starting at $8,000/month',
-          trial: 'Free security audit',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/cybersecurity',
-          popular: true
-        },
-        {
-          name: 'Compliance Management Platform',
-          description: 'Ensure compliance with GDPR, HIPAA, SOX, and other industry regulations',
-          features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support', 'Policy Management'],
-          pricing: 'Starting at $12,000',
-          trial: 'Free compliance check',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/compliance-management',
-          popular: true
-        },
-        {
-          name: 'Security Awareness Training',
-          description: 'Comprehensive employee security training with phishing simulation and assessment',
-          features: ['Phishing Simulation', 'Security Workshops', 'Policy Development', 'Assessment', 'Certification'],
-          pricing: 'Starting at $3,000',
-          trial: 'Free training session',
-          timeline: '1-2 weeks',
-          link: 'https://ziontechgroup.com/security-training',
-          popular: false
-        },
-        {
-          name: 'Zero Trust Security Architecture',
-          description: 'Implement zero trust security model with identity verification and micro-segmentation',
-          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free assessment',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/zero-trust',
-          popular: false
-        }
-      ]
+      color: 'from-red-500 to-pink-600'
     },
     {
-      category: 'IT Support & Management',
-      icon: Settings,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      services: [
-        {
-          name: '24/7 IT Support & Monitoring',
-          description: 'Round-the-clock technical support with proactive monitoring and maintenance',
-          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'Emergency Response', 'SLA Guarantee'],
-          pricing: 'Starting at $2,000/month',
-          trial: 'Free trial month',
-          timeline: 'Immediate',
-          link: 'https://ziontechgroup.com/it-support',
-          popular: true
-        },
-        {
-          name: 'System Administration Services',
-          description: 'Complete system administration with user management and performance optimization',
-          features: ['User Management', 'System Updates', 'Performance Monitoring', 'Backup Management', 'Patch Management'],
-          pricing: 'Starting at $4,000/month',
-          trial: 'Free assessment',
-          timeline: 'Ongoing',
-          link: 'https://ziontechgroup.com/system-administration',
-          popular: true
-        },
-        {
-          name: 'IT Strategic Consulting',
-          description: 'Strategic IT planning and technology consulting for digital transformation',
-          features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Budget Planning', 'Digital Transformation'],
-          pricing: 'Starting at $200/hour',
-          trial: 'Free consultation',
-          timeline: 'As needed',
-          link: 'https://ziontechgroup.com/it-consulting',
-          popular: false
-        },
-        {
-          name: 'IT Asset Management',
-          description: 'Comprehensive IT asset lifecycle management with tracking and optimization',
-          features: ['Asset Tracking', 'Lifecycle Management', 'License Management', 'Cost Optimization', 'Disposal Services'],
-          pricing: 'Starting at $1,500/month',
-          trial: 'Free inventory',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/asset-management',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Software Development & Integration',
+      id: 'devops-automation',
+      name: 'DevOps & Automation',
+      description: 'Streamline development workflows with CI/CD pipelines, infrastructure as code, and automated deployment solutions.',
+      features: [
+        'CI/CD pipeline setup',
+        'Infrastructure as Code',
+        'Container orchestration',
+        'Monitoring & logging',
+        'Automated testing',
+        'Performance optimization'
+      ],
+      pricing: {
+        setup: { price: 4000, period: 'project', features: ['Pipeline setup', 'Tool configuration', 'Training'] },
+        maintenance: { price: 1200, period: 'month', features: ['Pipeline maintenance', 'Updates', 'Support'] },
+        full: { price: 3000, period: 'month', features: ['Full DevOps suite', '24/7 support', 'Optimization'] }
+      },
       icon: Code,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {
-          name: 'Custom Software Development',
-          description: 'Tailored software solutions built with modern technologies and best practices',
-          features: ['Web Applications', 'Mobile Apps', 'API Development', 'Integration Services', 'Quality Assurance'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free consultation',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/custom-development',
-          popular: true
-        },
-        {
-          name: 'System Integration & APIs',
-          description: 'Connect and integrate disparate systems with robust API development and management',
-          features: ['API Integration', 'Data Migration', 'Workflow Automation', 'Legacy System Modernization', 'API Management'],
-          pricing: 'Starting at $8,000',
-          trial: 'Free integration assessment',
-          timeline: '3-8 weeks',
-          link: 'https://ziontechgroup.com/system-integration',
-          popular: true
-        },
-        {
-          name: 'DevOps & CI/CD Implementation',
-          description: 'Streamline development and deployment with automated testing and continuous integration',
-          features: ['Automated Testing', 'Continuous Integration', 'Deployment Automation', 'Monitoring', 'Infrastructure as Code'],
-          pricing: 'Starting at $6,000',
-          trial: 'Free DevOps audit',
-          timeline: '2-6 weeks',
-          link: 'https://ziontechgroup.com/devops-cicd',
-          popular: true
-        },
-        {
-          name: 'Legacy System Modernization',
-          description: 'Modernize legacy systems with cloud migration and technology updates',
-          features: ['Legacy Assessment', 'Cloud Migration', 'Technology Updates', 'Data Migration', 'User Training'],
-          pricing: 'Starting at $20,000',
-          trial: 'Free modernization plan',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/legacy-modernization',
-          popular: false
-        }
-      ]
+      color: 'from-green-500 to-emerald-600'
     },
     {
-      category: 'Network & Infrastructure',
-      icon: Wifi,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      services: [
-        {
-          name: 'Network Design & Implementation',
-          description: 'Secure and scalable network infrastructure with wireless and wired solutions',
-          features: ['Network Design', 'Wireless Solutions', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
-          pricing: 'Starting at $12,000',
-          trial: 'Free network assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/network-design',
-          popular: true
-        },
-        {
-          name: 'Disaster Recovery & Backup',
-          description: 'Comprehensive disaster recovery solutions with automated backup and recovery testing',
-          features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Testing', 'Documentation'],
-          pricing: 'Starting at $5,000',
-          trial: 'Free DR assessment',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/disaster-recovery',
-          popular: false
-        },
-        {
-          name: 'IT Performance Monitoring',
-          description: 'Real-time monitoring and alerting for IT infrastructure and applications',
-          features: ['Real-time Monitoring', 'Performance Metrics', 'Alerting', 'Reporting', 'Capacity Planning'],
-          pricing: 'Starting at $3,000/month',
-          trial: 'Free monitoring setup',
-          timeline: '1-2 weeks',
-          link: 'https://ziontechgroup.com/performance-monitoring',
-          popular: false
-        }
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Proven Results',
-      description: 'Our clients see 40% improvement in system performance',
-      stat: '40%'
-    },
-    {
-      icon: Clock,
-      title: 'Rapid Response',
-      description: 'Average response time of 15 minutes for critical issues',
-      stat: '15 min'
-    },
-    {
-      icon: DollarSign,
-      title: 'Cost Savings',
-      description: 'Reduce IT costs by up to 60% through optimization',
-      stat: '60%'
-    },
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Zero security breaches with our comprehensive approach',
-      stat: '100%'
-    }
-  ];
-
-  const technologies = [
-    {
-      category: 'Cloud Platforms',
-      icon: Cloud,
-      techs: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud']
-    },
-    {
-      category: 'Security Tools',
-      icon: Shield,
-      techs: ['CrowdStrike', 'Palo Alto', 'Cisco', 'Fortinet', 'Splunk']
-    },
-    {
-      category: 'Databases',
+      id: 'database-management',
+      name: 'Database Management',
+      description: 'Expert database design, optimization, and management services for improved performance and reliability.',
+      features: [
+        'Database design',
+        'Performance tuning',
+        'Backup & recovery',
+        'Data migration',
+        'Security hardening',
+        'Monitoring & maintenance'
+      ],
+      pricing: {
+        design: { price: 2000, period: 'project', features: ['Database design', 'Schema optimization', 'Documentation'] },
+        maintenance: { price: 800, period: 'month', features: ['Performance tuning', 'Backup management', 'Monitoring'] },
+        managed: { price: 1500, period: 'month', features: ['Full management', '24/7 support', 'Optimization'] }
+      },
       icon: Database,
-      techs: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
+      color: 'from-purple-500 to-violet-600'
     },
     {
-      category: 'Monitoring',
+      id: 'network-infrastructure',
+      name: 'Network Infrastructure',
+      description: 'Design, implement, and maintain robust network infrastructure for optimal connectivity and security.',
+      features: [
+        'Network design',
+        'Hardware installation',
+        'Security configuration',
+        'Performance optimization',
+        'Monitoring setup',
+        'Troubleshooting'
+      ],
+      pricing: {
+        design: { price: 2500, period: 'project', features: ['Network design', 'Hardware selection', 'Implementation plan'] },
+        installation: { price: 100, period: 'hour', features: ['Hardware installation', 'Configuration', 'Testing'] },
+        managed: { price: 1000, period: 'month', features: ['24/7 monitoring', 'Maintenance', 'Support'] }
+      },
+      icon: Network,
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      id: 'mobile-development',
+      name: 'Mobile App Development',
+      description: 'Native and cross-platform mobile application development with modern frameworks and best practices.',
+      features: [
+        'iOS & Android apps',
+        'Cross-platform solutions',
+        'UI/UX design',
+        'API integration',
+        'App store deployment',
+        'Maintenance & updates'
+      ],
+      pricing: {
+        native: { price: 15000, period: 'project', features: ['Native iOS/Android', 'UI/UX design', 'Testing'] },
+        cross: { price: 12000, period: 'project', features: ['Cross-platform', 'UI/UX design', 'Testing'] },
+        maintenance: { price: 2000, period: 'month', features: ['Updates', 'Bug fixes', 'Support'] }
+      },
+      icon: Smartphone,
+      color: 'from-indigo-500 to-blue-600'
+    },
+    {
+      id: 'web-development',
+      name: 'Web Development',
+      description: 'Modern, responsive web applications with cutting-edge technologies and optimal performance.',
+      features: [
+        'Responsive design',
+        'Modern frameworks',
+        'Performance optimization',
+        'SEO optimization',
+        'Security implementation',
+        'Maintenance & support'
+      ],
+      pricing: {
+        frontend: { price: 8000, period: 'project', features: ['Frontend development', 'Responsive design', 'Testing'] },
+        fullstack: { price: 15000, period: 'project', features: ['Full-stack development', 'Database design', 'Deployment'] },
+        maintenance: { price: 1500, period: 'month', features: ['Updates', 'Security patches', 'Support'] }
+      },
+      icon: Monitor,
+      color: 'from-teal-500 to-cyan-600'
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics & BI',
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',
+      features: [
+        'Data visualization',
+        'Dashboard creation',
+        'Predictive analytics',
+        'Data warehousing',
+        'ETL processes',
+        'Custom reporting'
+      ],
+      pricing: {
+        dashboard: { price: 5000, period: 'project', features: ['Dashboard creation', 'Data integration', 'Training'] },
+        analytics: { price: 8000, period: 'project', features: ['Advanced analytics', 'ML models', 'Reporting'] },
+        managed: { price: 2000, period: 'month', features: ['Data management', 'Report generation', 'Support'] }
+      },
       icon: BarChart,
-      techs: ['Datadog', 'New Relic', 'Prometheus', 'Grafana', 'Zabbix']
+      color: 'from-yellow-500 to-orange-600'
     }
   ];
 
-  const process = [
-    {
-      step: 1,
-      title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of your current IT infrastructure and needs',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 2,
-      title: 'Strategy Development',
-      description: 'Create a detailed IT strategy aligned with your business goals',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 3,
-      title: 'Implementation',
-      description: 'Deploy solutions with minimal disruption to your operations',
-      duration: '2-8 weeks'
-    },
-    {
-      step: 4,
-      title: 'Testing & Optimization',
-      description: 'Thorough testing and performance optimization',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 5,
-      title: 'Support & Monitoring',
-      description: 'Ongoing support, monitoring, and continuous improvement',
-      duration: 'Ongoing'
-    }
+  const certifications = [
+    { name: 'AWS Certified Solutions Architect', provider: 'Amazon Web Services' },
+    { name: 'Microsoft Azure Solutions Architect', provider: 'Microsoft' },
+    { name: 'CISSP - Certified Information Systems Security Professional', provider: 'ISC2' },
+    { name: 'CISM - Certified Information Security Manager', provider: 'ISACA' },
+    { name: 'PMP - Project Management Professional', provider: 'PMI' },
+    { name: 'ITIL Foundation', provider: 'AXELOS' }
   ];
 
-  const caseStudies = [
+  const testimonials = [
     {
-      company: 'ManufacturingCorp',
-      industry: 'Manufacturing',
-      challenge: 'Outdated IT infrastructure causing production delays',
-      solution: 'Complete infrastructure modernization and cloud migration',
-      results: ['50% faster processing', '99.9% uptime', '40% cost reduction'],
-      image: '/images/case-studies/manufacturing.jpg'
+      name: 'David Thompson',
+      company: 'Enterprise Solutions Corp.',
+      content: 'Zion Tech Group migrated our entire infrastructure to AWS, reducing costs by 40% while improving performance. Exceptional service.',
+      rating: 5
     },
     {
-      company: 'FinanceFirst Bank',
-      industry: 'Banking',
-      challenge: 'Security vulnerabilities and compliance issues',
-      solution: 'Comprehensive cybersecurity suite and compliance framework',
-      results: ['Zero security incidents', '100% compliance', '60% faster audits'],
-      image: '/images/case-studies/banking.jpg'
+      name: 'Lisa Martinez',
+      company: 'Healthcare Systems Inc.',
+      content: 'Their cybersecurity services helped us achieve HIPAA compliance and protect our sensitive patient data. Highly recommended.',
+      rating: 5
     },
     {
-      company: 'RetailMax Stores',
-      industry: 'Retail',
-      challenge: 'Disconnected systems and poor customer experience',
-      solution: 'System integration and unified platform development',
-      results: ['30% improved efficiency', '25% better customer satisfaction', '200% ROI'],
-      image: '/images/case-studies/retail.jpg'
+      name: 'Robert Kim',
+      company: 'FinTech Startup',
+      content: 'The DevOps automation they implemented reduced our deployment time from hours to minutes. Game-changing for our development process.',
+      rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              IT Services
+    <>
+      <Helmet>
+        <title>IT Services & Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and custom development solutions." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, database management, web development, mobile development" />
+        <meta property="og:title" content="IT Services & Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Transform your business with our comprehensive IT services. From cloud migration to cybersecurity, we provide end-to-end technology solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-services" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 text-center overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text-enhanced">
+              IT Services & Solutions
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
-              From infrastructure to security, we've got you covered.
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+              Comprehensive Technology Solutions for Modern Businesses
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Enterprise Security</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Cloud className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Cloud Solutions</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Settings className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">24/7 Support</span>
-              </div>
+            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              From cloud infrastructure to cybersecurity, we provide end-to-end IT services that drive innovation, 
+              enhance security, and optimize performance for businesses of all sizes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 neon-glow"
+              >
+                <Phone className="inline-block mr-2" size={20} />
+                Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 neon-glow"
+              >
+                <Mail className="inline-block mr-2" size={20} />
+                Email Us
+              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Proven expertise and enterprise-grade solutions that deliver measurable business value
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
               Our IT Services
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to meet your business needs
-            </p>
-          </div>
-          <div className="space-y-16">
-            {itServices.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
-                      {service.popular && (
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                          Popular
-                        </div>
-                      )}
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4">{service.description}</p>
-                      <div className="space-y-3 mb-6">
-                        <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="space-y-2 mb-6">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Pricing:</span>
-                          <span className="text-sm font-medium text-white">{service.pricing}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Trial:</span>
-                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Timeline:</span>
-                          <span className="text-sm font-medium text-cyan-400">{service.timeline}</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
-                        >
-                          Get Started
-                        </a>
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <div 
+                  key={service.id}
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                    isVisible ? 'animate-fade-in-up' : 'opacity-0'
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                      Most Popular
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Technologies We Work With
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We work with the latest and most reliable technologies in the industry
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">
-                  {tech.techs.map((technology, techIndex) => (
-                    <div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">
-                      {technology}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our IT Implementation Process
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful IT implementation
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
-              {process.map((step, index) => (
-                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}</div>
-                      <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}</p>
-                      <div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
-                    </div>
+                  )}
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}>
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Real results from real clients across various industries
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {study.company.split(' ').map(word => word[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
-                <p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:</h4>
-                    <p className="text-sm text-gray-400">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:</h4>
-                    <p className="text-sm text-gray-400">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
-                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
-                          <span>{result}</span>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Modernize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprises that have already transformed their IT operations with our solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today
-            </a>
-            <a
-              href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation
-            </a>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Pricing:</h4>
+                    <div className="space-y-2">
+                      {Object.entries(service.pricing).map(([plan, details]) => (
+                        <div key={plan} className="flex justify-between items-center">
+                          <span className="text-gray-300 capitalize">{plan}:</span>
+                          <span className="text-white font-semibold">
+                            ${details.price}/{details.period}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a 
+                    href={`https://ziontechgroup.com/${service.id}`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-center block"
+                  >
+                    Learn More <ArrowRight className="inline-block ml-2" size={16} />
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Certifications */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+              Our Certifications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => (
+                <div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <Award className="w-8 h-8 text-yellow-400 mr-3" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{cert.name}</h3>
+                      <p className="text-cyan-400 text-sm">{cert.provider}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+              Client Success Stories
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Award key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-cyan-400 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+              Let our certified experts help you build a robust, secure, and scalable technology foundation for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 neon-glow"
+              >
+                <Phone className="inline-block mr-2" size={20} />
+                Call: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 neon-glow"
+              >
+                <Mail className="inline-block mr-2" size={20} />
+                Email: kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-8 text-gray-400">
+              <p className="flex items-center justify-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <style jsx>{`
+        .neon-text {
+          text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+        .cyber-text-enhanced {
+          background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .neon-glow {
+          box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </>
   );
-}
+};
+
+export default ITServicesPage;

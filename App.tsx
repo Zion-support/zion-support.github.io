@@ -2,8 +2,10 @@
 import React, { Suspense, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
+import FuturisticNavigation from './app/components/FuturisticNavigation';
+import FuturisticFooter from './app/components/FuturisticFooter';
+import FuturisticBackground from './app/components/FuturisticBackground';
+import FuturisticHero from './app/components/FuturisticHero';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -109,19 +111,13 @@ const App: React.FC = memo(() => {
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
-          <div className="min-h-screen bg-white">
-            <Navigation />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <FuturisticBackground />
+            <FuturisticNavigation />
             <main>
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
-                  <Route path="/" element={
-                    <>
-                      <UnifiedContentPromotion />
-                      <InteractiveAIROICalculator />
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
-                    </>
-                  } />
+                  <Route path="/" element={<FuturisticHero />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
@@ -145,7 +141,7 @@ const App: React.FC = memo(() => {
                 </Routes>
               </Suspense>
             </main>
-            <Footer />
+            <FuturisticFooter />
           </div>
         </Router>
       </HelmetProvider>
