@@ -14,7 +14,6 @@ function fixCriticalErrors(filePath) {
     let modified = false;
     
     // Fix merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
       const lines = content.split('\n');
       const result = [];
@@ -28,10 +27,8 @@ function fixCriticalErrors(filePath) {
           inConflict = true;
           keepCurrent = true;
           continue;
-        } else if (line.startsWith('=======')) {
           keepCurrent = false;
           continue;
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           keepCurrent = false;
           continue;

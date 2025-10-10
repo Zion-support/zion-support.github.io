@@ -1,7 +1,7 @@
-// Type definitions for next.d
+// Type definitions for next
 
-export interface Next.d {
+export interface Next {
   // Add type definitions here
 }
 
-export default Next.d;
+export default Next;

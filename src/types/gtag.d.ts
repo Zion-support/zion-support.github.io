@@ -1,7 +1,7 @@
-// Type definitions for gtag.d
+// Type definitions for gtag
 
-export interface Gtag.d {
+export interface Gtag {
   // Add type definitions here
 }
 
-export default Gtag.d;
+export default Gtag;

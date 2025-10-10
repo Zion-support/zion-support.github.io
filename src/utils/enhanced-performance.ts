@@ -1,11 +1,11 @@
 // Enhanced-performance utility
 // This file contains utility functions and configurations
 
-export const enhanced-performance = {
+export const enhancedPerformance = {
   // Add utility functions here
   init: () => {
     console.log('enhanced-performance initialized');
   }
 };
 
-export default enhanced-performance;
+export default enhancedPerformance;
