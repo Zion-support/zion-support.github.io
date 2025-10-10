@@ -1,27 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* Futuristic Design System */
 :root {
   --neon-cyan: #00ffff;
-  --neon-purple: #8b5cf6;
-  --neon-pink: #ec4899;
-  --neon-green: #10b981;
-  --neon-blue: #3b82f6;
-  --neon-orange: #f59e0b;
-  --neon-red: #ef4444;
+  --neon-purple: #ff00ff;
+  --neon-pink: #ff1493;
+  --neon-green: #00ff00;
+  --neon-orange: #ff8c00;
+  --neon-blue: #0080ff;
+  --neon-yellow: #ffff00;
+  --neon-red: #ff0040;
   
-  --cyber-bg: #0a0a0a;
-  --cyber-surface: #1a1a1a;
-  --cyber-border: #333333;
-  --cyber-text: #ffffff;
-  --cyber-text-secondary: #a1a1aa;
-  
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-cyber: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
-  --gradient-neon: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+  --card-bg: rgba(15, 15, 15, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(0, 255, 255, 0.3);
 }
 
 /* Base Styles */
@@ -34,152 +30,23 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  background: var(--cyber-bg);
-  color: var(--cyber-text);
-  line-height: 1.6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%);
+  background-attachment: fixed;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-/* Cyber Grid Background */
-.cyber-grid {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-  background-size: 50px 50px, 50px 50px, 200px 200px, 200px 200px;
-  animation: grid-move 20s linear infinite, grid-pulse 8s ease-in-out infinite;
-}
-
-@keyframes grid-move {
-  0% { background-position: 0 0; }
-  100% { background-position: 50px 50px; }
-}
-
-@keyframes grid-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-}
-
-/* Neural Network Background */
-.neural-network-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.neural-network-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-  animation: neural-pulse 8s ease-in-out infinite;
-}
-
-@keyframes neural-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-}
-
-/* Matrix Rain Effect */
-.matrix-rain {
-  position: relative;
-  overflow: hidden;
-}
-
-.matrix-rain::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 255, 0, 0.03) 2px,
-      rgba(0, 255, 0, 0.03) 4px
-    );
-  animation: matrix-fall 3s linear infinite;
-}
-
-@keyframes matrix-fall {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
-
-/* Particle Field */
-.particle-field {
-  position: relative;
-}
-
-.particle-field::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(0, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 0, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(0, 255, 0, 0.3), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 0, 0.3), transparent);
-  background-repeat: repeat;
-  background-size: 200px 100px;
-  animation: particle-float 20s linear infinite;
-}
-
-@keyframes particle-float {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-100px); }
-}
-
-/* Neon Text Effects */
-.neon-text {
-  color: var(--neon-cyan);
-  text-shadow: 
-    0 0 5px var(--neon-cyan),
-    0 0 10px var(--neon-cyan),
-    0 0 15px var(--neon-cyan),
-    0 0 20px var(--neon-cyan);
-  animation: neon-flicker 2s infinite alternate;
-}
-
-@keyframes neon-flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+/* Futuristic Animations */
+@keyframes neon-pulse {
+  0%, 100% { 
     text-shadow: 
       0 0 5px var(--neon-cyan),
       0 0 10px var(--neon-cyan),
       0 0 15px var(--neon-cyan),
       0 0 20px var(--neon-cyan);
   }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-
-.neon-pulse {
-  animation: neon-pulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes neon-pulse {
-  from {
-    text-shadow: 
-      0 0 5px var(--neon-cyan),
-      0 0 10px var(--neon-cyan),
-      0 0 15px var(--neon-cyan);
-  }
-  to {
+  50% { 
     text-shadow: 
       0 0 2px var(--neon-cyan),
       0 0 5px var(--neon-cyan),
@@ -188,314 +55,142 @@ body {
   }
 }
 
-/* Cyber Text 3D Effect */
-.cyber-text-3d {
-  position: relative;
-  color: var(--neon-cyan);
-  text-shadow: 
-    0 1px 0 #ccc,
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
-  animation: cyber-glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes cyber-glow {
-  from {
-    text-shadow: 
-      0 1px 0 #ccc,
-      0 2px 0 #c9c9c9,
-      0 3px 0 #bbb,
-      0 4px 0 #b9b9b9,
-      0 5px 0 #aaa,
-      0 6px 1px rgba(0,0,0,.1),
-      0 0 5px rgba(0,0,0,.1),
-      0 1px 3px rgba(0,0,0,.3),
-      0 3px 5px rgba(0,0,0,.2),
-      0 5px 10px rgba(0,0,0,.25),
-      0 10px 10px rgba(0,0,0,.2),
-      0 20px 20px rgba(0,0,0,.15);
-  }
-  to {
-    text-shadow: 
-      0 1px 0 #ccc,
-      0 2px 0 #c9c9c9,
-      0 3px 0 #bbb,
-      0 4px 0 #b9b9b9,
-      0 5px 0 #aaa,
-      0 6px 1px rgba(0,0,0,.1),
+@keyframes neon-glow {
+  0%, 100% { 
+    box-shadow: 
       0 0 5px var(--neon-cyan),
-      0 1px 3px rgba(0,0,0,.3),
-      0 3px 5px rgba(0,0,0,.2),
-      0 5px 10px rgba(0,0,0,.25),
-      0 10px 10px rgba(0,0,0,.2),
-      0 20px 20px rgba(0,0,0,.15);
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      inset 0 0 5px var(--neon-cyan);
+  }
+  50% { 
+    box-shadow: 
+      0 0 2px var(--neon-cyan),
+      0 0 5px var(--neon-cyan),
+      0 0 8px var(--neon-cyan),
+      inset 0 0 2px var(--neon-cyan);
   }
 }
 
-/* Glitch Effect */
-.glitch {
-  position: relative;
-  animation: glitch-skew 1s infinite linear alternate-reverse;
+@keyframes matrix-rain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
 }
 
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  25%, 75% { opacity: 0.9; }
 }
 
-.glitch::before {
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-  color: var(--neon-pink);
-  z-index: -1;
-}
-
-.glitch::after {
-  animation: glitch-anim2 1s infinite linear alternate-reverse;
-  color: var(--neon-cyan);
-  z-index: -2;
-}
-
-@keyframes glitch-skew {
-  0% { transform: skew(0deg); }
-  10% { transform: skew(-2deg); }
-  20% { transform: skew(1deg); }
-  30% { transform: skew(-1deg); }
-  40% { transform: skew(2deg); }
-  50% { transform: skew(0deg); }
-  60% { transform: skew(1deg); }
-  70% { transform: skew(-2deg); }
-  80% { transform: skew(1deg); }
-  90% { transform: skew(-1deg); }
-  100% { transform: skew(0deg); }
-}
-
-@keyframes glitch-anim {
-  0% { clip-path: inset(40% 0 61% 0); }
-  5% { clip-path: inset(92% 0 1% 0); }
-  10% { clip-path: inset(43% 0 1% 0); }
-  15% { clip-path: inset(25% 0 58% 0); }
-  20% { clip-path: inset(54% 0 7% 0); }
-  25% { clip-path: inset(58% 0 43% 0); }
-  30% { clip-path: inset(75% 0 9% 0); }
-  35% { clip-path: inset(84% 0 2% 0); }
-  40% { clip-path: inset(44% 0 58% 0); }
-  45% { clip-path: inset(61% 0 34% 0); }
-  50% { clip-path: inset(88% 0 6% 0); }
-  55% { clip-path: inset(68% 0 23% 0); }
-  60% { clip-path: inset(26% 0 73% 0); }
-  65% { clip-path: inset(75% 0 19% 0); }
-  70% { clip-path: inset(84% 0 2% 0); }
-  75% { clip-path: inset(92% 0 8% 0); }
-  80% { clip-path: inset(31% 0 1% 0); }
-  85% { clip-path: inset(81% 0 9% 0); }
-  90% { clip-path: inset(28% 0 97% 0); }
-  95% { clip-path: inset(75% 0 1% 0); }
-  100% { clip-path: inset(54% 0 1% 0); }
-}
-
-@keyframes glitch-anim2 {
-  0% { clip-path: inset(25% 0 58% 0); }
-  5% { clip-path: inset(54% 0 7% 0); }
-  10% { clip-path: inset(58% 0 43% 0); }
-  15% { clip-path: inset(75% 0 9% 0); }
-  20% { clip-path: inset(84% 0 2% 0); }
-  25% { clip-path: inset(44% 0 58% 0); }
-  30% { clip-path: inset(61% 0 34% 0); }
-  35% { clip-path: inset(88% 0 6% 0); }
-  40% { clip-path: inset(68% 0 23% 0); }
-  45% { clip-path: inset(26% 0 73% 0); }
-  50% { clip-path: inset(75% 0 19% 0); }
-  55% { clip-path: inset(84% 0 2% 0); }
-  60% { clip-path: inset(92% 0 8% 0); }
-  65% { clip-path: inset(31% 0 1% 0); }
-  70% { clip-path: inset(81% 0 9% 0); }
-  75% { clip-path: inset(28% 0 97% 0); }
-  80% { clip-path: inset(75% 0 1% 0); }
-  85% { clip-path: inset(54% 0 1% 0); }
-  90% { clip-path: inset(25% 0 58% 0); }
-  95% { clip-path: inset(54% 0 7% 0); }
-  100% { clip-path: inset(58% 0 43% 0); }
-}
-
-/* Cyber Scan Line */
-.cyber-scan-line {
-  position: relative;
-  overflow: hidden;
-}
-
-.cyber-scan-line::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-  animation: scan-line 3s linear infinite;
-}
-
-@keyframes scan-line {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-/* Cyber Scan Effect */
-.cyber-scan-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.cyber-scan-effect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 255, 255, 0.1) 50%,
-    transparent 100%
-  );
-  animation: scan-sweep 4s ease-in-out infinite;
-}
-
-@keyframes scan-sweep {
+@keyframes cyber-scan {
   0% { transform: translateX(-100%); }
-  50% { transform: translateX(100%); }
   100% { transform: translateX(100%); }
 }
 
-/* Futuristic Glow */
-.futuristic-glow {
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+@keyframes data-stream {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-.futuristic-glow:hover {
-  background: rgba(0, 255, 255, 0.1);
-  border-color: rgba(0, 255, 255, 0.4);
-  box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.3),
-    inset 0 0 20px rgba(0, 255, 255, 0.1);
+@keyframes neon-border {
+  0%, 100% { 
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan);
+  }
+  25% { 
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 10px var(--neon-purple);
+  }
+  50% { 
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+  }
+  75% { 
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+  }
 }
 
-/* Neural Pattern */
-.neural-pattern {
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(0, 255, 255, 0.3) 1px, transparent 0),
-    radial-gradient(circle at 10px 10px, rgba(139, 92, 246, 0.2) 1px, transparent 0);
-  background-size: 20px 20px, 30px 30px;
-  animation: neural-pattern-move 10s linear infinite, neural-pattern-pulse 6s ease-in-out infinite;
+@keyframes hologram-float {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-10px) rotateX(5deg); }
 }
 
-@keyframes neural-pattern-move {
+@keyframes cyber-grid {
   0% { background-position: 0 0; }
-  100% { background-position: 20px 20px; }
+  100% { background-position: 50px 50px; }
 }
 
-@keyframes neural-pattern-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+/* Utility Classes */
+.neon-text {
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: neon-pulse 2s ease-in-out infinite;
 }
 
-/* Cyber Card */
-.cyber-card {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+.neon-purple {
+  color: var(--neon-purple);
+  text-shadow: 
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    0 0 15px var(--neon-purple);
 }
 
-.cyber-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 255, 255, 0.1),
-    transparent
-  );
-  transition: left 0.5s ease;
+.neon-pink {
+  color: var(--neon-pink);
+  text-shadow: 
+    0 0 5px var(--neon-pink),
+    0 0 10px var(--neon-pink),
+    0 0 15px var(--neon-pink);
 }
 
-.cyber-card:hover::before {
-  left: 100%;
+.neon-green {
+  color: var(--neon-green);
+  text-shadow: 
+    0 0 5px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 15px var(--neon-green);
 }
 
-.cyber-card:hover {
-  border-color: rgba(0, 255, 255, 0.4);
-  box-shadow: 
-    0 0 30px rgba(0, 255, 255, 0.2),
-    inset 0 0 30px rgba(0, 255, 255, 0.05);
-  transform: translateY(-5px);
+.neon-orange {
+  color: var(--neon-orange);
+  text-shadow: 
+    0 0 5px var(--neon-orange),
+    0 0 10px var(--neon-orange),
+    0 0 15px var(--neon-orange);
 }
 
-/* Cyber Button */
 .cyber-button {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+  border: 2px solid var(--neon-cyan);
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
   box-shadow: 
-    0 4px 15px rgba(0, 255, 255, 0.3),
-    0 2px 8px rgba(139, 92, 246, 0.2);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  animation: cyber-button-glow 2s ease-in-out infinite alternate;
+    0 0 10px var(--neon-cyan),
+    inset 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
-@keyframes cyber-button-glow {
-  0% {
-    box-shadow: 
-      0 4px 15px rgba(0, 255, 255, 0.3),
-      0 2px 8px rgba(139, 92, 246, 0.2);
-  }
-  100% {
-    box-shadow: 
-      0 6px 20px rgba(0, 255, 255, 0.5),
-      0 4px 12px rgba(139, 92, 246, 0.4);
-  }
+.cyber-button:hover {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+  border-color: var(--neon-purple);
+  box-shadow: 
+    0 0 20px var(--neon-purple),
+    inset 0 0 20px rgba(255, 0, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .cyber-button::before {
@@ -505,144 +200,115 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
 }
 
 .cyber-button:hover::before {
   left: 100%;
 }
 
-.cyber-button:hover {
-  transform: translateY(-2px);
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
   box-shadow: 
-    0 10px 20px rgba(0, 255, 255, 0.3),
-    0 0 30px rgba(139, 92, 246, 0.3);
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.cyber-button:active {
-  transform: translateY(0);
+.hologram-card {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(255, 0, 255, 0.1) 50%,
+    rgba(0, 255, 255, 0.1) 100%);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  animation: hologram-flicker 3s ease-in-out infinite;
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--neon-cyan), 
+    transparent);
+  animation: cyber-scan 2s linear infinite;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: cyber-grid 20s linear infinite;
+}
+
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  animation: matrix-rain 10s linear infinite;
+  pointer-events: none;
+}
+
+.neon-border {
+  border: 2px solid var(--neon-cyan);
+  animation: neon-border 4s ease-in-out infinite;
+}
+
+.hologram-float {
+  animation: hologram-float 6s ease-in-out infinite;
+}
+
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--neon-cyan), 
+    var(--neon-purple), 
+    transparent);
+  animation: data-stream 3s linear infinite;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .cyber-text-3d {
-    font-size: 4rem;
-  }
-  
-  .neon-text {
-    font-size: 1.75rem;
-  }
-  
-  .cyber-card {
-    padding: 1.25rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .cyber-text-3d {
-    font-size: 3.5rem;
-  }
-  
-  .neon-text {
-    font-size: 1.5rem;
-  }
-  
-  .cyber-card {
-    padding: 1rem;
-  }
-  
-  .futuristic-glow {
-    padding: 1rem;
-  }
-  
-  /* Improve mobile navigation */
-  .cyber-nav {
-    padding: 0.5rem 0;
-  }
-  
-  /* Better mobile spacing */
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  /* Mobile-friendly text sizes */
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-  
-  /* Mobile grid improvements */
-  .grid {
-    gap: 1rem;
-  }
-  
-  /* Mobile button improvements */
-  .cyber-button {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .cyber-text-3d {
-    font-size: 2.5rem;
-  }
-  
   .neon-text {
-    font-size: 1.25rem;
-  }
-  
-  .cyber-card {
-    margin-bottom: 1rem;
-    padding: 0.875rem;
-  }
-  
-  .futuristic-glow {
-    padding: 0.875rem;
-  }
-  
-  .cyber-grid {
-    background-size: 30px 30px;
-  }
-  
-  .neural-network-bg::before {
-    opacity: 0.3;
-  }
-}
-
-@media (max-width: 640px) {
-  .cyber-text-3d {
-    font-size: 2rem;
-  }
-  
-  .neon-text {
-    font-size: 1.125rem;
-  }
-  
-  .cyber-card {
-    padding: 0.75rem;
-  }
-  
-  .futuristic-glow {
-    padding: 0.75rem;
+    font-size: 1.5rem;
   }
   
   .cyber-button {
@@ -650,98 +316,14 @@ body {
     font-size: 0.875rem;
   }
   
-  /* Ultra small screen optimizations */
-  .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 1.75rem;
-    line-height: 1.1;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
-  
-  h3 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-  }
-  
-  /* Reduce padding and margins for very small screens */
-  .py-16 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  .py-12 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  
-  .py-8 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  .mb-16 {
-    margin-bottom: 2rem;
-  }
-  
-  .mb-12 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .mb-8 {
-    margin-bottom: 1rem;
+  .glass-card {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .cyber-text-3d {
-    font-size: 1.75rem;
-  }
-  
   .neon-text {
-    font-size: 1rem;
-  }
-  
-  .cyber-grid {
-    background-size: 25px 25px;
-  }
-  
-  .cyber-card {
-    padding: 0.625rem;
-  }
-  
-  .futuristic-glow {
-    padding: 0.625rem;
-  }
-  
-  .cyber-button {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.8125rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .cyber-text-3d {
-    font-size: 1.5rem;
-  }
-  
-  .neon-text {
-    font-size: 0.875rem;
-  }
-  
-  .cyber-card {
-    padding: 0.5rem;
-  }
-  
-  .futuristic-glow {
-    padding: 0.5rem;
+    font-size: 1.25rem;
   }
   
   .cyber-button {
@@ -750,392 +332,142 @@ body {
   }
 }
 
-/* Landscape orientation adjustments */
-@media (max-height: 500px) and (orientation: landscape) {
-  .cyber-text-3d {
-    font-size: 2rem;
-  }
-  
-  .neon-text {
-    font-size: 1rem;
-  }
-  
-  .cyber-card {
-    padding: 0.5rem;
-  }
-  
-  .futuristic-glow {
-    padding: 0.5rem;
-  }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Ultra-wide screens */
-@media (min-width: 1920px) {
-  .cyber-text-3d {
-    font-size: 6rem;
-  }
-  
-  .neon-text {
-    font-size: 2.5rem;
-  }
-  
-  .cyber-card {
-    padding: 2rem;
-  }
-  
-  .futuristic-glow {
-    padding: 2rem;
-  }
-  
-  .cyber-grid {
-    background-size: 60px 60px;
-  }
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
 }
 
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+  border-radius: 4px;
 }
 
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .cyber-card {
-    border-color: var(--neon-cyan);
-    background: rgba(0, 0, 0, 0.9);
-  }
-  
-  .neon-text {
-    color: var(--neon-cyan);
-    text-shadow: none;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
 }
 
-/* Quantum Card Effects */
-.quantum-card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 0 1px rgba(139, 92, 246, 0.1);
+/* Selection */
+::selection {
+  background: var(--neon-cyan);
+  color: #000;
 }
 
-.quantum-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(139, 92, 246, 0.1) 0%, 
-    transparent 25%, 
-    transparent 75%, 
-    rgba(236, 72, 153, 0.1) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+::-moz-selection {
+  background: var(--neon-cyan);
+  color: #000;
 }
 
-.quantum-card:hover::before {
-  opacity: 1;
+/* Focus States */
+.focus-visible:focus {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
 }
 
-.quantum-card:hover {
-  border-color: rgba(139, 92, 246, 0.6);
-  box-shadow: 
-    0 20px 40px rgba(139, 92, 246, 0.2),
-    inset 0 0 40px rgba(139, 92, 246, 0.1),
-    0 0 0 1px rgba(139, 92, 246, 0.3);
-  transform: translateY(-8px) scale(1.02);
-}
-
-/* Energy Pulse Animation */
-.energy-pulse {
-  animation: energy-pulse 3s ease-in-out infinite;
-}
-
-@keyframes energy-pulse {
-  0%, 100% {
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      0 0 0 1px rgba(139, 92, 246, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      0 0 0 1px rgba(139, 92, 246, 0.1),
-      0 0 20px rgba(139, 92, 246, 0.3),
-      inset 0 0 20px rgba(139, 92, 246, 0.1);
-  }
-}
-
-/* Holographic Effect */
-.holographic {
-  background: linear-gradient(45deg, 
-    #ff006e 0%, 
-    #8338ec 25%, 
-    #3a86ff 50%, 
-    #06ffa5 75%, 
-    #ff006e 100%);
-  background-size: 400% 400%;
-  animation: holographic-shift 4s ease-in-out infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes holographic-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Floating Animation */
-.floating {
-  animation: floating 6s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-/* Matrix Digital Rain */
-.matrix-rain::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 255, 0, 0.03) 2px,
-      rgba(0, 255, 0, 0.03) 4px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 255, 0, 0.03) 2px,
-      rgba(0, 255, 0, 0.03) 4px
-    );
-  animation: matrix-fall 3s linear infinite, matrix-fade 2s ease-in-out infinite alternate;
-}
-
-@keyframes matrix-fade {
-  0% { opacity: 0.1; }
-  100% { opacity: 0.3; }
-}
-
-/* Cyber Scan Effect Enhanced */
-.cyber-scan-effect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 255, 255, 0.1) 25%,
-    rgba(139, 92, 246, 0.1) 50%,
-    rgba(236, 72, 153, 0.1) 75%,
-    transparent 100%
-  );
-  animation: scan-sweep 4s ease-in-out infinite;
-}
-
-/* Neon Glow Enhanced */
-.neon-glow {
-  box-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor,
-    0 0 20px currentColor;
-  animation: neon-flicker 2s infinite alternate;
-}
-
-/* Cyber Button Enhanced */
-.cyber-button {
-  background: linear-gradient(135deg, 
-    var(--neon-cyan) 0%, 
-    var(--neon-purple) 50%, 
-    var(--neon-pink) 100%);
-  border: none;
-  border-radius: 12px;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 8px 25px rgba(0, 255, 255, 0.3),
-    0 4px 12px rgba(139, 92, 246, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  animation: cyber-button-glow 3s ease-in-out infinite alternate;
-}
-
-.cyber-button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: left 0.6s ease;
-}
-
-.cyber-button:hover::after {
-  left: 100%;
-}
-
-.cyber-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 
-    0 15px 35px rgba(0, 255, 255, 0.4),
-    0 8px 20px rgba(139, 92, 246, 0.3),
-    inset 0 0 30px rgba(255, 255, 255, 0.1);
-}
-
-/* Quantum Field Background */
-.quantum-field {
-  position: relative;
-  overflow: hidden;
-}
-
-.quantum-field::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 60%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-  animation: quantum-pulse 8s ease-in-out infinite;
-}
-
-@keyframes quantum-pulse {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
-}
-
-/* Cyber Grid Enhanced */
-.cyber-grid {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-    linear-gradient(45deg, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
-  background-size: 50px 50px, 50px 50px, 200px 200px, 200px 200px, 100px 100px;
-  animation: grid-move 20s linear infinite, grid-pulse 8s ease-in-out infinite, grid-rotate 30s linear infinite;
-}
-
-@keyframes grid-rotate {
+/* Loading Animation */
+@keyframes cyber-loading {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Neural Network Enhanced */
-.neural-network-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%),
-    linear-gradient(45deg, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-  animation: neural-pulse 8s ease-in-out infinite, neural-connect 12s linear infinite;
+.cyber-loading {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--neon-cyan);
+  border-right: 3px solid var(--neon-purple);
+  border-radius: 50%;
+  animation: cyber-loading 1s linear infinite;
 }
 
-@keyframes neural-connect {
-  0% { background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%; }
-  100% { background-position: 100% 100%, 0% 0%, 50% 50%, 100% 100%; }
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Particle Field Enhanced */
-.particle-field::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 25px rgba(0, 255, 255, 0.3),
+    0 0 20px var(--neon-cyan);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 
+    0 0 20px var(--neon-cyan),
+    0 0 40px var(--neon-cyan),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Text Effects */
+.text-gradient {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--neon-cyan) 0%,
+    var(--neon-purple) 50%,
+    var(--neon-cyan) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Grid Patterns */
+.cyber-pattern {
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(0, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 0, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(0, 255, 0, 0.3), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 0, 0.3), transparent),
-    radial-gradient(1px 1px at 200px 60px, rgba(139, 92, 246, 0.3), transparent);
-  background-repeat: repeat;
-  background-size: 200px 100px;
-  animation: particle-float 20s linear infinite, particle-twinkle 3s ease-in-out infinite alternate;
+    radial-gradient(circle at 25% 25%, var(--neon-cyan) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--neon-purple) 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
 }
 
-@keyframes particle-twinkle {
-  0% { opacity: 0.3; }
-  100% { opacity: 0.8; }
+/* Particle Effects */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-/* Print Styles */
-@media print {
-  .cyber-grid,
-  .neural-network-bg,
-  .matrix-rain,
-  .particle-field,
-  .quantum-field {
-    background: none !important;
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0) translateX(0);
+    opacity: 0;
   }
-  
-  .neon-text,
-  .cyber-text-3d,
-  .holographic {
-    color: black !important;
-    text-shadow: none !important;
-    background: none !important;
-    -webkit-text-fill-color: initial !important;
-  }
-  
-  .cyber-card,
-  .quantum-card {
-    border: 1px solid black !important;
-    background: white !important;
-    box-shadow: none !important;
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  50% { 
+    transform: translateY(-100px) translateX(50px);
   }
 }

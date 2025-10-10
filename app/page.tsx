@@ -80,6 +80,171 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      title: 'AI Meeting Intelligence Pro',
+      description: 'Revolutionary meeting management with real-time transcription, sentiment analysis, and automated action items. Used by Fortune 500 companies.',
+      icon: '🎯',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Real-time transcription', 'Sentiment analysis', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support'],
+      benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
+      link: '/ai-meeting-intelligence',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '20,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Document Intelligence Pro',
+      description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
+      icon: '📄',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
+      benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
+      link: '/ai-document-intelligence',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '15,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
+      icon: '🤖',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
+      benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '45,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Team Collaboration Hub',
+      description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
+      icon: '👥',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
+      benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],
+      link: '/ai-team-collaboration',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Task Manager Pro',
+      description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
+      icon: '✅',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
+      benefits: ['60% productivity boost', 'Never miss deadlines', 'Better focus', 'Achieve more goals'],
+      link: '/ai-task-manager',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Workflow Automation Pro',
+      description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
+      icon: '⚡',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],
+      benefits: ['20+ hours saved weekly', '99.9% accuracy', 'Easy setup', 'Scalable automation'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '15,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Meeting Scheduler Pro',
+      description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',
+      icon: '📅',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Smart scheduling', 'Calendar integration', 'Conflict resolution', 'Time zone handling', 'Meeting analytics', 'Auto-reminders', 'Room booking', 'Catering coordination'],
+      benefits: ['50% scheduling time saved', 'Zero double bookings', 'Better time utilization', 'Reduced no-shows'],
+      link: '/ai-meeting-scheduler',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '30,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Time Tracker Pro',
+      description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',
+      icon: '⏱️',
+      price: '$34/month',
+      originalPrice: '$49/month',
+      features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Idle detection', 'Detailed reports', 'Screenshot monitoring', 'App usage tracking'],
+      benefits: ['Accurate time tracking', 'Better productivity', 'Fair billing', 'Team optimization'],
+      link: '/ai-time-tracker',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.6,
+      users: '50,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Calendar Optimizer Pro',
+      description: 'Smart calendar management with AI-powered scheduling optimization, meeting analysis, and productivity insights.',
+      icon: '📆',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Smart scheduling', 'Meeting analysis', 'Productivity insights', 'Time blocking', 'Focus time', 'Meeting optimization', 'Calendar sync', 'Team coordination'],
+      benefits: ['Better time management', 'Reduced meeting fatigue', 'Improved focus', 'Enhanced productivity'],
+      link: '/ai-calendar-optimizer',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '35,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Note-Taking Assistant Pro',
+      description: 'Intelligent note-taking with AI-powered organization, search, and knowledge extraction. Never lose important information again.',
+      icon: '📝',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['AI organization', 'Smart search', 'Knowledge extraction', 'Voice notes', 'Image recognition', 'Cross-platform sync', 'Collaboration tools', 'Export options'],
+      benefits: ['Better organization', 'Quick information retrieval', 'Enhanced learning', 'Improved memory'],
+      link: '/ai-note-taking-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '28,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Focus & Concentration Pro',
+      description: 'AI-powered focus enhancement with distraction blocking, productivity tracking, and personalized optimization.',
+      icon: '🎯',
+      price: '$24/month',
+      originalPrice: '$39/month',
+      features: ['Distraction blocking', 'Focus tracking', 'Productivity analytics', 'Pomodoro timer', 'Ambient sounds', 'Goal setting', 'Progress tracking', 'Motivation system'],
+      benefits: ['Improved focus', 'Better concentration', 'Higher productivity', 'Reduced distractions'],
+      link: '/ai-focus-concentration',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.6,
+      users: '40,000+',
+      freeTrial: '7 days'
+    },
+    {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
       icon: '🎯',
@@ -335,6 +500,186 @@ const HomePage: React.FC = () => {
       users: '18,000+',
       freeTrial: '7 days'
     },
+    {
+      title: 'AI Ad Campaign Manager Pro',
+      description: 'Intelligent ad campaign management with AI-powered optimization, audience targeting, and performance analytics.',
+      icon: '📊',
+      price: '$119/month',
+      originalPrice: '$179/month',
+      features: ['AI campaign optimization', 'Audience targeting', 'Budget management', 'A/B testing', 'Performance analytics', 'Multi-platform support', 'Creative optimization', 'ROI tracking'],
+      benefits: ['50% better ad performance', 'Lower cost per acquisition', 'Automated optimization', 'Higher ROI'],
+      link: '/ai-ad-campaign-manager',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.8,
+      users: '15,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Influencer Marketing Pro',
+      description: 'AI-powered influencer discovery, campaign management, and performance tracking. Find the perfect influencers for your brand.',
+      icon: '👥',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Influencer discovery', 'Campaign management', 'Performance tracking', 'Audience analysis', 'Content collaboration', 'Payment processing', 'Analytics dashboard', 'ROI measurement'],
+      benefits: ['Better influencer matches', 'Higher engagement rates', 'Automated management', 'Measurable results'],
+      link: '/ai-influencer-marketing',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.7,
+      users: '12,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Content Calendar Pro',
+      description: 'Smart content planning with AI-powered scheduling, trend analysis, and performance optimization.',
+      icon: '📅',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Smart scheduling', 'Trend analysis', 'Content optimization', 'Team collaboration', 'Performance tracking', 'Multi-platform sync', 'Content templates', 'Analytics dashboard'],
+      benefits: ['Better content planning', 'Trend awareness', 'Improved engagement', 'Team coordination'],
+      link: '/ai-content-calendar',
+      popular: true,
+      category: 'Content',
+      rating: 4.6,
+      users: '25,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Brand Voice Analyzer Pro',
+      description: 'AI-powered brand voice analysis and consistency monitoring across all content and communications.',
+      icon: '🎤',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['Voice analysis', 'Consistency monitoring', 'Tone optimization', 'Brand guidelines', 'Content scoring', 'Team training', 'Performance tracking', 'Recommendations'],
+      benefits: ['Consistent brand voice', 'Better brand recognition', 'Improved messaging', 'Team alignment'],
+      link: '/ai-brand-voice-analyzer',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.7,
+      users: '16,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Video Creator Pro',
+      description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
+      icon: '🎬',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],
+      benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],
+      link: '/ai-video-creator',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '30,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Podcast Studio Pro',
+      description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
+      icon: '🎙️',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],
+      benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],
+      link: '/ai-podcast-studio',
+      popular: true,
+      category: 'Content',
+      rating: 4.7,
+      users: '18,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Graphic Design Studio',
+      description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
+      icon: '🎨',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],
+      benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],
+      link: '/ai-graphic-design',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '35,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Website Builder Pro',
+      description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
+      icon: '🌐',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
+      benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],
+      link: '/ai-website-builder',
+      popular: true,
+      category: 'Content',
+      rating: 4.9,
+      users: '50,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Social Media Manager Pro',
+      description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
+      icon: '📱',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],
+      benefits: ['300% audience growth', 'Consistent posting', 'Better engagement', 'Time savings'],
+      link: '/ai-social-media-manager',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.7,
+      users: '35,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Email Marketing Suite',
+      description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
+      icon: '📧',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],
+      benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],
+      link: '/ai-email-marketing',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.8,
+      users: '28,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI SEO Optimizer Pro',
+      description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
+      icon: '🔍',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],
+      benefits: ['200% traffic increase', 'Higher rankings', 'Better visibility', 'Competitive advantage'],
+      link: '/ai-seo-optimizer',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.9,
+      users: '22,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Lead Generation Pro',
+      description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5x more qualified leads.',
+      icon: '🎯',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],
+      benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],
+      link: '/ai-lead-generation',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.8,
+      users: '18,000+',
+      freeTrial: '7 days'
+    },
     // Business & Finance Tools
     {
       title: 'AI CRM Intelligence Pro',
@@ -349,6 +694,171 @@ const HomePage: React.FC = () => {
       category: 'Business',
       rating: 4.7,
       users: '32,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Financial Analyzer Pro',
+      description: 'Advanced financial analysis with AI-powered insights, forecasting, and investment recommendations. Make smarter financial decisions.',
+      icon: '💰',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Financial forecasting', 'Investment analysis', 'Risk assessment', 'Portfolio optimization', 'Tax planning', 'Expense tracking', 'Budget management', 'Report generation'],
+      benefits: ['Smarter investments', 'Better financial planning', 'Risk reduction', 'Tax optimization'],
+      link: '/ai-financial-analyzer',
+      popular: true,
+      category: 'Finance',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automated invoice creation with AI-powered pricing, tax calculations, and payment tracking. Save 90% of billing time.',
+      icon: '🧾',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Auto-invoice generation', 'Smart pricing suggestions', 'Tax calculations', 'Payment tracking', 'Client management', 'Multi-currency support', 'Recurring billing', 'Payment reminders'],
+      benefits: ['90% time savings', 'Zero calculation errors', 'Faster payments', 'Professional invoices'],
+      link: '/ai-invoice-generator',
+      popular: true,
+      category: 'Finance',
+      rating: 4.9,
+      users: '45,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense tracking with receipt scanning, automated categorization, and tax preparation. Perfect for businesses and freelancers.',
+      icon: '💳',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Receipt scanning', 'Auto-categorization', 'Tax preparation', 'Spending insights', 'Budget alerts', 'Multi-currency support', 'Team expense management', 'Integration with accounting software'],
+      benefits: ['95% automation', 'Tax-ready reports', 'Better spending control', 'Time savings'],
+      link: '/ai-expense-tracker',
+      popular: true,
+      category: 'Finance',
+      rating: 4.7,
+      users: '60,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Stock Portfolio Manager',
+      description: 'Intelligent portfolio management with AI-powered investment recommendations and risk assessment. Beat the market by 15%.',
+      icon: '📈',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Portfolio analysis', 'AI recommendations', 'Risk assessment', 'Performance tracking', 'Market insights', 'Tax optimization', 'Rebalancing alerts', 'News sentiment analysis'],
+      benefits: ['15% better returns', 'Risk management', 'Informed decisions', 'Tax savings'],
+      link: '/ai-stock-portfolio-manager',
+      popular: true,
+      category: 'Finance',
+      rating: 4.8,
+      users: '20,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Business Intelligence Pro',
+      description: 'Advanced business intelligence with AI-powered insights, forecasting, and automated reporting. Make data-driven decisions.',
+      icon: '📊',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['AI insights', 'Predictive analytics', 'Automated reporting', 'Data visualization', 'Custom dashboards', 'Real-time analytics', 'Data integration', 'Natural language queries'],
+      benefits: ['Better insights', 'Automated reports', 'Data-driven decisions', 'Competitive advantage'],
+      link: '/ai-business-intelligence',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '22,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Contract Analyzer Pro',
+      description: 'Intelligent contract analysis with AI-powered risk assessment, compliance checking, and automated review.',
+      icon: '📋',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Automated review', 'Clause extraction', 'Version comparison', 'Legal insights', 'Team collaboration'],
+      benefits: ['Faster contract review', 'Risk reduction', 'Better compliance', 'Time savings'],
+      link: '/ai-contract-analyzer',
+      popular: true,
+      category: 'Business',
+      rating: 4.7,
+      users: '18,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Supply Chain Optimizer Pro',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      icon: '🚚',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Quality control', 'Cost optimization', 'Risk management', 'Sustainability tracking'],
+      benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '15,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI HR Assistant Pro',
+      description: 'Comprehensive HR management with AI-powered recruitment, employee analytics, and performance optimization.',
+      icon: '👨‍💼',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['AI recruitment', 'Employee analytics', 'Performance tracking', 'Training recommendations', 'Retention analysis', 'Payroll integration', 'Compliance monitoring', 'Team insights'],
+      benefits: ['Better hiring decisions', 'Improved retention', 'Performance optimization', 'Compliance ready'],
+      link: '/ai-hr-assistant',
+      popular: true,
+      category: 'Business',
+      rating: 4.7,
+      users: '28,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Market Research Pro',
+      description: 'Advanced market research with AI-powered analysis, competitor intelligence, and trend forecasting.',
+      icon: '🔍',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Market analysis', 'Competitor intelligence', 'Trend forecasting', 'Customer insights', 'Brand monitoring', 'Sentiment analysis', 'Report generation', 'Data visualization'],
+      benefits: ['Better market understanding', 'Competitive advantage', 'Informed decisions', 'Trend awareness'],
+      link: '/ai-market-research',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '16,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Pricing Optimizer Pro',
+      description: 'Intelligent pricing strategy with AI-powered analysis, competitor monitoring, and dynamic pricing optimization.',
+      icon: '💲',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['Pricing analysis', 'Competitor monitoring', 'Dynamic pricing', 'Profit optimization', 'Market positioning', 'A/B testing', 'Revenue forecasting', 'Customer segmentation'],
+      benefits: ['20% revenue increase', 'Better pricing strategy', 'Competitive advantage', 'Profit optimization'],
+      link: '/ai-pricing-optimizer',
+      popular: true,
+      category: 'Business',
+      rating: 4.7,
+      users: '20,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Customer Analytics Pro',
+      description: 'Advanced customer analytics with AI-powered insights, behavior prediction, and retention optimization.',
+      icon: '👥',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Customer insights', 'Behavior prediction', 'Retention analysis', 'Segmentation', 'Lifetime value calculation', 'Churn prediction', 'Personalization', 'Campaign optimization'],
+      benefits: ['Better customer understanding', 'Higher retention rates', 'Improved personalization', 'Increased lifetime value'],
+      link: '/ai-customer-analytics',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '24,000+',
       freeTrial: '14 days'
     },
     {
@@ -1307,343 +1817,501 @@ const HomePage: React.FC = () => {
           enableAnalytics={true}
           enableErrorReporting={true}
         />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen matrix-bg cyber-grid">
           <Navigation />
           
           {/* Hero Section */}
           <section className="relative pt-20 pb-16 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 cyber-pattern"></div>
+            <div className="particles">
+              {[...Array(20)].map((_, i) => (
+                <div
+                  key={i}
+                  className="particle"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 6}s`,
+                    animationDuration: `${4 + Math.random() * 4}s`
+                  }}
+                />
+              ))}
+            </div>
             <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <div className="text-center max-w-5xl mx-auto">
+                <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
                   Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="block text-gradient text-shimmer">
                     AI-Powered Solutions
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-2xl md:text-3xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
                   Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
-                  Achieve 300% ROI with our cutting-edge technology.
+                  <span className="neon-text"> Achieve 300% ROI</span> with our cutting-edge technology.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold"
+                    className="cyber-button px-10 py-5 text-xl font-bold hover-lift"
                     onClick={handlePhoneClick}
                   >
                     Get Started Today
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium"
+                    className="flex items-center space-x-3 text-cyan-400 hover:text-white transition-all duration-300 text-xl font-medium hover-glow px-6 py-3 rounded-lg border border-cyan-400/30"
                     onClick={handlePhoneClick}
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-6 h-6" />
                     <span>+1 302 464 0950</span>
                   </a>
+                </div>
+                
+                {/* Stats Section */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <div className="text-3xl md:text-4xl font-bold neon-text mb-2">500+</div>
+                    <div className="text-gray-300">Enterprise Clients</div>
+                  </div>
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <div className="text-3xl md:text-4xl font-bold neon-purple mb-2">99.9%</div>
+                    <div className="text-gray-300">Uptime SLA</div>
+                  </div>
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <div className="text-3xl md:text-4xl font-bold neon-pink mb-2">300%</div>
+                    <div className="text-gray-300">Average ROI</div>
+                  </div>
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <div className="text-3xl md:text-4xl font-bold neon-green mb-2">24/7</div>
+                    <div className="text-gray-300">Expert Support</div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="py-20 bg-slate-800/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Micro SAAS Solutions
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/20 to-slate-900/80"></div>
+            <div className="data-stream"></div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center mb-20">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <span className="text-gradient">Micro SAAS Solutions</span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Powerful, affordable AI-powered tools designed for modern businesses. 
-                  Choose from our comprehensive suite of micro SAAS solutions.
+                  <span className="neon-text"> Choose from our comprehensive suite</span> of micro SAAS solutions.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
                 {microSAASServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="hologram-card p-6 hover-lift group h-full flex flex-col relative overflow-hidden"
                   >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="flex items-center justify-between mb-6 relative z-10">
+                      <div className="text-4xl group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full neon-border">
                           Popular
                         </span>
                       )}
                     </div>
                     
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors line-clamp-2 relative z-10">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-300 text-xs md:text-sm mb-4 leading-relaxed flex-grow line-clamp-3">
+                    <p className="text-gray-300 text-sm md:text-base mb-6 leading-relaxed flex-grow line-clamp-3 relative z-10">
                       {service.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center justify-between mb-4 relative z-10">
                       <div className="flex items-center space-x-2">
-                        <span className="text-lg md:text-2xl font-bold text-cyan-400">{service.price}</span>
+                        <span className="text-2xl md:text-3xl font-bold neon-text">{service.price}</span>
                         {service.originalPrice && (
-                          <span className="text-gray-400 line-through text-xs md:text-sm">{service.originalPrice}</span>
+                          <span className="text-gray-400 line-through text-sm md:text-base">{service.originalPrice}</span>
                         )}
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Star className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 fill-current" />
-                        <span className="text-xs md:text-sm text-gray-300">{service.rating}</span>
+                        <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
+                        <span className="text-sm md:text-base text-gray-300 font-medium">{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between text-xs md:text-sm text-gray-400 mb-2">
-                        <span>{service.users} users</span>
-                        <span>{service.freeTrial} free trial</span>
+                    <div className="mb-6 relative z-10">
+                      <div className="flex items-center justify-between text-sm md:text-base text-gray-400 mb-2">
+                        <span className="flex items-center space-x-1">
+                          <Users className="w-4 h-4" />
+                          <span>{service.users} users</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{service.freeTrial} free trial</span>
+                        </span>
                       </div>
                     </div>
                     
                     <a
                       href={service.link}
-                      className="block w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white text-center py-2 md:py-3 rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-medium text-sm md:text-base mt-auto"
+                      className="block w-full cyber-button text-center py-3 rounded-lg font-bold text-base mt-auto relative z-10"
                     >
                       Learn More
                     </a>
                   </div>
                 ))}
               </div>
+              
+              <div className="text-center mt-16">
+                <a
+                  href="/services"
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-white transition-all duration-300 text-xl font-medium hover-glow px-8 py-4 rounded-lg border border-cyan-400/30"
+                >
+                  <span>View All Micro SAAS Solutions</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* AI Services Section */}
-          <section className="py-20 bg-slate-900/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  AI Services & Solutions
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900/80 to-pink-900/20"></div>
+            <div className="cyber-pattern"></div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center mb-20">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <span className="text-gradient">AI Services & Solutions</span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Advanced AI solutions for enterprise clients. Transform your business with cutting-edge artificial intelligence.
+                <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  Advanced AI solutions for enterprise clients. 
+                  <span className="neon-purple"> Transform your business</span> with cutting-edge artificial intelligence.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="glass-card p-8 hover-lift group h-full flex flex-col relative overflow-hidden"
                   >
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
-                      <service.icon className="w-8 h-8 md:w-12 md:h-12 text-purple-400" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="flex items-center justify-between mb-6 relative z-10">
+                      <service.icon className="w-12 h-12 md:w-16 md:h-16 text-purple-400 group-hover:text-pink-400 transition-colors duration-300 group-hover:scale-110" />
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-2 md:px-3 py-1 rounded-full">
+                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full neon-border">
                           Popular
                         </span>
                       )}
                     </div>
                     
-                    <h3 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-purple-400 transition-colors line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors line-clamp-2 relative z-10">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3">
+                    <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3 relative z-10">
                       {service.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
+                    <div className="flex items-center justify-between mb-4 relative z-10">
                       <div className="flex items-center space-x-2">
-                        <span className="text-xl md:text-3xl font-bold text-purple-400">{service.price}</span>
+                        <span className="text-2xl md:text-3xl font-bold neon-purple">{service.price}</span>
                         {service.originalPrice && (
-                          <span className="text-gray-400 line-through text-sm md:text-lg">{service.originalPrice}</span>
+                          <span className="text-gray-400 line-through text-sm md:text-base">{service.originalPrice}</span>
                         )}
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
-                        <span className="text-sm md:text-base text-gray-300">{service.rating}</span>
+                        <span className="text-sm md:text-base text-gray-300 font-medium">{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="mb-4 md:mb-6">
-                      <div className="flex items-center justify-between text-gray-400 mb-2 text-xs md:text-sm">
-                        <span>{service.users} users</span>
-                        <span>{service.freeTrial} free trial</span>
+                    <div className="mb-6 relative z-10">
+                      <div className="flex items-center justify-between text-gray-400 mb-2 text-sm md:text-base">
+                        <span className="flex items-center space-x-1">
+                          <Users className="w-4 h-4" />
+                          <span>{service.users} users</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{service.freeTrial} free trial</span>
+                        </span>
                       </div>
                     </div>
                     
                     <a
                       href={service.link}
-                      className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 md:py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium text-sm md:text-base mt-auto"
+                      className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold text-base mt-auto relative z-10 hover-lift"
                     >
                       Get Started
                     </a>
                   </div>
                 ))}
               </div>
+              
+              <div className="text-center mt-16">
+                <a
+                  href="/ai-services"
+                  className="inline-flex items-center space-x-2 text-purple-400 hover:text-white transition-all duration-300 text-xl font-medium hover-glow px-8 py-4 rounded-lg border border-purple-400/30"
+                >
+                  <span>Explore All AI Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* IT Services Section */}
-          <section className="py-20 bg-slate-800/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  IT Services & Solutions
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900/80 to-emerald-900/20"></div>
+            <div className="cyber-pattern"></div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center mb-20">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <span className="text-gradient">IT Services & Solutions</span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Comprehensive IT services to modernize your infrastructure and accelerate your digital transformation.
+                <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  Comprehensive IT services to modernize your infrastructure and 
+                  <span className="neon-green"> accelerate your digital transformation</span>.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {itServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="glass-card p-8 hover-lift group h-full flex flex-col relative overflow-hidden"
                   >
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
-                      <service.icon className="w-8 h-8 md:w-12 md:h-12 text-green-400" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="flex items-center justify-between mb-6 relative z-10">
+                      <service.icon className="w-12 h-12 md:w-16 md:h-16 text-green-400 group-hover:text-emerald-400 transition-colors duration-300 group-hover:scale-110" />
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold px-2 md:px-3 py-1 rounded-full">
+                        <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full neon-border">
                           Popular
                         </span>
                       )}
                     </div>
                     
-                    <h3 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-green-400 transition-colors line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors line-clamp-2 relative z-10">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3">
+                    <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3 relative z-10">
                       {service.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
+                    <div className="flex items-center justify-between mb-4 relative z-10">
                       <div className="flex items-center space-x-2">
-                        <span className="text-xl md:text-3xl font-bold text-green-400">{service.price}</span>
+                        <span className="text-2xl md:text-3xl font-bold neon-green">{service.price}</span>
                         {service.originalPrice && (
-                          <span className="text-gray-400 line-through text-sm md:text-lg">{service.originalPrice}</span>
+                          <span className="text-gray-400 line-through text-sm md:text-base">{service.originalPrice}</span>
                         )}
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
-                        <span className="text-sm md:text-base text-gray-300">{service.rating}</span>
+                        <span className="text-sm md:text-base text-gray-300 font-medium">{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="mb-4 md:mb-6">
-                      <div className="flex items-center justify-between text-gray-400 mb-2 text-xs md:text-sm">
-                        <span>{service.users} users</span>
-                        <span>{service.freeTrial} free trial</span>
+                    <div className="mb-6 relative z-10">
+                      <div className="flex items-center justify-between text-gray-400 mb-2 text-sm md:text-base">
+                        <span className="flex items-center space-x-1">
+                          <Users className="w-4 h-4" />
+                          <span>{service.users} users</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{service.freeTrial} free trial</span>
+                        </span>
                       </div>
                     </div>
                     
                     <a
                       href={service.link}
-                      className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-2 md:py-3 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-medium text-sm md:text-base mt-auto"
+                      className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-3 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-bold text-base mt-auto relative z-10 hover-lift"
                     >
                       Learn More
                     </a>
                   </div>
                 ))}
               </div>
+              
+              <div className="text-center mt-16">
+                <a
+                  href="/it-services"
+                  className="inline-flex items-center space-x-2 text-green-400 hover:text-white transition-all duration-300 text-xl font-medium hover-glow px-8 py-4 rounded-lg border border-green-400/30"
+                >
+                  <span>Discover All IT Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* Specialized Services Section */}
-          <section className="py-20 bg-slate-900/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Specialized Solutions
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-slate-900/80 to-red-900/20"></div>
+            <div className="cyber-pattern"></div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center mb-20">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <span className="text-gradient">Specialized Solutions</span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Cutting-edge specialized solutions for the future. Quantum computing, autonomous systems, and more.
+                <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  Cutting-edge specialized solutions for the future. 
+                  <span className="neon-orange"> Quantum computing, autonomous systems</span>, and more.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {specializedServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="glass-card p-8 hover-lift group h-full flex flex-col relative overflow-hidden"
                   >
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
-                      <service.icon className="w-8 h-8 md:w-12 md:h-12 text-orange-400" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="flex items-center justify-between mb-6 relative z-10">
+                      <service.icon className="w-12 h-12 md:w-16 md:h-16 text-orange-400 group-hover:text-red-400 transition-colors duration-300 group-hover:scale-110" />
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-semibold px-2 md:px-3 py-1 rounded-full">
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full neon-border">
                           Popular
                         </span>
                       )}
                     </div>
                     
-                    <h3 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-orange-400 transition-colors line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors line-clamp-2 relative z-10">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3">
+                    <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base flex-grow line-clamp-3 relative z-10">
                       {service.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-4 md:mb-6">
+                    <div className="flex items-center justify-between mb-4 relative z-10">
                       <div className="flex items-center space-x-2">
-                        <span className="text-xl md:text-3xl font-bold text-orange-400">{service.price}</span>
+                        <span className="text-2xl md:text-3xl font-bold neon-orange">{service.price}</span>
                         {service.originalPrice && (
-                          <span className="text-gray-400 line-through text-sm md:text-lg">{service.originalPrice}</span>
+                          <span className="text-gray-400 line-through text-sm md:text-base">{service.originalPrice}</span>
                         )}
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
-                        <span className="text-sm md:text-base text-gray-300">{service.rating}</span>
+                        <span className="text-sm md:text-base text-gray-300 font-medium">{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="mb-4 md:mb-6">
-                      <div className="flex items-center justify-between text-gray-400 mb-2 text-xs md:text-sm">
-                        <span>{service.users} users</span>
-                        <span>{service.freeTrial} free trial</span>
+                    <div className="mb-6 relative z-10">
+                      <div className="flex items-center justify-between text-gray-400 mb-2 text-sm md:text-base">
+                        <span className="flex items-center space-x-1">
+                          <Users className="w-4 h-4" />
+                          <span>{service.users} users</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{service.freeTrial} free trial</span>
+                        </span>
                       </div>
                     </div>
                     
                     <a
                       href={service.link}
-                      className="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-center py-2 md:py-3 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 font-medium text-sm md:text-base mt-auto"
+                      className="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-center py-3 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 font-bold text-base mt-auto relative z-10 hover-lift"
                     >
                       Explore Solution
                     </a>
                   </div>
                 ))}
               </div>
+              
+              <div className="text-center mt-16">
+                <a
+                  href="/specialized-services"
+                  className="inline-flex items-center space-x-2 text-orange-400 hover:text-white transition-all duration-300 text-xl font-medium hover-glow px-8 py-4 rounded-lg border border-orange-400/30"
+                >
+                  <span>Explore All Specialized Solutions</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </section>
 
           {/* Contact Section */}
-          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
-            <div className="container mx-auto px-4">
-              <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Business?
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600"></div>
+            <div className="cyber-pattern"></div>
+            <div className="particles">
+              {[...Array(15)].map((_, i) => (
+                <div
+                  key={i}
+                  className="particle"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 6}s`,
+                    animationDuration: `${4 + Math.random() * 4}s`
+                  }}
+                />
+              ))}
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center max-w-5xl mx-auto">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <span className="text-gradient">Ready to Transform Your Business?</span>
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8">
-                  Contact us today to discuss your AI and IT needs. Our experts are ready to help you achieve your goals.
+                <p className="text-2xl text-cyan-100 mb-12 leading-relaxed">
+                  Contact us today to discuss your AI and IT needs. 
+                  <span className="neon-text"> Our experts are ready</span> to help you achieve your goals.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                   <a
                     href="/contact"
-                    className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors"
+                    className="bg-white text-cyan-600 px-10 py-5 rounded-lg font-bold text-xl hover:bg-cyan-50 transition-all duration-300 hover-lift shadow-2xl"
                   >
                     Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium"
+                    className="flex items-center space-x-3 text-white hover:text-cyan-100 transition-all duration-300 text-xl font-medium hover-glow px-8 py-4 rounded-lg border border-white/30"
                     onClick={handlePhoneClick}
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-6 h-6" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
-                <div className="mt-8 text-cyan-100">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>
+                    <a 
+                      href="mailto:kleber@ziontechgroup.com" 
+                      className="text-cyan-100 hover:text-white transition-colors"
+                    >
+                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-bold text-white mb-2">Visit Us</h3>
+                    <p className="text-cyan-100">
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709
+                    </p>
+                  </div>
+                  <div className="glass-card p-6 text-center hover-lift">
+                    <Clock className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-bold text-white mb-2">Business Hours</h3>
+                    <p className="text-cyan-100">
+                      Mon-Fri: 9AM-6PM EST<br />
+                      Emergency: 24/7
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -23,22 +23,46 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
-      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Meeting Intelligence Pro', url: '/ai-meeting-intelligence', description: 'Smart meeting management' },
+      { name: 'AI Document Intelligence Pro', url: '/ai-document-intelligence', description: 'Document analysis & insights' },
+      { name: 'AI Personal Assistant Pro', url: '/ai-personal-assistant', description: 'AI-powered personal assistant' },
+      { name: 'AI Team Collaboration Hub', url: '/ai-team-collaboration', description: 'Advanced team collaboration' },
+      { name: 'AI Task Manager Pro', url: '/ai-task-manager', description: 'Smart task management' },
+      { name: 'AI Workflow Automation Pro', url: '/ai-workflow-automation', description: 'Process automation' },
+      { name: 'AI Meeting Scheduler Pro', url: '/ai-meeting-scheduler', description: 'Intelligent scheduling' },
+      { name: 'AI Time Tracker Pro', url: '/ai-time-tracker', description: 'Advanced time tracking' },
+      { name: 'AI Calendar Optimizer Pro', url: '/ai-calendar-optimizer', description: 'Smart calendar management' },
+      { name: 'AI Note-Taking Assistant Pro', url: '/ai-note-taking-assistant', description: 'Intelligent note organization' },
+      { name: 'AI Focus & Concentration Pro', url: '/ai-focus-concentration', description: 'Focus enhancement tools' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
-      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+      { name: 'AI Video Creator Pro', url: '/ai-video-creator', description: 'Professional video creation' },
+      { name: 'AI Podcast Studio Pro', url: '/ai-podcast-studio', description: 'Complete podcast production' },
+      { name: 'AI Graphic Design Studio', url: '/ai-graphic-design', description: 'Professional graphic design' },
+      { name: 'AI Website Builder Pro', url: '/ai-website-builder', description: 'Intelligent website creation' },
+      { name: 'AI Social Media Manager Pro', url: '/ai-social-media-manager', description: 'Automated social media' },
       { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI SEO Optimizer Pro', url: '/ai-seo-optimizer', description: 'SEO automation' },
+      { name: 'AI Lead Generation Pro', url: '/ai-lead-generation', description: 'Automated lead generation' },
+      { name: 'AI Ad Campaign Manager Pro', url: '/ai-ad-campaign-manager', description: 'Intelligent ad management' },
+      { name: 'AI Influencer Marketing Pro', url: '/ai-influencer-marketing', description: 'AI-powered influencer discovery' },
+      { name: 'AI Content Calendar Pro', url: '/ai-content-calendar', description: 'Smart content planning' },
+      { name: 'AI Brand Voice Analyzer Pro', url: '/ai-brand-voice-analyzer', description: 'Brand voice consistency' }
     ],
     'Business & Finance': [
-      { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
-      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI CRM Intelligence Pro', url: '/ai-crm', description: 'Smart CRM solutions' },
+      { name: 'AI Financial Analyzer Pro', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
+      { name: 'AI Invoice Generator Pro', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
+      { name: 'AI Expense Tracker Pro', url: '/ai-expense-tracker', description: 'Smart expense tracking' },
+      { name: 'AI Stock Portfolio Manager', url: '/ai-stock-portfolio-manager', description: 'Intelligent portfolio management' },
+      { name: 'AI Business Intelligence Pro', url: '/ai-business-intelligence', description: 'Advanced business insights' },
+      { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer', description: 'Intelligent contract analysis' },
+      { name: 'AI Supply Chain Optimizer Pro', url: '/ai-supply-chain-optimizer', description: 'Supply chain optimization' },
+      { name: 'AI HR Assistant Pro', url: '/ai-hr-assistant', description: 'Comprehensive HR management' },
+      { name: 'AI Market Research Pro', url: '/ai-market-research', description: 'Advanced market research' },
+      { name: 'AI Pricing Optimizer Pro', url: '/ai-pricing-optimizer', description: 'Intelligent pricing strategy' },
+      { name: 'AI Customer Analytics Pro', url: '/ai-customer-analytics', description: 'Advanced customer analytics' }
     ],
     'Customer Service': [
       { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },

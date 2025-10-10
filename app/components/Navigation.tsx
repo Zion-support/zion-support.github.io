@@ -152,18 +152,32 @@ const Navigation: React.FC = () => {
   const microSAASServices = [
     // Productivity & Management
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
+    { name: 'AI Meeting Intelligence Pro', href: '/ai-meeting-intelligence', icon: MessageSquare, category: 'Productivity', price: '$79/mo' },
+    { name: 'AI Document Intelligence Pro', href: '/ai-document-intelligence', icon: FileText, category: 'Productivity', price: '$89/mo' },
+    { name: 'AI Personal Assistant Pro', href: '/ai-personal-assistant', icon: Bot, category: 'Productivity', price: '$49/mo' },
+    { name: 'AI Team Collaboration Hub', href: '/ai-team-collaboration', icon: Users, category: 'Productivity', price: '$99/mo' },
     { name: 'AI Task Manager Pro', href: '/ai-task-manager', icon: Check, category: 'Productivity', price: '$49/mo' },
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
+    { name: 'AI Meeting Scheduler Pro', href: '/ai-meeting-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
     { name: 'AI Time Tracker Pro', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity', price: '$34/mo' },
+    { name: 'AI Calendar Optimizer Pro', href: '/ai-calendar-optimizer', icon: Calendar, category: 'Productivity', price: '$29/mo' },
+    { name: 'AI Note-Taking Assistant Pro', href: '/ai-note-taking-assistant', icon: FileText, category: 'Productivity', price: '$39/mo' },
+    { name: 'AI Focus & Concentration Pro', href: '/ai-focus-concentration', icon: Target, category: 'Productivity', price: '$24/mo' },
     
     // Content & Marketing
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
+    { name: 'AI Video Creator Pro', href: '/ai-video-creator', icon: Video, category: 'Content', price: '$149/mo' },
+    { name: 'AI Podcast Studio Pro', href: '/ai-podcast-studio', icon: Music, category: 'Content', price: '$79/mo' },
+    { name: 'AI Graphic Design Studio', href: '/ai-graphic-design', icon: Palette, category: 'Content', price: '$69/mo' },
+    { name: 'AI Website Builder Pro', href: '/ai-website-builder', icon: Globe, category: 'Content', price: '$89/mo' },
     { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing', price: '$69/mo' },
     { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$59/mo' },
     { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', price: '$79/mo' },
     { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, category: 'Marketing', price: '$99/mo' },
-    { name: 'AI Website Builder Pro', href: '/ai-website-builder', icon: Globe, category: 'Marketing', price: '$89/mo' },
+    { name: 'AI Ad Campaign Manager Pro', href: '/ai-ad-campaign-manager', icon: BarChart, category: 'Marketing', price: '$119/mo' },
+    { name: 'AI Influencer Marketing Pro', href: '/ai-influencer-marketing', icon: Users, category: 'Marketing', price: '$89/mo' },
+    { name: 'AI Content Calendar Pro', href: '/ai-content-calendar', icon: Calendar, category: 'Content', price: '$49/mo' },
+    { name: 'AI Brand Voice Analyzer Pro', href: '/ai-brand-voice-analyzer', icon: MessageSquare, category: 'Marketing', price: '$59/mo' },
     
     // Business & Finance
     { name: 'AI CRM Intelligence Pro', href: '/ai-crm', icon: Users, category: 'Business', price: '$89/mo' },
@@ -171,6 +185,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: FileText, category: 'Finance', price: '$49/mo' },
     { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker', icon: CreditCard, category: 'Finance', price: '$29/mo' },
     { name: 'AI Stock Portfolio Manager', href: '/ai-stock-portfolio-manager', icon: TrendingUp, category: 'Finance', price: '$79/mo' },
+    { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence', icon: BarChart, category: 'Business', price: '$99/mo' },
+    { name: 'AI Contract Analyzer Pro', href: '/ai-contract-analyzer', icon: FileText, category: 'Business', price: '$89/mo' },
+    { name: 'AI Supply Chain Optimizer Pro', href: '/ai-supply-chain-optimizer', icon: Truck, category: 'Business', price: '$149/mo' },
+    { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant', icon: Users, category: 'Business', price: '$79/mo' },
+    { name: 'AI Market Research Pro', href: '/ai-market-research', icon: Search, category: 'Business', price: '$99/mo' },
+    { name: 'AI Pricing Optimizer Pro', href: '/ai-pricing-optimizer', icon: DollarSign, category: 'Business', price: '$69/mo' },
+    { name: 'AI Customer Analytics Pro', href: '/ai-customer-analytics', icon: Users, category: 'Business', price: '$89/mo' },
     
     // Customer Service & Support
     { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', price: '$99/mo' },
