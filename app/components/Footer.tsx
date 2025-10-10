@@ -117,13 +117,13 @@ const Footer: React.FC = memo(() => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}</div>
-          <div className="lg:col-span-2 space-y-6"></div>
-            <div className="flex items-center space-x-3 group"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div>
+          {/* Company Info */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
                 <Brain className="w-7 h-7 text-white" />
               </div>
-              <div className="flex flex-col"></div>
+              <div className="flex flex-col">
                 <span className="text-2xl font-bold neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-sm text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
               </div>

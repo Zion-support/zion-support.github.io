@@ -52,11 +52,11 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
                       <Navigation />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}></main>
+                      <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />

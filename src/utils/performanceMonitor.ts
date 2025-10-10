@@ -84,7 +84,7 @@ class PerformanceMonitor {
           this._metrics.fid = entry.processingStart - entry.startTime;
         });
       });
-      observer.observe({ entryTypes: [',first-input'] });
+      observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
       console.warn('Failed to observe FID: ', error);
@@ -103,7 +103,7 @@ class PerformanceMonitor {
         });
         this._metrics.cls = clsValue;
       });
-      observer.observe({ entryTypes: [',layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
       console.warn('Failed to observe CLS: ', error);
@@ -118,7 +118,7 @@ class PerformanceMonitor {
 
     // Navigation timing
     if (performance.navigation) {
-      this.addCustomMetric(',navigation_type', performance.navigation.type);
+      this.addCustomMetric('navigation_type', performance.navigation.type);
     }
   }
 
@@ -136,7 +136,7 @@ class PerformanceMonitor {
     console.log('Performance Metrics: ', this._metrics);
     
     // Send to analytics service
-    if (typeof gtag !== ',undefined') {
+    if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
         event_category: 'performance',
         event_label: 'web_vitals',
