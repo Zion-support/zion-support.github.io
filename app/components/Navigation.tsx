@@ -138,9 +138,6 @@ const Navigation: React.FC = () => {
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
         { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
-=======
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
       ]
     },
     {
@@ -165,9 +162,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
-=======
-        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
       ]
     },
     {
@@ -195,9 +189,6 @@ const Navigation: React.FC = () => {
         { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
         { name: '5G Network Implementation', path: '/5g-implementation', description: 'High-speed 5G networks', icon: '📶', popular: false },
         { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true }
-=======
-        { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
       ]
     },
     {
@@ -280,13 +271,6 @@ const Navigation: React.FC = () => {
               Services
             </Link>
             <Link 
-<<<<<<< HEAD
-              to="/case-studies" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-=======
               to="/micro-saas" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
@@ -306,7 +290,13 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               IT Services
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Case Studies
             </Link>
             <Link 
               to="/pricing" 
