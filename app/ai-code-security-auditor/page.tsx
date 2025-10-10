@@ -164,7 +164,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   ),
@@ -181,5 +180,3 @@ export default AiCodeSecurityAuditorPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
