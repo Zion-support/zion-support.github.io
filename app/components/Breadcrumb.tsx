@@ -37,7 +37,8 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
           {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />);
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+              )}
               <a
                 href={item.path}
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
