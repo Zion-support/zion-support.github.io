@@ -846,7 +846,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value);
+                      onChange={(e) => setSearchTerm(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     />
                   </div>
@@ -856,7 +856,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <select
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value);
+                        onChange={(e) => setSelectedCategory(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
                       {categories.map((category) => (

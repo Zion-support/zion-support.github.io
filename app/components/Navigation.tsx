@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 const [servicesOpen, setServicesOpen] = useState(false);
 const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -224,6 +224,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
+              )}
             </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
@@ -255,6 +256,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
+              )}
             </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
@@ -286,6 +288,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
+              )}
             </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
@@ -370,6 +373,7 @@ const emergingTech = [
                       View All AI Services →
                     </Link>
                   </div>
+                )}
               </div>
               {/* Mobile IT Services */}
               <div>
@@ -396,6 +400,7 @@ const emergingTech = [
                       </Link>
                       ))}
                   </div>
+                )}
               </div>
               {/* Mobile Micro SAAS */}
               <div>
@@ -429,6 +434,7 @@ const emergingTech = [
                       View All Micro SAAS →
                     </Link>
                   </div>
+                )}
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
@@ -467,9 +473,10 @@ const emergingTech = [
                 </div>
               </div>
             </div>
-          </div>);
+          </div>
+        )}
       </div>
-      </nav>
-    );
-  }
+    </nav>
+  );
+}
 export default Navigation;

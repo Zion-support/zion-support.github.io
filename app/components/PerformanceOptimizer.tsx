@@ -6,8 +6,9 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean}
-;
+  enableCodeSplitting?: boolean;
+}
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -15,85 +16,121 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableCodeSplitting = true
 }) => {
   useEffect(() => {
-    // Preload critical resources
-    if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts;
-const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontPreload.as = 'style';
-      document.head.appendChild(fontPreload);
+    // Image optimization
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          if (!img.loading) {
+            img.loading = 'lazy';
+          }
+          if (!img.decoding) {
+            img.decoding = 'async';
+          }
+        });
+      };
 
-      // Preload critical images;
-const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ];
+      optimizeImages();
+    }
+  }, [enableImageOptimization]);
 
-      criticalImages.forEach(src => {;
-const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link)});
-    // Optimize images
-    if ($1) { const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy'}
-
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async'}
-      });
-    // Intersection Observer for lazy loading
-    if ($1) { const imageObserver = new IntersectionObserver((entries, observer) => {
+  useEffect(() => {
+    // Lazy loading with Intersection Observer
+    if (enableLazyLoading && typeof window !== 'undefined') {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if ($1) { const img = entry.target as HTMLImageElement;
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img);
+            }
           }
-        })});
-;
-const lazyImages = document.querySelectorAll('img[data-src]');
+        });
+      });
+      
+      const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
+
+      return () => {
+        imageObserver.disconnect();
+      };
+    }
+  }, [enableLazyLoading]);
+
+  useEffect(() => {
+    // Preload critical resources
+    if (enablePreloading && typeof window !== 'undefined') {
+      const preloadCriticalResources = () => {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.href = '/styles/critical.css';
+        criticalCSS.as = 'style';
+        document.head.appendChild(criticalCSS);
+
+        // Preload critical fonts
+        const criticalFont = document.createElement('link');
+        criticalFont.rel = 'preload';
+        criticalFont.href = '/fonts/inter-var.woff2';
+        criticalFont.as = 'font';
+        criticalFont.type = 'font/woff2';
+        criticalFont.crossOrigin = 'anonymous';
+        document.head.appendChild(criticalFont);
+      };
+
+      preloadCriticalResources();
+    }
+  }, [enablePreloading]);
+
+  useEffect(() => {
     // Performance monitoring
-    if ($1) { const observer = new PerformanceObserver((list) => {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            // console.log removed for production
-}
+            console.log('LCP:', entry.startTime);
+          }
           if (entry.entryType === 'first-input') {
-            // console.log removed for production
-}
-        })});
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+          if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', entry.value);
+          }
+        });
+      });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })} catch (e) {
-        // Fallback for browsers that don't support these entry types
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      } catch (e) {
+        console.warn('Performance Observer not supported:', e);
       }
+
+      return () => {
+        observer.disconnect();
+      };
     }
+  }, []);
 
-    // Resource hints for better performance
-    if (typeof window !== 'undefined') {
-      // DNS prefetch for external domains;
-const dnsPrefetchDomains = [
-        'fonts.googleapis.com',
-        'fonts.gstatic.com',
-        'www.google-analytics.com'
-      ];
-
-      dnsPrefetchDomains.forEach(domain => {;
-const link = document.createElement('link');
-        link.rel = 'dns-prefetch';
-        link.href = `//${domain}`;
+  useEffect(() => {
+    // Code splitting optimization
+    if (enableCodeSplitting && typeof window !== 'undefined') {
+      // Preload next likely routes
+      const preloadRoute = (route: string) => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = route;
         document.head.appendChild(link);
-      });
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
+      };
 
-  return null}
+      // Preload common routes
+      const commonRoutes = ['/about', '/services', '/contact'];
+      commonRoutes.forEach(route => preloadRoute(route));
+    }
+  }, [enableCodeSplitting]);
+
+  return null;
+};
+
 export default PerformanceOptimizer;

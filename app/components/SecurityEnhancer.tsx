@@ -116,8 +116,6 @@ const target = e.target as HTMLInputElement;
 // console.log removed for production
 }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
 
-  return null;
+  return <React.Fragment>{children}</React.Fragment>;
 };
-
-  return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer;
