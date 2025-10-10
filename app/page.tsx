@@ -3,7 +3,6 @@
 import React, { Suspense } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
@@ -36,7 +35,6 @@ import {
   Users as People,
   CheckCircle2
 } from 'lucide-react';
-=======
 
 // Service data
 const microSAASServices = [
