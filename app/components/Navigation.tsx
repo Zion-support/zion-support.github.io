@@ -150,7 +150,6 @@ const Navigation: React.FC = () => {
   ]
 
   const microSaasServices = [
-<<<<<<< HEAD
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
@@ -188,21 +187,6 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
     { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
   ]
-=======
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
-    { name: 'Social Media AI', href: '/social-media-ai', icon: Globe, description: 'AI Social Management' },
-    { name: 'AI Project Management', href: '/ai-project-management', icon: Settings, description: 'Smart Project Tracking' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'Automated SEO Tools' },
-    { name: 'AI Sales CRM', href: '/ai-sales-crm', icon: TrendingUp, description: 'Intelligent CRM System' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Code, description: 'AI Design Tools' },
-    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database, description: 'Smart Inventory Tracking' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Users, description: 'Automated Invoicing' },
-    { name: 'AI Document Processor', href: '/ai-document-processor', icon: Zap, description: 'Document AI Processing' },
-    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
@@ -442,13 +426,11 @@ const Navigation: React.FC = () => {
             <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Tutorials
             </Link>
-<<<<<<< HEAD
             <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Demo
-=======
+            </Link>
             <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Careers
->>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -603,13 +585,11 @@ const Navigation: React.FC = () => {
               <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Tutorials
               </Link>
-<<<<<<< HEAD
               <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Demo
-=======
+              </Link>
               <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Careers
->>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
