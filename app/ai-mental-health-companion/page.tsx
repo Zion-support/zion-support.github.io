@@ -1375,4 +1375,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       </div>,
     </div>,
   );
-}
+};
+
+export default AIMentalHealthCompanionPage;

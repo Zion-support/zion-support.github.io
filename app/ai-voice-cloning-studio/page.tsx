@@ -1483,4 +1483,6 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>,
     </div>,
   );
-}
+};
+
+export default AIVoiceCloningStudioPage;

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, AlertTriangle, CheckCircle, Phone, Mail, Target, Brain, Target, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
+import { Shield, Lock, AlertTriangle, CheckCircle, Phone, Mail, Target, Brain } from 'lucide-react';
 
 <<<<<<< HEAD
 const AICybersecurityPage: React.FC = memo(() => {,

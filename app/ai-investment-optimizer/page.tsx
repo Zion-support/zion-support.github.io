@@ -1378,4 +1378,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>,
     </div>,
   );
-}
+};
+
+export default AIInvestmentOptimizerPage;

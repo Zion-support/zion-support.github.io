@@ -1492,4 +1492,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       </div>,
     </div>,
   );
-}
+};
+
+export default AICodeSecurityAuditorPage;

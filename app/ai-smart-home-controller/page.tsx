@@ -1422,4 +1422,6 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       </div>,
     </div>,
   );
-}
+};
+
+export default AISmartHomeControllerPage;
