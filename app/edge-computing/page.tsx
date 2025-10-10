@@ -41,8 +41,7 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
-  }
-    ]
+  }];
 const services = [
     {
     icon: '⚡',
@@ -59,13 +58,10 @@ const services = [
       title: 'Edge Security',
       description: 'Comprehensive security solutions for edge environments'
   },
-    {
-    icon: '📱',
+    {icon: '📱',
       title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'
-  }
-    }
-  ]
+      description: 'Mobile edge computing for 5G and mobile applications'}
+    }];
 const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -104,13 +100,10 @@ const useCases = [
       description: 'Real-time patient monitoring and diagnostics',
       icon: '🏥'
   },
-    {
-    title: 'Gaming',
+    {title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-      icon: '🎮'
-  }
-    }
-  ]
+      icon: '🎮'}
+    }];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
@@ -176,9 +169,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
-                  {
-    feature.benefits.map((benefit, benefitIndex) => (
-  }
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li>
                       <CheckCircle>
 
@@ -209,9 +200,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    services.map((service, index) => (
-  }
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -238,9 +227,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {
-    useCases.map((useCase, index) => (
-  }
+            {useCases.map((useCase, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group"></div>
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -302,8 +289,7 @@ return (
         </div>
       </section>
       <Footer />
-  ),
-};
+  )};
 
 export default EdgeComputingPage;
 

@@ -29,8 +29,7 @@ const AiCodeAssistantPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-  ]
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -110,8 +109,7 @@ const AiCodeAssistantPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  ),
-};
+  )};
 
 export default AiCodeAssistantPage
   </button>

@@ -2,14 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title: string;
+interface SEOOptimizerProps {title: string;
   description: string;
   keywords?: string[]
   canonicalUrl?: string;
-  structuredData?: object;
-}
-
+  structuredData?: object;}
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,

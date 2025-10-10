@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -30,15 +29,14 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  }];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology'
+  ];
 return (
     <>
       <Helmet>
@@ -101,11 +99,9 @@ return (
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
+                  {feature.benefits && (;
                     <ul>
-                      {feature.benefits.map((benefit, idx) => (
-  }
+                      {feature.benefits.map((benefit, idx) => (}
                         <li>
                           <CheckCircle>
 
@@ -180,8 +176,7 @@ return (
       </div>
       <Footer>
     </>
-  ),
-};
+  )};
 
 export default AiAnalyticsDashboardPage;
 
@@ -229,12 +224,10 @@ const AIAnalyticsDashboard: React.FC = () => {
       description: 'Schedule and automate report generation with AI insights',
       benefits: ['Scheduled reports', 'Email delivery', 'PDF export']
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption and compliance',
-      benefits: ['SOC 2 compliant', 'GDPR ready', 'End-to-end encryption']
-    }
+      benefits: ['SOC 2 compliant', 'GDPR ready', 'End-to-end encryption']}
   ];
 
   const pricingPlans = [
@@ -267,8 +260,7 @@ const AIAnalyticsDashboard: React.FC = () => {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations',
@@ -281,8 +273,7 @@ const AIAnalyticsDashboard: React.FC = () => {
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false
-    }
+      popular: false}
   ];
 
   const testimonials = [
@@ -298,12 +289,10 @@ const AIAnalyticsDashboard: React.FC = () => {
       content: 'The predictive analytics helped us identify market trends 6 months ahead of our competitors.',
       rating: 5
     },
-    {
-      name: 'Emily Rodriguez',
+    {name: 'Emily Rodriguez',
       role: 'Operations Manager, ScaleUp',
       content: 'The automated reporting saves us 20 hours per week. The AI insights are incredibly accurate.',
-      rating: 5
-    }
+      rating: 5}
   ];
 
   return (
@@ -411,7 +400,6 @@ const AIAnalyticsDashboard: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

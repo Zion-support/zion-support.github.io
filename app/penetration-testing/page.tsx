@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Shield,
+import {Shield,
   Search,
   AlertTriangle,
   CheckCircle,
@@ -26,8 +25,7 @@ import {
 
   Target,
 
-  Eye
-  }
+  Eye}
 } from 'lucide-react'
 const PenetrationTestingPage: React.FC = () => {
     const features = [
@@ -46,13 +44,10 @@ const PenetrationTestingPage: React.FC = () => {
       title: 'Detailed Security Reports',
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
   },
-    {
-    icon: Zap,
+    {icon: Zap,
       title: 'Expert Security Analysis',
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-  }
-    }
-  ]
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'}
+    }];
 const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
@@ -196,8 +191,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default PenetrationTestingPage;
 

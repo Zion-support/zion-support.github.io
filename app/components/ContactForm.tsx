@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-interface FormData {
-  name: string,
+interface FormData {name: string,
   email: string,
   company: string,
   phone: string,
   service: string,
-  message: string,
-}
-
-interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string,
-}
-
+  message: string}
+interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';
+  message: string}
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -36,7 +30,6 @@ interface FormStatus {
       [name]: value
     }));
   }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -66,7 +59,6 @@ interface FormStatus {
       })
     }
   }
-
   const services = [
     'AI Solutions',
     'Web Development',

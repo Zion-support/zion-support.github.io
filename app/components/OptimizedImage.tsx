@@ -132,8 +132,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default OptimizedImagePage;
 

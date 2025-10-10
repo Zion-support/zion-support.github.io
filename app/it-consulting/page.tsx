@@ -479,8 +479,7 @@ const itServices = [
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
-    }
-  ]
+    }];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -492,8 +491,7 @@ const categories = [
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare }];
 const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -554,7 +552,6 @@ return (
                   placeholder="Search IT services...";
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />,
               </div>
@@ -565,12 +562,9 @@ return (
               <select,
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >,
-                {
-    categories.map((category) => (
-  }
+                {categories.map((category) => (}
                   <option>
 
                     {category.name}
@@ -583,18 +577,14 @@ return (
 
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8"></div>
-            {
-    categories.map((category) => (</div>
-              <button
-  }
+            {categories.map((category) => (</div>
+              <button}
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={
-    `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white';
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
-  }
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'}
                 }`}
               >;
                 {category.name}
@@ -615,9 +605,7 @@ return (
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {
-    filteredServices.map((service) => (</div>
-  }
+            {filteredServices.map((service) => (</div>}
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
@@ -633,9 +621,7 @@ return (
                   <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul>
-                      {
-    service.features.slice(0, 4).map((feature, idx) => (
-  }
+                      {service.features.slice(0, 4).map((feature, idx) => (}
                         <li>
                           <CheckCircle>
                           <span>{feature}</span>
@@ -646,9 +632,7 @@ return (
                   <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul>
-                      {
-    service.benefits.slice(0, 2).map((benefit, idx) => (
-  }
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (}
                         <li>
                           <TrendingUp>
                           <span>{benefit}</span>
@@ -671,10 +655,8 @@ return (
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
-                {
-    service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
-  }
+                {service.caseStudy && (;
+                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>}
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>
                 )}
@@ -722,8 +704,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default ITConsultingPage;
 

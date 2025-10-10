@@ -9,8 +9,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
     { icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },
     { icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
     { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
-    { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
-  ]
+    { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }];
   return (
     <React.Fragment>
       <Helmet>

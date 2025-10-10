@@ -13,35 +13,28 @@ const technologies = [
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
+    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }];
 const process = [
     {
     step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart,
-  },
+      icon: BarChart},
     {
     step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code,
-  },
+      icon: Code},
     {
     step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe,
-  },
-    {
-    step: '04',
+      icon: Globe},
+    {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield,
-  }
-    }
-  ]
+      icon: Shield}
+    }];
 return(<>
 
       <SEOOptimizer;
@@ -86,14 +79,12 @@ const WebDevelopmentPage: React.FC = () => {
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
       color: 'text-orange-400'
     },
-    {
-      title: 'Maintenance & Support',
+    {title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support for your web applications',
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'
-    }
+      color: 'text-gray-400'}
   ];
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
@@ -101,7 +92,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
+    {name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization'}
   ];
   const process = [
     {
@@ -127,9 +118,7 @@ const WebDevelopmentPage: React.FC = () => {
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
-    }
-  ]
-
+    }];
   return (
     <>
       <SEOOptimizer
@@ -208,7 +197,6 @@ const WebDevelopmentPage: React.FC = () => {
           </section>,
 ,;
           {/* Services Grid */}
-
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -266,9 +254,7 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </div>
         </section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{
-    webServices.map((service, index) => (</div>
-  }
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
@@ -280,9 +266,7 @@ const WebDevelopmentPage: React.FC = () => {
             </h2>);
 );
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
-              {
-    webServices.map((service, index) => (</div>
-  }
+              {webServices.map((service, index) => (</div>}
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6">,</div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>
@@ -294,9 +278,7 @@ const WebDevelopmentPage: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{
-    webServices.map((service, index) => (</section>
-  }
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
@@ -304,20 +286,16 @@ const WebDevelopmentPage: React.FC = () => {
                     <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6"></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{
-    service.features.map((feature, featureIndex) => (</ul>
-  }
+                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>}
                         <li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>
                       ))}
                     </ul>
                   </div>
-                  {
-    service.benefits && (;
+                  {service.benefits && (;
                     <div className="mb-6"></div>
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-  }
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>}
                           <li>
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
                           </ArrowRight>

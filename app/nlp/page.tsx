@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-  ]
+import React from 'react']
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -68,8 +67,7 @@ const benefits = [
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 

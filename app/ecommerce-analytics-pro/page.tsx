@@ -33,8 +33,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       icon: Target,
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
-    }
-  ]
+    }];
   return (
     <React.Fragment>
       <Helmet>

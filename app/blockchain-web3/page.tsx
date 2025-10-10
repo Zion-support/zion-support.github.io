@@ -27,8 +27,7 @@ const BlockchainWeb3Page: React.FC = () => {
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
-  }
-    ]
+  }];
 return (
     <>
       <Helmet>
@@ -57,9 +56,7 @@ return (
                   </div>
                 </div>
                 <ul>
-                  {
-    feature.benefits.map((benefit, benefitIndex) => (
-  }
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li>
                       <CheckCircle>
 

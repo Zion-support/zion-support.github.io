@@ -2,14 +2,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
-interface PerformanceOptimizerProps {
-    children: React.ReactNode;
+interface PerformanceOptimizerProps {children: React.ReactNode;
   enableImageOptimization?: boolean
   enableLazyLoading?: boolean
   enablePreloading?: boolean,
-  enableCodeSplitting?: boolean
-  }
-
+  enableCodeSplitting?: boolean}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,
@@ -29,9 +26,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.loading) {
         img.loading = 'lazy'
   }
-      if (!img.decoding) {
-    img.decoding = 'async'
-  }
+      if (!img.decoding) {img.decoding = 'async'}
     })
   }, [enableImageOptimization]);
 
@@ -55,7 +50,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       optimizeImages(),
       newOptimizations.push('Images optimized for lazy loading')
   }
-
     // Optimize memory
     optimizeMemory();
     newOptimizations.push('Memory optimization applied');
@@ -81,7 +75,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return (
     <div className="performance-optimizer">
       {children}
-      
       {/* Performance Status Indicator (only in development) */}
       {process.env.NODE_ENV === 'development' && (
         <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
@@ -155,7 +148,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         document.head.appendChild(link)
   })
     }
-
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
     const images = document.querySelectorAll('img');
@@ -164,14 +156,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (enableLazyLoading && !img.hasAttribute('loading')) {
           img.loading = 'lazy'
   }
-
         // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-    img.decoding = 'async'
-  }
+        if (!img.hasAttribute('decoding')) {img.decoding = 'async'}
       })
     }
-
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -190,7 +178,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
     }
-
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -198,17 +185,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             // LCP measurement logged for performance monitoring
           }
-          if (entry.entryType === 'first-input') {
-            // FID measurement logged for performance monitoring
-          }
+          if (entry.entryType === 'first-input') {// FID measurement logged for performance monitoring}
         })
       })
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
-      } catch (e) {
-        // Fallback for browsers that don't support these entry types
-      }
+      } catch (e) {// Fallback for browsers that don't support these entry types}
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 

@@ -22,13 +22,11 @@ const ConsultationPage: React.FC = () => {
       price: 'Starting at $5,000',
       duration: '4-8 weeks'
     },
-    {
-      title: 'Cybersecurity Audit',
+    {title: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment and recommendations.',
       features: ['Vulnerability assessment', 'Compliance review', 'Security policies', 'Training recommendations'],
       price: 'Starting at $3,500',
-      duration: '2-3 weeks'
-    }
+      duration: '2-3 weeks'}
   ];
   const process = [
     {
@@ -54,9 +52,7 @@ const ConsultationPage: React.FC = () => {
       title: 'Implementation Support',
       description: 'We provide ongoing support to ensure successful implementation.',
       icon: ArrowRight
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>

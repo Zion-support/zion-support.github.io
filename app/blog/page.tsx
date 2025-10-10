@@ -38,16 +38,14 @@ const BlogPage: React.FC = () => {
       category: 'Security',
       image: '/images/blog/cybersecurity.jpg'
     },
-    {
-      id: 4,
+    {id: 4,
       title: 'Micro SaaS Development Guide',
       excerpt: 'Building scalable micro SaaS applications that solve real business problems.',
       author: 'Zion Tech Team',
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-      image: '/images/blog/micro-saas.jpg'
-    }
+      image: '/images/blog/micro-saas.jpg'}
   ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
 

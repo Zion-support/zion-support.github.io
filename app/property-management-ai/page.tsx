@@ -9,8 +9,7 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' },
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
-    { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ]
+    { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }];
   return (
     <React.Fragment>
       <Helmet>

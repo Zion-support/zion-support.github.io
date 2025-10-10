@@ -33,8 +33,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       icon: Zap,
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
-    }
-  ]
+    }];
   return (
     <React.Fragment>
       <Helmet>

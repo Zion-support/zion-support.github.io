@@ -19,15 +19,12 @@ const ApiPage: React.FC = () => {
               model: "gpt-4",
               temperature: 0.7
             },
-            response: {
-              response: "Hello! I'm here to help you with any questions or tasks you might have.",
+            response: {response: "Hello! I'm here to help you with any questions or tasks you might have.",
               confidence: 0.95,
-              tokens_used: 25
-            }
+              tokens_used: 25}
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/ai/analyze',
           description: 'Data analysis and insights',
           parameters: ['data', 'analysis_type', 'options'],
@@ -35,13 +32,11 @@ const ApiPage: React.FC = () => {
             request: {
               data: [1, 2, 3, 4, 5],
               analysis_type: "trend",
-              options: { include_forecast: true }
+              options: { include_forecast: true}
             },
-            response: {
-              trend: "increasing",
+            response: {trend: "increasing",
               forecast: [6, 7, 8],
-              confidence: 0.88
-            }
+              confidence: 0.88}
           }
         },
         {
@@ -56,14 +51,11 @@ const ApiPage: React.FC = () => {
               length: "medium",
               style: "professional"
             },
-            response: {
-              content: "Artificial Intelligence is revolutionizing...",
+            response: {content: "Artificial Intelligence is revolutionizing...",
               word_count: 500,
-              readability_score: 8.2
-            }
+              readability_score: 8.2}
           }
-        }
-      ]
+        }];
     },
     {
       category: 'IT Services',
@@ -75,15 +67,12 @@ const ApiPage: React.FC = () => {
           parameters: ['service_id'],
           example: {
             request: { service_id: "web-server-01" },
-            response: {
-              status: "healthy",
+            response: {status: "healthy",
               uptime: "99.9%",
-              last_check: "2024-01-15T10:30:00Z"
-            }
+              last_check: "2024-01-15T10:30:00Z"}
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/security/scan',
           description: 'Security vulnerability scan',
           parameters: ['target', 'scan_type', 'options'],
@@ -91,16 +80,13 @@ const ApiPage: React.FC = () => {
             request: {
               target: "https://example.com",
               scan_type: "comprehensive",
-              options: { include_ssl: true }
+              options: { include_ssl: true}
             },
-            response: {
-              vulnerabilities: [],
+            response: {vulnerabilities: [],
               score: 95,
-              recommendations: ["Keep SSL certificates updated"]
-            }
+              recommendations: ["Keep SSL certificates updated"]}
           }
-        }
-      ]
+        }];
     },
     {
       category: 'Micro SaaS',
@@ -115,16 +101,13 @@ const ApiPage: React.FC = () => {
               date_range: "last_30_days",
               metrics: ["visitors", "conversions", "revenue"]
             },
-            response: {
-              visitors: 15420,
+            response: {visitors: 15420,
               conversions: 234,
               revenue: 12500,
-              growth_rate: 12.5
-            }
+              growth_rate: 12.5}
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/email/send',
           description: 'Send transactional emails',
           parameters: ['to', 'template', 'data'],
@@ -132,16 +115,13 @@ const ApiPage: React.FC = () => {
             request: {
               to: "user@example.com",
               template: "welcome",
-              data: { name: "John", company: "Acme Corp" }
+              data: { name: "John", company: "Acme Corp"}
             },
-            response: {
-              message_id: "msg_123456",
+            response: {message_id: "msg_123456",
               status: "sent",
-              delivery_time: "2024-01-15T10:30:15Z"
-            }
+              delivery_time: "2024-01-15T10:30:15Z"}
           }
-        }
-      ]
+        }];
     }
   ];
   const authenticationMethods = [
@@ -157,19 +137,15 @@ const ApiPage: React.FC = () => {
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'Very High'
     },
-    {
-      name: 'JWT Token',
+    {name: 'JWT Token',
       description: 'JSON Web Token authentication',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'High'
-    }
+      security: 'High'}
   ];
   const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
-    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ]
-
+    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }];
   return (
     <>
       <Helmet>

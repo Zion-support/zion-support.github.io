@@ -1,7 +1,6 @@
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
-export interface MicroSaasService {
-    id: string,
+export interface MicroSaasService {id: string,
   title: string,
   description: string,
   shortDescription: string,
@@ -29,15 +28,12 @@ export interface MicroSaasService {
     languages: string[]
     frameworks: string[]
     databases: string[],
-    cloudProviders: string[]
+    cloudProviders: string[]}
   }
-  }
-  pricing: {
-    monthly: number,
+  pricing: {monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[]
-  }
+    features: string[]}
   }
 }
 export const microSaasServices: MicroSaasService[] = [
@@ -124,12 +120,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']
   },
-    pricing: {
-    monthly: 99,
+    pricing: {monthly: 99,
       yearly: 990,
       enterprise: 299,
-      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
-  }
+      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']}
     },
   {
     id: 'ai-task-manager-pro',
@@ -212,12 +206,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['SQLite', 'PostgreSQL', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Firebase']
   },
-    pricing: {
-    monthly: 49,
+    pricing: {monthly: 49,
       yearly: 490,
       enterprise: 149,
-      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
-  }
+      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']}
     },
 
   // AI Content & Marketing Tools;
@@ -301,12 +293,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']
   },
-    pricing: {
-    monthly: 79,
+    pricing: {monthly: 79,
       yearly: 790,
       enterprise: 199,
-      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
-  }
+      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']}
     },
   {
     id: 'ai-social-media-manager',
@@ -390,12 +380,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']
   },
-    pricing: {
-    monthly: 89,
+    pricing: {monthly: 89,
       yearly: 890,
       enterprise: 249,
-      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
-  }
+      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']}
     },
 
   // AI Business & Finance Tools;
@@ -480,12 +468,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']
   },
-    pricing: {
-    monthly: 129,
+    pricing: {monthly: 129,
       yearly: 1290,
       enterprise: 399,
-      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
-  }
+      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']}
     },
   {
     id: 'ai-financial-analyzer',
@@ -569,12 +555,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']
   },
-    pricing: {
-    monthly: 199,
+    pricing: {monthly: 199,
       yearly: 1990,
       enterprise: 599,
-      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
-  }
+      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']}
     },
 
   // AI Customer Service Tools;
@@ -655,12 +639,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']
   },
-    pricing: {
-    monthly: 59,
+    pricing: {monthly: 59,
       yearly: 590,
       enterprise: 199,
-      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
-  }
+      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']}
     },
 
   // AI Development Tools;
@@ -745,12 +727,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']
   },
-    pricing: {
-    monthly: 79,
+    pricing: {monthly: 79,
       yearly: 790,
       enterprise: 249,
-      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
-  }
+      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']}
     },
 
   // AI Healthcare Tools;
@@ -835,12 +815,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']
   },
-    pricing: {
-    monthly: 149,
+    pricing: {monthly: 149,
       yearly: 1490,
       enterprise: 499,
-      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
-  }
+      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']}
     },
 
   // AI E-commerce Tools;
@@ -925,12 +903,10 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']
   },
-    pricing: {
-    monthly: 119,
+    pricing: {monthly: 119,
       yearly: 1190,
       enterprise: 399,
-      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
-  }
+      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']}
     },
 
   // AI Education Tools;
@@ -1015,15 +991,12 @@ export const microSaasServices: MicroSaasService[] = [
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']
   },
-    pricing: {
-    monthly: 89,
+    pricing: {monthly: 89,
       yearly: 890,
       enterprise: 299,
-      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
-  }
+      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']}
     }
-  }
-]
+  }];
 // Service categories for filtering and organization;
 export const serviceCategories = [
   'All',
@@ -1056,12 +1029,10 @@ export const pricingTiers = {
     price: '$99-299/month',
     features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']
   },
-  enterprise: {
-    ,
+  enterprise: {,
     name: 'Enterprise',
     price: '$299-999/month',
-    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
-  }
+    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']}
   }
 }
 // Contact information;
@@ -1070,6 +1041,5 @@ export const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-  hours: '24/7 Support Available',
-  }
+  hours: '24/7 Support Available'}
   timezone: 'EST (Eastern Standard Time)'}

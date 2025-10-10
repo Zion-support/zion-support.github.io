@@ -50,12 +50,9 @@ const PagePage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   },
-    {
-    icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-
+      description: 'Worldwide deployment and support for international businesses'}
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
@@ -84,9 +81,7 @@ const PagePage: React.FC = () => {
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
-    }
-  ]
-
+    }];
           </div>
         </div>
       </section>
@@ -144,8 +139,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 
@@ -307,8 +301,7 @@ export default PagePage;
       </div>
       <Footer />
     </>
-  ),
-};
+  )};
 
 export default SmartCityInfrastructurePage;
 

@@ -10,7 +10,7 @@ const CommunityPage: React.FC = () => {
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
-    { icon: Star, value: '4.9', label: 'Average Rating' }
+    {icon: Star, value: '4.9', label: 'Average Rating'}
   ];
   const events = [
     {
@@ -29,14 +29,12 @@ const CommunityPage: React.FC = () => {
       attendees: 75,
       description: 'Discuss cloud architecture and deployment strategies'
     },
-    {
-      title: 'SaaS Business Growth Panel',
+    {title: 'SaaS Business Growth Panel',
       date: '2024-02-25',
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses'
-    }
+      description: 'Expert panel on scaling SaaS businesses'}
   ];
   const forums = [
     {
@@ -57,12 +55,10 @@ const CommunityPage: React.FC = () => {
       posts: 750,
       members: 900
     },
-    {
-      name: 'General Discussion',
+    {name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000
-    }
+      members: 3000}
   ];
   const benefits = [
     {
@@ -84,9 +80,7 @@ const CommunityPage: React.FC = () => {
       icon: Award,
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>
@@ -152,7 +146,7 @@ const CommunityPage: React.FC = () => {
                 { id: 'overview', name: 'Overview' },
                 { id: 'events', name: 'Events' },
                 { id: 'forums', name: 'Forums' },
-                { id: 'benefits', name: 'Benefits' }
+                {id: 'benefits', name: 'Benefits'}
               ].map((tab) => (
                 <button
                   key={tab.id}

@@ -25,7 +25,6 @@ const preloadComponents = () => {
     }, 100);
   }
 }
-
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -398,9 +397,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       benefits: ['Grid efficiency', 'Renewable integration', 'Cost optimization', 'Sustainability'],
       category: 'Energy Tech',
       popular: false
-    }
-  ]
-
+    }];
   // Real IT Services with actual capabilities and pricing
   const itServices = [
     {
@@ -761,9 +758,7 @@ description: 'Custom API development, third-party integrations, and microservice
       benefits: ['Cloud-native protection', 'Container security', 'Compliance assurance', 'Scalable security'],
       category: 'Cloud Security',
       popular: false
-    }
-  ]
-
+    }];
   // Real Micro SaaS Services with actual capabilities and pricing
   const microSaasServices = [
     {
@@ -1426,8 +1421,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 50 users'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Zion Social Scheduler',
       description: 'AI-powered social media management with content optimization and scheduling',
       price: '$69/month',
@@ -1436,16 +1430,13 @@ description: 'Custom API development, third-party integrations, and microservice
       benefits: ['Increase engagement by 250%', 'Save 80% content creation time', 'Optimal posting times', 'Comprehensive analytics'],
       category: 'Social Media',
       popular: true,
-      users: 'Up to 5 users'
-    }
+      users: 'Up to 5 users'}
   ];
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
-  ]
-
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }];
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -1500,11 +1491,8 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles neural-connections">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -1529,7 +1517,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             }`}
             aria-labelledby="hero-heading"
           >
-<<<<<<< HEAD
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
@@ -1828,7 +1815,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   Get Free Consultation
                 </a>
               </div>
-=======
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
@@ -2343,7 +2329,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   </a>
                 </div>
               </article>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
             </div>
           </section>
         </main>

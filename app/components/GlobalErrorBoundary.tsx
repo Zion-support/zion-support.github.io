@@ -1,5 +1,4 @@
-    }
-  ]
+    }];
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -110,8 +109,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default GlobalErrorBoundaryPage;
 

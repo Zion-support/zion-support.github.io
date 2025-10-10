@@ -30,15 +30,13 @@ const AiFraudDetectionPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  }];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology']
 return (
     <>
       <Helmet>
@@ -101,11 +99,9 @@ return (
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
+                  {feature.benefits && (;
                     <ul>
-                      {feature.benefits.map((benefit, idx) => (
-  }
+                      {feature.benefits.map((benefit, idx) => (}
                         <li>
                           <CheckCircle>
 
@@ -180,8 +176,7 @@ return (
       </div>
       <Footer>
     </>
-  ),
-};
+  )};
 
 export default AiFraudDetectionPage;
 

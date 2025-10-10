@@ -1,14 +1,11 @@
 'use client';
 import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceOptimizerProps {children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
-
+  enableCodeSplitting?: boolean;}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
@@ -30,7 +27,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       })
     }
-
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
     return () => clearTimeout(timer);
@@ -78,7 +74,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.crossOrigin = 'anonymous';
       document.head.appendChild(criticalFont);
     }
-
     preloadCriticalResources();
   }, [enablePreloading]);
 
@@ -99,7 +94,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         })
       })
     }
-
     const timer = setTimeout(optimizeCodeSplitting, 1000);
     return () => clearTimeout(timer);
   }, [enableCodeSplitting]);
@@ -117,7 +111,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
         }
-
         // Send metrics to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
@@ -129,13 +122,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       }
     }
-
     // Measure performance after page load
     window.addEventListener('load', measurePerformance);
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return <>{children}</>;
+  return <>{children}</>>;
 };
 
 export default PerformanceOptimizer;

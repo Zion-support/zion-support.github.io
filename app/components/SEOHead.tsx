@@ -1,18 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-    title?: string;
+interface SEOHeadProps {title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object
-  }
+  structuredData?: object}
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
-    title = 'Zion Tech Group - Advanced AI & IT Solutions',
+const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
   canonical,
@@ -23,8 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   twitterCard = 'summary_large_image',
 
-  structuredData
-  }
+  structuredData}
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -52,8 +48,7 @@ const defaultStructuredData = {
     "sameAs": [;
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
-    ],
-  }
+    ]}
 return (
     <Helmet>
       {/* Basic Meta Tags */}

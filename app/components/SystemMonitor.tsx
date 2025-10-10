@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-}
-  ]
+}];
 </span>
               <br>
               <span className="text-white">Solutions</span>
@@ -23,8 +22,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </div>
         </div>
     </div>
-  ),
-};
+  )};
 
 export default SystemMonitorPage;
 

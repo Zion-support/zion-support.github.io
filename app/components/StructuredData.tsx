@@ -1,11 +1,8 @@
 'use client';
 import React from 'react';
 
-interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
-}
-
+interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
+  data?: Record<string, unknown>;}
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
   data 
@@ -52,7 +49,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "IT Consulting"
           ]
         }
-      
       case 'WebSite':
         return {
           "@context": "https://schema.org",
@@ -70,7 +66,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "query-input": "required name=search_term_string"
           }
         }
-      
       case 'WebPage':
         return {
           "@context": "https://schema.org",
@@ -95,11 +90,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "position": 1,
                 "name": "Home",
                 "item": "https://ziontechgroup.com"
-              }
-            ]
+              }];
           }
         }
-      
       case 'Service':
         return {
           "@context": "https://schema.org",
@@ -120,13 +113,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "IT Consulting",
             "Custom Development"
           ],
-          "offers": {
-            "@type": "Offer",
+          "offers": {"@type": "Offer",
             "description": "Professional AI and IT consulting services",
-            "availability": "https://schema.org/InStock"
-          }
+            "availability": "https://schema.org/InStock"}
         }
-      
       case 'LocalBusiness':
         return {
           "@context": "https://schema.org",
@@ -161,12 +151,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "geoRadius": "100000"
           }
         }
-      
       default:
         return {}
     }
   }
-
   const structuredData = data || getDefaultData();
 
   return (

@@ -26,16 +26,13 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
       stats: 'Zero Breaches'
   },
-    {
-    title: 'Automation',
+    {title: 'Automation',
       description: 'Streamline processes with intelligent automation',
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency'
-  }
-    }
-  ]
+      stats: '95% Efficiency'}
+    }];
 return (
     <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -55,9 +52,7 @@ return (
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-          {
-    services.map((service, index) => (</div>
-  }
+          {services.map((service, index) => (</div>}
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
               <div className="flex items-center mb-4"></div>
                 <service>
@@ -67,9 +62,7 @@ return (
               </div>
               <p className="text-gray-300 mb-4">{service.description}</p>
               <ul>
-                {
-    service.features.map((feature, featureIndex) => (
-  }
+                {service.features.map((feature, featureIndex) => (}
                   <li>
                     <CheckCircle>
 

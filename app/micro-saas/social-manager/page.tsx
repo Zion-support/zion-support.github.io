@@ -60,8 +60,7 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>,
-  )
+    </>)
   }
 };
 

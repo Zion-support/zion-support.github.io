@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -30,15 +29,13 @@ const AiWorkflowAutomationPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  }];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology']
 return (
     <>
       <Helmet>
@@ -101,15 +98,12 @@ return (
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
+                  {feature.benefits && (;
                     <ul>
-                      {feature.benefits.map((benefit, idx) => (
-  }
+                      {feature.benefits.map((benefit, idx) => (}
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -154,12 +148,10 @@ const AIWorkflowAutomation: React.FC = () => {
       description: 'Create tailored automation solutions for your specific business needs',
       benefits: ['Custom logic', 'Business rules', 'Conditional flows']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to track workflow performance and ROI',
-      benefits: ['Performance metrics', 'ROI tracking', 'Custom reports']
-    }
+      benefits: ['Performance metrics', 'ROI tracking', 'Custom reports']}
   ];
 
   const services = [
@@ -177,20 +169,18 @@ const AIWorkflowAutomation: React.FC = () => {
       period: '/month',
       benefits: ['Unlimited workflows', 'Advanced integrations', 'Priority support']
     },
-    {
-      icon: Brain,
+    {icon: Brain,
       title: 'Enterprise',
       price: '$599',
       period: '/month',
-      benefits: ['Custom AI models', 'Dedicated support', 'White-label options']
-    }
+      benefits: ['Custom AI models', 'Dedicated support', 'White-label options']}
   ];
 
   const stats = [
     { number: '90%', label: 'Time Savings' },
     { number: '75%', label: 'Error Reduction' },
     { number: '500+', label: 'Integrations' },
-    { number: '24/7', label: 'Automation' }
+    {number: '24/7', label: 'Automation'}
   ];
 
   return (
@@ -270,12 +260,10 @@ const AIWorkflowAutomation: React.FC = () => {
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
                           {benefit}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   )}
                 </div>
               ))}
@@ -336,7 +324,6 @@ const AIWorkflowAutomation: React.FC = () => {
                 <button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
@@ -375,7 +362,6 @@ const AIWorkflowAutomation: React.FC = () => {
                     </a>
                   </div>
                 ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
               </div>
             </div>
           </div>
@@ -383,12 +369,8 @@ const AIWorkflowAutomation: React.FC = () => {
       </div>
       <Footer>
     </>
-  ),
-};
+  )};
 
 export default AiWorkflowAutomationPage;
 
-<<<<<<< HEAD
-=======
 export default AIWorkflowAutomation;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8

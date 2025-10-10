@@ -19,11 +19,9 @@ icon: Shield,
       title: 'AI-Powered Management',
       description: 'Intelligent cloud management powered by advanced AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Deployment',
-      description: 'Worldwide cloud infrastructure deployment and support'
-    }
+      description: 'Worldwide cloud infrastructure deployment and support'}
   ];
   const benefits = [
 'Advanced cloud technology integration',
@@ -124,8 +122,7 @@ icon: Shield,
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default CloudInfrastructurePage
   </button>

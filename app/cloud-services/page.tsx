@@ -24,13 +24,10 @@ const CloudServicesPage: React.FC = () => {
       description: 'Managed database services with automated backups, monitoring, and optimization.',
       features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Cloud Security',
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
-
-    }
+      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']}
   ];
   const benefits = [
 
@@ -85,9 +82,7 @@ const CloudServicesPage: React.FC = () => {
         'Unlimited users',
         'Custom development'
       ]
-    }
-
-  ]
+    }];
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -268,8 +263,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
     </div>
 
-  ),
-};
+  )};
 
 export default CloudServicesPage
   </button>

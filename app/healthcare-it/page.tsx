@@ -39,8 +39,7 @@ icon: Heart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
-  }
-    ]
+  }];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
       <SEOOptimizer>
@@ -89,9 +88,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    services.map((service, index) => (
-  }
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>

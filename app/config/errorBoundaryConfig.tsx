@@ -4,8 +4,7 @@
  * Centralized configuration for error handling across the application;
  */;
 import React from 'react';
-export interface ErrorBoundaryConfig {
-  /**;
+export interface ErrorBoundaryConfig {/**;
    * Whether to log errors to console;
    */;
   logErrors: boolean,
@@ -37,7 +36,6 @@ export interface ErrorBoundaryConfig {
    * Fallback UI components
    */,
   fallbackComponents: {}
-
     default: React.ComponentType<{ error: Error, resetError: () => void }>;
     network: React.ComponentType<{ error: Error, resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error, resetError: () => void }>;
@@ -46,14 +44,12 @@ export interface ErrorBoundaryConfig {
 /**;
  * Default error messages;
  */;
-const DEFAULT_ERROR_MESSAGES = {
-    default: 'Something went wrong. Please try again.',
+const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
-  }
+  validation: 'Validation error. Please check your input.'}
 }
 /**;
  * Get error boundary configuration based on environment;
@@ -70,9 +66,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     fallbackComponents: {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
-  },
-  }
+      notFound: NotFoundFallback}}
 }
 /**;
  * Default error fallback component;
@@ -93,9 +87,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 
           {error.message || 'An unexpected error occurred'}
         </p>
-        {
-    process.env['NODE_ENV'] === 'development' && (
-  }
+        {process.env['NODE_ENV'] === 'development' && (}
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
         <div className="mt-6 flex gap-4"></div>
@@ -111,8 +103,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         </div>
       </div>
     </div>
-  ),
-}
+  )}
 /**;
  * Network error fallback component;
  */;
@@ -165,8 +156,7 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-  ),
-}
+  )}
 /**;
  * Get error type from error object;
  */;
@@ -174,7 +164,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
     if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network'
   }
-
   }
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound'
@@ -205,8 +194,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-  }
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
   }
 };
 

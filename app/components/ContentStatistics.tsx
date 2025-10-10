@@ -10,13 +10,10 @@ const ContentStatistics: React.FC = () => {
     years: 0
   })
 
-  const targetCounters = {
-    clients: 500,
+  const targetCounters = {clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
-  }
-
+    years: 10}
   const statistics = [
     {
       icon: Users,
@@ -39,13 +36,11 @@ const ContentStatistics: React.FC = () => {
       suffix: '%',
       color: 'text-green-400'
     },
-    {
-      icon: Clock,
+    {icon: Clock,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400'
-    }
+      color: 'text-yellow-400'}
   ];
   const achievements = [
     {
@@ -67,9 +62,7 @@ const ContentStatistics: React.FC = () => {
       icon: Zap,
       title: 'Performance',
       description: '99.9% uptime and lightning-fast response'
-    }
-  ]
-
+    }];
   useEffect(() => {
     const timers = Object.keys(targetCounters).map(key => {
       const target = targetCounters[key as keyof typeof targetCounters]
@@ -90,9 +83,7 @@ const ContentStatistics: React.FC = () => {
       }, 16);
     })
 
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    }
+    return () => {timers.forEach(timer => clearInterval(timer));}
   }, []);
 
   return (

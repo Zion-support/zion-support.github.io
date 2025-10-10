@@ -41,8 +41,7 @@ const EnterprisePage: React.FC = () => {
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-  }
-    ]
+  }];
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -67,8 +66,7 @@ const solutions = [
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
-  }
-    ]
+  }];
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -87,8 +85,7 @@ const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+    { number: '24/7', label: 'Support Available', icon: Clock }];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
@@ -138,9 +135,7 @@ return (
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {
-    stats.map((stat, index) => (
-  }
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
                   <stat />
@@ -176,9 +171,7 @@ return (
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
-                  {
-    feature.benefits.map((benefit, idx) => (
-  }
+                  {feature.benefits.map((benefit, idx) => (}
                     <li>
                       <CheckCircle>
 
@@ -252,8 +245,7 @@ return (
         </div>
       </section>
       <Footer />
-  ),
-};
+  )};
 
 export default EnterprisePage;
 

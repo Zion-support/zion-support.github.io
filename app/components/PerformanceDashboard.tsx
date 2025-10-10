@@ -1,16 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
-interface PerformanceMetrics {
-    loadTime: number;
+interface PerformanceMetrics {loadTime: number;
   renderTime: number
   memoryUsage: number
   fps: number,
-  [key: string]: number
-  }
-interface PerformanceProps {
-    onMetricsUpdate?: (metrics: PerformanceMetrics) => void
-  }
+  [key: string]: number}
+interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void}
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -50,18 +46,14 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
             frameCount = 0;
             lastTime = currentTime
   }
-          if (isMonitoring) {
-    requestAnimationFrame(measureFPS)
-  }
+          if (isMonitoring) {requestAnimationFrame(measureFPS)}
         }
         requestAnimationFrame(measureFPS);
       }
-      const newMetrics: PerformanceMetrics = {
-        loadTime,
+      const newMetrics: PerformanceMetrics = {loadTime,
         renderTime,
         memoryUsage,
-        fps
-      }
+        fps}
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
       // Check for performance alerts
@@ -78,18 +70,12 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     if (currentMetrics.loadTime > 3000) {
       newAlerts.push('Load time is above 3 seconds')
   }
-    if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
-    // 50MB
-      newAlerts.push('Memory usage is high')
-  }
-    if (currentMetrics.fps < 30) {
-    newAlerts.push('FPS is below 30')
-  }
+    if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {// 50MB
+      newAlerts.push('Memory usage is high')}
+    if (currentMetrics.fps < 30) {newAlerts.push('FPS is below 30')}
     setAlerts(newAlerts);
   }
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
-  }
+  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
     const k = 1024,

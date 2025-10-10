@@ -33,8 +33,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       icon: Lock,
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
-    }
-  ]
+    }];
   return (
     <React.Fragment>
       <Helmet>

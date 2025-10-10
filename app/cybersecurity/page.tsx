@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-]
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react']
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -115,8 +114,7 @@ const benefits = [
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 

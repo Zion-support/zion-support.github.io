@@ -1,27 +1,19 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
+interface Props {children: ReactNode;
+  fallback?: ReactNode;}
+interface State {hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
+  errorInfo?: ErrorInfo;}
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -29,10 +21,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     })
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
+    if (process.env.NODE_ENV === 'development') {console.error('Error caught by boundary:', error, errorInfo);}
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
@@ -42,13 +31,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
     }
   }
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <div className="max-w-md mx-auto text-center p-8">
@@ -71,7 +58,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 };

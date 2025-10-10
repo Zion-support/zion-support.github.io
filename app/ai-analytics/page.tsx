@@ -41,8 +41,7 @@ title: 'Real-Time Dashboards',
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    },
-  ];
+    }];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -80,8 +79,7 @@ title: 'Real-Time Dashboards',
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
-    }
-  ]
+    }];
   return (
     <React.Fragment>
       <Helmet>
@@ -161,8 +159,7 @@ title: 'Real-Time Dashboards',
       </main>
       <Footer />
     </React.Fragment>
-  ),
-};
+  )};
 
 export default AiAnalyticsPage
   </button>

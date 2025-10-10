@@ -13,7 +13,7 @@ const DocsPage: React.FC = () => {
     { id: 'ai-services', name: 'AI Services', icon: Brain },
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
-    { id: 'security', name: 'Security', icon: Shield }
+    {id: 'security', name: 'Security', icon: Shield}
   ];
   const documentation = [
     {
@@ -91,8 +91,7 @@ const DocsPage: React.FC = () => {
         'Compliance'
       ]
     },
-    {
-      id: 6,
+    {id: 6,
       title: 'Troubleshooting Guide',
       description: 'Common issues and their solutions',
       category: 'getting-started',
@@ -104,16 +103,13 @@ const DocsPage: React.FC = () => {
         'Debugging Tips',
         'Performance Issues',
         'Support Resources'
-      ]
-    }
+      ]}
   ];
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
-    { title: 'Support', url: '/support', icon: Shield }
-  ]
-
+    { title: 'Support', url: '/support', icon: Shield }];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);

@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    BarChart,
+import {BarChart,
   TrendingUp,
   Database,
   CheckCircle,
@@ -25,8 +24,7 @@ import {
 
   PieChart,
 
-  LineChart
-  }
+  LineChart}
 } from 'lucide-react'
 const DataAnalyticsPage: React.FC = () => {
     const features = [
@@ -45,13 +43,10 @@ const DataAnalyticsPage: React.FC = () => {
       title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
   },
-    {
-    icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-  }
-    }
-  ]
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'}
+    }];
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -195,8 +190,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default DataAnalyticsPage;
 

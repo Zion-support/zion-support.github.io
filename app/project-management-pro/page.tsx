@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    CheckSquare,
+import {CheckSquare,
   Users,
   CheckCircle,
   BarChart,
@@ -25,8 +24,7 @@ import {
 
   Calendar,
 
-  FileText
-  }
+  FileText}
 } from 'lucide-react'
 const ProjectManagementProPage: React.FC = () => {
     const features = [
@@ -45,13 +43,10 @@ const ProjectManagementProPage: React.FC = () => {
       title: 'Progress Tracking',
       description: 'Comprehensive project analytics and reporting to track progress and performance.'
   },
-    {
-    icon: Zap,
+    {icon: Zap,
       title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-  }
-    }
-  ]
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'}
+    }];
 const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
@@ -195,8 +190,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default ProjectManagementProPage;
 

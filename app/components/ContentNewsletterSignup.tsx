@@ -22,12 +22,9 @@ const ContentNewsletterSignup: React.FC = () => {
       setEmail('');
     } catch (error) {
       console.error('Newsletter signup error:', error);
-    } finally {
-      setIsSubmitting(false);
-      setIsLoading(false);
-    }
+    } finally {setIsSubmitting(false);
+      setIsLoading(false);}
   }
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-lg p-8 text-center">
@@ -47,7 +44,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="bg-slate-800/50 rounded-lg p-8">
       <div className="text-center mb-6">

@@ -53,12 +53,10 @@ useEffect(() => {
   }
   }, []);
   // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
-  }
+        event_label: 'main_phone_number'}
       })
     }
   }, []);
@@ -74,7 +72,6 @@ useEffect(() => {
         {/* Navigation */}</div>
         <Navigation>
         {/* Skip to main content for accessibility */}
-
         <a>
           Skip to main content
         </a>
@@ -252,7 +249,6 @@ useEffect(() => {
             </Suspense>
           </div>
           {/* Micro SAAS Services Grid */}
-
           <div className="mb-12"></div>
             <h3>
               Micro SAAS Solutions

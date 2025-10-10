@@ -28,13 +28,10 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       title: 'Custom Dashboards',
       description: 'Build personalized dashboards tailored to your business needs.'
   },
-    {
-    icon: Target,
+    {icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-  }
-    }
-  ]
+      description: 'Monitor KPIs and business objectives with automated alerts.'}
+    }];
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -51,8 +48,7 @@ const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
+    { label: 'User Satisfaction', value: '4.9/5', icon: Star }];
 return (
     <>
       <Helmet>
@@ -114,9 +110,7 @@ return (
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {
-    features.map((feature, index) => (</div>
-  }
+              {features.map((feature, index) => (</div>}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
                     <feature />
@@ -144,9 +138,7 @@ return (
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-              {
-    metrics.map((metric, index) => (</div>
-  }
+              {metrics.map((metric, index) => (</div>}
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <metric />
@@ -175,9 +167,7 @@ return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6"></div>
-                {
-    benefits.map((benefit, index) => (</div>
-  }
+                {benefits.map((benefit, index) => (</div>}
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle>
                     <span className="text-gray-300 text-lg">{benefit}</span>
@@ -236,8 +226,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default AIAnalyticsDashboardPage;
 

@@ -19,11 +19,9 @@ icon: Shield,
       title: 'AI-Powered Migration',
       description: 'Intelligent migration planning and execution powered by AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-    }
+      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'}
   ];
   const benefits = [
 'Advanced cloud migration technology',
@@ -139,8 +137,7 @@ icon: Shield,
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default CloudMigrationServicesPage
   </button>

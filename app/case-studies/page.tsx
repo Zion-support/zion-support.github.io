@@ -29,9 +29,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
       results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
-    }
-  ]
-
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

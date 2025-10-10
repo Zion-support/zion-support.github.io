@@ -123,8 +123,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 

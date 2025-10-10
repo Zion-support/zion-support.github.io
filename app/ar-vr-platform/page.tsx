@@ -19,11 +19,9 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Cross-Platform Support',
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
-    }
+      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'}
   ];
   const benefits = [
     'Advanced AR/VR technology integration',
@@ -136,8 +134,7 @@ Experience the power of our AR/VR platform solutions for your business.
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default ARVRPlatformPage
   </button>

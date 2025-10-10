@@ -124,8 +124,7 @@ const IoTPage: React.FC = () => {
       category: 'IoT Security',
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']
   },
-    {
-    title: 'IoT Data Analytics Platform',
+    {title: 'IoT Data Analytics Platform',
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500/month',;
@@ -133,10 +132,8 @@ const IoTPage: React.FC = () => {
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',;
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
-  }
-    }
-  ]
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}
+    }];
 const categories = [...new Set(iotServices.map(service => service.category))]
 return (
     <>
@@ -223,9 +220,7 @@ return (
           </div>
         </section>
         {/* Services by Category */}
-        {
-    categories.map(category => (
-  }
+        {categories.map(category => (}
           <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -244,11 +239,9 @@ return (
                 </p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {
-    iotServices
+                {iotServices
                   .filter(service => service.category === category),
-                  .map((service, index) => (</div>
-  }
+                  .map((service, index) => (</div>}
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
@@ -265,9 +258,7 @@ return (
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul>
-                          {
-    service.features.map((feature, featureIndex) => (
-  }
+                          {service.features.map((feature, featureIndex) => (}
                             <li>
                               <CheckCircle>
 
@@ -280,9 +271,7 @@ return (
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
-                          {
-    service.technologies.map((tech, techIndex) => (</div>
-  }
+                          {service.technologies.map((tech, techIndex) => (</div>}
                             <span>
 
                               {tech}
@@ -294,9 +283,7 @@ return (
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul>
-                          {
-    service.benefits.map((benefit, benefitIndex) => (
-  }
+                          {service.benefits.map((benefit, benefitIndex) => (}
                             <li>
                               <Star>
 

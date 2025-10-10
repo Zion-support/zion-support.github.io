@@ -43,11 +43,9 @@ export default function APIDocsPage() {
     "image_url": "https://example.com/image.jpg",
     "features": ["objects", "faces", "text"]
   }'`
-        }
-      ]
+        }];
     },
-    {
-      title: 'Cloud Services',
+    {title: 'Cloud Services',
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
       endpoints: [
@@ -65,11 +63,9 @@ export default function APIDocsPage() {
     "config": {
       "cpu": "2",
       "memory": "4GB",
-      "instances": 3
-    }
+      "instances": 3}
   }'`
-        }
-      ]
+        }];
     },
     {
       title: 'Data Analytics',
@@ -89,10 +85,8 @@ export default function APIDocsPage() {
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
   }'`
-        }
-      ]
-    }
-  ]
+        }];
+    }];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -250,8 +244,7 @@ export default function APIDocsPage() {
       </section>
       <Footer />
     </div>
-  ),
-}
+  )}
   </button>
   </button>
   </button>

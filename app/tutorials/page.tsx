@@ -12,11 +12,10 @@ const TutorialsPage: React.FC = () => {
     { id: 'it', name: 'IT Services', icon: Cloud },
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
-    { id: 'integration', name: 'Integration', icon: Code }
+    {id: 'integration', name: 'Integration', icon: Code}
   ];
   const tutorials = [
-    {
-      id: 1,
+    {id: 1,
       title: 'Getting Started with AI Chat API',
       description: 'Learn how to integrate our AI chat API into your application with step-by-step examples.',
       category: 'ai',
@@ -35,8 +34,7 @@ const TutorialsPage: React.FC = () => {
           'Make your first API call',
           'Handle responses and errors',
           'Implement advanced features'
-        ]
-      }
+        ]}
     },
     {
       id: 2,
@@ -84,8 +82,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
-      id: 4,
+    {id: 4,
       title: 'AI-Powered Data Analytics Dashboard',
       description: 'Build an intelligent analytics dashboard using our AI data analytics services.',
       category: 'ai',
@@ -104,11 +101,9 @@ const TutorialsPage: React.FC = () => {
           'Create interactive charts and graphs',
           'Implement AI-powered insights',
           'Add real-time data updates'
-        ]
-      }
+        ]}
     },
-    {
-      id: 5,
+    {id: 5,
       title: 'Cybersecurity Best Practices',
       description: 'Learn essential cybersecurity practices to protect your applications and data.',
       category: 'security',
@@ -127,8 +122,7 @@ const TutorialsPage: React.FC = () => {
           'Use encryption properly',
           'Set up monitoring and logging',
           'Follow compliance guidelines'
-        ]
-      }
+        ]}
     },
     {
       id: 6,
@@ -152,9 +146,7 @@ const TutorialsPage: React.FC = () => {
           'Monitor and debug integrations'
         ]
       }
-    }
-  ]
-
+    }];
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);

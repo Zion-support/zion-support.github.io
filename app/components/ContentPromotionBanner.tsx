@@ -20,11 +20,9 @@ const ContentPromotionBanner: React.FC = () => {
       description: 'Join 500+ companies that have transformed their operations with our solutions.',
       icon: Star
     },
-    {
-      title: 'Expert Support',
+    {title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users
-    }
+      icon: Users}
   ];
   const benefits = [
     'Easy integration with existing systems',

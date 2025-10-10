@@ -20,10 +20,8 @@ const SupportPage: React.FC = () => {
       question: 'Do you provide ongoing support?',
       answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.'
     },
-    {
-      question: 'What technologies do you work with?',
-      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
-    }
+    {question: 'What technologies do you work with?',
+      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'}
   ];
   const supportChannels = [
     {
@@ -46,9 +44,7 @@ const SupportPage: React.FC = () => {
       icon: MessageCircle,
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST'
-    }
-  ]
-
+    }];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())

@@ -15,8 +15,7 @@ const SitemapPage: React.FC = () => {
         { name: 'About', url: '/about', description: 'About Zion Tech Group' },
         { name: 'Services', url: '/services', description: 'Our service offerings' },
         { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },
-        { name: 'Contact', url: '/contact', description: 'Contact information' }
-      ]
+        { name: 'Contact', url: '/contact', description: 'Contact information' }];
     },
     {
       title: 'AI Services',
@@ -30,8 +29,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-driven security solutions' },
         { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analytics' },
         { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' },
-        { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }
-      ]
+        { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }];
     },
     {
       title: 'IT Services',
@@ -42,8 +40,7 @@ const SitemapPage: React.FC = () => {
         { name: 'API Management', url: '/ai-api-management', description: 'API development and management' },
         { name: 'Cybersecurity Suite', url: '/ai-cybersecurity-suite', description: 'Comprehensive security solutions' },
         { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }
-      ]
+        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }];
     },
     {
       title: 'Micro SaaS',
@@ -55,8 +52,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Financial tracking solution' },
         { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
         { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
-        { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }
-      ]
+        { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }];
     },
     {
       title: 'Emerging Technologies',
@@ -67,8 +63,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Immersive work environments' },
         { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating systems' },
         { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Decentralized AI solutions' },
-        { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }
-      ]
+        { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }];
     },
     {
       title: 'Resources',
@@ -81,8 +76,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Support', url: '/support', description: 'Technical support' },
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
         { name: 'Demo', url: '/demo', description: 'Request a demo' },
-        { name: 'Consultation', url: '/consultation', description: 'Free consultation' }
-      ]
+        { name: 'Consultation', url: '/consultation', description: 'Free consultation' }];
     },
     {
       title: 'Documentation',
@@ -91,8 +85,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Documentation', url: '/docs', description: 'Complete documentation' },
         { name: 'API Reference', url: '/api', description: 'API documentation' },
         { name: 'Tutorials', url: '/tutorials', description: 'Learning resources' },
-        { name: 'Community', url: '/community', description: 'Developer community' }
-      ]
+        { name: 'Community', url: '/community', description: 'Developer community' }];
     },
     {
       title: 'Legal',
@@ -101,11 +94,8 @@ const SitemapPage: React.FC = () => {
         { name: 'Privacy Policy', url: '/privacy', description: 'Privacy policy and data protection' },
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
-        { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
-      ]
-    }
-  ]
-
+        { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }];
+    }];
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
 
   return (

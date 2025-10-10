@@ -2,17 +2,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
+interface SEOOptimizerProps {title?: string;
   description?: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
-  children: React.ReactNode;
-}
-
+  children: React.ReactNode;}
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -35,56 +32,35 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
-    } else {
-      newRecommendations.push('Title should be between 30-60 characters');
-    }
-
+    } else {newRecommendations.push('Title should be between 30-60 characters');}
     // Check description length
     if (description.length >= 120 && description.length <= 160) {
       score += 20;
-    } else {
-      newRecommendations.push('Description should be between 120-160 characters');
-    }
-
+    } else {newRecommendations.push('Description should be between 120-160 characters');}
     // Check for keywords in title
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
-    } else {
-      newRecommendations.push('Include primary keyword in title');
-    }
-
+    } else {newRecommendations.push('Include primary keyword in title');}
     // Check for keywords in description
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
-    } else {
-      newRecommendations.push('Include primary keyword in description');
-    }
-
+    } else {newRecommendations.push('Include primary keyword in description');}
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     if (headings.length > 0) {
       score += 10;
-    } else {
-      newRecommendations.push('Add proper heading structure');
-    }
-
+    } else {newRecommendations.push('Add proper heading structure');}
     // Check for images with alt text
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
     if (images.length === imagesWithAlt.length && images.length > 0) {
       score += 10;
-    } else {
-      newRecommendations.push('Add alt text to all images');
-    }
-
+    } else {newRecommendations.push('Add alt text to all images');}
     // Check for internal links
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
     if (internalLinks.length > 0) {
       score += 10;
-    } else {
-      newRecommendations.push('Add internal links for better SEO');
-    }
-
+    } else {newRecommendations.push('Add internal links for better SEO');}
     setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
@@ -106,19 +82,15 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://linkedin.com/company/ziontechgroup"
       ]
     }
-
     return structuredData || defaultStructuredData;
   }
-
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl,
-      })
+        page_location: config.canonicalUrl})
     }
   }
-
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
@@ -127,8 +99,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          })
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)})
         }
       })
     }
@@ -161,7 +132,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </Helmet>
       
       {children}
-      
       {process.env.NODE_ENV === 'development' && (
         <div className="seo-debug" style={{
           position: 'fixed',

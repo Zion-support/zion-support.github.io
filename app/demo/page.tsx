@@ -24,9 +24,7 @@ const DemoPage: React.FC = () => {
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>

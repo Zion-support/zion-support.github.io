@@ -19,11 +19,9 @@ const BlockchainPage: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Intelligent blockchain solutions powered by advanced AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide blockchain deployment and support for international businesses'
-    }
+      description: 'Worldwide blockchain deployment and support for international businesses'}
   ];
   const benefits = [
     'Advanced blockchain technology integration',

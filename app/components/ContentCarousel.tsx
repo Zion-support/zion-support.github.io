@@ -29,17 +29,9 @@ const ContentCarousel: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-    }
-  ]
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }
-
+    }];
+  const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length);}
+  const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);}
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);

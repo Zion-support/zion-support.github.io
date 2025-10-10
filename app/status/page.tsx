@@ -57,16 +57,13 @@ const services = [
       lastIncident: '2024-01-08',
       description: 'Content delivery network'
   },
-    {
-    name: 'Monitoring',
+    {name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
-  }
-    }
-  ]
+      description: 'System monitoring and alerts'}
+    }];
 const incidents = [
     {
     id: 1,
@@ -78,18 +75,15 @@ const incidents = [
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
       affectedServices: ['API Services', 'AI Services']
   },
-    {
-    id: 2,
+    {id: 2,
       title: 'Database Connection Issues',
       status: 'resolved',
       severity: 'major',
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
-  }
-    }
-  ]
+      affectedServices: ['Database', 'API Services']}
+    }];
 const getStatusIcon = (;
     switch (status) {
     case 'operational':;
@@ -156,9 +150,7 @@ return (
 
               {getStatusIcon(overallStatus)}
               <span>
-                {
-    overallStatus === 'operational' ? 'All Systems Operational' :
-  }
+                {overallStatus === 'operational' ? 'All Systems Operational' :}
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
@@ -185,9 +177,7 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {
-    services.map((service, index) => (
-  }
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <div className="flex items-center gap-3"></div>
@@ -196,7 +186,6 @@ return (
                   </div>
                   <span>
                     {service.status}
-
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -232,9 +221,7 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6"></div>
-            {
-    incidents.map((incident) => (
-  }
+            {incidents.map((incident) => (}
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div />
@@ -250,7 +237,6 @@ return (
                     </span>
                     <span>
                       {incident.status}
-
                     </span>
                   </div>
                 </div>

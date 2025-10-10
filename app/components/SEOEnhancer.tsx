@@ -20,11 +20,9 @@ const SEOEnhancer: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+      description: 'Worldwide deployment and support for international businesses'}
   ];
   const benefits = [
     'Advanced AI technology integration',

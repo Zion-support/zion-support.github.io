@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Shield,
+import {Shield,
   Eye,
   AlertTriangle,
   CheckCircle,
@@ -26,8 +25,7 @@ import {
 
   Target,
 
-  Monitor
-  }
+  Monitor}
 } from 'lucide-react'
 const SecurityMonitoringSuitePage: React.FC = () => {
     const features = [
@@ -46,13 +44,10 @@ const SecurityMonitoringSuitePage: React.FC = () => {
       title: 'Security Analytics',
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
   },
-    {
-    icon: Zap,
+    {icon: Zap,
       title: 'Automated Response',
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
-  }
-    }
-  ]
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'}
+    }];
 const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
@@ -196,8 +191,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default SecurityMonitoringSuitePage;
 

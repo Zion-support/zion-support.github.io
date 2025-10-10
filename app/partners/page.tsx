@@ -38,12 +38,10 @@ const PartnersPage: React.FC = () => {
       description: 'Partner for CRM and business automation solutions',
       category: 'Business Software'
     },
-    {
-      name: 'ServiceNow',
+    {name: 'ServiceNow',
       logo: '/images/partners/servicenow.png',
       description: 'Partner for IT service management and workflow automation',
-      category: 'IT Management'
-    }
+      category: 'IT Management'}
   ];
   const benefits = [
     {
@@ -61,11 +59,9 @@ const PartnersPage: React.FC = () => {
       description: 'Access to cutting-edge tools and early release features',
       icon: CheckCircle
     },
-    {
-      title: 'Cost Optimization',
+    {title: 'Cost Optimization',
       description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle
-    }
+      icon: CheckCircle}
   ];
   const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 

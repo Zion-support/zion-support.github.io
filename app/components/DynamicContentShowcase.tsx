@@ -21,11 +21,9 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
+      description: 'Scale effortlessly across multiple regions with automatic load balancing'}
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -58,9 +56,7 @@ const DynamicContentShowcase: React.FC = () => {
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
       rating: 5
-    }
-  ]
-
+    }];
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % features.length);

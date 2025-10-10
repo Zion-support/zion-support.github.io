@@ -19,11 +19,9 @@ icon: Shield,
       title: 'AI-Powered Security',
       description: 'Intelligent security solutions powered by advanced AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Compliance',
-      description: 'Worldwide compliance with security standards and regulations'
-    }
+      description: 'Worldwide compliance with security standards and regulations'}
   ];
   const benefits = [
 'Advanced cloud security technology',
@@ -135,8 +133,7 @@ icon: Shield,
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default CloudSecurityPage
   </button>

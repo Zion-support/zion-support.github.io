@@ -19,11 +19,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Intelligent blockchain solutions powered by advanced AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Multi-Chain Support',
-      description: 'Support for multiple blockchain networks and protocols'
-    }
+      description: 'Support for multiple blockchain networks and protocols'}
   ];
   const benefits = [
     'Advanced blockchain technology integration',
@@ -121,8 +119,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default BlockchainIntegrationServicesPage
   </button>

@@ -34,11 +34,9 @@ title: 'AI-Powered Business Apps',
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your business data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international business applications'
-    }
+      description: 'Worldwide deployment and support for international business applications'}
   ];
   const benefits = [
 'Advanced AI technology integration',
@@ -151,8 +149,7 @@ title: 'AI-Powered Business Apps',
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default BusinessAppsPage
   </button>

@@ -53,9 +53,7 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee'
       ],
       popular: false
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>
@@ -91,7 +89,6 @@ const PricingPage: React.FC = () => {
                       Most Popular
                     </div>
                   )}
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   

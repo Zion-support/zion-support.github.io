@@ -2,22 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
-interface AccessibilitySettings {
-    highContrast: boolean;
+interface AccessibilitySettings {highContrast: boolean;
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,
-  keyboardNavigation: boolean
-  }
-
-interface EnhancedAccessibilityProps {
-    children: React.ReactNode;
+  keyboardNavigation: boolean}
+interface EnhancedAccessibilityProps {children: React.ReactNode;
   enableKeyboardNavigation?: boolean
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean,
-  enableFocusManagement?: boolean
-  }
-
+  enableFocusManagement?: boolean}
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
@@ -66,17 +60,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
+    } else {root.classList.remove('high-contrast');}
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
+    } else {root.classList.remove('reduced-motion');}
     // Font size
     root.classList.remove('font-small', 'font-medium', 'font-large');
     root.classList.add(`font-${newSettings.fontSize}`);
@@ -84,11 +72,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // Screen reader optimizations
     if (newSettings.screenReader) {
     root.classList.add('screen-reader-optimized')
-  } else {
-    root.classList.remove('screen-reader-optimized')
+  } else {root.classList.remove('screen-reader-optimized')}
   }
-  }
-
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
@@ -96,7 +81,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     
     analytics?.track('accessibility_settings_changed', newSettings);
   }
-
   // Keyboard navigation support
   useEffect(() => {
     if (!enableKeyboardNavigation) return;
@@ -110,7 +94,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           event.preventDefault()
   }
       }
-
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
     const activeElement = document.activeElement as HTMLElement;
@@ -119,7 +102,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }
       }
     }
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation]);
@@ -136,7 +118,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         target.classList.add('focus-visible');
       }
     }
-
     const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
@@ -145,14 +126,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         target.classList.remove('focus-visible');
       }
     }
-
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
     
-    return () => {
-    document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut)
-  }
+    return () => {document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut)}
   }, [enableFocusManagement]);
 
   // Screen reader announcements
@@ -170,14 +148,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       document.body.removeChild(announcement);
     }, 1000);
   }
-
   // Expose accessibility functions to window for global access
-  useEffect(() => {
-    (window as any).accessibility = {
+  useEffect(() => {(window as any).accessibility = {
       updateSettings,
       announceToScreenReader,
-      settings
-    }
+      settings}
   }, [settings]);
 
   return (

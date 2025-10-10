@@ -1,9 +1,7 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-interface PerformanceOptimizerProps {
-    children: React.ReactNode,
-  enableOptimizations?: boolean
-  }
+interface PerformanceOptimizerProps {children: React.ReactNode,
+  enableOptimizations?: boolean}
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true
@@ -26,10 +24,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
   }
       // Add decoding attribute for better performance
-      if (!img.hasAttribute('decoding')) {
-    img.setAttribute('decoding', 'async');
-        optimizedCount++
-  }
+      if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');
+        optimizedCount++}
     })
     return optimizedCount;
   }, []);

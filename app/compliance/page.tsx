@@ -19,11 +19,9 @@ const CompliancePage: React.FC = () => {
       title: 'Certification Support',
       description: 'Get support for achieving and maintaining industry certifications'
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
-    }
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting'}
   ];
   const benefits = [
     'Advanced compliance technology integration',
@@ -97,8 +95,7 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default CompliancePage
   </button>

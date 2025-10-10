@@ -99,8 +99,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default PagePage;
 
@@ -124,11 +123,9 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale your operations worldwide with our robust infrastructure'
-    }
+      description: 'Scale your operations worldwide with our robust infrastructure'}
   ];
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -241,8 +238,7 @@ const SpecializedServicesPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  ),
-};
+  )};
 
 export default SpecializedServicesPage;
 

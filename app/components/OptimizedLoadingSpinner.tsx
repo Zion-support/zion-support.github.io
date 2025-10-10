@@ -16,8 +16,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
     text = 'Loading...',
     className = '',
     color = 'blue',
-    fullScreen = false,
-  }
+    fullScreen = false}
   }) => {
     const sizeClasses = useMemo(;
       () => ({
@@ -25,30 +24,25 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
-        xl: 'h-16 w-16',
-  }
+        xl: 'h-16 w-16'}
       }),
       []
     );
 const textSizeClasses = useMemo(;
-      () => ({
-    xs: 'text-xs',
+      () => ({xs: 'text-xs',
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
-        xl: 'text-xl',
-  }
+        xl: 'text-xl'}
       }),
       []
     );
 const colorClasses = useMemo(;
-      () => ({
-    blue: 'border-blue-600 bg-blue-600',
+      () => ({blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',
-  }
+        purple: 'border-purple-600 bg-purple-600'}
       }),
       []
     );
@@ -60,7 +54,6 @@ const renderSpinner = useMemo(() => {
               {[0, 1, 2].map(i => (</div>
                 <div
   }
-
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
@@ -95,17 +88,13 @@ case 'skeleton':;
 case 'bars':;
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
-              {
-    [0, 1, 2, 3].map(i => (</div>
-                <div
-  }
-
+              {[0, 1, 2, 3].map(i => (</div>
+                <div}
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{}
                     height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
+                    animationDelay: `${i * 0.1}s`}}
                 /></div>
               ))}</div>
           );
@@ -128,9 +117,7 @@ return (</div>
         <div className='text-center'></div>
 
           {renderSpinner}
-          {
-    text && (</div>
-  }
+          {text && (</div>}
             <p>
               {text}
             </p>

@@ -43,8 +43,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     },
-    {
-      type: 'Marketing Cookies',
+    {type: 'Marketing Cookies',
       icon: Eye,
       description: 'These cookies are used to deliver relevant advertisements and marketing content.',
       examples: [
@@ -53,8 +52,7 @@ const CookiesPage: React.FC = () => {
         'Email marketing tracking',
         'Campaign performance'
       ],
-      required: false
-    }
+      required: false}
   ];
   const purposes = [
     {
@@ -76,9 +74,7 @@ const CookiesPage: React.FC = () => {
       title: 'Marketing',
       description: 'Deliver relevant content and advertisements',
       icon: Eye
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>

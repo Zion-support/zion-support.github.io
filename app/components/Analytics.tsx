@@ -1,35 +1,23 @@
 'use client';
 import React, { Suspense, lazy } from 'react';
-interface AnalyticsProps {
-    enableGoogleAnalytics?: boolean;
+interface AnalyticsProps {enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean
-  }
+  enableUserBehaviorTracking?: boolean}
 }
-const Analytics: React.FC<AnalyticsProps> = ({
-    enableGoogleAnalytics = true,
+const Analytics: React.FC<AnalyticsProps> = ({enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
-  enableUserBehaviorTracking = true
-  }
-}) => {
-    useEffect(() => {
+  enableUserBehaviorTracking = true}
+}) => {useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-  }
+      initializeGoogleAnalytics()}
     }
-if (enablePerformanceMonitoring) {
-    initializePerformanceMonitoring()
-  }
+if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}
     }
-if (enableErrorTracking) {
-    initializeErrorTracking()
-  }
+if (enableErrorTracking) {initializeErrorTracking()}
     }
-if (enableUserBehaviorTracking) {
-    initializeUserBehaviorTracking()
-  }
+if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 const initializeGoogleAnalytics = (;
@@ -51,11 +39,9 @@ const initializeGoogleAnalytics = (;
     }
     (window as any).gtag = gtag;
 gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {
-    page_title: document.title,
+    gtag('config', 'GA_MEASUREMENT_ID', {page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true
-  }
+      send_page_view: true}
     })
   }
 const initializePerformanceMonitoring = (;
@@ -73,10 +59,8 @@ const initializePerformanceMonitoring = (;
     const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid))
   }
-          } else if (entry.entryType === 'layout-shift') {
-    if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value)
-  }
+          } else if (entry.entryType === 'layout-shift') {if (!(entry as any).hadRecentInput) {
+              trackEvent('web_vitals', 'CLS', (entry as any).value)}
             }
           }
         }
@@ -99,31 +83,26 @@ const initializeErrorTracking = (;
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno,) => {
+        colno: event.colno) => {
   return (
     $3
   )
   }
-        error: event.error?.stack,}
+        error: event.error?.stack}
       })
     })
 // Track unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {
-    trackEvent('error', 'unhandled_promise_rejection', {
+    window.addEventListener('unhandledrejection', (event) => {trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
-        promise: event.promise
-  }
+        promise: event.promise}
       })
     })
 // Track resource loading errors;
-    window.addEventListener('error', (event) => {
-    if (event.target !== window) {
+    window.addEventListener('error', (event) => {if (event.target !== window) {
         trackEvent('error', 'resource_error', {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
-          error: event.type
-  }
-
+          error: event.type}
         })
       }
     }, true);
@@ -132,12 +111,12 @@ const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {
     page_title: document.title,
-      page_location: window.location.href,) => {
+      page_location: window.location.href) => {
   return (
     $3
   )
   }
-      page_path: window.location.pathname,}
+      page_path: window.location.pathname}
     })
 // Track scroll depth;
 
@@ -172,11 +151,9 @@ if (tagName === 'a') {
           link_text: target.textContent?.trim()
   }
         })
-      } else if (tagName === 'button') {
-    trackEvent('engagement', 'button_click', {
+      } else if (tagName === 'button') {trackEvent('engagement', 'button_click', {
           button_text: target.textContent?.trim(),
-          button_class: target.className
-  }
+          button_class: target.className}
         })
       }
     })
@@ -195,24 +172,22 @@ const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', action, {
         event_category: category,
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value) => {
   return (
     $3
   )
   }
-        value: typeof value === 'number' ? value : undefined,}
+        value: typeof value === 'number' ? value : undefined}
       })
     }
   }
 return null;
 }
 // Extend Window interface for gtag;
-declare global {
-    interface Window {
+declare global {interface Window {
 
     dataLayer: any[],
-    gtag: (...args: any[]) => void
-  }
+    gtag: (...args: any[]) => void}
   }
 };
 

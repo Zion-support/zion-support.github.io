@@ -19,11 +19,9 @@ icon: Shield,
       title: 'AI-Powered Monitoring',
       description: 'Intelligent monitoring and automated backup scheduling'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Redundancy',
-      description: 'Worldwide backup storage with multiple redundancy layers'
-    }
+      description: 'Worldwide backup storage with multiple redundancy layers'}
   ];
   const benefits = [
 'Advanced data protection and encryption',
@@ -136,8 +134,7 @@ icon: Shield,
         </div>
       </div>
     </div>
-  ),
-};
+  )};
 
 export default BackupRecoveryPage
   </button>

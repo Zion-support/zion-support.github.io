@@ -38,9 +38,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Customer Churn Prediction', url: '/ai-customer-churn', description: 'Churn prevention' },
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
-    { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
-  ]
-
+    { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }];
   const microSaasServices = [
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time BI & Analytics' },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Platform' },
@@ -49,11 +47,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Project Management', url: '/ai-project-management', description: 'Smart Project Tracking' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO Tools' },
     { name: 'AI Sales CRM', url: '/ai-sales-crm', description: 'Intelligent CRM System' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools' }
+    {name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI Design Tools'}
   ];
 
   const itServices = [
-<<<<<<< HEAD
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
@@ -85,18 +82,15 @@ const Footer: React.FC = memo(() => {
     { name: 'Security Automation', url: '/security-automation', description: 'Automated security' },
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
-    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ]
-=======
+    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }];
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
     { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    {name: 'Database Services', url: '/ai-data-analytics', description: 'Database management'}
   ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
@@ -130,9 +124,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
-  ]
-
+    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }];
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -141,9 +133,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' },
-    { name: 'Status', url: '/status' }
-  ]
-
+    { name: 'Status', url: '/status' }];
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -154,18 +144,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Demo', url: '/demo' },
     { name: 'Compliance', url: '/compliance' },
     { name: 'Sitemap', url: '/sitemap' },
-    { name: 'Accessibility', url: '/accessibility' }
-  ]
-
+    { name: 'Accessibility', url: '/accessibility' }];
   const enterpriseLinks = [
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Edge Computing', url: '/edge-computing' },
     { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
-  ]
-
+    { name: 'Custom Development', url: '/custom-software' }];
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -343,7 +329,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.url} 
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {link.name}
@@ -359,7 +345,7 @@ const Footer: React.FC = memo(() => {
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.url} 
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {link.name}
@@ -375,7 +361,7 @@ const Footer: React.FC = memo(() => {
               {enterpriseLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.url} 
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {link.name}

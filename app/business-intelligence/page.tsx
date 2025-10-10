@@ -19,11 +19,9 @@ icon: Brain,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Analytics',
-      description: 'Worldwide business intelligence deployment and support'
-    }
+      description: 'Worldwide business intelligence deployment and support'}
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -120,8 +118,7 @@ icon: Brain,
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default BusinessIntelligencePage
   </button>

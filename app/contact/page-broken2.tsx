@@ -3,8 +3,7 @@ import React from 'react';
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Phone,
+import {Phone,
   Mail,
 
   MapPin,
@@ -13,8 +12,7 @@ import {
 
   Send,
 
-  CheckCircle
-  }
+  CheckCircle}
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -33,14 +31,11 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 
     const { name, value } = e.target;
-    setFormData(prev => ({
-    ...prev,
-      [name]: value
-  }
+    setFormData(prev => ({...prev,
+      [name]: value}
     }));
   }, []);
-const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
 try {
@@ -56,15 +51,10 @@ try {
         service: '',
         budget: '',
         timeline: '',
-        message: ''
-  }
+        message: ''}
       })
-    } catch (error) {
-    setSubmitStatus('error')
-  }
-    } finally {
-    setIsSubmitting(false)
-  }
+    } catch (error) {setSubmitStatus('error')}
+    } finally {setIsSubmitting(false)}
     }
   }
 const services = [
@@ -101,14 +91,11 @@ const contactInfo = [
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office'
   },
-    {
-    icon: Clock,
+    {icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-  }
-    }
-  ]
+      description: 'Eastern Time'}
+    }];
 return (
     <>
       <Helmet>
@@ -136,20 +123,16 @@ return (
             {/* Contact Form */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              {
-    submitStatus === 'success' && (;
+              {submitStatus === 'success' && (;
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-  }
+                </div>}
               )}
-{
-    submitStatus === 'error' && (;
+{submitStatus === 'error' && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-  }
+                </div>}
               )}
 <form>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
@@ -196,9 +179,7 @@ return (
                     <Globe>
                     <select>
                       <option value="">Select a service</option>
-                      {
-    services.map((service) => (
-  }
+                      {services.map((service) => (}
                         <option>
 
                           {service}
@@ -217,8 +198,7 @@ return (
                     <textarea />
                 </div>
                 <button>
-                  {
-    isSubmitting ? (;
+                  {isSubmitting ? (;
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
@@ -227,8 +207,7 @@ return (
                     <>
                       <Send>
                       <span>Send Message</span>
-                    </>
-  }
+                    </>}
                   )}
                 </button>
               </form>
@@ -264,7 +243,6 @@ return (
                       </p>
                       <p>
                         {info.description}
-
                       </p>
                     </div>
                   </div>
@@ -299,8 +277,7 @@ return (
         </section>
       </div>
 </div>
-  ),
-};
+  )};
 
 export default ContactPage;
 

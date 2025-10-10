@@ -19,7 +19,6 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
   }
-
       {/* Hero Section */}
             <h2>
               Why Choose Our Page?

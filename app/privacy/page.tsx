@@ -27,16 +27,14 @@ const PrivacyPage: React.FC = () => {
         'IP address and location data'
       ]
     },
-    {
-      category: 'Technical Data',
+    {category: 'Technical Data',
       icon: Server,
       items: [
         'Log files and error reports',
         'Performance metrics',
         'Security event data',
         'System configuration information'
-      ]
-    }
+      ]}
   ];
   const purposes = [
     {
@@ -54,11 +52,9 @@ const PrivacyPage: React.FC = () => {
       description: 'To protect against fraud and ensure system security',
       icon: Shield
     },
-    {
-      title: 'Improvement',
+    {title: 'Improvement',
       description: 'To analyze usage patterns and improve our services',
-      icon: Eye
-    }
+      icon: Eye}
   ];
   const rights = [
     {
@@ -90,15 +86,12 @@ const PrivacyPage: React.FC = () => {
       title: 'Objection',
       description: 'Object to certain types of processing',
       icon: Shield
-    }
-  ]
-
+    }];
   const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
-
   return (
     <>
       <Helmet>

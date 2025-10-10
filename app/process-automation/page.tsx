@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Zap,
+import {Zap,
   Settings,
   CheckCircle,
   BarChart,
@@ -25,8 +24,7 @@ import {
 
   Workflow,
 
-  Bot
-  }
+  Bot}
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
     const features = [
@@ -45,13 +43,10 @@ const ProcessAutomationPage: React.FC = () => {
       title: 'Custom Integration',
       description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
   },
-    {
-    icon: BarChart,
+    {icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-  }
-    }
-  ]
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.'}
+    }];
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
@@ -195,8 +190,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default ProcessAutomationPage;
 

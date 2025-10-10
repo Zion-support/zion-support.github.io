@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,7 +1011,6 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
       title: 'AI-Powered Parenting Assistant',
       description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
       icon: '👶',
@@ -1133,8 +1131,7 @@ const AiServicesPage: React.FC = () => {
       category: 'Energy AI',
       technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
     },
-    {
-      title: 'AI-Powered Smart City Management',
+    {title: 'AI-Powered Smart City Management',
       description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
       icon: '🏛️',
       price: 'Starting at $8,000/month',
@@ -1143,9 +1140,7 @@ const AiServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
-    }
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'}
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1175,9 +1170,7 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ]
-
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }];
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );

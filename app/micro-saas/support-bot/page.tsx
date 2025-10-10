@@ -60,8 +60,7 @@ const SmartSupportBotPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>,
-  )
+    </>)
   }
 };
 

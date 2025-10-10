@@ -983,8 +983,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Settings
     },
-    {
-      id: 'cloud-native-security',
+    {id: 'cloud-native-security',
       name: 'Cloud-Native Security',
       description: 'Specialized security services for cloud-native applications and infrastructure',
       price: '$3,100/month',
@@ -1007,8 +1006,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield
-    }
+      icon: Shield}
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1043,9 +1041,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
-
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }];
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );

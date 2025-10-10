@@ -9,8 +9,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
     { icon: Zap, title: 'Process Automation', description: 'Automated supply chain processes and workflow optimization.' },
     { icon: Shield, title: 'Risk Management', description: 'Comprehensive risk assessment and mitigation strategies.' },
     { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
-    { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
-  ]
+    { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }];
   return (
     <React.Fragment>
       <Helmet>

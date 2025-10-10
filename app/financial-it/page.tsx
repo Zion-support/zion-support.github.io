@@ -41,8 +41,7 @@ const FinancialITPage: React.FC = () => {
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
-  }
-    ]
+  }];
 const services = [
     {
     icon: '🏦',
@@ -59,13 +58,10 @@ const services = [
       title: 'Risk Management',
       description: 'Advanced risk assessment and management tools'
   },
-    {
-    icon: '🔒',
+    {icon: '🔒',
       title: 'Security Services',
-      description: 'Cybersecurity and data protection solutions'
-  }
-    }
-  ]
+      description: 'Cybersecurity and data protection solutions'}
+    }];
 const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -143,9 +139,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
-                  {
-    feature.benefits.map((benefit, benefitIndex) => (
-  }
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li>
                       <CheckCircle>
 
@@ -178,9 +172,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    services.map((service, index) => (
-  }
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -244,8 +236,7 @@ return (
         </div>
       </section>
       <Footer />
-  ),
-};
+  )};
 
 export default FinancialITPage;
 

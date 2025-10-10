@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -30,15 +29,13 @@ const AiChatbotBuilderPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
-    ]
+  }];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology']
 return (
     <>
       <Helmet>
@@ -101,15 +98,12 @@ return (
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
+                  {feature.benefits && (;
                     <ul>
-                      {feature.benefits.map((benefit, idx) => (
-  }
+                      {feature.benefits.map((benefit, idx) => (}
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -153,12 +147,10 @@ const AIChatbotBuilder: React.FC = () => {
       description: 'Connect with your existing tools and platforms',
       benefits: ['CRM integration', 'Live chat handoff', 'API access']
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data protection and compliance',
-      benefits: ['GDPR compliant', 'SOC 2 certified', 'End-to-end encryption']
-    }
+      benefits: ['GDPR compliant', 'SOC 2 certified', 'End-to-end encryption']}
   ];
 
   const useCases = [
@@ -180,12 +172,10 @@ const AIChatbotBuilder: React.FC = () => {
       icon: BarChart,
       benefits: ['Product recommendations', 'Price inquiries', 'Order processing']
     },
-    {
-      title: 'Internal Support',
+    {title: 'Internal Support',
       description: 'Help employees with HR and IT questions',
       icon: Settings,
-      benefits: ['HR policy questions', 'IT troubleshooting', 'Employee onboarding']
-    }
+      benefits: ['HR policy questions', 'IT troubleshooting', 'Employee onboarding']}
   ];
 
   const pricingPlans = [
@@ -218,8 +208,7 @@ const AIChatbotBuilder: React.FC = () => {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',
       price: '$299',
       period: '/month',
       description: 'For large organizations',
@@ -231,8 +220,7 @@ const AIChatbotBuilder: React.FC = () => {
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false
-    }
+      popular: false}
   ];
 
   const testimonials = [
@@ -248,12 +236,10 @@ const AIChatbotBuilder: React.FC = () => {
       content: 'The lead generation chatbot has increased our qualified leads by 250%. Setup was incredibly easy.',
       rating: 5
     },
-    {
-      name: 'James Wilson',
+    {name: 'James Wilson',
       role: 'CEO, StartupXYZ',
       content: 'We saved $50,000 annually in support costs. The AI responses are so natural, customers love it.',
-      rating: 5
-    }
+      rating: 5}
   ];
 
   return (
@@ -363,12 +349,10 @@ const AIChatbotBuilder: React.FC = () => {
                       {useCase.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
                           {benefit}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   )}
                 </div>
               ))}
@@ -436,12 +420,10 @@ const AIChatbotBuilder: React.FC = () => {
       </div>
       <Footer>
     </>
-  ),
-};
+  )};
 
 export default AiChatbotBuilderPage;
 
-=======
                   </div>
                 </div>
               </div>
@@ -467,7 +449,6 @@ export default AiChatbotBuilderPage;
                     </div>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -559,4 +540,3 @@ export default AiChatbotBuilderPage;
 };
 
 export default AIChatbotBuilder;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8

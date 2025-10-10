@@ -217,8 +217,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Data',
       popular: false
     },
-    {
-      title: 'Zion AI Contract Analyzer',
+    {title: 'Zion AI Contract Analyzer',
       description: 'AI-powered contract analysis and risk assessment with automated legal document processing.',
       features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking', 'Automated Summaries', 'Legal Database Integration'],
       price: '$149/month',
@@ -226,8 +225,7 @@ const MicroSaasPage: React.FC = () => {
       benefits: ['Faster contract review', 'Risk reduction', 'Compliance assurance', 'Time savings'],
       icon: Zap,
       category: 'Legal',
-      popular: false
-    }
+      popular: false}
   ];
   const features = [
     {
@@ -249,9 +247,7 @@ const MicroSaasPage: React.FC = () => {
       title: 'Secure & Compliant',
       description: 'Enterprise-grade security and compliance built-in from day one.',
       icon: Shield
-    }
-  ]
-
+    }];
   return (
     <>
       <Helmet>
@@ -286,7 +282,6 @@ const MicroSaasPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
                       <tool.icon className="w-8 h-8 text-white" />

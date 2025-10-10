@@ -15,7 +15,6 @@ const FuturisticBackground: React.FC = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -44,7 +43,6 @@ const FuturisticBackground: React.FC = () => {
         color: colors[Math.floor(Math.random() * colors.length)]
       })
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -91,29 +89,20 @@ const FuturisticBackground: React.FC = () => {
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
 
-      for (let x = 0; x < canvas.width; x += 20) {
-        ctx.beginPath();
+      for (let x = 0; x < canvas.width; x += 20) {ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      for (let y = 0; y < canvas.height; y += 20) {
-        ctx.beginPath();
+        ctx.stroke();}
+      for (let y = 0; y < canvas.height; y += 20) {ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
+        ctx.stroke();}
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
     }
-
     animate();
 
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
+    return () => {window.removeEventListener('resize', resizeCanvas);}
   }, []);
 
   return (

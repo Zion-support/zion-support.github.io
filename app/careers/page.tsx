@@ -24,15 +24,13 @@ const CareersPage: React.FC = () => {
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
-    {
-      title: 'Data Scientist',
+    {title: 'Data Scientist',
       department: 'Data Analytics',
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
-    }
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']}
   ];
   const benefits = [
     'Competitive salary and equity',
@@ -63,9 +61,7 @@ const CareersPage: React.FC = () => {
       icon: Award,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do'
-    }
-  ]
-
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

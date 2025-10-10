@@ -2,10 +2,8 @@
 import React from 'react';
 'use client';
 import React, { useState, useCallback } from 'react';
-interface ImageProps {
-    src: string,
-    alt: string
-  }
+interface ImageProps {src: string,
+    alt: string}
 interface ImageProps {}
 
   src: string;
@@ -34,8 +32,7 @@ interface ImageProps {}
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
   src,
-export const Image: React.FC<ImageProps> = ({
-    ,
+export const Image: React.FC<ImageProps> = ({,
   src;
   alt,
   width,
@@ -49,8 +46,7 @@ export const Image: React.FC<ImageProps> = ({
   sizes,
   style,
   onLoad,
-  onError,
-  }
+  onError}
   ...props}
 }) => {}
   const [, setIsLoaded] = useState(false);
@@ -63,13 +59,11 @@ export const Image: React.FC<ImageProps> = ({
     setHasError(true);
     if (onError) onError();}
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
-    ...style
+  const imageStyle: React.CSSProperties = {...style
     ...(fill && {
       position: 'absolute',
       top: 0,
-      left: 0,
-  }
+      left: 0}
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
@@ -110,14 +104,12 @@ export const,
         {...props})
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>),
-    ),
+      </div>)),
         {...props}
       ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
-    ),
-  }
+    )}
   return(<img;
   return (<img />
       src={src}

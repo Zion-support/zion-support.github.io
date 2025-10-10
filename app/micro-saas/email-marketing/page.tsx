@@ -60,8 +60,7 @@ const EmailMarketingSuitePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>,
-  )
+    </>)
   }
 };
 

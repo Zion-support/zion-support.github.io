@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Mail,
+import {Mail,
   Target,
   CheckCircle,
   BarChart,
@@ -24,8 +23,7 @@ import {
 
   Send,
 
-  PieChart
-  }
+  PieChart}
 } from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
     const features = [
@@ -44,13 +42,10 @@ const EmailMarketingAutomationPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
   },
-    {
-    icon: Zap,
+    {icon: Zap,
       title: 'Smart Triggers',
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-  }
-    }
-  ]
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.'}
+    }];
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -194,8 +189,7 @@ return (
         </section>
       </div>
     </>
-  ),
-};
+  )};
 
 export default EmailMarketingAutomationPage;
 

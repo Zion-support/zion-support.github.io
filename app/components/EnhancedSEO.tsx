@@ -146,8 +146,7 @@ return (
         </div>
       </section>
     </div>
-  ),
-};
+  )};
 
 export default EnhancedSEOPage;
 

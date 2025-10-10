@@ -17,18 +17,12 @@ const Navigation: React.FC = () => {
         setIsOpen(false)
   }
     }
-
-    const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50)
-  }
-
+    const handleScroll = () => {setIsScrolled(window.scrollY > 50)}
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
-    window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll)
-  }
+    return () => {window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll)}
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -37,14 +31,11 @@ const Navigation: React.FC = () => {
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
-  const closeAllMenus = () => {
-    setServicesOpen(false);
+  const closeAllMenus = () => {setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-    setIsOpen(false)
-  }
-
+    setIsOpen(false)}
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
@@ -54,7 +45,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
+    {name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology'}
   ];
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
@@ -62,7 +53,7 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
+    {name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications'}
   ];
   const microSaasServices = [
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
@@ -70,7 +61,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' }
+    {name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination'}
   ];
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
@@ -78,9 +69,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
-  ]
-
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
