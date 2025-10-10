@@ -75,7 +75,12 @@ import {
   Navigation as NavIcon,
   Truck,
   ChefHat,
-  Sprout
+  Sprout,
+  Type,
+  Link,
+  Map,
+  PiggyBank,
+  Search
 } from 'lucide-react';
 
 // Type definitions
@@ -614,6 +619,1506 @@ const microSAASServices = [
     popular: true,
     icon: Shield,
     link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Voice Assistant Pro",
+    description: "Advanced voice-controlled AI assistant with natural language processing and multi-language support",
+    price: "$149/mo",
+    features: ["Voice Recognition", "Multi-language Support", "Task Automation", "Smart Scheduling", "Voice Analytics"],
+    category: "Voice AI",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-voice-assistant"
+  },
+  {
+    name: "AI Document Scanner Pro",
+    description: "Intelligent document scanning with OCR, data extraction, and cloud storage integration",
+    price: "$89/mo",
+    features: ["OCR Processing", "Data Extraction", "Cloud Storage", "Batch Processing", "Format Conversion"],
+    category: "Document Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-document-scanner"
+  },
+  {
+    name: "AI Meeting Transcriber Pro",
+    description: "Real-time meeting transcription with AI-powered insights and action item extraction",
+    price: "$129/mo",
+    features: ["Real-time Transcription", "Action Items", "Meeting Summaries", "Speaker Identification", "Export Options"],
+    category: "Productivity",
+    popular: true,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-meeting-transcriber"
+  },
+  {
+    name: "AI Website Builder Pro",
+    description: "No-code website builder with AI-powered design suggestions and automated optimization",
+    price: "$199/mo",
+    features: ["No-Code Builder", "AI Design Suggestions", "SEO Optimization", "Mobile Responsive", "E-commerce Integration"],
+    category: "Web Development",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-website-builder"
+  },
+  {
+    name: "AI Password Manager Pro",
+    description: "Advanced password management with AI-powered security recommendations and breach monitoring",
+    price: "$79/mo",
+    features: ["Password Generation", "Security Monitoring", "Breach Alerts", "Multi-device Sync", "Biometric Login"],
+    category: "Security",
+    popular: true,
+    icon: Lock,
+    link: "https://ziontechgroup.com/ai-password-manager"
+  },
+  {
+    name: "AI Email Signature Manager",
+    description: "Professional email signature management with brand consistency and analytics",
+    price: "$49/mo",
+    features: ["Brand Templates", "Analytics Tracking", "Team Management", "Social Links", "Legal Compliance"],
+    category: "Email Marketing",
+    popular: false,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-signature-manager"
+  },
+  {
+    name: "AI Time Tracker Pro",
+    description: "Intelligent time tracking with productivity insights and automated project billing",
+    price: "$99/mo",
+    features: ["Automatic Tracking", "Productivity Insights", "Project Billing", "Team Analytics", "Integration Hub"],
+    category: "Productivity",
+    popular: true,
+    icon: Clock,
+    link: "https://ziontechgroup.com/ai-time-tracker"
+  },
+  {
+    name: "AI Social Media Scheduler",
+    description: "Advanced social media scheduling with AI-powered optimal posting times and content suggestions",
+    price: "$159/mo",
+    features: ["Smart Scheduling", "Optimal Timing", "Content Suggestions", "Multi-platform", "Analytics Dashboard"],
+    category: "Social Media",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-social-media-scheduler"
+  },
+  {
+    name: "AI Form Builder Pro",
+    description: "Intelligent form builder with conditional logic, payment integration, and analytics",
+    price: "$119/mo",
+    features: ["Conditional Logic", "Payment Integration", "Analytics Dashboard", "Custom Fields", "API Access"],
+    category: "Forms",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-form-builder"
+  },
+  {
+    name: "AI Survey Creator Pro",
+    description: "Advanced survey creation with AI-powered question suggestions and sentiment analysis",
+    price: "$139/mo",
+    features: ["Question Suggestions", "Sentiment Analysis", "Response Analytics", "Custom Themes", "Export Options"],
+    category: "Research",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-survey-creator"
+  },
+  {
+    name: "AI Chat Widget Pro",
+    description: "Intelligent website chat widget with AI-powered responses and lead qualification",
+    price: "$89/mo",
+    features: ["AI Responses", "Lead Qualification", "Multi-language", "Custom Branding", "Analytics"],
+    category: "Customer Support",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-chat-widget"
+  },
+  {
+    name: "AI Backup Manager Pro",
+    description: "Intelligent backup solution with automated scheduling and disaster recovery",
+    price: "$69/mo",
+    features: ["Automated Backups", "Disaster Recovery", "Version Control", "Cloud Storage", "Encryption"],
+    category: "Data Management",
+    popular: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-backup-manager"
+  },
+  {
+    name: "AI SEO Optimizer Pro",
+    description: "Advanced SEO optimization with AI-powered keyword research and content suggestions",
+    price: "$179/mo",
+    features: ["Keyword Research", "Content Suggestions", "Rank Tracking", "Competitor Analysis", "Technical SEO"],
+    category: "SEO",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-seo-optimizer"
+  },
+  {
+    name: "AI Analytics Pro",
+    description: "Comprehensive analytics platform with AI-powered insights and predictive modeling",
+    price: "$299/mo",
+    features: ["Predictive Analytics", "Custom Dashboards", "Real-time Data", "Machine Learning", "API Integration"],
+    category: "Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-analytics-pro"
+  },
+  {
+    name: "AI Translation Pro",
+    description: "Advanced translation service with AI-powered accuracy and cultural context",
+    price: "$199/mo",
+    features: ["100+ Languages", "Cultural Context", "Real-time Translation", "Document Translation", "API Access"],
+    category: "Translation",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-translation-pro"
+  },
+  {
+    name: "AI Video Editor Pro",
+    description: "AI-powered video editing with automated cuts, transitions, and effects",
+    price: "$249/mo",
+    features: ["Auto Editing", "Smart Transitions", "Voice Enhancement", "Background Removal", "Export Options"],
+    category: "Video Editing",
+    popular: true,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-video-editor"
+  },
+  {
+    name: "AI Image Editor Pro",
+    description: "Advanced image editing with AI-powered enhancement and background removal",
+    price: "$149/mo",
+    features: ["AI Enhancement", "Background Removal", "Object Removal", "Color Correction", "Batch Processing"],
+    category: "Image Editing",
+    popular: true,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-image-editor"
+  },
+  {
+    name: "AI Podcast Creator Pro",
+    description: "AI-powered podcast creation with voice synthesis and automated editing",
+    price: "$199/mo",
+    features: ["Voice Synthesis", "Auto Editing", "Music Integration", "Episode Templates", "Distribution"],
+    category: "Podcasting",
+    popular: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-podcast-creator"
+  },
+  {
+    name: "AI Email Validator Pro",
+    description: "Advanced email validation with deliverability scoring and bounce prevention",
+    price: "$79/mo",
+    features: ["Deliverability Scoring", "Bounce Prevention", "Spam Detection", "Bulk Validation", "API Integration"],
+    category: "Email Marketing",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-validator"
+  },
+  {
+    name: "AI QR Code Generator Pro",
+    description: "Advanced QR code generation with analytics, customization, and dynamic content",
+    price: "$59/mo",
+    features: ["Dynamic QR Codes", "Analytics Tracking", "Custom Design", "Bulk Generation", "API Access"],
+    category: "QR Codes",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-qr-generator"
+  },
+  {
+    name: "AI Color Palette Generator",
+    description: "AI-powered color palette generation with accessibility compliance and brand matching",
+    price: "$49/mo",
+    features: ["Brand Matching", "Accessibility Check", "Trend Analysis", "Export Options", "API Integration"],
+    category: "Design",
+    popular: true,
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-color-palette"
+  },
+  {
+    name: "AI Font Pairing Pro",
+    description: "Intelligent font pairing suggestions with readability analysis and brand consistency",
+    price: "$39/mo",
+    features: ["Font Pairing", "Readability Analysis", "Brand Consistency", "License Checking", "Export Options"],
+    category: "Typography",
+    popular: false,
+    icon: Type,
+    link: "https://ziontechgroup.com/ai-font-pairing"
+  },
+  {
+    name: "AI Icon Generator Pro",
+    description: "AI-powered icon generation with consistent style and multiple formats",
+    price: "$79/mo",
+    features: ["Style Consistency", "Multiple Formats", "Custom Styles", "Bulk Generation", "API Access"],
+    category: "Icons",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-icon-generator"
+  },
+  {
+    name: "AI Gradient Generator Pro",
+    description: "Advanced gradient generation with AI-powered color harmony and animation support",
+    price: "$49/mo",
+    features: ["Color Harmony", "Animation Support", "CSS Export", "Bulk Generation", "Trend Analysis"],
+    category: "Design",
+    popular: true,
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-gradient-generator"
+  },
+  {
+    name: "AI Mockup Generator Pro",
+    description: "AI-powered mockup generation for products, websites, and marketing materials",
+    price: "$149/mo",
+    features: ["Product Mockups", "Website Mockups", "Marketing Materials", "3D Rendering", "Export Options"],
+    category: "Mockups",
+    popular: true,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-mockup-generator"
+  },
+  {
+    name: "AI Logo Animator Pro",
+    description: "AI-powered logo animation with smooth transitions and multiple export formats",
+    price: "$199/mo",
+    features: ["Smooth Animations", "Multiple Formats", "Custom Timing", "Brand Guidelines", "Export Options"],
+    category: "Animation",
+    popular: true,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-logo-animator"
+  },
+  {
+    name: "AI Business Card Designer",
+    description: "AI-powered business card design with professional templates and contact management",
+    price: "$89/mo",
+    features: ["Professional Templates", "Contact Management", "Print Ready", "Digital Cards", "QR Integration"],
+    category: "Business Cards",
+    popular: true,
+    icon: CreditCard,
+    link: "https://ziontechgroup.com/ai-business-card-designer"
+  },
+  {
+    name: "AI Presentation Maker Pro",
+    description: "AI-powered presentation creation with smart layouts and content suggestions",
+    price: "$179/mo",
+    features: ["Smart Layouts", "Content Suggestions", "Template Library", "Collaboration", "Export Options"],
+    category: "Presentations",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-presentation-maker"
+  },
+  {
+    name: "AI Resume Builder Pro",
+    description: "AI-powered resume creation with ATS optimization and job matching",
+    price: "$99/mo",
+    features: ["ATS Optimization", "Job Matching", "Template Library", "Skills Analysis", "Cover Letters"],
+    category: "Career",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-resume-builder"
+  },
+  {
+    name: "AI Cover Letter Generator",
+    description: "AI-powered cover letter generation with personalized content and ATS optimization",
+    price: "$69/mo",
+    features: ["Personalized Content", "ATS Optimization", "Multiple Formats", "Industry Templates", "Customization"],
+    category: "Career",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-cover-letter-generator"
+  },
+  {
+    name: "AI Job Description Writer",
+    description: "AI-powered job description creation with bias detection and optimization",
+    price: "$79/mo",
+    features: ["Bias Detection", "Optimization", "Template Library", "Compliance Check", "Customization"],
+    category: "HR",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-job-description-writer"
+  },
+  {
+    name: "AI Interview Scheduler Pro",
+    description: "Intelligent interview scheduling with calendar integration and automated reminders",
+    price: "$129/mo",
+    features: ["Calendar Integration", "Automated Reminders", "Candidate Management", "Video Integration", "Analytics"],
+    category: "HR",
+    popular: true,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-interview-scheduler"
+  },
+  {
+    name: "AI Employee Onboarding Pro",
+    description: "Automated employee onboarding with personalized workflows and compliance tracking",
+    price: "$199/mo",
+    features: ["Personalized Workflows", "Compliance Tracking", "Document Management", "Progress Tracking", "Integration"],
+    category: "HR",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-employee-onboarding"
+  },
+  {
+    name: "AI Performance Review Pro",
+    description: "AI-powered performance review system with 360-degree feedback and analytics",
+    price: "$249/mo",
+    features: ["360 Feedback", "Analytics Dashboard", "Goal Tracking", "Development Plans", "Integration"],
+    category: "HR",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-performance-review"
+  },
+  {
+    name: "AI Learning Management System",
+    description: "AI-powered learning platform with personalized content and progress tracking",
+    price: "$299/mo",
+    features: ["Personalized Content", "Progress Tracking", "Skill Assessment", "Certification", "Analytics"],
+    category: "Education",
+    popular: true,
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-learning-management"
+  },
+  {
+    name: "AI Course Creator Pro",
+    description: "AI-powered course creation with content generation and interactive elements",
+    price: "$199/mo",
+    features: ["Content Generation", "Interactive Elements", "Assessment Tools", "Multimedia Support", "Publishing"],
+    category: "Education",
+    popular: true,
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-course-creator"
+  },
+  {
+    name: "AI Student Progress Tracker",
+    description: "AI-powered student progress tracking with predictive analytics and intervention alerts",
+    price: "$149/mo",
+    features: ["Predictive Analytics", "Intervention Alerts", "Parent Communication", "Grade Prediction", "Analytics"],
+    category: "Education",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-student-progress-tracker"
+  },
+  {
+    name: "AI Tutoring Assistant Pro",
+    description: "AI-powered tutoring with personalized learning paths and real-time assistance",
+    price: "$179/mo",
+    features: ["Personalized Learning", "Real-time Assistance", "Subject Expertise", "Progress Tracking", "Adaptive Learning"],
+    category: "Education",
+    popular: true,
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-tutoring-assistant"
+  },
+  {
+    name: "AI Homework Helper Pro",
+    description: "AI-powered homework assistance with step-by-step solutions and explanations",
+    price: "$99/mo",
+    features: ["Step-by-step Solutions", "Explanations", "Multiple Subjects", "Progress Tracking", "Parent Dashboard"],
+    category: "Education",
+    popular: true,
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-homework-helper"
+  },
+  {
+    name: "AI Language Learning Pro",
+    description: "AI-powered language learning with personalized lessons and pronunciation training",
+    price: "$149/mo",
+    features: ["Personalized Lessons", "Pronunciation Training", "Conversation Practice", "Progress Tracking", "Certification"],
+    category: "Language Learning",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-language-learning"
+  },
+  {
+    name: "AI Translation Assistant Pro",
+    description: "Advanced translation assistant with context understanding and cultural adaptation",
+    price: "$129/mo",
+    features: ["Context Understanding", "Cultural Adaptation", "Real-time Translation", "Document Translation", "API Access"],
+    category: "Translation",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-translation-assistant"
+  },
+  {
+    name: "AI Grammar Checker Pro",
+    description: "Advanced grammar checking with style suggestions and plagiarism detection",
+    price: "$79/mo",
+    features: ["Grammar Checking", "Style Suggestions", "Plagiarism Detection", "Tone Analysis", "Integration"],
+    category: "Writing",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-grammar-checker"
+  },
+  {
+    name: "AI Writing Assistant Pro",
+    description: "Comprehensive writing assistant with content generation and editing capabilities",
+    price: "$199/mo",
+    features: ["Content Generation", "Editing Assistance", "Style Optimization", "Tone Analysis", "Integration"],
+    category: "Writing",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-writing-assistant"
+  },
+  {
+    name: "AI Plagiarism Checker Pro",
+    description: "Advanced plagiarism detection with source identification and similarity analysis",
+    price: "$89/mo",
+    features: ["Source Identification", "Similarity Analysis", "Bulk Checking", "API Integration", "Detailed Reports"],
+    category: "Writing",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-plagiarism-checker"
+  },
+  {
+    name: "AI Citation Generator Pro",
+    description: "AI-powered citation generation with multiple formats and automatic formatting",
+    price: "$59/mo",
+    features: ["Multiple Formats", "Automatic Formatting", "Source Detection", "Bulk Generation", "Integration"],
+    category: "Research",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-citation-generator"
+  },
+  {
+    name: "AI Research Assistant Pro",
+    description: "AI-powered research assistant with source verification and fact-checking",
+    price: "$179/mo",
+    features: ["Source Verification", "Fact Checking", "Research Organization", "Citation Management", "Integration"],
+    category: "Research",
+    popular: true,
+    icon: Search,
+    link: "https://ziontechgroup.com/ai-research-assistant"
+  },
+  {
+    name: "AI Data Visualization Pro",
+    description: "AI-powered data visualization with interactive charts and automated insights",
+    price: "$249/mo",
+    features: ["Interactive Charts", "Automated Insights", "Custom Templates", "Real-time Data", "Export Options"],
+    category: "Data Visualization",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-data-visualization"
+  },
+  {
+    name: "AI Chart Generator Pro",
+    description: "AI-powered chart generation with smart recommendations and customization",
+    price: "$99/mo",
+    features: ["Smart Recommendations", "Customization", "Multiple Chart Types", "Export Options", "API Access"],
+    category: "Charts",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-chart-generator"
+  },
+  {
+    name: "AI Infographic Creator Pro",
+    description: "AI-powered infographic creation with data integration and design automation",
+    price: "$199/mo",
+    features: ["Data Integration", "Design Automation", "Template Library", "Custom Branding", "Export Options"],
+    category: "Infographics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-infographic-creator"
+  },
+  {
+    name: "AI Dashboard Builder Pro",
+    description: "AI-powered dashboard creation with real-time data and customizable widgets",
+    price: "$299/mo",
+    features: ["Real-time Data", "Customizable Widgets", "Drag & Drop", "Multiple Data Sources", "Collaboration"],
+    category: "Dashboards",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-dashboard-builder"
+  },
+  {
+    name: "AI Report Generator Pro",
+    description: "AI-powered report generation with automated insights and professional formatting",
+    price: "$179/mo",
+    features: ["Automated Insights", "Professional Formatting", "Multiple Templates", "Scheduled Reports", "Integration"],
+    category: "Reporting",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-report-generator"
+  },
+  {
+    name: "AI White Paper Creator Pro",
+    description: "AI-powered white paper creation with research integration and professional formatting",
+    price: "$299/mo",
+    features: ["Research Integration", "Professional Formatting", "Template Library", "Citation Management", "Collaboration"],
+    category: "Content Creation",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-white-paper-creator"
+  },
+  {
+    name: "AI Case Study Generator Pro",
+    description: "AI-powered case study creation with data analysis and compelling storytelling",
+    price: "$199/mo",
+    features: ["Data Analysis", "Storytelling", "Template Library", "Visual Elements", "Export Options"],
+    category: "Content Creation",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-case-study-generator"
+  },
+  {
+    name: "AI Press Release Writer Pro",
+    description: "AI-powered press release creation with media targeting and distribution",
+    price: "$149/mo",
+    features: ["Media Targeting", "Distribution", "Template Library", "SEO Optimization", "Analytics"],
+    category: "PR",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-press-release-writer"
+  },
+  {
+    name: "AI Newsletter Creator Pro",
+    description: "AI-powered newsletter creation with content curation and subscriber management",
+    price: "$129/mo",
+    features: ["Content Curation", "Subscriber Management", "Template Library", "Analytics", "Automation"],
+    category: "Email Marketing",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-newsletter-creator"
+  },
+  {
+    name: "AI Blog Post Generator Pro",
+    description: "AI-powered blog post creation with SEO optimization and content planning",
+    price: "$179/mo",
+    features: ["SEO Optimization", "Content Planning", "Topic Research", "Image Integration", "Publishing"],
+    category: "Blogging",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-blog-post-generator"
+  },
+  {
+    name: "AI Social Media Content Pro",
+    description: "AI-powered social media content creation with platform optimization and scheduling",
+    price: "$199/mo",
+    features: ["Platform Optimization", "Scheduling", "Hashtag Research", "Image Creation", "Analytics"],
+    category: "Social Media",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-social-media-content"
+  },
+  {
+    name: "AI Influencer Marketing Pro",
+    description: "AI-powered influencer marketing platform with campaign management and ROI tracking",
+    price: "$299/mo",
+    features: ["Campaign Management", "ROI Tracking", "Influencer Discovery", "Content Collaboration", "Analytics"],
+    category: "Marketing",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-influencer-marketing"
+  },
+  {
+    name: "AI Affiliate Marketing Pro",
+    description: "AI-powered affiliate marketing platform with performance tracking and optimization",
+    price: "$249/mo",
+    features: ["Performance Tracking", "Optimization", "Commission Management", "Reporting", "Integration"],
+    category: "Marketing",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-affiliate-marketing"
+  },
+  {
+    name: "AI PPC Campaign Manager Pro",
+    description: "AI-powered PPC campaign management with bid optimization and performance tracking",
+    price: "$399/mo",
+    features: ["Bid Optimization", "Performance Tracking", "A/B Testing", "Budget Management", "ROI Analysis"],
+    category: "PPC",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-ppc-campaign-manager"
+  },
+  {
+    name: "AI SEO Audit Pro",
+    description: "AI-powered SEO audit with technical analysis and optimization recommendations",
+    price: "$199/mo",
+    features: ["Technical Analysis", "Optimization Recommendations", "Competitor Analysis", "Rank Tracking", "Reporting"],
+    category: "SEO",
+    popular: true,
+    icon: Search,
+    link: "https://ziontechgroup.com/ai-seo-audit"
+  },
+  {
+    name: "AI Keyword Research Pro",
+    description: "AI-powered keyword research with trend analysis and competition insights",
+    price: "$149/mo",
+    features: ["Trend Analysis", "Competition Insights", "Long-tail Keywords", "Search Volume", "Difficulty Analysis"],
+    category: "SEO",
+    popular: true,
+    icon: Search,
+    link: "https://ziontechgroup.com/ai-keyword-research"
+  },
+  {
+    name: "AI Link Building Pro",
+    description: "AI-powered link building with outreach automation and relationship management",
+    price: "$299/mo",
+    features: ["Outreach Automation", "Relationship Management", "Link Quality Analysis", "Campaign Tracking", "Reporting"],
+    category: "SEO",
+    popular: true,
+    icon: Link,
+    link: "https://ziontechgroup.com/ai-link-building"
+  },
+  {
+    name: "AI Local SEO Pro",
+    description: "AI-powered local SEO optimization with Google My Business management and review monitoring",
+    price: "$179/mo",
+    features: ["Google My Business Management", "Review Monitoring", "Local Citations", "NAP Consistency", "Analytics"],
+    category: "Local SEO",
+    popular: true,
+    icon: MapPin,
+    link: "https://ziontechgroup.com/ai-local-seo"
+  },
+  {
+    name: "AI E-commerce Optimizer Pro",
+    description: "AI-powered e-commerce optimization with conversion tracking and A/B testing",
+    price: "$399/mo",
+    features: ["Conversion Tracking", "A/B Testing", "Product Optimization", "Checkout Analysis", "Revenue Optimization"],
+    category: "E-commerce",
+    popular: true,
+    icon: ShoppingCart,
+    link: "https://ziontechgroup.com/ai-ecommerce-optimizer"
+  },
+  {
+    name: "AI Product Description Generator Pro",
+    description: "AI-powered product description generation with SEO optimization and conversion focus",
+    price: "$99/mo",
+    features: ["SEO Optimization", "Conversion Focus", "Bulk Generation", "Template Library", "Integration"],
+    category: "E-commerce",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-product-description-generator"
+  },
+  {
+    name: "AI Inventory Optimizer Pro",
+    description: "AI-powered inventory optimization with demand forecasting and stock management",
+    price: "$299/mo",
+    features: ["Demand Forecasting", "Stock Management", "Reorder Alerts", "Cost Optimization", "Analytics"],
+    category: "Inventory",
+    popular: true,
+    icon: Package,
+    link: "https://ziontechgroup.com/ai-inventory-optimizer"
+  },
+  {
+    name: "AI Price Optimization Pro",
+    description: "AI-powered price optimization with dynamic pricing and competitor analysis",
+    price: "$399/mo",
+    features: ["Dynamic Pricing", "Competitor Analysis", "Demand Elasticity", "Profit Optimization", "A/B Testing"],
+    category: "Pricing",
+    popular: true,
+    icon: DollarSign,
+    link: "https://ziontechgroup.com/ai-price-optimization"
+  },
+  {
+    name: "AI Customer Segmentation Pro",
+    description: "AI-powered customer segmentation with behavioral analysis and targeting",
+    price: "$249/mo",
+    features: ["Behavioral Analysis", "Targeting", "Persona Creation", "Campaign Optimization", "Analytics"],
+    category: "Customer Analytics",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-customer-segmentation"
+  },
+  {
+    name: "AI Churn Prediction Pro",
+    description: "AI-powered churn prediction with intervention strategies and retention campaigns",
+    price: "$299/mo",
+    features: ["Churn Prediction", "Intervention Strategies", "Retention Campaigns", "Risk Scoring", "Analytics"],
+    category: "Customer Retention",
+    popular: true,
+    icon: TrendingDown,
+    link: "https://ziontechgroup.com/ai-churn-prediction"
+  },
+  {
+    name: "AI Customer Lifetime Value Pro",
+    description: "AI-powered CLV calculation with predictive modeling and optimization strategies",
+    price: "$199/mo",
+    features: ["CLV Calculation", "Predictive Modeling", "Optimization Strategies", "Segmentation", "Reporting"],
+    category: "Customer Analytics",
+    popular: true,
+    icon: DollarSign,
+    link: "https://ziontechgroup.com/ai-customer-lifetime-value"
+  },
+  {
+    name: "AI Recommendation Engine Pro",
+    description: "AI-powered recommendation engine with personalization and A/B testing",
+    price: "$399/mo",
+    features: ["Personalization", "A/B Testing", "Real-time Recommendations", "Multi-channel", "Analytics"],
+    category: "Recommendations",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-recommendation-engine"
+  },
+  {
+    name: "AI Personalization Engine Pro",
+    description: "AI-powered personalization engine with real-time adaptation and multi-channel support",
+    price: "$499/mo",
+    features: ["Real-time Adaptation", "Multi-channel Support", "Behavioral Learning", "A/B Testing", "Analytics"],
+    category: "Personalization",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-personalization-engine"
+  },
+  {
+    name: "AI A/B Testing Pro",
+    description: "AI-powered A/B testing platform with statistical significance and automated optimization",
+    price: "$299/mo",
+    features: ["Statistical Significance", "Automated Optimization", "Multi-variate Testing", "Real-time Results", "Integration"],
+    category: "Testing",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-ab-testing"
+  },
+  {
+    name: "AI Conversion Rate Optimizer Pro",
+    description: "AI-powered conversion rate optimization with heatmap analysis and user behavior tracking",
+    price: "$399/mo",
+    features: ["Heatmap Analysis", "User Behavior Tracking", "Automated Testing", "Optimization Suggestions", "Analytics"],
+    category: "CRO",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-conversion-rate-optimizer"
+  },
+  {
+    name: "AI Landing Page Builder Pro",
+    description: "AI-powered landing page builder with conversion optimization and A/B testing",
+    price: "$199/mo",
+    features: ["Conversion Optimization", "A/B Testing", "Template Library", "Drag & Drop", "Analytics"],
+    category: "Landing Pages",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-landing-page-builder"
+  },
+  {
+    name: "AI Sales Funnel Optimizer Pro",
+    description: "AI-powered sales funnel optimization with conversion tracking and automated improvements",
+    price: "$349/mo",
+    features: ["Conversion Tracking", "Automated Improvements", "Funnel Analysis", "Optimization Suggestions", "Analytics"],
+    category: "Sales Funnels",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-sales-funnel-optimizer"
+  },
+  {
+    name: "AI Lead Scoring Pro",
+    description: "AI-powered lead scoring with behavioral analysis and automated qualification",
+    price: "$249/mo",
+    features: ["Behavioral Analysis", "Automated Qualification", "Scoring Models", "Integration", "Analytics"],
+    category: "Lead Management",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-lead-scoring"
+  },
+  {
+    name: "AI Lead Nurturing Pro",
+    description: "AI-powered lead nurturing with automated campaigns and personalized content",
+    price: "$299/mo",
+    features: ["Automated Campaigns", "Personalized Content", "Behavioral Triggers", "Multi-channel", "Analytics"],
+    category: "Lead Management",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-lead-nurturing"
+  },
+  {
+    name: "AI Sales Forecasting Pro",
+    description: "AI-powered sales forecasting with predictive analytics and trend analysis",
+    price: "$399/mo",
+    features: ["Predictive Analytics", "Trend Analysis", "Revenue Forecasting", "Pipeline Analysis", "Reporting"],
+    category: "Sales Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-sales-forecasting"
+  },
+  {
+    name: "AI Sales Coaching Pro",
+    description: "AI-powered sales coaching with performance analysis and improvement recommendations",
+    price: "$199/mo",
+    features: ["Performance Analysis", "Improvement Recommendations", "Skill Assessment", "Training Modules", "Progress Tracking"],
+    category: "Sales Training",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-sales-coaching"
+  },
+  {
+    name: "AI Contract Management Pro",
+    description: "AI-powered contract management with automated review and compliance tracking",
+    price: "$299/mo",
+    features: ["Automated Review", "Compliance Tracking", "Renewal Alerts", "Risk Assessment", "Integration"],
+    category: "Contract Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-contract-management"
+  },
+  {
+    name: "AI Proposal Generator Pro",
+    description: "AI-powered proposal generation with template library and customization options",
+    price: "$179/mo",
+    features: ["Template Library", "Customization Options", "Pricing Calculators", "Client Management", "Analytics"],
+    category: "Proposals",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-proposal-generator"
+  },
+  {
+    name: "AI Quote Generator Pro",
+    description: "AI-powered quote generation with pricing optimization and approval workflows",
+    price: "$149/mo",
+    features: ["Pricing Optimization", "Approval Workflows", "Template Library", "Client Portal", "Integration"],
+    category: "Quotes",
+    popular: true,
+    icon: DollarSign,
+    link: "https://ziontechgroup.com/ai-quote-generator"
+  },
+  {
+    name: "AI Invoice Generator Pro",
+    description: "AI-powered invoice generation with automated billing and payment tracking",
+    price: "$99/mo",
+    features: ["Automated Billing", "Payment Tracking", "Recurring Invoices", "Client Portal", "Integration"],
+    category: "Invoicing",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-invoice-generator"
+  },
+  {
+    name: "AI Payment Processor Pro",
+    description: "AI-powered payment processing with fraud detection and optimization",
+    price: "$199/mo",
+    features: ["Fraud Detection", "Optimization", "Multiple Payment Methods", "Recurring Billing", "Analytics"],
+    category: "Payments",
+    popular: true,
+    icon: CreditCard,
+    link: "https://ziontechgroup.com/ai-payment-processor"
+  },
+  {
+    name: "AI Accounting Assistant Pro",
+    description: "AI-powered accounting assistant with automated bookkeeping and financial reporting",
+    price: "$299/mo",
+    features: ["Automated Bookkeeping", "Financial Reporting", "Tax Preparation", "Expense Tracking", "Integration"],
+    category: "Accounting",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-accounting-assistant"
+  },
+  {
+    name: "AI Tax Optimizer Pro",
+    description: "AI-powered tax optimization with deduction identification and compliance monitoring",
+    price: "$199/mo",
+    features: ["Deduction Identification", "Compliance Monitoring", "Tax Planning", "Document Management", "Integration"],
+    category: "Tax",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-tax-optimizer"
+  },
+  {
+    name: "AI Budget Planner Pro",
+    description: "AI-powered budget planning with expense tracking and financial goal management",
+    price: "$149/mo",
+    features: ["Expense Tracking", "Financial Goal Management", "Budget Alerts", "Investment Tracking", "Reporting"],
+    category: "Budgeting",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-budget-planner"
+  },
+  {
+    name: "AI Investment Advisor Pro",
+    description: "AI-powered investment advice with portfolio optimization and risk assessment",
+    price: "$399/mo",
+    features: ["Portfolio Optimization", "Risk Assessment", "Market Analysis", "Rebalancing", "Reporting"],
+    category: "Investments",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-investment-advisor"
+  },
+  {
+    name: "AI Retirement Planner Pro",
+    description: "AI-powered retirement planning with goal setting and optimization strategies",
+    price: "$199/mo",
+    features: ["Goal Setting", "Optimization Strategies", "Scenario Planning", "Social Security Analysis", "Reporting"],
+    category: "Retirement",
+    popular: true,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-retirement-planner"
+  },
+  {
+    name: "AI Insurance Optimizer Pro",
+    description: "AI-powered insurance optimization with coverage analysis and cost comparison",
+    price: "$149/mo",
+    features: ["Coverage Analysis", "Cost Comparison", "Risk Assessment", "Policy Management", "Claims Tracking"],
+    category: "Insurance",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-insurance-optimizer"
+  },
+  {
+    name: "AI Estate Planner Pro",
+    description: "AI-powered estate planning with will generation and asset management",
+    price: "$299/mo",
+    features: ["Will Generation", "Asset Management", "Beneficiary Planning", "Tax Optimization", "Document Management"],
+    category: "Estate Planning",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-estate-planner"
+  },
+  {
+    name: "AI Loan Optimizer Pro",
+    description: "AI-powered loan optimization with rate comparison and refinancing analysis",
+    price: "$179/mo",
+    features: ["Rate Comparison", "Refinancing Analysis", "Payment Optimization", "Credit Monitoring", "Application Assistance"],
+    category: "Loans",
+    popular: true,
+    icon: DollarSign,
+    link: "https://ziontechgroup.com/ai-loan-optimizer"
+  },
+  {
+    name: "AI Credit Score Monitor Pro",
+    description: "AI-powered credit score monitoring with improvement recommendations and alerts",
+    price: "$99/mo",
+    features: ["Score Monitoring", "Improvement Recommendations", "Alerts", "Credit Report Analysis", "Identity Protection"],
+    category: "Credit",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-credit-score-monitor"
+  },
+  {
+    name: "AI Debt Consolidation Pro",
+    description: "AI-powered debt consolidation with payment optimization and strategy planning",
+    price: "$199/mo",
+    features: ["Payment Optimization", "Strategy Planning", "Debt Analysis", "Consolidation Options", "Progress Tracking"],
+    category: "Debt Management",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-debt-consolidation"
+  },
+  {
+    name: "AI Savings Optimizer Pro",
+    description: "AI-powered savings optimization with goal tracking and investment recommendations",
+    price: "$149/mo",
+    features: ["Goal Tracking", "Investment Recommendations", "Savings Analysis", "Automated Transfers", "Reporting"],
+    category: "Savings",
+    popular: true,
+    icon: PiggyBank,
+    link: "https://ziontechgroup.com/ai-savings-optimizer"
+  },
+  {
+    name: "AI Expense Categorizer Pro",
+    description: "AI-powered expense categorization with receipt scanning and budget tracking",
+    price: "$79/mo",
+    features: ["Receipt Scanning", "Budget Tracking", "Expense Analysis", "Tax Preparation", "Integration"],
+    category: "Expense Management",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-expense-categorizer"
+  },
+  {
+    name: "AI Receipt Manager Pro",
+    description: "AI-powered receipt management with OCR scanning and expense tracking",
+    price: "$89/mo",
+    features: ["OCR Scanning", "Expense Tracking", "Tax Preparation", "Cloud Storage", "Integration"],
+    category: "Receipt Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-receipt-manager"
+  },
+  {
+    name: "AI Mileage Tracker Pro",
+    description: "AI-powered mileage tracking with automatic detection and tax optimization",
+    price: "$69/mo",
+    features: ["Automatic Detection", "Tax Optimization", "Trip Classification", "Reporting", "Integration"],
+    category: "Mileage Tracking",
+    popular: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-mileage-tracker"
+  },
+  {
+    name: "AI Time Clock Pro",
+    description: "AI-powered time tracking with facial recognition and automated payroll",
+    price: "$129/mo",
+    features: ["Facial Recognition", "Automated Payroll", "Geofencing", "Overtime Calculation", "Reporting"],
+    category: "Time Tracking",
+    popular: true,
+    icon: Clock,
+    link: "https://ziontechgroup.com/ai-time-clock"
+  },
+  {
+    name: "AI Shift Scheduler Pro",
+    description: "AI-powered shift scheduling with optimization and conflict resolution",
+    price: "$199/mo",
+    features: ["Optimization", "Conflict Resolution", "Employee Preferences", "Labor Law Compliance", "Analytics"],
+    category: "Scheduling",
+    popular: true,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-shift-scheduler"
+  },
+  {
+    name: "AI Attendance Tracker Pro",
+    description: "AI-powered attendance tracking with facial recognition and automated reporting",
+    price: "$149/mo",
+    features: ["Facial Recognition", "Automated Reporting", "Absence Management", "Integration", "Analytics"],
+    category: "Attendance",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-attendance-tracker"
+  },
+  {
+    name: "AI Performance Tracker Pro",
+    description: "AI-powered performance tracking with goal management and feedback automation",
+    price: "$249/mo",
+    features: ["Goal Management", "Feedback Automation", "Performance Analytics", "Development Planning", "Integration"],
+    category: "Performance Management",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-performance-tracker"
+  },
+  {
+    name: "AI Goal Setting Pro",
+    description: "AI-powered goal setting with SMART goal creation and progress tracking",
+    price: "$99/mo",
+    features: ["SMART Goal Creation", "Progress Tracking", "Milestone Management", "Team Collaboration", "Analytics"],
+    category: "Goal Management",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-goal-setting"
+  },
+  {
+    name: "AI Task Manager Pro",
+    description: "AI-powered task management with prioritization and automated scheduling",
+    price: "$149/mo",
+    features: ["Prioritization", "Automated Scheduling", "Dependency Management", "Team Collaboration", "Analytics"],
+    category: "Task Management",
+    popular: true,
+    icon: CheckCircle,
+    link: "https://ziontechgroup.com/ai-task-manager"
+  },
+  {
+    name: "AI Project Tracker Pro",
+    description: "AI-powered project tracking with risk assessment and resource optimization",
+    price: "$299/mo",
+    features: ["Risk Assessment", "Resource Optimization", "Timeline Management", "Budget Tracking", "Reporting"],
+    category: "Project Management",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-project-tracker"
+  },
+  {
+    name: "AI Resource Planner Pro",
+    description: "AI-powered resource planning with capacity optimization and allocation",
+    price: "$249/mo",
+    features: ["Capacity Optimization", "Allocation", "Skill Matching", "Availability Tracking", "Analytics"],
+    category: "Resource Management",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-resource-planner"
+  },
+  {
+    name: "AI Risk Manager Pro",
+    description: "AI-powered risk management with assessment and mitigation strategies",
+    price: "$399/mo",
+    features: ["Risk Assessment", "Mitigation Strategies", "Monitoring", "Reporting", "Compliance"],
+    category: "Risk Management",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-risk-manager"
+  },
+  {
+    name: "AI Compliance Monitor Pro",
+    description: "AI-powered compliance monitoring with automated reporting and alerts",
+    price: "$299/mo",
+    features: ["Automated Reporting", "Alerts", "Policy Management", "Audit Support", "Integration"],
+    category: "Compliance",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-compliance-monitor"
+  },
+  {
+    name: "AI Audit Assistant Pro",
+    description: "AI-powered audit assistance with document analysis and compliance checking",
+    price: "$349/mo",
+    features: ["Document Analysis", "Compliance Checking", "Evidence Collection", "Report Generation", "Integration"],
+    category: "Auditing",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-audit-assistant"
+  },
+  {
+    name: "AI Policy Manager Pro",
+    description: "AI-powered policy management with version control and approval workflows",
+    price: "$199/mo",
+    features: ["Version Control", "Approval Workflows", "Distribution Management", "Compliance Tracking", "Analytics"],
+    category: "Policy Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-policy-manager"
+  },
+  {
+    name: "AI Training Manager Pro",
+    description: "AI-powered training management with personalized learning paths and progress tracking",
+    price: "$249/mo",
+    features: ["Personalized Learning", "Progress Tracking", "Skill Assessment", "Certification Management", "Analytics"],
+    category: "Training",
+    popular: true,
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-training-manager"
+  },
+  {
+    name: "AI Knowledge Base Pro",
+    description: "AI-powered knowledge base with intelligent search and content management",
+    price: "$179/mo",
+    features: ["Intelligent Search", "Content Management", "Version Control", "Collaboration", "Analytics"],
+    category: "Knowledge Management",
+    popular: true,
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-knowledge-base"
+  },
+  {
+    name: "AI Documentation Generator Pro",
+    description: "AI-powered documentation generation with automated updates and formatting",
+    price: "$199/mo",
+    features: ["Automated Updates", "Formatting", "Template Library", "Version Control", "Collaboration"],
+    category: "Documentation",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-documentation-generator"
+  },
+  {
+    name: "AI API Documentation Pro",
+    description: "AI-powered API documentation with interactive examples and testing",
+    price: "$149/mo",
+    features: ["Interactive Examples", "Testing", "Code Generation", "Version Management", "Integration"],
+    category: "API Documentation",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-api-documentation"
+  },
+  {
+    name: "AI Code Documentation Pro",
+    description: "AI-powered code documentation with automated comments and examples",
+    price: "$129/mo",
+    features: ["Automated Comments", "Examples", "Code Analysis", "Integration", "Version Control"],
+    category: "Code Documentation",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-code-documentation"
+  },
+  {
+    name: "AI Technical Writer Pro",
+    description: "AI-powered technical writing with content generation and editing assistance",
+    price: "$179/mo",
+    features: ["Content Generation", "Editing Assistance", "Template Library", "Style Guide", "Collaboration"],
+    category: "Technical Writing",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-technical-writer"
+  },
+  {
+    name: "AI User Manual Generator Pro",
+    description: "AI-powered user manual generation with step-by-step instructions and screenshots",
+    price: "$199/mo",
+    features: ["Step-by-step Instructions", "Screenshots", "Interactive Elements", "Multi-format Export", "Updates"],
+    category: "User Manuals",
+    popular: true,
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-user-manual-generator"
+  },
+  {
+    name: "AI Help Desk Pro",
+    description: "AI-powered help desk with automated ticket routing and resolution",
+    price: "$299/mo",
+    features: ["Automated Routing", "Resolution", "Knowledge Base Integration", "Escalation Management", "Analytics"],
+    category: "Help Desk",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-help-desk"
+  },
+  {
+    name: "AI Ticket Manager Pro",
+    description: "AI-powered ticket management with prioritization and automated responses",
+    price: "$199/mo",
+    features: ["Prioritization", "Automated Responses", "SLA Management", "Escalation", "Analytics"],
+    category: "Ticket Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-ticket-manager"
+  },
+  {
+    name: "AI Customer Feedback Pro",
+    description: "AI-powered customer feedback analysis with sentiment analysis and action items",
+    price: "$179/mo",
+    features: ["Sentiment Analysis", "Action Items", "Trend Analysis", "Response Generation", "Integration"],
+    category: "Customer Feedback",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-customer-feedback"
+  },
+  {
+    name: "AI Survey Analyzer Pro",
+    description: "AI-powered survey analysis with statistical insights and visualization",
+    price: "$149/mo",
+    features: ["Statistical Insights", "Visualization", "Trend Analysis", "Report Generation", "Integration"],
+    category: "Survey Analysis",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-survey-analyzer"
+  },
+  {
+    name: "AI NPS Analyzer Pro",
+    description: "AI-powered NPS analysis with driver identification and improvement recommendations",
+    price: "$129/mo",
+    features: ["Driver Identification", "Improvement Recommendations", "Trend Analysis", "Segmentation", "Reporting"],
+    category: "NPS Analysis",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-nps-analyzer"
+  },
+  {
+    name: "AI Customer Journey Pro",
+    description: "AI-powered customer journey mapping with touchpoint analysis and optimization",
+    price: "$299/mo",
+    features: ["Touchpoint Analysis", "Optimization", "Persona Mapping", "Journey Visualization", "Analytics"],
+    category: "Customer Journey",
+    popular: true,
+    icon: Map,
+    link: "https://ziontechgroup.com/ai-customer-journey"
+  },
+  {
+    name: "AI Touchpoint Optimizer Pro",
+    description: "AI-powered touchpoint optimization with conversion tracking and improvement suggestions",
+    price: "$249/mo",
+    features: ["Conversion Tracking", "Improvement Suggestions", "A/B Testing", "Personalization", "Analytics"],
+    category: "Touchpoint Optimization",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-touchpoint-optimizer"
+  },
+  {
+    name: "AI Customer Health Score Pro",
+    description: "AI-powered customer health scoring with risk prediction and intervention strategies",
+    price: "$199/mo",
+    features: ["Risk Prediction", "Intervention Strategies", "Health Monitoring", "Alert System", "Analytics"],
+    category: "Customer Health",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-customer-health-score"
+  },
+  {
+    name: "AI Customer Success Pro",
+    description: "AI-powered customer success management with automated workflows and insights",
+    price: "$349/mo",
+    features: ["Automated Workflows", "Insights", "Success Metrics", "Intervention Triggers", "Analytics"],
+    category: "Customer Success",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-customer-success"
+  },
+  {
+    name: "AI Account Manager Pro",
+    description: "AI-powered account management with relationship tracking and opportunity identification",
+    price: "$299/mo",
+    features: ["Relationship Tracking", "Opportunity Identification", "Communication Management", "Task Automation", "Analytics"],
+    category: "Account Management",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-account-manager"
+  },
+  {
+    name: "AI Relationship Manager Pro",
+    description: "AI-powered relationship management with communication optimization and sentiment tracking",
+    price: "$249/mo",
+    features: ["Communication Optimization", "Sentiment Tracking", "Meeting Scheduling", "Follow-up Automation", "Analytics"],
+    category: "Relationship Management",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-relationship-manager"
+  },
+  {
+    name: "AI Communication Optimizer Pro",
+    description: "AI-powered communication optimization with tone analysis and response suggestions",
+    price: "$179/mo",
+    features: ["Tone Analysis", "Response Suggestions", "Language Optimization", "Cultural Adaptation", "Analytics"],
+    category: "Communication",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-communication-optimizer"
+  },
+  {
+    name: "AI Email Optimizer Pro",
+    description: "AI-powered email optimization with subject line testing and content improvement",
+    price: "$149/mo",
+    features: ["Subject Line Testing", "Content Improvement", "Send Time Optimization", "A/B Testing", "Analytics"],
+    category: "Email Optimization",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-optimizer"
+  },
+  {
+    name: "AI Subject Line Generator Pro",
+    description: "AI-powered subject line generation with A/B testing and performance optimization",
+    price: "$99/mo",
+    features: ["A/B Testing", "Performance Optimization", "Template Library", "Personalization", "Analytics"],
+    category: "Email Marketing",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-subject-line-generator"
+  },
+  {
+    name: "AI Email Template Pro",
+    description: "AI-powered email template creation with responsive design and personalization",
+    price: "$129/mo",
+    features: ["Responsive Design", "Personalization", "Template Library", "A/B Testing", "Analytics"],
+    category: "Email Templates",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-template"
+  },
+  {
+    name: "AI Email Sequence Pro",
+    description: "AI-powered email sequence creation with automation and personalization",
+    price: "$199/mo",
+    features: ["Automation", "Personalization", "Behavioral Triggers", "A/B Testing", "Analytics"],
+    category: "Email Sequences",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-sequence"
+  },
+  {
+    name: "AI Email Analytics Pro",
+    description: "AI-powered email analytics with performance insights and optimization recommendations",
+    price: "$179/mo",
+    features: ["Performance Insights", "Optimization Recommendations", "Predictive Analytics", "Segmentation", "Reporting"],
+    category: "Email Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-email-analytics"
+  },
+  {
+    name: "AI Email Deliverability Pro",
+    description: "AI-powered email deliverability optimization with reputation monitoring and improvement",
+    price: "$249/mo",
+    features: ["Reputation Monitoring", "Improvement", "Blacklist Monitoring", "Authentication", "Analytics"],
+    category: "Email Deliverability",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-deliverability"
+  },
+  {
+    name: "AI Email List Manager Pro",
+    description: "AI-powered email list management with segmentation and hygiene optimization",
+    price: "$199/mo",
+    features: ["Segmentation", "Hygiene Optimization", "Duplicate Detection", "Suppression Management", "Analytics"],
+    category: "List Management",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-email-list-manager"
+  },
+  {
+    name: "AI Email Automation Pro",
+    description: "AI-powered email automation with behavioral triggers and personalization",
+    price: "$299/mo",
+    features: ["Behavioral Triggers", "Personalization", "Workflow Automation", "A/B Testing", "Analytics"],
+    category: "Email Automation",
+    popular: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-email-automation"
+  },
+  {
+    name: "AI Email Personalization Pro",
+    description: "AI-powered email personalization with dynamic content and behavioral targeting",
+    price: "$249/mo",
+    features: ["Dynamic Content", "Behavioral Targeting", "Product Recommendations", "Location-based", "Analytics"],
+    category: "Email Personalization",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-email-personalization"
+  },
+  {
+    name: "AI Email Testing Pro",
+    description: "AI-powered email testing with automated testing and optimization",
+    price: "$149/mo",
+    features: ["Automated Testing", "Optimization", "Cross-client Testing", "Performance Testing", "Analytics"],
+    category: "Email Testing",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-testing"
+  },
+  {
+    name: "AI Email Compliance Pro",
+    description: "AI-powered email compliance with GDPR, CAN-SPAM, and other regulations",
+    price: "$199/mo",
+    features: ["GDPR Compliance", "CAN-SPAM Compliance", "Consent Management", "Data Protection", "Audit Trail"],
+    category: "Email Compliance",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-email-compliance"
+  },
+  {
+    name: "AI Email Security Pro",
+    description: "AI-powered email security with threat detection and protection",
+    price: "$299/mo",
+    features: ["Threat Detection", "Protection", "Phishing Detection", "Malware Scanning", "Analytics"],
+    category: "Email Security",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-email-security"
+  },
+  {
+    name: "AI Email Backup Pro",
+    description: "AI-powered email backup with automated archiving and recovery",
+    price: "$99/mo",
+    features: ["Automated Archiving", "Recovery", "Version Control", "Search", "Integration"],
+    category: "Email Backup",
+    popular: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-email-backup"
+  },
+  {
+    name: "AI Email Migration Pro",
+    description: "AI-powered email migration with automated transfer and validation",
+    price: "$199/mo",
+    features: ["Automated Transfer", "Validation", "Data Integrity", "Rollback Support", "Analytics"],
+    category: "Email Migration",
+    popular: true,
+    icon: ArrowRight,
+    link: "https://ziontechgroup.com/ai-email-migration"
+  },
+  {
+    name: "AI Email Integration Pro",
+    description: "AI-powered email integration with CRM, marketing tools, and other platforms",
+    price: "$249/mo",
+    features: ["CRM Integration", "Marketing Tools", "API Access", "Custom Connectors", "Analytics"],
+    category: "Email Integration",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-email-integration"
+  },
+  {
+    name: "AI Email Monitoring Pro",
+    description: "AI-powered email monitoring with performance tracking and alerting",
+    price: "$179/mo",
+    features: ["Performance Tracking", "Alerting", "Uptime Monitoring", "Error Detection", "Analytics"],
+    category: "Email Monitoring",
+    popular: true,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-email-monitoring"
+  },
+  {
+    name: "AI Email Reporting Pro",
+    description: "AI-powered email reporting with automated insights and visualization",
+    price: "$149/mo",
+    features: ["Automated Insights", "Visualization", "Custom Reports", "Scheduled Reports", "Export Options"],
+    category: "Email Reporting",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-email-reporting"
+  },
+  {
+    name: "AI Email Intelligence Pro",
+    description: "AI-powered email intelligence with predictive analytics and optimization",
+    price: "$399/mo",
+    features: ["Predictive Analytics", "Optimization", "Behavioral Analysis", "Recommendations", "Insights"],
+    category: "Email Intelligence",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-email-intelligence"
+  },
+  {
+    name: "AI Email Optimization Pro",
+    description: "AI-powered email optimization with continuous improvement and testing",
+    price: "$299/mo",
+    features: ["Continuous Improvement", "Testing", "Performance Optimization", "A/B Testing", "Analytics"],
+    category: "Email Optimization",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-email-optimization"
   }
 ];
 

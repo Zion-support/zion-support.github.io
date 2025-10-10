@@ -1170,10 +1170,445 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
-}
+    },
+    {
+      id: 36,
+      name: 'AI Quantum Machine Learning Pro',
+      description: 'Revolutionary quantum machine learning platform with quantum advantage for complex optimization problems',
+      icon: Brain,
+      features: [
+        'Quantum Neural Networks',
+        'Quantum Optimization',
+        'Quantum Feature Maps',
+        'Quantum Kernel Methods',
+        'Quantum Variational Circuits',
+        'Quantum Error Correction',
+        'Hybrid Classical-Quantum',
+        'Quantum Advantage'
+      ],
+      category: 'Quantum AI',
+      popular: true,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '1000x faster optimization',
+        'Quantum advantage in ML',
+        'Exponential speedup',
+        'Quantum supremacy'
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-machine-learning'
+    },
+    {
+      id: 37,
+      name: 'AI Space Mission Control Pro',
+      description: 'Advanced AI system for space mission planning, satellite management, and space exploration',
+      icon: Rocket,
+      features: [
+        'Mission Planning',
+        'Satellite Management',
+        'Orbital Mechanics',
+        'Space Weather Prediction',
+        'Autonomous Navigation',
+        'Resource Optimization',
+        'Risk Assessment',
+        'Real-time Monitoring'
+      ],
+      category: 'Space AI',
+      popular: true,
+      rating: 4.8,
+      users: '25+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $8,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Autonomous operations',
+        'Space debris mitigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-space-mission-control'
+    },
+    {
+      id: 38,
+      name: 'AI Climate Intelligence Pro',
+      description: 'Advanced climate monitoring and prediction system with environmental impact analysis',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Environmental Monitoring',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Disaster Prediction',
+        'Ecosystem Analysis',
+        'Policy Recommendations'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '95% weather accuracy',
+        'Real-time monitoring',
+        'Climate risk assessment',
+        'Sustainability optimization'
+      ],
+      link: 'https://ziontechgroup.com/ai-climate-intelligence'
+    },
+    {
+      id: 39,
+      name: 'AI Pharmaceutical Research Pro',
+      description: 'Revolutionary AI platform for drug discovery, molecular analysis, and pharmaceutical research',
+      icon: Stethoscope,
+      features: [
+        'Drug Discovery',
+        'Molecular Analysis',
+        'Clinical Trial Optimization',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Personalized Medicine',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '100+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $6,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+      ],
+      link: 'https://ziontechgroup.com/ai-pharmaceutical-research'
+    },
+    {
+      id: 40,
+      name: 'AI Financial Intelligence Pro',
+      description: 'Advanced financial AI with real-time market analysis, risk assessment, and investment optimization',
+      icon: BarChart,
+      features: [
+        'Market Analysis',
+        'Risk Assessment',
+        'Investment Optimization',
+        'Fraud Detection',
+        'Algorithmic Trading',
+        'Portfolio Management',
+        'Regulatory Compliance',
+        'Real-time Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '500+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '95% accuracy in predictions',
+        'Real-time risk monitoring',
+        'Automated compliance',
+        'Investment optimization'
+      ],
+      link: 'https://ziontechgroup.com/ai-financial-intelligence'
+    },
+    {
+      id: 41,
+      name: 'AI Autonomous Vehicles Pro',
+      description: 'Complete autonomous vehicle AI system with real-time decision making and safety monitoring',
+      icon: Car,
+      features: [
+        'Autonomous Navigation',
+        'Real-time Decision Making',
+        'Safety Monitoring',
+        'Traffic Prediction',
+        'Route Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Management'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $7,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-autonomous-vehicles'
+    },
+    {
+      id: 42,
+      name: 'AI Blockchain Intelligence Pro',
+      description: 'Advanced blockchain AI with smart contract optimization, DeFi analysis, and crypto intelligence',
+      icon: Shield,
+      features: [
+        'Smart Contract Analysis',
+        'DeFi Optimization',
+        'Crypto Analytics',
+        'Blockchain Security',
+        'Token Economics',
+        'Yield Farming AI',
+        'Risk Assessment',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        'Automated DeFi strategies',
+        'Smart contract optimization',
+        'Crypto market analysis',
+        'Blockchain security enhancement'
+      ],
+      link: 'https://ziontechgroup.com/ai-blockchain-intelligence'
+    },
+    {
+      id: 43,
+      name: 'AI Supply Chain Intelligence Pro',
+      description: 'Intelligent supply chain management with predictive analytics and optimization algorithms',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Route Planning',
+        'Risk Management',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '20% cost reduction',
+        '30% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+      ],
+      link: 'https://ziontechgroup.com/ai-supply-chain-intelligence'
+    },
+    {
+      id: 44,
+      name: 'AI Legal Intelligence Pro',
+      description: 'Advanced legal AI with case analysis, contract review, and legal research automation',
+      icon: Scale,
+      features: [
+        'Case Analysis',
+        'Contract Review',
+        'Legal Research',
+        'Document Analysis',
+        'Compliance Checking',
+        'Litigation Support',
+        'Legal Writing',
+        'Precedent Finding'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.7,
+      users: '250+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '80% faster research',
+        '95% accuracy in case finding',
+        'Automated document analysis',
+        'Compliance monitoring'
+      ],
+      link: 'https://ziontechgroup.com/ai-legal-intelligence'
+    },
+    {
+      id: 45,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Smart farming AI with crop monitoring, yield prediction, and agricultural optimization',
+      icon: Sprout,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest Detection',
+        'Weather Forecasting',
+        'Irrigation Optimization',
+        'Harvest Planning',
+        'Supply Chain Management'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '25% increase in crop yield',
+        '40% reduction in water usage',
+        'Early pest detection',
+        'Optimized harvest timing'
+      ],
+      link: 'https://ziontechgroup.com/ai-agricultural-intelligence'
+    },
+    {
+      id: 46,
+      name: 'AI Energy Grid Intelligence Pro',
+      description: 'Smart energy grid management with AI-powered optimization and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Grid Optimization',
+        'Demand Forecasting',
+        'Renewable Integration',
+        'Load Balancing',
+        'Energy Trading',
+        'Carbon Tracking',
+        'Smart Meter Analytics',
+        'Grid Stability'
+      ],
+      category: 'Energy AI',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ],
+      link: 'https://ziontechgroup.com/ai-energy-grid-intelligence'
+    },
+    {
+      id: 47,
+      name: 'AI Manufacturing Intelligence Pro',
+      description: 'Industrial AI with predictive maintenance, quality control, and manufacturing optimization',
+      icon: Factory,
+      features: [
+        'Predictive Maintenance',
+        'Quality Control',
+        'Process Optimization',
+        'Supply Chain Integration',
+        'Safety Monitoring',
+        'Energy Optimization',
+        'Production Planning',
+        'Performance Analytics'
+      ],
+      category: 'Manufacturing AI',
+      popular: true,
+      rating: 4.8,
+      users: '350+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '30% reduction in downtime',
+        '25% cost savings',
+        'Predictive maintenance',
+        'Real-time monitoring'
+      ],
+      link: 'https://ziontechgroup.com/ai-manufacturing-intelligence'
+    },
+    {
+      id: 48,
+      name: 'AI Neural Interface Pro',
+      description: 'Advanced brain-computer interface with neural signal processing and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Neural Signal Processing',
+        'Brain-Computer Interface',
+        'Cognitive Enhancement',
+        'Thought Recognition',
+        'Motor Control',
+        'Sensory Augmentation',
+        'Memory Enhancement',
+        'Neural Rehabilitation'
+      ],
+      category: 'Neural Interface',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $9,999/mo',
+      capabilities: [
+        'Direct brain control',
+        'Cognitive enhancement',
+        'Neural rehabilitation',
+        'Thought-to-text conversion'
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-interface'
+    },
+    {
+      id: 49,
+      name: 'AI Quantum Security Pro',
+      description: 'Quantum-resistant security solutions with post-quantum cryptography and quantum key distribution',
+      icon: Shield,
+      features: [
+        'Post-Quantum Cryptography',
+        'Quantum Key Distribution',
+        'Quantum Random Number Generation',
+        'Quantum Authentication',
+        'Quantum Digital Signatures',
+        'Quantum Secure Communication',
+        'Quantum Entanglement',
+        'Quantum Error Correction'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '100+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $5,999/mo',
+      capabilities: [
+        'Unbreakable encryption',
+        'Quantum key distribution',
+        'Future-proof security',
+        'Quantum advantage'
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-security'
+    },
+    {
+      id: 50,
+      name: 'AI Immersive Learning Pro',
+      description: 'Virtual reality learning platform with AI-powered personalized education and skill development',
+      icon: GraduationCap,
+      features: [
+        'Virtual Reality Learning',
+        'Personalized Education',
+        'Skill Development',
+        'Immersive Simulations',
+        'Progress Tracking',
+        'Adaptive Learning',
+        'Collaborative Learning',
+        'Assessment Tools'
+      ],
+      category: 'Immersive Learning',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Immersive learning experience',
+        'Personalized education',
+        'Skill development',
+        'Collaborative learning'
+      ],
+      link: 'https://ziontechgroup.com/ai-immersive-learning'
+    }
   ];
 
-const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
+const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI', 'Space AI', 'Climate AI', 'Manufacturing AI', 'Neural Interface', 'Quantum Security', 'Immersive Learning'];
 
   if (!isLoaded) {
     return (
