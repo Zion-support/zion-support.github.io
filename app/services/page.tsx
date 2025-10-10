@@ -1,6 +1,6 @@
 'use client';
 import React, { lazy } from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp } from 'lucide-react';
+import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp, Mic, Cube, Headphones, Package, DollarSign, Scale } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Check, Star, Zap, Shield, Clock, Users, ArrowRight, Phone, Mail } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const PricingPage: React.FC = () => {
   const plans = [
