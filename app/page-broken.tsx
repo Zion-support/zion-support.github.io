@@ -19,11 +19,6 @@ const HomePage: React.FC = () => {
             Learn More
           </button>
         </div>
-        <div className="mt-12 text-center">
-          <p className="text-gray-400 text-sm">
-            Website is being optimized. Full functionality coming soon.
-          </p>
-        </div>
       </div>
     </div>
   );
