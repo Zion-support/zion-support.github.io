@@ -3,11 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, Briefcase, GraduationCap, Zap } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
