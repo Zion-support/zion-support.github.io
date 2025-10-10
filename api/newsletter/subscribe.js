@@ -22,7 +22,7 @@ async function handler(req, res) {
       res.json({ error: 'Invalid email format' });
       return;
     }
-    // Save subscription logic here;
+    // Save subscription logic here
     const subscription = {
       email,
       subscribedAt: new Date().toISOString(),
@@ -30,12 +30,12 @@ async function handler(req, res) {
     };
 
     res.statusCode = 200;
-    res.json({)
-      message: 'Successfully subscribed to newsletter'),
-      subscription),
+    res.json({
+      message: 'Successfully subscribed to newsletter',
+      subscription
     });
-  } catch {
-    //     res.statusCode = 500;
+  } catch (error) {
+    res.statusCode = 500;
     res.json({ error: 'Failed to subscribe to newsletter' });
   }
 }

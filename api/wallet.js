@@ -28,11 +28,11 @@ async function handler(req, res) {
         const timestamp = Date.now();
         const random = Math.random().toString(36).substr(2, 9);
         const paymentIntent = {
-          id: 'pi_' + timestamp;
-          amount: Math.round(amount * 100)
+          id: 'pi_' + timestamp,
+          amount: Math.round(amount * 100),
           currency: currency.toLowerCase(),
           status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random;
+          client_secret: 'pi_' + timestamp + '_secret_' + random
         };
 
         res.statusCode = 200;
@@ -42,9 +42,9 @@ async function handler(req, res) {
 
       case 'get_balance': {
         const balance = {
-          available: 1000.0;
-          pending: 0.0;
-          currency: currency.toUpperCase(),
+          available: 1000.0,
+          pending: 0.0,
+          currency: currency.toUpperCase()
         };
 
         res.statusCode = 200;
