@@ -11,48 +11,96 @@ const PricingPage: React.FC = () => {
       name: 'Starter',
       price: '$2,999',
       period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
+      description: 'Perfect for small businesses getting started with AI and IT solutions',
       features: [
-        'Basic AI Integration',
-        'Cloud Infrastructure Setup',
-        'Email Support',
-        'Monthly Reports',
-        'Basic Analytics Dashboard'
+        'Basic AI Integration (1-2 AI models)',
+        'Cloud Infrastructure Setup (AWS/Azure)',
+        'Email Support (48-hour response)',
+        'Monthly Performance Reports',
+        'Basic Analytics Dashboard',
+        'Up to 5 users',
+        'Standard Security Features',
+        'Basic Training (2 hours)',
+        '99.5% Uptime SLA'
       ],
-      popular: false
+      popular: false,
+      category: 'AI & IT Starter'
     },
     {
       name: 'Professional',
       price: '$7,999',
       period: '/month',
-      description: 'Ideal for growing companies with advanced needs',
+      description: 'Ideal for growing companies with advanced AI and IT needs',
       features: [
-        'Advanced AI Solutions',
-        'Custom Development',
-        'Priority Support',
-        'Weekly Reports',
-        'Advanced Analytics',
-        'API Access',
-        'Training Sessions'
+        'Advanced AI Solutions (3-5 AI models)',
+        'Custom Development (up to 40 hours/month)',
+        'Priority Support (24-hour response)',
+        'Weekly Performance Reports',
+        'Advanced Analytics & BI Dashboard',
+        'API Access & Integration',
+        'Up to 25 users',
+        'Advanced Security & Compliance',
+        'Comprehensive Training (8 hours)',
+        '99.9% Uptime SLA',
+        'Dedicated Account Manager'
       ],
-      popular: true
+      popular: true,
+      category: 'AI & IT Professional'
     },
     {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'Tailored solutions for large organizations',
+      description: 'Tailored solutions for large organizations with complex requirements',
       features: [
-        'Custom AI Solutions',
-        'Dedicated Team',
-        '24/7 Support',
-        'Real-time Monitoring',
-        'Custom Integrations',
+        'Unlimited AI Models & Custom Solutions',
+        'Dedicated Development Team',
+        '24/7 Premium Support',
+        'Real-time Monitoring & Alerts',
+        'Custom Integrations & APIs',
         'White-label Options',
-        'On-site Training',
-        'SLA Guarantee'
+        'Unlimited Users',
+        'Enterprise Security & Compliance',
+        'On-site Training & Workshops',
+        '99.99% Uptime SLA',
+        'Dedicated Success Manager',
+        'Custom SLA Terms'
       ],
-      popular: false
+      popular: false,
+      category: 'AI & IT Enterprise'
+    }
+  ];
+
+  const servicePricing = [
+    {
+      category: 'AI Services',
+      services: [
+        { name: 'AI Strategy & Consulting', price: '$5,000/month', description: 'Strategic AI planning and implementation' },
+        { name: 'Machine Learning Development', price: '$15,000/project', description: 'Custom ML model development' },
+        { name: 'Natural Language Processing', price: '$8,000/project', description: 'NLP and chatbot solutions' },
+        { name: 'Computer Vision Solutions', price: '$12,000/project', description: 'Image and video analysis' },
+        { name: 'AI Automation & RPA', price: '$3,500/month', description: 'Process automation solutions' }
+      ]
+    },
+    {
+      category: 'IT Services',
+      services: [
+        { name: 'Cloud Infrastructure', price: '$2,500/month', description: 'AWS, Azure, GCP management' },
+        { name: 'DevOps & CI/CD', price: '$3,000/month', description: 'Automation and deployment pipelines' },
+        { name: 'Cybersecurity', price: '$4,000/month', description: 'Security monitoring and compliance' },
+        { name: 'Managed IT Services', price: '$2,200/month', description: '24/7 IT support and management' },
+        { name: 'Database Management', price: '$1,800/month', description: 'Database optimization and maintenance' }
+      ]
+    },
+    {
+      category: 'Micro SaaS',
+      services: [
+        { name: 'Business Intelligence Dashboard', price: '$89/month', description: 'Advanced analytics platform' },
+        { name: 'AI Customer Support Suite', price: '$149/month', description: 'Complete customer support solution' },
+        { name: 'Email Marketing Automation', price: '$99/month', description: 'AI-powered email marketing' },
+        { name: 'Project Management Suite', price: '$119/month', description: 'AI-powered project management' },
+        { name: 'Lead Generation Engine', price: '$179/month', description: 'AI-powered lead generation' }
+      ]
     }
   ];
 
@@ -146,6 +194,39 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Service Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Individual Service Pricing
+            </h2>
+            <div className="space-y-12">
+              {servicePricing.map((category, categoryIndex) => (
+                <div key={categoryIndex}>
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">
+                    {category.category}
+                  </h3>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                        <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
+                        <div className="text-2xl font-bold text-cyan-400 mb-3">{service.price}</div>
+                        <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                        <Link
+                          to="/contact"
+                          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"
+                        >
+                          Get Quote
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -175,6 +256,22 @@ const PricingPage: React.FC = () => {
                 </h3>
                 <p className="text-gray-300">
                   Yes, we provide custom AI and IT solutions tailored to your specific business requirements. Contact us for a consultation.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  What payment methods do you accept?
+                </h3>
+                <p className="text-gray-300">
+                  We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Is there a free trial available?
+                </h3>
+                <p className="text-gray-300">
+                  Yes, we offer a 14-day free trial for our Professional plan. Contact us to get started with your trial.
                 </p>
               </div>
             </div>

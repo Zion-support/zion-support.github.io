@@ -22,108 +22,246 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '1',
       icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics and reporting for your business metrics',
+      title: 'Business Intelligence Dashboard',
+      description: 'Advanced analytics and reporting platform with real-time data visualization and AI-powered insights',
       features: [
-        'Real-time data visualization',
-        'Custom report generation',
-        'Email alerts and notifications',
-        'Multi-platform integration',
-        'Advanced filtering options'
+        'Real-time data visualization with 50+ chart types',
+        'Custom report builder with drag-and-drop interface',
+        'AI-powered predictive analytics and forecasting',
+        'Multi-platform integration (Salesforce, HubSpot, Google Analytics)',
+        'Automated email reports and alerts',
+        'White-label customization options',
+        'Advanced filtering and drill-down capabilities',
+        'Mobile-responsive dashboard'
       ],
-      price: '$29/month',
-      users: 'Up to 5 users',
+      price: '$89/month',
+      users: 'Up to 10 users',
       popular: true,
       category: 'Analytics'
     },
     {
       id: '2',
       icon: '💬',
-      title: 'Customer Chat',
-      description: 'AI-powered customer support and live chat solution',
+      title: 'AI Customer Support Suite',
+      description: 'Complete customer support solution with AI chatbot, live chat, and ticket management',
       features: [
-        'AI chatbot integration',
-        'Live chat support',
-        'Ticket management system',
-        'Multi-language support',
-        'Analytics and reporting'
+        'Advanced AI chatbot with natural language processing',
+        'Live chat with real-time translation (50+ languages)',
+        'Intelligent ticket routing and prioritization',
+        'Knowledge base with AI-powered search',
+        'Customer satisfaction tracking and analytics',
+        'Integration with CRM systems',
+        'Multi-channel support (email, chat, social media)',
+        'Customizable chat widgets and themes'
       ],
-      price: '$49/month',
-      users: 'Up to 10 users',
-      popular: false,
+      price: '$149/month',
+      users: 'Up to 25 users',
+      popular: true,
       category: 'Communication'
     },
     {
       id: '3',
       icon: '🔐',
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection',
+      title: 'Enterprise Security Monitor',
+      description: 'Comprehensive cybersecurity monitoring with threat detection and compliance management',
       features: [
-        'Real-time threat detection',
-        'Automated security scans',
-        'Compliance reporting',
-        'Incident response tools',
-        'Security dashboard'
+        'Real-time threat detection and response',
+        'Automated vulnerability scanning and patching',
+        'SOC 2, GDPR, and HIPAA compliance reporting',
+        'Advanced incident response automation',
+        'Security awareness training modules',
+        'Dark web monitoring and breach detection',
+        'Custom security policies and rules',
+        '24/7 security operations center support'
       ],
-      price: '$79/month',
-      users: 'Up to 25 users',
+      price: '$299/month',
+      users: 'Up to 100 users',
       popular: false,
       category: 'Security'
     },
     {
       id: '4',
       icon: '☁️',
-      title: 'Cloud Backup',
-      description: 'Automated cloud backup and disaster recovery solution',
+      title: 'Smart Cloud Backup Pro',
+      description: 'Intelligent cloud backup with disaster recovery and business continuity features',
       features: [
-        'Automated daily backups',
-        'Cross-platform sync',
-        'Version control',
-        'Disaster recovery',
-        'Encrypted storage'
+        'Automated incremental and full backups',
+        'Cross-platform sync with conflict resolution',
+        'Version control with 90-day retention',
+        'Disaster recovery with RTO < 4 hours',
+        'End-to-end encryption (AES-256)',
+        'Compliance with GDPR and HIPAA',
+        'Bandwidth throttling and scheduling',
+        'Real-time backup monitoring and alerts'
       ],
-      price: '$39/month',
-      users: 'Up to 15 users',
+      price: '$79/month',
+      users: 'Up to 50 users',
       popular: false,
       category: 'Storage'
     },
     {
       id: '5',
       icon: '📈',
-      title: 'Performance Tracker',
-      description: 'Monitor and optimize your application performance',
+      title: 'Application Performance Monitor',
+      description: 'Advanced APM solution with real-time monitoring, error tracking, and performance optimization',
       features: [
-        'Performance monitoring',
-        'Error tracking',
-        'Uptime monitoring',
-        'Performance insights',
-        'Alert management'
+        'Real-time performance monitoring and alerting',
+        'Distributed tracing and error tracking',
+        'Uptime monitoring with global checkpoints',
+        'AI-powered performance insights and recommendations',
+        'Custom dashboards and reporting',
+        'Integration with popular development tools',
+        'SLA monitoring and reporting',
+        'Mobile app performance tracking'
       ],
-      price: '$59/month',
-      users: 'Up to 20 users',
+      price: '$129/month',
+      users: 'Up to 30 users',
       popular: false,
       category: 'Monitoring'
     },
     {
       id: '6',
       icon: '🤖',
-      title: 'AI Assistant',
-      description: 'Intelligent automation and workflow optimization',
+      title: 'AI Workflow Automation',
+      description: 'Intelligent business process automation with AI-powered decision making and custom workflows',
       features: [
-        'Workflow automation',
-        'AI-powered insights',
-        'Task scheduling',
-        'Integration capabilities',
-        'Custom AI models'
+        'Visual workflow builder with 200+ integrations',
+        'AI-powered decision making and routing',
+        'Document processing and data extraction',
+        'Email and calendar automation',
+        'Custom AI model training and deployment',
+        'Advanced analytics and reporting',
+        'Multi-tenant architecture',
+        'API access and webhook support'
       ],
-      price: '$99/month',
-      users: 'Up to 50 users',
+      price: '$199/month',
+      users: 'Up to 100 users',
       popular: true,
       category: 'AI'
+    },
+    {
+      id: '7',
+      icon: '📧',
+      title: 'Email Marketing Automation',
+      description: 'Advanced email marketing platform with AI-powered personalization and automation',
+      features: [
+        'AI-powered email personalization and optimization',
+        'Advanced segmentation and targeting',
+        'A/B testing with statistical significance',
+        'Behavioral triggers and drip campaigns',
+        'Landing page builder with conversion tracking',
+        'Advanced analytics and ROI reporting',
+        'GDPR and CAN-SPAM compliance tools',
+        'Integration with 50+ platforms'
+      ],
+      price: '$99/month',
+      users: 'Up to 20 users',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '8',
+      icon: '💰',
+      title: 'Financial Analytics Pro',
+      description: 'Comprehensive financial management and analytics platform for businesses',
+      features: [
+        'Real-time financial dashboard and reporting',
+        'Automated expense tracking and categorization',
+        'Invoice generation and payment processing',
+        'Tax preparation and compliance tools',
+        'Cash flow forecasting and budgeting',
+        'Multi-currency support and conversion',
+        'Integration with accounting software',
+        'Financial KPI tracking and alerts'
+      ],
+      price: '$149/month',
+      users: 'Up to 15 users',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '9',
+      icon: '📱',
+      title: 'Social Media Manager',
+      description: 'Complete social media management platform with AI-powered content creation and scheduling',
+      features: [
+        'AI-powered content creation and optimization',
+        'Multi-platform posting and scheduling',
+        'Social media analytics and reporting',
+        'Influencer identification and outreach',
+        'Hashtag research and trending topics',
+        'Social listening and sentiment analysis',
+        'Team collaboration and approval workflows',
+        'White-label client management'
+      ],
+      price: '$79/month',
+      users: 'Up to 10 users',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '10',
+      icon: '📋',
+      title: 'Project Management Suite',
+      description: 'Advanced project management with AI-powered resource allocation and progress tracking',
+      features: [
+        'AI-powered project planning and resource allocation',
+        'Gantt charts and timeline visualization',
+        'Team collaboration and communication tools',
+        'Time tracking and productivity analytics',
+        'Risk assessment and mitigation planning',
+        'Custom workflows and automation',
+        'Integration with 100+ tools',
+        'Mobile app for on-the-go management'
+      ],
+      price: '$119/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '11',
+      icon: '🎯',
+      title: 'Lead Generation Engine',
+      description: 'AI-powered lead generation and qualification platform with automated outreach',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Automated email and LinkedIn outreach',
+        'Lead database with 50M+ contacts',
+        'Intent data and behavioral tracking',
+        'A/B testing for outreach campaigns',
+        'CRM integration and lead routing',
+        'Compliance with GDPR and CAN-SPAM',
+        'Advanced analytics and ROI tracking'
+      ],
+      price: '$179/month',
+      users: 'Up to 25 users',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      id: '12',
+      icon: '🔍',
+      title: 'SEO Optimization Tool',
+      description: 'Comprehensive SEO platform with AI-powered optimization and competitor analysis',
+      features: [
+        'AI-powered keyword research and optimization',
+        'Technical SEO auditing and recommendations',
+        'Competitor analysis and tracking',
+        'Content optimization suggestions',
+        'Local SEO management and optimization',
+        'Rank tracking and SERP monitoring',
+        'Link building and outreach tools',
+        'White-label reporting and dashboards'
+      ],
+      price: '$89/month',
+      users: 'Up to 15 users',
+      popular: false,
+      category: 'Marketing'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Productivity', 'Sales'];
 
   const benefits = [
     'Quick setup and deployment',
@@ -230,9 +368,9 @@ const MicroSaasPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
               {selectedCategory === 'All' ? 'All Products' : `${selectedCategory} Products`}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
-                <div key={product.id} className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 ${product.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                <div key={product.id} className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 ${product.popular ? 'ring-2 ring-blue-500' : ''} hover:scale-105`}>
                   {product.popular && (
                     <div className="flex items-center justify-center mb-4">
                       <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">

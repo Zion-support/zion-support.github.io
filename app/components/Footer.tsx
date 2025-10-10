@@ -7,44 +7,56 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' },
-    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Financial AI applications' },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+    { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
+    { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
+    { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
+    { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
+    { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
+    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
   ];
 
   const itServices = [
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Expert IT guidance' },
-    { name: 'Database Services', url: '/database-services', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'IT Support', url: '/it-support', description: 'Technical support' }
+    { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
+    { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
+    { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
+    { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
+    { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
+    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
   ];
 
   const microSaasServices = [
-    { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics' },
-    { name: 'Content Generator', url: '/micro-saas/content-generator', description: 'AI content creation' },
-    { name: 'Email Marketing', url: '/micro-saas/email-marketing', description: 'Email automation' },
-    { name: 'Social Manager', url: '/micro-saas/social-manager', description: 'Social media management' },
-    { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking' },
-    { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Scheduling system' }
+    { name: 'Business Intelligence', url: '/micro-saas', description: 'Analytics dashboard' },
+    { name: 'AI Customer Support', url: '/micro-saas', description: 'Chatbot solutions' },
+    { name: 'Email Marketing', url: '/micro-saas', description: 'Marketing automation' },
+    { name: 'Project Management', url: '/micro-saas', description: 'Team collaboration' },
+    { name: 'Lead Generation', url: '/micro-saas', description: 'Sales automation' },
+    { name: 'Financial Analytics', url: '/micro-saas', description: 'Financial management' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Support', url: '/support' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api' },
+    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'Community', url: '/community' }
   ];
 
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -55,19 +67,19 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-2">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <Mail className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <MapPin className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start text-sm text-gray-300">
+                <MapPin className="w-4 h-4 mr-2 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
             </div>
           </div>
 
@@ -75,10 +87,10 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.slice(0, 6).map((service, index) => (
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
@@ -95,7 +107,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
@@ -112,7 +124,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
@@ -120,6 +132,82 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Additional Links Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/consultation" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Free Consultation
+                </Link>
+              </li>
+              <li>
+                <Link to="/demo" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Request Demo
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Contact Sales
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Technical Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
