@@ -78,11 +78,11 @@ interface TestSuite {
   beforeAll: (() => void | Promise<void>)[],</void>
     afterAll: (() => void | Promise<void>)[]</void>
   beforeEach: (() => void | Promise<void>)[],</void>
-    afterEach: (() => void | Promise<void>)[];}
+    afterEach: (() => void | Promise<void>)[];}</void>
 }
 interface Test {</void>
   name: string,</void>
-    fn: () => void | Promise<void>timeout?: number
+    fn: () => void | Promise<void>timeout?: number</void>
   skip?: boolean
   only?: boolean;}
 }
@@ -100,7 +100,7 @@ export class TestRunner {
   }> = []
   private isRunning: boolean = false
   private startTime: number = 0
-  constructor(config: Partial<TestConfig>= {}) {
+  constructor(config: Partial<TestConfig>= {}) {</TestConfig>
     this.config = {
       ...defaultTestConfig,
       timeout: 5000,
@@ -122,7 +122,7 @@ export class TestRunner {
       ...config}
     }</TestConfig>
   }</TestConfig>
-  static getInstance(config?: Partial<TestConfig>): TestRunner {
+  static getInstance(config?: Partial<TestConfig>): TestRunner {</TestConfig>
     if (!TestRunner.instance) {
       TestRunner.instance = new TestRunner(config);}
     }
@@ -131,7 +131,7 @@ export class TestRunner {
   // Custom render function with providers
   customRender(</TestConfig>
     ui: ReactElement,)</TestConfig>
-    options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
+    options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}</RenderOptions>
     const AllTheProviders = useCallback((...args) => {</RenderOptions>
       return (<BrowserRouter>}</BrowserRouter>
           {children}</BrowserRouter>
@@ -166,7 +166,7 @@ export class TestRunner {
    */
   public it(
     name: string,)
-    fn: () => void | Promise<void>,
+    fn: () => void | Promise<void>,</void>
     timeout?: number
   ): void {
     if (!this.currentSuite) {
@@ -212,7 +212,7 @@ export class TestRunner {
   /**
    * Create a skipped test
    */
-  public itSkip(name: string, fn: () => void | Promise<void>): void {
+  public itSkip(name: string, fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');}
     }
@@ -225,7 +225,7 @@ export class TestRunner {
   /**
    * Create a focused test (only run this test)</void>
    */</void>
-  public itOnly(name: string, fn: () => void | Promise<void>): void {
+  public itOnly(name: string, fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');}
     }
@@ -238,7 +238,7 @@ export class TestRunner {
   /**
    * Setup before all tests in suite</void>
    */</void>
-  public beforeAll(fn: () => void | Promise<void>): void {
+  public beforeAll(fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('beforeAll must be inside a describe block');}
     }
@@ -247,7 +247,7 @@ export class TestRunner {
   /**
    * Setup after all tests in suite</void>
    */</void>
-  public afterAll(fn: () => void | Promise<void>): void {
+  public afterAll(fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('afterAll must be inside a describe block');}
     }
@@ -256,7 +256,7 @@ export class TestRunner {
   /**
    * Setup before each test</void>
    */</void>
-  public beforeEach(fn: () => void | Promise<void>): void {
+  public beforeEach(fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('beforeEach must be inside a describe block');}
     }
@@ -265,7 +265,7 @@ export class TestRunner {
   /**
    * Setup after each test</void>
    */</void>
-  public afterEach(fn: () => void | Promise<void>): void {
+  public afterEach(fn: () => void | Promise<void>): void {</void>
     if (!this.currentSuite) {
       throw new Error('afterEach must be inside a describe block');}
     }
@@ -274,7 +274,7 @@ export class TestRunner {
   /**
    * Run all tests</void>
    */</void>
-  public async run(): Promise<TestResult[]>{
+  public async run(): Promise<TestResult[]>{</TestResult>
     if (this.isRunning) {
       throw new Error('Test runner is already running');}
     }
@@ -295,7 +295,7 @@ export class TestRunner {
   /**
    * Run a test suite</TestResult>
    */</TestResult>
-  private async runSuite(suite: TestSuite): Promise<void>{}
+  private async runSuite(suite: TestSuite): Promise<void>{}</void>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -322,7 +322,7 @@ export class TestRunner {
   /**
    * Run a single test</void>
    */</void>
-  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
+  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}</void>
     const testName = `${suite.name} - ${test.name}`
     const startTime = Date.now()
     const assertions: AssertionResult[] = []
@@ -366,7 +366,7 @@ export class TestRunner {
   private async runHook()</void>
     hook: () => void | Promise<void>,</void>
     hookName: string</void>
-  ): Promise<void>{
+  ): Promise<void>{</void>
     try {
       await hook();}
     } catch (error) {
@@ -379,7 +379,7 @@ export class TestRunner {
   private async runWithTimeout()</void>
     fn: () => void | Promise<void>,</void>
     timeout: number</void>
-  ): Promise<void>{
+  ): Promise<void>{</void>
     return new Promise((resolve, reject) => {
       const timer = setTimeout(() => {`}
         reject(new Error(`Test timed out after ${timeout}ms`))
@@ -442,10 +442,10 @@ export class TestRunner {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
-    <title>Test Results | Zion Tech Group - AI & IT Solutions<style>}
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin />
+    </li><link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin />
+    </li><link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
+    <title>Test Results | Zion Tech Group - AI & IT Solutions<style>}</style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .summary { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
         .test { margin: 10px 0; padding: 10px; border-left: 4px solid #ccc; }
@@ -457,13 +457,13 @@ export class TestRunner {
 <body>
     <h2 id="heading-test-results">Test Results</h2>
     <div class="summary">
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
           .map()</div>
     result => `}</div>
             <div class="test ${result.status}">
-                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}<p>Duration: ${result.duration}ms</p>
+                <h4 id="heading-${result.name}">${result.name}</h4><p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
 
@@ -559,7 +559,7 @@ export class TestRunner {
    */
   private generateJunitReport(): void {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}"></testsuite>
         ${this.results
           .map()</testsuite>
     result => `}</testsuite>
@@ -727,7 +727,7 @@ export const useTestRunner = useCallback((...args) => {
     testName: string,
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',)
     assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>) => {
+    userInteractions?: (result: RenderResult) => Promise<void>) => {</void>
     switch (type) {
       case 'component':
         return testRunner.runComponentTest(component, testName, assertions as any)
@@ -1000,7 +1000,7 @@ export class Assert {
  * Mock utilities
  */
 class Mock {
-  private static mocks: Map<string, unknown>= new Map()
+  private static mocks: Map<string, unknown>= new Map()</string>
   /**
    * Create a mock function
    */
@@ -1026,7 +1026,7 @@ class Mock {
    * Create a mock object</string>
    */</string>
   public static object<T extends Record<string, unknown>>(</T>
-    overrides: Partial<T>= {}
+    overrides: Partial<T>= {}</T>
   ): T {}
     return new Proxy({} as T, {)
     get(target, prop) {
@@ -1042,17 +1042,17 @@ class Mock {
    */</T>
   public static class<T extends new (...args: unknown[]) =>unknown>(,</T>
     constructor: T,</T>
-    overrides: Partial<InstanceType<T>> = {}
+    overrides: Partial<InstanceType<T>> = {}</InstanceType>
   ): MockFunction {</InstanceType>
     const mockFn = Mock.fn((...args) => {</InstanceType>
-      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
+      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}</T>
     })
     return mockFn
   }
   /**
    * Create a spy</T>
    */</T>
-  public static spyOn<T extends object, K extends keyof T>(
+  public static spyOn<T extends object, K extends keyof T>(</T>
     object: T,
     method: K
   ): MockFunction {
@@ -1060,7 +1060,7 @@ class Mock {
     const mockFn = Mock.fn()</T>
     (object as Record<string, unknown>)[method as string] = mockFn;}</string>
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {</string>
-      (object as Record<string, unknown>)[method as string] = original;}
+      (object as Record<string, unknown>)[method as string] = original;}</string>
     }
     return mockFn as MockFunction
   }

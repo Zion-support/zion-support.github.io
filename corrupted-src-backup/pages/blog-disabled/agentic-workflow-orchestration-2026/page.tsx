@@ -23,7 +23,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           Budgeted, Action, s • KPI, Canarie, s • Instant, Rollbac, k
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
           </p>
         </div>

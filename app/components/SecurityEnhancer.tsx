@@ -11,14 +11,14 @@ interface SecurityMetrics {
 }
 
 export const SecurityEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
+  const [metrics, setMetrics] = useState<SecurityMetrics>({</SecurityMetrics>
     cspViolations: 0,
     xssAttempts: 0,
     csrfAttempts: 0,
     suspiciousActivity: 0,
 </SecurityMetrics>
   const [isSecure, setIsSecure] = useState(true);</SecurityMetrics>
-  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
+  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);</string>
 
   // Content Security Policy monitoring
   const monitorCSP = useCallback(() => {
@@ -233,10 +233,7 @@ export const SecurityEnhancer: React.FC = () => {
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
   return (
-    <>
-      {/* Security Status Indicator */}
-      {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HTTPS</div>
+    <><div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HTTPS</div>
         </div>
       )}
 
@@ -254,12 +251,10 @@ export const SecurityEnhancer: React.FC = () => {
         <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
           <h4 className="font-bold mb-2">Security Metrics</h4>
           <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+            </div><div>CSP Violations: {metrics.cspViolations}</div><div>XSS Attempts: {metrics.xssAttempts}</div>
+            <div>CSRF Attempts: {metrics.csrfAttempts}</div><div>Suspicious Activity: {metrics.suspiciousActivity}</div>
           </div>
-        </div>
-      )}
-    </>
+        </div></>
   );
 };
 

@@ -686,34 +686,33 @@ name: 'AI-Powered Infrastructure Management',
   return (
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
+</div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div><div className="container mx-auto px-4 relative z-10">
+          </div><div className="max-w-4xl mx-auto text-center">
 
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
+<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
               From infrastructure to security, we've got you covered.</p>
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
+            {/* Stats */}<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
+              </div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+                </div><div className="text-3xl font-bold text-cyan-400 mb-2">150+</div><div className="text-gray-300">IT Services</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+<div className="text-gray-300">Enterprise Clients</div>
+                </div><div className="text-3xl font-bold text-purple-400 mb-2">750+</div><div className="text-gray-300">Enterprise Clients</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%<div className="text-gray-300">Uptime SLA</div>
+                </div><div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div><div className="text-gray-300">Uptime SLA</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7<div className="text-gray-300">Support</div>
+                </div><div className="text-3xl font-bold text-green-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
               </div>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
+              </div><div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+                <Shield className="w-5 h-5 text-cyan-400"  / />
                 <span className="text-white font-medium">Enterprise Security</span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
@@ -729,45 +728,41 @@ name: 'AI-Powered Infrastructure Management',
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+      {/* Benefits */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                </div><div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-10 h-10 text-white" />
                 <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
+      {/* IT Services */}<section className="py-20 bg-slate-800/50">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
+                </div><div className="flex items-center space-x-3 mb-8">
                   <category.icon className={`w-8 h-8 ${category.color}`} />
                   <h3 className="text-2xl font-bold text-white">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
 </div>
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
+</div><div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (</div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
                         </div>
-                      )}
-
-                      <div className="relative z-10">
-                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      )}<div className="relative z-10">
+                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                         <div className="space-y-4 mb-6">
                           <h5 className="text-lg font-semibold text-white flex items-center">
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                               <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  / />
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -779,14 +774,14 @@ name: 'AI-Powered Infrastructure Management',
                         </div>
 
                         <div className="space-y-3 mb-6">
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Pricing:<span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
+                          </div><div className="flex justify-between items-center">
+                            <span className="text-sm text-gray-400">Pricing:</span><span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
                           </div>
                           <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial:<span className="text-sm font-medium text-green-400">{service.trial}</span>
+                            <span className="text-sm text-gray-400">Trial:</span><span className="text-sm font-medium text-green-400">{service.trial}</span>
                           </div>
                           <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline:<span className="text-sm font-medium text-purple-400">{service.timeline}</span>
+                            <span className="text-sm text-gray-400">Timeline:</span><span className="text-sm font-medium text-purple-400">{service.timeline}</span>
                           </div>
                         </div>
 
@@ -807,7 +802,7 @@ name: 'AI-Powered Infrastructure Management',
                         <a
                           href={service.link}
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >Learn More<a
+                        >Learn More</a><a
                           href="/contact"
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
                         >Get Started</a>
@@ -823,16 +818,15 @@ name: 'AI-Powered Infrastructure Management',
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
+      {/* Technologies */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                </div><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
+                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (</div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
                     </div>
                   ))}
                 </div>
@@ -842,48 +836,46 @@ name: 'AI-Powered Infrastructure Management',
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
+      {/* Process */}<section className="py-20 bg-slate-800/50">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
+            </div><div className="relative">
+              </div><div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                  </div><div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    </div><div className="bg-slate-800/50 p-6 rounded-lg">
+                      </div><div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
+      {/* Case Studies */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
+                </div><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}</h3><p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
                 <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:<p className="text-sm text-gray-400">{study.challenge}</p>
+                  </div><div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:</h4><p className="text-sm text-gray-400">{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:<p className="text-sm text-gray-400">{study.solution}</p>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:</h4><p className="text-sm text-gray-400">{study.solution}</p>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:<ul className="space-y-1">{study.results.map((result, resultIndex) => (</ul>
                         <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
-                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 flex-shrink-0"  / />
                           <span>{result}</span>
                         </li>
                       ))}
@@ -896,13 +888,12 @@ name: 'AI-Powered Infrastructure Management',
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
+      {/* CTA Section */}<section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
 
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
+        </div><div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -924,7 +915,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
             </Phone>
           </div>
           <div className="text-gray-200 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div><p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
 
           </div>
         </div>

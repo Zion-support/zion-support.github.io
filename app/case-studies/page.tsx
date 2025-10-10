@@ -307,14 +307,14 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div><div className="container mx-auto px-4 relative z-10">
+          </div><div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
               industries achieve remarkable transformations with AI and technology.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-cyan-400" />
+              </div><div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+                <Award className="w-5 h-5 text-cyan-400"  / />
                 <span className="text-white font-medium">500+ Projects</span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
@@ -322,7 +322,7 @@ export default function CaseStudiesPage() {
                 <span className="text-white font-medium">300% Average ROI</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  / />
                 <span className="text-white font-medium">99% Client Satisfaction</span>
               </div>
             </div>
@@ -330,12 +330,11 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
+      {/* Filters */}<section className="py-8">
+        </section><div className="container mx-auto px-4">
+          </div><div className="max-w-6xl mx-auto">
+            </div><div className="flex flex-col md:flex-row gap-4 mb-8">
+              </div><div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -371,20 +370,19 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
+      {/* Case Studies Grid */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="max-w-7xl mx-auto">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
                 <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="relative">
+                  </div><div className="relative">
                     <img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
+                      </div><div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
                       </div>
                     </div>
                     <div className="absolute top-4 right-4">
@@ -398,7 +396,7 @@ export default function CaseStudiesPage() {
                     </h3>
 
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="flex items-center space-x-2">
+                      </div><div className="flex items-center space-x-2">
                         <Building className="w-4 h-4 text-gray-400" />
                         <span className="text-gray-300 text-sm">{study.company}</span>
                       </div>
@@ -409,18 +407,18 @@ export default function CaseStudiesPage() {
                     </div>
 
                     <div className="space-y-4 mb-6">
-                      <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:<p className="text-gray-300 text-sm">{study.challenge}</p>
+                      </div><div>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4><p className="text-gray-300 text-sm">{study.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:<p className="text-gray-300 text-sm">{study.solution}</p>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4><p className="text-gray-300 text-sm">{study.solution}</p>
                       </div>
                     </div>
 
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
                           <div key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{result}</CheckCircle>
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  / />{result}</CheckCircle>
                           </CheckCircle>
                         ))}
                       </div>
@@ -434,11 +432,11 @@ export default function CaseStudiesPage() {
                     </div>
 
                     <div className="border-t border-gray-700 pt-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
+                      </div><div className="flex items-center space-x-4">
+                        </div><div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
                         </div>
                         <div className="flex-1">
-                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}<div className="text-gray-400 text-xs">{study.testimonial.role}</div>
+                          </div><p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}</div><div className="text-gray-400 text-xs">{study.testimonial.role}</div>
                         </div>
                       </div>
                     </div>
@@ -450,10 +448,9 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
+      {/* CTA Section */}<section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        </section><div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

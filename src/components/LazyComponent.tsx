@@ -13,13 +13,13 @@ export default function LazyComponent({
 =======
 const DefaultFallback = () => (
   <div className="flex items-center justify-center p-8">
-    <div className="cyber-loader"></div>
+    </div><div className="cyber-loader"></div>
     <span className="ml-3 text-cyan-400">Loading...</span>
   </div>
 );
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  fallback = <DefaultFallback />, 
+const LazyComponent: React.FC<LazyComponentProps> = ({ </LazyComponentProps>
+  fallback = <DefaultFallback />, </DefaultFallback>
   children 
 }) => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-4b35
@@ -31,8 +31,8 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 // Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
+export const withLazyLoading = <P extends object>(</P>
+  Component: ComponentType<P>,</P>
   fallback?: React.ReactNode
 ) => {
   const LazyWrappedComponent = (props: P) => (
@@ -47,8 +47,8 @@ export const withLazyLoading = <P extends object>(
 };
 
 // Utility function to create lazy components
-export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
+export const createLazyComponent = <P extends object>(</P>
+  importFunc: () => Promise<{ default: ComponentType<P> }>,</P>
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);

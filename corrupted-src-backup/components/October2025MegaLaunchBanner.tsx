@@ -97,30 +97,30 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   ];
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
-      <div, className="te, x, t-center, m, b-8">
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+      </div><div, className="te, x, t-center, m, b-8">
+        </div><div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";
-      <div, className="te, x, t-center, m, b-8">";
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
-          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";</div>
+      <div, className="te, x, t-center, m, b-8">";</div>
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";</div>
+          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>";
-          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
         </d, i, v>
-        <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-2">";
+        <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-2">";</p>
           7, Revolutionary, Articles on, AI, Autonomous Infrastructu, r, e, Multimodal, A, I & Enterprise, Solution, s;
         </p>
-        <p, className="te, x, t-purp, l, e-200, tex, t-sm">";
+        <p, className="te, x, t-purp, l, e-200, tex, t-sm">";</p>
           Breakthrough, insights, on se, l, f-healing, system, s, unified, AI, processing, and, productio, n-ready, enterprise, solutions;
         </p>
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
+      </div><div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-        {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
+        {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
           <Li, n, k
   k, e, y={ind, e, x}
             to={artic, l, e.li, n, k}
@@ -133,7 +133,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
           </Li, n, k>
         ))}
       </d, i, v>
-      <div, className="te, x, t-cent, e, r">";
+      <div, className="te, x, t-cent, e, r">";</div>
         <Li, n, k
   to="/bl, o, g"
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
@@ -141,7 +141,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
         >
           Read, All, 7 Articl, e, s;
           <Link, className="w-5 h-5  />
-          <Link, className="w-5 h-5" />";
+          <Link, className="w-5 h-5" />";</Link>
         </Li, n, k>
       </d, i, v>
     </d, i, v>

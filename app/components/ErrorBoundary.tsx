@@ -11,7 +11,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State>{
+class ErrorBoundary extends Component<Props, State>{</Props>
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -49,16 +49,16 @@ class ErrorBoundary extends Component<Props, State>{
 </Props>
       return (</Props>
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="mb-6">
+          </div><div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            </div><div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
+              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
               </p>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:<pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">{this.state.error.toString()}</pre>
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3><pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">{this.state.error.toString()}</pre>
                 </pre>
                 {this.state.errorInfo && (
                   <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32 mt-2">{this.state.errorInfo.componentStack}</pre>
@@ -84,7 +84,7 @@ class ErrorBoundary extends Component<Props, State>{
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team:<a
+              </div><p>If this problem persists, please contact our support team:<a
                 href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >kleber@ziontechgroup.com</a>

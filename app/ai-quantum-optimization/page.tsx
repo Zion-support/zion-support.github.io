@@ -19,11 +19,10 @@ const AIQuantumOptimizationPage: React.FC = () => {
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-6">
+        {/* Hero Section */}<section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center">
+              </div><div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-6">
                 <Atom className="w-4 h-4 mr-2" />
                 Quantum AI Technology
               </div>
@@ -57,10 +56,9 @@ const AIQuantumOptimizationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        {/* Features Section */}<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Revolutionary Quantum AI Platform
               </h2>
@@ -70,8 +68,8 @@ const AIQuantumOptimizationPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-100">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
+              </div><div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-100">
+                </div><div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
                   <Cpu className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Machine Learning</h3>
@@ -80,18 +78,18 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Quantum neural networks
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Quantum optimization
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                </div><div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Complex Problem Solving</h3>
@@ -100,18 +98,18 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     NP-hard optimization
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Quantum simulations
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-100">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                </div><div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Speedup</h3>
@@ -120,19 +118,19 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Exponential speedup
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Parallel processing
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+                </div><div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-white"  / />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Cryptography</h3>
                 <p className="text-gray-600 mb-4">
@@ -140,18 +138,18 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Quantum key distribution
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Unbreakable encryption
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
+                </div><div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
                   <BarChart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Financial Modeling</h3>
@@ -160,19 +158,19 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Portfolio optimization
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Risk analysis
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100">
-                <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-white" />
+                </div><div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-white"  / />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Drug Discovery</h3>
                 <p className="text-gray-600 mb-4">
@@ -180,11 +178,11 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Molecular simulation
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2"  / />
                     Drug interaction analysis
                   </li>
                 </ul>
@@ -193,10 +191,9 @@ const AIQuantumOptimizationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        {/* Use Cases Section */}<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Quantum AI Applications
               </h2>
@@ -206,9 +203,9 @@ const AIQuantumOptimizationPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              </div><div className="space-y-8">
+                </div><div className="flex items-start space-x-4">
+                  </div><div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Target className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -218,7 +215,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  </div><div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <BarChart className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -228,7 +225,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  </div><div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Cpu className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -239,9 +236,9 @@ const AIQuantumOptimizationPage: React.FC = () => {
               </div>
 
               <div className="space-y-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-white" />
+                </div><div className="flex items-start space-x-4">
+                  </div><div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-white"  / />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Cybersecurity</h3>
@@ -250,8 +247,8 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Brain className="w-6 h-6 text-white" />
+                  </div><div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Brain className="w-6 h-6 text-white"  / />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Scientific Research</h3>
@@ -260,8 +257,8 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-white" />
+                  </div><div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-6 h-6 text-white"  / />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Climate Modeling</h3>
@@ -273,10 +270,9 @@ const AIQuantumOptimizationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        {/* Pricing Section */}<section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Quantum AI Pricing
               </h2>
@@ -286,8 +282,8 @@ const AIQuantumOptimizationPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
+              </div><div className="bg-white p-8 rounded-xl border border-gray-200">
+                </div><div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Research</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-gray-900">$2,999</span>
@@ -297,19 +293,19 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">10 quantum hours/month</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Basic quantum algorithms</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Email support</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Documentation access</span>
                   </li>
                 </ul>
@@ -322,7 +318,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
               </div>
 
               <div className="bg-white p-8 rounded-xl border-2 border-indigo-500 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
@@ -337,23 +333,23 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">100 quantum hours/month</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Advanced quantum algorithms</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Priority support</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Custom integrations</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Dedicated account manager</span>
                   </li>
                 </ul>
@@ -366,7 +362,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
               </div>
 
               <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
+                </div><div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-gray-900">Custom</span>
@@ -376,23 +372,23 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Unlimited quantum access</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Custom quantum algorithms</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">24/7 dedicated support</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">On-premise deployment</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3"  / />
                     <span className="text-gray-700">Research collaboration</span>
                   </li>
                 </ul>
@@ -407,9 +403,8 @@ const AIQuantumOptimizationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* CTA Section */}<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-600">
+          </section><div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Harness Quantum Power?
             </h2>
@@ -435,11 +430,10 @@ const AIQuantumOptimizationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Info */}
-        <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="grid md:grid-cols-3 gap-8 text-white">
-              <div className="flex items-center justify-center">
+        {/* Contact Info */}<section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="grid md:grid-cols-3 gap-8 text-white">
+              </div><div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" />
                 <span>+1 302 464 0950</span>
               </div>

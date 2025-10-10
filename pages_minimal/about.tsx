@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function about() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
+      </div><div className="max-w-4xl mx-auto px-4 py-8">
+        </div><div className="bg-white rounded-lg shadow-lg p-8">
+          </div><div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">About</h1>
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
             <div className="flex justify-center space-x-4">
@@ -32,7 +32,7 @@ export default function about() {
             </div>
           </div>
           <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
+            </div><p className="text-lg text-gray-700 mb-6">
               This page is currently under development. Please check back soon for the complete
               content.
             </p>

@@ -306,35 +306,34 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet / />
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
         <me, t, a
   na, m, e="descripti, o, n"
-          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"</link>
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t."
          />
-        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" />";
+        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";</meta>
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" />";</link>
       </Helmet>
       <Head, e, r   />
-      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
-        {/* Hero, Sectio, n */}
-        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-cent, e, r">
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";</main>
+        {/* Hero, Sectio, n */}<section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"</h1>
                 AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"</p>
                 Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
                 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
               </p>
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-cent, e, r">";
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
+        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-cent, e, r">";</div>
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";</h1>
                 AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m
@@ -342,14 +341,14 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
                 Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
                 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
               </p>
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e
   r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   <Phone, className="w-5 h-5, m, r-2  />
-                  <Phone, className="w-5 h-5, m, r-2" />";
+                  <Phone, className="w-5 h-5, m, r-2" />";</Phone>
                   Schedule, Dem, o;
                 </a>
                 <a
@@ -359,67 +358,66 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
                 >
                   View, Pricin, g;
                   <Link, className="w-5 h-5, m, l-2  />
-                  <Link, className="w-5 h-5, m, l-2" />";
+                  <Link, className="w-5 h-5, m, l-2" />";</Link>
                 </a>
               </d, i, v>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Key, Benefit, s */}
-        <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="text-center mb-12">
+        {/* Key, Benefit, s */}<section, className="py-16, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-16, b, g-gr, a, y-50">";
+        <section, className="py-16, b, g-gr, a, y-50">";</section>
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+  g:px-8">";</div>
+            </div><div, className="text-center mb-12">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Why, Choose, AI Email, Marketin, g?
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Leverage, artificial, intelligence to, create, more effecti, v, e, personaliz, e, d, and, profitable, email campaig, n, s.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">
                   <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">";
-                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">";</div>
+                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";</Target>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">3, 0, 0% Open, Rate, Boost</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">AI-optimized, content, and timi, n, g</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
                   <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
-                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
+                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";</BarChart3>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">2, 5, 0% ROI, Improvemen, t</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Predictive, analytics, and optimizati, o, n</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
                   <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";
-                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" />";
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";</div>
+                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" />";</Zap>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">70% Less, Manual, Work</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Intelligent, automation, workflows</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0   / />
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0"  / />";</Shield>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Advanced, inbox, placement optimizati, o, n</p>";
@@ -427,19 +425,18 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Use, Case, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Use, Case, s */}<section, className="py-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Industry, Application, s;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 AI, email, marketing solutions, tailored, for different, industries, and business, model, s.
               </p>
             </d, i, v>
@@ -447,28 +444,28 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";
-                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";</div>
+                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";</Icon>
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";
-                    <ul, className="spa, c, e-y-2">";
+                    <ul, className="spa, c, e-y-2">";</ul>
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0   / />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
-                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";</li>
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0"  / />";</CheckCircle>
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>
                       ))}
@@ -479,28 +476,27 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Capabiliti, e, s */}
-        <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Capabiliti, e, s */}<section, className="py-20, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20, b, g-gr, a, y-50">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 AI-Powered, Capabilitie, s;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Advanced, artificial, intelligence features, that, make your, email, marketing more, effectiv, e.
               </p>
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"</div>
+            </div><div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+              {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (</div>
+                </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}</p>";
                 </d, i, v>
@@ -508,20 +504,19 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Featur, e, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Featur, e, s */}<section, className="py-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
+        <section, className="py-20">";</section>
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+  g:px-8">";</div>
+            </div><div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Comprehensive, Email, Marketing Featur, e, s;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Everything, you, need to, creat, e, se, n, d, and, optimize, high-performing, email, campaigns.
               </p>
             </d, i, v>
@@ -529,28 +524,28 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">
                       <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  />
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
+                      <CheckCircle, className="w-4 h-4, m, r-1   / />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";
-                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />";
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";</div>
+                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />";</Icon>
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";
-                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
+                      <CheckCircle, className="w-4 h-4, m, r-1"  / />";</CheckCircle>
                       {featu, r, e.benef, i, t}
                     </d, i, v>
                   </d, i, v>
@@ -559,49 +554,47 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Prici, n, g */}
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Prici, n, g */}<section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Affordable, Pricing, for Every, Busines, s;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Choose, the, plan that, fits, your email, marketing, needs and, subscriber, count.
               </p>
             </d, i, v>
             <div, className="gri, d, m
-  d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+  d: gr, i, d-co, l, s-3, ga, p-8">"</div>
+            </div><div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</div>
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-emera, l, d-500, relativ, e' : ''}`}>`;`
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-emera, l, d-500, relativ, e' : ''}`}>`;`</div>
                   {pl, a, n.popul, a, r && (
-                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
-                      <span, className="bg-emera, l, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
+                      <span, className="bg-emera, l, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";</span>
                         Most, Popula, r;
                       </sp, a, n>
                     </d, i, v>
-                  )}
-                  <div, className="te, x, t-center, m, b-8">";
+                  )}<div, className="te, x, t-center, m, b-8">";</div>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
-                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
                       <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
                     </d, i, v>
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
                   </d, i, v>
-                  <ul, className="spa, c, e-y-4, m, b-8">";
+                  <ul, className="spa, c, e-y-4, m, b-8">";</ul>
                     {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0   / />
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
-                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";</li>
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0"  / />";</CheckCircle>
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
@@ -622,7 +615,7 @@ pl, a, n.popul, a, r;
                 </d, i, v>
               ))}
             </d, i, v>
-            <div, className="te, x, t-center, m, t-12">";
+            <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?</p>";
               <a
   hr, e, f="/conta, c, t"
@@ -630,39 +623,38 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, Marketing Te, a, m;
                 <Link, className="w-4 h-4, m, l-1  />
-                <Link, className="w-4 h-4, m, l-1" />";
+                <Link, className="w-4 h-4, m, l-1" />";</Link>
               </a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Testimonia, l, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Testimonia, l, s */}<section, className="py-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 What, Our, Clients S, a, y;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Join, hundreds, of companies, already, using our, AI, email marketing, to, boost their, campaign, s.
               </p>
             </d, i, v>
             <div, className="gri, d, m
-  d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+  d: gr, i, d-co, l, s-3, ga, p-8">"</div>
+            </div><div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</div>
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
-                  <div, className="flex, item, s-center, m, b-4">";
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
+                  <div, className="flex, item, s-center, m, b-4">";</div>
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t   / />
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t"  / />";</Star>
                     ))}
                   </d, i, v>
-                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";</blockquote>
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
                   <d, i, v>
@@ -675,29 +667,28 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">"
+        {/* CTA, Sectio, n */}<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"</div>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
-            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";</div>
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";</h2>
               Ready, to, Transform Your, Email, Marketing?
             </h2>
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";</p>
               Start, using, AI-powered, email, marketing to, achieve, 300% higher, open, rates and, 25, 0% better, RO, I.
             </p>
             <div, className="flex, fle, x-co, l, s
-  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
+            </div><div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
   hr, e, f="/conta, c, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e
   r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 <Phone, className="w-5 h-5, m, r-2  />
-                <Phone, className="w-5 h-5, m, r-2" />";
+                <Phone, className="w-5 h-5, m, r-2" />";</Phone>
                 Schedule, Dem, o;
               </a>
               <a
@@ -707,7 +698,7 @@ pl, a, n.popul, a, r;
               >
                 View, Success, Stories;
                 <Link, className="w-5 h-5, m, l-2  />
-                <Link, className="w-5 h-5, m, l-2" />";
+                <Link, className="w-5 h-5, m, l-2" />";</Link>
               </a>
             </d, i, v>
           </d, i, v>

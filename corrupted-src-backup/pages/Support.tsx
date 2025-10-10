@@ -101,17 +101,16 @@ const, Suppor, t: Rea, c, t.FC = () => {
   );
   return (
     <>
-      <Helmet>
+      <Helmet / />
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
-        {/* Hero, Sectio, n */}
-        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
-            <div, className="te, x, t-cent, e, r">
+        {/* Hero, Sectio, n */}</div><section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
+            </div><div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
                 Support, Cente, r;
@@ -119,9 +118,8 @@ const, Suppor, t: Rea, c, t.FC = () => {
               <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o">
                 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
               </p>
-              {/* Search, Ba, r */}
-              <div, className="m, a, x-w-2xl, m, x-au, t, o">
-                <div, className="relati, v, e">
+              {/* Search, Ba, r */}<div, className="m, a, x-w-2xl, m, x-au, t, o">
+                </div><div, className="relati, v, e">
                   <Search, className="absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5"  />
                   <inp, u, t
   ty, p, e="te, x, t"
@@ -136,10 +134,9 @@ const, Suppor, t: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Support, Channel, s */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
+        {/* Support, Channel, s */}<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
+          </section><div, className="m, a, x-w-7xl, m, x-au, t, o">
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
                 Get, Suppor, t;
               </h2>
@@ -149,10 +146,10 @@ const, Suppor, t: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">
-              {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
-                  <div, className="te, x, t-cent, e, r">
-                    <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+              {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (</div>
+                </div><div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+                  </div><div, className="te, x, t-cent, e, r">
+                    </div><div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  />
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">
@@ -162,7 +159,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
                       {chann, e, l.descripti, o, n}
                     </p>
                     <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4">
-                      <div, className="flex, justif, y-betwe, e, n">
+                      </div><div, className="flex, justif, y-betwe, e, n">
                         <sp, a, n>Availabili, t, y:</sp, a, n>
                         <span, className="fo, n, t-semibo, l, d">{chann, e, l.availabili, t, y}</sp, a, n>
                       </d, i, v>
@@ -180,10 +177,9 @@ const, Suppor, t: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* FAQ, Sectio, n */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
+        {/* FAQ, Sectio, n */}<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e">
+          </section><div, className="m, a, x-w-7xl, m, x-au, t, o">
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
                 Frequently, Asked, Questions;
               </h2>
@@ -204,10 +200,9 @@ const, Suppor, t: Rea, c, t.FC = () => {
   ];
   return (
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
-      {/* Hero, Sectio, n */}
-      <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
-        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
-          <div, className="te, x, t-cent, e, r">
+      {/* Hero, Sectio, n */}</div><section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
+        </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
+          </div><div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m
   d:te, x, t-6xl, fon, t-bold, m, b-6">
               We're, Here, to He, l, p;
@@ -216,9 +211,8 @@ const, Suppor, t: Rea, c, t.FC = () => {
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
               Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
             </p>
-            {/* Search, Ba, r */}
-            <div, className="m, a, x-w-2xl, m, x-au, t, o">
-              <div, className="relati, v, e">
+            {/* Search, Ba, r */}<div, className="m, a, x-w-2xl, m, x-au, t, o">
+              </div><div, className="relati, v, e">
                 <Search, className="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, w-5 h-5"  />
                 <inp, u, t
   ty, p, e="te, x, t"
@@ -233,8 +227,7 @@ const, Suppor, t: Rea, c, t.FC = () => {
           </d, i, v>
         </d, i, v>
       </secti, o, n>
-            {/* Category, Filte, r */}
-            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
+            {/* Category, Filte, r */}<div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
               <butt, o, n
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
                 classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`
@@ -260,10 +253,9 @@ const, Suppor, t: Rea, c, t.FC = () => {
                 </butt, o, n>
               ))}
             </d, i, v>
-            {/* FAQ, Item, s */}
-            <div, className="spa, c, e-y-6">
-              {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6">
+            {/* FAQ, Item, s */}<div, className="spa, c, e-y-6">
+              {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (</div>
+                </div><div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6">
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
                     {f, a, q.questi, o, n}
                   </h3>
@@ -275,16 +267,15 @@ const, Suppor, t: Rea, c, t.FC = () => {
             </d, i, v>
             {filteredFa, q, s.leng, t, h === 0 && (
               <div, className="te, x, t-center, p, y-12">
-                <p, className="te, x, t-gr, a, y-500, tex, t-lg">
+                </div><p, className="te, x, t-gr, a, y-500, tex, t-lg">
                   No, FAQs, found matching, your, search criter, i, a.
                 </p>
               </d, i, v>
             )}
           </d, i, v>
         </secti, o, n>
-        {/* Contact, CT, A */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
-          <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r">
+        {/* Contact, CT, A */}<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r">
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
               Still, Need, Help?
             </h2>

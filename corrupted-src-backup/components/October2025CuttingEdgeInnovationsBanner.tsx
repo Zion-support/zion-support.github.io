@@ -1,25 +1,25 @@
 const, October2025CuttingEdgeInnovationsBanne, r = () => {
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-6">"
-        <div, className="flex, item, s-start, ga, p-4">
-          <div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">"
+      </div><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-6">"</div>
+        </div><div, className="flex, item, s-start, ga, p-4">
+          </div><div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">"</div>
             <Sparkles, className="w-8 h-8, tex, t-whi, t, e  />
-    <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">";
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6">";
-        <div, className="flex, item, s-start, ga, p-4">";
+    <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">";</div>
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-6">";</div>
+        <div, className="flex, item, s-start, ga, p-4">";</div>
           <div, className="hidde, n, s
-  m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">";
-            <Sparkles, className="w-8 h-8, tex, t-whi, t, e" />";
+  m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">";</div>
+            <Sparkles, className="w-8 h-8, tex, t-whi, t, e" />";</Sparkles>
           </d, i, v>
-          <div, className="fl, e, x-1, mi, n-w-0">";
-            <div, className="flex, item, s-center, ga, p-2, m, b-2">";
-              <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-white, shado, w-lg">";
+          <div, className="fl, e, x-1, mi, n-w-0">";</div>
+            <div, className="flex, item, s-center, ga, p-2, m, b-2">";</div>
+              <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-white, shado, w-lg">";</span>
                 🚀 JUST, PUBLISHED, OCTOBER 1, 20, 2, 5;
               </sp, a, n>
-              <span, className="hidden, s, m: inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-r, e, d-600, tex, t-white, shado, w-lg, animat, e-pul, s, e">"
-              <span, className="hidden, s, m: inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-r, e, d-600, tex, t-white, shado, w-lg, animat, e-pul, s, e">";
+              <span, className="hidden, s, m: inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-r, e, d-600, tex, t-white, shado, w-lg, animat, e-pul, s, e">"</span>
+              <span, className="hidden, s, m: inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-r, e, d-600, tex, t-white, shado, w-lg, animat, e-pul, s, e">";</span>
                 🔥 BREAKTHROUGH, INNOVATION, S;
               </sp, a, n>
             </d, i, v>
@@ -27,13 +27,13 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   g:te, x, t-4xl, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, m, b-3, leadin, g-tig, h, t">"
               3, Gam, e-Changing, AI, Breakthroughs — Neu, r, o-Symbolic, Intelligenc, e, Spatial, Computing, Revolution & Agentic, Supply, Chain;
             </h2>
-            <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">"
+            <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">"</p>
             <h2, className="te, x, t-2xl, s, m: te, x, t-3x, l, l
   g:te, x, t-4xl, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, m, b-3, leadin, g-tig, h, t">";
               3, Gam, e-Changing, AI, Breakthroughs — Neu, r, o-Symbolic, Intelligenc, e, Spatial, Computing, Revolution & Agentic, Supply, Chain;
             </h2>
-            <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">";
-              ⚡ <strong, className="te, x, t-indi, g, o-2, 0, 0">BRAND, NEW, TODA
+            <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">";</p>
+              ⚡ <strong, className="te, x, t-indi, g, o-2, 0, 0">BRAND, NEW, TODA</strong>
   Y:</stro, n, g> Deploy, neur, o-symbolic, AI, achieving{" "}";
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.7% reasoning, accurac, y</sp, a, n> wi, t, h{" "}";
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">89% fewer, hallucination, s</sp, a, n>, implement, spatial, computing platforms, deliverin, g{" "}";
@@ -42,24 +42,24 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.1% forecast, accurac, y</sp, a, n> a, n, d{" "}";
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">82% cost, reductio, n</sp, a, n>. Revolutionary, innovations, transforming enterprises, worldwid, e!";
             </p>
-            <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
-            <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">";
+            <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"</div>
+            <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">";</div>
               <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-neu, r, o-symbol, i, c-ai-enterpri, s, e-breakthrou, g, h"
                 classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, hove, r: fr, o, m-bl, u, e-6, 0, 0/30, hove, r:to-purp, l, e-6, 0, 0/30, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-3, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hov, e
   r:shad, o, w-bl, u, e-5, 0, 0/25"
               >
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">
-                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5   / />
                   <div, className="fl, e, x-1, mi, n-w-0">
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0">"
-                <div, className="flex, item, s-start, ga, p-2, m, b-2">";
-                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
-                  <div, className="fl, e, x-1, mi, n-w-0">";
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0">";
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0">"</h3>
+                <div, className="flex, item, s-start, ga, p-2, m, b-2">";</div>
+                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5"  / />";</Brain>
+                  <div, className="fl, e, x-1, mi, n-w-0">";</div>
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0">";</h3>
                       Neu, r, o-Symbolic, AI, Breakthrough;
                     </h3>
-                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";
+                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";</p>
                       99.7% Reasoni, n, g + 96% Explainabili, t, y + 89% Fewer, Hallucination, s;
                     </p>
                   </d, i, v>
@@ -68,9 +68,9 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>
                   <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";</div>
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>";
-                  <Link, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";</Link>
                 </d, i, v>
               </Li, n, k>
               <Li, n, k
@@ -81,14 +81,14 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">
                   <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <div, className="fl, e, x-1, mi, n-w-0">
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0">"
-                <div, className="flex, item, s-start, ga, p-2, m, b-2">";
-                  <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
-                  <div, className="fl, e, x-1, mi, n-w-0">";
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0">";
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0">"</h3>
+                <div, className="flex, item, s-start, ga, p-2, m, b-2">";</div>
+                  <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";</Sparkles>
+                  <div, className="fl, e, x-1, mi, n-w-0">";</div>
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0">";</h3>
                       Spatial, Computin, g + AI, Revolutio, n;
                     </h3>
-                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";
+                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";</p>
                       12x, Productivit, y + 97% Training, Efficienc, y + 85% Cost, Cu, t;
                     </p>
                   </d, i, v>
@@ -97,9 +97,9 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>
                   <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";</div>
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>";
-                  <Link, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";</Link>
                 </d, i, v>
               </Li, n, k>
               <Li, n, k
@@ -110,14 +110,14 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">
                   <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <div, className="fl, e, x-1, mi, n-w-0">
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0">"
-                <div, className="flex, item, s-start, ga, p-2, m, b-2">";
-                  <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
-                  <div, className="fl, e, x-1, mi, n-w-0">";
-                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0">";
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0">"</h3>
+                <div, className="flex, item, s-start, ga, p-2, m, b-2">";</div>
+                  <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5" />";</TrendingUp>
+                  <div, className="fl, e, x-1, mi, n-w-0">";</div>
+                    <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0">";</h3>
                       Agentic, Supply, Chain Revoluti, o, n;
                     </h3>
-                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";
+                    <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";</p>
                       99.1% Forecast, Accurac, y + 82% Cost, Cu, t + $1.3, 7, B+ Val, u, e;
                     </p>
                   </d, i, v>
@@ -126,9 +126,9 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>
                   <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";</div>
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>";
-                  <Link, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";</Link>
                 </d, i, v>
               </Li, n, k>
             </d, i, v>
@@ -140,7 +140,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>;
               <Link, className="w-5 h-5  />
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>';
-              <Link, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";</Link>
             </Li, n, k>
           </d, i, v>
         </d, i, v>

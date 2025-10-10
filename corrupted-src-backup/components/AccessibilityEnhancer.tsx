@@ -8,7 +8,7 @@ interface AccessibilityEnhancerProps {
   enableReducedMotion?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({</AccessibilityEnhancerProps>
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -144,8 +144,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       role="main"
       aria-label="Main content"
     >
-      {/* Skip to main content link */}
-      <a
+      {/* Skip to main content link */}<a
         href="#main-content"
         className="skip-link"
         onClick={e => {
@@ -160,8 +159,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         Skip to main content
       </a>
 
-      {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
+      {/* Accessibility controls */}<div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button
           onClick={() => setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"

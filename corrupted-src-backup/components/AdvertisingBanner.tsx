@@ -10,7 +10,7 @@ interface AdvertisingBannerProps {
   textColor?: string;
 }
 
-const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
+const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({</AdvertisingBannerProps>
   title,
   description,
   ctaText,
@@ -33,8 +33,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         gap: '2rem',
       }}
     >
-      {imageUrl && (
-        <div className="banner-image">
+      {imageUrl && (</div>
+        </div><div className="banner-image">
           <img
             src={imageUrl}
             alt={title}

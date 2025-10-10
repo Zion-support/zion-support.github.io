@@ -6,7 +6,7 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({</AdvancedAnalyticsProps>
   enableConversionTracking = true,
   enablePerformanceTracking = true,
   enableErrorTracking = true,
@@ -50,7 +50,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     <div className="advanced-analytics">
       <h2>Advanced Analytics Dashboard</h2>
       <div className="metrics-grid">
-        <div className="metric-card">
+        </div><div className="metric-card">
           <h3>Page Views</h3>
           <p className="metric-value">{analytics.pageViews.toLocaleString()}</p>
         </div>

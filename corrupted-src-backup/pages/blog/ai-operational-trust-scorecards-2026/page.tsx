@@ -21,7 +21,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, ai operational, trust, scorecards 2026, and, how it, can, benefit your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, comprehensive, guide covers, ai, operational trust, scorecards, 2026
             and, provides, practical insights, for, enterprise implementati, o, n.
 }

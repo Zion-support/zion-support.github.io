@@ -9,7 +9,7 @@ interface AccessibilitySettings {
 }
 
 const EnhancedAccessibility: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<AccessibilitySettings>({</AccessibilitySettings>
     fontSize: 'medium',
     highContrast: false,
     reducedMotion: false,
@@ -110,8 +110,7 @@ const EnhancedAccessibility: React.FC = () => {
 </AccessibilitySettings>
   return (</AccessibilitySettings>
     <>
-      {/* Accessibility Toggle Button */}
-      <button
+      {/* Accessibility Toggle Button */}<button
         className="fixed bottom-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-all duration-200"
         onClick={() =>setIsVisible(!isVisible)}
         aria-label="Open accessibility settings"
@@ -131,7 +130,7 @@ const EnhancedAccessibility: React.FC = () => {
           aria-labelledby="accessibility-title"
           aria-modal="true"
         >
-          <div className="flex justify-between items-center mb-4">
+          </div><div className="flex justify-between items-center mb-4">
             <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900">Accessibility Settings<button
               onClick={() =>setIsVisible(false)}
               className="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded"
@@ -159,8 +158,7 @@ const EnhancedAccessibility: React.FC = () => {
               </div>
             </div>
 
-            {/* High Contrast */}
-            <div className="flex items-center justify-between">
+            {/* High Contrast */}<div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">High Contrast<button
                 onClick={() =>{
                   updateSetting('highContrast', !settings.highContrast);
@@ -180,8 +178,7 @@ const EnhancedAccessibility: React.FC = () => {
               </button>
             </div>
 
-            {/* Reduced Motion */}
-            <div className="flex items-center justify-between">
+            {/* Reduced Motion */}<div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">Reduced Motion<button
                 onClick={() =>{
                   updateSetting('reducedMotion', !settings.reducedMotion);
@@ -201,8 +198,7 @@ const EnhancedAccessibility: React.FC = () => {
               </button>
             </div>
 
-            {/* Screen Reader Optimizations */}
-            <div className="flex items-center justify-between">
+            {/* Screen Reader Optimizations */}<div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">Screen Reader Optimized<button
                 onClick={() =>{
                   updateSetting('screenReader', !settings.screenReader);
@@ -222,8 +218,7 @@ const EnhancedAccessibility: React.FC = () => {
               </button>
             </div>
 
-            {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">
+            {/* Keyboard Navigation */}<div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation<button
                 onClick={() =>{
                   updateSetting('keyboardNavigation', !settings.keyboardNavigation);
@@ -243,8 +238,7 @@ const EnhancedAccessibility: React.FC = () => {
               </button>
             </div>
 
-            {/* Reset Button */}
-            <button
+            {/* Reset Button */}<button
               onClick={() =>{
                 const defaultSettings: AccessibilitySettings = {,
     fontSize: 'medium',
@@ -266,8 +260,7 @@ const EnhancedAccessibility: React.FC = () => {
         </div>
       )}
 
-      {/* Skip Links */}
-      <a
+      {/* Skip Links */}<a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >Skip to main content</a>

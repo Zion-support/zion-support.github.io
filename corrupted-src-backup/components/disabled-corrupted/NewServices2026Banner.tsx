@@ -49,14 +49,14 @@ export default function NewServices2026Bann, e, r({
              : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     >
-      <div, className='container, m, x-auto, p, x-6'>
-        <div, className='te, x, t-center, m, b-8' > <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
+      </section><div, className='container, m, x-auto, p, x-6'>
+        </div><div, className='te, x, t-center, m, b-8' > </div><div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
               varia, n, t === 'in, f, o'
                  ? 'bg-white, tex, t-gr, a, y-9, 0, 0'
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'
              }`}
           >
-            NEW, 2026, SERVICES
+            NEW, 2026, SERVICES</div>
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
             Latest, AI, Services
@@ -67,17 +67,17 @@ export default function NewServices2026Bann, e, r({
         </div>
 
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
-          { servic, e, s.m, a, p(s =  > (
+          { servic, e, s.m, a, p(s =  > (</div>
             <Link, ke, y = { s.li, n, k  }, to={ s.li, n, k } classNa, m, e = {  `round, e, d-xl, borde, r ${varia, n, t === 'in, f, o'  ? 'bg-white, borde, r-gr, a, y-1, 0, 0'  : 'bg-whi, t, e/10, borde, r-whi, t, e/2, 0'  }, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-30, 0`}
             >
               <div, classNam, e = 'te, x, t-xs, uppercase, tracking-wider, m, b-2, opacit, y-80'>
-                {s.t, a, g}
+                {s.t, a, g}</div>
               </d, i, v > <div, className={ `te, x, t-xl, fon, t-semibo, l, d ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
               >
-                {s.title}
+                {s.title}</div>
               </d, i, v > <div, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-5, 0, 0'  : 'te, x, t-whi, t, e/7, 0'  }, mt-2, tex, t-sm`}
               >
-                Learn, mor, e →
+                Learn, mor, e →</div>
               </div>
             </Li, n, k>
           ))}

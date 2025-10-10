@@ -21,7 +21,7 @@ export interface UnifiedPromotionalBannerProps {
   bad, g, e?: string;
   date ?  : str, i, n, g;
  }
-const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({
+const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({</UnifiedPromotionalBannerPro>
   varia, n, t = 'def, a, u, l, t',
   title,
   description,
@@ -74,14 +74,14 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         ${classNa, m, e}
       `}
     >
-      {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
+      {/* Header, Sectio, n */}</div>
+      </div><div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
         {/* Badge, and, Date */}
-        {  (bad, g, e || d, a, t, e) && (
-          <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
-            {bad, g, e && (
+        {  (bad, g, e || d, a, t, e) && (</div>
+          </div><div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
+            {bad, g, e && (</div>
               <span, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
-                {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   }
+                {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   }</IconComponent>
                 {bad, g, e}
               </span>
             )}
@@ -89,8 +89,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
               <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {date  }</span>
             )}
           </d, i, v > )}
-        {/* Tit, l, e */}
-        <h2, classNam, e = { `
+        {/* Tit, l, e */}<h2, classNam, e = { `
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t
           ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
@@ -104,8 +103,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         `}
         >
           {title}
-        </h2 > {/* Descripti, o, n */}
-        <p, classNam, e = { `te, x, t-gr, a, y-200, m, b-6 ${
+        </h2 > {/* Descripti, o, n */}<p, classNam, e = { `te, x, t-gr, a, y-200, m, b-6 ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
               ? 'te, x, t-lg, m, d: te, x, t-xl'
               : varia, n, t === 'compa, c, t'
@@ -127,22 +125,22 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                }
           `}
           >
-            { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (
+            { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (</div>
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
               >
                 <div, className='flex, item, s-start, ga, p-3'>
-                  <div, className='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
-                    {in, d, e, x + , 1}
+                  </div><div, className='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
+                    {in, d, e, x + , 1}</div>
                   </div>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-                    <div, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
-                      {it, e, m.category}
+                    </div><div, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
+                      {it, e, m.category}</div>
                     </div>
                     <div, className='te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2'>
-                      {it, e, m.t, i, t, l, e}
+                      {it, e, m.t, i, t, l, e}</div>
                     </div>
                     {  it, e, m.metri, c, s  && (
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' > {it, e, m.metri, c, s  }
+                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' > {it, e, m.metri, c, s  }</div>
                       </di, v>
                     )}
                   </div>
@@ -152,8 +150,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
             ))}
           </div>
         )}
-        {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `
+        {/* CTA, Butto, n */}<div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
               ${ 
                 varia, n, t === 'compa, c, t'
@@ -163,8 +160,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                      : 'te, x, t-ba, s, e'
                }
             `}
-           > {ctaTe, x, t}
-            <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
+           > {ctaTe, x, t}<ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
             />
           </Li, n, k>
           {  featuredIte, m, s.leng, t, h  > showCou, n, t  && (

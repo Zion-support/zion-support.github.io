@@ -12,7 +12,7 @@ interface ImageOptimizerProps {
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({</ImageOptimizerProps>
   src,
   alt,
   className = '',
@@ -26,7 +26,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>
 
   useEffect(() => {
     if (priority) return;
@@ -86,8 +86,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
-        <div className="text-gray-400 text-center">
-          <div className="text-4xl mb-2">⚠️</div>
+        </div><div className="text-gray-400 text-center">
+          </div><div className="text-4xl mb-2">⚠️</div>
           <div className="text-sm">Image failed to load</div>
         </div>
       </div>
@@ -101,7 +101,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       style={{ width, height }}
     >
       {/* Placeholder */}
-      {!isLoaded && (
+      {!isLoaded && (</div>
         <img
           src={generatePlaceholder()}
           alt=""

@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({</LoadingSpinnerProps>
   size = 'md',
   className = '',
   color = 'blue',
@@ -27,7 +27,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      <div
+      </div><div
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       ></div>
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}

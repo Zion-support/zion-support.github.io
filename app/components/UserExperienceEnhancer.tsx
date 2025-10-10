@@ -11,7 +11,7 @@ interface UserPreferences {
 }
 
 export const UserExperienceEnhancer: React.FC = () => {
-  const [preferences, setPreferences] = useState<UserPreferences>({
+  const [preferences, setPreferences] = useState<UserPreferences>({</UserPreferences>
     theme: 'auto',
     language: 'en',
     notifications: true,
@@ -177,8 +177,7 @@ export const UserExperienceEnhancer: React.FC = () => {
 </UserPreferences>
   return (</UserPreferences>
     <>
-      {/* Theme Toggle Button */}
-      <button
+      {/* Theme Toggle Button */}<button
         onClick={() =>{
           const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
           handleThemeChange(newTheme);
@@ -191,12 +190,11 @@ export const UserExperienceEnhancer: React.FC = () => {
         {preferences.theme === 'dark' ? '☀️' : '🌙'}</button>
       </button>
 
-      {/* User Preferences Panel */}
-      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
+      {/* User Preferences Panel */}<div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
 
         <div className="space-y-2 text-sm">
-          <div>
+          </div><div>
             <label className="block text-xs text-gray-300 mb-1">Theme<select
               value={preferences.theme}
               onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
@@ -222,7 +220,7 @@ export const UserExperienceEnhancer: React.FC = () => {
               type="checkbox"
               id="notifications"
               checked={preferences.notifications}
-              onChange={(e) =>handleNotificationChange(e.target.checked)}
+              onChange={(e) = />handleNotificationChange(e.target.checked)}
               className="rounded"</input>
             /><label htmlFor="notifications" className="text-xs">Notifications</label>
           </div>
@@ -232,18 +230,17 @@ export const UserExperienceEnhancer: React.FC = () => {
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
-              onChange={(e) =>setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
+              onChange={(e) = />setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
               className="rounded"</input>
             /><label htmlFor="analytics" className="text-xs">Analytics</label>
           </div>
         </div>
 
         <div className="mt-3 pt-2 border-t border-gray-700">
-          <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
+          </div><p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
           </p>
         </div>
-      </div>
-    </>
+      </div></>
   );
 };
 

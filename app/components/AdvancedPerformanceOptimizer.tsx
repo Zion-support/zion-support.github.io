@@ -13,7 +13,7 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({</AdvancedPerformanceOptimizerProps>
   enableAdvancedCaching = true,
   enableImageOptimization = true,
   enableLazyLoading = true,

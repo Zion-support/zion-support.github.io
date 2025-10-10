@@ -76,7 +76,7 @@ const Breadcrumb: React.FC = () => {
                     to={item.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
                   >
-                    {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                    {index === 0 && <Home className="w-4 h-4 mr-1" />}</Home>
                     {item.name}
                   </Link>
                 )}
@@ -86,8 +86,7 @@ const Breadcrumb: React.FC = () => {
         </div>
       </nav>
       
-      {/* Structured Data */}
-      <script
+      {/* Structured Data */}<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />

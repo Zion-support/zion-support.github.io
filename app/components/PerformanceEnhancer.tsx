@@ -28,7 +28,7 @@ interface PerformanceEnhancerProps {
   };
 }
 
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({</PerformanceEnhancerProps>
   enableWebVitals = true,
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
@@ -56,7 +56,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
 
   // Performance metrics storage</PerformanceEnhancerProps>
   const performanceMetrics = useMemo(() => ({</PerformanceEnhancerProps>
-    webVitals: {} as Record<string, any>,
+    webVitals: {} as Record<string, any>,</string>
     resourceTiming: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
     memoryUsage: {} as any,

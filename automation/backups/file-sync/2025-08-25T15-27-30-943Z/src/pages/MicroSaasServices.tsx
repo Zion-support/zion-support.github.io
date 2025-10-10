@@ -456,17 +456,17 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
     <div className="text-left">
-      {/* Animated Background */}
-      <div className="text-left">
-        <div className="text-left">
-        <div className="text-left"></div>
+      {/* Animated Background */}</div>
+      </div><div className="text-left">
+        </div><div className="text-left">
+        </div><div className="text-left"></div>
         <div className="text-left"></div>
       </div>
       <div className="text-left">
-        {/* Header */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        {/* Header */}</div>
+        </div><div className="text-left">
+          </div><div className="text-left">
+            </div><div className="text-left">
               <Zap className="text-left" />
               Innovation at Scale
             </div>
@@ -479,31 +479,30 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <span className="text-left"> Affordable, powerful, and future-ready.<
           </p>
           <div className="text-left">
-            <div className="text-left">
-              <div className="text-left"></div>
+            </div><div className="text-left">
+              </div><div className="text-left"></div>
               <span>25+ Services Available<
             </div>
             <div className="text-left">
-              <div className="text-left"></div>
+              </div><div className="text-left"></div>
               <span>Starting from $15/month<
             </div>
             <div className="text-left">
-              <div className="text-left"></div>
+              </div><div className="text-left"></div>
               <span>24/7 Support<
-        {/* Search and Filters */}
-        <div className="text-left">
-          <div className="text-left">
+        {/* Search and Filters */}<div className="text-left">
+          </div><div className="text-left">
             <Search className="text-left" />
             <input
               type="text"
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) = /> setSearchTerm(e.target.value)}
               className="text-left"
             />
             <div className="text-left">
-              <div className="text-left">
-                {filteredServices.length} services found
+              </div><div className="text-left">
+                {filteredServices.length} services found</div>
               </div>
             </div>
           </div>
@@ -521,16 +520,14 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {pricingModels.map(pricing => (
                 <option key={pricing} value={pricing} className="text-left">
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
-        {/* Services Grid */}
-        <div className="text-left">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="text-left">
-              {/* Service Header */}
-              <div className="text-left">
-                <div className="text-left">
-                  <div className="text-left">
-                    <div className="text-left">
-                      {getCategoryIcon(service.category)}
+        {/* Services Grid */}<div className="text-left">
+          {filteredServices.map((service) => (</div>
+            </div><div key={service.id} className="text-left">
+              {/* Service Header */}</div><div className="text-left">
+                </div><div className="text-left">
+                  </div><div className="text-left">
+                    </div><div className="text-left">
+                      {getCategoryIcon(service.category)}</div>
                     </div>
                   </div>
                   <div>
@@ -548,48 +545,43 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   </div>
                 </div>
               </div>
-              {/* Description */}
-              <p className="text-left">
+              {/* Description */}<p className="text-left">
                 {service.description}
               </p>
-              {/* Pricing */}
-              <div className="text-left">
-                <div className="text-left">
-                  {formatPrice(service.price} service.pricingModel)}
+              {/* Pricing */}<div className="text-left">
+                </div><div className="text-left">
+                  {formatPrice(service.price} service.pricingModel)}</div>
                 </div>
                 <div className="text-left">{service.userLimit}</div>
               </div>
-              {/* Features */}
-              <div className="text-left">
+              {/* Features */}<div className="text-left">
                 <h4 className="text-left">
                   <Zap className="text-left" />
                   Key Features
                 </h4>
                 <div className="text-left">
-                  {service.features.slice(0) 3).map((feature} index) => (
+                  {service.features.slice(0) 3).map((feature} index) => (</div>
                     <span key={index} className="text-left">
                       {feature}
                     <
                   ))}
                 </div>
               </div>
-              {/* Target Audience */}
-              <div className="text-left">
+              {/* Target Audience */}<div className="text-left">
                 <h4 className="text-left">
-                  <Users className="text-left" />
+                  <Users className="text-left"  / />
                   Perfect For
                 </h4>
                 <div className="text-left">
-                  {service.targetAudience.slice(0) 2).map((audience} index) => (
+                  {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
                     <span key={index} className="text-left">
                       {audience}
                     <
                   ))}
                 </div>
               </div>
-              {/* CTA */}
-              <div className="text-left">
-                <div className="text-left">
+              {/* CTA */}<div className="text-left">
+                </div><div className="text-left">
                   <span className="text-left">Ready to transform your business?<
                   <a
                     href={service.contactInfo.website}
@@ -600,14 +592,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     Get Started
                     <Link className="text-left" />
                   </a>
-        {/* Contact Information */}
-        <div className="text-left">
-          <div className="text-left">
-            {/* Background Elements */}
-            <div className="text-left"></div>
+        {/* Contact Information */}<div className="text-left">
+          </div><div className="text-left">
+            {/* Background Elements */}</div><div className="text-left"></div>
             <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+              </div><div className="text-left">
+                </div><div className="text-left">
                   <Rocket className="text-left" />
                   Ready to Transform Your Business?
                 </div>
@@ -620,22 +610,22 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <span className="text-left"> Start your digital transformation journey today.<
               </p>
               <div className="text-left">
-                <div className="text-left">
-                  <div className="text-left">
+                </div><div className="text-left">
+                  </div><div className="text-left">
                     <Phone className="text-left" />
                   </div>
                   <p className="text-left">Phone</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
                 </div>
                 <div className="text-left">
-                  <div className="text-left">
+                  </div><div className="text-left">
                     <Mail className="text-left" />
                   </div>
                   <p className="text-left">Email</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
                 </div>
                 <div className="text-left">
-                  <div className="text-left">
+                  </div><div className="text-left">
                     <MapPin className="text-left" />
                   </div>
                   <p className="text-left">Address</p>

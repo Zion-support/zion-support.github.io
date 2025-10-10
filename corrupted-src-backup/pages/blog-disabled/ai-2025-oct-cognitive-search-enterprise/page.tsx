@@ -20,17 +20,17 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
         />
       </Helm, e, t>
     <div>
-      <Helmet>
+      <Helmet / />
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
         <meta name="description
   content="Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization." /><meta name="keywords
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems" /><link rel="canonical", href=" " />
   content=" />
-        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
+        </li><link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
         <meta name="description"
   content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: "keywords
-  content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>"
+  content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>"</link>
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
@@ -81,7 +81,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Enterprise, Deployment, Success
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="h-8 w-8 text-indigo-400 ,>
+                <Brain className="h-8 w-8 text-indigo-400 , / />
   Transformative Results
               </h2>"
               <ul className="space-y-4 text-lg">
@@ -94,7 +94,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"</TrendingUp>
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
@@ -104,22 +104,22 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className=" />
-                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"
+                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"</Search>
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"</Zap>
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <TrendingUp className=" />">
+                  <TrendingUp className=" />"></TrendingUp>
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="h-8 w-8 text-indigo-400" />
+                <Brain className="h-8 w-8 text-indigo-400"  / />
   Transformative Results
               </h2>
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30'>
+                </div><div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30'>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0'>
                     Professional, Services, Firm
                   </h3>
@@ -130,7 +130,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Advanced, Capabilitie, s
               </h2>
               <div, className='spa, c, e-y-6'>
-                <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-indi, g, o-5, 0, 0'>
+                </div><div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-indi, g, o-5, 0, 0'>
                   <h3, className='te, x, t-xl, fon, t-bold, m, b-3, tex, t-indi, g, o-3, 0, 0'>
                     Multimodal, Searc, h
                   </h3>
@@ -161,9 +161,9 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 organizati, o, n. Leaders, make, data-driven, decisions, with
                 comprehensive, contex, t.
                 Start, Your, Knowledge Transformati, o, n
-                <Brain, classNam, e='ml-2 h-5 w-5' />
+                <Brain, classNam, e='ml-2 h-5 w-5'  / />
                 Start, Your, Knowledge Transformati, o, n
-                <Brain, className='ml-2 h-5 w-5' />
+                <Brain, className='ml-2 h-5 w-5'  / />
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -184,13 +184,13 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <p className="text-gray-300 mb-4 leading-relaxed">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">"
+              <p className="text-gray-300 mb-4 leading-relaxed">"</p>
   Enterprise employees spend 19.8% of their time—nearly one full day per week—searching for information. 
                 Traditional keyword-based search fails to understand context, intent, or relationships between documents. 
                 Critical knowledge remains siloed across 47 different systems on average, inaccessible when decisions matter most.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-              <p className="text-gray-300 mb-4 leading-relaxed">"
+              </p><p className="text-gray-300 mb-4 leading-relaxed">"</p>
   Cognitive search powered by large language models and advanced RAG (Retrieval-Augmented Generation) architectures 
                 transforms how organizations access institutional knowledge. These systems understand natural language, reason about 
                 relationships, and provide precise answers with full source attribution.
@@ -206,13 +206,13 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Cognitive Search Architecture</h2>"
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">1. Semantic Understanding Layer</h3>
-                <p className="text-gray-300 mb-4">"
+                <p className="text-gray-300 mb-4">"</p>
   Advanced embedding models transform documents and queries into high-dimensional vector representations that 
                   capture semantic meaning. This enables understanding of synonyms, related concepts, and contextual nuances 
                   that keyword matching misses.
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                </ul><ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
                   <li >Domain-specific embeddings trained on your enterprise corpus</li>
                   <li >Multi-lingual support across 95+ languages with cross-lingual retrieval</li>
                   <li >Query expansion automatically includes related terms and concepts</li>
@@ -220,7 +220,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   </div>
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">2. Hybrid Retrieval System</h3>
-                <p className="text-gray-300 mb-4">"
+                <p className="text-gray-300 mb-4">"</p>
   Combines vector similarity search with traditional keyword matching and graph-based knowledge traversal. 
                   Multi-stage ranking ensures the most relevant information surfaces first, with explainable relevance scoring.
                 </p>
@@ -232,7 +232,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   </div>
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">3. AI-Powered Answer Generation</h3>
-                <p className="text-gray-300 mb-4">"
+                <p className="text-gray-300 mb-4">"</p>
   LLMs synthesize information from multiple sources to generate comprehensive answers with citations. 
                   The system explains its reasoning and confidence level, enabling users to trust and validate results.
                 </p>
@@ -244,7 +244,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   </div>
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">4. Continuous Learning Engine</h3>
-                <p className="text-gray-300 mb-4">"
+                <p className="text-gray-300 mb-4">"</p>
   Machine learning models improve from user interactions, learning which results are most valuable and 
                   adapting to evolving information needs. Feedback loops ensure search quality continuously improves.
                 </p>
@@ -286,7 +286,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>"
               <div>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
-                  <p className="text-gray-300">,"
+                  <p className="text-gray-300">,"</p>
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>
@@ -297,20 +297,20 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>"
               <div>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
-                  <p className="text-gray-300">,"
+                  <p className="text-gray-300">,"</p>
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>
               <div>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
-                  <p className="text-gray-300">"
+                  <p className="text-gray-300">"</p>
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations
                     quotes in recorded meetings, or technical diagrams in documentation with natural language queries.
                   </p>
   </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-purple-300">Proactive Knowledge Delivery</h3>
-                  <p className="text-gray-300">"
+                  <p className="text-gray-300">"</p>
   AI agents surface relevant information before users even search. Context-aware recommendations deliver 
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
@@ -327,14 +327,14 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <p className="text-gray-300 mb-4 leading-relaxed">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Knowledge Competitive Advantage</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">"
+              <p className="text-gray-300 mb-4 leading-relaxed">"</p>
   Organizations that effectively leverage institutional knowledge make better decisions faster. Cognitive search 
                 doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information '
                 about past similar engagements. Engineers solve problems by finding solutions from across the organization. 
                 Leaders make data-driven decisions with comprehensive context.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-              <p className="text-gray-300 mb-4 leading-relaxed">"
+              </p><p className="text-gray-300 mb-4 leading-relaxed">"</p>
   The competitive moat grows over time as the system learns from every search, continuously improving its understanding 
                 of your domain. Early adopters report 340% faster onboarding for new employees and 67% improvement in cross-functional 
                 collaboration as knowledge barriers dissolve.
@@ -343,7 +343,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
             <div>
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
+            </div><div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
               <p className="text-xl mb-6 text-indigo-100">
   Deploy cognitive search and transform how your organization discovers and leverages information.
@@ -352,20 +352,20 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >"
                 Start Your Knowledge Transformation"
-                <Brain className="ml-2 h-5 w-5 ">
-                <Brain className="ml-2 h-5 w-5/>">
-                <Brain className="ml-2 h-5 w-5" />
+                <Brain className="ml-2 h-5 w-5 " / />
+                <Brain className="ml-2 h-5 w-5 / />"></Brain>
+                <Brain className="ml-2 h-5 w-5"  / />
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
-              <p className="text-xl mb-6 text-indigo-100">"
+              <p className="text-xl mb-6 text-indigo-100">"</p>
   Deploy cognitive search and transform how your organization discovers and leverages information.
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >"
                 Start Your Knowledge Transformation"
-                <Brain className="ml-2 h-5 w-5 ">
-                <Brain className="ml-2 h-5 w-5" />
+                <Brain className="ml-2 h-5 w-5 " / />
+                <Brain className="ml-2 h-5 w-5"  / />
   );
 };
   </div>

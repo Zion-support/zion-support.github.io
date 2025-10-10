@@ -9,7 +9,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>
   end,
   duration = 2000,
   suffix = '',

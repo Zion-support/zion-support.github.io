@@ -69,9 +69,8 @@ const AICustomerSupportPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-16">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          {/* Hero Section */}<section className="container mx-auto px-4 py-16 text-center">
+            </section><div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Customer Support Solutions
               </h1>
@@ -99,12 +98,11 @@ const AICustomerSupportPage: React.FC = () => {
                   <span>Get Free Demo</span>
                 </a>
               </div>
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
+              {/* Stats */}<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                {stats.map((stat, index) => (</div>
+                  </div><div key={index} className="cyber-card p-6 text-center">
+                    </div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                      {stat.number}</div>
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
@@ -113,8 +111,7 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
         </main>
-      </div>
-    </>
+      </div></>
   );
 };
 
@@ -124,9 +121,8 @@ const AICustomerSupportPage2: React.FC = () => {
       <Navigation />
       
       <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+        </main><div className="max-w-7xl mx-auto">
+          {/* Hero Section */}</div><section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support
             </h1>
@@ -150,21 +146,20 @@ const AICustomerSupportPage2: React.FC = () => {
               </a>
             </div>
           </section>
-          {/* Features Section */}
-          <section className="mb-16">
+          {/* Features Section */}<section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              {features.map((feature, index) => (</div>
+                </div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  / />
                         {benefit}
                       </li>
                     ))}
@@ -173,33 +168,31 @@ const AICustomerSupportPage2: React.FC = () => {
               ))}
             </div>
           </section>
-          {/* Pricing Section */}
-          <section className="mb-16">
+          {/* Pricing Section */}<section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div
+              {pricingPlans.map((plan, index) => (</div>
+                </div><div
                   key={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (</div>
+                    </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       </span>
                     </div>
-                  )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  )}<h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  / />
                         {feature}
                       </li>
                     ))}
@@ -214,9 +207,8 @@ const AICustomerSupportPage2: React.FC = () => {
               ))}
             </div>
           </section>
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          {/* CTA Section */}<section className="container mx-auto px-4 py-16 text-center">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Transform Your Customer Support?
               </h2>

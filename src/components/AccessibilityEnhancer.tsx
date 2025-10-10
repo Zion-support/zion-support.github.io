@@ -4,7 +4,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>
   useEffect(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {

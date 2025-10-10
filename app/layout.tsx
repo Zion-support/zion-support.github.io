@@ -15,21 +15,21 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin="" />
-        <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
-        <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
-        <link rel="manifest" href="/manifest.json" />
+        </li><link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
+        </li><link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
+        </li><link rel="icon" href="/favicon.ico" />
+        </li><link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
+        </li><link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0f172a" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
+        <meta name="color-scheme" content="dark light"  />{/* Preconnect to external domains */}</meta>
         </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
+        </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""  />{/* Fonts */}</li><link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-        >{/* Structured Data */}</link>
+         />{/* Structured Data */}</link>
         </link><script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

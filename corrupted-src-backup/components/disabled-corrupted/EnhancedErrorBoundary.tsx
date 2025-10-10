@@ -14,7 +14,7 @@ interface State {
   errorId: string | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State> {</Props>
   private retryCount = 0;
   private maxRetries = 3;
 
@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State> {</State>
     // Update state so the next render will show the fallback UI
     return {
       hasError: true,
@@ -135,9 +135,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Default error UI
       return (
         <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-md w-full space-y-8'>
-            <div className='text-center'>
-              <div className='mx-auto h-12 w-12 text-red-500'>
+          </div><div className='max-w-md w-full space-y-8'>
+            </div><div className='text-center'>
+              </div><div className='mx-auto h-12 w-12 text-red-500'>
                 <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path
                     strokeLinecap='round'
@@ -162,7 +162,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
 
             <div className='space-y-4'>
-              <div className='flex space-x-4'>
+              </div><div className='flex space-x-4'>
                 {this.retryCount < this.maxRetries && (
                   <button
                     onClick={this.handleRetry}
@@ -202,7 +202,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Technical Details
                 </summary>
                 <div className='mt-2 p-4 bg-gray-100 rounded-md'>
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
+                  </div><pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
                     {this.state.error.message}
                     {'\n\n'}
                     {this.state.error.stack}

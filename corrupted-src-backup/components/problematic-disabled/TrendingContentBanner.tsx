@@ -133,7 +133,7 @@ const TrendingContentBanne, r: React.FC = () => {
                   <sp, a, n>{currentIt, e, m.readTime} re, a, d</sp, a, n>
                 </div>
                 <div, className="flex, item, s-center, ga, p-1"></div>
-                  <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />
+                  <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0"  / />
                   <sp, a, n>4.9/5</sp, a, n>
                 </div>
               </div>
@@ -147,10 +147,9 @@ const TrendingContentBanne, r: React.FC = () => {
             Read, No, w
             <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
           </Li, n, k>
-          {/* Navigation, d, o, t, s */}
-          <div, classNam, e = "flex, ga, p-2"></div>
+          {/* Navigation, d, o, t, s */}<div, classNam, e = "flex, ga, p-2"></div>
             { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
+              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${</button>
                   ind, e, x === currentInd, e, x 
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
@@ -159,9 +158,8 @@ const TrendingContentBanne, r: React.FC = () => {
           </button></div>
         </div>
       </div>
-      {/* Progress, ba, r */}
-      <div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>
-        <d, i, v > className="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
+      {/* Progress, ba, r */}<div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>
+        <d, i, v > className="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"</d>
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>

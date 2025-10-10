@@ -34,7 +34,7 @@ const App: React.FC = () => {
   }, []);
 
   if (!isInitialized) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner  />
   }
 
   return (

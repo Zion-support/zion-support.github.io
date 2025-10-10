@@ -15,7 +15,7 @@ interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>;</string>
   robots?: string;
   author?: string;
   publishedTime?: string;
@@ -32,14 +32,14 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({</AdvancedSEOOptimizerProps>
   seoData,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>
 
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
@@ -196,7 +196,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Record<string, unknown>) => {</string>
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -232,9 +232,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, []);
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
+    <Helmet / />
+      {/* Basic Meta Tags */}<title>{seoData.title}</title>
       {metaTags.map((tag, index) => (
         <meta key={index} name={tag.name} content={tag.content} />
       ))}
@@ -254,30 +253,28 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <meta key={name} name={name} content={content} />
       ))}
 
-      {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
+      {/* Additional SEO Tags */}<meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Favicon and Icons */}<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </li><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
+      </li><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
+      </li><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
+      </li><link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      </li><link rel="preconnect" href="https://fonts.googleapis.com" />
+      </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </li><link rel="preconnect" href="https://www.google-analytics.com" />
+      </li><link rel="preconnect" href="https://www.googletagmanager.com" />
 
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      </li><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      </li><link rel="dns-prefetch" href="//www.google-analytics.com" />
+      </li><link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
 };

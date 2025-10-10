@@ -14,7 +14,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State> {</Props>
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -58,8 +58,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
+          </div><div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            </div><div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
             </h1>

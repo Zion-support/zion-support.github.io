@@ -141,32 +141,30 @@ const, October2025FeaturedContentBanne, r = () => {
     }
   ];
   return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";
-      <div, className="container, m, x-auto, ma, x-w-7, x, l">";
-        {/* Head, e, r */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";</div>
+      <div, className="container, m, x-auto, ma, x-w-7, x, l">";</div>
+        {/* Head, e, r */}<div, className="text-center mb-12">
+          </div><div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">
             <Sparkles, className="w-5 h-5, m, r-2  />
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
             <Sparkles, className="w-5 h-5, m, l-2  />
           </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-        <div, className="text-center mb-12">";
-          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";
-            <Sparkles, className="w-5 h-5, m, r-2" />";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
+        <div, className="text-center mb-12">";</div>
+          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";</div>
+            <Sparkles, className="w-5 h-5, m, r-2" />";</Sparkles>
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
-            <Sparkles, className="w-5 h-5, m, l-2" />";
+            <Sparkles, className="w-5 h-5, m, l-2" />";</Sparkles>
           </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";</h2>
             Latest, AI, Solutions & Insigh, t, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">";
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">";</p>
             Discover, breakthrough, AI platforms, delivering, millions in, value, to enterprise, organization, s;
           </p>
         </d, i, v>
-        {/* Featured, Content, Cards */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
+        {/* Featured, Content, Cards */}<div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";</div>
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
             const, Ico, n = conte, n, t.ic, o, n;
             return (
@@ -179,63 +177,58 @@ const, October2025FeaturedContentBanne, r = () => {
               >
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
                 <div, className="relativ, e, p-8">
-                  {/* Ic, o, n & Tit, l, e */}
-                  <div, className="flex, item, s-start, m, b-6">
-                    <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
+                  {/* Ic, o, n & Tit, l, e */}</div>
+                  </div><div, className="flex, item, s-start, m, b-6">
+                    </div><div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`</div>
                       <Icon, className="w-8 h-8, tex, t-whi, t, e  />
                     </d, i, v>
                     <div, className="fl, e, x-1">
-                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-                <div, className="relativ, e, p-8">";
-                  {/* Ic, o, n & Tit, l, e */}
-                  <div, className="flex, item, s-start, m, b-6">";
-                    <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
-                      <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
+                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
+                <div, className="relativ, e, p-8">";</div>
+                  {/* Ic, o, n & Tit, l, e */}<div, className="flex, item, s-start, m, b-6">";</div>
+                    <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`</div>
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e" />";</Icon>
                     </d, i, v>
-                    <div, className="fl, e, x-1">";
-                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                    <div, className="fl, e, x-1">";</div>
+                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";</h3>
                         {conte, n, t.tit, l, e}
                       </h3>
-                      <p, className="te, x, t-gr, a, y-300, tex, t-sm">";
+                      <p, className="te, x, t-gr, a, y-300, tex, t-sm">";</p>
                         {conte, n, t.descripti, o, n}
                       </p>
                     </d, i, v>
                   </d, i, v>
-                  {/* Sta, t, s */}
-                  <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";
+                  {/* Sta, t, s */}<div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";</div>
                     {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">
-                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";
-                        <div, className={`te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} bg-cl, i, p-text, tex, t-transpare, n, t`}>`;`
+                      </div><div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";</div>
+                        <div, className={`te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} bg-cl, i, p-text, tex, t-transpare, n, t`}>`;`</div>
                           {st, a, t.val, u, e}
                         </d, i, v>
                         <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">{st, a, t.lab, e, l}</d, i, v>";
                       </d, i, v>
                     ))}
                   </d, i, v>
-                  {/* C, T, A */}
-                  <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                  {/* C, T, A */}<div, className="flex, item, s-center, justif, y-betwe, e, n">
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>
-                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
+                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`</div>
                       Read, Full, Article;
                       <Link, className="w-4 h-4, m, l-2  />
-                  <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                  <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>";
-                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
+                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`</div>
                       Read, Full, Article;
-                      <Link, className="w-4 h-4, m, l-2" />";
+                      <Link, className="w-4 h-4, m, l-2" />";</Link>
                     </d, i, v>
                   </d, i, v>
                 </d, i, v>
-                {/* Hover, Effect, Overlay */}
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
+                {/* Hover, Effect, Overlay */}<div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
               </Li, n, k>
             );
           })}
         </d, i, v>
-        {/* Bottom, CT, A */}
-        <div, className="te, x, t-cent, e, r">";
-          <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";
+        {/* Bottom, CT, A */}<div, className="te, x, t-cent, e, r">";</div>
+          <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";</div>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove
@@ -243,7 +236,7 @@ const, October2025FeaturedContentBanne, r = () => {
             >
               Explore, All, Articles;
               <TrendingUp, className="w-5 h-5, m, l-2  />
-              <TrendingUp, className="w-5 h-5, m, l-2" />";
+              <TrendingUp, className="w-5 h-5, m, l-2" />";</TrendingUp>
             </Li, n, k>
             <Li, n, k
   to="/conta, c, t"
@@ -251,15 +244,14 @@ const, October2025FeaturedContentBanne, r = () => {
             >
               Get, a, Free Consultati, o, n;
               <Link, className="w-5 h-5, m, l-2  />
-              <Link, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2" />";</Link>
             </Li, n, k>
           </d, i, v>
         </d, i, v>
-        {/* Value, Propositio, n */}
-        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">
-          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
-        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">";
-          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
+        {/* Value, Propositio, n */}<div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">
+          </div><div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"</div>
+        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">";</div>
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";</div>
             <d, i, v>
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">$31.1M</d, i, v>";
               <div, className="te, x, t-gr, a, y-300, tex, t-sm">Combined, Annual, Value</d, i, v>";

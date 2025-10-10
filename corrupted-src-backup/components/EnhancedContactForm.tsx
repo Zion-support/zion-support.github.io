@@ -15,14 +15,14 @@ export default function EnhancedContactForm(): React.JSX.Element {
         aria-label="Name"
         placeholder="Name"
         value={name}
-        onChange={e => setName(e.target.value)}
+        onChange={e = /> setName(e.target.value)}
         className="border p-2 rounded"
       />
       <input
         aria-label="Email"
         placeholder="Email"
         value={email}
-        onChange={e => setEmail(e.target.value)}
+        onChange={e = /> setEmail(e.target.value)}
         className="border p-2 rounded"
       />
       <textarea

@@ -70,13 +70,13 @@ jest.mock('../pages/Terms', () => {
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<App />);
+    render(<App />);</App>
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByTestId('seo')).toBeInTheDocument();
   });
 
   it('renders the home page by default', () => {
-    render(<App />);
+    render(<App />);</App>
     expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
 });

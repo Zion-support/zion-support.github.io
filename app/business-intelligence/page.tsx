@@ -93,28 +93,27 @@ const BusinessIntelligencePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet / />
         <title>Business Intelligence Services - Zion Tech Group</title>
         <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
+        </section><div className="absolute inset-0 bg-black opacity-20"></div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
             Make informed decisions with our comprehensive BI solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Free Consultation<a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">Call (302) 464-0950</a>
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Free Consultation</a><a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">Call (302) 464-0950</a>
             </a>
           </div>
         </div>
       </section>
 
-        {/* Features Section */}
-        <section className="mb-16">
+        {/* Features Section */}<section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}<ul className="text-sm text-gray-400 space-y-1">{feature.benefits.map((benefit, idx) => (<li key={idx}>• {benefit}</li>
@@ -125,11 +124,10 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8">
+        {/* Use Cases Section */}<section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases<div className="grid md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
               <div key={index} className="cyber-card p-6">
-                <div className="text-4xl mb-4">{useCase.icon}<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                </div><div className="text-4xl mb-4">{useCase.icon}<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}<ul className="text-sm text-gray-400 space-y-1">{useCase.examples.map((example, idx) => (<li key={idx}>• {example}</li>
                   ))}
                 </ul>
@@ -138,19 +136,17 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
+        {/* Pricing Section */}<section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-6">
+                )}<div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                   <p className="text-gray-300">{plan.description}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0"  / />{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
@@ -164,10 +160,9 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="text-center">
-          <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
+        {/* CTA Section */}<section className="text-center">
+          </section><div className="cyber-card p-12 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -190,27 +185,26 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Services<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive business intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
+      {/* Services Section */}<section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Services</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive business intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <div className="flex items-center mb-4">
+                </div><div className="flex items-center mb-4">
                   <service.icon className="w-12 h-12 text-purple-400 mr-4" />
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">{service.category}<p className="text-gray-300 mb-6">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">{service.category}</span><p className="text-gray-300 mb-6">{service.description}</p>
 
                 <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold text-white">{service.price}<span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
+                  </div><div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-white">{service.price}</span><span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                   </div>
                 </div>
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{feature}</CheckCircle>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2"  / />{feature}</CheckCircle>
                       </CheckCircle>
                     ))}
                   </ul>
@@ -219,7 +213,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
                       <li key={idx} className="flex items-center text-gray-300">
-                        <Star className="w-4 h-4 text-yellow-400 mr-2" >{benefit}</Star>
+                        <Star className="w-4 h-4 text-yellow-400 mr-2"  / />{benefit}</Star>
                       </Star>
                     ))}
                   </ul>
@@ -237,28 +231,26 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
+      {/* Process Section */}<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
               <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}<p className="text-gray-300">{step.description}</p>
+                </div><div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3><p className="text-gray-300">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our BI Services?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+      {/* Benefits Section */}<section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our BI Services?</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
+                </div><div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white"  / />
                 <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
@@ -266,10 +258,9 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?<p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
+      {/* CTA Section */}<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2><p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

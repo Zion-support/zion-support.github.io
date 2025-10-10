@@ -13,8 +13,8 @@ export default function NotificationSyst, e, m({
   if (!notificatio, n, s?.leng, t, h) return, nul, l;
   return (
     <div, ari, a-li, v, e = 'poli, t, e' ar, i, a-atom, i, c='tr, u, e'>
-      {notificatio, n, s.m, a, p(n = > (
-        <button, ke, y = { n.i, d  }, onCli, c, k={ () = > onRemoveNotificati, o, n(n.id) }>
+      {notificatio, n, s.m, a, p(n = > (</div>
+        <button, ke, y = { n.i, d  }, onCli, c, k={ () = > onRemoveNotificati, o, n(n.id) }></button>
           {n.messa, g, e}
         </button>
       ))}

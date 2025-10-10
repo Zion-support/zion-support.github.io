@@ -13,9 +13,8 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
     <section 
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
       aria-label="Cognitive Mesh Platform Launch Announcement"
-     > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
+     > {/* Animated background elements - purely decorative */}</section><div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
+        </div><div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div 
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={{ animationDelay: '2s' }}
@@ -27,9 +26,9 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
       </div>
 
       <div className="container mx-auto px-6 py-12 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <div 
+        {/* Header Section */}</div>
+        </div><div className="text-center mb-8">
+          </div><div 
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement"
@@ -68,9 +67,8 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           </ul>
         </section>
 
-        {/* Call to Action */}
-        <div  className="text-center" role="region" aria-label="Call to action">
-          <div  className="inline-flex flex-col sm:flex-row gap-4">
+        {/* Call to Action */}<div  className="text-center" role="region" aria-label="Call to action">
+          </div><div  className="inline-flex flex-col sm:flex-row gap-4">
             <Link
               to="/contact"
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"

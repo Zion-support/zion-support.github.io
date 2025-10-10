@@ -145,9 +145,8 @@ const AccessibilityPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      {/* Hero Section */}<section className="relative py-20 overflow-hidden">
+        </section><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -159,10 +158,9 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* Features Section */}<section className="py-16 bg-white/5">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Accessibility Features
             </h2>
@@ -172,10 +170,10 @@ const AccessibilityPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            {features.map((feature, index) => (</div>
+              </div><div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                </div><div className="flex items-start space-x-4 mb-6">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -187,7 +185,7 @@ const AccessibilityPage: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  / />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -198,10 +196,9 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Standards Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* Standards Section */}<section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance Standards
             </h2>
@@ -211,10 +208,10 @@ const AccessibilityPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {standards.map((standard, index) => (
-              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <div className="flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-400 mr-2" />
+            {standards.map((standard, index) => (</div>
+              </div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                </div><div className="flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-400 mr-2"  / />
                   <span className="text-green-400 font-bold">{standard.status}</span>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{standard.name}</h3>
@@ -225,10 +222,9 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* Tools Section */}<section className="py-16 bg-white/5">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Supported Technologies
             </h2>
@@ -238,9 +234,9 @@ const AccessibilityPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            {tools.map((tool, index) => (</div>
+              </div><div key={index} className="text-center">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <tool.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
@@ -251,10 +247,9 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Commitments Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* Commitments Section */}<section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Accessibility Commitments
             </h2>
@@ -264,9 +259,9 @@ const AccessibilityPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {commitments.map((commitment, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            {commitments.map((commitment, index) => (</div>
+              </div><div key={index} className="text-center">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <commitment.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{commitment.title}</h3>
@@ -277,9 +272,8 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Contact Section */}<section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Accessibility Support
           </h2>

@@ -5,7 +5,7 @@ const GlobalAITransformationHu, b = () => {
       title: 'Enterprise, Automat, i, o, n',
       description: 'Complete, business, process automation, with, 95% efficiency, gai, n, s',
       val, u, e: '$2.3, B',
-      ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,</Target>
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       li, n, k: '/servic, e, s/enterpri, s, e-automati, o, n-transformat, i, o, n'
      },
@@ -13,7 +13,7 @@ const GlobalAITransformationHu, b = () => {
       title: 'Quantum, Consciousness, A, I',
       description: 'Revolutionary, AI, consciousness integration, with, infinite scalabil, i, t, y',
       val, u, e: '$5, 0, 0, B',
-      ic, o, n: <Brain, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Brain, classNam, e = "w-8 , h-, 8"  / /> ,</Brain>
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-viol, e, t-50, 0',
       li, n, k: '/servic, e, s/quant, u, m-consciousne, s, s-ai-servi, c, e, s'
      },
@@ -21,7 +21,7 @@ const GlobalAITransformationHu, b = () => {
       title: 'Autonomous, Operatio, n, s',
       description: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventi, o, n',
       val, u, e: '$1, 5, 0, B',
-      ic, o, n: <Zap, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Zap, classNam, e = "w-8 , h-, 8" / > ,</Zap>
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       li, n, k: '/servic, e, s/autonomo, u, s-operatio, n, s-platf, o, r, m'
      },
@@ -29,7 +29,7 @@ const GlobalAITransformationHu, b = () => {
       title: 'Neural, Securi, t, y',
       description: 'Advanced, A, I-powered, security, with 99.7% threat, preventi, o, n',
       val, u, e: '$87, B',
-      ic, o, n: <Shield, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Shield, classNam, e = "w-8 , h-, 8"  / /> ,</Shield>
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       li, n, k: '/servic, e, s/neur, a, l-securi, t, y-framew, o, r, k'
      }
@@ -40,10 +40,10 @@ const GlobalAITransformationHu, b = () => {
     { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
   ]; return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
-      <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
+      </div><div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e"  / />
         <span, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">🌍 GLOBAL, AI, TRANSFORMATION H, U, B</sp, a, n>
-        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e"  / />
       </div>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
         Transforming, Business, Operations Worldwi, d, e
@@ -52,7 +52,7 @@ const GlobalAITransformationHu, b = () => {
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </p>
       <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
+        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (</div>
           <Link, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}
           >
             <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</div>
@@ -66,22 +66,22 @@ const GlobalAITransformationHu, b = () => {
         ))}
       </div>
       <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+        </div><div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
           <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>
         </div>
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = {ind, e, x }>
-              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</div>
+          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (</div>
+            </div><div, ke, y = {ind, e, x }>
+              </div><div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</div>
               <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l}</div>
             </di, v>
           ))}
         </div>
       </div>
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-        <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
-          <div, className="flex, item, s-center, ga, p-3, m, b-4">
+        </div><div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
+          </div><div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Rocket, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>
           </div>
@@ -93,8 +93,8 @@ const GlobalAITransformationHu, b = () => {
           </Li, n, k>
         </div>
         <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">
-          <div, className="flex, item, s-center, ga, p-3, m, b-4">
-            <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />
+          </div><div, className="flex, item, s-center, ga, p-3, m, b-4">
+            <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0"  / />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>
           </div>
           <p, className="te, x, t-gr, a, y-300, m, b-4">Re, a, l-world, transformations, delivering billions, in, value creation, and, operational excellen, c, e.</p>
@@ -105,8 +105,8 @@ const GlobalAITransformationHu, b = () => {
           </Li, n, k>
         </div>
         <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
-          <div, className="flex, item, s-center, ga, p-3, m, b-4">
-            <Users, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0" />
+          </div><div, className="flex, item, s-center, ga, p-3, m, b-4">
+            <Users, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0"  / />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>
           </div>
           <p, className="te, x, t-gr, a, y-300, m, b-4">Comprehensive, AI, transformation services, tailored, to your, specific, business nee, d, s.</p>

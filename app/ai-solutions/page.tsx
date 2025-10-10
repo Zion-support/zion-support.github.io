@@ -134,13 +134,12 @@ const AISolutionsPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Solutions">AI Solutions<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced artificial intelligence solutions designed to transform your business operations and drive unprecedented growth.</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Solutions">AI Solutions</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced artificial intelligence solutions designed to transform your business operations and drive unprecedented growth.</p>
           </p>
         </section>
 
-        {/* AI Services Grid */}
-        <section className="mb-16" aria-labelledby="ai-services-heading">
-          <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">Our AI Services<p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Comprehensive AI solutions tailored to your business needs<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">{aiServices.map((service, index) => (</div>
+        {/* AI Services Grid */}<section className="mb-16" aria-labelledby="ai-services-heading">
+          <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">Our AI Services</h2><p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Comprehensive AI solutions tailored to your business needs<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">{aiServices.map((service, index) => (</div>
               <a
                 key={index}
                 href={service.link}
@@ -148,11 +147,11 @@ const AISolutionsPage: React.FC = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
-                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}<p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  / />{feature}</CheckCircle>
                       </CheckCircle>
                     ))}
                   <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
@@ -161,38 +160,36 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Why Choose Our AI Solutions */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
+        {/* Why Choose Our AI Solutions */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our AI Solutions?</h2>
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology<p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
+              </div><div className="text-center">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white"  / />
+                <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology</h3><p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">Custom Solutions<p className="text-gray-300">Every AI solution is tailored to your specific business needs and requirements.</p>
+                <h3 className="text-xl font-bold text-white mb-3">Custom Solutions</h3><p className="text-gray-300">Every AI solution is tailored to your specific business needs and requirements.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">Enterprise Security<p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
+                </div><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white"  / />
+                <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3><p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
+        {/* Contact CTA */}<section className="text-center">
+          </section><div className="cyber-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

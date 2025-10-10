@@ -5,7 +5,7 @@ interface SkipLinkProps {
   children: React.ReactNode;
 }
 
-const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
+const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>
   return (
     <a
       href={to}

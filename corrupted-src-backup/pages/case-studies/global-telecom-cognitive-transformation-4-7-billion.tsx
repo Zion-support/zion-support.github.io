@@ -28,13 +28,12 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
       </Helm, e, t>
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / > {/* Hero, Sect, i, o, n */ }</Head>
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
+          </div><div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
 
-          <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            {/* Breadc, r, u, m, b */}
-            <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
+          </div><div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
+            {/* Breadc, r, u, m, b */}<nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
               <Link, t, o='/'
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
               >
@@ -50,11 +49,10 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
               <span, className='te, x, t-whi, t, e'>Fortune, 20, Telecom</sp, a, n>
             </n, a, v>
 
-            {/* Case, Study, Head, e, r */}
-            <div, classNam, e = 'm, a, x-w-4, x, l'>
-              <div, className='flex, item, s-center, ga, p-3, m, b-6, fle, x-wr, a, p'>
+            {/* Case, Study, Head, e, r */}<div, classNam, e = 'm, a, x-w-4, x, l'>
+              </div><div, className='flex, item, s-center, ga, p-3, m, b-6, fle, x-wr, a, p'>
                 <span, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, shado, w-lg'>
-                  <Award, className='w-4 h-4, m, r-2' />
+                  <Award, className='w-4 h-4, m, r-2'  / />
                   SUCCESS, STOR, Y
               </div>
 
@@ -64,21 +62,21 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                   <Zap, classNam, e='w-4 h-4' />
                   18, Month, Implementation
         <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <div, classNam, e='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
+          </div><div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
+            </div><div, classNam, e='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
                 <span, className='flex, item, s-center, ga, p-2'>
                   <Zap, className='w-4 h-4' />
                   18, Month, Implementation
         <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
+          </div><div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
+            </div><div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
                   The, Challeng, e
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                  <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0'  / />
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                  <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0'  / />
                         'Re, a, l-time, analytics, across all, business, unit, s',
                         'Predictive, modeling, for market, opportunitie, s',
                         'Competitive, intelligence, analysis',
@@ -95,17 +93,17 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                       </h3>
 
                       <div, className='mb-4'>
-                        <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
+                        </div><p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d: </p>
                         <ul, className='spa, c, e-y-2'>
                           { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
                             <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'
                             >
-                              <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                              <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'  / />
                       </div>
 
                       <div, classNam, e = 'bg-bla, c, k/30, rounde, d-l, g, p-3'>
-                        <p, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
+                        </div><p, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                           Technology, Stac, k: </p>
                         <p, className='te, x, t-sm, tex, t-purp, l, e-1, 0, 0'>
                           {solution.te, c, h}
@@ -201,7 +199,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                           chan, g, e: 'fas, t, e, r',
                         },
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
-                      <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
+                      </h3><h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                         Revenue, Growt, h
                       </h3>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'>
@@ -236,7 +234,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                           </sp, a, n>
                         </li>
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
-                      <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
+                      </h3><h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                         Cost, Reductio, n
                       </h3>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'>
@@ -268,14 +266,14 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                     <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
-                  <Award, classNam, e='w-6 h-6, tex, t-whi, t, e' />
+                  <Award, classNam, e='w-6 h-6, tex, t-whi, t, e'  / />
           <div, classNam, e='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                     Get, Similar, Results
                     <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
-                  <Award, className='w-6 h-6, tex, t-whi, t, e' />
+                  <Award, className='w-6 h-6, tex, t-whi, t, e'  / />
                 </div>
           <div, className='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>

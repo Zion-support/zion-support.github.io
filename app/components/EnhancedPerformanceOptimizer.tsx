@@ -15,7 +15,7 @@ interface PerformanceOptimizerProps {
   enableCriticalResourcePreloading?: boolean;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({</PerformanceOptimizerProps>
   enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,

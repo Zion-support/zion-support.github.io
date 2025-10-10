@@ -16,7 +16,7 @@ interface FormStatus {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormData>({</FormData>
     name: '',
     email: '',
     company: '',
@@ -25,12 +25,12 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
-  const [status, setStatus] = useState<FormStatus>({
+  const [status, setStatus] = useState<FormStatus>({</FormStatus>
     type: 'idle',
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {</HTMLInputElement>
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -81,10 +81,9 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Information */}
-        <div className="space-y-8">
-          <div>
+      </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Contact Information */}</div><div className="space-y-8">
+          </div><div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Get in Touch
             </h2>
@@ -94,8 +93,8 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            </div><div className="flex items-start space-x-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -108,7 +107,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -121,7 +120,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -136,11 +135,10 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        {/* Contact Form */}<div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              </div><div>
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Full Name *
                 </label>
@@ -174,7 +172,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              </div><div>
                 <label htmlFor="company" className="block text-white font-medium mb-2">
                   Company
                 </label>
@@ -247,12 +245,11 @@ const ContactForm: React.FC = () => {
                 status.type === 'error' ? 'bg-red-500/20 text-red-300' :
                 'bg-blue-500/20 text-blue-300'
               }`}>
-                {status.type === 'success' ? (
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                {status.type === 'success' ? (</div>
+                  <CheckCircle className="w-5 h-5 flex-shrink-0"  / />
                 ) : status.type === 'error' ? (
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                ) : null}
-                <span>{status.message}</span>
+                ) : null}<span>{status.message}</span>
               </div>
             )}
 
@@ -262,10 +259,7 @@ const ContactForm: React.FC = () => {
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
             >
               {status.type === 'loading' ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                  Sending...
-                </>
+                <><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></>
               ) : (
                 <>
                   Send Message

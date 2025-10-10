@@ -130,14 +130,14 @@ const AISalesAutomationPage: React.FC = () => {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Sales Automation<p className="text-xl text-cyan-400 mb-8 font-medium">Boost sales by 300% with intelligent automation<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your sales process with AI-powered lead scoring, automated outreach,</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Sales Automation</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Boost sales by 300% with intelligent automation</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your sales process with AI-powered lead scoring, automated outreach,</p>
               and intelligent CRM integration that drives results and maximizes efficiency.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
-              >📞 Call: (302) 464-0950<a
+              >📞 Call: (302) 464-0950</a><a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Get Quote</a>
@@ -145,14 +145,13 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="mb-16">
+          {/* Features Section */}<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
                       <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
-                        <CheckCircle className="w-4 h-4 mr-2" >{benefit}</CheckCircle>
+                        <CheckCircle className="w-4 h-4 mr-2"  / />{benefit}</CheckCircle>
                       </CheckCircle>
                     ))}
                   </ul>
@@ -161,20 +160,18 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
+          {/* Pricing Section */}<section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
                       </span>
                     </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-400 mb-4">{plan.description}</p>
+                  )}<div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}<span className="text-gray-400 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  / />{feature}</CheckCircle>
                       </CheckCircle>
                     ))}
                   <a
@@ -191,27 +188,25 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Benefits Section */}
-          <section className="mb-16">
+          {/* Benefits Section */}<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Sales Automation?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20">
-            <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Automate Your Sales?<p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI sales automation platform today. Contact us for a free consultation</p>
+          {/* CTA Section */}<section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20">
+            <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Automate Your Sales?</h2><p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI sales automation platform today. Contact us for a free consultation</p>
               and custom implementation plan.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
-              >📞 Call: (302) 464-0950<a
+              >📞 Call: (302) 464-0950</a><a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Email Us</a>
@@ -221,8 +216,7 @@ const AISalesAutomationPage: React.FC = () => {
         </main>
 
         <Footer />
-      </div>
-    </>
+      </div></>
   );
 };
 

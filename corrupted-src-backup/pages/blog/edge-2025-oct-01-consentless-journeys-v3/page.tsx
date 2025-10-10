@@ -21,7 +21,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, edge 2025, oct, 01 consentless, journeys, v3 and, how, it can, benefit, your enterpri, s, e.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-        <div, classNam, e='mt-8'>
+        </div><div, classNam, e='mt-8'>
           <Link, t, o='/<bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
           </Li, n, k>

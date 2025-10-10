@@ -131,22 +131,22 @@ export const SEOOptimizer: React.FC = () => {
   }, [seoData]);
 
   return (
-    <Helmet>
+    <Helmet / />
       <title>{seoData.title}</title>
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" >{/* Open Graph */}</meta>
+      <meta name="robots" content="index, follow"  />{/* Open Graph */}</meta>
       </meta><meta property="og:title" content={seoData.title} />
       <meta property="og:description" content={seoData.description} />
       <meta property="og:url" content={seoData.canonical} />
       <meta property="og:image" content={seoData.ogImage} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" >{/* Twitter Card */}</meta>
+      <meta property="og:site_name" content="Zion Tech Group"  />{/* Twitter Card */}</meta>
       </meta><meta name="twitter:card" content={seoData.twitterCard} />
       <meta name="twitter:title" content={seoData.title} />
       <meta name="twitter:description" content={seoData.description} />
-      <meta name="twitter:image" content={seoData.ogImage} >{/* Canonical */}</meta>
+      <meta name="twitter:image" content={seoData.ogImage}  />{/* Canonical */}</meta>
       </meta><link rel="canonical" href={seoData.canonical} />
     </Helmet>
   );

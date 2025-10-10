@@ -108,7 +108,7 @@ const AIAutomationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet / />
         <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
@@ -118,9 +118,9 @@ const AIAutomationPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
+          </main><div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
             <section className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Automation<p className="text-xl text-cyan-400 mb-8">Intelligent process automation with decision-making capabilities<p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,</p>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Automation</h1><p className="text-xl text-cyan-400 mb-8">Intelligent process automation with decision-making capabilities</p><p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,</p>
                 60% time savings, and zero human error with our intelligent automation platform.</p>
               </p>
 
@@ -138,29 +138,27 @@ const AIAutomationPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Stats Section */}
-            <section className="mb-16">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
+            {/* Stats Section */}<section className="mb-16">
+              </section><div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
                   <div key={index} className="text-center cyber-card p-6">
                     <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                    <div className="text-3xl font-bold text-white mb-2">{stat.value}<div className="text-gray-300">{stat.label}</div>
+                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div><div className="text-gray-300">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </section>
 
-            {/* Features Section */}
-            <section className="mb-16">
+            {/* Features Section */}<section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Advanced Automation Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
                   <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    </div><div className="flex items-start space-x-4">
+                      </div><div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                         <feature.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
+                        <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  / />{benefit}</CheckCircle>
                             </CheckCircle>
                           ))}
                         </ul>
@@ -171,21 +169,18 @@ const AIAutomationPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Pricing Section */}
-            <section className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Choose Your Plan<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
+            {/* Pricing Section */}<section className="mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Choose Your Plan<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
+                        </div><div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
                         </div>
                       </div>
-                    )}
-
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 mb-4">{plan.description}</p>
+                    )}<div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-cyan-400">{plan.price}<span className="text-gray-300 ml-1">{plan.period}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
+                        <span className="text-4xl font-bold text-cyan-400">{plan.price}</span><span className="text-gray-300 ml-1">{plan.period}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                         <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  / />{feature}</CheckCircle>
                         </CheckCircle>
                       ))}
                     <a
@@ -202,10 +197,9 @@ const AIAutomationPage: React.FC = () => {
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center cyber-card">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Automate Your Business?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join hundreds of businesses already using AI Automation to achieve unprecedented efficiency and growth.</p>
+            {/* CTA Section */}<section className="text-center">
+              </section><div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center cyber-card">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Automate Your Business?</h2><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join hundreds of businesses already using AI Automation to achieve unprecedented efficiency and growth.</p>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -221,7 +215,7 @@ const AIAutomationPage: React.FC = () => {
                   </Phone>
                 </div>
                 <div className="mt-8 text-sm opacity-90">
-                  <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
+                  </div><p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
               </div>
             </section>
@@ -229,8 +223,7 @@ const AIAutomationPage: React.FC = () => {
         </main>
 
         <Footer />
-      </div>
-    </>
+      </div></>
   );
 };
 

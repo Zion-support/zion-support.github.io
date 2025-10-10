@@ -10,7 +10,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Atom, className="w-8 h-8/>,"
+      ic, o, n: <Atom, className="w-8 h-8/>,"</Atom>
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
       sta, t, s: '10,000x, Speed, Boost}
@@ -23,7 +23,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '22, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Brain, className="w-8 h-8/>,"
+      ic, o, n: <Brain, className="w-8 h-8 / />,"</Brain>
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
       sta, t, s: '99.7% Au, t, o-Improveme, n, t}
@@ -36,7 +36,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '15, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Target, className="w-8 h-8/>,"
+      ic, o, n: <Target, className="w-8 h-8/>,"</Target>
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'PREDICTI, V, E','
       sta, t, s: '99.9% Accura, c, y}
@@ -49,7 +49,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '12, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Rocket, className="w-8 h-8/>,"
+      ic, o, n: <Rocket, className="w-8 h-8/>,"</Rocket>
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'IMMERSI, V, E','
       sta, t, s: '1, 0, 0% Integrati, o, n}
@@ -62,7 +62,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '14, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Shield, className="w-8 h-8/>,"
+      ic, o, n: <Shield, className="w-8 h-8 / />,"</Shield>
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'QUANT, U, M-SECU, R, E','
       sta, t, s: 'Unbreakable, Securit, y}
@@ -75,7 +75,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '20, mi, n','
       trendi, n, g: tr, u, e
-      ic, o, n: <Bot, className="w-8 h-8/>,"
+      ic, o, n: <Bot, className="w-8 h-8/>,"</Bot>
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'ME, T, A-COGNITI, V, E','
       sta, t, s: 'Autonomous, Orchestratio, n}
@@ -86,7 +86,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '18, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Atom, className="w-8 h-8" />,";
+      ic, o, n: <Atom, className="w-8 h-8" />,";</Atom>
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'QUANTUM, A, I',';
       sta, t, s: '10,000x, Speed, Boost'
@@ -100,7 +100,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '22, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Brain, className="w-8 h-8" />,";
+      ic, o, n: <Brain, className="w-8 h-8"  / />,";</Brain>
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'SE, L, F-EVOLVI, N, G',';
       sta, t, s: '99.7% Au, t, o-Improveme, n, t'
@@ -114,7 +114,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '15, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Target, className="w-8 h-8" />,";
+      ic, o, n: <Target, className="w-8 h-8" />,";</Target>
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'PREDICTI, V, E',';
       sta, t, s: '99.9% Accura, c, y'
@@ -128,7 +128,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '12, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Rocket, className="w-8 h-8" />,";
+      ic, o, n: <Rocket, className="w-8 h-8" />,";</Rocket>
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'IMMERSI, V, E',';
       sta, t, s: '1, 0, 0% Integrati, o, n'
@@ -142,7 +142,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '14, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Shield, className="w-8 h-8" />,";
+      ic, o, n: <Shield, className="w-8 h-8"  / />,";</Shield>
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'QUANT, U, M-SECU, R, E',';
       sta, t, s: 'Unbreakable, Securit, y'
@@ -156,33 +156,31 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '20, mi, n',';
       trendi, n, g: tr, u, e
-      ic, o, n: <Bot, className="w-8 h-8" />,";
+      ic, o, n: <Bot, className="w-8 h-8" />,";</Bot>
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
       bad, g, e: 'ME, T, A-COGNITI, V, E',';
       sta, t, s: 'Autonomous, Orchestratio, n'
     }
   ];
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}
-      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";</div>
+      {/* Animated, background, effects */}<div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
+        </div><div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+        </div><div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 2, s' }}
          />
-        <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+        </div><div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          />
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
+          </div><p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
-                    {  artic, l, e.trendi, n, g  && (
-                      <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>
+                    {  artic, l, e.trendi, n, g  && (</div>
+                      </div><div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>
                         <TrendingUp, classNam, e='w-3 h-3' />
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
-                  {artic, l, e.t, i, t, l, e}
-                  <sp, a, n>
+                  {artic, l, e.t, i, t, l, e}<sp, a, n>
                     {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
                       mon, t, h: 'sh, o, r, t',
                       d, a, y: 'nume, r, i, c',

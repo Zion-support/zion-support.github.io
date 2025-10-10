@@ -18,7 +18,7 @@ interface SEOProps {
   canonical?: string;
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: React.FC<SEOProps> = ({</SEOProps>
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
@@ -129,24 +129,20 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   }, [title, currentUrl, type]);
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
+    <Helmet / />
+      {/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
 
-      {/* Robots */}
-      <meta
+      {/* Robots */}<meta
         name="robots"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
 
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
+      {/* Canonical URL */}<link rel="canonical" href={canonicalUrl} />
 
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
+      {/* Open Graph / Facebook */}<meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
@@ -157,8 +153,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter */}<meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta
@@ -168,36 +163,31 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
 
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Additional Meta Tags */}<meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
 
-      {/* Theme Color */}
-      <meta name="theme-color" content="#1f2937" />
+      {/* Theme Color */}<meta name="theme-color" content="#1f2937" />
       <meta name="msapplication-TileColor" content="#1f2937" />
 
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Favicon */}<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </li><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      </li><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      </li><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      </li><link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      </li><link rel="preconnect" href="https://fonts.googleapis.com" />
+      </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </li><link rel="preconnect" href="https://www.google-analytics.com" />
 
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      {/* DNS Prefetch */}</li><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      </li><link rel="dns-prefetch" href="//www.google-analytics.com" />
 
-      {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
       {/* Additional structured data for breadcrumbs */}
       {location.pathname !== '/' && (

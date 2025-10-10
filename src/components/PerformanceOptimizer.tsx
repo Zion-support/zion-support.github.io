@@ -4,7 +4,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {</PerformanceOptimizerProps>
   // Intersection Observer for lazy loading
   const setupIntersectionObserver = useCallback(() => {
     if ('IntersectionObserver' in window) {

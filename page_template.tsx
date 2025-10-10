@@ -8,7 +8,7 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const PageTemplate: React.FC<{
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<any>;</any>
   features: string[];
   benefits: string[];
   price: string;
@@ -27,10 +27,9 @@ const PageTemplate: React.FC<{
       <Navigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+        {/* Hero Section */}<section className="text-center mb-16">
+          </section><div className="max-w-4xl mx-auto">
+            </div><div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Icon className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -57,9 +56,8 @@ const PageTemplate: React.FC<{
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        {/* Features Section */}<section className="mb-16">
+          </section><div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Features
             </h2>
@@ -69,9 +67,9 @@ const PageTemplate: React.FC<{
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+            {features.map((feature, index) => (</div>
+              </div><div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+                <CheckCircle className="w-8 h-8 text-green-400 mb-4"  / />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 <p className="text-gray-300">Advanced {feature.toLowerCase()} capabilities powered by AI</p>
               </div>
@@ -79,9 +77,8 @@ const PageTemplate: React.FC<{
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        {/* Benefits Section */}<section className="mb-16">
+          </section><div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our {title}?
             </h2>
@@ -91,8 +88,8 @@ const PageTemplate: React.FC<{
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+            {benefits.map((benefit, index) => (</div>
+              </div><div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
                 <p className="text-gray-300">Measurable improvement in your business metrics</p>
@@ -101,9 +98,8 @@ const PageTemplate: React.FC<{
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        {/* Pricing Section */}<section className="mb-16">
+          </section><div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pricing
             </h2>
@@ -113,7 +109,7 @@ const PageTemplate: React.FC<{
           </div>
           
           <div className="max-w-md mx-auto">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
+            </div><div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">{price}</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -127,9 +123,8 @@ const PageTemplate: React.FC<{
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        {/* Contact Section */}<section className="mb-16">
+          </section><div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -139,7 +134,7 @@ const PageTemplate: React.FC<{
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20">
+            </div><div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>

@@ -37,7 +37,7 @@ interface EnhancedSEOProps {
   preconnect?: string[];
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
+const EnhancedSEO: React.FC<EnhancedSEOProps>= ({</EnhancedSEOProps>
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
@@ -107,7 +107,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
 
   const finalStructuredData = structuredData || defaultStructuredData;
 </EnhancedSEOProps>
-  return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
+  return (<Helmet / />{/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
@@ -116,8 +116,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
       <meta name="theme-color" content={themeColor} />
       <meta name="color-scheme" content={colorScheme} />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" >{/* Canonical URL */}<link rel="canonical" href={canonicalUrl} >{/* Language and Locale */}</link>
-      <html lang={locale.split('_')[0]} >{alternateLocales.map((altLocale) => (<link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} >))}
+      <meta name="format-detection" content="telephone=no,address=no,email=no"  />{/* Canonical URL */}<link rel="canonical" href={canonicalUrl}  />{/* Language and Locale */}</link>
+      <html lang={locale.split('_')[0]} >{alternateLocales.map((altLocale) => (<link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`}  />))}</link>
 </link>
       {/* Open Graph / Facebook */}</link>
       </link><meta property="og:type" content={ogType} />
@@ -129,10 +129,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content={locale} >{publishedTime && <meta property="article:published_time" content={publishedTime} >}</meta>
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} >}</meta>
-      {section && <meta property="article:section" content={section} >}</meta>
-      {tags.map((tag) => (<meta key={tag} property="article:tag" content={tag} >))}
+      <meta property="og:locale" content={locale}  />{publishedTime && <meta property="article:published_time" content={publishedTime}  />}</meta>
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime}  />}</meta>
+      {section && <meta property="article:section" content={section}  />}</meta>
+      {tags.map((tag) => (<meta key={tag} property="article:tag" content={tag}  />))}</meta>
 </meta>
       {/* Twitter */}</meta>
       </meta><meta name="twitter:card" content={twitterCard} />
@@ -142,11 +142,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" >{/* Preconnect to external domains */}</meta>
-      {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" >))}
+      <meta name="twitter:creator" content="@ziontechgroup"  />{/* Preconnect to external domains */}</meta>
+      {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous"  />))}</link>
 
       {/* DNS Prefetch */}</link>
-      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain} >))}
+      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain}  />))}</link>
 
       {/* Preload critical resources */}</link>
       {preload.map((resource, index) => (<link
@@ -155,7 +155,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
           href={resource.href}
           as={resource.as}
           type={resource.type}
-        >))}
+         />))}
 
       {/* Prefetch likely next pages */}</link>
       {prefetch.map((resource, index) => (<link
@@ -163,27 +163,26 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
           rel="prefetch"
           href={resource.href}
           as={resource.as}
-        >))}
+         />))}
 </link>
       {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </script>
 
-      {/* Additional SEO Meta Tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
+      {/* Additional SEO Meta Tags */}<meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" >{/* Security Headers */}</meta>
+      <meta name="yandex-verification" content="your-yandex-verification-code"  />{/* Security Headers */}</meta>
       </meta><meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" >{/* Performance Hints */}</meta>
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"  />{/* Performance Hints */}</meta>
       </meta><meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Favicon and Icons */}</meta>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />{/* Favicon and Icons */}</meta>
       </meta><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.webp" />
-      <link rel="manifest" href="/manifest.json" />
+      </li><link rel="apple-touch-icon" href="/logo192.webp" />
+      </li><link rel="manifest" href="/manifest.json" />
     </Helmet>
   );
 };

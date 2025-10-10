@@ -36,7 +36,7 @@ export interface AppError {
   url?: string;
   userAgent?: string;
   componentStack?: string;
-  context?: Record<string, unknown>;
+  context?: Record<string, unknown>;</string>
   resolved?: boolean;
   retryCount?: number;
 }
@@ -71,17 +71,17 @@ export class ErrorHandler {
   private config: ErrorHandlerConfig;</string>
   private errors: AppError[] = [];</string>
   private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
-  constructor(config: Partial<ErrorHandlerConfig>= {}) {
+  constructor(config: Partial<ErrorHandlerConfig>= {}) {</ErrorHandlerConfig>
     this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
   }</ErrorHandlerConfig>
-  static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
+  static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {</ErrorHandlerConfig>
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler(config);
     }
     return ErrorHandler.instance;
   }</ErrorHandlerConfig>
   // Handle error</ErrorHandlerConfig>
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
+  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string>
     const appError: AppError = {,
     id: this.generateErrorId(),
       type: this.determineErrorType(error),
@@ -279,7 +279,7 @@ export class ErrorHandler {
     `;</string>
     notification.innerHTML = `</string>
       <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div>
+        </div><div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       </div>
     `;
@@ -384,13 +384,13 @@ export class ErrorHandler {
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-      {} as Record<ErrorType, number>);
+      {} as Record<ErrorType, number>);</ErrorType>
     const bySeverity = this.errors.reduce(
       (acc, error) => {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;</ErrorType>
       },</ErrorType>
-      {} as Record<ErrorSeverity, number>);
+      {} as Record<ErrorSeverity, number>);</ErrorSeverity>
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {
@@ -441,7 +441,7 @@ export class ErrorBoundary extends React.Component<
       return (
         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
+            <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.<button
               onClick={() =>this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
@@ -465,7 +465,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
   const handleError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
+    (error: Error, context?: Record<string, unknown>) => {</string>
       return errorHandler.handleError(error, undefined, context);
     },
     [errorHandler]

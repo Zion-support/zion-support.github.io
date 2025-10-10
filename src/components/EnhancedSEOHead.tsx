@@ -10,7 +10,7 @@ interface SEOHeadProps {
   type?: string;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>
   title = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
@@ -60,9 +60,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
+    <Helmet / />
+      {/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -72,8 +71,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta name="color-scheme" content="dark light" />
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
+      {/* Open Graph / Facebook */}<meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -81,8 +79,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
+      {/* Twitter */}<meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
@@ -90,31 +87,26 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta property="twitter:creator" content="@ziontechgroup" />
       <meta property="twitter:site" content="@ziontechgroup" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Canonical URL */}<link rel="canonical" href={url} />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </li><link rel="preconnect" href="https://fonts.googleapis.com" />
+      </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      </li><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
+      {/* Favicon */}</li><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      </li><link rel="apple-touch-icon" href="/logo192.png" />
+      </li><link rel="manifest" href="/manifest.json" />
       
-      {/* Theme Color */}
-      <meta name="theme-color" content="#0f172a" />
+      {/* Theme Color */}<meta name="theme-color" content="#0f172a" />
       
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      {/* Structured Data */}<script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
       
-      {/* Additional SEO Scripts */}
-      <script type="application/ld+json">
+      {/* Additional SEO Scripts */}<script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -128,72 +120,59 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
       
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Performance Hints */}<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      </li><link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      </li><link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       
-      {/* Performance Optimizations */}
-      <meta name="mobile-web-app-capable" content="yes" />
+      {/* Performance Optimizations */}<meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       <meta name="application-name" content="Zion Tech Group" />
       <meta name="msapplication-tooltip" content="AI-Powered Enterprise Solutions" />
       
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      {/* Security Headers */}<meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="rating" content="general" />
+      {/* Additional SEO Meta Tags */}<meta name="rating" content="general" />
       <meta name="distribution" content="global" />
       <meta name="target" content="all" />
       <meta name="HandheldFriendly" content="true" />
       <meta name="MobileOptimized" content="width" />
       
-      {/* Enhanced SEO Meta Tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
+      {/* Enhanced SEO Meta Tags */}<meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
       <meta name="pinterest-site-verification" content="your-pinterest-verification-code" />
       
-      {/* Additional Performance Hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+      {/* Additional Performance Hints */}<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </li><link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
       
-      {/* Critical Resource Hints */}
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      {/* Critical Resource Hints */}</li><link rel="preconnect" href="https://www.google-analytics.com" />
+      </li><link rel="preconnect" href="https://www.googletagmanager.com" />
+      </li><link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </li><link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       
-      {/* Rich Snippets */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      {/* Rich Snippets */}<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
-      {/* Enhanced Open Graph */}
-      <meta property="og:image:width" content="1200" />
+      {/* Enhanced Open Graph */}<meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
       <meta property="og:updated_time" content={new Date().toISOString()} />
       
-      {/* Enhanced Twitter Cards */}
-      <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+      {/* Enhanced Twitter Cards */}<meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
       <meta name="twitter:domain" content="ziontechgroup.com" />
       <meta name="twitter:url" content={url} />
       
-      {/* Additional Performance Hints */}
-      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+      {/* Additional Performance Hints */}<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </li><link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
       
-      {/* Manifest */}
-      <link rel="manifest" href="/manifest.json" />
+      {/* Manifest */}</li><link rel="manifest" href="/manifest.json" />
       
-      {/* Theme Color Variations */}
-      <meta name="theme-color" content="#00ffff" media="(prefers-color-scheme: light)" />
+      {/* Theme Color Variations */}<meta name="theme-color" content="#00ffff" media="(prefers-color-scheme: light)" />
       <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-fdcc
     </Helmet>

@@ -46,17 +46,16 @@ const GlobalFinTechAITransformatio, n = () => {
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent
               automation, and, predictive analyti, c, s.
-            </p > {/* Key, Metrics, Banner */ }
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
-                  $12, 7, M
+            </p > {/* Key, Metrics, Banner */ }<div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
+              </div><div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
+                </div><div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                  $12, 7, M</div>
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                  Annual, Value, Created
+                  Annual, Value, Created</div>
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    </h3><h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                       Company, Overvie, w
                     </h3>
                     <ul, className='spa, c, e-y-2'>
@@ -85,8 +84,8 @@ const GlobalFinTechAITransformatio, n = () => {
                       </li>
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   >
-                    <div, className='flex, item, s-start, ga, p-3, m, b-4'>
-                      <div, className='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</div>
+                    </div><div, className='flex, item, s-start, ga, p-3, m, b-4'>
+                      </div><div, className='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</div>
                       <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
                         {initiati, v, e.title}
                       </h3>
@@ -94,7 +93,7 @@ const GlobalFinTechAITransformatio, n = () => {
                     <ul, className='spa, c, e-y-2'>
                       { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                         <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'  / />
                           <span, className='te, x, t-sm'>{resu, l, t}</sp, a, n>
                         </l, i>
                     pha, s, e: 'Phas, e, 3: Optimizat, i, o, n',
@@ -112,7 +111,7 @@ const GlobalFinTechAITransformatio, n = () => {
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
                         { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'  / />
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:</sp, a, n>
                       <span, classNam, e='te, x, t-purp, l, e-400, fon, t-bold, tex, t-2, x, l'>
@@ -124,7 +123,7 @@ const GlobalFinTechAITransformatio, n = () => {
                         15.2x
                       </sp, a, n>
                     <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'  / />
                       <sp, a, n>
                         <stro, n, g>Scalabili, t, y: </stro, n, g> Ready, for, 10x customer, growt, h
                       </sp, a, n>
@@ -132,22 +131,22 @@ const GlobalFinTechAITransformatio, n = () => {
                 💬 Client, Testimonial, s
               </h2>
               <div, className='spa, c, e-y-6'>
-                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                  <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
+                </div><div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  </div><p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
                     "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
-                        Chief, Technology, Officer
+                        Chief, Technology, Officer</div>
                       </div>
                       <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
-                        Client, Company
+                        Client, Company</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                  <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
+                  </div><p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
                     "The, fraud, detection platform, alone, paid for, the, entire
                     initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
                     down, 9, 2%, and, our, team can, focus, on strategic, work, instead

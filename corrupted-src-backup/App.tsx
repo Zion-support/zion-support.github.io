@@ -25,14 +25,14 @@ function App() {
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
+              <Route path="/" element={<Home />} /></Route>
+              <Route path="/about" element={<About />} /></Route>
+              <Route path="/services" element={<Services />} /></Route>
+              <Route path="/blog" element={<Blog />} /></Route>
+              <Route path="/contact" element={<Contact />} /></Route>
+              <Route path="/team" element={<Team />} /></Route>
+              <Route path="/privacy" element={<Privacy />} /></Route>
+              <Route path="/terms" element={<Terms />} /></Route>
             </Routes>
           </Suspense>
         </Router>
@@ -63,7 +63,7 @@ class ErrorBoundary extends React.Component<
       return (
         this.props.fallback || (
           <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
+            </div><div className="text-center">
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
                 onClick={() => this.setState({ hasError: false })}

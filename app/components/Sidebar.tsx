@@ -41,7 +41,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
   const location = useLocation();</SidebarProps>
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);</string>
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>)
@@ -155,17 +155,15 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
   if (!isOpen) return null;
 </string>
   return (</string>
-    <>
-      {/* Backdrop */}
-      <div
+    <><div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       >{/* Sidebar */}</div>
       </div><div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
-        <div className="flex flex-col h-full">{/* Header */}</div>
+        </div><div className="flex flex-col h-full">{/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-gray-700">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            </div><div className="flex items-center space-x-2">
+              </div><div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               <span className="text-white font-bold text-lg">Zion Tech Group</span>
             </div>
@@ -177,8 +175,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
             </button>
           </div>
 
-          {/* Navigation Content */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">{/* Main Navigation */}</div>
+          {/* Navigation Content */}<div className="flex-1 overflow-y-auto p-6 space-y-6">{/* Main Navigation */}</div>
             <div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main Navigation<nav className="space-y-1">{mainLinks.map((link, index) => (</nav>
                   <Link
@@ -198,8 +195,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
               </nav>
             </div>
 
-            {/* Services */}
-            <div>
+            {/* Services */}<div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Our Services<div className="space-y-2">{serviceCategories.map((category, categoryIndex) => (</div>
                   <div key={categoryIndex}>
                     <button
@@ -234,8 +230,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
               </div>
             </div>
 
-            {/* Support */}
-            <div>
+            {/* Support */}<div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Support<nav className="space-y-1">{supportLinks.map((link, index) => (</nav>
                   <Link
                     key={index}
@@ -254,8 +249,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
               </nav>
             </div>
 
-            {/* Legal */}
-            <div>
+            {/* Legal */}<div>
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Legal<nav className="space-y-1">{legalLinks.map((link, index) => (</nav>
                   <Link
                     key={index}
@@ -275,11 +269,10 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="p-6 border-t border-gray-700">
-            <div className="space-y-4">{/* Contact Info */}</div>
+          {/* Footer */}<div className="p-6 border-t border-gray-700">
+            </div><div className="space-y-4">{/* Contact Info */}</div>
               <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                </div><div className="flex items-center space-x-2 text-gray-400 text-sm">
                   <Phone className="w-4 h-4" />
                   <span>+1 (302) 464-0950</span>
                 </div>
@@ -289,8 +282,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="flex space-x-4">
+              {/* Social Links */}<div className="flex space-x-4">
                 <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -302,8 +294,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                 </a>
               </div>
 
-              {/* CTA Button */}
-              <Link
+              {/* CTA Button */}<Link
                 to="/contact"
                 className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
                 onClick={onClose}
@@ -312,8 +303,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div></>
   );
 };
 

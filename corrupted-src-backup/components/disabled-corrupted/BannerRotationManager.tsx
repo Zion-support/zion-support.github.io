@@ -38,14 +38,14 @@ interface BannerRotationManagerProps {
  * - Limits the number of visible banners
  * - Provides fallback loading states
  */
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({</BannerRotationManagerProps>
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,
   className = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {

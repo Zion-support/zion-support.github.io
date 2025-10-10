@@ -93,7 +93,7 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" / />
                       {benefit}
                     </li>
                   ))}
@@ -104,9 +104,8 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* CTA Section */}<section className="py-20 px-4">
+        </section><div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for 5G Implementation?</h2>
           <p className="text-xl text-gray-300 mb-8">Join leading organizations using our 5G implementation services for next-generation connectivity</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -116,7 +116,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet / />
         <title>AI Website Builder - Create Websites with AI | Zion Tech Group</title>
         <meta name="description" content="Build professional websites in minutes with our AI-powered website builder. No coding required, mobile-first design, and instant deployment." />
         <meta name="keywords" content="AI website builder, website creation, no-code, web design, AI development" />
@@ -125,12 +125,12 @@ const AIWebsiteBuilderPage: React.FC = () => {
       <Navigation />
 
       <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
+        </main><div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
           <section className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+            </section><div className="flex items-center justify-center mb-6">
+              </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
                 <Code className="w-8 h-8 text-white" />
-              <h1 className="text-5xl font-bold text-white neon-text">AI Website Builder<p className="text-xl text-gray-300 mb-8 leading-relaxed">Create stunning, professional websites in minutes with our AI-powered builder.</p>
+              <h1 className="text-5xl font-bold text-white neon-text">AI Website Builder</h1><p className="text-xl text-gray-300 mb-8 leading-relaxed">Create stunning, professional websites in minutes with our AI-powered builder.</p>
               No coding required, mobile-first design, and instant deployment.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,18 +147,17 @@ const AIWebsiteBuilderPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="py-20 bg-slate-800/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+          {/* Features Section */}<section className="py-20 bg-slate-800/50">
+            </section><div className="container mx-auto px-4">
+              </div><div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                   <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                       <feature.icon className="w-8 h-8 text-white" />
                     <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-300 mb-6">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"  / />{benefit}</CheckCircle>
                         </CheckCircle>
                       ))}
                     </ul>
@@ -168,13 +167,12 @@ const AIWebsiteBuilderPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Benefits Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?<p className="text-xl text-gray-300">Revolutionary benefits that transform web development<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+          {/* Benefits Section */}<section className="py-16 px-4">
+            </section><div className="max-w-6xl mx-auto">
+              </div><div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?</h2><p className="text-xl text-gray-300">Revolutionary benefits that transform web development<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
                   <div key={index} className="cyber-card p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Zap className="w-8 h-8 text-white" />
                     <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                     <p className="text-gray-300 mb-4">{benefit.description}<div className="text-3xl font-bold text-purple-400">{benefit.percentage}</div>
@@ -184,21 +182,19 @@ const AIWebsiteBuilderPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <section className="py-16 px-4 bg-slate-800/50">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing<p className="text-xl text-gray-300">Choose the plan that fits your website needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>{plan.popular && (</div>
+          {/* Pricing Section */}<section className="py-16 px-4 bg-slate-800/50">
+            </section><div className="max-w-6xl mx-auto">
+              </div><div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your website needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>{plan.popular && (</div>
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                         </span>
                       </div>
-                    )}
-                    <div className="text-center mb-6">
+                    )}<div className="text-center mb-6">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                       <p className="text-gray-300">{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
                         <li key={idx} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-purple-400 mr-3" >{feature}</CheckCircle>
+                          <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  / />{feature}</CheckCircle>
                         </CheckCircle>
                       ))}
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
@@ -213,10 +209,9 @@ const AIWebsiteBuilderPage: React.FC = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Website?<p className="text-xl text-gray-300 mb-8">Join thousands of businesses that have already created stunning websites with our AI builder.</p>
+          {/* CTA Section */}<section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+            </section><div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Website?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of businesses that have already created stunning websites with our AI builder.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

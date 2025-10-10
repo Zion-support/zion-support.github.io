@@ -121,17 +121,17 @@ const ContactPage: React.FC = () => {
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
       >{/* Hero Section */}</SEOOptimizer>
       </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div><div className="container mx-auto px-4 relative z-10">
+          </div><div className="max-w-4xl mx-auto text-center">
+            </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">Get In Touch<h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build the</h1>
-              <span className="block holographic-text cyber-text">Future Together<p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
+              <span className="block holographic-text cyber-text">Future Together</span><p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
               Our experts are here to help you achieve your goals.</p>
             </p>
 
             <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+              </div><div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">+1 (302) 464-0950</span>
               </div>
@@ -144,16 +144,15 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Methods */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
+      {/* Contact Methods */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
               <div key={index} className="quantum-card p-6 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
+                </div><div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                   <method.icon className="w-8 h-8 text-cyan-400" />
                 <h3 className="text-xl font-bold text-white">{method.title}</h3>
                 <div className="space-y-2">
-                  <div className="text-cyan-400 font-medium">{method.value}<div className="text-gray-300 text-sm">{method.description}</div>
+                  </div><div className="text-cyan-400 font-medium">{method.value}</div><div className="text-gray-300 text-sm">{method.description}</div>
                   {method.action && (
                     <a
                       href={method.action}
@@ -170,22 +169,20 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced Contact Form */}
-      <section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20">
-        <div className="container mx-auto px-4">
+      {/* Enhanced Contact Form */}<section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20">
+        </section><div className="container mx-auto px-4">
           <EnhancedContactForm />
         </div>
       </section>
 
-      {/* Global Offices */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices<p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
+      {/* Global Offices */}<section className="py-20 bg-slate-800/50">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center justify-center space-x-2">
+                  </div><div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-4 h-4 text-cyan-400" />
                     <span className="text-gray-300 text-sm">{office.address}</span>
                   </div>
@@ -207,17 +204,16 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
+      {/* FAQ Section */}<section className="py-20">
+        </section><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">{faqs.map((faq, index) => (</div>
+            </div><div className="space-y-6">{faqs.map((faq, index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
             </div>

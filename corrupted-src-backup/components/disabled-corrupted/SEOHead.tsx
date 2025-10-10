@@ -12,7 +12,7 @@ interface SEOHeadProps {
   structuredData?: unknown;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
   keywords = 'AI solutions, IT consulting, cloud services, data analytics, machine learning, artificial intelligence',
@@ -38,39 +38,34 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
+    <Helmet / />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
 
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      {/* Open Graph */}<meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
+      {/* Twitter */}<meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
+      {/* Additional SEO */}<meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
 
-      {/* Performance hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      {/* Performance hints */}<link rel="preconnect" href="https://fonts.googleapis.com" />
+      </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </li><link rel="dns-prefetch" href="//www.google-analytics.com" />
 
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      {/* Structured Data */}<script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

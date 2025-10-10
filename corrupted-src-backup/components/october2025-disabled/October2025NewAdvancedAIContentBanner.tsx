@@ -1,14 +1,12 @@
 export default function October2025NewAdvancedAIContentBann, e, r() { 
   return (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }
-      {/* Animated, background, elements */}
-      <div, className='absolute, inse, t-0, opacit, y-20'>
-        <div, className='absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, className='absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0' />
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }</div>
+      {/* Animated, background, elements */}<div, className='absolute, inse, t-0, opacit, y-20'>
+        </div><div, className='absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
+        </div><div, className='absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0' />
       </div>
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
-        {/* Header, Sect, i, o, n */}
-        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+        {/* Header, Sect, i, o, n */}<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
           transiti, o, n = {{ duration: , 0., 6 }}
           classNa, m, e = 'te, x, t-center, m, b-8'
@@ -25,7 +23,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
             Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance
           </p>
           <div, className='flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d'>
-            <div, className='flex, item, s-center, ga, p-2'>
+            </div><div, className='flex, item, s-center, ga, p-2'>
               <TrendingUp, className='w-5 h-5' />
               <sp, a, n>$1.02B, Combined, Value</sp, a, n>
             </div>
@@ -34,15 +32,13 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               <sp, a, n>1, 0, 0% Complian, c, e</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'>
-              <Shield, className='w-5 h-5' />
+              <Shield, className='w-5 h-5'  / />
               <sp, a, n>99.8% Privacy, Protectio, n</sp, a, n>
             </div>
           </div>
         </moti, o, n.d, i, v>
-        {/* Content, G, r, i, d */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
-          {/* Federat, e, d , A, I */}
-          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+        {/* Content, G, r, i, d */}<div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
+          {/* Federat, e, d , A, I */}<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 1 }}
           >
@@ -50,9 +46,9 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               className='block, grou, p'
             >
               <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l'>
-                <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-                  <div, className='p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg'>
-                    <Brain, className='w-6 h-6, tex, t-whi, t, e' />
+                </div><div, className='flex, item, s-center, ga, p-3, m, b-4'>
+                  </div><div, className='p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg'>
+                    <Brain, className='w-6 h-6, tex, t-whi, t, e'  / />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r'>
                     Federated, A, I
@@ -62,21 +58,20 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                   Advanced, Federated, AI Enterprise, Revolutio, n
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
-                  Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}
-                  <span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$287M, valu, e</span>
+                  Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}<span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$287M, valu, e</span>
                   , 99.8% privacy, complianc, e, 67% faster, trainin, g — zero, data, movement.
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'>
-                  <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                  </div><div, className='flex, item, s-center, ga, p-2'>
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>
                       94.7% model, accuracy, matching centralized, trainin, g
                     </sp, a, n>
@@ -89,8 +84,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               </div>
             </Li, n, k>
           </moti, o, n.d, i, v>
-          {/* Synthetic, D, a, t, a */}
-          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+          {/* Synthetic, D, a, t, a */}<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 2 }}
           >
@@ -98,8 +92,8 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               className='block, grou, p'
             >
               <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l'>
-                <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-                  <div, className='p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg'>
+                </div><div, className='flex, item, s-center, ga, p-3, m, b-4'>
+                  </div><div, className='p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg'>
                     <Database, className='w-6 h-6, tex, t-whi, t, e' />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r'>
@@ -110,21 +104,20 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                   Synthetic, Data, Generation Enterprise, Breakthroug, h
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
-                  Unlimited, privac, y-safe, data, generati, o, n.{' '}
-                  <span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$312M, valu, e</span>
+                  Unlimited, privac, y-safe, data, generati, o, n.{' '}<span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$312M, valu, e</span>
                   , 10x, data, availability, 99.4% statistical, fidelit, y — solve, data, scarcity.
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'>
-                  <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                  </div><div, className='flex, item, s-center, ga, p-2'>
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
                   </div>
                 </div>
@@ -135,8 +128,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               </div>
             </Li, n, k>
           </moti, o, n.d, i, v>
-          {/* AI, Governa, n, c, e */}
-          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+          {/* AI, Governa, n, c, e */}<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 3 }}
           >
@@ -144,9 +136,9 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
               className='block, grou, p'
             >
               <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l'>
-                <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-                  <div, className='p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg'>
-                    <Shield, className='w-6 h-6, tex, t-whi, t, e' />
+                </div><div, className='flex, item, s-center, ga, p-3, m, b-4'>
+                  </div><div, className='p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg'>
+                    <Shield, className='w-6 h-6, tex, t-whi, t, e'  / />
                   </div>
                   <span, className='te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'>
                     AI, Governanc, e
@@ -156,21 +148,20 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                   AI, Model, Governance & Compliance, Breakthroug, h
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
-                  Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}
-                  <span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$421M, valu, e</span>
+                  Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}<span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$421M, valu, e</span>
                   , 1, 0, 0% audit, complianc, e, 8, 4, 0+ models, governe, d — complete, accountabilit, y.
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'>
-                  <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                  </div><div, className='flex, item, s-center, ga, p-2'>
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
+                    </div><div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' />
                     <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
                   </div>
                 </div>
@@ -182,8 +173,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
             </Li, n, k>
           </moti, o, n.d, i, v>
         </div>
-        {/* Call, to, Acti, o, n */}
-        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+        {/* Call, to, Acti, o, n */}<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
           transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 4 }}
           classNa, m, e = 'te, x, t-cent, e, r'

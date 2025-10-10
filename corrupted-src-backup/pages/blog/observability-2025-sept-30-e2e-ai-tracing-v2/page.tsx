@@ -21,7 +21,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, observability 2025, sept, 30 e2e, ai, tracing v2, and, how it, can, benefit your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, comprehensive, guide covers, observability, 2025 sept, 30, e2e ai, tracing, v2 and, provides, practical insights, for, enterprise
             implementati, o, n.
           </p>

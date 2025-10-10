@@ -7,13 +7,13 @@ interface FuturisticServiceCardProps {
     description: string;
   price: string;,
     features: string[];
-  icon: React.ComponentType<any>;,
+  icon: React.ComponentType<any>;,</any>
     color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
   href: string;
   popular?: boolean;
 }</any>
 </any>
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({</FuturisticServiceCardProps>
   title,
   description,
   price,
@@ -78,17 +78,16 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
       }`}
       onMouseEnter={() =>setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-    >
+    ></div>
       {/* Popular Badge */}</div>
       {popular && (</div>
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
+          </div><div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
           </div>
         </div>
       )}
 
-      {/* Card */}
-      <div
+      {/* Card */}<div
         className={`glass rounded-2xl p-8 border transition-all duration-500 ${
           popular ? currentColor.border : 'border-white/10'
         } ${currentColor.hover} ${
@@ -96,7 +95,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
         }`}
       >{/* Icon */}</div>
         <div className="relative mb-6">
-          <div
+          </div><div
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
               isHovered ? 'neon-cyan' : ''
             }`}
@@ -104,23 +103,19 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
             <Icon className="w-8 h-8 text-white" />
           </div>
 
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{/* Title */}<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
+          {/* Animated Background */}<div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{/* Title */}<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
         </h3>
 
-        {/* Description */}
-        <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
+        {/* Description */}<p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
         </p>
 
-        {/* Price */}
-        <div className="mb-6">
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}<div className="text-sm text-gray-400">per month</div>
+        {/* Price */}<div className="mb-6">
+          </div><div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}</div><div className="text-sm text-gray-400">per month</div>
         </div>
 
-        {/* Features */}
-        <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</ul>
+        {/* Features */}<ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</ul>
             <li key={index} className="flex items-center text-sm text-gray-300">
-              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  / />{feature}</CheckCircle>
             </CheckCircle>
           ))}
           {features.length > 4 && (
@@ -129,8 +124,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
           )}
         </ul>
 
-        {/* CTA Button */}
-        <button
+        {/* CTA Button */}<button
           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
             popular
               ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
@@ -140,12 +134,11 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </button>
 
-        {/* Hover Effect Overlay */}
-        <div
+        {/* Hover Effect Overlay */}<div
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
-        >{/* Glow Effect */}<div
+        >{/* Glow Effect */}</div><div
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
-      >);
+      >);</div>
 };</div>
 </div>
 export default FuturisticServiceCard;</div>

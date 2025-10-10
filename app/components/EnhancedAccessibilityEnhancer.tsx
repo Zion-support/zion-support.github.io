@@ -13,7 +13,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableFontScaling?: boolean;
 }
 
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({</EnhancedAccessibilityEnhancerProps>
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,

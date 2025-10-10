@@ -8,7 +8,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean;
 }
 
-const Analytics: React.FC<AnalyticsProps>= ({
+const Analytics: React.FC<AnalyticsProps>= ({</AnalyticsProps>
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,

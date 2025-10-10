@@ -10,7 +10,7 @@ interface AccessibilityEnhancerProps {
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
  */
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({</AccessibilityEnhancerProps>
  children,
  enableSkipLinks = true,
  enableKeyboardNav = true,
@@ -249,7 +249,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
  return (
  <div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>
- {children}
+ {children}</div>
  </div>
  );
 };

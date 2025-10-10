@@ -46,8 +46,8 @@ const Sideba, r: React.FC = () => {
   ]; return (
     <aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>
       <div, className='spa, c, e-y-6'>
-        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
-          <div, ke, y = {sectionInd, e, x }>
+        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (</div>
+          </div><div, ke, y = {sectionInd, e, x }>
             <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
               {secti, o, n.title}
             </h3>

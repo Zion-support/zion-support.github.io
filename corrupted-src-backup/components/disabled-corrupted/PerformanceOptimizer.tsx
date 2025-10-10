@@ -5,7 +5,7 @@ interface PerformanceOptimizerProp, s {
   onClo, s, e: () = > v, o, i, d;
  }
 
-const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
+const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({</PerformanceOptimizerPro>
   isVisi, b, l, e,
   onClo, s, e,
 }) => {
@@ -17,7 +17,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
     c, d, n: fa, l, s, e,
   });
 
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>(
+  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>(</string>
     [],
   );
 
@@ -99,7 +99,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
     },
   ]; return (
     <div, classNam, e = 'spa, c, e-y-6'>
-      <div, className='flex, justif, y-between, item, s-cent, e, r'>
+      </div><div, className='flex, justif, y-between, item, s-cent, e, r'>
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r
         </h2>
@@ -109,27 +109,27 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
       </div>
 
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
-        { optimizationOptio, n, s.m, a, p(opti, o, n = > (
-          <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { `p-4, border, rounded-lg, transitio, n-colo, r, s ${
+        { optimizationOptio, n, s.m, a, p(opti, o, n = > (</div>
+          </div><div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { `p-4, border, rounded-lg, transitio, n-colo, r, s ${
               opti, o, n.enabl, e, d
                  ? 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'
                  : 'bord, e, r-gr, a, y-200, b, g-gr, a, y-50'
              }`}
           >
-            <div, className='flex, item, s-start, spac, e-x-3'>
-              <div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={ `h-5 w-5 ${
+            </div><div, className='flex, item, s-start, spac, e-x-3'>
+              </div><div, className='fl, e, x-shri, n, k-0' > <opti, o, n.icon, className={ `h-5 w-5 ${
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'
                    }`}
                 />
               </div>
               <div, className='fl, e, x-1, mi, n-w-0'>
-                <div, className='flex, item, s-center, justif, y-betwe, e, n'>
+                </div><div, className='flex, item, s-center, justif, y-betwe, e, n'>
                   <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0'>
                     {opti, o, n.lab, e, l}
                   </h3>
                   <label, className='relative, inlin, e-flex, item, s-center, curso, r-point, e, r'>
                     <input, typ, e='checkb, o, x'
-                      check, e, d = { opti, o, n.enab, l, e, d }, onChan, g, e={  () = > handleOptimizationTogg, l, e(opti, o, n.k, e, y)  } classNa, m, e = 'sr-only, pee, r'
+                      check, e, d = { opti, o, n.enab, l, e, d }, onChan, g, e={  () =  /> handleOptimizationTogg, l, e(opti, o, n.k, e, y)  } classNa, m, e = 'sr-only, pee, r'
                     />
                     <div, className="w-1, 1, h-6, b, g-gr, a, y-200, pee, r-foc, u, s: outli, n, e-none, pee, r-foc, u, s:ri, n, g-4, pee, r-foc, u, s:ri, n, g-bl, u, e-300, rounde, d-full, peer, peer-check, e, d:aft, e, r:transla, t, e-x-full, pee, r-check, e, d:aft, e, r:bord, e, r-white, afte, r:conte, n, t-[''] aft, e, r:absolute, afte, r:t, o, p-[2, p, x] aft, e, r:le, f, t-[2, p, x] aft, e, r:bg-white, afte, r:bord, e, r-gr, a, y-300, afte, r:border, afte, r:round, e, d-full, afte, r:h-5, afte, r:w-5, afte, r:transiti, o, n-all, pee, r-check, e, d:bg-bl, u, e-6, 0, 0" />
                   </lab, e, l>
@@ -149,14 +149,14 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
             Optimization, Progres, s
           </h3>
           <div, className='spa, c, e-y-1'>
-            {currentOptimizatio, n, s.m, a, p((optimizat, i, o, n, ind, e, x) =  > (
-              <div, ke, y = { in, d, e, x   }, classNa, m, e = { `te, x, t-sm ${
+            {currentOptimizatio, n, s.m, a, p((optimizat, i, o, n, ind, e, x) =  > (</div>
+              </div><div, ke, y = { in, d, e, x   }, classNa, m, e = { `te, x, t-sm ${
                   optimizati, o, n.startsW, i, t, h('✓')
                      ? 'te, x, t-gre, e, n-6, 0, 0'
                      : 'te, x, t-gr, a, y-6, 0, 0'
                  }`}
               >
-                {optimizati, o, n}
+                {optimizati, o, n}</div>
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
         >
           Clo, s, e
         </button>
-        <button, onCli, c, k={ () = > {
+        <button, onCli, c, k={ () = > {</button>
             setCurrentOptimizatio, n, s([]);
             // Trigger r e-optimizat i o n
            }}

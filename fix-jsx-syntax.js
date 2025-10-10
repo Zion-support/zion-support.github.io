@@ -1,96 +1,90 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-//Function to fix JSX syntax errors
+// Function to fix common JSX syntax errors
 function fixJSXSyntax(content) {
-
-  //Fix function declarations with malformed comments
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-
-  //Fix malformed JSX elements that are self-closing but shouldn't be
-  //Pattern: <div></div> followed by content that should be inside
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects
-  fixed = fixed.replace(
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
+  // Fix malformed JSX where tags are nested incorrectly
+  // Pattern: <h1>text<p>content</p></h1> -> <h1>text</h1><p>content</p>
+  content = content.replace(/<(\w+)([^>]*)>([^<]*)<(\w+)([^>]*)>([^<]*)<\/\4><\/\1>/g, '<$1$2>$3</$1><$4$5>$6</$4>');
+  
+  // Fix unclosed tags that should be self-closing
+  content = content.replace(/<(\w+)([^>]*)\s*\/?>(?!\s*<\/\1>)/g, (match, tag, attrs) => {
+    if (match.endsWith('/>')) return match;
+    if (['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tag)) {
+      return `<${tag}${attrs} />`;
+    }
+    return match;
+  });
+  
+  // Fix missing closing tags for common elements
+  const openTags = [];
+  const lines = content.split('\n');
+  const fixedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    
+    // Fix specific patterns
+    // Fix <h1>text<p> -> <h1>text</h1><p>
+    line = line.replace(/<h1([^>]*)>([^<]*)<p([^>]*)>/g, '<h1$1>$2</h1><p$3>');
+    line = line.replace(/<h2([^>]*)>([^<]*)<p([^>]*)>/g, '<h2$1>$2</h2><p$3>');
+    line = line.replace(/<h3([^>]*)>([^<]*)<p([^>]*)>/g, '<h3$1>$2</h3><p$3>');
+    
+    // Fix <div>text<div> -> <div>text</div><div>
+    line = line.replace(/<div([^>]*)>([^<]*)<div([^>]*)>/g, '<div$1>$2</div><div$3>');
+    
+    // Fix missing closing tags in specific patterns
+    line = line.replace(/<(\w+)([^>]*)>([^<]*)$/g, (match, tag, attrs, text) => {
+      if (!text.trim()) return match;
+      return `<${tag}${attrs}>${text}</${tag}>`;
+    });
+    
+    fixedLines.push(line);
+  }
+  
+  return fixedLines.join('\n');
 }
 
-//Function to process a single file
+// Function to process a file
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJSXSyntax(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
     return false;
   } catch (error) {
-    //     return false;
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-//Main function
-async function main() {
-
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**',
-        '**/ai-optimization-backups/**',
-        '**/automation_logs/**',
-        '**/all-automations-reports/**',
-        '**/accessibility-reports/**',
-      ],
-    });
-
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+// Function to recursively find and process TSX/JSX files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (processFile(filePath)) {
+        fixedCount++;
       }
     }
   }
-
-  //   }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  //   main().catch(console.error);
+  
+  return fixedCount;
 }
 
-export { fixJSXSyntax, processFile };
-
-}
+// Main execution
+console.log('Starting JSX syntax fixes...');
+const fixedCount = processDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);

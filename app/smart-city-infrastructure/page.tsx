@@ -182,9 +182,8 @@ const SmartCityInfrastructurePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      {/* Hero Section */}<section className="relative py-20 overflow-hidden">
+        </section><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -205,32 +204,30 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
+          {/* Stats */}<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            </div><div className="text-center">
+              </div><div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
               <div className="text-gray-400">Traffic Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">30%</div>
+              </div><div className="text-4xl font-bold text-purple-400 mb-2">30%</div>
               <div className="text-gray-400">Energy Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">95%</div>
+              </div><div className="text-4xl font-bold text-pink-400 mb-2">95%</div>
               <div className="text-gray-400">Citizen Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">50%</div>
+              </div><div className="text-4xl font-bold text-green-400 mb-2">50%</div>
               <div className="text-gray-400">Faster Response</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+      {/* Features Section */}<section className="py-24 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-white mb-6">Smart City Features</h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Comprehensive infrastructure solutions that make cities more efficient, sustainable, and livable.
@@ -238,10 +235,10 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+            {features.map((feature, index) => (</div>
+              </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                </div><div className="text-center">
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -253,10 +250,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+      {/* Solutions Section */}<section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Proven Solutions
             </h2>
@@ -266,19 +262,19 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+            {solutions.map((solution, index) => (</div>
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                </div><div className="flex items-center mb-6">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4">
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  {solution.benefits.map((benefit, benefitIndex) => (</div>
+                    </div><div key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  / />
                       {benefit}
                     </div>
                   ))}
@@ -289,10 +285,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+      {/* Technologies Section */}<section className="py-24 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cutting-Edge Technologies
             </h2>
@@ -302,10 +297,10 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            {technologies.map((tech, index) => (</div>
+              </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+                </div><div className="text-center">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{tech.name}</h3>
@@ -317,10 +312,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+      {/* Pricing Section */}<section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Smart City Packages
             </h2>
@@ -330,19 +324,17 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
+            {pricingPlans.map((plan, index) => (</div>
+              </div><div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                 plan.popular ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' : 'border-gray-700'
               }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular
                     </span>
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
+                )}<div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300">{plan.description}</p>
@@ -351,7 +343,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  / />
                       {feature}
                     </li>
                   ))}
@@ -370,10 +362,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+      {/* Testimonials Section */}<section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               City Success Stories
             </h2>
@@ -383,12 +374,12 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
+            {testimonials.map((testimonial, index) => (</div>
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                </div><div className="flex items-center mb-4">
+                  </div><div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (</div>
+                      <Star key={i} className="w-5 h-5 fill-current"  / />
                     ))}
                   </div>
                 </div>
@@ -396,8 +387,8 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}</div>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
@@ -411,9 +402,8 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA Section */}<section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Build the City of Tomorrow
           </h2>

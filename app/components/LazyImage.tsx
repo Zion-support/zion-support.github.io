@@ -10,7 +10,7 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps>= ({
+const LazyImage: React.FC<LazyImageProps>= ({</LazyImageProps>
   src,
   alt,
   className = '',
@@ -21,7 +21,7 @@ const LazyImage: React.FC<LazyImageProps>= ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);</LazyImageProps>
   const [hasError, setHasError] = useState(false);</LazyImageProps>
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>
 
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
@@ -53,7 +53,7 @@ const LazyImage: React.FC<LazyImageProps>= ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading="lazy"
-        >)}
+         />)}
 </img>
       {!isLoaded && !hasError && (</img>
         </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">

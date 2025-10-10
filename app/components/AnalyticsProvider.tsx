@@ -1,19 +1,19 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  track: (event: string, properties?: Record<string, any>) => void;</string>
+  page: (name: string, properties?: Record<string, any>) => void;</string>
+  identify: (userId: string, traits?: Record<string, any>) => void;</string>
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);</AnalyticsContextType>
 
 interface AnalyticsProviderProps {
   children: ReactNode;
   trackingId?: string;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({</AnalyticsProviderProps>
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -41,7 +41,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, any>) => {</string>
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
     }
@@ -51,7 +51,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Record<string, any>) => {</string>
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
@@ -65,7 +65,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, any>) => {</string>
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,

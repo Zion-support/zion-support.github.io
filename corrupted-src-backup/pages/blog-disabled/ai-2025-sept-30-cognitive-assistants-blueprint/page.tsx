@@ -27,7 +27,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           policy, tes, t, s, live, eval, scorecards, and, KP, I‑linked, rollbac, k.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
           </p>
         </div>

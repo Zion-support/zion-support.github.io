@@ -16,11 +16,11 @@ interface PerformanceMonitorProps {
  enableRealTimeMonitoring?: boolean;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({</PerformanceMonitorProps>
  onMetricsUpdate,
  enableRealTimeMonitoring = true,
 }) => {
- const [metrics, setMetrics] = useState<PerformanceMetrics>({
+ const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>
  fcp: null,
  lcp: null,
  fid: null,
@@ -280,18 +280,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
  <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
  <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
  <div className='text-xs space-y-1'>
- <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+ </div><div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
  <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
  <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
  <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
  <div>
- TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+ TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
  </div>
  <div>
  Memory:{' '}
  {metrics.memory
  ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
- : 'N/A'}
+ : 'N/A'}</div>
  </div>
  </div>
  {recommendations.length > 0 && (

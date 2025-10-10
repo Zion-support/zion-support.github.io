@@ -6,7 +6,7 @@ export default function BlogPost(): React.JSX.Element {
     <>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
-        <Helmet>
+        <Helmet / />
           <title>Edge 2025 Sept 30 Zero Pii Experiments V2 - Zion Tech Group</title>
           <meta
             name="description"
@@ -15,7 +15,7 @@ export default function BlogPost(): React.JSX.Element {
         </Helmet>
 
         <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
+          </div><div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Edge 2025 Sept 30 Zero Pii Experiments V2
             </h1>
@@ -29,7 +29,7 @@ export default function BlogPost(): React.JSX.Element {
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">
-            <div className="text-gray-200 leading-relaxed">
+            </div><div className="text-gray-200 leading-relaxed">
               <h2>Introduction</h2>
               <p>
                 This is a placeholder blog post. The content for "Edge 2025 Sept 30 Zero Pii
@@ -51,8 +51,8 @@ export default function BlogPost(): React.JSX.Element {
           </div>
 
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-              <div>
+            </div><div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+              </div><div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4">
                   <a
@@ -82,7 +82,6 @@ export default function BlogPost(): React.JSX.Element {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }

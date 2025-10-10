@@ -14,7 +14,7 @@ interface AccessibilitySettings {
 }
 
 const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<AccessibilitySettings>({</AccessibilitySettings>
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',

@@ -14,7 +14,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({</AdvancedAccessibilityEnhancerProps>
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -182,7 +182,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
-      ) as NodeListOf<HTMLElement>;
+      ) as NodeListOf<HTMLElement>;</HTMLElement>
 
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];

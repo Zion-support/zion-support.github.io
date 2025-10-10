@@ -8,7 +8,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>;</string>
   noIndex?: boolean;
   author?: string;
   publishedTime?: string;
@@ -17,7 +17,7 @@ interface SEOOptimizerProps {
   tags?: string[];
 }</string>
 </string>
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({</SEOOptimizerProps>
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -128,7 +128,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
     canonical.setAttribute('href', url);
   };</SEOOptimizerProps>
 </SEOOptimizerProps>
-  const addStructuredData = (data: Record<string, unknown>): void => {
+  const addStructuredData = (data: Record<string, unknown>): void => {</string>
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

@@ -175,23 +175,21 @@ const TermsPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").<p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
+        {/* Introduction */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction</h2><p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").</p><p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
             </p>
           </div>
         </section>
 
-        {/* Main Content */}
-        <section className="space-y-12">{sections.map((section, index) => (</section>
+        {/* Main Content */}<section className="space-y-12">{sections.map((section, index) => (</section>
             <div key={index} className="cyber-card p-8">
-              <div className="flex items-center mb-6">
-                <section.icon className="w-8 h-8 text-cyan-400 mr-4" />
+              </div><div className="flex items-center mb-6">
+                </div><section.icon className="w-8 h-8 text-cyan-400 mr-4" />
                 <h2 className="text-2xl font-bold text-white neon-text">{section.title}<div className="space-y-6">{section.content.map((subsection, subIndex) => (</div>
                   <div key={subIndex}>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">{subsection.subtitle}<ul className="space-y-2">{subsection.items.map((item, itemIndex) => (</ul>
@@ -207,22 +205,21 @@ const TermsPage: React.FC = () => {
           ))}
         </section>
 
-        {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
+        {/* Contact Information */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              </div><div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
+                  </div><p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
                 </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">legal@ziontechgroup.com</a>
+                  </div><p>Email: <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">legal@ziontechgroup.com</a>
                   <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
                 </div>
               </div>
@@ -230,10 +227,9 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Updates */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms<p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.<p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+        {/* Updates */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms</h2><p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p><p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
             </p>
           </div>
         </section>

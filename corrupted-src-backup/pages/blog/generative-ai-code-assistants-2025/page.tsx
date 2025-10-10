@@ -22,7 +22,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, comprehensive, guide covers, generative, ai code, assistants, 2025
             and, provides, practical insights, for, enterprise implementati, o, n.
           </p>

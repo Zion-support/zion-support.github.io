@@ -253,35 +253,34 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet / />
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
         <me, t, a
   na, m, e="descripti, o, n"
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>"
+          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>"</link>
           content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s."
          />
-        <meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" />";
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n" />";
+        <meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" />";</meta>
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n" />";</link>
       </Helmet>
       <Head, e, r   />
-      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
-        {/* Hero, Sectio, n */}
-        <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-cent, e, r">
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";</main>
+        {/* Hero, Sectio, n */}<section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"</h1>
                 AI, Workflo, w <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Automati, o, n</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, m, b-8">"</p>
                 Transform, your, business processes, with, intelligent automation, that, reduces costs, by, 75%
                 increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s.
               </p>
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-        <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-cent, e, r">";
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
+        <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-cent, e, r">";</div>
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";</h1>
                 AI, Workflo, w <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Automati, o, n</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m
@@ -289,14 +288,14 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
                 Transform, your, business processes, with, intelligent automation, that, reduces costs, by, 75%
                 increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s.
               </p>
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-bl, u, e-600, hov, e
   r: bg-bl, u, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   <Phone, className="w-5 h-5, m, r-2  />
-                  <Phone, className="w-5 h-5, m, r-2" />";
+                  <Phone, className="w-5 h-5, m, r-2" />";</Phone>
                   Schedule, Dem, o;
                 </a>
                 <a
@@ -306,57 +305,56 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
                 >
                   View, Pricin, g;
                   <Link, className="w-5 h-5, m, l-2  />
-                  <Link, className="w-5 h-5, m, l-2" />";
+                  <Link, className="w-5 h-5, m, l-2" />";</Link>
                 </a>
               </d, i, v>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Key, Benefit, s */}
-        <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="text-center mb-12">
+        {/* Key, Benefit, s */}<section, className="py-16, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-16, b, g-gr, a, y-50">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="text-center mb-12">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Why, Choose, Our AI, Workflow, Automation?
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Our, platform, delivers measurable, results, through cutti, n, g-edge, AI, technology and, proven, methodologies.
               </p>
             </d, i, v>
             <div, className="gri, d, m
-  d: gr, i, d-co, l, s-3, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
+  d: gr, i, d-co, l, s-3, ga, p-8">"</div>
+              </div><div, className="te, x, t-cent, e, r">
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
                   <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
-                  <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</div>
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
+                  <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";</TrendingUp>
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">75% Cost, Reductio, n</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Average, operational, cost savings, across, all implementatio, n, s</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
                   <Zap, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
-                  <Zap, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
+                  <Zap, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";</Zap>
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">10x, Efficiency, Gain</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Dramatic, improvement, in process, speed, and accura, c, y</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
+                </div><div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0   / />
+              <div, className="te, x, t-cent, e, r">";</div>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";</div>
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0"  / />";</Shield>
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">99.9% Upti, m, e</h3>";
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Enterpri, s, e-grade, reliability, with guaranteed, SL, A</p>";
@@ -364,19 +362,18 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Featur, e, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Featur, e, s */}<section, className="py-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Powerful, Features, for Enterprise, Succes, s;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Comprehensive, A, I-powered, capabilities, designed to, transform, your business, operation, s.
               </p>
             </d, i, v>
@@ -384,28 +381,28 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">
                       <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
+                      <CheckCircle, className="w-4 h-4, m, r-1   / />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
-                return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";
-                      <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";
+                return (</div>
+                  </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";</div>
+                      <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";</Icon>
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";
-                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
+                      <CheckCircle, className="w-4 h-4, m, r-1"  / />";</CheckCircle>
                       {featu, r, e.benef, i, t}
                     </d, i, v>
                   </d, i, v>
@@ -414,49 +411,47 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Prici, n, g */}
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Prici, n, g */}<section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Transparent, Pricing, for Every, Business, Size;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Choose, the, plan that, fits, your nee, d, s. All, plans, include our, core, AI automation, feature, s.
               </p>
             </d, i, v>
             <div, className="gri, d, m
-  d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+  d: gr, i, d-co, l, s-3, ga, p-8">"</div>
+            </div><div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</div>
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`</div>
                   {pl, a, n.popul, a, r && (
-                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
-                      <span, className="bg-bl, u, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
+                      <span, className="bg-bl, u, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";</span>
                         Most, Popula, r;
                       </sp, a, n>
                     </d, i, v>
-                  )}
-                  <div, className="te, x, t-center, m, b-8">";
+                  )}<div, className="te, x, t-center, m, b-8">";</div>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
-                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
                       <span, className="te, x, t-gr, a, y-600, m, l-1">{pl, a, n.peri, o, d}</sp, a, n>";
                     </d, i, v>
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
                   </d, i, v>
-                  <ul, className="spa, c, e-y-4, m, b-8">";
+                  <ul, className="spa, c, e-y-4, m, b-8">";</ul>
                     {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0   / />
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
-                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";</li>
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0"  / />";</CheckCircle>
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
@@ -477,7 +472,7 @@ pl, a, n.popul, a, r;
                 </d, i, v>
               ))}
             </d, i, v>
-            <div, className="te, x, t-center, m, t-12">";
+            <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom soluti, o, n?</p>";
               <a
   hr, e, f="/conta, c, t"
@@ -485,31 +480,30 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, Enterprise Te, a, m;
                 <Link, className="w-4 h-4, m, l-1  />
-                <Link, className="w-4 h-4, m, l-1" />";
+                <Link, className="w-4 h-4, m, l-1" />";</Link>
               </a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Case, Studie, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Case, Studie, s */}<section, className="py-20">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 Re, a, l-World, Success, Stories;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 See, how, leading organizations, have, transformed their, operations, with our, AI, workflow automati, o, n.
               </p>
             </d, i, v>
             <div, className="gri, d, l
   g: gr, i, d-co, l, s-3, ga, p-8">"
-              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
+              {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (</div>
+                </div><div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>
                   <div, className="mb-6">
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>"
@@ -524,26 +518,26 @@ pl, a, n.popul, a, r;
                     <ul, className="spa, c, e-y-1">
                       {stu, d, y.resul, t, s.m, a, p((resu, l, t, resultInd, e, x) => (
                         <li, ke, y={resultInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0   / />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{resu, l, t}</sp, a, n>
-            <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8">";
+            <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8">";</div>
               {caseStudi, e, s.m, a, p((stu, d, y, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>";
-                  <div, className="mb-6">";
+                  <div, className="mb-6">";</div>
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>";
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.challen, g, e}</p>";
                   </d, i, v>
-                  <div, className="mb-6">";
+                  <div, className="mb-6">";</div>
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>";
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.soluti, o, n}</p>";
                   </d, i, v>
                   <d, i, v>
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>";
-                    <ul, className="spa, c, e-y-1">";
+                    <ul, className="spa, c, e-y-1">";</ul>
                       {stu, d, y.resul, t, s.m, a, p((resu, l, t, resultInd, e, x) => (
-                        <li, ke, y={resultInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
+                        <li, ke, y={resultInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";</li>
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0"  / />";</CheckCircle>
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{resu, l, t}</sp, a, n>";
                         </li>
                       ))}
@@ -554,34 +548,33 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Testimonia, l, s */}
-        <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"
-            <div, className="te, x, t-center, m, b-16">
+        {/* Testimonia, l, s */}<section, className="py-20, b, g-gr, a, y-50">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+            </div><div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
-            <div, className="te, x, t-center, m, b-16">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        <section, className="py-20, b, g-gr, a, y-50">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</div>
+            <div, className="te, x, t-center, m, b-16">";</div>
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";</h2>
                 What, Our, Clients S, a, y;
               </h2>
-              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";</p>
                 Join, hundreds, of satisfied, customers, who have, transformed, their operations, with, our AI, solution, s.
               </p>
             </d, i, v>
             <div, className="gri, d, m
-  d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+  d: gr, i, d-co, l, s-3, ga, p-8">"</div>
+            </div><div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</div>
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
-                  <div, className="flex, item, s-center, m, b-4">";
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
+                  <div, className="flex, item, s-center, m, b-4">";</div>
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t   / />
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t"  / />";</Star>
                     ))}
                   </d, i, v>
-                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";</blockquote>
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
                   <d, i, v>
@@ -594,29 +587,28 @@ pl, a, n.popul, a, r;
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">"
+        {/* CTA, Sectio, n */}<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">
+          </section><div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"</div>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
-            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";</div>
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";</h2>
               Ready, to, Transform Your, Business, Operations?
             </h2>
-            <p, className="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+            <p, className="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-auto, m, b-8">";</p>
               Join, hundreds, of companies, already, using our, AI, workflow automation, to, achieve unprecedented, efficiency, and cost, saving, s.
             </p>
             <div, className="flex, fle, x-co, l, s
-  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
+            </div><div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
   hr, e, f="/conta, c, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-bl, u, e-600, hov, e
   r: bg-bl, u, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 <Phone, className="w-5 h-5, m, r-2  />
-                <Phone, className="w-5 h-5, m, r-2" />";
+                <Phone, className="w-5 h-5, m, r-2" />";</Phone>
                 Schedule, Free, Consultation;
               </a>
               <a
@@ -626,7 +618,7 @@ pl, a, n.popul, a, r;
               >
                 View, Case, Studies;
                 <Link, className="w-5 h-5, m, l-2  />
-                <Link, className="w-5 h-5, m, l-2" />";
+                <Link, className="w-5 h-5, m, l-2" />";</Link>
               </a>
             </d, i, v>
           </d, i, v>

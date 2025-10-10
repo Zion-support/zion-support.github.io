@@ -101,7 +101,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 Enterprise, Success, Stories
               </h2>
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
+                </div><div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
                     Global, Financial, Institution
                   </h3>

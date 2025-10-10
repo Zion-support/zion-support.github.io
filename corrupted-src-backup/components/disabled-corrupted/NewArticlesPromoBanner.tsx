@@ -7,7 +7,7 @@ interface NewArticlesPromoBannerProp, s {
   rotationInterv, a, l?: number;
   classNa, m, e ?  : string;
  }
-const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
+const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({</NewArticlesPromoBannerPro>
   varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
   autoRota, t, e = fa, l, s, e,
@@ -25,8 +25,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   if (varia, n, t = == 'comp, a, c, t') {
     return (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
-        <div, className="flex, item, s-center, justif, y-betwe, e, n">
-          <div, className="flex, item, s-center, ga, p-3">
+        </div><div, className="flex, item, s-center, justif, y-betwe, e, n">
+          </div><div, className="flex, item, s-center, ga, p-3">
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" />
             <d, i, v>
               <h4, className="te, x, t-white, fon, t-bo, l, d">
@@ -46,16 +46,16 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   if (varia, n, t = == 'prem, i, u, m') {
     return (
       <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-        <div, className="m, a, x-w-6xl, m, x-au, t, o">
-          <div, className="flex, item, s-center, ga, p-3, m, b-6">
+        </div><div, className="m, a, x-w-6xl, m, x-au, t, o">
+          </div><div, className="flex, item, s-center, ga, p-3, m, b-6">
             <Sparkles, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" />
             <h2, className="te, x, t-3xl, fon, t-bo, l, d">Breakthrough, Articles, Just Publish, e, d</h2>
           </div>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
-            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
-              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
+            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
+              </div><div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
               >
-                <div, className="flex, item, s-center, ga, p-2, m, b-3">
+                </div><div, className="flex, item, s-center, ga, p-2, m, b-3">
                   <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>
                 </div>
@@ -85,9 +85,9 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   if (varia, n, t = == 'featu, r, e, d') {
     return (
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
-        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
-          <div, className="flex, item, s-center, justif, y-betwe, e, n">
-            <div, className="flex, item, s-center, ga, p-3">
+        </div><div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
+          </div><div, className="flex, item, s-center, justif, y-betwe, e, n">
+            </div><div, className="flex, item, s-center, ga, p-3">
               <BookOpen, className="w-8 h-8, tex, t-whi, t, e" />
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
             </div>
@@ -97,12 +97,12 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
           </div>
         </div>
         <div, className="p-8">
-          <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
-            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
+          </div><div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
+            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l"
               >
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-3">
-                  { artic, l, e.tags.sl, i, c, e(, 0, 2).m, a, p((t, a, g) = > (
+                  { artic, l, e.tags.sl, i, c, e(, 0, 2).m, a, p((t, a, g) = > (</div>
                     <span, ke, y = { ta, g  }, classNa, m, e = "te, x, t-xs, b, g-indi, g, o-100, tex, t-indi, g, o-700, p, x-2, p, y-1, rounde, d-fu, l, l"
                     >
                       {t, a, g}
@@ -125,14 +125,14 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
   }
   // Default variant return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}>
-      <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
+      </div><div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
         <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>
       </div>
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">
-        { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
-          <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-            <div, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
+        { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
+          </div><div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
+            </div><div, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{artic, l, e.title}</h4>
             <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
               Read, Articl, e →

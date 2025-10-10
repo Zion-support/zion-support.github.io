@@ -51,42 +51,40 @@ const AIStockPortfolioManagerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Stock Portfolio <span className="text-cyan-400">Manager<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Maximize your investment returns with AI-powered portfolio management. Get intelligent</p>
+              AI Stock Portfolio <span className="text-cyan-400">Manager</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Maximize your investment returns with AI-powered portfolio management. Get intelligent</p>
               recommendations, real-time monitoring, and automated optimization for your stock portfolio.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial</a><a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful Features<p className="text-xl text-gray-300">Everything you need to manage your portfolio<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+      {/* Features Grid */}<section className="py-16 px-4">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2><p className="text-xl text-gray-300">Everything you need to manage your portfolio<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Stock Portfolio Manager?<p className="text-xl text-gray-300">Proven results and cutting-edge technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+      {/* Benefits Section */}<section className="py-16 px-4 bg-slate-800/30">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Stock Portfolio Manager?</h2><p className="text-xl text-gray-300">Proven results and cutting-edge technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-cyan-400" />
+                </div><div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-cyan-400"  / />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
               </div>
             ))}
@@ -94,46 +92,44 @@ const AIStockPortfolioManagerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Simple Pricing<p className="text-xl text-gray-300">Choose the plan that fits your needs</p>
+      {/* Pricing Section */}<section className="py-16 px-4">
+        </section><div className="max-w-4xl mx-auto">
+          </div><div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Simple Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your needs</p>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 text-center">
-            <div className="mb-8">
+            </div><div className="mb-8">
               <h3 className="text-3xl font-bold text-white mb-2">AI Stock Portfolio Manager</h3>
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$79<span className="text-xl text-gray-300">/month<p className="text-gray-300">Per portfolio, billed monthly</p>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">$79<span className="text-xl text-gray-300">/month</span><p className="text-gray-300">Per portfolio, billed monthly</p>
             </div>
 
             <ul className="space-y-4 mb-8 text-left max-w-md mx-auto">
               <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Unlimited stocks</CheckCircle>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3"  / />Unlimited stocks</CheckCircle>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >AI recommendations</CheckCircle>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3"  / />AI recommendations</CheckCircle>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Real-time monitoring</CheckCircle>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3"  / />Real-time monitoring</CheckCircle>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Risk assessment</CheckCircle>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3"  / />Risk assessment</CheckCircle>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >24/7 support<a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today</a>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3"  / />24/7 support<a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today</a>
             </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Portfolio?<p className="text-xl text-gray-300 mb-8">Join thousands of investors already using AI Stock Portfolio Manager to maximize their returns.</p>
+      {/* CTA Section */}<section className="py-16 px-4">
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Portfolio?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of investors already using AI Stock Portfolio Manager to maximize their returns.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial</a><a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
             </a>
           </div>
         </div>

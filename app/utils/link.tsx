@@ -8,7 +8,7 @@ interface LinkProps {
   onClick?: () => void
   'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps>= ({
+export const Link: React.FC<LinkProps>= ({</LinkProps>
   href,
   children,
   className,

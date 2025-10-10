@@ -8,9 +8,9 @@ interface ErrorFallbackProps {
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-        <div className="flex items-center mb-4">
-          <div className="flex-shrink-0">
+      </div><div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+        </div><div className="flex items-center mb-4">
+          </div><div className="flex-shrink-0">
             <svg
               className="h-8 w-8 text-red-600"
               fill="none"
@@ -30,7 +30,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           </div>
         </div>
         <div className="mb-4">
-          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
+          </div><p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
             {error.message}
           </pre>
@@ -63,7 +63,7 @@ interface AppErrorBoundaryState {
   error: Error | undefined;
 }
 
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {</AppErrorBoundaryProps>
   constructor(props: AppErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: undefined };
@@ -86,7 +86,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 
   render() {
     if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
+      return <ErrorFallback error={this.state.error} resetError={this.resetError}  /></ErrorFallback>
     }
 
     return this.props.children;

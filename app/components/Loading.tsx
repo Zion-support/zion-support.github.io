@@ -7,7 +7,7 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-const Loading: React.FC<LoadingProps>= ({
+const Loading: React.FC<LoadingProps>= ({</LoadingProps>
   size = 'md',
   text = 'Loading...',
   fullScreen = false
@@ -26,8 +26,8 @@ const Loading: React.FC<LoadingProps>= ({
 </LoadingProps>
   const content = (</LoadingProps>
     <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
-        <div className={`${sizeClasses[size]} animate-spin`}>
+      </div><div className="relative">
+        </div><div className={`${sizeClasses[size]} animate-spin`}>
           <Loader2 className="w-full h-full text-cyan-400" />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">

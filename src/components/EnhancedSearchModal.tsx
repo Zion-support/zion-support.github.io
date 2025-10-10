@@ -95,15 +95,15 @@ const popularSearches = [
   'Data Analytics'
 ];
 
-const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>
   const [isSearching, setIsSearching] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  const inputRef = useRef<HTMLInputElement>(null);
-  const resultsRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>
+  const resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -166,7 +166,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>
     const value = e.target.value;
     setQuery(value);
     searchResults(value);
@@ -218,17 +218,15 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16">
-        {/* Backdrop */}
-        <div 
+      </div><div className="flex min-h-screen items-start justify-center p-4 pt-16">
+        {/* Backdrop */}</div><div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           onClick={onClose}
         />
         
-        {/* Modal */}
-        <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-2xl">
-          {/* Search Input */}
-          <div className="flex items-center p-4 border-b border-cyan-400/20">
+        {/* Modal */}</div>
+        </div><div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-2xl">
+          {/* Search Input */}</div><div className="flex items-center p-4 border-b border-cyan-400/20">
             <Search className="w-5 h-5 text-cyan-400 mr-3" />
             <input
               ref={inputRef}
@@ -246,18 +244,17 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
             </button>
           </div>
 
-          {/* Content */}
-          <div className="max-h-96 overflow-y-auto">
+          {/* Content */}<div className="max-h-96 overflow-y-auto">
             {query === '' && showSuggestions ? (
-              /* Suggestions */
-              <div className="p-4">
-                <div className="mb-6">
+              /* Suggestions */</div>
+              </div><div className="p-4">
+                </div><div className="mb-6">
                   <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
                     Recent Searches
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {recentSearches.map((search, index) => (
+                    {recentSearches.map((search, index) => (</div>
                       <button
                         key={index}
                         onClick={() => handleSuggestionClick(search)}
@@ -275,7 +272,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                     Popular Searches
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {popularSearches.map((search, index) => (
+                    {popularSearches.map((search, index) => (</div>
                       <button
                         key={index}
                         onClick={() => handleSuggestionClick(search)}
@@ -290,13 +287,13 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
             ) : isSearching ? (
               /* Loading */
               <div className="p-8 text-center">
-                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                </div><div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                 <p className="text-gray-400">Searching...</p>
               </div>
             ) : results.length > 0 ? (
               /* Results */
               <div className="p-2">
-                {results.map((result, index) => (
+                {results.map((result, index) => (</div>
                   <button
                     key={result.id}
                     onClick={() => handleResultClick(result)}
@@ -307,15 +304,15 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                     }`}
                   >
                     <div className="flex items-start space-x-3">
-                      <div className="text-2xl">{getCategoryIcon(result.category)}</div>
+                      </div><div className="text-2xl">{getCategoryIcon(result.category)}</div>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-2 mb-1">
+                        </div><div className="flex items-center space-x-2 mb-1">
                           <h4 className="font-medium text-white truncate">{result.title}</h4>
                           <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800`}>
                             {result.type}
                           </span>
                           {result.popularity && result.popularity > 85 && (
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                            <Star className="w-3 h-3 text-yellow-400 fill-current"  / />
                           )}
                         </div>
                         <p className="text-sm text-gray-400 line-clamp-2">{result.description}</p>
@@ -334,22 +331,21 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
             ) : query && !isSearching ? (
               /* No Results */
               <div className="p-8 text-center">
-                <div className="text-4xl mb-4">🔍</div>
+                </div><div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-lg font-medium text-white mb-2">No results found</h3>
                 <p className="text-gray-400 mb-4">
                   Try searching for something else or check the spelling of your search term.
                 </p>
                 <div className="text-sm text-gray-500">
-                  Popular searches: AI Analytics, Quantum Computing, Workflow Automation
+                  Popular searches: AI Analytics, Quantum Computing, Workflow Automation</div>
                 </div>
               </div>
             ) : null}
           </div>
 
-          {/* Footer */}
-          <div className="p-4 border-t border-cyan-400/20 bg-slate-800/50">
-            <div className="flex items-center justify-between text-xs text-gray-400">
-              <div className="flex items-center space-x-4">
+          {/* Footer */}<div className="p-4 border-t border-cyan-400/20 bg-slate-800/50">
+            </div><div className="flex items-center justify-between text-xs text-gray-400">
+              </div><div className="flex items-center space-x-4">
                 <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">↑↓</kbd> to navigate</span>
                 <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">Enter</kbd> to select</span>
               </div>

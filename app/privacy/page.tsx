@@ -177,23 +177,21 @@ const PrivacyPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Privacy Policy<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your privacy is important to us. This policy explains how we collect, use, and protect your information.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Privacy Policy</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your privacy is important to us. This policy explains how we collect, use, and protect your information.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.<p className="text-gray-300 leading-relaxed">By using our website or services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not use our website or services.</p>
+        {/* Introduction */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction</h2><p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p><p className="text-gray-300 leading-relaxed">By using our website or services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not use our website or services.</p>
             </p>
           </div>
         </section>
 
-        {/* Main Content */}
-        <section className="space-y-12">{sections.map((section, index) => (</section>
+        {/* Main Content */}<section className="space-y-12">{sections.map((section, index) => (</section>
             <div key={index} className="cyber-card p-8">
-              <div className="flex items-center mb-6">
-                <section.icon className="w-8 h-8 text-cyan-400 mr-4" />
+              </div><div className="flex items-center mb-6">
+                </div><section.icon className="w-8 h-8 text-cyan-400 mr-4" />
                 <h2 className="text-2xl font-bold text-white neon-text">{section.title}<div className="space-y-6">{section.content.map((subsection, subIndex) => (</div>
                   <div key={subIndex}>
                     <h3 className="text-xl font-semibold text-cyan-400 mb-3">{subsection.subtitle}<ul className="space-y-2">{subsection.items.map((item, itemIndex) => (</ul>
@@ -209,22 +207,21 @@ const PrivacyPage: React.FC = () => {
           ))}
         </section>
 
-        {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+        {/* Contact Information */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              </div><div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
+                  </div><p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
                 </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">privacy@ziontechgroup.com</a>
+                  </div><p>Email: <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">privacy@ziontechgroup.com</a>
                   <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
                 </div>
               </div>
@@ -232,10 +229,9 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Updates */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates<p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
+        {/* Updates */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates</h2><p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
             </p>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
@@ -245,7 +241,7 @@ const PrivacyPage: React.FC = () => {
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Sending email notifications to registered users</span>
               </span>
               <li className="flex items-start">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Updating the "Last Updated" date at the top of this policy<p className="text-gray-300 mt-4">Your continued use of our website or services after any changes to this Privacy Policy constitutes acceptance of the updated policy.</p>
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Updating the "Last Updated" date at the top of this policy</span><p className="text-gray-300 mt-4">Your continued use of our website or services after any changes to this Privacy Policy constitutes acceptance of the updated policy.</p>
             </p>
           </div>
         </section>

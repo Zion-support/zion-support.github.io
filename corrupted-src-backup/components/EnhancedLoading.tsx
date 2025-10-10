@@ -6,7 +6,7 @@ interface LoadingProps {
   variant?: 'spinner' | 'dots' | 'pulse';
 }
 
-const EnhancedLoading: React.FC<LoadingProps> = ({
+const EnhancedLoading: React.FC<LoadingProps> = ({</LoadingProps>
   message = 'Loading...',
   size = 'md',
   variant = 'spinner',
@@ -23,10 +23,10 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
     />
   );
 
-  const renderDots = () => (
-    <div className="flex space-x-1">
-      {[0, 1, 2].map(i => (
-        <div
+  const renderDots = () => (</div>
+    </div><div className="flex space-x-1">
+      {[0, 1, 2].map(i => (</div>
+        </div><div
           key={i}
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`}
           style={{
@@ -34,7 +34,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
             animationDuration: '1s',
           }}
         />
-      ))}
+      ))}</div>
     </div>
   );
 
@@ -53,9 +53,9 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
     }
   };
 
-  return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <div className="mb-4">{renderLoader()}</div>
+  return (</div>
+    </div><div className="flex flex-col items-center justify-center p-8">
+      </div><div className="mb-4">{renderLoader()}</div>
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
   );

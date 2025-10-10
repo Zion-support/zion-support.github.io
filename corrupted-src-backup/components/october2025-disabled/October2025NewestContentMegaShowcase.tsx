@@ -2,9 +2,9 @@ impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 export default function October2025NewestContentMegaShowca, s, e() { 
   const newConten, t = [
     {",
-      ic, o, n: <Network, classNam, e = "w-8 , h-, 8" />,",
+      ic, o, n: <Network, classNam, e = "w-8 , h-, 8" />,",</Network>
     {
-      ic, o, n: <Network, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Network, classNam, e = "w-8 , h-, 8" / > ,</Network>
       title: "Autonomous, Mesh, Intelligence Platf, o, r, m",
       description: "Se, l, f-organizing, distributed, AI networks, with, 99.9, 9, 7% upt, i, m, e",",
       val, u, e: "$8.4, B",
@@ -14,7 +14,7 @@ export default function October2025NewestContentMegaShowca, s, e() {
      },
     { 
       ic, o, n: '🚀',
-      ic, o, n: <Atom, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Atom, classNam, e = "w-8 , h-, 8" / > ,</Atom>
       title: "Quant, u, m-Neural, Hybrid, System, s",
       description: "10, 0,000x, performance, improvements for, drug, discovery and, optimizatio, n",",
       val, u, e: "$12.7, B",
@@ -24,7 +24,7 @@ export default function October2025NewestContentMegaShowca, s, e() {
      },
     { 
       ic, o, n: '🚀',
-      ic, o, n: <Brain, classNam, e = "w-8 , h-, 8" / > ,
+      ic, o, n: <Brain, classNam, e = "w-8 , h-, 8"  / /> ,</Brain>
       title: "Neur, a, l-Symbolic, Reasoning, System, s",
       description: "97% accuracy, with, 100% explainable, AI, decision-mak, i, n, g",",
       val, u, e: "$5.7, B",
@@ -34,13 +34,12 @@ export default function October2025NewestContentMegaShowca, s, e() {
      }
   ]; return (
     <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">
-      {/* Animated, Backgroun, d */}
-      <div, className="absolute, inse, t-0">
-        <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
-      <div, className="container, m, x-auto, p, x-4, relative, z-10">
-        {/* He, a, d, e, r */}
-        <div, classNam, e = "te, x, t-center, m, b-16, animat, e-fa, d, e-in">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
+      {/* Animated, Backgroun, d */}</section><div, className="absolute, inse, t-0">
+        </div><div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
+      </div><div, className="container, m, x-auto, p, x-4, relative, z-10">
+        {/* He, a, d, e, r */}</div>
+        </div><div, classNam, e = "te, x, t-center, m, b-16, animat, e-fa, d, e-in">
+          </div><div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">JUST, PUBLISHE, D • OCTOB, E, R , 1, 20, 2, 5</sp, a, n>
           </div>
@@ -51,7 +50,7 @@ export default function October2025NewestContentMegaShowca, s, e() {
             3, Breakthrough, AI Technologi, e, s
           </p>
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg">
-            <div, className="flex, item, s-center, ga, p-2">
+            </div><div, className="flex, item, s-center, ga, p-2">
               <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">$26.8B, Combined, Value</sp, a, n>
             </div>
@@ -63,28 +62,23 @@ export default function October2025NewestContentMegaShowca, s, e() {
             </div>
           </div>
         </div>
-        {/* Content, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
+        {/* Content, G, r, i, d */}<div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+          { newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>
             <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20"
             >
-              {/* Ic, o, n */}
-              <div, classNam, e = { `inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
-                <div, classNam, e = "te, x, t-whi, t, e">
-                  {it, e, m.ic, o, n}
+              {/* Ic, o, n */}<div, classNam, e = { `inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, mb-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
+                </div><div, classNam, e = "te, x, t-whi, t, e">
+                  {it, e, m.ic, o, n}</div>
                 </div>
               </div>
-              {/* Tit, l, e */}
-              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
+              {/* Tit, l, e */}<h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
                 {it, e, m.t, i, t, l, e}
               </h3>
-              {/* Descripti, o, n */}
-              <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
+              {/* Descripti, o, n */}<p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
                 {it, e, m.description}
               </p>
-              {/* Metri, c, s */}
-              <div, className="spa, c, e-y-3, m, b-6">
-                <div, className="flex, item, s-center, justif, y-between, p, y-2, p, x-4, b, g-sla, t, e-7, 0, 0/30, rounde, d-lg">
+              {/* Metri, c, s */}<div, className="spa, c, e-y-3, m, b-6">
+                </div><div, className="flex, item, s-center, justif, y-between, p, y-2, p, x-4, b, g-sla, t, e-7, 0, 0/30, rounde, d-lg">
                   <span, className="te, x, t-gr, a, y-4, 0, 0">Enterprise, Valu, e</sp, a, n>
                   <span, className="te, x, t-gre, e, n-400, fon, t-bold, tex, t-xl">{it, e, m.val, u, e}</sp, a, n>
                 </div>
@@ -93,19 +87,16 @@ export default function October2025NewestContentMegaShowca, s, e() {
                   <span, className="te, x, t-purp, l, e-400, fon, t-bold, tex, t-xl">{it, e, m.metr, i, c}</sp, a, n>
                 </div>
               </div>
-              {/* C, T, A */}
-              <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
+              {/* C, T, A */}<div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
                 <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
               </div>
-              </d, i, v  > {/* Hover, Glow, Effe, c, t */}
-              <div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k>
-          ))}
+              </d, i, v  > {/* Hover, Glow, Effe, c, t */}<div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k>
+          ))}</div>
         </div>
-        {/* Bottom, CT, A */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30">
-            <p, className="te, x, t-xl, tex, t-gr, a, y-3, 0, 0">
+        {/* Bottom, CT, A */}<div, classNam, e = "te, x, t-cent, e, r">
+          </div><div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30">
+            </div><p, className="te, x, t-xl, tex, t-gr, a, y-3, 0, 0">
               Ready, to, transform your, enterprise, with cutti, n, g-edge, A, I?
             </p>
             <div, className="flex, fle, x-wrap, ga, p-4">

@@ -2,11 +2,11 @@
 export default function October2025SelfHealingSpotlightBann, e, r() { 
   return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
-      <div, className='m, a, x-w-6xl, m, x-au, t, o'>
-        <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
-          <div, className='fl, e, x-1'>
-            <div, className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
-              🔥 H, O, T - JUST, PUBLISHED, TODAY
+      </div><div, className='m, a, x-w-6xl, m, x-au, t, o'>
+        </div><div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
+          </div><div, className='fl, e, x-1'>
+            </div><div, className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
+              🔥 H, O, T - JUST, PUBLISHED, TODAY</div>
             </div>
             <h3, className='te, x, t-4xl, fon, t-bold, m, b-4'>
               Agentic, Sel, f-Healing, Infrastructur, e
@@ -15,24 +15,24 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               AI, agents, that autonomously, det, e, c, t, diagno, s, e, and, resolve, infrastructure issues, before, they impact, your, business
             </p>
             <div, classNam, e = 'grid, gri, d-co, l, s-2, ga, p-4, m, b-6'>
-              <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
-                <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>$5.4B</div>
+              </div><div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
+                </div><div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>$5.4B</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Operational, Saving, s</div>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
-                <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>99.9, 9, 9%</div>
+                </div><div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>99.9, 9, 9%</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Uptime, Achieve, d</div>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
-                <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</div>
+                </div><div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Mean, Time, to Resolution
+                  Mean, Time, to Resolution</div>
                 </div>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
-                <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>94%</div>
+                </div><div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>94%</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Au, t, o-Resolution, Rat, e
+                  Au, t, o-Resolution, Rat, e</div>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
             </Li, n, k>
           </div>
           <div, className='fl, e, x-1'>
-            <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/2, 0, p-8, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>
+            </div><div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/2, 0, p-8, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>
               <h4, className='te, x, t-2xl, fon, t-bold, m, b-4'>🎯 Key, Innovation, s</h4>
               <ul, className='spa, c, e-y-3, tex, t-lg'>
                 <li, className='flex, item, s-sta, r, t'>

@@ -16,7 +16,7 @@ interface SEOData {
  twitterTitle?: string;
  twitterDescription?: string;
  twitterImage?: string;
- structuredData?: Record<string, unknown>;
+ structuredData?: Record<string, unknown>;</string>
  robots?: string;
  author?: string;
  publishedTime?: string;
@@ -33,14 +33,14 @@ interface AdvancedSEOOptimizerProps {
  enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({</AdvancedSEOOptimizerProps>
  seoData,
  enableStructuredData = true,
  enableOpenGraph = true,
  enableTwitterCards = true,
  enableSchemaMarkup = true,
 }) => {
- const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+ const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>
  const generateStructuredData = useCallback(() => {
  if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -184,7 +184,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  // }
  // };origin/
 
- // const _addStructuredData = (data: Record<string, unknown>) => {
+ // const _addStructuredData = (data: Record<string, unknown>) => {</string>
  // // Remove existing structured data
  // // if (structuredDataRef.current) {
  // // structuredDataRef.current.remove();
@@ -207,7 +207,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
  const _trackPageView = (config: SEOData) => {
  if (typeof window !== 'undefined' && 'gtag' in window) {
- (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+ (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {</string>
  page_title: config.title,
  page_location: config.canonicalUrl,
  });
@@ -219,7 +219,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  window.addEventListener('load', () => {
  const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
- (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+ (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {</string>
  event_category: 'Performance',
  event_label: 'Page Load',
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
@@ -230,9 +230,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  };origin/
 
  return (
- <Helmet>
- {/* Basic Meta Tags */}
- <title>{seoData.title}</title>
+ <Helmet / />
+ {/* Basic Meta Tags */}<title>{seoData.title}</title>
  <meta name="description" content={seoData.description} />
  <meta name="keywords" content={seoData.keywords.join(', ')} />
  <link rel="canonical" href={seoData.canonicalUrl} />
@@ -259,8 +258,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  </>
  )}
 
- {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+ {/* Additional SEO Meta Tags */}<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
  <meta name="googlebot" content="index, follow" />
  <meta name="bingbot" content="index, follow" />
  <meta name="author" content="Zion Tech Group" />
@@ -291,16 +289,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  </script>
  )}
 
- {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
- <link rel="preconnect" href="https://www.google-analytics.com" />
- <link rel="preconnect" href="https://www.googletagmanager.com" />
+ {/* Preconnect to external domains for performance */}<link rel="preconnect" href="https://fonts.googleapis.com" />
+ </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+ </li><link rel="preconnect" href="https://www.google-analytics.com" />
+ </li><link rel="preconnect" href="https://www.googletagmanager.com" />
 
- {/* DNS Prefetch for better performance */}
- <link rel="dns-prefetch" href="//fonts.googleapis.com" />
- <link rel="dns-prefetch" href="//www.google-analytics.com" />
- <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+ {/* DNS Prefetch for better performance */}</li><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+ </li><link rel="dns-prefetch" href="//www.google-analytics.com" />
+ </li><link rel="dns-prefetch" href="//www.googletagmanager.com" />
  </Helmet>
  );
 };

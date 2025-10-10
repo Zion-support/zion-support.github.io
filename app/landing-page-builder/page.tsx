@@ -63,9 +63,9 @@ const LandingPageBuilderPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+        </div><div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Landing Page <span className="text-cyan-400">Builder<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Create high-converting landing pages in minutes with our AI-powered builder.</p>
+            Landing Page <span className="text-cyan-400">Builder</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Create high-converting landing pages in minutes with our AI-powered builder.</p>
             No coding required - just drag, drop, and launch.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,39 +84,36 @@ const LandingPageBuilderPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Features Section */}
-        <div className="mb-16">
+        {/* Features Section */}<div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Powerful <span className="text-cyan-400">Features<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
               >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
+                </div><div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Templates Section */}
-        <div className="mb-16">
+        {/* Templates Section */}<div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Professional <span className="text-cyan-400">Templates<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{templates.map((template, index) => (</div>
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-2">{template.category}<div className="text-cyan-400 font-bold text-lg mb-2">{template.count}<p className="text-gray-300 text-sm">{template.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{template.category}<div className="text-cyan-400 font-bold text-lg mb-2">{template.count}</div><p className="text-gray-300 text-sm">{template.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Landing Page?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses creating high-converting landing pages with our builder.</p>
+        {/* CTA Section */}<div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Landing Page?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses creating high-converting landing pages with our builder.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

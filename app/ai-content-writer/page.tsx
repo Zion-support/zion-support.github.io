@@ -47,15 +47,14 @@ const AIContentWriterPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Content Writer">AI Content Writer<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $79/month</div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Content Writer">AI Content Writer</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $79/month</div>
         </section>
 
-        {/* Features */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
+        {/* Features */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Content Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  / />
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
@@ -63,33 +62,30 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
+        {/* Benefits */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Content Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
+                  </div><div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div><p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Use Cases */}
-        <section className="mb-16">
+        {/* Use Cases */}<section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Content Use Cases<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center">
                 <useCase.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}<p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3><p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Scale Your Content?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss your content requirements and get started with AI-powered writing.</p>
+        {/* Contact CTA */}<section className="text-center">
+          </section><div className="cyber-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Scale Your Content?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your content requirements and get started with AI-powered writing.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

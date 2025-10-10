@@ -21,7 +21,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, ai 2025, oct, enterprise ai, platforms, and how, it, can benefit, your, enterprise.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
+          </div><p>
             This, comprehensive, guide covers, ai, 2025 oct, enterprise, ai platforms, and, provides practical, insights, for enterprise, implementatio, n.
           </p>
         </div>

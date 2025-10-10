@@ -13,7 +13,7 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps>= ({
+const EnhancedSEOHead: React.FC<SEOHeadProps>= ({</SEOHeadProps>
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
@@ -63,13 +63,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps>= ({
     ]
   };
 </SEOHeadProps>
-  return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
+  return (<Helmet / />{/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" >{/* Open Graph / Facebook */}</meta>
+      <meta name="bingbot" content="index, follow"  />{/* Open Graph / Facebook */}</meta>
       </meta><meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
@@ -78,30 +78,29 @@ const EnhancedSEOHead: React.FC<SEOHeadProps>= ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" >{/* Twitter */}</meta>
+      <meta property="og:locale" content="en_US"  />{/* Twitter */}</meta>
       </meta><meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:site" content="@ziontechgroup" >{/* Additional SEO Meta Tags */}</meta>
+      <meta name="twitter:site" content="@ziontechgroup"  />{/* Additional SEO Meta Tags */}</meta>
       </meta><meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Canonical URL */}<link rel="canonical" href={url} >{/* Structured Data */}<script type="application/ld+json">{JSON.stringify(structuredData || defaultStructuredData)}</script>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />{/* Canonical URL */}<link rel="canonical" href={url}  />{/* Structured Data */}<script type="application/ld+json">{JSON.stringify(structuredData || defaultStructuredData)}</script>
       </script>
       
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="preconnect" href="https://www.google-analytics.com" >{/* DNS prefetch for performance */}</link>
+      {/* Preconnect to external domains for performance */}<link rel="preconnect" href="https://fonts.googleapis.com" />
+      </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      </li><link rel="preconnect" href="https://www.googletagmanager.com" />
+      </li><link rel="preconnect" href="https://www.google-analytics.com"  />{/* DNS prefetch for performance */}</link>
       </link><link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      </li><link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      </li><link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </li><link rel="dns-prefetch" href="https://www.google-analytics.com" />
     </Helmet>
   );
 };

@@ -47,15 +47,14 @@ const MobileDevelopmentPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</div>
         </section>
 
-        {/* Features */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
+        {/* Features */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Development Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  / />
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
@@ -63,33 +62,30 @@ const MobileDevelopmentPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
+        {/* Benefits */}<section className="mb-16">
+          </section><div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
+                  </div><div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div><p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services */}
-        <section className="mb-16">
+        {/* Services */}<section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Mobile Services<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{services.map((service, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center">
                 <service.icon className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Build Your Mobile App?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss your mobile app requirements and get a custom solution.</p>
+        {/* Contact CTA */}<section className="text-center">
+          </section><div className="cyber-card p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Build Your Mobile App?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your mobile app requirements and get a custom solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

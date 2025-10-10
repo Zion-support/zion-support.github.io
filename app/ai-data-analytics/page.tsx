@@ -163,31 +163,31 @@ const AIDataAnalyticsPage: React.FC = () => {
     {
       title: 'Advanced Data Processing',
       description: 'Handle massive datasets with real-time processing capabilities',
-      icon: <Database className="w-8 h-8 text-blue-600" >},
+      icon: <Database className="w-8 h-8 text-blue-600" >},</Database>
     {
       title: 'Machine Learning Models',</Database>
       description: 'Custom ML models trained on your specific data',</Database>
-      icon: <Brain className="w-8 h-8 text-purple-600" >},
+      icon: <Brain className="w-8 h-8 text-purple-600"  / />},</Brain>
     {
       title: 'Interactive Dashboards',</Brain>
       description: 'Beautiful, responsive dashboards for all devices',</Brain>
-      icon: <BarChart3 className="w-8 h-8 text-green-600" >},
+      icon: <BarChart3 className="w-8 h-8 text-green-600" >},</BarChart3>
     {
       title: 'Predictive Insights',</BarChart3>
       description: 'AI-powered predictions and recommendations',</BarChart3>
-      icon: <Target className="w-8 h-8 text-orange-600" >}
+      icon: <Target className="w-8 h-8 text-orange-600" >}</Target>
   ];</Target>
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */}</div>
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services<p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
+        </section><div className="absolute inset-0 bg-black opacity-20"></div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services</h1><p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              >📞 +1 302 464 0950<a
+              >📞 +1 302 464 0950</a><a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >✉️ Get Free Consultation</a>
@@ -196,20 +196,19 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Services Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Analytics Solutions<p className="text-xl text-gray-600">Comprehensive AI-powered analytics platforms for every business need<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{analyticsServices.map((service, index) => (</div>
+      {/* Services Grid */}<section className="py-16 bg-white">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Analytics Solutions</h2><p className="text-xl text-gray-600">Comprehensive AI-powered analytics platforms for every business need<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{analyticsServices.map((service, index) => (</div>
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="text-4xl mb-4">{service.icon}<h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}<p className="text-gray-600 mb-4">{service.description}</p>
+                </div><div className="text-4xl mb-4">{service.icon}<h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}<span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span><span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
                 <div className="mb-4">
                   <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">{service.category}<ul className="space-y-2 mb-6">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  / />{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -228,35 +227,33 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Analytics Solutions?<p className="text-xl text-gray-600">Advanced technology and expert implementation for maximum ROI<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{additionalFeatures.map((feature, index) => (</div>
+      {/* Features Section */}<section className="py-16 bg-gray-50">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div><div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Analytics Solutions?</h2><p className="text-xl text-gray-600">Advanced technology and expert implementation for maximum ROI<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{additionalFeatures.map((feature, index) => (</div>
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">{feature.icon}<h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}<p className="text-gray-600">{feature.description}</p>
+                </div><div className="flex justify-center mb-4">{feature.icon}<h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3><p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?<p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
+      {/* Contact Section */}<section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?</h2><p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-            >📞 +1 302 464 0950<a
+            >📞 +1 302 464 0950</a><a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >✉️ kleber@ziontechgroup.com</a>
             </a>
           </div>
           <div className="mt-8 text-sm text-blue-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div><p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>

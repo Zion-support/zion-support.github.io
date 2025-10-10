@@ -16,9 +16,9 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-12'>
-        <div, className='m, a, x-w-3xl, m, x-au, t, o'>
-          <div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-            AI, Operation, s • 9, min, read • 20, 2, 5-10-01
+        </div><div, className='m, a, x-w-3xl, m, x-au, t, o'>
+          </div><div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+            AI, Operation, s • 9, min, read • 20, 2, 5-10-01</div>
           </div>
           <h1, className='te, x, t-4xl, fon, t-bold, m, b-4'>
             Agent, Reliability, Runbooks v5

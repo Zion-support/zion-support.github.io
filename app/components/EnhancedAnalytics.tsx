@@ -12,7 +12,7 @@ interface EnhancedAnalyticsProps {
   enableHeatmapTracking?: boolean;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({</EnhancedAnalyticsProps>
   enableGoogleAnalytics = true,
   enableGoogleTagManager = true,
   enableFacebookPixel = false,

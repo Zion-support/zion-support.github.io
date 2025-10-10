@@ -10,11 +10,11 @@ interface SEOEnhancerProps {
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>;</string>
   noIndex?: boolean;
 }</string>
 </string>
-const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
+const SEOEnhancer: React.FC<SEOEnhancerProps>= ({</SEOEnhancerProps>
   children,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.',
@@ -64,7 +64,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
 </SEOEnhancerProps>
   return (</SEOEnhancerProps>
     <>
-      <Helmet>{/* Basic Meta Tags */}<title>{title}</title>
+      <Helmet / />{/* Basic Meta Tags */}<title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
@@ -74,8 +74,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
-        <meta name="rating" content="general" >{/* Canonical URL */}</meta>
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} >}
+        <meta name="rating" content="general"  />{/* Canonical URL */}</meta>
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}</link>
 </link>
         {/* Open Graph Tags */}</link>
         </link><meta property="og:type" content={ogType} />
@@ -84,27 +84,26 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
         <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" >{/* Twitter Card Tags */}</meta>
+        <meta property="og:locale" content="en_US"  />{/* Twitter Card Tags */}</meta>
         </meta><meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" >{/* Additional SEO Tags */}</meta>
+        <meta name="twitter:creator" content="@ziontechgroup"  />{/* Additional SEO Tags */}</meta>
         </meta><meta name="theme-color" content="#1f2937" />
         <meta name="msapplication-TileColor" content="#1f2937" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />{/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
 
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" >{/* DNS Prefetch */}</link>
+        {/* Preconnect to external domains */}<link rel="preconnect" href="https://fonts.googleapis.com" />
+        </li><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        </li><link rel="preconnect" href="https://www.google-analytics.com" />
+        </li><link rel="preconnect" href="https://www.googletagmanager.com"  />{/* DNS Prefetch */}</link>
         </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        </li><link rel="dns-prefetch" href="//www.google-analytics.com" />
+        </li><link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Helmet>
       {children}
     </>

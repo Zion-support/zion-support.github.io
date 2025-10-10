@@ -13,7 +13,7 @@ interface State {
   errorId?: string;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {</Props>
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -63,7 +63,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
+          </div><div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">

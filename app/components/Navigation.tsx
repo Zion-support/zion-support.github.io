@@ -223,7 +223,7 @@ const Navigation: React.FC = () => {
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">{/* Logo */}</div>
+          </div><div className="flex items-center justify-between h-16 lg:h-20">{/* Logo */}</div>
             <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-6 h-6 text-white" />
@@ -234,8 +234,7 @@ const Navigation: React.FC = () => {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Desktop Navigation */}<div className="hidden lg:flex items-center space-x-8">
               <Link
                 to="/"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text"
@@ -251,8 +250,7 @@ const Navigation: React.FC = () => {
                 About
               </Link>
               
-              {/* Services Dropdown */}
-              <div className="relative">
+              {/* Services Dropdown */}<div className="relative">
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -265,17 +263,17 @@ const Navigation: React.FC = () => {
                 
                 {servicesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20 py-6 z-50">
-                    <div className="grid grid-cols-2 gap-6 px-6">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 mb-3">
-                            <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                    </div><div className="grid grid-cols-2 gap-6 px-6">
+                      {serviceCategories.map((category, index) => (</div>
+                        </div><div key={index} className="space-y-3">
+                          </div><div className="flex items-center space-x-2 mb-3">
+                            </div><div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
                               <category.icon className={`w-4 h-4 ${category.color}`} />
                             </div>
                             <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                           </div>
                           <div className="space-y-2">
-                            {category.services.slice(0, 6).map((service, serviceIndex) => (
+                            {category.services.slice(0, 6).map((service, serviceIndex) => (</div>
                               <Link
                                 key={serviceIndex}
                                 to={service.path}
@@ -343,8 +341,7 @@ const Navigation: React.FC = () => {
                 Pricing
               </Link>
 
-              {/* Search Button */}
-              <button
+              {/* Search Button */}<button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-white hover:text-cyan-400 transition-colors duration-200"
                 aria-label="Search"
@@ -359,8 +356,7 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
               
-              {/* CTA Button */}
-              <Link
+              {/* CTA Button */}<Link
                 to="/contact"
                 className="cyber-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
                 onClick={closeAllMenus}
@@ -370,21 +366,20 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
+            {/* Mobile Menu Button */}<button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</Menu>
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
             <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-              <div className="space-y-4">
-                {mainLinks.map((link, index) => (
+              </div><div className="space-y-4">
+                {mainLinks.map((link, index) => (</div>
                   <Link
                     key={index}
                     to={link.path}
@@ -396,8 +391,7 @@ const Navigation: React.FC = () => {
                   </Link>
                 ))}
                 
-                {/* Mobile Services */}
-                <div>
+                {/* Mobile Services */}<div>
                   <button
                     className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2"
                     onClick={() => setServicesOpen(!servicesOpen)}
@@ -409,14 +403,14 @@ const Navigation: React.FC = () => {
 
                   {servicesOpen && (
                     <div className="ml-6 mt-2 space-y-2">
-                      {serviceCategories.map((category, categoryIndex) => (
-                        <div key={categoryIndex} className="space-y-2">
-                          <div className="flex items-center space-x-2">
+                      {serviceCategories.map((category, categoryIndex) => (</div>
+                        </div><div key={categoryIndex} className="space-y-2">
+                          </div><div className="flex items-center space-x-2">
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                             <span className="text-cyan-400 font-medium text-sm">{category.title}</span>
                           </div>
                           <div className="ml-6 space-y-1">
-                            {category.services.slice(0, 3).map((service, serviceIndex) => (
+                            {category.services.slice(0, 3).map((service, serviceIndex) => (</div>
                               <Link
                                 key={serviceIndex}
                                 to={service.path}
@@ -433,8 +427,7 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
                 
-                {/* Mobile CTA */}
-                <Link
+                {/* Mobile CTA */}<Link
                   to="/contact"
                   className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4"
                   onClick={closeAllMenus}
@@ -447,8 +440,7 @@ const Navigation: React.FC = () => {
         </div>
       </nav>
       
-      {/* Search Modal */}
-        <EnhancedSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      {/* Search Modal */}<EnhancedSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} /></EnhancedSearchModal>
     </>
   );
 };

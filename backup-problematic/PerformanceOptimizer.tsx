@@ -1,6 +1,6 @@
 'use client';
 
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({</PerformanceOptimizerProps>
  children,
 }) => {
  // Preload critical resources
