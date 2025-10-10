@@ -13,10 +13,17 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Settings,
+  Users
 } from 'lucide-react';
-<<<<<<< HEAD
+
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
+
   const services = [
     // AI Services
     {
