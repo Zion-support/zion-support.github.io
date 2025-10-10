@@ -19,7 +19,20 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target,
+  DollarSign,
+  Heart,
+  Mic,
+  Lock,
+  Calendar,
+  Code,
+  Monitor,
+  Package,
+  Wifi,
+  Mail,
+  CheckSquare,
+  Box,
+  TrendingUp
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
