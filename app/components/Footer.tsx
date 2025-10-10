@@ -76,15 +76,19 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Partners', url: '/partners' },
-    { name: 'Contact', url: '/contact' }
+    { name: 'Contact', url: '/contact' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Consultation', url: '/consultation' }
   ];
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
+    { name: 'FAQ', url: '/faq' },
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' }
   ];
   const contactInfo = {
     phone: '+1 (302) 464-0950',

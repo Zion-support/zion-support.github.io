@@ -57,6 +57,10 @@ const AdCampaignManagerPage = React.lazy(() => import('./app/ad-campaign-manager
 const TeamPage = React.lazy(() => import('./app/team/page'));
 const NewsPage = React.lazy(() => import('./app/news/page'));
 
+// Legal Pages
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -118,6 +122,10 @@ const App: React.FC = () => {
                             {/* Company Routes */}
                             <Route path="/team" element={<TeamPage />} />
                             <Route path="/news" element={<NewsPage />} />
+                            
+                            {/* Legal Routes */}
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
                           </Routes>
                         </Suspense>
                       </main>
