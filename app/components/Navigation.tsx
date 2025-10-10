@@ -54,16 +54,17 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home;
-  </
+              Home
+            </Link>
+            
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
@@ -86,38 +87,9 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
-=======
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                    <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      AI Services
-                    </Link>
-                    <Link href="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      IT Services
-                    </Link>
-                    <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      Micro SaaS
-                    </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
-                )}
-              </div>
+                </div>
+              )}
 
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
@@ -126,7 +98,6 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
             </div>
-<<<<<<< HEAD
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -221,20 +192,20 @@ const Navigation: React.FC = () => {
               )}
             </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About;
-  </
+              About
+            </Link>
             <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services;
-  </
+              Services
+            </Link>
             <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing;
-  </
+              Pricing
+            </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog;
-  </
+              Blog
+            </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact;
-  </
+              Contact
+            </Link>
           </div>
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -252,11 +223,6 @@ const Navigation: React.FC = () => {
             </a>
           </div>
           {/* Mobile Menu Button */}
-=======
-          </div>
-
-          {/* Mobile menu button */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -269,12 +235,11 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home;
-  </
+                Home
+              </Link>
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -401,19 +366,6 @@ const Navigation: React.FC = () => {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
-=======
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
-              <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Contact
-              </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         )}
@@ -421,7 +373,6 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-<<<<<<< HEAD
 export default Navigation;
   </Link>
   </Link>
@@ -435,7 +386,3 @@ export default Navigation;
   </Link>
   </Link>
   </Link>
-=======
-
-export default Navigation;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
