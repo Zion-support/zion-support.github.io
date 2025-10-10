@@ -14,8 +14,15 @@ const features = [
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -28,10 +35,18 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
+=======
+    'Proven track record of success';
+  ];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

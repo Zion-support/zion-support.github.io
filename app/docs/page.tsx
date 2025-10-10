@@ -8,12 +8,22 @@ const DocsPage: React.FC = () => {,
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Documentation', icon: BookOpen ,},
     {id: 'getting-started', name: 'Getting Started', icon: Zap ,},
     {id: 'ai-services', name: 'AI Services', icon: Brain ,},
     {id: 'it-services', name: 'IT Services', icon: Cloud ,},
     {id: 'api', name: 'API Reference', icon: Code ,},
     {id: 'security', name: 'Security', icon: Shield ,}];
+=======
+    { id: 'all', name: 'All Documentation', icon: BookOpen },
+    { id: 'getting-started', name: 'Getting Started', icon: Zap },
+    { id: 'ai-services', name: 'AI Services', icon: Brain },
+    { id: 'it-services', name: 'IT Services', icon: Cloud },
+    { id: 'api', name: 'API Reference', icon: Code },
+    { id: 'security', name: 'Security', icon: Shield }
+  ];];];
+>>>>>>> origin/main
   const documentation = [
     {id: 1,
       title: 'Getting Started Guide',
@@ -26,9 +36,17 @@ const DocsPage: React.FC = () => {,
         'Account Setup',
         'First API Call',
         'Authentication',
+<<<<<<< HEAD
         'Basic Configuration'
       ]},
     {id: 2,
+=======
+        'Basic Configuration';
+      ];
+    },
+    {
+      id: 2,
+>>>>>>> origin/main
       title: 'AI Services Documentation',
       description: 'Comprehensive guide to our AI-powered services',
       category: 'ai-services',
@@ -94,6 +112,7 @@ const DocsPage: React.FC = () => {,
         'Support Resources'
       ]}];
   const quickLinks = [
+<<<<<<< HEAD
     {title: 'API Reference', url: '/api', icon: Code ,},
     {title: 'Tutorials', url: '/tutorials', icon: BookOpen ,},
     {title: 'Community', url: '/community', icon: Users ,},
@@ -101,6 +120,15 @@ const DocsPage: React.FC = () => {,
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation;
+=======
+    { title: 'API Reference', url: '/api', icon: Code },
+    { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
+    { title: 'Community', url: '/community', icon: Users },
+    { title: 'Support', url: '/support', icon: Shield }
+  ];];];
+  const filteredDocs = selectedCategory === 'all' 
+    ? documentation ;
+>>>>>>> origin/main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery;
@@ -234,7 +262,12 @@ const DocsPage: React.FC = () => {,
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* No Results */}{searchResults.length === 0 && searchQuery && (
+=======
+          {/* No Results */},
+    {searchResults.length === 0 && searchQuery && (
+>>>>>>> origin/main
             <div className="cyber-card-enhanced p-8 text-center">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
@@ -246,9 +279,15 @@ const DocsPage: React.FC = () => {,
                 Clear Search;
               </button>
             </div>
+<<<<<<< HEAD
           )}
 
           {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
+=======
+          )},
+    {/* Additional Resources */}
+          <div className="cyber-card-enhanced p-8 mt-16">
+>>>>>>> origin/main
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
               <a;

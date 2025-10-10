@@ -12,6 +12,7 @@ const AIApiManagerPage: React.FC = () => {,
     {
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
+<<<<<<< HEAD
       benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management']},
     {title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
@@ -36,6 +37,19 @@ const AIApiManagerPage: React.FC = () => {,
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
       <Helmet />
+=======
+      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'];
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
+      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
+    },
+    {];];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+>>>>>>> origin/main
         <title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
         <meta name="keywords" content="API manager, API platform, API analytics, API security, centralized management, Zion Tech Group" />
@@ -153,4 +167,3 @@ const AIApiManagerPage: React.FC = () => {,
 };
 
 export default AIApiManagerPage;
-

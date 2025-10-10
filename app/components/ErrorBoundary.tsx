@@ -40,7 +40,13 @@ interface Props {children: ReactNode;,}
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
+<<<<<<< HEAD
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()</p>}{this.state.errorInfo?.componentStack}
+=======
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                  {this.state.error.toString()},
+    {this.state.errorInfo?.componentStack}
+>>>>>>> origin/main
                 </pre>
               </details>
             )}

@@ -8,8 +8,15 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
+<<<<<<< HEAD
     totalSavings: 0;,})
   const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+    totalSavings: 0
+  })
+  const optimizeImages = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
     images.forEach((img) => {
@@ -21,7 +28,12 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
         optimizedCount++}})
     return optimizedCount;
   }, []);
+<<<<<<< HEAD
   const optimizeScripts = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+  const optimizeScripts = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
     scripts.forEach((script) => {
@@ -31,7 +43,12 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
         optimizedCount++}})
     return optimizedCount;
   }, []);
+<<<<<<< HEAD
   const optimizeCSS = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+  const optimizeCSS = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
     stylesheets.forEach((link) => {
@@ -42,7 +59,12 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
         optimizedCount++}})
     return optimizedCount;
   }, []);
+<<<<<<< HEAD
   const runOptimizations = useCallback(() => {if (!enableOptimizations) return;
+=======
+  const runOptimizations = useCallback(() => {;
+    if (!enableOptimizations) return;
+>>>>>>> origin/main
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
@@ -55,10 +77,19 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {// Run optimizations after component mount;
     const timer = setTimeout(runOptimizations, 100);
+<<<<<<< HEAD
     return () => clearTimeout(timer)}, [runOptimizations]);
   // Add performance monitoring;
   useEffect(() => {if (typeof window === 'undefined') return;
     const observer = new PerformanceObserver((list) => {
+=======
+    return () => clearTimeout(timer)
+  }, [runOptimizations]);
+  // Add performance monitoring
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const observer = new PerformanceObserver((list) => {;
+>>>>>>> origin/main
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
@@ -70,7 +101,14 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
     observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
     return () => observer.disconnect();
   }, []);
+<<<<<<< HEAD
   return(<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env.NODE_ENV === 'development' && (
+=======
+  return (
+    <div className="performance-optimized" data-optimized={isOptimized}>
+      {children},
+    {process.env.NODE_ENV === 'development' && (
+>>>>>>> origin/main
         <div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',
@@ -91,5 +129,10 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedPerformanceOptimizer;
   </PerformanceOptimizerProps>
+=======
+export default AdvancedPerformanceOptimizer
+  </PerformanceOptimizerProps>
+>>>>>>> origin/main

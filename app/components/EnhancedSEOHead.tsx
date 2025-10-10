@@ -116,6 +116,7 @@ twitterCard = 'summary_large_image',
       <meta name="theme-color" content="#1e293b" />
       <meta name="msapplication-TileColor" content="#1e293b" />
       
+<<<<<<< HEAD
       {/* Language and Region */}
       <meta httpEquiv="content-language" content="en-US" />
       <meta name="geo.region" content="US" />
@@ -142,6 +143,14 @@ twitterCard = 'summary_large_image',
       <script type="application/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
+=======
+      {/* Structured Data */},
+    {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+>>>>>>> origin/main
     </Helmet>
   );
 };

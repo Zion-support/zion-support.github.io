@@ -45,6 +45,7 @@ export class PerformanceMetrics {private static instance: PerformanceMetrics,}}p
   constructor() {,;
     if (typeof window !== 'undefined') {,}export class PerformanceMetrics {}}private static instance: PerformanceMetrics;,
   private metrics: PerformanceMetric[] = [],}
+<<<<<<< HEAD
   private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
   constructor() {}if (typeof window !== 'undefined') {}this.initializeObservers();}
     }
@@ -57,6 +58,39 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */,}}}
   p: Date,
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
+=======
+  private webVitals: WebVitalsMetrics = {}
+  private observers: PerformanceObserver[] = [],
+  constructor() {
+    ,
+    if (typeof window !== 'undefined') {,
+  }
+export class PerformanceMetrics {}
+  private static instance: PerformanceMetrics
+  private metrics: PerformanceMetric[] = [],}
+  private webVitals: WebVitalsMetrics = {}
+  private observers: PerformanceObserver[] = [],
+  constructor() {}
+    if (typeof window !== 'undefined') {}
+      this.initializeObservers();}
+    }
+  }
+  static getInstance(): PerformanceMetrics {}
+    if (!PerformanceMetrics.instance) {}
+      PerformanceMetrics.instance = new PerformanceMetrics();}
+export interface PerformanceMetric {/* TODO: Fix JSX expression */}
+}
+export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
+}
+export interface PerformanceReport {/* TODO: Fix JSX expression */}
+  }
+  timestam,
+  p: Date,
+}
+export class PerformanceMetrics {/* TODO: Fix JSX expression */}
+  webVitals: WebVitalsMetrics = {}
+  private,
+>>>>>>> origin/main
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */,}}
   }
@@ -98,7 +132,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
         navObserver.observe({entryTypes: ['navigation'] ,)})
         this.observers.push(navObserver);
         // Paint timing;
+<<<<<<< HEAD
         const paintObserver = new PerformanceObserver(list => {)
+=======
+        const paintObserver = new PerformanceObserver(list => {;
+>>>>>>> origin/main
     );
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -120,11 +158,15 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
         paintObserver.observe({entryTypes: ['paint'] ,)})
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
+<<<<<<< HEAD
         const lcpObserver = new PerformanceObserver(list => {)
+=======
+        const lcpObserver = new PerformanceObserver(list => {;
+>>>>>>> origin/main
     );
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {
+          if (lastEntry) {;
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({);
               name: 'LCP'),
@@ -144,7 +186,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
         lcpObserver.observe({entryTypes: ['largest-contentful-paint'] ,)})
         this.observers.push(lcpObserver);
         // Layout Shift;
+<<<<<<< HEAD
         const clsObserver = new PerformanceObserver(list => {)
+=======
+        const clsObserver = new PerformanceObserver(list => {;
+>>>>>>> origin/main
     );
           let clsValue = 0;);
           for (const entry of list.getEntries()) {
@@ -208,7 +254,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
    */;
   recordMetric(metric: PerformanceMetric): void {,}
     ,
-    this.metrics.push(metric),;
+    this.metrics.push(metric),
     // Keep only last 1000 metrics;
     if (this.metrics.length > 1000) {,}recordMetric(metric: PerformanceMetric): void {,}}this.metrics.push(metric);
     // Keep only last 1000 metrics;
@@ -262,10 +308,18 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
       unit: 'ms',
       timestamp: new Date(),
       category: 'network',
+<<<<<<< HEAD
       metadata: {,}url,;
         status}
   recordNetworkRequest(ur,;)
   l: string, duratio,;
+=======
+      metadata: {}
+        url,
+        status}
+  recordNetworkRequest(ur,
+  l: string, duratio,
+>>>>>>> origin/main
   n: number, statu);
   s: number): void {/* TODO: Fix JSX expression */,}}}
     })
@@ -303,15 +357,25 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
    */;
   measureFunction<T>(name: string, fn: () => T): T {,}
     ,
+<<<<<<< HEAD
     const startTime = performance.now(),;
     const result = fn(),;
     const endTime = performance.now(),}this.recordMetric({)})
       name: `function:${name,}`);
+=======
+    const startTime = performance.now(),
+    const result = fn(),
+    const endTime = performance.now(),
+  }
+    this.recordMetric({})
+      name: `function:${name}`);
+>>>>>>> origin/main
       value: endTime - startTime),
       unit: 'ms'),
   measureFunction<T>(name: string, fn: () => T): T {,}}const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
+<<<<<<< HEAD
     this.recordMetric({)})
       name: `function:${name,}`,;
       value: endTime - startTime,
@@ -322,12 +386,25 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
   e: string, f);
   n: () => T): T {/* TODO: Fix JSX expression */,}}n: ${name,}`,;
       valu,;
+=======
+    this.recordMetric({})
+      name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'})
+  measureFunction<T>(nam,
+  e: string, f);
+  n: () => T): T {/* TODO: Fix JSX expression */}
+  n:${name}`,
+      valu,
+>>>>>>> origin/main
   e: endTime - startTime,
-      uni,;
+      uni,
   t: 'ms',
-      timestam,;
+      timestam,
   p: new Date(),
-      categor,;
+      categor,
   y: 'runtime',
     })
     return result;
@@ -337,15 +414,25 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
    */;
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
     ,
+<<<<<<< HEAD
     const startTime = performance.now(),;
     const result = await fn(),;
     const endTime = performance.now(),}this.recordMetric({`)})
       name: `async:${name,}`);
+=======
+    const startTime = performance.now(),
+    const result = await fn(),
+    const endTime = performance.now(),
+  }
+    this.recordMetric({`})
+      name: `async:${name}`);
+>>>>>>> origin/main
       value: endTime - startTime),
       unit: 'ms'),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
+<<<<<<< HEAD
     this.recordMetric({`)})
       name: `async:${name,}`,;
       value: endTime - startTime,
@@ -357,12 +444,25 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */,}`;
   c: ${name,}`,;
       valu,;
+=======
+    this.recordMetric({`})
+      name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'})
+  async measureAsyncFunction<T>(nam,
+  e: string, f);
+  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`;
+  c:${name}`,
+      valu,
+>>>>>>> origin/main
   e: endTime - startTime,
-      uni,;
+      uni,
   t: 'ms',
-      timestam,;
+      timestam,
   p: new Date(),
-      categor,;
+      categor,
   y: 'runtime',
     })
     return result;
@@ -426,8 +526,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
   /**;
    * Get performance recommendations;
    */;
+<<<<<<< HEAD
   getRecommendations(): string[] {const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,;
+=======
+  getRecommendations(): string[] {
+    const recommendations: string[] = [],
+    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
+>>>>>>> origin/main
       recommendations.push();
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',}getRecommendations(): string[] {}const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}recommendations.push();
@@ -464,6 +570,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {metrics: this.getMetrics();,}
       webVitals: this.getWebVitals(),
+<<<<<<< HEAD
       summary: {,
         avgLoadTime;
         totalMetrics: this.metrics.length,
@@ -476,6 +583,16 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: Web
       timestamp: new Date(),}
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */,}},
       timestam,;
+=======
+      summary: {}
+        avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
+        recommendations: this.getRecommendations()},
+      timestamp: new Date()}
+  generateReport(): PerformanceReport {/* TODO: Fix JSX expression */},
+      timestam,
+>>>>>>> origin/main
   p: new Date(),
     }
   }

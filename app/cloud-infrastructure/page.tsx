@@ -4,11 +4,18 @@ import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database}}from 'lucide-react';
 const CloudInfrastructurePage: React.FC = () => {,
   const features = [
+<<<<<<< HEAD
     {}];
+=======
+    {
+    }
+  ];];];
+>>>>>>> origin/main
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
+<<<<<<< HEAD
     'Proven track record of success'
   ]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -22,6 +29,18 @@ const CloudInfrastructurePage: React.FC = () => {,
           <h1 className="text-5xl font-bold text-white mb-6">Cloud Infrastructure;</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced cloud infrastructure solutions.</p>
+=======
+    'Proven track record of success';
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Cloud Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our advanced cloud infrastructure solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */} <section className="py-16 px-4">

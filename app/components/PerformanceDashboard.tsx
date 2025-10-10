@@ -12,10 +12,19 @@ interface PerformanceMetrics {loadTime: number;,}
     fps: 0;,})
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
+<<<<<<< HEAD
   useEffect(() => {const updateMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation;
+=======
+  useEffect(() => {
+    const updateMetrics = () => {;
+      const navigation = performance.getEntriesByType(
+        'navigation';
+      )[0] as PerformanceNavigationTiming;
+      const loadTime = navigation
+>>>>>>> origin/main
         ? navigation.loadEventEnd - navigation.fetchStart;
         : 0;
       // Measure render time;
@@ -31,7 +40,7 @@ interface PerformanceMetrics {loadTime: number;,}
       let fps = 60;
       if ('requestAnimationFrame' in window) {let lastTime = performance.now();
         let frameCount = 0;
-        const measureFPS = () => {
+        const measureFPS = () => {;
           const currentTime = performance.now();
           frameCount++;
           if (currentTime - lastTime >= 1000) {
@@ -51,19 +60,50 @@ interface PerformanceMetrics {loadTime: number;,}
     }
     if (isMonitoring) {updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
+<<<<<<< HEAD
       return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
   const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
+=======
+      return () => clearInterval(interval)
+  }
+  }, [isMonitoring, onMetricsUpdate]);
+  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {;
+>>>>>>> origin/main
     const newAlerts: string[] = [],
     if (currentMetrics.loadTime > 3000) {
       newAlerts.push('Load time is above 3 seconds')}if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {// 50MB;
       newAlerts.push('Memory usage is high')}if (currentMetrics.fps < 30) {newAlerts.push('FPS is below 30')}setAlerts(newAlerts);
   }
+<<<<<<< HEAD
   const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
     if (bytes === 0) return '0 Bytes'
+=======
+    if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
+    // 50MB
+      newAlerts.push('Memory usage is high')
+  }
+    if (currentMetrics.fps < 30) {
+    newAlerts.push('FPS is below 30')
+  }
+    setAlerts(newAlerts);
+  }
+  const toggleMonitoring = () => {
+    setIsMonitoring(!isMonitoring)
+  }
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 Bytes';
+>>>>>>> origin/main
     const k = 1024,
-    const sizes = ['Bytes', 'KB', 'MB', 'GB']
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];];];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
+<<<<<<< HEAD
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400';
+=======
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+  }
+  const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {;
+    if (value <= thresholds.good) return 'text-green-400';
+>>>>>>> origin/main
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'}return(<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">)</div>
       <div className="flex items-center justify-between mb-6">

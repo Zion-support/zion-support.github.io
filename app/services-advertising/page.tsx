@@ -16,10 +16,19 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 return(</h1>)
             <p>Transform your business with our advanced page solutions.;</p>
+=======
+    'Proven track record of success';
+  ];];];
+return (
+            </h1>
+            <p>
+              Transform your business with our advanced page solutions.;
+>>>>>>> origin/main
               Powered by cutting-edge AI technology and industry expertise.
             </p>
                 </div>

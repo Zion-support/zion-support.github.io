@@ -13,8 +13,15 @@ const AIClimatePredictionEngine: React.FC = () => {,
     {icon: Globe,
       title: 'Global Climate Modeling',
       description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
+<<<<<<< HEAD
       benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates']},
     {icon: BarChart,
+=======
+      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'];
+    },
+    {
+      icon: BarChart,
+>>>>>>> origin/main
       title: 'Extreme Weather Prediction',
       description: 'AI-powered prediction of extreme weather events and natural disasters',
       benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment']},
@@ -25,8 +32,14 @@ const AIClimatePredictionEngine: React.FC = () => {,
     {icon: Shield,
       title: 'Climate Risk Assessment',
       description: 'Comprehensive climate risk assessment for businesses and governments',
+<<<<<<< HEAD
       benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']}];
 
+=======
+      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']
+    },
+  ];];];
+>>>>>>> origin/main
   const pricingPlans = [
     {name: 'Basic',
       price: '$299',
@@ -89,10 +102,19 @@ const AIClimatePredictionEngine: React.FC = () => {,
     {title: 'Urban Planning',
       description: 'Climate data for sustainable urban development and infrastructure planning',
       icon: Target,
+<<<<<<< HEAD
       results: 'Enhanced urban resilience',}];
 
   return(<>)
       <Helmet />
+=======
+      results: 'Enhanced urban resilience'
+    }
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
         <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />

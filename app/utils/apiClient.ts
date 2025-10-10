@@ -13,19 +13,39 @@ interface APIResponse<T = any> {}data: T,
   statusText: string,
   headers: Record<string></strin>,
 }
+<<<<<<< HEAD
 class APIClient {}}private baseURL: string,
   private defaultHeaders: Record<string>,
 constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {)}) {}this.baseURL = baseURL;
     this.defaultHeaders = {}'Content-Type': 'application/json',;
+=======
+class APIClient {}
+  private baseURL: string,
+  private defaultHeaders: Record<string>
+constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
+    this.baseURL = baseURL;
+    this.defaultHeaders = {}
+      'Content-Type': 'application/json',
+>>>>>>> origin/main
       ...defaultHeaders;
     }
   }
 private async makeRequest<T>(;
     endpoint: string,
+<<<<<<< HEAD
     config: RequestConfig = {,}): Promise<APIResponse<T>> {}const {}}method = 'GET',;
       headers = {},;
       body,;
       cache = false,;
+=======
+    config: RequestConfig = {}
+  ): Promise<APIResponse<T>> {}
+    const {}
+      method = 'GET',
+      headers = {},
+      body,
+      cache = false,
+>>>>>>> origin/main
       cacheTTL;
     } = config;
 const url = `${this.baseURL}${endpoint}`;
@@ -38,15 +58,24 @@ const url = `${this.baseURL}${endpoint}`;
 try {const response = await fetch(url, {);}
         method);
         headers: {,
+<<<<<<< HEAD
           ...this.defaultHeaders),;
           ...headers;}})
         body: body ? JSON.stringify(body) : undefined;,
+=======
+          ...this.defaultHeaders),
+          ...headers
+  }
+        })
+        body: body ? JSON.stringify(body) : undefined;
+>>>>>>> origin/main
       const data = await response.json()
 const apiResponse: APIResponse<T> = {,
     data;
         status: response.status,
         statusText: response.statusText;,}headers: Object.fromEntries(response.headers.entries()),}
 // Cache successful GET requests;
+<<<<<<< HEAD
       if (method === 'GET' && cache && response.ok) {}try {}}const response = await fetch(url, {)}method,;
         headers: {,}...this.defaultHeaders,;
           ...headers;
@@ -54,6 +83,20 @@ const apiResponse: APIResponse<T> = {,
         body: body ? JSON.stringify(body) : undefined;,
       const data = await response.json(),
 const apiResponse: APIResponse<T> = {,}data,;
+=======
+      if (method === 'GET' && cache && response.ok) {}
+    try {}
+      const response = await fetch(url, {)}
+        method,
+        headers: {}
+          ...this.defaultHeaders,
+          ...headers;
+        },
+        body: body ? JSON.stringify(body) : undefined
+      const data = await response.json(),
+const apiResponse: APIResponse<T> = {}
+        data,
+>>>>>>> origin/main
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),
@@ -70,60 +113,77 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
 export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */,}}
 export class ApiError extends Error {/* TODO: Fix JSX expression */,}}}
 }
+<<<<<<< HEAD
 class ApiClient {/* TODO: Fix JSX expression */,}}}
   private,;
   abortControllers: Map<string, AbortController> = new Map();
   constructor(confi);
   g: ApiClientConfig = {,}) {/* TODO: Fix JSX expression */,},
       cacheOption,;
+=======
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
+}
+export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
+}
+export class ApiError extends Error {/* TODO: Fix JSX expression */}
+  }
+}
+class ApiClient {/* TODO: Fix JSX expression */}
+  }
+  private,
+  abortControllers: Map<string, AbortController> = new Map();
+  constructor(confi);
+  g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */},
+      cacheOption,
+>>>>>>> origin/main
   s: config.cacheOptions,
     }
   }
   /**;
    * GET request;
    */;
-  async get<T = unknown>(ur,;
+  async get<T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
   }
   /**;
    * POST request;
    */;
-  async post<T = unknown>(ur,;
+  async post<T = unknown>(ur,
   l: string,
-    data?: unknown,;
-    confi,;
+    data?: unknown,
+    confi,
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
   }
   /**;
    * PUT request;
    */;
-  async put<T = unknown>(ur,;
+  async put<T = unknown>(ur,
   l: string,
-    data?: unknown,;
-    confi,;
+    data?: unknown,
+    confi,
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
   }
   /**;
    * DELETE request;
    */;
-  async delete<T = unknown>(ur,;
+  async delete<T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
   }
   /**;
    * PATCH request;
    */;
-  async patch<T = unknown>(ur,;
+  async patch<T = unknown>(ur,
   l: string,
-    data?: unknown,;
-    confi,;
+    data?: unknown,
+    confi,
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
   }
@@ -131,12 +191,18 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
    * Main request method with retry logic;
    */;
   private async request<T>(confi);
+<<<<<<< HEAD
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}headers = {},;
       cacheOption,;
+=======
+  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+      headers = {},
+      cacheOption,
+>>>>>>> origin/main
   s: cacheConfig,
-      skipCache = false,;
-      retries = this.config.retries,;
-      timeout = this.config.timeout,;
+      skipCache = false,
+      retries = this.config.retries,
+      timeout = this.config.timeout,
       ...fetchConfig;
     } = config;
     const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`;
@@ -148,24 +214,40 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
     // Create abort controller for timeout;
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
+<<<<<<< HEAD
     const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */,}}, timeout);
     let,;
   lastError: Error | null = null;,
     let attempt = 0,
     while (attempt < retries) {/* TODO: Fix JSX expression */,},
           signa,;
+=======
+    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
+    }, timeout);
+    let,
+  lastError: Error | null = null
+    let attempt = 0,
+    while (attempt < retries) {/* TODO: Fix JSX expression */},
+          signa,
+>>>>>>> origin/main
   l: controller.signal,
         })
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
+<<<<<<< HEAD
         if (!response.ok) {/* TODO: Fix JSX expression */,}`;
             `HTTP ${response.status}: ${response.statusText}`,;
             response.status,;
+=======
+        if (!response.ok) {/* TODO: Fix JSX expression */}`;
+            `HTTP ${response.status}: ${response.statusText}`,
+            response.status,
+>>>>>>> origin/main
             await response.text();
           );
         }
         const contentType = response.headers.get('content-type');
-        let,;
+        let,
   data: T,
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
         // Cache successful GET requests;
@@ -191,7 +273,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
   /**;
    * Cancel a pending request;
    */;
+<<<<<<< HEAD
   cancel(ur,;)
+=======
+  cancel(ur,
+>>>>>>> origin/main
   l: string, metho);
   d: string = 'GET'): void {/* TODO: Fix JSX expression */,}}`;
     const cacheKey = `${method}:${url}`;
@@ -268,5 +354,11 @@ export default APIClient;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */,)}})
 })
 // Export both the class and default instance;
+<<<<<<< HEAD
 export {apiClient}}export default ApiClient;
 `;
+=======
+export { apiClient }
+export default ApiClient;
+`;
+>>>>>>> origin/main

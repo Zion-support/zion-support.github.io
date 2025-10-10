@@ -37,7 +37,12 @@ const colorClasses = useMemo(;)
         purple: 'border-purple-600 bg-purple-600',}}),
       []
     );
+<<<<<<< HEAD
 const renderSpinner = useMemo(() => {switch (variant) {
+=======
+const renderSpinner = useMemo(() => {
+    switch (variant) {;
+>>>>>>> origin/main
         case 'dots':;
           return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
               {[0, 1, 2].map(i => (</div>)
@@ -96,7 +101,12 @@ return(</div>)
       <div className={containerClasses}></div>
         <div className='text-center'></div>
 
+<<<<<<< HEAD
           {renderSpinner}{
+=======
+          {renderSpinner},
+    {
+>>>>>>> origin/main
     text && (</div>
   }
             <p>{text</p>} </p>

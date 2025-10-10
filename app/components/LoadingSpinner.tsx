@@ -14,7 +14,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
       {text && (
         <p className={`text-sm ${colorClasses[color]}animate-pulse`}>{text</p>} </p>
       )}
-    </div>
+    </div>;
   );
 };
 

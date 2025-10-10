@@ -13,8 +13,15 @@ const AISmartContractAuditor: React.FC = () => {,
     {icon: Shield,
       title: 'Automated Security Analysis',
       description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',
+<<<<<<< HEAD
       benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives']},
     {icon: Code,
+=======
+      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'];
+    },
+    {
+      icon: Code,
+>>>>>>> origin/main
       title: 'Code Quality Assessment',
       description: 'Comprehensive code review with best practices compliance and optimization suggestions',
       benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance']},
@@ -25,8 +32,14 @@ const AISmartContractAuditor: React.FC = () => {,
     {icon: Brain,
       title: 'Machine Learning Models',
       description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
+<<<<<<< HEAD
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']}];
 
+=======
+      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
+    },
+  ];];];
+>>>>>>> origin/main
   const pricingPlans = [
     {name: 'Starter',
       price: '$299',
@@ -89,10 +102,19 @@ const AISmartContractAuditor: React.FC = () => {,
     {title: 'Cross-Chain Bridge Audits',
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
+<<<<<<< HEAD
       results: 'Prevented $50M+ in potential losses',}];
 
   return(<>)
       <Helmet />
+=======
+      results: 'Prevented $50M+ in potential losses'
+    }
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />

@@ -14,7 +14,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
   useEffect(() => {
     if (!enableImageOptimization) return;
 
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
       images.forEach((img) => {
         const image = img as HTMLImageElement;
@@ -34,7 +34,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     const observer = new IntersectionObserver()
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');}})
       },
@@ -88,9 +88,16 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => clearTimeout(timer);
   }, [enableCodeSplitting]);
 
+<<<<<<< HEAD
   // Performance monitoring;
   useEffect(() => {const measurePerformance = () => {
       if ('performance' in window) {
+=======
+  // Performance monitoring
+  useEffect(() => {
+    const measurePerformance = () => {
+      if ('performance' in window) {;
+>>>>>>> origin/main
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
         
@@ -98,9 +105,19 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
+<<<<<<< HEAD
           firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0;,}// Send metrics to analytics;
         if (typeof window !== 'undefined' && 'gtag' in window) {const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
           gtag('event', 'performance_metrics', {)
+=======
+          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
+        }
+
+        // Send metrics to analytics
+        if (typeof window !== 'undefined' && 'gtag' in window) {;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          gtag('event', 'performance_metrics', {
+>>>>>>> origin/main
             event_category: 'performance',
             event_label: 'page_load',
             value: Math.round(metrics.domContentLoaded),})

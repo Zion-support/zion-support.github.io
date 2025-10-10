@@ -929,6 +929,7 @@ const ItServicesPage: React.FC = () => {,
       ],
       category: 'Cloud Security',
       popular: true,
+<<<<<<< HEAD
       icon: Shield;,}];
   const categories = [
     {id: 'all', name: 'All Services', count: services.length ,},
@@ -966,6 +967,47 @@ const ItServicesPage: React.FC = () => {,
     {id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length ,}]
 
   const filteredServices = services.filter(service =>)
+=======
+      icon: Shield
+    }
+  ];];];
+  const categories = [
+    { id: 'all', name: 'All Services', count: services.length },
+    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length },
+    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
+    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
+    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length },
+    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length },
+    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length },
+    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
+    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
+    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
+    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length },
+    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length },
+    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
+    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
+    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
+    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length },
+    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length },
+    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length },
+    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length },
+    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length },
+    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length },
+    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
+    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
+    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+  ];
+  const filteredServices = services.filter(service => 
+>>>>>>> origin/main
     selectedCategory === 'all' || service.category === selectedCategory;
   );
 

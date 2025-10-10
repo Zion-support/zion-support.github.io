@@ -4,6 +4,7 @@ import {Helmet}}from 'react-helmet-async';
 import {Truck, BarChart, Zap, Shield, CheckCircle, Target}}from 'lucide-react';
 const SupplyChainOptimizerPage: React.FC = () => {,
   const features = [
+<<<<<<< HEAD
     { icon: Truck, title: 'Logistics Optimization', description: 'AI-powered logistics optimization for efficient supply chain management.' ,},
     {icon: BarChart, title: 'Demand Forecasting', description: 'Accurate demand forecasting and inventory optimization using AI analytics.' ,},
     {icon: Zap, title: 'Process Automation', description: 'Automated supply chain processes and workflow optimization.' ,},
@@ -12,6 +13,18 @@ const SupplyChainOptimizerPage: React.FC = () => {,
     {icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' ,}]
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
+=======
+    { icon: Truck, title: 'Logistics Optimization', description: 'AI-powered logistics optimization for efficient supply chain management.' },
+    { icon: BarChart, title: 'Demand Forecasting', description: 'Accurate demand forecasting and inventory optimization using AI analytics.' },
+    { icon: Zap, title: 'Process Automation', description: 'Automated supply chain processes and workflow optimization.' },
+    { icon: Shield, title: 'Risk Management', description: 'Comprehensive risk assessment and mitigation strategies.' },
+    { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
+    { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Supply Chain Optimizer | Zion Tech Group - AI-Powered Supply Chain Management</title>
         <meta name="description" content="Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes." />
         <meta name="keywords" content="supply chain optimization, logistics management, demand forecasting, supply chain AI, inventory optimization" />
@@ -37,7 +50,7 @@ const SupplyChainOptimizerPage: React.FC = () => {,
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

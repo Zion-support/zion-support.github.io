@@ -7,12 +7,22 @@ const ContentStatistics: React.FC = () => {,
     clients: 0,
     projects: 0,
     satisfaction: 0,
+<<<<<<< HEAD
     years: 0;,});
+=======
+    years: 0
+  });
+>>>>>>> origin/main
 
   const targetCounters = {clients: 500,
     projects: 1000,
     satisfaction: 99,
+<<<<<<< HEAD
     years: 10;,};
+=======
+    years: 10;
+  };
+>>>>>>> origin/main
 
   const statistics = [
     {icon: Users,
@@ -34,6 +44,7 @@ const ContentStatistics: React.FC = () => {,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
+<<<<<<< HEAD
       color: 'text-yellow-400',}];
 
   const achievements = [
@@ -57,10 +68,48 @@ const ContentStatistics: React.FC = () => {,
           if (current < target) {
             return {...prev,}
               [key]: Math.min(current + increment, target)};
+=======
+      color: 'text-yellow-400'
+    }
+  ];];];
+  const achievements = [
+    {
+      icon: Brain,
+      title: 'AI Innovation',
+      description: 'Leading the industry with cutting-edge AI solutions'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Serving clients across 50+ countries'
+    },
+    {
+      icon: Zap,
+      title: 'Performance',
+      description: '99.9% uptime and lightning-fast response'
+    }
+  ];
+
+  useEffect(() => {
+    const timers = Object.keys(targetCounters).map(key => {;
+      const target = targetCounters[key as keyof typeof targetCounters];
+      const duration = 2000; // 2 seconds
+      const increment = target / (duration / 16); // 60fps
+      
+      const timer = setInterval(() => {
+        setCounters(prev => {;
+          const current = prev[key as keyof typeof prev];
+          if (current < target) {
+            return {
+              ...prev,
+              [key]: Math.min(current + increment, target)
+            };
+>>>>>>> origin/main
           }
           return prev;
         });
       }, 16);
+<<<<<<< HEAD
     });
 
     return () => {timers.forEach(timer => clearInterval(timer));};
@@ -88,10 +137,54 @@ const ContentStatistics: React.FC = () => {,
                 </div>
                 <div className="text-gray-300 text-lg">{stat.label</div>}</div>
               </div>
+=======
+
+      return timer;
+    });
+
+    return () => {
+      timers.forEach(timer => clearInterval(timer));
+    };
+  }, []);
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Statistics Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {statistics.map((stat, index) => (
+          <div
+            key={index}
+            className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
+          >
+            <div className={`w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <stat.icon className="w-8 h-8 text-white" />
+            </div>
+            <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+              {Math.floor(stat.value)}{stat.suffix}
+            </div>
+            <div className="text-gray-300 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Achievements Section */}
+      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+        <h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <achievement.icon className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>
+              <p className="text-gray-300">{achievement.description}</p>
+>>>>>>> origin/main
             </div>
           ))}
         </div>
+      </div>
 
+<<<<<<< HEAD
         {/* Achievements Section */} <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md: p-12">,</div>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Why We're Different</h3>
@@ -115,6 +208,20 @@ const ContentStatistics: React.FC = () => {,
             ))}
           </div>
         </div>
+=======
+      {/* CTA Section */}
+      <div className="text-center">
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Ready to Join Our Success Story?
+        </h3>
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          Let us help you achieve similar results with our proven AI and IT solutions.
+        </p>
+        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+          Get Started Today
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
+>>>>>>> origin/main
       </div>
     </div>
   );

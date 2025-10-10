@@ -29,8 +29,16 @@ icon: Heart,
     {icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
+<<<<<<< HEAD
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)
+=======
+      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
+  },
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
+>>>>>>> origin/main
       <SEOOptimizer>
       <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">

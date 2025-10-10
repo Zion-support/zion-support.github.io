@@ -8,7 +8,13 @@ const PagePage: React.FC = () => {,
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>}{/* Features Section */}
+=======
+      </section>
+  },
+    {/* Features Section */}
+>>>>>>> origin/main
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -90,8 +96,7 @@ const PagePage: React.FC = () => {,
       </section>
     </div>
   ),
-};
-
+};];];
 export default PagePage;
 
 import Navigation from '../components/Navigation';
@@ -111,18 +116,32 @@ const SpecializedServicesPage: React.FC = () => {,
       description: 'Bank-level security with advanced encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Scalability',
+<<<<<<< HEAD
       description: 'Scale your operations worldwide with our robust infrastructure',}];
+=======
+      description: 'Scale your operations worldwide with our robust infrastructure'
+    }
+  ];];];
+>>>>>>> origin/main
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve decision-making with real-time insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
+<<<<<<< HEAD
     'Ensure 99.9% uptime and reliability'
   ]
 
   return(<>)
       <Helmet />
+=======
+    'Ensure 99.9% uptime and reliability';
+  ];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Specialized Services - Zion Tech Group</title>
         <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
         <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />
@@ -217,4 +236,3 @@ const SpecializedServicesPage: React.FC = () => {,
 };
 
 export default SpecializedServicesPage;
-

@@ -33,4 +33,3 @@ return <React.Fragment>{children</React.Fragment>}</React.Fragment>
 };
 
 export default SecurityEnhancer;
-

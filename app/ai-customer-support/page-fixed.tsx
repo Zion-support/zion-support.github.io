@@ -10,8 +10,15 @@ const PageFixedPage: React.FC = () => {,
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
+<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+  },
+    {
+    icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -22,9 +29,18 @@ const PageFixedPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
 return(<>)
       <Helmet />
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  },
+  ];];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Page Fixed - Zion Tech Group</title>
         <meta />
       </Helmet>
@@ -120,4 +136,3 @@ return(<>)
 };
 
 export default PageFixedPage;
-

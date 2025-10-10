@@ -16,7 +16,13 @@ const BlockchainPage: React.FC = () => {,
       description: 'Intelligent blockchain solutions powered by advanced AI technology',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide blockchain deployment and support for international businesses',}];
+=======
+      description: 'Worldwide blockchain deployment and support for international businesses'
+    }
+  ];];];
+>>>>>>> origin/main
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -25,14 +31,23 @@ const BlockchainPage: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
+<<<<<<< HEAD
     'Proven track record of success'
   ]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+    'Proven track record of success';
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+>>>>>>> origin/main
         <title>Blockchain Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
+<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">Blockchain Solutions;</h1>
@@ -49,6 +64,9 @@ const BlockchainPage: React.FC = () => {,
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description</p>}</p>
+=======
+
+>>>>>>> origin/main
             </div>
           ))}
         </div>
@@ -105,9 +123,16 @@ const BlockchainPage: React.FC = () => {,
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Services by Category */}{categories.map(category => ()
           <section key={category}className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+        {/* Services by Category */},
+    {categories.map(category => (
+          <section key={category} className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/main
               <div className="text-center mb-12">
                 <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
                   {category}Services;
@@ -166,9 +191,16 @@ const BlockchainPage: React.FC = () => {,
               </div>
             </div>
           </section>
+<<<<<<< HEAD
         ))}
         {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+        ))},
+    {/* Blockchain Capabilities Showcase */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+>>>>>>> origin/main
             <div className="text-center mb-12">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
                 Our Blockchain Capabilities;

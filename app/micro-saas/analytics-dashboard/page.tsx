@@ -21,8 +21,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {,
       description: 'Build personalized dashboards tailored to your business needs.',},
     {icon: Target,
       title: 'Goal Tracking',
+<<<<<<< HEAD
       description: 'Monitor KPIs and business objectives with automated alerts.',}}
   ]
+=======
+      description: 'Monitor KPIs and business objectives with automated alerts.'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -33,15 +40,26 @@ const benefits = [
 
     'Multi-platform data integration',
 
-    'Mobile-responsive design'
-  ]
+    'Mobile-responsive design';
+  ];
 const metrics = [
+<<<<<<< HEAD
     {label: 'Data Sources', value: '50+', icon: BarChart ,},
     {label: 'Update Frequency', value: 'Real-time', icon: Clock ,},
     {label: 'Accuracy Rate', value: '99.9%', icon: Shield ,},
     {label: 'User Satisfaction', value: '4.9/5', icon: Star ,}]
 return(<>)
       <Helmet />
+=======
+    { label: 'Data Sources', value: '50+', icon: BarChart },
+    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
+    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
+  ];];];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -205,4 +223,3 @@ return(<>)
 };
 
 export default AIAnalyticsDashboardPage;
-

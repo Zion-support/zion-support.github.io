@@ -39,8 +39,15 @@ const DataAnalyticsPage: React.FC = () => {,
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.',},
     {icon: TrendingUp,
       title: 'Predictive Analytics',
+<<<<<<< HEAD
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
   ]
+=======
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -53,10 +60,18 @@ const benefits = [
 
     'Real-time insights and reporting',
 
+<<<<<<< HEAD
     'Custom analytics solutions'
   ]
 return(<>)
       <Helmet />
+=======
+    'Custom analytics solutions';
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -175,4 +190,3 @@ return(<>)
 };
 
 export default DataAnalyticsPage;
-

@@ -40,8 +40,15 @@ const SecurityMonitoringSuitePage: React.FC = () => {,
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.',},
     {icon: Zap,
       title: 'Automated Response',
+<<<<<<< HEAD
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.',}}
   ]
+=======
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
@@ -54,10 +61,18 @@ const benefits = [
 
     'Scalable for any business size',
 
+<<<<<<< HEAD
     'Expert security team support'
   ]
 return(<>)
       <Helmet />
+=======
+    'Expert security team support';
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -176,4 +191,3 @@ return(<>)
 };
 
 export default SecurityMonitoringSuitePage;
-

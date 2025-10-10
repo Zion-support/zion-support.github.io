@@ -60,4 +60,3 @@ const SmartSupportBotPage: React.FC = () => {,
   )}};
 
 export default SmartSupportBotPage;
-

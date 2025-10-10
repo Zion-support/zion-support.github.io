@@ -92,4 +92,3 @@ return(<p>)</p>
 };
 
 export default PagePage;
-

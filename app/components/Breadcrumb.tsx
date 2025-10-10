@@ -11,9 +11,16 @@ const Breadcrumb: React.FC = () => {,
     return null;}const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
   const breadcrumbItems = [
+<<<<<<< HEAD
     {name: 'Home', path: '/', icon: Home ,}]
 
   pathSegments.forEach((segment, index) => {const path = '/' + pathSegments.slice(0, index + 1).join('/');
+=======
+    { name: 'Home', path: '/', icon: Home }
+  ];
+    pathSegments.forEach((segment, index) => {
+    const path = '/' + pathSegments.slice(0, index + 1).join('/');
+>>>>>>> origin/main
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     breadcrumbItems.push({ name, path, icon: null ,)})
   })

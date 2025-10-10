@@ -10,10 +10,22 @@ interface LogEntry {}}level: LogLevel,
 }
 class ProductionLogger {}}private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
+<<<<<<< HEAD
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,}
       level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {,}level,;
       message,;
       data,;
+=======
+private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
+    const entry: LogEntry = {,
+      level
+  }
+  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
+    const entry: LogEntry = {}
+      level,
+      message,
+      data,
+>>>>>>> origin/main
       timestamp: new Date().toISOString(),
       context;
     }
@@ -36,7 +48,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
 private sendToMonitoring(entry: LogEntry): void {,}
     ,
     // Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {,;
+    if (typeof window !== 'undefined' && 'gtag' in window) {,
       (window as any).gtag('event', 'error_log', {);
         error_message: entry.message;),
         error_context: entry.context),

@@ -10,7 +10,7 @@ export interface EnvConfig {}}NODE_ENV: 'development' | 'production' | 'test';,
 }
 class EnvValidator {private errors: string[] = [],}
   private warnings: string[] = [],
-  /**,;
+  /**,
    * Validate all environment variables;
    */,}validate(): {isValid: boolean; errors: string[], warnings: string[] ,}{}
 class EnvValidator {}}private errors: string[] = [],
@@ -49,9 +49,17 @@ class EnvValidator {/* TODO: Fix JSX expression */,}}s: string[] ,} {/* TODO: Fi
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL'],}
   }
+<<<<<<< HEAD
   private validateNodeEnv(): void {}}const nodeEnv = process.env['NODE_ENV']
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {}this.errors.push('NODE_ENV is not set');
+=======
+  private validateNodeEnv(): void {}
+    const nodeEnv = process.env['NODE_ENV'];
+    const validEnvs = ['development', 'production', 'test'];
+    if (!nodeEnv) {}
+      this.errors.push('NODE_ENV is not set');];];
+>>>>>>> origin/main
       return;
     }
     if (!validEnvs.includes(nodeEnv)) {}this.errors.push();
@@ -102,5 +110,11 @@ export function validateEnv(): EnvConfig {// Export convenience function;}}expor
 }
 export default envValidator;
 // Export convenience function;
+<<<<<<< HEAD
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */,}}}
 export default envValidator;`;
+=======
+export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
+}
+export default envValidator;`;
+>>>>>>> origin/main

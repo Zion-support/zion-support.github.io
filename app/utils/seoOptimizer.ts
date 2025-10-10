@@ -33,7 +33,7 @@ interface PageSEOData {}}title: string;,
   modifiedTime?: string;
   author?: string;
   section?: string,
-  tags?: string[],;
+  tags?: string[],
   noindex?: boolean;
   nofollow?: boolean;}
 }
@@ -85,7 +85,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   /**;
    * Generate keywords string;
    */;
+<<<<<<< HEAD
   generateKeywords(pageKeywords?: string[]): string {}}const keywords = pageKeywords || this.currentPageData?.keywords || []
+=======
+  generateKeywords(pageKeywords?: string[]): string {}
+    const keywords = pageKeywords || this.currentPageData?.keywords || [];
+>>>>>>> origin/main
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}}
   /**;
@@ -144,8 +149,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     if (!meta) {}meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
+<<<<<<< HEAD
   private setMetaTag(nam,;)
   e: string, conten,;
+=======
+  private setMetaTag(nam,
+  e: string, conten,
+>>>>>>> origin/main
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */,}}`;
     let meta = document.querySelector(`meta[${attribute)}="${name}"]`) as HTMLMetaElement;
@@ -155,6 +165,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   /**;
    * Get robots content;
    */;
+<<<<<<< HEAD
   private getRobotsContent(): string {}}if (!this.currentPageData) return 'index, follow';
     const directives = []
     if (!this.currentPageData.noindex) {}directives.push('noindex');}
@@ -163,14 +174,38 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     } else {}}directives.push('nofollow');}
   private getRobotsContent(): string {/* TODO: Fix JSX expression */,}}}
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
+=======
+  private getRobotsContent(): string {}
+    if (!this.currentPageData) return 'index, follow';
+    const directives = [];
+    if (!this.currentPageData.noindex) {}
+      directives.push('noindex');}
+    }
+    if (!this.currentPageData.nofollow) {}
+      directives.push('follow');}
+    } else {}
+      directives.push('nofollow');}
+  private getRobotsContent(): string {/* TODO: Fix JSX expression */}
+    }
+    if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+    }];];
+>>>>>>> origin/main
     return directives.join(', ');
   }
   /**;
    * Setup structured data;
    */;
+<<<<<<< HEAD
   private setupStructuredData(): void {}}this.addStructuredData(structuredData);
   private setupStructuredData(): void {/* TODO: Fix JSX expression */,}}`;
   t: `${this.config.siteUrl,}/search?q={search_term_string}`,;
+=======
+  private setupStructuredData(): void {}
+    this.addStructuredData(structuredData);
+  private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
+  t: `${this.config.siteUrl}/search?q={search_term_string}`,
+>>>>>>> origin/main
         'query-input': 'required name=search_term_string';
       }
     }
@@ -182,6 +217,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   private updateStructuredData(): void {if (!this.currentPageData) return;}
     const structuredData = {
       '@context': 'https: //schema.org',
+<<<<<<< HEAD
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();,
       description: this.generateDescription(),
@@ -190,11 +226,30 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
       publisher: {,}private updateStructuredData(): void {}}if (!this.currentPageData) return;
     const structuredData = {}'@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
+=======
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle();
+      description: this.generateDescription()
+      url: this.currentPageData.url || window.location.href
+      image: this.currentPageData.image || this.config.defaultImage,
+      publisher: {,
+  }
+  private updateStructuredData(): void {}
+    if (!this.currentPageData) return;
+    const structuredData = {}
+      '@context': 'https: //schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+>>>>>>> origin/main
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
+<<<<<<< HEAD
       publisher: {,}'@type': 'Organization',;
+=======
+      publisher: {}
+        '@type': 'Organization',
+>>>>>>> origin/main
         name: this.config.siteName,
         url: this.config.siteUrl,}
       }
@@ -209,9 +264,16 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
     // Add article-specific properties;
+<<<<<<< HEAD
     if (this.currentPageData.type === 'article') {}Object.assign(structuredData, {)}author: {,}// '@type': 'Person',;
+=======
+    if (this.currentPageData.type === 'article') {}
+      Object.assign(structuredData, {)}
+        author: {}
+// '@type': 'Person',
+>>>>>>> origin/main
 // name: this.currentPageData.author || this.config.siteName,
-        },;
+        },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
@@ -220,14 +282,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   private updateStructuredData(): void {/* TODO: Fix JSX expression */,}}}
     }
     // Add article-specific properties;
+<<<<<<< HEAD
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */,},
         datePublishe,;
+=======
+    if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */},
+        datePublishe,
+>>>>>>> origin/main
   d: this.currentPageData.publishedTime,
-        dateModifie,;
+        dateModifie,
   d: this.currentPageData.modifiedTime,
-        articleSectio,;
+        articleSectio,
   n: this.currentPageData.section,
-        keyword,;
+        keyword,
   s: this.generateKeywords(),
       })
     }
@@ -289,13 +356,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
    */;
   private trackSEOMetric(metric: string, value: number): void {,}
     ,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,;
+    if (typeof window !== 'undefined' && (window as any).gtag) {,
       (window as any).gtag('event', 'seo_metric', {);
         metric_name: metric),}private trackSEOMetric(metric: string, value: number): void {,}}if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'seo_metric', {)}metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo',}
       })
+<<<<<<< HEAD
   private trackSEOMetric(metri,;)
+=======
+  private trackSEOMetric(metri,
+>>>>>>> origin/main
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}})
     }
@@ -311,9 +382,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
       {}url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
+<<<<<<< HEAD
         priority: '1.0',}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */,}y: number ,}> {/* TODO: Fix JSX expression */,}}
     ]
+=======
+        priority: '1.0'}
+  generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
+  y: number }> {/* TODO: Fix JSX expression */}
+      }
+  ]
+>>>>>>> origin/main
   }
   /**;
    * Generate robots.txt content;
@@ -327,14 +406,20 @@ Disallow: /private/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /static/`,
+<<<<<<< HEAD
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */,}}p: ${this.config.siteUrl,}/sitemap.xml;
 # Disallow admin and private areas,;
+=======
+  generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
+  p: ${this.config.siteUrl}/sitemap.xml;
+# Disallow admin and private areas,
+>>>>>>> origin/main
   Disallow: /admin/,
-Disallo,;
+Disallo,
   w: /private/,
-Disallo,;
+Disallo,
   w: /api/,
-Disallo,;
+Disallo,
   w: /_next/,
 Disallo,`;
   w: /static/`,
@@ -342,7 +427,16 @@ Disallo,`;
   /**;
    * Check for SEO issues;
    */;
+<<<<<<< HEAD
   checkSEOIssues(): string[] {}const issues: string[] = [],
+=======
+  checkSEOIssues(): string[] {}
+    const issues: string[] = []
+    // Check title length
+    const title = document.title,,
+    if (title.length < 30) {
+    ,
+>>>>>>> origin/main
     // Check title length;
     const title = document.title,,;
     if (title.length < 30) {,;
@@ -407,7 +501,13 @@ export default seoOptimizer;
   getSEOScore(): number {/* TODO: Fix JSX expression */,}}}
 }
 // Default configuration;
+<<<<<<< HEAD
 const,;
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */,}}
+=======
+const,
+  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
+}
+>>>>>>> origin/main
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`;

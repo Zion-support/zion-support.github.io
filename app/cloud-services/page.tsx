@@ -10,18 +10,36 @@ const CloudServicesPage: React.FC = () => {,
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
+<<<<<<< HEAD
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance']},
     {icon: Server,
+=======
+      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'];
+    },
+    {
+      icon: Server,
+>>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Design and deploy scalable, secure, and cost-effective cloud infrastructure solutions.',
       features: ['Auto-scaling', 'Load balancing', 'High availability', 'Disaster recovery']},
     {icon: Database,
       title: 'Database Solutions',
       description: 'Managed database services with automated backups, monitoring, and optimization.',
+<<<<<<< HEAD
       features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']},
     {icon: Shield,
       title: 'Cloud Security',}];
   const benefits = [
+=======
+      features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']
+    },
+    {
+      icon: Shield,
+      title: 'Cloud Security',
+    }
+  ];];];
+  const benefits = [;
+>>>>>>> origin/main
   ];
   const pricing = [
     {name: 'Starter',
@@ -33,9 +51,17 @@ const CloudServicesPage: React.FC = () => {,
         'Email support',
         'Monthly monitoring',
         'Standard security',
+<<<<<<< HEAD
         'Up to 5 users'
       ]},
     {name: 'Professional',
+=======
+        'Up to 5 users';
+      ];
+    },
+    {
+      name: 'Professional',
+>>>>>>> origin/main
       price: '$7,999',
       period: 'per month',
       description: 'Ideal for growing businesses with complex needs',
@@ -59,9 +85,19 @@ const CloudServicesPage: React.FC = () => {,
         'Enterprise security',
         'Unlimited users',
         'Custom development'
+<<<<<<< HEAD
       ]}]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+      ]
+    }
+  ];];
+  return (
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+>>>>>>> origin/main
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
         <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
@@ -129,6 +165,7 @@ const CloudServicesPage: React.FC = () => {,
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -225,3 +262,5 @@ export default CloudServicesPage;
   </button>
   </h1>
   </div>
+=======
+>>>>>>> origin/main

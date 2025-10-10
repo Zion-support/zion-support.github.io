@@ -2,6 +2,7 @@
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
 
+<<<<<<< HEAD
 const PartnersPage: React.FC = () => {,
   const partners = [
 import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
@@ -17,6 +18,27 @@ interface Partner {id: string;,}
   const [selectedTier, setSelectedTier] = useState('all');
 
   const partners: Partner[] = [,
+=======
+const PartnersPage: React.FC = () => {
+  const partners = [;
+import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
+
+interface Partner {
+  id: string;
+  name: string;
+  logo: string;
+  description: string;
+  category: string;
+  website: string;
+  tier: 'preferred' | 'certified' | 'strategic';
+}];];
+const PartnersPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTier, setSelectedTier] = useState('all');
+
+  const partners: Partner[] = [
+
+>>>>>>> origin/main
     {
       id: '1',
       name: 'Microsoft',
@@ -29,6 +51,7 @@ interface Partner {id: string;,}
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
+<<<<<<< HEAD
   ];
   const benefits = [
     {title: 'Certified Expertise',
@@ -54,6 +77,11 @@ interface Partner {id: string;,}
 
       <Navigation />
       
+=======
+
+  ];
+
+>>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -93,17 +121,21 @@ interface Partner {id: string;,}
         </section>
       </div>
     </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
+  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];];];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
+<<<<<<< HEAD
   const filteredPartners = partners.filter(partner => {)
+=======
+  const filteredPartners = partners.filter(partner => {;
+>>>>>>> origin/main
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;
     return matchesCategory && matchesTier;});
 
   const getTierColor = (tier: string) => {,
     switch (tier) {
-      case 'strategic':
+      case 'strategic':;
         return 'from-purple-500 to-pink-600';
       case 'preferred':
         return 'from-blue-500 to-purple-600';
@@ -113,7 +145,7 @@ interface Partner {id: string;,}
 
   const getTierIcon = (tier: string) => {,
     switch (tier) {
-      case 'strategic':
+      case 'strategic':;
         return <Star className="w-4 h-4" />;
       case 'preferred':
         return <Award className="w-4 h-4" />;
@@ -206,7 +238,13 @@ interface Partner {id: string;,}
                   <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{partner.name.charAt(0)</span>}</span>
                   </div>
+<<<<<<< HEAD
                   <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)}flex items-center gap-1`}>{getTierIcon(partner.tier)</div>}{partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
+=======
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
+                    {getTierIcon(partner.tier)},
+    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
+>>>>>>> origin/main
                   </div>
                 </div>
 
@@ -349,6 +387,10 @@ interface Partner {id: string;,}
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   );
 };
 

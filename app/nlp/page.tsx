@@ -13,8 +13,8 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
 </h1>
             <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
@@ -65,7 +65,5 @@ const benefits = [
       </section>
     </div>
   ),
-};
-
+};];];
 export default PagePage;
-

@@ -19,10 +19,23 @@ interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const Advance
         document.body.classList.add('keyboard-navigation')}}
     const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
+<<<<<<< HEAD
     return () => {document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
   const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
     document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
+=======
+    return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)
+  }
+  }, [isHighContrast, isReducedMotion]);
+  const toggleHighContrast = () => {;
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast')
+  }
+  const changeFontSize = (size: string) => {
+>>>>>>> origin/main
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
@@ -51,7 +64,12 @@ interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const Advance
   </
         </div>
       </div>
+<<<<<<< HEAD
       {children} </div>
+=======
+      {children}
+    </div>;
+>>>>>>> origin/main
   );
 };
 

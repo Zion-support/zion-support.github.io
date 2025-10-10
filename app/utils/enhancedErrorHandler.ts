@@ -32,8 +32,8 @@ interface ErrorReport {}}id: string;,
     | 'runtime'
     | 'network'
     | 'security',
-    | 'performance',;
-    | 'unknown',;
+    | 'performance',
+    | 'unknown',
   tags: string[],
   metadata: Record<string>,
   resolved: boolean,
@@ -158,6 +158,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
             message: `Failed to load resource: ${target?.src || target?.href,}`);
             element: event.target?.constructor.name),
             src: target?.src || target?.href,
+<<<<<<< HEAD
   private setupResourceErrorHandler(): void {}}window.addEventListener();
       'error',;
       event => {}if (event.target !== window) {}const target = event.target as HTMLElement & {}src?: string;
@@ -165,17 +166,39 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
           }
           this.handleError({)}type: 'resource',}
             message: `Failed to load resource: ${target?.src || target?.href,}`,;
+=======
+  private setupResourceErrorHandler(): void {}
+    window.addEventListener();
+      'error',
+      event => {}
+        if (event.target !== window) {}
+          const target = event.target as HTMLElement & {}
+            src?: string;
+            href?: string;}
+          }
+          this.handleError({)}
+            type: 'resource'}
+            message: `Failed to load resource: ${target?.src || target?.href}`,
+>>>>>>> origin/main
             element: event.target?.constructor.name,
             src: target?.src || target?.href,
           })
         },
       true;
     );
+<<<<<<< HEAD
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */,}}}
           this.handleError({/* TODO: Fix JSX expression */,)}resource: ${target?.src || target?.href,}`,;
             elemen,;
+=======
+  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
+          }
+          this.handleError({/* TODO: Fix JSX expression */}
+  resource: ${target?.src || target?.href}`,
+            elemen,
+>>>>>>> origin/main
   t: event.target?.constructor.name,
-            sr,;
+            sr,
   c: target?.src || target?.href;),
           })
         },
@@ -188,11 +211,21 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   private setupNetworkErrorHandler(): void {// Monitor fetch requests;}
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
+<<<<<<< HEAD
       try {,;}
         const response = await originalFetch(...args),;
         if (!response.ok) {,;
           this.handleError({)}type: 'network',`})
             message: `Network request failed: ${response.status,}${response.statusText}`);
+=======
+      try {,
+        const response = await originalFetch(...args),
+        if (!response.ok) {,
+          this.handleError({)
+  }
+            type: 'network',`})
+            message: `Network request failed: ${response.status} ${response.statusText}`);
+>>>>>>> origin/main
             url: args[0] as string),
             status: response.status),
             statusText: response.statusText,
@@ -205,15 +238,26 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
           error: error instanceof Error ? error : new Error(String(error)),
   private setupNetworkErrorHandler(): void {}}// Monitor fetch requests;
     const originalFetch = window.fetch;
+<<<<<<< HEAD
     window.fetch = async (...args: Parameters<typeof fetch>) => {,}try {}}const response = await originalFetch(...args);
         if (!response.ok) {}this.handleError({)}type: 'network',`}
             message: `Network request failed: ${response.status,}${response.statusText}`,;
+=======
+    window.fetch = async (...args: Parameters<typeof fetch>) => {}
+      try {}
+        const response = await originalFetch(...args);
+        if (!response.ok) {}
+          this.handleError({)}
+            type: 'network',`}
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+>>>>>>> origin/main
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
           })
         }
         return response;
+<<<<<<< HEAD
       } catch (error) {}this.handleError({)}type: 'network',`}
           message: `Network request failed: ${error,}`,;
           url: args[0] as string,
@@ -222,19 +266,37 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
   failed: ${response.status,}${response.statusText}`,;
             ur,;
+=======
+      } catch (error) {}
+        this.handleError({)}
+          type: 'network',`}
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error)),
+        })
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`;
+  failed: ${response.status} ${response.statusText}`,
+            ur,
+>>>>>>> origin/main
   l: args[0] as string,
-            statu,;
+            statu,
   s: response.status,
-            statusTex,;
+            statusTex,
   t: response.statusText,
           })
         }
         return response;
+<<<<<<< HEAD
       } catch (error) {/* TODO: Fix JSX expression */,}`;
   failed: ${error,}`,;
           ur,;
+=======
+      } catch (error) {/* TODO: Fix JSX expression */}`;
+  failed: ${error}`,
+          ur,
+>>>>>>> origin/main
   l: args[0] as string,
-          erro,;
+          erro,
   r: error instanceof Error ? error : new Error(String(error)),
         })
         throw error;
@@ -254,20 +316,40 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
               this.handleError({)}type: 'custom',`})
   private setupPerformanceErrorHandler(): void {}}if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
+<<<<<<< HEAD
     if ('PerformanceObserver' in window) {}try {}}const observer = new PerformanceObserver(list => {)}list.getEntries().forEach(entry => {)}if (entry.duration > 100) {}// Tasks longer than 100ms;
               this.handleError({)}type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2),}ms`,;
+=======
+    if ('PerformanceObserver' in window) {}
+      try {}
+        const observer = new PerformanceObserver(list => {)}
+          list.getEntries().forEach(entry => {)}
+            if (entry.duration > 100) {}
+              // Tasks longer than 100ms;
+              this.handleError({)}
+                type: 'custom',`}
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+>>>>>>> origin/main
                 duration: entry.duration,
                 category: 'performance',})
             }
           })
         })
+<<<<<<< HEAD
         observer.observe({type: 'longtask', buffered: true ,)})
       } catch (error) {}private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
   detected: ${entry.duration.toFixed(2),}ms`,;
                 duratio,;
+=======
+        observer.observe({ type: 'longtask', buffered: true })
+      } catch (error) {}
+  private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`;
+  detected: ${entry.duration.toFixed(2)}ms`,
+                duratio,
+>>>>>>> origin/main
   n: entry.duration,
-                categor,;
+                categor,
   y: 'performance',
               })
             }
@@ -316,19 +398,38 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
 // url?: string;);
 // status?: number;);
 // statusText?: string;);
+<<<<<<< HEAD
 // duration?: number;),;
 // category?: string;)}): void {// Rate limiting;}
+=======
+// duration?: number;),
+// category?: string;)}): void {
+    // Rate limiting;
+>>>>>>> origin/main
     if (!this.checkRateLimit()) {
 // src?: string;
 // url?: string;
 // status?: number;
 // statusText?: string;
 // duration?: number;
+<<<<<<< HEAD
 // category?: string;}}): void {}}// Rate limiting;
     if (!this.checkRateLimit()) {}return;}
   private handleError(errorDat,;)
   a: {/* TODO: Fix JSX expression */,})
   }): void {/* TODO: Fix JSX expression */,}}}
+=======
+// category?: string
+  }
+  }): void {}
+    // Rate limiting;
+    if (!this.checkRateLimit()) {}
+      return;}
+  private handleError(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): void {/* TODO: Fix JSX expression */}
+    }
+>>>>>>> origin/main
     const errorReport = this.createErrorReport(errorData);
     this.processError(errorReport);
   }
@@ -348,8 +449,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
 // url?: string;);
 // status?: number;);
 // statusText?: string;);
+<<<<<<< HEAD
 // duration?: number;),;
 // category?: string;)}): ErrorReport {// src?: string;}
+=======
+// duration?: number;),
+// category?: string;)}): ErrorReport {
+    // src?: string;
+>>>>>>> origin/main
 // url?: string;
 // status?: number;
 // statusText?: string;
@@ -365,6 +472,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
+<<<<<<< HEAD
       context,;
       severity,;
       category,;
@@ -376,6 +484,19 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
         element: errorData.element;,
         src: errorData['src'],
         url: errorData.url;,
+=======
+      context,
+      severity,
+      category,
+      tags,
+      metadata: {
+    filename: errorData.filename;
+        lineno: errorData.lineno;
+        colno: errorData.colno;
+        element: errorData.element;
+        src: errorData['src']
+        url: errorData.url
+>>>>>>> origin/main
         status: errorData.status,
         statusText: errorData.statusText;,}metadata: {,}filename: errorData.filename,
         lineno: errorData.lineno,
@@ -388,10 +509,17 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
         duration: errorData.duration,},
       resolved: false,
     }
+<<<<<<< HEAD
   private createErrorReport(errorDat,;)
   a: {/* TODO: Fix JSX expression */,})
   }): ErrorReport {/* TODO: Fix JSX expression */,}},
       resolve,;
+=======
+  private createErrorReport(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport {/* TODO: Fix JSX expression */},
+      resolve,
+>>>>>>> origin/main
   d: false,
     }
   }
@@ -402,7 +530,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     // Add to errors array;
     this.errors.push(errorReport)
     // Update counters,
-    this.updateErrorCounts(errorReport),;
+    this.updateErrorCounts(errorReport),
     // Console logging;
     if (this.config.enableConsoleLogging) {,}this.logError(errorReport);}
     }
@@ -456,9 +584,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   private determineSeverity(errorData: {,)
     ),
     type: ErrorReport['type']),
+<<<<<<< HEAD
     message: string,),;
     status?: number;),}element?: string;}
   }): ErrorReport['severity'] {if(errorData.type === 'network' &&);
+=======
+    message: string,),
+    status?: number;),
+  }
+    element?: string;}
+  }): ErrorReport['severity'] {
+    if(errorData.type === 'network' &&);
+>>>>>>> origin/main
       errorData.status &&);
       errorData.status >= 500;);
     ) {}private determineSeverity(errorData: {),}type: ErrorReport['type'],
@@ -475,7 +612,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       errorData.message.includes('Cannot read property');
     ) {}return 'high';}
     }
+<<<<<<< HEAD
     if (errorData.type === 'resource' && errorData.element === 'img') {}return 'medium';}
+=======
+    if (errorData.type === 'resource' && errorData.element === 'img') {}
+      return 'medium';}
+    }
+    if (errorData.type === 'promise') {}
+      return 'medium';}
+  private determineSeverity(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
     if (errorData.type === 'promise') {}return 'medium';}
   private determineSeverity(errorDat,;)
@@ -495,7 +643,21 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     ),
     type: ErrorReport['type']),}private categorizeError(errorData: {),}type: ErrorReport['type'],
     message: string,}
+<<<<<<< HEAD
   }): ErrorReport['category'] {}if (errorData.type === 'network') {}return 'network';}
+=======
+  }): ErrorReport['category'] {}
+    if (errorData.type === 'network') {}
+      return 'network';}
+    }
+    if (errorData.type === 'resource') {}
+      return 'performance';}
+  private categorizeError(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
     if (errorData.type === 'resource') {}return 'performance';}
   private categorizeError(errorDat,;)
@@ -520,18 +682,49 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    */;
   private generateTags(errorData: {,)
     ),
+<<<<<<< HEAD
     filename?: string;),;
     type: ErrorReport['type']),}duration?: number;}
   }): string[] {const tags: string[] = [],
     if (errorData.filename) {,}private generateTags(errorData: {),}filename?: string;
     type: ErrorReport['type'],
+=======
+    filename?: string;),
+    type: ErrorReport['type']),
+  }
+    duration?: number;}
+  }): string[] {
+    const tags: string[] = [],
+    if (errorData.filename) {,
+  }
+  private generateTags(errorData: {)}
+    filename?: string;
+    type: ErrorReport['type']
+>>>>>>> origin/main
     duration?: number,}
   }): string[] {}const tags: string[] = [],
     if (errorData.filename) {}tags.push('client-side');}
     }
     if (errorData.type === 'network') {}tags.push('network');}
     }
+<<<<<<< HEAD
     if (errorData.type === 'resource') {}tags.push('resource');}
+=======
+    if (errorData.type === 'resource') {}
+      tags.push('resource');}
+    }
+    if (errorData.duration && errorData.duration > 1000) {}
+      tags.push('slow');}
+  private generateTags(errorDat,
+  a: {/* TODO: Fix JSX expression */})
+  }): string[] {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'network') {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+    }
+    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
     if (errorData.duration && errorData.duration > 1000) {}tags.push('slow');}
   private generateTags(errorDat,;)
@@ -589,7 +782,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     this.errorCategories.set(errorReport.category);
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     this.errorCategories.set();
-      errorReport.category,;
+      errorReport.category,
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     );
   private updateErrorCounts(errorRepor);
@@ -618,10 +811,10 @@ if (errorReport.stack) {}private logError(errorRepor);
       case 'high':;
         return '🔴';
       case 'medium':,
-        return '🟡',;
-      case 'low':,;
-        return '🟢',;
-      default:,;
+        return '🟡',
+      case 'low':,
+        return '🟢',
+      default:,
         return '❓';}
   private getSeverityEmoji(severit);
   y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */,}}}
@@ -632,6 +825,7 @@ if (errorReport.stack) {}private logError(errorRepor);
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     ,
     if (!this.config.remoteEndpoint) return;
+<<<<<<< HEAD
     try {,;}
       await fetch(this.config.remoteEndpoint, {);
         method: 'POST'),
@@ -645,6 +839,29 @@ if (errorReport.stack) {}private logError(errorRepor);
   n: `Bearer ${this.config.apiKey,}`;
         },;
         bod,;
+=======
+    try {,
+      await fetch(this.config.remoteEndpoint, {);
+        method: 'POST'),
+        headers: {,
+  }
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {}
+    if (!this.config.remoteEndpoint) return;
+    try {}
+      await fetch(this.config.remoteEndpoint, {)}
+        method: 'POST',
+        headers: {}
+          'Content-Type': 'application/json',`}
+          Authorization: `Bearer ${this.config.apiKey}
+        })
+        body: JSON.stringify(errorReport)})
+    } catch (error) {}
+  private async reportToRemote(errorRepor);
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}`;
+  n: `Bearer ${this.config.apiKey}`;
+        },
+        bod,
+>>>>>>> origin/main
   y: JSON.stringify(errorReport),
       })
     } catch (error) {/* TODO: Fix JSX expression */,}}
@@ -723,9 +940,20 @@ if (errorReport.stack) {}private logError(errorRepor);
       errorsBySeverity[error.severity] =;
         (errorsBySeverity[error.severity] || 0) + 1;}
     })
+<<<<<<< HEAD
   public getErrorStatistics(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}errorsByType: Record<string, number> = {}const,;
   errorsByCategory: Record<string, number> = {}const,;
   errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)})
+=======
+  public getErrorStatistics(): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+  errorsByType: Record<string, number> = {}
+    const,
+  errorsByCategory: Record<string, number> = {}
+    const,
+  errorsBySeverity: Record<string, number> = {}
+    this.errors.forEach(error => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/main
     })
     const recentErrors = this.errors;
       .filter(error => !error.resolved);
@@ -735,10 +963,21 @@ if (errorReport.stack) {}private logError(errorRepor);
           new Date(a.context.timestamp).getTime();
       );
       .slice(0, 10);
+<<<<<<< HEAD
     return {totalErrors: this.errors.length;,}}return {}}totalErrors: this.errors.length,
       errorsByType,;
       errorsByCategory,;
       errorsBySeverity,;
+=======
+    return {
+    totalErrors: this.errors.length
+  }
+    return {}
+      totalErrors: this.errors.length,
+      errorsByType,
+      errorsByCategory,
+      errorsBySeverity,
+>>>>>>> origin/main
       recentErrors}
     }
       .slice(0, 10);
@@ -752,12 +991,21 @@ if (errorReport.stack) {}private logError(errorRepor);
       {}errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config,
+<<<<<<< HEAD
         timestamp: new Date().toISOString(),},
       null,;
       2;
     );
   public exportErrorData(): string {/* TODO: Fix JSX expression */,}},
       null,;
+=======
+        timestamp: new Date().toISOString()},
+      null,
+      2;
+    );
+  public exportErrorData(): string {/* TODO: Fix JSX expression */},
+      null,
+>>>>>>> origin/main
       2;
     );
   }
@@ -766,8 +1014,17 @@ if (errorReport.stack) {}private logError(errorRepor);
    */;
   public reportError(message: string, context?: Partial<ErrorContext>): string {const errorReport = this.createErrorReport({);}
       type: 'custom'),
+<<<<<<< HEAD
       message),}public reportError(message: string, context?: Partial<ErrorContext>): string {}}const errorReport = this.createErrorReport({)}type: 'custom',
       message,;
+=======
+      message),
+  }
+  public reportError(message: string, context?: Partial<ErrorContext>): string {}
+    const errorReport = this.createErrorReport({)}
+      type: 'custom',
+      message,
+>>>>>>> origin/main
       ...context}
     })
     this.processError(errorReport);
@@ -780,12 +1037,28 @@ if (errorReport.stack) {}private logError(errorRepor);
 // Export singleton instance;
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
+<<<<<<< HEAD
 export {// Export class for custom instances;}}export {}}EnhancedErrorHandler,;
   type ErrorReport,;
   type ErrorContext,;
+=======
+export {
+    // Export class for custom instances
+  }
+export {}
+  EnhancedErrorHandler,
+  type ErrorReport,
+  type ErrorContext,
+>>>>>>> origin/main
   type ErrorHandlerConfig}
 }
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
+<<<<<<< HEAD
 export {/* TODO: Fix JSX expression */,}}}
 `;
+=======
+export {/* TODO: Fix JSX expression */}
+}
+`;
+>>>>>>> origin/main

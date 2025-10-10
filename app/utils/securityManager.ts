@@ -3,14 +3,20 @@ import React from 'react';
 /**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
+<<<<<<< HEAD
  */,;
 export class SecurityManager {,;}
+=======
+ */,
+export class SecurityManager {
+    ,
+>>>>>>> origin/main
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */}export class SecurityManager {}}private static instance: SecurityManager,}
   private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
- * Generate,;
+ * Generate,
   d: 2025-10-08T0,
   2: 0,
   6: 22.083Z;,
@@ -35,10 +41,22 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
    */;
   sanitizeUrl(url: string): string {,}
     ,
+<<<<<<< HEAD
     try {,;}
       const parsed = new URL(url),;
       if (!['http:', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);
       if (!['http:', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}
+=======
+    try {,
+      const parsed = new URL(url),
+      if (!['http:', 'https: '].includes(parsed.protocol)) {,
+  }
+  sanitizeUrl(url: string): string {}
+    try {}
+      const parsed = new URL(url);
+      if (!['http:', 'https:'].includes(parsed.protocol)) {}
+        throw new Error('Invalid protocol');}
+>>>>>>> origin/main
       }
       return parsed.toString();
     } catch {}}return '';}
@@ -52,11 +70,27 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
    */;
   generateSecureToken(length: number = 32): string {,}
     ,
+<<<<<<< HEAD
     const array = new Uint8Array(length),;
     if (typeof window !== 'undefined' && window.crypto) {,}window.crypto.getRandomValues(array);}
     } else {// Fallback for Node.js environment;}}generateSecureToken(length: number = 32): string {,}}const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {}window.crypto.getRandomValues(array);}
     } else {}}// Fallback for Node.js environment;
+=======
+    const array = new Uint8Array(length),
+    if (typeof window !== 'undefined' && window.crypto) {,
+  }
+      window.crypto.getRandomValues(array);}
+    } else {
+    // Fallback for Node.js environment
+  }
+  generateSecureToken(length: number = 32): string {}
+    const array = new Uint8Array(length);
+    if (typeof window !== 'undefined' && window.crypto) {}
+      window.crypto.getRandomValues(array);}
+    } else {}
+      // Fallback for Node.js environment;
+>>>>>>> origin/main
       const crypto = import("crypto");
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);
@@ -70,14 +104,26 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
     const windowStart = now - windowMs;
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
-    const requests = storage.get(key) || []
+    const requests = storage.get(key) || [];
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),
+<<<<<<< HEAD
     if (validRequests.length >= limit) {,;
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),}if (validRequests.length >= limit) {}return false;}
   checkRateLimit(ke,;)
   y: string, limi,;
+=======
+    if (validRequests.length >= limit) {;
+    ,
+    // Remove old requests;
+    const validRequests = requests.filter((time: number) => time > windowStart)
+  }
+    if (validRequests.length >= limit) {}
+      return false;}
+  checkRateLimit(ke,
+  y: string, limi,
+>>>>>>> origin/main
   t: number, windowM);
   s: number): boolean {/* TODO: Fix JSX expression */,}}}
     validRequests.push(now);

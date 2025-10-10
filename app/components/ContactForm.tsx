@@ -17,14 +17,24 @@ interface FormData {name: string,}
   const [status, setStatus] = useState<FormStatus>({type: 'idle',
     message: '',})
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)
+=======
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    const { name, value } = e.target;
+    setFormData(prev => ({
+>>>>>>> origin/main
       ...prev,
       [name]: value;}));
   }
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {,
+=======
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' ,)})
 
@@ -57,10 +67,17 @@ interface FormData {name: string,}
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
+<<<<<<< HEAD
     'Other'
   ]
 
   return(<div className="max-w-2xl mx-auto p-6">)</div>
+=======
+    'Other';
+  ];];];
+  return (
+    <div className="max-w-2xl mx-auto p-6">
+>>>>>>> origin/main
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
       <form onSubmit={handleSubmit}className="space-y-6">
         <div>

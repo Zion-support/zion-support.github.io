@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap}}from 'lucide-react';
 
@@ -16,9 +17,22 @@ const SitemapPage: React.FC = () => {,
         {name: 'Services', url: '/services', description: 'Our service offerings' ,},
         {name: 'Pricing', url: '/pricing', description: 'Service pricing plans' ,},
         {name: 'Contact', url: '/contact', description: 'Contact information' ,}]
+=======
+import { Helmet } from 'react-helmet-async';
+import { Map, ArrowRight, Home, Users, Settings, Brain, Cloud, Code, FileText, Mail, Phone, Calendar, Shield, BarChart, Target, Globe, Database, Zap, Eye, Mic, Heart, DollarSign, Box, Cpu, Link, Server, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Package, Monitor, Search, Video, Headphones, Scale, Cookie } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const SitemapPage: React.FC = () => {
+    {
+      title: 'Main Pages',
+      icon: Home,
+      pages: [
+>>>>>>> origin/main
     },
     {title: 'AI Services',
       icon: Brain,
+<<<<<<< HEAD
       pages: [,
         { name: 'AI Services Overview', url: '/ai-services', description: 'Complete AI services catalog' ,},
         {name: 'AI Analytics', url: '/ai-analytics', description: 'AI-powered data analytics' ,},
@@ -29,9 +43,13 @@ const SitemapPage: React.FC = () => {,
         {name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analytics' ,},
         {name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' ,},
         {name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' ,}]
+=======
+      pages: [
+>>>>>>> origin/main
     },
     {title: 'IT Services',
       icon: Cloud,
+<<<<<<< HEAD
       pages: [,
         { name: 'IT Services Overview', url: '/it-services', description: 'Complete IT services catalog' ,},
         {name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud infrastructure solutions' ,},
@@ -92,10 +110,27 @@ const SitemapPage: React.FC = () => {,
   ]
 
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
+=======
+      pages: [
+        { name: 'IT Services Overview', url: '/it-services', description: 'Complete IT infrastructure solutions' },
+        { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, and GCP solutions' },
+        { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
+        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
+        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
+    },
+    {
+      title: 'Resources',
+      icon: FileText,
+      pages: [
+        { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
+        { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
+        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+>>>>>>> origin/main
 
   return(<>)
       <Helmet />
         <title>Sitemap - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." />
         <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources" />
         <link rel="canonical" href="https: //ziontechgroup.com/sitemap" />,
@@ -109,8 +144,30 @@ const SitemapPage: React.FC = () => {,
               </div>
               <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
                 Sitemap;
+=======
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all our pages, services, and resources organized by category." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <Map className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Sitemap
+>>>>>>> origin/main
               </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Navigate our website easily with this comprehensive sitemap. 
+                Find all our pages, services, and resources organized by category.
+              </p>
             </div>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete overview of all pages and resources available on our website.</p>
               Find what you're looking for quickly and easily.
             </p>
@@ -127,24 +184,29 @@ const SitemapPage: React.FC = () => {,
               <Map className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">{totalPages</div>}</div>
               <div className="text-gray-300">Total Pages</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Brain className="w-8 h-8 text-green-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300">AI Services</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Cloud className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">20+</div>
-              <div className="text-gray-300">IT Services</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
-              <Zap className="w-8 h-8 text-orange-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">15+</div>
-              <div className="text-gray-300">Micro SaaS</div>
-            </div>
-          </div>
+=======
 
+            {/* Quick Links */}
+            <div className="bg-slate-800/50 rounded-lg p-8 mb-12">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Quick Links</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {quickLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    className="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 group"
+                  >
+                    <link.icon className="w-6 h-6 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm text-white text-center group-hover:text-cyan-300 transition-colors">
+                      {link.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+>>>>>>> origin/main
+            </div>
+
+<<<<<<< HEAD
           {/* Page Categories */} <div className="space-y-12">{pageCategories.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-6">
@@ -173,13 +235,68 @@ const SitemapPage: React.FC = () => {,
                         Visit Page;
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
+=======
+            {/* Sitemap Sections */}
+            <div className="space-y-12">
+              {sitemapSections.map((section, sectionIndex) => (
+                <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-8">
+                  <div className="flex items-center space-x-4 mb-8">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <section.icon className="w-6 h-6 text-white" />
+>>>>>>> origin/main
                     </div>
-                  ))}
+                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {section.pages.map((page, pageIndex) => (
+                      <a
+                        key={pageIndex}
+                        href={page.url}
+                        className="block p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start justify-between mb-2">
+                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                            {page.name}
+                          </h3>
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                        </div>
+                        <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
+                          {page.description}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Search Box */}
+            <div className="mt-16 text-center">
+              <div className="bg-slate-800/50 rounded-lg p-8">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  Can't Find What You're Looking For?
+                </h2>
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                  Use our search functionality or contact us directly for assistance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                  <div className="flex-1 relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      type="text"
+                      placeholder="Search our website..."
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    />
+                  </div>
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Search
+                  </button>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
+<<<<<<< HEAD
           {/* Search Functionality */} <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Can't Find What You're Looking For?</h2>
             <p className="text-gray-300 text-center mb-8">Use our search functionality or contact our support team for assistance.</p>
@@ -219,8 +336,38 @@ const SitemapPage: React.FC = () => {,
               <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
+=======
+            {/* Contact CTA */}
+            <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  Need Help Finding Something?
+                </h2>
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                  Our team is here to help you find exactly what you need. Contact us for personalized assistance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >
+                    Contact Us
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  >
+                    Call: (302) 464-0950
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> origin/main
         </div>
-      </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };

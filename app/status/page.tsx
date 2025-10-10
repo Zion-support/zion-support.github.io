@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 const refreshStatus = async () => {
-
+;
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -49,8 +49,15 @@ const services = [
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
+<<<<<<< HEAD
       description: 'System monitoring and alerts',}}
   ]
+=======
+      description: 'System monitoring and alerts'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const incidents = [
     {id: 1,
       title: 'API Response Time Degradation',
@@ -59,16 +66,30 @@ const incidents = [
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
+<<<<<<< HEAD
       affectedServices: ['API Services', 'AI Services']},
     {id: 2,
+=======
+      affectedServices: ['API Services', 'AI Services'];
+  },
+    {
+    id: 2,
+>>>>>>> origin/main
       title: 'Database Connection Issues',
       status: 'resolved',
       severity: 'major',
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
+<<<<<<< HEAD
       affectedServices: ['Database', 'API Services']}}
   ]
+=======
+      affectedServices: ['Database', 'API Services']
+  }
+    }
+  ];
+>>>>>>> origin/main
 const getStatusIcon = (;
     switch (status) {case 'operational':;
 

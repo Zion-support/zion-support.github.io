@@ -16,8 +16,15 @@ const PagePage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -30,9 +37,17 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 return({/* Hero Section */)} <section className="py-20 px-4">
+=======
+    'Proven track record of success';
+  ];
+return (
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -138,4 +153,3 @@ return({/* Hero Section */)} <section className="py-20 px-4">
 };
 
 export default PagePage;
-

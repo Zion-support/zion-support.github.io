@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 
+<<<<<<< HEAD
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -120,3 +121,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
 );
 
 export default Skeleton;
+=======
+;
+>>>>>>> origin/main

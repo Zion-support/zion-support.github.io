@@ -13,8 +13,15 @@ const AISpaceMissionOptimizer: React.FC = () => {,
     {icon: Rocket,
       title: 'Mission Trajectory Optimization',
       description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success',
+<<<<<<< HEAD
       benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments']},
     {icon: Target,
+=======
+      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments'];
+    },
+    {
+      icon: Target,
+>>>>>>> origin/main
       title: 'Payload Optimization',
       description: 'Intelligent payload configuration and resource allocation for maximum mission value',
       benefits: ['Optimal payload distribution', 'Resource efficiency', 'Mission success maximization']},
@@ -25,8 +32,14 @@ const AISpaceMissionOptimizer: React.FC = () => {,
     {icon: Globe,
       title: 'Multi-Planetary Mission Planning',
       description: 'Complex mission planning for interplanetary and deep space exploration',
+<<<<<<< HEAD
       benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']}];
 
+=======
+      benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']
+    },
+  ];];];
+>>>>>>> origin/main
   const pricingPlans = [
     {name: 'Explorer',
       price: '$4,999',
@@ -89,10 +102,19 @@ const AISpaceMissionOptimizer: React.FC = () => {,
     {title: 'Deep Space Exploration',
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
+<<<<<<< HEAD
       results: 'Enhanced mission success rates',}];
 
   return(<>)
       <Helmet />
+=======
+      results: 'Enhanced mission success rates'
+    }
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />

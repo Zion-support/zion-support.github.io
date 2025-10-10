@@ -78,8 +78,15 @@ export const,
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }
+<<<<<<< HEAD
   if (hasError) {/* TODO: Fix JSX expression */,}className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}{...props})
+=======
+  if (hasError) {/* TODO: Fix JSX expression */}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={imageStyle},
+    {...props})
+>>>>>>> origin/main
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
       </div>),
@@ -89,9 +96,25 @@ export const,
       </div>
     ),
   }
+<<<<<<< HEAD
   return(<img;)
   return(<img />)
       src={src}alt={alt}width={width}height={height}className={className}style={imageStyle}sizes={sizes}loading={priority ? 'eager' : 'lazy'}onLoad={handleLoad}onError={handleError}{...props}
+=======
+  return(<img;
+  return (<img />
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      style={imageStyle}
+      sizes={sizes}
+      loading={priority ? 'eager' : 'lazy'}
+      onLoad={handleLoad}
+      onError={handleError},
+    {...props}
+>>>>>>> origin/main
     >)</img>
 }</img>
 export default Image</img>
@@ -111,4 +134,3 @@ export default Image;
 export default Image;
 
 "`;
-

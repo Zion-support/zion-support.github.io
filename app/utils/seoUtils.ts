@@ -62,6 +62,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
       document.head.appendChild(canonical)}}
     canonical.href = this.config.canonicalUrl;
   }
+<<<<<<< HEAD
 private updateOpenGraphTags(): void {if (typeof document === 'undefined') return;}
 const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.config.title ,},;
       {property: 'og:description', content: this.config.ogDescription || this.config.description ,},;
@@ -69,16 +70,42 @@ const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.co
       {property: 'og:url', content: this.config.canonicalUrl || window.location.href ,},;
     ]
 if (this.config.ogImage) {}ogTags.push({property: 'og:image', content: this.config.ogImage ,)})
+=======
+private updateOpenGraphTags(): void {
+    if (typeof document === 'undefined') return;
+const ogTags = [},
+    { property: 'og:title', content: this.config.ogTitle || this.config.title },
+      { property: 'og:description', content: this.config.ogDescription || this.config.description },
+      { property: 'og:type', content: this.config.ogType || 'website' },
+      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },
+    ];
+if (this.config.ogImage) {}
+      ogTags.push({ property: 'og:image', content: this.config.ogImage })
+>>>>>>> origin/main
     }
 ogTags.forEach(tag => {)
     this.updateMetaTagByProperty(tag.property, tag.content)}})
   }
+<<<<<<< HEAD
 private updateTwitterTags(): void {if (typeof document === 'undefined') return;}
 const twitterTags = [}{ name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' ,},;
       {name: 'twitter:title', content: this.config.twitterTitle || this.config.title ,},;
       {name: 'twitter:description', content: this.config.twitterDescription || this.config.description ,},;
     ]
 if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content: this.config.twitterImage ,)})
+=======
+    })
+  }
+private updateTwitterTags(): void {
+    if (typeof document === 'undefined') return;];];
+const twitterTags = [},
+    { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
+      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
+      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },
+    ];
+if (this.config.twitterImage) {}
+      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
+>>>>>>> origin/main
     }
 twitterTags.forEach(tag => {)
     this.updateMetaTag(tag.name, tag.content)}})
@@ -98,7 +125,11 @@ const meta = document.createElement('meta')
     document.head.appendChild(meta)}}
 }
 // Utility functions;
+<<<<<<< HEAD
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {,
+=======
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;
+>>>>>>> origin/main
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;}}
@@ -106,9 +137,19 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 }
 })
 }
+<<<<<<< HEAD
 export const addStructuredData = (data: any): void => {,
+=======
+export const addStructuredData = (data: any): void => {;
+>>>>>>> origin/main
     if (typeof document === 'undefined') return;
 const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = createStructuredData(data),
+<<<<<<< HEAD
   document.head.appendChild(script)}}
+=======
+  document.head.appendChild(script)
+  }
+}
+>>>>>>> origin/main

@@ -17,7 +17,13 @@ const SEOEnhancer: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}];
+=======
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];];];
+>>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -26,11 +32,19 @@ const SEOEnhancer: React.FC = () => {,
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+    'Proven track record of success';
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+>>>>>>> origin/main
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
@@ -126,4 +140,3 @@ const SEOEnhancer: React.FC = () => {,
 };
 
 export default SEOEnhancer;
-

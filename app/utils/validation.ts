@@ -16,8 +16,17 @@ export function validateEmail(email: string): ValidationResult {,}
   }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email.trim());
+<<<<<<< HEAD
 return {isValid,;}
     error: isValid ? undefined : 'Invalid email format',}return {/* TODO: Fix JSX expression */,}}}
+=======
+return {
+    isValid,
+    error: isValid ? undefined : 'Invalid email format',
+  }
+  return {/* TODO: Fix JSX expression */}
+  }
+>>>>>>> origin/main
 }
 /**;
  * URL validation;
@@ -27,7 +36,11 @@ export function validateURL(url: string): ValidationResult {,}
   if (!url || url.trim() === '') {,}return {isValid: false, error: 'URL is required' ,}}}
 try {const urlObj = new URL(url);}
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
+<<<<<<< HEAD
     return {,;}
+=======
+    return {,
+>>>>>>> origin/main
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
@@ -43,21 +56,35 @@ export function validateLength(value: string;);,
   min: number),
   max: number),
   fieldName: string = 'Field',
+<<<<<<< HEAD
 ): ValidationResult {if (value.length < min) {,;}
     return {,;}
       isValid: false,}error: `${fieldName,}must be at least ${min}characters long`;
+=======
+): ValidationResult {
+    if (value.length < min) {,
+    return {,
+      isValid: false,
+  }
+      error: `${fieldName} must be at least ${min} characters long`;
+>>>>>>> origin/main
     }
   }
 if (value.<<<length>max</length></length>) {return {isValid: false,}}error: `${fieldName,}must be no more than ${max}characters long`;
     }
   }
+<<<<<<< HEAD
 return {isValid: true ,}}export function validateLength(valu,;)
+=======
+return { isValid: true }
+export function validateLength(valu,
+>>>>>>> origin/main
   e: string,
-  mi,;
+  mi,
   n: number,
-  ma,;
+  ma,
   x: number,
-  fieldNam,;
+  fieldNam,
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */,}}r: `${fieldName,}must be at least ${min}characters long`;
     }
@@ -108,7 +135,15 @@ if (typeof value === 'string' && value.trim() === '') {}return {isValid: false, 
   }
 if (Array.isArray(value) && value.length === 0) {}return {isValid: false, error: `${fieldName,}}is required` }
   }
+<<<<<<< HEAD
 return {isValid: true ,}}export function validateRequired(valu,;)
+=======
+if (Array.isArray(value) && value.length === 0) {}
+    return { isValid: false, error: `${fieldName} is required` }
+  }
+return { isValid: true }
+export function validateRequired(valu,
+>>>>>>> origin/main
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`;
   r: `${fieldName,}is required` }
@@ -175,8 +210,17 @@ for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned[i], 
     isEven = !isEven;
   }
 const isValid = sum % 10 === 0;
+<<<<<<< HEAD
   return {isValid,;}
     error: isValid ? undefined : 'Invalid credit card number',}return {/* TODO: Fix JSX expression */,}}}
+=======
+  return {
+    isValid,
+    error: isValid ? undefined : 'Invalid credit card number',
+  }
+  return {/* TODO: Fix JSX expression */}
+  }
+>>>>>>> origin/main
 }
 /**;
  * JSON validation;
@@ -196,7 +240,7 @@ try {/* TODO: Fix JSX expression */,}}d: true ,}
  */;
 export function sanitizeHTML(html: string): string {,}
     if (!html) return '',
-,;
+,
   return html;
     .replace(/&/g, '&amp;');
     .replace(/</g, '&lt;');
@@ -212,11 +256,15 @@ export function validateComposite(value: unknown),
   validators: Array<(val: unknown) => ValidationResult>,
 ): ValidationResult {for (const validator of validators) {}
     const result = validator(value),
-    if (!result.isValid) {,;
+    if (!result.isValid) {,
       return result;
+<<<<<<< HEAD
 export function validateComposite(valu,;)
+=======
+export function validateComposite(valu,
+>>>>>>> origin/main
   e: unknown,
-  validator,;
+  validator,
   s: Array<(va),
   l: unknown) => ValidationResult>,}): ValidationResult {/* TODO: Fix JSX expression */,}}}
   }
@@ -228,6 +276,7 @@ export function validateComposite(valu,;)
 export async function validateAsync(;)
   validator: (val: unknown) => Promise<ValidationResult>,
   value: unknown,
+<<<<<<< HEAD
 ): Promise<ValidationResult> {,;
   try {,;}
     return await validator(value)}} catch (error) {return {isValid: false,}
@@ -247,3 +296,37 @@ export {isValidEmail,;}
   isValidPassword,;
   sanitizeInput;}} from './validators';
 export {/* TODO: Fix JSX expression */,}}} from './validators';"`;
+=======
+): Promise<ValidationResult> {
+    ,
+  try {,
+    return await validator(value)
+  }
+  } catch (error) {
+    return {
+      isValid: false,
+      error: error instanceof Error ? error.message : 'Validation failed',
+export async function validateAsync(validato,
+  r: (va),
+  l: unknown) => Promise<ValidationResult>,
+  valu,
+  e: unknown,
+  }
+): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+    }
+  }
+}
+// Re-export existing functions for compatibility;
+export {
+    isValidEmail,
+  isValidPhone,
+  isValidUrl,
+  isRequired,
+  isValidPassword,
+  sanitizeInput
+  }
+} from './validators';
+export {/* TODO: Fix JSX expression */}
+} from './validators';"`;
+>>>>>>> origin/main

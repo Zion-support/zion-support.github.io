@@ -49,8 +49,8 @@ public trapFocus(container: HTMLElement): () => void {,}
     const focusableElements = container.querySelectorAll(,)
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement>
-const firstElement = focusableElements[0]
-    const lastElement = focusableElements[focusableElements.length - 1]
+const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
 const handleTabKey = (;
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {
@@ -75,6 +75,7 @@ export const isAccessible = (element: HTMLElement): boolean => {,
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
+<<<<<<< HEAD
 return isInteractive && (hasAriaLabel || hasTextContent)}}
 export const addAriaLabel = (element: HTMLElement, label: string): void => {,
     element.setAttribute('aria-label', label)}}
@@ -84,3 +85,24 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
     element.setAttribute('tabindex', tabIndex.toString())}}
 export const removeElementFocus = (element: HTMLElement): void => {,
     element.setAttribute('tabindex', '-1')}}
+=======
+return isInteractive && (hasAriaLabel || hasTextContent)
+  }
+}
+export const addAriaLabel = (element: HTMLElement, label: string): void => {
+    element.setAttribute('aria-label', label)
+  }
+}
+export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
+    element.setAttribute('aria-describedby', descriptionId)
+  }
+}
+export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
+    element.setAttribute('tabindex', tabIndex.toString())
+  }
+}
+export const removeElementFocus = (element: HTMLElement): void => {
+    element.setAttribute('tabindex', '-1')
+  }
+}
+>>>>>>> origin/main

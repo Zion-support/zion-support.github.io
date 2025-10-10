@@ -8,7 +8,11 @@ const ContentNewsletterSignup: React.FC = () => {,
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {,
+=======
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
     if (!email) return;
 

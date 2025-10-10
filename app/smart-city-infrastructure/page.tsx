@@ -21,10 +21,20 @@ const SmartCityInfrastructurePage: React.FC = () => {,
     {icon: Shield,
       title: 'Enterprise Security',
 
+<<<<<<< HEAD
       description: 'Bank-level security with advanced encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
 const PagePage: React.FC = () => {,
+=======
+      description: 'Bank-level security with advanced encryption and compliance standards'
+
+    },
+    {
+    icon: Globe,
+      title: 'Global Reach',];];
+const PagePage: React.FC = () => {
+>>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -41,13 +51,20 @@ const PagePage: React.FC = () => {,
       description: 'Worldwide deployment and support for international businesses',}description: 'Worldwide deployment and support for international smart city projects',
 
     }
-  ];
+  ];];];
   const smartCityServices = [
     {icon: Building,
       title: 'Smart Buildings',
       description: 'Intelligent building management systems with IoT integration',
+<<<<<<< HEAD
       features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']},
     {icon: Wifi,
+=======
+      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort'];
+    },
+    {
+      icon: Wifi,
+>>>>>>> origin/main
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
       features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']},
@@ -58,8 +75,14 @@ const PagePage: React.FC = () => {,
     {icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
+<<<<<<< HEAD
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']}]
 
+=======
+      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
+    }
+  ]
+>>>>>>> origin/main
           </div>
         </div>
       </section>
@@ -124,11 +147,19 @@ export default PagePage;
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 
   return(<>)
       <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
@@ -263,4 +294,3 @@ export default PagePage;
 };
 
 export default SmartCityInfrastructurePage;
-

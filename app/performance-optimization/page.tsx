@@ -22,9 +22,16 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
     'Proven track record of success'
   ]
 return(</div>)
+=======
+    'Proven track record of success';
+  ];];];
+return (
+          </div>
+>>>>>>> origin/main
         </div>
       </section>
               </div>

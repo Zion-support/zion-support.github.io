@@ -13,7 +13,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
       {text && (
         <p className="mt-2 text-sm text-gray-500">{text</p>}</p>
       )}
-    </div>
+    </div>;
   );
 }
 

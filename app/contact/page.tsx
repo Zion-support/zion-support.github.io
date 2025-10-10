@@ -16,14 +16,24 @@ const ContactPage: React.FC = () => {,
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+<<<<<<< HEAD
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)
+=======
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    const { name, value } = e.target;
+    setFormData(prev => ({
+>>>>>>> origin/main
       ...prev,
       [name]: value;}));
   }, []);
 
+<<<<<<< HEAD
   const handleSubmit = useCallback(async (e: React.FormEvent) => {,
+=======
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -124,8 +134,15 @@ const ContactPage: React.FC = () => {,
                 {submitStatus === 'success' && (
                   <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">Thank you! Your message has been sent successfully. We'll get back to you soon.</div>
                   </div>
+<<<<<<< HEAD
                 )}{submitStatus === 'error' && (
                   <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">Sorry, there was an error sending your message. Please try again.</div>
+=======
+                )},
+    {submitStatus === 'error' && (
+                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
+                    Sorry, there was an error sending your message. Please try again.
+>>>>>>> origin/main
                   </div>
                 )}
 

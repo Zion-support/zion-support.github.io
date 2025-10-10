@@ -3,6 +3,7 @@
  * Provides comprehensive accessibility improvements for web applications;
  */
 
+<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
@@ -87,6 +88,10 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
    */
   private handleEscapeKey(event: KeyboardEvent): void {,}
     // Close any open modals or dropdowns;
+=======
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+>>>>>>> origin/main
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {)
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
@@ -119,7 +124,7 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
     const menuItems = Array.from()
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
     ) as HTMLElement[]
-    
+    ;
     const currentIndex = menuItems.indexOf(activeElement);
     
     if (currentIndex === -1) return;
@@ -200,9 +205,19 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
   private setupColorContrast(): void {// Add high contrast mode support;}
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
     
+<<<<<<< HEAD
     const handleContrastChange = (e: MediaQueryListEvent) => {,
       if (e.matches) {
         document.body.classList.add('high-contrast');}else {document.body.classList.remove('high-contrast');}}}
+=======
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {;
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+    }
+>>>>>>> origin/main
     
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
@@ -256,6 +271,7 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
   public destroy(): void {this.isInitialized = false;}
     this.focusableElements = []
     this.skipLinks = []
+<<<<<<< HEAD
     this.landmarks = []}}
 
 // Create global instance;
@@ -264,3 +280,12 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
   accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
+=======
+    this.landmarks = []
+  }
+
+// Export utility functions
+export const announceToScreenReader = (message: string) => {;
+  accessibilityEnhancer.announce(message);
+}
+>>>>>>> origin/main

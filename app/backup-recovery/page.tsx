@@ -4,13 +4,20 @@ import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck}}from 'lucide-react';
 const BackupRecoveryPage: React.FC = () => {,
   const features = [
+<<<<<<< HEAD
     {}];
+=======
+    {
+    }
+  ];];];
+>>>>>>> origin/main
   const benefits = [
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
+<<<<<<< HEAD
     'Proven track record of success'
   ]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -24,6 +31,18 @@ const BackupRecoveryPage: React.FC = () => {,
           <h1 className="text-5xl font-bold text-white mb-6">Backup & Recovery;</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced backup and recovery solutions.</p>
+=======
+    'Proven track record of success';
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Backup & Recovery | Zion Tech Group</title>
+        <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our advanced backup and recovery solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       </section>
@@ -80,8 +99,12 @@ const BackupRecoveryPage: React.FC = () => {,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
+<<<<<<< HEAD
               Email Us;
   </
+=======
+
+>>>>>>> origin/main
           </div>
         </div>
         <div className="text-center">

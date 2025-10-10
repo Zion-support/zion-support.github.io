@@ -7,6 +7,7 @@ const PagePage: React.FC = () => {,
     {
       icon: Zap,
       title: 'High Performance',
+<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
@@ -16,6 +17,23 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>}{/* Hero Section */}
             <h2>Why Choose Our Page?</h2>
+=======
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+  },
+    {;
+    ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+  },
+    {/* Hero Section */}
+            <h2>
+              Why Choose Our Page?
+>>>>>>> origin/main
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
@@ -46,4 +64,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 
 export default PagePage;
-

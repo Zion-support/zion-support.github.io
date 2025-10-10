@@ -20,7 +20,7 @@ interface SEOOptimizerProps {title?: string;}
   children;}) => {const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
-  const analyzeSEO = useCallback(() => {
+  const analyzeSEO = useCallback(() => {;
     if (typeof window === 'undefined') return;
 
     let score = 0;
@@ -65,8 +65,14 @@ interface SEOOptimizerProps {title?: string;}
     }
   }
 
+<<<<<<< HEAD
   const _trackPerformanceMetrics = () => {if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
+=======
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {;
+>>>>>>> origin/main
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
@@ -80,6 +86,7 @@ interface SEOOptimizerProps {title?: string;}
   return(<>)
       <Helmet />
         <title>{title}</title>
+<<<<<<< HEAD
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>
         {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
@@ -94,12 +101,33 @@ interface SEOOptimizerProps {title?: string;}
         <meta name="twitter: title" content={title,}/>
         <meta name="twitter: description" content={description,}/>
         <meta name="twitter: image" content={ogImage,}/>
+=======
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />},
+    {/* Twitter Card */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+>>>>>>> origin/main
         
         {/* Structured Data */} <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())} </script>
       </Helmet>
       
+<<<<<<< HEAD
       {children}{process.env.NODE_ENV === 'development' && (
+=======
+      {children},
+    {process.env.NODE_ENV === 'development' && (
+>>>>>>> origin/main
         <div className="seo-debug" style={{
           position: 'fixed',
           top: '10px',
@@ -123,6 +151,7 @@ interface SEOOptimizerProps {title?: string;}
             </div>
           )}
         </div>
+<<<<<<< HEAD
       )}
 
       {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" />,
@@ -131,6 +160,16 @@ interface SEOOptimizerProps {title?: string;}
       <meta name="twitter: image" content={ogImage,}/>
       <meta name="twitter: site" content="@ziontechgroup" />,
       <meta name="twitter: creator" content="@ziontechgroup" />,
+=======
+      )},
+    {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> origin/main
 
       {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
       <meta name="googlebot" content="index, follow" />
@@ -157,10 +196,19 @@ interface SEOOptimizerProps {title?: string;}
       <meta property="og: site_name" content="Zion Tech Group" />,
       <meta property="og: locale" content="en_US" />,
 
+<<<<<<< HEAD
       {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
 
       {/* Structured Data */} <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())} </script>
+=======
+      {/* Canonical URL */},
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
+>>>>>>> origin/main
     </Helmet>
     {children} </>
   );

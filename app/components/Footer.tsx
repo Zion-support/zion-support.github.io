@@ -38,6 +38,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Customer Churn Prediction', url: '/ai-customer-churn', description: 'Churn prevention' },
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
+<<<<<<< HEAD
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
@@ -66,6 +67,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' }
   ];
 
+=======
+      { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
+    ];
+>>>>>>> origin/main
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
@@ -101,6 +106,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
   ];
 
+<<<<<<< HEAD
 
   const companyLinks = [
     {name: 'About Us', url: '/about' ,},
@@ -132,6 +138,40 @@ const Footer: React.FC = memo(() => {
 
   return(<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">)
       {/* Futuristic Background Effects */} <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+=======
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+      { name: 'Support', url: '/support' },
+      { name: 'Status', url: '/status' }
+    ];
+  const resourcesLinks = [
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'Community', url: '/community' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Compliance', url: '/compliance' }
+  ];
+  const enterpriseLinks = [
+    { name: 'Enterprise Solutions', url: '/enterprise' },
+    { name: 'Digital Transformation', url: '/digital-transformation' },
+    { name: 'Business Intelligence', url: '/business-intelligence' },
+    { name: 'Edge Computing', url: '/edge-computing' },
+      { name: 'Consultation', url: '/consultation' },
+      { name: 'Custom Development', url: '/custom-software' }
+    ];
+  return (
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+>>>>>>> origin/main
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 relative z-10">,</div>
@@ -213,8 +253,14 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {microSaasServices.map((service, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link;
                     href={service.url}className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 group flex items-start",
+=======
+                  <Link
+                    to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
+>>>>>>> origin/main
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover: opacity-100 transition-opacity" />,
                     <div>

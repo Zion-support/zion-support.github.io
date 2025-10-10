@@ -22,9 +22,18 @@ const MedicalRecordsManagerPage: React.FC = () => {,
       description: 'Comprehensive analytics on patient data, treatment outcomes, and healthcare metrics for informed decision-making.'},
     {icon: Lock,
       title: 'Advanced Security',
+<<<<<<< HEAD
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'}]
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
+=======
+      description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
+    }
+  ];];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
         <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
@@ -54,9 +63,14 @@ const MedicalRecordsManagerPage: React.FC = () => {,
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
+<<<<<<< HEAD
 export default MedicalRecordsManagerPage;
   </h1>
+=======
+export default MedicalRecordsManagerPage
+  </h1>
+>>>>>>> origin/main

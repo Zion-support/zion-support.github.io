@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 
 
 interface LinkProps {href: string,}
     children: React.ReactNode;,}interface LinkProps {}}href: string;,
+=======
+interface LinkProps {
+    href: string,
+    children: React.ReactNode
+  }
+interface LinkProps {}
+  href: string;
+>>>>>>> origin/main
 
   children: React.ReactNode;,
   className?: string;
@@ -45,8 +54,19 @@ export const,
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */,}}
   }
+<<<<<<< HEAD
   return(<a />)
       href={href}className={className}target={target}rel={rel}onClick={handleClick}aria-label={ariaLabel}{...props}
+=======
+  return (<a />
+      href={href}
+      className={className}
+      target={target}
+      rel={rel}
+      onClick={handleClick}
+      aria-label={ariaLabel},
+    {...props}
+>>>>>>> origin/main
     >{children}</a>
     </a>
       aria-label={ariaLabel})

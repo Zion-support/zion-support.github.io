@@ -28,10 +28,19 @@ const FiveGImplementationPage: React.FC = () => {,
     {icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
+<<<<<<< HEAD
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']},
   ]
   return(<>)
       <Helmet />
+=======
+      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
+    },
+  ];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
@@ -112,4 +121,3 @@ const FiveGImplementationPage: React.FC = () => {,
 };
 
 export default FiveGImplementationPage;
-

@@ -30,10 +30,18 @@ const HomePage: React.FC = () => {,
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer)}, []);
 
+<<<<<<< HEAD
   // Analytics tracking for phone clicks - optimized;
   const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
       gtag('event', 'phone_click', {)
+=======
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'phone_click', {
+>>>>>>> origin/main
         event_category: 'engagement',
         event_label: 'main_phone_number',})
     }
@@ -43,8 +51,15 @@ const HomePage: React.FC = () => {,
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+<<<<<<< HEAD
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']},
     {icon: Cloud,
+=======
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+    },
+    {
+      icon: Cloud,
+>>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']},
@@ -63,15 +78,28 @@ const HomePage: React.FC = () => {,
     {icon: Users,
       title: 'Consulting Services',
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
+<<<<<<< HEAD
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']},
   ];
+=======
+      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
+    },
+  ];];];
+>>>>>>> origin/main
   const services = [
     {icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',
       href: '/ai-services',
+<<<<<<< HEAD
       features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']},
     {icon: Cloud,
+=======
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'];
+    },
+    {
+      icon: Cloud,
+>>>>>>> origin/main
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
@@ -80,10 +108,19 @@ const HomePage: React.FC = () => {,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
+<<<<<<< HEAD
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']}]
 
   return(<React.Fragment>)</React.Fragment>
       <SEOOptimizer;
+=======
+      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
+    }
+  ];
+  return (
+    <>
+      <SEOOptimizer
+>>>>>>> origin/main
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}canonicalUrl="https: //ziontechgroup.com",
@@ -201,8 +238,15 @@ const HomePage: React.FC = memo(() => {,
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+<<<<<<< HEAD
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']},
     {icon: Cloud,
+=======
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+    },
+    {
+      icon: Cloud,
+>>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']},
@@ -221,6 +265,7 @@ const HomePage: React.FC = memo(() => {,
     {icon: Users,
       title: 'IT Consulting',
       description: 'Expert guidance to help you make the right technology decisions.',
+<<<<<<< HEAD
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']},
   ];
   const stats = [
@@ -230,6 +275,19 @@ const HomePage: React.FC = memo(() => {,
     {number: '50+', label: 'Expert Team Members' ,}]
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+=======
+      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
+    },
+  ];];];
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Expert Team Members' }
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/main
       <StructuredData type="Organization" />
       <StructuredData type="WebSite" />
       <StructuredData type="WebPage" />
@@ -254,8 +312,26 @@ const HomePage: React.FC = memo(() => {,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             </section>
 
+<<<<<<< HEAD
             {/* Services Section */} <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+            {/* Services Section */}
+            <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/main
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
                     Our Core Services;
@@ -431,11 +507,10 @@ const HomePage: React.FC = memo(() => {,
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
 
-    </React.Fragment>
+    </>
   );
 }
 
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
-

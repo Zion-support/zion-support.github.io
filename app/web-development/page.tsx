@@ -8,12 +8,22 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 const technologies = [
+<<<<<<< HEAD
     {name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' ,},
     {name: 'Node.js', icon: Database, description: 'Server-side JavaScript' ,},
     {name: 'Python/Django', icon: Globe, description: 'Backend development' ,},
     {name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' ,},
     {name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' ,},
     {name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' ,}]
+=======
+    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
+    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
+    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
+    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
+    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
+    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
+  ];];];
+>>>>>>> origin/main
 const process = [
     {step: '01',
       title: 'Discovery & Planning',
@@ -30,9 +40,18 @@ const process = [
     {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
+<<<<<<< HEAD
       icon: Shield,}}
   ]
 return(<>)
+=======
+      icon: Shield,
+  }
+    }
+  ];
+return (
+    <>
+>>>>>>> origin/main
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
@@ -73,7 +92,13 @@ const WebDevelopmentPage: React.FC = () => {,
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
+<<<<<<< HEAD
       color: 'text-gray-400',}];
+=======
+      color: 'text-gray-400'
+    }
+  ];];];
+>>>>>>> origin/main
   const technologies = [
     {name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' ,},
     {name: 'Node.js', icon: Database, description: 'Server-side JavaScript' ,},
@@ -97,10 +122,19 @@ const WebDevelopmentPage: React.FC = () => {,
     {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
+<<<<<<< HEAD
       icon: Shield;,}]
 
   return(<>)
       <SEOOptimizer;
+=======
+      icon: Shield
+    }
+  ];];];
+  return (
+    <>
+      <SEOOptimizer
+>>>>>>> origin/main
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
 
@@ -164,8 +198,15 @@ const WebDevelopmentPage: React.FC = () => {,
               </a>
             </div>,
           </section>,
+<<<<<<< HEAD
 ,;
           {/* Services Grid */}/>
+=======
+,
+          {/* Services Grid */}
+
+      />
+>>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */</main>} <section className="text-center mb-16">
@@ -191,9 +232,28 @@ const WebDevelopmentPage: React.FC = () => {,
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Services Grid */} <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">,</h2>
               Our Web Development Services;
+=======
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+          {/* Services Grid */}
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+              Our Web Development Services
+>>>>>>> origin/main
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
               {webServices.map((service, index) => (
@@ -429,4 +489,3 @@ export default WebDevelopmentPage;
 };
 
 export default WebDevelopmentPage;
-

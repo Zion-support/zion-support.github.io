@@ -16,8 +16,15 @@ const LoadingPage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -30,8 +37,8 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+    'Proven track record of success';
+  ];
 };
 
 export default LoadingPage;

@@ -10,8 +10,15 @@ const GlobalErrorPage: React.FC = () => {,
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+    },
+    {
+      icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -22,10 +29,19 @@ const GlobalErrorPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    },
+  ];];
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Global Error - Zion Tech Group</title>
         <meta name="description" content="Global error page." />
         <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
@@ -50,7 +66,24 @@ const GlobalErrorPage: React.FC = () => {,
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+=======
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+        {/* Features Section */}
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -93,7 +126,7 @@ const GlobalErrorPage: React.FC = () => {,
         </section>
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   ),
 };
 

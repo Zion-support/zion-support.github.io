@@ -76,7 +76,13 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
+<<<<<<< HEAD
                 "item": "https: //ziontechgroup.com",}]
+=======
+                "item": "https://ziontechgroup.com"
+              }
+  ]
+>>>>>>> origin/main
           }
         }
       

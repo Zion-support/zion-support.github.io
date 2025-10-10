@@ -39,8 +39,15 @@ const ProcessAutomationPage: React.FC = () => {,
       description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.',},
     {icon: BarChart,
       title: 'Performance Monitoring',
+<<<<<<< HEAD
       description: 'Track and optimize your automated processes with real-time analytics and reporting.',}}
   ]
+=======
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
+  }
+    }
+  ];];];
+>>>>>>> origin/main
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
@@ -53,10 +60,18 @@ const benefits = [
 
     '24/7 automated operations',
 
+<<<<<<< HEAD
     'Custom automation solutions'
   ]
 return(<>)
       <Helmet />
+=======
+    'Custom automation solutions';
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -175,4 +190,3 @@ return(<>)
 };
 
 export default ProcessAutomationPage;
-
