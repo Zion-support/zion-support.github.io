@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 },;
     {
-    icon: Clock,;
-      title: '24/7 Monitoring',;
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',;
+    icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
   }
     },;
@@ -38,7 +38,7 @@ return (
               IoT Use Cases;
             </h2>
             <p>
-              Our IoT platform supports a wide range of industries and applications,;
+              Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.;
             </p>
           </div>
@@ -63,7 +63,7 @@ return (
               Why Choose Our IoT Platform?;
             </h2>
             <p>
-              Experience the benefits of a comprehensive IoT platform designed for scale,;
+              Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.;
             </p>
           </div>
@@ -73,7 +73,7 @@ return (
   }
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
+                  <CheckCircle />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -93,7 +93,7 @@ return (
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer />
 </div>
   );
 }

@@ -4,38 +4,38 @@ import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, Check
 const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
     {
-      icon: BarChart,;
-      title: 'Real-time Analytics',;
+      icon: BarChart,
+      title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive charts.'
   }
     },;
     {
-    icon: TrendingUp,;
-      title: 'Predictive Insights',;
+    icon: TrendingUp,
+      title: 'Predictive Insights',
       description: 'AI-powered forecasting and trend analysis for better decision making.'
   }
     },;
     {
-    icon: Users,;
-      title: 'User Behavior Tracking',;
+    icon: Users,
+      title: 'User Behavior Tracking',
       description: 'Comprehensive user analytics and engagement metrics tracking.'
   }
     },;
     {
-    icon: DollarSign,;
-      title: 'Revenue Analytics',;
+    icon: DollarSign,
+      title: 'Revenue Analytics',
       description: 'Detailed financial metrics and revenue optimization insights.'
   }
     },;
     {
-    icon: Zap,;
-      title: 'Custom Dashboards',;
+    icon: Zap,
+      title: 'Custom Dashboards',
       description: 'Build personalized dashboards tailored to your business needs.'
   }
     },;
     {
-    icon: Target,;
-      title: 'Goal Tracking',;
+    icon: Target,
+      title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
     }
@@ -58,9 +58,9 @@ return (
     <></>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta>
-        <meta>
-        <link>
+        <meta />
+        <meta />
+        <link />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
@@ -68,7 +68,7 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-                <BarChart>
+                <BarChart />
                 <span>AI Analytics Dashboard</span>
               </div>
               <h1>
@@ -82,7 +82,7 @@ return (
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <span>Start Free Trial</span>
-                  <ArrowRight>
+                  <ArrowRight />
                 </button>
                 <button>
                   View Demo,
@@ -106,7 +106,7 @@ return (
   }
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <feature />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -130,7 +130,7 @@ return (
   }
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    <metric>
+                    <metric />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
@@ -154,7 +154,7 @@ return (
     benefits.map((benefit, index) => (</div>
   }
                   <div key={index} className="flex items-start space-x-3"></div>
-                    <CheckCircle>
+                    <CheckCircle />
                     <span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
                 ))}
@@ -163,15 +163,15 @@ return (
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
-                    <Star>
+                    <Star />
                     <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
                   </div>
                   <div className="flex items-center space-x-3"></div>
-                    <Star>
+                    <Star />
                     <span className="text-gray-300">"Reduced reporting time by 80%"</span>
                   </div>
                   <div className="flex items-center space-x-3"></div>
-                    <Star>
+                    <Star />
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ return (
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <span>Start Free Trial</span>
-                  <ArrowRight>
+                  <ArrowRight />
                 </button>
                 <button>
                   Schedule Demo

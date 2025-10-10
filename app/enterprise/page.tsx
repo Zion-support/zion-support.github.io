@@ -7,74 +7,74 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, 
 const EnterprisePage: React.FC = () => {
     const features = [
     {
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',;
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
   }
     },;
     {
-    icon: Cloud,;
-      title: 'Cloud Infrastructure',;
-      description: 'Scalable cloud solutions that grow with your business needs.',;
+    icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that grow with your business needs.',
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
   }
     },;
     {
-    icon: Brain,;
-      title: 'AI Integration',;
-      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',;
+    icon: Brain,
+      title: 'AI Integration',
+      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
       benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
   }
     },;
     {
-    icon: Database,;
-      title: 'Data Management',;
-      description: 'Advanced data management and analytics for enterprise-scale operations.',;
+    icon: Database,
+      title: 'Data Management',
+      description: 'Advanced data management and analytics for enterprise-scale operations.',
       benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
   }
     },;
     {
-    icon: Users,;
-      title: 'User Management',;
-      description: 'Comprehensive user and access management for large organizations.',;
+    icon: Users,
+      title: 'User Management',
+      description: 'Comprehensive user and access management for large organizations.',
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
   }
     },;
     {
-    icon: Settings,;
-      title: 'System Integration',;
-      description: 'Seamless integration with existing enterprise systems and workflows.',;
+    icon: Settings,
+      title: 'System Integration',
+      description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   }
     }
   ];
 const solutions = [
     {
-    title: 'Enterprise Resource Planning',;
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
-      icon: Building,;
+    title: 'Enterprise Resource Planning',
+      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
+      icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
   }
     },;
     {
-    title: 'Customer Relationship Management',;
-      description: 'Advanced CRM systems for managing customer relationships and sales processes.',;
-      icon: Users,;
+    title: 'Customer Relationship Management',
+      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
+      icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
   }
     },;
     {
-    title: 'Business Intelligence',;
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',;
-      icon: BarChart,;
+    title: 'Business Intelligence',
+      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
+      icon: BarChart,
       benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']
   }
     },;
     {
-    title: 'Workflow Automation',;
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',;
-      icon: Zap,;
+    title: 'Workflow Automation',
+      description: 'Automate complex business processes to improve efficiency and reduce errors.',
+      icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
     }
@@ -97,8 +97,8 @@ const stats = [
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer>
-      <Navigation>
+      <SEOOptimizer />
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
@@ -117,7 +117,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Enterprise Consultation
-              <ArrowRight>
+              <ArrowRight />
             </button>
             <button>
               View Case Studies,
@@ -135,7 +135,7 @@ return (
   }
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat>
+                  <stat />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -157,7 +157,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature>
+                  <feature />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -166,7 +166,7 @@ return (
     feature.benefits.map((benefit, idx) => (
   }
                     <li>
-                      <CheckCircle>
+                      <CheckCircle />
 
                       {benefit}
                     </li>
@@ -215,7 +215,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Contact Enterprise Sales
-              <ArrowRight>
+              <ArrowRight />
             </button>
             <button>
               Learn More
@@ -223,7 +223,7 @@ return (
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer />
     </div>
   ),
 }

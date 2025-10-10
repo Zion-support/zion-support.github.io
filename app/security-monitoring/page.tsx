@@ -2,50 +2,50 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Shield,;
-  Eye,;
-  AlertTriangle,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
+    Shield,
+  Eye,
+  AlertTriangle,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
   Database
   }
 } from 'lucide-react';
 const SecurityMonitoringPage: React.FC = () => {
     const features = [
     {
-      icon: Eye,;
-      title: '24/7 Real-time Monitoring',;
+      icon: Eye,
+      title: '24/7 Real-time Monitoring',
       description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
   }
     },;
     {
-    icon: AlertTriangle,;
-      title: 'Advanced Threat Detection',;
+    icon: AlertTriangle,
+      title: 'Advanced Threat Detection',
       description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
   }
     },;
     {
-    icon: BarChart,;
-      title: 'Comprehensive Analytics',;
+    icon: BarChart,
+      title: 'Comprehensive Analytics',
       description: 'Detailed security reports and insights to help you understand and improve your security posture.'
   }
     },;
     {
-    icon: Zap,;
-      title: 'Instant Response',;
+    icon: Zap,
+      title: 'Instant Response',
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
@@ -64,8 +64,8 @@ return (
     <></>
       <Helmet>
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -81,11 +81,11 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Shield>
+                  <Shield />
                   Get Protected Now
                 </button>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950,
                 </button>
               </div>
@@ -109,7 +109,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <feature />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -134,7 +134,7 @@ return (
     benefits.map((benefit, index) => (
   }
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -153,11 +153,11 @@ return (
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950;
                 </button>
                 <button>
-                  <Mail>
+                  <Mail />
                   Email Us
                 </button>
               </div>

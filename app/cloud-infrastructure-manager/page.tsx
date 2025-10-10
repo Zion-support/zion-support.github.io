@@ -2,52 +2,52 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Cloud,;
-  Settings,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Target,;
-  Eye,;
-  Database,;
-  Server,;
+    Cloud,
+  Settings,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Target,
+  Eye,
+  Database,
+  Server,
   Monitor
   }
 } from 'lucide-react';
 const CloudInfrastructureManagerPage: React.FC = () => {
     const features = [
     {
-      icon: Cloud,;
-      title: 'Multi-Cloud Management',;
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
   }
     },;
     {
-    icon: Settings,;
-      title: 'Automated Scaling',;
+    icon: Settings,
+      title: 'Automated Scaling',
       description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
   }
     },;
     {
-    icon: BarChart,;
-      title: 'Cost Optimization',;
+    icon: BarChart,
+      title: 'Cost Optimization',
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
   }
     },;
     {
-    icon: Zap,;
-      title: 'DevOps Integration',;
+    icon: Zap,
+      title: 'DevOps Integration',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
@@ -66,8 +66,8 @@ return (
     <></>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -83,11 +83,11 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Cloud>
+                  <Cloud />
                   Start Free Trial
                 </button>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950,
                 </button>
               </div>
@@ -111,7 +111,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <feature />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -136,7 +136,7 @@ return (
     benefits.map((benefit, index) => (
   }
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -155,11 +155,11 @@ return (
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950;
                 </button>
                 <button>
-                  <Mail>
+                  <Mail />
                   Email Us
                 </button>
               </div>

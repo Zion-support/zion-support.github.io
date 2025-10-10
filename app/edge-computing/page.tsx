@@ -7,70 +7,70 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
     const features = [
     {
-      icon: Cpu,;
-      title: 'Edge Processing',;
-      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',;
+      icon: Cpu,
+      title: 'Edge Processing',
+      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
   }
     },;
     {
-    icon: Globe,;
-      title: 'Global Distribution',;
-      description: 'Deploy edge nodes worldwide for optimal performance and coverage.',;
+    icon: Globe,
+      title: 'Global Distribution',
+      description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
       benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']
   }
     },;
     {
-    icon: Shield,;
-      title: 'Edge Security',;
-      description: 'Advanced security measures designed specifically for edge computing environments.',;
+    icon: Shield,
+      title: 'Edge Security',
+      description: 'Advanced security measures designed specifically for edge computing environments.',
       benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
   }
     },;
     {
-    icon: Database,;
-      title: 'Edge Storage',;
-      description: 'Distributed storage solutions optimized for edge computing workloads.',;
+    icon: Database,
+      title: 'Edge Storage',
+      description: 'Distributed storage solutions optimized for edge computing workloads.',
       benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies']
   }
     },;
     {
-    icon: Wifi,;
-      title: 'IoT Integration',;
-      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',;
+    icon: Wifi,
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
       benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']
   }
     },;
     {
-    icon: Server,;
-      title: 'Edge Infrastructure',;
-      description: 'Robust infrastructure designed for edge computing requirements and scalability.',;
+    icon: Server,
+      title: 'Edge Infrastructure',
+      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   }
     }
   ];
 const services = [
     {
-    icon: '⚡',;
-      title: 'Edge Analytics',;
+    icon: '⚡',
+      title: 'Edge Analytics',
       description: 'Real-time data processing and analytics at the edge'
   }
     },;
     {
-    icon: '🌐',;
-      title: 'Edge Networking',;
+    icon: '🌐',
+      title: 'Edge Networking',
       description: 'Optimized networking solutions for edge deployments'
   }
     },;
     {
-    icon: '🔒',;
-      title: 'Edge Security',;
+    icon: '🔒',
+      title: 'Edge Security',
       description: 'Comprehensive security solutions for edge environments'
   }
     },;
     {
-    icon: '📱',;
-      title: 'Mobile Edge',;
+    icon: '📱',
+      title: 'Mobile Edge',
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
@@ -85,38 +85,38 @@ const benefits = [
   ];
 const useCases = [
     {
-    title: 'Autonomous Vehicles',;
-      description: 'Real-time decision making for self-driving cars',;
+    title: 'Autonomous Vehicles',
+      description: 'Real-time decision making for self-driving cars',
       icon: '🚗'
   }
     },;
     {
-    title: 'Smart Cities',;
-      description: 'IoT sensors and real-time city management',;
+    title: 'Smart Cities',
+      description: 'IoT sensors and real-time city management',
       icon: '🏙️'
   }
     },;
     {
-    title: 'Industrial IoT',;
-      description: 'Manufacturing automation and monitoring',;
+    title: 'Industrial IoT',
+      description: 'Manufacturing automation and monitoring',
       icon: '🏭'
   }
     },;
     {
-    title: 'AR/VR Applications',;
-      description: 'Immersive experiences with low latency',;
+    title: 'AR/VR Applications',
+      description: 'Immersive experiences with low latency',
       icon: '🥽'
   }
     },;
     {
-    title: 'Healthcare',;
-      description: 'Real-time patient monitoring and diagnostics',;
+    title: 'Healthcare',
+      description: 'Real-time patient monitoring and diagnostics',
       icon: '🏥'
   }
     },;
     {
-    title: 'Gaming',;
-      description: 'Cloud gaming with minimal latency',;
+    title: 'Gaming',
+      description: 'Cloud gaming with minimal latency',
       icon: '🎮'
   }
     }
@@ -125,10 +125,10 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
-      <Navigation>
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>
@@ -147,7 +147,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Started Today
-              <ArrowRight>
+              <ArrowRight />
             </button>
             <button>
               View Demo,
@@ -170,7 +170,7 @@ return (
   }
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature>
+                  <feature />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -179,7 +179,7 @@ return (
     feature.benefits.map((benefit, benefitIndex) => (
   }
                     <li>
-                      <CheckCircle>
+                      <CheckCircle />
 
                       {benefit}
                     </li>
@@ -250,7 +250,7 @@ return (
   }
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
+                  <CheckCircle />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -275,7 +275,7 @@ return (
           </div>
         </div>
       </section>
-      <Footer>
+      <Footer />
     </div>
   ),
 }

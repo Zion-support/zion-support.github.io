@@ -7,30 +7,30 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const PageBackupPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,;
-      title: 'AI-Powered Analysis',;
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',;
+      icon: Brain,
+      title: 'AI-Powered Analysis',
+      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
   }
     },;
     {
-    icon: BarChart,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',;
+    icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
   }
     },;
     {
-    icon: Target,;
-      title: 'Precision Targeting',;
-      description: 'Target specific goals and objectives with precision and accuracy.',;
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
   }
     },;
     {
-    icon: TrendingUp,;
-      title: 'Growth Optimization',;
-      description: 'Optimize your business growth with data-driven strategies.',;
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   }
     }
@@ -39,9 +39,9 @@ return (
     <></>
       <Helmet>
         <title>Page Backup - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
-      <Navigation>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -81,7 +81,7 @@ return (
   }
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <feature />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -91,7 +91,7 @@ return (
                       {feature.benefits.map((benefit, idx) => (
   }
                         <li>
-                          <CheckCircle>
+                          <CheckCircle />
 
                           {benefit}
                         </li>
@@ -126,7 +126,7 @@ return (
           </div>
         </section>
       </div>
-      <Footer>
+      <Footer />
     </>
   ),
 }

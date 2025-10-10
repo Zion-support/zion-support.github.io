@@ -1,227 +1,120 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Template for a basic page component
-const createBasicPage = (pageName, title, description) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 2',
-      description: 'Description of feature 2',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
-  ];
-
-  const benefits = [
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>${title} | Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-        <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-      
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            ${title}
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            ${description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">${title} Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our ${title.toLowerCase()} solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default ${pageName};`;
-
-// Function to get page name from file path
-function getPageName(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-}
-
-// Function to get title from file path
-function getTitle(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-}
-
-// Function to get description from file path
-function getDescription(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  return `Professional ${title.toLowerCase()} solutions by Zion Tech Group. Advanced AI and IT solutions for your business.`;
-}
-
-// Get list of files with errors from type check
-function getFilesWithErrors() {
+// Find all TSX files with remaining parsing errors
+function findFilesWithErrors() {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8', cwd: '/workspace' });
-    const lines = output.split('\n');
-    const filesWithErrors = new Set();
-    
-    lines.forEach(line => {
-      const match = line.match(/^app\/([^(]+)\(/);
-      if (match) {
-        filesWithErrors.add(match[1]);
-      }
-    });
-    
-    return Array.from(filesWithErrors);
+    const result = execSync('pnpm run lint 2>&1 | grep "error" | grep "\.tsx" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error running type check:', error.message);
     return [];
   }
 }
 
-// Fix files with errors
-const filesWithErrors = getFilesWithErrors();
-console.log(`Found ${filesWithErrors.length} files with errors`);
-
-let fixedCount = 0;
-
-filesWithErrors.forEach(filePath => {
-  const fullPath = path.join('/workspace', filePath);
-  const pageName = getPageName(filePath);
-  const title = getTitle(filePath);
-  const description = getDescription(filePath);
-  
+// Fix specific syntax errors in a file
+function fixFile(filePath) {
   try {
-    const content = createBasicPage(pageName, title, description);
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-    fixedCount++;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix malformed object structures like "},;" and "  }"
+    const malformedObjectPattern = /(\s*})\s*,\s*;/g;
+    if (malformedObjectPattern.test(content)) {
+      content = content.replace(malformedObjectPattern, '$1,');
+      modified = true;
+    }
+
+    // Fix missing commas in object arrays
+    const missingCommaPattern = /(\s*})\s*(\s*{)/g;
+    if (missingCommaPattern.test(content)) {
+      content = content.replace(missingCommaPattern, '$1,$2');
+      modified = true;
+    }
+
+    // Fix extra semicolons in object properties
+    const extraSemicolonPattern = /(\w+):\s*([^,}]+),;/g;
+    if (extraSemicolonPattern.test(content)) {
+      content = content.replace(extraSemicolonPattern, '$1: $2,');
+      modified = true;
+    }
+
+    // Fix malformed JSX elements
+    const malformedJSXPattern = /<(\w+)>\s*<\/\1>/g;
+    if (malformedJSXPattern.test(content)) {
+      content = content.replace(malformedJSXPattern, '<$1 />');
+      modified = true;
+    }
+
+    // Fix incomplete JSX elements
+    const incompleteJSXPattern = /<(\w+)(?![^>]*\/>)[^>]*>(?!.*<\/\1>)(?!.*\/>)/g;
+    if (incompleteJSXPattern.test(content)) {
+      content = content.replace(incompleteJSXPattern, '<$1 />');
+      modified = true;
+    }
+
+    // Fix malformed return statements
+    const malformedReturnPattern = /return\s*\(\s*<>\s*<\/>\s*\)/g;
+    if (malformedReturnPattern.test(content)) {
+      content = content.replace(malformedReturnPattern, 'return (\n    <>\n      {/* Content */}\n    </>\n  )');
+      modified = true;
+    }
+
+    // Fix missing closing parentheses in function calls
+    const missingParenPattern = /(\w+)\s*\(\s*[^)]*$/g;
+    if (missingParenPattern.test(content)) {
+      content = content.replace(missingParenPattern, '$1()');
+      modified = true;
+    }
+
+    // Fix malformed array syntax
+    const malformedArrayPattern = /\[\s*\]\s*;/g;
+    if (malformedArrayPattern.test(content)) {
+      content = content.replace(malformedArrayPattern, '[]');
+      modified = true;
+    }
+
+    // Fix missing semicolons after statements
+    const missingSemicolonPattern = /(\w+)\s*$/gm;
+    if (missingSemicolonPattern.test(content)) {
+      content = content.replace(missingSemicolonPattern, '$1;');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log(`\nFinished fixing files:`);
-console.log(`- Fixed: ${fixedCount}`);
-console.log(`- Total with errors: ${filesWithErrors.length}`);
+// Main execution
+function main() {
+  console.log('Finding files with remaining parsing errors...');
+  const files = findFilesWithErrors();
+  
+  if (files.length === 0) {
+    console.log('No files found with parsing errors.');
+    return;
+  }
+
+  console.log(`Found ${files.length} files with parsing errors.`);
+  
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`Fixed ${fixedCount} out of ${files.length} files.`);
+}
+
+main();

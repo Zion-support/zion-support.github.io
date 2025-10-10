@@ -2,50 +2,50 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Mail,;
-  Target,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database,;
-  Send,;
+    Mail,
+  Target,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
+  Database,
+  Send,
   PieChart
   }
 } from 'lucide-react';
 const EmailMarketingAutomationPage: React.FC = () => {
     const features = [
     {
-      icon: Mail,;
-      title: 'Automated Campaigns',;
+      icon: Mail,
+      title: 'Automated Campaigns',
       description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
   }
     },;
     {
-    icon: Target,;
-      title: 'Advanced Segmentation',;
+    icon: Target,
+      title: 'Advanced Segmentation',
       description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
   }
     },;
     {
-    icon: BarChart,;
-      title: 'Analytics & Insights',;
+    icon: BarChart,
+      title: 'Analytics & Insights',
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
   }
     },;
     {
-    icon: Zap,;
-      title: 'Smart Triggers',;
+    icon: Zap,
+      title: 'Smart Triggers',
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
@@ -64,8 +64,8 @@ return (
     <></>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -81,11 +81,11 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Mail>
+                  <Mail />
                   Start Free Trial
                 </button>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950,
                 </button>
               </div>
@@ -109,7 +109,7 @@ return (
   }
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+                    <feature />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -134,7 +134,7 @@ return (
     benefits.map((benefit, index) => (
   }
                 <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
+                  <CheckCircle />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -153,11 +153,11 @@ return (
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
+                  <Phone />
                   Call (302) 464-0950;
                 </button>
                 <button>
-                  <Mail>
+                  <Mail />
                   Email Us
                 </button>
               </div>

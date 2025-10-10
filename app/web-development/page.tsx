@@ -17,30 +17,30 @@ const technologies = [
   ];
 const process = [
     {
-    step: '01',;
-      title: 'Discovery & Planning',;
-      description: 'We analyze your requirements and create a detailed project plan',;
+    step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project plan',
       icon: BarChart,
   }
     },;
     {
-    step: '02',;
-      title: 'Design & Prototyping',;
-      description: 'Create wireframes and prototypes to visualize your solution',;
+    step: '02',
+      title: 'Design & Prototyping',
+      description: 'Create wireframes and prototypes to visualize your solution',
       icon: Code,
   }
     },;
     {
-    step: '03',;
-      title: 'Development',;
-      description: 'Build your web application using modern technologies and best practices',;
+    step: '03',
+      title: 'Development',
+      description: 'Build your web application using modern technologies and best practices',
       icon: Globe,
   }
     },;
     {
-    step: '04',;
-      title: 'Testing & Launch',;
-      description: 'Thorough testing and deployment with ongoing support',;
+    step: '04',
+      title: 'Testing & Launch',
+      description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,
   }
     }
@@ -51,7 +51,7 @@ return(<></>
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
 
-const WebDevelopmentPage: React.FC = () => {
+const WebDevelopmentPage: React.FC = () = /> {
   const webServices = [
     {
       title: 'Frontend Development',
@@ -156,12 +156,12 @@ const WebDevelopmentPage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <SecurityEnhancer>
-      <Analytics>
+      <SecurityEnhancer />
+      <Analytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 </div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation>
+        <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16"></section>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
@@ -256,15 +256,15 @@ const WebDevelopmentPage: React.FC = () => {
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service>
+                      <service />
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2>
               Our Web Development Services;);
             </h2>);
 );
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
               {
     webServices.map((service, index) => (</div>
   }
@@ -285,9 +285,9 @@ const WebDevelopmentPage: React.FC = () => {
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service>
+                      <service />
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{
@@ -469,7 +469,7 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer>
+        <Footer />
       </div>,;
     </>);
 }

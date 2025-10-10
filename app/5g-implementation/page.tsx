@@ -9,21 +9,19 @@ const FiveGImplementationPage: React.FC = () => {
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
-  },
+    },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
       benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
-  }
-    },;
+    },
     {
-    icon: Clock,
+      icon: Clock,
       title: '24/7 Network Monitoring',
       description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
       benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
-  }
-    },;
+    },
     {
     icon: Users,
       title: 'Scalable Infrastructure',

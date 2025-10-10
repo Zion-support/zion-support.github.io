@@ -5,26 +5,26 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const FuturisticHeroPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
+      icon: Brain,
+      title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   }
     },;
     {
-    icon: Zap,;
-      title: 'High Performance',;
+    icon: Zap,
+      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   }
     },;
     {
-    icon: Shield,;
-      title: 'Enterprise Security',;
+    icon: Shield,
+      title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   }
     },;
     {
-    icon: Globe,;
-      title: 'Global Reach',;
+    icon: Globe,
+      title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
   }
     }
@@ -45,7 +45,7 @@ return (
     benefits.map((benefit, index) => (
   }
               <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
+                <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -64,11 +64,11 @@ return (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
+                <Phone />
                 Call Now
               </button>
               <button>
-                <Mail>
+                <Mail />
                 Email Us
               </button>
             </div>
