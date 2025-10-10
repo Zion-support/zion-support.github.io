@@ -19,6 +19,10 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEO from './components/EnhancedSEO';
 import FuturisticHero from './components/FuturisticHero';
+import AdvancedSEO from '../src/components/AdvancedSEO';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import SecurityHeaders from '../src/components/SecurityHeaders';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 'use client';
 
 // Dynamically import heavy components for better performance
@@ -4892,6 +4896,19 @@ const HomePage: React.FC = () => {
           <Footer />
         </div>
       </SEOOptimizer>
+      
+      {/* Enhanced Components */}
+      <AdvancedSEO
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="https://ziontechgroup.com/og-image.jpg"
+      />
+      
+      <PerformanceMonitor enableReporting={true} />
+      <SecurityHeaders />
+      <AccessibilityEnhancer />
     </ErrorBoundary>
   );
 };

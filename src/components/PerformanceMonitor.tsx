@@ -1,156 +1,228 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
+  cls: number | null;
+  fid: number | null;
   fcp: number | null;
   lcp: number | null;
-  fid: number | null;
-  cls: number | null;
   ttfb: number | null;
+  loadTime: number | null;
+  domContentLoaded: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableReporting?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableReporting = true
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    fid: null,
     fcp: null,
     lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
+    ttfb: null,
+    loadTime: null,
+    domContentLoaded: null
   });
 
+  const updateMetric = useCallback((key: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => {
+      const updated = { ...prev, [key]: value };
+      onMetricsUpdate?.(updated);
+      return updated;
+    });
+  }, [onMetricsUpdate]);
+
+  const reportMetric = useCallback((name: string, value: number) => {
+    if (!enableReporting) return;
+
+    // Report to Google Analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', name, {
+        event_category: 'Web Vitals',
+        value: Math.round(name === 'CLS' ? value * 1000 : value),
+        non_interaction: true,
+      });
+    }
+
+    // Report to custom analytics endpoint
+    if (typeof window !== 'undefined' && 'navigator' in window) {
+      fetch('/api/analytics/performance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          metric: name,
+          value: value,
+          url: window.location.href,
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent
+        })
+      }).catch(() => {
+        // Silently fail if analytics endpoint is not available
+      });
+    }
+  }, [enableReporting]);
+
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Measure Core Web Vitals
+    getCLS((metric) => {
+      updateMetric('cls', metric.value);
+      reportMetric('CLS', metric.value);
+    });
 
-    // Measure First Contentful Paint (FCP)
-    const measureFCP = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+    getFID((metric) => {
+      updateMetric('fid', metric.value);
+      reportMetric('FID', metric.value);
+    });
+
+    getFCP((metric) => {
+      updateMetric('fcp', metric.value);
+      reportMetric('FCP', metric.value);
+    });
+
+    getLCP((metric) => {
+      updateMetric('lcp', metric.value);
+      reportMetric('LCP', metric.value);
+    });
+
+    getTTFB((metric) => {
+      updateMetric('ttfb', metric.value);
+      reportMetric('TTFB', metric.value);
+    });
+
+    // Measure additional performance metrics
+    const measureLoadTime = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          updateMetric('loadTime', loadTime);
+          updateMetric('domContentLoaded', domContentLoaded);
+          
+          reportMetric('LoadTime', loadTime);
+          reportMetric('DOMContentLoaded', domContentLoaded);
         }
-      });
-      observer.observe({ entryTypes: ['paint'] });
+      }
     };
 
-    // Measure Largest Contentful Paint (LCP)
-    const measureLCP = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    };
+    // Measure when page is fully loaded
+    if (document.readyState === 'complete') {
+      measureLoadTime();
+    } else {
+      window.addEventListener('load', measureLoadTime);
+    }
 
-    // Measure First Input Delay (FID)
-    const measureFID = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime 
-          }));
-        });
-      });
-      observer.observe({ entryTypes: ['first-input'] });
-    };
-
-    // Measure Cumulative Layout Shift (CLS)
-    const measureCLS = () => {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+    // Monitor resource loading performance
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'resource') {
+          const resource = entry as PerformanceResourceTiming;
+          if (resource.duration > 1000) { // Log slow resources
+            console.warn('Slow resource detected:', {
+              name: resource.name,
+              duration: resource.duration,
+              size: resource.transferSize
+            });
           }
-        });
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      observer.observe({ entryTypes: ['layout-shift'] });
-    };
-
-    // Measure Time to First Byte (TTFB)
-    const measureTTFB = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigation.responseStart - navigation.requestStart 
-        }));
+        }
       }
-    };
+    });
 
-    // Initialize measurements
-    measureFCP();
-    measureLCP();
-    measureFID();
-    measureCLS();
-    measureTTFB();
+    observer.observe({ entryTypes: ['resource'] });
 
-    // Send metrics to analytics
-    const sendMetricsToAnalytics = () => {
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as any).gtag;
-        
-        if (metrics.fcp) {
-          gtag('event', 'web_vitals', {
-            name: 'FCP',
-            value: Math.round(metrics.fcp),
-            event_category: 'Performance'
-          });
-        }
-        
-        if (metrics.lcp) {
-          gtag('event', 'web_vitals', {
-            name: 'LCP',
-            value: Math.round(metrics.lcp),
-            event_category: 'Performance'
-          });
-        }
-        
-        if (metrics.fid) {
-          gtag('event', 'web_vitals', {
-            name: 'FID',
-            value: Math.round(metrics.fid),
-            event_category: 'Performance'
-          });
-        }
-        
-        if (metrics.cls) {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(metrics.cls * 1000) / 1000,
-            event_category: 'Performance'
-          });
-        }
-        
-        if (metrics.ttfb) {
-          gtag('event', 'web_vitals', {
-            name: 'TTFB',
-            value: Math.round(metrics.ttfb),
-            event_category: 'Performance'
+    // Monitor long tasks
+    const longTaskObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const longTask = entry as PerformanceEntry;
+        if (longTask.duration > 50) { // Tasks longer than 50ms
+          console.warn('Long task detected:', {
+            duration: longTask.duration,
+            startTime: longTask.startTime
           });
         }
       }
-    };
+    });
 
-    // Send metrics after a delay to ensure all measurements are complete
-    const timeoutId = setTimeout(sendMetricsToAnalytics, 5000);
+    longTaskObserver.observe({ entryTypes: ['longtask'] });
 
     return () => {
-      clearTimeout(timeoutId);
+      window.removeEventListener('load', measureLoadTime);
+      observer.disconnect();
+      longTaskObserver.disconnect();
     };
+  }, [updateMetric, reportMetric]);
+
+  // Performance score calculation
+  const calculatePerformanceScore = useCallback(() => {
+    const { cls, fid, fcp, lcp, ttfb } = metrics;
+    let score = 0;
+    let factors = 0;
+
+    // CLS scoring (0-100)
+    if (cls !== null) {
+      if (cls <= 0.1) score += 25;
+      else if (cls <= 0.25) score += 15;
+      else if (cls <= 0.4) score += 5;
+      factors++;
+    }
+
+    // FID scoring (0-100)
+    if (fid !== null) {
+      if (fid <= 100) score += 25;
+      else if (fid <= 300) score += 15;
+      else if (fid <= 500) score += 5;
+      factors++;
+    }
+
+    // FCP scoring (0-100)
+    if (fcp !== null) {
+      if (fcp <= 1800) score += 25;
+      else if (fcp <= 3000) score += 15;
+      else if (fcp <= 4000) score += 5;
+      factors++;
+    }
+
+    // LCP scoring (0-100)
+    if (lcp !== null) {
+      if (lcp <= 2500) score += 25;
+      else if (lcp <= 4000) score += 15;
+      else if (lcp <= 6000) score += 5;
+      factors++;
+    }
+
+    return factors > 0 ? Math.round(score / factors) : 0;
   }, [metrics]);
 
-  // Log metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      }
-  }, [metrics]);
+  const performanceScore = calculatePerformanceScore();
 
-  return null; // This component doesn't render anything
+  // Don't render anything visible, this is a monitoring component
+  return (
+    <div style={{ display: 'none' }} aria-hidden="true">
+      {/* Performance metrics for debugging */}
+      {process.env.NODE_ENV === 'development' && (
+        <div>
+          <p>Performance Score: {performanceScore}/100</p>
+          <p>CLS: {metrics.cls}</p>
+          <p>FID: {metrics.fid}</p>
+          <p>FCP: {metrics.fcp}</p>
+          <p>LCP: {metrics.lcp}</p>
+          <p>TTFB: {metrics.ttfb}</p>
+          <p>Load Time: {metrics.loadTime}</p>
+          <p>DOM Content Loaded: {metrics.domContentLoaded}</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

@@ -9,19 +9,11 @@ export const metadata = {
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
       {
-<<<<<<< HEAD
         url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026'
       }
-=======
-        url: '/og-ai-cost-optimization-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction'
-      },
->>>>>>> cursor/analyze-improve-and-deploy-application-744e
     ]
   },
   twitter: {
