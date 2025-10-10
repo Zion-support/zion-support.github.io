@@ -169,8 +169,6 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-=======
             <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </a>
@@ -184,7 +182,6 @@ const Navigation: React.FC = () => {
               Careers
             </a>
             
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -360,7 +357,6 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
@@ -450,10 +446,9 @@ const Navigation: React.FC = () => {
             </div>
           </div>
         )}
-=======
+        
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
       </div>
     </nav>
   );

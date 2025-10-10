@@ -91,7 +91,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-<<<<<<< HEAD
       title: 'AI Content Writer Pro',
       description: 'Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials. Create 10x more content in half the time.',
       icon: '✍️',
@@ -252,7 +251,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-<<<<<<< HEAD
       title: 'AI Social Media Manager Pro',
       description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience intelligence. Increase engagement by 200%.',
       icon: '📱',
@@ -1804,7 +1802,6 @@ const HomePage: React.FC = () => {
                   Powerful, affordable AI-powered tools designed for modern businesses. 
                   Choose from our comprehensive suite of micro SAAS solutions.
                 </p>
-<<<<<<< HEAD
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $399/month</div>
                   <a href="/ai-predictive-analytics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
@@ -2367,8 +2364,6 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-=======
->>>>>>> origin/main
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">

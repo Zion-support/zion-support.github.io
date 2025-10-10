@@ -148,6 +148,7 @@ const Navigation: React.FC = () => {
   ];
 
   const specializedServices = [
+    { name: 'Specialized Services', href: '/specialized-services', icon: Target },
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
     { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },

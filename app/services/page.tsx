@@ -18,14 +18,10 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
-<<<<<<< HEAD
-      category: 'Productivity'
-=======
       category: 'Productivity',
       rating: 4.9,
       users: '10,000+',
       freeTrial: '14 days'
->>>>>>> origin/main
     },
     {
       title: 'AI Task Manager Pro',
@@ -37,7 +33,6 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['60% productivity boost', '50% better time management', '40% fewer missed deadlines', '25% stress reduction'],
       link: '/ai-task-manager',
       popular: true,
-<<<<<<< HEAD
       category: 'Marketing'
     },
     {
@@ -118,7 +113,6 @@ const ServicesPage: React.FC = React.memo((props) => {
     {
       title: 'AI Workflow Automation Pro',
       description: 'Automate complex business processes with intelligent workflow management and exception handling. Save 20+ hours per week.',
->>>>>>> origin/main
       icon: Zap,
       price: '$79/month',
       originalPrice: '$119/month',
@@ -156,8 +150,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['25% time awareness', '40% productivity insights', '30% better focus', 'Accurate billing'],
       link: '/ai-time-tracker',
       popular: false,
-<<<<<<< HEAD
-      category: 'Creative'}
+      category: 'Creative'
     },
     {
       title: 'AI Fitness Coach',
@@ -499,7 +492,6 @@ const ServicesPage: React.FC = React.memo((props) => {
     }
   ];
 
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />

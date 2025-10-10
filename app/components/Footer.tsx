@@ -242,7 +242,6 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
@@ -253,7 +252,7 @@ const Footer: React.FC = () => {
               <a href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </a>
-=======
+            </div>
           </div>
         </div>
 
@@ -289,7 +288,6 @@ const Footer: React.FC = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
             </div>
           </div>
         </div>

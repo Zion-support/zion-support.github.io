@@ -21,6 +21,7 @@ const SitemapPage: React.FC = () => {
               <li><a href="/ai-services" className="text-blue-400 hover:text-cyan-400">AI Services</a></li>
               <li><a href="/it-services" className="text-blue-400 hover:text-cyan-400">IT Services</a></li>
               <li><a href="/specialized-services" className="text-blue-400 hover:text-cyan-400">Specialized Services</a></li>
+              <li><a href="/micro-saas" className="text-blue-400 hover:text-cyan-400">Micro SAAS Solutions</a></li>
             </ul>
           </div>
           <div>
