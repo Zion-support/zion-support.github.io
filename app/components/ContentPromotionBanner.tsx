@@ -1,116 +1,154 @@
 'use client';
 
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { X, ArrowRight, Star, Users, Zap, CheckCircle } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap
-    },
-    {
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield
-    },
-    {
-      title: 'Proven Results',
-      description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users
+interface ContentPromotionBannerProps {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  features?: string[];
+  variant?: 'default' | 'success' | 'warning' | 'info';
+  dismissible?: boolean;
+  onDismiss?: () => void;
+}
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  features = [],
+  variant = 'default',
+  dismissible = true,
+  onDismiss
+}) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    onDismiss?.();
+  };
+
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'success':
+        return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      case 'warning':
+        return 'bg-gradient-to-r from-yellow-600 to-orange-600';
+      case 'info':
+        return 'bg-gradient-to-r from-cyan-600 to-blue-600';
+      default:
+        return 'bg-gradient-to-r from-purple-600 to-blue-600';
     }
-  ];
+  };
 
-  const benefits = [
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Transform Your Business with AI
-          </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Discover how our AI-powered solutions can revolutionize your operations and drive growth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-white" />
+    <div className={`${getVariantStyles()} text-white py-16 px-4 relative overflow-hidden`}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-purple-100 text-sm">{feature.description}</p>
+              <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
+                Limited Time Offer
+              </span>
             </div>
-          ))}
-        </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              {title}
+            </h2>
+            
+            <p className="text-xl text-white/90 leading-relaxed">
+              {description}
+            </p>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-purple-100">{benefit}</span>
-                  </li>
+            {/* Features */}
+            {features.length > 0 && (
+              <div className="space-y-3">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                    <span className="text-white/90">{feature}</span>
+                  </div>
                 ))}
-              </ul>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-purple-100 mb-4">Happy Clients</div>
-              <div className="text-4xl font-bold mb-2">99.9%</div>
-              <div className="text-purple-100 mb-6">Uptime</div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center mx-auto">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+              </div>
+            )}
+
+            {/* CTA Button */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={ctaLink}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105"
+              >
+                {ctaText}
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
               </button>
             </div>
           </div>
-        </div>
-=======
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Join thousands of businesses already using our AI and IT solutions
-        </p>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <feature.icon className="w-8 h-8 text-white" />
+          {/* Visual Element */}
+          <div className="relative">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold">4.9/5</div>
+                  <div className="text-white/80 text-sm">Customer Rating</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold">10K+</div>
+                  <div className="text-white/80 text-sm">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold">300%</div>
+                  <div className="text-white/80 text-sm">ROI Guaranteed</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold">24/7</div>
+                  <div className="text-white/80 text-sm">Support</div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
           </div>
-        ))}
+        </div>
       </div>
 
-      <div className="text-center">
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" />
+      {/* Dismiss Button */}
+      {dismissible && (
+        <button
+          onClick={handleDismiss}
+          className="absolute top-4 right-4 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300"
+          aria-label="Dismiss banner"
+        >
+          <X className="w-4 h-4 text-white" />
         </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-      </div>
+      )}
     </div>
   );
 };

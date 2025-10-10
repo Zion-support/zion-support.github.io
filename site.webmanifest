@@ -31,6 +31,16 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    },
+    {
+      "src": "/mstile-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/mstile-310x310.png",
+      "sizes": "310x310",
+      "type": "image/png"
     }
   ],
   "screenshots": [],
