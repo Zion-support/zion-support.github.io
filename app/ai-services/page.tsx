@@ -18,7 +18,16 @@ import {
   Award,
   Stethoscope,
   Truck,
-  Rocket
+  Rocket,
+  Car,
+  Building,
+  Scale,
+  BookOpen,
+  Trash,
+  Droplets,
+  Wind,
+  Waves,
+  Trees
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -1165,6 +1174,860 @@ const AIServicesPage: React.FC = () => {
         'Navigation Systems',
         'Space Mission Analytics'
       ],
+      category: 'Space Technology',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Satellite constellation optimization',
+        'Space mission planning',
+        'Orbital debris tracking',
+        'Space weather prediction'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Autonomous Vehicle Intelligence',
+      description: 'Advanced AI systems for autonomous vehicles with real-time decision making, obstacle detection, and route optimization',
+      icon: Car,
+      features: [
+        'Real-time Decision Making',
+        'Obstacle Detection',
+        'Route Optimization',
+        'Traffic Prediction',
+        'Weather Adaptation',
+        'Emergency Response',
+        'Fleet Management',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.8,
+      users: '500+',
+      color: 'from-green-500 to-teal-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time navigation',
+        'Weather adaptation',
+        'Fleet optimization'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Medical Diagnosis Assistant',
+      description: 'Advanced AI medical diagnosis with image analysis, symptom recognition, and treatment recommendations',
+      icon: Stethoscope,
+      features: [
+        'Medical Image Analysis',
+        'Symptom Recognition',
+        'Treatment Recommendations',
+        'Drug Interaction Analysis',
+        'Patient Monitoring',
+        'Clinical Decision Support',
+        'Electronic Health Records',
+        'Compliance Tracking'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        '98% diagnostic accuracy',
+        'Faster diagnosis times',
+        'Reduced medical errors',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Financial Crime Detection',
+      description: 'Advanced AI system for detecting financial crimes, fraud prevention, and compliance monitoring',
+      icon: Shield,
+      features: [
+        'Fraud Detection',
+        'Money Laundering Detection',
+        'Transaction Monitoring',
+        'Risk Assessment',
+        'Compliance Monitoring',
+        'Real-time Alerts',
+        'Pattern Recognition',
+        'Regulatory Reporting'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '99.5% fraud detection rate',
+        'Real-time monitoring',
+        'Compliance automation',
+        'Risk reduction'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Climate Change Predictor',
+      description: 'AI-powered climate modeling and prediction system for environmental impact assessment and policy planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Environmental Impact Assessment',
+        'Carbon Footprint Analysis',
+        'Policy Planning',
+        'Risk Assessment',
+        'Data Visualization',
+        'Trend Analysis'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.9,
+      users: '400+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $1,599/mo',
+      capabilities: [
+        '95% prediction accuracy',
+        'Climate modeling',
+        'Environmental impact',
+        'Policy recommendations'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Drug Discovery Platform',
+      description: 'Revolutionary AI platform for pharmaceutical research, drug discovery, and molecular analysis',
+      icon: Stethoscope,
+      features: [
+        'Molecular Analysis',
+        'Drug Target Identification',
+        'Compound Screening',
+        'Clinical Trial Optimization',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Personalized Medicine',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-purple-500 to-violet-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '10x faster drug discovery',
+        '95% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment options'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Smart City Controller',
+      description: 'Comprehensive AI system for smart city management with traffic optimization, energy management, and citizen services',
+      icon: Building,
+      features: [
+        'Traffic Optimization',
+        'Energy Management',
+        'Citizen Services',
+        'Waste Management',
+        'Public Safety',
+        'Environmental Monitoring',
+        'Data Analytics',
+        'Integration Hub'
+      ],
+      category: 'Smart Cities',
+      popular: true,
+      rating: 4.8,
+      users: '150+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '30% traffic reduction',
+        'Energy optimization',
+        'Citizen satisfaction',
+        'Environmental monitoring'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Agricultural Intelligence',
+      description: 'AI-powered agricultural solutions with crop monitoring, yield prediction, and precision farming',
+      icon: Globe,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Precision Farming',
+        'Weather Analysis',
+        'Soil Analysis',
+        'Pest Detection',
+        'Irrigation Management',
+        'Harvest Optimization'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '20% yield increase',
+        'Precision farming',
+        'Crop monitoring',
+        'Weather prediction'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Energy Grid Optimizer',
+      description: 'AI-powered energy grid management with load balancing, demand response, and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Load Balancing',
+        'Demand Response',
+        'Renewable Energy Integration',
+        'Energy Storage',
+        'Grid Stability',
+        'Fault Detection',
+        'Predictive Maintenance',
+        'Real-time Control'
+      ],
+      category: 'Energy AI',
+      popular: true,
+      rating: 4.9,
+      users: '250+',
+      color: 'from-yellow-500 to-amber-600',
+      pricing: 'Starting at $1,799/mo',
+      capabilities: [
+        '25% energy savings',
+        'Grid stability',
+        'Renewable integration',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Manufacturing Optimizer',
+      description: 'AI-powered manufacturing optimization with predictive maintenance, quality control, and production planning',
+      icon: Settings,
+      features: [
+        'Predictive Maintenance',
+        'Quality Control',
+        'Production Planning',
+        'Supply Chain Optimization',
+        'Equipment Monitoring',
+        'Waste Reduction',
+        'Energy Management',
+        'Performance Analytics'
+      ],
+      category: 'Manufacturing AI',
+      popular: true,
+      rating: 4.8,
+      users: '700+',
+      color: 'from-gray-500 to-slate-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        '30% reduction in downtime',
+        'Quality improvement',
+        'Production optimization',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Cybersecurity Sentinel',
+      description: 'Advanced AI cybersecurity system with threat detection, incident response, and security automation',
+      icon: Shield,
+      features: [
+        'Threat Detection',
+        'Incident Response',
+        'Security Automation',
+        'Vulnerability Assessment',
+        'Compliance Monitoring',
+        'Zero Trust Architecture',
+        'Threat Intelligence',
+        'Security Analytics'
+      ],
+      category: 'Cybersecurity AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,500+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% threat detection',
+        'Real-time response',
+        'Automated security',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 31,
+      name: 'AI Content Moderation System',
+      description: 'AI-powered content moderation with automated detection of inappropriate content, hate speech, and spam',
+      icon: FileText,
+      features: [
+        'Content Detection',
+        'Hate Speech Detection',
+        'Spam Filtering',
+        'Image Analysis',
+        'Video Analysis',
+        'Text Analysis',
+        'Automated Actions',
+        'Human Review'
+      ],
+      category: 'Content AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,000+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '95% accuracy in detection',
+        'Real-time moderation',
+        'Automated actions',
+        'Human review integration'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Language Translation Pro',
+      description: 'Advanced AI language translation with real-time processing, context understanding, and cultural adaptation',
+      icon: Globe,
+      features: [
+        'Real-time Translation',
+        'Context Understanding',
+        'Cultural Adaptation',
+        'Voice Translation',
+        'Document Translation',
+        'Multi-language Support',
+        'Quality Assessment',
+        'Custom Training'
+      ],
+      category: 'Language AI',
+      popular: true,
+      rating: 4.8,
+      users: '3,500+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '99% translation accuracy',
+        'Real-time processing',
+        'Cultural adaptation',
+        'Multi-language support'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Personal Assistant Pro',
+      description: 'Advanced AI personal assistant with natural language processing, task automation, and learning capabilities',
+      icon: Brain,
+      features: [
+        'Natural Language Processing',
+        'Task Automation',
+        'Learning Capabilities',
+        'Calendar Management',
+        'Email Management',
+        'Voice Commands',
+        'Multi-device Sync',
+        'Custom Training'
+      ],
+      category: 'Personal AI',
+      popular: true,
+      rating: 4.8,
+      users: '5,000+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Natural language understanding',
+        'Task automation',
+        'Learning capabilities',
+        'Multi-device sync'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Investment Advisor',
+      description: 'AI-powered investment advisory with portfolio optimization, risk assessment, and market analysis',
+      icon: BarChart,
+      features: [
+        'Portfolio Optimization',
+        'Risk Assessment',
+        'Market Analysis',
+        'Investment Recommendations',
+        'Performance Tracking',
+        'Tax Optimization',
+        'Retirement Planning',
+        'Real-time Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '95% accuracy in predictions',
+        'Portfolio optimization',
+        'Risk assessment',
+        'Real-time analysis'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Legal Research Assistant',
+      description: 'AI-powered legal research with case law analysis, document review, and legal writing assistance',
+      icon: Scale,
+      features: [
+        'Case Law Analysis',
+        'Document Review',
+        'Legal Writing Assistance',
+        'Precedent Research',
+        'Citation Checking',
+        'Legal Brief Generation',
+        'Compliance Monitoring',
+        'Client Communication'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.8,
+      users: '900+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        '90% time savings',
+        'Comprehensive research',
+        'Legal writing assistance',
+        'Compliance monitoring'
+      ]
+    },
+    {
+      id: 36,
+      name: 'AI Education Tutor',
+      description: 'AI-powered educational tutor with personalized learning, adaptive content, and progress tracking',
+      icon: BookOpen,
+      features: [
+        'Personalized Learning',
+        'Adaptive Content',
+        'Progress Tracking',
+        'Assessment Tools',
+        'Learning Analytics',
+        'Multi-subject Support',
+        'Interactive Content',
+        'Performance Insights'
+      ],
+      category: 'Education AI',
+      popular: true,
+      rating: 4.8,
+      users: '4,200+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Personalized learning paths',
+        'Adaptive content',
+        'Progress tracking',
+        'Performance insights'
+      ]
+    },
+    {
+      id: 37,
+      name: 'AI Customer Experience Optimizer',
+      description: 'AI-powered customer experience optimization with sentiment analysis, personalization, and engagement tracking',
+      icon: Users,
+      features: [
+        'Sentiment Analysis',
+        'Personalization',
+        'Engagement Tracking',
+        'Customer Journey Mapping',
+        'Predictive Analytics',
+        'Omnichannel Support',
+        'Real-time Recommendations',
+        'Customer Segmentation'
+      ],
+      category: 'Customer AI',
+      popular: true,
+      rating: 4.8,
+      users: '3,200+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $699/mo',
+      capabilities: [
+        '40% increase in satisfaction',
+        'Personalized experiences',
+        'Engagement optimization',
+        'Predictive insights'
+      ]
+    },
+    {
+      id: 38,
+      name: 'AI Supply Chain Optimizer',
+      description: 'AI-powered supply chain optimization with demand forecasting, inventory management, and logistics planning',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Management',
+        'Logistics Planning',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,100+',
+      color: 'from-amber-500 to-yellow-600',
+      pricing: 'Starting at $1,399/mo',
+      capabilities: [
+        '20% cost reduction',
+        'Inventory optimization',
+        'Demand forecasting',
+        'Risk mitigation'
+      ]
+    },
+    {
+      id: 39,
+      name: 'AI Human Resources Assistant',
+      description: 'AI-powered HR assistant with recruitment, employee management, and performance analytics',
+      icon: Users,
+      features: [
+        'Recruitment Automation',
+        'Employee Management',
+        'Performance Analytics',
+        'Talent Acquisition',
+        'Employee Engagement',
+        'Training Recommendations',
+        'Compliance Monitoring',
+        'Workforce Planning'
+      ],
+      category: 'HR AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '50% faster hiring',
+        'Employee engagement',
+        'Performance analytics',
+        'Talent acquisition'
+      ]
+    },
+    {
+      id: 40,
+      name: 'AI Marketing Intelligence',
+      description: 'AI-powered marketing intelligence with campaign optimization, audience analysis, and ROI tracking',
+      icon: Target,
+      features: [
+        'Campaign Optimization',
+        'Audience Analysis',
+        'ROI Tracking',
+        'A/B Testing',
+        'Content Personalization',
+        'Social Media Analytics',
+        'Competitor Analysis',
+        'Performance Insights'
+      ],
+      category: 'Marketing AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '50% better performance',
+        'Audience insights',
+        'Campaign optimization',
+        'ROI tracking'
+      ]
+    },
+    {
+      id: 41,
+      name: 'AI Real Estate Analyzer',
+      description: 'AI-powered real estate analysis with property valuation, market trends, and investment recommendations',
+      icon: Building,
+      features: [
+        'Property Valuation',
+        'Market Trends',
+        'Investment Recommendations',
+        'Risk Assessment',
+        'Rental Yield Analysis',
+        'Location Analysis',
+        'Price Prediction',
+        'Market Intelligence'
+      ],
+      category: 'Real Estate AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,400+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $699/mo',
+      capabilities: [
+        'Accurate valuations',
+        'Market insights',
+        'Investment recommendations',
+        'Risk assessment'
+      ]
+    },
+    {
+      id: 42,
+      name: 'AI Insurance Underwriter',
+      description: 'AI-powered insurance underwriting with risk assessment, fraud detection, and policy optimization',
+      icon: Shield,
+      features: [
+        'Risk Assessment',
+        'Fraud Detection',
+        'Policy Optimization',
+        'Claims Processing',
+        'Customer Analysis',
+        'Pricing Optimization',
+        'Compliance Monitoring',
+        'Automated Decisions'
+      ],
+      category: 'Insurance AI',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $1,099/mo',
+      capabilities: [
+        '90% accuracy in risk assessment',
+        'Fraud detection',
+        'Policy optimization',
+        'Automated decisions'
+      ]
+    },
+    {
+      id: 43,
+      name: 'AI Transportation Optimizer',
+      description: 'AI-powered transportation optimization with route planning, fleet management, and fuel efficiency',
+      icon: Truck,
+      features: [
+        'Route Optimization',
+        'Fleet Management',
+        'Fuel Efficiency',
+        'Driver Management',
+        'Maintenance Scheduling',
+        'Load Optimization',
+        'Real-time Tracking',
+        'Cost Analysis'
+      ],
+      category: 'Transportation AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,200+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $999/mo',
+      capabilities: [
+        '20% fuel savings',
+        'Route optimization',
+        'Fleet management',
+        'Cost reduction'
+      ]
+    },
+    {
+      id: 44,
+      name: 'AI Energy Management System',
+      description: 'AI-powered energy management with consumption optimization, renewable energy integration, and cost reduction',
+      icon: Zap,
+      features: [
+        'Consumption Optimization',
+        'Renewable Energy Integration',
+        'Cost Reduction',
+        'Demand Response',
+        'Energy Storage',
+        'Grid Management',
+        'Carbon Tracking',
+        'Predictive Analytics'
+      ],
+      category: 'Energy AI',
+      popular: true,
+      rating: 4.8,
+      users: '900+',
+      color: 'from-yellow-500 to-amber-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '25% energy savings',
+        'Renewable integration',
+        'Cost optimization',
+        'Carbon tracking'
+      ]
+    },
+    {
+      id: 45,
+      name: 'AI Waste Management Optimizer',
+      description: 'AI-powered waste management with collection optimization, recycling sorting, and environmental impact tracking',
+      icon: Trash,
+      features: [
+        'Collection Optimization',
+        'Recycling Sorting',
+        'Environmental Impact',
+        'Route Planning',
+        'Waste Analysis',
+        'Compliance Monitoring',
+        'Cost Optimization',
+        'Sustainability Tracking'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.7,
+      users: '600+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Collection optimization',
+        'Recycling efficiency',
+        'Environmental impact',
+        'Cost reduction'
+      ]
+    },
+    {
+      id: 46,
+      name: 'AI Water Quality Monitor',
+      description: 'AI-powered water quality monitoring with contamination detection, treatment optimization, and compliance tracking',
+      icon: Droplets,
+      features: [
+        'Contamination Detection',
+        'Treatment Optimization',
+        'Compliance Tracking',
+        'Quality Analysis',
+        'Predictive Maintenance',
+        'Environmental Impact',
+        'Real-time Monitoring',
+        'Alert Systems'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.8,
+      users: '500+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        'Real-time monitoring',
+        'Contamination detection',
+        'Treatment optimization',
+        'Compliance tracking'
+      ]
+    },
+    {
+      id: 47,
+      name: 'AI Air Quality Analyzer',
+      description: 'AI-powered air quality analysis with pollution detection, health impact assessment, and environmental forecasting',
+      icon: Wind,
+      features: [
+        'Pollution Detection',
+        'Health Impact Assessment',
+        'Environmental Forecasting',
+        'Source Identification',
+        'Trend Analysis',
+        'Alert Systems',
+        'Data Visualization',
+        'Regulatory Reporting'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.8,
+      users: '700+',
+      color: 'from-sky-500 to-blue-600',
+      pricing: 'Starting at $699/mo',
+      capabilities: [
+        'Pollution detection',
+        'Health impact analysis',
+        'Environmental forecasting',
+        'Source identification'
+      ]
+    },
+    {
+      id: 48,
+      name: 'AI Biodiversity Monitor',
+      description: 'AI-powered biodiversity monitoring with species identification, habitat analysis, and conservation planning',
+      icon: Globe,
+      features: [
+        'Species Identification',
+        'Habitat Analysis',
+        'Conservation Planning',
+        'Population Tracking',
+        'Threat Assessment',
+        'Ecosystem Health',
+        'Data Collection',
+        'Research Tools'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.9,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Species identification',
+        'Habitat analysis',
+        'Conservation planning',
+        'Population tracking'
+      ]
+    },
+    {
+      id: 49,
+      name: 'AI Ocean Monitoring System',
+      description: 'AI-powered ocean monitoring with marine life tracking, water quality analysis, and ecosystem health assessment',
+      icon: Waves,
+      features: [
+        'Marine Life Tracking',
+        'Water Quality Analysis',
+        'Ecosystem Health',
+        'Current Monitoring',
+        'Temperature Analysis',
+        'Pollution Detection',
+        'Research Tools',
+        'Data Visualization'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        'Marine life tracking',
+        'Water quality analysis',
+        'Ecosystem health',
+        'Current monitoring'
+      ]
+    },
+    {
+      id: 50,
+      name: 'AI Forest Management System',
+      description: 'AI-powered forest management with tree monitoring, wildfire detection, and sustainable harvesting planning',
+      icon: Trees,
+      features: [
+        'Tree Monitoring',
+        'Wildfire Detection',
+        'Harvesting Planning',
+        'Growth Analysis',
+        'Disease Detection',
+        'Carbon Sequestration',
+        'Biodiversity Tracking',
+        'Sustainability Metrics'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.7,
+      users: '350+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $999/mo',
+      capabilities: [
+        'Tree monitoring',
+        'Wildfire detection',
+        'Harvesting planning',
+        'Growth analysis'
+      ]
+    }
+  ];
       category: 'Space Tech',
       popular: false,
       rating: 4.9,
