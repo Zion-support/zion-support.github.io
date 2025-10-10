@@ -41,6 +41,7 @@ const AIServicesPage: React.FC = () => {
     // Core AI Services
     {
       id: 1,
+<<<<<<< HEAD
       name: 'AI-Powered Analytics Platform',
       description: 'Advanced analytics solutions powered by machine learning and artificial intelligence with real-time insights and predictive modeling',
       icon: BarChart,
@@ -56,13 +57,30 @@ const AIServicesPage: React.FC = () => {
         'Automated Reporting'
       ],
       category: 'Analytics',
+=======
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform accelerating pharmaceutical research by 10x',
+      icon: Brain,
+      features: [
+        'Molecular Structure Analysis',
+        'Drug Interaction Prediction',
+        'Clinical Trial Optimization',
+        'Regulatory Compliance Automation',
+        'Side Effect Prediction',
+        'Drug Repurposing Analysis',
+        'Biomarker Discovery'
+      ],
+      category: 'Healthcare',
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       popular: true,
-      rating: 4.8,
-      users: '2,800+',
+      rating: 4.9,
+      users: '500+',
+      price: 'Starting at $50,000/month',
       color: 'from-purple-500 to-pink-600',
       pricing: 'Starting at $299/mo',
       link: 'https://ziontechgroup.com/ai-analytics-platform',
       capabilities: [
+<<<<<<< HEAD
         '300% increase in conversion rates',
         'Automated campaign optimization',
         'Real-time performance tracking',
@@ -780,10 +798,17 @@ const AIServicesPage: React.FC = () => {
         'Form correction accuracy',
         'Progress optimization',
         'Injury prevention'
+=======
+        '90% faster drug discovery process',
+        '60% reduction in clinical trial costs',
+        'Real-time molecular analysis',
+        'Predictive drug efficacy modeling'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     },
     {
       id: 2,
+<<<<<<< HEAD
       name: 'AI Workflow Automation Suite',
       description: 'Comprehensive business process automation with intelligent decision-making and self-optimizing workflows',
       icon: Zap,
@@ -796,9 +821,23 @@ const AIServicesPage: React.FC = () => {
         'Custom Triggers',
         'Analytics Dashboard',
         'Compliance Monitoring'
+=======
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis using cutting-edge AI',
+      icon: Globe,
+      features: [
+        'Climate Change Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Risk Assessment',
+        'Renewable Energy Optimization',
+        'Weather Pattern Prediction',
+        'Ecosystem Monitoring'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ],
-      category: 'Automation',
+      category: 'Environment',
       popular: true,
+<<<<<<< HEAD
       rating: 4.9,
       users: '3,200+',
       color: 'from-blue-500 to-cyan-600',
@@ -809,10 +848,22 @@ const AIServicesPage: React.FC = () => {
         '99.9% workflow reliability',
         'Real-time process monitoring',
         'Intelligent error handling'
+=======
+      rating: 4.8,
+      users: '300+',
+      price: 'Starting at $25,000/month',
+      color: 'from-green-500 to-emerald-600',
+      capabilities: [
+        '95% accuracy in climate predictions',
+        '40% reduction in carbon emissions',
+        'Real-time environmental monitoring',
+        'Automated sustainability reporting'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     },
     {
       id: 3,
+<<<<<<< HEAD
       name: 'AI Cybersecurity Platform',
       description: 'Next-generation security solutions with AI-powered threat detection, prevention, and response capabilities',
       icon: Shield,
@@ -838,10 +889,36 @@ const AIServicesPage: React.FC = () => {
         'Real-time security monitoring',
         'Automated incident response',
         'Compliance automation'
+=======
+      name: 'AI Space Technology Pro',
+      description: 'Space exploration and satellite data analysis powered by advanced AI algorithms',
+      icon: Rocket,
+      features: [
+        'Satellite Data Analysis',
+        'Space Mission Planning',
+        'Orbital Mechanics Calculation',
+        'Space Weather Prediction',
+        'Asteroid Detection',
+        'Space Debris Tracking',
+        'Planetary Surface Analysis'
+      ],
+      category: 'Space',
+      popular: false,
+      rating: 4.7,
+      users: '150+',
+      price: 'Starting at $75,000/month',
+      color: 'from-blue-500 to-cyan-600',
+      capabilities: [
+        '99.9% accuracy in orbital predictions',
+        'Real-time space weather monitoring',
+        'Automated mission planning',
+        'Advanced satellite constellation management'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     },
     {
       id: 4,
+<<<<<<< HEAD
       name: 'AI Document Intelligence Suite',
       description: 'Intelligent document processing with advanced OCR, NLP, and automated data extraction capabilities',
       icon: FileText,
@@ -854,10 +931,132 @@ const AIServicesPage: React.FC = () => {
         'Quality Assurance',
         'Integration APIs',
         'Compliance Tracking'
+=======
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced fraud detection and financial crime prevention system with real-time monitoring',
+      icon: Shield,
+      features: [
+        'Real-time Fraud Detection',
+        'Transaction Pattern Analysis',
+        'Risk Assessment Scoring',
+        'Compliance Reporting',
+        'Money Laundering Detection',
+        'Identity Verification',
+        'Behavioral Analytics'
       ],
-      category: 'Document Processing',
+      category: 'Finance',
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      price: 'Starting at $30,000/month',
+      color: 'from-red-500 to-orange-600',
+      capabilities: [
+        '99.5% fraud detection accuracy',
+        'Real-time transaction monitoring',
+        'Automated compliance reporting',
+        'Predictive risk modeling'
+      ]
+    },
+    {
+      id: 5,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with predictive analytics and optimization',
+      icon: Target,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Supplier Risk Assessment',
+        'Route Optimization',
+        'Quality Control Automation',
+        'Cost Reduction Analysis',
+        'Sustainability Tracking'
+      ],
+      category: 'Logistics',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      price: 'Starting at $35,000/month',
+      color: 'from-indigo-500 to-purple-600',
+      capabilities: [
+        '30% reduction in supply chain costs',
+        '95% demand forecasting accuracy',
+        'Real-time supply chain monitoring',
+        'Automated optimization recommendations'
+      ]
+    },
+    {
+      id: 6,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid management with AI-powered optimization and monitoring',
+      icon: Zap,
+      features: [
+        'Grid Load Balancing',
+        'Energy Demand Prediction',
+        'Renewable Energy Integration',
+        'Fault Detection & Diagnosis',
+        'Power Quality Monitoring',
+        'Energy Trading Optimization',
+        'Grid Stability Analysis'
+      ],
+      category: 'Energy',
+      popular: false,
+      rating: 4.7,
+      users: '200+',
+      price: 'Starting at $60,000/month',
+      color: 'from-yellow-500 to-orange-600',
+      capabilities: [
+        '25% improvement in grid efficiency',
+        'Real-time energy optimization',
+        'Predictive maintenance alerts',
+        'Automated load balancing'
+      ]
+    },
+    {
+      id: 7,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Precision agriculture with AI-powered crop monitoring and yield optimization',
+      icon: Sprout,
+      features: [
+        'Crop Health Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest Detection',
+        'Irrigation Optimization',
+        'Weather Integration',
+        'Harvest Planning'
+      ],
+      category: 'Agriculture',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      price: 'Starting at $20,000/month',
+      color: 'from-green-500 to-teal-600',
+      capabilities: [
+        '35% increase in crop yields',
+        'Real-time crop monitoring',
+        'Predictive pest management',
+        'Automated irrigation control'
+      ]
+    },
+    {
+      id: 8,
+      name: 'AI Legal Research Pro',
+      description: 'Advanced legal research and case analysis powered by natural language processing',
+      icon: FileText,
+      features: [
+        'Case Law Analysis',
+        'Legal Document Review',
+        'Contract Analysis',
+        'Precedent Research',
+        'Legal Writing Assistance',
+        'Compliance Checking',
+        'Risk Assessment'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
+      ],
+      category: 'Legal',
       popular: false,
       rating: 4.6,
+<<<<<<< HEAD
       users: '1,800+',
       color: 'from-green-500 to-emerald-600',
       pricing: 'Starting at $149/mo',
@@ -3040,10 +3239,21 @@ const AIServicesPage: React.FC = () => {
         'Recall improvement',
         'Cognitive optimization'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+      users: '300+',
+      price: 'Starting at $15,000/month',
+      color: 'from-gray-500 to-slate-600',
+      capabilities: [
+        '80% faster legal research',
+        'Automated document analysis',
+        'Real-time case law updates',
+        'Predictive legal outcomes'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3063,6 +3273,9 @@ const AIServicesPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+  const categories = ['All', 'Healthcare', 'Environment', 'Space', 'Finance', 'Logistics', 'Energy', 'Agriculture', 'Legal'];
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
 
   if (!isLoaded) {
     return (
@@ -3232,6 +3445,7 @@ const AIServicesPage: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -3268,6 +3482,48 @@ const AIServicesPage: React.FC = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
+=======
+              <div className="flex items-center justify-between mb-6">
+                <div className="text-sm text-gray-400">
+                  {service.users} users
+                </div>
+                <div className="text-sm text-gray-400">
+                  {service.category}
+                </div>
+              </div>
+
+              <div className="text-2xl font-bold text-cyan-400 mb-4">
+                {service.price}
+              </div>
+
+              <div className="space-y-2 mb-6">
+                <h4 className="text-sm font-semibold text-gray-300">Key Capabilities:</h4>
+                <ul className="space-y-1">
+                  {service.capabilities?.map((capability, capabilityIndex) => (
+                    <li key={capabilityIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <a
+                  href={`https://ziontechgroup.com/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a
+                  href="/contact"
+                  className="w-full border border-purple-400 text-purple-400 py-2 px-4 rounded-lg font-medium hover:bg-purple-400 hover:text-white transition-all block text-center"
+                >
+                  Get Started
+                </a>
+              </div>
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
             </div>
           ))}
         </div>

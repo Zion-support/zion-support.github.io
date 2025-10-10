@@ -100,6 +100,7 @@ const Footer: React.FC = memo(() => {
         { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
         { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
+<<<<<<< HEAD
         { name: 'AI API Manager Pro', href: '/ai-api-manager' },
         { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
         { name: 'AI Password Manager Pro', href: '/ai-password-manager' },
@@ -131,6 +132,25 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
         { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
+=======
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager' },
+        { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator' },
+        { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker' }
+      ]
+    },
+    {
+      title: 'Emerging Tech',
+      icon: Zap,
+      services: [
+        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
+        { name: 'Autonomous Systems', href: '/autonomous-systems' },
+        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
+        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
+        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
+        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Innovation Labs', href: '/innovation-labs' }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     }
   ];

@@ -120,6 +120,7 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
+<<<<<<< HEAD
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -370,11 +371,28 @@ const Navigation: React.FC = () => {
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Revolutionary drug discovery', icon: '💊', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Personal AI memory', icon: '🧠', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
+=======
+      title: 'AI Services',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      hoverColor: 'hover:bg-purple-500/20',
+      services: [
+        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Revolutionary drug discovery platform', icon: '🧬', popular: true },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Advanced climate modeling', icon: '🌍', popular: true },
+        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration & satellite analysis', icon: '🚀', popular: false },
+        { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro', description: 'Advanced fraud detection', icon: '🛡️', popular: true },
+        { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain management', icon: '📦', popular: true },
+        { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro', description: 'Smart energy grid optimization', icon: '⚡', popular: false },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Precision agriculture solutions', icon: '🌱', popular: true },
+        { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research & analysis', icon: '⚖️', popular: false }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
@@ -497,6 +515,37 @@ const Navigation: React.FC = () => {
         { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false },
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum computing cloud', icon: '⚛️', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
+=======
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      hoverColor: 'hover:bg-blue-500/20',
+      services: [
+        { name: 'AI Infrastructure Monitoring Pro', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
+        { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Enterprise blockchain solutions', icon: '⛓️', popular: true },
+        { name: 'AI API Management Pro', path: '/ai-api-management', description: 'Intelligent API gateway', icon: '🔌', popular: false },
+        { name: 'Intelligent Database Migration Pro', path: '/intelligent-database-migration', description: 'AI-powered database migration', icon: '🗄️', popular: false },
+        { name: 'AI Load Testing Pro', path: '/ai-load-testing', description: 'Intelligent performance testing', icon: '⚡', popular: false },
+        { name: 'Smart Contract Security Audit Pro', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: false },
+        { name: 'AI Content Delivery Network Pro', path: '/ai-content-delivery-network', description: 'Intelligent CDN optimization', icon: '🌐', popular: false },
+        { name: 'Intelligent Email Infrastructure Pro', path: '/intelligent-email-infrastructure', description: 'AI-powered email systems', icon: '📧', popular: false }
+      ]
+    },
+    {
+      title: 'Micro SAAS Solutions',
+      icon: Code,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project management', icon: '📊', popular: true },
+        { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar', description: 'AI-powered calendar management', icon: '📅', popular: true },
+        { name: 'AI Content Writer Pro', path: '/ai-content-writer', description: 'Advanced AI content creation', icon: '✍️', popular: true },
+        { name: 'AI Video Generator Pro', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: false },
+        { name: 'AI Social Media Manager Pro', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email marketing', icon: '📧', popular: true },
+        { name: 'AI Financial Analyzer Pro', path: '/ai-financial-analyzer', description: 'Advanced financial analysis', icon: '💰', popular: true },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant', description: 'Intelligent coding assistant', icon: '💻', popular: true }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       ]
     },
     {
@@ -506,6 +555,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -581,6 +631,14 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
+=======
+        { name: 'Quantum Computing Solutions', path: '/quantum-computing', description: 'Quantum computing applications', icon: '⚛️', popular: true },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: false },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: false },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false },
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
 <<<<<<< HEAD
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: true },
@@ -620,11 +678,14 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
+=======
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD

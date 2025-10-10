@@ -211,6 +211,7 @@ const MicroSAASPage: React.FC = () => {
       description: 'Intelligent email marketing with personalization, A/B testing, and automated campaign optimization',
       features: ['Personalization Engine', 'A/B Testing', 'Automation Workflows', 'Advanced Analytics', 'Deliverability Optimization', 'Template Library'],
       popular: true,
+<<<<<<< HEAD
       rating: 4.7,
       users: '2,900+',
       trial: '14-day free trial'
@@ -285,11 +286,28 @@ const MicroSAASPage: React.FC = () => {
 
     // Development & Technical
     { 
+=======
+      rating: 4.7
+    },
+    { 
+      name: 'AI Financial Analyzer Pro', 
+      href: '/ai-financial-analyzer', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$149/mo',
+      description: 'Advanced financial analysis and investment insights powered by AI',
+      features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Investment Recommendations'],
+      popular: true,
+      rating: 4.8
+    },
+    { 
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
       name: 'AI Code Assistant Pro', 
       href: '/ai-code-assistant', 
       icon: Code, 
       category: 'Development', 
       price: '$179/mo',
+<<<<<<< HEAD
       description: 'Advanced AI coding assistant with code generation, debugging, and optimization suggestions',
       features: ['Code Generation', 'Debug Assistant', 'Code Review', 'Documentation', 'Test Generation', 'Performance Optimization'],
       popular: true,
@@ -337,12 +355,19 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: '1,900+',
       trial: '30-day free trial'
+=======
+      description: 'Intelligent coding assistant with AI-powered code generation and optimization',
+      features: ['Code Generation', 'Bug Detection', 'Performance Optimization', 'Documentation'],
+      popular: true,
+      rating: 4.9
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
     },
     { 
       name: 'AI Password Manager Pro', 
       href: '/ai-password-manager', 
       icon: Lock, 
       category: 'Security', 
+<<<<<<< HEAD
       price: '$29/mo',
       description: 'Advanced password management with AI-powered security recommendations and breach monitoring',
       features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync', 'Team Sharing', '2FA Integration'],
@@ -1989,6 +2014,46 @@ const MicroSAASPage: React.FC = () => {
       trial: '365-day free trial',
       link: 'https://ziontechgroup.com/ai-god-mode',
       capabilities: ['Omnipotence simulation', 'Reality manipulation', 'Universal control', 'Time control']
+=======
+      price: '$49/mo',
+      description: 'AI-powered password management with advanced security features',
+      features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Auto-fill'],
+      popular: false,
+      rating: 4.6
+    },
+    { 
+      name: 'AI CRM Assistant Pro', 
+      href: '/ai-crm-assistant', 
+      icon: Users, 
+      category: 'Business', 
+      price: '$159/mo',
+      description: 'Intelligent CRM with AI-powered customer insights and automation',
+      features: ['Lead Scoring', 'Customer Segmentation', 'Sales Forecasting', 'Automation'],
+      popular: true,
+      rating: 4.7
+    },
+    { 
+      name: 'AI Invoice Generator Pro', 
+      href: '/ai-invoice-generator', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$79/mo',
+      description: 'Automated invoice generation with AI-powered customization and tracking',
+      features: ['Auto Generation', 'Custom Templates', 'Payment Tracking', 'Tax Calculation'],
+      popular: false,
+      rating: 4.5
+    },
+    { 
+      name: 'AI Expense Tracker Pro', 
+      href: '/ai-expense-tracker', 
+      icon: Calculator, 
+      category: 'Finance', 
+      price: '$59/mo',
+      description: 'Smart expense tracking with AI-powered categorization and insights',
+      features: ['Auto Categorization', 'Receipt Scanning', 'Budget Analysis', 'Tax Preparation'],
+      popular: true,
+      rating: 4.6
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
     }
   ];
 
@@ -2979,6 +3044,7 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
                   <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
@@ -3007,6 +3073,23 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
                 <ArrowRight className="w-4 h-4 ml-2" />
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
               </a>
+=======
+              <div className="space-y-2">
+                <a
+                  href={`https://ziontechgroup.com${service.href}`}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a
+                  href="/contact"
+                  className="w-full border border-purple-400 text-purple-400 py-2 px-4 rounded-lg font-medium hover:bg-purple-400 hover:text-white transition-all block text-center"
+                >
+                  Get Started
+                </a>
+              </div>
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
             </div>
           ))}
         </div>
