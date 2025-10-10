@@ -394,7 +394,6 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-<<<<<<< HEAD
         {/* Footer */}
         <Footer />
         
@@ -821,14 +820,9 @@ const HomePage: React.FC = () => {
           </section>
         </main>
 
-        <Footer />
-      </div>
-=======
       {/* Footer */}
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c40d
-    </>
   );
 };
 

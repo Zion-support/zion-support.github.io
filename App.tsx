@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
+import ContentShowcase from './src/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -78,6 +83,30 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+  "foundingDate": "2020",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "Customer Service"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  }
+};
+
 const App: React.FC = memo(() => {
   return (
     <ErrorBoundary>
@@ -149,4 +178,4 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
