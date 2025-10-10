@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Twitter, Linkedin, Github } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Twitter, Linkedin, Github, Target, Settings } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -109,6 +109,22 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Infrastructure', href: '/it-infrastructure' },
         { name: 'Custom Development', href: '/custom-development' }
       ]
+    },
+    {
+      title: 'Key Solutions',
+      icon: Target,
+      services: [
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
+        { name: 'AI Content Writer', href: '/ai-content-writer' },
+        { name: 'AI Video Generator', href: '/ai-video-generator' },
+        { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' }
+      ]
     }
   ];
 
@@ -123,7 +139,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', href: '/partners' },
     { name: 'Investors', href: '/investors' },
     { name: 'Demo', href: '/demo' },
-    { name: 'Consultation', href: '/consultation' }
+    { name: 'Consultation', href: '/consultation' },
+    { name: 'Services', href: '/services' }
   ];
 
   const supportLinks = [
@@ -135,7 +152,9 @@ const Footer: React.FC = memo(() => {
     { name: 'System Health', href: '/health' },
     { name: 'Help Center', href: '/help' },
     { name: 'Community', href: '/community' },
-    { name: 'Training', href: '/training' }
+    { name: 'Training', href: '/training' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Consultation', href: '/consultation' }
   ];
 
   const legalLinks = [
@@ -162,13 +181,14 @@ const Footer: React.FC = memo(() => {
       <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
       <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full quantum-particle" style={{ animationDelay: '2s' }}></div>
       <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
+      
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">
-<div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
@@ -324,7 +344,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
               />
-<button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button neon-glow">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button neon-glow">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
@@ -360,6 +380,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
+});
 
 Footer.displayName = 'Footer';
 

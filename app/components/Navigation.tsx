@@ -212,6 +212,7 @@ const Navigation: React.FC = () => {
     { name: 'IT Services', path: '/it-services', icon: Cloud },
     { name: 'Micro SAAS', path: '/micro-saas', icon: Code },
     { name: 'Case Studies', path: '/case-studies', icon: FileText },
+    { name: 'Team', path: '/team', icon: Users },
     { name: 'Blog', path: '/blog', icon: MessageSquare },
     { name: 'Pricing', path: '/pricing', icon: BarChart },
     { name: 'Contact', path: '/contact', icon: Phone }
@@ -330,6 +331,13 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Case Studies
+              </Link>
+              <Link 
+                to="/team" 
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                onClick={closeAllMenus}
+              >
+                Team
               </Link>
               <Link 
                 to="/blog" 
