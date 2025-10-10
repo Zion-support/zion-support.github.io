@@ -1,8 +1,15 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+// Import enhancers
+import PerformanceEnhancer from './utils/performanceEnhancer';
+import SEOEnhancer from './components/SEOEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./pageOptimized'));
+const HomePage = lazy(() => import('./page-optimized'));
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
