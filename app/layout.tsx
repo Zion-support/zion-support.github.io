@@ -34,7 +34,9 @@ const LayoutPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]return (
+  ]
+  
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Layout | Zion Tech Group</title>
@@ -48,7 +50,7 @@ const LayoutPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Layout
-  </
+              </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -63,7 +65,7 @@ const LayoutPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
-  </
+              </button>
             </div>
           </div>
         </div>
@@ -98,7 +100,7 @@ const LayoutPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
-  </
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our layout solutions for your business.
             </p>
@@ -127,20 +129,17 @@ const LayoutPage: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-  </
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-  </
+              </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )}
+  )
+}
+
 export default LayoutPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

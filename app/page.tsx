@@ -38,6 +38,77 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  // Data arrays
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
+      benefits: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Comprehensive cloud solutions for scalability, reliability, and performance.',
+      benefits: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions to protect your digital assets.',
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Compliance']
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions designed to meet your specific business needs.',
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics platform.',
+      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Predictive Modeling']
+    },
+    {
+      icon: Users,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to help you make informed technology decisions.',
+      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Change Management']
+    }
+  ];
+
+  const services = [
+    {
+      title: 'AI Services',
+      description: 'Comprehensive artificial intelligence solutions to transform your business operations.',
+      icon: Brain,
+      href: '/ai-services',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      title: 'IT Services',
+      description: 'Complete IT infrastructure and support services for modern businesses.',
+      icon: Settings,
+      href: '/it-services',
+      features: ['Cloud Solutions', 'Cybersecurity', 'DevOps', 'Network Management']
+    },
+    {
+      title: 'Micro SaaS',
+      description: 'Specialized software-as-a-service solutions for specific business needs.',
+      icon: Cloud,
+      href: '/micro-saas',
+      features: ['Analytics Tools', 'Content Management', 'Email Marketing', 'Project Management']
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Delivered' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '5★', label: 'Client Rating' }
+  ];
   
   useEffect(() => {
     setIsLoaded(true);
