@@ -1,106 +1,106 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Zap, BarChart3, ArrowRight, Star, CheckSquare, Smartphone, Users, Target, Globe, Settings } from 'lucide-react';
+import { Mic, Brain, Globe, Zap, ArrowRight, Star, CheckSquare, Shield, Smartphone, Users, Target, MessageCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AICloudInfrastructurePage: React.FC = () => {
+const AIVoiceAssistantPlatformPage: React.FC = () => {
   const features = [
     {
-      icon: Cloud,
-      title: 'Intelligent Auto-Scaling',
-      description: 'AI-powered auto-scaling that predicts traffic patterns and scales resources automatically',
-      benefits: ['Predictive scaling', 'Cost optimization', 'Zero downtime', 'Performance optimization']
+      icon: Mic,
+      title: 'Natural Voice Recognition',
+      description: 'Advanced speech-to-text with 99.9% accuracy in 50+ languages and dialects',
+      benefits: ['Multi-language support', 'Accent recognition', 'Noise cancellation', 'Real-time processing']
     },
     {
-      icon: Shield,
-      title: 'Advanced Security',
-      description: 'Comprehensive cloud security with AI-powered threat detection and automated response',
-      benefits: ['Real-time threat detection', 'Automated incident response', 'Compliance management', 'Data encryption']
+      icon: Brain,
+      title: 'AI Conversation Engine',
+      description: 'Intelligent conversation management with context awareness and memory',
+      benefits: ['Context retention', 'Intent recognition', 'Response generation', 'Learning capabilities']
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Platform Integration',
+      description: 'Deploy across web, mobile, IoT devices, and smart speakers seamlessly',
+      benefits: ['Web integration', 'Mobile SDKs', 'IoT compatibility', 'Smart speaker support']
     },
     {
       icon: Zap,
-      title: 'Performance Optimization',
-      description: 'AI-driven performance monitoring and optimization for maximum efficiency and speed',
-      benefits: ['Real-time monitoring', 'Performance analytics', 'Bottleneck detection', 'Automated optimization']
-    },
-    {
-      icon: BarChart3,
-      title: 'Cost Management',
-      description: 'Intelligent cost optimization and resource management to reduce cloud spending',
-      benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting']
+      title: 'Custom Voice Training',
+      description: 'Train custom voice models for your brand voice and specific use cases',
+      benefits: ['Brand voice training', 'Custom wake words', 'Domain-specific training', 'Continuous learning']
     }
   ];
 
-  const cloudProviders = [
+  const useCases = [
     {
-      name: 'Amazon Web Services',
-      icon: '☁️',
-      features: ['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53', 'SageMaker, Rekognition'],
-      pricing: 'Starting at $500/month'
+      title: 'Customer Service',
+      description: '24/7 intelligent customer support with natural conversations',
+      icon: MessageCircle,
+      benefits: ['Reduce support costs by 60%', 'Handle 10x more inquiries', 'Multilingual support', 'Instant responses']
     },
     {
-      name: 'Microsoft Azure',
-      icon: '🔷',
-      features: ['Virtual Machines', 'Azure SQL Database', 'Azure Functions', 'Cognitive Services'],
-      pricing: 'Starting at $450/month'
+      title: 'E-commerce',
+      description: 'Voice shopping and product recommendations',
+      icon: Target,
+      benefits: ['Voice search', 'Product recommendations', 'Order management', 'Inventory queries']
     },
     {
-      name: 'Google Cloud Platform',
-      icon: '🔵',
-      features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'AI Platform'],
-      pricing: 'Starting at $400/month'
+      title: 'Healthcare',
+      description: 'Patient assistance and appointment scheduling',
+      icon: Users,
+      benefits: ['Appointment booking', 'Symptom checking', 'Medication reminders', 'Health monitoring']
     },
     {
-      name: 'Multi-Cloud',
-      icon: '🌐',
-      features: ['Hybrid cloud solutions', 'Cross-platform management', 'Disaster recovery', 'Vendor independence'],
-      pricing: 'Starting at $800/month'
+      title: 'Smart Home',
+      description: 'Control IoT devices and home automation',
+      icon: Smartphone,
+      benefits: ['Device control', 'Routine automation', 'Energy management', 'Security monitoring']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$1,299',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small to medium businesses',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 10 servers',
-        'Basic monitoring',
+        'Up to 1,000 interactions/month',
+        'Basic voice recognition',
+        '5 languages',
         'Email support',
-        'Standard security',
-        '99.9% uptime SLA'
+        'Web integration'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$2,999',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing enterprises',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 100 servers',
+        'Up to 10,000 interactions/month',
         'Advanced AI features',
+        '20 languages',
         'Priority support',
-        'Enhanced security',
-        '99.99% uptime SLA',
-        'API access'
+        'Mobile SDKs',
+        'Custom training'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,999',
+      price: '$999',
       period: '/month',
       description: 'For large organizations with complex needs',
       features: [
-        'Unlimited servers',
-        'Custom AI models',
+        'Unlimited interactions',
+        'Custom voice models',
+        '50+ languages',
         'Dedicated support',
-        'Advanced security',
-        '99.999% uptime SLA',
+        'On-premise deployment',
         'White-label solution'
       ],
       popular: false
@@ -109,24 +109,24 @@ const AICloudInfrastructurePage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
+      name: 'Dr. Jennifer Walsh',
+      role: 'CEO',
+      company: 'MediCare Solutions',
+      content: 'Our AI voice assistant handles 80% of patient inquiries automatically. Patient satisfaction increased by 45%.',
+      rating: 5
+    },
+    {
+      name: 'Robert Kim',
       role: 'CTO',
-      company: 'TechStartup Inc',
-      content: 'Our cloud costs reduced by 40% while performance improved by 60%. The AI optimization is incredible.',
+      company: 'SmartRetail',
+      content: 'Voice shopping has increased our conversion rate by 35%. Customers love the natural conversation experience.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'IT Director',
-      company: 'Global Enterprises',
-      content: 'We achieved 99.99% uptime and reduced security incidents by 90%. Outstanding service.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Wilson',
-      role: 'Cloud Architect',
-      company: 'Digital Solutions',
-      content: 'The auto-scaling and cost optimization features saved us $50K monthly. Highly recommended.',
+      name: 'Maria Garcia',
+      role: 'Customer Success Director',
+      company: 'TechCorp',
+      content: 'We reduced support costs by 60% while improving response times. The AI understands context perfectly.',
       rating: 5
     }
   ];
@@ -134,9 +134,9 @@ const AICloudInfrastructurePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. Reduce costs by 40% and improve performance by 60%." />
-        <meta name="keywords" content="AI cloud infrastructure, cloud optimization, auto-scaling, cloud security, cloud management" />
+        <title>AI Voice Assistant Platform - Zion Tech Group</title>
+        <meta name="description" content="Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration. 99.9% accuracy." />
+        <meta name="keywords" content="AI voice assistant, voice recognition, speech-to-text, conversational AI, voice platform" />
       </Helmet>
       
       <Navigation />
@@ -146,15 +146,15 @@ const AICloudInfrastructurePage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
-              AI-Powered Cloud Infrastructure
+              <Mic className="w-4 h-4 mr-2" />
+              AI-Powered Voice Technology
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Cloud Infrastructure
+              AI Voice Assistant Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. 
-              Reduce costs by 40% and improve performance by 60% with our advanced cloud management platform.
+              Build intelligent voice assistants with natural language understanding, multi-language support, and enterprise integration. 
+              Achieve 99.9% accuracy and deploy across all platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -176,10 +176,10 @@ const AICloudInfrastructurePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced AI Features
+                Advanced Voice AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to optimize your cloud infrastructure for maximum performance and cost efficiency.
+                Leverage cutting-edge voice AI technology to create natural, intelligent conversations.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -204,30 +204,30 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Cloud Providers Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Multi-Cloud Support
+                Industry Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Deploy and manage your infrastructure across all major cloud providers.
+                Deploy voice AI across various industries with proven results and ROI.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cloudProviders.map((provider, index) => (
+              {useCases.map((useCase, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{provider.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-2">{provider.name}</h3>
-                    <div className="text-blue-400 font-semibold">{provider.pricing}</div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-6">{useCase.description}</p>
                   <ul className="space-y-2">
-                    {provider.features.map((feature, idx) => (
+                    {useCase.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckSquare className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -245,7 +245,7 @@ const AICloudInfrastructurePage: React.FC = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your cloud infrastructure needs. All plans include our core AI features.
+                Choose the plan that fits your voice AI needs. All plans include our core features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -293,7 +293,7 @@ const AICloudInfrastructurePage: React.FC = () => {
                 What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of organizations who have transformed their cloud infrastructure with AI.
+                Join thousands of businesses who have transformed their customer experience with voice AI.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -320,10 +320,10 @@ const AICloudInfrastructurePage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Optimize Your Cloud Infrastructure?
+                Ready to Build Your Voice Assistant?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven cloud management.
+                Start your free trial today and experience the power of AI-driven voice technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -347,4 +347,4 @@ const AICloudInfrastructurePage: React.FC = () => {
   );
 };
 
-export default AICloudInfrastructurePage;
+export default AIVoiceAssistantPlatformPage;

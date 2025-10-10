@@ -36,6 +36,14 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+// New AI Services
+const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
+const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
+const AIVoiceAssistantPlatformPage = React.lazy(() => import('./app/ai-voice-assistant-platform/page'));
+const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AISupplyChainOptimizationPage = React.lazy(() => import('./app/ai-supply-chain-optimization/page'));
+const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infrastructure/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -78,6 +86,14 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            {/* New AI Services Routes */}
+                            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                            <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                            <Route path="/ai-voice-assistant-platform" element={<AIVoiceAssistantPlatformPage />} />
+                            <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                            <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
+                            <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
                           </Routes>
                         </Suspense>
                       </main>
