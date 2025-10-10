@@ -25,6 +25,7 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -221,6 +222,7 @@ export default function App() {
                   <Route path="/status" element={<StatusPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
                 </Routes>
               </Suspense>
             </main>

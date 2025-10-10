@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Receipt, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, BarChart, PieChart, TrendingUp } from 'lucide-react';
+import { Video, Play, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, Camera, Film, Sparkles } from 'lucide-react';
 
-const AIExpenseTracker: React.FC = memo(() => {
+const AIVideoGenerator: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
@@ -12,76 +12,76 @@ const AIExpenseTracker: React.FC = memo(() => {
 
   const features = [
     {
-      icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
+      icon: Video,
+      title: 'AI-Powered Video Creation',
+      description: 'Generate professional videos from text prompts in minutes with advanced AI technology',
       color: 'text-purple-400'
     },
     {
-      icon: Brain,
-      title: 'AI Categorization',
-      description: 'Intelligently categorize expenses and learn from your spending patterns over time',
+      icon: Play,
+      title: 'Multiple Video Formats',
+      description: 'Create videos in 4K, HD, social media formats, and custom dimensions for any platform',
       color: 'text-blue-400'
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Get detailed insights into your spending habits with beautiful charts and reports',
+      icon: Brain,
+      title: 'Smart Content Generation',
+      description: 'AI automatically generates scripts, selects music, and creates engaging visual content',
       color: 'text-green-400'
     },
     {
       icon: Target,
-      title: 'Budget Management',
-      description: 'Set budgets, track progress, and get alerts when approaching limits',
+      title: 'Brand Customization',
+      description: 'Maintain consistent branding with custom templates, colors, fonts, and logos',
       color: 'text-orange-400'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Personal',
-      price: '$9',
+      name: 'Creator',
+      price: '$49',
       period: '/month',
-      description: 'Perfect for individuals',
+      description: 'Perfect for content creators',
       features: [
-        'Unlimited receipts',
-        'Basic categorization',
-        'Monthly reports',
+        'Up to 10 videos/month',
+        'HD quality (1080p)',
+        'Basic templates',
+        'Text-to-video generation',
         'Email support',
-        'Mobile app',
-        '1 user account'
+        'Commercial license'
       ],
       popular: false
     },
     {
-      name: 'Business',
-      price: '$29',
+      name: 'Professional',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for small businesses',
+      description: 'Ideal for businesses',
       features: [
-        'Unlimited receipts',
-        'AI categorization',
-        'Advanced analytics',
+        'Up to 50 videos/month',
+        '4K quality available',
+        'Premium templates',
+        'Voice synthesis',
         'Priority support',
-        'Team collaboration',
-        'Custom categories',
-        '5 user accounts'
+        'Brand customization',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '$499',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited everything',
-        'Advanced AI features',
-        'Custom integrations',
-        '24/7 support',
+        'Unlimited videos',
+        'All quality options',
+        'Custom templates',
         'White-label solution',
-        'API access',
-        'Unlimited users'
+        '24/7 dedicated support',
+        'Advanced analytics',
+        'Team collaboration'
       ],
       popular: false
     }
@@ -89,65 +89,58 @@ const AIExpenseTracker: React.FC = memo(() => {
 
   const useCases = [
     {
-      title: 'Personal Finance',
-      description: 'Track personal expenses and build better financial habits',
-      icon: Receipt,
-      result: '30% savings'
-    },
-    {
-      title: 'Business Expenses',
-      description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart,
-      result: '50% faster'
-    },
-    {
-      title: 'Tax Preparation',
-      description: 'Organize receipts and expenses for easy tax filing',
+      title: 'Marketing Videos',
+      description: 'Create compelling product demos and promotional content',
       icon: Target,
-      result: '90% easier'
+      result: '10x faster'
     },
     {
-      title: 'Team Management',
-      description: 'Track team expenses and enforce spending policies',
+      title: 'Social Media Content',
+      description: 'Generate engaging videos for Instagram, TikTok, and YouTube',
+      icon: Globe,
+      result: '95% engagement'
+    },
+    {
+      title: 'Training Materials',
+      description: 'Produce educational and training videos for your team',
       icon: Users,
-      result: '100% control'
+      result: '80% retention'
+    },
+    {
+      title: 'Explainer Videos',
+      description: 'Create clear, concise explainer videos for complex topics',
+      icon: Brain,
+      result: '3x clarity'
     }
-  ];
-
-  const benefits = [
-    { metric: '99%', label: 'OCR Accuracy', color: 'text-green-400' },
-    { metric: '5 min', label: 'Setup Time', color: 'text-blue-400' },
-    { metric: '30%', label: 'Time Saved', color: 'text-purple-400' },
-    { metric: '24/7', label: 'Available', color: 'text-orange-400' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Expense Tracker - Smart Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization. Save time and money with intelligent expense management." />
-        <meta name="keywords" content="expense tracker, receipt scanning, financial management, AI categorization, budget tracking" />
-        <meta property="og:title" content="AI Expense Tracker - Smart Financial Management" />
-        <meta property="og:description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization." />
+        <title>AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
+        <meta name="description" content="Generate professional videos from text prompts in minutes. AI-powered video creation with 4K quality, custom branding, and multiple formats." />
+        <meta name="keywords" content="AI video generator, video creation, text to video, video marketing, content creation" />
+        <meta property="og:title" content="AI Video Generator - Create Professional Videos with AI" />
+        <meta property="og:description" content="Generate professional videos from text prompts in minutes with our advanced AI technology." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-video-generator" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Receipt className="w-4 h-4" />
-            <span>AI-Powered Finance</span>
+            <Video className="w-4 h-4" />
+            <span>AI Video Creation</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Expense Tracker
+            AI Video Generator
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your expense management with AI-powered receipt scanning and intelligent categorization. 
-            Save time, reduce errors, and gain valuable insights into your spending habits.
+            Create professional videos from text prompts in minutes. Our AI-powered platform generates 
+            engaging content with custom branding, multiple formats, and 4K quality for any platform.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -162,27 +155,40 @@ const AIExpenseTracker: React.FC = memo(() => {
               href="/contact"
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Tracking
+              Start Creating Videos
             </a>
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* Key Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
-                <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
-                <div className="text-white font-semibold mb-2">{benefit.label}</div>
-                <div className="text-gray-400 text-sm">Industry-leading performance</div>
-              </div>
-            ))}
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+              <div className="text-3xl font-bold text-purple-400 mb-2">10x</div>
+              <div className="text-white font-semibold mb-2">Faster Creation</div>
+              <div className="text-gray-400 text-sm">Create videos 10x faster than traditional methods</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
+              <div className="text-3xl font-bold text-blue-400 mb-2">4K</div>
+              <div className="text-white font-semibold mb-2">Quality</div>
+              <div className="text-gray-400 text-sm">Professional 4K video quality available</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20">
+              <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+              <div className="text-white font-semibold mb-2">Templates</div>
+              <div className="text-gray-400 text-sm">Professional templates for every use case</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-white font-semibold mb-2">Available</div>
+              <div className="text-gray-400 text-sm">Create videos anytime, anywhere</div>
+            </div>
           </div>
         </section>
 
         {/* Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
@@ -219,7 +225,7 @@ const AIExpenseTracker: React.FC = memo(() => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
@@ -263,9 +269,9 @@ const AIExpenseTracker: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing Videos?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 10,000+ users already saving time and money with our AI Expense Tracker.
+            Join 1,000+ creators and businesses already using our AI Video Generator to create professional content.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -289,6 +295,6 @@ const AIExpenseTracker: React.FC = memo(() => {
   );
 });
 
-AIExpenseTracker.displayName = 'AIExpenseTracker';
+AIVideoGenerator.displayName = 'AIVideoGenerator';
 
-export default AIExpenseTracker;
+export default AIVideoGenerator;

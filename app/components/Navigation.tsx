@@ -61,7 +61,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Sales Automation', path: '/ai-sales-automation' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
+        { name: 'AI Data Visualization', path: '/ai-data-visualization' },
+        { name: 'AI Sentiment Analyzer', path: '/ai-sentiment-analyzer' },
+        { name: 'AI Video Generator', path: '/ai-video-generator' },
+        { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+        { name: 'AI Social Media Scheduler', path: '/ai-social-media-scheduler' },
+        { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor' },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' }
       ]
     },
     {
@@ -146,6 +152,13 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               About
+            </Link>
+            <Link 
+              to="/services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Services
             </Link>
 
             {/* Services Dropdown */}
@@ -260,6 +273,13 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link 
+                to="/services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Services
               </Link>
 
               {/* Mobile Services */}
