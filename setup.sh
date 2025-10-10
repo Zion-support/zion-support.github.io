@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env bash
-=======
-#!/bin/bash
->>>>>>> origin/auto/autonomy-17186719616
 
 # Make sure the script fails if any command fails
 set -e
@@ -40,8 +36,13 @@ $PM install
 
 # Generate Prisma client after dependencies are installed
 if command -v npx >/dev/null 2>&1; then
-  echo "Generating Prisma client..."
-  npx prisma generate
+  # Check if Prisma schema exists before generating client
+  if [ -f "prisma/schema.prisma" ] || [ -f "schema.prisma" ]; then
+    echo "Generating Prisma client..."
+    npx prisma generate
+  else
+    echo "No Prisma schema found. Skipping Prisma client generation."
+  fi
   # Automatically install Playwright browsers if the dependency exists
   if grep -q "@playwright/test" package.json >/dev/null 2>&1; then
     echo "Installing Playwright browsers..."

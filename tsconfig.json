@@ -36,6 +36,9 @@
   },
   "include": [
     "src/**/*",
+    ".storybook/**/*",
+    "**/*.ts",
+    "**/*.tsx",
     "src/types/offline-shims.d.ts",
     "tailwind.config.js",
     "postcss.config.js"
